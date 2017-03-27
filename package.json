@@ -70,6 +70,7 @@
     "start": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack --config=./webpack-dist.config",
     "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au webpack-dev-server --config=./webpack-dist.config",
+    "start:build:e2e": "cross-env NODE_ENV=development URL=localhost webpack-dev-server --config=./webpack-dist.config",
     "test:e2e": "node nightwatch --test",
     "test": "jest",
     "test:watch": "npm run test -- --watch"

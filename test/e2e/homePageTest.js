@@ -6,7 +6,7 @@
 
 'use strict';
 
-let url = 'http://dev-espace.library.uq.edu.au:9000/#/';
+let url = 'http://localhost:9000/#/';
 
 module.exports = {
   before(browser) {
