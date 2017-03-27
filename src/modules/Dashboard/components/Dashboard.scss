@@ -1,0 +1,136 @@
+@import '../../../sass/variables';
+
+.dashboard {
+  .info-summary {
+    position: relative;
+    height: 300px;
+
+    @media all and (max-width: 599px) {
+      height: 250px;
+    }
+
+    > * {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .info {
+      z-index: 3;
+      color: #FFF;
+
+      .user-information {
+        padding: 20px;
+      }
+
+      .message-center {
+        height: 80px;
+
+        .alert {
+          width: 100%;
+          padding: 0 20px;
+          background-color: #333;
+          border-top: 1px solid #000;
+
+          &.warning {
+            color: orange;
+          }
+
+          &.error {
+            color: red;
+          }
+        }
+      }
+    }
+
+    .grey-cover {
+      z-index: 2;
+      background-color: #000;
+      opacity: 0.30;
+    }
+
+    .image-cover {
+      background-image: url('../../../../public/images/dashboard_cover.jpg');
+      filter: saturate(0.55) blur(2px);
+      background-size: cover;
+      background-position: 0;
+      z-index: 1;
+      overflow: hidden;
+    }
+  }
+}
+
+.time-display {
+  padding: 14px;
+
+  .location {
+    color: #aaa;
+  }
+
+  .time {
+    @media all and (max-width: 599px) {
+      font-size: 17px;
+      padding-top: 8px;
+    }
+  }
+
+  .flag {
+    height: 16px;
+    display: inline-block;
+    padding-left: 20px;
+    vertical-align: middle;
+  }
+}
+
+.connected-service-tick {
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+
+  > span {
+    font-size: 12px !important;
+  }
+
+  &.true {
+    background-color: limegreen;
+  }
+
+  &.false {
+    background-color: red;
+  }
+}
+
+.dashboard-plans {
+  width: 100%;
+
+  .head {
+    padding: 20px;
+    background-color: $uq-primary-color;
+
+    h2 {
+      color: #FFF;
+    }
+  }
+}
+
+.dashboard-collaborators {
+  width: 100%;
+
+  .head {
+    padding: 20px;
+    background-color: $uq-accent-color;
+
+    h2 {
+      color: #FFF;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }
+}

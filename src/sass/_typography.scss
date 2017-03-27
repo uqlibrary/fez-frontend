@@ -1,0 +1,42 @@
+@import 'variables';
+
+.body-1 { font-size: 14px; font-weight: 400; }
+.body-2 { font-size: 14px; font-weight: bold; }
+.subhead { font-size: 16px; }
+.title { font-size: 20px; }
+.headline { font-size: 24px; }
+.display-1 { font-size: 34px; }
+.display-2 { font-size: 45px; }
+.display-3 { font-size: 56px; }
+.display-4 { font-size: 112px; }
+.caption { font-size: 12px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 5px 0;
+  color: $uq-primary-color;
+}
+
+h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: #444;
+}
+
+// Custom
+h1.page-title {
+  max-width: 1200px;
+  margin: 32px auto 16px auto;
+  width: 100%;
+}
+
+td {
+  font-size: 16px !important;
+}
+
+.color-primary {
+  color: $uq-primary-color;
+}
