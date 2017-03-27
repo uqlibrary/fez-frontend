@@ -5,3 +5,4 @@ npm-debug.log
 
 e2eTestLog
 chromedriver.log
+coverage
