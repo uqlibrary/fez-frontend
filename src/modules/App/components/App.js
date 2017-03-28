@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
@@ -8,7 +10,7 @@ import {MenuDrawer} from 'uqlibrary-react-toolbox';
 
 // review HelpDrawer component export - it's not loading correctly
 // import {HelpDrawer} from 'uqlibrary-react-toolbox';
-import {menuItems} from 'config';
+import {defaultMenuItems, researcherMenuItems} from 'config';
 
 // Pages
 import {Dashboard} from 'modules/Dashboard';
@@ -66,7 +68,7 @@ export default class App extends React.Component {
                             titleStyle={titleStyle}
                             onLeftIconButtonTouchTap={this.toggleDrawer} />
 
-                        <MenuDrawer menuItems={menuItems(account.get('mail'))}
+                        <MenuDrawer menuItems={[...researcherMenuItems(account.get('mail')), ...defaultMenuItems()]}
                                     drawerOpen={docked ? true : menuDrawerOpen}
                                     docked={docked}
                                     toggleDrawer={this.toggleDrawer} />
@@ -88,7 +90,8 @@ export default class App extends React.Component {
                             onRequestClose={hideSnackbar} />
 
                         {/* review HelpDrawer export */}
-                        {/* <HelpDrawer /> */}
+                        {/*<HelpDrawer />*/}
+                        {/*{HelpDrawer}*/}
                     </div>
                 )}
             </div>

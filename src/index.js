@@ -39,6 +39,11 @@ const store = createStore(
     ),
 );
 
+// Import mock data if required
+if (process.env.NODE_ENV !== 'production' && process.env.USE_MOCK) {
+    require('./mock');
+}
+
 const render = () => {
     ReactDOM.render(
         <AppContainer>

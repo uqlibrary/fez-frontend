@@ -13,6 +13,10 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const port = 9000;
 const title = 'eSpace - The University of Queensland';
 
+let useMock = false;
+if (process.env.USE_MOCK)
+    useMock = process.env.USE_MOCK;
+
 let URL_BASE_PATH = '';
 let publicPath = '';
 let publicPathOffline = '/';
@@ -85,7 +89,8 @@ module.exports = {
         new webpack.DefinePlugin({
             __DEVELOPMENT__: false,
             'process.env.NODE_ENV': JSON.stringify(environment),
-            'process.env.BASE_PATH': JSON.stringify(URL_BASE_PATH)
+            'process.env.BASE_PATH': JSON.stringify(URL_BASE_PATH),
+            'process.env.USE_MOCK': JSON.stringify(useMock)
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true,

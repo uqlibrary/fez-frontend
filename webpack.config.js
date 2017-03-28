@@ -6,10 +6,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const port = 3000;
-let url = 'dev-espace.library.uq.edu.au'; //'localhost';
+let url = 'localhost';
+let useMock = false;
 
 if (process.env.URL)
-    url = process.env.URL; //'dev-espace.library.uq.edu.au'; //define this url in /etc/hosts
+    url = process.env.URL;
+
+if (process.env.USE_MOCK)
+    useMock = process.env.USE_MOCK;
+
 
 module.exports = {
     context: path.resolve(__dirname),
@@ -135,6 +140,7 @@ module.exports = {
         new webpack.DefinePlugin({
             __DEVELOPMENT__: true,
             'process.env.NODE_ENV': JSON.stringify('development'),
+            'process.env.USE_MOCK': JSON.stringify(useMock)
         })
     ],
     resolve: {

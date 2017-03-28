@@ -11,5 +11,6 @@ export {default as theme} from './theme';
 
 export * as validation from './validation';
 export {default as helpText} from './helpText';
-export {menuItems} from './menu';
-export {menuItems as adminMenuItems} from './adminMenu';
+
+export {defaultMenuItems, adminMenuItems, researcherMenuItems} from './menu';
+

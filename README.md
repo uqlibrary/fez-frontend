@@ -20,10 +20,11 @@ UQ's branding for Fez is UQ eSpace.
 - Tests: `Jest/Nightwatch`
 
 ## Development
+
 - `yarn`
-- `yarn start`
-- The website is now running on `http://localhost:3000/`
-- For Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
+- `yarn start` - The website is now running on `http://localhost:3000/` on dev api (requires additional setup of uqlibrary/api project)
+- `yarn start:mock` - The website is now running on `http://localhost:3000/` on mock data
+- for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
 - `yarn start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
 
 Mock data is provided for all pages and actions under `src/mock/`.
@@ -40,12 +41,12 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 ### E2E testing
 [Nightwatch.js](http://nightwatchjs.org/) is used to run end to end tests. 
  
-- start dist version of the project by `yarn start:build`
+- start dist version of the project by `yarn start:build:e2e` - runs application in mock mode
 - while dist version of the project is running, start tests by `yarn test:e2e`
 
 Codeship setup:
 
-- `nohup bash -c "yarn start:build 2>&1 &" && sleep 20; cat nohup.out`
+- `nohup bash -c "yarn start:build:e2e 2>&1 &" && sleep 20; cat nohup.out`
 - `yarn test:e2e`
 
 ## Mocking
