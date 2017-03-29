@@ -1,4 +1,5 @@
 /* eslint-disable */
+// TODO: remove eslint-disable
 
 // External
 import {AppContainer} from 'react-hot-loader';
@@ -53,20 +54,19 @@ ga('create', 'UA-4365437-1', 'auto');
 const analytics = () => next => action => {
     dataLayer = dataLayer || [];
     dataLayer.push({
-        event: action.type,
-        payload: action.payload
+        event: action.type
     });
-
-    console.log(action.type);
 
     var fieldObject = {
         hitType: 'event',
-        eventAction: action.type
+        eventCategory: action.type
     };
 
 
-    ga('send', 'pageview');
-    ga('send', fieldObject);
+    if (action.type && action.type.indexOf('LOCATION_CHANGE') > -1)
+        ga('send', 'pageview', action.payload.location.pathname);
+    else
+        ga('send', fieldObject);
 
     return next(action);
 };
