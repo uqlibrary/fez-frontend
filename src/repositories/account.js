@@ -7,7 +7,7 @@ import {api} from 'config';
 export function getAccount() {
     return new Promise((resolve, reject) => {
         api.get('account').then(response => {
-            if (response.data.hasSession === true) {
+            if (response.data && response.data.hasOwnProperty('hasSession') && response.data.hasSession === true) {
                 resolve(response.data);
             } else {
                 reject({
@@ -15,7 +15,6 @@ export function getAccount() {
                     message: 'Unauthorized user'
                 });
             }
-            resolve(response.data);
         }).catch(e => {
             reject(e);
             throw e;

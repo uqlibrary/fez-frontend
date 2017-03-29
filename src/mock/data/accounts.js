@@ -1,4 +1,9 @@
 export const accounts = [
+    // anonymous user
+    {
+        'id': 'anon',
+        'hasSession': false
+    },
     // researchers
     {
         'id': 'uqinewton',
@@ -19,7 +24,7 @@ export const accounts = [
         'blocked': false
     },
     {
-        'id': 'uqpferma',
+        'id': 'uqpfermat',
         'class': 'uqd',
         'type': 3,
         'homeLib': 'PACE',

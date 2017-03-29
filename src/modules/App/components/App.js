@@ -1,4 +1,5 @@
 /* eslint-disable */
+// TODO: remove all eslint-disable
 
 import React from 'react';
 import {Route, Switch} from 'react-router';
@@ -24,7 +25,7 @@ const mediaQuery = window.matchMedia('(min-width: 1600px)');
 
 export default class App extends React.Component {
     static propTypes = {
-        account: React.PropTypes.object.isRequired,
+        account: React.PropTypes.object,
         loaded: React.PropTypes.bool.isRequired,
         loadAccount: React.PropTypes.func.isRequired,
         menuDrawerOpen: React.PropTypes.bool.isRequired,
@@ -54,6 +55,9 @@ export default class App extends React.Component {
         const titleStyle = docked ? { paddingLeft: 320 } : {};
         const container = docked ? { paddingLeft: 340 } : {};
 
+        const menuItems = loaded === true && account !== null && account.get('mail') ?
+            [...researcherMenuItems(account.get('mail')), ...defaultMenuItems()] : defaultMenuItems();
+
         return (
             <div className="layout-fill">
                 {!loaded ? (
@@ -77,19 +81,29 @@ export default class App extends React.Component {
                             }
                         />
 
-                        <MenuDrawer menuItems={[...researcherMenuItems(account.get('mail')), ...defaultMenuItems()]}
+                        <MenuDrawer menuItems={menuItems}
                                     drawerOpen={docked ? true : menuDrawerOpen}
                                     docked={docked}
                                     toggleDrawer={this.toggleDrawer} />
 
                         <div className="content-container flex" style={container}>
-                            <Switch>
-                                <Route exact path="/" component={Dashboard} />
-                                <Route path="/research" component={Research} />
-                                <Route path="/add-record" component={AddRecord} />
-                                <Route path="/browse" component={Browse} />
-                                <Route path="/about" component={About} />
-                            </Switch>
+                            {/* TODO: how to handle different types of users and anonymous accounts */}
+                            {account ?
+                                (
+                                    <Switch>
+                                        <Route exact path="/" component={Dashboard} />
+                                        <Route path="/research" component={Research} />
+                                        <Route path="/add-record" component={AddRecord} />
+                                        <Route component={Dashboard} />
+                                    </Switch>
+                                ) : (
+                                    <Switch>
+                                        <Route path="/about" component={About} />
+                                        <Route path="/browse" component={Browse} />
+                                        <Route component={Browse} />
+                                    </Switch>
+                                )
+                            }
                         </div>
 
                         <Snackbar

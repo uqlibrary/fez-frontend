@@ -3,6 +3,7 @@ import Immutable from 'immutable';
 import {
     APP_ACCOUNT_LOADING,
     APP_ACCOUNT_LOADED,
+    APP_ACCOUNT_ANONYMOUS,
     APP_MENU_DRAWER_TOGGLE,
     APP_SNACKBAR_HIDE,
     APP_SNACKBAR_SHOW
@@ -25,6 +26,8 @@ const appReducer = (state = initialState, action) => {
             return state.set('accountLoading', true);
         case APP_ACCOUNT_LOADED:
             return state.set('account', Immutable.fromJS(action.payload)).set('accountLoaded', true);
+        case APP_ACCOUNT_ANONYMOUS:
+            return state.set('account', Immutable.fromJS(null)).set('accountLoaded', true);
         case APP_SNACKBAR_SHOW:
             return state.set('snackbar', Immutable.fromJS({
                 open: true,
