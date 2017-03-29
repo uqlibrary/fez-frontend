@@ -10,7 +10,10 @@ export function getAccount() {
             if (response.data.hasSession === true) {
                 resolve(response.data);
             } else {
-                reject('You are not logged in.');
+                reject({
+                    status: 401,
+                    message: 'Unauthorized user'
+                });
             }
             resolve(response.data);
         }).catch(e => {

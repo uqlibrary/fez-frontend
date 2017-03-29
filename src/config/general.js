@@ -1,5 +1,5 @@
 // Authentication
-export const COOKIE_NAME = 'UQLID';
+export const SESSION_COOKIE_NAME = 'UQLID';
 export const TOKEN_NAME = 'X-Uql-Token';
 
 // URLS

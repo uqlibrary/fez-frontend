@@ -4,6 +4,7 @@ import React from 'react';
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import Snackbar from 'material-ui/Snackbar';
+import IconButton from 'material-ui/IconButton';
 
 import {AppLoader} from 'modules/Toolbox';
 import {MenuDrawer} from 'uqlibrary-react-toolbox';
@@ -66,7 +67,15 @@ export default class App extends React.Component {
                             iconStyleLeft={{marginTop: 0}}
                             title="UQ eSpace"
                             titleStyle={titleStyle}
-                            onLeftIconButtonTouchTap={this.toggleDrawer} />
+                            onLeftIconButtonTouchTap={this.toggleDrawer}
+                            iconElementRight={
+                                <div style={{marginTop: '-10px'}}>
+                                    <IconButton iconClassName="material-icons" data-tip="Search" data-for="header" className="AppBarRightButton">search</IconButton>
+                                    <IconButton iconClassName="material-icons" data-tip="Sign in" data-for="header" className="AppBarRightButton">person_outline</IconButton>
+                                    <IconButton iconClassName="material-icons" data-tip="Help" data-for="header" className="AppBarRightButton">help</IconButton>
+                                </div>
+                            }
+                        />
 
                         <MenuDrawer menuItems={[...researcherMenuItems(account.get('mail')), ...defaultMenuItems()]}
                                     drawerOpen={docked ? true : menuDrawerOpen}

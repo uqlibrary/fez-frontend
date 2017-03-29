@@ -24,9 +24,13 @@ export function loadAccount() {
                 type: APP_ACCOUNT_LOADED,
                 payload: account
             });
-        }).catch(() => {
-            const returnUrl = window.btoa(window.location.href);
-            window.location.href = `${AUTH_URL}?return=${returnUrl}`;
+        }).catch((error) => {
+            if (error.hasOwnProperty(status) && error.status === 401) {
+                const returnUrl = window.btoa(window.location.href);
+                window.location.href = `${AUTH_URL}?return=${returnUrl}`;
+            } else {
+                throw(error);
+            }
         });
     };
 }

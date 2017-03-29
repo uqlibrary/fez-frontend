@@ -1,7 +1,7 @@
 export {
     API_URL,
     AUTH_URL,
-    COOKIE_NAME,
+    SESSION_COOKIE_NAME,
     TOKEN_NAME
 } from './general';
 

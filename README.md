@@ -29,6 +29,11 @@ UQ's branding for Fez is UQ eSpace.
 
 Mock data is provided for all pages and actions under `src/mock/`.
 
+### Development notes
+
+- any custom reject() by promises should return an object with status and message defined `{status: 401, message: 'Unauthorised user'}` [Example]()
+- any custom catch() methods of promises should process known errors and throw other errors. [Example]()
+
 ## Testing
 
 ### Unit testing
