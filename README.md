@@ -31,8 +31,9 @@ Mock data is provided for all pages and actions under `src/mock/`.
 
 ### Development notes
 
-- any custom reject() by promises should return an object with status and message defined `{status: 401, message: 'Unauthorised user'}` [Example]()
-- any custom catch() methods of promises should process known errors and throw other errors. [Example]()
+#### Exception handling
+- any custom reject() by promises should return an object with status and message defined `{status: 401, message: 'Unauthorised user'}` [Example](https://github.com/uqlibrary/fez-frontend/blob/5b77d698065ddbff6f8ffcd31cf95ffcacd6f16b/src/repositories/account.js#L13)
+- any custom catch() methods of promises should process known errors and throw other errors. [Example](https://github.com/uqlibrary/fez-frontend/blob/5b77d698065ddbff6f8ffcd31cf95ffcacd6f16b/src/modules/App/actions.js#L27)
 
 ## Testing
 
