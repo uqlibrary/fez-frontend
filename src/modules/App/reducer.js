@@ -12,7 +12,7 @@ import {
 // Immutable state
 const initialState = Immutable.fromJS({
     account: {},
-    accountLoaded: false,
+    accountLoaded: false, // TODO: more indicative name to the variable - user might not have a session, eg anon user
     menuDrawerOpen: false,
     snackbar: {
         open: false,

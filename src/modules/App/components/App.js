@@ -1,4 +1,3 @@
-/* eslint-disable */
 // TODO: remove all eslint-disable
 
 import React from 'react';
@@ -55,8 +54,10 @@ export default class App extends React.Component {
         const titleStyle = docked ? { paddingLeft: 320 } : {};
         const container = docked ? { paddingLeft: 340 } : {};
 
-        const menuItems = loaded === true && account !== null && account.get('mail') ?
-            [...researcherMenuItems(account.get('mail')), ...defaultMenuItems()] : defaultMenuItems();
+        const isAuthorizedUser = loaded === true && account !== null && account.get('mail');
+        const components = { Browse, About, Dashboard, Research, AddRecord };
+        const landingPage =  isAuthorizedUser ? Dashboard : Browse;
+        const menuItems = isAuthorizedUser ? [...researcherMenuItems(account.get('mail'), components), ...defaultMenuItems(components)] : defaultMenuItems(components);
 
         return (
             <div className="layout-fill">
@@ -64,6 +65,8 @@ export default class App extends React.Component {
                     <AppLoader />
                 ) : (
                     <div className="layout-fill column align-stretch">
+                        {/* TODO: application name should be configurable */}
+                        {/* TODO: app bar buttons should be components */}
                         <AppBar
                             className="row align-center"
                             showMenuIconButton={!docked}
@@ -87,23 +90,12 @@ export default class App extends React.Component {
                                     toggleDrawer={this.toggleDrawer} />
 
                         <div className="content-container flex" style={container}>
-                            {/* TODO: how to handle different types of users and anonymous accounts */}
-                            {account ?
-                                (
-                                    <Switch>
-                                        <Route exact path="/" component={Dashboard} />
-                                        <Route path="/research" component={Research} />
-                                        <Route path="/add-record" component={AddRecord} />
-                                        <Route component={Dashboard} />
-                                    </Switch>
-                                ) : (
-                                    <Switch>
-                                        <Route path="/about" component={About} />
-                                        <Route path="/browse" component={Browse} />
-                                        <Route component={Browse} />
-                                    </Switch>
-                                )
-                            }
+                            <Switch>
+                                <Route path="/" exact component={landingPage} />
+                                {menuItems.map((route, index) => (
+                                    <Route key={index} {...route} />
+                                ))}
+                            </Switch>
                         </div>
 
                         <Snackbar
@@ -113,8 +105,8 @@ export default class App extends React.Component {
                             onRequestClose={hideSnackbar} />
 
                         {/* review HelpDrawer export */}
-                        {/*<HelpDrawer />*/}
-                        {/*{HelpDrawer}*/}
+                        {/* <HelpDrawer />*/}
+                        {/* {HelpDrawer}*/}
                     </div>
                 )}
             </div>

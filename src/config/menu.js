@@ -1,27 +1,40 @@
-export const researcherMenuItems = email => [
+/* eslint-disable react/no-multi-comp*/
+
+import React from 'react';
+
+export const researcherMenuItems = (email, components) => [
     {
-        linkTo: '/',
+        linkTo: '/dashboard',
+        path: '/dashboard',
         primaryText: 'My dashboard',
-        secondaryText: email
+        secondaryText: email,
+        component: components.Dashboard
     },
     {
         linkTo: '/research',
-        primaryText: 'My research'
+        path: '/research',
+        primaryText: 'My research',
+        component: components.Research
     },
     {
         linkTo: '/add-record',
+        path: '/add-record',
         primaryText: 'Add a missing record',
+        component: components.AddRecord
     },
     {
-        divider: true
+        divider: true,
+        path: '/' + (new Date()).getTime() // TODO: fix: workaround: empty Route is constructed from divider
     }
 ];
 
-export const adminMenuItems = email => [
+export const adminMenuItems = (email, components) => [
     {
-        linkTo: '/',
+        linkTo: '/dashboard',
+        path: '/dashboard',
         primaryText: 'My dashboard',
-        secondaryText: email
+        secondaryText: email,
+        component: components.Dashboard
     },
     {
         linkTo: '/',
@@ -40,22 +53,29 @@ export const adminMenuItems = email => [
     }
 ];
 
-export const defaultMenuItems = () => [
+export const defaultMenuItems = components => [
     {
         linkTo: '/browse',
-        primaryText: 'Browse'
+        primaryText: 'Browse',
+        path: '/browse',
+        component: components.Browse
     },
     {
         linkTo: '/search',
-        primaryText: 'Search'
+        path: '/search',
+        primaryText: 'Search',
+        render: () => <div> eSpace search coming soon ...</div>
     },
     {
         linkTo: '/faqs',
-        primaryText: 'FAQs'
+        path: '/faqs',
+        primaryText: 'FAQs',
+        render: () => <div> eSpace FAQ coming soon ...</div>
     },
     {
         linkTo: '/about',
-        primaryText: 'About'
+        path: '/about',
+        primaryText: 'About',
+        component: components.About
     }
 ];
-

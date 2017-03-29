@@ -12,6 +12,9 @@ export default function Browse() {
                         <p>
                             Placeholder for Browse espace page...
                         </p>
+                        <p>
+                            <a href="auth.library.uq.edu.au/login">Temporary login link...</a>
+                        </p>
                     </div>
                 </CardText>
             </Card>
