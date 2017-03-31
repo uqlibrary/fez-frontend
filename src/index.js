@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === 'production') {
     a.src = g;
     m.parentNode.insertBefore(a, m)
 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-ga('create', 'UA-4365437-1', 'auto');
+ga('create', 'UA-4365437-1', 'development.library.uq.edu.au/espace', 'espace-dev');
 
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -58,15 +58,14 @@ const analytics = () => next => action => {
     });
 
     var fieldObject = {
-        hitType: 'event',
         eventCategory: action.type
     };
 
 
     if (action.type && action.type.indexOf('LOCATION_CHANGE') > -1)
-        ga('send', 'pageview', action.payload.location.pathname);
+        ga('send', 'pageview', {page: action.payload.location.pathname});
     else
-        ga('send', fieldObject);
+        ga('send', 'event', fieldObject);
 
     return next(action);
 };
