@@ -24,6 +24,7 @@ const mediaQuery = window.matchMedia('(min-width: 1600px)');
 
 export default class App extends React.Component {
     static propTypes = {
+        error: React.PropTypes.object,
         account: React.PropTypes.object,
         loaded: React.PropTypes.bool.isRequired,
         loadAccount: React.PropTypes.func.isRequired,
@@ -43,6 +44,7 @@ export default class App extends React.Component {
 
     render() {
         const {
+            error,
             account,
             loaded,
             menuDrawerOpen,
@@ -96,6 +98,13 @@ export default class App extends React.Component {
                                     <Route key={index} {...route} />
                                 ))}
                             </Switch>
+
+                            {error && (
+                            <div>
+                                <h3>Application error: {error.message}</h3>
+                                <p>TODO: create component for error handing, notifications</p>
+                            </div>
+                            )}
                         </div>
 
                         <Snackbar

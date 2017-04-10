@@ -11,6 +11,7 @@ const AppContainer = connect(state => {
     const appState = state.get('app');
 
     return {
+        error: appState.get('error'),
         account: appState.get('account'),
         loaded: appState.get('accountLoaded'),
         menuDrawerOpen: appState.get('menuDrawerOpen'),

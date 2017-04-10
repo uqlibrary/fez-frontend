@@ -11,13 +11,20 @@ export function getAccount() {
                 resolve(response.data);
             } else {
                 reject({
-                    status: 401,
-                    message: 'Unauthorized user'
+                    response: {
+                        status: 401,
+                        data: 'Unauthorized user'
+                    },
                 });
             }
         }).catch(e => {
             reject(e);
-            throw e;
+
+            // if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
+            //     && e.response.hasOwnProperty('status') && (e.response.status === 401 || e.response.status === 403)) {
+            // } else {
+            //     throw e;
+            // }
         });
     });
 }

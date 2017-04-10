@@ -6,7 +6,8 @@ import {
     APP_ACCOUNT_ANONYMOUS,
     APP_MENU_DRAWER_TOGGLE,
     APP_SNACKBAR_HIDE,
-    APP_SNACKBAR_SHOW
+    APP_SNACKBAR_SHOW,
+    APP_LOADING_ERROR
 } from './actions';
 
 // Immutable state
@@ -18,10 +19,13 @@ const initialState = Immutable.fromJS({
         open: false,
         message: ''
     },
+    error: {}
 });
 
 const appReducer = (state = initialState, action) => {
     switch (action.type) {
+        case APP_LOADING_ERROR:
+            return state.set('error', Immutable.fromJS(action.payload)).set('accountLoaded', true);
         case APP_ACCOUNT_LOADING:
             return state.set('accountLoading', true);
         case APP_ACCOUNT_LOADED:
