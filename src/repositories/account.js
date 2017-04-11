@@ -18,6 +18,8 @@ export function getAccount() {
                 });
             }
         }).catch(e => {
+            console.dir(e);
+
             reject(e);
 
             // if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
