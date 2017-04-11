@@ -6554,7 +6554,7 @@ upper-case@^1.1.1:
 
 uqlibrary-react-toolbox@uqlibrary/uqlibrary-react-toolbox#master:
   version "0.0.1"
-  resolved "https://codeload.github.com/uqlibrary/uqlibrary-react-toolbox/tar.gz/2a00377af30f946b71ab21e027a667323c0a5950"
+  resolved "https://codeload.github.com/uqlibrary/uqlibrary-react-toolbox/tar.gz/e7d2445223d89b6ae746b39344945018480ea613"
   dependencies:
     axios "^0.15.3"
     babel-polyfill "^6.23.0"

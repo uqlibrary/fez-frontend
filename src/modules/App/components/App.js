@@ -7,10 +7,8 @@ import Snackbar from 'material-ui/Snackbar';
 import IconButton from 'material-ui/IconButton';
 
 import {AppLoader} from 'modules/Toolbox';
-import {MenuDrawer} from 'uqlibrary-react-toolbox';
+import {MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
 
-// review HelpDrawer component export - it's not loading correctly
-// import {HelpDrawer} from 'uqlibrary-react-toolbox';
 import {defaultMenuItems, researcherMenuItems} from 'config';
 
 // Pages
@@ -113,9 +111,7 @@ export default class App extends React.Component {
                             autoHideDuration={4000}
                             onRequestClose={hideSnackbar} />
 
-                        {/* review HelpDrawer export */}
-                        {/* <HelpDrawer />*/}
-                        {/* {HelpDrawer}*/}
+                        <HelpDrawer />
                     </div>
                 )}
             </div>
