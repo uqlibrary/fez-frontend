@@ -19,7 +19,10 @@ const initialState = Immutable.fromJS({
         open: false,
         message: ''
     },
-    error: {}
+    error: {
+        displayError: false,
+        message: ''
+    }
 });
 
 const appReducer = (state = initialState, action) => {
