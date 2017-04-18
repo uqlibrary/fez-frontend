@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card, CardText} from 'material-ui/Card';
+import {PublicationTypeForm} from '../Forms/PublicationType';
 
 export default function AddRecord() {
     return (
@@ -10,7 +11,7 @@ export default function AddRecord() {
                     <br />
                     <div>
                         <p>
-                            Placeholder for a form
+                            <PublicationTypeForm />
                         </p>
                     </div>
                 </CardText>

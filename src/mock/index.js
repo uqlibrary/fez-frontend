@@ -5,6 +5,7 @@ import {SESSION_COOKIE_NAME} from 'config';
 
 // mocked data
 import {accounts} from './data/accounts';
+import {publicationTypes} from './data/publicationTypes';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api);
@@ -25,4 +26,5 @@ if (queryString.parse(location.search).user === 'null') {
     mock.onGet('/account').reply(200, account);
 }
 
-
+// Mock the publication types endpoint
+mock.onGet('records/types').reply(200, publicationTypes);
