@@ -11,10 +11,10 @@ import './PublicationSearchForm.scss';
 export default class PublicationSearchForm extends Component {
 
     static propTypes = {
-        helpText: React.PropTypes.string.isRequired,
         helpTitle: React.PropTypes.string.isRequired,
-        explanationText: React.PropTypes.string.isRequired,
+        helpText: React.PropTypes.string.isRequired,
         title: React.PropTypes.string.isRequired,
+        explanationText: React.PropTypes.string.isRequired,
         defaultSearchFieldLabel: React.PropTypes.string.isRequired,
         defaultButtonLabel: React.PropTypes.string.isRequired,
         pristine: React.PropTypes.bool,

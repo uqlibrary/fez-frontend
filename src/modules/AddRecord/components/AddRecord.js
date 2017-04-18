@@ -2,11 +2,14 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import ExpandTransition from 'material-ui/internal/ExpandTransition';
+import ReactTooltip from 'react-tooltip';
 
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 
 // forms & custom components
 import {PublicationSearchForm} from '../../Forms';
+import {SearchResults} from '../../SearchResults';
+import {NoMatchingRecords} from '../../NoMatchingRecords';
 
 import './AddRecord.scss';
 
@@ -68,7 +71,32 @@ class addRecord extends React.Component {
                 );
             case 1:
                 return (
-                    <div>Placeholder for results</div>
+                    <div>
+                        { this.props.searchResults.size > 0 &&
+                            <SearchResults
+                                dataSource={this.props.searchResults}
+                                title="Possible matches found"
+                                explanationText='Top [noOfResults] matches displayed below. To refine your search and narrow down results, please click the "search again" button below - or create a new record.'
+                                helpText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+                                helpTitle="No matching records"
+                                claimRecordBtnLabel="Claim This Record"
+                            />
+                        }
+
+                        <NoMatchingRecords
+                                handleNext={this.handleNext}
+                                handlePrevious={this.handlePrev}
+                                stepIndex={this.state.stepIndex}
+                                title="No matching records?"
+                                explanationText="Refine your search and narrow down results, or create a new eSpace record for your publication."
+                                helpText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+                                helpTitle="No matching records"
+                                searchAgainBtnLabel="Search again"
+                                addPublicationBtnLabel="Add a new publication"
+                        />
+
+                        <ReactTooltip id="claimTooltips" effect="solid" place="bottom"/>
+                    </div>
                 );
             case 2:
                 return (
