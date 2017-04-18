@@ -237,7 +237,7 @@ export const internalTitleSearchResults = [
         'fez_record_search_key_publisher': {
             'rek_publisher': 'Wiley-Blackwell'
         },
-        'rek_title': 'External - Defining ‘nutraceuticals’: neither nutritious nor pharmaceutical',
+        'rek_title': 'Internal - Defining ‘nutraceuticals’: neither nutritious nor pharmaceutical',
         'rek_date': '2016-04-25 00:00:00',
         'fez_record_search_key_collection_year': {
             'rek_collection_year': '2016-04-25 00:00:00'
