@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PublicationSearchForm page snapshots tests renders default about page 1`] = `
+<form>
+  <div>
+    <Card
+      className="layout-card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
+    >
+      <CardHeader
+        avatar={null}
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="flex-100"
+          >
+            <h2
+              className="headline"
+            >
+              Do Something
+            </h2>
+          </div>
+          <div
+            className="flex"
+          >
+            <undefined
+              text="Some help text content"
+              title="Help Title"
+            />
+          </div>
+        </div>
+      </CardHeader>
+      <CardText
+        className="body-1"
+      >
+        <p>
+          This is some text that explains what this form block displays
+        </p>
+        <Field
+          autoComplete="off"
+          component={[Function]}
+          floatingLabelText="Search field label"
+          fullWidth={true}
+          name="doiSearch"
+          onChange={[Function]}
+        />
+        <div
+          style={
+            Object {
+              "marginTop": "20px",
+              "textAlign": "right",
+            }
+          }
+        >
+          <RaisedButton
+            disabled={false}
+            fullWidth={false}
+            label="Button Label"
+            labelPosition="after"
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={true}
+            type="submit"
+          />
+        </div>
+      </CardText>
+    </Card>
+  </div>
+</form>
+`;
