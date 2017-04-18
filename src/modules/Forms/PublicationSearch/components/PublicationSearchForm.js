@@ -11,13 +11,13 @@ import './PublicationSearchForm.scss';
 export default class PublicationSearchForm extends Component {
 
     static propTypes = {
-
         helpText: React.PropTypes.string.isRequired,
         helpTitle: React.PropTypes.string.isRequired,
         explanationText: React.PropTypes.string.isRequired,
         title: React.PropTypes.string.isRequired,
         defaultSearchFieldLabel: React.PropTypes.string.isRequired,
         defaultButtonLabel: React.PropTypes.string.isRequired,
+        pristine: React.PropTypes.bool,
         handleSubmit: React.PropTypes.func,
         doiSearch: React.PropTypes.func,
         pubMedSearch: React.PropTypes.func,
@@ -64,7 +64,7 @@ export default class PublicationSearchForm extends Component {
     };
 
     render() {
-        const {handleSubmit} = this.props;
+        const {pristine, handleSubmit} = this.props;
         return (
             <form ref="publicationSearchForm" onSubmit={handleSubmit}>
                 <div>
@@ -96,6 +96,7 @@ export default class PublicationSearchForm extends Component {
                                     secondary
                                     onTouchTap={this.performSearch}
                                     type="submit"
+                                    disabled={pristine}
                                 />
                             </div>
                         </CardText>
@@ -105,4 +106,3 @@ export default class PublicationSearchForm extends Component {
         );
     }
 }
-
