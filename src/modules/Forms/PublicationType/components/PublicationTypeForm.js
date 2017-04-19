@@ -5,6 +5,7 @@ import Divider from 'material-ui/Divider';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {AutoCompleteSelect} from 'uqlibrary-react-toolbox';
+import {AddJournalArticleForm} from '../../JournalArticle';
 
 import './PublicationTypeForm.scss';
 
@@ -121,8 +122,7 @@ export default class PublicationTypeForm extends Component {
                 {/* Journal Article is selected */}
                 { publicationName === 'Journal Article' &&
                 <div>
-                    Add journal article form
-
+                    <AddJournalArticleForm />
                 </div>
                 }
             </form>

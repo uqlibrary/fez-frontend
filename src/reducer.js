@@ -4,13 +4,14 @@ import {combineReducers} from 'redux-immutable';
 // Load reducers
 import {appReducer} from 'modules/App';
 import {reducer as dashboardReducer} from 'modules/Dashboard';
-import {publicationTypeReducer} from './modules/Forms/PublicationType';
+import {publicationTypeReducer, publicationSubTypeReducer} from './modules/Forms';
 
 const rootReducer = combineReducers({
     // App reducers
     app: appReducer,
     dashboard: dashboardReducer,
     publicationTypes: publicationTypeReducer,
+    publicationSubTypes: publicationSubTypeReducer
 });
 
 export default rootReducer;
