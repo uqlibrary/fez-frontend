@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
-
 import Divider from 'material-ui/Divider';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
@@ -14,7 +13,7 @@ export default class PublicationTypeForm extends Component {
 
     static propTypes = {
         title: React.PropTypes.string.isRequired,
-        explanationText: React.PropTypes,
+        explanationText: React.PropTypes.string,
         helpTitle: React.PropTypes.string,
         helpText: React.PropTypes.string,
         pristine: React.PropTypes.bool,
