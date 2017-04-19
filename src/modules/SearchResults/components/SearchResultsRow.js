@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
@@ -11,8 +12,8 @@ const altmetricIcon = require('../../../images/altmetric_icon.svg');
 export default class SearchResultsRow extends Component {
 
     static propTypes = {
-        entry: React.PropTypes.object.isRequired,
-        claimRecordBtnLabel: React.PropTypes.string.isRequired
+        entry: PropTypes.object.isRequired,
+        claimRecordBtnLabel: PropTypes.string.isRequired
     };
 
     constructor(props) {

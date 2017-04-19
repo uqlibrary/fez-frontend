@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
+import PropTypes from 'prop-types';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import SearchResultsRow from './SearchResultsRow';
@@ -7,12 +8,12 @@ import SearchResultsRow from './SearchResultsRow';
 export default class SearchResults extends Component {
 
     static propTypes = {
-        title: React.PropTypes.string.isRequired,
-        explanationText: React.PropTypes.string.isRequired,
-        claimRecordBtnLabel: React.PropTypes.string.isRequired,
-        helpTitle: React.PropTypes.string,
-        helpText: React.PropTypes.string,
-        dataSource: React.PropTypes.object
+        title: PropTypes.string.isRequired,
+        explanationText: PropTypes.string.isRequired,
+        claimRecordBtnLabel: PropTypes.string.isRequired,
+        helpTitle: PropTypes.string,
+        helpText: PropTypes.string,
+        dataSource: PropTypes.object
     };
 
     constructor(props) {
