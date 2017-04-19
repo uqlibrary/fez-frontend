@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
 
@@ -13,7 +13,10 @@ import './PublicationTypeForm.scss';
 export default class PublicationTypeForm extends Component {
 
     static propTypes = {
-        formValues: React.PropTypes.object,
+        title: React.PropTypes.string.isRequired,
+        explanationText: React.PropTypes,
+        helpTitle: React.PropTypes.string,
+        helpText: React.PropTypes.string,
         pristine: React.PropTypes.bool,
         handleSubmit: React.PropTypes.func,
         loadPublicationTypes: React.PropTypes.func,
@@ -23,12 +26,22 @@ export default class PublicationTypeForm extends Component {
 
     constructor(props) {
         super(props);
+
+        // setup the state
+        this.state = {
+            submitOpen: false,
+            saveOpen: false,
+            selectedId: 0
+        };
     }
 
     componentDidMount() {
         this.props.loadPublicationTypes();
     }
 
+    handlePublicationTypeChange = (obj, id) => {
+        this.setState({selectedId: parseInt(id, 10)});
+    };
 
     setPublicationList = () => {
         const popularTypesList = ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'];
@@ -71,8 +84,8 @@ export default class PublicationTypeForm extends Component {
     }
 
     render() {
-        const {handleSubmit, formValues} = this.props;
-        const publicationName = this.getPublicationName(parseInt(formValues.get('publicationType'), 10));
+        const {handleSubmit} = this.props;
+        const publicationName = this.getPublicationName(this.state.selectedId);
 
         return (
             <form onSubmit={handleSubmit}>
@@ -80,21 +93,27 @@ export default class PublicationTypeForm extends Component {
                     <CardHeader>
                         <div className="row">
                             <div className="flex-100">
-                                <h2 className="headline">Add your publication</h2>
+                                <h2 className="headline">{this.props.title}</h2>
                             </div>
-                            <div className="flex">
-                                <HelpIcon
-                                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
-                                    title="No matching records" inline />
-                            </div>
+                            {this.props.helpTitle && this.props.helpText && (
+                                <div className="flex">
+                                    <HelpIcon
+                                        text={this.props.helpTitle}
+                                        title={this.props.helpText} inline />
+                                </div>
+                            )}
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
+                        {this.props.explanationText && (
+                            <p>{this.props.explanationText}</p>
+                        )}
                         <Field component={AutoCompleteSelect} name="publicationType"
                                maxSearchResults={10}
                                label="Select a publication type"
                                dataSource={this.setPublicationList()}
                                dataSourceConfig={{text: 'name', value: 'id'}}
+                               onChange={this.handlePublicationTypeChange}
                                openOnFocus
                                fullWidth />
                     </CardText>
