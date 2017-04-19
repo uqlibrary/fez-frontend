@@ -68,4 +68,4 @@ Application deployment is 100% automated using Codeship, and is hosted in S3. Al
 Deployment pipelines are setup for branches: "master", "production" and any branch starting with "feature-". 
 
 - TBA: Deployments to production are hosted on https://espace.library.uq.edu.au/ 
-- All other branches are deployed on https://development.library.uq.edu/espace/`branchName`/.
+- All other branches are deployed on https://development.library.uq.edu.au/espace/`branchName`/.
