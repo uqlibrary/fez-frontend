@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {reduxForm, Field} from 'redux-form/immutable';
 
-import {HelpIcon, TextField, AutoCompleteSelect} from 'uqlibrary-react-toolbox';
+import {HelpIcon, TextField, Authors} from 'uqlibrary-react-toolbox';
 import DatePicker from 'material-ui/DatePicker';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
@@ -17,7 +17,9 @@ class AddJournalArticleForm extends Component {
 
     static propTypes = {
         loadPublicationSubTypes: React.PropTypes.func,
-        types: React.PropTypes.object
+        types: React.PropTypes.object,
+        loadAuthorData: React.PropTypes.func,
+        listOfAuthors: React.PropTypes.object
     };
 
     constructor(props) {
@@ -31,6 +33,7 @@ class AddJournalArticleForm extends Component {
 
     componentDidMount() {
         this.props.loadPublicationSubTypes();
+        this.props.loadAuthorData();
     }
 
     handleSubTypeChange = (e, index, value) => {
@@ -42,13 +45,6 @@ class AddJournalArticleForm extends Component {
         const subtypeItems = types.valueSeq().map((subtypes) => {
             return (<MenuItem value={subtypes.get('id')} key={subtypes.get('id')} primaryText={subtypes.get('label')}/>);
         });
-
-        const authorsDataSource = [
-            {'id': 202, 'name': 'Author 8'},
-            {'id': 263, 'name': 'Author 9'},
-            {'id': 174, 'name': 'Author 10'},
-            {'id': 177, 'name': 'Author 11'}
-        ];
 
         return (
             <div style={{marginBottom: '-60px'}}>
@@ -109,22 +105,7 @@ class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div>
-                            <div className="row" style={{marginBottom: '50px'}}>
-                                <div className="flex inputPadding">
-                                    <Field component={AutoCompleteSelect} name="authorName"
-                                           maxSearchResults={10}
-                                           label="Author name (as published, in order)"
-                                           dataSource={authorsDataSource}
-                                           dataSourceConfig={{text: 'name', value: 'id'}}
-                                           openOnFocus
-                                           fullWidth />
-                                </div>
-                                <div className="flex" style={{flex: '0 0 80px', textAlign: 'right'}}>
-                                    <RaisedButton label="Add" secondary style={{marginTop: '30px'}} />
-                                </div>
-                            </div>
-                        </div>
+                        <Authors form={formName} dataSource={this.props.listOfAuthors} />
                     </CardText>
                 </Card>
 

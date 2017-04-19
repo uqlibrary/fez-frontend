@@ -5,6 +5,7 @@ import {SESSION_COOKIE_NAME} from 'config';
 
 // mocked data
 import {accounts} from './data/accounts';
+import {authors} from './data/authors';
 import {publicationTypes} from './data/publicationTypes';
 import {publicationSubTypes} from './data/publicationSubTypes';
 
@@ -26,6 +27,9 @@ if (queryString.parse(location.search).user === 'null') {
     // mock account route
     mock.onGet('/account').reply(200, account);
 }
+
+// Mock the authors endpoint
+mock.onGet('authors/search').reply(200, authors);
 
 // Mock the publication types endpoint
 mock.onGet('records/types').reply(200, publicationTypes);

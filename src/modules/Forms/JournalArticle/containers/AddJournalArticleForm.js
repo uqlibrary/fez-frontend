@@ -2,7 +2,8 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import AddJournalArticleForm from '../components/AddJournalArticleForm';
-import {loadPublicationSubTypes} from '../actions';
+import {loadPublicationSubTypes, loadAuthorData} from '../actions';
+import Immutable from 'immutable';
 
 
 let AddJournalArticleFormContainer = reduxForm({
@@ -12,11 +13,13 @@ let AddJournalArticleFormContainer = reduxForm({
 AddJournalArticleFormContainer = connect(state => {
     const publicationTypeState = state.get('publicationSubTypes');
     return {
+        listOfAuthors: publicationTypeState.get('listOfAuthors') || Immutable.Map({}),
         types: publicationTypeState.get('publicationSubTypes')
     };
 }, dispatch => {
     return {
-        loadPublicationSubTypes: () => dispatch(loadPublicationSubTypes())
+        loadPublicationSubTypes: () => dispatch(loadPublicationSubTypes()),
+        loadAuthorData: () => dispatch(loadAuthorData())
     };
 })(AddJournalArticleFormContainer);
 

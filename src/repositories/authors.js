@@ -1,12 +1,12 @@
 import {api} from '../config';
 
 /**
- * Fetches the publication sub types
+ * Fetches the the current list of authors
  * @returns {Promise}
  */
-export function getPublicationSubTypes() {
+export function getListOfAuthors() {
     return new Promise((resolve, reject) => {
-        api.get('records/sub/types').then(response => {
+        api.get('authors/search').then(response => {
             resolve(response.data);
         }).catch(e => {
             reject(e);
