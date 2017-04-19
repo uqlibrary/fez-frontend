@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {reduxForm, Field} from 'redux-form/immutable';
+import PropTypes from 'prop-types';
 
 import {HelpIcon, TextField, Authors} from 'uqlibrary-react-toolbox';
 import DatePicker from 'material-ui/DatePicker';
@@ -16,10 +17,10 @@ const formName = 'addJournalArticle';
 class AddJournalArticleForm extends Component {
 
     static propTypes = {
-        loadPublicationSubTypes: React.PropTypes.func,
-        types: React.PropTypes.object,
-        loadAuthorData: React.PropTypes.func,
-        listOfAuthors: React.PropTypes.object
+        loadPublicationSubTypes: PropTypes.func,
+        types: PropTypes.object,
+        loadAuthorData: PropTypes.func,
+        listOfAuthors: PropTypes.object
     };
 
     constructor(props) {
