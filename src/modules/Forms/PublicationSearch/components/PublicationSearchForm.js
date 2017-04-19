@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
-import {PropTypes} from 'prop-types';
+import PropTypes from 'prop-types';
 
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
