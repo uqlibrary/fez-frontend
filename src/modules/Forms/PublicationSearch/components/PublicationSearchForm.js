@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
+import {PropTypes} from 'prop-types';
 
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -11,18 +12,18 @@ import './PublicationSearchForm.scss';
 export default class PublicationSearchForm extends Component {
 
     static propTypes = {
-        helpTitle: React.PropTypes.string.isRequired,
-        helpText: React.PropTypes.string.isRequired,
-        title: React.PropTypes.string.isRequired,
-        explanationText: React.PropTypes.string.isRequired,
-        defaultSearchFieldLabel: React.PropTypes.string.isRequired,
-        defaultButtonLabel: React.PropTypes.string.isRequired,
-        pristine: React.PropTypes.bool,
-        handleSubmit: React.PropTypes.func,
-        doiSearch: React.PropTypes.func,
-        pubMedSearch: React.PropTypes.func,
-        titleSearch: React.PropTypes.func,
-        formValues: React.PropTypes.object
+        helpTitle: PropTypes.string.isRequired,
+        helpText: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        explanationText: PropTypes.string.isRequired,
+        defaultSearchFieldLabel: PropTypes.string.isRequired,
+        defaultButtonLabel: PropTypes.string.isRequired,
+        pristine: PropTypes.bool,
+        handleSubmit: PropTypes.func,
+        doiSearch: PropTypes.func,
+        pubMedSearch: PropTypes.func,
+        titleSearch: PropTypes.func,
+        formValues: PropTypes.object
     };
 
     constructor(props) {

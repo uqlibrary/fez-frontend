@@ -56,6 +56,7 @@
     "material-ui-chip-input": "^0.13.1",
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.11",
+    "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.4.1",
     "react-hot-loader": "^3.0.0-beta.6",
@@ -90,6 +91,9 @@
   "jest": {
     "testMatch": [
       "**/?(*.)(test).js?(x)"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/?!(uqlibrary-react-toolbox)"
     ],
     "transform": {
       ".*": "<rootDir>/node_modules/babel-jest"
