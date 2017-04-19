@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
 import Divider from 'material-ui/Divider';
+import PropTypes from 'prop-types';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {AutoCompleteSelect} from 'uqlibrary-react-toolbox';
@@ -13,15 +14,15 @@ import './PublicationTypeForm.scss';
 export default class PublicationTypeForm extends Component {
 
     static propTypes = {
-        title: React.PropTypes.string.isRequired,
-        explanationText: React.PropTypes.string,
-        helpTitle: React.PropTypes.string,
-        helpText: React.PropTypes.string,
-        pristine: React.PropTypes.bool,
-        handleSubmit: React.PropTypes.func,
-        loadPublicationTypes: React.PropTypes.func,
-        types: React.PropTypes.object,
-        account: React.PropTypes.object,
+        title: PropTypes.string.isRequired,
+        explanationText: PropTypes.string,
+        helpTitle: PropTypes.string,
+        helpText: PropTypes.string,
+        pristine: PropTypes.bool,
+        handleSubmit: PropTypes.func,
+        loadPublicationTypes: PropTypes.func,
+        types: PropTypes.object,
+        account: PropTypes.object,
     };
 
     constructor(props) {
