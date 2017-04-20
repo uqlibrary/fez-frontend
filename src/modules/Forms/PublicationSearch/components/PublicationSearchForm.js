@@ -16,14 +16,19 @@ export default class PublicationSearchForm extends Component {
         helpText: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         explanationText: PropTypes.string.isRequired,
-        defaultSearchFieldLabel: PropTypes.string.isRequired,
-        defaultButtonLabel: PropTypes.string.isRequired,
+        defaultSearchFieldLabel: PropTypes.string,
+        defaultButtonLabel: PropTypes.string,
         pristine: PropTypes.bool,
         handleSubmit: PropTypes.func,
         doiSearch: PropTypes.func,
         pubMedSearch: PropTypes.func,
         titleSearch: PropTypes.func,
         formValues: PropTypes.object
+    };
+
+    static defaultProps = {
+        defaultSearchFieldLabel: 'Search for publication',
+        defaultButtonLabel: 'Search',
     };
 
     constructor(props) {

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Publication search form snapshots tests renders default publication search form page 1`] = `
+<form>
+  <div>
+    <Card
+      className="layout-card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
+    >
+      <CardHeader
+        avatar={null}
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="flex-100"
+          >
+            <h2
+              className="headline"
+            >
+              Component Title
+            </h2>
+          </div>
+          <div
+            className="flex"
+          >
+            <Connect(HelpIcon)
+              text="Lorem Ipsum"
+              title="Help Title"
+            />
+          </div>
+        </div>
+      </CardHeader>
+      <CardText
+        className="body-1"
+      >
+        <p>
+          Component Search Text
+        </p>
+        <Field
+          autoComplete="off"
+          component={[Function]}
+          floatingLabelText="Search for publication"
+          fullWidth={true}
+          name="doiSearch"
+          onChange={[Function]}
+        />
+        <div
+          style={
+            Object {
+              "marginTop": "20px",
+              "textAlign": "right",
+            }
+          }
+        >
+          <RaisedButton
+            disabled={false}
+            fullWidth={false}
+            label="Search"
+            labelPosition="after"
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={true}
+            type="submit"
+          />
+        </div>
+      </CardText>
+    </Card>
+  </div>
+</form>
+`;
