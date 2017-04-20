@@ -13,7 +13,11 @@ export default class SearchResultsRow extends Component {
 
     static propTypes = {
         entry: PropTypes.object.isRequired,
-        claimRecordBtnLabel: PropTypes.string.isRequired
+        claimRecordBtnLabel: PropTypes.string
+    };
+
+    static defaultProps = {
+        claimRecordBtnLabel: 'Claim Record'
     };
 
     constructor(props) {

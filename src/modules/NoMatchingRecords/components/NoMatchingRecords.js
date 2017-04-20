@@ -20,6 +20,11 @@ const propTypes = {
     stepIndex: PropTypes.number
 };
 
+const defaultProps = {
+    searchAgainBtnLabel: 'Search again?',
+    addPublicationBtnLabel: 'Add new publication'
+};
+
 const NoMatchingRecords = ({handleNext, handlePrevious, stepIndex, title, explanationText, helpTitle, helpText, searchAgainBtnLabel, addPublicationBtnLabel}) => {
     return (
         <Card className="layout-card">
@@ -59,6 +64,7 @@ const NoMatchingRecords = ({handleNext, handlePrevious, stepIndex, title, explan
 };
 
 NoMatchingRecords.propTypes = propTypes;
+NoMatchingRecords.defaultProps = defaultProps;
 
 export default NoMatchingRecords;
 

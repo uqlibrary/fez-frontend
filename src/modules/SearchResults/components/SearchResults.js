@@ -10,7 +10,7 @@ export default class SearchResults extends Component {
     static propTypes = {
         title: PropTypes.string.isRequired,
         explanationText: PropTypes.string.isRequired,
-        claimRecordBtnLabel: PropTypes.string.isRequired,
+        claimRecordBtnLabel: PropTypes.string,
         helpTitle: PropTypes.string,
         helpText: PropTypes.string,
         dataSource: PropTypes.object
