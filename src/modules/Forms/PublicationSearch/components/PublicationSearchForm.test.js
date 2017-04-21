@@ -31,9 +31,6 @@ function tester(app, inputValue, result) {
     expect(button.props().label).toEqual(result);
     expect(handleSubmit.called).toEqual(true);
     expect(handleSubmit.callCount).toEqual(1);
-
-    const tree = toJson(app);
-    expect(tree).toMatchSnapshot();
 }
 
 describe('Publication search form integration tests', () => {
