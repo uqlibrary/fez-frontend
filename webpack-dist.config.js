@@ -69,6 +69,8 @@ module.exports = {
         new ExtractTextPlugin('[name]-[hash].min.css'),
         new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
         new webpack.optimize.UglifyJsPlugin({
+            sourceMap: false,
+            mangle: false,
             compress: {
                 warnings: false,
                 screw_ie8: true,
@@ -80,6 +82,7 @@ module.exports = {
                 evaluate: true,
                 if_return: true,
                 join_vars: true,
+
             },
             output: {
                 comments: false,
