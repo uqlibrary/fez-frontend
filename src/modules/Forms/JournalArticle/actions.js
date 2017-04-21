@@ -1,6 +1,6 @@
 // Repositories
 import {getPublicationSubTypes} from '../../../repositories/publicationSubTypes';
-import {getListOfAuthors} from 'repositories/authors';
+import {getListOfAuthors} from '../../../repositories/authors';
 
 // Types
 export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
