@@ -817,7 +817,7 @@ exports[`Publication search form integration tests sets the search button to DOI
                                       >
                                         <TextFieldLabel
                                           disabled={false}
-                                          htmlFor="doiSearch-undefined-Searchforpublication-58564"
+                                          htmlFor="doiSearch-undefined-Searchforpublication-27467"
                                           muiTheme={
                                             Object {
                                               "appBar": Object {
@@ -1243,7 +1243,7 @@ exports[`Publication search form integration tests sets the search button to DOI
                                           }
                                         >
                                           <label
-                                            htmlFor="doiSearch-undefined-Searchforpublication-58564"
+                                            htmlFor="doiSearch-undefined-Searchforpublication-27467"
                                             style={
                                               Object {
                                                 "color": "rgba(0, 0, 0, 0.3)",
@@ -1266,7 +1266,7 @@ exports[`Publication search form integration tests sets the search button to DOI
                                         <input
                                           autoComplete="off"
                                           disabled={false}
-                                          id="doiSearch-undefined-Searchforpublication-58564"
+                                          id="doiSearch-undefined-Searchforpublication-27467"
                                           name="doiSearch"
                                           onBlur={[Function]}
                                           onChange={[Function]}
@@ -2779,7 +2779,7 @@ exports[`Publication search form integration tests sets the search button to DOI
                                       >
                                         <TextFieldLabel
                                           disabled={false}
-                                          htmlFor="doiSearch-undefined-Searchforpublication-30243"
+                                          htmlFor="doiSearch-undefined-Searchforpublication-44550"
                                           muiTheme={
                                             Object {
                                               "appBar": Object {
@@ -3205,7 +3205,7 @@ exports[`Publication search form integration tests sets the search button to DOI
                                           }
                                         >
                                           <label
-                                            htmlFor="doiSearch-undefined-Searchforpublication-30243"
+                                            htmlFor="doiSearch-undefined-Searchforpublication-44550"
                                             style={
                                               Object {
                                                 "color": "rgba(0, 0, 0, 0.3)",
@@ -3228,7 +3228,7 @@ exports[`Publication search form integration tests sets the search button to DOI
                                         <input
                                           autoComplete="off"
                                           disabled={false}
-                                          id="doiSearch-undefined-Searchforpublication-30243"
+                                          id="doiSearch-undefined-Searchforpublication-44550"
                                           name="doiSearch"
                                           onBlur={[Function]}
                                           onChange={[Function]}
@@ -4741,7 +4741,7 @@ exports[`Publication search form integration tests sets the search button to Tit
                                       >
                                         <TextFieldLabel
                                           disabled={false}
-                                          htmlFor="doiSearch-undefined-Searchforpublication-32754"
+                                          htmlFor="doiSearch-undefined-Searchforpublication-38870"
                                           muiTheme={
                                             Object {
                                               "appBar": Object {
@@ -5167,7 +5167,7 @@ exports[`Publication search form integration tests sets the search button to Tit
                                           }
                                         >
                                           <label
-                                            htmlFor="doiSearch-undefined-Searchforpublication-32754"
+                                            htmlFor="doiSearch-undefined-Searchforpublication-38870"
                                             style={
                                               Object {
                                                 "color": "rgba(0, 0, 0, 0.3)",
@@ -5190,7 +5190,7 @@ exports[`Publication search form integration tests sets the search button to Tit
                                         <input
                                           autoComplete="off"
                                           disabled={false}
-                                          id="doiSearch-undefined-Searchforpublication-32754"
+                                          id="doiSearch-undefined-Searchforpublication-38870"
                                           name="doiSearch"
                                           onBlur={[Function]}
                                           onChange={[Function]}
