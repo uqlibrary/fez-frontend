@@ -12,14 +12,12 @@ function setup() {
     return shallow(<AddRecord {...props} />);
 }
 
-describe('About page snapshots tests', () => {
-    it('renders default about page', () => {
+describe('Add record page snapshots tests', () => {
+    it('renders default add record page', () => {
         const wrapper = setup();
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setState({finished: true});
-        const tree2 = toJson(wrapper);
-        expect(tree2).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

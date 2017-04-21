@@ -242,3 +242,265 @@ exports[`About page snapshots tests renders default about page 2`] = `
   </div>
 </div>
 `;
+
+exports[`About page snapshots tests renders simulated stepper clicks 1`] = `
+<div
+  className="layout-fill"
+>
+  <h1
+    className="page-title display-1"
+  >
+    Add a journal article
+  </h1>
+  <Stepper
+    activeStep={2}
+    connector={<pure(StepConnector) />}
+    linear={true}
+    onChange={[Function]}
+    orientation="horizontal"
+    style={
+      Object {
+        "margin": "-10px auto",
+        "padding": "0 25px",
+      }
+    }
+  >
+    <Step>
+      <StepLabel
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+          }
+        }
+      >
+        Search for your publication
+      </StepLabel>
+    </Step>
+    <Step>
+      <StepLabel
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+          }
+        }
+      >
+        Search results
+      </StepLabel>
+    </Step>
+    <Step>
+      <StepLabel
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+          }
+        }
+      >
+        Claim or Add your publication
+      </StepLabel>
+    </Step>
+  </Stepper>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxWidth": "1200px",
+        "width": "100%",
+      }
+    }
+  >
+    <ExpandTransition
+      enterDelay={0}
+      loading={false}
+      open={true}
+      transitionDelay={0}
+      transitionDuration={450}
+    >
+      <div
+        style={
+          Object {
+            "margin": "0 16px",
+            "overflow": "hidden",
+          }
+        }
+      >
+        <div>
+          <div>
+            Placeholder for add new publication
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "none",
+              "marginBottom": 12,
+              "marginTop": 24,
+            }
+          }
+        >
+          <FlatButton
+            disabled={false}
+            fullWidth={false}
+            label="Back"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={false}
+            style={
+              Object {
+                "marginRight": 12,
+              }
+            }
+          />
+          <RaisedButton
+            disabled={false}
+            fullWidth={false}
+            label="Finish"
+            labelPosition="after"
+            onTouchTap={[Function]}
+            primary={true}
+            secondary={false}
+          />
+        </div>
+      </div>
+    </ExpandTransition>
+  </div>
+</div>
+`;
+
+exports[`About page snapshots tests renders simulated stepper clicks 2`] = `
+<div
+  className="layout-fill"
+>
+  <h1
+    className="page-title display-1"
+  >
+    Add a journal article
+  </h1>
+  <Stepper
+    activeStep={4}
+    connector={<pure(StepConnector) />}
+    linear={true}
+    onChange={[Function]}
+    orientation="horizontal"
+    style={
+      Object {
+        "margin": "-10px auto",
+        "padding": "0 25px",
+      }
+    }
+  >
+    <Step>
+      <StepLabel
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+          }
+        }
+      >
+        Search for your publication
+      </StepLabel>
+    </Step>
+    <Step>
+      <StepLabel
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+          }
+        }
+      >
+        Search results
+      </StepLabel>
+    </Step>
+    <Step>
+      <StepLabel
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+          }
+        }
+      >
+        Claim or Add your publication
+      </StepLabel>
+    </Step>
+  </Stepper>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxWidth": "1200px",
+        "width": "100%",
+      }
+    }
+  >
+    <ExpandTransition
+      enterDelay={0}
+      loading={false}
+      open={true}
+      transitionDelay={0}
+      transitionDuration={450}
+    >
+      <div
+        style={
+          Object {
+            "margin": "0 16px",
+            "overflow": "hidden",
+          }
+        }
+      >
+        <div>
+          Error
+        </div>
+        <div
+          style={
+            Object {
+              "display": "none",
+              "marginBottom": 12,
+              "marginTop": 24,
+            }
+          }
+        >
+          <FlatButton
+            disabled={false}
+            fullWidth={false}
+            label="Back"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={false}
+            style={
+              Object {
+                "marginRight": 12,
+              }
+            }
+          />
+          <RaisedButton
+            disabled={false}
+            fullWidth={false}
+            label="Next"
+            labelPosition="after"
+            onTouchTap={[Function]}
+            primary={true}
+            secondary={false}
+          />
+        </div>
+      </div>
+    </ExpandTransition>
+  </div>
+</div>
+`;

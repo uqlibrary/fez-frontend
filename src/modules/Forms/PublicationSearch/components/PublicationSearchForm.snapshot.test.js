@@ -12,7 +12,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 
-function shallowSetup() {
+function setup() {
     const props = {
         helpTitle: 'Help Title',
         helpText: 'Lorem Ipsum',
@@ -26,7 +26,7 @@ function shallowSetup() {
 
 describe('Publication search form snapshots tests', () => {
     it('renders default publication search form page', () => {
-        const app = shallowSetup();
+        const app = setup();
         const tree = toJson(app);
         expect(tree).toMatchSnapshot();
     });

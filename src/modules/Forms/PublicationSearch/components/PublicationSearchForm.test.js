@@ -2,7 +2,6 @@ jest.dontMock('./PublicationSearchForm');
 
 import React from 'react';
 import {mount} from 'enzyme';
-import toJson from 'enzyme-to-json';
 
 import {reduxForm} from 'redux-form';
 import {reducer as formReducer} from 'redux-form';
