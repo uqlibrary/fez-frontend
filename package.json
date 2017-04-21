@@ -44,7 +44,6 @@
     "selenium-server": "^3.1.0",
     "sinon": "^2.1.0",
     "style-loader": "^0.16.0",
-    "uqlibrary-react-toolbox": "uqlibrary/uqlibrary-react-toolbox#master",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.2"
   },
@@ -73,7 +72,8 @@
     "redux-form": "^6.6.0",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "timezones.json": "^1.2.0"
+    "timezones.json": "^1.2.0",
+    "uqlibrary-react-toolbox": "0.0.10"
   },
   "scripts": {
     "start": "webpack-dev-server",
@@ -95,9 +95,6 @@
     "testMatch": [
       "**/?(*.)(test).js?(x)"
     ],
-    "transformIgnorePatterns": [
-      "<rootDir>/node_modules/?!(uqlibrary-react-toolbox)"
-    ],
     "transform": {
       ".*": "<rootDir>/node_modules/babel-jest"
     },
@@ -114,6 +111,9 @@
     "moduleNameMapper": {
       "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
       "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
-    }
+    },
+    "transformIgnorePatterns": [
+      "<roodDir>/node_modules/(?!uqlibrary-react-toolbox)"
+    ]
   }
 }

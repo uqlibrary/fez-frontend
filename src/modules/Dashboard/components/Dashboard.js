@@ -1,4 +1,5 @@
 import React from 'react';
+import {PropTypes} from 'prop-types';
 
 import TimeDisplay from './TimeDisplay';
 import './Dashboard.scss';
@@ -6,7 +7,7 @@ import './Dashboard.scss';
 
 class Dashboard extends React.Component {
     static propTypes = {
-        account: React.PropTypes.object.isRequired
+        account: PropTypes.object.isRequired
     };
 
     componentDidMount() {

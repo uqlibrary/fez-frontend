@@ -5,7 +5,6 @@ import {reducer as formReducer} from 'redux-form/immutable';
 import {appReducer} from 'modules/App';
 import {reducer as dashboardReducer} from 'modules/Dashboard';
 import {helpDrawerReducer} from 'uqlibrary-react-toolbox';
-
 import {publicationSearchReducer} from 'modules/Forms';
 
 const rootReducer = combineReducers({

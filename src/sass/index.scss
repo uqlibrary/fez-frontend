@@ -1,12 +1,7 @@
 // Vendor
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-
-// Imports
-@import 'table';
-@import 'typography';
-@import 'variables';
-
-@import 'flexum/index.scss';
+@import '~uqlibrary-react-toolbox/sass/index';
+@import '~uqlibrary-react-toolbox/sass/components';
 
 html, body {
   padding: 0;
