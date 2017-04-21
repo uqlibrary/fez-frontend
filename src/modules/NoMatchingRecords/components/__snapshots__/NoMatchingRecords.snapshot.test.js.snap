@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`No matching record component snapshots tests renders default no matching record component 1`] = `
+<Card
+  className="layout-card"
+  expandable={false}
+  expanded={null}
+  initiallyExpanded={false}
+>
+  <CardHeader
+    avatar={null}
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="flex-100"
+      >
+        <h2
+          className="headline"
+        >
+          No Records
+        </h2>
+      </div>
+    </div>
+  </CardHeader>
+  <CardText
+    className="body-1"
+  >
+    <p>
+       Lorem ipsum
+    </p>
+    <div
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+    >
+      <FlatButton
+        disabled={false}
+        fullWidth={false}
+        label="Search again?"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+        style={
+          Object {
+            "marginRight": 12,
+          }
+        }
+      />
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Add new publication"
+        labelPosition="after"
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </CardText>
+</Card>
+`;
