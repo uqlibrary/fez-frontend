@@ -61,7 +61,6 @@ const analytics = () => next => action => {
         eventCategory: action.type
     };
 
-
     if (action.type && action.type.indexOf('LOCATION_CHANGE') > -1)
         ga('send', 'pageview', {page: action.payload.location.pathname});
     else

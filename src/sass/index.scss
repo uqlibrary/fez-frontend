@@ -1,12 +1,15 @@
 // Vendor
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import '~uqlibrary-react-toolbox/sass/index';
+@import '~uqlibrary-react-toolbox/sass/components';
 
-// Imports
-@import 'table';
-@import 'typography';
-@import 'variables';
+// Imports these to be removed all css classes used in the app to be updated to use Bulma
 
-@import 'flexum/index.scss';
+//@import 'table';
+//@import 'typography';
+//@import 'variables';
+
+//@import 'flexum/index.scss';
 
 html, body {
   padding: 0;

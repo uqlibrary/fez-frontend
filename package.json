@@ -38,7 +38,6 @@
     "sass-loader": "^6.0.3",
     "selenium-server": "^3.1.0",
     "style-loader": "^0.16.0",
-    "uqlibrary-react-toolbox": "uqlibrary/uqlibrary-react-toolbox#master",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.2"
   },
@@ -52,6 +51,7 @@
     "material-ui-chip-input": "^0.13.1",
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.11",
+    "prop-types": "^15.5.7",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-hot-loader": "^3.0.0-beta.6",
@@ -65,7 +65,8 @@
     "redux-form": "^6.6.0",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "timezones.json": "^1.2.0"
+    "timezones.json": "^1.2.0",
+    "uqlibrary-react-toolbox": "0.0.10"
   },
   "scripts": {
     "start": "webpack-dev-server",
@@ -101,6 +102,9 @@
     "collectCoverage": true,
     "moduleNameMapper": {
       "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js"
-    }
+    },
+    "transformIgnorePatterns": [
+      "<roodDir>/node_modules/(?!uqlibrary-react-toolbox)"
+    ]
   }
 }

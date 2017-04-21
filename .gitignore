@@ -1,7 +1,7 @@
 .idea
 node_modules
 dist
-npm-debug.log
+npm-debug.log*
 
 e2eTestLog
 chromedriver.log
