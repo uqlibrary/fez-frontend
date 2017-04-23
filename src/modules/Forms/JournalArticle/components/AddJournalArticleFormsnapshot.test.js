@@ -4,12 +4,10 @@ import React from 'react';
 import {mount} from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import {reduxForm} from 'redux-form';
-import {reducer as formReducer} from 'redux-form';
-import {createStore, combineReducers} from 'redux';
+import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import Immutable from 'immutable';
-import {authorsReducer} from 'uqlibrary-react-toolbox';
+import {Authors} from 'uqlibrary-react-toolbox';
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
@@ -21,12 +19,34 @@ injectTapEventPlugin();
 
 let app;
 
-describe('Add journal form integration tests', () => {
-    beforeEach(() => {
-        const store = createStore(combineReducers({form: formReducer, authors: authorsReducer}));
+// http://engineering.pivotal.io/post/stub-dont-shallow-render-your-child-components/
+const lifecycleMethods = [
+    'render',
+    'componentWillMount',
+    'componentDidMount',
+    'componentWillReceiveProps',
+    'shouldComponentUpdate',
+    'componentWillUpdate',
+    'componentDidUpdate',
+    'componentWillUnmount'
+];
 
+const stubComponent = (componentClass) => {
+    beforeEach(() => {
+        for (const value of lifecycleMethods) {
+            if (typeof componentClass.prototype[value] !== 'undefined') {
+                spyOn(componentClass.prototype, value).and.returnValue(null);
+            }
+        }
+    });
+};
+
+
+describe('Add journal form integration tests', () => {
+    stubComponent(Authors);
+    beforeEach(() => {
+        const store = createStore(jest.fn());
         const muiTheme = getMuiTheme();
-        const Decorated = reduxForm({ form: 'testForm' })(AddJournalArticleForm);
 
         const publicationSubTypes = [
             {'id': 1, 'label': 'Article (original research)'},
@@ -47,7 +67,7 @@ describe('Add journal form integration tests', () => {
             {'id': 177, 'name': 'Author 11'}
         ];
 
-
+        // adding these props allows the snapshot to cover a larger amount fields
         const props = {
             types: Immutable.fromJS(publicationSubTypes),
             listOfAuthors: Immutable.fromJS(authors),
@@ -57,7 +77,7 @@ describe('Add journal form integration tests', () => {
 
         app = mount(
             <Provider store={store}>
-                <Decorated {...props} />
+                <AddJournalArticleForm {...props} />
             </Provider>,
             { context: {muiTheme},
                 childContextTypes: {muiTheme: React.PropTypes.object}}
@@ -65,8 +85,6 @@ describe('Add journal form integration tests', () => {
     });
 
     it('renders default add journal form', () => {
-        const tree = toJson(app);
-        expect(tree).toMatchSnapshot();
+        expect(toJson(app)).toMatchSnapshot();
     });
-
 });
