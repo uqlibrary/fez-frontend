@@ -1015,7 +1015,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       >
                                         <TextFieldLabel
                                           disabled={false}
-                                          htmlFor="journalTitle-undefined-Journaltitle-39118"
+                                          htmlFor="journalTitle-undefined-Journaltitle-27296"
                                           muiTheme={
                                             Object {
                                               "appBar": Object {
@@ -1441,7 +1441,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           }
                                         >
                                           <label
-                                            htmlFor="journalTitle-undefined-Journaltitle-39118"
+                                            htmlFor="journalTitle-undefined-Journaltitle-27296"
                                             style={
                                               Object {
                                                 "color": "rgba(0, 0, 0, 0.3)",
@@ -1463,7 +1463,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         </TextFieldLabel>
                                         <input
                                           disabled={false}
-                                          id="journalTitle-undefined-Journaltitle-39118"
+                                          id="journalTitle-undefined-Journaltitle-27296"
                                           name="journalTitle"
                                           onBlur={[Function]}
                                           onChange={[Function]}
@@ -2332,7 +2332,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="journalName-undefined-Journalname-64896"
+                                            htmlFor="journalName-undefined-Journalname-21681"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -2758,7 +2758,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="journalName-undefined-Journalname-64896"
+                                              htmlFor="journalName-undefined-Journalname-21681"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -2780,7 +2780,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="journalName-undefined-Journalname-64896"
+                                            id="journalName-undefined-Journalname-21681"
                                             name="journalName"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -3348,7 +3348,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                   >
                                     <TextFieldLabel
                                       disabled={false}
-                                      htmlFor="undefined-undefined-JournalPublishDate-40812"
+                                      htmlFor="undefined-undefined-JournalPublishDate-45427"
                                       muiTheme={
                                         Object {
                                           "appBar": Object {
@@ -3774,7 +3774,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       }
                                     >
                                       <label
-                                        htmlFor="undefined-undefined-JournalPublishDate-40812"
+                                        htmlFor="undefined-undefined-JournalPublishDate-45427"
                                         style={
                                           Object {
                                             "color": "rgba(0, 0, 0, 0.3)",
@@ -3796,7 +3796,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     </TextFieldLabel>
                                     <input
                                       disabled={false}
-                                      id="undefined-undefined-JournalPublishDate-40812"
+                                      id="undefined-undefined-JournalPublishDate-45427"
                                       onBlur={[Function]}
                                       onChange={[Function]}
                                       onFocus={[Function]}
@@ -4393,7 +4393,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                               >
                                 <TextFieldLabel
                                   disabled={false}
-                                  htmlFor="undefined-undefined-Selectapublicationtype-1861"
+                                  htmlFor="undefined-undefined-Selectapublicationtype-13783"
                                   muiTheme={
                                     Object {
                                       "appBar": Object {
@@ -4819,7 +4819,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                   }
                                 >
                                   <label
-                                    htmlFor="undefined-undefined-Selectapublicationtype-1861"
+                                    htmlFor="undefined-undefined-Selectapublicationtype-13783"
                                     style={
                                       Object {
                                         "color": "rgba(0, 0, 0, 0.3)",
@@ -4856,7 +4856,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "top": 8,
                                     }
                                   }
-                                  id="undefined-undefined-Selectapublicationtype-1861"
+                                  id="undefined-undefined-Selectapublicationtype-13783"
                                   labelStyle={
                                     Object {
                                       "paddingLeft": 0,
@@ -4895,7 +4895,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                   value={1}
                                 >
                                   <div
-                                    id="undefined-undefined-Selectapublicationtype-1861"
+                                    id="undefined-undefined-Selectapublicationtype-13783"
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
@@ -6738,7 +6738,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationVolume-undefined-Volume-29994"
+                                            htmlFor="publicationVolume-undefined-Volume-23503"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -7164,7 +7164,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationVolume-undefined-Volume-29994"
+                                              htmlFor="publicationVolume-undefined-Volume-23503"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -7186,7 +7186,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="publicationVolume-undefined-Volume-29994"
+                                            id="publicationVolume-undefined-Volume-23503"
                                             name="publicationVolume"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -8052,7 +8052,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationIssue-undefined-Issue-26839"
+                                            htmlFor="publicationIssue-undefined-Issue-64946"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -8478,7 +8478,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationIssue-undefined-Issue-26839"
+                                              htmlFor="publicationIssue-undefined-Issue-64946"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -8500,7 +8500,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="publicationIssue-undefined-Issue-26839"
+                                            id="publicationIssue-undefined-Issue-64946"
                                             name="publicationIssue"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -9370,7 +9370,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationStartPage-undefined-Startpage-5006"
+                                            htmlFor="publicationStartPage-undefined-Startpage-62745"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -9796,7 +9796,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationStartPage-undefined-Startpage-5006"
+                                              htmlFor="publicationStartPage-undefined-Startpage-62745"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -9818,7 +9818,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="publicationStartPage-undefined-Startpage-5006"
+                                            id="publicationStartPage-undefined-Startpage-62745"
                                             name="publicationStartPage"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -10684,7 +10684,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationEndPage-undefined-Endpage-26167"
+                                            htmlFor="publicationEndPage-undefined-Endpage-25983"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -11110,7 +11110,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationEndPage-undefined-Endpage-26167"
+                                              htmlFor="publicationEndPage-undefined-Endpage-25983"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -11132,7 +11132,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="publicationEndPage-undefined-Endpage-26167"
+                                            id="publicationEndPage-undefined-Endpage-25983"
                                             name="publicationEndPage"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -12010,7 +12010,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationNotes-undefined-Notesnotpublicallyviewable-56852"
+                                            htmlFor="publicationNotes-undefined-Notesnotpublicallyviewable-50196"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -12436,7 +12436,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationNotes-undefined-Notesnotpublicallyviewable-56852"
+                                              htmlFor="publicationNotes-undefined-Notesnotpublicallyviewable-50196"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -12458,7 +12458,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <EnhancedTextarea
                                             disabled={false}
-                                            id="publicationNotes-undefined-Notesnotpublicallyviewable-56852"
+                                            id="publicationNotes-undefined-Notesnotpublicallyviewable-50196"
                                             name="publicationNotes"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -12557,7 +12557,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                               />
                                               <textarea
                                                 disabled={false}
-                                                id="publicationNotes-undefined-Notesnotpublicallyviewable-56852"
+                                                id="publicationNotes-undefined-Notesnotpublicallyviewable-50196"
                                                 name="publicationNotes"
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
@@ -13950,7 +13950,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="filesUpload-undefined-Filenameselected-3838"
+                                            htmlFor="filesUpload-undefined-Filenameselected-3301"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -14376,7 +14376,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="filesUpload-undefined-Filenameselected-3838"
+                                              htmlFor="filesUpload-undefined-Filenameselected-3301"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -14398,7 +14398,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="filesUpload-undefined-Filenameselected-3838"
+                                            id="filesUpload-undefined-Filenameselected-3301"
                                             name="filesUpload"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -15300,7 +15300,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="filesAccessConditions-undefined-Accessconditions-21515"
+                                            htmlFor="filesAccessConditions-undefined-Accessconditions-36073"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -15726,7 +15726,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="filesAccessConditions-undefined-Accessconditions-21515"
+                                              htmlFor="filesAccessConditions-undefined-Accessconditions-36073"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -15748,7 +15748,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="filesAccessConditions-undefined-Accessconditions-21515"
+                                            id="filesAccessConditions-undefined-Accessconditions-36073"
                                             name="filesAccessConditions"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -16316,7 +16316,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                   >
                                     <TextFieldLabel
                                       disabled={false}
-                                      htmlFor="undefined-undefined-Embargodate-47443"
+                                      htmlFor="undefined-undefined-Embargodate-52060"
                                       muiTheme={
                                         Object {
                                           "appBar": Object {
@@ -16742,7 +16742,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       }
                                     >
                                       <label
-                                        htmlFor="undefined-undefined-Embargodate-47443"
+                                        htmlFor="undefined-undefined-Embargodate-52060"
                                         style={
                                           Object {
                                             "color": "rgba(0, 0, 0, 0.3)",
@@ -16764,7 +16764,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     </TextFieldLabel>
                                     <input
                                       disabled={false}
-                                      id="undefined-undefined-Embargodate-47443"
+                                      id="undefined-undefined-Embargodate-52060"
                                       onBlur={[Function]}
                                       onChange={[Function]}
                                       onFocus={[Function]}
@@ -17686,7 +17686,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="filesDescription-undefined-Description-49602"
+                                            htmlFor="filesDescription-undefined-Description-21960"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -18112,7 +18112,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="filesDescription-undefined-Description-49602"
+                                              htmlFor="filesDescription-undefined-Description-21960"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -18134,7 +18134,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <EnhancedTextarea
                                             disabled={false}
-                                            id="filesDescription-undefined-Description-49602"
+                                            id="filesDescription-undefined-Description-21960"
                                             name="filesDescription"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -18233,7 +18233,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                               />
                                               <textarea
                                                 disabled={false}
-                                                id="filesDescription-undefined-Description-49602"
+                                                id="filesDescription-undefined-Description-21960"
                                                 name="filesDescription"
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
