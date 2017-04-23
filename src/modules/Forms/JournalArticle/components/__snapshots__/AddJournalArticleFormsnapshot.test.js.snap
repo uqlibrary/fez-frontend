@@ -13,26 +13,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
   }
 >
   <ReduxForm
-    listOfAuthors={
-      Array [
-        Object {
-          "id": 202,
-          "name": "Author 8",
-        },
-        Object {
-          "id": 263,
-          "name": "Author 9",
-        },
-        Object {
-          "id": 174,
-          "name": "Author 10",
-        },
-        Object {
-          "id": 177,
-          "name": "Author 11",
-        },
-      ]
-    }
     loadAuthorData={[Function]}
     loadPublicationSubTypes={[Function]}
     types={
@@ -83,26 +63,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
       form="addJournalArticle"
       getFormState={[Function]}
       keepDirtyOnReinitialize={false}
-      listOfAuthors={
-        Array [
-          Object {
-            "id": 202,
-            "name": "Author 8",
-          },
-          Object {
-            "id": 263,
-            "name": "Author 9",
-          },
-          Object {
-            "id": 174,
-            "name": "Author 10",
-          },
-          Object {
-            "id": 177,
-            "name": "Author 11",
-          },
-        ]
-      }
       loadAuthorData={[Function]}
       loadPublicationSubTypes={[Function]}
       persistentSubmitErrors={false}
@@ -198,26 +158,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
         initialized={false}
         invalid={false}
         keepDirtyOnReinitialize={false}
-        listOfAuthors={
-          Array [
-            Object {
-              "id": 202,
-              "name": "Author 8",
-            },
-            Object {
-              "id": 263,
-              "name": "Author 9",
-            },
-            Object {
-              "id": 174,
-              "name": "Author 10",
-            },
-            Object {
-              "id": 177,
-              "name": "Author 11",
-            },
-          ]
-        }
         loadAuthorData={[Function]}
         loadPublicationSubTypes={[Function]}
         persistentSubmitErrors={false}
@@ -322,26 +262,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
           initialize={[Function]}
           initialized={false}
           invalid={false}
-          listOfAuthors={
-            Array [
-              Object {
-                "id": 202,
-                "name": "Author 8",
-              },
-              Object {
-                "id": 263,
-                "name": "Author 9",
-              },
-              Object {
-                "id": 174,
-                "name": "Author 10",
-              },
-              Object {
-                "id": 177,
-                "name": "Author 11",
-              },
-            ]
-          }
           loadAuthorData={[Function]}
           loadPublicationSubTypes={[Function]}
           pristine={true}
@@ -791,24 +711,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                   "initialized": false,
                                   "invalid": false,
                                   "keepDirtyOnReinitialize": false,
-                                  "listOfAuthors": Array [
-                                    Object {
-                                      "id": 202,
-                                      "name": "Author 8",
-                                    },
-                                    Object {
-                                      "id": 263,
-                                      "name": "Author 9",
-                                    },
-                                    Object {
-                                      "id": 174,
-                                      "name": "Author 10",
-                                    },
-                                    Object {
-                                      "id": 177,
-                                      "name": "Author 11",
-                                    },
-                                  ],
                                   "loadAuthorData": [Function],
                                   "loadPublicationSubTypes": [Function],
                                   "persistentSubmitErrors": false,
@@ -945,24 +847,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -1131,7 +1015,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       >
                                         <TextFieldLabel
                                           disabled={false}
-                                          htmlFor="journalTitle-undefined-Journaltitle-20169"
+                                          htmlFor="journalTitle-undefined-Journaltitle-39118"
                                           muiTheme={
                                             Object {
                                               "appBar": Object {
@@ -1557,7 +1441,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           }
                                         >
                                           <label
-                                            htmlFor="journalTitle-undefined-Journaltitle-20169"
+                                            htmlFor="journalTitle-undefined-Journaltitle-39118"
                                             style={
                                               Object {
                                                 "color": "rgba(0, 0, 0, 0.3)",
@@ -1579,7 +1463,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         </TextFieldLabel>
                                         <input
                                           disabled={false}
-                                          id="journalTitle-undefined-Journaltitle-20169"
+                                          id="journalTitle-undefined-Journaltitle-39118"
                                           name="journalTitle"
                                           onBlur={[Function]}
                                           onChange={[Function]}
@@ -2144,24 +2028,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -2298,24 +2164,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "initialized": false,
                                       "invalid": false,
                                       "keepDirtyOnReinitialize": false,
-                                      "listOfAuthors": Array [
-                                        Object {
-                                          "id": 202,
-                                          "name": "Author 8",
-                                        },
-                                        Object {
-                                          "id": 263,
-                                          "name": "Author 9",
-                                        },
-                                        Object {
-                                          "id": 174,
-                                          "name": "Author 10",
-                                        },
-                                        Object {
-                                          "id": 177,
-                                          "name": "Author 11",
-                                        },
-                                      ],
                                       "loadAuthorData": [Function],
                                       "loadPublicationSubTypes": [Function],
                                       "persistentSubmitErrors": false,
@@ -2484,7 +2332,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="journalName-undefined-Journalname-7388"
+                                            htmlFor="journalName-undefined-Journalname-64896"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -2910,7 +2758,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="journalName-undefined-Journalname-7388"
+                                              htmlFor="journalName-undefined-Journalname-64896"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -2932,7 +2780,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="journalName-undefined-Journalname-7388"
+                                            id="journalName-undefined-Journalname-64896"
                                             name="journalName"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -3500,7 +3348,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                   >
                                     <TextFieldLabel
                                       disabled={false}
-                                      htmlFor="undefined-undefined-JournalPublishDate-16443"
+                                      htmlFor="undefined-undefined-JournalPublishDate-40812"
                                       muiTheme={
                                         Object {
                                           "appBar": Object {
@@ -3926,7 +3774,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       }
                                     >
                                       <label
-                                        htmlFor="undefined-undefined-JournalPublishDate-16443"
+                                        htmlFor="undefined-undefined-JournalPublishDate-40812"
                                         style={
                                           Object {
                                             "color": "rgba(0, 0, 0, 0.3)",
@@ -3948,7 +3796,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     </TextFieldLabel>
                                     <input
                                       disabled={false}
-                                      id="undefined-undefined-JournalPublishDate-16443"
+                                      id="undefined-undefined-JournalPublishDate-40812"
                                       onBlur={[Function]}
                                       onChange={[Function]}
                                       onFocus={[Function]}
@@ -4545,7 +4393,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                               >
                                 <TextFieldLabel
                                   disabled={false}
-                                  htmlFor="undefined-undefined-Selectapublicationtype-29493"
+                                  htmlFor="undefined-undefined-Selectapublicationtype-1861"
                                   muiTheme={
                                     Object {
                                       "appBar": Object {
@@ -4971,7 +4819,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                   }
                                 >
                                   <label
-                                    htmlFor="undefined-undefined-Selectapublicationtype-29493"
+                                    htmlFor="undefined-undefined-Selectapublicationtype-1861"
                                     style={
                                       Object {
                                         "color": "rgba(0, 0, 0, 0.3)",
@@ -5008,7 +4856,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "top": 8,
                                     }
                                   }
-                                  id="undefined-undefined-Selectapublicationtype-29493"
+                                  id="undefined-undefined-Selectapublicationtype-1861"
                                   labelStyle={
                                     Object {
                                       "paddingLeft": 0,
@@ -5047,7 +4895,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                   value={1}
                                 >
                                   <div
-                                    id="undefined-undefined-Selectapublicationtype-29493"
+                                    id="undefined-undefined-Selectapublicationtype-1861"
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
@@ -6186,26 +6034,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                         }
                       >
                         <Connect(ReduxForm)
-                          dataSource={
-                            Array [
-                              Object {
-                                "id": 202,
-                                "name": "Author 8",
-                              },
-                              Object {
-                                "id": 263,
-                                "name": "Author 9",
-                              },
-                              Object {
-                                "id": 174,
-                                "name": "Author 10",
-                              },
-                              Object {
-                                "id": 177,
-                                "name": "Author 11",
-                              },
-                            ]
-                          }
                           form="addJournalArticle"
                         />
                       </div>
@@ -6606,24 +6434,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -6760,24 +6570,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "initialized": false,
                                       "invalid": false,
                                       "keepDirtyOnReinitialize": false,
-                                      "listOfAuthors": Array [
-                                        Object {
-                                          "id": 202,
-                                          "name": "Author 8",
-                                        },
-                                        Object {
-                                          "id": 263,
-                                          "name": "Author 9",
-                                        },
-                                        Object {
-                                          "id": 174,
-                                          "name": "Author 10",
-                                        },
-                                        Object {
-                                          "id": 177,
-                                          "name": "Author 11",
-                                        },
-                                      ],
                                       "loadAuthorData": [Function],
                                       "loadPublicationSubTypes": [Function],
                                       "persistentSubmitErrors": false,
@@ -6946,7 +6738,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationVolume-undefined-Volume-29876"
+                                            htmlFor="publicationVolume-undefined-Volume-29994"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -7372,7 +7164,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationVolume-undefined-Volume-29876"
+                                              htmlFor="publicationVolume-undefined-Volume-29994"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -7394,7 +7186,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="publicationVolume-undefined-Volume-29876"
+                                            id="publicationVolume-undefined-Volume-29994"
                                             name="publicationVolume"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -7956,24 +7748,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -8110,24 +7884,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "initialized": false,
                                       "invalid": false,
                                       "keepDirtyOnReinitialize": false,
-                                      "listOfAuthors": Array [
-                                        Object {
-                                          "id": 202,
-                                          "name": "Author 8",
-                                        },
-                                        Object {
-                                          "id": 263,
-                                          "name": "Author 9",
-                                        },
-                                        Object {
-                                          "id": 174,
-                                          "name": "Author 10",
-                                        },
-                                        Object {
-                                          "id": 177,
-                                          "name": "Author 11",
-                                        },
-                                      ],
                                       "loadAuthorData": [Function],
                                       "loadPublicationSubTypes": [Function],
                                       "persistentSubmitErrors": false,
@@ -8296,7 +8052,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationIssue-undefined-Issue-10318"
+                                            htmlFor="publicationIssue-undefined-Issue-26839"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -8722,7 +8478,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationIssue-undefined-Issue-10318"
+                                              htmlFor="publicationIssue-undefined-Issue-26839"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -8744,7 +8500,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="publicationIssue-undefined-Issue-10318"
+                                            id="publicationIssue-undefined-Issue-26839"
                                             name="publicationIssue"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -9310,24 +9066,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -9464,24 +9202,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "initialized": false,
                                       "invalid": false,
                                       "keepDirtyOnReinitialize": false,
-                                      "listOfAuthors": Array [
-                                        Object {
-                                          "id": 202,
-                                          "name": "Author 8",
-                                        },
-                                        Object {
-                                          "id": 263,
-                                          "name": "Author 9",
-                                        },
-                                        Object {
-                                          "id": 174,
-                                          "name": "Author 10",
-                                        },
-                                        Object {
-                                          "id": 177,
-                                          "name": "Author 11",
-                                        },
-                                      ],
                                       "loadAuthorData": [Function],
                                       "loadPublicationSubTypes": [Function],
                                       "persistentSubmitErrors": false,
@@ -9650,7 +9370,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationStartPage-undefined-Startpage-23585"
+                                            htmlFor="publicationStartPage-undefined-Startpage-5006"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -10076,7 +9796,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationStartPage-undefined-Startpage-23585"
+                                              htmlFor="publicationStartPage-undefined-Startpage-5006"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -10098,7 +9818,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="publicationStartPage-undefined-Startpage-23585"
+                                            id="publicationStartPage-undefined-Startpage-5006"
                                             name="publicationStartPage"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -10660,24 +10380,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -10814,24 +10516,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "initialized": false,
                                       "invalid": false,
                                       "keepDirtyOnReinitialize": false,
-                                      "listOfAuthors": Array [
-                                        Object {
-                                          "id": 202,
-                                          "name": "Author 8",
-                                        },
-                                        Object {
-                                          "id": 263,
-                                          "name": "Author 9",
-                                        },
-                                        Object {
-                                          "id": 174,
-                                          "name": "Author 10",
-                                        },
-                                        Object {
-                                          "id": 177,
-                                          "name": "Author 11",
-                                        },
-                                      ],
                                       "loadAuthorData": [Function],
                                       "loadPublicationSubTypes": [Function],
                                       "persistentSubmitErrors": false,
@@ -11000,7 +10684,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationEndPage-undefined-Endpage-62130"
+                                            htmlFor="publicationEndPage-undefined-Endpage-26167"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -11426,7 +11110,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationEndPage-undefined-Endpage-62130"
+                                              htmlFor="publicationEndPage-undefined-Endpage-26167"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -11448,7 +11132,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="publicationEndPage-undefined-Endpage-62130"
+                                            id="publicationEndPage-undefined-Endpage-26167"
                                             name="publicationEndPage"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -12016,24 +11700,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -12172,24 +11838,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "initialized": false,
                                       "invalid": false,
                                       "keepDirtyOnReinitialize": false,
-                                      "listOfAuthors": Array [
-                                        Object {
-                                          "id": 202,
-                                          "name": "Author 8",
-                                        },
-                                        Object {
-                                          "id": 263,
-                                          "name": "Author 9",
-                                        },
-                                        Object {
-                                          "id": 174,
-                                          "name": "Author 10",
-                                        },
-                                        Object {
-                                          "id": 177,
-                                          "name": "Author 11",
-                                        },
-                                      ],
                                       "loadAuthorData": [Function],
                                       "loadPublicationSubTypes": [Function],
                                       "persistentSubmitErrors": false,
@@ -12362,7 +12010,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="publicationNotes-undefined-Notesnotpublicallyviewable-43726"
+                                            htmlFor="publicationNotes-undefined-Notesnotpublicallyviewable-56852"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -12788,7 +12436,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="publicationNotes-undefined-Notesnotpublicallyviewable-43726"
+                                              htmlFor="publicationNotes-undefined-Notesnotpublicallyviewable-56852"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -12810,7 +12458,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <EnhancedTextarea
                                             disabled={false}
-                                            id="publicationNotes-undefined-Notesnotpublicallyviewable-43726"
+                                            id="publicationNotes-undefined-Notesnotpublicallyviewable-56852"
                                             name="publicationNotes"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -12909,7 +12557,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                               />
                                               <textarea
                                                 disabled={false}
-                                                id="publicationNotes-undefined-Notesnotpublicallyviewable-43726"
+                                                id="publicationNotes-undefined-Notesnotpublicallyviewable-56852"
                                                 name="publicationNotes"
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
@@ -13998,24 +13646,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -14152,24 +13782,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "initialized": false,
                                       "invalid": false,
                                       "keepDirtyOnReinitialize": false,
-                                      "listOfAuthors": Array [
-                                        Object {
-                                          "id": 202,
-                                          "name": "Author 8",
-                                        },
-                                        Object {
-                                          "id": 263,
-                                          "name": "Author 9",
-                                        },
-                                        Object {
-                                          "id": 174,
-                                          "name": "Author 10",
-                                        },
-                                        Object {
-                                          "id": 177,
-                                          "name": "Author 11",
-                                        },
-                                      ],
                                       "loadAuthorData": [Function],
                                       "loadPublicationSubTypes": [Function],
                                       "persistentSubmitErrors": false,
@@ -14338,7 +13950,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="filesUpload-undefined-Filenameselected-18973"
+                                            htmlFor="filesUpload-undefined-Filenameselected-3838"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -14764,7 +14376,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="filesUpload-undefined-Filenameselected-18973"
+                                              htmlFor="filesUpload-undefined-Filenameselected-3838"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -14786,7 +14398,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="filesUpload-undefined-Filenameselected-18973"
+                                            id="filesUpload-undefined-Filenameselected-3838"
                                             name="filesUpload"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -15384,24 +14996,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -15538,24 +15132,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "initialized": false,
                                       "invalid": false,
                                       "keepDirtyOnReinitialize": false,
-                                      "listOfAuthors": Array [
-                                        Object {
-                                          "id": 202,
-                                          "name": "Author 8",
-                                        },
-                                        Object {
-                                          "id": 263,
-                                          "name": "Author 9",
-                                        },
-                                        Object {
-                                          "id": 174,
-                                          "name": "Author 10",
-                                        },
-                                        Object {
-                                          "id": 177,
-                                          "name": "Author 11",
-                                        },
-                                      ],
                                       "loadAuthorData": [Function],
                                       "loadPublicationSubTypes": [Function],
                                       "persistentSubmitErrors": false,
@@ -15724,7 +15300,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="filesAccessConditions-undefined-Accessconditions-13324"
+                                            htmlFor="filesAccessConditions-undefined-Accessconditions-21515"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -16150,7 +15726,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="filesAccessConditions-undefined-Accessconditions-13324"
+                                              htmlFor="filesAccessConditions-undefined-Accessconditions-21515"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -16172,7 +15748,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <input
                                             disabled={false}
-                                            id="filesAccessConditions-undefined-Accessconditions-13324"
+                                            id="filesAccessConditions-undefined-Accessconditions-21515"
                                             name="filesAccessConditions"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -16740,7 +16316,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                   >
                                     <TextFieldLabel
                                       disabled={false}
-                                      htmlFor="undefined-undefined-Embargodate-42622"
+                                      htmlFor="undefined-undefined-Embargodate-47443"
                                       muiTheme={
                                         Object {
                                           "appBar": Object {
@@ -17166,7 +16742,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       }
                                     >
                                       <label
-                                        htmlFor="undefined-undefined-Embargodate-42622"
+                                        htmlFor="undefined-undefined-Embargodate-47443"
                                         style={
                                           Object {
                                             "color": "rgba(0, 0, 0, 0.3)",
@@ -17188,7 +16764,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     </TextFieldLabel>
                                     <input
                                       disabled={false}
-                                      id="undefined-undefined-Embargodate-42622"
+                                      id="undefined-undefined-Embargodate-47443"
                                       onBlur={[Function]}
                                       onChange={[Function]}
                                       onFocus={[Function]}
@@ -17800,24 +17376,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                     "initialized": false,
                                     "invalid": false,
                                     "keepDirtyOnReinitialize": false,
-                                    "listOfAuthors": Array [
-                                      Object {
-                                        "id": 202,
-                                        "name": "Author 8",
-                                      },
-                                      Object {
-                                        "id": 263,
-                                        "name": "Author 9",
-                                      },
-                                      Object {
-                                        "id": 174,
-                                        "name": "Author 10",
-                                      },
-                                      Object {
-                                        "id": 177,
-                                        "name": "Author 11",
-                                      },
-                                    ],
                                     "loadAuthorData": [Function],
                                     "loadPublicationSubTypes": [Function],
                                     "persistentSubmitErrors": false,
@@ -17956,24 +17514,6 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                       "initialized": false,
                                       "invalid": false,
                                       "keepDirtyOnReinitialize": false,
-                                      "listOfAuthors": Array [
-                                        Object {
-                                          "id": 202,
-                                          "name": "Author 8",
-                                        },
-                                        Object {
-                                          "id": 263,
-                                          "name": "Author 9",
-                                        },
-                                        Object {
-                                          "id": 174,
-                                          "name": "Author 10",
-                                        },
-                                        Object {
-                                          "id": 177,
-                                          "name": "Author 11",
-                                        },
-                                      ],
                                       "loadAuthorData": [Function],
                                       "loadPublicationSubTypes": [Function],
                                       "persistentSubmitErrors": false,
@@ -18146,7 +17686,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                         >
                                           <TextFieldLabel
                                             disabled={false}
-                                            htmlFor="filesDescription-undefined-Description-49655"
+                                            htmlFor="filesDescription-undefined-Description-49602"
                                             muiTheme={
                                               Object {
                                                 "appBar": Object {
@@ -18572,7 +18112,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                             }
                                           >
                                             <label
-                                              htmlFor="filesDescription-undefined-Description-49655"
+                                              htmlFor="filesDescription-undefined-Description-49602"
                                               style={
                                                 Object {
                                                   "color": "rgba(0, 0, 0, 0.3)",
@@ -18594,7 +18134,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                           </TextFieldLabel>
                                           <EnhancedTextarea
                                             disabled={false}
-                                            id="filesDescription-undefined-Description-49655"
+                                            id="filesDescription-undefined-Description-49602"
                                             name="filesDescription"
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -18693,7 +18233,7 @@ exports[`Add journal form integration tests renders default add journal form 1`]
                                               />
                                               <textarea
                                                 disabled={false}
-                                                id="filesDescription-undefined-Description-49655"
+                                                id="filesDescription-undefined-Description-49602"
                                                 name="filesDescription"
                                                 onBlur={[Function]}
                                                 onChange={[Function]}

@@ -60,17 +60,9 @@ describe('Add journal form integration tests', () => {
             {'id': 9, 'label': 'Others'}
         ];
 
-        const authors = [
-            {'id': 202, 'name': 'Author 8'},
-            {'id': 263, 'name': 'Author 9'},
-            {'id': 174, 'name': 'Author 10'},
-            {'id': 177, 'name': 'Author 11'}
-        ];
-
         // adding these props allows the snapshot to cover a larger amount fields
         const props = {
             types: Immutable.fromJS(publicationSubTypes),
-            listOfAuthors: Immutable.fromJS(authors),
             loadPublicationSubTypes: jest.fn(),
             loadAuthorData: jest.fn()
         };
@@ -82,6 +74,10 @@ describe('Add journal form integration tests', () => {
             { context: {muiTheme},
                 childContextTypes: {muiTheme: React.PropTypes.object}}
         );
+    });
+
+    afterEach(() => {
+        jest.clearAllMocks();
     });
 
     it('renders default add journal form', () => {
