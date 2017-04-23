@@ -33,9 +33,9 @@ const lifecycleMethods = [
 
 const stubComponent = (componentClass) => {
     beforeEach(() => {
-        for (const value of lifecycleMethods) {
-            if (typeof componentClass.prototype[value] !== 'undefined') {
-                spyOn(componentClass.prototype, value).and.returnValue(null);
+        for (const method of lifecycleMethods) {
+            if (typeof componentClass.prototype[method] !== 'undefined') {
+                jest.spyOn(componentClass.prototype, method).mockImplementation(() => {return null;});
             }
         }
     });
@@ -81,6 +81,7 @@ describe('Add journal form integration tests', () => {
     });
 
     it('renders default add journal form', () => {
+        app.setState({subTypeValue: 1});
         expect(toJson(app)).toMatchSnapshot();
     });
 });
