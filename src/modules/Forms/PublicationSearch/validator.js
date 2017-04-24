@@ -13,8 +13,7 @@ export const isDOIValue = value => {
 
 export const isPubMedValue = value => {
     const numbersOnlyRegex = /^[\d]*$/; // pubmed regex
-
-    return !numbersOnlyRegex.test(value) ? false : true;
+    return numbersOnlyRegex.test(value);
 };
 
 export const validate = values => {

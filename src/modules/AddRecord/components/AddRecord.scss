@@ -1,4 +1,4 @@
-@import '../../../sass/_variables';
+
 
 // Styles for the "claim a publication" panel
 .claimWrapper {
@@ -11,7 +11,7 @@
   font-size: 1.5em;
 }
 a .claimTitle {
-  color: $accent-color;
+  color: #000;
 }
 .claimTitleIcon {
   opacity: 0.5;
@@ -21,7 +21,7 @@ a .claimTitle {
 }
 a:hover .claimTitleIcon {
   opacity: 1.0;
-  color: $accent-color !important;
+  color: #000 !important;
 }
 .claimAuthors, .claimJournal {
   margin: 10px 0 5px 0;

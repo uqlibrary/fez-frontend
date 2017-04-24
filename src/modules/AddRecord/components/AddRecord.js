@@ -1,3 +1,4 @@
+/* eslint-disable*/
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
@@ -107,6 +108,11 @@ class addRecord extends React.Component {
         }
     }
 
+    resetExample = (event) => {
+        event.preventDefault();
+        this.setState({stepIndex: 0, finished: false});
+    }
+
     renderContent() {
         const {finished, stepIndex} = this.state;
         const contentStyle = {margin: '0 16px', overflow: 'hidden'};
@@ -117,10 +123,7 @@ class addRecord extends React.Component {
                     <p>
                         <FlatButton
                             label="Click here to reset the example."
-                            onClick={(event) => {
-                                event.preventDefault();
-                                this.setState({stepIndex: 0, finished: false});
-                            }} />
+                            onClick={this.resetExample} />
                     </p>
                 </div>
             );

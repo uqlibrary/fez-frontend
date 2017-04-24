@@ -44,7 +44,6 @@ export default class App extends React.Component {
 
     render() {
         const {
-            error,
             account,
             loaded,
             menuDrawerOpen,
@@ -60,7 +59,7 @@ export default class App extends React.Component {
         const components = { Browse, StaticPage, Dashboard, Research, AddRecord };
         const landingPage =  isAuthorizedUser ? Dashboard : Browse;
         const menuItems = isAuthorizedUser ? [...researcherMenuItems(locale, account.get('mail'), components), ...defaultMenuItems(locale, components)] : defaultMenuItems(locale, components);
-        console.log(error);
+
         return (
             <div className="layout-fill">
                 {!loaded ? (
