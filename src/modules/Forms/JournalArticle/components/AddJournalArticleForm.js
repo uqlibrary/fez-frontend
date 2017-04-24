@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
-import {reduxForm, Field} from 'redux-form/immutable';
+import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 
 import {HelpIcon, TextField, Authors} from 'uqlibrary-react-toolbox';
@@ -14,7 +14,7 @@ import './AddJournalArticleForm.scss';
 const formName = 'addJournalArticle';
 
 
-class AddJournalArticleForm extends Component {
+export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
         loadPublicationSubTypes: PropTypes.func,
@@ -216,9 +216,3 @@ class AddJournalArticleForm extends Component {
         );
     }
 }
-
-AddJournalArticleForm = reduxForm({
-    form: formName
-})(AddJournalArticleForm);
-
-export default AddJournalArticleForm;

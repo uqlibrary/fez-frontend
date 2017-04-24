@@ -37,7 +37,6 @@ function setup() {
 describe('Document type form integration tests', () => {
     it('renders default document type component', () => {
         const app = setup();
-        const component = app.dive().dive().dive(); // this gets us to the actual component
-        expect(toJson(component)).toMatchSnapshot();
+        expect(toJson(app)).toMatchSnapshot();
     });
 });
