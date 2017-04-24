@@ -34,7 +34,6 @@ const store = createStore(
     composeEnhancer(
         applyMiddleware(
             routerMiddleware(history),
-            analytics,
             thunk
         ),
     ),
