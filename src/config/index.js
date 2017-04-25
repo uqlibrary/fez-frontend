@@ -11,7 +11,7 @@ export {default as api} from './axios';
 export {default as theme} from './theme';
 
 export * as validation from './validation';
-export {default as helpText} from './helpText';
+export {default as locale} from './locale';
 
 export {defaultMenuItems, adminMenuItems, researcherMenuItems} from './menu';
 

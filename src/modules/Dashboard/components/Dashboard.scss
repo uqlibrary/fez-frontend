@@ -1,4 +1,4 @@
-@import '../../../sass/variables';
+@import '~uqlibrary-react-toolbox/sass/variables';
 
 .dashboard {
   .info-summary {
@@ -110,7 +110,7 @@
 
   .head {
     padding: 20px;
-    background-color: $uq-primary-color;
+    background-color: $theme-color;
 
     h2 {
       color: #FFF;
@@ -123,7 +123,7 @@
 
   .head {
     padding: 20px;
-    background-color: $uq-accent-color;
+    background-color: $accent-color;
 
     h2 {
       color: #FFF;

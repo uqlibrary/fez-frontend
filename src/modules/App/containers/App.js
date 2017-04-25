@@ -1,15 +1,10 @@
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 import App from '../components/App';
-import {
-    hideSnackbar,
-    loadAccount,
-    toggleDrawer
-} from '../actions';
+import {hideSnackbar, loadAccount, toggleDrawer} from '../actions';
 
 const AppContainer = connect(state => {
     const appState = state.get('app');
-
     return {
         error: appState.get('error'),
         account: appState.get('account'),

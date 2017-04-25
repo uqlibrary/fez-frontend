@@ -2,24 +2,24 @@
 
 import React from 'react';
 
-export const researcherMenuItems = (email, components) => [
+export const researcherMenuItems = (locale, email, components) => [
     {
         linkTo: '/dashboard',
         path: '/dashboard',
-        primaryText: 'My dashboard',
+        primaryText: locale.menu.myDashboard.primaryText,
         secondaryText: email,
         component: components.Dashboard
     },
     {
         linkTo: '/research',
         path: '/research',
-        primaryText: 'My research',
+        primaryText: locale.menu.myResearch.primaryText,
         component: components.Research
     },
     {
         linkTo: '/add-record',
         path: '/add-record',
-        primaryText: 'Add a missing record',
+        primaryText: locale.menu.addMissingRecord.primaryText,
         component: components.AddRecord
     },
     {
@@ -28,37 +28,38 @@ export const researcherMenuItems = (email, components) => [
     }
 ];
 
-export const adminMenuItems = (email, components) => [
+export const adminMenuItems = (locale, email, components) => [
     {
         linkTo: '/dashboard',
         path: '/dashboard',
-        primaryText: 'My dashboard',
+        primaryText: locale.menu.myDashboard.primaryText,
         secondaryText: email,
         component: components.Dashboard
     },
     {
         linkTo: '/',
-        primaryText: 'Manage users'
+        primaryText: locale.menu.manageUsers.primaryText
     },
     {
         linkTo: '/',
-        primaryText: 'Manage groups'
+        primaryText: locale.menu.manageGroups.primaryText
     },
     {
         linkTo: '/',
-        primaryText: 'Manage authors'
+        primaryText: locale.menu.manageAuthors.primaryText
     },
     {
         divider: true
     }
 ];
 
-export const defaultMenuItems = components => [
+export const defaultMenuItems = (locale, components) => [
     {
         linkTo: '/browse',
-        primaryText: 'Browse',
+        primaryText: locale.menu.browse.primaryText,
+        secondaryText: locale.menu.browse.secondaryText,
         path: '/browse',
-        component: components.Browse
+        render: () => components.Browse(locale.pages.browse)
     },
     {
         linkTo: '/search',
@@ -69,13 +70,14 @@ export const defaultMenuItems = components => [
     {
         linkTo: '/faqs',
         path: '/faqs',
-        primaryText: 'FAQs',
+        primaryText: locale.menu.faqs.primaryText,
         render: () => <div> eSpace FAQ coming soon ...</div>
     },
     {
         linkTo: '/about',
         path: '/about',
-        primaryText: 'About',
-        component: components.About
+        primaryText: locale.menu.about.primaryText,
+        secondaryText: locale.menu.about.secondaryText,
+        render: () => components.StaticPage(locale.pages.about)
     }
 ];

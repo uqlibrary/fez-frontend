@@ -10,12 +10,13 @@ import {AppLoader} from 'modules/Toolbox';
 import {MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
 
 import {defaultMenuItems, researcherMenuItems} from 'config';
+import {locale} from 'config';
 
 // Pages
 import {Dashboard} from 'modules/Dashboard';
 import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
-import {About} from 'modules/About';
+import {StaticPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 
 const mediaQuery = window.matchMedia('(min-width: 1600px)');
@@ -55,24 +56,23 @@ export default class App extends React.Component {
         const container = docked ? { paddingLeft: 340 } : {};
 
         const isAuthorizedUser = loaded === true && account !== null && account.get('mail');
-        const components = { Browse, About, Dashboard, Research, AddRecord };
+        const components = { Browse, StaticPage, Dashboard, Research, AddRecord };
         const landingPage =  isAuthorizedUser ? Dashboard : Browse;
-        const menuItems = isAuthorizedUser ? [...researcherMenuItems(account.get('mail'), components), ...defaultMenuItems(components)] : defaultMenuItems(components);
-
+        const menuItems = isAuthorizedUser ? [...researcherMenuItems(locale, account.get('mail'), components), ...defaultMenuItems(locale, components)] : defaultMenuItems(locale, components);
+        console.log(error);
         return (
             <div className="layout-fill">
                 {!loaded ? (
-                    <AppLoader />
-                ) : (
+                    <AppLoader title={locale.global.title} logoImage={locale.global.logo} logoText={locale.global.title} />
+                    ) : (
                     <div className="layout-fill column align-stretch">
-                        {/* TODO: application name should be configurable */}
                         {/* TODO: app bar buttons should be components */}
                         <AppBar
                             className="row align-center"
                             showMenuIconButton={!docked}
                             style={{height: 75}}
                             iconStyleLeft={{marginTop: 0}}
-                            title="UQ eSpace"
+                            title={locale.global.title}
                             titleStyle={titleStyle}
                             onLeftIconButtonTouchTap={this.toggleDrawer}
                             iconElementRight={
@@ -87,6 +87,8 @@ export default class App extends React.Component {
                         <MenuDrawer menuItems={menuItems}
                                     drawerOpen={docked ? true : menuDrawerOpen}
                                     docked={docked}
+                                    logoImage={locale.global.logo}
+                                    logoText={locale.global.title}
                                     toggleDrawer={this.toggleDrawer} />
 
                         <div className="content-container flex" style={container}>
@@ -96,13 +98,6 @@ export default class App extends React.Component {
                                     <Route key={index} {...route} />
                                 ))}
                             </Switch>
-
-                            {error && (
-                            <div>
-                                <h3>Application error: {error.message}</h3>
-                                <p>TODO: create component for error handing, notifications</p>
-                            </div>
-                            )}
                         </div>
 
                         <Snackbar
