@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 import { DOI_SEARCH_COMPLETE, PUBMED_SEARCH_COMPLETE, TITLE_SEARCH_COMPLETE } from './actions';
 
 // Immutable state
-const initialState = Immutable.fromJS({
+export const initialState = Immutable.fromJS({
     searchResults: {}
 });
 
