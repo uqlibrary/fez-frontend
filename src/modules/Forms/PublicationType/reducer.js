@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 import { PUBLICATION_TYPES_LOADED } from './actions';
 
 // Immutable state
-const initialState = Immutable.fromJS({
+export const initialState = Immutable.fromJS({
     publicationTypes: {}
 });
 
