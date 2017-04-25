@@ -6,8 +6,7 @@ import AppBar from 'material-ui/AppBar';
 import Snackbar from 'material-ui/Snackbar';
 import IconButton from 'material-ui/IconButton';
 
-import {AppLoader} from 'modules/Toolbox';
-import {MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
+import {AppLoader, MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
 
 import {defaultMenuItems, researcherMenuItems} from 'config';
 import {locale} from 'config';
