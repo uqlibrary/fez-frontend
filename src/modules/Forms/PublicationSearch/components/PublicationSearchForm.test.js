@@ -57,15 +57,15 @@ describe('Publication search form integration tests', () => {
         );
     });
 
-    it('sets the search button to DOI Search', () => {
-        tester(app, '123456', 'Pubmed ID Search');
+    it('sets the search button to PubMed Id Search', () => {
+        tester(app, '123456', 'Pubmed Id Search');
     });
 
     it('sets the search button to Title Search', () => {
         tester(app, 'test', 'Title Search');
     });
 
-    it('sets the search button to DOI Search', () => {
-        tester(app, '10.1163/9789004326828', 'DOI Search');
+    it('sets the search button to Doi Search', () => {
+        tester(app, '10.1163/9789004326828', 'Doi Search');
     });
 });
