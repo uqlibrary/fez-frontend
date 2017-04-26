@@ -4,7 +4,6 @@ import React from 'react';
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import Snackbar from 'material-ui/Snackbar';
-import IconButton from 'material-ui/IconButton';
 
 import {AppLoader} from 'uqlibrary-react-toolbox';
 import {MenuDrawer} from 'uqlibrary-react-toolbox';
@@ -12,6 +11,7 @@ import {MenuDrawer} from 'uqlibrary-react-toolbox';
 import {HelpDrawer} from 'uqlibrary-react-toolbox';
 import {defaultMenuItems, researcherMenuItems} from 'config';
 import {locale} from 'config';
+import AuthButton from 'modules/AuthButton';
 
 // Pages
 import {Dashboard} from 'modules/Dashboard';
@@ -66,7 +66,7 @@ export default class App extends React.Component {
                 {!loaded ? (
                     <AppLoader title={locale.global.title} logoImage={locale.global.logo} logoText={locale.global.title} />
                     ) : (
-                    <div className="layout-fill column align-stretch">
+                    <div className="layout-fill align-stretch">
                         {/* TODO: app bar buttons should be components */}
                         <AppBar
                             className="row align-center"
@@ -78,9 +78,7 @@ export default class App extends React.Component {
                             onLeftIconButtonTouchTap={this.toggleDrawer}
                             iconElementRight={
                                 <div style={{marginTop: '-10px'}}>
-                                    <IconButton iconClassName="material-icons" data-tip="Search" data-for="header" className="AppBarRightButton">search</IconButton>
-                                    <IconButton iconClassName="material-icons" data-tip="Sign in" data-for="header" className="AppBarRightButton">person_outline</IconButton>
-                                    <IconButton iconClassName="material-icons" data-tip="Help" data-for="header" className="AppBarRightButton">help</IconButton>
+                                    <AuthButton loaded={loaded} account={account}/>
                                 </div>
                             }
                         />
@@ -92,7 +90,7 @@ export default class App extends React.Component {
                                     logoText={locale.global.title}
                                     toggleDrawer={this.toggleDrawer} />
 
-                        <div className="content-container flex" style={container}>
+                        <div className="content-container" style={container}>
                             <Switch>
                                 <Route path="/" exact component={landingPage} />
                                 {menuItems.map((route, index) => (

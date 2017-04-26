@@ -19,30 +19,17 @@ class Dashboard extends React.Component {
             account
         } = this.props;
         return (
-            <div className="dashboard">
-                <div className="layout-container info-summary">
-                    <div className="info column align-stretch justify-stretch">
-                        <div className="user-information column flex">
-                            <span className="display-1">{account.get('title')}&nbsp;{account.get('name')}</span>
-                            <span className="subhead">{account.get('fullTitle')}</span>
+            <div className="layout-fill">
+                <div className="layout-card">
+                    <div className="image-cover">
+                        <div className="user-information" style={{color: '#FFF'}}>
+                            <span className="display-1">{account.get('title')} {account.get('name')}</span><br />
+                            <span className="subhead">{account.get('fullTitle')}</span><br />
                             <span className="body-1">{account.get('school')}</span>
                         </div>
-                        <div className="message-center">
-                            <div className="alert">
-                                <TimeDisplay />
-                            </div>
-                        </div>
                     </div>
-                    <div className="image-cover" />
-                    <div className="grey-cover" />
-                </div>
-                <div className="layout-container column row-lg align-stretch">
-                    <div className="flex">
-                        some data here...
-                    </div>
-                    <div style={{width: 32, height: 32}} />
-                    <div className="flex">
-                        some data here...
+                    <div className="time-display-wrap">
+                        <TimeDisplay />
                     </div>
                 </div>
             </div>
