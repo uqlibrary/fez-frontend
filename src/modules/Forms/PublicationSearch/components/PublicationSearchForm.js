@@ -47,9 +47,9 @@ export default class PublicationSearchForm extends Component {
             label = 'Title Search';
 
             if (isDOIValue(fieldValue)) {
-                label = 'DOI Search';
+                label = 'Doi Search';
             } else if (isPubMedValue(fieldValue)) {
-                label = 'Pubmed ID Search';
+                label = 'Pubmed Id Search';
             }
         }
 
