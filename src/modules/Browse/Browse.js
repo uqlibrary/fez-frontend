@@ -10,7 +10,7 @@ export default function Browse({title, text, help}) {
             <h1 className="page-title display-1">{title ? title : 'Browse'}</h1>
 
             <Card className="layout-card">
-                <CardHeader>
+                <CardHeader className="card-header">
                     <div className="columns is-gapless">
                         <div className="column">
                             <h2 className="headline">{title ? title : 'Browse'}</h2>

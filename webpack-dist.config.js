@@ -11,7 +11,10 @@ const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const port = 9000;
+
+// options for deployment: global title, Google tag manager id
 const title = 'eSpace - The University of Queensland';
+const gtm = 'GTM-T4NPC25';
 
 let useMock = false;
 if (process.env.USE_MOCK)
@@ -59,6 +62,7 @@ module.exports = {
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
             title: title,
+            gtm: gtm,
             inject: true,
             template: resolve(__dirname, './public', 'index.html'),
         }),
