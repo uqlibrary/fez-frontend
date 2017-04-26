@@ -33,10 +33,10 @@ mock.onGet(/search\/external\?doi=*/).reply(200, externalDoiSearchResult);
 mock.onGet(/search\/internal\?doi=*/).reply(200, internalDoiSearchResult);
 
 // Mock the publication form external pubMed search endpoint
-mock.onGet(/search\/external\?pubMedId=*/).reply(200, externalPubMedSearchResults);
+mock.onGet(/search\/external\?pub_med_id=*/).reply(200, externalPubMedSearchResults);
 
 // Mock the publication form internal pubMed search endpoint
-mock.onGet(/search\/internal\?pubMedId=*/).reply(200, internalPubMedSearchResults);
+mock.onGet(/search\/internal\?pub_med_id=*/).reply(200, internalPubMedSearchResults);
 
 // Mock the publication form external title search endpoint
 mock.onGet(/search\/external\?rek_display_type=[0-9]*/).reply(200, externalTitleSearchResults);

@@ -47,7 +47,7 @@ export function searchDoi(doi) {
  * @returns {Promise}
  */
 export function searchPubMed(pubMedId) {
-    return performSearch(`pubMedId=${pubMedId}`);
+    return performSearch(`pub_med_id=${pubMedId}`);
 }
 
 
