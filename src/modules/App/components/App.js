@@ -67,7 +67,7 @@ export default class App extends React.Component {
                     <div className="layout-fill align-stretch">
                         {/* TODO: app bar buttons should be components */}
                         <AppBar
-                            className="row align-center"
+                            className="AppBar align-center"
                             showMenuIconButton={!docked}
                             style={{height: 75}}
                             iconStyleLeft={{marginTop: 0}}

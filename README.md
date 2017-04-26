@@ -69,3 +69,11 @@ Deployment pipelines are setup for branches: "master", "production" and any bran
 
 - TBA: Deployments to production are hosted on https://espace.library.uq.edu.au/ 
 - All other branches are deployed on https://development.library.uq.edu/espace/`branchName`/.
+
+## Google Analytics integration
+
+Fez-frontend includes GTM (Google Tag Manager). GTM is set at webpack build time in webpack configuration. 
+It can be setup as an environmental variable at CI level if required.
+ 
+GTM is very flexible and easy to configure to track required events. See more details on [Google Analytics](https://www.google.com.au/analytics/tag-manager/)  
+
