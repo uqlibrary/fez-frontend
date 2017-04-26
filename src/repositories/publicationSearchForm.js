@@ -38,16 +38,16 @@ function performSearch(querystring) {
  * Searches internally and externally for a requested doi
  * @returns {Promise}
  */
-export function searchDOI(doi) {
+export function searchDoi(doi) {
     return performSearch(`doi=${doi}`);
 }
 
 /**
- * Searches internally and externally for a requested pubmedID
+ * Searches internally and externally for a requested pubmedId
  * @returns {Promise}
  */
-export function searchPubMed(pubMedID) {
-    return performSearch(`pubMedID=${pubMedID}`);
+export function searchPubMed(pubMedId) {
+    return performSearch(`pubMedId=${pubMedId}`);
 }
 
 

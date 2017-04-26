@@ -1,5 +1,5 @@
 // Repositories
-import {searchDOI, searchPubMed, searchTitle} from '../../../repositories/publicationSearchForm';
+import {searchDoi, searchPubMed, searchTitle} from '../../../repositories/publicationSearchForm';
 
 // Types
 export const SEARCHING_DOI = 'SEARCHING_DOI';
@@ -16,7 +16,7 @@ export const TITLE_SEARCH_COMPLETE = 'TITLE_SEARCH_COMPLETE';
 export function doiSearch(doi) {
     return dispatch => {
         dispatch({type: SEARCHING_DOI});
-        searchDOI(doi).then(authorList => {
+        searchDoi(doi).then(authorList => {
             dispatch({
                 type: DOI_SEARCH_COMPLETE,
                 payload: authorList
@@ -31,10 +31,10 @@ export function doiSearch(doi) {
  * Performs a pubmed ID search
  * @returns {function(*)}
  */
-export function pubMedSearch(pubMedID) {
+export function pubMedSearch(pubMedId) {
     return dispatch => {
         dispatch({type: SEARCHING_PUBMED});
-        searchPubMed(pubMedID).then(payload => {
+        searchPubMed(pubMedId).then(payload => {
             dispatch({
                 type: PUBMED_SEARCH_COMPLETE,
                 payload: payload
