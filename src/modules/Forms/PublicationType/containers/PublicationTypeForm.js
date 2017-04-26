@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import PublicationTypeForm from '../components/PublicationTypeForm';

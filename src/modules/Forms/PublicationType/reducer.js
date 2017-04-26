@@ -1,6 +1,6 @@
 import Immutable from 'immutable';
 
-import { PUBLICATION_TYPES_LOADED } from './actions';
+import {PUBLICATION_TYPES_LOADED} from './actions';
 
 // Immutable state
 export const initialState = Immutable.fromJS({
