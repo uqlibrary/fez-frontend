@@ -1,136 +1,92 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
-.dashboard {
-  .info-summary {
-    position: relative;
-    height: 300px;
+.grey-cover {
+  z-index: 2;
+  background-color: #000;
+  opacity: 0.30;
+  height: 80px;
+}
 
-    @media all and (max-width: 599px) {
-      height: 250px;
-    }
+.user-information {
+  padding: 20px 20px !important;
+}
 
-    > * {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-
-    .info {
-      z-index: 3;
-      color: #FFF;
-
-      .user-information {
-        padding: 20px;
-      }
-
-      .message-center {
-        height: 80px;
-
-        .alert {
-          width: 100%;
-          padding: 0 20px;
-          background-color: #333;
-          border-top: 1px solid #000;
-
-          &.warning {
-            color: orange;
-          }
-
-          &.error {
-            color: red;
-          }
-        }
-      }
-    }
-
-    .grey-cover {
-      z-index: 2;
-      background-color: #000;
-      opacity: 0.30;
-    }
-
-    .image-cover {
-      background-image: url('../../../../public/images/dashboard_cover.jpg');
-      filter: saturate(0.55) blur(2px);
-      background-size: cover;
-      background-position: 0;
-      z-index: 1;
-      overflow: hidden;
-    }
+.image-cover {
+  background-image: url('../../../../public/images/dashboard_cover.jpg');
+  background-size: cover;
+  background-position: 0;
+  overflow: hidden;
+  height: 300px;
+  @media all and (max-width: 599px) {
+    height: 250px;
   }
+}
+
+.time-display-wrap {
+  padding: 26px 0 0 26px;
+  background-color: rgba(20, 20, 20, 0.8);
+  color: #FFFF !important;
+  height: 75px;
+  margin-top: -101px;
 }
 
 .time-display {
-  padding: 14px;
+  color: #FFFF !important;
+  white-space: nowrap;
+}
 
-  .location {
-    color: #aaa;
+.time {
+  font-size: 14px;
+  color: #FFF;
+}
+
+.location {
+  font-size: 12px;
+  color: #FFF;
+  opacity: 0.8;
+}
+
+@media all and (max-width: 600px) {
+
+  .time-display-wrap {
+    padding: 15px 0px 0px 15px !important;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: #FFFF !important;
+    height: 60px;
+    margin-top: -75px;
   }
 
   .time {
-    @media all and (max-width: 599px) {
-      font-size: 17px;
-      padding-top: 8px;
+    font-size: 14px !important;
+  }
+
+  .dashboard-plans {
+    width: 100%;
+
+    .head {
+      padding: 20px;
+      background-color: $theme-color;
+
+      h2 {
+        color: #FFF;
+      }
     }
   }
 
-  .flag {
-    height: 16px;
-    display: inline-block;
-    padding-left: 20px;
-    vertical-align: middle;
-  }
-}
+  .dashboard-collaborators {
+    width: 100%;
 
-.connected-service-tick {
-  border-radius: 50%;
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 20px;
-  height: 20px;
+    .head {
+      padding: 20px;
+      background-color: $accent-color;
 
-  > span {
-    font-size: 12px !important;
-  }
-
-  &.true {
-    background-color: limegreen;
-  }
-
-  &.false {
-    background-color: red;
-  }
-}
-
-.dashboard-plans {
-  width: 100%;
-
-  .head {
-    padding: 20px;
-    background-color: $theme-color;
-
-    h2 {
-      color: #FFF;
+      h2 {
+        color: #FFF;
+      }
     }
-  }
-}
 
-.dashboard-collaborators {
-  width: 100%;
-
-  .head {
-    padding: 20px;
-    background-color: $accent-color;
-
-    h2 {
-      color: #FFF;
+    a {
+      text-decoration: none;
     }
-  }
-  
-  a {
-    text-decoration: none;
   }
 }
