@@ -50,8 +50,8 @@ class TimeDisplay extends Component {
 
     render() {
         return (
-            <div className="row time-display">
-                <div className="column flex">
+            <div className="time-display columns is-gapless">
+                <div className="column">
                     <span className="subhead location">Brisbane, Australia</span>
                     <div className="headline time">
                         {moment(this.state.date).format('dddd, MMMM Do YYYY, h:mm:ss a')}
