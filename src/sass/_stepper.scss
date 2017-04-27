@@ -1,0 +1,34 @@
+.Stepper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+
+  // Stepper: Targets the div wrapping just the stepper
+  > div:first-child {
+    overflow: hidden;
+  }
+
+  // Targets the step span which contains the icon and text
+  > div > div > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+}
+
+// Stepper - responsive css to hide the text on mobile, and just leave the steps
+@media (max-width: 768px) {
+  .Stepper div span span {
+    padding: 0 4px 0 0 !important;
+    z-index: 10;
+    zoom: 1.5;
+  }
+  .Stepper div div span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: -999px;
+    padding: 0px 0px 0px 0px !important;
+  }
+}
