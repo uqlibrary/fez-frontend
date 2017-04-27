@@ -5,3 +5,4 @@ webpack.*.js
 *server.js
 conf
 gulp_tasks
+/yarn.lock
