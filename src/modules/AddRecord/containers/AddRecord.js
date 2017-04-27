@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import AddRecord from '../components/AddREcord';
+import AddRecord from '../components/AddRecord';
 import {reduxForm} from 'redux-form/immutable';
 
 let AddRecordContainer = reduxForm({
