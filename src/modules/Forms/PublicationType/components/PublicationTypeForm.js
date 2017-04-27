@@ -27,6 +27,8 @@ export default class PublicationTypeForm extends Component {
         ]),
         publicationTypes: PropTypes.object,
         account: PropTypes.object,
+        maxSearchResults: PropTypes.number,
+        label: PropTypes.string
     };
 
     constructor(props) {
@@ -88,8 +90,8 @@ export default class PublicationTypeForm extends Component {
                             <p>{this.props.explanationText}</p>
                         )}
                         <Field component={AutoCompleteSelect} name="publicationType"
-                               maxSearchResults={10}
-                               label="Select a publication type"
+                               maxSearchResults={this.props.maxSearchResults}
+                               label={this.props.label}
                                dataSource={this.setPublicationList()}
                                dataSourceConfig={{text: 'name', value: 'id'}}
                                onChange={getSelectedPublicationType}
