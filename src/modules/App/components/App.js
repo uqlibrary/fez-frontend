@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import Snackbar from 'material-ui/Snackbar';
@@ -24,14 +26,14 @@ import '../../../sass/_appbar.scss';
 export default class App extends React.Component {
 
     static propTypes = {
-        error: React.PropTypes.object,
-        account: React.PropTypes.object,
-        loaded: React.PropTypes.bool.isRequired,
-        loadAccount: React.PropTypes.func.isRequired,
-        menuDrawerOpen: React.PropTypes.bool.isRequired,
-        hideSnackbar: React.PropTypes.func.isRequired,
-        snackbar: React.PropTypes.object.isRequired,
-        toggleMenuDrawer: React.PropTypes.func.isRequired
+        error: PropTypes.object,
+        account: PropTypes.object,
+        loaded: PropTypes.bool.isRequired,
+        loadAccount: PropTypes.func.isRequired,
+        menuDrawerOpen: PropTypes.bool.isRequired,
+        hideSnackbar: PropTypes.func.isRequired,
+        snackbar: PropTypes.object.isRequired,
+        toggleMenuDrawer: PropTypes.func.isRequired
     };
 
     constructor(props) {
