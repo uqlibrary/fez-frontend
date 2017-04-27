@@ -20,7 +20,7 @@ import {AddRecord} from 'modules/AddRecord';
 import {StaticPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 
-
+// Import specific style for the AppBar
 import '../../../sass/_appbar.scss';
 
 export default class App extends React.Component {
