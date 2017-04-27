@@ -22,6 +22,8 @@ import {Browse} from 'modules/Browse';
 
 const mediaQuery = window.matchMedia('(min-width: 1600px)');
 
+import '../../../sass/_appbar.scss';
+
 export default class App extends React.Component {
     static propTypes = {
         error: React.PropTypes.object,
