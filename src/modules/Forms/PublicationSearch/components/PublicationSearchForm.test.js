@@ -2,6 +2,7 @@ jest.dontMock('./PublicationSearchForm');
 
 import React from 'react';
 import {mount} from 'enzyme';
+import PropTypes from 'prop-types';
 
 import {reduxForm} from 'redux-form';
 import {reducer as formReducer} from 'redux-form';
@@ -53,7 +54,7 @@ describe('Publication search form integration tests', () => {
                 <Decorated {...props} />
             </Provider>,
             { context: {muiTheme},
-                childContextTypes: {muiTheme: React.PropTypes.object}}
+                childContextTypes: {muiTheme: PropTypes.object}}
         );
     });
 
