@@ -9,7 +9,7 @@ export const AUTHORS_LOADING = 'AUTHORS_LOADING';
 export const AUTHORS_LOADED = 'AUTHORS_LOADED';
 
 /**
- * Loads the user's account into the application
+ * Loads the publication sub types into the application
  * @returns {function(*)}
  */
 export function loadPublicationSubTypes() {

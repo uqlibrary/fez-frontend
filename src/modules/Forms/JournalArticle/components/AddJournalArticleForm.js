@@ -42,7 +42,7 @@ export default class AddJournalArticleForm extends Component {
     };
 
     render() {
-        const { types } = this.props;
+        const {types} = this.props;
         const subtypeItems = types.valueSeq().map((subtypes) => {
             return (<MenuItem value={subtypes.get('id')} key={subtypes.get('id')} primaryText={subtypes.get('label')}/>);
         });

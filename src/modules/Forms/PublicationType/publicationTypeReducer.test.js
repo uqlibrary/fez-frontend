@@ -1,5 +1,5 @@
 import publicationTypeReducer, {initialState} from './reducer';
-import {PUBLICATION_TYPES_LOADED} from './actions';
+import {PUBLICATION_TYPES_LOADED, SELECTED_PUBLICATION_TYPE} from './actions';
 import Immutable from 'immutable';
 
 import {publicationTypes} from '../../../../src/mock/data/publicationTypes';
@@ -21,7 +21,27 @@ describe('Publication type reducer', () => {
             })
         ).toEqual(
             Immutable.fromJS({
-                publicationTypes: publicationTypes
+                publicationTypes: publicationTypes,
+                selectedPublicationType: {}
+            })
+        );
+    });
+
+    it('should handle SELECTED_PUBLICATION_TYPE', () => {
+        const alteredState = Immutable.fromJS({
+            publicationTypes: publicationTypes,
+            selectedPublicationType: {}
+        });
+
+        expect(
+            publicationTypeReducer(alteredState, {
+                type: SELECTED_PUBLICATION_TYPE,
+                payload: 179
+            })
+        ).toEqual(
+            Immutable.fromJS({
+                publicationTypes: publicationTypes,
+                selectedPublicationType: Immutable.fromJS({id: 179, type: 'Journal Article'})
             })
         );
     });

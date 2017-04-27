@@ -4,10 +4,10 @@ import {getPublicationTypes} from '../../../repositories/publicationTypes';
 // Types
 export const PUBLICATION_TYPES_LOADING = 'PUBLICATION_TYPES_LOADING';
 export const PUBLICATION_TYPES_LOADED = 'PUBLICATION_TYPES_LOADED';
-
+export const SELECTED_PUBLICATION_TYPE = 'SELECTED_PUBLICATION_TYPE';
 
 /**
- * Loads the user's account into the application
+ * Loads the publication types into the application
  * @returns {function(*)}
  */
 export function loadPublicationTypes() {
@@ -21,5 +21,16 @@ export function loadPublicationTypes() {
         }).catch((error) => {
             throw(error);
         });
+    };
+}
+
+/**
+ * Selects the publication type id
+ * @returns {{type: string, payload: int}}
+ */
+export function getSelectedPublicationType(selectedId) {
+    return {
+        type: SELECTED_PUBLICATION_TYPE,
+        payload: selectedId
     };
 }

@@ -79,7 +79,8 @@
     "start:build:e2e": "cross-env NODE_ENV=production URL=localhost USE_MOCK=true webpack-dev-server --config=./webpack-dist.config",
     "test:e2e": "node nightwatch --test",
     "test": "jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "updateSnapshot": "jest -updateSnapshot"
   },
   "engines": {
     "npm": ">=3",

@@ -95,7 +95,6 @@ exports[`Document type form integration tests renders default document type comp
         label="Select a publication type"
         maxSearchResults={10}
         name="publicationType"
-        onChange={[Function]}
         openOnFocus={true}
       />
     </CardText>

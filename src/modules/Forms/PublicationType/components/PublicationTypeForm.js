@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {AutoCompleteSelect} from 'uqlibrary-react-toolbox';
-import {AddJournalArticleForm} from '../../JournalArticle';
 
 import './PublicationTypeForm.scss';
 
@@ -21,28 +20,22 @@ export default class PublicationTypeForm extends Component {
         pristine: PropTypes.bool,
         handleSubmit: PropTypes.func,
         loadPublicationTypes: PropTypes.func,
+        getSelectedPublicationType: PropTypes.func,
+        children: PropTypes.oneOfType([
+            PropTypes.bool,
+            PropTypes.object
+        ]),
         types: PropTypes.object,
         account: PropTypes.object,
     };
 
     constructor(props) {
         super(props);
-
-        // setup the state
-        this.state = {
-            submitOpen: false,
-            saveOpen: false,
-            selectedId: 0
-        };
     }
 
     componentDidMount() {
         this.props.loadPublicationTypes();
     }
-
-    handlePublicationTypeChange = (obj, id) => {
-        this.setState({selectedId: parseInt(id, 10)});
-    };
 
     setPublicationList = () => {
         const popularTypesList = ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'];
@@ -70,23 +63,8 @@ export default class PublicationTypeForm extends Component {
         return popularTypes.concat(allTypes);
     };
 
-    getPublicationName = (id) => {
-        if (id) {
-            const pubTypes = this.props.types;
-
-            const selected = pubTypes.find(item => {
-                return item.get('id') === id;
-            });
-
-            return selected.get('type');
-        }
-
-        return '';
-    }
-
     render() {
-        const {handleSubmit} = this.props;
-        const publicationName = this.getPublicationName(this.state.selectedId);
+        const {handleSubmit, getSelectedPublicationType} = this.props;
 
         return (
             <form onSubmit={handleSubmit}>
@@ -114,18 +92,12 @@ export default class PublicationTypeForm extends Component {
                                label="Select a publication type"
                                dataSource={this.setPublicationList()}
                                dataSourceConfig={{text: 'name', value: 'id'}}
-                               onChange={this.handlePublicationTypeChange}
+                               onChange={getSelectedPublicationType}
                                openOnFocus
                                fullWidth />
                     </CardText>
                 </Card>
-
-                {/* Journal Article is selected */}
-                { publicationName === 'Journal Article' &&
-                <div>
-                    <AddJournalArticleForm />
-                </div>
-                }
+                {this.props.children}
             </form>
         );
     }
