@@ -85,7 +85,7 @@ export default class AddJournalArticleForm extends Component {
                                 onChange={this.handleSubTypeChange}
                                 style={{width: '100%'}}
                             >
-                                { subtypeItems }
+                                {subtypeItems}
                             </SelectField>
                         </div>
                     </CardText>

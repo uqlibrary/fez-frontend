@@ -27,10 +27,10 @@ export default class AddRecord extends Component {
                     label="Select a publication type">
 
                     {/* Journal Article is selected */}
-                    { selectedPublication && selectedPublication.get('name') === 'Journal Article' &&
-                    <div>
-                        <AddJournalArticleForm />
-                    </div>
+                    {selectedPublication && selectedPublication.get('name') === 'Journal Article' &&
+                        <div>
+                            <AddJournalArticleForm />
+                        </div>
                     }
                 </PublicationTypeForm>
             </div>
