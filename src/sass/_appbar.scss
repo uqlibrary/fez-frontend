@@ -1,0 +1,49 @@
+@import '~uqlibrary-react-toolbox/sass/variables';
+
+// Some styling over-rides on the app bar.
+.AppBar {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  h1 {
+    height: 75px !important;
+    line-height: 75px !important;
+  }
+
+  .AppBarRightButton {
+    color: $text-color-reverse !important;
+    span {
+      color: $text-color-reverse !important;
+    }
+    button {
+      color: $text-color-reverse !important;
+    }
+    svg {
+      fill: $text-color-reverse !important;
+    }
+  }
+  .AppBarRightButton:hover {
+    color: $accent-color !important;
+    span {
+      color: $accent-color !important;
+    }
+    button {
+      color: $accent-color !important;
+    }
+    svg {
+      fill: $accent-color !important;
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .AppBar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    button {
+      line-height: 75px;
+    }
+  }
+}
