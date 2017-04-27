@@ -84,7 +84,7 @@ export default class App extends React.Component {
                         />
 
                         <MenuDrawer menuItems={menuItems}
-                                    drawerOpen={docked ? true : menuDrawerOpen}
+                                    drawerOpen={docked || menuDrawerOpen}
                                     docked={docked}
                                     logoImage={locale.global.logo}
                                     logoText={locale.global.title}
