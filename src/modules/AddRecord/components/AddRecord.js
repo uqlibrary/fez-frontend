@@ -25,7 +25,7 @@ export default class AddRecord extends Component {
                     helpTitle="Add your publication">
 
                     {/* Journal Article is selected */}
-                    { selectedPublication && selectedPublication.get('type') === 'Journal Article' &&
+                    { selectedPublication && selectedPublication.get('name') === 'Journal Article' &&
                     <div>
                         <AddJournalArticleForm />
                     </div>

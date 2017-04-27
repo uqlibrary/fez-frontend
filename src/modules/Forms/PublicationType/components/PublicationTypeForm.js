@@ -25,7 +25,7 @@ export default class PublicationTypeForm extends Component {
             PropTypes.bool,
             PropTypes.object
         ]),
-        types: PropTypes.object,
+        publicationTypes: PropTypes.object,
         account: PropTypes.object,
     };
 
@@ -38,29 +38,29 @@ export default class PublicationTypeForm extends Component {
     }
 
     setPublicationList = () => {
-        const popularTypesList = ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'];
-        const popularTypes = [];
-        const allTypes = [];
+        const {publicationTypes} = this.props;
+        if (publicationTypes && publicationTypes.size > 0) {
+            const popularTypesList = ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'];
+            const popularTypes = [];
 
-        this.props.types.map(item => {
-            // check if the item is within the popularTypesList array
-            if (popularTypesList.indexOf(item.get('type')) >= 0) {
-                popularTypes.push(
-                    {'id': item.get('id'), 'name': item.get('type')}
-                );
-            }
+            const ptObject = publicationTypes.toJS();
 
-            // build the complete publication type list
-            allTypes.push(
-                {'id': item.get('id'), 'name': item.get('type')}
-            );
-        });
+            popularTypesList.map(item => {
+                const entry = ptObject.find(obj => {
+                    return obj.name === item;
+                });
 
-        // add the divider
-        popularTypes.push({'id': 'divider', 'divider': <Divider key="divider" />});
+                popularTypes.push(entry);
+            });
 
-        // return the complete merged list
-        return popularTypes.concat(allTypes);
+            // add the divider
+            popularTypes.push({'id': 'divider', 'divider': <Divider key="divider"/>});
+
+            // return the complete merged list
+            return popularTypes.concat(publicationTypes.toJS());
+        }
+
+        return [];
     };
 
     render() {

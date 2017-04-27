@@ -39,52 +39,7 @@ exports[`Document type form integration tests renders default document type comp
     >
       <Field
         component={[Function]}
-        dataSource={
-          Array [
-            Object {
-              "divider": <Divider
-                inset={false}
-          />,
-              "id": "divider",
-            },
-            Object {
-              "id": 1,
-              "name": undefined,
-            },
-            Object {
-              "id": 2,
-              "name": undefined,
-            },
-            Object {
-              "id": 3,
-              "name": undefined,
-            },
-            Object {
-              "id": 4,
-              "name": undefined,
-            },
-            Object {
-              "id": 5,
-              "name": undefined,
-            },
-            Object {
-              "id": 6,
-              "name": undefined,
-            },
-            Object {
-              "id": 7,
-              "name": undefined,
-            },
-            Object {
-              "id": 8,
-              "name": undefined,
-            },
-            Object {
-              "id": 9,
-              "name": undefined,
-            },
-          ]
-        }
+        dataSource={Array []}
         dataSourceConfig={
           Object {
             "text": "name",

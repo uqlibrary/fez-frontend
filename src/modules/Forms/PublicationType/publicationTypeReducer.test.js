@@ -41,7 +41,7 @@ describe('Publication type reducer', () => {
         ).toEqual(
             Immutable.fromJS({
                 publicationTypes: publicationTypes,
-                selectedPublicationType: Immutable.fromJS({id: 179, type: 'Journal Article'})
+                selectedPublicationType: Immutable.fromJS({id: 179, name: 'Journal Article'})
             })
         );
     });
