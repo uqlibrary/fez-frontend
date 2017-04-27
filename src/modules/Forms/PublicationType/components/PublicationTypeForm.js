@@ -66,7 +66,17 @@ export default class PublicationTypeForm extends Component {
     };
 
     render() {
-        const {handleSubmit, getSelectedPublicationType} = this.props;
+        const {
+            handleSubmit,
+            getSelectedPublicationType,
+            title,
+            helpTitle,
+            helpText,
+            explanationText,
+            maxSearchResults,
+            children,
+            label
+        } = this.props;
 
         return (
             <form onSubmit={handleSubmit}>
@@ -74,24 +84,24 @@ export default class PublicationTypeForm extends Component {
                     <CardHeader>
                         <div className="row">
                             <div className="flex-100">
-                                <h2 className="headline">{this.props.title}</h2>
+                                <h2 className="headline">{title}</h2>
                             </div>
-                            {this.props.helpTitle && this.props.helpText && (
+                            {helpTitle && helpText && (
                                 <div className="flex">
                                     <HelpIcon
-                                        text={this.props.helpTitle}
-                                        title={this.props.helpText} inline />
+                                        text={helpTitle}
+                                        title={helpText} inline />
                                 </div>
                             )}
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        {this.props.explanationText && (
-                            <p>{this.props.explanationText}</p>
+                        {explanationText && (
+                            <p>{explanationText}</p>
                         )}
                         <Field component={AutoCompleteSelect} name="publicationType"
-                               maxSearchResults={this.props.maxSearchResults}
-                               label={this.props.label}
+                               maxSearchResults={maxSearchResults}
+                               label={label}
                                dataSource={this.setPublicationList()}
                                dataSourceConfig={{text: 'name', value: 'id'}}
                                onChange={getSelectedPublicationType}
@@ -99,7 +109,7 @@ export default class PublicationTypeForm extends Component {
                                fullWidth />
                     </CardText>
                 </Card>
-                {this.props.children}
+                {children}
             </form>
         );
     }
