@@ -39,7 +39,56 @@ exports[`Document type form integration tests renders default document type comp
     >
       <Field
         component={[Function]}
-        dataSource={Array []}
+        dataSource={
+          Array [
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Object {
+              "divider": <Divider
+                inset={false}
+          />,
+              "id": "divider",
+            },
+            Object {
+              "id": 1,
+              "label": "Article (original research)",
+            },
+            Object {
+              "id": 2,
+              "label": "Critical review of research, literature review, critical commentary",
+            },
+            Object {
+              "id": 3,
+              "label": "Letter to editor, brief commentary or brief communication",
+            },
+            Object {
+              "id": 4,
+              "label": "Correction/erratum",
+            },
+            Object {
+              "id": 5,
+              "label": "Review of book, film, TV, video, software, performance, music etc ...",
+            },
+            Object {
+              "id": 6,
+              "label": "Editorial",
+            },
+            Object {
+              "id": 7,
+              "label": "Discussion - respones, round table/panel discussions. Q&A, reply",
+            },
+            Object {
+              "id": 8,
+              "label": "Creative work",
+            },
+            Object {
+              "id": 9,
+              "label": "Others",
+            },
+          ]
+        }
         dataSourceConfig={
           Object {
             "text": "name",
