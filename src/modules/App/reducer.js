@@ -1,4 +1,5 @@
 import Immutable from 'immutable';
+import {LOCATION_CHANGE} from 'connected-react-router';
 
 import {
     APP_ACCOUNT_LOADING,
@@ -42,6 +43,8 @@ const appReducer = (state = initialState, action) => {
             }));
         case APP_SNACKBAR_HIDE:
             return state.set('snackbar', initialState.get('snackbar'));
+        case LOCATION_CHANGE:
+            return state.set('menuDrawerOpen', false);
         case APP_MENU_DRAWER_TOGGLE:
             return state.set('menuDrawerOpen', action.payload);
         default:

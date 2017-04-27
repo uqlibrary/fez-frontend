@@ -1,5 +1,3 @@
-// TODO: remove all eslint-disable
-
 import React from 'react';
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
@@ -18,9 +16,11 @@ import {AddRecord} from 'modules/AddRecord';
 import {StaticPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 
-const mediaQuery = window.matchMedia('(min-width: 1600px)');
+
+import '../../../sass/_appbar.scss';
 
 export default class App extends React.Component {
+
     static propTypes = {
         error: React.PropTypes.object,
         account: React.PropTypes.object,
@@ -32,8 +32,33 @@ export default class App extends React.Component {
         toggleMenuDrawer: React.PropTypes.func.isRequired
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            mediaQuery: window.matchMedia('(min-width: 1600px)')
+        };
+    }
+
+    /**
+     * Set up default values, event handlers when component is mounted
+     */
     componentDidMount() {
         this.props.loadAccount();
+        this.handleResize(this.state.mediaQuery);
+        this.state.mediaQuery.addListener(this.handleResize);
+    }
+
+    /**
+     * Clean up after the container has been unmounted
+     */
+    componentWillUnmount() {
+        this.state.mediaQuery.removeListener(this.handleResize);
+    }
+
+    handleResize = (mediaQuery) => {
+        this.setState({
+            docked: mediaQuery.matches
+        });
     }
 
     toggleDrawer = () => {
@@ -50,7 +75,10 @@ export default class App extends React.Component {
             hideSnackbar
         } = this.props;
 
-        const docked = mediaQuery.matches;
+        const {
+            docked
+        } = this.state;
+
         const titleStyle = docked ? { paddingLeft: 320 } : {};
         const container = docked ? { paddingLeft: 340 } : {};
 
@@ -58,7 +86,9 @@ export default class App extends React.Component {
         const components = { Browse, StaticPage, Dashboard, Research, AddRecord };
         const landingPage =  isAuthorizedUser ? Dashboard : Browse;
         const menuItems = isAuthorizedUser ? [...researcherMenuItems(locale, account.get('mail'), components), ...defaultMenuItems(locale, components)] : defaultMenuItems(locale, components);
+
         console.log(error);
+
         return (
             <div className="layout-fill">
                 {!loaded ? (
@@ -82,7 +112,7 @@ export default class App extends React.Component {
                         />
 
                         <MenuDrawer menuItems={menuItems}
-                                    drawerOpen={docked ? true : menuDrawerOpen}
+                                    drawerOpen={docked || menuDrawerOpen}
                                     docked={docked}
                                     logoImage={locale.global.logo}
                                     logoText={locale.global.title}
