@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthButton snapshots test renders a outlined logout icon 1`] = `
+<div
+  className="AuthButtonWrapper"
+>
+  <IconButton
+    className="LogInButton"
+    disableTouchRipple={false}
+    disabled={false}
+    iconStyle={Object {}}
+    onClick={[Function]}
+    tooltip="Sign in"
+    tooltipPosition="bottom-left"
+    touch={false}
+  >
+    <SocialPersonOutline />
+  </IconButton>
+</div>
+`;
+
+exports[`AuthButton snapshots test renders a solid login icon 1`] = `
+<div
+  className="AuthButtonWrapper"
+>
+  <IconButton
+    className="LogOutButton"
+    disableTouchRipple={false}
+    disabled={false}
+    iconStyle={Object {}}
+    onClick={[Function]}
+    tooltip="Sign out - Test Name"
+    tooltipPosition="bottom-left"
+    touch={false}
+  >
+    <SocialPerson />
+  </IconButton>
+</div>
+`;
