@@ -1,12 +1,32 @@
-AuthButton
----
-#####Button commonly used in the header to link to the login/logout URL.
+# AuthButton
 
-###Use:
+simple reusable login/logout button for UQ Library applications
+
+## Props
+- `isAuthorizedUser: PropTypes.bool.isRequired` - flag indicating if user is logged in or not
+- `loginUrl: PropTypes.string.isRequired` - redirect URL
+- `logoutUrl: PropTypes.string.isRequired` - redirect URL
+- `signOutTooltipText: PropTypes.string` - default value 'Log out'
+- `signInTooltipText: PropTypes.strin` - default value 'Log in'
+    
+## Usage
+
+**./App.js**
 ```jsx
-    import AuthButton from 'modules/AuthButton';
-    ...
+import React from 'react';
+...
 
-    <AuthButton isAuthorizedUser={isAuthorizedUser} name={account.get('name')} />
+import {AuthButton} from 'uqlibrary-react-toolbox';
+
+...
+
+const App = () => (
+  <div>
+    ...
+    <AuthButton {...props} />
+    ...
+  </div>
+);
+
 ```
-No user settable props are available, as it queries the current account loaded state, and passes the account details from the account props.
+
