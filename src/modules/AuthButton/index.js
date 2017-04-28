@@ -1,2 +1,2 @@
-export { default as AuthButton } from './containers/AuthButton';
+export {default as AuthButton} from './components/AuthButton';
 

@@ -11,7 +11,7 @@ import {MenuDrawer} from 'uqlibrary-react-toolbox';
 import {HelpDrawer} from 'uqlibrary-react-toolbox';
 import {defaultMenuItems, researcherMenuItems} from 'config';
 import {locale} from 'config';
-import AuthButton from 'modules/AuthButton';
+import {AuthButton} from '../../../modules/AuthButton';
 
 // Pages
 import {Dashboard} from 'modules/Dashboard';
