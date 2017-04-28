@@ -11,6 +11,8 @@ import {MenuDrawer} from 'uqlibrary-react-toolbox';
 import {HelpDrawer} from 'uqlibrary-react-toolbox';
 import {defaultMenuItems, researcherMenuItems} from 'config';
 import {locale} from 'config';
+
+import {AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 import {AuthButton} from '../../../modules/AuthButton';
 
 // Pages
@@ -110,7 +112,12 @@ export default class App extends React.Component {
                             onLeftIconButtonTouchTap={this.toggleDrawer}
                             iconElementRight={
                                 <div style={{marginTop: '-10px'}}>
-                                    <AuthButton isAuthorizedUser={isAuthorizedUser} name={account.get('name')} />
+                                    <AuthButton isAuthorizedUser={isAuthorizedUser}
+                                                loginUrl={AUTH_URL_LOGIN}
+                                                logoutUrl={AUTH_URL_LOGOUT}
+                                                signInTooltipText={locale.authentication.signInText}
+                                                signOutTooltipText={locale.authentication.signOutText + ' - ' + account.get('name')}
+                                    />
                                 </div>
                             }
                         />
