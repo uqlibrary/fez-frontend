@@ -6,15 +6,20 @@ import PropTypes from 'prop-types';
 
 import './AuthButton.scss';
 
-class AuthButton extends React.Component {
+const propTypes = {
+    isAuthorizedUser: PropTypes.bool.isRequired,
+    loginUrl: PropTypes.string.isRequired,
+    logoutUrl: PropTypes.string.isRequired,
+    signOutTooltipText: PropTypes.string,
+    signInTooltipText: PropTypes.string
+};
 
-    static propTypes = {
-        isAuthorizedUser: PropTypes.bool.isRequired,
-        loginUrl: PropTypes.string.isRequired,
-        logoutUrl: PropTypes.string.isRequired,
-        signOutTooltipText: PropTypes.string,
-        signInTooltipText: PropTypes.string
-    };
+const defaultProps = {
+    signOutTooltipText: 'Log out',
+    signInTooltipText: 'Log in'
+};
+
+class AuthButton extends React.Component {
 
     redirectUser = () => {
         const redirectUrl = this.props.isAuthorizedUser ? this.props.logoutUrl : this.props.loginUrl;
@@ -35,9 +40,7 @@ class AuthButton extends React.Component {
     }
 }
 
-AuthButton.defaultProps = {
-    signOutTooltipText: 'Log out',
-    signInTooltipText: 'Log in'
-};
+AuthButton.defaultProps = defaultProps;
+AuthButton.propTypes = propTypes;
 
 export default AuthButton;
