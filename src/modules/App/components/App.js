@@ -13,7 +13,7 @@ import {defaultMenuItems, researcherMenuItems} from 'config';
 import {locale} from 'config';
 
 import {AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
-import {AuthButton} from '../../../modules/AuthButton';
+import {AuthButton} from 'uqlibrary-react-toolbox';
 
 // Pages
 import {Dashboard} from 'modules/Dashboard';
