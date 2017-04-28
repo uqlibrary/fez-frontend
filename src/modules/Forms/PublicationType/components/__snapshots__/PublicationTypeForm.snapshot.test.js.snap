@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Document type form integration tests renders default document type component 1`] = `
+<form>
+  <Card
+    className="layout-card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+  >
+    <CardHeader
+      avatar={null}
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="flex-100"
+        >
+          <h2
+            className="headline"
+          >
+            Component Title
+          </h2>
+        </div>
+        <div
+          className="flex"
+        >
+          <Connect(HelpIcon)
+            inline={true}
+            text="Help Title"
+            title="Lorem Ipsum"
+          />
+        </div>
+      </div>
+    </CardHeader>
+    <CardText
+      className="body-1"
+    >
+      <Field
+        component={[Function]}
+        dataSource={
+          Array [
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Object {
+              "divider": <Divider
+                inset={false}
+          />,
+              "id": "divider",
+            },
+            Object {
+              "id": 1,
+              "label": "Article (original research)",
+            },
+            Object {
+              "id": 2,
+              "label": "Critical review of research, literature review, critical commentary",
+            },
+            Object {
+              "id": 3,
+              "label": "Letter to editor, brief commentary or brief communication",
+            },
+            Object {
+              "id": 4,
+              "label": "Correction/erratum",
+            },
+            Object {
+              "id": 5,
+              "label": "Review of book, film, TV, video, software, performance, music etc ...",
+            },
+            Object {
+              "id": 6,
+              "label": "Editorial",
+            },
+            Object {
+              "id": 7,
+              "label": "Discussion - respones, round table/panel discussions. Q&A, reply",
+            },
+            Object {
+              "id": 8,
+              "label": "Creative work",
+            },
+            Object {
+              "id": 9,
+              "label": "Others",
+            },
+          ]
+        }
+        dataSourceConfig={
+          Object {
+            "text": "name",
+            "value": "id",
+          }
+        }
+        fullWidth={true}
+        name="publicationType"
+        openOnFocus={true}
+      />
+    </CardText>
+  </Card>
+</form>
+`;

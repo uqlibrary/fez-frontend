@@ -6,6 +6,9 @@ import {SESSION_COOKIE_NAME} from 'config';
 // mocked data
 import {accounts} from './data/accounts';
 import {externalDoiSearchResult, internalDoiSearchResult, externalPubMedSearchResults, internalPubMedSearchResults, externalTitleSearchResults, internalTitleSearchResults} from './data/publicationSearch';
+import {authors} from './data/authors';
+import {publicationTypes} from './data/publicationTypes';
+import {publicationSubTypes} from './data/publicationSubTypes';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api);
@@ -43,3 +46,13 @@ mock.onGet(/search\/external\?rek_display_type=[0-9]*/).reply(200, externalTitle
 
 // Mock the publication form internal title search endpoint
 mock.onGet(/search\/internal\?rek_display_type=[0-9]*/).reply(200, internalTitleSearchResults);
+
+// Mock the publication types endpoint
+mock.onGet('records/types').reply(200, publicationTypes);
+
+// Mock the publication sub types endpoint
+mock.onGet('records/sub/types').reply(200, publicationSubTypes);
+
+// Mock the authors endpoint
+mock.onGet('authors/search').reply(200, authors);
+

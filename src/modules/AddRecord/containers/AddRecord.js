@@ -1,16 +1,15 @@
-import { connect } from 'react-redux';
-
+import {connect} from 'react-redux';
 import {reduxForm} from 'redux-form/immutable';
+
 import AddRecord from '../components/AddRecord';
 
 let AddRecordContainer = reduxForm({
-    form: 'AddRecordForm'
+    form: 'AddNewRecord'
 })(AddRecord);
 
-AddRecordContainer = connect((state) => {
-    const searchResultsState = state.get('publicationSearch');
+AddRecordContainer = connect(state => {
     return {
-        searchResults: searchResultsState.get('searchResults')
+        selectedPublication: state.get('publicationTypes').get('selectedPublicationType')
     };
 })(AddRecordContainer);
 
