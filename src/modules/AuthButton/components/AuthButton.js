@@ -10,36 +10,27 @@ import './AuthButton.scss';
 class AuthButton extends React.Component {
 
     static propTypes = {
-        account: PropTypes.object,
-        loaded: PropTypes.bool.isRequired,
+        isAuthorizedUser: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.bool
+        ]).isRequired,
+        name: PropTypes.string.isRequired
     };
 
     constructor(props) {
         super(props);
-        this.state = {
-            isAuthorizedUser: false
-        };
     }
 
     redirectUser = () => {
-        const redirectUrl = this.state.isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
+        const redirectUrl = this.props.isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
         const returnUrl = window.btoa(window.location.href);
         window.location.href = `${redirectUrl}?return=${returnUrl}`;
     }
 
     render() {
-        const {
-            account,
-            loaded
-        } = this.props;
+        const signOutMsg = `Sign out - ${this.props.name}`;
 
-        this.setState({
-            isAuthorizedUser: loaded === true && account !== null && account.get('mail')
-        });
-
-        const signOutMsg = `Sign out - ${account.get('name')}`;
-
-        if (this.state.isAuthorizedUser) {
+        if (this.props.isAuthorizedUser) {
             return (
                 <div className="AuthButtonWrapper">
                     <IconButton tooltip={signOutMsg} tooltipPosition="bottom-left" className="LogOutButton"

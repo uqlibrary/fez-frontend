@@ -110,7 +110,7 @@ export default class App extends React.Component {
                             onLeftIconButtonTouchTap={this.toggleDrawer}
                             iconElementRight={
                                 <div style={{marginTop: '-10px'}}>
-                                    <AuthButton loaded={loaded} account={account}/>
+                                    <AuthButton isAuthorizedUser={isAuthorizedUser} name={account.get('name')} />
                                 </div>
                             }
                         />
