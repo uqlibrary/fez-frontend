@@ -88,10 +88,15 @@ export default class App extends React.Component {
         const titleStyle = docked ? { paddingLeft: 320 } : {};
         const container = docked ? { paddingLeft: 340 } : {};
 
-        const isAuthorizedUser = loaded === true && account !== null && account.get('mail');
-        const components = { Browse, StaticPage, Dashboard, Research, AddRecord };
+        const isAuthorizedUser = loaded && account.get('id') !== undefined;
+        const components = {
+            Browse, StaticPage, Dashboard, Research, AddRecord
+        };
         const landingPage =  isAuthorizedUser ? Dashboard : Browse;
-        const menuItems = isAuthorizedUser ? [...researcherMenuItems(locale, account.get('mail'), components), ...defaultMenuItems(locale, components)] : defaultMenuItems(locale, components);
+        const menuItems = isAuthorizedUser ?
+            [...researcherMenuItems(locale, account.get('mail'), components), ...defaultMenuItems(locale, components)]
+            :
+            defaultMenuItems(locale, components);
 
         console.log(error);
 
