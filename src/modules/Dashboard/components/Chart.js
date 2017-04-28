@@ -20,8 +20,16 @@ class Chart extends React.Component {
         );
     }
 
+    componentDidUpdate() {
+        if (this.chart) {
+            this.chart.update(this.props.chartOptions);
+        }
+    }
+
     componentWillUnmount() {
-        this.chart.destroy();
+        if (this.chart) {
+            this.chart.destroy();
+        }
     }
 
     render() {
