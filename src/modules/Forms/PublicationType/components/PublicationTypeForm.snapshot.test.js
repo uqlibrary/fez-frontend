@@ -15,7 +15,7 @@ function setup() {
         helpTitle: 'Help Title',
         helpText: 'Lorem Ipsum',
         title: 'Component Title',
-        publicationTypeList: Immutable.fromJS(publicationTypeList),
+        dataSource: Immutable.fromJS(publicationTypeList),
         loadPublicationTypes: jest.fn(),
         popularTypesList: popularTypesList
     };

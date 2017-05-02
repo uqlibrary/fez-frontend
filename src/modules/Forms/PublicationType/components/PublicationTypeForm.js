@@ -13,6 +13,7 @@ import './PublicationTypeForm.scss';
 export default class PublicationTypeForm extends Component {
 
     static propTypes = {
+        dataSource: PropTypes.object.isRequired,
         title: PropTypes.string.isRequired,
         popularTypesList: PropTypes.array.isRequired,
         explanationText: PropTypes.string,
@@ -20,13 +21,11 @@ export default class PublicationTypeForm extends Component {
         helpText: PropTypes.string,
         pristine: PropTypes.bool,
         handleSubmit: PropTypes.func,
-        loadPublicationTypesList: PropTypes.func,
         loadSelectedPublicationType: PropTypes.func,
         children: PropTypes.oneOfType([
             PropTypes.bool,
             PropTypes.object
         ]),
-        publicationTypeList: PropTypes.object,
         maxSearchResults: PropTypes.number,
         publicationTypeLabel: PropTypes.string
     };
@@ -35,20 +34,16 @@ export default class PublicationTypeForm extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        this.props.loadPublicationTypesList();
-    }
-
-    addListDivider(popularTypes) {
+    addListDivider = (popularTypes) => {
         if (popularTypes.length > 0) {
             popularTypes.push({'id': 'divider', 'divider': <Divider key="divider"/>});
         }
 
         return popularTypes;
-    }
+    };
 
     // create a list of popularTypes as each id is different in each environment
-    createPopularTypesList(popularTypesList, publicationTypeList) {
+    createPopularTypesList = (popularTypesList, publicationTypeList) => {
         const popularTypes = [];
         const ptObject = publicationTypeList.toJS();
 
@@ -64,23 +59,23 @@ export default class PublicationTypeForm extends Component {
         }
 
         return popularTypes;
-    }
+    };
 
     // merge the popularTypes list with the complete publicationTypeList
-    mergeLists(popularTypes, publicationTypeList) {
+    mergeLists = (popularTypes, publicationTypeList) => {
         return popularTypes.concat(publicationTypeList.toJS());
-    }
+    };
 
     createCompletePublicationList = () => {
-        const {publicationTypeList, popularTypesList} = this.props;
-        if (publicationTypeList.size > 0) {
-            let popularTypes = this.createPopularTypesList(popularTypesList, publicationTypeList);
+        const {dataSource, popularTypesList} = this.props;
+        if (dataSource.size > 0) {
+            let popularTypes = this.createPopularTypesList(popularTypesList, dataSource);
 
             // add the divider
             popularTypes = this.addListDivider(popularTypes);
 
             // return the complete merged list
-            return this.mergeLists(popularTypes, publicationTypeList);
+            return this.mergeLists(popularTypes, dataSource);
         }
 
         return [];

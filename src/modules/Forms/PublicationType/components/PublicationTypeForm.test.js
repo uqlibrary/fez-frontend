@@ -10,10 +10,9 @@ import {publicationTypeList} from '../../../../mock/data/publicationTypes';
 
 let popularTypesResult = [];
 let popularTypesList = [];
-let app;
 
 describe('Document type form integration tests', () => {
-    beforeEach(() => {
+    function setup(dataSource = Immutable.fromJS(publicationTypeList)) {
         popularTypesResult = [
             {'id': 174, 'name': 'Book'},
             {'id': 177, 'name': 'Book Chapter'},
@@ -27,19 +26,21 @@ describe('Document type form integration tests', () => {
             helpTitle: 'Help Title',
             helpText: 'Lorem Ipsum',
             title: 'Component Title',
-            publicationTypeList: Immutable.fromJS(publicationTypeList),
+            dataSource: dataSource,
             loadPublicationTypes: jest.fn(),
             popularTypesList: popularTypesList
         };
 
-        app = shallow(<PublicationTypeForm {...props} />);
-    });
+        return shallow(<PublicationTypeForm {...props} />);
+    }
 
-    it('test the createPopularTypesList function', () => {
+    it('tests the createPopularTypesList function', () => {
+        const app = setup();
         expect(app.instance().createPopularTypesList(popularTypesList, Immutable.fromJS(publicationTypeList))).toEqual(popularTypesResult);
     });
 
-    it('test the addListDivider function', () => {
+    it('tests the addListDivider function', () => {
+        const app = setup();
         // check if we get an empty array back
         expect(app.instance().addListDivider([])).toEqual([]);
 
@@ -54,8 +55,22 @@ describe('Document type form integration tests', () => {
         expect(app.instance().addListDivider(Immutable.fromJS(publicationTypeList))).toEqual(Immutable.fromJS(publicationTypeList));
     });
 
-    it('test the mergeLists function', () => {
+    it('tests the mergeLists function', () => {
+        const app = setup();
         const resultTestList = popularTypesResult.concat(popularTypesResult);
         expect(app.instance().mergeLists(popularTypesResult, Immutable.fromJS(popularTypesResult))).toEqual(resultTestList);
+    });
+
+    it('tests the createCompletePublicationList function', () => {
+        const app = setup();
+        let resultTestList = popularTypesResult;
+        resultTestList.push({'id': 'divider', 'divider': <Divider key="divider"/>});
+        resultTestList = resultTestList.concat(publicationTypeList);
+
+        expect(app.instance().createCompletePublicationList()).toEqual(resultTestList);
+
+        // test for an empty data source
+        const appEmptyDS = setup([]);
+        expect(appEmptyDS.instance().createCompletePublicationList()).toEqual([]);
     });
 });

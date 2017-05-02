@@ -20,7 +20,9 @@ class addRecord extends React.Component {
 
     static propTypes = {
         searchResultsList: PropTypes.object,
-        selectedPublicationType: PropTypes.object
+        selectedPublicationType: PropTypes.object,
+        loadPublicationTypesList: PropTypes.func,
+        publicationTypeList: PropTypes.object
     };
 
     state = {
@@ -31,6 +33,10 @@ class addRecord extends React.Component {
         saveOpen: false,
         publicationType: 0
     };
+
+    componentDidMount() {
+        this.props.loadPublicationTypesList();
+    }
 
     dummyAsync = (cb) => {
         this.setState({loading: true}, () => {
@@ -112,6 +118,7 @@ class addRecord extends React.Component {
                         helpTitle="Add your publication"
                         maxSearchResults={10}
                         publicationTypeLabel="Select a publication type"
+                        dataSource={this.props.publicationTypeList}
                         popularTypesList={popularTypesList}>
 
                         {/* Journal Article is selected */}
