@@ -5,6 +5,10 @@ export default {
         title: 'UQ eSpace',
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg'
     },
+    authentication: {
+        signInText: 'Log in',
+        signOutText: 'Log out'
+    },
     menu: {
         myDashboard: {
             primaryText: 'My dashboard'

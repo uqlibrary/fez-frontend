@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import Snackbar from 'material-ui/Snackbar';
@@ -7,7 +9,9 @@ import {AppLoader, MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
 
 import {defaultMenuItems, researcherMenuItems} from 'config';
 import {locale} from 'config';
-import AuthButton from 'modules/AuthButton';
+
+import {AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
+import {AuthButton} from 'uqlibrary-react-toolbox';
 
 // Pages
 import {Dashboard} from 'modules/Dashboard';
@@ -22,14 +26,14 @@ import '../../../sass/_appbar.scss';
 export default class App extends React.Component {
 
     static propTypes = {
-        error: React.PropTypes.object,
-        account: React.PropTypes.object,
-        loaded: React.PropTypes.bool.isRequired,
-        loadAccount: React.PropTypes.func.isRequired,
-        menuDrawerOpen: React.PropTypes.bool.isRequired,
-        hideSnackbar: React.PropTypes.func.isRequired,
-        snackbar: React.PropTypes.object.isRequired,
-        toggleMenuDrawer: React.PropTypes.func.isRequired
+        error: PropTypes.object,
+        account: PropTypes.object,
+        loaded: PropTypes.bool.isRequired,
+        loadAccount: PropTypes.func.isRequired,
+        menuDrawerOpen: PropTypes.bool.isRequired,
+        hideSnackbar: PropTypes.func.isRequired,
+        snackbar: PropTypes.object.isRequired,
+        toggleMenuDrawer: PropTypes.func.isRequired
     };
 
     constructor(props) {
@@ -82,10 +86,15 @@ export default class App extends React.Component {
         const titleStyle = docked ? { paddingLeft: 320 } : {};
         const container = docked ? { paddingLeft: 340 } : {};
 
-        const isAuthorizedUser = loaded === true && account !== null && account.get('mail');
-        const components = { Browse, StaticPage, Dashboard, Research, AddRecord };
+        const isAuthorizedUser = loaded && account.get('id') !== undefined;
+        const components = {
+            Browse, StaticPage, Dashboard, Research, AddRecord
+        };
         const landingPage =  isAuthorizedUser ? Dashboard : Browse;
-        const menuItems = isAuthorizedUser ? [...researcherMenuItems(locale, account.get('mail'), components), ...defaultMenuItems(locale, components)] : defaultMenuItems(locale, components);
+        const menuItems = isAuthorizedUser ?
+            [...researcherMenuItems(locale, account.get('mail'), components), ...defaultMenuItems(locale, components)]
+            :
+            defaultMenuItems(locale, components);
 
         console.log(error);
 
@@ -106,7 +115,12 @@ export default class App extends React.Component {
                             onLeftIconButtonTouchTap={this.toggleDrawer}
                             iconElementRight={
                                 <div style={{marginTop: '-10px'}}>
-                                    <AuthButton loaded={loaded} account={account}/>
+                                    <AuthButton isAuthorizedUser={isAuthorizedUser}
+                                                loginUrl={AUTH_URL_LOGIN}
+                                                logoutUrl={AUTH_URL_LOGOUT}
+                                                signInTooltipText={locale.authentication.signInText}
+                                                signOutTooltipText={locale.authentication.signOutText + ' - ' + account.get('name')}
+                                    />
                                 </div>
                             }
                         />

@@ -1,6 +1,9 @@
 import React from 'react';
-import {PropTypes} from 'prop-types';
+import PropTypes from 'prop-types';
+import {Card, CardText, CardHeader} from 'material-ui/Card';
+// import {HelpIcon} from 'uqlibrary-react-toolbox';
 
+import AuthorsPublicationsPerYearChart from './AuthorsPublicationsPerYearChart';
 import TimeDisplay from './TimeDisplay';
 import './Dashboard.scss';
 
@@ -18,6 +21,9 @@ class Dashboard extends React.Component {
         const {
             account
         } = this.props;
+
+        const authorStatsData = {};
+
         return (
             <div className="layout-fill">
                 <div className="layout-card">
@@ -32,6 +38,35 @@ class Dashboard extends React.Component {
                         <TimeDisplay />
                     </div>
                 </div>
+
+                <Card className="layout-card">
+                    <CardHeader className="card-header">
+                        <div className="columns is-gapless">
+
+                            <div className="column">
+                                <h2 className="headline">eSpace publications by year</h2>
+                            </div>
+
+                            <div className="column">
+                                {/* {help && (
+                                    <HelpIcon
+                                        title={help.title}
+                                        text={help.text}
+                                        buttonLabel={help.button}
+                                    />
+                                )}*/}
+                            </div>
+                        </div>
+                    </CardHeader>
+
+                    <CardText className="body-1">
+                        <br />
+                        <div>
+                            <AuthorsPublicationsPerYearChart data={authorStatsData} yAxisTitle="Total publications ever"/>
+                        </div>
+                    </CardText>
+
+                </Card>
             </div>
         );
     }
