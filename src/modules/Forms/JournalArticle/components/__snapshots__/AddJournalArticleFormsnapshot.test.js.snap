@@ -8,553 +8,569 @@ exports[`Document type form integration tests renders default document type comp
     }
   }
 >
-  <Card
-    className="layout-card"
-    expandable={false}
-    expanded={null}
-    initiallyExpanded={false}
+  <div
+    className="layout-fill"
   >
-    <CardHeader
-      avatar={null}
+    <Card
+      className="layout-card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
     >
-      <div
-        className="row"
+      <CardHeader
+        avatar={null}
+        className="card-header"
       >
         <div
-          className="flex-100"
+          className="columns is-gapless"
         >
-          <h2
-            className="headline"
+          <div
+            className="column"
           >
-            Journal article information
-          </h2>
-        </div>
-        <div
-          className="flex"
-        >
-          <Connect(HelpIcon)
-            inline={true}
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
-            title="No matching records"
-          />
-        </div>
-      </div>
-    </CardHeader>
-    <CardText
-      className="body-1"
-    >
-      <div
-        className="flex"
-      >
-        <Field
-          component={[Function]}
-          floatingLabelText="Journal title"
-          fullWidth={true}
-          name="journalTitle"
-          type="text"
-        />
-      </div>
-      <div
-        className="row-sm column align-stretch align-center-sm"
-      >
-        <div
-          className="flex inputPadding"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Journal name"
-            fullWidth={true}
-            name="journalName"
-            type="text"
-          />
-        </div>
-        <div
-          className="flex"
-        >
-          <DatePicker
-            autoOk={false}
-            container="dialog"
-            disableYearSelection={false}
-            disabled={false}
-            firstDayOfWeek={1}
-            floatingLabelText="Journal Publish Date"
-            hideCalendarDate={false}
-            style={
-              Object {
-                "width": "100%",
-              }
-            }
-            textFieldStyle={
-              Object {
-                "width": "100%",
-              }
-            }
-          />
-        </div>
-      </div>
-      <div
-        className="flex"
-      >
-        <SelectField
-          autoWidth={false}
-          disabled={false}
-          floatingLabelText="Select a publication type"
-          fullWidth={false}
-          multiple={false}
-          onChange={[Function]}
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-          value={1}
-        >
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Article (original research)"
-            value={1}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Critical review of research, literature review, critical commentary"
-            value={2}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Letter to editor, brief commentary or brief communication"
-            value={3}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Correction/erratum"
-            value={4}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Review of book, film, TV, video, software, performance, music etc ..."
-            value={5}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Editorial"
-            value={6}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Discussion - respones, round table/panel discussions. Q&A, reply"
-            value={7}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Creative work"
-            value={8}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Others"
-            value={9}
-          />
-        </SelectField>
-      </div>
-    </CardText>
-  </Card>
-  <Card
-    className="layout-card"
-    expandable={false}
-    expanded={null}
-    initiallyExpanded={false}
-  >
-    <CardHeader
-      avatar={null}
-    >
-      <div
-        className="row"
-      >
-        <div
-          className="flex-100"
-        >
-          <h2
-            className="headline"
+            <h2
+              className="headline"
+            >
+              Journal article information
+            </h2>
+          </div>
+          <div
+            className="column"
           >
-            Authors
-          </h2>
+            <Connect(HelpIcon)
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+              title="Journal article information"
+            />
+          </div>
         </div>
+      </CardHeader>
+      <CardText
+        className="body-1"
+      >
         <div
           className="flex"
         >
-          <Connect(HelpIcon)
-            inline={true}
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
-            title="No matching records"
+          <Field
+            component={[Function]}
+            floatingLabelText="Journal title"
+            fullWidth={true}
+            name="journalTitle"
+            type="text"
           />
         </div>
-      </div>
-    </CardHeader>
-    <CardText
-      className="body-1"
-    >
-      <Connect(ReduxForm)
-        form="addJournalArticle"
-      />
-    </CardText>
-  </Card>
-  <Card
-    className="layout-card"
-    expandable={false}
-    expanded={null}
-    initiallyExpanded={false}
-  >
-    <CardHeader
-      avatar={null}
-    >
-      <div
-        className="row"
-      >
         <div
-          className="flex-100"
+          className="row-sm column align-stretch align-center-sm"
         >
-          <h2
-            className="headline"
+          <div
+            className="flex inputPadding"
           >
-            Optional publication detail
-          </h2>
-        </div>
-        <div
-          className="flex"
-        >
-          <Connect(HelpIcon)
-            inline={true}
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
-            title="No matching records"
-          />
-        </div>
-      </div>
-    </CardHeader>
-    <CardText
-      className="body-1"
-    >
-      <div
-        className="row-sm column align-stretch align-center-sm"
-      >
-        <div
-          className="flex inputPadding"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Volume"
-            fullWidth={true}
-            name="publicationVolume"
-            type="text"
-          />
-        </div>
-        <div
-          className="flex inputPadding"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Issue"
-            fullWidth={true}
-            name="publicationIssue"
-            type="text"
-          />
-        </div>
-      </div>
-      <div
-        className="row-sm column align-stretch align-center-sm"
-      >
-        <div
-          className="flex inputPadding"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Start page"
-            fullWidth={true}
-            name="publicationStartPage"
-            type="text"
-          />
-        </div>
-        <div
-          className="flex"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="End page"
-            fullWidth={true}
-            name="publicationEndPage"
-            type="text"
-          />
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="flex"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Notes (not publically viewable)"
-            fullWidth={true}
-            multiLine={true}
-            name="publicationNotes"
-            rows={5}
-            type="text"
-          />
-        </div>
-      </div>
-    </CardText>
-  </Card>
-  <Card
-    className="layout-card"
-    expandable={false}
-    expanded={null}
-    initiallyExpanded={false}
-  >
-    <CardHeader
-      avatar={null}
-    >
-      <div
-        className="row"
-      >
-        <div
-          className="flex-100"
-        >
-          <h2
-            className="headline"
+            <Field
+              component={[Function]}
+              floatingLabelText="Journal name"
+              fullWidth={true}
+              name="journalName"
+              type="text"
+            />
+          </div>
+          <div
+            className="flex"
           >
-            Files
-          </h2>
+            <DatePicker
+              autoOk={false}
+              container="dialog"
+              disableYearSelection={false}
+              disabled={false}
+              firstDayOfWeek={1}
+              floatingLabelText="Journal Publish Date"
+              hideCalendarDate={false}
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+              textFieldStyle={
+                Object {
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
         </div>
         <div
           className="flex"
         >
-          <Connect(HelpIcon)
-            inline={true}
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
-            title="No matching records"
-          />
-        </div>
-      </div>
-    </CardHeader>
-    <CardText
-      className="body-1"
-    >
-      <div
-        className="row"
-      >
-        <div
-          className="flex"
-          style={
-            Object {
-              "flex": "0 0 140px",
-              "marginTop": "16px",
-            }
-          }
-        >
-          <RaisedButton
+          <SelectField
+            autoWidth={false}
             disabled={false}
+            floatingLabelText="Select a publication type"
             fullWidth={false}
-            label="Browse files"
-            labelPosition="after"
-            primary={false}
-            secondary={true}
-          />
-        </div>
-        <div
-          className="flex"
-          style={
-            Object {
-              "marginTop": "-10px",
-            }
-          }
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Filename selected"
-            fullWidth={true}
-            name="filesUpload"
-            type="text"
-          />
-        </div>
-      </div>
-      <div
-        className="fileInstructions"
-      >
-        <h3>
-          File name restrictions
-        </h3>
-        <div
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
-        >
-          <ul>
-            <li>
-              Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)
-            </li>
-            <li>
-              Only numbers and lowercase characters in the file extension
-            </li>
-            <li>
-              Under 45 characters
-            </li>
-            <li>
-              Only one file extension (on period (.) character) and
-            </li>
-            <li>
-              Starting with a letter. Eg "s12345678_phd_thesis.pdf"
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div
-        className="row-sm column align-stretch align-center-sm"
-      >
-        <div
-          className="flex inputPadding"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Access conditions"
-            fullWidth={true}
-            name="filesAccessConditions"
-            type="text"
-          />
-        </div>
-        <div
-          className="flex"
-        >
-          <DatePicker
-            autoOk={false}
-            container="dialog"
-            disableYearSelection={false}
-            disabled={false}
-            firstDayOfWeek={1}
-            floatingLabelText="Embargo date"
-            hideCalendarDate={false}
+            multiple={false}
+            onChange={[Function]}
             style={
               Object {
                 "width": "100%",
               }
             }
-            textFieldStyle={
+            value={1}
+          >
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Article (original research)"
+              value={1}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Critical review of research, literature review, critical commentary"
+              value={2}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Letter to editor, brief commentary or brief communication"
+              value={3}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Correction/erratum"
+              value={4}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Review of book, film, TV, video, software, performance, music etc ..."
+              value={5}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Editorial"
+              value={6}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Discussion - respones, round table/panel discussions. Q&A, reply"
+              value={7}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Creative work"
+              value={8}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Others"
+              value={9}
+            />
+          </SelectField>
+        </div>
+      </CardText>
+    </Card>
+  </div>
+  <div
+    className="layout-fill"
+  >
+    <Card
+      className="layout-card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
+    >
+      <CardHeader
+        avatar={null}
+        className="card-header"
+      >
+        <div
+          className="columns is-gapless"
+        >
+          <div
+            className="column"
+          >
+            <h2
+              className="headline"
+            >
+              Authors
+            </h2>
+          </div>
+          <div
+            className="column"
+          >
+            <Connect(HelpIcon)
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+              title="Authors"
+            />
+          </div>
+        </div>
+      </CardHeader>
+      <CardText
+        className="body-1"
+      >
+        <Connect(ReduxForm)
+          form="addJournalArticle"
+        />
+      </CardText>
+    </Card>
+  </div>
+  <div
+    className="layout-fill"
+  >
+    <Card
+      className="layout-card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
+    >
+      <CardHeader
+        avatar={null}
+        className="card-header"
+      >
+        <div
+          className="columns is-gapless"
+        >
+          <div
+            className="column"
+          >
+            <h2
+              className="headline"
+            >
+              Optional publication detail
+            </h2>
+          </div>
+          <div
+            className="column"
+          >
+            <Connect(HelpIcon)
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+              title="Optional publication detail"
+            />
+          </div>
+        </div>
+      </CardHeader>
+      <CardText
+        className="body-1"
+      >
+        <div
+          className="row-sm column align-stretch align-center-sm"
+        >
+          <div
+            className="flex inputPadding"
+          >
+            <Field
+              component={[Function]}
+              floatingLabelText="Volume"
+              fullWidth={true}
+              name="publicationVolume"
+              type="text"
+            />
+          </div>
+          <div
+            className="flex inputPadding"
+          >
+            <Field
+              component={[Function]}
+              floatingLabelText="Issue"
+              fullWidth={true}
+              name="publicationIssue"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          className="row-sm column align-stretch align-center-sm"
+        >
+          <div
+            className="flex inputPadding"
+          >
+            <Field
+              component={[Function]}
+              floatingLabelText="Start page"
+              fullWidth={true}
+              name="publicationStartPage"
+              type="text"
+            />
+          </div>
+          <div
+            className="flex"
+          >
+            <Field
+              component={[Function]}
+              floatingLabelText="End page"
+              fullWidth={true}
+              name="publicationEndPage"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="flex"
+          >
+            <Field
+              component={[Function]}
+              floatingLabelText="Notes (not publically viewable)"
+              fullWidth={true}
+              multiLine={true}
+              name="publicationNotes"
+              rows={5}
+              type="text"
+            />
+          </div>
+        </div>
+      </CardText>
+    </Card>
+  </div>
+  <div
+    className="layout-fill"
+  >
+    <Card
+      className="layout-card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
+    >
+      <CardHeader
+        avatar={null}
+        className="card-header"
+      >
+        <div
+          className="columns is-gapless"
+        >
+          <div
+            className="column"
+          >
+            <h2
+              className="headline"
+            >
+              Files
+            </h2>
+          </div>
+          <div
+            className="column"
+          >
+            <Connect(HelpIcon)
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+              title="Files"
+            />
+          </div>
+        </div>
+      </CardHeader>
+      <CardText
+        className="body-1"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="flex"
+            style={
+              Object {
+                "flex": "0 0 140px",
+                "marginTop": "16px",
+              }
+            }
+          >
+            <RaisedButton
+              disabled={false}
+              fullWidth={false}
+              label="Browse files"
+              labelPosition="after"
+              primary={false}
+              secondary={true}
+            />
+          </div>
+          <div
+            className="flex"
+            style={
+              Object {
+                "marginTop": "-10px",
+              }
+            }
+          >
+            <Field
+              component={[Function]}
+              floatingLabelText="Filename selected"
+              fullWidth={true}
+              name="filesUpload"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          className="fileInstructions"
+        >
+          <h3>
+            File name restrictions
+          </h3>
+          <div
+            style={
               Object {
                 "width": "100%",
               }
             }
-          />
+          >
+            <ul>
+              <li>
+                Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)
+              </li>
+              <li>
+                Only numbers and lowercase characters in the file extension
+              </li>
+              <li>
+                Under 45 characters
+              </li>
+              <li>
+                Only one file extension (on period (.) character) and
+              </li>
+              <li>
+                Starting with a letter. Eg "s12345678_phd_thesis.pdf"
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div
-        className="row"
-      >
         <div
-          className="flex"
+          className="row-sm column align-stretch align-center-sm"
         >
-          <Field
-            component={[Function]}
-            floatingLabelText="Description"
-            fullWidth={true}
-            multiLine={true}
-            name="filesDescription"
-            rows={5}
-            type="text"
-          />
+          <div
+            className="flex inputPadding"
+          >
+            <Field
+              component={[Function]}
+              floatingLabelText="Access conditions"
+              fullWidth={true}
+              name="filesAccessConditions"
+              type="text"
+            />
+          </div>
+          <div
+            className="flex"
+          >
+            <DatePicker
+              autoOk={false}
+              container="dialog"
+              disableYearSelection={false}
+              disabled={false}
+              firstDayOfWeek={1}
+              floatingLabelText="Embargo date"
+              hideCalendarDate={false}
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+              textFieldStyle={
+                Object {
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
         </div>
-      </div>
-    </CardText>
-  </Card>
+        <div
+          className="row"
+        >
+          <div
+            className="flex"
+          >
+            <Field
+              component={[Function]}
+              floatingLabelText="Description"
+              fullWidth={true}
+              multiLine={true}
+              name="filesDescription"
+              rows={5}
+              type="text"
+            />
+          </div>
+        </div>
+      </CardText>
+    </Card>
+  </div>
 </div>
 `;

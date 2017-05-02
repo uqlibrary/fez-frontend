@@ -2,7 +2,14 @@
 
 exports[`Publication search form snapshots tests renders default publication search form page 1`] = `
 <form>
-  <div>
+  <div
+    className="layout-fill"
+  >
+    <h1
+      className="page-title display-1"
+    >
+      Component Title
+    </h1>
     <Card
       className="layout-card"
       expandable={false}
@@ -11,12 +18,13 @@ exports[`Publication search form snapshots tests renders default publication sea
     >
       <CardHeader
         avatar={null}
+        className="card-header"
       >
         <div
-          className="row"
+          className="columns is-gapless"
         >
           <div
-            className="flex-100"
+            className="column"
           >
             <h2
               className="headline"
@@ -25,21 +33,17 @@ exports[`Publication search form snapshots tests renders default publication sea
             </h2>
           </div>
           <div
-            className="flex"
-          >
-            <Connect(HelpIcon)
-              text="Lorem Ipsum"
-              title="Help Title"
-            />
-          </div>
+            className="column"
+          />
         </div>
       </CardHeader>
       <CardText
         className="body-1"
       >
-        <p>
+        <br />
+        <div>
           Component Search Text
-        </p>
+        </div>
         <Field
           autoComplete="off"
           component={[Function]}

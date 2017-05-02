@@ -12,8 +12,6 @@ import './PublicationSearchForm.scss';
 export default class PublicationSearchForm extends Component {
 
     static propTypes = {
-        helpTitle: PropTypes.string.isRequired,
-        helpText: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         explanationText: PropTypes.string.isRequired,
         defaultSearchFieldLabel: PropTypes.string,
@@ -23,7 +21,8 @@ export default class PublicationSearchForm extends Component {
         loadDoiResultsList: PropTypes.func,
         loadPubmedResultsList: PropTypes.func,
         loadTitleResultsList: PropTypes.func,
-        formValues: PropTypes.object
+        formValues: PropTypes.object,
+        help: PropTypes.object
     };
 
     static defaultProps = {
@@ -70,25 +69,32 @@ export default class PublicationSearchForm extends Component {
     };
 
     render() {
-        const {pristine, handleSubmit} = this.props;
+        const {pristine, handleSubmit, title, help} = this.props;
         return (
             <form ref="publicationSearchForm" onSubmit={handleSubmit}>
-                <div>
+                <div className="layout-fill">
+
+                    <h1 className="page-title display-1">{title ? title : 'This is the page title'}</h1>
                     <Card className="layout-card">
-                        <CardHeader>
-                            <div className="row">
-                                <div className="flex-100">
-                                    <h2 className="headline">{this.props.title}</h2>
+                        <CardHeader className="card-header">
+                            <div className="columns is-gapless">
+                                <div className="column">
+                                    <h2 className="headline">{title ? title : 'This is the card title'}</h2>
                                 </div>
-                                <div className="flex">
-                                    <HelpIcon
-                                        text={this.props.helpText}
-                                        title={this.props.helpTitle} />
+                                <div className="column">
+                                    {help && (
+                                        <HelpIcon
+                                            title={help.title}
+                                            text={help.text}
+                                            buttonLabel={help.buttonLabel}
+                                        />
+                                    )}
                                 </div>
                             </div>
                         </CardHeader>
                         <CardText className="body-1">
-                            <p>{this.props.explanationText}</p>
+                            <br />
+                            <div>{this.props.explanationText}</div>
                             <Field component={TextField}
                                    name="doiSearch"
                                    fullWidth

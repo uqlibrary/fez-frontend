@@ -13,7 +13,8 @@ export default class SearchResults extends Component {
         claimRecordBtnLabel: PropTypes.string,
         helpTitle: PropTypes.string,
         helpText: PropTypes.string,
-        dataSource: PropTypes.object
+        dataSource: PropTypes.object,
+        help: PropTypes.object
     };
 
     constructor(props) {
@@ -25,7 +26,8 @@ export default class SearchResults extends Component {
     };
 
     render() {
-        const searchResultEntries = this.props.dataSource.map((source, i) => {
+        const {dataSource, help, title} = this.props;
+        const searchResultEntries = dataSource.map((source, i) => {
             const entry = {
                 title: source.get('rek_title'),
                 journalName: source.get('fez_record_search_key_journal_name').get('rek_journal_name'),
@@ -44,26 +46,34 @@ export default class SearchResults extends Component {
         });
 
         return (
-            <Card className="layout-card">
-                <CardHeader>
-                    <div className="row">
-                        <div className="flex-100">
-                            <h2 className="headline">{this.props.title}</h2>
-                        </div>
-                        {this.props.helpTitle && this.props.helpText && (
-                            <div className="flex">
-                                <HelpIcon
-                                    text={this.props.helpTitle}
-                                    title={this.props.helpText} inline />
+            <div className="layout-fill">
+
+                <h1 className="page-title display-1">{title ? title : 'This is the page title'}</h1>
+
+                <Card className="layout-card">
+                    <CardHeader className="card-header">
+                        <div className="columns is-gapless">
+                            <div className="column">
+                                <h2 className="headline">{title}</h2>
                             </div>
-                        )}
-                    </div>
-                </CardHeader>
-                <CardText className="body-1">
-                    <p>{this.setExplanationText()}</p>
-                    {searchResultEntries}
-                </CardText>
-            </Card>
+                            <div className="column">
+                                {help && (
+                                    <HelpIcon
+                                        title={help.title}
+                                        text={help.text}
+                                        buttonLabel={help.buttonLabel}
+                                    />
+                                )}
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardText className="body-1">
+                        <br />
+                        <div>{this.setExplanationText()}</div>
+                        {searchResultEntries}
+                    </CardText>
+                </Card>
+            </div>
         );
     }
 }

@@ -27,7 +27,8 @@ export default class PublicationTypeForm extends Component {
             PropTypes.object
         ]),
         maxSearchResults: PropTypes.number,
-        publicationTypeLabel: PropTypes.string
+        publicationTypeLabel: PropTypes.string,
+        help: PropTypes.object
     };
 
     constructor(props) {
@@ -86,8 +87,7 @@ export default class PublicationTypeForm extends Component {
             handleSubmit,
             loadSelectedPublicationType,
             title,
-            helpTitle,
-            helpText,
+            help,
             explanationText,
             maxSearchResults,
             children,
@@ -96,36 +96,43 @@ export default class PublicationTypeForm extends Component {
 
         return (
             <form onSubmit={handleSubmit}>
-                <Card className="layout-card">
-                    <CardHeader>
-                        <div className="row">
-                            <div className="flex-100">
-                                <h2 className="headline">{title}</h2>
-                            </div>
-                            {helpTitle && helpText && (
-                                <div className="flex">
-                                    <HelpIcon
-                                        text={helpTitle}
-                                        title={helpText} inline />
+                <div className="layout-fill">
+
+                    <h1 className="page-title display-1">{title ? title : 'This is the page title'}</h1>
+                    <Card className="layout-card">
+                        <CardHeader className="card-header">
+                            <div className="columns is-gapless">
+                                <div className="column">
+                                    <h2 className="headline">{title ? title : 'This is the card title'}</h2>
                                 </div>
-                            )}
-                        </div>
-                    </CardHeader>
-                    <CardText className="body-1">
-                        {explanationText && (
-                            <p>{explanationText}</p>
-                        )}
-                        <Field component={AutoCompleteSelect} name="publicationType"
-                               maxSearchResults={maxSearchResults}
-                               label={publicationTypeLabel}
-                               dataSource={this.createCompletePublicationList()}
-                               dataSourceConfig={{text: 'name', value: 'id'}}
-                               onChange={loadSelectedPublicationType}
-                               openOnFocus
-                               fullWidth />
-                    </CardText>
-                </Card>
-                {children}
+                                <div className="column">
+                                    {help && (
+                                        <HelpIcon
+                                            title={help.title}
+                                            text={help.text}
+                                            buttonLabel={help.buttonLabel}
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                        </CardHeader>
+                        <CardText className="body-1">
+                            <br />
+                            <div>
+                                {explanationText ? explanationText : 'This is the default card content'}
+                            </div>
+                            <Field component={AutoCompleteSelect} name="publicationType"
+                                   maxSearchResults={maxSearchResults}
+                                   label={publicationTypeLabel}
+                                   dataSource={this.createCompletePublicationList()}
+                                   dataSourceConfig={{text: 'name', value: 'id'}}
+                                   onChange={loadSelectedPublicationType}
+                                   openOnFocus
+                                   fullWidth />
+                        </CardText>
+                    </Card>
+                    {children}
+                </div>
             </form>
         );
     }
