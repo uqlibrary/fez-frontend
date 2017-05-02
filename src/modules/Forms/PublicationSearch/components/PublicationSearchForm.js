@@ -20,9 +20,9 @@ export default class PublicationSearchForm extends Component {
         defaultButtonLabel: PropTypes.string,
         pristine: PropTypes.bool,
         handleSubmit: PropTypes.func,
-        doiSearch: PropTypes.func,
-        pubMedSearch: PropTypes.func,
-        titleSearch: PropTypes.func,
+        loadDoiResultsList: PropTypes.func,
+        loadPubmedResultsList: PropTypes.func,
+        loadTitleResultsList: PropTypes.func,
         formValues: PropTypes.object
     };
 
@@ -61,11 +61,11 @@ export default class PublicationSearchForm extends Component {
         const fieldValue = formValues.get('doiSearch');
 
         if (isDOIValue(fieldValue)) {
-            this.props.doiSearch(fieldValue);
+            this.props.loadDoiResultsList(fieldValue);
         } else if (isPubMedValue(fieldValue)) {
-            this.props.pubMedSearch(fieldValue);
+            this.props.loadPubmedResultsList(fieldValue);
         } else {
-            this.props.titleSearch(179, fieldValue);
+            this.props.loadTitleResultsList(179, fieldValue);
         }
     };
 

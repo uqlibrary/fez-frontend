@@ -19,8 +19,8 @@ export default class PublicationTypeForm extends Component {
         helpText: PropTypes.string,
         pristine: PropTypes.bool,
         handleSubmit: PropTypes.func,
-        loadPublicationTypes: PropTypes.func,
-        getSelectedPublicationType: PropTypes.func,
+        loadPublicationTypesList: PropTypes.func,
+        loadSelectedPublicationType: PropTypes.func,
         children: PropTypes.oneOfType([
             PropTypes.bool,
             PropTypes.object
@@ -35,7 +35,7 @@ export default class PublicationTypeForm extends Component {
     }
 
     componentDidMount() {
-        this.props.loadPublicationTypes();
+        this.props.loadPublicationTypesList();
     }
 
     setPublicationList = () => {
@@ -67,7 +67,7 @@ export default class PublicationTypeForm extends Component {
     render() {
         const {
             handleSubmit,
-            getSelectedPublicationType,
+            loadSelectedPublicationType,
             title,
             helpTitle,
             helpText,
@@ -103,7 +103,7 @@ export default class PublicationTypeForm extends Component {
                                label={label}
                                dataSource={this.setPublicationList()}
                                dataSourceConfig={{text: 'name', value: 'id'}}
-                               onChange={getSelectedPublicationType}
+                               onChange={loadSelectedPublicationType}
                                openOnFocus
                                fullWidth />
                     </CardText>

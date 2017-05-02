@@ -4,7 +4,7 @@ import {api} from '../config';
  * Fetches the publication Types
  * @returns {Promise}
  */
-export function getPublicationTypes() {
+export function loadPublicationTypesData() {
     return new Promise((resolve, reject) => {
         api.get('records/types').then(response => {
             resolve(response.data);

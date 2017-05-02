@@ -1,5 +1,5 @@
 // Repositories
-import {getPublicationTypes} from '../../../repositories/publicationTypes';
+import {loadPublicationTypesData} from '../../../repositories/publicationTypes';
 
 // Types
 export const PUBLICATION_TYPES_LOADING = 'PUBLICATION_TYPES_LOADING';
@@ -10,10 +10,10 @@ export const PUBLICATION_TYPE_SELECTED = 'PUBLICATION_TYPE_SELECTED';
  * Loads the publication types into the application
  * @returns {function(*)}
  */
-export function loadPublicationTypes() {
+export function loadPublicationTypesList() {
     return dispatch => {
         dispatch({type: PUBLICATION_TYPES_LOADING});
-        getPublicationTypes().then(publicationTypes => {
+        loadPublicationTypesData().then(publicationTypes => {
             dispatch({
                 type: PUBLICATION_TYPES_LOADED,
                 payload: publicationTypes
@@ -28,7 +28,7 @@ export function loadPublicationTypes() {
  * Selects the publication type id
  * @returns {{type: string, payload: int}}
  */
-export function getSelectedPublicationType(selectedId) {
+export function loadSelectedPublicationType(selectedId) {
     return {
         type: PUBLICATION_TYPE_SELECTED,
         payload: selectedId

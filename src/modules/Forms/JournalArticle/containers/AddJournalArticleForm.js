@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import AddJournalArticleForm from '../components/AddJournalArticleForm';
-import {loadPublicationSubTypes, loadAuthorData} from '../actions';
+import {loadPublicationSubTypesList, loadAuthorsList} from '../actions';
 import Immutable from 'immutable';
 
 
@@ -18,8 +18,8 @@ AddJournalArticleFormContainer = connect(state => {
     };
 }, dispatch => {
     return {
-        loadPublicationSubTypes: () => dispatch(loadPublicationSubTypes()),
-        loadAuthorData: () => dispatch(loadAuthorData())
+        loadPublicationSubTypesList: () => dispatch(loadPublicationSubTypesList()),
+        loadAuthorsList: () => dispatch(loadAuthorsList())
     };
 })(AddJournalArticleFormContainer);
 

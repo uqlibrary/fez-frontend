@@ -4,7 +4,7 @@ import {reduxForm, getFormValues} from 'redux-form/immutable';
 import PublicationSearchForm from '../components/PublicationSearchForm';
 import {validate} from '../validator';
 import Immutable from 'immutable';
-import {doiSearch, pubMedSearch, titleSearch} from '../actions';
+import {loadDoiResultsList, loadPubmedResultsList, loadTitleResultsList} from '../actions';
 
 let PublicationSearchFormContainer = reduxForm({
     form: 'PublicationSearchForm',
@@ -17,9 +17,9 @@ PublicationSearchFormContainer = connect((state) => {
     };
 }, dispatch => {
     return {
-        doiSearch: doi => dispatch(doiSearch(doi)),
-        pubMedSearch: pubMedId => dispatch(pubMedSearch(pubMedId)),
-        titleSearch: (rekDisplayType, title) => dispatch(titleSearch(rekDisplayType, title))
+        loadDoiResultsList: doi => dispatch(loadDoiResultsList(doi)),
+        loadPubmedResultsList: pubMedId => dispatch(loadPubmedResultsList(pubMedId)),
+        loadTitleResultsList: (rekDisplayType, title) => dispatch(loadTitleResultsList(rekDisplayType, title))
     };
 })(PublicationSearchFormContainer);
 

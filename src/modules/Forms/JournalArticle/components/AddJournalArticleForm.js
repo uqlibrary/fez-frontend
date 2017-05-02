@@ -17,9 +17,9 @@ const formName = 'addJournalArticle';
 export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
-        loadPublicationSubTypes: PropTypes.func,
+        loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
-        loadAuthorData: PropTypes.func,
+        loadAuthorsList: PropTypes.func,
         authorList: PropTypes.object
     };
 
@@ -33,8 +33,8 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentDidMount() {
-        this.props.loadPublicationSubTypes();
-        this.props.loadAuthorData();
+        this.props.loadPublicationSubTypesList();
+        this.props.loadAuthorsList();
     }
 
     handleSubTypeChange = (e, index, value) => {

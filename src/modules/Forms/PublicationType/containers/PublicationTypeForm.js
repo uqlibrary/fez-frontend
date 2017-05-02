@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {reduxForm} from 'redux-form/immutable';
 
 import PublicationTypeForm from '../components/PublicationTypeForm';
-import {loadPublicationTypes, getSelectedPublicationType} from '../actions';
+import {loadPublicationTypesList, loadSelectedPublicationType} from '../actions';
 
 
 let PublicationTypeFormContainer = reduxForm({
@@ -16,8 +16,8 @@ PublicationTypeFormContainer = connect(state => {
     };
 }, dispatch => {
     return {
-        loadPublicationTypes: () => dispatch(loadPublicationTypes()),
-        getSelectedPublicationType: (obj, selectedId) => dispatch(getSelectedPublicationType(selectedId))
+        loadPublicationTypesList: () => dispatch(loadPublicationTypesList()),
+        loadSelectedPublicationType: (obj, selectedId) => dispatch(loadSelectedPublicationType(selectedId))
     };
 })(PublicationTypeFormContainer);
 

@@ -20,7 +20,7 @@ class addRecord extends React.Component {
 
     static propTypes = {
         searchResultsList: PropTypes.object,
-        selectedPublication: PropTypes.object
+        selectedPublicationType: PropTypes.object
     };
 
     state = {
@@ -103,7 +103,7 @@ class addRecord extends React.Component {
                     </div>
                 );
             case 2:
-                const {selectedPublication} = this.props;
+                const {selectedPublicationType} = this.props;
                 return (
                     <PublicationTypeForm
                         title="Add your publication"
@@ -113,7 +113,7 @@ class addRecord extends React.Component {
                         label="Select a publication type">
 
                         {/* Journal Article is selected */}
-                        {selectedPublication.get('name') === 'Journal Article' &&
+                        {selectedPublicationType.get('name') === 'Journal Article' &&
                         <div>
                             <AddJournalArticleForm />
                         </div>

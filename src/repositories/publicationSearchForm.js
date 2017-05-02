@@ -38,7 +38,7 @@ function performSearch(querystring) {
  * Searches internally and externally for a requested doi
  * @returns {Promise}
  */
-export function searchDoi(doi) {
+export function searchDoiEndpoint(doi) {
     return performSearch(`doi=${doi}`);
 }
 
@@ -46,7 +46,7 @@ export function searchDoi(doi) {
  * Searches internally and externally for a requested pubmedId
  * @returns {Promise}
  */
-export function searchPubMed(pubMedId) {
+export function searchPubmedEndpoint(pubMedId) {
     return performSearch(`pub_med_id=${pubMedId}`);
 }
 
@@ -55,6 +55,6 @@ export function searchPubMed(pubMedId) {
  * Searches internally and externally for a requested title
  * @returns {Promise}
  */
-export function searchTitle(rekDisplayType, title) {
+export function searchTitleEndpoint(rekDisplayType, title) {
     return performSearch(`rek_display_type=${rekDisplayType}&title=${title}`);
 }
