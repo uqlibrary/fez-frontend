@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Document type form integration tests renders default document type component 1`] = `
+exports[`Document type form snapshot tests renders default document type component 1`] = `
 <form>
   <Card
     className="layout-card"
@@ -41,10 +41,22 @@ exports[`Document type form integration tests renders default document type comp
         component={[Function]}
         dataSource={
           Array [
-            undefined,
-            undefined,
-            undefined,
-            undefined,
+            Object {
+              "id": 174,
+              "name": "Book",
+            },
+            Object {
+              "id": 177,
+              "name": "Book Chapter",
+            },
+            Object {
+              "id": 130,
+              "name": "Conference Paper",
+            },
+            Object {
+              "id": 179,
+              "name": "Journal Article",
+            },
             Object {
               "divider": <Divider
                 inset={false}
@@ -52,40 +64,96 @@ exports[`Document type form integration tests renders default document type comp
               "id": "divider",
             },
             Object {
-              "id": 1,
-              "label": "Article (original research)",
+              "id": 202,
+              "name": "Generic Document",
             },
             Object {
-              "id": 2,
-              "label": "Critical review of research, literature review, critical commentary",
+              "id": 263,
+              "name": "Audio Document",
             },
             Object {
-              "id": 3,
-              "label": "Letter to editor, brief commentary or brief communication",
+              "id": 174,
+              "name": "Book",
             },
             Object {
-              "id": 4,
-              "label": "Correction/erratum",
+              "id": 177,
+              "name": "Book Chapter",
             },
             Object {
-              "id": 5,
-              "label": "Review of book, film, TV, video, software, performance, music etc ...",
+              "id": 130,
+              "name": "Conference Paper",
             },
             Object {
-              "id": 6,
-              "label": "Editorial",
+              "id": 197,
+              "name": "Conference Proceedings",
             },
             Object {
-              "id": 7,
-              "label": "Discussion - respones, round table/panel discussions. Q&A, reply",
+              "id": 313,
+              "name": "Creative Work",
             },
             Object {
-              "id": 8,
-              "label": "Creative work",
+              "id": 371,
+              "name": "Data Collection",
             },
             Object {
-              "id": 9,
-              "label": "Others",
+              "id": 181,
+              "name": "Department Technical Report",
+            },
+            Object {
+              "id": 316,
+              "name": "Design",
+            },
+            Object {
+              "id": 228,
+              "name": "Digilib Image",
+            },
+            Object {
+              "id": 238,
+              "name": "Image",
+            },
+            Object {
+              "id": 294,
+              "name": "Journal",
+            },
+            Object {
+              "id": 179,
+              "name": "Journal Article",
+            },
+            Object {
+              "id": 374,
+              "name": "Manuscript",
+            },
+            Object {
+              "id": 191,
+              "name": "Newspaper Article",
+            },
+            Object {
+              "id": 185,
+              "name": "Patent",
+            },
+            Object {
+              "id": 204,
+              "name": "Preprint",
+            },
+            Object {
+              "id": 275,
+              "name": "Research Report",
+            },
+            Object {
+              "id": 189,
+              "name": "Seminar Paper",
+            },
+            Object {
+              "id": 187,
+              "name": "Thesis",
+            },
+            Object {
+              "id": 310,
+              "name": "Video Document",
+            },
+            Object {
+              "id": 183,
+              "name": "Working Paper",
             },
           ]
         }

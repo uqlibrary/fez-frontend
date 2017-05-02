@@ -14,6 +14,7 @@ export default class PublicationTypeForm extends Component {
 
     static propTypes = {
         title: PropTypes.string.isRequired,
+        popularTypesList: PropTypes.array.isRequired,
         explanationText: PropTypes.string,
         helpTitle: PropTypes.string,
         helpText: PropTypes.string,
@@ -27,7 +28,7 @@ export default class PublicationTypeForm extends Component {
         ]),
         publicationTypeList: PropTypes.object,
         maxSearchResults: PropTypes.number,
-        label: PropTypes.string
+        publicationTypeLabel: PropTypes.string
     };
 
     constructor(props) {
@@ -38,14 +39,21 @@ export default class PublicationTypeForm extends Component {
         this.props.loadPublicationTypesList();
     }
 
-    setPublicationList = () => {
-        const {publicationTypeList} = this.props;
-        if (publicationTypeList && publicationTypeList.size > 0) {
-            const popularTypesList = ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'];
-            const popularTypes = [];
+    addListDivider(popularTypes) {
+        if (popularTypes.length > 0) {
+            popularTypes.push({'id': 'divider', 'divider': <Divider key="divider"/>});
+        }
 
-            const ptObject = publicationTypeList.toJS();
+        return popularTypes;
+    }
 
+    // create a list of popularTypes as each id is different in each environment
+    createPopularTypesList(popularTypesList, publicationTypeList) {
+        const popularTypes = [];
+        const ptObject = publicationTypeList.toJS();
+
+        // check if the popularTypesList has been passed in as a prop
+        if (popularTypesList.length > 0) {
             popularTypesList.map(item => {
                 const entry = ptObject.find(obj => {
                     return obj.name === item;
@@ -53,12 +61,26 @@ export default class PublicationTypeForm extends Component {
 
                 popularTypes.push(entry);
             });
+        }
+
+        return popularTypes;
+    }
+
+    // merge the popularTypes list with the complete publicationTypeList
+    mergeLists(popularTypes, publicationTypeList) {
+        return popularTypes.concat(publicationTypeList.toJS());
+    }
+
+    createCompletePublicationList = () => {
+        const {publicationTypeList, popularTypesList} = this.props;
+        if (publicationTypeList.size > 0) {
+            let popularTypes = this.createPopularTypesList(popularTypesList, publicationTypeList);
 
             // add the divider
-            popularTypes.push({'id': 'divider', 'divider': <Divider key="divider"/>});
+            popularTypes = this.addListDivider(popularTypes);
 
             // return the complete merged list
-            return popularTypes.concat(publicationTypeList.toJS());
+            return this.mergeLists(popularTypes, publicationTypeList);
         }
 
         return [];
@@ -74,7 +96,7 @@ export default class PublicationTypeForm extends Component {
             explanationText,
             maxSearchResults,
             children,
-            label
+            publicationTypeLabel
         } = this.props;
 
         return (
@@ -100,8 +122,8 @@ export default class PublicationTypeForm extends Component {
                         )}
                         <Field component={AutoCompleteSelect} name="publicationType"
                                maxSearchResults={maxSearchResults}
-                               label={label}
-                               dataSource={this.setPublicationList()}
+                               label={publicationTypeLabel}
+                               dataSource={this.createCompletePublicationList()}
                                dataSourceConfig={{text: 'name', value: 'id'}}
                                onChange={loadSelectedPublicationType}
                                openOnFocus
