@@ -13,8 +13,8 @@ let AddJournalArticleFormContainer = reduxForm({
 AddJournalArticleFormContainer = connect(state => {
     const publicationTypeState = state.get('publicationSubTypes');
     return {
-        listOfAuthors: publicationTypeState.get('listOfAuthors') || Immutable.Map({}),
-        types: publicationTypeState.get('publicationSubTypes')
+        authorList: publicationTypeState.get('authorList') || Immutable.Map({}),
+        publicationSubTypeList: publicationTypeState.get('publicationSubTypeList')
     };
 }, dispatch => {
     return {

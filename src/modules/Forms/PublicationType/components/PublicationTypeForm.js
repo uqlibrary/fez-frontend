@@ -25,8 +25,7 @@ export default class PublicationTypeForm extends Component {
             PropTypes.bool,
             PropTypes.object
         ]),
-        publicationTypes: PropTypes.object,
-        account: PropTypes.object,
+        publicationTypeList: PropTypes.object,
         maxSearchResults: PropTypes.number,
         label: PropTypes.string
     };
@@ -40,12 +39,12 @@ export default class PublicationTypeForm extends Component {
     }
 
     setPublicationList = () => {
-        const {publicationTypes} = this.props;
-        if (publicationTypes && publicationTypes.size > 0) {
+        const {publicationTypeList} = this.props;
+        if (publicationTypeList && publicationTypeList.size > 0) {
             const popularTypesList = ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'];
             const popularTypes = [];
 
-            const ptObject = publicationTypes.toJS();
+            const ptObject = publicationTypeList.toJS();
 
             popularTypesList.map(item => {
                 const entry = ptObject.find(obj => {
@@ -59,7 +58,7 @@ export default class PublicationTypeForm extends Component {
             popularTypes.push({'id': 'divider', 'divider': <Divider key="divider"/>});
 
             // return the complete merged list
-            return popularTypes.concat(publicationTypes.toJS());
+            return popularTypes.concat(publicationTypeList.toJS());
         }
 
         return [];

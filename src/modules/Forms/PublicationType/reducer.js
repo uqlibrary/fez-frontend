@@ -1,19 +1,19 @@
 import Immutable from 'immutable';
 
-import {PUBLICATION_TYPES_LOADED, SELECTED_PUBLICATION_TYPE} from './actions';
+import {PUBLICATION_TYPES_LOADED, PUBLICATION_TYPE_SELECTED} from './actions';
 
 // Immutable state
 export const initialState = Immutable.fromJS({
-    publicationTypes: {},
+    publicationTypeList: {},
     selectedPublicationType: {}
 });
 
 const publicationTypeReducer = (state = initialState, action) => {
     switch (action.type) {
         case PUBLICATION_TYPES_LOADED:
-            return state.set('publicationTypes', Immutable.fromJS(action.payload));
-        case SELECTED_PUBLICATION_TYPE:
-            const selectedArticleType = state.get('publicationTypes').find(item => {
+            return state.set('publicationTypeList', Immutable.fromJS(action.payload));
+        case PUBLICATION_TYPE_SELECTED:
+            const selectedArticleType = state.get('publicationTypeList').find(item => {
                 return item.get('id') === action.payload;
             });
 

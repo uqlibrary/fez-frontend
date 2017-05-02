@@ -19,7 +19,7 @@ import './AddRecord.scss';
 class addRecord extends React.Component {
 
     static propTypes = {
-        searchResults: PropTypes.object,
+        searchResultsList: PropTypes.object,
         selectedPublication: PropTypes.object
     };
 
@@ -76,9 +76,9 @@ class addRecord extends React.Component {
             case 1:
                 return (
                     <div>
-                        { this.props.searchResults.size > 0 &&
+                        { this.props.searchResultsList.size > 0 &&
                         <SearchResults
-                            dataSource={this.props.searchResults}
+                            dataSource={this.props.searchResultsList}
                             title="Possible matches found"
                             explanationText='Top [noOfResults] matches displayed below. To refine your search and narrow down results, please click the "search again" button below - or create a new record.'
                             helpText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
@@ -113,7 +113,7 @@ class addRecord extends React.Component {
                         label="Select a publication type">
 
                         {/* Journal Article is selected */}
-                        {selectedPublication && selectedPublication.get('name') === 'Journal Article' &&
+                        {selectedPublication.get('name') === 'Journal Article' &&
                         <div>
                             <AddJournalArticleForm />
                         </div>

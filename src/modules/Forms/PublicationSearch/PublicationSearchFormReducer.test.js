@@ -1,8 +1,8 @@
 import publicationSearchReducer, {initialState} from './reducer';
-import {DOI_SEARCH_COMPLETE, PUBMED_SEARCH_COMPLETE, TITLE_SEARCH_COMPLETE} from './actions';
+import {DOI_SEARCH_COMPLETED, PUBMED_SEARCH_COMPLETED, TITLE_SEARCH_COMPLETED} from './actions';
 import Immutable from 'immutable';
 
-import {externalDoiSearchResult, externalPubMedSearchResults, externalTitleSearchResults} from '../../../../src/mock/data/publicationSearch';
+import {externalDoiSearchResultList, externalPubMedSearchResultsList, externalTitleSearchResultsList} from '../../../../src/mock/data/publicationSearch';
 
 describe('Publication search form reducer', () => {
     it('should return the initial state', () => {
@@ -13,41 +13,41 @@ describe('Publication search form reducer', () => {
         );
     });
 
-    it('should handle DOI_SEARCH_COMPLETE', () => {
+    it('should handle DOI_SEARCH_COMPLETED', () => {
         expect(
             publicationSearchReducer(initialState, {
-                type: DOI_SEARCH_COMPLETE,
-                payload: externalDoiSearchResult
+                type: DOI_SEARCH_COMPLETED,
+                payload: externalDoiSearchResultList
             })
         ).toEqual(
             Immutable.fromJS({
-                searchResults: externalDoiSearchResult
+                searchResultsList: externalDoiSearchResultList
             })
         );
     });
 
-    it('should handle PUBMED_SEARCH_COMPLETE', () => {
+    it('should handle PUBMED_SEARCH_COMPLETED', () => {
         expect(
             publicationSearchReducer(initialState, {
-                type: PUBMED_SEARCH_COMPLETE,
-                payload: externalPubMedSearchResults
+                type: PUBMED_SEARCH_COMPLETED,
+                payload: externalPubMedSearchResultsList
             })
         ).toEqual(
             Immutable.fromJS({
-                searchResults: externalPubMedSearchResults
+                searchResultsList: externalPubMedSearchResultsList
             })
         );
     });
 
-    it('should handle TITLE_SEARCH_COMPLETE', () => {
+    it('should handle TITLE_SEARCH_COMPLETED', () => {
         expect(
             publicationSearchReducer(initialState, {
-                type: TITLE_SEARCH_COMPLETE,
-                payload: externalTitleSearchResults
+                type: TITLE_SEARCH_COMPLETED,
+                payload: externalTitleSearchResultsList
             })
         ).toEqual(
             Immutable.fromJS({
-                searchResults: externalTitleSearchResults
+                searchResultsList: externalTitleSearchResultsList
             })
         );
     });

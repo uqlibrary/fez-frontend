@@ -4,7 +4,7 @@ import {getPublicationTypes} from '../../../repositories/publicationTypes';
 // Types
 export const PUBLICATION_TYPES_LOADING = 'PUBLICATION_TYPES_LOADING';
 export const PUBLICATION_TYPES_LOADED = 'PUBLICATION_TYPES_LOADED';
-export const SELECTED_PUBLICATION_TYPE = 'SELECTED_PUBLICATION_TYPE';
+export const PUBLICATION_TYPE_SELECTED = 'PUBLICATION_TYPE_SELECTED';
 
 /**
  * Loads the publication types into the application
@@ -30,7 +30,7 @@ export function loadPublicationTypes() {
  */
 export function getSelectedPublicationType(selectedId) {
     return {
-        type: SELECTED_PUBLICATION_TYPE,
+        type: PUBLICATION_TYPE_SELECTED,
         payload: selectedId
     };
 }

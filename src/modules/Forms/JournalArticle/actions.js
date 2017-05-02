@@ -1,6 +1,6 @@
 // Repositories
-import {getPublicationSubTypes} from '../../../repositories/publicationSubTypes';
-import {getListOfAuthors} from '../../../repositories/authors';
+import {loadPublicationSubTypeList} from '../../../repositories/publicationSubTypes';
+import {loadAuthorsList} from '../../../repositories/authors';
 
 // Types
 export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
@@ -15,7 +15,7 @@ export const AUTHORS_LOADED = 'AUTHORS_LOADED';
 export function loadPublicationSubTypes() {
     return dispatch => {
         dispatch({type: PUBLICATION_SUB_TYPES_LOADING});
-        getPublicationSubTypes().then(publicationTypes => {
+        loadPublicationSubTypeList().then(publicationTypes => {
             dispatch({
                 type: PUBLICATION_SUB_TYPES_LOADED,
                 payload: publicationTypes
@@ -33,7 +33,7 @@ export function loadPublicationSubTypes() {
 export function loadAuthorData() {
     return dispatch => {
         dispatch({type: AUTHORS_LOADING});
-        getListOfAuthors().then(authorList => {
+        loadAuthorsList().then(authorList => {
             dispatch({
                 type: AUTHORS_LOADED,
                 payload: authorList

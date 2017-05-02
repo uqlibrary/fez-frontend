@@ -1,4 +1,4 @@
-export const externalDoiSearchResult = [
+export const externalDoiSearchResultList = [
     {
         'rek_display_type': 179,
         'rek_status': 2,
@@ -59,7 +59,7 @@ export const externalDoiSearchResult = [
     }
 ];
 
-export const internalDoiSearchResult = [
+export const internalDoiSearchResultList = [
     {
         'rek_display_type': 179,
         'rek_status': 2,
@@ -120,7 +120,7 @@ export const internalDoiSearchResult = [
     }
 ];
 
-export const externalPubMedSearchResults = [
+export const externalPubMedSearchResultsList = [
     {
         'rek_display_type': 222,
         'rek_status': 2,
@@ -173,7 +173,7 @@ export const externalPubMedSearchResults = [
     }
 ];
 
-export const internalPubMedSearchResults = [
+export const internalPubMedSearchResultsList = [
     {
         'rek_display_type': 222,
         'rek_status': 2,
@@ -226,7 +226,7 @@ export const internalPubMedSearchResults = [
     }
 ];
 
-export const internalTitleSearchResults = [
+export const internalTitleSearchResultsList = [
     {
         'rek_display_type': 179,
         'rek_status': 2,
@@ -279,7 +279,7 @@ export const internalTitleSearchResults = [
     }
 ];
 
-export const externalTitleSearchResults = [
+export const externalTitleSearchResultsList = [
     {
         'rek_display_type': 179,
         'rek_status': 2,

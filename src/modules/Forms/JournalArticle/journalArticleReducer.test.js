@@ -2,7 +2,7 @@ import publicationSubTypeReducer, {initialState} from './reducer';
 import {PUBLICATION_SUB_TYPES_LOADED, AUTHORS_LOADED} from './actions';
 import Immutable from 'immutable';
 
-import {publicationSubTypes} from '../../../../src/mock/data/publicationSubTypes';
+import {publicationSubTypeList} from '../../../../src/mock/data/publicationSubTypes';
 import {authors} from '../../../../src/mock/data/authors';
 
 describe('Publication type reducer', () => {
@@ -18,12 +18,12 @@ describe('Publication type reducer', () => {
         expect(
             publicationSubTypeReducer(initialState, {
                 type: PUBLICATION_SUB_TYPES_LOADED,
-                payload: publicationSubTypes
+                payload: publicationSubTypeList
             })
         ).toEqual(
             Immutable.fromJS({
-                listOfAuthors: {},
-                publicationSubTypes: publicationSubTypes
+                authorList: {},
+                publicationSubTypeList: publicationSubTypeList
             })
         );
     });
@@ -36,8 +36,8 @@ describe('Publication type reducer', () => {
             })
         ).toEqual(
             Immutable.fromJS({
-                listOfAuthors: authors,
-                publicationSubTypes: {}
+                authorList: authors,
+                publicationSubTypeList: {}
             })
         );
     });

@@ -12,7 +12,7 @@ let PublicationTypeFormContainer = reduxForm({
 PublicationTypeFormContainer = connect(state => {
     const publicationTypeState = state.get('publicationTypes');
     return {
-        publicationTypes: publicationTypeState.get('publicationTypes')
+        publicationTypeList: publicationTypeState.get('publicationTypeList')
     };
 }, dispatch => {
     return {

@@ -1,4 +1,4 @@
-export const publicationTypes = [
+export const publicationTypeList = [
     {'id': 202, 'name': 'Generic Document'},
     {'id': 263, 'name': 'Audio Document'},
     {'id': 174, 'name': 'Book'},

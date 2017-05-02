@@ -2,12 +2,12 @@
 import {searchDoi, searchPubMed, searchTitle} from '../../../repositories/publicationSearchForm';
 
 // Types
-export const SEARCHING_DOI = 'SEARCHING_DOI';
-export const DOI_SEARCH_COMPLETE = 'DOI_SEARCH_COMPLETE';
-export const SEARCHING_PUBMED = 'SEARCHING_PUBMED';
-export const PUBMED_SEARCH_COMPLETE = 'PUBMED_SEARCH_COMPLETE';
-export const SEARCHING_TITLE = 'SEARCHING_TITLE';
-export const TITLE_SEARCH_COMPLETE = 'TITLE_SEARCH_COMPLETE';
+export const DOI_SEARCH = 'DOI_SEARCH';
+export const DOI_SEARCH_COMPLETED = 'DOI_SEARCH_COMPLETED';
+export const PUBMED_SEARCH = 'PUBMED_SEARCH';
+export const PUBMED_SEARCH_COMPLETED = 'PUBMED_SEARCH_COMPLETED';
+export const TITLE_SEARCH = 'TITLE_SEARCH';
+export const TITLE_SEARCH_COMPLETED = 'TITLE_SEARCH_COMPLETED';
 
 /**
  * Performs a DOI search
@@ -15,10 +15,10 @@ export const TITLE_SEARCH_COMPLETE = 'TITLE_SEARCH_COMPLETE';
  */
 export function doiSearch(doi) {
     return dispatch => {
-        dispatch({type: SEARCHING_DOI});
+        dispatch({type: DOI_SEARCH});
         searchDoi(doi).then(authorList => {
             dispatch({
-                type: DOI_SEARCH_COMPLETE,
+                type: DOI_SEARCH_COMPLETED,
                 payload: authorList
             });
         }).catch((error) => {
@@ -33,10 +33,10 @@ export function doiSearch(doi) {
  */
 export function pubMedSearch(pubMedId) {
     return dispatch => {
-        dispatch({type: SEARCHING_PUBMED});
+        dispatch({type: PUBMED_SEARCH});
         searchPubMed(pubMedId).then(payload => {
             dispatch({
-                type: PUBMED_SEARCH_COMPLETE,
+                type: PUBMED_SEARCH_COMPLETED,
                 payload: payload
             });
         }).catch((error) => {
@@ -51,10 +51,10 @@ export function pubMedSearch(pubMedId) {
  */
 export function titleSearch(rekDisplayType, title) {
     return dispatch => {
-        dispatch({type: SEARCHING_TITLE});
+        dispatch({type: TITLE_SEARCH});
         searchTitle(rekDisplayType, title).then(payload => {
             dispatch({
-                type: DOI_SEARCH_COMPLETE,
+                type: TITLE_SEARCH_COMPLETED,
                 payload: payload
             });
         }).catch((error) => {

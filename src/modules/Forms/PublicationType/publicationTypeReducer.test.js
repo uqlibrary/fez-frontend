@@ -1,8 +1,8 @@
 import publicationTypeReducer, {initialState} from './reducer';
-import {PUBLICATION_TYPES_LOADED, SELECTED_PUBLICATION_TYPE} from './actions';
+import {PUBLICATION_TYPES_LOADED, PUBLICATION_TYPE_SELECTED} from './actions';
 import Immutable from 'immutable';
 
-import {publicationTypes} from '../../../../src/mock/data/publicationTypes';
+import {publicationTypeList} from '../../../../src/mock/data/publicationTypes';
 
 describe('Publication type reducer', () => {
     it('should return the initial state', () => {
@@ -17,30 +17,30 @@ describe('Publication type reducer', () => {
         expect(
             publicationTypeReducer(initialState, {
                 type: PUBLICATION_TYPES_LOADED,
-                payload: publicationTypes
+                payload: publicationTypeList
             })
         ).toEqual(
             Immutable.fromJS({
-                publicationTypes: publicationTypes,
+                publicationTypeList: publicationTypeList,
                 selectedPublicationType: {}
             })
         );
     });
 
-    it('should handle SELECTED_PUBLICATION_TYPE', () => {
+    it('should handle PUBLICATION_TYPE_SELECTED', () => {
         const alteredState = Immutable.fromJS({
-            publicationTypes: publicationTypes,
+            publicationTypeList: publicationTypeList,
             selectedPublicationType: {}
         });
 
         expect(
             publicationTypeReducer(alteredState, {
-                type: SELECTED_PUBLICATION_TYPE,
+                type: PUBLICATION_TYPE_SELECTED,
                 payload: 179
             })
         ).toEqual(
             Immutable.fromJS({
-                publicationTypes: publicationTypes,
+                publicationTypeList: publicationTypeList,
                 selectedPublicationType: Immutable.fromJS({id: 179, name: 'Journal Article'})
             })
         );

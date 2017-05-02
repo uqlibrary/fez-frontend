@@ -6,7 +6,7 @@ import toJson from 'enzyme-to-json';
 import Immutable from 'immutable';
 
 import SearchResults from './SearchResults';
-import {externalDoiSearchResult} from '../../../mock/data/publicationSearch';
+import {externalDoiSearchResultList} from '../../../mock/data/publicationSearch';
 
 function setup(ds) {
     const props = {
@@ -19,7 +19,7 @@ function setup(ds) {
 
 describe('Search results snapshots tests', () => {
     it('renders default search results page', () => {
-        const wrapper = setup(externalDoiSearchResult);
+        const wrapper = setup(externalDoiSearchResultList);
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });

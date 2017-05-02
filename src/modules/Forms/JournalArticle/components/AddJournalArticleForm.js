@@ -18,9 +18,9 @@ export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
         loadPublicationSubTypes: PropTypes.func,
-        types: PropTypes.object,
+        publicationSubTypeList: PropTypes.object,
         loadAuthorData: PropTypes.func,
-        listOfAuthors: PropTypes.object
+        authorList: PropTypes.object
     };
 
     constructor(props) {
@@ -42,8 +42,8 @@ export default class AddJournalArticleForm extends Component {
     };
 
     render() {
-        const {types} = this.props;
-        const subtypeItems = types.valueSeq().map((subtypes) => {
+        const {publicationSubTypeList} = this.props;
+        const subtypeItems = publicationSubTypeList.valueSeq().map((subtypes) => {
             return (<MenuItem value={subtypes.get('id')} key={subtypes.get('id')} primaryText={subtypes.get('label')}/>);
         });
 
@@ -106,7 +106,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <Authors form={formName} dataSource={this.props.listOfAuthors} />
+                        <Authors form={formName} dataSource={this.props.authorList} />
                     </CardText>
                 </Card>
 

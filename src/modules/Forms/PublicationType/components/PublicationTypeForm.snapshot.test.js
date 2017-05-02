@@ -8,7 +8,7 @@ import Immutable from 'immutable';
 import PublicationTypeForm from './PublicationTypeForm';
 
 function setup() {
-    const publicationSubTypes = [
+    const publicationSubTypeList = [
         {'id': 1, 'label': 'Article (original research)'},
         {'id': 2, 'label': 'Critical review of research, literature review, critical commentary'},
         {'id': 3, 'label': 'Letter to editor, brief commentary or brief communication'},
@@ -24,7 +24,7 @@ function setup() {
         helpTitle: 'Help Title',
         helpText: 'Lorem Ipsum',
         title: 'Component Title',
-        publicationTypes: Immutable.fromJS(publicationSubTypes),
+        publicationTypeList: Immutable.fromJS(publicationSubTypeList),
         loadPublicationTypes: jest.fn()
     };
 

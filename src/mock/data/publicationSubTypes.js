@@ -1,4 +1,4 @@
-export const publicationSubTypes = [
+export const publicationSubTypeList = [
     {'id': 1, 'label': 'Article (original research)'},
     {'id': 2, 'label': 'Critical review of research, literature review, critical commentary'},
     {'id': 3, 'label': 'Letter to editor, brief commentary or brief communication'},

@@ -12,9 +12,7 @@ let PublicationSearchFormContainer = reduxForm({
 })(PublicationSearchForm);
 
 PublicationSearchFormContainer = connect((state) => {
-    const searchResultsState = state.get('publicationSearch');
     return {
-        searchResults: searchResultsState.get('searchResults'),
         formValues: getFormValues('PublicationSearchForm')(state) || Immutable.Map({})
     };
 }, dispatch => {

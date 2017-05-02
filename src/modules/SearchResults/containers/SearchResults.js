@@ -10,7 +10,7 @@ let SearchResultsContainer = reduxForm({
 SearchResultsContainer = connect((state) => {
     const searchResultsState = state.get('publicationSearch');
     return {
-        searchResults: searchResultsState.get('searchResults')
+        searchResultsList: searchResultsState.get('searchResultsList')
     };
 })(SearchResultsContainer);
 
