@@ -69,193 +69,185 @@ export default class AddJournalArticleForm extends Component {
 
         return (
             <div style={{marginBottom: '-60px'}}>
-                <div className="layout-fill">
-                    {/* Journal Information */}
-                    <Card className="layout-card">
-                        <CardHeader className="card-header">
-                            <div className="columns is-gapless">
-                                <div className="column">
-                                    <h2 className="headline">Journal article information</h2>
-                                </div>
-                                <div className="column">
-                                    {journalArticleHelp && (
-                                        <HelpIcon
-                                            title={journalArticleHelp.title}
-                                            text={journalArticleHelp.text}
-                                            buttonLabel={journalArticleHelp.buttonLabel}
-                                        />
-                                    )}
-                                </div>
+                {/* Journal Information */}
+                <Card className="layout-card">
+                    <CardHeader className="card-header">
+                        <div className="columns is-gapless">
+                            <div className="column">
+                                <h2 className="headline">Journal article information</h2>
                             </div>
-                        </CardHeader>
-                        <CardText className="body-1">
-                            <div className="flex">
-                                <Field component={TextField} name="journalTitle" type="text" fullWidth
-                                       floatingLabelText="Journal title"/>
+                            <div className="column">
+                                {journalArticleHelp && (
+                                    <HelpIcon
+                                        title={journalArticleHelp.title}
+                                        text={journalArticleHelp.text}
+                                        buttonLabel={journalArticleHelp.buttonLabel}
+                                    />
+                                )}
                             </div>
-                            <div className="row-sm column align-stretch align-center-sm">
-                                <div className="flex inputPadding">
-                                    <Field component={TextField} name="journalName" type="text" fullWidth
-                                           floatingLabelText="Journal name"/>
-                                </div>
-                                <div className="flex">
-                                    <DatePicker floatingLabelText="Journal Publish Date" textFieldStyle={{width: '100%'}}
-                                                style={{width: '100%'}}/>
-                                </div>
+                        </div>
+                    </CardHeader>
+                    <CardText className="body-1">
+                        <div className="flex">
+                            <Field component={TextField} name="journalTitle" type="text" fullWidth
+                                   floatingLabelText="Journal title"/>
+                        </div>
+                        <div className="row-sm column align-stretch align-center-sm">
+                            <div className="flex inputPadding">
+                                <Field component={TextField} name="journalName" type="text" fullWidth
+                                       floatingLabelText="Journal name"/>
                             </div>
                             <div className="flex">
-                                <SelectField
-                                    floatingLabelText="Select a publication type"
-                                    value={this.state.subTypeValue}
-                                    onChange={this.handleSubTypeChange}
-                                    style={{width: '100%'}}
-                                >
-                                    {subtypeItems}
-                                </SelectField>
+                                <DatePicker floatingLabelText="Journal Publish Date" textFieldStyle={{width: '100%'}}
+                                            style={{width: '100%'}}/>
                             </div>
-                        </CardText>
-                    </Card>
-                </div>
+                        </div>
+                        <div className="flex">
+                            <SelectField
+                                floatingLabelText="Select a publication type"
+                                value={this.state.subTypeValue}
+                                onChange={this.handleSubTypeChange}
+                                style={{width: '100%'}}
+                            >
+                                {subtypeItems}
+                            </SelectField>
+                        </div>
+                    </CardText>
+                </Card>
 
                 {/* Author Information */}
-                <div className="layout-fill">
-                    <Card className="layout-card">
-                        <CardHeader className="card-header">
-                            <div className="columns is-gapless">
-                                <div className="column">
-                                    <h2 className="headline">Authors</h2>
-                                </div>
-                                <div className="column">
-                                    {authorsHelp && (
-                                        <HelpIcon
-                                            title={authorsHelp.title}
-                                            text={authorsHelp.text}
-                                            buttonLabel={authorsHelp.buttonLabel}
-                                        />
-                                    )}
-                                </div>
+                <Card className="layout-card">
+                    <CardHeader className="card-header">
+                        <div className="columns is-gapless">
+                            <div className="column">
+                                <h2 className="headline">Authors</h2>
                             </div>
-                        </CardHeader>
-                        <CardText className="body-1">
-                            <Authors form={formName} dataSource={this.props.authorList} />
-                        </CardText>
-                    </Card>
-                </div>
+                            <div className="column">
+                                {authorsHelp && (
+                                    <HelpIcon
+                                        title={authorsHelp.title}
+                                        text={authorsHelp.text}
+                                        buttonLabel={authorsHelp.buttonLabel}
+                                    />
+                                )}
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardText className="body-1">
+                        <Authors form={formName} dataSource={this.props.authorList} />
+                    </CardText>
+                </Card>
 
                 {/* Optional publication details */}
-                <div className="layout-fill">
-                    <Card className="layout-card">
-                        <CardHeader className="card-header">
-                            <div className="columns is-gapless">
-                                <div className="column">
-                                    <h2 className="headline">Optional publication detail</h2>
-                                </div>
-                                <div className="column">
-                                    {optionalDetailsHelp && (
-                                        <HelpIcon
-                                            title={optionalDetailsHelp.title}
-                                            text={optionalDetailsHelp.text}
-                                            buttonLabel={optionalDetailsHelp.buttonLabel}
-                                        />
-                                    )}
-                                </div>
+                <Card className="layout-card">
+                    <CardHeader className="card-header">
+                        <div className="columns is-gapless">
+                            <div className="column">
+                                <h2 className="headline">Optional publication detail</h2>
                             </div>
-                        </CardHeader>
-                        <CardText className="body-1">
-                            <div className="row-sm column align-stretch align-center-sm">
-                                <div className="flex inputPadding">
-                                    <Field component={TextField} name="publicationVolume" type="text" fullWidth
-                                           floatingLabelText="Volume"/>
-                                </div>
-                                <div className="flex inputPadding">
-                                    <Field component={TextField} name="publicationIssue" type="text" fullWidth
-                                           floatingLabelText="Issue"/>
-                                </div>
+                            <div className="column">
+                                {optionalDetailsHelp && (
+                                    <HelpIcon
+                                        title={optionalDetailsHelp.title}
+                                        text={optionalDetailsHelp.text}
+                                        buttonLabel={optionalDetailsHelp.buttonLabel}
+                                    />
+                                )}
                             </div>
-                            <div className="row-sm column align-stretch align-center-sm">
-                                <div className="flex inputPadding">
-                                    <Field component={TextField} name="publicationStartPage" type="text" fullWidth
-                                           floatingLabelText="Start page"/>
-                                </div>
-                                <div className="flex">
-                                    <Field component={TextField} name="publicationEndPage" type="text" fullWidth
-                                           floatingLabelText="End page"/>
-                                </div>
+                        </div>
+                    </CardHeader>
+                    <CardText className="body-1">
+                        <div className="row-sm column align-stretch align-center-sm">
+                            <div className="flex inputPadding">
+                                <Field component={TextField} name="publicationVolume" type="text" fullWidth
+                                       floatingLabelText="Volume"/>
                             </div>
-                            <div className="row">
-                                <div className="flex">
-                                    <Field component={TextField} name="publicationNotes" type="text" fullWidth multiLine
-                                           rows={5} floatingLabelText="Notes (not publically viewable)"/>
-                                </div>
+                            <div className="flex inputPadding">
+                                <Field component={TextField} name="publicationIssue" type="text" fullWidth
+                                       floatingLabelText="Issue"/>
                             </div>
-                        </CardText>
-                    </Card>
-                </div>
+                        </div>
+                        <div className="row-sm column align-stretch align-center-sm">
+                            <div className="flex inputPadding">
+                                <Field component={TextField} name="publicationStartPage" type="text" fullWidth
+                                       floatingLabelText="Start page"/>
+                            </div>
+                            <div className="flex">
+                                <Field component={TextField} name="publicationEndPage" type="text" fullWidth
+                                       floatingLabelText="End page"/>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="flex">
+                                <Field component={TextField} name="publicationNotes" type="text" fullWidth multiLine
+                                       rows={5} floatingLabelText="Notes (not publically viewable)"/>
+                            </div>
+                        </div>
+                    </CardText>
+                </Card>
 
                 {/* Files */}
-                <div className="layout-fill">
-                    <Card className="layout-card">
-                        <CardHeader className="card-header">
-                            <div className="columns is-gapless">
-                                <div className="column">
-                                    <h2 className="headline">Files</h2>
-                                </div>
-                                <div className="column">
-                                    {filesHelp && (
-                                        <HelpIcon
-                                            title={filesHelp.title}
-                                            text={filesHelp.text}
-                                            buttonLabel={filesHelp.buttonLabel}
-                                        />
-                                    )}
-                                </div>
+                <Card className="layout-card">
+                    <CardHeader className="card-header">
+                        <div className="columns is-gapless">
+                            <div className="column">
+                                <h2 className="headline">Files</h2>
                             </div>
-                        </CardHeader>
-                        <CardText className="body-1">
+                            <div className="column">
+                                {filesHelp && (
+                                    <HelpIcon
+                                        title={filesHelp.title}
+                                        text={filesHelp.text}
+                                        buttonLabel={filesHelp.buttonLabel}
+                                    />
+                                )}
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardText className="body-1">
 
-                            <div className="row">
-                                <div className="flex" style={{marginTop: '16px', flex: '0 0 140px'}}>
-                                    <RaisedButton label="Browse files" secondary/>
-                                </div>
-                                <div className="flex" style={{marginTop: '-10px'}}>
-                                    <Field component={TextField} name="filesUpload" type="text"
-                                           floatingLabelText="Filename selected" fullWidth/>
-                                </div>
+                        <div className="row">
+                            <div className="flex" style={{marginTop: '16px', flex: '0 0 140px'}}>
+                                <RaisedButton label="Browse files" secondary/>
                             </div>
+                            <div className="flex" style={{marginTop: '-10px'}}>
+                                <Field component={TextField} name="filesUpload" type="text"
+                                       floatingLabelText="Filename selected" fullWidth/>
+                            </div>
+                        </div>
 
 
-                            <div className="fileInstructions">
-                                <h3>File name restrictions</h3>
-                                <div style={{width: '100%'}}>
-                                    <ul>
-                                        <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
-                                        <li>Only numbers and lowercase characters in the file extension</li>
-                                        <li>Under 45 characters</li>
-                                        <li>Only one file extension (on period (.) character) and</li>
-                                        <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
-                                    </ul>
-                                </div>
+                        <div className="fileInstructions">
+                            <h3>File name restrictions</h3>
+                            <div style={{width: '100%'}}>
+                                <ul>
+                                    <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
+                                    <li>Only numbers and lowercase characters in the file extension</li>
+                                    <li>Under 45 characters</li>
+                                    <li>Only one file extension (on period (.) character) and</li>
+                                    <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
+                                </ul>
                             </div>
+                        </div>
 
-                            <div className="row-sm column align-stretch align-center-sm">
-                                <div className="flex inputPadding">
-                                    <Field component={TextField} name="filesAccessConditions" type="text" fullWidth
-                                           floatingLabelText="Access conditions"/>
-                                </div>
-                                <div className="flex">
-                                    <DatePicker floatingLabelText="Embargo date" textFieldStyle={{width: '100%'}}
-                                                style={{width: '100%'}}/>
-                                </div>
+                        <div className="row-sm column align-stretch align-center-sm">
+                            <div className="flex inputPadding">
+                                <Field component={TextField} name="filesAccessConditions" type="text" fullWidth
+                                       floatingLabelText="Access conditions"/>
                             </div>
-                            <div className="row">
-                                <div className="flex">
-                                    <Field component={TextField} name="filesDescription" type="text" fullWidth multiLine
-                                           rows={5} floatingLabelText="Description"/>
-                                </div>
+                            <div className="flex">
+                                <DatePicker floatingLabelText="Embargo date" textFieldStyle={{width: '100%'}}
+                                            style={{width: '100%'}}/>
                             </div>
-                        </CardText>
-                    </Card>
-                </div>
+                        </div>
+                        <div className="row">
+                            <div className="flex">
+                                <Field component={TextField} name="filesDescription" type="text" fullWidth multiLine
+                                       rows={5} floatingLabelText="Description"/>
+                            </div>
+                        </div>
+                    </CardText>
+                </Card>
             </div>
         );
     }
