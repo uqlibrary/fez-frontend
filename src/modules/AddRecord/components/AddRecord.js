@@ -14,6 +14,7 @@ import {SearchResults} from '../../SearchResults';
 import {NoMatchingRecords} from '../../NoMatchingRecords';
 import {PublicationTypeForm} from '../../Forms/PublicationType';
 import {AddJournalArticleForm} from '../../Forms/JournalArticle';
+import {InlineLoader} from 'uqlibrary-react-toolbox';
 
 import './AddRecord.scss';
 
@@ -25,6 +26,10 @@ class addRecord extends React.Component {
         loadPublicationTypesList: PropTypes.func,
         publicationTypeList: PropTypes.object
     };
+
+    static defaultProps = {
+        searchResultsList: null
+    }
 
     constructor(props) {
         super(props);
@@ -117,9 +122,18 @@ class addRecord extends React.Component {
                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
                 };
 
+                // on initial load this will be null
+                const loaded = this.props.searchResultsList !== null;
+
                 return (
                     <div>
-                        { this.props.searchResultsList.size > 0 &&
+                        { !loaded &&
+                            <div className="is-centered">
+                                <InlineLoader message="Searching ..." />
+                            </div>
+                        }
+
+                        { loaded && this.props.searchResultsList.size > 0 &&
                         <SearchResults
                             dataSource={this.props.searchResultsList}
                             title="Possible matches found"
@@ -129,17 +143,18 @@ class addRecord extends React.Component {
                         />
                         }
 
-                        <NoMatchingRecords
-                            handleNext={this.handleNext}
-                            handlePrevious={this.handlePrev}
-                            stepIndex={this.state.stepIndex}
-                            title="No matching records?"
-                            explanationText="Refine your search and narrow down results, or create a new eSpace record for your publication."
-                            searchAgainBtnLabel="Search again"
-                            addPublicationBtnLabel="Add a new publication"
-                            help={noMatchingRecordsHelp}
-                        />
-
+                        { loaded &&
+                            <NoMatchingRecords
+                                handleNext={this.handleNext}
+                                handlePrevious={this.handlePrev}
+                                stepIndex={this.state.stepIndex}
+                                title="No matching records?"
+                                explanationText="Refine your search and narrow down results, or create a new eSpace record for your publication."
+                                searchAgainBtnLabel="Search again"
+                                addPublicationBtnLabel="Add a new publication"
+                                help={noMatchingRecordsHelp}
+                            />
+                        }
                         <ReactTooltip id="claimTooltips" effect="solid" place="bottom"/>
                     </div>
                 );
