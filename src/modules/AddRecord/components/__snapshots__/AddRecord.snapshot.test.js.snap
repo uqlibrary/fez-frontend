@@ -9,56 +9,60 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
   >
     Add a journal article
   </h1>
-  <Stepper
-    activeStep={0}
-    connector={<pure(StepConnector) />}
-    linear={true}
-    onChange={[Function]}
-    orientation="horizontal"
-    style={
-      Object {
-        "margin": "-10px auto",
-        "padding": "0 25px",
-      }
-    }
+  <div
+    className="Stepper"
   >
-    <Step>
-      <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
+    <Stepper
+      activeStep={0}
+      connector={<pure(StepConnector) />}
+      linear={true}
+      onChange={[Function]}
+      orientation="horizontal"
+      style={
+        Object {
+          "margin": "-10px auto",
+          "padding": "0 25px",
         }
-      >
-        Search for your publication
-      </StepLabel>
-    </Step>
-    <Step>
-      <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
+      }
+    >
+      <Step>
+        <StepLabel
+          style={
+            Object {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+            }
           }
-        }
-      >
-        Search results
-      </StepLabel>
-    </Step>
-    <Step>
-      <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
+        >
+          Search for your publication
+        </StepLabel>
+      </Step>
+      <Step>
+        <StepLabel
+          style={
+            Object {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+            }
           }
-        }
-      >
-        Claim or Add your publication
-      </StepLabel>
-    </Step>
-  </Stepper>
+        >
+          Search results
+        </StepLabel>
+      </Step>
+      <Step>
+        <StepLabel
+          style={
+            Object {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+            }
+          }
+        >
+          Claim or Add your publication
+        </StepLabel>
+      </Step>
+    </Stepper>
+  </div>
   <div
     style={
       Object {
@@ -151,56 +155,60 @@ exports[`Add record page snapshots tests renders default add record page 2`] = `
   >
     Add a journal article
   </h1>
-  <Stepper
-    activeStep={0}
-    connector={<pure(StepConnector) />}
-    linear={true}
-    onChange={[Function]}
-    orientation="horizontal"
-    style={
-      Object {
-        "margin": "-10px auto",
-        "padding": "0 25px",
-      }
-    }
+  <div
+    className="Stepper"
   >
-    <Step>
-      <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
+    <Stepper
+      activeStep={0}
+      connector={<pure(StepConnector) />}
+      linear={true}
+      onChange={[Function]}
+      orientation="horizontal"
+      style={
+        Object {
+          "margin": "-10px auto",
+          "padding": "0 25px",
         }
-      >
-        Search for your publication
-      </StepLabel>
-    </Step>
-    <Step>
-      <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
+      }
+    >
+      <Step>
+        <StepLabel
+          style={
+            Object {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+            }
           }
-        }
-      >
-        Search results
-      </StepLabel>
-    </Step>
-    <Step>
-      <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
+        >
+          Search for your publication
+        </StepLabel>
+      </Step>
+      <Step>
+        <StepLabel
+          style={
+            Object {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+            }
           }
-        }
-      >
-        Claim or Add your publication
-      </StepLabel>
-    </Step>
-  </Stepper>
+        >
+          Search results
+        </StepLabel>
+      </Step>
+      <Step>
+        <StepLabel
+          style={
+            Object {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+            }
+          }
+        >
+          Claim or Add your publication
+        </StepLabel>
+      </Step>
+    </Stepper>
+  </div>
   <div
     style={
       Object {
