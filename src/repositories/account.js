@@ -6,7 +6,8 @@ import {api} from 'config';
  */
 export function getAccount() {
     return new Promise((resolve, reject) => {
-        api.get('account').then(response => {
+        const now = new Date().getTime();
+        api.get('account?' + now).then(response => {
             if (response.data && response.data.hasOwnProperty('hasSession') && response.data.hasSession === true) {
                 resolve(response.data);
             } else {
