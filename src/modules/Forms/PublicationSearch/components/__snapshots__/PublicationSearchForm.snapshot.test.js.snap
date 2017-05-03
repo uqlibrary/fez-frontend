@@ -2,77 +2,68 @@
 
 exports[`Publication search form snapshots tests renders default publication search form page 1`] = `
 <form>
-  <div
-    className="layout-fill"
+  <Card
+    className="layout-card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
   >
-    <h1
-      className="page-title display-1"
+    <CardHeader
+      avatar={null}
+      className="card-header"
     >
-      Component Title
-    </h1>
-    <Card
-      className="layout-card"
-      expandable={false}
-      expanded={null}
-      initiallyExpanded={false}
-    >
-      <CardHeader
-        avatar={null}
-        className="card-header"
+      <div
+        className="columns is-gapless"
       >
         <div
-          className="columns is-gapless"
+          className="column"
         >
-          <div
-            className="column"
+          <h2
+            className="headline"
           >
-            <h2
-              className="headline"
-            >
-              Component Title
-            </h2>
-          </div>
-          <div
-            className="column"
-          />
+            Component Title
+          </h2>
         </div>
-      </CardHeader>
-      <CardText
-        className="body-1"
-      >
-        <br />
-        <div>
-          Component Search Text
-        </div>
-        <Field
-          autoComplete="off"
-          component={[Function]}
-          floatingLabelText="Search for publication"
-          fullWidth={true}
-          name="doiSearch"
-          onChange={[Function]}
-        />
         <div
-          style={
-            Object {
-              "marginTop": "20px",
-              "textAlign": "right",
-            }
+          className="column"
+        />
+      </div>
+    </CardHeader>
+    <CardText
+      className="body-1"
+    >
+      <br />
+      <div>
+        Component Search Text
+      </div>
+      <Field
+        autoComplete="off"
+        component={[Function]}
+        floatingLabelText="Search for publication"
+        fullWidth={true}
+        name="doiSearch"
+        onChange={[Function]}
+      />
+      <div
+        style={
+          Object {
+            "marginTop": "20px",
+            "textAlign": "right",
           }
-        >
-          <RaisedButton
-            disabled={false}
-            fullWidth={false}
-            label="Search"
-            labelPosition="after"
-            onTouchTap={[Function]}
-            primary={false}
-            secondary={true}
-            type="submit"
-          />
-        </div>
-      </CardText>
-    </Card>
-  </div>
+        }
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          label="Search"
+          labelPosition="after"
+          onTouchTap={[Function]}
+          primary={false}
+          secondary={true}
+          type="submit"
+        />
+      </div>
+    </CardText>
+  </Card>
 </form>
 `;

@@ -1,66 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search results snapshots tests renders default search results page 1`] = `
-<div
-  className="layout-fill"
+<Card
+  className="layout-card"
+  expandable={false}
+  expanded={null}
+  initiallyExpanded={false}
 >
-  <h1
-    className="page-title display-1"
+  <CardHeader
+    avatar={null}
+    className="card-header"
   >
-    Component Title
-  </h1>
-  <Card
-    className="layout-card"
-    expandable={false}
-    expanded={null}
-    initiallyExpanded={false}
-  >
-    <CardHeader
-      avatar={null}
-      className="card-header"
+    <div
+      className="columns is-gapless"
     >
       <div
-        className="columns is-gapless"
+        className="column"
       >
-        <div
-          className="column"
+        <h2
+          className="headline"
         >
-          <h2
-            className="headline"
-          >
-            Component Title
-          </h2>
-        </div>
-        <div
-          className="column"
-        />
+          Component Title
+        </h2>
       </div>
-    </CardHeader>
-    <CardText
-      className="body-1"
-    >
-      <br />
-      <div>
-        Lorem Ipsum
-      </div>
-      <SearchResultsRow
-        claimRecordBtnLabel="Claim Record"
-        entry={
-          Object {
-            "authors": "",
-            "counts": Object {
-              "altmetric": 4,
-              "downloads": 100,
-              "google": 3,
-              "scopus": 2,
-              "thomson": 1,
-            },
-            "journalName": "Cardiovascular Therapeutics",
-            "title": "External - Nutraceuticals and Atherosclerosis: Human Trials",
-          }
-        }
+      <div
+        className="column"
       />
-    </CardText>
-  </Card>
-</div>
+    </div>
+  </CardHeader>
+  <CardText
+    className="body-1"
+  >
+    <br />
+    <div>
+      Lorem Ipsum
+    </div>
+    <SearchResultsRow
+      claimRecordBtnLabel="Claim Record"
+      entry={
+        Object {
+          "authors": "",
+          "counts": Object {
+            "altmetric": 4,
+            "downloads": 100,
+            "google": 3,
+            "scopus": 2,
+            "thomson": 1,
+          },
+          "journalName": "Cardiovascular Therapeutics",
+          "title": "External - Nutraceuticals and Atherosclerosis: Human Trials",
+        }
+      }
+    />
+  </CardText>
+</Card>
 `;

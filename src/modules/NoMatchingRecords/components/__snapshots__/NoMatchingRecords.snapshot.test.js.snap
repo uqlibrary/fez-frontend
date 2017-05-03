@@ -1,83 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`No matching record component snapshots tests renders default no matching record component 1`] = `
-<div
-  className="layout-fill"
+<Card
+  className="layout-card"
+  expandable={false}
+  expanded={null}
+  initiallyExpanded={false}
 >
-  <h1
-    className="page-title display-1"
+  <CardHeader
+    avatar={null}
+    className="card-header"
   >
-    No Records
-  </h1>
-  <Card
-    className="layout-card"
-    expandable={false}
-    expanded={null}
-    initiallyExpanded={false}
-  >
-    <CardHeader
-      avatar={null}
-      className="card-header"
+    <div
+      className="columns is-gapless"
     >
       <div
-        className="columns is-gapless"
+        className="column"
       >
-        <div
-          className="column"
+        <h2
+          className="headline"
         >
-          <h2
-            className="headline"
-          >
-            No Records
-          </h2>
-        </div>
-        <div
-          className="column"
-        />
-      </div>
-    </CardHeader>
-    <CardText
-      className="body-1"
-    >
-      <br />
-      <div>
-         Lorem ipsum
+          No Records
+        </h2>
       </div>
       <div
+        className="column"
+      />
+    </div>
+  </CardHeader>
+  <CardText
+    className="body-1"
+  >
+    <br />
+    <div>
+       Lorem ipsum
+    </div>
+    <div
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+    >
+      <FlatButton
+        disabled={false}
+        fullWidth={false}
+        label="Search again?"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
         style={
           Object {
-            "textAlign": "right",
+            "marginRight": 12,
           }
         }
-      >
-        <FlatButton
-          disabled={false}
-          fullWidth={false}
-          label="Search again?"
-          labelPosition="after"
-          labelStyle={Object {}}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onTouchStart={[Function]}
-          primary={false}
-          secondary={false}
-          style={
-            Object {
-              "marginRight": 12,
-            }
-          }
-        />
-        <RaisedButton
-          disabled={false}
-          fullWidth={false}
-          label="Add new publication"
-          labelPosition="after"
-          primary={false}
-          secondary={true}
-        />
-      </div>
-    </CardText>
-  </Card>
-</div>
+      />
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Add new publication"
+        labelPosition="after"
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </CardText>
+</Card>
 `;
