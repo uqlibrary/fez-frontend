@@ -86,7 +86,7 @@ export default class App extends React.Component {
         const titleStyle = docked ? { paddingLeft: 320 } : {};
         const container = docked ? { paddingLeft: 340 } : {};
 
-        const isAuthorizedUser = loaded && account.get('id') !== undefined;
+        const isAuthorizedUser = loaded && account !== null && account.get('id') !== undefined;
         const components = {
             Browse, StaticPage, Dashboard, Research, AddRecord
         };
