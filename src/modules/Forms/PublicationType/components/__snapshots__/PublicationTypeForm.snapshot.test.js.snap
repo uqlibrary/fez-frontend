@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Document type form snapshot tests renders default document type component 1`] = `
+<form>
+  <Card
+    className="layout-card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+  >
+    <CardHeader
+      avatar={null}
+      className="card-header"
+    >
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        >
+          <h2
+            className="headline"
+          >
+            Component Title
+          </h2>
+        </div>
+        <div
+          className="column"
+        />
+      </div>
+    </CardHeader>
+    <CardText
+      className="body-1"
+    >
+      <br />
+      <div>
+        \`                            
+      </div>
+      <Field
+        component={[Function]}
+        dataSource={
+          Array [
+            Object {
+              "id": 174,
+              "name": "Book",
+            },
+            Object {
+              "id": 177,
+              "name": "Book Chapter",
+            },
+            Object {
+              "id": 130,
+              "name": "Conference Paper",
+            },
+            Object {
+              "id": 179,
+              "name": "Journal Article",
+            },
+            Object {
+              "divider": <Divider
+                inset={false}
+          />,
+              "id": "divider",
+            },
+            Object {
+              "id": 202,
+              "name": "Generic Document",
+            },
+            Object {
+              "id": 263,
+              "name": "Audio Document",
+            },
+            Object {
+              "id": 174,
+              "name": "Book",
+            },
+            Object {
+              "id": 177,
+              "name": "Book Chapter",
+            },
+            Object {
+              "id": 130,
+              "name": "Conference Paper",
+            },
+            Object {
+              "id": 197,
+              "name": "Conference Proceedings",
+            },
+            Object {
+              "id": 313,
+              "name": "Creative Work",
+            },
+            Object {
+              "id": 371,
+              "name": "Data Collection",
+            },
+            Object {
+              "id": 181,
+              "name": "Department Technical Report",
+            },
+            Object {
+              "id": 316,
+              "name": "Design",
+            },
+            Object {
+              "id": 228,
+              "name": "Digilib Image",
+            },
+            Object {
+              "id": 238,
+              "name": "Image",
+            },
+            Object {
+              "id": 294,
+              "name": "Journal",
+            },
+            Object {
+              "id": 179,
+              "name": "Journal Article",
+            },
+            Object {
+              "id": 374,
+              "name": "Manuscript",
+            },
+            Object {
+              "id": 191,
+              "name": "Newspaper Article",
+            },
+            Object {
+              "id": 185,
+              "name": "Patent",
+            },
+            Object {
+              "id": 204,
+              "name": "Preprint",
+            },
+            Object {
+              "id": 275,
+              "name": "Research Report",
+            },
+            Object {
+              "id": 189,
+              "name": "Seminar Paper",
+            },
+            Object {
+              "id": 187,
+              "name": "Thesis",
+            },
+            Object {
+              "id": 310,
+              "name": "Video Document",
+            },
+            Object {
+              "id": 183,
+              "name": "Working Paper",
+            },
+          ]
+        }
+        dataSourceConfig={
+          Object {
+            "text": "name",
+            "value": "id",
+          }
+        }
+        fullWidth={true}
+        name="publicationType"
+        openOnFocus={true}
+        value={179}
+      />
+    </CardText>
+  </Card>
+</form>
+`;

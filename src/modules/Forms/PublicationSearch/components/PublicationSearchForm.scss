@@ -1,0 +1,31 @@
+
+.Author {
+  padding: 0 0 10px 0;
+  hr{
+    margin: 0px 0 10px 0 !important;
+  }
+  .authorLeftIcon{
+    padding: 3px;
+    line-height: 32px !important;
+
+  }
+  .authorRightIcon {
+    line-height: 32px;
+
+  }
+  .authorName {
+    padding-left: 10px;
+    line-height: 32px;
+    font-weight: 500;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.fileInstructions {
+  margin: 20px 0;
+  padding: 16px;
+  background-color: rgba(0,0,0,0.03);
+}

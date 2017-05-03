@@ -5,10 +5,8 @@ import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import Snackbar from 'material-ui/Snackbar';
 
-import {AppLoader} from 'uqlibrary-react-toolbox';
-import {MenuDrawer} from 'uqlibrary-react-toolbox';
+import {AppLoader, MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
 
-import {HelpDrawer} from 'uqlibrary-react-toolbox';
 import {defaultMenuItems, researcherMenuItems} from 'config';
 import {locale} from 'config';
 
@@ -149,7 +147,7 @@ export default class App extends React.Component {
                             autoHideDuration={4000}
                             onRequestClose={hideSnackbar} />
 
-                         <HelpDrawer />
+                        <HelpDrawer />
                     </div>
                 )}
             </div>
