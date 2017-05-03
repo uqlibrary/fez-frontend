@@ -12,21 +12,17 @@ export function getAccount() {
             } else {
                 reject({
                     response: {
-                        status: 401,
+                        status: 403,
                         data: 'Unauthorized user'
                     },
                 });
             }
         }).catch(e => {
-            console.dir(e);
-
-            reject(e);
-
-            // if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
-            //     && e.response.hasOwnProperty('status') && (e.response.status === 401 || e.response.status === 403)) {
-            // } else {
-            //     throw e;
-            // }
+            if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
+                && e.response.hasOwnProperty('status') && (e.response.status === 401 || e.response.status === 403)) {
+            } else {
+                reject(e);
+            }
         });
     });
 }
