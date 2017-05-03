@@ -73,6 +73,22 @@ class addRecord extends React.Component {
         }
     };
 
+    handleCloseSubmitForApproval = () => {
+        this.setState({submitOpen: false});
+    };
+
+    handleCloseSaveForLater = () => {
+        this.setState({saveOpen: false});
+    };
+
+    handleOpenSubmitForApproval = () => {
+        this.setState({submitOpen: true});
+    };
+
+    handleOpenSaveForLater = () => {
+        this.setState({saveOpen: true});
+    };
+
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
@@ -167,7 +183,7 @@ class addRecord extends React.Component {
                                 <div className="buttonWrapper">
                                     <RaisedButton label="Save for Later" style={{marginLeft: '12px'}}
                                                   onTouchTap={this.handleOpenSaveForLater}/>
-                                    <RaisedButton label="Cancel" style={{marginLeft: '12px'}}/>
+                                    <RaisedButton label="Cancel" style={{marginLeft: '12px'}} onTouchTap={this.handlePrev}/>
                                     <RaisedButton secondary label="Submit for Approval" style={{marginLeft: '12px'}}
                                                   onTouchTap={this.handleOpenSubmitForApproval}/>
                                     <Dialog

@@ -116,7 +116,7 @@ export default class PublicationTypeForm extends Component {
                     <CardText className="body-1">
                         <br />
                         <div>
-                            {explanationText ? explanationText : 'This is the default card content'}
+`                            {explanationText}
                         </div>
                         <Field component={AutoCompleteSelect} name="publicationType"
                                maxSearchResults={maxSearchResults}
@@ -125,6 +125,7 @@ export default class PublicationTypeForm extends Component {
                                dataSourceConfig={{text: 'name', value: 'id'}}
                                onChange={loadSelectedPublicationType}
                                openOnFocus
+                               value={179}
                                fullWidth />
                     </CardText>
                 </Card>
