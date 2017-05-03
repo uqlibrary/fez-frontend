@@ -86,7 +86,7 @@ export default class App extends React.Component {
         const titleStyle = docked ? { paddingLeft: 320 } : {};
         const container = docked ? { paddingLeft: 340 } : {};
 
-        const isAuthorizedUser = loaded && account.get('id') !== undefined;
+        const isAuthorizedUser = loaded && account !== null && account.get('id') !== undefined;
         const components = {
             Browse, StaticPage, Dashboard, Research, AddRecord
         };
@@ -119,7 +119,7 @@ export default class App extends React.Component {
                                                 loginUrl={AUTH_URL_LOGIN}
                                                 logoutUrl={AUTH_URL_LOGOUT}
                                                 signInTooltipText={locale.authentication.signInText}
-                                                signOutTooltipText={locale.authentication.signOutText + ' - ' + account.get('name')}
+                                                signOutTooltipText={isAuthorizedUser ? (locale.authentication.signOutText + ' - ' + account.get('name')) : ''}
                                     />
                                 </div>
                             }

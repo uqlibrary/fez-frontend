@@ -6,27 +6,24 @@ import {api} from 'config';
  */
 export function getAccount() {
     return new Promise((resolve, reject) => {
-        api.get('account').then(response => {
+        const now = new Date().getTime();
+        api.get('account?' + now).then(response => {
             if (response.data && response.data.hasOwnProperty('hasSession') && response.data.hasSession === true) {
                 resolve(response.data);
             } else {
                 reject({
                     response: {
-                        status: 401,
+                        status: 403,
                         data: 'Unauthorized user'
                     },
                 });
             }
         }).catch(e => {
-            console.dir(e);
-
+            if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
+                && e.response.hasOwnProperty('status') && (e.response.status === 401 || e.response.status === 403)) {
+                console.log('Unauthorized user....');
+            }
             reject(e);
-
-            // if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
-            //     && e.response.hasOwnProperty('status') && (e.response.status === 401 || e.response.status === 403)) {
-            // } else {
-            //     throw e;
-            // }
         });
     });
 }
