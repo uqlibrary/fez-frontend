@@ -260,6 +260,7 @@ class addRecord extends React.Component {
                 <h1 className="page-title display-1">Add a journal article</h1>
 
                 {/* Stepper start */}
+                <div className="Stepper">
                 <Stepper activeStep={this.state.stepIndex} style={{padding: '0 25px', margin: '-10px auto' }} onChange={this.handleNext}>
                     <Step>
                         <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>Search for your publication</StepLabel>
@@ -271,6 +272,7 @@ class addRecord extends React.Component {
                         <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>Claim or Add your publication</StepLabel>
                     </Step>
                 </Stepper>
+                </div>
 
 
                 <div style={{width: '100%', maxWidth: '1200px', margin: 'auto'}}>
