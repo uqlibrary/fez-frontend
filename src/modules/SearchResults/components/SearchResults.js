@@ -46,34 +46,29 @@ export default class SearchResults extends Component {
         });
 
         return (
-            <div className="layout-fill">
-
-                <h1 className="page-title display-1">{title ? title : 'This is the page title'}</h1>
-
-                <Card className="layout-card">
-                    <CardHeader className="card-header">
-                        <div className="columns is-gapless">
-                            <div className="column">
-                                <h2 className="headline">{title}</h2>
-                            </div>
-                            <div className="column">
-                                {help && (
-                                    <HelpIcon
-                                        title={help.title}
-                                        text={help.text}
-                                        buttonLabel={help.buttonLabel}
-                                    />
-                                )}
-                            </div>
+            <Card className="layout-card">
+                <CardHeader className="card-header">
+                    <div className="columns is-gapless">
+                        <div className="column">
+                            <h2 className="headline">{title}</h2>
                         </div>
-                    </CardHeader>
-                    <CardText className="body-1">
-                        <br />
-                        <div>{this.setExplanationText()}</div>
-                        {searchResultEntries}
-                    </CardText>
-                </Card>
-            </div>
+                        <div className="column">
+                            {help && (
+                                <HelpIcon
+                                    title={help.title}
+                                    text={help.text}
+                                    buttonLabel={help.buttonLabel}
+                                />
+                            )}
+                        </div>
+                    </div>
+                </CardHeader>
+                <CardText className="body-1">
+                    <br />
+                    <div>{this.setExplanationText()}</div>
+                    {searchResultEntries}
+                </CardText>
+            </Card>
         );
     }
 }

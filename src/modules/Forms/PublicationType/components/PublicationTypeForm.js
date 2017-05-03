@@ -96,43 +96,39 @@ export default class PublicationTypeForm extends Component {
 
         return (
             <form onSubmit={handleSubmit}>
-                <div className="layout-fill">
-
-                    <h1 className="page-title display-1">{title ? title : 'This is the page title'}</h1>
-                    <Card className="layout-card">
-                        <CardHeader className="card-header">
-                            <div className="columns is-gapless">
-                                <div className="column">
-                                    <h2 className="headline">{title ? title : 'This is the card title'}</h2>
-                                </div>
-                                <div className="column">
-                                    {help && (
-                                        <HelpIcon
-                                            title={help.title}
-                                            text={help.text}
-                                            buttonLabel={help.buttonLabel}
-                                        />
-                                    )}
-                                </div>
+                <Card className="layout-card">
+                    <CardHeader className="card-header">
+                        <div className="columns is-gapless">
+                            <div className="column">
+                                <h2 className="headline">{title ? title : 'This is the card title'}</h2>
                             </div>
-                        </CardHeader>
-                        <CardText className="body-1">
-                            <br />
-                            <div>
-                                {explanationText ? explanationText : 'This is the default card content'}
+                            <div className="column">
+                                {help && (
+                                    <HelpIcon
+                                        title={help.title}
+                                        text={help.text}
+                                        buttonLabel={help.buttonLabel}
+                                    />
+                                )}
                             </div>
-                            <Field component={AutoCompleteSelect} name="publicationType"
-                                   maxSearchResults={maxSearchResults}
-                                   label={publicationTypeLabel}
-                                   dataSource={this.createCompletePublicationList()}
-                                   dataSourceConfig={{text: 'name', value: 'id'}}
-                                   onChange={loadSelectedPublicationType}
-                                   openOnFocus
-                                   fullWidth />
-                        </CardText>
-                    </Card>
-                    {children}
-                </div>
+                        </div>
+                    </CardHeader>
+                    <CardText className="body-1">
+                        <br />
+                        <div>
+                            {explanationText ? explanationText : 'This is the default card content'}
+                        </div>
+                        <Field component={AutoCompleteSelect} name="publicationType"
+                               maxSearchResults={maxSearchResults}
+                               label={publicationTypeLabel}
+                               dataSource={this.createCompletePublicationList()}
+                               dataSourceConfig={{text: 'name', value: 'id'}}
+                               onChange={loadSelectedPublicationType}
+                               openOnFocus
+                               fullWidth />
+                    </CardText>
+                </Card>
+                {children}
             </form>
         );
     }

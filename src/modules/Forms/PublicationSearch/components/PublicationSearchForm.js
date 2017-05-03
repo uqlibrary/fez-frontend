@@ -72,48 +72,44 @@ export default class PublicationSearchForm extends Component {
         const {pristine, handleSubmit, title, help} = this.props;
         return (
             <form ref="publicationSearchForm" onSubmit={handleSubmit}>
-                <div className="layout-fill">
-
-                    <h1 className="page-title display-1">{title ? title : 'This is the page title'}</h1>
-                    <Card className="layout-card">
-                        <CardHeader className="card-header">
-                            <div className="columns is-gapless">
-                                <div className="column">
-                                    <h2 className="headline">{title ? title : 'This is the card title'}</h2>
-                                </div>
-                                <div className="column">
-                                    {help && (
-                                        <HelpIcon
-                                            title={help.title}
-                                            text={help.text}
-                                            buttonLabel={help.buttonLabel}
-                                        />
-                                    )}
-                                </div>
+                <Card className="layout-card">
+                    <CardHeader className="card-header">
+                        <div className="columns is-gapless">
+                            <div className="column">
+                                <h2 className="headline">{title ? title : 'This is the card title'}</h2>
                             </div>
-                        </CardHeader>
-                        <CardText className="body-1">
-                            <br />
-                            <div>{this.props.explanationText}</div>
-                            <Field component={TextField}
-                                   name="doiSearch"
-                                   fullWidth
-                                   floatingLabelText={this.props.defaultSearchFieldLabel}
-                                   onChange={this.updateButtonLabel}
-                                   autoComplete="off"
+                            <div className="column">
+                                {help && (
+                                    <HelpIcon
+                                        title={help.title}
+                                        text={help.text}
+                                        buttonLabel={help.buttonLabel}
+                                    />
+                                )}
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardText className="body-1">
+                        <br />
+                        <div>{this.props.explanationText}</div>
+                        <Field component={TextField}
+                               name="doiSearch"
+                               fullWidth
+                               floatingLabelText={this.props.defaultSearchFieldLabel}
+                               onChange={this.updateButtonLabel}
+                               autoComplete="off"
+                        />
+                        <div style={{textAlign: 'right', marginTop: '20px'}}>
+                            <RaisedButton
+                                label={this.state.buttonLabel}
+                                secondary
+                                onTouchTap={this.performSearch}
+                                type="submit"
+                                disabled={pristine}
                             />
-                            <div style={{textAlign: 'right', marginTop: '20px'}}>
-                                <RaisedButton
-                                    label={this.state.buttonLabel}
-                                    secondary
-                                    onTouchTap={this.performSearch}
-                                    type="submit"
-                                    disabled={pristine}
-                                />
-                            </div>
-                        </CardText>
-                    </Card>
-                </div>
+                        </div>
+                    </CardText>
+                </Card>
             </form>
         );
     }

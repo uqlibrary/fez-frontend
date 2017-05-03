@@ -157,37 +157,38 @@ class addRecord extends React.Component {
                         publicationTypeLabel="Select a publication type"
                         dataSource={this.props.publicationTypeList}
                         popularTypesList={popularTypesList}>
+                            <div>
+                            {/* Journal Article is selected. Size check needed as it is undefined on initial load */}
+                            {selectedPublicationType.size > 0 && selectedPublicationType.get('name').toLowerCase() === 'journal article' &&
+                                <AddJournalArticleForm />
+                            }
 
-                        {/* Journal Article is selected */}
-                        {selectedPublicationType.get('name') === 'Journal Article' &&
-                            <AddJournalArticleForm />
-                        }
-
-                        {selectedPublicationType.get('name') === 'Journal Article' &&
-                            <div className="buttonWrapper">
-                                <RaisedButton label="Save for Later" style={{marginLeft: '12px'}}
-                                              onTouchTap={this.handleOpenSaveForLater}/>
-                                <RaisedButton label="Cancel" style={{marginLeft: '12px'}}/>
-                                <RaisedButton secondary label="Submit for Approval" style={{marginLeft: '12px'}}
-                                              onTouchTap={this.handleOpenSubmitForApproval}/>
-                                <Dialog
-                                    actions={submitActions}
-                                    modal={false}
-                                    open={this.state.submitOpen}
-                                    onRequestClose={this.handleCloseSubmitForApproval}
-                                >
-                                    Your Journal has been submitted for approval.
-                                </Dialog>
-                                <Dialog
-                                    actions={saveActions}
-                                    modal={false}
-                                    open={this.state.saveOpen}
-                                    onRequestClose={this.handleCloseSaveForLater}
-                                >
-                                    Your Journal has been saved for later.
-                                </Dialog>
+                            {selectedPublicationType.size > 0 &&
+                                <div className="buttonWrapper">
+                                    <RaisedButton label="Save for Later" style={{marginLeft: '12px'}}
+                                                  onTouchTap={this.handleOpenSaveForLater}/>
+                                    <RaisedButton label="Cancel" style={{marginLeft: '12px'}}/>
+                                    <RaisedButton secondary label="Submit for Approval" style={{marginLeft: '12px'}}
+                                                  onTouchTap={this.handleOpenSubmitForApproval}/>
+                                    <Dialog
+                                        actions={submitActions}
+                                        modal={false}
+                                        open={this.state.submitOpen}
+                                        onRequestClose={this.handleCloseSubmitForApproval}
+                                    >
+                                        Your Journal has been submitted for approval.
+                                    </Dialog>
+                                    <Dialog
+                                        actions={saveActions}
+                                        modal={false}
+                                        open={this.state.saveOpen}
+                                        onRequestClose={this.handleCloseSaveForLater}
+                                    >
+                                        Your Journal has been saved for later.
+                                    </Dialog>
+                                </div>
+                            }
                             </div>
-                        }
                     </PublicationTypeForm>
                 );
             default:
