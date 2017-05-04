@@ -7,7 +7,7 @@ import {publicationSubTypeList} from '../mock/data/publicationSubTypes';
  * @returns {Promise}
  */
 export function loadPublicationSubTypeData() {
-    if (!process.env.USE_MOCK) {
+    if (process.env.USE_MOCK) {
         return new Promise((resolve, reject) => {
             api.get('records/sub/types').then(response => {
                 resolve(response.data);
