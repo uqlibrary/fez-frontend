@@ -9,6 +9,7 @@ import {externalDoiSearchResultList, internalDoiSearchResultList, externalPubMed
 import {authorsList} from './data/authors';
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
+import {publicationYears} from './data/publication-years';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api);
@@ -18,7 +19,7 @@ Cookies.set(SESSION_COOKIE_NAME, 'abc123');
 
 // Mock the account that the user is logged in as
 if (queryString.parse(location.search).user === 'null') {
-    mock.onGet('/account').reply(200, null);
+    mock.onGet(/account\?[0-9]*/).reply(200, null);
 } else {
     let account = accounts.find(s => s.id === queryString.parse(location.search).user);
 
@@ -26,7 +27,7 @@ if (queryString.parse(location.search).user === 'null') {
         account = accounts.find(s => s.id === 'uqinewton');
     }
     // mock account route
-    mock.onGet('/account').reply(200, account);
+    mock.onGet(/account\?[0-9]*/).reply(200, account);
 }
 
 // Mock the publication form external doi search endpoint
@@ -55,4 +56,8 @@ mock.onGet('records/sub/types').reply(200, publicationSubTypeList);
 
 // Mock the authors endpoint
 mock.onGet('authors/search').reply(200, authorsList);
+
+// Mock academics publication years endpoint response
+mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYears);
+
 

@@ -10,16 +10,28 @@ import Chart from './Chart';
 
 
 class AuthorsPublicationsPerYearChart extends React.Component {
+
+    // TODO: should be immutableJs data
     static propTypes = {
         rawData: PropTypes.object.isRequired,
-        yAxisTitle: PropTypes.string.isRequired
+        yAxisTitle: PropTypes.string
     };
+
+    static defaultProps = {
+        yAxisTitle: 'Total publications'
+    }
 
     constructor(props) {
         super(props);
 
-        const categories = this.getCategories(); // this.props.rawData.facet_counts.facet_pivot['date_year_t,display_type_i_lookup_exact']);
-        const series = this.getSeries(); // this.props.rawData.facet_counts.facet_pivot['date_year_t,display_type_i_lookup_exact']);
+        // TODO: cache/retrieve data if available...
+
+        const data = this.props.rawData !== null && this.props.rawData.hasOwnProperty('facet_counts')
+            && this.props.rawData.facet_counts.hasOwnProperty('facet_pivot') ?
+            this.props.rawData.facet_counts.facet_pivot['date_year_t,display_type_i_lookup_exact'] : [];
+
+        const categories = this.getCategories([...data]);
+        const series = this.getSeries([...data]);
 
         this.state = {
             options: {
@@ -71,96 +83,61 @@ class AuthorsPublicationsPerYearChart extends React.Component {
         };
     }
 
+    /**
+     * getCategories - transforms raw academic publication years data into categories, eg years
+     * eg [1977, 1980, 1982]
+     * @returns {Array}
+     */
     getCategories = (rawData) => {
-        console.log(rawData);
-        return [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016];
+        // extract years and parse year value into int
+        const categories = rawData.map((yearData) => { return parseInt(yearData.value, 10); });
 
-        // TODO:update codez...
-        // var returnVal = [];
-        //
-        // for (var i = 0, l = values.length; i < l; i++) {
-        //     returnVal.push(parseInt(values[i].value, 10));
-        // }
-        //
-        // returnVal.sort(function (a, b) {
-        //     return a - b;
-        // });
-        //
-        // return returnVal;
+        // sort years in ascending order
+        categories.sort((yearFirst, yearNext) => { return yearFirst - yearNext; });
+        return categories;
     }
 
+    /**
+     * getSeries - transforms raw academic publication years data into series formatted data, eg publication type and publications count per year
+     * eg [{ 'name': 'Journal Article', 'data': [1, 1, 3]}]
+     * @returns {Array}
+     */
     getSeries = (rawData) => {
-        console.log(rawData);
-        return [{
-            'name': 'Journal Article',
-            'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 7, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5]
-        }, {
-            'name': 'Conference Paper',
-            'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 3]
-        }, {
-            'name': 'Book Chapter',
-            'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0]
-        }, {
-            'name': 'Book',
-            'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        }, {
-            'name': 'Other',
-            'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        }];
+        // initialise data structure
+        const initialValues = new Array(rawData.length).fill(0);
+        const fields = {
+            'Journal Article': [...initialValues],
+            'Conference Paper': [...initialValues],
+            'Book Chapter': [...initialValues],
+            'Book': [...initialValues],
+            'Other': [...initialValues]
+        };
 
-        // TODO:update codez...
-        // var fields = [
-        //     'Journal Article',
-        //     'Conference Paper',
-        //     'Book Chapter',
-        //     'Book',
-        //     'Other'
-        // ];
-        //
-        // var returnVal = [];
-        // var values = angular.copy(rawValues);
-        //
-        // values.sort(function (a, b) {
-        //     var inta = parseInt(a.value, 10);
-        //     var intb = parseInt(b.value, 10);
-        //
-        //     return inta - intb;
-        // });
-        //
-        // // each value represents a year in the resultset from solr
-        // for (var i = 0, il = values.length; i < il; i++) {
-        //     // we want to make sure each field has a value of 0
-        //     var newRow = {};
-        //     for (var j = 0, jl = fields.length; j < jl; j++) {
-        //         newRow[fields[j]] = 0;
-        //     }
-        //
-        //     // each year in the value set, has pivots of the document types within it
-        //     // so we look for them and assign them to the returnVal if present
-        //     for (var k = 0, kl = values[i].pivot.length; k < kl; k++) {
-        //         var pivot = values[i].pivot[k];
-        //         var val = parseInt(pivot.count, 10);
-        //         if (fields.indexOf(pivot.value) === -1) {
-        //             newRow.Other += parseInt(pivot.count, 10);
-        //         }
-        //         else {
-        //             newRow[pivot.value] = val;
-        //         }
-        //     }
-        //
-        //     for (var x = 0, xl = fields.length; x < xl; x++) {
-        //         if (!returnVal.hasOwnProperty(x)) {
-        //             returnVal[x] = {
-        //                 name: fields[x],
-        //                 data: [newRow[fields[x]]]
-        //             };
-        //         } else {
-        //             returnVal[x].data.push(newRow[fields[x]]);
-        //         }
-        //     }
-        // }
-        //
-        // return returnVal;
+        // sort all data by year
+        rawData.sort((yearFirst, yearNext) => { return parseInt(yearFirst.value, 10) - parseInt(yearNext.value, 10); });
+
+        // for each year/publication type - extract publication type count
+        rawData.map((yearData, yearIndex) => {
+            yearData.pivot.map((publicationType) => {
+                if (fields[publicationType.value]) {
+                    fields[publicationType.value][yearIndex] = publicationType.count;
+                } else {
+                    fields.Other[yearIndex] += publicationType.count;
+                }
+            });
+        });
+
+        const series = [];
+
+        // construct final data structure
+        Object.keys(fields).map(publicationType => {
+            series.push({
+                name: publicationType,
+                data: fields[publicationType]
+            });
+        });
+
+        return series;
     }
 
     render() {

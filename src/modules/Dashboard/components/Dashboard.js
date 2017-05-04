@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardText, CardHeader} from 'material-ui/Card';
-// import {HelpIcon} from 'uqlibrary-react-toolbox';
+import {publicationYearsBig as publicationYearsData} from '../../../mock/data/publication-years';
 
 import AuthorsPublicationsPerYearChart from './AuthorsPublicationsPerYearChart';
 import TimeDisplay from './TimeDisplay';
@@ -21,8 +21,6 @@ class Dashboard extends React.Component {
         const {
             account
         } = this.props;
-
-        const authorStatsData = {};
 
         return (
             <div className="layout-fill">
@@ -62,7 +60,7 @@ class Dashboard extends React.Component {
                     <CardText className="body-1">
                         <br />
                         <div>
-                            <AuthorsPublicationsPerYearChart data={authorStatsData} yAxisTitle="Total publications ever"/>
+                            <AuthorsPublicationsPerYearChart rawData={publicationYearsData} yAxisTitle="Total publications"/>
                         </div>
                     </CardText>
 

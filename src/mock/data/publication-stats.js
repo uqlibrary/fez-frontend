@@ -1,4 +1,6 @@
-export const publicationYears = {
+/* eslint-disable */
+
+export const publicationStats = {
     "responseHeader": {
         "status": 0,
         "QTime": 13,

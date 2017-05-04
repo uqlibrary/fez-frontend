@@ -1,25 +1,27 @@
-export const publicationYears = {
+/* eslint-disable */
+
+export const publicationYearsZero = {};
+
+export const publicationYearsBig = {
     "responseHeader": {
-        "status": 0,
-        "QTime": 1,
-        "params": {
+        "status": 0, "QTime": 1, "params": {
             "facet": "on",
             "facet.mincount": "1",
             "indent": "true",
             "facet.sort": "index",
-            "q": "author_id_mi:410 AND status_i:2 AND date_year_t:[1977 TO 2017]",
+            "q": "author_id_mi:410 AND status_i:2",
             "wt": "json",
             "facet.pivot": "date_year_t,display_type_i_lookup_exact",
             "rows": "0"
         }
-    },
-    "response": {"numFound": 322, "start": 0, "docs": []},
+    }
+    ,
+    "response": {
+        "numFound": 322, "start": 0, "docs": []
+    }
+    ,
     "facet_counts": {
-        "facet_queries": [],
-        "facet_fields": [],
-        "facet_dates": [],
-        "facet_ranges": [],
-        "facet_pivot": {
+        "facet_queries": [], "facet_fields": [], "facet_dates": [], "facet_ranges": [], "facet_pivot": {
             "date_year_t,display_type_i_lookup_exact": [{
                 "field": "date_year_t",
                 "value": "1977",
@@ -27,7 +29,7 @@ export const publicationYears = {
                 "pivot": [{"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 1}]
             }, {
                 "field": "date_year_t",
-                "value": "1980",
+                "value": "1975",
                 "count": 1,
                 "pivot": [{"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 1}]
             }, {
@@ -305,6 +307,118 @@ export const publicationYears = {
                     "value": "Conference Paper",
                     "count": 3
                 }, {"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 5}]
+            }]
+        }
+    }
+};
+
+export const publicationYearsTiny = {
+    "responseHeader": {
+        "status": 0,
+        "QTime": 2,
+        "params": {
+            "facet": "on",
+            "facet.mincount": "1",
+            "indent": "true",
+            "facet.sort": "index",
+            "q": "author_id_mi:1854109 AND status_i:2",
+            "wt": "json",
+            "facet.pivot": "date_year_t,display_type_i_lookup_exact",
+            "rows": "0"
+        }
+    },
+    "response": {"numFound": 1, "start": 0, "docs": []},
+    "facet_counts": {
+        "facet_queries": [],
+        "facet_fields": [],
+        "facet_dates": [],
+        "facet_ranges": [],
+        "facet_pivot": {
+            "date_year_t,display_type_i_lookup_exact": [{
+                "field": "date_year_t",
+                "value": "2014",
+                "count": 1,
+                "pivot": [{"field": "display_type_i_lookup_exact", "value": "Thesis", "count": 1}]
+            }]
+        }
+    }
+};
+
+export const publicationYearsSmall = {
+    "responseHeader": {
+        "status": 0,
+        "QTime": 1,
+        "params": {
+            "facet": "on",
+            "facet.mincount": "1",
+            "indent": "true",
+            "facet.sort": "index",
+            "q": "author_id_mi:6503 AND status_i:2",
+            "wt": "json",
+            "facet.pivot": "date_year_t,display_type_i_lookup_exact",
+            "rows": "0"
+        }
+    },
+    "response": {"numFound": 17, "start": 0, "docs": []},
+    "facet_counts": {
+        "facet_queries": [],
+        "facet_fields": [],
+        "facet_dates": [],
+        "facet_ranges": [],
+        "facet_pivot": {
+            "date_year_t,display_type_i_lookup_exact": [{
+                "field": "date_year_t",
+                "value": "2005",
+                "count": 1,
+                "pivot": [{"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 1}]
+            }, {
+                "field": "date_year_t",
+                "value": "2007",
+                "count": 2,
+                "pivot": [{
+                    "field": "display_type_i_lookup_exact",
+                    "value": "Journal Article",
+                    "count": 1
+                }, {"field": "display_type_i_lookup_exact", "value": "Thesis", "count": 1}]
+            }, {
+                "field": "date_year_t",
+                "value": "2008",
+                "count": 2,
+                "pivot": [{"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 2}]
+            }, {
+                "field": "date_year_t",
+                "value": "2009",
+                "count": 2,
+                "pivot": [{"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 2}]
+            }, {
+                "field": "date_year_t",
+                "value": "2011",
+                "count": 3,
+                "pivot": [{
+                    "field": "display_type_i_lookup_exact",
+                    "value": "Conference Paper",
+                    "count": 1
+                }, {"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 2}]
+            }, {
+                "field": "date_year_t",
+                "value": "2012",
+                "count": 1,
+                "pivot": [{"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 1}]
+            }, {
+                "field": "date_year_t",
+                "value": "2013",
+                "count": 1,
+                "pivot": [{"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 1}]
+            }, {
+                "field": "date_year_t",
+                "value": "2014",
+                "count": 3,
+                "pivot": [{"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 3}]
+            }, {
+                "field": "date_year_t",
+                "value": "2015",
+                "count": 2,
+                "pivot": [{"field": "display_type_i_lookup_exact", "value": "Journal Article", "count": 2}]
             }]
         }
     }
