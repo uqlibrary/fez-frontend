@@ -17,8 +17,6 @@ export default class PublicationTypeForm extends Component {
         title: PropTypes.string.isRequired,
         popularTypesList: PropTypes.array.isRequired,
         explanationText: PropTypes.string,
-        helpTitle: PropTypes.string,
-        helpText: PropTypes.string,
         pristine: PropTypes.bool,
         handleSubmit: PropTypes.func,
         loadSelectedPublicationType: PropTypes.func,
@@ -100,7 +98,7 @@ export default class PublicationTypeForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless">
                             <div className="column">
-                                <h2 className="headline">{title ? title : 'This is the card title'}</h2>
+                                <h2 className="headline">{title}</h2>
                             </div>
                             <div className="column">
                                 {help && (
@@ -116,7 +114,7 @@ export default class PublicationTypeForm extends Component {
                     <CardText className="body-1">
                         <br />
                         <div>
-`                            {explanationText}
+                            {explanationText}
                         </div>
                         <Field component={AutoCompleteSelect} name="publicationType"
                                maxSearchResults={maxSearchResults}

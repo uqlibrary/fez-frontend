@@ -4,15 +4,13 @@ import PropTypes from 'prop-types';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
-
 import FlatButton from 'material-ui/FlatButton';
+import {locale} from '../../../config';
 
 
 const propTypes = {
     title: PropTypes.string.isRequired,
     explanationText: PropTypes.string.isRequired,
-    helpTitle: PropTypes.string,
-    helpText: PropTypes.string,
     searchAgainBtnLabel: PropTypes.string,
     addPublicationBtnLabel: PropTypes.string,
     handlePrevious: PropTypes.func,
@@ -22,8 +20,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-    searchAgainBtnLabel: 'Search again?',
-    addPublicationBtnLabel: 'Add new publication'
+    searchAgainBtnLabel: locale.pages.addRecord.noMatchingRecords.defaultProps.searchAgainBtnLabel,
+    addPublicationBtnLabel: locale.pages.addRecord.noMatchingRecords.defaultProps.addPublicationBtnLabel
 };
 
 const NoMatchingRecords = ({handleNext, handlePrevious, stepIndex, title, explanationText, help, searchAgainBtnLabel, addPublicationBtnLabel}) => {
@@ -32,7 +30,7 @@ const NoMatchingRecords = ({handleNext, handlePrevious, stepIndex, title, explan
             <CardHeader className="card-header">
                 <div className="columns is-gapless">
                     <div className="column">
-                        <h2 className="headline">{title ? title : 'This is the card title'}</h2>
+                        <h2 className="headline">{title}</h2>
                     </div>
                     <div className="column">
                         {help && (

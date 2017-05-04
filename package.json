@@ -61,6 +61,7 @@
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.4.1",
+    "react-dropzone-s3-uploader": "^1.0.0-rc.3",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-json-tree": "^0.10.7",
     "react-markdown": "^2.4.6",

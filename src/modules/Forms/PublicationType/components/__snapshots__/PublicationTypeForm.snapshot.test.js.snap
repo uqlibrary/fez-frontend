@@ -33,9 +33,7 @@ exports[`Document type form snapshot tests renders default document type compone
       className="body-1"
     >
       <br />
-      <div>
-        \`                            
-      </div>
+      <div />
       <Field
         component={[Function]}
         dataSource={
