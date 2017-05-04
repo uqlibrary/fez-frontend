@@ -77,7 +77,7 @@ exports[`Document type form integration tests renders default document type comp
             disableYearSelection={false}
             disabled={false}
             firstDayOfWeek={1}
-            floatingLabelText="Journal Publish Date"
+            floatingLabelText="Journal publish date"
             hideCalendarDate={false}
             style={
               Object {
@@ -284,6 +284,7 @@ exports[`Document type form integration tests renders default document type comp
       className="body-1"
     >
       <Connect(ReduxForm)
+        authorFieldLabel="Add an author (Name as published)"
         form="addJournalArticle"
       />
     </CardText>
@@ -383,7 +384,7 @@ exports[`Document type form integration tests renders default document type comp
         >
           <Field
             component={[Function]}
-            floatingLabelText="Notes (not publically viewable)"
+            floatingLabelText="Not (not publically viewable)"
             fullWidth={true}
             multiLine={true}
             name="publicationNotes"

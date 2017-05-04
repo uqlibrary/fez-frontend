@@ -11,8 +11,6 @@ export default class SearchResults extends Component {
         title: PropTypes.string.isRequired,
         explanationText: PropTypes.string.isRequired,
         claimRecordBtnLabel: PropTypes.string,
-        helpTitle: PropTypes.string,
-        helpText: PropTypes.string,
         dataSource: PropTypes.object,
         help: PropTypes.object
     };

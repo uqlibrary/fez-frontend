@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {isDOIValue, isPubMedValue} from '../validator';
+import {locale} from '../../../../config';
 
 import './PublicationSearchForm.scss';
 
@@ -26,8 +27,8 @@ export default class PublicationSearchForm extends Component {
     };
 
     static defaultProps = {
-        defaultSearchFieldLabel: 'Search for publication',
-        defaultButtonLabel: 'Search',
+        defaultSearchFieldLabel: locale.pages.addRecord.searchForPublication.defaultProps.defaultSearchFieldLabel,
+        defaultButtonLabel: locale.pages.addRecord.searchForPublication.defaultProps.defaultButtonLabel,
     };
 
     constructor(props) {
@@ -40,15 +41,16 @@ export default class PublicationSearchForm extends Component {
     }
 
     updateButtonLabel = (event) => {
-        let label = ' Search';
         const fieldValue = event.target.value;
+        const buttonLabels = locale.pages.addRecord.searchForPublication.buttonLabelVariants;
+        let label = buttonLabels.default;
         if (fieldValue) {
-            label = 'Title Search';
+            label = buttonLabels.title;
 
             if (isDOIValue(fieldValue)) {
-                label = 'Doi Search';
+                label = buttonLabels.doi;
             } else if (isPubMedValue(fieldValue)) {
-                label = 'Pubmed Id Search';
+                label = buttonLabels.pubmed;
             }
         }
 
@@ -69,14 +71,14 @@ export default class PublicationSearchForm extends Component {
     };
 
     render() {
-        const {pristine, handleSubmit, title, help} = this.props;
+        const {pristine, handleSubmit, title, help, explanationText, defaultSearchFieldLabel} = this.props;
         return (
             <form ref="publicationSearchForm" onSubmit={handleSubmit}>
                 <Card className="layout-card">
                     <CardHeader className="card-header">
                         <div className="columns is-gapless">
                             <div className="column">
-                                <h2 className="headline">{title ? title : 'This is the card title'}</h2>
+                                <h2 className="headline">{title}</h2>
                             </div>
                             <div className="column">
                                 {help && (
@@ -91,11 +93,11 @@ export default class PublicationSearchForm extends Component {
                     </CardHeader>
                     <CardText className="body-1">
                         <br />
-                        <div>{this.props.explanationText}</div>
+                        <div>{explanationText}</div>
                         <Field component={TextField}
                                name="doiSearch"
                                fullWidth
-                               floatingLabelText={this.props.defaultSearchFieldLabel}
+                               floatingLabelText={defaultSearchFieldLabel}
                                onChange={this.updateButtonLabel}
                                autoComplete="off"
                         />
