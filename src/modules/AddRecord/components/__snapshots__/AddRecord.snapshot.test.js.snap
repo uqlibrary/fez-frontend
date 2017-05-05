@@ -7,7 +7,7 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
   <h1
     className="page-title display-1"
   >
-    Add a new record
+    Add missing record
   </h1>
   <div
     className="Stepper"
@@ -115,7 +115,7 @@ exports[`Add record page snapshots tests renders default add record page 2`] = `
   <h1
     className="page-title display-1"
   >
-    Add a new record
+    Add missing record
   </h1>
   <div
     className="Stepper"
