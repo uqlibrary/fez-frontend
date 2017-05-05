@@ -1,7 +1,3 @@
-/* eslint-disable react/no-multi-comp*/
-
-import React from 'react';
-
 export const researcherMenuItems = (locale, email, components) => [
     {
         linkTo: '/dashboard',
@@ -21,6 +17,12 @@ export const researcherMenuItems = (locale, email, components) => [
         path: '/add-record',
         primaryText: locale.menu.addMissingRecord.primaryText,
         component: components.AddRecord
+    },
+    {
+        linkTo: '/claim-publications',
+        path: '/claim-publications',
+        primaryText: locale.menu.claimPublication.primaryText,
+        render: () => components.StaticPage(locale.pages.claimPublications)
     },
     {
         divider: true,
@@ -65,13 +67,13 @@ export const defaultMenuItems = (locale, components) => [
         linkTo: '/search',
         path: '/search',
         primaryText: 'Search',
-        render: () => <div> eSpace search coming soon ...</div>
+        render: () => components.StaticPage({title: 'Search', text: 'public search coming soon...'})
     },
     {
         linkTo: '/faqs',
         path: '/faqs',
         primaryText: locale.menu.faqs.primaryText,
-        render: () => <div> eSpace FAQ coming soon ...</div>
+        render: () => components.StaticPage({title: 'FAQs', text: 'public FAQs coming soon...'})
     },
     {
         linkTo: '/about',
