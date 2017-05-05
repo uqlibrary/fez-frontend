@@ -127,7 +127,7 @@ export default {
             stepper: {
                 step1Label: 'Search for your publication',
                 step2Label: 'Search results',
-                step3Label: 'Claim or Add your publication',
+                step3Label: 'Add your publication',
                 defaultErrorMessage: 'Error'
             },
             searchForPublication: {
