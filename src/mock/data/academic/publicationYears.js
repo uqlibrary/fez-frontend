@@ -423,3 +423,4 @@ export const publicationYearsSmall = {
         }
     }
 };
+

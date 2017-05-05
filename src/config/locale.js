@@ -26,6 +26,9 @@ export default {
         addMissingRecord: {
             primaryText: 'Add missing record'
         },
+        claimPublication: {
+            primaryText: 'Clalim publications'
+        },
         manageUsers: {
             primaryText: 'Manage users'
         },
@@ -120,8 +123,8 @@ export default {
             }
         },
         addRecord: {
+            title: 'Add missing record',
             stepper: {
-                title: 'Add a new record',
                 step1Label: 'Search for your publication',
                 step2Label: 'Search results',
                 step3Label: 'Claim or Add your publication',
@@ -255,7 +258,27 @@ export default {
                     }
                 }
             }
-        }
+        },
+        claimPublications: {
+            title: 'Claim publications',
+            text: ( <div>
+                    <p>
+                        possibly your publications....
+                    </p>
+                </div>
+            ),
+            help: {
+                title: 'Help',
+                text: (
+                    <div>
+                        <p>
+                            Help on possibly your publications...
+                        </p>
+                    </div>
+                ),
+                button: 'OK'
+            }
+        },
     }
 };
 

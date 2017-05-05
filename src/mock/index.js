@@ -9,7 +9,7 @@ import {externalDoiSearchResultList, internalDoiSearchResultList, externalPubMed
 import {authorsList} from './data/authors';
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
-import {publicationYears} from './data/publication-years';
+import {publicationYearsBig} from './data/academic/publicationYears';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api);
@@ -58,6 +58,6 @@ mock.onGet('records/sub/types').reply(200, publicationSubTypeList);
 mock.onGet('authors/search').reply(200, authorsList);
 
 // Mock academics publication years endpoint response
-mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYears);
+mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsBig);
 
 

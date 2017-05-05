@@ -207,7 +207,7 @@ class addRecord extends React.Component {
 
         return (
             <div className="layout-fill">
-                <h1 className="page-title display-1">{stepperInformation.title}</h1>
+                <h1 className="page-title display-1">{locale.pages.addRecord.title}</h1>
 
                 {/* Stepper start */}
                 <div className="Stepper">
