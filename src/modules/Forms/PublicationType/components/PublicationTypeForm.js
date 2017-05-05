@@ -26,11 +26,16 @@ export default class PublicationTypeForm extends Component {
         ]),
         maxSearchResults: PropTypes.number,
         publicationTypeLabel: PropTypes.string,
-        help: PropTypes.object
+        help: PropTypes.object,
+        clearSelectedPublicationType: PropTypes.func
     };
 
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        this.props.clearSelectedPublicationType();
     }
 
     addListDivider = (popularTypes) => {
@@ -123,7 +128,6 @@ export default class PublicationTypeForm extends Component {
                                dataSourceConfig={{text: 'name', value: 'id'}}
                                onChange={loadSelectedPublicationType}
                                openOnFocus
-                               value={179}
                                fullWidth />
                     </CardText>
                 </Card>

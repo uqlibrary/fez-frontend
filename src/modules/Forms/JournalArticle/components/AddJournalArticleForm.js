@@ -3,10 +3,8 @@ import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 
-import {HelpIcon, TextField, Authors} from 'uqlibrary-react-toolbox';
+import {AutoCompleteSelect, HelpIcon, TextField, Authors} from 'uqlibrary-react-toolbox';
 import DatePicker from 'material-ui/DatePicker';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from '../../../../config';
 
@@ -43,11 +41,6 @@ export default class AddJournalArticleForm extends Component {
     };
 
     render() {
-        const {publicationSubTypeList} = this.props;
-        const subtypeItems = publicationSubTypeList.valueSeq().map((subtypes) => {
-            return (<MenuItem value={subtypes.get('id')} key={subtypes.get('id')} primaryText={subtypes.get('label')}/>);
-        });
-
         // path to the locale data for each of the sections
         const journalArticleInformation = locale.pages.addRecord.addJournalArticle.journalArticleInformation;
         const authorsInformation = locale.pages.addRecord.addJournalArticle.authors;
@@ -75,29 +68,28 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div className="flex">
+                        <div className="columns is-gapless">
                             <Field component={TextField} name="journalTitle" type="text" fullWidth
                                    floatingLabelText={journalArticleInformation.fields.titleLabel}/>
                         </div>
-                        <div className="row-sm column align-stretch align-center-sm">
-                            <div className="flex inputPadding">
+                        <div className="row-sm columns align-stretch align-center-sm">
+                            <div className="column is-8">
                                 <Field component={TextField} name="journalName" type="text" fullWidth
                                        floatingLabelText={journalArticleInformation.fields.nameLabel}/>
                             </div>
-                            <div className="flex">
-                                <DatePicker floatingLabelText={journalArticleInformation.fields.publishDateLabel} textFieldStyle={{width: '100%'}}
-                                            style={{width: '100%'}}/>
+                            <div className="column is-4 is-pulled-right">
+                                <DatePicker floatingLabelText={journalArticleInformation.fields.publishDateLabel}  />
                             </div>
                         </div>
-                        <div className="flex">
-                            <SelectField
-                                floatingLabelText={journalArticleInformation.fields.publicationTypeLabel}
-                                value={this.state.subTypeValue}
-                                onChange={this.handleSubTypeChange}
-                                style={{width: '100%'}}
-                            >
-                                {subtypeItems}
-                            </SelectField>
+                        <div className="columns is-gapless">
+                            <Field component={AutoCompleteSelect}
+                                   name="publicationSubType"
+                                   fullWidth
+                                   label={journalArticleInformation.fields.nameLabel}
+                                   formValue={this.state.subTypeValue}
+                                   dataSource={[].concat(this.props.publicationSubTypeList.toJS())}
+                                   dataSourceConfig={{text: 'label', value: 'id'}}
+                            />
                         </div>
                     </CardText>
                 </Card>
@@ -144,28 +136,34 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div className="row-sm column align-stretch align-center-sm">
-                            <div className="flex inputPadding">
-                                <Field component={TextField} name="publicationVolume" type="text" fullWidth
-                                       floatingLabelText={optionalInformation.fields.volumeLabel}/>
+                        <div className="columns">
+                            <div className="column">
+                                <div className="row-sm columns align-stretch align-center-sm">
+                                    <div className="column">
+                                        <Field component={TextField} name="publicationVolume" type="text" fullWidth
+                                               floatingLabelText={optionalInformation.fields.volumeLabel}/>
+                                    </div>
+                                    <div className="column">
+                                        <Field component={TextField} name="publicationIssue" type="text" fullWidth
+                                               floatingLabelText={optionalInformation.fields.issueLabel}/>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="flex inputPadding">
-                                <Field component={TextField} name="publicationIssue" type="text" fullWidth
-                                       floatingLabelText={optionalInformation.fields.issueLabel}/>
+                            <div className="column">
+                                <div className="row-sm columns is-3 align-stretch align-center-sm">
+                                    <div className="column">
+                                        <Field component={TextField} name="publicationStartPage" type="text" fullWidth
+                                               floatingLabelText={optionalInformation.fields.startPageLabel}/>
+                                    </div>
+                                    <div className="column">
+                                        <Field component={TextField} name="publicationEndPage" type="text" fullWidth
+                                               floatingLabelText={optionalInformation.fields.endPageLabel}/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="row-sm column align-stretch align-center-sm">
-                            <div className="flex inputPadding">
-                                <Field component={TextField} name="publicationStartPage" type="text" fullWidth
-                                       floatingLabelText={optionalInformation.fields.startPageLabel}/>
-                            </div>
-                            <div className="flex">
-                                <Field component={TextField} name="publicationEndPage" type="text" fullWidth
-                                       floatingLabelText={optionalInformation.fields.endPageLabel}/>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="flex">
+                        <div className="columns">
+                            <div className="column">
                                 <Field component={TextField} name="publicationNotes" type="text" fullWidth multiLine
                                        rows={5} floatingLabelText={optionalInformation.fields.notesLabel}/>
                             </div>
@@ -193,30 +191,31 @@ export default class AddJournalArticleForm extends Component {
                     </CardHeader>
                     <CardText className="body-1">
 
-                        <div className="row">
-                            <div className="flex" style={{marginTop: '16px', flex: '0 0 140px'}}>
-                                <RaisedButton label={fileInformation.buttons.browseLabel} secondary/>
-                            </div>
-                            <div className="flex" style={{marginTop: '-10px'}}>
+                        <div className="columns">
+                            <div className="column">
                                 <Field component={TextField} name="filesUpload" type="text"
                                        floatingLabelText={fileInformation.fields.filenameLabel} fullWidth/>
+                            </div>
+                        </div>
+                        <div className="columns">
+                            <div className="column">
+                                <RaisedButton label={fileInformation.buttons.browseLabel} secondary/>
                             </div>
                         </div>
 
                         {fileInformation.fields.filenameRestrictions}
 
-                        <div className="row-sm column align-stretch align-center-sm">
-                            <div className="flex inputPadding">
+                        <div className="row-sm columns align-stretch align-center-sm">
+                            <div className="column is-8">
                                 <Field component={TextField} name="filesAccessConditions" type="text" fullWidth
                                        floatingLabelText={fileInformation.fields.accessConditionsLabel}/>
                             </div>
-                            <div className="flex">
-                                <DatePicker floatingLabelText={fileInformation.fields.embargoDateLabel} textFieldStyle={{width: '100%'}}
-                                            style={{width: '100%'}}/>
+                            <div className="column is-4 is-pulled-right">
+                                <DatePicker floatingLabelText={fileInformation.fields.embargoDateLabel} />
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="flex">
+                        <div className="columns">
+                            <div className="column">
                                 <Field component={TextField} name="filesDescription" type="text" fullWidth multiLine
                                        rows={5} floatingLabelText={fileInformation.fields.descriptionLabel}/>
                             </div>

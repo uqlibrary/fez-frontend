@@ -44,7 +44,7 @@ exports[`Document type form integration tests renders default document type comp
       className="body-1"
     >
       <div
-        className="flex"
+        className="columns is-gapless"
       >
         <Field
           component={[Function]}
@@ -55,10 +55,10 @@ exports[`Document type form integration tests renders default document type comp
         />
       </div>
       <div
-        className="row-sm column align-stretch align-center-sm"
+        className="row-sm columns align-stretch align-center-sm"
       >
         <div
-          className="flex inputPadding"
+          className="column is-8"
         >
           <Field
             component={[Function]}
@@ -69,7 +69,7 @@ exports[`Document type form integration tests renders default document type comp
           />
         </div>
         <div
-          className="flex"
+          className="column is-4 is-pulled-right"
         >
           <DatePicker
             autoOk={false}
@@ -79,172 +79,66 @@ exports[`Document type form integration tests renders default document type comp
             firstDayOfWeek={1}
             floatingLabelText="Journal publish date"
             hideCalendarDate={false}
-            style={
-              Object {
-                "width": "100%",
-              }
-            }
-            textFieldStyle={
-              Object {
-                "width": "100%",
-              }
-            }
+            style={Object {}}
           />
         </div>
       </div>
       <div
-        className="flex"
+        className="columns is-gapless"
       >
-        <SelectField
-          autoWidth={false}
-          disabled={false}
-          floatingLabelText="Select a publication type"
-          fullWidth={false}
-          multiple={false}
-          onChange={[Function]}
-          style={
+        <Field
+          component={[Function]}
+          dataSource={
+            Array [
+              Object {
+                "id": 1,
+                "label": "Article (original research)",
+              },
+              Object {
+                "id": 2,
+                "label": "Critical review of research, literature review, critical commentary",
+              },
+              Object {
+                "id": 3,
+                "label": "Letter to editor, brief commentary or brief communication",
+              },
+              Object {
+                "id": 4,
+                "label": "Correction/erratum",
+              },
+              Object {
+                "id": 5,
+                "label": "Review of book, film, TV, video, software, performance, music etc ...",
+              },
+              Object {
+                "id": 6,
+                "label": "Editorial",
+              },
+              Object {
+                "id": 7,
+                "label": "Discussion - respones, round table/panel discussions. Q&A, reply",
+              },
+              Object {
+                "id": 8,
+                "label": "Creative work",
+              },
+              Object {
+                "id": 9,
+                "label": "Others",
+              },
+            ]
+          }
+          dataSourceConfig={
             Object {
-              "width": "100%",
+              "text": "label",
+              "value": "id",
             }
           }
-          value={1}
-        >
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Article (original research)"
-            value={1}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Critical review of research, literature review, critical commentary"
-            value={2}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Letter to editor, brief commentary or brief communication"
-            value={3}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Correction/erratum"
-            value={4}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Review of book, film, TV, video, software, performance, music etc ..."
-            value={5}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Editorial"
-            value={6}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Discussion - respones, round table/panel discussions. Q&A, reply"
-            value={7}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Creative work"
-            value={8}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Others"
-            value={9}
-          />
-        </SelectField>
+          formValue={1}
+          fullWidth={true}
+          label="Journal name"
+          name="publicationSubType"
+        />
       </div>
     </CardText>
   </Card>
@@ -325,62 +219,74 @@ exports[`Document type form integration tests renders default document type comp
       className="body-1"
     >
       <div
-        className="row-sm column align-stretch align-center-sm"
+        className="columns"
       >
         <div
-          className="flex inputPadding"
+          className="column"
         >
-          <Field
-            component={[Function]}
-            floatingLabelText="Volume"
-            fullWidth={true}
-            name="publicationVolume"
-            type="text"
-          />
+          <div
+            className="row-sm columns align-stretch align-center-sm"
+          >
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelText="Volume"
+                fullWidth={true}
+                name="publicationVolume"
+                type="text"
+              />
+            </div>
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelText="Issue"
+                fullWidth={true}
+                name="publicationIssue"
+                type="text"
+              />
+            </div>
+          </div>
         </div>
         <div
-          className="flex inputPadding"
+          className="column"
         >
-          <Field
-            component={[Function]}
-            floatingLabelText="Issue"
-            fullWidth={true}
-            name="publicationIssue"
-            type="text"
-          />
+          <div
+            className="row-sm columns is-3 align-stretch align-center-sm"
+          >
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelText="Start page"
+                fullWidth={true}
+                name="publicationStartPage"
+                type="text"
+              />
+            </div>
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelText="End page"
+                fullWidth={true}
+                name="publicationEndPage"
+                type="text"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div
-        className="row-sm column align-stretch align-center-sm"
+        className="columns"
       >
         <div
-          className="flex inputPadding"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Start page"
-            fullWidth={true}
-            name="publicationStartPage"
-            type="text"
-          />
-        </div>
-        <div
-          className="flex"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="End page"
-            fullWidth={true}
-            name="publicationEndPage"
-            type="text"
-          />
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="flex"
+          className="column"
         >
           <Field
             component={[Function]}
@@ -431,16 +337,25 @@ exports[`Document type form integration tests renders default document type comp
       className="body-1"
     >
       <div
-        className="row"
+        className="columns"
       >
         <div
-          className="flex"
-          style={
-            Object {
-              "flex": "0 0 140px",
-              "marginTop": "16px",
-            }
-          }
+          className="column"
+        >
+          <Field
+            component={[Function]}
+            floatingLabelText="Filename selected"
+            fullWidth={true}
+            name="filesUpload"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="columns"
+      >
+        <div
+          className="column"
         >
           <RaisedButton
             disabled={false}
@@ -449,22 +364,6 @@ exports[`Document type form integration tests renders default document type comp
             labelPosition="after"
             primary={false}
             secondary={true}
-          />
-        </div>
-        <div
-          className="flex"
-          style={
-            Object {
-              "marginTop": "-10px",
-            }
-          }
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Filename selected"
-            fullWidth={true}
-            name="filesUpload"
-            type="text"
           />
         </div>
       </div>
@@ -501,10 +400,10 @@ exports[`Document type form integration tests renders default document type comp
         </div>
       </div>
       <div
-        className="row-sm column align-stretch align-center-sm"
+        className="row-sm columns align-stretch align-center-sm"
       >
         <div
-          className="flex inputPadding"
+          className="column is-8"
         >
           <Field
             component={[Function]}
@@ -515,7 +414,7 @@ exports[`Document type form integration tests renders default document type comp
           />
         </div>
         <div
-          className="flex"
+          className="column is-4 is-pulled-right"
         >
           <DatePicker
             autoOk={false}
@@ -525,24 +424,15 @@ exports[`Document type form integration tests renders default document type comp
             firstDayOfWeek={1}
             floatingLabelText="Embargo date"
             hideCalendarDate={false}
-            style={
-              Object {
-                "width": "100%",
-              }
-            }
-            textFieldStyle={
-              Object {
-                "width": "100%",
-              }
-            }
+            style={Object {}}
           />
         </div>
       </div>
       <div
-        className="row"
+        className="columns"
       >
         <div
-          className="flex"
+          className="column"
         >
           <Field
             component={[Function]}

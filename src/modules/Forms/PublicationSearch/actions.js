@@ -1,5 +1,5 @@
 // Repositories
-import {searchDoiEndpoint, searchPubmedEndpoint, searchTitleEndpoint} from '../../../repositories/publicationSearchForm';
+import {searchDoiEndpoint, searchPubmedEndpoint, searchTitleEndpoint} from '../../../repositories/publicationSearch';
 
 // Types
 export const DOI_SEARCH = 'DOI_SEARCH';

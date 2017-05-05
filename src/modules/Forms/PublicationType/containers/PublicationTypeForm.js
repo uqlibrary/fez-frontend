@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {reduxForm} from 'redux-form/immutable';
 
 import PublicationTypeForm from '../components/PublicationTypeForm';
-import {loadSelectedPublicationType} from '../actions';
+import {loadSelectedPublicationType, clearSelectedPublicationType} from '../actions';
 
 
 let PublicationTypeFormContainer = reduxForm({
@@ -11,7 +11,8 @@ let PublicationTypeFormContainer = reduxForm({
 
 PublicationTypeFormContainer = connect(null, dispatch => {
     return {
-        loadSelectedPublicationType: (obj, selectedId) => dispatch(loadSelectedPublicationType(selectedId))
+        loadSelectedPublicationType: (obj, selectedId) => dispatch(loadSelectedPublicationType(selectedId)),
+        clearSelectedPublicationType: () => dispatch(clearSelectedPublicationType())
     };
 })(PublicationTypeFormContainer);
 
