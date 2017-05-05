@@ -19,16 +19,12 @@ export default class AddJournalArticleForm extends Component {
         loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
         loadAuthorsList: PropTypes.func,
-        authorList: PropTypes.object
+        authorList: PropTypes.object,
+        formValues: PropTypes.object
     };
 
     constructor(props) {
         super(props);
-
-        // setup the state
-        this.state = {
-            subTypeValue: 1,
-        };
     }
 
     componentDidMount() {
@@ -36,16 +32,14 @@ export default class AddJournalArticleForm extends Component {
         this.props.loadAuthorsList();
     }
 
-    handleSubTypeChange = (e, index, value) => {
-        this.setState({subTypeValue: value});
-    };
-
     render() {
         // path to the locale data for each of the sections
         const journalArticleInformation = locale.pages.addRecord.addJournalArticle.journalArticleInformation;
         const authorsInformation = locale.pages.addRecord.addJournalArticle.authors;
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const fileInformation = locale.pages.addRecord.addJournalArticle.files;
+
+        const {formValues} = this.props;
 
         return (
             <div style={{marginBottom: '-60px'}}>
@@ -86,7 +80,7 @@ export default class AddJournalArticleForm extends Component {
                                    name="publicationSubType"
                                    fullWidth
                                    label={journalArticleInformation.fields.publicationTypeLabel}
-                                   formValue={this.state.subTypeValue}
+                                   formValue={formValues.get('publicationSubType')}
                                    dataSource={[].concat(this.props.publicationSubTypeList.toJS())}
                                    dataSourceConfig={{text: 'label', value: 'id'}}
                             />

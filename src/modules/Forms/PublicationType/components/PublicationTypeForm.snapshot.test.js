@@ -17,6 +17,7 @@ function setup() {
         title: 'Component Title',
         dataSource: Immutable.fromJS(publicationTypeList),
         loadPublicationTypes: jest.fn(),
+        formValues: Immutable.fromJS({publicationType: 179}),
         popularTypesList: popularTypesList
     };
 

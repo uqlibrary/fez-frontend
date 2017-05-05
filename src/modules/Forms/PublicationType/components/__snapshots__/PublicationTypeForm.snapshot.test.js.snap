@@ -160,6 +160,7 @@ exports[`Document type form snapshot tests renders default document type compone
             "value": "id",
           }
         }
+        formValue={179}
         fullWidth={true}
         name="publicationType"
         openOnFocus={true}

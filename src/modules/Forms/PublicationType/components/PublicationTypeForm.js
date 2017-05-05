@@ -27,7 +27,8 @@ export default class PublicationTypeForm extends Component {
         maxSearchResults: PropTypes.number,
         publicationTypeLabel: PropTypes.string,
         help: PropTypes.object,
-        clearSelectedPublicationType: PropTypes.func
+        clearSelectedPublicationType: PropTypes.func,
+        formValues: PropTypes.object
     };
 
     constructor(props) {
@@ -94,7 +95,8 @@ export default class PublicationTypeForm extends Component {
             explanationText,
             maxSearchResults,
             children,
-            publicationTypeLabel
+            publicationTypeLabel,
+            formValues
         } = this.props;
 
         return (
@@ -127,6 +129,7 @@ export default class PublicationTypeForm extends Component {
                                dataSource={this.createCompletePublicationList()}
                                dataSourceConfig={{text: 'name', value: 'id'}}
                                onChange={loadSelectedPublicationType}
+                               formValue={formValues.get('publicationType')}
                                openOnFocus
                                fullWidth />
                     </CardText>

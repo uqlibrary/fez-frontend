@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
-import {reduxForm} from 'redux-form/immutable';
+import {reduxForm, getFormValues} from 'redux-form/immutable';
+import Immutable from 'immutable';
 
 import PublicationTypeForm from '../components/PublicationTypeForm';
 import {loadSelectedPublicationType, clearSelectedPublicationType} from '../actions';
@@ -9,7 +10,11 @@ let PublicationTypeFormContainer = reduxForm({
     form: 'PublicationTypeForm'
 })(PublicationTypeForm);
 
-PublicationTypeFormContainer = connect(null, dispatch => {
+PublicationTypeFormContainer = connect((state) => {
+    return {
+        formValues: getFormValues('PublicationTypeForm')(state) || Immutable.Map({})
+    };
+}, dispatch => {
     return {
         loadSelectedPublicationType: (obj, selectedId) => dispatch(loadSelectedPublicationType(selectedId)),
         clearSelectedPublicationType: () => dispatch(clearSelectedPublicationType())

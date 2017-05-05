@@ -28,6 +28,7 @@ describe('Document type form integration tests', () => {
             title: 'Component Title',
             dataSource: dataSource,
             loadPublicationTypes: jest.fn(),
+            formValues: Immutable.fromJS({publicationType: 179}),
             popularTypesList: popularTypesList
         };
 

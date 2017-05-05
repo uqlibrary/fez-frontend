@@ -135,7 +135,6 @@ exports[`Document type form integration tests renders default document type comp
               "value": "id",
             }
           }
-          formValue={1}
           fullWidth={true}
           label="Select a publication type"
           name="publicationSubType"
