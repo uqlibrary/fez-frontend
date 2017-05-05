@@ -72,20 +72,20 @@ export default class AddJournalArticleForm extends Component {
                             <Field component={TextField} name="journalTitle" type="text" fullWidth
                                    floatingLabelText={journalArticleInformation.fields.titleLabel}/>
                         </div>
-                        <div className="row-sm columns align-stretch align-center-sm">
-                            <div className="column is-8">
+                        <div className="columns">
+                            <div className="column is-two-thirds">
                                 <Field component={TextField} name="journalName" type="text" fullWidth
                                        floatingLabelText={journalArticleInformation.fields.nameLabel}/>
                             </div>
-                            <div className="column is-4 is-pulled-right">
-                                <DatePicker floatingLabelText={journalArticleInformation.fields.publishDateLabel}  />
+                            <div className="column">
+                                <DatePicker floatingLabelText={journalArticleInformation.fields.publishDateLabel} fullWidth />
                             </div>
                         </div>
-                        <div className="columns is-gapless">
+                        <div className="columns">
                             <Field component={AutoCompleteSelect}
                                    name="publicationSubType"
                                    fullWidth
-                                   label={journalArticleInformation.fields.nameLabel}
+                                   label={journalArticleInformation.fields.publicationTypeLabel}
                                    formValue={this.state.subTypeValue}
                                    dataSource={[].concat(this.props.publicationSubTypeList.toJS())}
                                    dataSourceConfig={{text: 'label', value: 'id'}}
@@ -138,7 +138,7 @@ export default class AddJournalArticleForm extends Component {
                     <CardText className="body-1">
                         <div className="columns">
                             <div className="column">
-                                <div className="row-sm columns align-stretch align-center-sm">
+                                <div className="columns">
                                     <div className="column">
                                         <Field component={TextField} name="publicationVolume" type="text" fullWidth
                                                floatingLabelText={optionalInformation.fields.volumeLabel}/>
@@ -150,7 +150,7 @@ export default class AddJournalArticleForm extends Component {
                                 </div>
                             </div>
                             <div className="column">
-                                <div className="row-sm columns is-3 align-stretch align-center-sm">
+                                <div className="columns">
                                     <div className="column">
                                         <Field component={TextField} name="publicationStartPage" type="text" fullWidth
                                                floatingLabelText={optionalInformation.fields.startPageLabel}/>
@@ -205,19 +205,19 @@ export default class AddJournalArticleForm extends Component {
 
                         {fileInformation.fields.filenameRestrictions}
 
-                        <div className="row-sm columns align-stretch align-center-sm">
-                            <div className="column is-8">
+                        <div className="columns">
+                            <div className="column is-two-thirds">
                                 <Field component={TextField} name="filesAccessConditions" type="text" fullWidth
                                        floatingLabelText={fileInformation.fields.accessConditionsLabel}/>
                             </div>
-                            <div className="column is-4 is-pulled-right">
-                                <DatePicker floatingLabelText={fileInformation.fields.embargoDateLabel} />
+                            <div className="column">
+                                <DatePicker floatingLabelText={fileInformation.fields.embargoDateLabel} fullWidth />
                             </div>
                         </div>
                         <div className="columns">
                             <div className="column">
                                 <Field component={TextField} name="filesDescription" type="text" fullWidth multiLine
-                                       rows={5} floatingLabelText={fileInformation.fields.descriptionLabel}/>
+                                       rows={3} floatingLabelText={fileInformation.fields.descriptionLabel}/>
                             </div>
                         </div>
                     </CardText>

@@ -3,7 +3,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import ExpandTransition from 'material-ui/internal/ExpandTransition';
 import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
-
+import Snackbar from 'material-ui/Snackbar';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 
 // the stepper's step constants
@@ -28,7 +28,11 @@ class addRecord extends React.Component {
         searchResultsList: PropTypes.object,
         selectedPublicationType: PropTypes.object,
         loadPublicationTypesList: PropTypes.func,
-        publicationTypeList: PropTypes.object
+        loadNotification: PropTypes.func,
+        publicationTypeList: PropTypes.object,
+        hideSnackbar: PropTypes.func.isRequired,
+        showSnackbar: PropTypes.func.isRequired,
+        snackbar: PropTypes.object.isRequired
     };
 
     static defaultProps = {
@@ -98,19 +102,49 @@ class addRecord extends React.Component {
         this.setState({saveOpen: true});
     };
 
+    cancelAddRecord = () => {
+        // go back to step 1
+        this.setState({stepIndex: 0});
+        this.props.showSnackbar(locale.notifications.addRecord.cancelMessage);
+    };
+
+    saveForLater = () => {
+        // go back to step 1
+        this.setState({stepIndex: 0});
+        this.props.showSnackbar(locale.notifications.addRecord.saveMessage);
+    };
+
+    submitRecord = () => {
+        // go back to step 1
+        this.setState({stepIndex: 0});
+        this.props.showSnackbar(locale.notifications.addRecord.submitMessage);
+    };
+
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case STEP_1:
                 const searchForPublicationInformation = locale.pages.addRecord.searchForPublication;
+                const {
+                    snackbar,
+                    hideSnackbar
+                } = this.props;
 
                 return (
-                    <PublicationSearchForm onSubmit={this.handleNext}
-                       title={searchForPublicationInformation.title}
-                       explanationText={searchForPublicationInformation.explanationText}
-                       defaultSearchFieldLabel={searchForPublicationInformation.defaultSearchFieldLabel}
-                       defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
-                       help={searchForPublicationInformation.help}
-                       />
+                    <div>
+                        <PublicationSearchForm onSubmit={this.handleNext}
+                           title={searchForPublicationInformation.title}
+                           explanationText={searchForPublicationInformation.explanationText}
+                           defaultSearchFieldLabel={searchForPublicationInformation.defaultSearchFieldLabel}
+                           defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
+                           help={searchForPublicationInformation.help}
+                           />
+
+                        <Snackbar
+                            open={snackbar.get('open')}
+                            message={snackbar.get('message')}
+                            autoHideDuration={4000}
+                            onRequestClose={hideSnackbar} />
+                    </div>
                 );
             case STEP_2:
                 // on initial load this will be null
@@ -175,10 +209,10 @@ class addRecord extends React.Component {
                             {selectedPublicationType.size > 0 &&
                                 <div className="buttonWrapper">
                                     <RaisedButton label={buttonLabels.saveForLater} style={{marginLeft: '12px'}}
-                                                  onTouchTap={this.handleOpenSaveForLater}/>
-                                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.handlePrev}/>
+                                                  onTouchTap={this.saveForLater}/>
+                                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddRecord}/>
                                     <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}}
-                                                  onTouchTap={this.handleOpenSubmitForApproval}/>
+                                                  onTouchTap={this.submitRecord}/>
                                 </div>
                             }
                             </div>

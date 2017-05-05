@@ -52,6 +52,13 @@ export default {
             primaryText: 'About',
         },
     },
+    notifications: {
+        addRecord: {
+            cancelMessage: 'Publication has not been saved',
+            saveMessage: 'Publication has been saved for later',
+            submitMessage: 'Publication has been submitted for approval'
+        }
+    },
     pages: {
         about: {
             title: 'About UQ eSpace',

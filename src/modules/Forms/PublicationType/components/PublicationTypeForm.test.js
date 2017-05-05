@@ -70,7 +70,7 @@ describe('Document type form integration tests', () => {
         expect(app.instance().createCompletePublicationList()).toEqual(resultTestList);
 
         // test for an empty data source
-        const appEmptyDS = setup([]);
+        const appEmptyDS = setup(Immutable.fromJS([]));
         expect(appEmptyDS.instance().createCompletePublicationList()).toEqual([]);
     });
 });

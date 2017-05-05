@@ -7,7 +7,7 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
   <h1
     className="page-title display-1"
   >
-    Add a new record
+    Add missing record
   </h1>
   <div
     className="Stepper"
@@ -88,19 +88,27 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
         }
       >
         <div>
-          <Connect(ReduxForm)
-            defaultButtonLabel="Enter Doi, Pubmed Id or Title"
-            defaultSearchFieldLabel="Enter Doi, Pubmed Id or Title"
-            explanationText="Enter either the publication Doi (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source."
-            help={
-              Object {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.",
-                "title": "Search for your publication",
+          <div>
+            <Connect(ReduxForm)
+              defaultButtonLabel="Enter Doi, Pubmed Id or Title"
+              defaultSearchFieldLabel="Enter Doi, Pubmed Id or Title"
+              explanationText="Enter either the publication Doi (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source."
+              help={
+                Object {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.",
+                  "title": "Search for your publication",
+                }
               }
-            }
-            onSubmit={[Function]}
-            title="Search for your publication"
-          />
+              onSubmit={[Function]}
+              title="Search for your publication"
+            />
+            <Snackbar
+              autoHideDuration={4000}
+              message="test message"
+              onRequestClose={[Function]}
+              open={false}
+            />
+          </div>
         </div>
       </div>
     </ExpandTransition>
@@ -115,7 +123,7 @@ exports[`Add record page snapshots tests renders default add record page 2`] = `
   <h1
     className="page-title display-1"
   >
-    Add a new record
+    Add missing record
   </h1>
   <div
     className="Stepper"
@@ -196,19 +204,27 @@ exports[`Add record page snapshots tests renders default add record page 2`] = `
         }
       >
         <div>
-          <Connect(ReduxForm)
-            defaultButtonLabel="Enter Doi, Pubmed Id or Title"
-            defaultSearchFieldLabel="Enter Doi, Pubmed Id or Title"
-            explanationText="Enter either the publication Doi (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source."
-            help={
-              Object {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.",
-                "title": "Search for your publication",
+          <div>
+            <Connect(ReduxForm)
+              defaultButtonLabel="Enter Doi, Pubmed Id or Title"
+              defaultSearchFieldLabel="Enter Doi, Pubmed Id or Title"
+              explanationText="Enter either the publication Doi (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source."
+              help={
+                Object {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.",
+                  "title": "Search for your publication",
+                }
               }
-            }
-            onSubmit={[Function]}
-            title="Search for your publication"
-          />
+              onSubmit={[Function]}
+              title="Search for your publication"
+            />
+            <Snackbar
+              autoHideDuration={4000}
+              message="test message"
+              onRequestClose={[Function]}
+              open={false}
+            />
+          </div>
         </div>
       </div>
     </ExpandTransition>
