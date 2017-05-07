@@ -102,12 +102,6 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
               onSubmit={[Function]}
               title="Search for your publication"
             />
-            <Snackbar
-              autoHideDuration={4000}
-              message="test message"
-              onRequestClose={[Function]}
-              open={false}
-            />
           </div>
         </div>
       </div>
@@ -217,12 +211,6 @@ exports[`Add record page snapshots tests renders default add record page 2`] = `
               }
               onSubmit={[Function]}
               title="Search for your publication"
-            />
-            <Snackbar
-              autoHideDuration={4000}
-              message="test message"
-              onRequestClose={[Function]}
-              open={false}
             />
           </div>
         </div>

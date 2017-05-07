@@ -3,8 +3,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 import ExpandTransition from 'material-ui/internal/ExpandTransition';
 import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
-import Snackbar from 'material-ui/Snackbar';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
+
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -30,9 +30,10 @@ class addRecord extends React.Component {
         loadPublicationTypesList: PropTypes.func,
         loadNotification: PropTypes.func,
         publicationTypeList: PropTypes.object,
-        hideSnackbar: PropTypes.func.isRequired,
-        showSnackbar: PropTypes.func.isRequired,
-        snackbar: PropTypes.object.isRequired
+        snackbar: PropTypes.object.isRequired,
+        cancelAddRecord: PropTypes.func,
+        saveForLater: PropTypes.func,
+        submitRecord: PropTypes.func
     };
 
     static defaultProps = {
@@ -102,33 +103,31 @@ class addRecord extends React.Component {
         this.setState({saveOpen: true});
     };
 
+    // TODO: Update this with the new pagestepper component as it will have it's own reducer to update the step
     cancelAddRecord = () => {
         // go back to step 1
         this.setState({stepIndex: 0});
-        this.props.showSnackbar(locale.notifications.addRecord.cancelMessage);
+        this.props.cancelAddRecord(locale.notifications.addRecord.cancelMessage);
     };
 
+    // TODO: Update this with the new pagestepper component as it will have it's own reducer to update the step
     saveForLater = () => {
         // go back to step 1
         this.setState({stepIndex: 0});
-        this.props.showSnackbar(locale.notifications.addRecord.saveMessage);
+        this.props.saveForLater(locale.notifications.addRecord.saveMessage);
     };
 
+    // TODO: Update this with the new pagestepper component as it will have it's own reducer to update the step
     submitRecord = () => {
         // go back to step 1
         this.setState({stepIndex: 0});
-        this.props.showSnackbar(locale.notifications.addRecord.submitMessage);
+        this.props.submitRecord(locale.notifications.addRecord.submitMessage);
     };
 
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case STEP_1:
                 const searchForPublicationInformation = locale.pages.addRecord.searchForPublication;
-                const {
-                    snackbar,
-                    hideSnackbar
-                } = this.props;
-
                 return (
                     <div>
                         <PublicationSearchForm onSubmit={this.handleNext}
@@ -138,12 +137,6 @@ class addRecord extends React.Component {
                            defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
                            help={searchForPublicationInformation.help}
                            />
-
-                        <Snackbar
-                            open={snackbar.get('open')}
-                            message={snackbar.get('message')}
-                            autoHideDuration={4000}
-                            onRequestClose={hideSnackbar} />
                     </div>
                 );
             case STEP_2:
