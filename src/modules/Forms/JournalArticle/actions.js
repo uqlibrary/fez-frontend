@@ -12,10 +12,10 @@ export const AUTHORS_LOADED = 'AUTHORS_LOADED';
  * Loads the publication sub types into the application
  * @returns {function(*)}
  */
-export function loadPublicationSubTypesList() {
+export function loadPublicationSubTypesList(id) {
     return dispatch => {
         dispatch({type: PUBLICATION_SUB_TYPES_LOADING});
-        loadPublicationSubTypeData().then(publicationTypes => {
+        loadPublicationSubTypeData(id).then(publicationTypes => {
             dispatch({
                 type: PUBLICATION_SUB_TYPES_LOADED,
                 payload: publicationTypes

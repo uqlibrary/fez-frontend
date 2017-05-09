@@ -52,7 +52,7 @@ mock.onGet(/search\/internal\?rek_display_type=[0-9]*/).reply(200, internalTitle
 mock.onGet('records/types').reply(200, publicationTypeList);
 
 // Mock the publication sub types endpoint
-mock.onGet('records/sub/types').reply(200, publicationSubTypeList);
+mock.onGet(/vocabularies\/[0-9]/).reply(200, publicationSubTypeList);
 
 // Mock the authors endpoint
 mock.onGet('authors/search').reply(200, authorsList);

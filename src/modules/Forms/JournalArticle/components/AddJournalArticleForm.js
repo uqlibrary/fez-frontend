@@ -20,7 +20,8 @@ export default class AddJournalArticleForm extends Component {
         publicationSubTypeList: PropTypes.object,
         loadAuthorsList: PropTypes.func,
         authorList: PropTypes.object,
-        formValues: PropTypes.object
+        formValues: PropTypes.object,
+        selectedPublicationId: PropTypes.object
     };
 
     constructor(props) {
@@ -28,7 +29,7 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentDidMount() {
-        this.props.loadPublicationSubTypesList();
+        this.props.loadPublicationSubTypesList(this.props.selectedPublicationId.get('id'));
         this.props.loadAuthorsList();
     }
 

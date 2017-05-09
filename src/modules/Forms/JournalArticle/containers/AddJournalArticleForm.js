@@ -15,11 +15,12 @@ AddJournalArticleFormContainer = connect(state => {
     return {
         authorList: publicationTypeState.get('authorList') || Immutable.Map({}),
         publicationSubTypeList: publicationTypeState.get('publicationSubTypeList'),
-        formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({})
+        formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
+        selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType')
     };
 }, dispatch => {
     return {
-        loadPublicationSubTypesList: () => dispatch(loadPublicationSubTypesList()),
+        loadPublicationSubTypesList: (id) => dispatch(loadPublicationSubTypesList(id)),
         loadAuthorsList: () => dispatch(loadAuthorsList())
     };
 })(AddJournalArticleFormContainer);
