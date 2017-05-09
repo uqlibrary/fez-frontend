@@ -30,7 +30,6 @@ class addRecord extends React.Component {
         loadPublicationTypesList: PropTypes.func,
         loadNotification: PropTypes.func,
         publicationTypeList: PropTypes.object,
-        snackbar: PropTypes.object.isRequired,
         cancelAddRecord: PropTypes.func,
         saveForLater: PropTypes.func,
         submitRecord: PropTypes.func
