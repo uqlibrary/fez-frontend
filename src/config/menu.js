@@ -19,6 +19,10 @@ export const researcherMenuItems = (locale, email, components) => [
         component: components.AddRecord
     },
     {
+        path: '/claim-publications/:id',
+        component: components.ClaimPublicationForm
+    },
+    {
         linkTo: '/claim-publications',
         path: '/claim-publications',
         primaryText: locale.menu.claimPublication.primaryText,

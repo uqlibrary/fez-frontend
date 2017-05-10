@@ -2,24 +2,17 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
-import {loadPublicationSubTypesList, loadAuthorsList} from '../actions';
-import Immutable from 'immutable';
+import {claimThisPublication, cancelThisPublicationClaim} from '../actions';
 
 
 let ClaimPublicationFormContainer = reduxForm({
     form: 'ClaimPublicationForm'
 })(ClaimPublicationForm);
 
-ClaimPublicationFormContainer = connect(state => {
-    const publicationTypeState = state.get('publicationSubTypes');
+ClaimPublicationFormContainer = connect(null, dispatch => {
     return {
-        authorList: publicationTypeState.get('authorList') || Immutable.Map({}),
-        publicationSubTypeList: publicationTypeState.get('publicationSubTypeList')
-    };
-}, dispatch => {
-    return {
-        loadPublicationSubTypesList: () => dispatch(loadPublicationSubTypesList()),
-        loadAuthorsList: () => dispatch(loadAuthorsList())
+        cancelThisPublicationClaim: (message) => dispatch(cancelThisPublicationClaim(message)),
+        claimThisPublication: (message) => dispatch(claimThisPublication(message))
     };
 })(ClaimPublicationFormContainer);
 

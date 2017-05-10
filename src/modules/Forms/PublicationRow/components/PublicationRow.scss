@@ -1,0 +1,54 @@
+// Styles for the "claim a publication" panel
+.claimWrapper {
+  padding: 20px;
+  margin: 10px auto 5px auto;
+  width: calc(100% - 40px);
+}
+.claimTitle{
+  font-size: 2em;
+  color: #2196F3;
+  margin-bottom: 20px;
+}
+a .claimTitle {
+  color: #2196F3;
+}
+.claimTitleIcon {
+  opacity: 0.5;
+  font-size: 0.66em !important;
+  vertical-align: super !important;
+  margin-left: 5px;
+}
+a:hover .claimTitleIcon {
+  opacity: 1.0;
+  color: #000 !important;
+}
+.claimAuthors, .claimJournal {
+  margin: 10px 0 5px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.claimStats {
+  margin: 15px 0 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.claimAuthorsIcon, .claimJournalIcon {
+  font-size: 1.2em !important;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+
+.claimStats img {
+  width: 1em;
+  height: 1em;
+  filter: grayscale(1);
+  vertical-align: sub;
+}
+.claimStatsIcon{
+  font-size: 1.2em !important;
+  vertical-align: sub;
+  color: #333;
+}
+

@@ -9,15 +9,11 @@ import {theme} from 'config';
 // Top level "pages"
 import {App} from 'modules/App';
 
-// Forms
-import {ClaimPublicationForm} from 'modules/Forms';
-
 const Root = ({ history }) => {
     return (
         <ConnectedRouter history={history}>
             <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
                 <Switch>
-                    <Route path="/claim-publications/:id" component={ClaimPublicationForm}/>
                     <Route component={App} />
                 </Switch>
             </MuiThemeProvider>

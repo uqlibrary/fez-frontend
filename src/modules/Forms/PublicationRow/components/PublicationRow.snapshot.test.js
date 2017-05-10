@@ -1,10 +1,10 @@
-jest.dontMock('./SearchResultsRow');
+jest.dontMock('./PublicationRow');
 
 import React from 'react';
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import SearchResultsRow from './SearchResultsRow';
+import PublicationRow from './PublicationRow';
 
 function setup() {
     const props = {
@@ -21,11 +21,11 @@ function setup() {
             }
         }
     };
-    return shallow(<SearchResultsRow {...props} />);
+    return shallow(<PublicationRow {...props} />);
 }
 
-describe('Search results snapshots tests', () => {
-    it('renders default search results row', () => {
+describe('Publication row results snapshots tests', () => {
+    it('renders default publication row', () => {
         const wrapper = setup();
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();

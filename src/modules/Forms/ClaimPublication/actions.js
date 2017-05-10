@@ -1,45 +1,22 @@
-// Repositories
-import {loadPublicationSubTypeData} from '../../../repositories/publicationSubTypes';
-import {loadAuthorsData} from '../../../repositories/authors';
-
-// Types
-export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
-export const PUBLICATION_SUB_TYPES_LOADED = 'PUBLICATION_SUB_TYPES_LOADED';
-export const AUTHORS_LOADING = 'AUTHORS_LOADING';
-export const AUTHORS_LOADED = 'AUTHORS_LOADED';
+// module imports
+import {showSnackbar} from 'modules/App';
 
 /**
- * Loads the publication sub types into the application
+ * Shows the cancel message within the snackbar
  * @returns {function(*)}
  */
-export function loadPublicationSubTypesList() {
+export function cancelThisPublicationClaim(message) {
     return dispatch => {
-        dispatch({type: PUBLICATION_SUB_TYPES_LOADING});
-        loadPublicationSubTypeData().then(publicationTypes => {
-            dispatch({
-                type: PUBLICATION_SUB_TYPES_LOADED,
-                payload: publicationTypes
-            });
-        }).catch((error) => {
-            throw(error);
-        });
+        dispatch(showSnackbar(message));
     };
 }
 
 /**
- * Loads a list of authors
+ * Shows the claim publication message within the snackbar
  * @returns {function(*)}
  */
-export function loadAuthorsList() {
+export function claimThisPublication(message) {
     return dispatch => {
-        dispatch({type: AUTHORS_LOADING});
-        loadAuthorsData().then(authorList => {
-            dispatch({
-                type: AUTHORS_LOADED,
-                payload: authorList
-            });
-        }).catch((error) => {
-            throw(error);
-        });
+        dispatch(showSnackbar(message));
     };
 }

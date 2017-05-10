@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 
+import './PublicationRow.scss';
+
 const thompsonIcon = require('../../../../images/thomson_icon.svg');
 const scopusIcon = require('../../../../images/scopus_icon.svg');
 const googleScholarIcon = require('../../../../images/googlescholar_icon.svg');
@@ -30,11 +32,7 @@ export default class PublicationRow extends Component {
         const {title, journalName, authors, counts, showButtons} = this.props.entry;
         return (
             <div className="claimWrapper">
-                <a href="#claimTitle">
-                    <h3 className="claimTitle">{title}
-                        <FontIcon className="material-icons claimTitleIcon">open_in_new</FontIcon>
-                    </h3>
-                </a>
+                <h3 className="claimTitle">{title}</h3>
 
                 {authors &&
                     <div className="claimAuthors">

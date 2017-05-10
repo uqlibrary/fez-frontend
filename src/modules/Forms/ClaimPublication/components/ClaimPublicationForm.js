@@ -3,41 +3,57 @@ import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
+import Divider from 'material-ui/Divider';
 
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import DatePicker from 'material-ui/DatePicker';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from '../../../../config';
 
+import {PublicationRow} from '../../PublicationRow';
+
 export default class ClaimPublicationForm extends Component {
 
     static propTypes = {
-        loadPublicationSubTypesList: PropTypes.func,
-        publicationSubTypeList: PropTypes.object,
-        loadAuthorsList: PropTypes.func,
-        authorList: PropTypes.object
+        history: PropTypes.object,
+        cancelThisPublicationClaim: PropTypes.func,
+        claimThisPublication: PropTypes.func
     };
 
     constructor(props) {
         super(props);
-
-        // setup the state
-        this.state = {
-            subTypeValue: 1,
-        };
     }
 
-    handleSubTypeChange = (e, index, value) => {
-        this.setState({subTypeValue: value});
+    cancelClaimPublication = () => {
+        this.props.cancelThisPublicationClaim(locale.notifications.claimPublicationForm.cancelMessage);
+        this.props.history.push('/claim-publications');
+    };
+
+    claimPublication = () => {
+        this.props.claimThisPublication(locale.notifications.claimPublicationForm.claimMessage);
+        this.props.history.push('/claim-publications');
     };
 
     render() {
         // path to the locale data for each of the sections
-        const claimPublicationsInformation = locale.pages.claimPublications;
+        const claimPublicationsInformation = locale.pages.claimPublicationForm;
         const publicationDetailsInformation = claimPublicationsInformation.publicationDetails;
         const commentsInformation = claimPublicationsInformation.comments;
         const fileInformation = claimPublicationsInformation.files;
         const actionButtonsInformation = claimPublicationsInformation.formButtons;
+
+        const entry = {
+            title: 'test title',
+            journalName: 'some journal name',
+            authors: '',
+            counts: {
+                thomson: 1,
+                scopus: 2,
+                google: 3,
+                altmetric: 4,
+                downloads: 100
+            }
+        };
 
         return (
             <div style={{marginBottom: '-60px'}}>
@@ -47,9 +63,9 @@ export default class ClaimPublicationForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless">
                             <div className="column">
-                                <h2 className="headline">{publicationDetailsInformation.title}</h2>
+                                <h2 className="headline" style={{marginBottom: '30px'}}>{publicationDetailsInformation.title}</h2>
                             </div>
-                            <div className="column">
+                            <div className="column is-narrow">
                                 {publicationDetailsInformation.help && (
                                     <HelpIcon
                                         title={publicationDetailsInformation.help.title}
@@ -60,8 +76,10 @@ export default class ClaimPublicationForm extends Component {
                             </div>
                         </div>
                     </CardHeader>
-                    <CardText className="body-1">
-                        adsfasdfasfd
+                    <CardText className="body-1" style={{padding: '0px'}}>
+                        <Divider />
+                        <PublicationRow entry={entry} form="ClaimPublicationForm" />
+                        <Divider />
                     </CardText>
                 </Card>
 
@@ -122,14 +140,14 @@ export default class ClaimPublicationForm extends Component {
                 </Card>
 
                 {/* Buttons */}
-                <Card className="layout-card">
+                <Card className="layout-card" id="formButtons">
                     <CardText className="body-1">
                         <div className="columns">
                             <div className="column is-narrow is-offset-two-thirds">
-                                <FlatButton label={actionButtonsInformation.cancelLabel} secondary href="/claim-publications" />
+                                <FlatButton label={locale.global.labels.buttons.cancel} secondary onTouchTap={this.cancelClaimPublication}/>
                             </div>
                             <div className="column is-narrow">
-                                <RaisedButton label={actionButtonsInformation.claimLabel} secondary/>
+                                <RaisedButton label={actionButtonsInformation.claimLabel} secondary onTouchTap={this.claimPublication} />
                             </div>
                         </div>
                     </CardText>

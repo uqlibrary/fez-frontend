@@ -19,6 +19,7 @@ import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
 import {StaticPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
+import {ClaimPublicationForm} from 'modules/Forms';
 
 // Import specific style for the AppBar
 import '../../../sass/_appbar.scss';
@@ -63,7 +64,7 @@ export default class App extends React.Component {
         this.setState({
             docked: mediaQuery.matches
         });
-    }
+    };
 
     toggleDrawer = () => {
         this.props.toggleMenuDrawer(!this.props.menuDrawerOpen);
@@ -88,7 +89,7 @@ export default class App extends React.Component {
 
         const isAuthorizedUser = loaded && account !== null && account.get('id') !== undefined;
         const components = {
-            Browse, StaticPage, Dashboard, Research, AddRecord
+            Browse, StaticPage, Dashboard, Research, AddRecord, ClaimPublicationForm
         };
         const landingPage =  isAuthorizedUser ? Dashboard : Browse;
         const menuItems = isAuthorizedUser ?

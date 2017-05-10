@@ -52,6 +52,12 @@ export default {
             primaryText: 'About',
         },
     },
+    notifications: {
+        claimPublicationForm: {
+            cancelMessage: 'Your publication claim has been canceled',
+            claimMessage: 'Your publication claim has been sent for approval'
+        }
+    },
     pages: {
         about: {
             title: 'About UQ eSpace',
@@ -260,21 +266,35 @@ export default {
             }
         },
         claimPublications: {
-            title: 'Claim a publication',
-            publicationDetails: {
-                title: 'You are claiming to be an author for the following item',
-                text: ( <div>
+            title: 'Claim publications',
+            text: ( <div>
+                    <p>
+                        possibly your publications....
+                    </p>
+                </div>
+            ),
+            help: {
+                title: 'Help',
+                text: (
+                    <div>
                         <p>
-                            possibly your publications....
+                            Help on possibly your publications...
                         </p>
                     </div>
                 ),
+                button: 'OK'
+            }
+        },
+        claimPublicationForm: {
+            title: 'Claim a publication',
+            publicationDetails: {
+                title: 'You are claiming to be an author for the following item:',
                 help: {
-                    title: 'Help',
+                    title: 'Claim a publication',
                     text: (
                         <div>
                             <p>
-                                Help on possibly your publications...
+                                Mauris pharetra vel arcu in hendrerit. Ut iaculis, quam id cursus fringilla, velit enim sodales dui, sed commodo massa justo quis dui. Nulla ornare massa nibh, quis laoreet eros ultrices nec. Curabitur efficitur ipsum ut metus dignissim ornare. Vestibulum fringilla viverra tortor ac hendrerit.
                             </p>
                         </div>
                     ),
@@ -314,7 +334,6 @@ export default {
                 }
             },
             formButtons: {
-                cancelLabel: 'Cancel',
                 claimLabel: 'Claim this publication'
             }
         },
