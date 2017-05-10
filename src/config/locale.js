@@ -260,23 +260,62 @@ export default {
             }
         },
         claimPublications: {
-            title: 'Claim publications',
-            text: ( <div>
-                    <p>
-                        possibly your publications....
-                    </p>
-                </div>
-            ),
-            help: {
-                title: 'Help',
-                text: (
-                    <div>
+            title: 'Claim a publication',
+            publicationDetails: {
+                title: 'You are claiming to be an author for the following item',
+                text: ( <div>
                         <p>
-                            Help on possibly your publications...
+                            possibly your publications....
                         </p>
                     </div>
                 ),
-                button: 'OK'
+                help: {
+                    title: 'Help',
+                    text: (
+                        <div>
+                            <p>
+                                Help on possibly your publications...
+                            </p>
+                        </div>
+                    ),
+                    button: 'OK'
+                },
+            },
+            comments: {
+                title: 'If necessary, please suggest changes or upload additional files below',
+                fields: {
+                    descriptionLabel: 'Type edits/changes/comments here'
+                }
+            },
+            files: {
+                title: 'Upload new files',
+                fields: {
+                    filenameLabel: 'Filename selected',
+                    filenameRestrictions: (
+                        <div className="fileInstructions">
+                            <h3>File name restrictions</h3>
+                            <div style={{width: '100%'}}>
+                                <ul>
+                                    <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
+                                    <li>Only numbers and lowercase characters in the file extension</li>
+                                    <li>Under 45 characters</li>
+                                    <li>Only one file extension (on period (.) character) and</li>
+                                    <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    ),
+                    accessConditionsLabel: 'Access conditions',
+                    embargoDateLabel: 'Embargo date',
+                    descriptionLabel: 'Description'
+                },
+                buttons: {
+                    browseLabel: 'Browse files'
+                }
+            },
+            formButtons: {
+                cancelLabel: 'Cancel',
+                claimLabel: 'Claim this publication'
             }
         },
     }

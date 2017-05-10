@@ -4,20 +4,22 @@ import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 
-const thompsonIcon = require('../../../images/thomson_icon.svg');
-const scopusIcon = require('../../../images/scopus_icon.svg');
-const googleScholarIcon = require('../../../images/googlescholar_icon.svg');
-const altmetricIcon = require('../../../images/altmetric_icon.svg');
+const thompsonIcon = require('../../../../images/thomson_icon.svg');
+const scopusIcon = require('../../../../images/scopus_icon.svg');
+const googleScholarIcon = require('../../../../images/googlescholar_icon.svg');
+const altmetricIcon = require('../../../../images/altmetric_icon.svg');
 
-export default class SearchResultsRow extends Component {
+export default class PublicationRow extends Component {
 
     static propTypes = {
         entry: PropTypes.object.isRequired,
-        claimRecordBtnLabel: PropTypes.string
+        claimRecordBtnLabel: PropTypes.string,
+        showButtons: PropTypes.bool
     };
 
     static defaultProps = {
-        claimRecordBtnLabel: 'Claim Record'
+        claimRecordBtnLabel: 'Claim Record',
+        showButtons: true
     };
 
     constructor(props) {
@@ -25,7 +27,7 @@ export default class SearchResultsRow extends Component {
     }
 
     render() {
-        const {title, journalName, authors, counts} = this.props.entry;
+        const {title, journalName, authors, counts, showButtons} = this.props.entry;
         return (
             <div className="claimWrapper">
                 <a href="#claimTitle">
@@ -64,10 +66,12 @@ export default class SearchResultsRow extends Component {
                               data-for="claimTooltips" data-place="bottom"
                               style={{marginLeft: '10px'}}>file_download</FontIcon> {counts.downloads}
                 </div>
-
-                <div className="claimButtonWrapper">
-                    <FlatButton label={this.props.claimRecordBtnLabel} secondary href="#/claim-publication/123" />
-                </div><div style={{clear: 'both'}} />
+                {showButtons &&
+                    <div className="claimButtonWrapper">
+                        <FlatButton label={this.props.claimRecordBtnLabel} secondary/>
+                    </div>
+                }
+                <div style={{clear: 'both'}} />
             </div>
         );
     }
