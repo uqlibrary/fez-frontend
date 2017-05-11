@@ -1,4 +1,4 @@
-import publicationSearchReducer, {initialState} from './reducer';
+import publicationSearchReducer, {initialState} from '../ClaimPublication/reducer';
 import {DOI_SEARCH_COMPLETED, PUBMED_SEARCH_COMPLETED, TITLE_SEARCH_COMPLETED} from './actions';
 import Immutable from 'immutable';
 

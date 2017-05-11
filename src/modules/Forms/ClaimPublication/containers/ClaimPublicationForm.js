@@ -2,16 +2,22 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
-import {claimThisPublication, cancelThisPublicationClaim} from '../actions';
+import {claimThisPublication, claimThisPublicationCancelled} from '../actions';
 
 
 let ClaimPublicationFormContainer = reduxForm({
     form: 'ClaimPublicationForm'
 })(ClaimPublicationForm);
 
-ClaimPublicationFormContainer = connect(null, dispatch => {
+ClaimPublicationFormContainer = connect((state) => {
+    const claimPublication = state.get('claimPublication');
     return {
-        cancelThisPublicationClaim: (message) => dispatch(cancelThisPublicationClaim(message)),
+        searchResultsList: claimPublication.get('claimPublicationResults'),
+        selectedPublication: claimPublication.get('selectedPublication')
+    };
+}, dispatch => {
+    return {
+        claimThisPublicationCancelled: (message) => dispatch(claimThisPublicationCancelled(message)),
         claimThisPublication: (message) => dispatch(claimThisPublication(message))
     };
 })(ClaimPublicationFormContainer);

@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
+import Divider from 'material-ui/Divider';
 import PropTypes from 'prop-types';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
-import SearchResultsRow from './SearchResultsRow';
+import {ClaimPublicationRow} from '../../Forms';
 
 export default class SearchResults extends Component {
 
@@ -25,21 +26,13 @@ export default class SearchResults extends Component {
 
     render() {
         const {dataSource, help, title} = this.props;
-        const searchResultEntries = dataSource.map((source, i) => {
-            const entry = {
-                title: source.get('rek_title'),
-                journalName: source.get('fez_record_search_key_journal_name').get('rek_journal_name'),
-                authors: '',
-                counts: {
-                    thomson: 1,
-                    scopus: 2,
-                    google: 3,
-                    altmetric: 4,
-                    downloads: 100
-                }
-            };
+        const searchResultEntries = dataSource.map((entry, i) => {
+            console.log('entry', entry);
             return (
-                <SearchResultsRow key={i} entry={entry} claimRecordBtnLabel={this.props.claimRecordBtnLabel} />
+                <div key={i}>
+                    <ClaimPublicationRow entry={entry} claimRecordBtnLabel={this.props.claimRecordBtnLabel} form="SearchResultsForm" />
+                    <Divider />
+                </div>
             );
         });
 

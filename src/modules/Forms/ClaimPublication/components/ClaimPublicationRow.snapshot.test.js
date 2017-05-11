@@ -1,10 +1,10 @@
-jest.dontMock('./PublicationRow');
+jest.dontMock('./ClaimPublicationRow');
 
 import React from 'react';
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import PublicationRow from './PublicationRow';
+import ClaimPublicationRow from './ClaimPublicationRow';
 
 function setup() {
     const props = {
@@ -21,7 +21,7 @@ function setup() {
             }
         }
     };
-    return shallow(<PublicationRow {...props} />);
+    return shallow(<ClaimPublicationRow {...props} />);
 }
 
 describe('Publication row results snapshots tests', () => {

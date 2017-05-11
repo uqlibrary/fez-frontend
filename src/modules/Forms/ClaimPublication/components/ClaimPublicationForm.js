@@ -10,14 +10,15 @@ import DatePicker from 'material-ui/DatePicker';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from '../../../../config';
 
-import {PublicationRow} from '../../PublicationRow';
+import ClaimPublicationRow from '../containers/ClaimPublicationRow';
 
 export default class ClaimPublicationForm extends Component {
 
     static propTypes = {
         history: PropTypes.object,
-        cancelThisPublicationClaim: PropTypes.func,
-        claimThisPublication: PropTypes.func
+        claimThisPublicationCancelled: PropTypes.func,
+        claimThisPublication: PropTypes.func,
+        selectedPublication: PropTypes.object
     };
 
     constructor(props) {
@@ -25,13 +26,13 @@ export default class ClaimPublicationForm extends Component {
     }
 
     cancelClaimPublication = () => {
-        this.props.cancelThisPublicationClaim(locale.notifications.claimPublicationForm.cancelMessage);
-        this.props.history.push('/claim-publications');
+        this.props.claimThisPublicationCancelled(locale.notifications.claimPublicationForm.cancelMessage);
+        this.props.history.goBack();
     };
 
     claimPublication = () => {
         this.props.claimThisPublication(locale.notifications.claimPublicationForm.claimMessage);
-        this.props.history.push('/claim-publications');
+        this.props.history.goBack();
     };
 
     render() {
@@ -41,19 +42,6 @@ export default class ClaimPublicationForm extends Component {
         const commentsInformation = claimPublicationsInformation.comments;
         const fileInformation = claimPublicationsInformation.files;
         const actionButtonsInformation = claimPublicationsInformation.formButtons;
-
-        const entry = {
-            title: 'test title',
-            journalName: 'some journal name',
-            authors: '',
-            counts: {
-                thomson: 1,
-                scopus: 2,
-                google: 3,
-                altmetric: 4,
-                downloads: 100
-            }
-        };
 
         return (
             <div style={{marginBottom: '-60px'}}>
@@ -78,7 +66,7 @@ export default class ClaimPublicationForm extends Component {
                     </CardHeader>
                     <CardText className="body-1" style={{padding: '0px'}}>
                         <Divider />
-                        <PublicationRow entry={entry} form="ClaimPublicationForm" />
+                        <ClaimPublicationRow entry={this.props.selectedPublication} form="ClaimPublicationForm" hideClaimButton />
                         <Divider />
                     </CardText>
                 </Card>

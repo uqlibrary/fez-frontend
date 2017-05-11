@@ -12,7 +12,6 @@ import sinon from 'sinon';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import PublicationSearchForm from './PublicationSearchForm';
-import publicationSearchReducer from '../reducer';
 
 // otherwise it throws an 'Unknown prop `onTouchTap` on <div> tag.' error during the test
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -35,7 +34,7 @@ function tester(app, inputValue, result) {
 
 describe('Publication search form integration tests', () => {
     beforeEach(() => {
-        const store = createStore(combineReducers({form: formReducer, publicationSearch: publicationSearchReducer}));
+        const store = createStore(combineReducers({form: formReducer}));
 
         const muiTheme = getMuiTheme();
         const Decorated = reduxForm({ form: 'testForm' })(PublicationSearchForm);

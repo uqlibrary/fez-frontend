@@ -113,8 +113,9 @@ class addRecord extends React.Component {
                        />
                 );
             case STEP_2:
+                const {searchResultsList} = this.props;
                 // on initial load this will be null
-                const loaded = this.props.searchResultsList !== null;
+                const loaded = searchResultsList !== null;
                 const inlineLoaderInformation = locale.pages.addRecord.inlineLoader;
                 const searchResultsInformation = locale.pages.addRecord.searchResults;
                 const noMatchingRecordsInformation = locale.pages.addRecord.noMatchingRecords;
@@ -127,9 +128,9 @@ class addRecord extends React.Component {
                             </div>
                         }
 
-                        {loaded && this.props.searchResultsList.size > 0 &&
+                        {loaded && searchResultsList.size > 0 &&
                         <SearchResults
-                            dataSource={this.props.searchResultsList}
+                            dataSource={searchResultsList}
                             title={searchResultsInformation.title}
                             explanationText={searchResultsInformation.explanationText}
                             claimRecordBtnLabel={searchResultsInformation.claimRecordBtnLabel}

@@ -10,7 +10,7 @@ let AddRecordContainer = reduxForm({
 
 AddRecordContainer = connect((state) => {
     return {
-        searchResultsList: state.get('publicationSearch').get('searchResultsList'),
+        searchResultsList: state.get('claimPublication').get('claimPublicationResults'),
         selectedPublicationType: state.get('publicationTypes').get('selectedPublicationType'),
         publicationTypeList: state.get('publicationTypes').get('publicationTypeList')
     };

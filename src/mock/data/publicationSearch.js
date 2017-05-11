@@ -1,5 +1,6 @@
 export const externalDoiSearchResultList = [
     {
+        'rek_pid': 123,
         'rek_display_type': 179,
         'rek_status': 2,
         'rek_object_type': 1,
@@ -61,6 +62,7 @@ export const externalDoiSearchResultList = [
 
 export const internalDoiSearchResultList = [
     {
+        'rek_pid': 123,
         'rek_display_type': 179,
         'rek_status': 2,
         'rek_object_type': 1,
@@ -122,6 +124,7 @@ export const internalDoiSearchResultList = [
 
 export const externalPubMedSearchResultsList = [
     {
+        'rek_pid': 123,
         'rek_display_type': 222,
         'rek_status': 2,
         'rek_object_type': 1,
@@ -175,60 +178,8 @@ export const externalPubMedSearchResultsList = [
 
 export const internalPubMedSearchResultsList = [
     {
+        'rek_pid': 123,
         'rek_display_type': 222,
-        'rek_status': 2,
-        'rek_object_type': 1,
-        'fez_record_search_key_doi': {
-            'rek_doi': '10.1111/bcp.12935'
-        },
-        'fez_record_search_key_publisher': {
-            'rek_publisher': 'Wiley-Blackwell'
-        },
-        'rek_title': 'Internal - Defining ‘nutraceuticals’: neither nutritious nor pharmaceutical',
-        'rek_date': '2016-04-25 00:00:00',
-        'fez_record_search_key_collection_year': {
-            'rek_collection_year': '2016-04-25 00:00:00'
-        },
-        'fez_record_search_key_date_available': {
-            'rek_date_available': '2016-04-25 00:00:00'
-        },
-        'fez_record_search_key_journal_name': {
-            'rek_journal_name': 'British Journal of Clinical Pharmacology'
-        },
-        'fez_record_search_key_issue_number': {
-            'rek_issue_number': '1'
-        },
-        'fez_record_search_key_volume_number': {
-            'rek_volume_number': '83'
-        },
-        'fez_record_search_key_start_page': {
-            'rek_start_page': '8'
-        },
-        'fez_record_search_key_end_page': {
-            'rek_end_page': '19'
-        },
-        'fez_record_search_key_keywords': [
-            {
-                'rek_keywords': 'Pharmacology (medical)',
-                'rek_keywords_order': 1
-            },
-            {
-                'rek_keywords': 'Pharmacology',
-                'rek_keywords_order': 2
-            }
-        ],
-        'fez_record_search_key_issn': [
-            {
-                'rek_issn': '0306-5251',
-                'rek_issn_order': 1
-            }
-        ]
-    }
-];
-
-export const internalTitleSearchResultsList = [
-    {
-        'rek_display_type': 179,
         'rek_status': 2,
         'rek_object_type': 1,
         'fez_record_search_key_doi': {
@@ -281,6 +232,61 @@ export const internalTitleSearchResultsList = [
 
 export const externalTitleSearchResultsList = [
     {
+        'rek_pid': 123,
+        'rek_display_type': 179,
+        'rek_status': 2,
+        'rek_object_type': 1,
+        'fez_record_search_key_doi': {
+            'rek_doi': '10.1111/bcp.12935'
+        },
+        'fez_record_search_key_publisher': {
+            'rek_publisher': 'Wiley-Blackwell'
+        },
+        'rek_title': 'Internal - Defining ‘nutraceuticals’: neither nutritious nor pharmaceutical',
+        'rek_date': '2016-04-25 00:00:00',
+        'fez_record_search_key_collection_year': {
+            'rek_collection_year': '2016-04-25 00:00:00'
+        },
+        'fez_record_search_key_date_available': {
+            'rek_date_available': '2016-04-25 00:00:00'
+        },
+        'fez_record_search_key_journal_name': {
+            'rek_journal_name': 'British Journal of Clinical Pharmacology'
+        },
+        'fez_record_search_key_issue_number': {
+            'rek_issue_number': '1'
+        },
+        'fez_record_search_key_volume_number': {
+            'rek_volume_number': '83'
+        },
+        'fez_record_search_key_start_page': {
+            'rek_start_page': '8'
+        },
+        'fez_record_search_key_end_page': {
+            'rek_end_page': '19'
+        },
+        'fez_record_search_key_keywords': [
+            {
+                'rek_keywords': 'Pharmacology (medical)',
+                'rek_keywords_order': 1
+            },
+            {
+                'rek_keywords': 'Pharmacology',
+                'rek_keywords_order': 2
+            }
+        ],
+        'fez_record_search_key_issn': [
+            {
+                'rek_issn': '0306-5251',
+                'rek_issn_order': 1
+            }
+        ]
+    }
+];
+
+export const internalTitleSearchResultsList = [
+    {
+        'rek_pid': 123,
         'rek_display_type': 179,
         'rek_status': 2,
         'rek_object_type': 1,
@@ -331,6 +337,7 @@ export const externalTitleSearchResultsList = [
         ]
     },
     {
+        'rek_pid': 124,
         'rek_display_type': 179,
         'rek_status': 2,
         'rek_object_type': 1,
@@ -389,6 +396,7 @@ export const externalTitleSearchResultsList = [
         ]
     },
     {
+        'rek_pid': 125,
         'rek_display_type': 179,
         'rek_status': 2,
         'rek_object_type': 1,
@@ -423,6 +431,7 @@ export const externalTitleSearchResultsList = [
         ]
     },
     {
+        'rek_pid': 126,
         'rek_display_type': 179,
         'rek_status': 2,
         'rek_object_type': 1,
@@ -481,6 +490,7 @@ export const externalTitleSearchResultsList = [
         ]
     },
     {
+        'rek_pid': 127,
         'rek_display_type': 179,
         'rek_status': 2,
         'rek_object_type': 1,
