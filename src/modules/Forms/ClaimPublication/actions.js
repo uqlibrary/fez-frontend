@@ -25,7 +25,10 @@ export function claimThisPublication(message) {
     };
 }
 
-
+/**
+ * Clear the selected publication
+ * @returns {object}
+ */
 export function clearSelectedPublication() {
     return {
         type: PUBLICATION_SELECTED_CLEARED,
@@ -33,7 +36,10 @@ export function clearSelectedPublication() {
     };
 }
 
-
+/**
+ * Load the selected publication data
+ * @returns {number}
+ */
 export function loadSelectedPublication(id) {
     return {
         type: PUBLICATION_SELECTED,
@@ -41,6 +47,10 @@ export function loadSelectedPublication(id) {
     };
 }
 
+/**
+ * Clear the publication search results
+ * @returns {object}
+ */
 export function clearPublicationResults() {
     return {
         type: PUBLICATION_RESULTS_CLEARED,

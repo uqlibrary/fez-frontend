@@ -3,31 +3,21 @@ jest.dontMock('./ClaimPublicationRow');
 import React from 'react';
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
+import Immutable from 'immutable';
 
 import ClaimPublicationRow from './ClaimPublicationRow';
+import {externalDoiSearchResultList} from '../../../../mock/data/publicationSearch';
 
-function setup() {
+function setup(ds) {
     const props = {
-        entry: {
-            title: 'Entry Title',
-            journalName: 'A Journal Name',
-            authors: '',
-            counts: {
-                thomson: 1,
-                scopus: 2,
-                google: 3,
-                altmetric: 4,
-                downloads: 100
-            }
-        }
+        entry: Immutable.fromJS(ds[0])
     };
     return shallow(<ClaimPublicationRow {...props} />);
 }
 
 describe('Publication row results snapshots tests', () => {
     it('renders default publication row', () => {
-        const wrapper = setup();
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const app = setup(externalDoiSearchResultList);
+        expect(toJson(app)).toMatchSnapshot();
     });
 });

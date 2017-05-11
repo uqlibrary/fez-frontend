@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
-import { withRouter } from 'react-router';
 
 import './ClaimPublicationRow.scss';
 
@@ -12,7 +11,7 @@ const scopusIcon = require('../../../../images/scopus_icon.svg');
 const googleScholarIcon = require('../../../../images/googlescholar_icon.svg');
 const altmetricIcon = require('../../../../images/altmetric_icon.svg');
 
-class ClaimPublicationRow extends Component {
+export default class ClaimPublicationRow extends Component {
 
     static propTypes = {
         history: PropTypes.object,
@@ -105,6 +104,3 @@ class ClaimPublicationRow extends Component {
         );
     }
 }
-
-// withRouter essentially makes the props of the Root.js component available and allows this grandchild component to access the props
-export default withRouter(ClaimPublicationRow);
