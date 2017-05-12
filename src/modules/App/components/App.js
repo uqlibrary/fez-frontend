@@ -19,6 +19,7 @@ import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
 import {StaticPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
+import {ClaimPublication} from 'modules/ClaimPublication';
 import {ClaimPublicationForm} from 'modules/Forms';
 
 // Import specific style for the AppBar
@@ -89,7 +90,7 @@ export default class App extends React.Component {
 
         const isAuthorizedUser = loaded && account !== null && account.get('id') !== undefined;
         const components = {
-            Browse, StaticPage, Dashboard, Research, AddRecord, ClaimPublicationForm
+            Browse, StaticPage, Dashboard, Research, AddRecord, ClaimPublicationForm, ClaimPublication
         };
         const landingPage =  isAuthorizedUser ? Dashboard : Browse;
         const menuItems = isAuthorizedUser ?

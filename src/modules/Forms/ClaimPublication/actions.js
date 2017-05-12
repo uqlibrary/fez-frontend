@@ -1,9 +1,14 @@
+// repositories
+import {loadUsersPublicationData}  from '../../../repositories/claimPublication';
+
 // module imports
 import {showSnackbar} from '../../App';
 
 export const PUBLICATION_RESULTS_CLEARED = 'PUBLICATION_RESULTS_CLEARED';
 export const PUBLICATION_SELECTED_CLEARED = 'PUBLICATION_SELECTED_CLEARED';
 export const PUBLICATION_SELECTED = 'PUBLICATION_SELECTED';
+export const USERS_PUBLICATIONS_LOADING = 'USERS_PUBLICATIONS_LOADING';
+export const USERS_PUBLICATIONS_LOADED = 'USERS_PUBLICATIONS_LOADED';
 
 /**
  * Shows the cancel message within the snackbar
@@ -58,3 +63,21 @@ export function clearPublicationResults() {
     };
 }
 
+
+/**
+ * Loads the publication types into the application
+ * @returns {Promise}
+ */
+export function loadUsersPublications(userid) {
+    return dispatch => {
+        dispatch({type: USERS_PUBLICATIONS_LOADING});
+        loadUsersPublicationData(userid).then(data => {
+            dispatch({
+                type: USERS_PUBLICATIONS_LOADED,
+                payload: data
+            });
+        }).catch((error) => {
+            throw(error);
+        });
+    };
+}

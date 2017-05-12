@@ -267,22 +267,30 @@ export default {
         },
         claimPublications: {
             title: 'Claim publications',
-            text: ( <div>
-                    <p>
-                        possibly your publications....
-                    </p>
-                </div>
-            ),
-            help: {
-                title: 'Help',
-                text: (
-                    <div>
+            claimPublicationResults: {
+                title: 'Possible publications found',
+                explanationText: 'Select any items below to claim them as your work',
+                text: ( <div>
                         <p>
-                            Help on possibly your publications...
+                            possibly your publications....
                         </p>
                     </div>
                 ),
-                button: 'OK'
+                help: {
+                    title: 'Help',
+                    text: (
+                        <div>
+                            <p>
+                                Help on possibly your publications...
+                            </p>
+                        </div>
+                    ),
+                    button: 'OK'
+                }
+            },
+            formButtons: {
+                claimLabel: 'Claim this article',
+                notMineLabel: 'None of these publications are mine'
             }
         },
         claimPublicationForm: {

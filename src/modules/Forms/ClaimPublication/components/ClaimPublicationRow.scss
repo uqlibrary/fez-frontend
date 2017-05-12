@@ -22,7 +22,7 @@ a:hover .claimTitleIcon {
   opacity: 1.0;
   color: #000 !important;
 }
-.claimAuthors, .claimJournal {
+.claimJournal {
   margin: 10px 0 5px 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -50,5 +50,9 @@ a:hover .claimTitleIcon {
   font-size: 1.2em !important;
   vertical-align: sub;
   color: #333;
+}
+
+.extendedAuthorsList {
+  display:none;
 }
 

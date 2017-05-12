@@ -10,6 +10,7 @@ import {authorsList} from './data/authors';
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
+import {claimPublication} from './data/claimPublication';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api);
@@ -60,4 +61,6 @@ mock.onGet('authors/search').reply(200, authorsList);
 // Mock academics publication years endpoint response
 mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsBig);
 
+// Mock claim publication results endpoint response
+mock.onGet(/claimPublication\/?user_id=*/).reply(200, claimPublication);
 

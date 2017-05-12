@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 import FontIcon from 'material-ui/FontIcon';
 
 import './ClaimPublicationRow.scss';
@@ -28,6 +28,10 @@ export default class ClaimPublicationRow extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            authorListVisible: false
+        };
     }
 
     claimThisPublication = (id) => {
@@ -42,7 +46,7 @@ export default class ClaimPublicationRow extends Component {
         }
 
         return '';
-    }
+    };
 
     getPageNumbers = (entry) => {
         if (entry.get('fez_record_search_key_start_page') && entry.get('fez_record_search_key_end_page')) {
@@ -50,22 +54,68 @@ export default class ClaimPublicationRow extends Component {
         }
 
         return '';
+    };
+
+    getAuthorsList = (authors, size) => {
+        const names = [];
+
+        authors.map((author, index) => {
+            const suffix = index < (size - 2) ? ', ' : '';
+            const prefix = index === (size - 1) ? ' and ' : '';
+            names.push(`${prefix}${author.get('name')}${suffix}`);
+        });
+
+        return names.join('');
+    };
+
+    updateAuthorListState = () => {
+        this.setState({authorListVisible: !this.state.authorListVisible});
     }
+
+    getExtendedAuthorsList = (authors, size) => {
+        const names = [];
+        const namesExtendedList = [];
+        const maxDisplayLimit = 10;
+        const showAuthorsBtnLabel = 'Show more authors';
+        const hideAuthorsBtnLabel = 'Hide Authors';
+
+        authors.map((author, index) => {
+            const suffix = index < (size - 2) ? ', ' : '';
+            const prefix = index === (size - 1) ? ' and ' : '';
+            if (index >= maxDisplayLimit) {
+                namesExtendedList.push(`${prefix}${author.get('name')}${suffix}`);
+            } else {
+                names.push(`${prefix}${author.get('name')}${suffix}`);
+            }
+        });
+
+        return names.concat([
+            <span key="extendedAuthorsList">
+                <span className={this.state.authorListVisible ? '' : 'extendedAuthorsList'}>{namesExtendedList}</span>
+                {this.state.authorListVisible ? ' ' : '..... '}
+                <a href="void:;" onTouchTap={() => this.updateAuthorListState()}>{this.state.authorListVisible ? hideAuthorsBtnLabel : showAuthorsBtnLabel}</a>
+            </span>]);
+    };
 
     render() {
         const {entry, hideClaimButton, claimRecordBtnLabel} = this.props;
-        const counts = entry.get('counts');
+        const authorListSize = entry.get('rek_authors') ? entry.get('fez_record_search_key_author_count').get('rek_author_count') : 0;
 
         return (
             <div className="claimWrapper">
                 <h3 className="claimTitle">{entry.get('rek_title')}</h3>
 
-                {entry.get('authors') &&
+                {entry.get('rek_authors') &&
                     <div className="claimAuthors">
                     <FontIcon className="material-icons claimAuthorsIcon" data-tip="Authors"
-                    data-for="claimTooltips" data-place="left">people</FontIcon> Palomino,
-                    Sheyla - Unger, Corinne - Edraki, Mansour
-                    {entry.get('authors')}
+                    data-for="claimTooltips" data-place="left">people</FontIcon>
+                    {authorListSize <= 10 && (
+                        this.getAuthorsList(entry.get('rek_authors'), authorListSize)
+                    )}
+
+                    {authorListSize > 10 && (
+                        this.getExtendedAuthorsList(entry.get('rek_authors'), authorListSize)
+                    )}
                     </div>
                 }
 
@@ -77,26 +127,46 @@ export default class ClaimPublicationRow extends Component {
                     {this.getPageNumbers(entry)}
                 </div>
 
-                {counts &&
-                    <div className="claimStats">
-                        <img src={thompsonIcon} alt="Thomson Routers"
-                             data-tip="Thomson Routers Web of Science citation count"
-                             data-for="claimTooltips"/> {counts.thomson}
-                        <img src={scopusIcon} alt="Scopus" data-tip="Scopus citation count"
-                             data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.scopus}
-                        <img src={googleScholarIcon} alt="Google Scholar"
-                             data-tip="Google Scholar citation count" data-for="claimTooltips"
-                             style={{marginLeft: '10px'}}/> {counts.google}
-                        <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score"
-                             data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.altmetric}
+
+                <div className="claimStats">
+                    {entry.get('rek_thomson_citation_count') &&
+                        <span>
+                            <img src={thompsonIcon} alt="Thomson Routers"
+                            data-tip="Thomson Routers Web of Science citation count"
+                            data-for="claimTooltips"/> {entry.get('rek_thomson_citation_count')}
+                        </span>
+                    }
+                    {entry.get('rek_scopus_citation_count') &&
+                        <span>
+                            <img src={scopusIcon} alt="Scopus" data-tip="Scopus citation count"
+                            data-for="claimTooltips" style={{marginLeft: '10px'}}/> {entry.get('rek_scopus_citation_count')}
+                        </span>
+                    }
+                    {entry.get('rek_gs_citation_count') &&
+                        <span>
+                            <img src={googleScholarIcon} alt="Google Scholar"
+                            data-tip="Google Scholar citation count" data-for="claimTooltips"
+                            style={{marginLeft: '10px'}}/> {entry.get('rek_gs_citation_count')}
+                        </span>
+                    }
+                    {entry.get('rek_altmetric_score') &&
+                        <span>
+                            <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score"
+                            data-for="claimTooltips" style={{marginLeft: '10px'}}/> {entry.get('rek_altmetric_score')}
+                        </span>
+                    }
+                    {entry.get('rek_file_downloads') &&
+                        <span>
                         <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads"
-                                  data-for="claimTooltips" data-place="bottom"
-                                  style={{marginLeft: '10px'}}>file_download</FontIcon> {counts.downloads}
-                    </div>
-                }
+                              data-for="claimTooltips" data-place="bottom"
+                              style={{marginLeft: '10px'}}>file_download</FontIcon> {entry.get('rek_file_downloads')}
+                        </span>
+                    }
+                </div>
+
                 {!hideClaimButton &&
                     <div className="claimButtonWrapper">
-                        <FlatButton label={claimRecordBtnLabel} secondary onTouchTap={() => this.claimThisPublication(entry.get('rek_pid'))} />
+                        <RaisedButton label={claimRecordBtnLabel} secondary onTouchTap={() => this.claimThisPublication(entry.get('rek_pid'))} />
                     </div>
                 }
                 <div style={{clear: 'both'}} />

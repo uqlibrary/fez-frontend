@@ -26,7 +26,7 @@ export const researcherMenuItems = (locale, email, components) => [
         linkTo: '/claim-publications',
         path: '/claim-publications',
         primaryText: locale.menu.claimPublication.primaryText,
-        render: () => components.StaticPage(locale.pages.claimPublications)
+        component: components.ClaimPublication
     },
     {
         divider: true,
