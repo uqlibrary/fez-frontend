@@ -59,6 +59,15 @@ export default {
             submitMessage: 'Publication has been submitted for approval'
         }
     },
+    mapping: {
+        vocabs: [
+            {'documentId': 174, 'vocabId': 453581},
+            {'documentId': 177, 'vocabId': 453588},
+            {'documentId': 130, 'vocabId': 453596},
+            {'documentId': 313, 'vocabId': 453594},
+            {'documentId': 179, 'vocabId': 453573}
+        ]
+    },
     pages: {
         about: {
             title: 'About UQ eSpace',
