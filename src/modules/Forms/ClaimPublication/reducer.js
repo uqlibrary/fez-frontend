@@ -2,6 +2,9 @@ import Immutable from 'immutable';
 
 import {PUBLICATION_SELECTED, PUBLICATION_SELECTED_CLEARED, PUBLICATION_RESULTS_CLEARED, USERS_PUBLICATIONS_LOADED} from './actions';
 import {DOI_SEARCH_COMPLETED, PUBMED_SEARCH_COMPLETED, TITLE_SEARCH_COMPLETED} from '../PublicationSearch/actions';
+import {USER_PUBLICATIONS_MARKED_NOT_MINE_COMPLETED} from '../../ClaimPublication/actions';
+
+import {locale} from '../../../config';
 
 // Immutable state
 export const initialState = Immutable.fromJS({
@@ -25,6 +28,11 @@ const claimPublicationsReducer = (state = initialState, action) => {
             return state.set('claimPublicationResults', Immutable.fromJS(action.payload));
         case PUBLICATION_SELECTED_CLEARED:
             return state.set('selectedPublication', Immutable.fromJS(action.payload));
+        case USER_PUBLICATIONS_MARKED_NOT_MINE_COMPLETED:
+            const updatedState = state.get('claimPublicationResults').filter((item, index) => {
+                return index >= locale.pages.claimPublications.maxSearchResults;
+            });
+            return state.set('claimPublicationResults', Immutable.fromJS(updatedState));
         default:
             return state;
     }

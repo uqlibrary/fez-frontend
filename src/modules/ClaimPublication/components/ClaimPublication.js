@@ -14,7 +14,8 @@ export default class ClaimPublication extends React.Component {
 
     static propTypes = {
         searchResultsList: PropTypes.object,
-        loadUsersPublications: PropTypes.func
+        loadUsersPublications: PropTypes.func,
+        markPublicationsNotMine: PropTypes.func
     };
 
     static defaultProps = {
@@ -33,7 +34,7 @@ export default class ClaimPublication extends React.Component {
         const claimPublicationsInformation = locale.pages.claimPublications;
         const resultsInformation = claimPublicationsInformation.claimPublicationResults;
 
-        const searchResultEntries = this.props.searchResultsList.valueSeq().map((entry, i) => {
+        const searchResultEntries = this.props.searchResultsList.valueSeq().slice(0, claimPublicationsInformation.maxSearchResults).map((entry, i) => {
             return (
                 <div key={i}>
                     <ClaimPublicationRow entry={entry} claimRecordBtnLabel={claimPublicationsInformation.formButtons.claimLabel} form="ClaimPublicationResultsForm" />
@@ -41,6 +42,8 @@ export default class ClaimPublication extends React.Component {
                 </div>
             );
         });
+
+        const noOfResults = claimPublicationsInformation.maxSearchResults > this.props.searchResultsList.size ? this.props.searchResultsList.size : claimPublicationsInformation.maxSearchResults;
 
         return (
             <div className="layout-fill">
@@ -69,9 +72,14 @@ export default class ClaimPublication extends React.Component {
                         </div>
                         {searchResultEntries}
                     </CardText>
-                    <CardActions className="cardActions">
-                        <div className="notMineButtonWrapper">
-                            <RaisedButton label={claimPublicationsInformation.formButtons.notMineLabel} primary />
+                    <CardActions>
+                        <div className="columns notMineButtonWrapper">
+                            <div className="column">
+                                {noOfResults} matches shown of {this.props.searchResultsList.size}
+                            </div>
+                            <div className="column has-text-right">
+                                <RaisedButton label={claimPublicationsInformation.formButtons.notMineLabel} primary onTouchTap={this.props.markPublicationsNotMine} />
+                            </div>
                         </div>
                     </CardActions>
                 </Card>

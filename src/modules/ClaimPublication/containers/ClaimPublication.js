@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import ClaimPublication from '../components/ClaimPublication';
-import {loadUsersPublications} from '../actions';
+import {loadUsersPublications, markPublicationsNotMine} from '../actions';
 
 let ClaimPublicationContainer = reduxForm({
     form: 'ClaimPublicationResultsForm'
@@ -14,7 +14,8 @@ ClaimPublicationContainer = connect((state) => {
     };
 }, dispatch => {
     return {
-        loadUsersPublications: (userId) => dispatch(loadUsersPublications(userId))
+        loadUsersPublications: (userId) => dispatch(loadUsersPublications(userId)),
+        markPublicationsNotMine: () => dispatch(markPublicationsNotMine())
     };
 })(ClaimPublicationContainer);
 
