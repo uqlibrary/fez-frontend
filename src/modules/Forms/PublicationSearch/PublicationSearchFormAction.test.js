@@ -21,7 +21,8 @@ describe('Publication search form reducer', () => {
             })
         ).toEqual(
             Immutable.fromJS({
-                searchResultsList: externalDoiSearchResultList
+                claimPublicationResults: externalDoiSearchResultList,
+                selectedPublication: {}
             })
         );
     });
@@ -34,7 +35,8 @@ describe('Publication search form reducer', () => {
             })
         ).toEqual(
             Immutable.fromJS({
-                searchResultsList: externalPubMedSearchResultsList
+                claimPublicationResults: externalPubMedSearchResultsList,
+                selectedPublication: {}
             })
         );
     });
@@ -47,7 +49,8 @@ describe('Publication search form reducer', () => {
             })
         ).toEqual(
             Immutable.fromJS({
-                searchResultsList: externalTitleSearchResultsList
+                claimPublicationResults: externalTitleSearchResultsList,
+                selectedPublication: {}
             })
         );
     });
