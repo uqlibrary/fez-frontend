@@ -6,4 +6,4 @@ export {ClaimPublicationForm, ClaimPublicationRow} from './ClaimPublication';
 // Reducers
 export {publicationTypeReducer} from './PublicationType';
 export {publicationSubTypeReducer} from './JournalArticle';
-export {claimPublicationReducer} from './ClaimPublication';
+export {claimPublicationsReducer} from './ClaimPublication';
