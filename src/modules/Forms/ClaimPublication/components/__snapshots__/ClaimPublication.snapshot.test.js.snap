@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Document type form integration tests renders default document type component 1`] = `
+exports[`Claim publication page test renders default claim publication test 1`] = `
 <div
   style={
     Object {
