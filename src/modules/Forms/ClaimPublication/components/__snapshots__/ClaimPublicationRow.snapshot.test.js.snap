@@ -1,7 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Publication row results snapshots tests renders default publication row 1`] = `
-<Route
-  render={[Function]}
-/>
+<div
+  className="claimWrapper"
+>
+  <h3
+    className="claimTitle"
+  >
+    External - Nutraceuticals and Atherosclerosis: Human Trials
+  </h3>
+  <div
+    className="claimJournal"
+  >
+    <FontIcon
+      className="material-icons claimJournalIcon"
+      data-for="claimTooltips"
+      data-place="left"
+      data-tip="Published"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      library_books
+    </FontIcon>
+    (2010) 
+    Cardiovascular Therapeutics
+     202-215
+  </div>
+  <div
+    className="claimStats"
+  />
+  <div
+    className="claimButtonWrapper"
+  >
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Claim Record"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={true}
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "clear": "both",
+      }
+    }
+  />
+</div>
 `;

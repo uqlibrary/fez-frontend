@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
-import {claimThisPublication, claimThisPublicationCancelled} from '../actions';
+import {showSnackbar} from '../../../App';
 
 
 let ClaimPublicationFormContainer = reduxForm({
@@ -17,8 +17,7 @@ ClaimPublicationFormContainer = connect((state) => {
     };
 }, dispatch => {
     return {
-        claimThisPublicationCancelled: (message) => dispatch(claimThisPublicationCancelled(message)),
-        claimThisPublication: (message) => dispatch(claimThisPublication(message))
+        showSnackbar: (message) => dispatch(showSnackbar(message))
     };
 })(ClaimPublicationFormContainer);
 

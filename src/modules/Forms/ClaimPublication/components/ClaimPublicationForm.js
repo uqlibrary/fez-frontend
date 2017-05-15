@@ -18,6 +18,7 @@ export default class ClaimPublicationForm extends Component {
         history: PropTypes.object,
         claimThisPublicationCancelled: PropTypes.func,
         claimThisPublication: PropTypes.func,
+        showSnackbar: PropTypes.func,
         selectedPublication: PropTypes.object
     };
 
@@ -26,12 +27,12 @@ export default class ClaimPublicationForm extends Component {
     }
 
     cancelClaimPublication = () => {
-        this.props.claimThisPublicationCancelled(locale.notifications.claimPublicationForm.cancelMessage);
+        this.props.showSnackbar(locale.notifications.claimPublicationForm.cancelMessage);
         this.props.history.goBack();
     };
 
     claimPublication = () => {
-        this.props.claimThisPublication(locale.notifications.claimPublicationForm.claimMessage);
+        this.props.showSnackbar(locale.notifications.claimPublicationForm.claimMessage);
         this.props.history.goBack();
     };
 

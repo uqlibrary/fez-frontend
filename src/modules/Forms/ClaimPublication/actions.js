@@ -1,34 +1,12 @@
 // repositories
 import {loadUsersPublicationData}  from '../../../repositories/claimPublication';
 
-// module imports
-import {showSnackbar} from '../../App';
-
 export const PUBLICATION_RESULTS_CLEARED = 'PUBLICATION_RESULTS_CLEARED';
 export const PUBLICATION_SELECTED_CLEARED = 'PUBLICATION_SELECTED_CLEARED';
 export const PUBLICATION_SELECTED = 'PUBLICATION_SELECTED';
 export const USERS_PUBLICATIONS_LOADING = 'USERS_PUBLICATIONS_LOADING';
 export const USERS_PUBLICATIONS_LOADED = 'USERS_PUBLICATIONS_LOADED';
 
-/**
- * Shows the cancel message within the snackbar
- * @returns {function(*)}
- */
-export function claimThisPublicationCancelled(message) {
-    return dispatch => {
-        dispatch(showSnackbar(message));
-    };
-}
-
-/**
- * Shows the claim publication message within the snackbar
- * @returns {function(*)}
- */
-export function claimThisPublication(message) {
-    return dispatch => {
-        dispatch(showSnackbar(message));
-    };
-}
 
 /**
  * Clear the selected publication
