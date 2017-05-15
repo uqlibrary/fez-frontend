@@ -11,16 +11,14 @@ import {externalDoiSearchResultList} from '../../../../mock/data/publicationSear
 function setup(ds) {
     const props = {
         history: {},
-        cancelThisPublicationClaim: jest.fn(),
-        claimThisPublication: jest.fn(),
         entry: Immutable.fromJS(ds[0])
     };
     return shallow(<ClaimPublicationForm {...props} />);
 }
 
 
-describe('Document type form integration tests', () => {
-    it('renders default document type component', () => {
+describe('Claim publication page test', () => {
+    it('renders default claim publication test', () => {
         const app = setup(externalDoiSearchResultList);
         expect(toJson(app)).toMatchSnapshot();
     });

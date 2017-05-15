@@ -16,8 +16,6 @@ export default class ClaimPublicationForm extends Component {
 
     static propTypes = {
         history: PropTypes.object,
-        claimThisPublicationCancelled: PropTypes.func,
-        claimThisPublication: PropTypes.func,
         showSnackbar: PropTypes.func,
         selectedPublication: PropTypes.object
     };

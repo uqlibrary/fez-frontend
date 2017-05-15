@@ -27,7 +27,6 @@ export default class SearchResults extends Component {
     render() {
         const {dataSource, help, title} = this.props;
         const searchResultEntries = dataSource.map((entry, i) => {
-            console.log('entry', entry);
             return (
                 <div key={i}>
                     <ClaimPublicationRow entry={entry} claimRecordBtnLabel={this.props.claimRecordBtnLabel} form="SearchResultsForm" />

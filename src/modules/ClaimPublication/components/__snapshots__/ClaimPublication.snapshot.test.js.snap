@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add record page snapshots tests renders default add record page 1`] = `
+<div
+  className="layout-fill"
+>
+  <h1
+    className="page-title display-1"
+  >
+    Claim publications
+  </h1>
+  <Card
+    className="layout-card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+  >
+    <CardHeader
+      avatar={null}
+      className="card-header"
+    >
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        >
+          <h2
+            className="headline"
+          >
+            Possible publications found
+          </h2>
+        </div>
+        <div
+          className="column"
+        >
+          <Connect(HelpIcon)
+            buttonLabel="OK"
+            text={
+              <div>
+                <p>
+                  Help on possibly your publications...
+                </p>
+              </div>
+            }
+            title="Help"
+          />
+        </div>
+      </div>
+    </CardHeader>
+    <CardText
+      className="body-1"
+    >
+      <br />
+      <div>
+        Select any items below to claim them as your work
+      </div>
+      <div>
+        <withRouter(Connect(ReduxForm))
+          claimRecordBtnLabel="Claim this article"
+          entry={
+            Object {
+              "fez_record_search_key_collection_year": Object {
+                "rek_collection_year": "2010-07-05 00:00:00",
+              },
+              "fez_record_search_key_date_available": Object {
+                "rek_date_available": "2010-07-05 00:00:00",
+              },
+              "fez_record_search_key_doi": Object {
+                "rek_doi": "10.1111/j.1755-5922.2010.00189.x",
+              },
+              "fez_record_search_key_end_page": Object {
+                "rek_end_page": "215",
+              },
+              "fez_record_search_key_issn": Array [
+                Object {
+                  "rek_issn": "1755-5914",
+                  "rek_issn_order": 1,
+                },
+                Object {
+                  "rek_issn": "1755-5922",
+                  "rek_issn_order": 2,
+                },
+              ],
+              "fez_record_search_key_issue_number": Object {
+                "rek_issue_number": "4",
+              },
+              "fez_record_search_key_journal_name": Object {
+                "rek_journal_name": "Cardiovascular Therapeutics",
+              },
+              "fez_record_search_key_keywords": Array [
+                Object {
+                  "rek_keywords": "Pharmacology (medical)",
+                  "rek_keywords_order": 1,
+                },
+                Object {
+                  "rek_keywords": "Pharmacology",
+                  "rek_keywords_order": 2,
+                },
+                Object {
+                  "rek_keywords": "Cardiology and Cardiovascular Medicine",
+                  "rek_keywords_order": 3,
+                },
+              ],
+              "fez_record_search_key_publisher": Object {
+                "rek_publisher": "Wiley-Blackwell",
+              },
+              "fez_record_search_key_start_page": Object {
+                "rek_start_page": "202",
+              },
+              "fez_record_search_key_volume_number": Object {
+                "rek_volume_number": "28",
+              },
+              "rek_date": "2010-07-05 00:00:00",
+              "rek_display_type": 179,
+              "rek_object_type": 1,
+              "rek_pid": 123,
+              "rek_status": 2,
+              "rek_title": "External - Nutraceuticals and Atherosclerosis: Human Trials",
+            }
+          }
+          form="ClaimPublicationResultsForm"
+        />
+        <Divider
+          inset={false}
+        />
+      </div>
+    </CardText>
+    <CardActions>
+      <div
+        className="columns notMineButtonWrapper"
+      >
+        <div
+          className="column"
+        >
+          1
+           matches shown of 
+          1
+        </div>
+        <div
+          className="column has-text-right"
+        >
+          <RaisedButton
+            disabled={false}
+            fullWidth={false}
+            label="None of these publications are mine"
+            labelPosition="after"
+            onTouchTap={[Function]}
+            primary={true}
+            secondary={false}
+          />
+        </div>
+      </div>
+    </CardActions>
+  </Card>
+</div>
+`;
