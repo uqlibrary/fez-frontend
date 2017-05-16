@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
-import {showSnackbar} from '../../../App';
+import {showSnackbar} from 'modules/App/actions';
 
 
 let ClaimPublicationFormContainer = reduxForm({
