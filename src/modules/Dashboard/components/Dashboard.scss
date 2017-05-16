@@ -22,12 +22,11 @@
   }
 }
 
-.time-display-wrap {
-  padding: 26px 0 0 26px;
-  background-color: rgba(20, 20, 20, 0.8);
-  color: #FFFF !important;
-  height: 75px;
-  margin-top: -101px;
+.notification-wrap {
+  padding: 26px 0 0 0px;
+  height: 64px;
+  margin-top: -90px;
+  overflow: hidden;
 }
 
 .time-display {
@@ -46,14 +45,61 @@
   opacity: 0.8;
 }
 
+.notification-wrap {
+  .claim-publication-lure {
+    background-color: #F26D00 !important;
+
+    h1 {
+      font-size: 18px !important;
+    }
+  }
+
+  .error_outline {
+    color: #FFF !important;
+    font-size: 38px !important;
+    line-height: 64px;
+    margin-top: -8px;
+    vertical-align: middle;
+  }
+
+  .button-wrap {
+    display: flex;
+  }
+
+  .claim-publications {
+    background-color: #D04908 !important;
+    color: #FFF !important;
+    align-self: center;
+  }
+
+  .hide-appbar {
+    font-size: 34px;
+    color: #FFAB91 !important;
+  }
+}
+
+.claim-publication-lure-enter {
+  transition-timing-function: ease-out;
+  transition: 0.2s;
+
+  /* Hide appbar by pushing it outside by default */
+  transform: translateY(-130%);
+}
+
+.claim-publication-lure-leave {
+  transition-timing-function: ease-in;
+  transition: 0.2s;
+
+  /* Hide appbar by pushing it outside by default */
+  transform: translateY(130%);
+}
+
 @media all and (max-width: 600px) {
 
-  .time-display-wrap {
-    padding: 15px 0px 0px 15px !important;
-    background-color: rgba(20, 20, 20, 0.8);
-    color: #FFFF !important;
-    height: 60px;
-    margin-top: -75px;
+  .notification-wrap {
+    padding: 15px 0px 0px 0px !important;
+    height: 65px;
+    margin-top: -79px;
   }
 
   .time {
