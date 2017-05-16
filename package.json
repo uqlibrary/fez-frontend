@@ -109,6 +109,9 @@
       "enzyme"
     ],
     "collectCoverage": true,
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
     "moduleNameMapper": {
       "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
       "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
