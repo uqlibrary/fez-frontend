@@ -11,13 +11,13 @@ export function loadPresignedData(file) {
             console.log('PUTTING file ... ');
             const options = {
                 headers: {
-                    'Content-Type': file[0].type,
+                    'Content-Type': 'multipart/form-data',
                     'Content-Length': file[0].size
                 }
             };
 
-            console.log(`PUTTING ${file[0].name} ... `);
-            api.put(response.data, file, options).then(result => {
+            console.log(`PUTTINGS ${file[0].name} ... `);
+            api.put(response.data, file[0], options).then(result => {
                 console.log('SUCCESS', result);
                 resolve(result);
             }).catch(err => {
