@@ -64,7 +64,7 @@ export function uploadFile(file) {
         console.log('werwerwerwer');
         dispatch({type: FILE_UPLOADING});
         console.log('werwerwerwer2');
-        loadPresignedData(file.name).then(presignedUrl => {
+        loadPresignedData(file).then(presignedUrl => {
             console.log('presignedUrl', presignedUrl);
             dispatch({
                 type: FILE_UPLOADED,

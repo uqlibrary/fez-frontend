@@ -125,7 +125,7 @@ class addRecord extends React.Component {
     };
 
     uploadFile = (file) => {
-        this.props.uploadFile(file[0]);
+        this.props.uploadFile(file);
     };
 
     getStepContent(stepIndex) {
