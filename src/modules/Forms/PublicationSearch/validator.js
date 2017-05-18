@@ -1,4 +1,4 @@
-import {validation} from '../../../config';
+import {validation} from 'config';
 
 export const isDOIValue = value => {
     // https://www.crossref.org/blog/dois-and-matching-regular-expressions/

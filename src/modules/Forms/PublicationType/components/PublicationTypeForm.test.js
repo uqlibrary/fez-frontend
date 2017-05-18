@@ -6,7 +6,7 @@ import Immutable from 'immutable';
 import Divider from 'material-ui/Divider';
 
 import PublicationTypeForm from './PublicationTypeForm';
-import {publicationTypeList} from '../../../../mock/data/publicationTypes';
+import {publicationTypeList} from 'mock/data/publicationTypes';
 
 let popularTypesResult = [];
 let popularTypesList = [];

@@ -1,9 +1,9 @@
 // Repositories
-import {loadPublicationSubTypeData} from '../../../repositories/publicationSubTypes';
-import {loadAuthorsData} from '../../../repositories/authors';
+import {loadPublicationSubTypeData} from 'repositories/publicationSubTypes';
+import {loadAuthorsData} from 'repositories/authors';
 
 // config
-import {locale} from '../../../config';
+import {locale} from 'config';
 
 // Types
 export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';

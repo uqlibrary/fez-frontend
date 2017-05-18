@@ -6,7 +6,7 @@ import toJson from 'enzyme-to-json';
 import Immutable from 'immutable';
 
 import SearchResults from './SearchResults';
-import {externalDoiSearchResultList} from '../../../mock/data/publicationSearch';
+import {externalDoiSearchResultList} from 'mock/data/publicationSearch';
 
 function setup(ds) {
     const props = {

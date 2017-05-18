@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import {AutoCompleteSelect, HelpIcon, TextField, Authors} from 'uqlibrary-react-toolbox';
 import DatePicker from 'material-ui/DatePicker';
 import RaisedButton from 'material-ui/RaisedButton';
-import {locale} from '../../../../config';
+import {locale} from 'config';
 
 import './AddJournalArticleForm.scss';
 

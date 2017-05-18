@@ -1,4 +1,4 @@
-import {api} from '../config';
+import {api} from 'config';
 
 /**
  * Generic search function that searches externally

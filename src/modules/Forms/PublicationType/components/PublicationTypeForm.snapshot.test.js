@@ -6,7 +6,7 @@ import toJson from 'enzyme-to-json';
 import Immutable from 'immutable';
 
 import PublicationTypeForm from './PublicationTypeForm';
-import {publicationTypeList} from '../../../../mock/data/publicationTypes';
+import {publicationTypeList} from 'mock/data/publicationTypes';
 
 function setup() {
     const popularTypesList = ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'];

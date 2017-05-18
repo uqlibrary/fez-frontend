@@ -7,8 +7,6 @@ import PropTypes from 'prop-types';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {AutoCompleteSelect} from 'uqlibrary-react-toolbox';
 
-import './PublicationTypeForm.scss';
-
 
 export default class PublicationTypeForm extends Component {
 

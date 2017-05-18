@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {isDOIValue, isPubMedValue} from '../validator';
-import {locale} from '../../../../config';
+import {locale} from 'config';
 
 import './PublicationSearchForm.scss';
 

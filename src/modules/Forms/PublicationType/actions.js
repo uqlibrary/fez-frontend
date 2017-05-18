@@ -1,5 +1,5 @@
 // Repositories
-import {loadPublicationTypesData} from '../../../repositories/publicationTypes';
+import {loadPublicationTypesData} from 'repositories/publicationTypes';
 
 // Types
 export const PUBLICATION_TYPES_LOADING = 'PUBLICATION_TYPES_LOADING';

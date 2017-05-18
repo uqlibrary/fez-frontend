@@ -2,7 +2,7 @@ import publicationTypeReducer, {initialState} from './reducer';
 import {PUBLICATION_TYPES_LOADED, PUBLICATION_TYPE_SELECTED} from './actions';
 import Immutable from 'immutable';
 
-import {publicationTypeList} from '../../../../src/mock/data/publicationTypes';
+import {publicationTypeList} from 'mock/data/publicationTypes';
 
 describe('Publication type reducer', () => {
     it('should return the initial state', () => {
