@@ -5,19 +5,18 @@ import {api} from 'config';
  * @returns {Promise}
  */
 export function loadPresignedData(file) {
-    console.log('loadPresignedData');
+    console.log('loadPresignedData', file.name);
     return new Promise((resolve, reject) => {
-        api.get(`file/upload/presigned/${file[0].name}`).then(response => {
-            console.log('PUTTING file ... ');
+        api.get(`file/upload/presigned/${file.name}`).then(response => {
+            console.log('PUTTING file ... ', response);
             const options = {
                 headers: {
-                    'Content-Type': 'multipart/form-data',
-                    'Content-Length': file[0].size
+                    'Content-Type': 'multipart/form-data'
                 }
             };
 
-            console.log(`PUTTINGS ${file[0].name} ... `);
-            api.put(response.data, file[0], options).then(result => {
+            console.log(`PUTTINGS ${file.name} ... `);
+            api.put(response.data, file, options).then(result => {
                 console.log('SUCCESS', result);
                 resolve(result);
             }).catch(err => {

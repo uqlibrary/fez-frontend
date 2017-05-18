@@ -124,8 +124,8 @@ class addRecord extends React.Component {
         this.props.submitRecord(locale.notifications.addRecord.submitMessage);
     };
 
-    uploadFile = (file) => {
-        this.props.uploadFile(file);
+    uploadFile = (acceptedFiles) => {
+        this.props.uploadFile(acceptedFiles);
     };
 
     getStepContent(stepIndex) {
@@ -142,7 +142,7 @@ class addRecord extends React.Component {
                            help={searchForPublicationInformation.help}
                            />
 
-                        <Dropzone onDrop={this.uploadFile.bind(this)}>
+                        <Dropzone onDrop={this.uploadFile.bind(this)} size={150}>
                             <p>Try dropping some files here, or click to select files to upload.</p>
                         </Dropzone>
                     </div>

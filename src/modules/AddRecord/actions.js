@@ -59,16 +59,19 @@ export function submitRecord(message) {
     };
 }
 
-export function uploadFile(file) {
+export function uploadFile(acceptedFiles) {
     return dispatch => {
-        dispatch({type: FILE_UPLOADING});
-        loadPresignedData(file).then(presignedUrl => {
-            dispatch({
-                type: FILE_UPLOADED,
-                payload: presignedUrl
+        acceptedFiles.map(file => {
+            dispatch({type: FILE_UPLOADING});
+            console.log(file);
+            loadPresignedData(file).then(presignedUrl => {
+                dispatch({
+                    type: FILE_UPLOADED,
+                    payload: presignedUrl
+                });
+            }).catch((error) => {
+                throw(error);
             });
-        }).catch((error) => {
-            throw(error);
         });
     };
 }
