@@ -16,7 +16,11 @@ export function loadPresignedData(file) {
             };
 
             console.log(`PUTTING ${file[0].name} ... `);
-            return api.put(response.data, file, options);
+            api.put(response.data, file, options).then(result => {
+                console.log('SUCCESS', result);
+            }).catch(err => {
+                console.log('ERROR', err);
+            });
         }).catch(e => {
             reject(e);
             throw e;
