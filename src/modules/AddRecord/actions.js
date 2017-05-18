@@ -61,11 +61,8 @@ export function submitRecord(message) {
 
 export function uploadFile(file) {
     return dispatch => {
-        console.log('werwerwerwer');
         dispatch({type: FILE_UPLOADING});
-        console.log('werwerwerwer2');
         loadPresignedData(file).then(presignedUrl => {
-            console.log('presignedUrl', presignedUrl);
             dispatch({
                 type: FILE_UPLOADED,
                 payload: presignedUrl

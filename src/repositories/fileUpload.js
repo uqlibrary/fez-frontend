@@ -5,6 +5,7 @@ import {api} from '../config';
  * @returns {Promise}
  */
 export function loadPresignedData(file) {
+    console.log('loadPresignedData');
     return new Promise((resolve, reject) => {
         api.get(`file/upload/presigned/${file[0].name}`).then(response => {
             console.log('PUTTING file ... ');
