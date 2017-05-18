@@ -1,9 +1,12 @@
 // Repositories
-import {loadPublicationTypesData} from '../../repositories/publicationTypes';
+import {loadPublicationTypesData} from 'repositories/publicationTypes';
+import {loadPresignedData} from 'repositories/fileUpload';
 
 // Types
 export const PUBLICATION_TYPES_LOADING = 'PUBLICATION_TYPES_LOADING';
 export const PUBLICATION_TYPES_LOADED = 'PUBLICATION_TYPES_LOADED';
+export const FILE_UPLOADING = 'FILE_UPLOADING';
+export const FILE_UPLOADED = 'FILE_UPLOADED';
 
 // module imports
 import {showSnackbar} from 'modules/App';
@@ -53,5 +56,22 @@ export function saveForLater(message) {
 export function submitRecord(message) {
     return dispatch => {
         dispatch(showSnackbar(message));
+    };
+}
+
+export function uploadFile(file) {
+    return dispatch => {
+        console.log('werwerwerwer');
+        dispatch({type: FILE_UPLOADING});
+        console.log('werwerwerwer2');
+        loadPresignedData(file.name).then(presignedUrl => {
+            console.log('presignedUrl', presignedUrl);
+            dispatch({
+                type: FILE_UPLOADED,
+                payload: presignedUrl
+            });
+        }).catch((error) => {
+            throw(error);
+        });
     };
 }

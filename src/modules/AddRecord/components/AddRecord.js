@@ -4,7 +4,7 @@ import ExpandTransition from 'material-ui/internal/ExpandTransition';
 import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
-
+import Dropzone from 'react-dropzone';
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -32,7 +32,8 @@ class addRecord extends React.Component {
         publicationTypeList: PropTypes.object,
         cancelAddRecord: PropTypes.func,
         saveForLater: PropTypes.func,
-        submitRecord: PropTypes.func
+        submitRecord: PropTypes.func,
+        uploadFile: PropTypes.func
     };
 
     static defaultProps = {
@@ -123,6 +124,10 @@ class addRecord extends React.Component {
         this.props.submitRecord(locale.notifications.addRecord.submitMessage);
     };
 
+    uploadFile = (file) => {
+        this.props.uploadFile(file[0]);
+    };
+
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case STEP_1:
@@ -136,6 +141,10 @@ class addRecord extends React.Component {
                            defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
                            help={searchForPublicationInformation.help}
                            />
+
+                        <Dropzone onDrop={this.uploadFile.bind(this)}>
+                            <p>Try dropping some files here, or click to select files to upload.</p>
+                        </Dropzone>
                     </div>
                 );
             case STEP_2:

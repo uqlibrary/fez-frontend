@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import AddRecord from '../components/AddRecord';
-import {loadPublicationTypesList, cancelAddRecord, saveForLater, submitRecord} from '../actions';
+import {loadPublicationTypesList, cancelAddRecord, saveForLater, submitRecord, uploadFile} from '../actions';
 
 let AddRecordContainer = reduxForm({
     form: 'AddRecordForm'
@@ -19,7 +19,8 @@ AddRecordContainer = connect((state) => {
         loadPublicationTypesList: () => dispatch(loadPublicationTypesList()),
         cancelAddRecord: (message) => dispatch(cancelAddRecord(message)),
         saveForLater: (message) => dispatch(saveForLater(message)),
-        submitRecord: (message) => dispatch(submitRecord(message))
+        submitRecord: (message) => dispatch(submitRecord(message)),
+        uploadFile: (file) => dispatch(uploadFile(file))
     };
 })(AddRecordContainer);
 
