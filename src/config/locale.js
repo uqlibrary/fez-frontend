@@ -242,36 +242,6 @@ export default {
                         endPageLabel: 'End page',
                         notesLabel: 'Not (not publically viewable)'
                     }
-                },
-                files: {
-                    title: 'Files',
-                    help: {
-                        title: 'Files',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
-                    },
-                    fields: {
-                        filenameLabel: 'Filename selected',
-                        filenameRestrictions: (
-                            <div className="fileInstructions">
-                                <h3>File name restrictions</h3>
-                                <div style={{width: '100%'}}>
-                                    <ul>
-                                        <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
-                                        <li>Only numbers and lowercase characters in the file extension</li>
-                                        <li>Under 45 characters</li>
-                                        <li>Only one file extension (on period (.) character) and</li>
-                                        <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        ),
-                        accessConditionsLabel: 'Access conditions',
-                        embargoDateLabel: 'Embargo date',
-                        descriptionLabel: 'Description'
-                    },
-                    buttons: {
-                        browseLabel: 'Browse files'
-                    }
                 }
             }
         },
@@ -295,6 +265,38 @@ export default {
                 button: 'OK'
             }
         },
+    },
+    sharedComponents: {
+        files: {
+            title: 'Files',
+            help: {
+                title: 'Files',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
+            },
+            fields: {
+                filenameLabel: 'Filename selected',
+                filenameRestrictions: (
+                    <div className="fileInstructions">
+                        <h3>File name restrictions</h3>
+                        <div style={{width: '100%'}}>
+                            <ul>
+                                <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
+                                <li>Only numbers and lowercase characters in the file extension</li>
+                                <li>Under 45 characters</li>
+                                <li>Only one file extension (on period (.) character) and</li>
+                                <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
+                            </ul>
+                        </div>
+                    </div>
+                ),
+                accessConditionsLabel: 'Access conditions',
+                embargoDateLabel: 'Embargo date',
+                descriptionLabel: 'Description'
+            },
+            buttons: {
+                browseLabel: 'Browse files'
+            }
+        }
     }
 };
 

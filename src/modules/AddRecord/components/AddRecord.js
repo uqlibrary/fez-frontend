@@ -125,7 +125,15 @@ class addRecord extends React.Component {
     };
 
     uploadFile = (acceptedFiles) => {
-        this.props.uploadFile(acceptedFiles);
+        acceptedFiles.map(file => {
+            if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[\.][a-z0-9]+$/)) {
+                console.log('good file', file.name);
+            } else {
+                console.log('bad file', file.name);
+            }
+        });
+
+        // this.props.uploadFile(acceptedFiles);
     };
 
     getStepContent(stepIndex) {
@@ -142,9 +150,10 @@ class addRecord extends React.Component {
                            help={searchForPublicationInformation.help}
                            />
 
-                        <Dropzone onDrop={this.uploadFile.bind(this)} size={150}>
-                            <p>Try dropping some files here, or click to select files to upload.</p>
+                        <Dropzone onDrop={this.uploadFile.bind(this)} style={{background: '#d8d8d8', padding: '10px', textAlign: 'center'}}>
+                            <p>Drop your files here</p>
                         </Dropzone>
+                        {locale.sharedComponents.files.fields.filenameRestrictions}
                     </div>
                 );
             case STEP_2:

@@ -60,4 +60,3 @@ mock.onGet('authors/search').reply(200, authorsList);
 // Mock academics publication years endpoint response
 mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsBig);
 
-
