@@ -4,7 +4,8 @@ import ExpandTransition from 'material-ui/internal/ExpandTransition';
 import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
-import Dropzone from 'react-dropzone';
+
+import {FileUploadDropZone} from 'modules/sharedComponents/FileUploadDropZone';
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -124,18 +125,6 @@ class addRecord extends React.Component {
         this.props.submitRecord(locale.notifications.addRecord.submitMessage);
     };
 
-    uploadFile = (acceptedFiles) => {
-        acceptedFiles.map(file => {
-            if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[\.][a-z0-9]+$/)) {
-                console.log('good file', file.name);
-            } else {
-                console.log('bad file', file.name);
-            }
-        });
-
-        // this.props.uploadFile(acceptedFiles);
-    };
-
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case STEP_1:
@@ -149,11 +138,7 @@ class addRecord extends React.Component {
                            defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
                            help={searchForPublicationInformation.help}
                            />
-
-                        <Dropzone onDrop={this.uploadFile.bind(this)} style={{background: '#d8d8d8', padding: '10px', textAlign: 'center'}}>
-                            <p>Drop your files here</p>
-                        </Dropzone>
-                        {locale.sharedComponents.files.fields.filenameRestrictions}
+                        <FileUploadDropZone />
                     </div>
                 );
             case STEP_2:
