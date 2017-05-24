@@ -5,26 +5,30 @@ import {api} from 'config';
  * @returns {Promise}
  */
 export function loadPresignedData(file) {
-    console.log('loadPresignedData', file.name);
     return new Promise((resolve, reject) => {
+        // get the pre-signed url
         api.get(`file/upload/presigned/${file.name}`).then(response => {
-            console.log('PUTTING file ... ', response);
             const options = {
                 headers: {
                     'Content-Type': 'multipart/form-data'
+                },
+                onUploadProgress: progressEvent => {
+                    const percentCompleted = Math.floor((progressEvent.loaded * 100) / progressEvent.total);
+                    resolve({
+                        file: file.name,
+                        progress: percentCompleted
+                    });
                 }
             };
 
-            console.log(`PUTTINGS ${file.name} ... `);
+            // push the file into the S3 bucket
             api.put(response.data, file, options).then(result => {
-                console.log('SUCCESS', result);
+                console.log(result);
                 resolve(result);
             }).catch(err => {
-                console.log('ERROR', err);
                 reject(err);
             });
         }).catch(e => {
-            console.log('error', e);
             reject(e);
             throw e;
         });

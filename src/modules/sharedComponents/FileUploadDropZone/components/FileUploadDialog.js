@@ -2,244 +2,202 @@ import React, {Component} from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
-import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
-import Toggle from 'material-ui/Toggle';
-import FontIcon from 'material-ui/FontIcon';
+import Immutable from 'immutable';
 
-import {TextField} from 'uqlibrary-react-toolbox';
-import DatePicker from 'material-ui/DatePicker';
+import FileUploadStepper from '../containers/FileUploadStepper';
+
 import {locale} from 'config';
 
 import './FileUpload.scss';
 
-const STEP_1 = 0;
 const GETTING_STARTED_STEP = 'GETTING_STARTED_STEP';
 const ADD_FILE_DETAILS_STEP = 'ADD_FILE_DETAILS_STEP';
-const CONFIRMATION_STEP = 'CONFIRMATION_STEP';
-const UPLOAD_FILE_STEP = 'UPLOAD_FILE_STEP';
+
+let IS_UPLOAD_STEP;
+let IS_CONFIRMATION_STEP;
 
 export default class FileUploadDialog extends Component {
 
     static propTypes = {
+        acceptedFiles: PropTypes.array.isRequired,
+        rejectedFiles: PropTypes.array.isRequired,
+        isDialogOpen: PropTypes.bool,
+        isUploadCompleted: PropTypes.bool,
+        cancelUpload: PropTypes.func,
+        closeDialog: PropTypes.func,
+        decreaseStep: PropTypes.func,
+        increaseStep: PropTypes.func,
+        openDialog: PropTypes.func,
+        resetSteps: PropTypes.func,
+        showSnackbar: PropTypes.func,
         uploadFile: PropTypes.func,
-        open: PropTypes.bool,
-        acceptedFiles: PropTypes.array,
-        rejectedFiles: PropTypes.array
+        stepperIndex: PropTypes.number,
+        uploadProgress: PropTypes.object
     };
 
     static defaultProps = {
-        open: false
+        isOpen: Immutable.fromJS(false)
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            closeDialog: false,
             fileSummary: [],
-            progressStep: GETTING_STARTED_STEP,
-            stepIndex: 0
+            currentStep: GETTING_STARTED_STEP,
+            uploadProgress: []
         };
     }
 
+    componentWillUpdate(nextProps) {
+        IS_UPLOAD_STEP = nextProps.acceptedFiles && nextProps.stepperIndex > nextProps.acceptedFiles.length;
+        IS_CONFIRMATION_STEP = nextProps.acceptedFiles && nextProps.stepperIndex === nextProps.acceptedFiles.length;
+    }
+
     handleClose = () => {
-        this.setState({closeDialog: true});
+        this.props.closeDialog();
+        this.setState({
+            currentStep: GETTING_STARTED_STEP
+        });
+        this.props.resetSteps();
     };
 
-    setProgressStep = () => {
-        if (this.state.stepIndex < STEP_1) {
-            this.setState({progressStep: GETTING_STARTED_STEP});
-        } else if (this.state.stepIndex >= STEP_1 && this.state.stepIndex < (this.props.acceptedFiles.length - 1)) {
-            this.setState({progressStep: ADD_FILE_DETAILS_STEP});
-        } else if (this.state.stepIndex === (this.props.acceptedFiles.length - 1)) {
-            this.setState({progressStep: CONFIRMATION_STEP});
+    setCurrentStep = (dir = 'forward') => {
+        if (dir === 'forward') {
+            switch (this.state.currentStep) {
+                case GETTING_STARTED_STEP:
+                    this.setState({currentStep: ADD_FILE_DETAILS_STEP});
+                    break;
+                default:
+                    this.setState({currentStep: GETTING_STARTED_STEP});
+            }
         } else {
-            this.setState({progressStep: UPLOAD_FILE_STEP});
+            if (this.state.currentStep === ADD_FILE_DETAILS_STEP) {
+                this.setState({currentStep: GETTING_STARTED_STEP});
+            }
         }
     };
 
     uploadFile = () => {
-        // acceptedFiles.map(file => {
-        //     if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[\.][a-z0-9]+$/)) {
-        //         console.log('good file', file.name);
-        //     } else {
-        //         console.log('bad file', file.name);
-        //     }
-        // });
-        console.log('uploading files', this.props.acceptedFiles);
+        this.props.increaseStep();
         this.props.uploadFile(this.props.acceptedFiles);
     };
 
-    handleNext = () => {
-        if (this.state.progressStep === ADD_FILE_DETAILS_STEP) {
-            this.setState({stepIndex: (this.state.stepIndex + 1)});
-        }
+    cancelUpload = () => {
+        this.props.showSnackbar('Cancelled the file uploads.');
+        this.handleClose();
+        this.props.cancelUpload();
+    }
 
-        this.setProgressStep();
+    handleNext = () => {
+        this.setCurrentStep();
     };
 
     handlePrevious = () => {
-        // handle the stepper
-        this.setState({stepIndex: this.state.stepIndex - 1});
-        this.setProgressStep();
+        this.setCurrentStep('back');
     };
 
-    getIcon = (mimeType) => {
-        switch(mimeType) {
-            case 'application/pdf':
-                return 'movie';
-            case 'image/jpeg':
-            case 'image/pjpeg':
-            case 'image/x-png':
-            case 'image/png':
-            case 'image/gif':
-                return 'photo';
+    getPreviousButtonLabel = () => {
+        const fileInformation = locale.sharedComponents.files;
+        switch(this.state.currentStep) {
+            case GETTING_STARTED_STEP:
+                return locale.global.labels.buttons.cancel;
             default:
-                return 'insert_drive_file';
+                if (IS_UPLOAD_STEP) {
+                    return fileInformation.buttons.cancelUpload;
+                }
+                return fileInformation.buttons.backLabel;
         }
     };
 
-    formatBytes = (bytes, decimals) => {
-        if(bytes === 0) return '0 Bytes';
+    getPreviousButtonFunc = () => {
+        switch(this.state.currentStep) {
+            case GETTING_STARTED_STEP:
+                return this.handleClose();
+            case ADD_FILE_DETAILS_STEP:
+                if (this.props.stepperIndex === 0) {
+                    return this.handlePrevious();
+                }
 
-        const kb = 1000;
-        const dm = decimals || 2;
-        const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-        const result = Math.floor(Math.log(bytes) / Math.log(kb));
-
-        return parseFloat((bytes / Math.pow(kb, result)).toFixed(dm)) + ' ' + sizes[result];
-    };
-
-    getFileSummary = (file) => {
-        return (
-            <div>
-                <FontIcon
-                className="material-icons">{this.getIcon(file.type)}</FontIcon> {file.name} <span>({this.formatBytes(file.size)})</span>
-            </div>
-        );
+                if (IS_UPLOAD_STEP) {
+                    this.cancelUpload();
+                }
+                return this.props.decreaseStep();
+            default:
+                return this.handlePrevious();
+        }
     };
 
     getNextButtonLabel = () => {
         const fileInformation = locale.sharedComponents.files;
-        if (this.state.progressStep === GETTING_STARTED_STEP) {
-            return fileInformation.buttons.getStartedLabel;
-        } else if (this.state.progressStep === ADD_FILE_DETAILS_STEP) {
-            return fileInformation.buttons.stepperNextLabel;
-        } else if (this.state.progressStep === CONFIRMATION_STEP) {
-            return fileInformation.buttons.uploadFilesLabel;
-        } else {
-            return 'Got ot!';
+        let label = '';
+
+        if (this.state.currentStep === GETTING_STARTED_STEP) {
+            label = fileInformation.buttons.getStartedLabel;
+        } else if (this.state.currentStep === ADD_FILE_DETAILS_STEP) {
+            if (IS_CONFIRMATION_STEP) {
+                label = fileInformation.buttons.uploadFilesLabel;
+            } else if (IS_UPLOAD_STEP) {
+                label = locale.global.labels.buttons.close;
+            } else {
+                label = fileInformation.buttons.stepperNextLabel;
+            }
+        }
+
+        return label;
+    };
+
+    getNextButtonFunc = () => {
+        switch(this.state.currentStep) {
+            case ADD_FILE_DETAILS_STEP:
+                if (IS_UPLOAD_STEP) {
+                    return this.handleClose();
+                } else if (IS_CONFIRMATION_STEP) {
+                    return this.uploadFile();
+                }
+                return this.props.increaseStep();
+            default:
+                return this.handleNext();
         }
     };
 
     render() {
+        const {
+            acceptedFiles,
+            isDialogOpen,
+            isUploadCompleted
+        } = this.props;
+
         const fileInformation = locale.sharedComponents.files;
         const actions = [
             <FlatButton
-                label={this.state.progressStep !== GETTING_STARTED_STEP ? fileInformation.buttons.backLabel : locale.global.labels.buttons.cancel}
-                onTouchTap={this.state.progressStep !== GETTING_STARTED_STEP ? this.handlePrevious : this.handleClose}
+                label={this.getPreviousButtonLabel()}
+                onTouchTap={this.getPreviousButtonFunc}
             />,
             <RaisedButton
                 label={this.getNextButtonLabel()}
                 secondary
-                onTouchTap={this.state.progressStep !== CONFIRMATION_STEP ? this.handleNext : this.uploadFile}
+                onTouchTap={this.getNextButtonFunc}
+                disabled={(!isUploadCompleted && IS_UPLOAD_STEP)}
             />,
         ];
-
-        const DateTimeFormat = global.Intl.DateTimeFormat;
-        const stepIndex = this.state.stepIndex;
-
-        let steps = [];
-
-        if (this.state.progressStep === ADD_FILE_DETAILS_STEP && this.props.acceptedFiles) {
-            steps = this.props.acceptedFiles.map(file => {
-                return (<Step key={file.name}>
-                    <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{file.name}</StepLabel>
-                </Step>);
-            });
-        }
-
-        if (this.state.progressStep === ADD_FILE_DETAILS_STEP) {
-            const file = this.props.acceptedFiles[stepIndex];
-            this.state.fileSummary[stepIndex] = this.getFileSummary(file);
-        }
 
         return (
             <Dialog
                 title={fileInformation.dialog.title}
                 actions={actions}
                 modal={false}
-                open={this.props.open && !this.state.closeDialog }
+                open={isDialogOpen}
             >
-                {this.state.progressStep === GETTING_STARTED_STEP && (
+                {this.state.currentStep === GETTING_STARTED_STEP && (
                     fileInformation.dialog.explanationText
                 )}
 
-                {this.state.progressStep === ADD_FILE_DETAILS_STEP && (
-                    <div className="layout-fill">
-                        <Stepper activeStep={stepIndex} style={{padding: '0 25px', margin: '-10px auto' }} onChange={this.handleNext}>
-                            {steps}
-                            <Step>
-                                <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>Confirm and upload</StepLabel>
-                            </Step>
-                        </Stepper>
-                        <div className="columns">
-                            <div className="column">
-                                {this.state.fileSummary[stepIndex]}
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Field component={TextField} name={`filesDescription-${stepIndex}`} type="text" fullWidth multiLine
-                                       rows={3} floatingLabelText={fileInformation.fields.descriptionLabel}/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Toggle name={`filesAccessConditions-${stepIndex}`}
-                                        label={fileInformation.fields.accessConditionsLabel}
-                                        defaultToggled />
-                            </div>
-                            <div className="column">
-                                <Field component={DatePicker} floatingLabelText={fileInformation.fields.embargoDateLabel} fullWidth name={`fileEmbargoDate-${stepIndex}`} locale="en-AU" DateTimeFormat={DateTimeFormat} />
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                {fileInformation.dialog.disclaimer}
-                            </div>
-                        </div>
-                    </div>
-                )}
-
-                {this.state.progressStep === CONFIRMATION_STEP && (
-                    <div className="layout-fill">
-                        <div className="columns">
-                            <div className="column">
-                                <h3>{fileInformation.dialog.lastStepTitle}</h3>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                {this.state.fileSummary}
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                {fileInformation.dialog.disclaimer}
-                            </div>
-                        </div>
-                    </div>
-                )}
-
-                {this.state.progressStep === UPLOAD_FILE_STEP && (
-                    <div className="columns">
-                        <div className="column">
-                            UPLOADING FILES
-                        </div>
-                    </div>
+                {this.state.currentStep === ADD_FILE_DETAILS_STEP && (
+                    <FileUploadStepper
+                        acceptedFiles={acceptedFiles}
+                    />
                 )}
             </Dialog>
         );

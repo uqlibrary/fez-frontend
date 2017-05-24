@@ -9,6 +9,7 @@ export default {
             buttons: {
                 saveForLater: 'Save for later',
                 cancel: 'Cancel',
+                close: 'Close',
                 submitForApproval: 'Submit for approval'
             }
         }
@@ -276,6 +277,9 @@ export default {
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
             },
             limit: 10,
+            messages: {
+                maxFiles: 'Only [maxNumberOfFiles] are allowed to be selected per upload.'
+            },
             fields: {
                 filenameLabel: 'Filename selected',
                 filenameRestrictions: (
@@ -315,6 +319,7 @@ export default {
             },
             buttons: {
                 backLabel: 'Back',
+                cancelUpload: 'Cancel upload',
                 getStartedLabel: 'Get Started',
                 stepperNextLabel: 'Agree and continue',
                 uploadFilesLabel: 'Upload all files'

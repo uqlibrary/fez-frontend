@@ -14,25 +14,50 @@ import './FileUpload.scss';
 export default class FileUploadDropZone extends Component {
 
     static propTypes = {
-        uploadFile: PropTypes.func
+        openDialog: PropTypes.func,
+        setAcceptedFileList: PropTypes.func,
+        showSnackbar: PropTypes.func
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            openDialog: false,
-            acceptedFiles: null,
+            filesToUpload: null,
             rejectedFiles: null
         };
     }
 
     openDialog = (acceptedFiles, rejectedFiles) => {
+        const maxNumberOfFiles = locale.sharedComponents.files.limit;
+        let filesToUpload = acceptedFiles;
+
+        // check if the user has more than the maximum of files uploaded
+        if (acceptedFiles.length > maxNumberOfFiles) {
+            // alert user they're trying to upload more than files than maxNumberOfFiles
+            const msg = locale.sharedComponents.files.messages.maxFiles.replace('[maxNumberOfFiles]', maxNumberOfFiles);
+            this.props.showSnackbar(msg);
+
+            // only allow maxNumberOfFiles to upload
+            filesToUpload = acceptedFiles.slice(0, maxNumberOfFiles);
+        }
+
+        // acceptedFiles.map(file => {
+        //     if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[\.][a-z0-9]+$/)) {
+        //         console.log('good file', file.name);
+        //     } else {
+        //         console.log('bad file', file.name);
+        //     }
+        // });
+
         this.setState({
-            dialogOpen: true,
-            acceptedFiles,
+            filesToUpload,
             rejectedFiles
         });
+
+        this.props.setAcceptedFileList(filesToUpload);
+
+        this.props.openDialog();
     };
 
     render() {
@@ -69,7 +94,7 @@ export default class FileUploadDropZone extends Component {
                     </CardText>
                 </Card>
 
-                <FileUploadDialog open={this.state.dialogOpen} acceptedFiles={this.state.acceptedFiles} rejectedFiles={this.state.rejectedFiles} />
+                <FileUploadDialog acceptedFiles={this.state.filesToUpload} rejectedFiles={this.state.rejectedFiles} />
             </div>
         );
     }
