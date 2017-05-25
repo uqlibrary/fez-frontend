@@ -1,19 +1,20 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 
-export default class FileUploadInfoRow extends Component {
+export default class FileUploadInfoRow extends PureComponent {
 
     static propTypes = {
+        file: PropTypes.object.isRequired,
         showProgress: PropTypes.bool,
-        file: PropTypes.object.isRequired
+        uploadProgress: PropTypes.string
     };
 
     constructor(props) {
         super(props);
     }
 
-    formatBytes = (bytes, decimals) => {
+    getByteConversion = (bytes, decimals) => {
         if(bytes === 0) return '0 Bytes';
 
         const kb = 1000;
@@ -40,13 +41,13 @@ export default class FileUploadInfoRow extends Component {
     };
 
     render() {
-        const {file, showProgress} = this.props;
+        const {file, showProgress, uploadProgress} = this.props;
         return (
             <div>
                 <FontIcon
-                    className="material-icons">{this.getIcon(file.type)}</FontIcon> {file.name} <span>({this.formatBytes(file.size)})</span>
+                    className="material-icons">{this.getIcon(file.type)}</FontIcon> {file.name} <span>({this.getByteConversion(file.size)})</span>
                 {showProgress && (
-                    <span className="uploadProgress">{file.progress}</span>
+                    <span className="uploadProgress">{uploadProgress}</span>
                 )}
             </div>
         );

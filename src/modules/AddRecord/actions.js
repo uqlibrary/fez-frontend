@@ -1,6 +1,5 @@
 // Repositories
 import {loadPublicationTypesData} from 'repositories/publicationTypes';
-import {loadPresignedData} from 'repositories/fileUpload';
 
 // Types
 export const PUBLICATION_TYPES_LOADING = 'PUBLICATION_TYPES_LOADING';
@@ -56,22 +55,5 @@ export function saveForLater(message) {
 export function submitRecord(message) {
     return dispatch => {
         dispatch(showSnackbar(message));
-    };
-}
-
-export function uploadFile(acceptedFiles) {
-    return dispatch => {
-        acceptedFiles.map(file => {
-            dispatch({type: FILE_UPLOADING});
-            console.log(file);
-            loadPresignedData(file).then(presignedUrl => {
-                dispatch({
-                    type: FILE_UPLOADED,
-                    payload: presignedUrl
-                });
-            }).catch((error) => {
-                throw(error);
-            });
-        });
     };
 }

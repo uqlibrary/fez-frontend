@@ -5,7 +5,7 @@ import FileUploadSummary from '../components/FileUploadSummary';
 import {uploadFile, openDialog, closeDialog} from '../actions';
 
 let FileUploadSummaryContainer = reduxForm({
-    form: 'AddRecordForm'
+    destroyOnUnmount: false
 })(FileUploadSummary);
 
 FileUploadSummaryContainer = connect((state) => {

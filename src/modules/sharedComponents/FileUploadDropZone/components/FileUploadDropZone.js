@@ -1,21 +1,19 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 
+// custom components
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-
 import FileUploadDialog from '../containers/FileUploadDialog';
-
 import './FileUpload.scss';
 
-
-export default class FileUploadDropZone extends Component {
+export default class FileUploadDropZone extends PureComponent {
 
     static propTypes = {
+        form: PropTypes.string.isRequired,
         openDialog: PropTypes.func,
-        setAcceptedFileList: PropTypes.func,
         showSnackbar: PropTypes.func
     };
 
@@ -23,41 +21,67 @@ export default class FileUploadDropZone extends Component {
         super(props);
 
         this.state = {
-            filesToUpload: null,
-            rejectedFiles: null
+            filesToUpload: [],
+            rejectedFiles: []
         };
     }
 
     openDialog = (acceptedFiles, rejectedFiles) => {
-        const maxNumberOfFiles = locale.sharedComponents.files.limit;
-        let filesToUpload = acceptedFiles;
+        const fileInformation = locale.sharedComponents.files;
+        const {validFiles, invalidFiles} = this.validateNumberOfFiles(acceptedFiles, rejectedFiles);
+        const {filesToUpload, filesToReject} = this.validateFilenameFormat(validFiles, invalidFiles);
+
+        this.setState({
+            filesToUpload
+        });
+
+        if (filesToReject.length > 0) {
+            const msg = fileInformation.messages.rejectedFiles.replace('[numberOfRejectedFiles]', filesToReject.length);
+            this.props.showSnackbar(msg);
+        }
+
+        if (filesToUpload.length > 0) {
+            this.props.openDialog();
+        } else {
+            this.props.showSnackbar(fileInformation.messages.acceptedFiles);
+        }
+    };
+
+    validateFilenameFormat = (acceptedFiles, rejectedFiles) => {
+        const filesToUpload = [];
+        const filesToReject = rejectedFiles;
+
+        acceptedFiles.map(file => {
+            if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[.][a-z0-9]+$/)) {
+                filesToUpload.push(file);
+            } else {
+                filesToReject.push(file);
+            }
+        });
+
+        return {filesToUpload, filesToReject};
+    };
+
+    validateNumberOfFiles = (acceptedFiles, rejectedFiles) => {
+        const fileInformation = locale.sharedComponents.files;
+        const maxNumberOfFiles = fileInformation.limit;
+        let validFiles = acceptedFiles;
+        let invalidFiles = rejectedFiles;
 
         // check if the user has more than the maximum of files uploaded
         if (acceptedFiles.length > maxNumberOfFiles) {
             // alert user they're trying to upload more than files than maxNumberOfFiles
-            const msg = locale.sharedComponents.files.messages.maxFiles.replace('[maxNumberOfFiles]', maxNumberOfFiles);
+            const msg = fileInformation.messages.maxFiles.replace('[maxNumberOfFiles]', maxNumberOfFiles);
             this.props.showSnackbar(msg);
 
             // only allow maxNumberOfFiles to upload
-            filesToUpload = acceptedFiles.slice(0, maxNumberOfFiles);
+            validFiles = acceptedFiles.slice(0, maxNumberOfFiles);
+
+            // push to the array of rejected files
+            invalidFiles = acceptedFiles.slice(maxNumberOfFiles);
         }
 
-        // acceptedFiles.map(file => {
-        //     if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[\.][a-z0-9]+$/)) {
-        //         console.log('good file', file.name);
-        //     } else {
-        //         console.log('bad file', file.name);
-        //     }
-        // });
-
-        this.setState({
-            filesToUpload,
-            rejectedFiles
-        });
-
-        this.props.setAcceptedFileList(filesToUpload);
-
-        this.props.openDialog();
+        return {validFiles, invalidFiles};
     };
 
     render() {
@@ -94,7 +118,7 @@ export default class FileUploadDropZone extends Component {
                     </CardText>
                 </Card>
 
-                <FileUploadDialog acceptedFiles={this.state.filesToUpload} rejectedFiles={this.state.rejectedFiles} />
+                <FileUploadDialog form={this.props.form} acceptedFiles={this.state.filesToUpload} />
             </div>
         );
     }

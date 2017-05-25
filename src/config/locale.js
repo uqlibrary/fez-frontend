@@ -278,7 +278,9 @@ export default {
             },
             limit: 10,
             messages: {
-                maxFiles: 'Only [maxNumberOfFiles] are allowed to be selected per upload.'
+                maxFiles: 'Only [maxNumberOfFiles] are allowed to be selected per upload.',
+                rejectedFiles: '[numberOfRejectedFiles] file was not included in this upload.',
+                acceptedFiles: 'There are no valid files to upload.'
             },
             fields: {
                 filenameLabel: 'Filename selected',
@@ -288,7 +290,7 @@ export default {
                             <h3>File name restrictions</h3>
                             <div>
                                 <ul>
-                                    <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
+                                    <li>Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)</li>
                                     <li>Only numbers and lowercase characters in the file extension</li>
                                     <li>Under 45 characters</li>
                                     <li>Only one file extension (on period (.) character) and</li>

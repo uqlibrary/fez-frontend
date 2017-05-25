@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 
+// custom components
 import FileUploadStepper from '../containers/FileUploadStepper';
-
 import {locale} from 'config';
 
 import './FileUpload.scss';
@@ -17,11 +17,11 @@ const ADD_FILE_DETAILS_STEP = 'ADD_FILE_DETAILS_STEP';
 let IS_UPLOAD_STEP;
 let IS_CONFIRMATION_STEP;
 
-export default class FileUploadDialog extends Component {
+export default class FileUploadDialog extends PureComponent {
 
     static propTypes = {
         acceptedFiles: PropTypes.array.isRequired,
-        rejectedFiles: PropTypes.array.isRequired,
+        form: PropTypes.string.isRequired,
         isDialogOpen: PropTypes.bool,
         isUploadCompleted: PropTypes.bool,
         cancelUpload: PropTypes.func,
@@ -55,47 +55,18 @@ export default class FileUploadDialog extends Component {
         IS_CONFIRMATION_STEP = nextProps.acceptedFiles && nextProps.stepperIndex === nextProps.acceptedFiles.length;
     }
 
-    handleClose = () => {
+    cancelUpload = () => {
+        this.props.showSnackbar('Cancelled the file uploads.');
+        this.closeDialog();
+        this.props.cancelUpload();
+    };
+
+    closeDialog = () => {
         this.props.closeDialog();
         this.setState({
             currentStep: GETTING_STARTED_STEP
         });
         this.props.resetSteps();
-    };
-
-    setCurrentStep = (dir = 'forward') => {
-        if (dir === 'forward') {
-            switch (this.state.currentStep) {
-                case GETTING_STARTED_STEP:
-                    this.setState({currentStep: ADD_FILE_DETAILS_STEP});
-                    break;
-                default:
-                    this.setState({currentStep: GETTING_STARTED_STEP});
-            }
-        } else {
-            if (this.state.currentStep === ADD_FILE_DETAILS_STEP) {
-                this.setState({currentStep: GETTING_STARTED_STEP});
-            }
-        }
-    };
-
-    uploadFile = () => {
-        this.props.increaseStep();
-        this.props.uploadFile(this.props.acceptedFiles);
-    };
-
-    cancelUpload = () => {
-        this.props.showSnackbar('Cancelled the file uploads.');
-        this.handleClose();
-        this.props.cancelUpload();
-    }
-
-    handleNext = () => {
-        this.setCurrentStep();
-    };
-
-    handlePrevious = () => {
-        this.setCurrentStep('back');
     };
 
     getPreviousButtonLabel = () => {
@@ -114,10 +85,10 @@ export default class FileUploadDialog extends Component {
     getPreviousButtonFunc = () => {
         switch(this.state.currentStep) {
             case GETTING_STARTED_STEP:
-                return this.handleClose();
+                return this.closeDialog();
             case ADD_FILE_DETAILS_STEP:
                 if (this.props.stepperIndex === 0) {
-                    return this.handlePrevious();
+                    return this.setCurrentStep('back');
                 }
 
                 if (IS_UPLOAD_STEP) {
@@ -125,7 +96,7 @@ export default class FileUploadDialog extends Component {
                 }
                 return this.props.decreaseStep();
             default:
-                return this.handlePrevious();
+                return this.setCurrentStep('back');
         }
     };
 
@@ -152,28 +123,52 @@ export default class FileUploadDialog extends Component {
         switch(this.state.currentStep) {
             case ADD_FILE_DETAILS_STEP:
                 if (IS_UPLOAD_STEP) {
-                    return this.handleClose();
+                    return this.closeDialog();
                 } else if (IS_CONFIRMATION_STEP) {
                     return this.uploadFile();
                 }
                 return this.props.increaseStep();
             default:
-                return this.handleNext();
+                return this.setCurrentStep();
         }
+    };
+
+    setCurrentStep = (dir = 'forward') => {
+        if (dir === 'forward') {
+            switch (this.state.currentStep) {
+                case GETTING_STARTED_STEP:
+                    this.setState({currentStep: ADD_FILE_DETAILS_STEP});
+                    break;
+                default:
+                    this.setState({currentStep: GETTING_STARTED_STEP});
+            }
+        } else {
+            if (this.state.currentStep === ADD_FILE_DETAILS_STEP) {
+                this.setState({currentStep: GETTING_STARTED_STEP});
+            }
+        }
+    };
+
+    uploadFile = () => {
+        this.props.increaseStep();
+        this.props.uploadFile(this.props.acceptedFiles);
     };
 
     render() {
         const {
             acceptedFiles,
             isDialogOpen,
-            isUploadCompleted
+            isUploadCompleted,
+            form
         } = this.props;
 
         const fileInformation = locale.sharedComponents.files;
+        const backButtonVisibility = (isUploadCompleted && IS_UPLOAD_STEP) ? {display: 'none'} : {};
         const actions = [
             <FlatButton
                 label={this.getPreviousButtonLabel()}
                 onTouchTap={this.getPreviousButtonFunc}
+                style={backButtonVisibility}
             />,
             <RaisedButton
                 label={this.getNextButtonLabel()}
@@ -196,6 +191,7 @@ export default class FileUploadDialog extends Component {
 
                 {this.state.currentStep === ADD_FILE_DETAILS_STEP && (
                     <FileUploadStepper
+                        form={form}
                         acceptedFiles={acceptedFiles}
                     />
                 )}

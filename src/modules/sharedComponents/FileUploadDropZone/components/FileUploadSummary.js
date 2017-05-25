@@ -1,16 +1,18 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
+// custom components
 import {locale} from 'config';
 import './FileUploadSummary.scss';
 import FileUploadInfoRow from './FileUploadInfoRow';
 
 const fileUploadProgress = [];
 
-export default class FileUploadSummary extends Component {
+export default class FileUploadSummary extends PureComponent {
 
     static propTypes = {
         acceptedFiles: PropTypes.array.isRequired,
+        form: PropTypes.string.isRequired,
         showProgress: PropTypes.bool
     };
 
@@ -30,9 +32,8 @@ export default class FileUploadSummary extends Component {
 
         const fileInformation = locale.sharedComponents.files;
         const filesToUpload = acceptedFiles.map(file => {
-            file.progress = fileUploadProgress[file.name];
             return (
-                <FileUploadInfoRow key={file.name} file={file} showProgress={showProgress} />
+                <FileUploadInfoRow key={file.name} file={file} uploadProgress={fileUploadProgress[file.name]} showProgress={showProgress} />
             );
         });
 

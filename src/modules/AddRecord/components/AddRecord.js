@@ -5,21 +5,20 @@ import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 
-import {FileUploadDropZone} from 'modules/sharedComponents/FileUploadDropZone';
-
 // the stepper's step constants
 const STEP_1 = 0;
 const STEP_2 = 1;
 const STEP_3 = 2;
 
 // forms & custom components
-import {PublicationSearchForm} from '../../Forms';
-import {SearchResults} from '../../SearchResults';
-import {NoMatchingRecords} from '../../NoMatchingRecords';
-import {PublicationTypeForm} from '../../Forms/PublicationType';
-import {AddJournalArticleForm} from '../../Forms/JournalArticle';
+import {PublicationSearchForm} from 'modules/Forms';
+import {SearchResults} from 'modules/SearchResults';
+import {NoMatchingRecords} from 'modules/NoMatchingRecords';
+import {PublicationTypeForm} from 'modules/Forms/PublicationType';
+import {AddJournalArticleForm} from 'modules/Forms/JournalArticle';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
-import {locale} from '../../../config';
+import {locale} from 'config';
+import {FileUploadDropZone} from 'modules/sharedComponents/FileUploadDropZone';
 
 import './AddRecord.scss';
 
@@ -33,8 +32,7 @@ class addRecord extends React.Component {
         publicationTypeList: PropTypes.object,
         cancelAddRecord: PropTypes.func,
         saveForLater: PropTypes.func,
-        submitRecord: PropTypes.func,
-        uploadFile: PropTypes.func
+        submitRecord: PropTypes.func
     };
 
     static defaultProps = {
@@ -138,7 +136,7 @@ class addRecord extends React.Component {
                            defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
                            help={searchForPublicationInformation.help}
                            />
-                        <FileUploadDropZone />
+                        <FileUploadDropZone form="AddRecordForm" />
                     </div>
                 );
             case STEP_2:

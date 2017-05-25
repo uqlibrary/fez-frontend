@@ -1,20 +1,23 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import Immutable from 'immutable';
 
-
+// custom components
 import FileUploadSummary from '../containers/FileUploadSummary';
-import FileUploadMetadata from './FileUploadMetadata';
+import FileUploadMetadata from '../containers/FileUploadMetadata';
 
 let CONFIRMATION_STEP = 0;
 let UPLOAD_STEP = 0;
 
-export default class FileUploadStepper extends Component {
+export default class FileUploadStepper extends PureComponent {
 
     static propTypes = {
         acceptedFiles: PropTypes.array.isRequired,
-        stepperIndex: PropTypes.number.isRequired
+        form: PropTypes.string.isRequired,
+        stepperIndex: PropTypes.number.isRequired,
+        documentAccessTypes: PropTypes.array,
+        loadDocumentAccessTypes: PropTypes.func
     };
 
     static defaultProps = {
@@ -28,8 +31,16 @@ export default class FileUploadStepper extends Component {
         UPLOAD_STEP = this.props.acceptedFiles.length + 1;
     }
 
+    componentDidMount() {
+        this.props.loadDocumentAccessTypes();
+    }
+
     render() {
-        const {stepperIndex, acceptedFiles} = this.props;
+        const {
+            stepperIndex,
+            acceptedFiles,
+            form
+        } = this.props;
 
         const steps = acceptedFiles.map(file => {
             return (<Step key={file.name} disabled={stepperIndex === UPLOAD_STEP}>
@@ -45,17 +56,24 @@ export default class FileUploadStepper extends Component {
                         <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>Confirm and upload</StepLabel>
                     </Step>
                 </Stepper>
+
                 {stepperIndex < CONFIRMATION_STEP && (
-                    <FileUploadMetadata stepperIndex={stepperIndex} file={acceptedFiles[stepperIndex]} />
+                    <FileUploadMetadata
+                        stepperIndex={stepperIndex}
+                        form={form}
+                        file={acceptedFiles[stepperIndex]}
+                        dataSource={this.props.documentAccessTypes} />
                 )}
 
                 {stepperIndex === CONFIRMATION_STEP && (
                     <FileUploadSummary
+                        form={form}
                         acceptedFiles={acceptedFiles} />
                 )}
 
                 {stepperIndex === UPLOAD_STEP && (
                     <FileUploadSummary
+                        form={form}
                         acceptedFiles={acceptedFiles} showProgress/>
                 )}
             </div>

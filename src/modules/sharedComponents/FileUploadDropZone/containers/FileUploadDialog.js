@@ -6,7 +6,7 @@ import {uploadFile, openDialog, closeDialog, decreaseStep, increaseStep, resetSt
 import {showSnackbar} from '../../../App/actions';
 
 let FileUploadDialogContainer = reduxForm({
-    form: 'AddRecordForm'
+    destroyOnUnmount: false
 })(FileUploadDialog);
 
 FileUploadDialogContainer = connect((state) => {

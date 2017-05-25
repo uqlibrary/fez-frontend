@@ -10,6 +10,7 @@ import {authorsList} from './data/authors';
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
+import {documentAccessTypes} from './data/documentAccessTypes';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api);
@@ -63,3 +64,6 @@ mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYears
 // Allow the file upload calls to pass through to the S3 bucket directly
 mock.onGet(/file\/upload\/presigned/).passThrough();
 mock.onPut(/https:\/\/s3-ap-southeast-2\.amazonaws\.com\/uqlapp-file-upload/).passThrough();
+
+// Mock the document access types
+mock.onGet('records/access-types').reply(200, documentAccessTypes);

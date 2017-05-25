@@ -1,20 +1,21 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
-import Toggle from 'material-ui/Toggle';
-
-import {TextField} from 'uqlibrary-react-toolbox';
+import {TextField, AutoCompleteSelect} from 'uqlibrary-react-toolbox';
 import DatePicker from 'material-ui/DatePicker';
-import FileUploadInfoRow from './FileUploadInfoRow';
 
+// custom components
+import FileUploadInfoRow from './FileUploadInfoRow';
 import {locale} from 'config';
 
-
-export default class FileUploadMetadata extends Component {
+export default class FileUploadMetadata extends PureComponent {
 
     static propTypes = {
+        dataSource: PropTypes.array.isRequired,
         stepperIndex: PropTypes.number.isRequired,
-        file: PropTypes.object.isRequired
+        file: PropTypes.object.isRequired,
+        form: PropTypes.string.isRequired,
+        formValues: PropTypes.object
     };
 
     constructor(props) {
@@ -22,7 +23,7 @@ export default class FileUploadMetadata extends Component {
     }
 
     render() {
-        const {stepperIndex, file} = this.props;
+        const {stepperIndex, file, formValues} = this.props;
         const DateTimeFormat = global.Intl.DateTimeFormat;
         const fileInformation = locale.sharedComponents.files;
 
@@ -35,18 +36,31 @@ export default class FileUploadMetadata extends Component {
                 </div>
                 <div className="columns">
                     <div className="column">
-                        <Field component={TextField} name={`filesDescription-${stepperIndex}`} type="text" fullWidth multiLine
-                               rows={3} floatingLabelText={fileInformation.fields.descriptionLabel} maxLength="255" />
+                        <Field component={TextField}
+                               name={`filesDescription-${stepperIndex}`}
+                               type="text" fullWidth multiLine
+                               rows={3}
+                               floatingLabelText={fileInformation.fields.descriptionLabel}
+                               maxLength="255" />
                     </div>
                 </div>
                 <div className="columns">
                     <div className="column">
-                        <Toggle name={`filesAccessConditions-${stepperIndex}`}
-                                label={fileInformation.fields.accessConditionsLabel}
-                                defaultToggled />
+                        <Field component={AutoCompleteSelect}
+                               label={fileInformation.fields.accessConditionsLabel}
+                               name={`filesAccessConditions-${stepperIndex}`}
+                               dataSource={this.props.dataSource}
+                               dataSourceConfig={{text: 'name', value: 'id'}}
+                               formValue={formValues.get(`filesAccessConditions-${stepperIndex}`)}
+                        />
                     </div>
                     <div className="column">
-                        <Field component={DatePicker} floatingLabelText={fileInformation.fields.embargoDateLabel} fullWidth name={`fileEmbargoDate-${stepperIndex}`} locale="en-AU" DateTimeFormat={DateTimeFormat} />
+                        <Field component={DatePicker}
+                               floatingLabelText={fileInformation.fields.embargoDateLabel}
+                               fullWidth
+                               name={`fileEmbargoDate-${stepperIndex}`}
+                               locale="en-AU"
+                               DateTimeFormat={DateTimeFormat} />
                     </div>
                 </div>
                 <div className="columns">
