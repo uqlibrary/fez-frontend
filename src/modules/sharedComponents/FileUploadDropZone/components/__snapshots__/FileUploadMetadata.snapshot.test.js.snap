@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File upload metadata snapshots tests renders default file upload metadata component 1`] = `
+<div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <FileUploadInfoRow
+        file={
+          Object {
+            "name": "s12345678_test_file_archive.zip",
+            "size": "application/pdf",
+            "type": 5307669356,
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <Field
+        component={[Function]}
+        floatingLabelText="Description"
+        fullWidth={true}
+        maxLength="255"
+        multiLine={true}
+        name="filesDescription-0"
+        rows={3}
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <Field
+        component={[Function]}
+        dataSource={
+          Array [
+            Object {
+              "id": 1,
+              "title": "UQ staff and students view only",
+            },
+            Object {
+              "id": 2,
+              "title": "Fully Embargoed (system admins only)",
+            },
+            Object {
+              "id": 3,
+              "title": "Only Thesis Office Approve, View, List. Printery View.",
+            },
+            Object {
+              "id": 4,
+              "title": "Only SBS Theses Approve, View, List.",
+            },
+            Object {
+              "id": 5,
+              "title": "ERA Assessors only",
+            },
+            Object {
+              "id": 6,
+              "title": "UQ staff and students and printery view only",
+            },
+            Object {
+              "id": 7,
+              "title": "Inherit from above",
+            },
+            Object {
+              "id": 8,
+              "title": "Admin and UPO access only",
+            },
+            Object {
+              "id": 9,
+              "title": "Open Access",
+            },
+            Object {
+              "id": 10,
+              "title": "HERDC evidence Admin and UPO List, View only",
+            },
+            Object {
+              "id": 11,
+              "title": "NTRO auditors",
+            },
+            Object {
+              "id": 12,
+              "title": "Admin List and View only",
+            },
+          ]
+        }
+        dataSourceConfig={
+          Object {
+            "text": "title",
+            "value": "id",
+          }
+        }
+        formValue={3}
+        label="File is public (open access)"
+        name="filesAccessConditions-0"
+      />
+    </div>
+    <div
+      className="column"
+    >
+      <Field
+        DateTimeFormat={[Function]}
+        component={[Function]}
+        floatingLabelText="Embargo date"
+        fullWidth={true}
+        locale="en-AU"
+        name="fileEmbargoDate-0"
+      />
+    </div>
+  </div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <div
+        className="disclaimer"
+      >
+        <span>
+          DISCLAIMER
+        </span>
+        : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus, mauris vitae euismod iaculis, orci nulla tristique neque, eu mattis justo lorem in tellus. Pellentesque ultrices tempor felis, vitae sodales risus hendrerit vel. Cras vitae rutrum mauris. Suspendisse vitae est eleifend, imperdiet est sit amet, sagittis odio. Vivamus quis velit nibh. Fusce ullamcorper pulvinar viverra. Quisque mi nisl, pharetra id massa eget, euismod ullamcorper lectus. Quisque id ligula ullamcorper, efficitur lectus sed, tristique ipsum. Pellentesque quis ipsum ut turpis mattis sodales id ac metus.
+      </div>
+    </div>
+  </div>
+</div>
+`;

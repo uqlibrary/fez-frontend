@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File upload dropzone snapshots tests renders default file upload dropzone component 1`] = `
+<div
+  style={
+    Object {
+      "marginBottom": "-60px",
+    }
+  }
+>
+  <Card
+    className="layout-card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+  >
+    <CardHeader
+      avatar={null}
+      className="card-header"
+    >
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        >
+          <h2
+            className="headline"
+          >
+            Files
+          </h2>
+        </div>
+        <div
+          className="column"
+        >
+          <Connect(HelpIcon)
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+            title="Files"
+          />
+        </div>
+      </div>
+    </CardHeader>
+    <CardText
+      className="body-1"
+    >
+      <p
+        className="sub-title"
+      >
+        Upload a new file
+      </p>
+      <div
+        className="columns"
+      >
+        <div
+          className="column"
+        >
+          <Dropzone
+            disableClick={false}
+            disablePreview={false}
+            maxSize={Infinity}
+            minSize={0}
+            multiple={true}
+            onDrop={[Function]}
+            preventDropOnDocument={true}
+            style={
+              Object {
+                "padding": "10px",
+              }
+            }
+          >
+            <div
+              className="columns fileInstructions"
+            >
+              <div
+                className="column"
+              >
+                <h3>
+                  File name restrictions
+                </h3>
+                <div>
+                  <ul>
+                    <li>
+                      Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)
+                    </li>
+                    <li>
+                      Only numbers and lowercase characters in the file extension
+                    </li>
+                    <li>
+                      Under 45 characters
+                    </li>
+                    <li>
+                      Only one file extension (on period (.) character) and
+                    </li>
+                    <li>
+                      Starting with a letter. Eg "s12345678_phd_thesis.pdf"
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                className="column "
+              >
+                <FontIcon
+                  className="material-icons"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  cloud_upload
+                </FontIcon>
+                <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>
+              </div>
+            </div>
+          </Dropzone>
+        </div>
+      </div>
+    </CardText>
+  </Card>
+  <Connect(ReduxForm)
+    acceptedFiles={Array []}
+    form="testForm"
+  />
+</div>
+`;
