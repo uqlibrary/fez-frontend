@@ -6,7 +6,7 @@ import {api} from 'config';
  */
 export function loadDocumentAccessData() {
     return new Promise((resolve, reject) => {
-        api.get('records/access-types').then(response => {
+        api.get('acml/quick-templates').then(response => {
             resolve(response.data);
         }).catch(err => {
             reject(err);

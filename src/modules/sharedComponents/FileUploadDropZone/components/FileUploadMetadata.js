@@ -50,7 +50,7 @@ export default class FileUploadMetadata extends PureComponent {
                                label={fileInformation.fields.accessConditionsLabel}
                                name={`filesAccessConditions-${stepperIndex}`}
                                dataSource={this.props.dataSource}
-                               dataSourceConfig={{text: 'name', value: 'id'}}
+                               dataSourceConfig={{text: 'title', value: 'id'}}
                                formValue={formValues.get(`filesAccessConditions-${stepperIndex}`)}
                         />
                     </div>

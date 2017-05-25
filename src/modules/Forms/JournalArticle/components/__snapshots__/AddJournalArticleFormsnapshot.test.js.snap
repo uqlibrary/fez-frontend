@@ -360,7 +360,7 @@ exports[`Document type form integration tests renders default document type comp
           <RaisedButton
             disabled={false}
             fullWidth={false}
-            label="Browse files"
+            label="Delete this and replace with component"
             labelPosition="after"
             primary={false}
             secondary={true}
@@ -368,35 +368,47 @@ exports[`Document type form integration tests renders default document type comp
         </div>
       </div>
       <div
-        className="fileInstructions"
+        className="columns fileInstructions"
       >
-        <h3>
-          File name restrictions
-        </h3>
         <div
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
+          className="column"
         >
-          <ul>
-            <li>
-              Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)
-            </li>
-            <li>
-              Only numbers and lowercase characters in the file extension
-            </li>
-            <li>
-              Under 45 characters
-            </li>
-            <li>
-              Only one file extension (on period (.) character) and
-            </li>
-            <li>
-              Starting with a letter. Eg "s12345678_phd_thesis.pdf"
-            </li>
-          </ul>
+          <h3>
+            File name restrictions
+          </h3>
+          <div>
+            <ul>
+              <li>
+                Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)
+              </li>
+              <li>
+                Only numbers and lowercase characters in the file extension
+              </li>
+              <li>
+                Under 45 characters
+              </li>
+              <li>
+                Only one file extension (on period (.) character) and
+              </li>
+              <li>
+                Starting with a letter. Eg "s12345678_phd_thesis.pdf"
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          className="column "
+        >
+          <FontIcon
+            className="material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            cloud_upload
+          </FontIcon>
+          <p>
+            Click here to select files, or drag files into this area to upload
+          </p>
         </div>
       </div>
       <div
@@ -407,7 +419,7 @@ exports[`Document type form integration tests renders default document type comp
         >
           <Field
             component={[Function]}
-            floatingLabelText="Access conditions"
+            floatingLabelText="File is public (open access)"
             fullWidth={true}
             name="filesAccessConditions"
             type="text"

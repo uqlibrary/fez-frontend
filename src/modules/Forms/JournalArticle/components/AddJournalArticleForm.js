@@ -38,7 +38,7 @@ export default class AddJournalArticleForm extends Component {
         const journalArticleInformation = locale.pages.addRecord.addJournalArticle.journalArticleInformation;
         const authorsInformation = locale.pages.addRecord.addJournalArticle.authors;
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
-        const fileInformation = locale.pages.addRecord.addJournalArticle.files;
+        const fileInformation = locale.sharedComponents.files;
 
         const {formValues} = this.props;
 
@@ -194,7 +194,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                         <div className="columns">
                             <div className="column">
-                                <RaisedButton label={fileInformation.buttons.browseLabel} secondary/>
+                                <RaisedButton label="Delete this and replace with component" secondary/>
                             </div>
                         </div>
 

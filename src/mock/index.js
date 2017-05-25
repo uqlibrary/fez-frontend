@@ -66,4 +66,4 @@ mock.onGet(/file\/upload\/presigned/).passThrough();
 mock.onPut(/https:\/\/s3-ap-southeast-2\.amazonaws\.com\/uqlapp-file-upload/).passThrough();
 
 // Mock the document access types
-mock.onGet('records/access-types').reply(200, documentAccessTypes);
+mock.onGet('acml/quick-templates').reply(200, documentAccessTypes);
