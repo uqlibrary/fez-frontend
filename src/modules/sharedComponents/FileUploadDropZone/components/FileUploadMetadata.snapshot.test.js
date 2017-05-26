@@ -8,6 +8,8 @@ import Immutable from 'immutable';
 import {documentAccessTypes} from 'mock/data/documentAccessTypes';
 import FileUploadMetadata from './FileUploadMetadata';
 
+const accessConditionId = 3;
+
 function setup(ds) {
     const file = {
         name: 's12345678_test_file_archive.zip',
@@ -20,7 +22,7 @@ function setup(ds) {
         stepperIndex: 0,
         file,
         form: 'testForm',
-        formValues: Immutable.fromJS({'filesAccessConditions-0': 3})
+        formValues: Immutable.fromJS({'filesAccessConditions-0': accessConditionId})
     };
     return shallow(<FileUploadMetadata {...props} />);
 }

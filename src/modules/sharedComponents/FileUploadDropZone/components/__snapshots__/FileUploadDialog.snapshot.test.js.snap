@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File upload dialog snapshots tests renders default file upload dialog component 1`] = `
+<Dialog
+  actions={
+    Array [
+      <FlatButton
+        disabled={false}
+        fullWidth={false}
+        label="Cancel"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={false}
+        style={Object {}}
+    />,
+      <RaisedButton
+        disabled={false}
+        fullWidth={false}
+        label="Get Started"
+        labelPosition="after"
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={true}
+    />,
+    ]
+  }
+  autoDetectWindowHeight={true}
+  autoScrollBodyContent={false}
+  modal={false}
+  open={true}
+  repositionOnUpdate={true}
+  title="Upload Files"
+>
+  The following steps will allow you to identify, describe and assign a date which will allow/restrict open access to each file you upload. At the end of this process, the files themselves will be uploaded to the server for review.
+</Dialog>
+`;

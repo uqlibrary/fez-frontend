@@ -56,7 +56,7 @@ export default class FileUploadDialog extends PureComponent {
     }
 
     cancelUpload = () => {
-        this.props.showSnackbar('Cancelled the file uploads.');
+        this.props.showSnackbar(locale.sharedComponents.files.messages.cancelledUpload);
         this.closeDialog();
         this.props.cancelUpload();
     };
@@ -102,7 +102,7 @@ export default class FileUploadDialog extends PureComponent {
 
     getNextButtonLabel = () => {
         const fileInformation = locale.sharedComponents.files;
-        let label = '';
+        let label = fileInformation.buttons.getStartedLabel;
 
         if (this.state.currentStep === GETTING_STARTED_STEP) {
             label = fileInformation.buttons.getStartedLabel;
@@ -124,10 +124,9 @@ export default class FileUploadDialog extends PureComponent {
             case ADD_FILE_DETAILS_STEP:
                 if (IS_UPLOAD_STEP) {
                     return this.closeDialog();
-                } else if (IS_CONFIRMATION_STEP) {
+                } else {
                     return this.uploadFile();
                 }
-                return this.props.increaseStep();
             default:
                 return this.setCurrentStep();
         }

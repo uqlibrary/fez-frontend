@@ -280,7 +280,8 @@ export default {
             messages: {
                 maxFiles: 'Only [maxNumberOfFiles] are allowed to be selected per upload.',
                 rejectedFiles: '[numberOfRejectedFiles] file was not included in this upload.',
-                acceptedFiles: 'There are no valid files to upload.'
+                acceptedFiles: 'There are no valid files to upload.',
+                cancelledUpload: 'Cancelled the file uploads.'
             },
             fields: {
                 filenameLabel: 'Filename selected',
