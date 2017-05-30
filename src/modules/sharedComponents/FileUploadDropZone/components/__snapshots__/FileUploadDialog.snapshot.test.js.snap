@@ -5,6 +5,7 @@ exports[`File upload dialog snapshots tests renders default file upload dialog c
   actions={
     Array [
       <FlatButton
+        className="prevBtn"
         disabled={false}
         fullWidth={false}
         label="Cancel"
@@ -30,12 +31,15 @@ exports[`File upload dialog snapshots tests renders default file upload dialog c
     />,
     ]
   }
+  actionsContainerClassName="actionsPanel"
   autoDetectWindowHeight={true}
   autoScrollBodyContent={false}
+  bodyClassName="stepperContentPanel"
+  className="uploadFileDialog"
   modal={false}
   open={true}
   repositionOnUpdate={true}
-  title="Upload Files"
+  title="Getting started"
 >
   The following steps will allow you to identify, describe and assign a date which will allow/restrict open access to each file you upload. At the end of this process, the files themselves will be uploaded to the server for review.
 </Dialog>

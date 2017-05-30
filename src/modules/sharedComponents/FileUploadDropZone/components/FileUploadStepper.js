@@ -6,6 +6,7 @@ import Immutable from 'immutable';
 // custom components
 import FileUploadSummary from '../containers/FileUploadSummary';
 import FileUploadMetadata from '../containers/FileUploadMetadata';
+import './FileUploadStepper.scss';
 
 let CONFIRMATION_STEP = 0;
 let UPLOAD_STEP = 0;
@@ -43,8 +44,8 @@ export default class FileUploadStepper extends PureComponent {
         } = this.props;
 
         const steps = acceptedFiles.map(file => {
-            return (<Step key={file.name} disabled={stepperIndex === UPLOAD_STEP}>
-                <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{file.name}</StepLabel>
+            return (<Step key={file.name} disabled={stepperIndex === UPLOAD_STEP} className="step">
+                <StepLabel className="stepLabel">{file.name}</StepLabel>
             </Step>);
         });
 
@@ -53,7 +54,7 @@ export default class FileUploadStepper extends PureComponent {
                 <Stepper activeStep={stepperIndex} style={{padding: '0 25px', margin: '-10px auto' }} onChange={this.handleNext}>
                     {steps}
                     <Step disabled={stepperIndex === UPLOAD_STEP}>
-                        <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>Confirm and upload</StepLabel>
+                        <StepLabel className="stepLabel">Confirm and upload</StepLabel>
                     </Step>
                 </Stepper>
 

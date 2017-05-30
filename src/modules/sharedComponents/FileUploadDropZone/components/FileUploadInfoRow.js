@@ -2,6 +2,8 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 
+import './FileUploadInfoRow.scss';
+
 export default class FileUploadInfoRow extends PureComponent {
 
     static propTypes = {
@@ -43,7 +45,7 @@ export default class FileUploadInfoRow extends PureComponent {
     render() {
         const {file, showProgress, uploadProgress} = this.props;
         return (
-            <div>
+            <div className="fileSummary">
                 <FontIcon
                     className="material-icons">{this.getIcon(file.type)}</FontIcon> {file.name} <span>({this.getByteConversion(file.size)})</span>
                 {showProgress && (

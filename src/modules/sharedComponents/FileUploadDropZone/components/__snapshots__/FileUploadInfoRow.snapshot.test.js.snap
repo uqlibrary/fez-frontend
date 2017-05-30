@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`File upload info row snapshots tests renders default file upload info row component 1`] = `
-<div>
+<div
+  className="fileSummary"
+>
   <FontIcon
     className="material-icons"
     onMouseEnter={[Function]}
@@ -21,7 +23,9 @@ exports[`File upload info row snapshots tests renders default file upload info r
 `;
 
 exports[`File upload info row snapshots tests renders default file upload info row component 2`] = `
-<div>
+<div
+  className="fileSummary"
+>
   <FontIcon
     className="material-icons"
     onMouseEnter={[Function]}
@@ -41,7 +45,9 @@ exports[`File upload info row snapshots tests renders default file upload info r
 `;
 
 exports[`File upload info row snapshots tests renders default file upload info row component 3`] = `
-<div>
+<div
+  className="fileSummary"
+>
   <FontIcon
     className="material-icons"
     onMouseEnter={[Function]}

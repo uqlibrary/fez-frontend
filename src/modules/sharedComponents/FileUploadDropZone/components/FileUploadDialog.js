@@ -69,6 +69,25 @@ export default class FileUploadDialog extends PureComponent {
         this.props.resetSteps();
     };
 
+    getDialogTitle = () => {
+        const dialogTitles = locale.sharedComponents.files.dialog.titles;
+        let title = '';
+
+        if (this.state.currentStep === 'GETTING_STARTED_STEP') {
+            title = dialogTitles.gettingStarted;
+        } else {
+            if (IS_UPLOAD_STEP) {
+                title = dialogTitles.uploadingFiles;
+            } else if (IS_CONFIRMATION_STEP) {
+                title = dialogTitles.confirmation;
+            } else {
+                title = dialogTitles.fileMetadata;
+            }
+        }
+
+        return title;
+    };
+
     getPreviousButtonLabel = () => {
         const fileInformation = locale.sharedComponents.files;
         switch(this.state.currentStep) {
@@ -165,6 +184,7 @@ export default class FileUploadDialog extends PureComponent {
         const backButtonVisibility = (isUploadCompleted && IS_UPLOAD_STEP) ? {display: 'none'} : {};
         const actions = [
             <FlatButton
+                className="prevBtn"
                 label={this.getPreviousButtonLabel()}
                 onTouchTap={this.getPreviousButtonFunc}
                 style={backButtonVisibility}
@@ -179,10 +199,13 @@ export default class FileUploadDialog extends PureComponent {
 
         return (
             <Dialog
-                title={fileInformation.dialog.title}
+                title={this.getDialogTitle()}
                 actions={actions}
                 modal={false}
                 open={isDialogOpen}
+                className="uploadFileDialog"
+                actionsContainerClassName="actionsPanel"
+                bodyClassName="stepperContentPanel"
             >
                 {this.state.currentStep === GETTING_STARTED_STEP && (
                     fileInformation.dialog.explanationText

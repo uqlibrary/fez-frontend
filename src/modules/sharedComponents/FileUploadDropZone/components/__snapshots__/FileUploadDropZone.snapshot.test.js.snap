@@ -98,7 +98,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
                 </div>
               </div>
               <div
-                className="column "
+                className="column uploadInstructions"
               >
                 <FontIcon
                   className="material-icons"

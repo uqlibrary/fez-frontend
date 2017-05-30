@@ -41,7 +41,7 @@ exports[`File upload metadata snapshots tests renders default file upload metada
     className="columns"
   >
     <div
-      className="column"
+      className="column access"
     >
       <Field
         component={[Function]}

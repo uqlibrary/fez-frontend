@@ -1,8 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
-import {TextField, AutoCompleteSelect} from 'uqlibrary-react-toolbox';
-import DatePicker from 'material-ui/DatePicker';
+import {TextField, AutoCompleteSelect, DatePicker} from 'uqlibrary-react-toolbox';
 
 // custom components
 import FileUploadInfoRow from './FileUploadInfoRow';
@@ -45,7 +44,7 @@ export default class FileUploadMetadata extends PureComponent {
                     </div>
                 </div>
                 <div className="columns">
-                    <div className="column">
+                    <div className="column access">
                         <Field component={AutoCompleteSelect}
                                label={fileInformation.fields.accessConditionsLabel}
                                name={`filesAccessConditions-${stepperIndex}`}

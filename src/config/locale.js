@@ -299,7 +299,7 @@ export default {
                                 </ul>
                             </div>
                         </div>
-                        <div className="column ">
+                        <div className="column uploadInstructions">
                             <FontIcon
                                 className="material-icons">cloud_upload</FontIcon>
                             <p>Click here to select files, or drag files into this area to upload</p>
@@ -311,7 +311,12 @@ export default {
                 descriptionLabel: 'Description'
             },
             dialog: {
-                title: 'Upload Files',
+                titles: {
+                    gettingStarted: 'Getting started',
+                    fileMetadata: 'Add file metadata',
+                    confirmation: 'Confirm list of files to upload',
+                    uploadingFiles: 'Uploading files ...'
+                },
                 lastStepTitle: 'The following files are ready to upload',
                 explanationText: 'The following steps will allow you to identify, describe and assign a date which will allow/restrict open access to each file you upload. At the end of this process, the files themselves will be uploaded to the server for review.',
                 disclaimer: (

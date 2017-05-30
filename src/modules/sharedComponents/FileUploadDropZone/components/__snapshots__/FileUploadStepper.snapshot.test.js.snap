@@ -17,29 +17,21 @@ exports[`File upload stepper unit tests renders default file upload stepper comp
     }
   >
     <Step
+      className="step"
       disabled={false}
     >
       <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
-        }
+        className="stepLabel"
       >
         s12345678_test_file_archive.zip
       </StepLabel>
     </Step>
     <Step
+      className="step"
       disabled={false}
     >
       <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
-        }
+        className="stepLabel"
       >
         s12345678_test_file_boot.iso
       </StepLabel>
@@ -48,12 +40,7 @@ exports[`File upload stepper unit tests renders default file upload stepper comp
       disabled={false}
     >
       <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
-        }
+        className="stepLabel"
       >
         Confirm and upload
       </StepLabel>
@@ -142,29 +129,21 @@ exports[`File upload stepper unit tests renders the confirmation components 1`] 
     }
   >
     <Step
+      className="step"
       disabled={false}
     >
       <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
-        }
+        className="stepLabel"
       >
         s12345678_test_file_archive.zip
       </StepLabel>
     </Step>
     <Step
+      className="step"
       disabled={false}
     >
       <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
-        }
+        className="stepLabel"
       >
         s12345678_test_file_boot.iso
       </StepLabel>
@@ -173,12 +152,7 @@ exports[`File upload stepper unit tests renders the confirmation components 1`] 
       disabled={false}
     >
       <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
-        }
+        className="stepLabel"
       >
         Confirm and upload
       </StepLabel>
@@ -220,29 +194,21 @@ exports[`File upload stepper unit tests renders the upload components 1`] = `
     }
   >
     <Step
+      className="step"
       disabled={true}
     >
       <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
-        }
+        className="stepLabel"
       >
         s12345678_test_file_archive.zip
       </StepLabel>
     </Step>
     <Step
+      className="step"
       disabled={true}
     >
       <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
-        }
+        className="stepLabel"
       >
         s12345678_test_file_boot.iso
       </StepLabel>
@@ -251,12 +217,7 @@ exports[`File upload stepper unit tests renders the upload components 1`] = `
       disabled={true}
     >
       <StepLabel
-        style={
-          Object {
-            "overflow": "hidden",
-            "textOverflow": "ellipsis",
-          }
-        }
+        className="stepLabel"
       >
         Confirm and upload
       </StepLabel>
