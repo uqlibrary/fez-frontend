@@ -280,7 +280,8 @@ export default {
             messages: {
                 maxFiles: 'Only [maxNumberOfFiles] are allowed to be selected per upload.',
                 rejectedFiles: '[numberOfRejectedFiles] file was not included in this upload.',
-                acceptedFiles: 'There are no valid files to upload.',
+                acceptedFiles: 'There are no valid files to upload or these files have already been uploaded.',
+                alreadyUploaded: '[numberOfUploadedFiles] files have already been uploaded.',
                 cancelledUpload: 'Cancelled the file uploads.'
             },
             fields: {
@@ -308,7 +309,12 @@ export default {
                 ),
                 accessConditionsLabel: 'File is public (open access)',
                 embargoDateLabel: 'Embargo date',
-                descriptionLabel: 'Description'
+                descriptionLabel: 'Description',
+                metadata: {
+                    description: 'fileDescription',
+                    accessCondition: 'accessCondition',
+                    embargoDate: 'embargoDate'
+                }
             },
             dialog: {
                 titles: {

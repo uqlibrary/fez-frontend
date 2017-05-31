@@ -24,12 +24,14 @@ export default class FileUploadDialog extends PureComponent {
         form: PropTypes.string.isRequired,
         isDialogOpen: PropTypes.bool,
         isUploadCompleted: PropTypes.bool,
+        formValues: PropTypes.object,
         cancelUpload: PropTypes.func,
         closeDialog: PropTypes.func,
         decreaseStep: PropTypes.func,
         increaseStep: PropTypes.func,
+        loadFileMetaData: PropTypes.func,
         openDialog: PropTypes.func,
-        resetSteps: PropTypes.func,
+        resetState: PropTypes.func,
         showSnackbar: PropTypes.func,
         uploadFile: PropTypes.func,
         stepperIndex: PropTypes.number,
@@ -66,7 +68,7 @@ export default class FileUploadDialog extends PureComponent {
         this.setState({
             currentStep: GETTING_STARTED_STEP
         });
-        this.props.resetSteps();
+        this.props.resetState();
     };
 
     getDialogTitle = () => {
@@ -143,8 +145,10 @@ export default class FileUploadDialog extends PureComponent {
             case ADD_FILE_DETAILS_STEP:
                 if (IS_UPLOAD_STEP) {
                     return this.closeDialog();
-                } else {
+                } else if (IS_CONFIRMATION_STEP) {
                     return this.uploadFile();
+                } else {
+                    return this.props.increaseStep();
                 }
             default:
                 return this.setCurrentStep();
@@ -167,7 +171,29 @@ export default class FileUploadDialog extends PureComponent {
         }
     };
 
+    setUploadedDataState = () => {
+        const fields = locale.sharedComponents.files.fields.metadata;
+        const formValues = this.props.formValues;
+        const fileMetaData = {};
+
+        this.props.acceptedFiles.map((file, index) => {
+            const data = {};
+            data.file = file;
+
+            Object.keys(fields).map(id => {
+                data[fields[id]] = formValues.get(`${fields[id]}-${index}`);
+            });
+
+            fileMetaData[file.name] = data;
+        });
+
+        this.props.loadFileMetaData(fileMetaData);
+    }
+
     uploadFile = () => {
+        // save the form data into the state so that we can generate the list of files that were uploaded
+        this.setUploadedDataState();
+
         this.props.increaseStep();
         this.props.uploadFile(this.props.acceptedFiles);
     };

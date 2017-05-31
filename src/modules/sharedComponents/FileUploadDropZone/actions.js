@@ -10,10 +10,12 @@ export const FILE_DIALOG_OPENED = 'FILE_DIALOG_OPENED';
 export const FILE_DIALOG_CLOSED = 'FILE_DIALOG_CLOSED';
 export const FILE_STEPPER_INDEX_INCREASED = 'FILE_STEPPER_INDEX_INCREASED';
 export const FILE_STEPPER_INDEX_DECREASED = 'FILE_STEPPER_INDEX_DECREASED';
-export const FILE_STEPPER_INDEX_ZEROED = 'FILE_STEPPER_INDEX_ZEROED';
+export const FILE_STEPPER_RESET_STATE = 'FILE_STEPPER_RESET_STATE';
 export const FILE_UPLOAD_CANCELLED = 'FILE_UPLOAD_CANCELLED';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADING = 'FILE_DOCUMENT_ACCESS_TYPES_LOADING';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADED = 'FILE_DOCUMENT_ACCESS_TYPES_LOADED';
+export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
+export const FILE_METADATA_CREATED = 'FILE_METADATA_CREATED';
 
 let cancelToken;
 
@@ -116,12 +118,16 @@ export function decreaseStep() {
  * Resets the stepper index to zero
  * @returns {{type: string}}
  */
-export function resetSteps() {
+export function resetState() {
     return {
-        type: FILE_STEPPER_INDEX_ZEROED
+        type: FILE_STEPPER_RESET_STATE
     };
 }
 
+/**
+ * Loads the document access types from the endpoint
+ * @returns {function(*)}
+ */
 export function loadDocumentAccessTypes() {
     return dispatch => {
         dispatch({type: FILE_DOCUMENT_ACCESS_TYPES_LOADING});
@@ -133,5 +139,24 @@ export function loadDocumentAccessTypes() {
         }).catch((error) => {
             throw(error);
         });
+    };
+}
+
+/**
+ * Sets the list of files that have been uploaded
+ * @param files
+ * @returns {{type: string, payload: object}}
+ */
+export function setAcceptedFileList(files) {
+    return {
+        type: FILE_LIST_CREATED,
+        payload: files
+    };
+}
+
+export function loadFileMetaData(data) {
+    return {
+        type: FILE_METADATA_CREATED,
+        payload: data
     };
 }

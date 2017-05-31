@@ -7,13 +7,17 @@ import Dropzone from 'react-dropzone';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import FileUploadDialog from '../containers/FileUploadDialog';
+import UploadedFileMetadata from '../containers/UploadedFileMetadata';
 import './FileUpload.scss';
 
 export default class FileUploadDropZone extends PureComponent {
 
     static propTypes = {
         form: PropTypes.string.isRequired,
+        fileMetaData: PropTypes.object,
+        isUploadCompleted: PropTypes.bool,
         openDialog: PropTypes.func,
+        setAcceptedFileList: PropTypes.func,
         showSnackbar: PropTypes.func
     };
 
@@ -28,38 +32,79 @@ export default class FileUploadDropZone extends PureComponent {
 
     openDialog = (acceptedFiles, rejectedFiles) => {
         const fileInformation = locale.sharedComponents.files;
-        const {validFiles, invalidFiles} = this.validateNumberOfFiles(acceptedFiles, rejectedFiles);
-        const {filesToUpload, filesToReject} = this.validateFilenameFormat(validFiles, invalidFiles);
+        let [validFiles, invalidFiles] = this.validateNumberOfFiles(acceptedFiles, rejectedFiles);
+        [validFiles, invalidFiles] = this.validateFilenameFormat(validFiles, invalidFiles);
+        const filesToUpload = this.validateFileMetaIsNull(validFiles);
 
         this.setState({
             filesToUpload
         });
 
-        if (filesToReject.length > 0) {
-            const msg = fileInformation.messages.rejectedFiles.replace('[numberOfRejectedFiles]', filesToReject.length);
+        if (invalidFiles.length > 0) {
+            const msg = fileInformation.messages.rejectedFiles.replace('[numberOfRejectedFiles]', invalidFiles.length);
             this.props.showSnackbar(msg);
         }
 
         if (filesToUpload.length > 0) {
+            this.props.setAcceptedFileList(filesToUpload);
             this.props.openDialog();
         } else {
             this.props.showSnackbar(fileInformation.messages.acceptedFiles);
         }
     };
 
-    validateFilenameFormat = (acceptedFiles, rejectedFiles) => {
-        const filesToUpload = [];
-        const filesToReject = rejectedFiles;
+    getListOfUploadedFiles = () => {
+        const {
+            fileMetaData
+        } = this.props;
 
+        if (fileMetaData) {
+            const data = fileMetaData.toJS();
+            return Object.keys(fileMetaData.toJS()).map(id => {
+                return <UploadedFileMetadata key={id} dataSource={data[id]} form={this.props.form} />;
+            });
+        }
+
+        return '';
+    };
+
+    // checks if we're uploading the same file again
+    validateFileMetaIsNull = (acceptedFiles) => {
+        const {fileMetaData} = this.props;
+        if (fileMetaData.size === 0) return acceptedFiles;
+
+        const filesToUpload = [];
         acceptedFiles.map(file => {
-            if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[.][a-z0-9]+$/)) {
+            const found = fileMetaData.find(metadata => {
+                return metadata.get('file').name === file.name;
+            });
+
+            if (!found) {
                 filesToUpload.push(file);
-            } else {
-                filesToReject.push(file);
             }
         });
 
-        return {filesToUpload, filesToReject};
+        if (acceptedFiles.length !== filesToUpload.length) {
+            const msg = locale.sharedComponents.files.messages.alreadyUploaded.replace('[numberOfUploadedFiles]', acceptedFiles.length - filesToUpload.length);
+            this.props.showSnackbar(msg);
+        }
+
+        return filesToUpload;
+    };
+
+    validateFilenameFormat = (acceptedFiles, rejectedFiles) => {
+        const validFiles = [];
+        const invalidFiles = rejectedFiles;
+
+        acceptedFiles.map(file => {
+            if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[.][a-z0-9]+$/)) {
+                validFiles.push(file);
+            } else {
+                invalidFiles.push(file);
+            }
+        });
+
+        return [validFiles, invalidFiles];
     };
 
     validateNumberOfFiles = (acceptedFiles, rejectedFiles) => {
@@ -81,11 +126,13 @@ export default class FileUploadDropZone extends PureComponent {
             invalidFiles = acceptedFiles.slice(maxNumberOfFiles);
         }
 
-        return {validFiles, invalidFiles};
+        return [validFiles, invalidFiles];
     };
 
     render() {
         const fileInformation = locale.sharedComponents.files;
+
+        const uploadedFiles = this.getListOfUploadedFiles();
 
         return (
             <div style={{marginBottom: '-60px'}}>
@@ -118,6 +165,13 @@ export default class FileUploadDropZone extends PureComponent {
                     </CardText>
                 </Card>
 
+                {this.props.fileMetaData.size > 0 && (
+                <Card className="layout-card metadataContainer">
+                    <CardText className="body-1">
+                        {uploadedFiles}
+                    </CardText>
+                </Card>
+                )}
                 <FileUploadDialog form={this.props.form} acceptedFiles={this.state.filesToUpload} />
             </div>
         );

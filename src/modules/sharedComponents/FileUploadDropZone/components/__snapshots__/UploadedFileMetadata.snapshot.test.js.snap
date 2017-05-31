@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File upload uploaded file metadata snapshot renders default uploaded file metadata component 1`] = `
+<Toolbar
+  className="metadataRow"
+  noGutter={false}
+>
+  <ToolbarGroup
+    className="iconCell"
+    firstChild={true}
+    lastChild={false}
+  >
+    <FontIcon
+      className="material-icons"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      insert_drive_file
+    </FontIcon>
+  </ToolbarGroup>
+  <ToolbarGroup
+    className="metadataDetails"
+    firstChild={false}
+    lastChild={false}
+  >
+    <div>
+      s12345678_test_file_archive.zip
+    </div>
+    <div
+      className="secondaryDetails"
+    >
+      test file description - embargoed until 25/5/2017
+    </div>
+  </ToolbarGroup>
+  <ToolbarGroup
+    firstChild={false}
+    lastChild={false}
+  >
+    <IconMenu
+      anchorOrigin={
+        Object {
+          "horizontal": "right",
+          "vertical": "top",
+        }
+      }
+      animated={true}
+      iconButtonElement={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          iconStyle={Object {}}
+          tooltipPosition="bottom-center"
+          touch={false}
+        >
+          <NavigationMoreVert />
+        </IconButton>
+      }
+      multiple={false}
+      onItemTouchTap={[Function]}
+      onKeyboardFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onRequestChange={[Function]}
+      onTouchTap={[Function]}
+      open={null}
+      targetOrigin={
+        Object {
+          "horizontal": "right",
+          "vertical": "top",
+        }
+      }
+      touchTapCloseDelay={200}
+      useLayerForClickAway={false}
+    >
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        primaryText="Download"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        primaryText="Re-upload"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        primaryText="Remove"
+      />
+    </IconMenu>
+  </ToolbarGroup>
+</Toolbar>
+`;
+
+exports[`File upload uploaded file metadata snapshot renders default uploaded file metadata component 2`] = `
+<Toolbar
+  className="metadataRow"
+  noGutter={false}
+>
+  <ToolbarGroup
+    className="iconCell"
+    firstChild={true}
+    lastChild={false}
+  >
+    <FontIcon
+      className="material-icons"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      insert_drive_file
+    </FontIcon>
+  </ToolbarGroup>
+  <ToolbarGroup
+    className="metadataDetails"
+    firstChild={false}
+    lastChild={false}
+  >
+    <div>
+      s12345678_test_file_archive.zip
+    </div>
+    <div
+      className="secondaryDetails"
+    >
+      test file description - UQ staff and students view only
+    </div>
+  </ToolbarGroup>
+  <ToolbarGroup
+    firstChild={false}
+    lastChild={false}
+  >
+    <IconMenu
+      anchorOrigin={
+        Object {
+          "horizontal": "right",
+          "vertical": "top",
+        }
+      }
+      animated={true}
+      iconButtonElement={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          iconStyle={Object {}}
+          tooltipPosition="bottom-center"
+          touch={false}
+        >
+          <NavigationMoreVert />
+        </IconButton>
+      }
+      multiple={false}
+      onItemTouchTap={[Function]}
+      onKeyboardFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onRequestChange={[Function]}
+      onTouchTap={[Function]}
+      open={null}
+      targetOrigin={
+        Object {
+          "horizontal": "right",
+          "vertical": "top",
+        }
+      }
+      touchTapCloseDelay={200}
+      useLayerForClickAway={false}
+    >
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        primaryText="Download"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        primaryText="Re-upload"
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        primaryText="Remove"
+      />
+    </IconMenu>
+  </ToolbarGroup>
+</Toolbar>
+`;

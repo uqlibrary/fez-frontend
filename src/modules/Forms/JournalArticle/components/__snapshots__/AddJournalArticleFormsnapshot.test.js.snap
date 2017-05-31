@@ -397,7 +397,7 @@ exports[`Document type form integration tests renders default document type comp
           </div>
         </div>
         <div
-          className="column "
+          className="column uploadInstructions"
         >
           <FontIcon
             className="material-icons"
