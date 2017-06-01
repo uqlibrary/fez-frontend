@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`File upload metadata snapshots tests renders default file upload metadata component 1`] = `
-<div>
+<form>
   <div
     className="columns"
   >
@@ -27,15 +27,18 @@ exports[`File upload metadata snapshots tests renders default file upload metada
     >
       <Field
         component={[Function]}
-        errorText=""
         floatingLabelText="Description"
         fullWidth={true}
         maxLength="255"
         multiLine={true}
-        name="fileDescription-0"
-        onChange={[Function]}
+        name="fileDescription0"
         rows={3}
         type="text"
+        validate={
+          Array [
+            [Function],
+          ]
+        }
       />
     </div>
   </div>
@@ -106,7 +109,7 @@ exports[`File upload metadata snapshots tests renders default file upload metada
           }
         }
         label="File is public (open access)"
-        name="accessCondition-0"
+        name="accessCondition0"
       />
     </div>
     <div
@@ -119,8 +122,8 @@ exports[`File upload metadata snapshots tests renders default file upload metada
         floatingLabelText="Embargo date"
         fullWidth={true}
         locale="en-AU"
-        minDate={2017-05-31T14:00:00.000Z}
-        name="embargoDate-0"
+        minDate={2017-06-01T14:00:00.000Z}
+        name="embargoDate0"
       />
     </div>
   </div>
@@ -140,5 +143,32 @@ exports[`File upload metadata snapshots tests renders default file upload metada
       </div>
     </div>
   </div>
-</div>
+  <div
+    className="buttonsContainer"
+  >
+    <FlatButton
+      className="prevBtn"
+      disabled={false}
+      fullWidth={false}
+      label="Back"
+      labelPosition="after"
+      labelStyle={Object {}}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
+      primary={false}
+      secondary={false}
+    />
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Agree and continue"
+      labelPosition="after"
+      primary={false}
+      secondary={true}
+      type="submit"
+    />
+  </div>
+</form>
 `;

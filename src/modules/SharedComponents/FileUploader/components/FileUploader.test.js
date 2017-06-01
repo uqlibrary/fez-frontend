@@ -36,11 +36,11 @@ describe('File upload dropzone unit tests', () => {
             form: 'testForm',
             openDialog: jest.fn(),
             setAcceptedFileList: jest.fn(),
+            initializeDialog: jest.fn(),
             showSnackbar,
             fileMetadata
         };
 
-        console.log('fileMetadata', fileMetadata.get('file'));
         app = shallow(<FileUploader {...props} />);
     });
 

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File upload dialog snapshots tests renders default file upload dialog component 1`] = `
+<Dialog
+  actionsContainerClassName="actionsPanel"
+  autoDetectWindowHeight={true}
+  autoScrollBodyContent={false}
+  bodyClassName="stepperContentPanel"
+  className="uploadFileDialog"
+  modal={false}
+  open={true}
+  repositionOnUpdate={true}
+  title="File uploader"
+/>
+`;

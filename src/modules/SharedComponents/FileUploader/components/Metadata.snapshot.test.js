@@ -21,6 +21,7 @@ function setup(ds) {
         dataSource: ds,
         stepperIndex: 0,
         file,
+        handleSubmit: jest.fn(),
         form: 'testForm',
         formValues: Immutable.fromJS({'filesAccessConditions-0': accessConditionId})
     };

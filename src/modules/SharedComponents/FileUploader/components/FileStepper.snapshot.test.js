@@ -1,4 +1,4 @@
-jest.dontMock('./FileUploadStepper');
+jest.dontMock('./FileStepper');
 
 import React from 'react';
 import {shallow} from 'enzyme';
