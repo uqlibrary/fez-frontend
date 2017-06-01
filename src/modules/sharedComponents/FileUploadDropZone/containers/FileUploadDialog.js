@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm, getFormValues} from 'redux-form/immutable';
 import FileUploadDialog from '../components/FileUploadDialog';
-import {uploadFile, openDialog, closeDialog, decreaseStep, increaseStep, resetState, cancelUpload, loadFileMetadata} from '../actions';
+import {uploadFile, openDialog, closeDialog, decreaseStep, increaseStep, resetState, cancelUpload, updateFileMetadata} from '../actions';
 import {showSnackbar} from '../../../App/actions';
 import Immutable from 'immutable';
 
@@ -15,6 +15,7 @@ FileUploadDialogContainer = connect((state, initialProps) => {
     return {
         isDialogOpen: fileUploadState.get('isDialogOpen'),
         formValues: getFormValues(initialProps.form)(state) || Immutable.Map({}),
+        fileMetadata: fileUploadState.get('fileMetadata'),
         stepperIndex: fileUploadState.get('stepperIndex'),
         isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         uploadError: fileUploadState.get('uploadError')
@@ -27,7 +28,7 @@ FileUploadDialogContainer = connect((state, initialProps) => {
         closeDialog: () => dispatch(closeDialog()),
         increaseStep: () => dispatch(increaseStep()),
         decreaseStep: () => dispatch(decreaseStep()),
-        loadFileMetadata: (data) => dispatch(loadFileMetadata(data)),
+        updateFileMetadata: (data) => dispatch(updateFileMetadata(data)),
         resetState: () => dispatch(resetState()),
         showSnackbar: (msg) => dispatch(showSnackbar(msg))
     };

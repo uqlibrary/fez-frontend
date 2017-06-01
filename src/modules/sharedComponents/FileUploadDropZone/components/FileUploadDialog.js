@@ -24,16 +24,17 @@ export default class FileUploadDialog extends PureComponent {
         form: PropTypes.string.isRequired,
         isDialogOpen: PropTypes.bool,
         isUploadCompleted: PropTypes.bool,
+        fileMetadata: PropTypes.object,
         formValues: PropTypes.object,
         cancelUpload: PropTypes.func,
         closeDialog: PropTypes.func,
         decreaseStep: PropTypes.func,
         increaseStep: PropTypes.func,
-        loadFileMetadata: PropTypes.func,
         openDialog: PropTypes.func,
         reset: PropTypes.func,
         resetState: PropTypes.func,
         showSnackbar: PropTypes.func,
+        updateFileMetadata: PropTypes.func,
         uploadFile: PropTypes.func,
         stepperIndex: PropTypes.number,
         uploadProgress: PropTypes.object,
@@ -64,6 +65,7 @@ export default class FileUploadDialog extends PureComponent {
         this.props.showSnackbar(locale.sharedComponents.files.messages.cancelledUpload);
         this.closeDialog();
         this.props.cancelUpload();
+        dispatch(submit('remoteSubmit'));
     };
 
     closeDialog = () => {
@@ -197,7 +199,8 @@ export default class FileUploadDialog extends PureComponent {
                 fileMetadata[file.name] = data;
             });
 
-            this.props.loadFileMetadata(fileMetadata);
+            const combinedList = Object.assign({}, fileMetadata, this.props.fileMetadata.toJS());
+            this.props.updateFileMetadata(combinedList);
         }
     };
 

@@ -1,5 +1,5 @@
 import {api, generateCancelToken} from 'config';
-import {showSnackbar} from 'modules/App';
+// import {showSnackbar} from 'modules/App';
 import {locale} from 'config';
 
 // Repositories
@@ -17,7 +17,7 @@ export const FILE_UPLOAD_CANCELLED = 'FILE_UPLOAD_CANCELLED';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADING = 'FILE_DOCUMENT_ACCESS_TYPES_LOADING';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADED = 'FILE_DOCUMENT_ACCESS_TYPES_LOADED';
 export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
-export const FILE_METADATA_CREATED = 'FILE_METADATA_CREATED';
+export const FILE_METADATA_UPDATED = 'FILE_METADATA_UPDATED';
 export const FILE_UPLOAD_TERMINATED = 'FILE_UPLOAD_TERMINATED';
 
 let cancelToken;
@@ -27,6 +27,11 @@ export const cancelUpload = () => {
 };
 
 const errorMsg = locale.sharedComponents.files.messages.uploadError;
+
+
+function getErrorMssage(e) {
+    return e.response ? errorMsg[e.response.status] : errorMsg.default;
+}
 
 /**
  * Uploads a file/s directly into an S3 bucket
@@ -70,8 +75,7 @@ export function uploadFile(acceptedFiles) {
                             type: FILE_UPLOAD_TERMINATED,
                             payload: e.message
                         });
-                        dispatch(showSnackbar(`${e.message}: ${errorMsg}`));
-
+                        dispatch(showSnackbar(getErrorMssage(e)));
                         throw(e);
                     }
                 });
@@ -80,12 +84,14 @@ export function uploadFile(acceptedFiles) {
                     type: FILE_UPLOAD_TERMINATED,
                     payload: e.message
                 });
-                dispatch(showSnackbar(`${e.message}: ${errorMsg}`));
+
+                dispatch(showSnackbar(getErrorMssage(e)));
                 throw e;
             });
         });
     };
 }
+
 
 /**
  * Controls when the file uploader dialog is opened
@@ -169,9 +175,9 @@ export function setAcceptedFileList(files) {
     };
 }
 
-export function loadFileMetadata(data) {
+export function updateFileMetadata(data) {
     return {
-        type: FILE_METADATA_CREATED,
+        type: FILE_METADATA_UPDATED,
         payload: data
     };
 }

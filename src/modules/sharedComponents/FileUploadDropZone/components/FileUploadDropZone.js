@@ -157,7 +157,7 @@ export default class FileUploadDropZone extends PureComponent {
                         <p className="sub-title">{fileInformation.subTitle}</p>
                         <div className="columns">
                             <div className="column">
-                                <Dropzone onDrop={this.openDialog.bind(this)} style={{padding: '10px'}}>
+                                <Dropzone onDrop={this.openDialog.bind(this)} style={{padding: '10px'}} disablePreview>
                                     {fileInformation.fields.filenameRestrictions}
                                 </Dropzone>
                             </div>

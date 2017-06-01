@@ -282,8 +282,10 @@ export default {
                 rejectedFiles: '[numberOfRejectedFiles] file was not included in this upload.',
                 acceptedFiles: 'There are no valid files to upload or these files have already been uploaded.',
                 alreadyUploaded: '[numberOfUploadedFiles] files have already been uploaded.',
-                cancelledUpload: 'Cancelled the file uploads.',
-                uploadError: 'The file upload failed to complete. Please check your connection.'
+                cancelledUpload: 'File upload cancelled.',
+                uploadError: {
+                    default: 'There seems to be a problem uploading the file. Please try again later.'
+                }
             },
             fields: {
                 filenameLabel: 'Filename selected',
@@ -293,6 +295,7 @@ export default {
                             <h3>File name restrictions</h3>
                             <div>
                                 <ul>
+                                    <li>No folders</li>
                                     <li>Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)</li>
                                     <li>Only numbers and lowercase characters in the file extension</li>
                                     <li>Under 45 characters</li>

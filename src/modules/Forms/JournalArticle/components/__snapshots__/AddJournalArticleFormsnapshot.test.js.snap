@@ -379,6 +379,9 @@ exports[`Document type form integration tests renders default document type comp
           <div>
             <ul>
               <li>
+                No folders
+              </li>
+              <li>
                 Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)
               </li>
               <li>

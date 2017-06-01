@@ -5,7 +5,7 @@ import {
     FILE_DIALOG_OPENED,
     FILE_DIALOG_CLOSED,
     FILE_LIST_CREATED,
-    FILE_METADATA_CREATED,
+    FILE_METADATA_UPDATED,
     FILE_STEPPER_INDEX_DECREASED,
     FILE_STEPPER_INDEX_INCREASED,
     FILE_STEPPER_RESET_STATE,
@@ -40,7 +40,7 @@ const fileUploadReducer = (state = initialState, action) => {
             return initialState.set('fileMetadata', state.get('fileMetadata')).set('documentAccessTypes', state.get('documentAccessTypes'));
         case FILE_LIST_CREATED:
             return state.set('acceptedFiles', Immutable.fromJS(action.payload));
-        case FILE_METADATA_CREATED:
+        case FILE_METADATA_UPDATED:
             return state.set('fileMetadata', Immutable.fromJS(action.payload));
         case FILE_UPLOADING:
             return state.set('progress', Immutable.fromJS(action.payload));
