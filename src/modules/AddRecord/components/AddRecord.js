@@ -18,7 +18,7 @@ import {PublicationTypeForm} from 'modules/Forms/PublicationType';
 import {AddJournalArticleForm} from 'modules/Forms/JournalArticle';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-import {FileUploader} from 'modules/sharedComponents/FileUploader';
+import {FileUploader} from 'modules/SharedComponents/FileUploader';
 
 import './AddRecord.scss';
 
