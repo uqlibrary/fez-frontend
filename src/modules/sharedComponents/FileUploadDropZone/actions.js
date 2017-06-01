@@ -1,5 +1,5 @@
 import {api, generateCancelToken} from 'config';
-// import {showSnackbar} from 'modules/App';
+import {showSnackbar} from 'modules/App';
 import {locale} from 'config';
 
 // Repositories
@@ -12,13 +12,18 @@ export const FILE_DIALOG_OPENED = 'FILE_DIALOG_OPENED';
 export const FILE_DIALOG_CLOSED = 'FILE_DIALOG_CLOSED';
 export const FILE_STEPPER_INDEX_INCREASED = 'FILE_STEPPER_INDEX_INCREASED';
 export const FILE_STEPPER_INDEX_DECREASED = 'FILE_STEPPER_INDEX_DECREASED';
-export const FILE_STEPPER_RESET_STATE = 'FILE_STEPPER_RESET_STATE';
 export const FILE_UPLOAD_CANCELLED = 'FILE_UPLOAD_CANCELLED';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADING = 'FILE_DOCUMENT_ACCESS_TYPES_LOADING';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADED = 'FILE_DOCUMENT_ACCESS_TYPES_LOADED';
 export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
 export const FILE_METADATA_UPDATED = 'FILE_METADATA_UPDATED';
 export const FILE_UPLOAD_TERMINATED = 'FILE_UPLOAD_TERMINATED';
+export const FILE_PAGE_INCREASED = 'FILE_PAGE_INCREASED';
+export const FILE_PAGE_DECREASED = 'FILE_PAGE_DECREASED';
+export const FILE_DIALOG_INITIALIZED = 'FILE_DIALOG_INITIALIZED';
+
+export const DIALOG_GETTING_STARTED_PAGE = 'DIALOG_GETTING_STARTED_PAGE';
+export const DIALOG_STEPPER_PAGE = 'DIALOG_STEPPER_PAGE';
 
 let cancelToken;
 
@@ -136,16 +141,6 @@ export function decreaseStep() {
 }
 
 /**
- * Resets the stepper index to zero
- * @returns {{type: string}}
- */
-export function resetState() {
-    return {
-        type: FILE_STEPPER_RESET_STATE
-    };
-}
-
-/**
  * Loads the document access types from the endpoint
  * @returns {function(*)}
  */
@@ -179,5 +174,23 @@ export function updateFileMetadata(data) {
     return {
         type: FILE_METADATA_UPDATED,
         payload: data
+    };
+}
+
+export function nextPage() {
+    return {
+        type: FILE_PAGE_INCREASED
+    };
+}
+
+export function previousPage() {
+    return {
+        type: FILE_PAGE_DECREASED
+    };
+}
+
+export function initializeDialog() {
+    return {
+        type: FILE_DIALOG_INITIALIZED
     };
 }

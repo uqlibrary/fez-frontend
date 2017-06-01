@@ -6,16 +6,17 @@ import Dropzone from 'react-dropzone';
 // custom components
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-import FileUploadDialog from '../containers/FileUploadDialog';
+import UploadDialog from '../containers/UploadDialog';
 import UploadedFileMetadata from '../containers/UploadedFileMetadata';
 import './FileUpload.scss';
 
-export default class FileUploadDropZone extends PureComponent {
+export default class FileUploader extends PureComponent {
 
     static propTypes = {
         form: PropTypes.string.isRequired,
         fileMetadata: PropTypes.object,
         isUploadCompleted: PropTypes.bool,
+        initializeDialog: PropTypes.func,
         openDialog: PropTypes.func,
         setAcceptedFileList: PropTypes.func,
         showSnackbar: PropTypes.func
@@ -46,6 +47,7 @@ export default class FileUploadDropZone extends PureComponent {
         }
 
         if (filesToUpload.length > 0) {
+            this.props.initializeDialog();
             this.props.setAcceptedFileList(filesToUpload);
             this.props.openDialog();
         } else {
@@ -172,7 +174,7 @@ export default class FileUploadDropZone extends PureComponent {
                     </CardText>
                 </Card>
                 )}
-                <FileUploadDialog form={this.props.form} acceptedFiles={this.state.filesToUpload} />
+                <UploadDialog form={this.props.form} acceptedFiles={this.state.filesToUpload} />
             </div>
         );
     }

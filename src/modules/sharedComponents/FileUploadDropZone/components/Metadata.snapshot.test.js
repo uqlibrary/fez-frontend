@@ -1,4 +1,4 @@
-jest.dontMock('./FileUploadMetadata');
+jest.dontMock('./Metadata');
 
 import React from 'react';
 import {shallow} from 'enzyme';
@@ -6,7 +6,7 @@ import toJson from 'enzyme-to-json';
 import Immutable from 'immutable';
 
 import {documentAccessTypes} from 'mock/data/documentAccessTypes';
-import FileUploadMetadata from './FileUploadMetadata';
+import Metadata from './Metadata';
 
 const accessConditionId = 3;
 
@@ -24,7 +24,7 @@ function setup(ds) {
         form: 'testForm',
         formValues: Immutable.fromJS({'filesAccessConditions-0': accessConditionId})
     };
-    return shallow(<FileUploadMetadata {...props} />);
+    return shallow(<Metadata {...props} />);
 }
 
 describe('File upload metadata snapshots tests', () => {

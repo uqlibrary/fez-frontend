@@ -321,12 +321,7 @@ export default {
                 }
             },
             dialog: {
-                titles: {
-                    gettingStarted: 'Getting started',
-                    fileMetadata: 'Add file metadata',
-                    confirmation: 'Confirm list of files to upload',
-                    uploadingFiles: 'Uploading files ...'
-                },
+                title: 'File uploader',
                 lastStepTitle: 'The following files are ready to upload',
                 explanationText: 'The following steps will allow you to identify, describe and assign a date which will allow/restrict open access to each file you upload. At the end of this process, the files themselves will be uploaded to the server for review.',
                 disclaimer: (

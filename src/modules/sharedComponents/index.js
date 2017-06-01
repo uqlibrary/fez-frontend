@@ -1,4 +1,4 @@
-export {FileUploadDropZone} from './FileUploadDropZone';
+export {FileUploader} from './FileUploadDropZone';
 
 // Reducers
 export {fileUploadReducer} from './FileUploadDropZone';

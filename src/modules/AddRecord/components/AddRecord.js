@@ -18,7 +18,7 @@ import {PublicationTypeForm} from 'modules/Forms/PublicationType';
 import {AddJournalArticleForm} from 'modules/Forms/JournalArticle';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-import {FileUploadDropZone} from 'modules/sharedComponents/FileUploadDropZone';
+import {FileUploader} from 'modules/sharedComponents/FileUploadDropZone';
 
 import './AddRecord.scss';
 
@@ -136,7 +136,7 @@ class addRecord extends React.Component {
                            defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
                            help={searchForPublicationInformation.help}
                            />
-                        <FileUploadDropZone form="AddRecordForm" />
+                        <FileUploader form="AddRecordForm" />
                     </div>
                 );
             case STEP_2:

@@ -1,2 +1,2 @@
-export {default as FileUploadDropZone} from './containers/FileUploadDropZone';
+export {default as FileUploader} from './containers/FileUploader';
 export {default as fileUploadReducer} from './reducer';

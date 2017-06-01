@@ -1,14 +1,14 @@
 import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
-import FileUploadStepper from '../components/FileUploadStepper';
+import FileStepper from '../components/FileStepper';
 import {uploadFile, openDialog, closeDialog, loadDocumentAccessTypes} from '../actions';
 
-let FileUploadStepperContainer = reduxForm({
+let FileStepperContainer = reduxForm({
     destroyOnUnmount: false
-})(FileUploadStepper);
+})(FileStepper);
 
-FileUploadStepperContainer = connect((state) => {
+FileStepperContainer = connect((state) => {
     const fileUploadSate = state.get('fileUpload');
     return {
         documentAccessTypes: fileUploadSate.get('documentAccessTypes').toJS(),
@@ -21,6 +21,6 @@ FileUploadStepperContainer = connect((state) => {
         closeDialog: () => dispatch(closeDialog()),
         loadDocumentAccessTypes: () => dispatch(loadDocumentAccessTypes())
     };
-})(FileUploadStepperContainer);
+})(FileStepperContainer);
 
-export default FileUploadStepperContainer;
+export default FileStepperContainer;

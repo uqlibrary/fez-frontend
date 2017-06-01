@@ -1,6 +1,5 @@
 import axios from 'axios';
-import Cookies from 'js-cookie';
-import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from './general';
+import {API_URL, TOKEN_NAME} from './general';
 
 export const api = axios.create({
     baseURL: API_URL
@@ -14,5 +13,5 @@ export const generateCancelToken = () => {
 };
 
 
-api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+api.defaults.headers.common[TOKEN_NAME] = 'JHWJ0ho9rjxpibTRGP8N3dsXK0736QoHqbUaGwrf';
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method

@@ -1,10 +1,10 @@
-jest.dontMock('./FileUploadSummary');
+jest.dontMock('./Confirmation');
 
 import React from 'react';
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import FileUploadSummary from './FileUploadSummary';
+import Confirmation from './Confirmation';
 import Immutable from 'immutable';
 
 function setup() {
@@ -24,10 +24,10 @@ function setup() {
         form: 'testForm',
         acceptedFiles: files
     };
-    return shallow(<FileUploadSummary {...props} />);
+    return shallow(<Confirmation {...props} />);
 }
-describe('File upload summary snapshots tests', () => {
-    it('renders default file upload summary component', () => {
+describe('File upload confirmation snapshots tests', () => {
+    it('renders default file upload confirmation component', () => {
         const app = setup();
 
         const nextProps = {uploadProgress: Immutable.fromJS({

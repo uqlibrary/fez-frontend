@@ -1,10 +1,10 @@
-jest.dontMock('./FileUploadDialog');
+jest.dontMock('./UploadDialog');
 
 import React from 'react';
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import FileUploadDialog from './FileUploadDialog';
+import UploadDialog from './UploadDialog';
 
 function setup() {
     const acceptedFiles = [
@@ -36,7 +36,7 @@ function setup() {
         stepperIndex: 0,
         uploadProgress: {}
     };
-    return shallow(<FileUploadDialog {...props} />);
+    return shallow(<UploadDialog {...props} />);
 }
 
 describe('File upload dialog snapshots tests', () => {

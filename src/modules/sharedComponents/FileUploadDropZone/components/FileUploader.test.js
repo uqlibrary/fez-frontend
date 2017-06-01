@@ -1,11 +1,11 @@
-jest.dontMock('./FileUploadDropZone');
+jest.dontMock('./FileUploader');
 
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 
 import {locale} from 'config';
-import FileUploadDropZone from './FileUploadDropZone';
+import FileUploader from './FileUploader';
 import Immutable from 'immutable';
 
 let showSnackbar;
@@ -41,7 +41,7 @@ describe('File upload dropzone unit tests', () => {
         };
 
         console.log('fileMetadata', fileMetadata.get('file'));
-        app = shallow(<FileUploadDropZone {...props} />);
+        app = shallow(<FileUploader {...props} />);
     });
 
     it('validates the number of valid and invalid files', () => {

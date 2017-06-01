@@ -1,4 +1,4 @@
-jest.dontMock('./FileUploadDropZone');
+jest.dontMock('./FileUploader');
 
 import React from 'react';
 import {shallow} from 'enzyme';
@@ -6,7 +6,7 @@ import toJson from 'enzyme-to-json';
 import Immutable from 'immutable';
 
 import {locale} from 'config';
-import FileUploadDropZone from './FileUploadDropZone';
+import FileUploader from './FileUploader';
 
 function setup() {
     const data = {};
@@ -33,7 +33,7 @@ function setup() {
         fileMetadata,
         uploadError: ''
     };
-    return shallow(<FileUploadDropZone {...props} />);
+    return shallow(<FileUploader {...props} />);
 }
 
 describe('File upload dropzone snapshots tests', () => {

@@ -1,10 +1,10 @@
-jest.dontMock('./FileUploadDialog');
+jest.dontMock('./UploadDialog');
 
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 
-import FileUploadDialog from './FileUploadDialog';
+import UploadDialog from './UploadDialog';
 
 let app;
 let increaseStep;
@@ -48,7 +48,7 @@ function setup(fileList, stepperIndex = 2) {
         stepperIndex,
         uploadProgress: {}
     };
-    app = shallow(<FileUploadDialog {...props} />);
+    app = shallow(<UploadDialog {...props} />);
 }
 
 describe('File upload dialog unit tests', () => {

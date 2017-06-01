@@ -4,14 +4,15 @@ import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import Immutable from 'immutable';
 
 // custom components
-import FileUploadSummary from '../containers/FileUploadSummary';
-import FileUploadMetadata from '../containers/FileUploadMetadata';
-import './FileUploadStepper.scss';
+import Confirmation from '../containers/Confirmation';
+import Metadata from '../containers/Metadata';
+import './FileStepper.scss';
+
 
 let CONFIRMATION_STEP = 0;
 let UPLOAD_STEP = 0;
 
-export default class FileUploadStepper extends PureComponent {
+export default class FileStepper extends PureComponent {
 
     static propTypes = {
         acceptedFiles: PropTypes.array.isRequired,
@@ -40,7 +41,7 @@ export default class FileUploadStepper extends PureComponent {
         const {
             stepperIndex,
             acceptedFiles,
-            form
+            form,
         } = this.props;
 
         const steps = acceptedFiles.map(file => {
@@ -59,7 +60,7 @@ export default class FileUploadStepper extends PureComponent {
                 </Stepper>
 
                 {stepperIndex < CONFIRMATION_STEP && (
-                    <FileUploadMetadata
+                    <Metadata
                         stepperIndex={stepperIndex}
                         form={form}
                         file={acceptedFiles[stepperIndex]}
@@ -67,13 +68,13 @@ export default class FileUploadStepper extends PureComponent {
                 )}
 
                 {stepperIndex === CONFIRMATION_STEP && (
-                    <FileUploadSummary
+                    <Confirmation
                         form={form}
                         acceptedFiles={acceptedFiles} />
                 )}
 
                 {stepperIndex === UPLOAD_STEP && (
-                    <FileUploadSummary
+                    <Confirmation
                         form={form}
                         acceptedFiles={acceptedFiles} showProgress/>
                 )}

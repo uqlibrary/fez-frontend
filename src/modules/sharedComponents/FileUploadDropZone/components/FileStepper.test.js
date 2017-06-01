@@ -1,11 +1,11 @@
-jest.dontMock('./FileUploadStepper');
+jest.dontMock('./FileStepper');
 
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 
 import {documentAccessTypes} from 'mock/data/documentAccessTypes';
-import FileUploadStepper from './FileUploadStepper';
+import FileStepper from './FileStepper';
 
 let loadDocumentAccessTypes;
 
@@ -30,7 +30,7 @@ function setup(documentAccessTypes) {
         documentAccessTypes,
         loadDocumentAccessTypes
     };
-    return shallow(<FileUploadStepper {...props} />);
+    return shallow(<FileStepper {...props} />);
 }
 
 describe('File upload stepper snapshots tests', () => {
