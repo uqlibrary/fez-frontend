@@ -24,15 +24,15 @@ export default class UploadedFileMetadata extends PureComponent {
         super(props);
     }
 
-    formatMetadataDetails = (dataSource, fileMetaDataFields) => {
+    formatMetadataDetails = (dataSource, fileMetadataFields) => {
         let accessDetails;
-        if (dataSource[fileMetaDataFields.accessCondition] === EMBARGO_ID) {
-            const d = dataSource[fileMetaDataFields.embargoDate] ? new Date(dataSource[fileMetaDataFields.embargoDate]) : new Date();
+        if (dataSource[fileMetadataFields.accessCondition] === EMBARGO_ID) {
+            const d = dataSource[fileMetadataFields.embargoDate] ? new Date(dataSource[fileMetadataFields.embargoDate]) : new Date();
             accessDetails = ` - embargoed until ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
         } else {
-            if (dataSource[fileMetaDataFields.accessCondition]) {
+            if (dataSource[fileMetadataFields.accessCondition]) {
                 const selectedDoc = this.props.documentAccessTypes.find(doc => {
-                    return doc.get('id') === dataSource[fileMetaDataFields.accessCondition];
+                    return doc.get('id') === dataSource[fileMetadataFields.accessCondition];
                 });
 
                 accessDetails = ` - ${selectedDoc.get('title')}`;
@@ -41,7 +41,7 @@ export default class UploadedFileMetadata extends PureComponent {
             }
         }
 
-        return `${dataSource[fileMetaDataFields.description]}${accessDetails}`;
+        return `${dataSource[fileMetadataFields.description]}${accessDetails}`;
     };
 
     getFileOptions = () => (
@@ -63,7 +63,7 @@ export default class UploadedFileMetadata extends PureComponent {
             dataSource
         } = this.props;
 
-        const fileMetaDataFields = locale.sharedComponents.files.fields.metadata;
+        const fileMetadataFields = locale.sharedComponents.files.fields.metadata;
 
         return (
             <Toolbar className="metadataRow">
@@ -73,7 +73,7 @@ export default class UploadedFileMetadata extends PureComponent {
                 </ToolbarGroup>
                 <ToolbarGroup className="metadataDetails">
                     <div>{dataSource.file.name}</div>
-                    <div className="secondaryDetails">{this.formatMetadataDetails(dataSource, fileMetaDataFields)}</div>
+                    <div className="secondaryDetails">{this.formatMetadataDetails(dataSource, fileMetadataFields)}</div>
                 </ToolbarGroup>
                 <ToolbarGroup>
                     {this.getFileOptions()}

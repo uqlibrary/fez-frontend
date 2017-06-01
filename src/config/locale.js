@@ -282,7 +282,8 @@ export default {
                 rejectedFiles: '[numberOfRejectedFiles] file was not included in this upload.',
                 acceptedFiles: 'There are no valid files to upload or these files have already been uploaded.',
                 alreadyUploaded: '[numberOfUploadedFiles] files have already been uploaded.',
-                cancelledUpload: 'Cancelled the file uploads.'
+                cancelledUpload: 'Cancelled the file uploads.',
+                uploadError: 'The file upload failed to complete. Please check your connection.'
             },
             fields: {
                 filenameLabel: 'Filename selected',

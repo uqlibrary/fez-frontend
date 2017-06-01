@@ -14,7 +14,7 @@ export default class FileUploadDropZone extends PureComponent {
 
     static propTypes = {
         form: PropTypes.string.isRequired,
-        fileMetaData: PropTypes.object,
+        fileMetadata: PropTypes.object,
         isUploadCompleted: PropTypes.bool,
         openDialog: PropTypes.func,
         setAcceptedFileList: PropTypes.func,
@@ -55,12 +55,12 @@ export default class FileUploadDropZone extends PureComponent {
 
     getListOfUploadedFiles = () => {
         const {
-            fileMetaData
+            fileMetadata,
         } = this.props;
 
-        if (fileMetaData) {
-            const data = fileMetaData.toJS();
-            return Object.keys(fileMetaData.toJS()).map(id => {
+        if (fileMetadata) {
+            const data = fileMetadata.toJS();
+            return Object.keys(fileMetadata.toJS()).map(id => {
                 return <UploadedFileMetadata key={id} dataSource={data[id]} form={this.props.form} />;
             });
         }
@@ -70,13 +70,13 @@ export default class FileUploadDropZone extends PureComponent {
 
     // checks if we're uploading the same file again
     validateFileMetaIsNull = (acceptedFiles) => {
-        const {fileMetaData} = this.props;
-        if (fileMetaData.size === 0) return acceptedFiles;
+        const {fileMetadata} = this.props;
+        if (fileMetadata.size === 0) return acceptedFiles;
 
         const filesToUpload = [];
         acceptedFiles.map(file => {
-            const found = fileMetaData.find(metadata => {
-                return metadata.get('file').name === file.name;
+            const found = fileMetadata.find(metadata => {
+                return metadata.name === file.name;
             });
 
             if (!found) {
@@ -165,7 +165,7 @@ export default class FileUploadDropZone extends PureComponent {
                     </CardText>
                 </Card>
 
-                {this.props.fileMetaData.size > 0 && (
+                {this.props.fileMetadata.size > 0 && (
                 <Card className="layout-card metadataContainer">
                     <CardText className="body-1">
                         {uploadedFiles}

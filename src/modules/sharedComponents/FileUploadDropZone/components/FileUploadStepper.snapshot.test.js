@@ -38,14 +38,14 @@ describe('File upload stepper unit tests', () => {
         const app = setup(documentAccessTypes);
         expect(toJson(app)).toMatchSnapshot();
     });
-
-    it('renders the confirmation components', () => {
-        const app = setup(documentAccessTypes, CONFIRMATION_INDEX);
-        expect(toJson(app)).toMatchSnapshot();
-    });
-
-    it('renders the upload components', () => {
-        const app = setup(documentAccessTypes, UPLOAD_INDEX);
-        expect(toJson(app)).toMatchSnapshot();
-    });
+    //
+    // it('renders the confirmation components', () => {
+    //     const app = setup(documentAccessTypes, CONFIRMATION_INDEX);
+    //     expect(toJson(app)).toMatchSnapshot();
+    // });
+    //
+    // it('renders the upload components', () => {
+    //     const app = setup(documentAccessTypes, UPLOAD_INDEX);
+    //     expect(toJson(app)).toMatchSnapshot();
+    // });
 });

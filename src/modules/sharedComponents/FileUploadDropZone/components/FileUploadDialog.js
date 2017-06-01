@@ -29,17 +29,20 @@ export default class FileUploadDialog extends PureComponent {
         closeDialog: PropTypes.func,
         decreaseStep: PropTypes.func,
         increaseStep: PropTypes.func,
-        loadFileMetaData: PropTypes.func,
+        loadFileMetadata: PropTypes.func,
         openDialog: PropTypes.func,
+        reset: PropTypes.func,
         resetState: PropTypes.func,
         showSnackbar: PropTypes.func,
         uploadFile: PropTypes.func,
         stepperIndex: PropTypes.number,
-        uploadProgress: PropTypes.object
+        uploadProgress: PropTypes.object,
+        uploadError: PropTypes.string
     };
 
     static defaultProps = {
-        isOpen: Immutable.fromJS(false)
+        isOpen: Immutable.fromJS(false),
+        uploadError: ''
     };
 
     constructor(props) {
@@ -64,11 +67,15 @@ export default class FileUploadDialog extends PureComponent {
     };
 
     closeDialog = () => {
+        // save the form data into the state so that we can generate the list of files that were uploaded
+        this.setUploadedDataState();
+
         this.props.closeDialog();
         this.setState({
             currentStep: GETTING_STARTED_STEP
         });
         this.props.resetState();
+        this.props.reset(); // resets the form fields in the dialog
     };
 
     getDialogTitle = () => {
@@ -172,28 +179,29 @@ export default class FileUploadDialog extends PureComponent {
     };
 
     setUploadedDataState = () => {
-        const fields = locale.sharedComponents.files.fields.metadata;
-        const formValues = this.props.formValues;
-        const fileMetaData = {};
+        const {formValues, isUploadCompleted, uploadError} = this.props;
 
-        this.props.acceptedFiles.map((file, index) => {
-            const data = {};
-            data.file = file;
+        if (isUploadCompleted && uploadError.length === 0) {
+            const fields = locale.sharedComponents.files.fields.metadata;
 
-            Object.keys(fields).map(id => {
-                data[fields[id]] = formValues.get(`${fields[id]}-${index}`);
+            const fileMetadata = {};
+
+            this.props.acceptedFiles.map((file, index) => {
+                const data = {};
+                data.file = file;
+
+                Object.keys(fields).map(id => {
+                    data[fields[id]] = formValues.get(`${fields[id]}-${index}`);
+                });
+
+                fileMetadata[file.name] = data;
             });
 
-            fileMetaData[file.name] = data;
-        });
-
-        this.props.loadFileMetaData(fileMetaData);
-    }
+            this.props.loadFileMetadata(fileMetadata);
+        }
+    };
 
     uploadFile = () => {
-        // save the form data into the state so that we can generate the list of files that were uploaded
-        this.setUploadedDataState();
-
         this.props.increaseStep();
         this.props.uploadFile(this.props.acceptedFiles);
     };
@@ -203,11 +211,12 @@ export default class FileUploadDialog extends PureComponent {
             acceptedFiles,
             isDialogOpen,
             isUploadCompleted,
-            form
+            form,
+            uploadError
         } = this.props;
 
         const fileInformation = locale.sharedComponents.files;
-        const backButtonVisibility = (isUploadCompleted && IS_UPLOAD_STEP) ? {display: 'none'} : {};
+        const backButtonVisibility = (isUploadCompleted && IS_UPLOAD_STEP || uploadError.length > 0) ? {display: 'none'} : {};
         const actions = [
             <FlatButton
                 className="prevBtn"
@@ -219,7 +228,7 @@ export default class FileUploadDialog extends PureComponent {
                 label={this.getNextButtonLabel()}
                 secondary
                 onTouchTap={this.getNextButtonFunc}
-                disabled={(!isUploadCompleted && IS_UPLOAD_STEP)}
+                disabled={(IS_UPLOAD_STEP &&  (!isUploadCompleted && uploadError.length === 0))}
             />,
         ];
 

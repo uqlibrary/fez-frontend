@@ -22,6 +22,7 @@ function setup() {
     const props = {
         acceptedFiles: acceptedFiles,
         form: 'testForm',
+        uploadError: '',
         isDialogOpen: true,
         isUploadCompleted: false,
         cancelUpload: jest.fn(),

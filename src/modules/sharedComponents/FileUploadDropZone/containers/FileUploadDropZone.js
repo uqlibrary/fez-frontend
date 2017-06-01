@@ -10,9 +10,9 @@ let FileUploadDropZoneContainer = reduxForm({
 })(FileUploadDropZone);
 
 FileUploadDropZoneContainer = connect((state) => {
-    const fileUploadSate = state.get('fileUpload');
+    const fileUploadState = state.get('fileUpload');
     return {
-        fileMetaData: fileUploadSate.get('fileMetaData')
+        fileMetadata: fileUploadState.get('fileMetadata')
     };
 }, dispatch => {
     return {

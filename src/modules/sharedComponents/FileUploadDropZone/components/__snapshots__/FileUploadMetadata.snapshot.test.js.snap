@@ -27,11 +27,13 @@ exports[`File upload metadata snapshots tests renders default file upload metada
     >
       <Field
         component={[Function]}
+        errorText=""
         floatingLabelText="Description"
         fullWidth={true}
         maxLength="255"
         multiLine={true}
-        name="filesDescription-0"
+        name="fileDescription-0"
+        onChange={[Function]}
         rows={3}
         type="text"
       />
@@ -41,7 +43,7 @@ exports[`File upload metadata snapshots tests renders default file upload metada
     className="columns"
   >
     <div
-      className="column access"
+      className="column "
     >
       <Field
         component={[Function]}
@@ -103,9 +105,8 @@ exports[`File upload metadata snapshots tests renders default file upload metada
             "value": "id",
           }
         }
-        formValue={3}
         label="File is public (open access)"
-        name="filesAccessConditions-0"
+        name="accessCondition-0"
       />
     </div>
     <div
@@ -114,10 +115,12 @@ exports[`File upload metadata snapshots tests renders default file upload metada
       <Field
         DateTimeFormat={[Function]}
         component={[Function]}
+        disabled={true}
         floatingLabelText="Embargo date"
         fullWidth={true}
         locale="en-AU"
-        name="fileEmbargoDate-0"
+        minDate={2017-05-31T14:00:00.000Z}
+        name="embargoDate-0"
       />
     </div>
   </div>
