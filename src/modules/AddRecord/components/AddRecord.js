@@ -1,5 +1,4 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
 import ExpandTransition from 'material-ui/internal/ExpandTransition';
 import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
@@ -10,6 +9,9 @@ const STEP_1 = 0;
 const STEP_2 = 1;
 const STEP_3 = 2;
 
+// for displaying different types of fields depending on publication type selected
+let formType;
+
 // forms & custom components
 import {PublicationSearchForm} from 'modules/Forms';
 import {SearchResults} from 'modules/SearchResults';
@@ -18,21 +20,19 @@ import {PublicationTypeForm} from 'modules/Forms/PublicationType';
 import {AddJournalArticleForm} from 'modules/Forms/JournalArticle';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-import {FileUploader} from 'modules/SharedComponents/FileUploader';
 
 import './AddRecord.scss';
 
 class addRecord extends React.Component {
 
     static propTypes = {
+        formValues: PropTypes.object,
+        loadNotification: PropTypes.func,
+        loadPublicationTypesList: PropTypes.func,
+        publicationTypeList: PropTypes.object,
         searchResultsList: PropTypes.object,
         selectedPublicationType: PropTypes.object,
-        loadPublicationTypesList: PropTypes.func,
-        loadNotification: PropTypes.func,
-        publicationTypeList: PropTypes.object,
-        cancelAddRecord: PropTypes.func,
-        saveForLater: PropTypes.func,
-        submitRecord: PropTypes.func
+        submitRecordForApproval: PropTypes.func
     };
 
     static defaultProps = {
@@ -90,37 +90,21 @@ class addRecord extends React.Component {
         this.setState({submitOpen: false});
     };
 
-    handleCloseSaveForLater = () => {
-        this.setState({saveOpen: false});
-    };
-
     handleOpenSubmitForApproval = () => {
         this.setState({submitOpen: true});
     };
 
-    handleOpenSaveForLater = () => {
-        this.setState({saveOpen: true});
-    };
-
-    // TODO: Update this with the new pagestepper component as it will have it's own reducer to update the step
-    cancelAddRecord = () => {
-        // go back to step 1
-        this.setState({stepIndex: 0});
-        this.props.cancelAddRecord(locale.notifications.addRecord.cancelMessage);
-    };
-
-    // TODO: Update this with the new pagestepper component as it will have it's own reducer to update the step
-    saveForLater = () => {
-        // go back to step 1
-        this.setState({stepIndex: 0});
-        this.props.saveForLater(locale.notifications.addRecord.saveMessage);
-    };
-
-    // TODO: Update this with the new pagestepper component as it will have it's own reducer to update the step
-    submitRecord = () => {
-        // go back to step 1
-        this.setState({stepIndex: 0});
-        this.props.submitRecord(locale.notifications.addRecord.submitMessage);
+    setFormDetails = (selectedPublicationType, publicationTypeInformation) => {
+        if (selectedPublicationType.size > 0) {
+            switch(selectedPublicationType.get('name').toLowerCase()) {
+                case publicationTypeInformation.documentTypes.JOURNAL_ARTICLE:
+                    formType = publicationTypeInformation.documentTypes.JOURNAL_ARTICLE;
+                    break;
+                default:
+                    formType = 'defaultFormType';
+                    break;
+            }
+        }
     };
 
     getStepContent(stepIndex) {
@@ -136,7 +120,6 @@ class addRecord extends React.Component {
                            defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
                            help={searchForPublicationInformation.help}
                            />
-                        <FileUploader form="AddRecordForm" />
                     </div>
                 );
             case STEP_2:
@@ -182,34 +165,26 @@ class addRecord extends React.Component {
             case STEP_3:
                 const {selectedPublicationType} = this.props;
                 const publicationTypeInformation = locale.pages.addRecord.publicationTypeForm;
-                const buttonLabels = locale.global.labels.buttons;
+
+                this.setFormDetails(selectedPublicationType, publicationTypeInformation);
 
                 return (
-                    <PublicationTypeForm
-                        title={publicationTypeInformation.title}
-                        explanationText={publicationTypeInformation.explanationText}
-                        help={publicationTypeInformation.help}
-                        maxSearchResults={publicationTypeInformation.maxSearchResults}
-                        publicationTypeLabel={publicationTypeInformation.publicationTypeLabel}
-                        dataSource={this.props.publicationTypeList}
-                        popularTypesList={publicationTypeInformation.popularTypesList}>
-                            <div>
-                            {/* Journal Article is selected. Size check needed as it is an empty Immutable Map on initial load */}
-                            {selectedPublicationType.size > 0 && selectedPublicationType.get('name').toLowerCase() === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE &&
-                                <AddJournalArticleForm />
-                            }
+                    <div>
+                        <PublicationTypeForm
+                            title={publicationTypeInformation.title}
+                            explanationText={publicationTypeInformation.explanationText}
+                            help={publicationTypeInformation.help}
+                            maxSearchResults={publicationTypeInformation.maxSearchResults}
+                            publicationTypeLabel={publicationTypeInformation.publicationTypeLabel}
+                            dataSource={this.props.publicationTypeList}
+                            popularTypesList={publicationTypeInformation.popularTypesList} />
 
-                            {selectedPublicationType.size > 0 &&
-                                <div className="buttonWrapper">
-                                    <RaisedButton label={buttonLabels.saveForLater} style={{marginLeft: '12px'}}
-                                                  onTouchTap={this.saveForLater}/>
-                                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddRecord}/>
-                                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}}
-                                                  onTouchTap={this.submitRecord}/>
-                                </div>
+
+                            {/* Journal Article is selected. Size check needed as it is an empty Immutable Map on initial load */}
+                            {formType === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE &&
+                            <AddJournalArticleForm form="AddJournalArticleForm" />
                             }
-                            </div>
-                    </PublicationTypeForm>
+                    </div>
                 );
             default:
                 const stepperInformation = locale.pages.addRecord.stepper;

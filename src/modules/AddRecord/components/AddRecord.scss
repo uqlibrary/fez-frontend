@@ -67,9 +67,11 @@ a:hover .claimTitleIcon {
 }
 
 .buttonWrapper {
+  max-width: 1200px;
+  margin: 24px auto;
+  width: 90%;
+  padding: 0 0 20px 0;
   text-align: right;
-  margin: -70px auto 20px auto;
-  max-width: 1100px;
 }
 
 // Override Material UI wanting to nowrap the card titles

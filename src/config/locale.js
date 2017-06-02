@@ -7,7 +7,6 @@ export default {
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         labels: {
             buttons: {
-                saveForLater: 'Save for later',
                 cancel: 'Cancel',
                 close: 'Close',
                 submitForApproval: 'Submit for approval'
@@ -242,7 +241,7 @@ export default {
                         issueLabel: 'Issue',
                         startPageLabel: 'Start page',
                         endPageLabel: 'End page',
-                        notesLabel: 'Not (not publically viewable)'
+                        notesLabel: 'Note (not publically viewable)'
                     }
                 }
             }

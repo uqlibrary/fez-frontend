@@ -27,6 +27,7 @@ function setup() {
         publicationSubTypeList: Immutable.fromJS(publicationSubTypeList),
         loadPublicationSubTypeList: jest.fn(),
         loadAuthorData: jest.fn(),
+        form: 'testForm',
         formValues: Immutable.fromJS({publicationType: 179}),
         store: store
     };

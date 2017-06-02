@@ -2,26 +2,26 @@ import {connect} from 'react-redux';
 
 import {reduxForm, getFormValues} from 'redux-form/immutable';
 import AddJournalArticleForm from '../components/AddJournalArticleForm';
-import {loadPublicationSubTypesList, loadAuthorsList} from '../actions';
+import {loadPublicationSubTypesList, cancelAddRecord, loadAuthorsList, submitRecordForApproval} from '../actions';
 import Immutable from 'immutable';
 
 
-let AddJournalArticleFormContainer = reduxForm({
-    form: 'AddJournalArticleForm'
-})(AddJournalArticleForm);
+let AddJournalArticleFormContainer = reduxForm()(AddJournalArticleForm);
 
 AddJournalArticleFormContainer = connect(state => {
     const publicationTypeState = state.get('publicationSubTypes');
     return {
         authorList: publicationTypeState.get('authorList') || Immutable.Map({}),
-        publicationSubTypeList: publicationTypeState.get('publicationSubTypeList'),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
+        publicationSubTypeList: publicationTypeState.get('publicationSubTypeList'),
         selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType')
     };
 }, dispatch => {
     return {
+        cancelAddRecord: (message) => dispatch(cancelAddRecord(message)),
         loadPublicationSubTypesList: (id) => dispatch(loadPublicationSubTypesList(id)),
-        loadAuthorsList: () => dispatch(loadAuthorsList())
+        loadAuthorsList: () => dispatch(loadAuthorsList()),
+        submitRecordForApproval: (data, message) => dispatch(submitRecordForApproval(data, message))
     };
 })(AddJournalArticleFormContainer);
 

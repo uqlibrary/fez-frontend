@@ -1,6 +1,7 @@
 // Repositories
 import {loadPublicationSubTypeData} from 'repositories/publicationSubTypes';
 import {loadAuthorsData} from 'repositories/authors';
+import {submitRecord} from 'repositories/addRecord';
 
 // config
 import {locale} from 'config';
@@ -10,6 +11,10 @@ export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
 export const PUBLICATION_SUB_TYPES_LOADED = 'PUBLICATION_SUB_TYPES_LOADED';
 export const AUTHORS_LOADING = 'AUTHORS_LOADING';
 export const AUTHORS_LOADED = 'AUTHORS_LOADED';
+export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
+
+// module imports
+import {showSnackbar} from 'modules/App';
 
 /**
  * Returns the vocab id entry
@@ -54,6 +59,32 @@ export function loadAuthorsList() {
                 payload: authorList
             });
         }).catch((error) => {
+            throw(error);
+        });
+    };
+}
+
+
+/**
+ * Cancels the add record functionality
+ * @returns {function(*)}
+ */
+export function cancelAddRecord(message) {
+    return dispatch => {
+        dispatch(showSnackbar(message));
+    };
+}
+
+/**
+ * Submits the record for approval
+ * @returns {function(*)}
+ */
+export function submitRecordForApproval(data, message) {
+    return dispatch => {
+        submitRecord(data).then(() => {
+            dispatch({type: RECORD_SUBMITTED});
+            dispatch(showSnackbar(message));
+        }).catch(error => {
             throw(error);
         });
     };

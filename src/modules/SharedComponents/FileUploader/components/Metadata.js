@@ -51,7 +51,7 @@ export default class Metadata extends PureComponent {
         const required = value => value && value.replace(/\s/, '').length > 0 ? undefined : 'This field is required';
 
         return (
-            <form ref="test" onSubmit={handleSubmit(increaseStep)}>
+            <form onSubmit={handleSubmit(increaseStep)}>
                 <div className="columns">
                     <div className="column">
                         <FileUploadInfoRow key={file.name} file={file} />

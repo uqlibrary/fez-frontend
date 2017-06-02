@@ -1,5 +1,5 @@
 import {api, generateCancelToken} from 'config';
-// import {showSnackbar} from 'modules/App';
+import {showSnackbar} from 'modules/App';
 import {locale} from 'config';
 
 // Repositories

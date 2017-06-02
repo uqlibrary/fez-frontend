@@ -4,11 +4,7 @@ import {loadPublicationTypesData} from 'repositories/publicationTypes';
 // Types
 export const PUBLICATION_TYPES_LOADING = 'PUBLICATION_TYPES_LOADING';
 export const PUBLICATION_TYPES_LOADED = 'PUBLICATION_TYPES_LOADED';
-export const FILE_UPLOADING = 'FILE_UPLOADING';
-export const FILE_UPLOADED = 'FILE_UPLOADED';
 
-// module imports
-import {showSnackbar} from 'modules/App';
 
 /**
  * Loads the publication types into the application
@@ -28,32 +24,3 @@ export function loadPublicationTypesList() {
     };
 }
 
-/**
- * Cancels the add record functionality
- * @returns {function(*)}
- */
-export function cancelAddRecord(message) {
-    return dispatch => {
-        dispatch(showSnackbar(message));
-    };
-}
-
-/**
- * Saves the record for later edits
- * @returns {function(*)}
- */
-export function saveForLater(message) {
-    return dispatch => {
-        dispatch(showSnackbar(message));
-    };
-}
-
-/**
- * Submits the record for approval
- * @returns {function(*)}
- */
-export function submitRecord(message) {
-    return dispatch => {
-        dispatch(showSnackbar(message));
-    };
-}

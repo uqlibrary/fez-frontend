@@ -1,13 +1,12 @@
 import {api} from 'config';
 
 /**
- * Fetches the the current list of authors
+ * Submits the metadata for approval
  * @returns {Promise}
  */
-export function loadAuthorsData(querystring) {
-    console.log('querystring', querystring);
+export function submitRecord(data) {
     return new Promise((resolve, reject) => {
-        api.get(`authors/search?query=${querystring}`).then(response => {
+        api.post('records', data).then(response => {
             resolve(response.data);
         }).catch(e => {
             reject(e);
