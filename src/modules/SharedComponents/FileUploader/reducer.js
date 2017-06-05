@@ -3,6 +3,7 @@ import Immutable from 'immutable';
 import {
     DIALOG_GETTING_STARTED_PAGE,
     DIALOG_STEPPER_PAGE,
+    FILE_DELETED,
     FILE_DOCUMENT_ACCESS_TYPES_LOADED,
     FILE_DIALOG_OPENED,
     FILE_DIALOG_CLOSED,
@@ -34,6 +35,10 @@ export const initialState = Immutable.fromJS({
 
 const fileUploadReducer = (state = initialState, action) => {
     switch (action.type) {
+        case FILE_DELETED:
+            const fileMetadata = state.get('fileMetadata').toJS();
+            delete fileMetadata[action.payload];
+            return state.set('fileMetadata', Immutable.fromJS(fileMetadata));
         case FILE_DIALOG_OPENED:
         case FILE_DIALOG_CLOSED:
             return state.set('isDialogOpen', action.payload);

@@ -13,8 +13,10 @@ const authorsReducer = (state = initialState, action) => {
             let updatedAuthorsList = Immutable.Set(state.get('selectedAuthors'));
             const foundAuthor = action.payload;
 
-            if (!updatedAuthorsList.has(foundAuthor.get('id'))) {
-                updatedAuthorsList = updatedAuthorsList.union([Immutable.Map(foundAuthor)]);
+            console.log('is here', updatedAuthorsList, updatedAuthorsList.has(foundAuthor.id));
+
+            if (!updatedAuthorsList.has(foundAuthor.id)) {
+                updatedAuthorsList = updatedAuthorsList.union([Immutable.Map(Immutable.fromJS(foundAuthor))]);
             }
 
             return state.set('selectedAuthors', Immutable.fromJS(updatedAuthorsList));

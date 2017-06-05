@@ -15,6 +15,7 @@ export default class AddJournalArticleForm extends Component {
     static propTypes = {
         authorList: PropTypes.object,
         cancelAddRecord: PropTypes.func,
+        fileMetadata: PropTypes.object,
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
@@ -41,19 +42,57 @@ export default class AddJournalArticleForm extends Component {
         this.props.cancelAddRecord(locale.notifications.addRecord.cancelMessage);
     };
 
+    getElementLabel = (elementData, elementKey, formData, formKey, matchedLabel) => {
+        const matched = elementData.find(entry => {
+            return entry[elementKey] === formData[formKey];
+        });
+
+        return matched ? {'rek_subtype': matched[matchedLabel]} : {};
+    };
+
+    setFileData = () => {
+        const {fileMetadata} = this.props;
+
+        if (fileMetadata.size > 0) {
+            const data = {'fez_record_search_key_file_attachment_name': []};
+
+            Object.keys(fileMetadata.toJS()).map((file, index) => {
+                data.fez_record_search_key_file_attachment_name.push({
+                    'rek_file_attachment_name': file,
+                    'rek_file_attachment_name_order': (index + 1)
+                });
+            });
+
+            return data;
+        }
+
+        return {};
+    };
+
     submitRecord = () => {
         const {formValues, submitRecordForApproval} = this.props;
         const RECORD_TYPE = 3;
         const SUBMITTED_FOR_APPROVAL = 3;
         const JOURNAL_TYPE = 179;
 
-        const data = {
+        const defaultData = {
             rek_object_type: RECORD_TYPE,
             rek_status: SUBMITTED_FOR_APPROVAL,
             rek_display_type: JOURNAL_TYPE
         };
 
-        const combinedData = Object.assign({}, data, formValues.toJS());
+        const formData = formValues.toJS();
+        const tempData = this.getElementLabel(this.props.publicationSubTypeList.toJS(), 'id', formData, 'rek_subtype', 'label');
+
+        // check if the date object is set otherwise default to today
+        if (!formData.rek_date) {
+            formData.rek_date = new Date();
+        }
+
+        const fileData = this.setFileData();
+        const combinedData = Object.assign({}, defaultData, formData, tempData, fileData);
+
+        console.log('combinedData', combinedData);
 
         submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
     };
@@ -170,7 +209,7 @@ export default class AddJournalArticleForm extends Component {
                             <div className="column">
                                 <div className="columns">
                                     <div className="column">
-                                        <Field component={TextField} name="fez_record_search_key_data_volume.rek_data_volume" type="text" fullWidth
+                                        <Field component={TextField} name="fez_record_search_key_volume_number.rek_volume_number" type="text" fullWidth
                                                floatingLabelText={optionalInformation.fields.volumeLabel}/>
                                     </div>
                                     <div className="column">
@@ -194,7 +233,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                         <div className="columns">
                             <div className="column">
-                                <Field component={TextField} name="fez_record_search_key_additional_notes.rek_additional_notes" type="text" fullWidth multiLine
+                                <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text" fullWidth multiLine
                                        rows={5} floatingLabelText={optionalInformation.fields.notesLabel}/>
                             </div>
                         </div>
@@ -202,7 +241,7 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
 
                 {/* Files */}
-                <FileUploader form={form} />
+                <FileUploader form="FileUploadForm" />
 
                 <div className="buttonWrapper">
                     <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddRecord}/>

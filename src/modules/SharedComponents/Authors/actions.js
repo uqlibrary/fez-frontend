@@ -12,11 +12,11 @@ export function removeAuthor(authorIndex) {
     };
 }
 
-export function addAuthor(authorID) {
+export function addAuthor(author) {
     return dispatch => {
         dispatch({
             type: ADD_AUTHOR,
-            payload: authorID
+            payload: author
         });
     };
 }

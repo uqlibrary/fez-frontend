@@ -1,10 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
-import IconButton from 'material-ui/IconButton';
-import IconMenu from 'material-ui/IconMenu';
-import MenuItem from 'material-ui/MenuItem';
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 
 import {getIcon} from './fileHelper';
@@ -17,12 +14,18 @@ export default class UploadedFileMetadata extends PureComponent {
     static propTypes = {
         form: PropTypes.string.isRequired,
         dataSource: PropTypes.object.isRequired,
+        deleteFile: PropTypes.func,
         documentAccessTypes: PropTypes.object
     };
 
     constructor(props) {
         super(props);
     }
+
+    deleteFile = (file) => {
+        // remove file from state
+        this.props.deleteFile(file);
+    };
 
     formatMetadataDetails = (dataSource, fileMetadataFields) => {
         let accessDetails;
@@ -44,18 +47,8 @@ export default class UploadedFileMetadata extends PureComponent {
         return `${dataSource[fileMetadataFields.description]}${accessDetails}`;
     };
 
-    getFileOptions = () => (
-        <IconMenu
-            iconButtonElement={
-                <IconButton><MoreVertIcon /></IconButton>
-            }
-            targetOrigin={{horizontal: 'right', vertical: 'top'}}
-            anchorOrigin={{horizontal: 'right', vertical: 'top'}}
-        >
-            <MenuItem primaryText="Download" />
-            <MenuItem primaryText="Re-upload" />
-            <MenuItem primaryText="Remove" />
-        </IconMenu>
+    getFileOptions = (filename) => (
+        <FlatButton label={locale.sharedComponents.files.buttons.deleteLabel} onTouchTap={() => this.deleteFile(filename)} />
     );
 
     render() {
@@ -76,7 +69,7 @@ export default class UploadedFileMetadata extends PureComponent {
                     <div className="secondaryDetails">{this.formatMetadataDetails(dataSource, fileMetadataFields)}</div>
                 </ToolbarGroup>
                 <ToolbarGroup>
-                    {this.getFileOptions()}
+                    {this.getFileOptions(dataSource.file.name)}
                 </ToolbarGroup>
             </Toolbar>
         );

@@ -11,16 +11,23 @@ export default class GettingStarted extends PureComponent {
 
     static propTypes = {
         closeDialog: PropTypes.func,
-        nextPage: PropTypes.func
+        nextPage: PropTypes.func,
+        reset: PropTypes.func
     };
 
     constructor(props) {
         super(props);
     }
 
+    cancelFileUpload = () => {
+        const {closeDialog, reset} = this.props;
+
+        closeDialog();
+        reset(); // resets the redux form fields in the dialog. Function available in redux-form itself
+    }
+
     render() {
         const {
-            closeDialog,
             nextPage
         } = this.props;
 
@@ -33,7 +40,7 @@ export default class GettingStarted extends PureComponent {
                     <FlatButton
                         className="prevBtn"
                         label={locale.global.labels.buttons.cancel}
-                        onTouchTap={closeDialog}
+                        onTouchTap={this.cancelFileUpload}
                     />
                     <RaisedButton
                         label={fileInformation.buttons.getStartedLabel}

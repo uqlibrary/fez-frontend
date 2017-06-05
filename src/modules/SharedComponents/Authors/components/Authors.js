@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import {Field} from 'redux-form';
 import PropTypes from 'prop-types';
-
 import Divider from 'material-ui/Divider';
-import RaisedButton from 'material-ui/RaisedButton';
 
-import {AsyncAutoCompleteSelect} from 'uqlibrary-react-toolbox';
+// import {AsyncAutoCompleteSelect} from 'uqlibrary-react-toolbox';
+import AsyncAutoCompleteSelect from 'modules/SharedComponents/AsyncAutoCompleteSelect';
 import AuthorRow from './AuthorRow';
 import {loadAuthorsData} from 'repositories/authors';
 
@@ -36,10 +35,8 @@ export default class Authors extends Component {
         this.props.clearAuthors();
     }
 
-    addAuthor = () => {
-        const authorId = this.props.formValues.get('authorName');
-        const matchedAuthor = this.props.dataSource.find(function findMatchedAuthor(obj) {return obj.get('id') === authorId;});
-        this.props.addAuthor(matchedAuthor);
+    addAuthor = (author) => {
+        this.props.addAuthor(author);
     };
 
     removeAuthor = (i) => {
@@ -63,43 +60,20 @@ export default class Authors extends Component {
         }
     };
 
-    prepDataSource = (listOfAuthors) => {
-        const authors = [];
-
-        if (typeof listOfAuthors !== 'undefined' && listOfAuthors.size > 0) {
-            listOfAuthors.map((author) => {
-                authors.push(
-                    {'id': author.get('id'), 'name': author.get('name')}
-                );
-            });
-        }
-
-        return authors;
-    };
-
     render() {
-        const {formValues, selectedAuthors} = this.props;
+        const {selectedAuthors} = this.props;
         const ListOfAuthors = this.createAuthorRow(selectedAuthors);
-        const blah = {
-            id: 1,
-            name: 'test author'
-        };
 
         return (
             <div>
                 <div className="columns">
-                    <div className="column">
-                        <Field component={AsyncAutoCompleteSelect} name="authorName"
-                               label={this.props.authorFieldLabel}
-                               value={blah}
-                               dataSource={loadAuthorsData}
-                               dataSourceConfig={{text: 'name', value: 'id'}}
-                               openOnFocus
-                               fullWidth />
-                    </div>
-                    <div className="column is-narrow">
-                        <RaisedButton label="Add" secondary style={{marginTop: '15px'}} onClick={this.addAuthor} disabled={formValues && formValues.size === 0} />
-                    </div>
+                    <Field component={AsyncAutoCompleteSelect} name="authorName"
+                           label={this.props.authorFieldLabel}
+                           dataSourceLabel="name"
+                           dataSource={loadAuthorsData}
+                           onChange={this.addAuthor}
+                           disable={false}
+                           fullWidth/>
                 </div>
 
                 {ListOfAuthors}

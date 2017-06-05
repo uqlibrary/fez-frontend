@@ -29,6 +29,7 @@ function setup() {
         loadAuthorData: jest.fn(),
         form: 'testForm',
         formValues: Immutable.fromJS({publicationType: 179}),
+        handleSubmit: jest.fn(),
         store: store
     };
 

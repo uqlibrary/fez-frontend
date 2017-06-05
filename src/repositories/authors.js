@@ -5,7 +5,6 @@ import {api} from 'config';
  * @returns {Promise}
  */
 export function loadAuthorsData(querystring) {
-    console.log('querystring', querystring);
     return new Promise((resolve, reject) => {
         api.get(`authors/search?query=${querystring}`).then(response => {
             resolve(response.data);

@@ -6,7 +6,7 @@ import {SESSION_COOKIE_NAME} from 'config';
 // mocked data
 import {accounts} from './data/accounts';
 import {externalDoiSearchResultList, internalDoiSearchResultList, externalPubMedSearchResultsList, internalPubMedSearchResultsList, externalTitleSearchResultsList, internalTitleSearchResultsList} from './data/publicationSearch';
-// import {authorsList} from './data/authors';
+import {authorsList} from './data/authors';
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
@@ -56,7 +56,7 @@ mock.onGet('records/types').reply(200, publicationTypeList);
 mock.onGet(/vocabularies\/[0-9]/).reply(200, publicationSubTypeList);
 
 // Mock the authors endpoint
-mock.onGet('authors/search').passThrough();
+mock.onGet(/authors\/search\?query=*/).reply(200, authorsList);
 
 // Mock academics publication years endpoint response
 mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsBig);

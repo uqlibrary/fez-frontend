@@ -10,8 +10,10 @@ let AddJournalArticleFormContainer = reduxForm()(AddJournalArticleForm);
 
 AddJournalArticleFormContainer = connect(state => {
     const publicationTypeState = state.get('publicationSubTypes');
+    const fileUploadState = state.get('fileUpload');
     return {
         authorList: publicationTypeState.get('authorList') || Immutable.Map({}),
+        fileMetadata: fileUploadState.get('fileMetadata'),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
         publicationSubTypeList: publicationTypeState.get('publicationSubTypeList'),
         selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType')

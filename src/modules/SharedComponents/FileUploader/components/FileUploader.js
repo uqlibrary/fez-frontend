@@ -26,29 +26,30 @@ export default class FileUploader extends PureComponent {
         super(props);
 
         this.state = {
-            filesToUpload: [],
-            rejectedFiles: []
+            filesToUpload: []
         };
     }
 
     openDialog = (acceptedFiles, rejectedFiles) => {
         const fileInformation = locale.sharedComponents.files;
+
         let [validFiles, invalidFiles] = this.validateNumberOfFiles(acceptedFiles, rejectedFiles);
         [validFiles, invalidFiles] = this.validateFilenameFormat(validFiles, invalidFiles);
-        const filesToUpload = this.validateFileMetaIsNull(validFiles);
 
-        this.setState({
-            filesToUpload
-        });
+        if (this.props.fileMetadata.size > 0) {
+            [validFiles, invalidFiles] = this.validateFileNotUploaded(validFiles, invalidFiles);
+        }
 
-        if (invalidFiles.length > 0) {
+        if (invalidFiles && invalidFiles.length > 0) {
             const msg = fileInformation.messages.rejectedFiles.replace('[numberOfRejectedFiles]', invalidFiles.length);
             this.props.showSnackbar(msg);
         }
 
-        if (filesToUpload.length > 0) {
+        if (validFiles.length > 0) {
+            this.setState({filesToUpload: validFiles});
+
             this.props.initializeDialog();
-            this.props.setAcceptedFileList(filesToUpload);
+            this.props.setAcceptedFileList(validFiles);
             this.props.openDialog();
         } else {
             this.props.showSnackbar(fileInformation.messages.acceptedFiles);
@@ -62,7 +63,7 @@ export default class FileUploader extends PureComponent {
 
         if (fileMetadata) {
             const data = fileMetadata.toJS();
-            return Object.keys(fileMetadata.toJS()).map(id => {
+            return Object.keys(data).map(id => {
                 return <UploadedFileMetadata key={id} dataSource={data[id]} form={this.props.form} />;
             });
         }
@@ -71,27 +72,31 @@ export default class FileUploader extends PureComponent {
     };
 
     // checks if we're uploading the same file again
-    validateFileMetaIsNull = (acceptedFiles) => {
+    validateFileNotUploaded = (acceptedFiles, rejectedFiles) => {
         const {fileMetadata} = this.props;
-        if (fileMetadata.size === 0) return acceptedFiles;
 
-        const filesToUpload = [];
+        const validFiles = [];
+        const invalidFiles = rejectedFiles;
+
         acceptedFiles.map(file => {
             const found = fileMetadata.find(metadata => {
+                console.log(metadata, metadata.name, file, file.name);
                 return metadata.name === file.name;
             });
 
             if (!found) {
-                filesToUpload.push(file);
+                validFiles.push(file);
+            } else {
+                invalidFiles.push(file);
             }
         });
 
-        if (acceptedFiles.length !== filesToUpload.length) {
-            const msg = locale.sharedComponents.files.messages.alreadyUploaded.replace('[numberOfUploadedFiles]', acceptedFiles.length - filesToUpload.length);
+        if (acceptedFiles.length !== validFiles.length) {
+            const msg = locale.sharedComponents.files.messages.alreadyUploaded.replace('[numberOfUploadedFiles]', acceptedFiles.length - validFiles.length);
             this.props.showSnackbar(msg);
         }
 
-        return filesToUpload;
+        return [validFiles, invalidFiles];
     };
 
     validateFilenameFormat = (acceptedFiles, rejectedFiles) => {
@@ -115,7 +120,7 @@ export default class FileUploader extends PureComponent {
         let validFiles = acceptedFiles;
         let invalidFiles = rejectedFiles;
 
-        // check if the user has more than the maximum of files uploaded
+        // check if the user has more than the maximum of files uploaded in one hit
         if (acceptedFiles.length > maxNumberOfFiles) {
             // alert user they're trying to upload more than files than maxNumberOfFiles
             const msg = fileInformation.messages.maxFiles.replace('[maxNumberOfFiles]', maxNumberOfFiles);

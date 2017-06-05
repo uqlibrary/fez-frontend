@@ -57,7 +57,7 @@ export default class Confirmation extends PureComponent {
         this.setUploadedDataState();
 
         closeDialog();
-        reset(); // resets the form fields in the dialog
+        reset(); // resets the redux form fields in the dialog. Function available in redux-form itself
     };
 
     setUploadedDataState = () => {
@@ -108,7 +108,8 @@ export default class Confirmation extends PureComponent {
         const prevBtnFunc = !showProgress ? decreaseStep : this.cancelFileUpload;
         const nextBtnLabel = !showProgress ? fileInformation.buttons.uploadFilesLabel : locale.global.labels.buttons.close;
         const nextBtnFunc = !showProgress ? this.uploadSelectedFiles : this.closeFileUploadDialog;
-        const disabledBtn = (IS_UPLOAD_STEP && !isUploadCompleted && uploadError.length === 0);
+        const prevDisabledBtn = (IS_UPLOAD_STEP && isUploadCompleted && uploadError.length === 0);
+        const nextDisabledBtn = (IS_UPLOAD_STEP && !isUploadCompleted && uploadError.length === 0);
 
         return (
             <div>
@@ -134,13 +135,13 @@ export default class Confirmation extends PureComponent {
                         className="prevBtn"
                         label={prevBtnLabel}
                         onTouchTap={prevBtnFunc}
-                        disabled={!disabledBtn}
+                        disabled={prevDisabledBtn}
                     />
                     <RaisedButton
                         label={nextBtnLabel}
                         secondary
                         onTouchTap={nextBtnFunc}
-                        disabled={disabledBtn}
+                        disabled={nextDisabledBtn}
                     />
                 </div>
             </div>

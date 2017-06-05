@@ -36,87 +36,20 @@ exports[`File upload uploaded file metadata snapshot renders default uploaded fi
     firstChild={false}
     lastChild={false}
   >
-    <IconMenu
-      anchorOrigin={
-        Object {
-          "horizontal": "right",
-          "vertical": "top",
-        }
-      }
-      animated={true}
-      iconButtonElement={
-        <IconButton
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
-          tooltipPosition="bottom-center"
-          touch={false}
-        >
-          <NavigationMoreVert />
-        </IconButton>
-      }
-      multiple={false}
-      onItemTouchTap={[Function]}
+    <FlatButton
+      disabled={false}
+      fullWidth={false}
+      label="Remove"
+      labelPosition="after"
+      labelStyle={Object {}}
       onKeyboardFocus={[Function]}
-      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onRequestChange={[Function]}
+      onTouchStart={[Function]}
       onTouchTap={[Function]}
-      open={null}
-      targetOrigin={
-        Object {
-          "horizontal": "right",
-          "vertical": "top",
-        }
-      }
-      touchTapCloseDelay={200}
-      useLayerForClickAway={false}
-    >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        primaryText="Download"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        primaryText="Re-upload"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        primaryText="Remove"
-      />
-    </IconMenu>
+      primary={false}
+      secondary={false}
+    />
   </ToolbarGroup>
 </Toolbar>
 `;
@@ -157,87 +90,20 @@ exports[`File upload uploaded file metadata snapshot renders default uploaded fi
     firstChild={false}
     lastChild={false}
   >
-    <IconMenu
-      anchorOrigin={
-        Object {
-          "horizontal": "right",
-          "vertical": "top",
-        }
-      }
-      animated={true}
-      iconButtonElement={
-        <IconButton
-          disableTouchRipple={false}
-          disabled={false}
-          iconStyle={Object {}}
-          tooltipPosition="bottom-center"
-          touch={false}
-        >
-          <NavigationMoreVert />
-        </IconButton>
-      }
-      multiple={false}
-      onItemTouchTap={[Function]}
+    <FlatButton
+      disabled={false}
+      fullWidth={false}
+      label="Remove"
+      labelPosition="after"
+      labelStyle={Object {}}
       onKeyboardFocus={[Function]}
-      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onRequestChange={[Function]}
+      onTouchStart={[Function]}
       onTouchTap={[Function]}
-      open={null}
-      targetOrigin={
-        Object {
-          "horizontal": "right",
-          "vertical": "top",
-        }
-      }
-      touchTapCloseDelay={200}
-      useLayerForClickAway={false}
-    >
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        primaryText="Download"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        primaryText="Re-upload"
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        primaryText="Remove"
-      />
-    </IconMenu>
+      primary={false}
+      secondary={false}
+    />
   </ToolbarGroup>
 </Toolbar>
 `;

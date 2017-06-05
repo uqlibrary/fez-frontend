@@ -332,6 +332,7 @@ export default {
             buttons: {
                 backLabel: 'Back',
                 cancelUpload: 'Cancel upload',
+                deleteLabel: 'Remove',
                 getStartedLabel: 'Get Started',
                 stepperNextLabel: 'Agree and continue',
                 uploadFilesLabel: 'Upload all files'

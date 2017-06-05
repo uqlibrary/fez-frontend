@@ -1,26 +1,26 @@
 import {api, generateCancelToken} from 'config';
-import {showSnackbar} from 'modules/App';
 import {locale} from 'config';
 
 // Repositories
 import {loadDocumentAccessData} from 'repositories/documentAccessTypes';
 
 // Types
-export const FILE_UPLOADING = 'FILE_UPLOADING';
-export const FILE_UPLOADED = 'FILE_UPLOADED';
+export const FILE_DELETED = 'FILE_DELETED';
+export const FILE_DOCUMENT_ACCESS_TYPES_LOADING = 'FILE_DOCUMENT_ACCESS_TYPES_LOADING';
+export const FILE_DOCUMENT_ACCESS_TYPES_LOADED = 'FILE_DOCUMENT_ACCESS_TYPES_LOADED';
 export const FILE_DIALOG_OPENED = 'FILE_DIALOG_OPENED';
 export const FILE_DIALOG_CLOSED = 'FILE_DIALOG_CLOSED';
+export const FILE_DIALOG_INITIALIZED = 'FILE_DIALOG_INITIALIZED';
+export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
+export const FILE_METADATA_UPDATED = 'FILE_METADATA_UPDATED';
+export const FILE_PAGE_INCREASED = 'FILE_PAGE_INCREASED';
+export const FILE_PAGE_DECREASED = 'FILE_PAGE_DECREASED';
 export const FILE_STEPPER_INDEX_INCREASED = 'FILE_STEPPER_INDEX_INCREASED';
 export const FILE_STEPPER_INDEX_DECREASED = 'FILE_STEPPER_INDEX_DECREASED';
 export const FILE_UPLOAD_CANCELLED = 'FILE_UPLOAD_CANCELLED';
-export const FILE_DOCUMENT_ACCESS_TYPES_LOADING = 'FILE_DOCUMENT_ACCESS_TYPES_LOADING';
-export const FILE_DOCUMENT_ACCESS_TYPES_LOADED = 'FILE_DOCUMENT_ACCESS_TYPES_LOADED';
-export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
-export const FILE_METADATA_UPDATED = 'FILE_METADATA_UPDATED';
 export const FILE_UPLOAD_TERMINATED = 'FILE_UPLOAD_TERMINATED';
-export const FILE_PAGE_INCREASED = 'FILE_PAGE_INCREASED';
-export const FILE_PAGE_DECREASED = 'FILE_PAGE_DECREASED';
-export const FILE_DIALOG_INITIALIZED = 'FILE_DIALOG_INITIALIZED';
+export const FILE_UPLOADING = 'FILE_UPLOADING';
+export const FILE_UPLOADED = 'FILE_UPLOADED';
 
 export const DIALOG_GETTING_STARTED_PAGE = 'DIALOG_GETTING_STARTED_PAGE';
 export const DIALOG_STEPPER_PAGE = 'DIALOG_STEPPER_PAGE';
@@ -78,19 +78,16 @@ export function uploadFile(acceptedFiles) {
                     } else {
                         dispatch({
                             type: FILE_UPLOAD_TERMINATED,
-                            payload: e.message
+                            payload: getErrorMssage(e)
                         });
-                        dispatch(showSnackbar(getErrorMssage(e)));
                         throw(e);
                     }
                 });
             }).catch(e => {
                 dispatch({
                     type: FILE_UPLOAD_TERMINATED,
-                    payload: e.message
+                    payload: getErrorMssage(e)
                 });
-
-                dispatch(showSnackbar(getErrorMssage(e)));
                 throw e;
             });
         });
@@ -192,5 +189,12 @@ export function previousPage() {
 export function initializeDialog() {
     return {
         type: FILE_DIALOG_INITIALIZED
+    };
+}
+
+export function deleteFile(file) {
+    return {
+        type: FILE_DELETED,
+        payload: file
     };
 }

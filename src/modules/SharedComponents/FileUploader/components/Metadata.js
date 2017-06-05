@@ -16,13 +16,14 @@ export default class Metadata extends PureComponent {
 
     static propTypes = {
         dataSource: PropTypes.array.isRequired,
-        stepperIndex: PropTypes.number.isRequired,
+        decreaseStep: PropTypes.func,
         file: PropTypes.object.isRequired,
         form: PropTypes.string.isRequired,
+        formValues: PropTypes.object,
+        handleSubmit: PropTypes.func,
         increaseStep: PropTypes.func,
         previousPage: PropTypes.func,
-        formValues: PropTypes.object,
-        handleSubmit: PropTypes.func
+        stepperIndex: PropTypes.number.isRequired
     };
 
     constructor(props) {
@@ -39,6 +40,7 @@ export default class Metadata extends PureComponent {
             file,
             formValues,
             previousPage,
+            decreaseStep,
             increaseStep,
             handleSubmit
         } = this.props;
@@ -49,6 +51,7 @@ export default class Metadata extends PureComponent {
         defaultDate.setHours(0, 0, 0, 0);
 
         const required = value => value && value.replace(/\s/, '').length > 0 ? undefined : 'This field is required';
+        const prevBtnFunc = stepperIndex === 0 ? previousPage : decreaseStep;
 
         return (
             <form onSubmit={handleSubmit(increaseStep)}>
@@ -99,7 +102,7 @@ export default class Metadata extends PureComponent {
                     <FlatButton
                         className="prevBtn"
                         label={fileInformation.buttons.backLabel}
-                        onTouchTap={previousPage}
+                        onTouchTap={prevBtnFunc}
                     />
                     <RaisedButton
                         label={fileInformation.buttons.stepperNextLabel}

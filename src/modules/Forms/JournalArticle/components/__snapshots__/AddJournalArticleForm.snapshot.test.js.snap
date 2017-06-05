@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Document type form integration tests renders default document type component 1`] = `
-<div
-  style={
-    Object {
-      "marginBottom": "-60px",
-    }
-  }
->
+<form>
   <Card
     className="layout-card"
     expandable={false}
@@ -50,8 +44,13 @@ exports[`Document type form integration tests renders default document type comp
           component={[Function]}
           floatingLabelText="Journal title"
           fullWidth={true}
-          name="journalTitle"
+          name="rek_title"
           type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
         />
       </div>
       <div
@@ -64,23 +63,18 @@ exports[`Document type form integration tests renders default document type comp
             component={[Function]}
             floatingLabelText="Journal name"
             fullWidth={true}
-            name="journalName"
+            name="fez_record_search_key_journal_name.rek_journal_name"
             type="text"
           />
         </div>
         <div
           className="column"
         >
-          <DatePicker
-            autoOk={false}
-            container="dialog"
-            disableYearSelection={false}
-            disabled={false}
-            firstDayOfWeek={1}
+          <Field
+            component={[Function]}
             floatingLabelText="Journal publish date"
             fullWidth={true}
-            hideCalendarDate={false}
-            style={Object {}}
+            name="rek_date"
           />
         </div>
       </div>
@@ -137,7 +131,7 @@ exports[`Document type form integration tests renders default document type comp
           }
           fullWidth={true}
           label="Select a publication type"
-          name="publicationSubType"
+          name="rek_subtype"
         />
       </div>
     </CardText>
@@ -179,7 +173,7 @@ exports[`Document type form integration tests renders default document type comp
     >
       <Connect(ReduxForm)
         authorFieldLabel="Add an author (Name as published)"
-        form="addJournalArticle"
+        form="testForm"
       />
     </CardText>
   </Card>
@@ -234,7 +228,7 @@ exports[`Document type form integration tests renders default document type comp
                 component={[Function]}
                 floatingLabelText="Volume"
                 fullWidth={true}
-                name="publicationVolume"
+                name="fez_record_search_key_volume_number.rek_volume_number"
                 type="text"
               />
             </div>
@@ -245,7 +239,7 @@ exports[`Document type form integration tests renders default document type comp
                 component={[Function]}
                 floatingLabelText="Issue"
                 fullWidth={true}
-                name="publicationIssue"
+                name="fez_record_search_key_issue_number.rek_issue_number"
                 type="text"
               />
             </div>
@@ -264,7 +258,7 @@ exports[`Document type form integration tests renders default document type comp
                 component={[Function]}
                 floatingLabelText="Start page"
                 fullWidth={true}
-                name="publicationStartPage"
+                name="fez_record_search_key_start_page.rek_start_page"
                 type="text"
               />
             </div>
@@ -275,7 +269,7 @@ exports[`Document type form integration tests renders default document type comp
                 component={[Function]}
                 floatingLabelText="End page"
                 fullWidth={true}
-                name="publicationEndPage"
+                name="fez_record_search_key_end_page.rek_end_page"
                 type="text"
               />
             </div>
@@ -290,10 +284,10 @@ exports[`Document type form integration tests renders default document type comp
         >
           <Field
             component={[Function]}
-            floatingLabelText="Not (not publically viewable)"
+            floatingLabelText="Note (not publically viewable)"
             fullWidth={true}
             multiLine={true}
-            name="publicationNotes"
+            name="fez_record_search_key_notes.rek_notes"
             rows={5}
             type="text"
           />
@@ -301,167 +295,40 @@ exports[`Document type form integration tests renders default document type comp
       </div>
     </CardText>
   </Card>
-  <Card
-    className="layout-card"
-    expandable={false}
-    expanded={null}
-    initiallyExpanded={false}
+  <Connect(ReduxForm)
+    form="FileUploadForm"
+  />
+  <div
+    className="buttonWrapper"
   >
-    <CardHeader
-      avatar={null}
-      className="card-header"
-    >
-      <div
-        className="columns is-gapless"
-      >
-        <div
-          className="column"
-        >
-          <h2
-            className="headline"
-          >
-            Files
-          </h2>
-        </div>
-        <div
-          className="column"
-        >
-          <Connect(HelpIcon)
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
-            title="Files"
-          />
-        </div>
-      </div>
-    </CardHeader>
-    <CardText
-      className="body-1"
-    >
-      <div
-        className="columns"
-      >
-        <div
-          className="column"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Filename selected"
-            fullWidth={true}
-            name="filesUpload"
-            type="text"
-          />
-        </div>
-      </div>
-      <div
-        className="columns"
-      >
-        <div
-          className="column"
-        >
-          <RaisedButton
-            disabled={false}
-            fullWidth={false}
-            label="Delete this and replace with component"
-            labelPosition="after"
-            primary={false}
-            secondary={true}
-          />
-        </div>
-      </div>
-      <div
-        className="columns fileInstructions"
-      >
-        <div
-          className="column"
-        >
-          <h3>
-            File name restrictions
-          </h3>
-          <div>
-            <ul>
-              <li>
-                No folders
-              </li>
-              <li>
-                Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)
-              </li>
-              <li>
-                Only numbers and lowercase characters in the file extension
-              </li>
-              <li>
-                Under 45 characters
-              </li>
-              <li>
-                Only one file extension (on period (.) character) and
-              </li>
-              <li>
-                Starting with a letter. Eg "s12345678_phd_thesis.pdf"
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          className="column uploadInstructions"
-        >
-          <FontIcon
-            className="material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            cloud_upload
-          </FontIcon>
-          <p>
-            Click here to select files, or drag files into this area to upload
-          </p>
-        </div>
-      </div>
-      <div
-        className="columns"
-      >
-        <div
-          className="column is-two-thirds"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="File is public (open access)"
-            fullWidth={true}
-            name="filesAccessConditions"
-            type="text"
-          />
-        </div>
-        <div
-          className="column"
-        >
-          <DatePicker
-            autoOk={false}
-            container="dialog"
-            disableYearSelection={false}
-            disabled={false}
-            firstDayOfWeek={1}
-            floatingLabelText="Embargo date"
-            fullWidth={true}
-            hideCalendarDate={false}
-            style={Object {}}
-          />
-        </div>
-      </div>
-      <div
-        className="columns"
-      >
-        <div
-          className="column"
-        >
-          <Field
-            component={[Function]}
-            floatingLabelText="Description"
-            fullWidth={true}
-            multiLine={true}
-            name="filesDescription"
-            rows={3}
-            type="text"
-          />
-        </div>
-      </div>
-    </CardText>
-  </Card>
-</div>
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Cancel"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={false}
+      style={
+        Object {
+          "marginLeft": "12px",
+        }
+      }
+    />
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Submit for approval"
+      labelPosition="after"
+      primary={false}
+      secondary={true}
+      style={
+        Object {
+          "marginLeft": "12px",
+        }
+      }
+      type="submit"
+    />
+  </div>
+</form>
 `;

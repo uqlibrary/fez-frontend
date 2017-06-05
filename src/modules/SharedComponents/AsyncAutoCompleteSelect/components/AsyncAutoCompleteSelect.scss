@@ -1,0 +1,59 @@
+.auto-complete-select-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 50;
+}
+
+.auto-complete-select-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  width: 400px;
+  height: 500px;
+  margin-left: -100px;
+  margin-top: -250px;
+  padding: 0 25px 25px;
+  background: #FFF;
+  border-radius: 4px;
+
+}
+
+.auto-complete-select {
+  .base-input-container {
+    position: relative;
+    outline: none;
+    height: 48px;
+    margin-top: 24px;
+    cursor: pointer;
+  }
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #ddd;
+}
+
+.auto-complete-select-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
