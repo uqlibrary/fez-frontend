@@ -11,40 +11,41 @@ import Immutable from 'immutable';
 let showSnackbar;
 let app;
 
+function setup(testData = {}) {
+    const data = {};
+    const metadata = locale.sharedComponents.files.fields.metadata;
+
+    data[metadata.description] = 'test file description';
+    data[metadata.accessCondition] = 1;
+    data[metadata.embargoDate] = 'Thu May 25 2017 00:00:00 GMT+1000 (AEST)';
+
+    const fileData = {
+        file: {
+            name: 's12345678_test_file_archive.zip',
+            size: 5307669356,
+            type: 'application/zip'
+        }
+    };
+
+    const fileMetadata = typeof testData.fileMetadata !== 'undefined' ? testData.fileMetadata : Immutable.fromJS(Object.assign({}, fileData, data));
+
+    showSnackbar = sinon.spy();
+
+    const props = {
+        form: 'testForm',
+        openDialog: jest.fn(),
+        setAcceptedFileList: jest.fn(),
+        initializeDialog: jest.fn(),
+        showSnackbar,
+        fileMetadata
+    };
+
+    app = shallow(<FileUploader {...props} />);
+};
+
 describe('File upload dropzone unit tests', () => {
-    beforeEach(() => {
-        const data = {};
-        const metadata = locale.sharedComponents.files.fields.metadata;
-
-        data[metadata.description] = 'test file description';
-        data[metadata.accessCondition] = 1;
-        data[metadata.embargoDate] = 'Thu May 25 2017 00:00:00 GMT+1000 (AEST)';
-
-        const fileData = {
-            file: {
-                name: 's12345678_test_file_archive.zip',
-                size: 5307669356,
-                type: 'application/zip'
-            }
-        };
-
-        const fileMetadata = Immutable.fromJS(Object.assign({}, fileData, data));
-
-        showSnackbar = sinon.spy();
-
-        const props = {
-            form: 'testForm',
-            openDialog: jest.fn(),
-            setAcceptedFileList: jest.fn(),
-            initializeDialog: jest.fn(),
-            showSnackbar,
-            fileMetadata
-        };
-
-        app = shallow(<FileUploader {...props} />);
-    });
-
     it('validates the number of valid and invalid files', () => {
+        setup();
         const fileList = [
             {
                 name: 's123456781_test_file_archive.zip',
@@ -104,6 +105,7 @@ describe('File upload dropzone unit tests', () => {
     });
 
     it('validates the files names', () => {
+        setup();
         const fileList = [
             {
                 name: '123456781_test_file_archive.zip',
@@ -137,6 +139,7 @@ describe('File upload dropzone unit tests', () => {
     });
 
     it('opens the dialog', () => {
+        setup();
         const fileList = [
             {
                 name: '123456781_test_file_archive.zip',
@@ -168,7 +171,39 @@ describe('File upload dropzone unit tests', () => {
     });
 
     it('fails to open the dialog', () => {
+        setup();
         app.instance().openDialog([], []);
         expect(showSnackbar.calledOnce).toEqual(true);
+    });
+
+    it('renders the list of files', () => {
+        setup();
+        const result = app.instance().getListOfUploadedFiles();
+        expect(result).not.toHaveLength(0);
+    });
+
+    it("doesn't renders the list of files", () => {
+        const testData = {};
+        testData.fileMetadata = null;
+        setup(testData);
+
+        const result = app.instance().getListOfUploadedFiles();
+        expect(result).toEqual('');
+    });
+
+    it('filters out duplicate files', () => {
+        setup();
+        const fileData = {
+            file: {
+                name: 's12345678_test_file_archive.zip',
+                size: 5307669356,
+                type: 'application/zip'
+            }
+        };
+
+        const [validFiles, invalidFiles] = app.instance().validateFileNotUploaded(Immutable.fromJS(fileData), []);
+
+        expect(validFiles.length).toEqual(0);
+        expect(invalidFiles.length).toEqual(1);
     });
 });

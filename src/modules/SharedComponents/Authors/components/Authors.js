@@ -71,6 +71,7 @@ export default class Authors extends Component {
                            label={this.props.authorFieldLabel}
                            dataSourceLabel="name"
                            dataSource={loadAuthorsData}
+                           disabled={false}
                            onChange={this.addAuthor}
                            disable={false}
                            fullWidth/>

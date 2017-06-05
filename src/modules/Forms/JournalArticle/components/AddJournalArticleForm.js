@@ -92,8 +92,6 @@ export default class AddJournalArticleForm extends Component {
         const fileData = this.setFileData();
         const combinedData = Object.assign({}, defaultData, formData, tempData, fileData);
 
-        console.log('combinedData', combinedData);
-
         submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
     };
 

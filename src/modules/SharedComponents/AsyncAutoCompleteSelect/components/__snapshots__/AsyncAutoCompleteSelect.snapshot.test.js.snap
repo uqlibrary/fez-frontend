@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorRow snapshots testx renders an Author Rowx 1`] = `
+<div
+  className="auto-complete-select"
+>
+  <div
+    className="base-input-container"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onTouchTap={[Function]}
+    tabIndex={0}
+  >
+    <TextFieldLabel
+      disabled={false}
+      shrink={false}
+      style={
+        Object {
+          "color": "rgb(224, 224, 224)",
+          "cursor": "pointer",
+          "fontSize": "16px",
+          "top": "12px",
+        }
+      }
+    >
+      some label
+    </TextFieldLabel>
+    <TextFieldUnderline
+      disabled={false}
+      disabledStyle={Object {}}
+      error={false}
+      errorStyle={Object {}}
+      focus={false}
+      focusStyle={Object {}}
+      style={Object {}}
+    />
+  </div>
+  <Modal
+    ariaHideApp={true}
+    className="auto-complete-select-content"
+    closeTimeoutMS={1}
+    contentLabel="Modal"
+    isOpen={false}
+    onRequestClose={[Function]}
+    overlayClassName="auto-complete-select-overlay"
+    parentSelector={[Function]}
+    portalClassName="ReactModalPortal"
+    shouldCloseOnOverlayClick={true}
+  >
+    <div>
+      <Autosuggest
+        alwaysRenderSuggestions={false}
+        focusInputOnSuggestionClick={true}
+        getSuggestionValue={[Function]}
+        highlightFirstSuggestion={false}
+        id="1"
+        inputProps={
+          Object {
+            "onChange": [Function],
+            "placeholder": "Type to filter",
+            "value": "",
+          }
+        }
+        multiSection={false}
+        onSuggestionSelected={[Function]}
+        onSuggestionsClearRequested={[Function]}
+        onSuggestionsFetchRequested={[Function]}
+        renderInputComponent={[Function]}
+        renderSuggestion={[Function]}
+        renderSuggestionsContainer={[Function]}
+        shouldRenderSuggestions={[Function]}
+        suggestions={Array []}
+        theme={
+          Object {
+            "container": "react-autosuggest__container",
+            "containerOpen": "react-autosuggest__container--open",
+            "input": "react-autosuggest__input",
+            "inputFocused": "react-autosuggest__input--focused",
+            "inputOpen": "react-autosuggest__input--open",
+            "sectionContainer": "react-autosuggest__section-container",
+            "sectionContainerFirst": "react-autosuggest__section-container--first",
+            "sectionTitle": "react-autosuggest__section-title",
+            "suggestion": "react-autosuggest__suggestion",
+            "suggestionFirst": "react-autosuggest__suggestion--first",
+            "suggestionHighlighted": "react-autosuggest__suggestion--highlighted",
+            "suggestionsContainer": "react-autosuggest__suggestions-container",
+            "suggestionsContainerOpen": "react-autosuggest__suggestions-container--open",
+            "suggestionsList": "react-autosuggest__suggestions-list",
+          }
+        }
+      />
+    </div>
+    <div
+      className="auto-complete-select-close"
+    >
+      <IconButton
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onClick={[Function]}
+        tooltipPosition="bottom-center"
+        touch={false}
+      >
+        <FontIcon
+          className="material-icons"
+          color="#999"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          clear
+        </FontIcon>
+      </IconButton>
+    </div>
+  </Modal>
+</div>
+`;

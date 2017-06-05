@@ -5,8 +5,9 @@ import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import UploadDialog from './UploadDialog';
+import {DIALOG_GETTING_STARTED_PAGE, DIALOG_STEPPER_PAGE} from '../actions';
 
-function setup() {
+function setup(page = '') {
     const acceptedFiles = [
         {
             name: 's12345678_test_file_archive.zip',
@@ -34,6 +35,7 @@ function setup() {
         showSnackbar: jest.fn(),
         uploadFile: jest.fn(),
         stepperIndex: 0,
+        page,
         uploadProgress: {}
     };
     return shallow(<UploadDialog {...props} />);
@@ -42,6 +44,16 @@ function setup() {
 describe('File upload dialog snapshots tests', () => {
     it('renders default file upload dialog component', () => {
         const app = setup();
+        expect(toJson(app)).toMatchSnapshot();
+    });
+
+    it('renders getting started component', () => {
+        const app = setup(DIALOG_GETTING_STARTED_PAGE);
+        expect(toJson(app)).toMatchSnapshot();
+    });
+
+    it('renders stepper component', () => {
+        const app = setup(DIALOG_STEPPER_PAGE);
         expect(toJson(app)).toMatchSnapshot();
     });
 });

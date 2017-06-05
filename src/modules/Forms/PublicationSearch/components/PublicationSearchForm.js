@@ -42,8 +42,9 @@ export default class PublicationSearchForm extends Component {
         };
     }
 
-    updateButtonLabel = (event) => {
-        const fieldValue = event.target.value;
+    updateButtonLabel = () => {
+        const {formValues} = this.props;
+        const fieldValue = formValues.get('doiSearch');
         const buttonLabels = locale.pages.addRecord.searchForPublication.buttonLabelVariants;
         let label = buttonLabels.default;
         if (fieldValue) {

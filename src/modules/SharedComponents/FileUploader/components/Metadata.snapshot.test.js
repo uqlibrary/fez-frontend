@@ -10,7 +10,7 @@ import Metadata from './Metadata';
 
 const accessConditionId = 3;
 
-function setup(ds) {
+function setup(ds, stepperIndex) {
     const file = {
         name: 's12345678_test_file_archive.zip',
         size: 'application/pdf',
@@ -19,7 +19,7 @@ function setup(ds) {
 
     const props = {
         dataSource: ds,
-        stepperIndex: 0,
+        stepperIndex,
         file,
         handleSubmit: jest.fn(),
         form: 'testForm',
@@ -30,7 +30,12 @@ function setup(ds) {
 
 describe('File upload metadata snapshots tests', () => {
     it('renders default file upload metadata component', () => {
-        const app = setup(documentAccessTypes);
+        const app = setup(documentAccessTypes, 0);
+        expect(toJson(app)).toMatchSnapshot();
+    });
+
+    it('sets the previous button to decreaseStep function', () => {
+        const app = setup(documentAccessTypes, 1);
         expect(toJson(app)).toMatchSnapshot();
     });
 });

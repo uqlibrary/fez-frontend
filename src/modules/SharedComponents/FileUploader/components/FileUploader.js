@@ -80,7 +80,6 @@ export default class FileUploader extends PureComponent {
 
         acceptedFiles.map(file => {
             const found = fileMetadata.find(metadata => {
-                console.log(metadata, metadata.name, file, file.name);
                 return metadata.name === file.name;
             });
 
@@ -172,7 +171,7 @@ export default class FileUploader extends PureComponent {
                     </CardText>
                 </Card>
 
-                {this.props.fileMetadata.size > 0 && (
+                {this.props.fileMetadata && this.props.fileMetadata.size > 0 && (
                 <Card className="layout-card metadataContainer">
                     <CardText className="body-1">
                         {uploadedFiles}

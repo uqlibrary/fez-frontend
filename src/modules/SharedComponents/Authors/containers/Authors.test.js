@@ -71,13 +71,9 @@ describe('Authors', () => {
     });
 
     it('adds an author to the list', () => {
-        const button = app.find('RaisedButton').first();
-        const input = app.find('AutoCompleteSelectWrapper').first();
-        input.simulate('change', { target: { value: 'Author 10' } });
+        const input = app.find('AsyncAutoCompleteSelect');
+        input.props().onChange();
 
-        // trigger a real click as the this.addAuthor function is internal to the component
-        // ie it's not passed as a prop which means we can't simulate the click
-        button.props().onClick();
         expect(addAuthor.called).toEqual(true);
         expect(addAuthor.callCount).toEqual(1);
     });
