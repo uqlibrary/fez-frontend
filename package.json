@@ -76,7 +76,7 @@
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "timezones.json": "^1.2.0",
-    "uqlibrary-react-toolbox": "0.0.15"
+    "uqlibrary-react-toolbox": "0.0.14"
   },
   "scripts": {
     "start": "webpack-dev-server",
