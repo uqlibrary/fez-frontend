@@ -46,7 +46,7 @@ class addRecord extends React.Component {
         this.state = {
             loading: false,
             finished: false,
-            stepIndex: 0,
+            stepIndex: 2,
             submitOpen: false,
             saveOpen: false,
             publicationType: 0

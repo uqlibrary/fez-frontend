@@ -51,8 +51,8 @@ export default class Authors extends Component {
                 return (
                     <AuthorRow
                         key={i}
-                        authorID={author.get('id')}
-                        name={author.get('name')}
+                        authorID={author.get('aut_id')}
+                        name={author.get('aut_display_name')}
                         removeAuthorLabel={this.props.removeAuthorLabel}
                         removeAuthor={this.removeAuthor}/>
                 );
@@ -69,7 +69,7 @@ export default class Authors extends Component {
                 <div className="columns">
                     <Field component={AsyncAutoCompleteSelect} name="authorName"
                            label={this.props.authorFieldLabel}
-                           dataSourceLabel="name"
+                           dataSourceLabel="aut_display_name"
                            dataSource={loadAuthorsData}
                            disabled={false}
                            onChange={this.addAuthor}
