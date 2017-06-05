@@ -11,12 +11,15 @@ let AddJournalArticleFormContainer = reduxForm()(AddJournalArticleForm);
 AddJournalArticleFormContainer = connect(state => {
     const publicationTypeState = state.get('publicationSubTypes');
     const fileUploadState = state.get('fileUpload');
+    const authorsState = state.get('authors') || Immutable.Map({});
+
     return {
         authorList: publicationTypeState.get('authorList') || Immutable.Map({}),
         fileMetadata: fileUploadState.get('fileMetadata'),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
         publicationSubTypeList: publicationTypeState.get('publicationSubTypeList'),
-        selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType')
+        selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType'),
+        selectedAuthors: authorsState.get('selectedAuthors') || Immutable.Map({}),
     };
 }, dispatch => {
     return {
