@@ -6,8 +6,15 @@ import {loadPublicationSubTypesList, cancelAddRecord, loadAuthorsList, submitRec
 import {decreaseStep} from '../../../AddRecord/actions';
 import Immutable from 'immutable';
 
+const scrollToElement = require('scrollto-element');
 
-let AddJournalArticleFormContainer = reduxForm()(AddJournalArticleForm);
+let AddJournalArticleFormContainer = reduxForm({
+    onSubmitFail: (result) => {
+        const target = Object.keys(result);
+        // scroll to the first erroneous field
+        scrollToElement(document.getElementsByName(target[0])[0], 800);
+    }
+})(AddJournalArticleForm);
 
 AddJournalArticleFormContainer = connect(state => {
     const publicationTypeState = state.get('publicationSubTypes');
@@ -20,7 +27,7 @@ AddJournalArticleFormContainer = connect(state => {
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
         publicationSubTypeList: publicationTypeState.get('publicationSubTypeList'),
         selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType'),
-        selectedAuthors: authorsState.get('selectedAuthors') || Immutable.Map({}),
+        selectedAuthors: authorsState.get('selectedAuthors') || Immutable.Map({})
     };
 }, dispatch => {
     return {
