@@ -127,6 +127,8 @@ export default class AddJournalArticleForm extends Component {
         const {formValues, form, handleSubmit} = this.props;
         const required = value => value && value.replace(/\s/, '').length > 0 ? undefined : 'This field is required';
 
+        const DateTimeFormat = global.Intl.DateTimeFormat;
+
         return (
             <form onSubmit={handleSubmit(this.submitRecord)}>
                 {/* Journal Information */}
@@ -166,6 +168,8 @@ export default class AddJournalArticleForm extends Component {
                                 <Field component={DatePicker}
                                        floatingLabelText={journalArticleInformation.fields.publishDateLabel}
                                        fullWidth
+                                       locale="en-AU"
+                                       DateTimeFormat={DateTimeFormat}
                                        name="rek_date"
                                 />
                             </div>
