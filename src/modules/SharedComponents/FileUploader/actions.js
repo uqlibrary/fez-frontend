@@ -12,6 +12,7 @@ export const FILE_DIALOG_OPENED = 'FILE_DIALOG_OPENED';
 export const FILE_DIALOG_CLOSED = 'FILE_DIALOG_CLOSED';
 export const FILE_DIALOG_INITIALIZED = 'FILE_DIALOG_INITIALIZED';
 export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
+export const FILE_METADATA_INITIALIZED = 'FILE_METADATA_INITIALIZED';
 export const FILE_METADATA_UPDATED = 'FILE_METADATA_UPDATED';
 export const FILE_PAGE_INCREASED = 'FILE_PAGE_INCREASED';
 export const FILE_PAGE_DECREASED = 'FILE_PAGE_DECREASED';
@@ -164,6 +165,12 @@ export function setAcceptedFileList(files) {
     return {
         type: FILE_LIST_CREATED,
         payload: files
+    };
+}
+
+export function initializeMetadata() {
+    return {
+        type: FILE_METADATA_INITIALIZED
     };
 }
 

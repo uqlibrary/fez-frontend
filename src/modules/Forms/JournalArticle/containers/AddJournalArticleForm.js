@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {reduxForm, getFormValues} from 'redux-form/immutable';
 import AddJournalArticleForm from '../components/AddJournalArticleForm';
 import {loadPublicationSubTypesList, cancelAddRecord, loadAuthorsList, submitRecordForApproval} from '../actions';
+import {decreaseStep} from '../../../AddRecord/actions';
 import Immutable from 'immutable';
 
 
@@ -24,6 +25,7 @@ AddJournalArticleFormContainer = connect(state => {
 }, dispatch => {
     return {
         cancelAddRecord: (message) => dispatch(cancelAddRecord(message)),
+        decreaseStep: () => dispatch(decreaseStep()),
         loadPublicationSubTypesList: (id) => dispatch(loadPublicationSubTypesList(id)),
         loadAuthorsList: () => dispatch(loadAuthorsList()),
         submitRecordForApproval: (data, message) => dispatch(submitRecordForApproval(data, message))

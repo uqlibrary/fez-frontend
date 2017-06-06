@@ -33,7 +33,7 @@ export default class PublicationTypeForm extends Component {
         super(props);
     }
 
-    componentDidMount() {
+    componentWillUnmount() {
         this.props.clearSelectedPublicationType();
     }
 

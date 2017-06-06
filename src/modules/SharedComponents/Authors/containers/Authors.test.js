@@ -32,15 +32,15 @@ describe('Authors', () => {
         removeAuthor = sinon.spy();
         clearAuthors = sinon.spy();
         const authors = Immutable.fromJS([
-            {'id': 202, 'name': 'Author 8'},
-            {'id': 263, 'name': 'Author 9'},
-            {'id': 174, 'name': 'Author 10'},
-            {'id': 177, 'name': 'Author 11'}
+            {'aut_id': 202, 'aut_display_name': 'Author 8'},
+            {'aut_id': 263, 'aut_display_name': 'Author 9'},
+            {'aut_id': 174, 'aut_display_name': 'Author 10'},
+            {'aut_id': 177, 'aut_display_name': 'Author 11'}
         ]);
 
         selectedAuthors = Immutable.fromJS([
-            {'id': 202, 'name': 'Author 8'},
-            {'id': 263, 'name': 'Author 9'}
+            {'aut_id': 202, 'aut_display_name': 'Author 8'},
+            {'aut_id': 263, 'aut_display_name': 'Author 9'}
         ]);
 
         const props = {

@@ -26,13 +26,13 @@ import './AddRecord.scss';
 class addRecord extends React.Component {
 
     static propTypes = {
-        formValues: PropTypes.object,
-        loadNotification: PropTypes.func,
+        decreaseStep: PropTypes.func,
+        increaseStep: PropTypes.func,
         loadPublicationTypesList: PropTypes.func,
         publicationTypeList: PropTypes.object,
         searchResultsList: PropTypes.object,
         selectedPublicationType: PropTypes.object,
-        submitRecordForApproval: PropTypes.func
+        stepperIndex: PropTypes.number
     };
 
     static defaultProps = {
@@ -46,7 +46,6 @@ class addRecord extends React.Component {
         this.state = {
             loading: false,
             finished: false,
-            stepIndex: 2,
             submitOpen: false,
             saveOpen: false,
             publicationType: 0
@@ -64,26 +63,11 @@ class addRecord extends React.Component {
     };
 
     handleNext = () => {
-        const {stepIndex} = this.state;
-        if (!this.state.loading) {
-            this.dummyAsync(() => {
-                this.setState({
-                    loading: false,
-                    stepIndex: stepIndex + 1,
-                    finished: stepIndex >= 2,
-                });
-            });
-        }
+        this.props.increaseStep();
     };
 
     handlePrev = () => {
-        const {stepIndex} = this.state;
-        if (!this.state.loading) {
-            this.dummyAsync(() => this.setState({
-                loading: false,
-                stepIndex: stepIndex - 1,
-            }));
-        }
+        this.props.decreaseStep();
     };
 
     handleCloseSubmitForApproval = () => {
@@ -107,6 +91,10 @@ class addRecord extends React.Component {
         }
     };
 
+    resetFormType = () => {
+        formType = 'defaultFormType';
+    };
+
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case STEP_1:
@@ -128,6 +116,8 @@ class addRecord extends React.Component {
                 const inlineLoaderInformation = locale.pages.addRecord.inlineLoader;
                 const searchResultsInformation = locale.pages.addRecord.searchResults;
                 const noMatchingRecordsInformation = locale.pages.addRecord.noMatchingRecords;
+
+                this.resetFormType();
 
                 return (
                     <div>
@@ -193,12 +183,11 @@ class addRecord extends React.Component {
     }
 
     renderContent() {
-        const {stepIndex} = this.state;
         const contentStyle = {margin: '0 16px', overflow: 'hidden'};
 
         return (
             <div style={contentStyle}>
-                <div>{this.getStepContent(stepIndex)}</div>
+                <div>{this.getStepContent(this.props.stepperIndex)}</div>
             </div>
         );
     }
@@ -206,14 +195,13 @@ class addRecord extends React.Component {
     render() {
         const {loading} = this.state;
         const stepperInformation = locale.pages.addRecord.stepper;
-
         return (
             <div className="layout-fill">
                 <h1 className="page-title display-1">{locale.pages.addRecord.title}</h1>
 
                 {/* Stepper start */}
                 <div className="Stepper">
-                <Stepper activeStep={this.state.stepIndex} style={{padding: '0 25px', margin: '-10px auto' }} onChange={this.handleNext}>
+                <Stepper activeStep={this.props.stepperIndex} style={{padding: '0 25px', margin: '-10px auto' }} onChange={this.handleNext}>
                     <Step>
                         <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{stepperInformation.step1Label}</StepLabel>
                     </Step>

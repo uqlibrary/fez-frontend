@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import FileUploader from '../components/FileUploader';
-import {openDialog, setAcceptedFileList, initializeDialog} from '../actions';
+import {openDialog, setAcceptedFileList, initializeDialog, initializeMetadata} from '../actions';
 import {showSnackbar} from 'modules/App/actions';
 
 let FileUploaderContainer = reduxForm({
@@ -17,6 +17,7 @@ FileUploaderContainer = connect((state) => {
 }, dispatch => {
     return {
         initializeDialog: () => dispatch(initializeDialog()),
+        initializeMetadata: () => dispatch(initializeMetadata()),
         openDialog: () => dispatch(openDialog()),
         setAcceptedFileList: (acceptedFiles) => dispatch(setAcceptedFileList(acceptedFiles)),
         showSnackbar: (msg) => dispatch(showSnackbar(msg))

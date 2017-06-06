@@ -53,6 +53,7 @@ export default class Confirmation extends PureComponent {
 
     closeFileUploadDialog = () => {
         const {closeDialog, reset} = this.props;
+
         // save the form data into the state so that we can generate the list of files that were uploaded
         this.setUploadedDataState();
 
@@ -94,6 +95,7 @@ export default class Confirmation extends PureComponent {
             acceptedFiles,
             decreaseStep,
             isUploadCompleted,
+            showSnackbar,
             uploadError
         } = this.props;
 
@@ -110,6 +112,10 @@ export default class Confirmation extends PureComponent {
         const nextBtnFunc = !showProgress ? this.uploadSelectedFiles : this.closeFileUploadDialog;
         const prevDisabledBtn = (IS_UPLOAD_STEP && isUploadCompleted && uploadError.length === 0);
         const nextDisabledBtn = (IS_UPLOAD_STEP && !isUploadCompleted && uploadError.length === 0);
+
+        if (uploadError && uploadError.length > 0) {
+            showSnackbar(fileInformation.messages.uploadError.default);
+        }
 
         return (
             <div>

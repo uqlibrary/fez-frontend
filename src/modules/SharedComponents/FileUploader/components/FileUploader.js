@@ -17,6 +17,7 @@ export default class FileUploader extends PureComponent {
         fileMetadata: PropTypes.object,
         isUploadCompleted: PropTypes.bool,
         initializeDialog: PropTypes.func,
+        initializeMetadata: PropTypes.func,
         openDialog: PropTypes.func,
         setAcceptedFileList: PropTypes.func,
         showSnackbar: PropTypes.func
@@ -28,6 +29,10 @@ export default class FileUploader extends PureComponent {
         this.state = {
             filesToUpload: []
         };
+    }
+
+    componentWillUnmount() {
+        this.props.initializeMetadata();
     }
 
     openDialog = (acceptedFiles, rejectedFiles) => {

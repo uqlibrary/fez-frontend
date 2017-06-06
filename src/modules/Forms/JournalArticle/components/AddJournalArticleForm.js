@@ -15,6 +15,7 @@ export default class AddJournalArticleForm extends Component {
     static propTypes = {
         authorList: PropTypes.object,
         cancelAddRecord: PropTypes.func,
+        decreaseStep: PropTypes.func,
         fileMetadata: PropTypes.object,
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
@@ -39,7 +40,7 @@ export default class AddJournalArticleForm extends Component {
 
     cancelAddRecord = () => {
         // go back to step 1
-        this.setState({stepIndex: 0});
+        this.props.decreaseStep();
         this.props.cancelAddRecord(locale.notifications.addRecord.cancelMessage);
     };
 
@@ -89,7 +90,7 @@ export default class AddJournalArticleForm extends Component {
     };
 
     submitRecord = () => {
-        const {formValues, submitRecordForApproval} = this.props;
+        const {decreaseStep, formValues, submitRecordForApproval} = this.props;
         const RECORD_TYPE = 3;
         const SUBMITTED_FOR_APPROVAL = 3;
         const JOURNAL_TYPE = 179;
@@ -113,6 +114,7 @@ export default class AddJournalArticleForm extends Component {
         const combinedData = Object.assign({}, defaultData, formData, tempData, fileData, authorData);
 
         submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
+        decreaseStep();
     };
 
     render() {
