@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Document type form integration tests renders default document type component 1`] = `
+exports[`Add Journal article form snapshot tests renders default add journal article form 1`] = `
 <form>
   <Card
     className="layout-card"
@@ -71,9 +71,11 @@ exports[`Document type form integration tests renders default document type comp
           className="column"
         >
           <Field
+            DateTimeFormat={[Function]}
             component={[Function]}
             floatingLabelText="Journal publish date"
             fullWidth={true}
+            locale="en-AU"
             name="rek_date"
           />
         </div>

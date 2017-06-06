@@ -37,8 +37,8 @@ function setup() {
 }
 
 
-describe('Document type form integration tests', () => {
-    it('renders default document type component', () => {
+describe('Add Journal article form snapshot tests', () => {
+    it('renders default add journal article form', () => {
         const app = setup();
         expect(toJson(app)).toMatchSnapshot();
     });

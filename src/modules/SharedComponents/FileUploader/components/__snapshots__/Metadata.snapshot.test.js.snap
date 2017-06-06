@@ -117,12 +117,11 @@ exports[`File upload metadata snapshots tests renders default file upload metada
     >
       <Field
         DateTimeFormat={[Function]}
-        component={[Function]}
         disabled={true}
         floatingLabelText="Embargo date"
         fullWidth={true}
         locale="en-AU"
-        minDate={2017-06-05T14:00:00.000Z}
+        minDate={2017-06-06T14:00:00.000Z}
         name="embargoDate0"
       />
     </div>
@@ -290,12 +289,11 @@ exports[`File upload metadata snapshots tests sets the previous button to decrea
     >
       <Field
         DateTimeFormat={[Function]}
-        component={[Function]}
         disabled={true}
         floatingLabelText="Embargo date"
         fullWidth={true}
         locale="en-AU"
-        minDate={2017-06-05T14:00:00.000Z}
+        minDate={2017-06-06T14:00:00.000Z}
         name="embargoDate1"
       />
     </div>

@@ -3,8 +3,7 @@ import {Field} from 'redux-form';
 import PropTypes from 'prop-types';
 import Divider from 'material-ui/Divider';
 
-// import {AsyncAutoCompleteSelect} from 'uqlibrary-react-toolbox';
-import AsyncAutoCompleteSelect from 'modules/SharedComponents/AsyncAutoCompleteSelect';
+import {AsyncAutoCompleteSelect} from 'uqlibrary-react-toolbox';
 import AuthorRow from './AuthorRow';
 import {loadAuthorsData} from 'repositories/authors';
 
@@ -73,7 +72,6 @@ export default class Authors extends Component {
                            dataSource={loadAuthorsData}
                            disabled={false}
                            onChange={this.addAuthor}
-                           disable={false}
                            fullWidth/>
                 </div>
 

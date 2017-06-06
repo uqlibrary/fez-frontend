@@ -38,10 +38,11 @@ export default class AddJournalArticleForm extends Component {
         loadAuthorsList();
     }
 
-    cancelAddRecord = () => {
+    cancelAddingRecord = () => {
+        const {cancelAddRecord, decreaseStep} = this.props;
         // go back to step 1
-        this.props.decreaseStep();
-        this.props.cancelAddRecord(locale.notifications.addRecord.cancelMessage);
+        decreaseStep();
+        cancelAddRecord(locale.notifications.addRecord.cancelMessage);
     };
 
     getElementLabel = (elementData, elementKey, formData, formKey, matchedLabel) => {
@@ -268,7 +269,7 @@ export default class AddJournalArticleForm extends Component {
                 <FileUploader form="FileUploadForm" />
 
                 <div className="buttonWrapper">
-                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddRecord}/>
+                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddingRecord}/>
                     <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}} type="submit"/>
                 </div>
             </form>

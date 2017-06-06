@@ -23,7 +23,7 @@ import {locale} from 'config';
 
 import './AddRecord.scss';
 
-class addRecord extends React.Component {
+export default class AddRecord extends React.Component {
 
     static propTypes = {
         decreaseStep: PropTypes.func,
@@ -225,5 +225,3 @@ class addRecord extends React.Component {
         );
     }
 }
-
-export default addRecord;
