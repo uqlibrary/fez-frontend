@@ -2,8 +2,8 @@ import publicationSubTypeReducer, {initialState} from './reducer';
 import {PUBLICATION_SUB_TYPES_LOADED, AUTHORS_LOADED} from './actions';
 import Immutable from 'immutable';
 
-import {publicationSubTypeList} from '../../../../src/mock/data/publicationSubTypes';
-import {authors} from '../../../../src/mock/data/authors';
+import {publicationSubTypeList} from 'mock/data/publicationSubTypes';
+import {authors} from 'mock/data/authors';
 
 describe('Publication type reducer', () => {
     it('should return the initial state', () => {

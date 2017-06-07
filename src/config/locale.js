@@ -1,4 +1,5 @@
 import React from 'react';
+import FontIcon from 'material-ui/FontIcon';
 
 export default {
     global: {
@@ -6,8 +7,8 @@ export default {
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         labels: {
             buttons: {
-                saveForLater: 'Save for later',
                 cancel: 'Cancel',
+                close: 'Close',
                 submitForApproval: 'Submit for approval'
             }
         }
@@ -51,6 +52,22 @@ export default {
         about: {
             primaryText: 'About',
         },
+    },
+    notifications: {
+        addRecord: {
+            cancelMessage: 'Publication has not been saved',
+            saveMessage: 'Publication has been saved for later',
+            submitMessage: 'Publication has been submitted for approval'
+        }
+    },
+    mapping: {
+        vocabs: [
+            {'documentId': 174, 'vocabId': 453581},
+            {'documentId': 177, 'vocabId': 453588},
+            {'documentId': 130, 'vocabId': 453596},
+            {'documentId': 313, 'vocabId': 453594},
+            {'documentId': 179, 'vocabId': 453573}
+        ]
     },
     pages: {
         about: {
@@ -224,37 +241,7 @@ export default {
                         issueLabel: 'Issue',
                         startPageLabel: 'Start page',
                         endPageLabel: 'End page',
-                        notesLabel: 'Not (not publically viewable)'
-                    }
-                },
-                files: {
-                    title: 'Files',
-                    help: {
-                        title: 'Files',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
-                    },
-                    fields: {
-                        filenameLabel: 'Filename selected',
-                        filenameRestrictions: (
-                            <div className="fileInstructions">
-                                <h3>File name restrictions</h3>
-                                <div style={{width: '100%'}}>
-                                    <ul>
-                                        <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
-                                        <li>Only numbers and lowercase characters in the file extension</li>
-                                        <li>Under 45 characters</li>
-                                        <li>Only one file extension (on period (.) character) and</li>
-                                        <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        ),
-                        accessConditionsLabel: 'Access conditions',
-                        embargoDateLabel: 'Embargo date',
-                        descriptionLabel: 'Description'
-                    },
-                    buttons: {
-                        browseLabel: 'Browse files'
+                        notesLabel: 'Note (not publically viewable)'
                     }
                 }
             }
@@ -279,6 +266,78 @@ export default {
                 button: 'OK'
             }
         },
+    },
+    sharedComponents: {
+        files: {
+            title: 'Files',
+            subTitle: 'Upload a new file',
+            help: {
+                title: 'Files',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
+            },
+            limit: 10,
+            messages: {
+                maxFiles: 'Only [maxNumberOfFiles] are allowed to be selected per upload.',
+                rejectedFiles: '[numberOfRejectedFiles] file was not included in this upload.',
+                acceptedFiles: 'There are no valid files to upload or these files have already been uploaded.',
+                alreadyUploaded: '[numberOfUploadedFiles] files have already been uploaded.',
+                cancelledUpload: 'File upload cancelled.',
+                uploadError: {
+                    default: 'There seems to be a problem uploading the file. Please try again later.'
+                }
+            },
+            fields: {
+                filenameLabel: 'Filename selected',
+                filenameRestrictions: (
+                    <div className="columns fileInstructions">
+                        <div className="column">
+                            <h3>File name restrictions</h3>
+                            <div>
+                                <ul>
+                                    <li>No folders</li>
+                                    <li>Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)</li>
+                                    <li>Only numbers and lowercase characters in the file extension</li>
+                                    <li>Under 45 characters</li>
+                                    <li>Only one file extension (on period (.) character) and</li>
+                                    <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="column uploadInstructions">
+                            <FontIcon
+                                className="material-icons">cloud_upload</FontIcon>
+                            <p>Click here to select files, or drag files into this area to upload</p>
+                        </div>
+                    </div>
+                ),
+                accessConditionsLabel: 'File is public (open access)',
+                embargoDateLabel: 'Embargo date',
+                descriptionLabel: 'Description',
+                metadata: {
+                    description: 'fileDescription',
+                    accessCondition: 'accessCondition',
+                    embargoDate: 'embargoDate'
+                }
+            },
+            dialog: {
+                title: 'File uploader',
+                lastStepTitle: 'The following files are ready to upload',
+                explanationText: 'The following steps will allow you to identify, describe and assign a date which will allow/restrict open access to each file you upload. At the end of this process, the files themselves will be uploaded to the server for review.',
+                disclaimer: (
+                    <div className="disclaimer">
+                        <span>DISCLAIMER</span>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus, mauris vitae euismod iaculis, orci nulla tristique neque, eu mattis justo lorem in tellus. Pellentesque ultrices tempor felis, vitae sodales risus hendrerit vel. Cras vitae rutrum mauris. Suspendisse vitae est eleifend, imperdiet est sit amet, sagittis odio. Vivamus quis velit nibh. Fusce ullamcorper pulvinar viverra. Quisque mi nisl, pharetra id massa eget, euismod ullamcorper lectus. Quisque id ligula ullamcorper, efficitur lectus sed, tristique ipsum. Pellentesque quis ipsum ut turpis mattis sodales id ac metus.
+                    </div>
+                )
+            },
+            buttons: {
+                backLabel: 'Back',
+                cancelUpload: 'Cancel upload',
+                deleteLabel: 'Remove',
+                getStartedLabel: 'Get Started',
+                stepperNextLabel: 'Agree and continue',
+                uploadFilesLabel: 'Upload all files'
+            }
+        }
     }
 };
 

@@ -27,6 +27,9 @@ function setup() {
         publicationSubTypeList: Immutable.fromJS(publicationSubTypeList),
         loadPublicationSubTypeList: jest.fn(),
         loadAuthorData: jest.fn(),
+        form: 'testForm',
+        formValues: Immutable.fromJS({publicationType: 179}),
+        handleSubmit: jest.fn(),
         store: store
     };
 
@@ -34,8 +37,8 @@ function setup() {
 }
 
 
-describe('Document type form integration tests', () => {
-    it('renders default document type component', () => {
+describe('Add Journal article form snapshot tests', () => {
+    it('renders default add journal article form', () => {
         const app = setup();
         expect(toJson(app)).toMatchSnapshot();
     });

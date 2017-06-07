@@ -6,10 +6,11 @@ import {SESSION_COOKIE_NAME} from 'config';
 // mocked data
 import {accounts} from './data/accounts';
 import {externalDoiSearchResultList, internalDoiSearchResultList, externalPubMedSearchResultsList, internalPubMedSearchResultsList, externalTitleSearchResultsList, internalTitleSearchResultsList} from './data/publicationSearch';
-import {authorsList} from './data/authors';
+// import {authorsList} from './data/authors';
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
+import {documentAccessTypes} from './data/documentAccessTypes';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api);
@@ -52,12 +53,21 @@ mock.onGet(/search\/internal\?rek_display_type=[0-9]*/).reply(200, internalTitle
 mock.onGet('records/types').reply(200, publicationTypeList);
 
 // Mock the publication sub types endpoint
-mock.onGet('records/sub/types').reply(200, publicationSubTypeList);
+mock.onGet(/vocabularies\/[0-9]/).reply(200, publicationSubTypeList);
 
 // Mock the authors endpoint
-mock.onGet('authors/search').reply(200, authorsList);
+// mock.onGet(/authors\/search\?query=*/).reply(200, authorsList);
+mock.onGet(/authors\/search\?query=*/).passThrough();
 
 // Mock academics publication years endpoint response
 mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsBig);
 
+// Allow the file upload calls to pass through to the S3 bucket directly
+mock.onGet(/file\/upload\/presigned/).passThrough();
+mock.onPut(/https:\/\/s3-ap-southeast-2\.amazonaws\.com\/uqlapp-file-upload/).passThrough();
 
+// Mock the document access types
+mock.onGet('acml/quick-templates').reply(200, documentAccessTypes);
+
+// Let the create records endpoint go through to staging
+mock.onPost('records').passThrough();

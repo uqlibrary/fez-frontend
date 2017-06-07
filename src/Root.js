@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {ConnectedRouter} from 'connected-react-router/immutable';
 import {Route, Switch} from 'react-router';
+import PropTypes from 'prop-types';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 

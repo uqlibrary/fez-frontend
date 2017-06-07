@@ -1,0 +1,38 @@
+.fileInstructions {
+  margin: 20px 0 0 0;
+  padding: 16px;
+  background-color: #F5F5F5;
+  border: 2px dashed #8D8D8D;
+  font-size: 0.9em;
+  line-height: 1.2em;
+
+  div, span, h3 {
+    color: #757575 !important;
+  }
+
+  h3 {
+    font-weight: bold !important;
+  }
+
+  .uploadInstructions {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center !important;
+    .material-icons {
+      font-size: 36px !important;
+    }
+  }
+}
+
+.sub-title {
+  font-size: 18px;
+}
+
+.disclaimer {
+  font-size: 12px;
+
+  span {
+    font-weight: bold;
+  }
+}

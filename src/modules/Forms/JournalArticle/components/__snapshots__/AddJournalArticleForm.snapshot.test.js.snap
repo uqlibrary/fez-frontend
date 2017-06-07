@@ -1,0 +1,336 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Journal article form snapshot tests renders default add journal article form 1`] = `
+<form>
+  <Card
+    className="layout-card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+  >
+    <CardHeader
+      avatar={null}
+      className="card-header"
+    >
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        >
+          <h2
+            className="headline"
+          >
+            Journal article information
+          </h2>
+        </div>
+        <div
+          className="column"
+        >
+          <Connect(HelpIcon)
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+            title="Journal article information"
+          />
+        </div>
+      </div>
+    </CardHeader>
+    <CardText
+      className="body-1"
+    >
+      <div
+        className="columns is-gapless"
+      >
+        <Field
+          component={[Function]}
+          floatingLabelText="Journal title"
+          fullWidth={true}
+          name="rek_title"
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+      <div
+        className="columns"
+      >
+        <div
+          className="column is-two-thirds"
+        >
+          <Field
+            component={[Function]}
+            floatingLabelText="Journal name"
+            fullWidth={true}
+            name="fez_record_search_key_journal_name.rek_journal_name"
+            type="text"
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <Field
+            DateTimeFormat={[Function]}
+            component={[Function]}
+            floatingLabelText="Journal publish date"
+            fullWidth={true}
+            locale="en-AU"
+            name="rek_date"
+          />
+        </div>
+      </div>
+      <div
+        className="columns"
+      >
+        <Field
+          component={[Function]}
+          dataSource={
+            Array [
+              Object {
+                "id": 1,
+                "label": "Article (original research)",
+              },
+              Object {
+                "id": 2,
+                "label": "Critical review of research, literature review, critical commentary",
+              },
+              Object {
+                "id": 3,
+                "label": "Letter to editor, brief commentary or brief communication",
+              },
+              Object {
+                "id": 4,
+                "label": "Correction/erratum",
+              },
+              Object {
+                "id": 5,
+                "label": "Review of book, film, TV, video, software, performance, music etc ...",
+              },
+              Object {
+                "id": 6,
+                "label": "Editorial",
+              },
+              Object {
+                "id": 7,
+                "label": "Discussion - respones, round table/panel discussions. Q&A, reply",
+              },
+              Object {
+                "id": 8,
+                "label": "Creative work",
+              },
+              Object {
+                "id": 9,
+                "label": "Others",
+              },
+            ]
+          }
+          dataSourceConfig={
+            Object {
+              "text": "label",
+              "value": "id",
+            }
+          }
+          fullWidth={true}
+          label="Select a publication type"
+          name="rek_subtype"
+        />
+      </div>
+    </CardText>
+  </Card>
+  <Card
+    className="layout-card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+  >
+    <CardHeader
+      avatar={null}
+      className="card-header"
+    >
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        >
+          <h2
+            className="headline"
+          >
+            Authors
+          </h2>
+        </div>
+        <div
+          className="column"
+        >
+          <Connect(HelpIcon)
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+            title="Authors"
+          />
+        </div>
+      </div>
+    </CardHeader>
+    <CardText
+      className="body-1"
+    >
+      <Connect(ReduxForm)
+        authorFieldLabel="Add an author (Name as published)"
+        form="testForm"
+      />
+    </CardText>
+  </Card>
+  <Card
+    className="layout-card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+  >
+    <CardHeader
+      avatar={null}
+      className="card-header"
+    >
+      <div
+        className="columns is-gapless"
+      >
+        <div
+          className="column"
+        >
+          <h2
+            className="headline"
+          >
+            Optional publication detail
+          </h2>
+        </div>
+        <div
+          className="column"
+        >
+          <Connect(HelpIcon)
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
+            title="Optional publication detail"
+          />
+        </div>
+      </div>
+    </CardHeader>
+    <CardText
+      className="body-1"
+    >
+      <div
+        className="columns"
+      >
+        <div
+          className="column"
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelText="Volume"
+                fullWidth={true}
+                name="fez_record_search_key_volume_number.rek_volume_number"
+                type="text"
+              />
+            </div>
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelText="Issue"
+                fullWidth={true}
+                name="fez_record_search_key_issue_number.rek_issue_number"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="column"
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelText="Start page"
+                fullWidth={true}
+                name="fez_record_search_key_start_page.rek_start_page"
+                type="text"
+              />
+            </div>
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelText="End page"
+                fullWidth={true}
+                name="fez_record_search_key_end_page.rek_end_page"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="columns"
+      >
+        <div
+          className="column"
+        >
+          <Field
+            component={[Function]}
+            floatingLabelText="Note (not publically viewable)"
+            fullWidth={true}
+            multiLine={true}
+            name="fez_record_search_key_notes.rek_notes"
+            rows={5}
+            type="text"
+          />
+        </div>
+      </div>
+    </CardText>
+  </Card>
+  <Connect(ReduxForm)
+    form="FileUploadForm"
+  />
+  <div
+    className="buttonWrapper"
+  >
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Cancel"
+      labelPosition="after"
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={false}
+      style={
+        Object {
+          "marginLeft": "12px",
+        }
+      }
+    />
+    <RaisedButton
+      disabled={false}
+      fullWidth={false}
+      label="Submit for approval"
+      labelPosition="after"
+      primary={false}
+      secondary={true}
+      style={
+        Object {
+          "marginLeft": "12px",
+        }
+      }
+      type="submit"
+    />
+  </div>
+</form>
+`;

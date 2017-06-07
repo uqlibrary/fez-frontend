@@ -6,9 +6,11 @@ import PropTypes from 'prop-types';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {isDOIValue, isPubMedValue} from '../validator';
-import {locale} from '../../../../config';
+import {locale} from 'config';
 
 import './PublicationSearchForm.scss';
+
+const JOURNAL_ARTICLE = 179;
 
 export default class PublicationSearchForm extends Component {
 
@@ -40,8 +42,9 @@ export default class PublicationSearchForm extends Component {
         };
     }
 
-    updateButtonLabel = (event) => {
-        const fieldValue = event.target.value;
+    updateButtonLabel = () => {
+        const {formValues} = this.props;
+        const fieldValue = formValues.get('doiSearch');
         const buttonLabels = locale.pages.addRecord.searchForPublication.buttonLabelVariants;
         let label = buttonLabels.default;
         if (fieldValue) {
@@ -66,7 +69,7 @@ export default class PublicationSearchForm extends Component {
         } else if (isPubMedValue(fieldValue)) {
             this.props.loadPubmedResultsList(fieldValue);
         } else {
-            this.props.loadTitleResultsList(179, fieldValue);
+            this.props.loadTitleResultsList(JOURNAL_ARTICLE, fieldValue);
         }
     };
 

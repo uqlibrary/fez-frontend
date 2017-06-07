@@ -6,7 +6,7 @@ import Immutable from 'immutable';
 import Divider from 'material-ui/Divider';
 
 import PublicationTypeForm from './PublicationTypeForm';
-import {publicationTypeList} from '../../../../mock/data/publicationTypes';
+import {publicationTypeList} from 'mock/data/publicationTypes';
 
 let popularTypesResult = [];
 let popularTypesList = [];
@@ -28,6 +28,7 @@ describe('Document type form integration tests', () => {
             title: 'Component Title',
             dataSource: dataSource,
             loadPublicationTypes: jest.fn(),
+            formValues: Immutable.fromJS({publicationType: 179}),
             popularTypesList: popularTypesList
         };
 
@@ -70,7 +71,7 @@ describe('Document type form integration tests', () => {
         expect(app.instance().createCompletePublicationList()).toEqual(resultTestList);
 
         // test for an empty data source
-        const appEmptyDS = setup([]);
+        const appEmptyDS = setup(Immutable.fromJS([]));
         expect(appEmptyDS.instance().createCompletePublicationList()).toEqual([]);
     });
 });

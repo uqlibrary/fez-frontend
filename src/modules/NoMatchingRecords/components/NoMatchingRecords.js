@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-import {locale} from '../../../config';
+import {locale} from 'config';
 
 
 const propTypes = {

@@ -7,8 +7,6 @@ import PropTypes from 'prop-types';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {AutoCompleteSelect} from 'uqlibrary-react-toolbox';
 
-import './PublicationTypeForm.scss';
-
 
 export default class PublicationTypeForm extends Component {
 
@@ -26,11 +24,17 @@ export default class PublicationTypeForm extends Component {
         ]),
         maxSearchResults: PropTypes.number,
         publicationTypeLabel: PropTypes.string,
-        help: PropTypes.object
+        help: PropTypes.object,
+        clearSelectedPublicationType: PropTypes.func,
+        formValues: PropTypes.object
     };
 
     constructor(props) {
         super(props);
+    }
+
+    componentWillUnmount() {
+        this.props.clearSelectedPublicationType();
     }
 
     addListDivider = (popularTypes) => {
@@ -89,7 +93,8 @@ export default class PublicationTypeForm extends Component {
             explanationText,
             maxSearchResults,
             children,
-            publicationTypeLabel
+            publicationTypeLabel,
+            formValues
         } = this.props;
 
         return (
@@ -122,8 +127,8 @@ export default class PublicationTypeForm extends Component {
                                dataSource={this.createCompletePublicationList()}
                                dataSourceConfig={{text: 'name', value: 'id'}}
                                onChange={loadSelectedPublicationType}
+                               formValue={formValues.get('publicationType')}
                                openOnFocus
-                               value={179}
                                fullWidth />
                     </CardText>
                 </Card>
