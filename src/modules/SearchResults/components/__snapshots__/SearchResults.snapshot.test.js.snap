@@ -24,7 +24,7 @@ exports[`Search results snapshots tests renders default search results page 1`] 
         </h2>
       </div>
       <div
-        className="column"
+        className="column is-narrow is-helpicon"
       />
     </div>
   </CardHeader>

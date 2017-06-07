@@ -24,7 +24,7 @@ exports[`No matching record component snapshots tests renders default no matchin
         </h2>
       </div>
       <div
-        className="column"
+        className="column is-narrow is-helpicon"
       />
     </div>
   </CardHeader>

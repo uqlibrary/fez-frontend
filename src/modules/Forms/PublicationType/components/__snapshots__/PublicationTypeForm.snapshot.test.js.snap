@@ -25,7 +25,7 @@ exports[`Document type form snapshot tests renders default document type compone
           </h2>
         </div>
         <div
-          className="column"
+          className="column is-narrow is-helpicon"
         />
       </div>
     </CardHeader>

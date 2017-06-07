@@ -25,7 +25,7 @@ exports[`Publication search form snapshots tests renders default publication sea
           </h2>
         </div>
         <div
-          className="column"
+          className="column is-narrow is-helpicon"
         />
       </div>
     </CardHeader>
