@@ -83,7 +83,7 @@ export default class PublicationSearchForm extends Component {
                             <div className="column">
                                 <h2 className="headline">{title}</h2>
                             </div>
-                            <div className="column">
+                            <div className="column is-narrow is-helpicon">
                                 {help && (
                                     <HelpIcon
                                         title={help.title}

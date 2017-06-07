@@ -183,7 +183,7 @@ export default class AddRecord extends React.Component {
     }
 
     renderContent() {
-        const contentStyle = {margin: '0 16px', overflow: 'hidden'};
+        const contentStyle = {margin: '0', overflow: 'hidden'};
 
         return (
             <div style={contentStyle}>
@@ -196,12 +196,12 @@ export default class AddRecord extends React.Component {
         const {loading} = this.state;
         const stepperInformation = locale.pages.addRecord.stepper;
         return (
-            <div className="layout-fill">
+            <div>
                 <h1 className="page-title display-1">{locale.pages.addRecord.title}</h1>
 
                 {/* Stepper start */}
                 <div className="Stepper">
-                <Stepper activeStep={this.props.stepperIndex} style={{padding: '0 25px', margin: '-10px auto' }} onChange={this.handleNext}>
+                <Stepper activeStep={this.props.stepperIndex} style={{padding: '0', margin: '-10px auto' }} onChange={this.handleNext}>
                     <Step>
                         <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{stepperInformation.step1Label}</StepLabel>
                     </Step>
@@ -215,7 +215,7 @@ export default class AddRecord extends React.Component {
                 </div>
 
 
-                <div style={{width: '100%', maxWidth: '1200px', margin: 'auto'}}>
+                <div style={{width: '100%', maxWidth: '1320px', margin: '0 auto'}}>
                     <ExpandTransition loading={loading} open>
                         {this.renderContent()}
                     </ExpandTransition>

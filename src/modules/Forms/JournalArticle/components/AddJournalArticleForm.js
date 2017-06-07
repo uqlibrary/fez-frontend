@@ -139,7 +139,7 @@ export default class AddJournalArticleForm extends Component {
                             <div className="column">
                                 <h2 className="headline">{journalArticleInformation.title}</h2>
                             </div>
-                            <div className="column">
+                            <div className="column is-narrow is-helpicon">
                                 {journalArticleInformation.help && (
                                     <HelpIcon
                                         title={journalArticleInformation.help.title}
@@ -195,7 +195,7 @@ export default class AddJournalArticleForm extends Component {
                             <div className="column">
                                 <h2 className="headline">{authorsInformation.title}</h2>
                             </div>
-                            <div className="column">
+                            <div className="column is-narrow is-helpicon">
                                 {authorsInformation.help && (
                                     <HelpIcon
                                         title={authorsInformation.help.title}
@@ -218,7 +218,7 @@ export default class AddJournalArticleForm extends Component {
                             <div className="column">
                                 <h2 className="headline">{optionalInformation.title}</h2>
                             </div>
-                            <div className="column">
+                            <div className="column is-narrow is-helpicon">
                                 {optionalInformation.help && (
                                     <HelpIcon
                                         title={optionalInformation.help.title}

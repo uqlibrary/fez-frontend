@@ -17,12 +17,13 @@ export default function Research({title, text, help}) {
                             <h2 className="headline">{title ? title : 'Research placeholder title'}</h2>
                         </div>
 
-                        <div className="column">
+                        <div className="column is-narrow is-helpicon">
                             {help && (
                                 <HelpIcon
                                     title={help.title}
                                     text={help.text}
                                     buttonLabel={help.button}
+                                    style="float: right;"
                                 />
                             )}
                         </div>

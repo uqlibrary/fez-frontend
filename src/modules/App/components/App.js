@@ -22,6 +22,8 @@ import {Browse} from 'modules/Browse';
 
 // Import specific style for the AppBar
 import '../../../sass/_appbar.scss';
+// import a style for the helpicon placement
+import '../../../sass/_helpicon.scss';
 
 export default class App extends React.Component {
 

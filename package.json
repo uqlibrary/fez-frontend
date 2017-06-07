@@ -78,7 +78,7 @@
     "redux-thunk": "^2.2.0",
     "scrollto-element": "^1.0.4",
     "timezones.json": "^1.2.0",
-    "uqlibrary-react-toolbox": "0.0.16"
+    "uqlibrary-react-toolbox": "0.0.17"
   },
   "scripts": {
     "start": "webpack-dev-server",
