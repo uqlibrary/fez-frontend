@@ -70,13 +70,19 @@ a:hover .claimTitleIcon {
   max-width: 1200px;
   margin: 24px auto;
   width: 90%;
-  padding: 0 0 20px 0;
+  padding: 64px 0 24px 0;
   text-align: right;
 }
 
 // Override Material UI wanting to nowrap the card titles
 div.layout-card > div > div { white-space: normal !important;}
 
+
+.Stepper {
+  width: 90% !important;
+  margin: 0px auto !important;
+  max-width: 1280;
+}
 
 // Stepper: Targets the div wrapping just the stepper
 .Stepper>div:first-child {
