@@ -32,7 +32,6 @@ exports[`Document type form snapshot tests renders default document type compone
     <CardText
       className="body-1"
     >
-      <br />
       <div />
       <Field
         component={[Function]}

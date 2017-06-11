@@ -58,6 +58,12 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       >
         <div
           className="column is-two-thirds"
+          style={
+            Object {
+              "paddingBottom": "0",
+              "paddingTop": "0",
+            }
+          }
         >
           <Field
             component={[Function]}
@@ -69,6 +75,12 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         </div>
         <div
           className="column"
+          style={
+            Object {
+              "paddingBottom": "0",
+              "paddingTop": "0",
+            }
+          }
         >
           <Field
             DateTimeFormat={[Function]}
@@ -82,6 +94,12 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       </div>
       <div
         className="columns"
+        style={
+          Object {
+            "paddingBottom": "0",
+            "paddingTop": "0",
+          }
+        }
       >
         <Field
           component={[Function]}
@@ -291,6 +309,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
             multiLine={true}
             name="fez_record_search_key_notes.rek_notes"
             rows={5}
+            style={
+              Object {
+                "marginTop": "-36px",
+              }
+            }
             type="text"
           />
         </div>

@@ -117,7 +117,6 @@ export default class PublicationTypeForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <br />
                         <div>
                             {explanationText}
                         </div>

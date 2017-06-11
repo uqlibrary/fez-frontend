@@ -161,11 +161,11 @@ export default class AddJournalArticleForm extends Component {
                             />
                         </div>
                         <div className="columns">
-                            <div className="column is-two-thirds">
+                            <div className="column is-two-thirds" style={{paddingTop: '0', paddingBottom: '0'}}>
                                 <Field component={TextField} name="fez_record_search_key_journal_name.rek_journal_name" type="text" fullWidth
                                        floatingLabelText={journalArticleInformation.fields.nameLabel}/>
                             </div>
-                            <div className="column">
+                            <div className="column" style={{paddingTop: '0', paddingBottom: '0'}}>
                                 <Field component={DatePicker}
                                        floatingLabelText={journalArticleInformation.fields.publishDateLabel}
                                        fullWidth
@@ -175,7 +175,7 @@ export default class AddJournalArticleForm extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="columns">
+                        <div className="columns" style={{paddingTop: '0', paddingBottom: '0'}}>
                             <Field component={AutoCompleteSelect}
                                    name="rek_subtype"
                                    fullWidth
@@ -259,7 +259,7 @@ export default class AddJournalArticleForm extends Component {
                         <div className="columns">
                             <div className="column">
                                 <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text" fullWidth multiLine
-                                       rows={5} floatingLabelText={optionalInformation.fields.notesLabel}/>
+                                       rows={5} floatingLabelText={optionalInformation.fields.notesLabel} style={{marginTop: '-36px'}} />
                             </div>
                         </div>
                     </CardText>
