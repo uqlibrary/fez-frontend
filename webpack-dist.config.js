@@ -138,6 +138,7 @@ module.exports = {
             },
             {
                 test: /\.js?$/,
+                exclude: /node_modules/,
                 include: [
                     resolve(__dirname, 'src'),
                     resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')
