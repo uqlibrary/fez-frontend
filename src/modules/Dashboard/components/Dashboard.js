@@ -6,68 +6,14 @@ import {Card, CardText, CardHeader} from 'material-ui/Card';
 // import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox';
 import './Dashboard.scss';
 
-import {Chart, DataSeries, Pie} from 'diffract';
-
-const colors = ['#481e5d', '#468fcc', '#f28620', '#FFF'];
-const width = 240;
-const height = 240;
-
-const getRandomValuesArray = () => ([
-    Math.random() * 10000, Math.random() * 10000,
-    Math.random() * 10000, Math.random() * 10000
-]);
-
 class Dashboard extends React.Component {
 
     static propTypes = {
         account: PropTypes.object.isRequired
     };
 
-    constructor() {
-        super();
-        this.state = {
-            values: [Math.random() * 10000, Math.random() * 10000,
-                Math.random() * 10000, Math.random() * 10000],
-
-            multiValues: [
-                getRandomValuesArray(), getRandomValuesArray(), getRandomValuesArray(), getRandomValuesArray()],
-
-            labels: ['Elves', 'Dwarves', 'Hobbitses', 'Men']
-        };
-    }
-
-
     componentDidMount() {
         // fetch data to display here
-    }
-
-    getColors(d, i) {
-        if (arguments.length === 2) {
-            return colors[i];
-        } else {
-            return colors[d];
-        }
-    }
-
-    getPieChart() {
-        return (
-            <Chart width={width} height={height}>
-                <DataSeries data={this.state.values}>
-                    <Pie innerRadius={80} outerRadius={110}
-                         onClick={(e, v, i) => console.log(this.state.labels[i] + ' clicked')}
-                         style={(d, i) => ({fill: this.getColors(i)})}>
-                        <text className="donut-title" textAnchor="middle"
-                              x={0} y={0} fontSize={18}>
-                            {'Hi'}
-                        </text>
-                        <text className="donut-subtitle" textAnchor="middle"
-                              x={0} y={18} fontSize={10}>
-                            {'chosen'}
-                        </text>
-                    </Pie>
-                </DataSeries>
-            </Chart>
-        );
     }
 
     render() {
@@ -96,7 +42,7 @@ class Dashboard extends React.Component {
 
                                 <CardText className="body-1">
                                     <div><br/>
-                                        {this.getPieChart()}
+                                        Some content
                                     </div>
                                 </CardText>
 
