@@ -90,7 +90,7 @@ export default class PublicationTypeForm extends Component {
             loadSelectedPublicationType,
             title,
             help,
-            explanationText,
+            // explanationText,
             maxSearchResults,
             children,
             publicationTypeLabel,
@@ -101,7 +101,7 @@ export default class PublicationTypeForm extends Component {
             <form onSubmit={handleSubmit}>
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="headline">{title}</h2>
                             </div>
@@ -117,10 +117,8 @@ export default class PublicationTypeForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div>
-                            {explanationText}
-                        </div>
-                        <Field component={AutoCompleteSelect} name="publicationType"
+                       <div style={{marginTop: '-24px', marginBottom: '-24px'}}>
+                           <Field component={AutoCompleteSelect} name="publicationType"
                                maxSearchResults={maxSearchResults}
                                label={publicationTypeLabel}
                                dataSource={this.createCompletePublicationList()}
@@ -128,7 +126,9 @@ export default class PublicationTypeForm extends Component {
                                onChange={loadSelectedPublicationType}
                                formValue={formValues.get('publicationType')}
                                openOnFocus
-                               fullWidth />
+                               fullWidth
+                        />
+                       </div>
                     </CardText>
                 </Card>
                 {children}

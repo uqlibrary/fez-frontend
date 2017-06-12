@@ -135,7 +135,7 @@ export default class AddJournalArticleForm extends Component {
                 {/* Journal Information */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="headline">{journalArticleInformation.title}</h2>
                             </div>

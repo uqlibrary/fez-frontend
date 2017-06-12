@@ -149,7 +149,7 @@ export default class FileUploader extends PureComponent {
             <div style={{marginBottom: '-60px'}}>
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="headline">{fileInformation.title}</h2>
                             </div>

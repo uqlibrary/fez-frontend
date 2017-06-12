@@ -11,7 +11,7 @@ export default function Research({title, text, help}) {
 
             <Card className="layout-card">
                 <CardHeader className="card-header">
-                    <div className="columns is-gapless">
+                    <div className="columns is-gapless is-mobile">
 
                         <div className="column">
                             <h2 className="headline">{title ? title : 'Research placeholder title'}</h2>
