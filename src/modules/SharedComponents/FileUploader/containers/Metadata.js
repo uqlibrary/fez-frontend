@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {reduxForm, getFormValues} from 'redux-form/immutable';
 import Metadata from '../components/Metadata';
 import Immutable from 'immutable';
-import {previousPage, increaseStep, decreaseStep} from '../actions';
+import {closeDialog, increaseStep, decreaseStep} from '../actions';
 
 let MetadataContainer = reduxForm({
     destroyOnUnmount: false
@@ -15,9 +15,9 @@ MetadataContainer = connect((state, initialProps) => {
     };
 }, dispatch => {
     return {
+        closeDialog: () => dispatch(closeDialog()),
         decreaseStep: () => dispatch(decreaseStep()),
-        increaseStep: () => dispatch(increaseStep()),
-        previousPage: () => dispatch(previousPage())
+        increaseStep: () => dispatch(increaseStep())
     };
 })(MetadataContainer);
 

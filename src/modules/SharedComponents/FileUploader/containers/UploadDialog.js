@@ -10,8 +10,7 @@ let UploadDialogContainer = reduxForm({
 UploadDialogContainer = connect((state) => {
     const fileUploadState = state.get('fileUpload');
     return {
-        isDialogOpen: fileUploadState.get('isDialogOpen'),
-        page: fileUploadState.get('page')
+        isDialogOpen: fileUploadState.get('isDialogOpen')
     };
 })(UploadDialogContainer);
 

@@ -5,10 +5,7 @@ import Immutable from 'immutable';
 
 // custom components
 import FileStepper from '../containers/FileStepper';
-import GettingStarted from '../containers/GettingStarted';
 import {locale} from 'config';
-
-import {DIALOG_GETTING_STARTED_PAGE, DIALOG_STEPPER_PAGE} from '../actions';
 
 export default class UploadDialog extends PureComponent {
 
@@ -38,7 +35,6 @@ export default class UploadDialog extends PureComponent {
             acceptedFiles,
             isDialogOpen,
             form,
-            page
         } = this.props;
         const fileInformation = locale.sharedComponents.files;
 
@@ -51,16 +47,10 @@ export default class UploadDialog extends PureComponent {
                 actionsContainerClassName="actionsPanel"
                 bodyClassName="stepperContentPanel"
             >
-                {page === DIALOG_GETTING_STARTED_PAGE && (
-                    <GettingStarted form={form} />
-                )}
-
-                {page === DIALOG_STEPPER_PAGE && (
-                    <FileStepper
-                        form={form}
-                        acceptedFiles={acceptedFiles}
-                    />
-                )}
+                <FileStepper
+                    form={form}
+                    acceptedFiles={acceptedFiles}
+                />
             </Dialog>
         );
     }

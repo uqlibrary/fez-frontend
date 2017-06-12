@@ -13,7 +13,7 @@ exports[`Document type form snapshot tests renders default document type compone
       className="card-header"
     >
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile"
       >
         <div
           className="column"
@@ -32,138 +32,146 @@ exports[`Document type form snapshot tests renders default document type compone
     <CardText
       className="body-1"
     >
-      <div />
-      <Field
-        component={[Function]}
-        dataSource={
-          Array [
-            Object {
-              "id": 174,
-              "name": "Book",
-            },
-            Object {
-              "id": 177,
-              "name": "Book Chapter",
-            },
-            Object {
-              "id": 130,
-              "name": "Conference Paper",
-            },
-            Object {
-              "id": 179,
-              "name": "Journal Article",
-            },
-            Object {
-              "divider": <Divider
-                inset={false}
-          />,
-              "id": "divider",
-            },
-            Object {
-              "id": 202,
-              "name": "Generic Document",
-            },
-            Object {
-              "id": 263,
-              "name": "Audio Document",
-            },
-            Object {
-              "id": 174,
-              "name": "Book",
-            },
-            Object {
-              "id": 177,
-              "name": "Book Chapter",
-            },
-            Object {
-              "id": 130,
-              "name": "Conference Paper",
-            },
-            Object {
-              "id": 197,
-              "name": "Conference Proceedings",
-            },
-            Object {
-              "id": 313,
-              "name": "Creative Work",
-            },
-            Object {
-              "id": 371,
-              "name": "Data Collection",
-            },
-            Object {
-              "id": 181,
-              "name": "Department Technical Report",
-            },
-            Object {
-              "id": 316,
-              "name": "Design",
-            },
-            Object {
-              "id": 228,
-              "name": "Digilib Image",
-            },
-            Object {
-              "id": 238,
-              "name": "Image",
-            },
-            Object {
-              "id": 294,
-              "name": "Journal",
-            },
-            Object {
-              "id": 179,
-              "name": "Journal Article",
-            },
-            Object {
-              "id": 374,
-              "name": "Manuscript",
-            },
-            Object {
-              "id": 191,
-              "name": "Newspaper Article",
-            },
-            Object {
-              "id": 185,
-              "name": "Patent",
-            },
-            Object {
-              "id": 204,
-              "name": "Preprint",
-            },
-            Object {
-              "id": 275,
-              "name": "Research Report",
-            },
-            Object {
-              "id": 189,
-              "name": "Seminar Paper",
-            },
-            Object {
-              "id": 187,
-              "name": "Thesis",
-            },
-            Object {
-              "id": 310,
-              "name": "Video Document",
-            },
-            Object {
-              "id": 183,
-              "name": "Working Paper",
-            },
-          ]
-        }
-        dataSourceConfig={
+      <div
+        style={
           Object {
-            "text": "name",
-            "value": "id",
+            "marginBottom": "-24px",
+            "marginTop": "-24px",
           }
         }
-        formValue={179}
-        fullWidth={true}
-        name="publicationType"
-        openOnFocus={true}
-      />
+      >
+        <Field
+          component={[Function]}
+          dataSource={
+            Array [
+              Object {
+                "id": 174,
+                "name": "Book",
+              },
+              Object {
+                "id": 177,
+                "name": "Book Chapter",
+              },
+              Object {
+                "id": 130,
+                "name": "Conference Paper",
+              },
+              Object {
+                "id": 179,
+                "name": "Journal Article",
+              },
+              Object {
+                "divider": <Divider
+                  inset={false}
+            />,
+                "id": "divider",
+              },
+              Object {
+                "id": 202,
+                "name": "Generic Document",
+              },
+              Object {
+                "id": 263,
+                "name": "Audio Document",
+              },
+              Object {
+                "id": 174,
+                "name": "Book",
+              },
+              Object {
+                "id": 177,
+                "name": "Book Chapter",
+              },
+              Object {
+                "id": 130,
+                "name": "Conference Paper",
+              },
+              Object {
+                "id": 197,
+                "name": "Conference Proceedings",
+              },
+              Object {
+                "id": 313,
+                "name": "Creative Work",
+              },
+              Object {
+                "id": 371,
+                "name": "Data Collection",
+              },
+              Object {
+                "id": 181,
+                "name": "Department Technical Report",
+              },
+              Object {
+                "id": 316,
+                "name": "Design",
+              },
+              Object {
+                "id": 228,
+                "name": "Digilib Image",
+              },
+              Object {
+                "id": 238,
+                "name": "Image",
+              },
+              Object {
+                "id": 294,
+                "name": "Journal",
+              },
+              Object {
+                "id": 179,
+                "name": "Journal Article",
+              },
+              Object {
+                "id": 374,
+                "name": "Manuscript",
+              },
+              Object {
+                "id": 191,
+                "name": "Newspaper Article",
+              },
+              Object {
+                "id": 185,
+                "name": "Patent",
+              },
+              Object {
+                "id": 204,
+                "name": "Preprint",
+              },
+              Object {
+                "id": 275,
+                "name": "Research Report",
+              },
+              Object {
+                "id": 189,
+                "name": "Seminar Paper",
+              },
+              Object {
+                "id": 187,
+                "name": "Thesis",
+              },
+              Object {
+                "id": 310,
+                "name": "Video Document",
+              },
+              Object {
+                "id": 183,
+                "name": "Working Paper",
+              },
+            ]
+          }
+          dataSourceConfig={
+            Object {
+              "text": "name",
+              "value": "id",
+            }
+          }
+          formValue={179}
+          fullWidth={true}
+          name="publicationType"
+          openOnFocus={true}
+        />
+      </div>
     </CardText>
   </Card>
 </form>

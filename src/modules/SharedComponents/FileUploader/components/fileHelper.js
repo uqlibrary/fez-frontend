@@ -1,5 +1,3 @@
-export const EMBARGO_ID = 2;
-
 export function getByteConversion(bytes, decimals) {
     if(bytes === 0) return '0 Bytes';
 

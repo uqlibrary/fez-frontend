@@ -1,4 +1,4 @@
-import {validation} from 'config';
+import {validation, locale} from 'config';
 
 export const isDOIValue = value => {
     // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
@@ -26,7 +26,7 @@ export const validate = values => {
     const titleRegex = /^[a-zA-Z\s\d\!\?\-]+$/; // title regex
 
     if (!isDOIValue(fieldValue) && !isPubMedValue(fieldValue) && !titleRegex.test(fieldValue)) {
-        errors.doiSearch = 'Please enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title of the publication';
+        errors.doiSearch = locale.pages.addRecord.searchForPublication.errorMsg;
     }
 
     return errors;
