@@ -36,11 +36,7 @@ exports[`Document type form snapshot tests renders default document type compone
         style={
           Object {
             "marginBottom": "-24px",
-<<<<<<< HEAD
             "marginTop": "-12px",
-=======
-            "marginTop": "-24px",
->>>>>>> 247ab33da6e5e02f4c3666c35fe0b843768d5718
           }
         }
       >
