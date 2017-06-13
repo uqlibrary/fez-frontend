@@ -14,17 +14,12 @@ export const FILE_DIALOG_INITIALIZED = 'FILE_DIALOG_INITIALIZED';
 export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
 export const FILE_METADATA_INITIALIZED = 'FILE_METADATA_INITIALIZED';
 export const FILE_METADATA_UPDATED = 'FILE_METADATA_UPDATED';
-export const FILE_PAGE_INCREASED = 'FILE_PAGE_INCREASED';
-export const FILE_PAGE_DECREASED = 'FILE_PAGE_DECREASED';
 export const FILE_STEPPER_INDEX_INCREASED = 'FILE_STEPPER_INDEX_INCREASED';
 export const FILE_STEPPER_INDEX_DECREASED = 'FILE_STEPPER_INDEX_DECREASED';
 export const FILE_UPLOAD_CANCELLED = 'FILE_UPLOAD_CANCELLED';
 export const FILE_UPLOAD_TERMINATED = 'FILE_UPLOAD_TERMINATED';
 export const FILE_UPLOADING = 'FILE_UPLOADING';
 export const FILE_UPLOADED = 'FILE_UPLOADED';
-
-export const DIALOG_GETTING_STARTED_PAGE = 'DIALOG_GETTING_STARTED_PAGE';
-export const DIALOG_STEPPER_PAGE = 'DIALOG_STEPPER_PAGE';
 
 let cancelToken;
 
@@ -178,18 +173,6 @@ export function updateFileMetadata(data) {
     return {
         type: FILE_METADATA_UPDATED,
         payload: data
-    };
-}
-
-export function nextPage() {
-    return {
-        type: FILE_PAGE_INCREASED
-    };
-}
-
-export function previousPage() {
-    return {
-        type: FILE_PAGE_DECREASED
     };
 }
 

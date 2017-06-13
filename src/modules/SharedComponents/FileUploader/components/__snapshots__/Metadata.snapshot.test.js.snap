@@ -27,12 +27,10 @@ exports[`File upload metadata snapshots tests renders default file upload metada
     >
       <Field
         component={[Function]}
-        floatingLabelText="Description"
+        floatingLabelText="Enter a short description of file e.g. author manuscript"
         fullWidth={true}
         maxLength="255"
-        multiLine={true}
         name="fileDescription0"
-        rows={3}
         type="text"
         validate={
           Array [
@@ -50,66 +48,28 @@ exports[`File upload metadata snapshots tests renders default file upload metada
     >
       <Field
         component={[Function]}
-        dataSource={
-          Array [
-            Object {
-              "id": 1,
-              "title": "UQ staff and students view only",
-            },
-            Object {
-              "id": 2,
-              "title": "Fully Embargoed (system admins only)",
-            },
-            Object {
-              "id": 3,
-              "title": "Only Thesis Office Approve, View, List. Printery View.",
-            },
-            Object {
-              "id": 4,
-              "title": "Only SBS Theses Approve, View, List.",
-            },
-            Object {
-              "id": 5,
-              "title": "ERA Assessors only",
-            },
-            Object {
-              "id": 6,
-              "title": "UQ staff and students and printery view only",
-            },
-            Object {
-              "id": 7,
-              "title": "Inherit from above",
-            },
-            Object {
-              "id": 8,
-              "title": "Admin and UPO access only",
-            },
-            Object {
-              "id": 9,
-              "title": "Open Access",
-            },
-            Object {
-              "id": 10,
-              "title": "HERDC evidence Admin and UPO List, View only",
-            },
-            Object {
-              "id": 11,
-              "title": "NTRO auditors",
-            },
-            Object {
-              "id": 12,
-              "title": "Admin List and View only",
-            },
-          ]
-        }
-        dataSourceConfig={
-          Object {
-            "text": "title",
-            "value": "id",
-          }
-        }
         label="File is public (open access)"
         name="accessCondition0"
+        thumbStyle={
+          Object {
+            "backgroundColor": "white",
+          }
+        }
+        thumbSwitchedStyle={
+          Object {
+            "backgroundColor": "#2377CB",
+          }
+        }
+        trackStyle={
+          Object {
+            "backgroundColor": "#595959",
+          }
+        }
+        trackSwitchedStyle={
+          Object {
+            "backgroundColor": "#288BED",
+          }
+        }
       />
     </div>
     <div
@@ -150,13 +110,14 @@ exports[`File upload metadata snapshots tests renders default file upload metada
       className="prevBtn"
       disabled={false}
       fullWidth={false}
-      label="Back"
+      label="Cancel"
       labelPosition="after"
       labelStyle={Object {}}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
+      onTouchTap={[Function]}
       primary={false}
       secondary={false}
     />
@@ -200,12 +161,10 @@ exports[`File upload metadata snapshots tests sets the previous button to decrea
     >
       <Field
         component={[Function]}
-        floatingLabelText="Description"
+        floatingLabelText="Enter a short description of file e.g. author manuscript"
         fullWidth={true}
         maxLength="255"
-        multiLine={true}
         name="fileDescription1"
-        rows={3}
         type="text"
         validate={
           Array [
@@ -223,66 +182,28 @@ exports[`File upload metadata snapshots tests sets the previous button to decrea
     >
       <Field
         component={[Function]}
-        dataSource={
-          Array [
-            Object {
-              "id": 1,
-              "title": "UQ staff and students view only",
-            },
-            Object {
-              "id": 2,
-              "title": "Fully Embargoed (system admins only)",
-            },
-            Object {
-              "id": 3,
-              "title": "Only Thesis Office Approve, View, List. Printery View.",
-            },
-            Object {
-              "id": 4,
-              "title": "Only SBS Theses Approve, View, List.",
-            },
-            Object {
-              "id": 5,
-              "title": "ERA Assessors only",
-            },
-            Object {
-              "id": 6,
-              "title": "UQ staff and students and printery view only",
-            },
-            Object {
-              "id": 7,
-              "title": "Inherit from above",
-            },
-            Object {
-              "id": 8,
-              "title": "Admin and UPO access only",
-            },
-            Object {
-              "id": 9,
-              "title": "Open Access",
-            },
-            Object {
-              "id": 10,
-              "title": "HERDC evidence Admin and UPO List, View only",
-            },
-            Object {
-              "id": 11,
-              "title": "NTRO auditors",
-            },
-            Object {
-              "id": 12,
-              "title": "Admin List and View only",
-            },
-          ]
-        }
-        dataSourceConfig={
-          Object {
-            "text": "title",
-            "value": "id",
-          }
-        }
         label="File is public (open access)"
         name="accessCondition1"
+        thumbStyle={
+          Object {
+            "backgroundColor": "white",
+          }
+        }
+        thumbSwitchedStyle={
+          Object {
+            "backgroundColor": "#2377CB",
+          }
+        }
+        trackStyle={
+          Object {
+            "backgroundColor": "#595959",
+          }
+        }
+        trackSwitchedStyle={
+          Object {
+            "backgroundColor": "#288BED",
+          }
+        }
       />
     </div>
     <div

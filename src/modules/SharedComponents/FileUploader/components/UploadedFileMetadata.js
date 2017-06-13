@@ -7,7 +7,6 @@ import FontIcon from 'material-ui/FontIcon';
 import {getIcon} from './fileHelper';
 import {locale} from 'config';
 import './UploadedFileMetadata.scss';
-import {EMBARGO_ID} from './fileHelper';
 
 export default class UploadedFileMetadata extends PureComponent {
 
@@ -29,7 +28,7 @@ export default class UploadedFileMetadata extends PureComponent {
 
     formatMetadataDetails = (dataSource, fileMetadataFields) => {
         let accessDetails;
-        if (dataSource[fileMetadataFields.accessCondition] === EMBARGO_ID) {
+        if (dataSource[fileMetadataFields.accessCondition]) {
             const d = dataSource[fileMetadataFields.embargoDate] ? new Date(dataSource[fileMetadataFields.embargoDate]) : new Date();
             accessDetails = ` - embargoed until ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
         } else {

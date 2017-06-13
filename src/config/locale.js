@@ -150,8 +150,9 @@ export default {
             searchForPublication: {
                 title: 'Search for your publication',
                 explanationText: 'Enter either the publication Doi (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',
-                defaultSearchFieldLabel: 'Enter a DOI, Pubmed ID or a title',
-                defaultButtonLabel: 'Search',
+                defaultSearchFieldLabel: 'Enter DOI, Pubmed Id or Title',
+                defaultButtonLabel: 'Enter DOI, Pubmed Id or Title',
+                errorMsg: 'Please enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title of the publication',
                 help: {
                     title: 'Search for your publication',
                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
@@ -195,7 +196,7 @@ export default {
             },
             publicationTypeForm: {
                 popularTypesList: ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'],
-                title: 'Publication type',
+                title: 'Add your publication',
                 maxSearchResults: 10,
                 publicationTypeLabel: 'Select a publication type',
                 help: {
@@ -313,7 +314,7 @@ export default {
                 ),
                 accessConditionsLabel: 'File is public (open access)',
                 embargoDateLabel: 'Embargo date',
-                descriptionLabel: 'Description',
+                descriptionLabel: 'Enter a short description of file e.g. author manuscript',
                 metadata: {
                     description: 'fileDescription',
                     accessCondition: 'accessCondition',
