@@ -7,5 +7,3 @@ e2eTestLog
 chromedriver.log
 coverage
 /yarn.lock
-/package-lock.json
-/package-lock.json
