@@ -7,13 +7,13 @@ export default function Browse({title, text, help}) {
     return (
         <div className="layout-fill">
 
-            <h1 className="page-title display-1">{title ? title : 'Browse'}</h1>
+            <h1 className="page-title headline">{title ? title : 'Browse'}</h1>
 
             <Card className="layout-card">
                 <CardHeader className="card-header">
                     <div className="columns is-gapless is-mobile">
                         <div className="column">
-                            <h2 className="headline">{title ? title : 'Browse'}</h2>
+                            <h2 className="title">{title ? title : 'Browse'}</h2>
                         </div>
                         <div className="column is-narrow is-helpicon">
                             {help && (

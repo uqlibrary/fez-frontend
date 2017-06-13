@@ -7,14 +7,14 @@
 ---
     <div className="layout-fill">
         
-        <h1 className="page-title display-1">{title ? title : 'This is the page title'}</h1>
+        <h1 className="page-title headline">{title ? title : 'This is the page title'}</h1>
 
             <Card className="layout-card">
                 <CardHeader className="card-header">
                     <div className="columns is-gapless">
                         
                         <div className="column">
-                            <h2 className="headline">{title ? title : 'This is the card title'}</h2>
+                            <h2 className="title">{title ? title : 'This is the card title'}</h2>
                         </div>
                         
                         <div className="column is-narrow is-helpicon">

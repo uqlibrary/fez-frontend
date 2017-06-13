@@ -197,7 +197,7 @@ export default class AddRecord extends React.Component {
         const stepperInformation = locale.pages.addRecord.stepper;
         return (
             <div>
-                <h1 className="page-title display-1">{locale.pages.addRecord.title}</h1>
+                <h1 className="page-title headline">{locale.pages.addRecord.title}</h1>
 
                 {/* Stepper start */}
                 <div className="Stepper">

@@ -137,7 +137,7 @@ export default class AddJournalArticleForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="headline">{journalArticleInformation.title}</h2>
+                                <h2 className="title">{journalArticleInformation.title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {journalArticleInformation.help && (
@@ -193,7 +193,7 @@ export default class AddJournalArticleForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="headline">{authorsInformation.title}</h2>
+                                <h2 className="title">{authorsInformation.title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {authorsInformation.help && (
@@ -216,7 +216,7 @@ export default class AddJournalArticleForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="headline">{optionalInformation.title}</h2>
+                                <h2 className="title">{optionalInformation.title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {optionalInformation.help && (

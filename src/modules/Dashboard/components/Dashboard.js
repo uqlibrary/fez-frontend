@@ -51,7 +51,7 @@ class Dashboard extends React.Component {
                         <div className="column">
                             <Card style={{marginLeft: '10px', marginTop: '20px'}}>
                                 <CardHeader className="card-header">
-                                    <h2 className="headline">eSpace publications by year</h2>
+                                    <h2 className="title">eSpace publications by year</h2>
                                 </CardHeader>
 
                                 <CardText className="body-1">

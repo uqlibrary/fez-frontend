@@ -7,14 +7,14 @@ export default function Research({title, text, help}) {
     return (
         <div className="layout-fill">
 
-            <h1 className="page-title display-1">{title ? title : 'My research'}</h1>
+            <h1 className="page-title headline">{title ? title : 'My research'}</h1>
 
             <Card className="layout-card">
                 <CardHeader className="card-header">
                     <div className="columns is-gapless is-mobile">
 
                         <div className="column">
-                            <h2 className="headline">{title ? title : 'Research placeholder title'}</h2>
+                            <h2 className="title">{title ? title : 'Research placeholder title'}</h2>
                         </div>
 
                         <div className="column is-narrow is-helpicon">
