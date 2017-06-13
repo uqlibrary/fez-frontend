@@ -76,12 +76,6 @@ export const defaultMenuItems = (locale, components) => [
         render: () => components.StaticPage({title: 'FAQs', text: 'public FAQs coming soon...'})
     },
     {
-        linkTo: '/add-record',
-        path: '/add-record',
-        primaryText: locale.menu.addMissingRecord.primaryText,
-        component: components.AddRecord
-    },
-    {
         linkTo: '/about',
         path: '/about',
         primaryText: locale.menu.about.primaryText,

@@ -308,7 +308,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
             fullWidth={true}
             multiLine={true}
             name="fez_record_search_key_notes.rek_notes"
-            rows={2}
+            rows={1}
             type="text"
           />
         </div>
