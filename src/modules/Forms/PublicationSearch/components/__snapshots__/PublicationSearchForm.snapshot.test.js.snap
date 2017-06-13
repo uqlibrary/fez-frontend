@@ -13,7 +13,7 @@ exports[`Publication search form snapshots tests renders default publication sea
       className="card-header"
     >
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile"
       >
         <div
           className="column"

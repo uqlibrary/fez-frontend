@@ -12,7 +12,7 @@ exports[`Search results snapshots tests renders default search results page 1`] 
     className="card-header"
   >
     <div
-      className="columns is-gapless"
+      className="columns is-gapless is-mobile"
     >
       <div
         className="column"

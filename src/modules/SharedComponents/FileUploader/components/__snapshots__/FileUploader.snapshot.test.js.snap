@@ -19,7 +19,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
       className="card-header"
     >
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile"
       >
         <div
           className="column"
@@ -27,7 +27,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
           <h2
             className="headline"
           >
-            Files
+            Upload open access or administrative files
           </h2>
         </div>
         <div
@@ -45,9 +45,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
     >
       <p
         className="sub-title"
-      >
-        Upload a new file
-      </p>
+      />
       <div
         className="columns"
       >

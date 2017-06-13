@@ -252,7 +252,7 @@ export default class AddJournalArticleForm extends Component {
                                 </div>
 
                                 <div className="columns">
-                                    <div className="column is-textfield">
+                                    <div className="column is-textarea">
                                         <Field component={TextField} name="" type="text" fullWidth multiLine
                                                floatingLabelText={optionalInformation.fields.articleNumber}  />
                                     </div>
@@ -260,9 +260,9 @@ export default class AddJournalArticleForm extends Component {
 
 
                                 <div className="columns">
-                                    <div className="column is-textfield">
+                                    <div className="column is-textarea">
                                         <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text" fullWidth multiLine
-                                               rows={5} floatingLabelText={optionalInformation.fields.notesLabel} />
+                                               rows={2} floatingLabelText={optionalInformation.fields.notesLabel} />
                                     </div>
                                 </div>
                     </CardText>

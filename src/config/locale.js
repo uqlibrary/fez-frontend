@@ -242,7 +242,7 @@ export default {
                         startPageLabel: 'Start page',
                         endPageLabel: 'End page',
                         articleNumber: 'Article number',
-                        notesLabel: 'Note (not publically viewable)'
+                        notesLabel: 'Notes (not publically viewable)'
                     }
                 }
             }
@@ -270,7 +270,7 @@ export default {
     },
     sharedComponents: {
         files: {
-            title: 'Upload new files',
+            title: 'Upload open access or administrative files',
             subTitle: '',
             help: {
                 title: 'Files',

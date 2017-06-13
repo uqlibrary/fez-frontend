@@ -117,7 +117,7 @@ export default class PublicationTypeForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                       <div style={{marginTop: '-24px', marginBottom: '-24px'}}>
+                       <div style={{marginTop: '-12px', marginBottom: '-24px'}}>
                            <Field component={AutoCompleteSelect} name="publicationType"
                                maxSearchResults={maxSearchResults}
                                label={publicationTypeLabel}

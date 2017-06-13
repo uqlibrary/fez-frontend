@@ -13,7 +13,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       className="card-header"
     >
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile"
       >
         <div
           className="column"
@@ -167,7 +167,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       className="card-header"
     >
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile"
       >
         <div
           className="column"
@@ -208,7 +208,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       className="card-header"
     >
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile"
       >
         <div
           className="column"
@@ -238,82 +238,77 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         <div
           className="column"
         >
-          <div
-            className="columns"
-          >
-            <div
-              className="column"
-            >
-              <Field
-                component={[Function]}
-                floatingLabelText="Volume"
-                fullWidth={true}
-                name="fez_record_search_key_volume_number.rek_volume_number"
-                type="text"
-              />
-            </div>
-            <div
-              className="column"
-            >
-              <Field
-                component={[Function]}
-                floatingLabelText="Issue"
-                fullWidth={true}
-                name="fez_record_search_key_issue_number.rek_issue_number"
-                type="text"
-              />
-            </div>
-          </div>
+          <Field
+            component={[Function]}
+            floatingLabelText="Volume"
+            fullWidth={true}
+            name="fez_record_search_key_volume_number.rek_volume_number"
+            type="text"
+          />
         </div>
         <div
           className="column"
         >
-          <div
-            className="columns"
-          >
-            <div
-              className="column"
-            >
-              <Field
-                component={[Function]}
-                floatingLabelText="Start page"
-                fullWidth={true}
-                name="fez_record_search_key_start_page.rek_start_page"
-                type="text"
-              />
-            </div>
-            <div
-              className="column"
-            >
-              <Field
-                component={[Function]}
-                floatingLabelText="End page"
-                fullWidth={true}
-                name="fez_record_search_key_end_page.rek_end_page"
-                type="text"
-              />
-            </div>
-          </div>
+          <Field
+            component={[Function]}
+            floatingLabelText="Issue"
+            fullWidth={true}
+            name="fez_record_search_key_issue_number.rek_issue_number"
+            type="text"
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <Field
+            component={[Function]}
+            floatingLabelText="Start page"
+            fullWidth={true}
+            name="fez_record_search_key_start_page.rek_start_page"
+            type="text"
+          />
+        </div>
+        <div
+          className="column"
+        >
+          <Field
+            component={[Function]}
+            floatingLabelText="End page"
+            fullWidth={true}
+            name="fez_record_search_key_end_page.rek_end_page"
+            type="text"
+          />
         </div>
       </div>
       <div
         className="columns"
       >
         <div
-          className="column"
+          className="column is-textarea"
         >
           <Field
             component={[Function]}
-            floatingLabelText="Note (not publically viewable)"
+            floatingLabelText="Article number"
+            fullWidth={true}
+            multiLine={true}
+            name=""
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="columns"
+      >
+        <div
+          className="column is-textarea"
+        >
+          <Field
+            component={[Function]}
+            floatingLabelText="Notes (not publically viewable)"
             fullWidth={true}
             multiLine={true}
             name="fez_record_search_key_notes.rek_notes"
-            rows={5}
-            style={
-              Object {
-                "marginTop": "-36px",
-              }
-            }
+            rows={2}
             type="text"
           />
         </div>
