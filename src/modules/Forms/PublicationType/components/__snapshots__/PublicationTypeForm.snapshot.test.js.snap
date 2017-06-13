@@ -19,7 +19,7 @@ exports[`Document type form snapshot tests renders default document type compone
           className="column"
         >
           <h2
-            className="headline"
+            className="title"
           >
             Component Title
           </h2>

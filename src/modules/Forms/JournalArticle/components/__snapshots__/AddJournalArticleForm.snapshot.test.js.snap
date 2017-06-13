@@ -19,7 +19,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
           className="column"
         >
           <h2
-            className="headline"
+            className="title"
           >
             Journal article information
           </h2>
@@ -173,7 +173,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
           className="column"
         >
           <h2
-            className="headline"
+            className="title"
           >
             Authors
           </h2>
@@ -214,7 +214,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
           className="column"
         >
           <h2
-            className="headline"
+            className="title"
           >
             Optional publication detail
           </h2>

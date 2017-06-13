@@ -18,7 +18,7 @@ exports[`Search results snapshots tests renders default search results page 1`] 
         className="column"
       >
         <h2
-          className="headline"
+          className="title"
         >
           Component Title
         </h2>

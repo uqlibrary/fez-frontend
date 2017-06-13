@@ -25,7 +25,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
           className="column"
         >
           <h2
-            className="headline"
+            className="title"
           >
             Upload open access or administrative files
           </h2>
