@@ -230,8 +230,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div className="columns">
-                            <div className="column">
+
                                 <div className="columns">
                                     <div className="column">
                                         <Field component={TextField} name="fez_record_search_key_volume_number.rek_volume_number" type="text" fullWidth
@@ -241,10 +240,7 @@ export default class AddJournalArticleForm extends Component {
                                         <Field component={TextField} name="fez_record_search_key_issue_number.rek_issue_number" type="text" fullWidth
                                                floatingLabelText={optionalInformation.fields.issueLabel}/>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="column">
-                                <div className="columns">
+
                                     <div className="column">
                                         <Field component={TextField} name="fez_record_search_key_start_page.rek_start_page" type="text" fullWidth
                                                floatingLabelText={optionalInformation.fields.startPageLabel}/>
@@ -254,14 +250,21 @@ export default class AddJournalArticleForm extends Component {
                                                floatingLabelText={optionalInformation.fields.endPageLabel}/>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text" fullWidth multiLine
-                                       rows={5} floatingLabelText={optionalInformation.fields.notesLabel} style={{marginTop: '-36px'}} />
-                            </div>
-                        </div>
+
+                                <div className="columns">
+                                    <div className="column" style={{marginTop: '-36px'}}>
+                                        <Field component={TextField} name="" type="text" fullWidth multiLine
+                                               rows={1} floatingLabelText={optionalInformation.fields.articleNumber}  />
+                                    </div>
+                                </div>
+
+
+                                <div className="columns">
+                                    <div className="column" style={{marginTop: '-36px'}}>
+                                        <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text" fullWidth multiLine
+                                               rows={5} floatingLabelText={optionalInformation.fields.notesLabel} />
+                                    </div>
+                                </div>
                     </CardText>
                 </Card>
 
