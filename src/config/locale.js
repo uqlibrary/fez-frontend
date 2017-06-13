@@ -28,7 +28,7 @@ export default {
             primaryText: 'Add missing record'
         },
         claimPublication: {
-            primaryText: 'Clalim publications'
+            primaryText: 'Claim publications'
         },
         manageUsers: {
             primaryText: 'Manage users'

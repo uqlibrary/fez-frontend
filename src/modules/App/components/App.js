@@ -22,8 +22,10 @@ import {Browse} from 'modules/Browse';
 
 // Import specific style for the AppBar
 import '../../../sass/_appbar.scss';
-// import a style for the helpicon placement
+// Import a style for the helpicon placement
 import '../../../sass/_helpicon.scss';
+// Import styles to override MUI defaults for UX
+import '../../../sass/_muifixes.scss';
 
 export default class App extends React.Component {
 

@@ -191,7 +191,7 @@ export default class AddJournalArticleForm extends Component {
                 {/* Author Information */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="headline">{authorsInformation.title}</h2>
                             </div>
@@ -214,7 +214,7 @@ export default class AddJournalArticleForm extends Component {
                 {/* Optional publication details */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="headline">{optionalInformation.title}</h2>
                             </div>
@@ -252,15 +252,15 @@ export default class AddJournalArticleForm extends Component {
                                 </div>
 
                                 <div className="columns">
-                                    <div className="column" style={{marginTop: '-36px'}}>
+                                    <div className="column is-textfield">
                                         <Field component={TextField} name="" type="text" fullWidth multiLine
-                                               rows={1} floatingLabelText={optionalInformation.fields.articleNumber}  />
+                                               floatingLabelText={optionalInformation.fields.articleNumber}  />
                                     </div>
                                 </div>
 
 
                                 <div className="columns">
-                                    <div className="column" style={{marginTop: '-36px'}}>
+                                    <div className="column is-textfield">
                                         <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text" fullWidth multiLine
                                                rows={5} floatingLabelText={optionalInformation.fields.notesLabel} />
                                     </div>

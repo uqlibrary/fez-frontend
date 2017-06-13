@@ -1,0 +1,9 @@
+// An MUI override to make form labels WCAG AA compliant
+label {
+  color: #888 !important;
+}
+
+
+.is-textfield {
+  margin-top: -36px;
+}

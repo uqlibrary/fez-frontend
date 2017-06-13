@@ -2,9 +2,3 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 @import '~uqlibrary-react-toolbox/sass/index';
 @import '~uqlibrary-react-toolbox/sass/components';
-
-
-// An MUI override to make form labels WCAG AA compliant
-label {
-  color: #888 !important;
-}
