@@ -81,7 +81,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
                       No folders
                     </li>
                     <li>
-                      Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)
+                      Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9)
                     </li>
                     <li>
                       Only numbers and lowercase characters in the file extension

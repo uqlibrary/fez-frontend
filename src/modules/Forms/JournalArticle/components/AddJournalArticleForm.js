@@ -179,7 +179,7 @@ export default class AddJournalArticleForm extends Component {
                             <Field component={AutoCompleteSelect}
                                    name="rek_subtype"
                                    fullWidth
-                                   label={journalArticleInformation.fields.publicationTypeLabel}
+                                   label={journalArticleInformation.fields.publicationSubType}
                                    formValue={formValues.get('rek_subtype')}
                                    dataSource={[].concat(this.props.publicationSubTypeList.toJS())}
                                    dataSourceConfig={{text: 'label', value: 'id'}}

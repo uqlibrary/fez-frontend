@@ -150,7 +150,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
             }
           }
           fullWidth={true}
-          label="Select a publication type"
+          label="Select publication subtype"
           name="rek_subtype"
         />
       </div>
@@ -192,7 +192,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       className="body-1"
     >
       <Connect(ReduxForm)
-        authorFieldLabel="Add an author (Name as published)"
+        authorFieldLabel="Add an author (name as published)"
         form="testForm"
       />
     </CardText>

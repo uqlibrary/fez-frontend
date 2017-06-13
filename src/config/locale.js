@@ -149,7 +149,7 @@ export default {
             },
             searchForPublication: {
                 title: 'Search for your publication',
-                explanationText: 'Enter either the publication Doi (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',
+                explanationText: 'Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',
                 defaultSearchFieldLabel: 'Enter DOI, Pubmed Id or Title',
                 defaultButtonLabel: 'Enter DOI, Pubmed Id or Title',
                 errorMsg: 'Please enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title of the publication',
@@ -162,7 +162,7 @@ export default {
                     defaultButtonLabel: 'Search'
                 },
                 buttonLabelVariants: {
-                    doi: 'Doi Search',
+                    doi: 'DOI Search',
                     pubmed: 'Pubmed Id Search',
                     title: 'Title Search',
                     default: 'Search'
@@ -198,7 +198,7 @@ export default {
                 popularTypesList: ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'],
                 title: 'Add your publication',
                 maxSearchResults: 10,
-                publicationTypeLabel: 'Select a publication type',
+                publicationTypeLabel: 'Select publication type',
                 help: {
                     title: 'Add your publication',
                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
@@ -218,7 +218,7 @@ export default {
                         titleLabel: 'Journal title',
                         nameLabel: 'Journal name',
                         publishDateLabel: 'Journal publish date',
-                        publicationTypeLabel: 'Select a publication type'
+                        publicationSubType: 'Select publication subtype'
                     }
                 },
                 authors: {
@@ -228,7 +228,7 @@ export default {
                         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
                     },
                     fields: {
-                        dropdownLabel: 'Add an author (Name as published)'
+                        dropdownLabel: 'Add an author (name as published)'
                     }
                 },
                 optionalDetails: {
@@ -297,7 +297,7 @@ export default {
                             <div>
                                 <ul>
                                     <li>No folders</li>
-                                    <li>Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)</li>
+                                    <li>Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9)</li>
                                     <li>Only numbers and lowercase characters in the file extension</li>
                                     <li>Under 45 characters</li>
                                     <li>Only one file extension (on period (.) character) and</li>
