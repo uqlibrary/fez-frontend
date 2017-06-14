@@ -44,6 +44,8 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 - install jest `npm install jest -g`
 - run tests `npm test`
 
+Before committing changes, locally run tests and update stapshots (if required). To update snapshots run `npm test -- -u`. 
+
 ### E2E testing
 [Nightwatch.js](http://nightwatchjs.org/) is used to run end to end tests. 
  
