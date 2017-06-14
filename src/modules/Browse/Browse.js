@@ -28,7 +28,6 @@ export default function Browse({title, text, help}) {
                 </CardHeader>
 
                 <CardText className="body-1">
-                    <br />
                     <div>
                         {text ? text : 'Browse this repository'}
                     </div>

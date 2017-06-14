@@ -62,7 +62,6 @@ export default class SearchResults extends Component {
                     </div>
                 </CardHeader>
                 <CardText className="body-1">
-                    <br />
                     <div>{this.setExplanationText()}</div>
                     {searchResultEntries}
                 </CardText>

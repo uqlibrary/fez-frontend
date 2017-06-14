@@ -45,7 +45,6 @@ const NoMatchingRecords = ({handleNext, handlePrevious, stepIndex, title, explan
             </CardHeader>
 
             <CardText className="body-1">
-                <br />
                 <div>{explanationText}</div>
                 <div style={{textAlign: 'right'}}>
                     <FlatButton

@@ -95,7 +95,6 @@ export default class PublicationSearchForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <br />
                         <div>{explanationText}</div>
                         <Field component={TextField}
                                name="doiSearch"

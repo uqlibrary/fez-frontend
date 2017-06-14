@@ -82,7 +82,7 @@ exports[`File upload metadata snapshots tests renders default file upload metada
         floatingLabelText="Embargo date"
         fullWidth={true}
         locale="en-AU"
-        minDate={2017-06-12T14:00:00.000Z}
+        minDate={2017-06-13T14:00:00.000Z}
         name="embargoDate0"
       />
     </div>
@@ -216,7 +216,7 @@ exports[`File upload metadata snapshots tests sets the previous button to decrea
         floatingLabelText="Embargo date"
         fullWidth={true}
         locale="en-AU"
-        minDate={2017-06-12T14:00:00.000Z}
+        minDate={2017-06-13T14:00:00.000Z}
         name="embargoDate1"
       />
     </div>

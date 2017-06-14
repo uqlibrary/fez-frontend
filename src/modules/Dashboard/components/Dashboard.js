@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardText, CardHeader} from 'material-ui/Card';
 // import {publicationYearsBig as publicationYearsMockData} from '../../../mock/data/academic/publicationYears';
-
 // import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox';
 import './Dashboard.scss';
 
