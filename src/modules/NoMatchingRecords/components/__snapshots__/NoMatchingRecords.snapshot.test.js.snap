@@ -31,7 +31,6 @@ exports[`No matching record component snapshots tests renders default no matchin
   <CardText
     className="body-1"
   >
-    <br />
     <div>
        Lorem ipsum
     </div>

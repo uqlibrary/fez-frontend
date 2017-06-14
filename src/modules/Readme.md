@@ -30,7 +30,6 @@
                 </CardHeader>
 
                 <CardText className="body-1">
-                    <br />
                     <div>
                         {text ? text : 'This is the default card content'}
                     </div>

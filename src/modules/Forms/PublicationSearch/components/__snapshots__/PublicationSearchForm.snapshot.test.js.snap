@@ -32,7 +32,6 @@ exports[`Publication search form snapshots tests renders default publication sea
     <CardText
       className="body-1"
     >
-      <br />
       <div>
         Component Search Text
       </div>

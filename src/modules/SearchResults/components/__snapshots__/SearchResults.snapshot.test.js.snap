@@ -31,7 +31,6 @@ exports[`Search results snapshots tests renders default search results page 1`] 
   <CardText
     className="body-1"
   >
-    <br />
     <div>
       Lorem Ipsum
     </div>
