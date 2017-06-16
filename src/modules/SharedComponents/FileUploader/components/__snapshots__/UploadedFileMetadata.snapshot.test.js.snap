@@ -29,7 +29,7 @@ exports[`File upload uploaded file metadata snapshot renders default uploaded fi
     <div
       className="secondaryDetails"
     >
-      test file description - embargoed until 25/5/2017
+      test file description - embargoed until 24/5/2017
     </div>
   </ToolbarGroup>
   <ToolbarGroup
@@ -83,7 +83,7 @@ exports[`File upload uploaded file metadata snapshot renders default uploaded fi
     <div
       className="secondaryDetails"
     >
-      test file description - embargoed until 25/5/2017
+      test file description - embargoed until 24/5/2017
     </div>
   </ToolbarGroup>
   <ToolbarGroup
