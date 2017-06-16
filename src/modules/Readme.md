@@ -11,7 +11,7 @@
 
             <Card className="layout-card">
                 <CardHeader className="card-header">
-                    <div className="columns is-gapless">
+                    <div className="columns is-gapless is-mobile">
                         
                         <div className="column">
                             <h2 className="title">{title ? title : 'This is the card title'}</h2>

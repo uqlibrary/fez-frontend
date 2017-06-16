@@ -30,7 +30,7 @@ export default class UploadedFileMetadata extends PureComponent {
         let accessDetails;
         if (dataSource[fileMetadataFields.accessCondition]) {
             const d = dataSource[fileMetadataFields.embargoDate] ? new Date(dataSource[fileMetadataFields.embargoDate]) : new Date();
-            accessDetails = ` - embargoed until ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+            accessDetails = ` - embargoed until ${d.getUTCDate()}/${d.getUTCMonth() + 1}/${d.getUTCFullYear()}`;
         } else {
             if (dataSource[fileMetadataFields.accessCondition]) {
                 const selectedDoc = this.props.documentAccessTypes.find(doc => {
