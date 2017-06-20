@@ -284,10 +284,13 @@ export default {
                 cancelledUpload: 'File upload cancelled.',
                 uploadError: {
                     default: 'There seems to be a problem uploading the file. Please try again later.'
-                }
+                },
+                openAccessConfirmation: (
+                    <div>I understand that the files indicated above will be submitted as open access and will be made publicaly available immediately,
+                        or where indicated as closed access, will be made available on the indicated embargo date.</div>
+                )
             },
             fields: {
-                filenameLabel: 'Filename selected',
                 filenameRestrictions: (
                     <div className="columns fileInstructions">
                         <div className="column">
@@ -310,32 +313,24 @@ export default {
                         </div>
                     </div>
                 ),
-                accessConditionsLabel: 'File is public (open access)',
-                embargoDateLabel: 'Embargo date',
-                descriptionLabel: 'Description',
-                metadata: {
-                    description: 'fileDescription',
-                    accessCondition: 'accessCondition',
-                    embargoDate: 'embargoDate'
+                fileAccess: 'fileAccess',
+                datepickerAccess: 'accessDate',
+                selectField: {
+                    openAccessValue: 'Open Access',
+                    closedAccessValue: 'Closed Access',
+                    embargoedAccessValue: 'Embargoed access'
                 }
             },
-            dialog: {
-                title: 'File uploader',
-                lastStepTitle: 'The following files are ready to upload',
-                explanationText: 'The following steps will allow you to identify, describe and assign a date which will allow/restrict open access to each file you upload. At the end of this process, the files themselves will be uploaded to the server for review.',
-                disclaimer: (
-                    <div className="disclaimer">
-                        <span>DISCLAIMER</span>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus, mauris vitae euismod iaculis, orci nulla tristique neque, eu mattis justo lorem in tellus. Pellentesque ultrices tempor felis, vitae sodales risus hendrerit vel. Cras vitae rutrum mauris. Suspendisse vitae est eleifend, imperdiet est sit amet, sagittis odio. Vivamus quis velit nibh. Fusce ullamcorper pulvinar viverra. Quisque mi nisl, pharetra id massa eget, euismod ullamcorper lectus. Quisque id ligula ullamcorper, efficitur lectus sed, tristique ipsum. Pellentesque quis ipsum ut turpis mattis sodales id ac metus.
-                    </div>
-                )
+            list: {
+                filenameLabel: 'Filename',
+                fileAccessLabel: 'File access',
+                embargoDateLabel: 'Embargo date'
             },
-            buttons: {
-                backLabel: 'Back',
-                cancelUpload: 'Cancel upload',
-                deleteLabel: 'Remove',
-                getStartedLabel: 'Get Started',
-                stepperNextLabel: 'Agree and continue',
-                uploadFilesLabel: 'Upload all files'
+            constants: {
+                openAccessId: 9,
+                embargoAccessId: 2,
+                closedAccessId: 8,
+                completed: 100
             }
         }
     }

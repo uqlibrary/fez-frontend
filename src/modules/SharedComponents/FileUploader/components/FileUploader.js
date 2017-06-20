@@ -6,43 +6,30 @@ import Dropzone from 'react-dropzone';
 // custom components
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-import UploadDialog from '../containers/UploadDialog';
-import UploadedFileMetadata from '../containers/UploadedFileMetadata';
+import FileMetadata from '../containers/FileMetadata';
 import './FileUpload.scss';
 
 export default class FileUploader extends PureComponent {
 
     static propTypes = {
+        acceptedFiles: PropTypes.object,
         form: PropTypes.string.isRequired,
-        fileMetadata: PropTypes.object,
-        isUploadCompleted: PropTypes.bool,
-        initializeDialog: PropTypes.func,
-        initializeMetadata: PropTypes.func,
-        openDialog: PropTypes.func,
         setAcceptedFileList: PropTypes.func,
         showSnackbar: PropTypes.func
     };
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            filesToUpload: []
-        };
     }
 
-    componentWillUnmount() {
-        this.props.initializeMetadata();
-    }
-
-    openDialog = (acceptedFiles, rejectedFiles) => {
+    setAcceptedFileList = (acceptedFiles, rejectedFiles) => {
         const fileInformation = locale.sharedComponents.files;
 
         let [validFiles, invalidFiles] = this.validateNumberOfFiles(acceptedFiles, rejectedFiles);
         [validFiles, invalidFiles] = this.validateFilenameFormat(validFiles, invalidFiles);
 
-        if (this.props.fileMetadata.size > 0) {
-            [validFiles, invalidFiles] = this.validateFileNotUploaded(validFiles, invalidFiles);
+        if (this.props.acceptedFiles.size > 0) {
+            [validFiles, invalidFiles] = this.validateFileNotAdded(validFiles, invalidFiles);
         }
 
         if (invalidFiles && invalidFiles.length > 0) {
@@ -51,40 +38,20 @@ export default class FileUploader extends PureComponent {
         }
 
         if (validFiles.length > 0) {
-            this.setState({filesToUpload: validFiles});
-
-            this.props.initializeDialog();
             this.props.setAcceptedFileList(validFiles);
-            this.props.openDialog();
         } else {
             this.props.showSnackbar(fileInformation.messages.acceptedFiles);
         }
     };
 
-    getListOfUploadedFiles = () => {
-        const {
-            fileMetadata,
-        } = this.props;
-
-        if (fileMetadata) {
-            const data = fileMetadata.toJS();
-            return Object.keys(data).map(id => {
-                return <UploadedFileMetadata key={id} dataSource={data[id]} form={this.props.form} />;
-            });
-        }
-
-        return '';
-    };
-
     // checks if we're uploading the same file again
-    validateFileNotUploaded = (acceptedFiles, rejectedFiles) => {
-        const {fileMetadata} = this.props;
-
+    validateFileNotAdded = (addedFiles, rejectedFiles) => {
+        const {acceptedFiles} = this.props;
         const validFiles = [];
         const invalidFiles = rejectedFiles;
 
-        acceptedFiles.map(file => {
-            const found = fileMetadata.find(metadata => {
+        addedFiles.map(file => {
+            const found = acceptedFiles.toJS().find(metadata => {
                 return metadata.name === file.name;
             });
 
@@ -141,9 +108,8 @@ export default class FileUploader extends PureComponent {
     };
 
     render() {
+        const {acceptedFiles, form} = this.props;
         const fileInformation = locale.sharedComponents.files;
-
-        const uploadedFiles = this.getListOfUploadedFiles();
 
         return (
             <div style={{marginBottom: '-60px'}}>
@@ -168,22 +134,18 @@ export default class FileUploader extends PureComponent {
                         <p className="sub-title">{fileInformation.subTitle}</p>
                         <div className="columns">
                             <div className="column">
-                                <Dropzone onDrop={this.openDialog.bind(this)} style={{padding: '10px'}} disablePreview>
+                                <Dropzone onDrop={this.setAcceptedFileList.bind(this)} style={{padding: '10px'}} disablePreview>
                                     {fileInformation.fields.filenameRestrictions}
                                 </Dropzone>
                             </div>
                         </div>
+                        {acceptedFiles.size > 0 && (
+                            <FileMetadata
+                                acceptedFiles={acceptedFiles}
+                                form={form} />
+                        )}
                     </CardText>
                 </Card>
-
-                {this.props.fileMetadata && this.props.fileMetadata.size > 0 && (
-                <Card className="layout-card metadataContainer">
-                    <CardText className="body-1">
-                        {uploadedFiles}
-                    </CardText>
-                </Card>
-                )}
-                <UploadDialog form={this.props.form} acceptedFiles={this.state.filesToUpload} />
             </div>
         );
     }

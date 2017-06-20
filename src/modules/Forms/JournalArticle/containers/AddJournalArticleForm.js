@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {reduxForm, getFormValues} from 'redux-form/immutable';
 import AddJournalArticleForm from '../components/AddJournalArticleForm';
 import {loadPublicationSubTypesList, cancelAddRecord, loadAuthorsList, submitRecordForApproval} from '../actions';
-import {decreaseStep} from '../../../AddRecord/actions';
+import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
 import Immutable from 'immutable';
 
 const scrollToElement = require('scrollto-element');
@@ -22,9 +22,11 @@ AddJournalArticleFormContainer = connect(state => {
     const authorsState = state.get('authors') || Immutable.Map({});
 
     return {
+        acceptedFiles: fileUploadState.get('acceptedFiles'),
         authorList: publicationTypeState.get('authorList') || Immutable.Map({}),
-        fileMetadata: fileUploadState.get('fileMetadata'),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
+        isOpenAccessAccepted: fileUploadState.get('isOpenAccessAccepted'),
+        isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         publicationSubTypeList: publicationTypeState.get('publicationSubTypeList'),
         selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType'),
         selectedAuthors: authorsState.get('selectedAuthors') || Immutable.Map({})
@@ -32,10 +34,10 @@ AddJournalArticleFormContainer = connect(state => {
 }, dispatch => {
     return {
         cancelAddRecord: (message) => dispatch(cancelAddRecord(message)),
-        decreaseStep: () => dispatch(decreaseStep()),
         loadPublicationSubTypesList: (id) => dispatch(loadPublicationSubTypesList(id)),
         loadAuthorsList: () => dispatch(loadAuthorsList()),
-        submitRecordForApproval: (data, message) => dispatch(submitRecordForApproval(data, message))
+        submitRecordForApproval: (data, message) => dispatch(submitRecordForApproval(data, message)),
+        uploadFile: (acceptedFiles) => dispatch(uploadFile(acceptedFiles))
     };
 })(AddJournalArticleFormContainer);
 

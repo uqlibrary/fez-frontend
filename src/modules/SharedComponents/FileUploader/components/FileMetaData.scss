@@ -1,0 +1,67 @@
+.metadataContainer {
+  padding: 0px !important;
+  > div:first-child {
+    padding: 0px !important;
+  }
+
+  .metadataRow {
+    margin: 0px auto !important;
+    background: #FFF !important;
+    padding: 0px !important;
+    border-bottom: 1px solid #bfbfbf !important;
+
+    .filename {
+      flex: 3;
+    }
+
+    .fileAccess {
+      flex: 1;
+      align-items: flex-end !important;
+      hr {
+        display: none;
+      }
+
+      div > div > div:first-child {
+        font-size: 14px !important;
+      }
+    }
+
+    .embargoDate {
+      flex: 1;
+      align-items: flex-end !important;
+      hr {
+        display: none;
+      }
+
+      input {
+        font-size: 14px !important;
+      }
+
+      .progressCircle {
+        align-self: center;
+        opacity: 0.5;
+      }
+    }
+
+    .header {
+      align-self: center;
+    }
+
+    .greenTick {
+      color: green !important;
+      cursor: default !important;
+    }
+
+    .uploadProgress {
+      align-self: center;
+
+      circle {
+        stroke: #adadad !important;
+      }
+    }
+  }
+
+  .openAccessCheckbox {
+    margin-top: 20px;
+  }
+}

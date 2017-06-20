@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File metadata snapshots tests renders default file metadata component 1`] = `
+<div
+  className="metadataContainer"
+>
+  <Toolbar
+    className="metadataRow"
+    noGutter={false}
+  >
+    <ToolbarGroup
+      className="filename"
+      firstChild={false}
+      lastChild={false}
+    >
+      Filename
+    </ToolbarGroup>
+    <ToolbarGroup
+      className="fileAccess header"
+      firstChild={false}
+      lastChild={false}
+    >
+      File access
+    </ToolbarGroup>
+    <ToolbarGroup
+      className="embargoDate header"
+      firstChild={false}
+      lastChild={false}
+    >
+      Embargo date
+    </ToolbarGroup>
+    <ToolbarGroup
+      firstChild={false}
+      lastChild={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete
+      </FontIcon>
+    </ToolbarGroup>
+  </Toolbar>
+  <Toolbar
+    className="metadataRow"
+    noGutter={false}
+  >
+    <ToolbarGroup
+      className="filename"
+      firstChild={false}
+      lastChild={false}
+    >
+      <div />
+    </ToolbarGroup>
+    <ToolbarGroup
+      className="fileAccess"
+      firstChild={false}
+      lastChild={false}
+    >
+      <SelectField
+        autoWidth={false}
+        className="selectField"
+        disabled={false}
+        fullWidth={false}
+        multiple={false}
+        name="fileAccess0"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": 180,
+          }
+        }
+        value={9}
+      >
+        <MenuItem
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          checked={false}
+          desktop={false}
+          disabled={false}
+          focusState="none"
+          insetChildren={false}
+          primaryText="Open Access"
+          value={9}
+        />
+        <MenuItem
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          checked={false}
+          desktop={false}
+          disabled={false}
+          focusState="none"
+          insetChildren={false}
+          primaryText="Closed Access"
+          value={8}
+        />
+        <MenuItem
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          checked={false}
+          desktop={false}
+          disabled={false}
+          focusState="none"
+          insetChildren={false}
+          primaryText="Embargoed access"
+          value={2}
+        />
+      </SelectField>
+    </ToolbarGroup>
+    <ToolbarGroup
+      className="embargoDate"
+      firstChild={false}
+      lastChild={false}
+    >
+      <DatePicker
+        DateTimeFormat={[Function]}
+        autoOk={false}
+        className="datepicker"
+        container="dialog"
+        disableYearSelection={false}
+        disabled={true}
+        firstDayOfWeek={0}
+        hideCalendarDate={false}
+        hintText="20/6/2017"
+        locale="en-AU"
+        name="accessDate0"
+        style={
+          Object {
+            "width": 90,
+          }
+        }
+      />
+    </ToolbarGroup>
+    <ToolbarGroup
+      firstChild={false}
+      lastChild={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete
+      </FontIcon>
+    </ToolbarGroup>
+  </Toolbar>
+  <Checkbox
+    className="openAccessCheckbox"
+    disabled={false}
+    label={
+      <div>
+        I understand that the files indicated above will be submitted as open access and will be made publicaly available immediately, or where indicated as closed access, will be made available on the indicated embargo date.
+      </div>
+    }
+    labelPosition="right"
+  />
+</div>
+`;

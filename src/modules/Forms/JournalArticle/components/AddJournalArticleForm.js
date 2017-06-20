@@ -14,18 +14,21 @@ export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
         authorList: PropTypes.object,
+        acceptedFiles: PropTypes.object,
         cancelAddRecord: PropTypes.func,
-        decreaseStep: PropTypes.func,
-        fileMetadata: PropTypes.object,
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
+        isOpenAccessAccepted: PropTypes.bool,
+        isUploadCompleted: PropTypes.bool,
         loadAuthorsList: PropTypes.func,
         loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
         selectedAuthors: PropTypes.object,
         selectedPublicationId: PropTypes.object,
-        submitRecordForApproval: PropTypes.func
+        submitRecordForApproval: PropTypes.func,
+        submitting: PropTypes.bool,
+        uploadFile: PropTypes.func
     };
 
     constructor(props) {
@@ -39,9 +42,7 @@ export default class AddJournalArticleForm extends Component {
     }
 
     cancelAddingRecord = () => {
-        const {cancelAddRecord, decreaseStep} = this.props;
-        // go back to step 1
-        decreaseStep();
+        const {cancelAddRecord} = this.props;
         cancelAddRecord(locale.notifications.addRecord.cancelMessage);
     };
 
@@ -72,14 +73,13 @@ export default class AddJournalArticleForm extends Component {
     };
 
     setFileData = () => {
-        const {fileMetadata} = this.props;
+        const {acceptedFiles} = this.props;
 
-        if (fileMetadata.size > 0) {
+        if (acceptedFiles.size > 0) {
             const data = {'fez_record_search_key_file_attachment_name': []};
-
-            Object.keys(fileMetadata.toJS()).map((file, index) => {
+            acceptedFiles.toJS().map((file, index) => {
                 data.fez_record_search_key_file_attachment_name.push({
-                    'rek_file_attachment_name': file,
+                    'rek_file_attachment_name': file.name,
                     'rek_file_attachment_name_order': (index + 1)
                 });
             });
@@ -91,7 +91,8 @@ export default class AddJournalArticleForm extends Component {
     };
 
     submitRecord = () => {
-        const {decreaseStep, formValues, submitRecordForApproval} = this.props;
+        const {acceptedFiles, uploadFile, formValues, submitRecordForApproval} = this.props;
+
         const RECORD_TYPE = 3;
         const SUBMITTED_FOR_APPROVAL = 3;
         const JOURNAL_TYPE = 179;
@@ -114,8 +115,9 @@ export default class AddJournalArticleForm extends Component {
         const authorData = this.setAuthorData();
         const combinedData = Object.assign({}, defaultData, formData, tempData, fileData, authorData);
 
+        console.log(combinedData);
         submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
-        decreaseStep();
+        uploadFile(acceptedFiles);
     };
 
     render() {
@@ -125,10 +127,12 @@ export default class AddJournalArticleForm extends Component {
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
 
-        const {formValues, form, handleSubmit} = this.props;
+        const {acceptedFiles, formValues, form, handleSubmit, isOpenAccessAccepted} = this.props;
         const required = value => value && value.replace(/\s/, '').length > 0 ? undefined : 'This field is required';
-
         const DateTimeFormat = global.Intl.DateTimeFormat;
+
+        // disable if files are being uploaded and the open access checkbox is ticked OR no files are being uploaded
+        const isSubmitDisabled = !(acceptedFiles.size === 0 || (acceptedFiles.size > 0 && isOpenAccessAccepted === true));
 
         return (
             <form onSubmit={handleSubmit(this.submitRecord)}>
@@ -266,11 +270,19 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
 
                 {/* Files */}
-                <FileUploader form="FileUploadForm" />
+                <FileUploader form={form} />
 
                 <div className="buttonWrapper">
-                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddingRecord}/>
-                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}} type="submit"/>
+                    <RaisedButton
+                        label={buttonLabels.cancel}
+                        style={{marginLeft: '12px'}}
+                        onTouchTap={this.cancelAddingRecord} />
+                    <RaisedButton
+                        disabled={isSubmitDisabled}
+                        secondary
+                        label={buttonLabels.submitForApproval}
+                        style={{marginLeft: '12px'}}
+                        type="submit" />
                 </div>
             </form>
         );

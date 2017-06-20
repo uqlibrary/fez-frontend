@@ -9,29 +9,19 @@ import {locale} from 'config';
 import FileUploader from './FileUploader';
 
 function setup() {
-    const data = {};
-    const metadata = locale.sharedComponents.files.fields.metadata;
-
-    data[metadata.description] = 'test file description';
-    data[metadata.accessCondition] = 1;
-    data[metadata.embargoDate] = 'Thu May 25 2017 00:00:00 GMT+1000 (AEST)';
-
-    const fileData = {
-        file: {
+    const acceptedFiles = Immutable.fromJS([{
             name: 's12345678_test_file_archive.zip',
             size: 5307669356,
             type: 'application/zip'
-        }
-    };
-
-    const fileMetadata = Immutable.fromJS(Object.assign({}, fileData, data));
+    }]);
 
     const props = {
+        acceptedFiles,
         form: 'testForm',
-        openDialog: jest.fn(),
-        showSnackbar: jest.fn(),
-        fileMetadata,
-        uploadError: ''
+        isUploadCompleted: true,
+        initializeMetadata: jest.fn(),
+        setAcceptedFileList: jest.fn(),
+        showSnackbar: jest.fn()
     };
     return shallow(<FileUploader {...props} />);
 }
