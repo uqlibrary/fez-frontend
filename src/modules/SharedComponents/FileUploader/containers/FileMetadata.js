@@ -14,6 +14,7 @@ FileMetadataContainer = connect((state) => {
     return {
         acceptedFiles: fileUploadState.get('acceptedFiles'),
         fileMetadata: fileUploadState.get('fileMetadata'),
+        uploadError: fileUploadState.get('uploadError'),
         uploadProgress: fileUploadState.get('progress')
     };
 }, dispatch => {

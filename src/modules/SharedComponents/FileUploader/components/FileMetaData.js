@@ -20,7 +20,8 @@ export default class FileMetadata extends Component {
         acceptedFiles: PropTypes.object.isRequired,
         deleteFile: PropTypes.func,
         form: PropTypes.string.isRequired,
-        setCheckboxState: PropTypes.func
+        setCheckboxState: PropTypes.func,
+        uploadError: PropTypes.string
     };
 
     constructor(props) {
@@ -83,7 +84,7 @@ export default class FileMetadata extends Component {
     };
 
     buildInterface = () => {
-        const {acceptedFiles} = this.props;
+        const {acceptedFiles, uploadError} = this.props;
 
         return(
             acceptedFiles.map((file, index) => {
@@ -100,19 +101,22 @@ export default class FileMetadata extends Component {
                         <ToolbarGroup className="embargoDate">
                             {this.buildDatePicker(index)}
                             {fileUploadProgress[file.name] && (
-                                fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed ?
-                                    <CircularProgress
-                                        className="uploadProgress"
-                                        mode="determinate"
-                                        value={fileUploadProgress[file.name]}
-                                        size={30}
-                                        thickness={4}
-                                    /> :
-                                    <FontIcon
-                                        className="material-icons greenTick">done</FontIcon>
+                                ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
+                                fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&
+                                <CircularProgress
+                                    className="uploadProgress"
+                                    mode="determinate"
+                                    value={fileUploadProgress[file.name]}
+                                    size={30}
+                                    thickness={4}
+                                />
                             )}
-                        </ToolbarGroup>
-                        <ToolbarGroup>
+
+                            {fileUploadProgress[file.name] && (
+                                (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
+                                <FontIcon
+                                className="material-icons greenTick">done</FontIcon>
+                            )}
                             <FontIcon
                                 onClick={() => this.deleteRow(index)}
                                 className="material-icons">delete</FontIcon>
@@ -156,7 +160,7 @@ export default class FileMetadata extends Component {
 
         return (
             <div className="metadataContainer">
-                <Toolbar className="metadataRow">
+                <Toolbar className="header metadataRow">
                     <ToolbarGroup className="filename">
                         {fileInformation.list.filenameLabel}
                     </ToolbarGroup>

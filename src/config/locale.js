@@ -277,10 +277,9 @@ export default {
             },
             limit: 10,
             messages: {
-                maxFiles: 'Only [maxNumberOfFiles] are allowed to be selected per upload.',
-                rejectedFiles: '[numberOfRejectedFiles] file was not included in this upload.',
-                acceptedFiles: 'There are no valid files to upload or these files have already been uploaded.',
-                alreadyUploaded: '[numberOfUploadedFiles] files have already been uploaded.',
+                maxFiles: 'Only [maxNumberOfFiles] files are allowed to be selected per batch.',
+                rejectedFiles: '[numberOfRejectedFiles] file/s was not included in this upload.',
+                acceptedFiles: 'File/s have already been added.',
                 cancelledUpload: 'File upload cancelled.',
                 uploadError: {
                     default: 'There seems to be a problem uploading the file. Please try again later.'

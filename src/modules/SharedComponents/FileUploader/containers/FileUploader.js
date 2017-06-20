@@ -13,7 +13,8 @@ FileUploaderContainer = connect((state) => {
     const fileUploadState = state.get('fileUpload');
     return {
         acceptedFiles: fileUploadState.get('acceptedFiles'),
-        fileMetadata: fileUploadState.get('fileMetadata')
+        fileMetadata: fileUploadState.get('fileMetadata'),
+        uploadError: fileUploadState.get('uploadError')
     };
 }, dispatch => {
     return {

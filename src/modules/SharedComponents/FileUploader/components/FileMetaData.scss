@@ -61,7 +61,20 @@
     }
   }
 
+  @media (max-width: 768px) {
+    .metadataRow {
+      height: initial !important;
+      flex-direction: column;
+    }
+  }
+
   .openAccessCheckbox {
     margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      display: none !important;
+    }
   }
 }
