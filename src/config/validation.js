@@ -1,7 +1,7 @@
 import Immutable from 'immutable';
 
 // Generic
-export const required = value => value ? undefined : 'This field is required';
+export const required = value => value && value.replace(/\s/g, '').length > 0 ? undefined : 'This field is required';
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Please enter a valid email address' : undefined;
 export const requiredTrue = value => value === true ? undefined : 'This field is required';
 export const unique = (value, array) => array.indexOf(value) !== -1 ? 'This value has already been used' : undefined;
@@ -15,7 +15,7 @@ export const minLength = min => value => value && value.length < min ? `Must be 
 export const minLength10 = minLength(10);
 
 // Array
-export const arrayRequired = value => Immutable.List.isList(value) && value.size >= 1 ? undefined : 'You must enter at least one entry';
+export const arrayRequired = value => Immutable.List.isList(value) && value.size >= 1 ? undefined : 'You must select at least one item';
 
 // Collaborators
 export const cannotBeCI = value => {

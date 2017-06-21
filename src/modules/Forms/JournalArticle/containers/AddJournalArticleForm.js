@@ -11,8 +11,17 @@ const scrollToElement = require('scrollto-element');
 let AddJournalArticleFormContainer = reduxForm({
     onSubmitFail: (result) => {
         const target = Object.keys(result);
-        // scroll to the first erroneous field
-        scrollToElement(document.getElementsByName(target[0])[0], 800);
+        const invalidField = document.getElementsByName(target[0])[0];
+        if (invalidField) {
+            // scroll to the first erroneous field
+            scrollToElement(invalidField, 800);
+            // set focus to first invalid field
+            invalidField.focus();
+            const invalidFieldSubElements = invalidField.querySelectorAll('button, select, input, textArea, a');
+            if (invalidFieldSubElements.length > 0) {
+                invalidFieldSubElements[0].focus();
+            }
+        }
     }
 })(AddJournalArticleForm);
 

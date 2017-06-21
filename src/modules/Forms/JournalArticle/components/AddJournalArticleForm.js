@@ -1,12 +1,14 @@
+/* eslint-disable */
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
+import MenuItem from 'material-ui/MenuItem';
 import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
-import {AutoCompleteSelect, HelpIcon, TextField, DatePicker} from 'uqlibrary-react-toolbox';
-import {Authors, FileUploader} from 'modules/SharedComponents';
-import {locale} from 'config';
+import {HelpIcon, TextField, DatePicker} from 'uqlibrary-react-toolbox';
+import {Authors, FileUploader, SelectField} from 'modules/SharedComponents';
+import {validation, locale} from 'config';
 
 import './AddJournalArticleForm.scss';
 
@@ -36,6 +38,9 @@ export default class AddJournalArticleForm extends Component {
         const {loadAuthorsList, loadPublicationSubTypesList, selectedPublicationId} = this.props;
         loadPublicationSubTypesList(selectedPublicationId.get('id'));
         loadAuthorsList();
+
+        // set focus to first input field
+        rek_title
     }
 
     cancelAddingRecord = () => {
@@ -43,14 +48,6 @@ export default class AddJournalArticleForm extends Component {
         // go back to step 1
         decreaseStep();
         cancelAddRecord(locale.notifications.addRecord.cancelMessage);
-    };
-
-    getElementLabel = (elementData, elementKey, formData, formKey, matchedLabel) => {
-        const matched = elementData.find(entry => {
-            return entry[elementKey] === formData[formKey];
-        });
-
-        return matched ? {'rek_subtype': matched[matchedLabel]} : {};
     };
 
     setAuthorData = () => {
@@ -103,7 +100,6 @@ export default class AddJournalArticleForm extends Component {
         };
 
         const formData = formValues.toJS();
-        const tempData = this.getElementLabel(this.props.publicationSubTypeList.toJS(), 'id', formData, 'rek_subtype', 'label');
 
         // check if the date object is set otherwise default to today
         if (!formData.rek_date) {
@@ -112,7 +108,7 @@ export default class AddJournalArticleForm extends Component {
 
         const fileData = this.setFileData();
         const authorData = this.setAuthorData();
-        const combinedData = Object.assign({}, defaultData, formData, tempData, fileData, authorData);
+        const combinedData = Object.assign({}, defaultData, formData, fileData, authorData);
 
         submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
         decreaseStep();
@@ -126,7 +122,6 @@ export default class AddJournalArticleForm extends Component {
         const buttonLabels = locale.global.labels.buttons;
 
         const {formValues, form, handleSubmit} = this.props;
-        const required = value => value && value.replace(/\s/, '').length > 0 ? undefined : 'This field is required';
 
         const DateTimeFormat = global.Intl.DateTimeFormat;
 
@@ -153,17 +148,22 @@ export default class AddJournalArticleForm extends Component {
                     <CardText className="body-1">
                         <div className="columns is-gapless">
                             <Field component={TextField}
+                                   autoFocus
                                    name="rek_title"
                                    type="text"
                                    fullWidth
                                    floatingLabelText={journalArticleInformation.fields.titleLabel}
-                                   validate={[required]}
+                                   validate={[validation.required]}
                             />
                         </div>
-                        <div className="columns">
+                        <div className="columns is-gapless">
                             <div className="column is-two-thirds" style={{paddingTop: '0', paddingBottom: '0'}}>
-                                <Field component={TextField} name="fez_record_search_key_journal_name.rek_journal_name" type="text" fullWidth
-                                       floatingLabelText={journalArticleInformation.fields.nameLabel}/>
+                                <Field component={TextField}
+                                       name="fez_record_search_key_journal_name.rek_journal_name"
+                                       type="text" fullWidth
+                                       floatingLabelText={journalArticleInformation.fields.nameLabel}
+                                       validate={[validation.required]}
+                                />
                             </div>
                             <div className="column" style={{paddingTop: '0', paddingBottom: '0'}}>
                                 <Field component={DatePicker}
@@ -175,15 +175,18 @@ export default class AddJournalArticleForm extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="columns" style={{paddingTop: '0', paddingBottom: '0'}}>
-                            <Field component={AutoCompleteSelect}
+                        <div className="columns is-gapless">
+                            <Field component={SelectField}
                                    name="rek_subtype"
                                    fullWidth
-                                   label={journalArticleInformation.fields.publicationSubType}
-                                   formValue={formValues.get('rek_subtype')}
-                                   dataSource={[].concat(this.props.publicationSubTypeList.toJS())}
-                                   dataSourceConfig={{text: 'label', value: 'id'}}
-                            />
+                                   floatingLabelText={journalArticleInformation.fields.publicationSubType}
+                                   validate={[validation.required]}>
+                                {
+                                    this.props.publicationSubTypeList.map(item => (
+                                    <MenuItem key={item.get('id')} value={item.get('label')} primaryText={item.get('label')}/>
+                                    ))
+                                }
+                            </Field>
                         </div>
                     </CardText>
                 </Card>

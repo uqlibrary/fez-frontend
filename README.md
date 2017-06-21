@@ -59,11 +59,13 @@ Codeship setup:
 
 ## Mocking
 
-TBA: how to run project with local mocked data only...
+To run website on mock data run `yarn start:mock` webserver will start on `http://localhost:3000/`
 
-To review:
 The project allows the user to "login" as any test user. Simply add `?user=<username>` to the request and it will log you
-in as that user. Usernames can be found in the `src/mock/data/staff.js` file.
+in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.
+
+- anonymous user: http://localhost:3000/?user=anon#/
+- registered user: http://localhost:3000/?user=uqinewton#/
 
 ## Deployment
 Application deployment is 100% automated using Codeship, and is hosted in S3. All deployment data is stored within Codeship. 

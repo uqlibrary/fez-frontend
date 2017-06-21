@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
 import Divider from 'material-ui/Divider';
+import MenuItem from 'material-ui/MenuItem';
+import {SelectField} from 'modules/SharedComponents';
+
 import PropTypes from 'prop-types';
-
 import {HelpIcon} from 'uqlibrary-react-toolbox';
-import {AutoCompleteSelect} from 'uqlibrary-react-toolbox';
-
 
 export default class PublicationTypeForm extends Component {
 
@@ -31,58 +31,34 @@ export default class PublicationTypeForm extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            displayPublicationTypeList: this.createDisplayPublicationList(props.popularTypesList, props.dataSource.size > 0 ? props.dataSource.toJS() : [])
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.dataSource.size > 0) {
+            this.setState({
+                displayPublicationTypeList: this.createDisplayPublicationList(nextProps.popularTypesList, nextProps.dataSource.toJS())
+            });
+        }
     }
 
     componentWillUnmount() {
         this.props.clearSelectedPublicationType();
     }
 
-    addListDivider = (popularTypes) => {
-        if (popularTypes.length > 0) {
-            popularTypes.push({'id': 'divider', 'divider': <Divider key="divider"/>});
-        }
+    // display publication types list contains popular types set in config and all publication types
+    createDisplayPublicationList = (popularTypesList, allPublicationTypeList) => {
+        let displayPubTypeList = [];
 
-        return popularTypes;
-    };
-
-    // create a list of popularTypes as each id is different in each environment
-    createPopularTypesList = (popularTypesList, publicationTypeList) => {
-        const popularTypes = [];
-        const ptObject = publicationTypeList.toJS();
-
-        // check if the popularTypesList has been passed in as a prop
         if (popularTypesList.length > 0) {
-            popularTypesList.map(item => {
-                const entry = ptObject.find(obj => {
-                    return obj.name === item;
-                });
-
-                popularTypes.push(entry);
-            });
+            displayPubTypeList = allPublicationTypeList.filter(item => (popularTypesList.indexOf(item.name) >= 0));
+            displayPubTypeList.push({id: 0, name: 'divider'});
         }
 
-        return popularTypes;
-    };
-
-    // merge the popularTypes list with the complete publicationTypeList
-    mergeLists = (popularTypes, publicationTypeList) => {
-        return popularTypes.concat(publicationTypeList.toJS());
-    };
-
-    createCompletePublicationList = () => {
-        const {dataSource, popularTypesList} = this.props;
-        if (dataSource.size > 0) {
-            let popularTypes = this.createPopularTypesList(popularTypesList, dataSource);
-
-            // add the divider
-            popularTypes = this.addListDivider(popularTypes);
-
-            // return the complete merged list
-            return this.mergeLists(popularTypes, dataSource);
-        }
-
-        return [];
-    };
+        return displayPubTypeList.concat(allPublicationTypeList);
+    }
 
     render() {
         const {
@@ -90,11 +66,9 @@ export default class PublicationTypeForm extends Component {
             loadSelectedPublicationType,
             title,
             help,
-            // explanationText,
-            maxSearchResults,
+            formValues,
             children,
-            publicationTypeLabel,
-            formValues
+            publicationTypeLabel
         } = this.props;
 
         return (
@@ -117,17 +91,19 @@ export default class PublicationTypeForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                       <div style={{marginTop: '-12px', marginBottom: '-24px'}}>
-                           <Field component={AutoCompleteSelect} name="publicationType"
-                               maxSearchResults={maxSearchResults}
-                               label={publicationTypeLabel}
-                               dataSource={this.createCompletePublicationList()}
-                               dataSourceConfig={{text: 'name', value: 'id'}}
-                               onChange={loadSelectedPublicationType}
-                               formValue={formValues.get('publicationType')}
-                               openOnFocus
-                               fullWidth
-                        />
+                       <div className="columns is-gapless">
+                           <Field component={SelectField}
+                                  name="publicationType"
+                                  fullWidth
+                                  floatingLabelText={publicationTypeLabel}
+                                  formValue={formValues.get('publicationType')}
+                                  onChange={loadSelectedPublicationType}>
+                                   {
+                                       this.state.displayPublicationTypeList.map(item => (
+                                           item.id !== 0 ? <MenuItem value={item.id} primaryText={item.name} /> : <Divider />
+                                       ))
+                                   }
+                           </Field>
                        </div>
                     </CardText>
                 </Card>
