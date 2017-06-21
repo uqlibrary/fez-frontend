@@ -4,7 +4,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 
-import {locale} from 'config';
 import FileUploader from './FileUploader';
 import Immutable from 'immutable';
 
@@ -91,7 +90,7 @@ describe('File upload dropzone unit tests', () => {
         const [validFiles, invalidFiles] = app.instance().validateNumberOfFiles(fileList, []);
 
         expect(validFiles.length).toEqual(10);
-        expect(invalidFiles.length).toEqual(1);
+        expect(invalidFiles.length).toEqual(0);
     });
 
     it('validates the files names', () => {

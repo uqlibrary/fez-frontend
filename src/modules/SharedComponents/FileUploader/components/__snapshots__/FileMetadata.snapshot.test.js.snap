@@ -5,7 +5,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
   className="metadataContainer"
 >
   <Toolbar
-    className="metadataRow"
+    className="header metadataRow"
     noGutter={false}
   >
     <ToolbarGroup
@@ -143,11 +143,6 @@ exports[`File metadata snapshots tests renders default file metadata component 1
           }
         }
       />
-    </ToolbarGroup>
-    <ToolbarGroup
-      firstChild={false}
-      lastChild={false}
-    >
       <FontIcon
         className="material-icons"
         onClick={[Function]}

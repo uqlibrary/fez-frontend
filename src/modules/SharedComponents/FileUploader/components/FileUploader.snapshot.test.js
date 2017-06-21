@@ -18,10 +18,9 @@ function setup() {
     const props = {
         acceptedFiles,
         form: 'testForm',
-        isUploadCompleted: true,
-        initializeMetadata: jest.fn(),
         setAcceptedFileList: jest.fn(),
-        showSnackbar: jest.fn()
+        showSnackbar: jest.fn(),
+        uploadError: ''
     };
     return shallow(<FileUploader {...props} />);
 }

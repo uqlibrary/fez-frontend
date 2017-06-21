@@ -61,13 +61,11 @@ export function uploadFile(acceptedFiles) {
                         type: FILE_UPLOADED
                     });
                 }).catch(e => {
-                    console.log('error 1');
                     if (api.isCancel(e)) {
                         dispatch({
                             type: FILE_UPLOAD_CANCELLED
                         });
                     } else {
-                        console.log('error 2');
                         dispatch({
                             type: FILE_UPLOAD_TERMINATED,
                             payload: getErrorMssage(e)

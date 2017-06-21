@@ -16,6 +16,7 @@ export default class AddJournalArticleForm extends Component {
         authorList: PropTypes.object,
         acceptedFiles: PropTypes.object,
         cancelAddRecord: PropTypes.func,
+        decreaseStep: PropTypes.func,
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
@@ -27,7 +28,6 @@ export default class AddJournalArticleForm extends Component {
         selectedAuthors: PropTypes.object,
         selectedPublicationId: PropTypes.object,
         submitRecordForApproval: PropTypes.func,
-        submitting: PropTypes.bool,
         uploadFile: PropTypes.func
     };
 
@@ -41,8 +41,13 @@ export default class AddJournalArticleForm extends Component {
         loadAuthorsList();
     }
 
+    componentWillUpdate(nextProps) {
+        console.log('nextProps', nextProps.isUploadCompleted);
+    }
+
     cancelAddingRecord = () => {
-        const {cancelAddRecord} = this.props;
+        const {cancelAddRecord, decreaseStep} = this.props;
+        decreaseStep();
         cancelAddRecord(locale.notifications.addRecord.cancelMessage);
     };
 
@@ -115,8 +120,10 @@ export default class AddJournalArticleForm extends Component {
         const authorData = this.setAuthorData();
         const combinedData = Object.assign({}, defaultData, formData, tempData, fileData, authorData);
 
-        console.log(combinedData);
-        submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
+        // this flag is for those cases where we want the 'Your submission was successful' message
+        // to only appear once the files were successfully uploaded
+        const showSubmissionMessage = acceptedFiles.size === 0;
+        submitRecordForApproval(combinedData, showSubmissionMessage);
         uploadFile(acceptedFiles);
     };
 

@@ -79,11 +79,13 @@ export function cancelAddRecord(message) {
  * Submits the record for approval
  * @returns {function(*)}
  */
-export function submitRecordForApproval(data, message) {
+export function submitRecordForApproval(data, showSubmissionMessage) {
     return dispatch => {
         submitRecord(data).then(() => {
             dispatch({type: RECORD_SUBMITTED});
-            dispatch(showSnackbar(message));
+            if (showSubmissionMessage) {
+                dispatch(showSnackbar(locale.notifications.addRecord.submitMessage));
+            }
         }).catch(error => {
             throw(error);
         });

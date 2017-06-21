@@ -106,7 +106,7 @@ export default class FileUploader extends PureComponent {
         const {acceptedFiles, form, showSnackbar, uploadError} = this.props;
         const fileInformation = locale.sharedComponents.files;
 
-        if (uploadError.length > 0) {
+        if (uploadError && uploadError.length > 0) {
             showSnackbar(fileInformation.messages.uploadError.default);
         }
 
