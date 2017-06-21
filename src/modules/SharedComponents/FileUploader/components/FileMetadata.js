@@ -10,7 +10,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 
 // custom components
 import {locale} from 'config';
-import './FileMetaData.scss';
+import './FileMetadata.scss';
 
 const fileUploadProgress = [];
 
