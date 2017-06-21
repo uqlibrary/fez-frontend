@@ -4,6 +4,56 @@
     padding: 0px !important;
   }
 
+  @media (max-width: 768px) {
+    .metadataRow {
+      &:nth-child(2) {
+        border-top: 1px solid #bfbfbf !important;
+      }
+
+      height: initial !important;
+      flex-direction: column;
+      padding: 10px 0px !important;
+
+      .fileAccess {
+        height: 38px;
+        align-items: center !important;
+      }
+
+      .embargoDate {
+        height: 26px;
+        align-items: center !important;
+
+        .datepicker > div:first-child > div:first-child {
+          font-size: 14px !important;
+        }
+      }
+
+      .filename,
+      .fileAccess,
+      .embargoDate {
+        justify-content: flex-start !important;
+
+        .icon {
+          display: inline-block !important;
+          color: #7d7d7d !important;
+          line-height: 38px !important;
+          width: 30px !important;
+          padding-left: 0px !important;
+        }
+
+        .label {
+          display: inline-block !important;
+          margin-right: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .header {
+      display: none !important;
+    }
+  }
+
   .metadataRow {
     margin: 0px auto !important;
     background: #FFF !important;
@@ -15,17 +65,19 @@
     }
 
     .fileAccess {
-      flex: 1;
-      align-items: flex-end !important;
-      hr {
-        display: none;
-      }
-
       div > div > div:first-child {
         font-size: 14px !important;
       }
     }
 
+    .embargoDate {
+      .progressCircle {
+        align-self: center;
+        opacity: 0.5;
+      }
+    }
+
+    .fileAccess,
     .embargoDate {
       flex: 1;
       align-items: flex-end !important;
@@ -36,10 +88,14 @@
       input {
         font-size: 14px !important;
       }
+    }
 
-      .progressCircle {
-        align-self: center;
-        opacity: 0.5;
+    .filename,
+    .fileAccess,
+    .embargoDate {
+      .icon,
+      .label {
+        display: none;
       }
     }
 
@@ -61,20 +117,9 @@
     }
   }
 
-  @media (max-width: 768px) {
-    .metadataRow {
-      height: initial !important;
-      flex-direction: column;
-    }
-  }
-
   .openAccessCheckbox {
     margin-top: 20px;
   }
 
-  @media (max-width: 768px) {
-    .header {
-      display: none !important;
-    }
-  }
+
 }

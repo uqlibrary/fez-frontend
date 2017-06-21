@@ -51,13 +51,32 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       firstChild={false}
       lastChild={false}
     >
-      <div />
+      <FontIcon
+        className="material-icons icon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        attachment
+      </FontIcon>
+      <span />
     </ToolbarGroup>
     <ToolbarGroup
       className="fileAccess"
       firstChild={false}
       lastChild={false}
     >
+      <FontIcon
+        className="material-icons icon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        lock_outline
+      </FontIcon>
+      <span
+        className="label"
+      >
+        File Access
+      </span>
       <SelectField
         autoWidth={false}
         className="selectField"
@@ -125,6 +144,18 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       firstChild={false}
       lastChild={false}
     >
+      <FontIcon
+        className="material-icons icon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        date_range
+      </FontIcon>
+      <span
+        className="label"
+      >
+        Embargo Date
+      </span>
       <DatePicker
         DateTimeFormat={[Function]}
         autoOk={false}

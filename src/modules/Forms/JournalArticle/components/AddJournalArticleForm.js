@@ -16,17 +16,21 @@ export default class AddJournalArticleForm extends Component {
         authorList: PropTypes.object,
         acceptedFiles: PropTypes.object,
         cancelAddRecord: PropTypes.func,
+        completeFormSubmission: PropTypes.func,
         decreaseStep: PropTypes.func,
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
+        hasOpenAccess: PropTypes.bool,
         isOpenAccessAccepted: PropTypes.bool,
         isUploadCompleted: PropTypes.bool,
         loadAuthorsList: PropTypes.func,
         loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
+        resetFormSubmissionFlag: PropTypes.func,
         selectedAuthors: PropTypes.object,
         selectedPublicationId: PropTypes.object,
+        showSnackbar: PropTypes.func,
         submitRecordForApproval: PropTypes.func,
         uploadFile: PropTypes.func
     };
@@ -36,19 +40,26 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentDidMount() {
-        const {loadAuthorsList, loadPublicationSubTypesList, selectedPublicationId} = this.props;
+        const {loadAuthorsList, loadPublicationSubTypesList, resetFormSubmissionFlag, selectedPublicationId} = this.props;
         loadPublicationSubTypesList(selectedPublicationId.get('id'));
         loadAuthorsList();
+        resetFormSubmissionFlag();
     }
 
     componentWillUpdate(nextProps) {
-        console.log('nextProps', nextProps.isUploadCompleted);
+        // this is for when we do a file upload
+        // we want to redirect once the file upload is complete
+        if (nextProps.isUploadCompleted) {
+            const {showSnackbar, decreaseStep} = this.props;
+            showSnackbar(locale.notifications.addRecord.submitMessage);
+            decreaseStep();
+        }
     }
 
     cancelAddingRecord = () => {
         const {cancelAddRecord, decreaseStep} = this.props;
-        decreaseStep();
         cancelAddRecord(locale.notifications.addRecord.cancelMessage);
+        decreaseStep();
     };
 
     getElementLabel = (elementData, elementKey, formData, formKey, matchedLabel) => {
@@ -96,7 +107,7 @@ export default class AddJournalArticleForm extends Component {
     };
 
     submitRecord = () => {
-        const {acceptedFiles, uploadFile, formValues, submitRecordForApproval} = this.props;
+        const {acceptedFiles, decreaseStep, formValues, showSnackbar, submitRecordForApproval, uploadFile} = this.props;
 
         const RECORD_TYPE = 3;
         const SUBMITTED_FOR_APPROVAL = 3;
@@ -122,9 +133,17 @@ export default class AddJournalArticleForm extends Component {
 
         // this flag is for those cases where we want the 'Your submission was successful' message
         // to only appear once the files were successfully uploaded
-        const showSubmissionMessage = acceptedFiles.size === 0;
-        submitRecordForApproval(combinedData, showSubmissionMessage);
-        uploadFile(acceptedFiles);
+        const hasFilesToUpload = acceptedFiles.size > 0;
+        submitRecordForApproval(combinedData);
+
+        if (hasFilesToUpload) {
+            uploadFile(acceptedFiles);
+        }
+
+        if (!hasFilesToUpload) {
+            showSnackbar(locale.notifications.addRecord.submitMessage);
+            decreaseStep();
+        }
     };
 
     render() {
@@ -134,12 +153,12 @@ export default class AddJournalArticleForm extends Component {
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
 
-        const {acceptedFiles, formValues, form, handleSubmit, isOpenAccessAccepted} = this.props;
+        const {acceptedFiles, formValues, form, handleSubmit, hasOpenAccess, isOpenAccessAccepted} = this.props;
         const required = value => value && value.replace(/\s/, '').length > 0 ? undefined : 'This field is required';
         const DateTimeFormat = global.Intl.DateTimeFormat;
 
         // disable if files are being uploaded and the open access checkbox is ticked OR no files are being uploaded
-        const isSubmitDisabled = !(acceptedFiles.size === 0 || (acceptedFiles.size > 0 && isOpenAccessAccepted === true));
+        const isSubmitDisabled = !(acceptedFiles.size === 0 || (acceptedFiles.size > 0  && (hasOpenAccess || isOpenAccessAccepted)));
 
         return (
             <form onSubmit={handleSubmit(this.submitRecord)}>

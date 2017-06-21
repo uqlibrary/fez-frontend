@@ -14,6 +14,7 @@ export default class FileUploader extends PureComponent {
     static propTypes = {
         acceptedFiles: PropTypes.object,
         form: PropTypes.string.isRequired,
+        resetToInitialState: PropTypes.func,
         setAcceptedFileList: PropTypes.func,
         showSnackbar: PropTypes.func,
         uploadError: PropTypes.string
@@ -21,6 +22,10 @@ export default class FileUploader extends PureComponent {
 
     constructor(props) {
         super(props);
+    }
+
+    componentWillUnmount() {
+        this.props.resetToInitialState();
     }
 
     setAcceptedFileList = (acceptedFiles, rejectedFiles) => {

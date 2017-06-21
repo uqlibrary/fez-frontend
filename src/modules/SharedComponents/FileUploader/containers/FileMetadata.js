@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import FileMetadata from '../components/FileMetadata';
-import {deleteFile, setCheckboxState} from '../actions';
+import {deleteFile, setCheckboxState, setOpenAccessState} from '../actions';
 import {showSnackbar} from 'modules/App/actions';
 
 let FileMetadataContainer = reduxForm({
@@ -20,6 +20,7 @@ FileMetadataContainer = connect((state) => {
 }, dispatch => {
     return {
         setCheckboxState: (event, isInputChecked) => dispatch(setCheckboxState(event, isInputChecked)),
+        setOpenAccessState: (isOpenAccess) => dispatch(setOpenAccessState(isOpenAccess)),
         deleteFile: (file) => dispatch(deleteFile(file)),
         showSnackbar: (msg) => dispatch(showSnackbar(msg))
     };

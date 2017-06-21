@@ -21,6 +21,7 @@ export default class FileMetadata extends Component {
         deleteFile: PropTypes.func,
         form: PropTypes.string.isRequired,
         setCheckboxState: PropTypes.func,
+        setOpenAccessState: PropTypes.func,
         uploadError: PropTypes.string
     };
 
@@ -35,7 +36,10 @@ export default class FileMetadata extends Component {
     }
 
     componentWillUpdate(nextProps) {
-        fileUploadProgress[nextProps.uploadProgress.get('name')] = nextProps.uploadProgress.get('progress');
+        const {acceptedFiles, uploadProgress} = nextProps;
+        fileUploadProgress[uploadProgress.get('name')] = uploadProgress.get('progress');
+        const showOpenAccessNotice = this.state.isOpenAccess || Object.keys(this.state.accessFields).length < acceptedFiles.size;
+        this.props.setOpenAccessState(!showOpenAccessNotice);
     }
 
     buildDatePicker = (id) => {
@@ -93,12 +97,17 @@ export default class FileMetadata extends Component {
                 return (
                     <Toolbar className="metadataRow" key={fieldName}>
                         <ToolbarGroup className="filename">
-                            <div>{file.name}</div>
+                            <FontIcon className="material-icons icon">attachment</FontIcon>
+                            <span>{file.name}</span>
                         </ToolbarGroup>
                         <ToolbarGroup className="fileAccess">
+                            <FontIcon className="material-icons icon">lock_outline</FontIcon>
+                            <span className="label">File Access</span>
                             {this.buildSelectField(index)}
                         </ToolbarGroup>
                         <ToolbarGroup className="embargoDate">
+                            <FontIcon className="material-icons icon">date_range</FontIcon>
+                            <span className="label">Embargo Date</span>
                             {this.buildDatePicker(index)}
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
@@ -156,6 +165,8 @@ export default class FileMetadata extends Component {
         const fileInformation = locale.sharedComponents.files;
         const messages = fileInformation.messages;
 
+        // check if open access OR
+        // check if the number of manipulated selectFields is less than the total number of accepted files (because we default all selectFields to open access)
         const showOpenAccessNotice = this.state.isOpenAccess || Object.keys(this.state.accessFields).length < acceptedFiles.size;
 
         return (

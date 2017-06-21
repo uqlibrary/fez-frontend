@@ -11,12 +11,14 @@ let decreaseStep;
 let submitRecordForApproval;
 let cancelAddRecord;
 let uploadFile;
+let showSnackbar;
 
 function setup(testData = {}) {
     decreaseStep = sinon.spy();
     submitRecordForApproval = sinon.spy();
     cancelAddRecord = sinon.spy();
     uploadFile = sinon.spy();
+    showSnackbar = sinon.spy();
 
     const publicationSubTypeList = [
         {'id': 1, 'label': 'Article (original research)'},
@@ -40,6 +42,7 @@ function setup(testData = {}) {
         handleSubmit: jest.fn(),
         publicationSubTypeList: Immutable.fromJS(publicationSubTypeList),
         selectedAuthors: (typeof testData.selectedAuthors === 'undefined') ? {} : Immutable.fromJS(testData.selectedAuthors),
+        showSnackbar,
         submitRecordForApproval,
         uploadFile
     };
@@ -50,11 +53,23 @@ function setup(testData = {}) {
 
 describe('Add Journal article form unit tests', () => {
     it('checks the form was submitted', () => {
-        const app = setup();
+        let app = setup();
+        const testData = {};
 
         app.instance().submitRecord();
         expect(submitRecordForApproval.calledOnce).toEqual(true);
+        expect(uploadFile.calledOnce).toEqual(false);
+        expect(showSnackbar.calledOnce).toEqual(true);
+
+        testData.acceptedFiles = [{
+            name: 's12345678_test_file_archive.zip'
+        }];
+
+        app = setup(testData);
+        app.instance().submitRecord();
+        expect(submitRecordForApproval.calledOnce).toEqual(true);
         expect(uploadFile.calledOnce).toEqual(true);
+        expect(showSnackbar.calledOnce).toEqual(false);
     });
 
     it('checked the file data was set', () => {

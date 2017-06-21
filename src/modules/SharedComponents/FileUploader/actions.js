@@ -8,18 +8,15 @@ export const FILE_DELETED = 'FILE_DELETED';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADING = 'FILE_DOCUMENT_ACCESS_TYPES_LOADING';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADED = 'FILE_DOCUMENT_ACCESS_TYPES_LOADED';
 export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
-export const FILE_OPEN_ACCESS_ACCEPTED = 'FILE_OPEN_ACCESS_ACCEPTED';
+export const FILE_OPEN_ACCESS_CHECKBOX_ACCEPTED = 'FILE_OPEN_ACCESS_CHECKBOX_ACCEPTED';
+export const FILE_SET_OPEN_ACCESS = 'FILE_SET_OPEN_ACCESS';
+export const FILE_STATE_RESTORED = 'FILE_STATE_RESTORED';
 export const FILE_UPLOAD_CANCELLED = 'FILE_UPLOAD_CANCELLED';
 export const FILE_UPLOAD_TERMINATED = 'FILE_UPLOAD_TERMINATED';
 export const FILE_UPLOADING = 'FILE_UPLOADING';
 export const FILE_UPLOADED = 'FILE_UPLOADED';
 
 let cancelToken;
-
-export const cancelUpload = () => {
-    cancelToken.cancel();
-};
-
 const errorMsg = locale.sharedComponents.files.messages.uploadError;
 
 
@@ -124,7 +121,20 @@ export function deleteFile(index) {
 
 export function setCheckboxState(event, isInputChecked) {
     return {
-        type: FILE_OPEN_ACCESS_ACCEPTED,
+        type: FILE_OPEN_ACCESS_CHECKBOX_ACCEPTED,
         payload: isInputChecked
+    };
+}
+
+export function resetToInitialState() {
+    return {
+        type: FILE_STATE_RESTORED
+    };
+}
+
+export function setOpenAccessState(isOpenAccess) {
+    return {
+        type: FILE_SET_OPEN_ACCESS,
+        payload: isOpenAccess
     };
 }

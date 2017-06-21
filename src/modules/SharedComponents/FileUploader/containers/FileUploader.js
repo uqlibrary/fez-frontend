@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import FileUploader from '../components/FileUploader';
-import {setAcceptedFileList} from '../actions';
+import {resetToInitialState, setAcceptedFileList} from '../actions';
 import {showSnackbar} from 'modules/App/actions';
 
 let FileUploaderContainer = reduxForm({
@@ -18,6 +18,7 @@ FileUploaderContainer = connect((state) => {
     };
 }, dispatch => {
     return {
+        resetToInitialState: () => dispatch(resetToInitialState()),
         setAcceptedFileList: (acceptedFiles) => dispatch(setAcceptedFileList(acceptedFiles)),
         showSnackbar: (msg) => dispatch(showSnackbar(msg))
     };

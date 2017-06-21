@@ -11,7 +11,7 @@ export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
 export const PUBLICATION_SUB_TYPES_LOADED = 'PUBLICATION_SUB_TYPES_LOADED';
 export const AUTHORS_LOADING = 'AUTHORS_LOADING';
 export const AUTHORS_LOADED = 'AUTHORS_LOADED';
-export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
+export const RECORD_SUBMITTED_RESETTED = 'RECORD_SUBMITTED_RESETTED';
 
 // module imports
 import {showSnackbar} from 'modules/App';
@@ -77,17 +77,25 @@ export function cancelAddRecord(message) {
 
 /**
  * Submits the record for approval
- * @returns {function(*)}
+ * @returns {Promise}
  */
-export function submitRecordForApproval(data, showSubmissionMessage) {
-    return dispatch => {
-        submitRecord(data).then(() => {
-            dispatch({type: RECORD_SUBMITTED});
-            if (showSubmissionMessage) {
-                dispatch(showSnackbar(locale.notifications.addRecord.submitMessage));
-            }
+export function submitRecordForApproval(data) {
+    return new Promise((resolve, reject) => {
+        submitRecord(data).then(response => {
+            resolve(response.data);
         }).catch(error => {
+            reject(error);
             throw(error);
         });
+    });
+}
+
+/**
+ * Resets the isFormSubmissionComplete state
+ * @returns {{type: string}}
+ */
+export function resetFormSubmissionFlag() {
+    return {
+        type: RECORD_SUBMITTED_RESETTED
     };
 }
