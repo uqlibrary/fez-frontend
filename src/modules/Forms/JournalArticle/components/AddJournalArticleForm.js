@@ -38,9 +38,6 @@ export default class AddJournalArticleForm extends Component {
         const {loadAuthorsList, loadPublicationSubTypesList, selectedPublicationId} = this.props;
         loadPublicationSubTypesList(selectedPublicationId.get('id'));
         loadAuthorsList();
-
-        // set focus to first input field
-        rek_title
     }
 
     cancelAddingRecord = () => {

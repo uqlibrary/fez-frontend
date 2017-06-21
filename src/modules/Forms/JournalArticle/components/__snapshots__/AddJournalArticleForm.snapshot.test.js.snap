@@ -41,6 +41,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         className="columns is-gapless"
       >
         <Field
+          autoFocus={true}
           component={[Function]}
           floatingLabelText="Journal title"
           fullWidth={true}
@@ -54,7 +55,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         />
       </div>
       <div
-        className="columns"
+        className="columns is-gapless"
       >
         <div
           className="column is-two-thirds"
@@ -71,6 +72,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
             fullWidth={true}
             name="fez_record_search_key_journal_name.rek_journal_name"
             type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
         <div
@@ -93,66 +99,155 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         </div>
       </div>
       <div
-        className="columns"
-        style={
-          Object {
-            "paddingBottom": "0",
-            "paddingTop": "0",
-          }
-        }
+        className="columns is-gapless"
       >
         <Field
           component={[Function]}
-          dataSource={
+          floatingLabelText="Select publication subtype"
+          fullWidth={true}
+          name="rek_subtype"
+          validate={
             Array [
-              Object {
-                "id": 1,
-                "label": "Article (original research)",
-              },
-              Object {
-                "id": 2,
-                "label": "Critical review of research, literature review, critical commentary",
-              },
-              Object {
-                "id": 3,
-                "label": "Letter to editor, brief commentary or brief communication",
-              },
-              Object {
-                "id": 4,
-                "label": "Correction/erratum",
-              },
-              Object {
-                "id": 5,
-                "label": "Review of book, film, TV, video, software, performance, music etc ...",
-              },
-              Object {
-                "id": 6,
-                "label": "Editorial",
-              },
-              Object {
-                "id": 7,
-                "label": "Discussion - respones, round table/panel discussions. Q&A, reply",
-              },
-              Object {
-                "id": 8,
-                "label": "Creative work",
-              },
-              Object {
-                "id": 9,
-                "label": "Others",
-              },
+              [Function],
             ]
           }
-          dataSourceConfig={
-            Object {
-              "text": "label",
-              "value": "id",
+        >
+          <MenuItem
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
             }
-          }
-          fullWidth={true}
-          label="Select publication subtype"
-          name="rek_subtype"
-        />
+            checked={false}
+            desktop={false}
+            disabled={false}
+            focusState="none"
+            insetChildren={false}
+            primaryText="Article (original research)"
+            value="Article (original research)"
+          />
+          <MenuItem
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            checked={false}
+            desktop={false}
+            disabled={false}
+            focusState="none"
+            insetChildren={false}
+            primaryText="Critical review of research, literature review, critical commentary"
+            value="Critical review of research, literature review, critical commentary"
+          />
+          <MenuItem
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            checked={false}
+            desktop={false}
+            disabled={false}
+            focusState="none"
+            insetChildren={false}
+            primaryText="Letter to editor, brief commentary or brief communication"
+            value="Letter to editor, brief commentary or brief communication"
+          />
+          <MenuItem
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            checked={false}
+            desktop={false}
+            disabled={false}
+            focusState="none"
+            insetChildren={false}
+            primaryText="Correction/erratum"
+            value="Correction/erratum"
+          />
+          <MenuItem
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            checked={false}
+            desktop={false}
+            disabled={false}
+            focusState="none"
+            insetChildren={false}
+            primaryText="Review of book, film, TV, video, software, performance, music etc ..."
+            value="Review of book, film, TV, video, software, performance, music etc ..."
+          />
+          <MenuItem
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            checked={false}
+            desktop={false}
+            disabled={false}
+            focusState="none"
+            insetChildren={false}
+            primaryText="Editorial"
+            value="Editorial"
+          />
+          <MenuItem
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            checked={false}
+            desktop={false}
+            disabled={false}
+            focusState="none"
+            insetChildren={false}
+            primaryText="Discussion - respones, round table/panel discussions. Q&A, reply"
+            value="Discussion - respones, round table/panel discussions. Q&A, reply"
+          />
+          <MenuItem
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            checked={false}
+            desktop={false}
+            disabled={false}
+            focusState="none"
+            insetChildren={false}
+            primaryText="Creative work"
+            value="Creative work"
+          />
+          <MenuItem
+            anchorOrigin={
+              Object {
+                "horizontal": "right",
+                "vertical": "top",
+              }
+            }
+            checked={false}
+            desktop={false}
+            disabled={false}
+            focusState="none"
+            insetChildren={false}
+            primaryText="Others"
+            value="Others"
+          />
+        </Field>
       </div>
     </CardText>
   </Card>
