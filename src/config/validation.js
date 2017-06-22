@@ -5,6 +5,7 @@ export const required = value => value && value.replace(/\s/g, '').length > 0 ? 
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Please enter a valid email address' : undefined;
 export const requiredTrue = value => value === true ? undefined : 'This field is required';
 export const unique = (value, array) => array.indexOf(value) !== -1 ? 'This value has already been used' : undefined;
+export const url = (value) => value && !/^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$/i.test(value) ? 'Please enter a valid URL' : undefined;
 
 // Min Length
 export const maxLength = max => value => value && value.length > max ? `Must be ${max} characters or less` : undefined;

@@ -169,6 +169,7 @@ export default class AddJournalArticleForm extends Component {
                                        locale="en-AU"
                                        DateTimeFormat={DateTimeFormat}
                                        name="rek_date"
+                                       tabIndex="0"
                                 />
                             </div>
                         </div>
@@ -258,11 +259,22 @@ export default class AddJournalArticleForm extends Component {
                                     </div>
                                 </div>
 
-
                                 <div className="columns">
                                     <div className="column is-textarea">
                                         <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text" fullWidth multiLine
                                                rows={1} floatingLabelText={optionalInformation.fields.notesLabel} />
+                                    </div>
+                                </div>
+
+                                <div className="columns">
+                                    <div className="column is-textarea">
+                                        <Field component={TextField}
+                                               name="fez_record_search_key_link.rek_link"
+                                               type="text"
+                                               fullWidth
+                                               floatingLabelText={optionalInformation.fields.urlLabel}
+                                               validate={[validation.url]}
+                                        />
                                     </div>
                                 </div>
                     </CardText>

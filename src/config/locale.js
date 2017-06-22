@@ -232,9 +232,9 @@ export default {
                     }
                 },
                 optionalDetails: {
-                    title: 'Optional publication detail',
+                    title: 'Optional publication details',
                     help: {
-                        title: 'Optional publication detail',
+                        title: 'Optional publication details',
                         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
                     },
                     fields: {
@@ -243,7 +243,8 @@ export default {
                         startPageLabel: 'Start page',
                         endPageLabel: 'End page',
                         articleNumber: 'Article number',
-                        notesLabel: 'Notes (not publically viewable)'
+                        notesLabel: 'Notes (not publicly viewable)',
+                        urlLabel: 'URL for this publication'
                     }
                 }
             }
