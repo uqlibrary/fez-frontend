@@ -277,10 +277,13 @@ export default {
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
             },
             limit: 10,
+            filenameLimit: 45,
             messages: {
                 maxFiles: 'Only [maxNumberOfFiles] files are allowed to be uploaded.',
                 invalidFormatFile: 'Invalid filename format.',
                 invalidFormatFiles: '[numberOfRejectedFiles] has an invalid filename format.',
+                invalidFileLength: 'Filename is too long',
+                invalidFileLengths: '[numberOfLongFiles] filenames are too long',
                 existingFile: 'File has already been added.',
                 existingFiles: '[numberOfExistingFiles] have already been added.',
                 cancelledUpload: 'File upload cancelled.',
