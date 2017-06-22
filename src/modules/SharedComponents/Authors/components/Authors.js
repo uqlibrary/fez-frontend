@@ -66,7 +66,7 @@ export default class Authors extends Component {
         return (
             <div>
                 <div className="columns">
-                    <div className="column is-gapless">
+                    <div className="column">
                     <Field component={AsyncAutoCompleteSelect} name="authorName"
                            label={this.props.authorFieldLabel}
                            dataSourceLabel="aut_display_name"

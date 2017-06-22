@@ -24,3 +24,8 @@ div.row-sm.column.align-stretch.align-center-sm .inputPadding, div.row .inputPad
   overflow: hidden;
   width: 100%;
 }
+
+// Negates the 24px top margin for autocomplete inputs
+.auto-complete-select .base-input-container {
+  margin-top: 0px !important;
+}
