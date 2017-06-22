@@ -169,7 +169,6 @@ export default class AddJournalArticleForm extends Component {
                                        locale="en-AU"
                                        DateTimeFormat={DateTimeFormat}
                                        name="rek_date"
-                                       tabIndex="0"
                                 />
                             </div>
                         </div>
