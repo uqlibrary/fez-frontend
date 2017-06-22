@@ -278,7 +278,7 @@ export default {
             },
             limit: 10,
             messages: {
-                maxFiles: 'Only [maxNumberOfFiles] files are allowed to be selected per batch.',
+                maxFiles: 'Only [maxNumberOfFiles] files are allowed to be uploaded.',
                 rejectedFiles: '[numberOfRejectedFiles] file/s was not included in this upload.',
                 acceptedFiles: 'File/s have already been added.',
                 cancelledUpload: 'File upload cancelled.',

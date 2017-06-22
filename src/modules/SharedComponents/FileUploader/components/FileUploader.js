@@ -28,34 +28,36 @@ export default class FileUploader extends PureComponent {
         this.props.resetToInitialState();
     }
 
-    setAcceptedFileList = (acceptedFiles, rejectedFiles) => {
+    setAcceptedFileList = (addedFiles) => {
         const fileInformation = locale.sharedComponents.files;
-        const isOverLimit = acceptedFiles.length > fileInformation.limit;
+        const {acceptedFiles, setAcceptedFileList, showSnackbar} = this.props;
 
-        let [validFiles, invalidFiles] = this.validateNumberOfFiles(acceptedFiles, rejectedFiles);
-        [validFiles, invalidFiles] = this.validateFilenameFormat(validFiles, invalidFiles);
+        let validFiles = this.validateNumberOfFiles(addedFiles);
+        validFiles = this.validateFilenameFormat(validFiles);
 
         if (this.props.acceptedFiles.size > 0) {
-            [validFiles, invalidFiles] = this.validateFileNotAdded(validFiles, invalidFiles);
+            validFiles = this.validateFileNotAdded(validFiles);
         }
 
-        if (invalidFiles && invalidFiles.length > 0 && !isOverLimit) {
-            const msg = fileInformation.messages.rejectedFiles.replace('[numberOfRejectedFiles]', invalidFiles.length);
-            this.props.showSnackbar(msg);
-        }
+        // check if the total number of files dropped/added plus the files already added are over the limit
+        const isOverLimit = (validFiles.length + acceptedFiles.size) > fileInformation.limit;
 
-        if (validFiles.length > 0) {
-            this.props.setAcceptedFileList(validFiles);
+        if (isOverLimit) {
+            const msg = fileInformation.messages.maxFiles.replace('[maxNumberOfFiles]', fileInformation.limit);
+            showSnackbar(msg);
         } else {
-            this.props.showSnackbar(fileInformation.messages.acceptedFiles);
+            if (validFiles.length > 0) {
+                setAcceptedFileList(validFiles);
+            } else {
+                showSnackbar(fileInformation.messages.acceptedFiles);
+            }
         }
     };
 
     // checks if we're uploading the same file again
-    validateFileNotAdded = (addedFiles, rejectedFiles) => {
+    validateFileNotAdded = (addedFiles) => {
         const {acceptedFiles} = this.props;
         const validFiles = [];
-        const invalidFiles = rejectedFiles;
 
         addedFiles.map(file => {
             const found = acceptedFiles.toJS().find(metadata => {
@@ -64,35 +66,28 @@ export default class FileUploader extends PureComponent {
 
             if (!found) {
                 validFiles.push(file);
-            } else {
-                invalidFiles.push(file);
             }
         });
 
-
-        return [validFiles, invalidFiles];
+        return validFiles;
     };
 
-    validateFilenameFormat = (acceptedFiles, rejectedFiles) => {
+    validateFilenameFormat = (acceptedFiles) => {
         const validFiles = [];
-        const invalidFiles = rejectedFiles;
 
         acceptedFiles.map(file => {
             if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[.][a-z0-9]+$/)) {
                 validFiles.push(file);
-            } else {
-                invalidFiles.push(file);
             }
         });
 
-        return [validFiles, invalidFiles];
+        return validFiles;
     };
 
-    validateNumberOfFiles = (acceptedFiles, rejectedFiles) => {
+    validateNumberOfFiles = (acceptedFiles) => {
         const fileInformation = locale.sharedComponents.files;
         const maxNumberOfFiles = fileInformation.limit;
         let validFiles = acceptedFiles;
-        const invalidFiles = rejectedFiles;
 
         // check if the user has more than the maximum of files uploaded in one hit
         if (acceptedFiles.length > maxNumberOfFiles) {
@@ -104,7 +99,7 @@ export default class FileUploader extends PureComponent {
             validFiles = acceptedFiles.slice(0, maxNumberOfFiles);
         }
 
-        return [validFiles, invalidFiles];
+        return validFiles;
     };
 
     render() {

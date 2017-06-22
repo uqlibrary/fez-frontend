@@ -87,10 +87,9 @@ describe('File upload dropzone unit tests', () => {
             }
         ];
 
-        const [validFiles, invalidFiles] = app.instance().validateNumberOfFiles(fileList, []);
+        const validFiles = app.instance().validateNumberOfFiles(fileList);
 
         expect(validFiles.length).toEqual(10);
-        expect(invalidFiles.length).toEqual(0);
     });
 
     it('validates the files names', () => {
@@ -120,10 +119,9 @@ describe('File upload dropzone unit tests', () => {
             }
         ];
 
-        const [validFiles, invalidFiles] = app.instance().validateFilenameFormat(fileList, []);
+        const validFiles = app.instance().validateFilenameFormat(fileList);
 
         expect(validFiles.length).toEqual(2);
-        expect(invalidFiles.length).toEqual(3);
     });
 
     it('filters out duplicate files', () => {
@@ -135,10 +133,9 @@ describe('File upload dropzone unit tests', () => {
             }
         ];
 
-        let [validFiles, invalidFiles] = app.instance().validateFileNotAdded(fileData, []);
+        let validFiles = app.instance().validateFileNotAdded(fileData);
 
         expect(validFiles.length).toEqual(0);
-        expect(invalidFiles.length).toEqual(1);
 
         fileData = [
             {
@@ -148,10 +145,9 @@ describe('File upload dropzone unit tests', () => {
             }
         ];
 
-        [validFiles, invalidFiles] = app.instance().validateFileNotAdded(fileData, []);
+        validFiles = app.instance().validateFileNotAdded(fileData);
 
         expect(validFiles.length).toEqual(1);
-        expect(invalidFiles.length).toEqual(0);
     });
 
     it('sets the accepted list in the state', () => {
@@ -163,7 +159,7 @@ describe('File upload dropzone unit tests', () => {
             }
         ];
 
-        app.instance().setAcceptedFileList(fileData, []);
+        app.instance().setAcceptedFileList(fileData);
         expect(setAcceptedFileList.calledOnce).toEqual(true);
     });
 
@@ -176,7 +172,7 @@ describe('File upload dropzone unit tests', () => {
             }
         ];
 
-        app.instance().setAcceptedFileList(fileData, []);
+        app.instance().setAcceptedFileList(fileData);
         expect(setAcceptedFileList.calledOnce).toEqual(false);
         expect(showSnackbar.called).toEqual(true);
     });
