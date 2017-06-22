@@ -7,7 +7,7 @@ export default {
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         labels: {
             buttons: {
-                cancel: 'Cancel',
+                cancel: 'Abandon and search again',
                 close: 'Close',
                 submitForApproval: 'Submit for approval'
             }
@@ -232,9 +232,9 @@ export default {
                     }
                 },
                 optionalDetails: {
-                    title: 'Optional publication detail',
+                    title: 'Optional publication details',
                     help: {
-                        title: 'Optional publication detail',
+                        title: 'Optional publication details',
                         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
                     },
                     fields: {
@@ -243,7 +243,8 @@ export default {
                         startPageLabel: 'Start page',
                         endPageLabel: 'End page',
                         articleNumber: 'Article number',
-                        notesLabel: 'Notes (not publically viewable)'
+                        notesLabel: 'Notes (not publicly viewable)',
+                        urlLabel: 'Link (URL)'
                     }
                 }
             }
@@ -293,15 +294,16 @@ export default {
                 filenameRestrictions: (
                     <div className="columns fileInstructions">
                         <div className="column">
-                            <h3>File name restrictions</h3>
+                            <h3>File upload restrictions</h3>
                             <div>
                                 <ul>
                                     <li>No folders</li>
-                                    <li>Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9)</li>
-                                    <li>Only numbers and lowercase characters in the file extension</li>
-                                    <li>Under 45 characters</li>
-                                    <li>Only one file extension (on period (.) character) and</li>
-                                    <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
+                                    <li>Limited to 10 files</li>
+                                    <li>Filenames must have only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9)</li>
+                                    <li>Filenames must have only numbers and lowercase characters in the file extension</li>
+                                    <li>Filenames must be under 45 characters</li>
+                                    <li>Filenames must have only one file extension (on period (.) character) and</li>
+                                    <li>Filenames must start with a letter. Eg "s12345678_phd_thesis.pdf"</li>
                                 </ul>
                             </div>
                         </div>

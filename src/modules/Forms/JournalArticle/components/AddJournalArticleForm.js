@@ -5,6 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
 import {HelpIcon, TextField, DatePicker} from 'uqlibrary-react-toolbox';
 import {Authors, FileUploader, SelectField} from 'modules/SharedComponents';
@@ -236,7 +237,6 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-
                         <div className="columns">
                             <div className="column">
                                 <Field component={TextField}
@@ -274,9 +274,20 @@ export default class AddJournalArticleForm extends Component {
                             <div className="column">
                                 <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text"
                                        fullWidth multiLine
-                                       rows={1} floatingLabelText={optionalInformation.fields.notesLabel}/><br />
+                                       rows={1} floatingLabelText={optionalInformation.fields.notesLabel}/>
                             </div>
                         </div>
+                                <div className="columns">
+                                    <div className="column">
+                                        <Field component={TextField}
+                                               name="fez_record_search_key_link.rek_link"
+                                               type="text"
+                                               fullWidth
+                                               floatingLabelText={optionalInformation.fields.urlLabel}
+                                               validate={[validation.url]}
+                                        /><br />
+                                    </div>
+                                </div>
                     </CardText>
                 </Card>
 
@@ -284,8 +295,8 @@ export default class AddJournalArticleForm extends Component {
                 <FileUploader form="FileUploadForm"/>
 
                 <div className="buttonWrapper">
-                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}}
-                                  onTouchTap={this.cancelAddingRecord}/>
+                    <FlatButton label={buttonLabels.cancel} style={{marginLeft: '12px'}}
+                                  onTouchTap={this.cancelAddingRecord} secondary />
                     <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}}
                                   type="submit"/>
                 </div>

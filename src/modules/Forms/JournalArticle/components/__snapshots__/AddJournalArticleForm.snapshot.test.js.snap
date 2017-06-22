@@ -311,7 +311,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
           <h2
             className="title"
           >
-            Optional publication detail
+            Optional publication details
           </h2>
         </div>
         <div
@@ -319,7 +319,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         >
           <Connect(HelpIcon)
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc."
-            title="Optional publication detail"
+            title="Optional publication details"
           />
         </div>
       </div>
@@ -399,12 +399,32 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         >
           <Field
             component={[Function]}
-            floatingLabelText="Notes (not publically viewable)"
+            floatingLabelText="Notes (not publicly viewable)"
             fullWidth={true}
             multiLine={true}
             name="fez_record_search_key_notes.rek_notes"
             rows={1}
             type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="columns"
+      >
+        <div
+          className="column is-textarea"
+        >
+          <Field
+            component={[Function]}
+            floatingLabelText="URL for this publication"
+            fullWidth={true}
+            name="fez_record_search_key_link.rek_link"
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
       </div>
