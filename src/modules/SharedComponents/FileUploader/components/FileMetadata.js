@@ -20,8 +20,6 @@ export default class FileMetadata extends Component {
         acceptedFiles: PropTypes.object.isRequired,
         deleteFile: PropTypes.func,
         form: PropTypes.string.isRequired,
-        setCheckboxState: PropTypes.func,
-        setOpenAccessState: PropTypes.func,
         uploadError: PropTypes.string
     };
 
@@ -36,10 +34,8 @@ export default class FileMetadata extends Component {
     }
 
     componentWillUpdate(nextProps) {
-        const {acceptedFiles, uploadProgress} = nextProps;
+        const {uploadProgress} = nextProps;
         fileUploadProgress[uploadProgress.get('name')] = uploadProgress.get('progress');
-        const showOpenAccessNotice = this.state.isOpenAccess || Object.keys(this.state.accessFields).length < acceptedFiles.size;
-        this.props.setOpenAccessState(!showOpenAccessNotice);
     }
 
     buildDatePicker = (id) => {
@@ -95,25 +91,25 @@ export default class FileMetadata extends Component {
                 const fieldName = `${file}${index}`;
 
                 return (
-                    <Toolbar className="metadataRow" key={fieldName}>
+                    <Toolbar className="metadata-row" key={fieldName}>
                         <ToolbarGroup className="filename">
-                            <FontIcon className="material-icons icon">attachment</FontIcon>
-                            <span>{file.name}</span>
+                            <FontIcon className="material-icons mobile-icon">attachment</FontIcon>
+                            <span className="filename-label">{file.name}</span>
                         </ToolbarGroup>
-                        <ToolbarGroup className="fileAccess">
-                            <FontIcon className="material-icons icon">lock_outline</FontIcon>
+                        <ToolbarGroup className="file-access">
+                            <FontIcon className="material-icons mobile-icon">lock_outline</FontIcon>
                             <span className="label">File Access</span>
                             {this.buildSelectField(index)}
                         </ToolbarGroup>
-                        <ToolbarGroup className="embargoDate">
-                            <FontIcon className="material-icons icon">date_range</FontIcon>
+                        <ToolbarGroup className="embargo-date">
+                            <FontIcon className="material-icons mobile-icon">date_range</FontIcon>
                             <span className="label">Embargo Date</span>
                             {this.buildDatePicker(index)}
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
                                 fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&
                                 <CircularProgress
-                                    className="uploadProgress"
+                                    className="upload-progress"
                                     mode="determinate"
                                     value={fileUploadProgress[file.name]}
                                     size={30}
@@ -124,7 +120,7 @@ export default class FileMetadata extends Component {
                             {fileUploadProgress[file.name] && (
                                 (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
                                 <FontIcon
-                                className="material-icons greenTick">done</FontIcon>
+                                className="material-icons green-tick">done</FontIcon>
                             )}
                             <FontIcon
                                 onClick={() => this.deleteRow(index)}
@@ -161,7 +157,7 @@ export default class FileMetadata extends Component {
     };
 
     render() {
-        const {acceptedFiles, setCheckboxState} = this.props;
+        const {acceptedFiles} = this.props;
         const fileInformation = locale.sharedComponents.files;
         const messages = fileInformation.messages;
 
@@ -170,15 +166,15 @@ export default class FileMetadata extends Component {
         const showOpenAccessNotice = this.state.isOpenAccess || Object.keys(this.state.accessFields).length < acceptedFiles.size;
 
         return (
-            <div className="metadataContainer">
-                <Toolbar className="header metadataRow">
+            <div className="metadata-container">
+                <Toolbar className="header metadata-row">
                     <ToolbarGroup className="filename">
                         {fileInformation.list.filenameLabel}
                     </ToolbarGroup>
-                    <ToolbarGroup className="fileAccess header">
+                    <ToolbarGroup className="file-access header">
                         {fileInformation.list.fileAccessLabel}
                     </ToolbarGroup>
-                    <ToolbarGroup className="embargoDate header">
+                    <ToolbarGroup className="embargo-date header">
                         {fileInformation.list.embargoDateLabel}
                     </ToolbarGroup>
                     <ToolbarGroup>
@@ -190,9 +186,8 @@ export default class FileMetadata extends Component {
 
                 {showOpenAccessNotice && (
                     <Checkbox
-                        className="openAccessCheckbox"
+                        className="open-access-checkbox"
                         label={messages.openAccessConfirmation}
-                        onCheck={setCheckboxState}
                     />
                 )}
             </div>

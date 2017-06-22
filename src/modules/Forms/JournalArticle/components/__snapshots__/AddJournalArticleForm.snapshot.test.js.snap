@@ -329,7 +329,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
     <RaisedButton
       disabled={false}
       fullWidth={false}
-      label="Cancel"
+      label="Abandon and search again"
       labelPosition="after"
       onTouchTap={[Function]}
       primary={false}
@@ -687,7 +687,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
     <RaisedButton
       disabled={false}
       fullWidth={false}
-      label="Cancel"
+      label="Abandon and search again"
       labelPosition="after"
       onTouchTap={[Function]}
       primary={false}

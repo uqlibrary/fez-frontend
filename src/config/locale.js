@@ -7,6 +7,7 @@ export default {
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         labels: {
             buttons: {
+                abandon: 'Abandon and search again',
                 cancel: 'Cancel',
                 close: 'Close',
                 submitForApproval: 'Submit for approval'
@@ -291,7 +292,7 @@ export default {
             },
             fields: {
                 filenameRestrictions: (
-                    <div className="columns fileInstructions">
+                    <div className="columns file-instructions">
                         <div className="column">
                             <h3>File name restrictions</h3>
                             <div>
@@ -305,7 +306,7 @@ export default {
                                 </ul>
                             </div>
                         </div>
-                        <div className="column uploadInstructions">
+                        <div className="column upload-instructions">
                             <FontIcon
                                 className="material-icons">cloud_upload</FontIcon>
                             <p>Click here to select files, or drag files into this area to upload</p>
@@ -322,8 +323,8 @@ export default {
             },
             list: {
                 filenameLabel: 'Filename',
-                fileAccessLabel: 'File access',
-                embargoDateLabel: 'Embargo date'
+                fileAccessLabel: 'Access conditions',
+                embargoDateLabel: 'Embargo release date'
             },
             constants: {
                 openAccessId: 9,

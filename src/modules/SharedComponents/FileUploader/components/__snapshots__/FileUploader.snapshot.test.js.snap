@@ -53,6 +53,8 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
       >
         <div
           className="column"
+          onKeyPress={[Function]}
+          tabIndex="0"
         >
           <Dropzone
             disableClick={false}
@@ -69,7 +71,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
             }
           >
             <div
-              className="columns fileInstructions"
+              className="columns file-instructions"
             >
               <div
                 className="column"
@@ -101,7 +103,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
                 </div>
               </div>
               <div
-                className="column uploadInstructions"
+                className="column upload-instructions"
               >
                 <FontIcon
                   className="material-icons"

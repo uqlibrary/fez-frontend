@@ -115,6 +115,8 @@ export default class FileUploader extends PureComponent {
             showSnackbar(fileInformation.messages.uploadError.default);
         }
 
+        let dropzoneRef;
+
         return (
             <div style={{marginBottom: '-60px'}}>
                 <Card className="layout-card">
@@ -137,8 +139,8 @@ export default class FileUploader extends PureComponent {
                     <CardText className="body-1">
                         <p className="sub-title">{fileInformation.subTitle}</p>
                         <div className="columns">
-                            <div className="column">
-                                <Dropzone onDrop={this.setAcceptedFileList.bind(this)} style={{padding: '10px'}} disablePreview>
+                            <div className="column"  tabIndex="0" onKeyPress={() => dropzoneRef.open()}>
+                                <Dropzone ref={(node) => {dropzoneRef = node;}} onDrop={this.setAcceptedFileList.bind(this)} style={{padding: '10px'}} disablePreview>
                                     {fileInformation.fields.filenameRestrictions}
                                 </Dropzone>
                             </div>

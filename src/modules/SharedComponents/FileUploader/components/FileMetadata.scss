@@ -1,25 +1,105 @@
-.metadataContainer {
+.accessibility-button {
+  display: none;
+}
+
+.metadata-container {
   padding: 0px !important;
   > div:first-child {
     padding: 0px !important;
   }
+  .metadata-row {
+    margin: 0px auto !important;
+    background: #FFF !important;
+    padding: 0px !important;
+    border-bottom: 1px solid #bfbfbf !important;
 
-  @media (max-width: 768px) {
-    .metadataRow {
-      &:nth-child(2) {
-        border-top: 1px solid #bfbfbf !important;
+    .filename {
+      flex: 3;
+      overflow: hidden;
+
+      .filename-label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 10px;
+      }
+    }
+
+    .file-access {
+      div > div > div:first-child {
+        font-size: 14px !important;
+      }
+    }
+
+    .file-access,
+    .embargo-date {
+      flex: 1;
+      align-items: flex-end !important;
+      hr {
+        display: none;
       }
 
+      input {
+        font-size: 14px !important;
+      }
+    }
+
+    .filename,
+    .file-access,
+    .embargo-date {
+      .label {
+        display: none;
+      }
+    }
+
+    .header {
+      align-self: center;
+    }
+
+    .green-tick {
+      color: green !important;
+      cursor: default !important;
+    }
+
+    .upload-progress {
+      align-self: center;
+
+      circle {
+        stroke: #adadad !important;
+      }
+    }
+  }
+
+  .open-access-checkbox {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-icon{
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .metadata-row {
       height: initial !important;
       flex-direction: column;
       padding: 10px 0px !important;
 
-      .fileAccess {
+      &:nth-child(2) {
+        border-top: 1px solid #bfbfbf !important;
+      }
+
+      .mobile-icon {
+        padding-left: 0px !important;
+      }
+
+      .filename,
+      .file-access {
         height: 38px;
         align-items: center !important;
       }
 
-      .embargoDate {
+      .embargo-date {
         height: 26px;
         align-items: center !important;
 
@@ -29,8 +109,8 @@
       }
 
       .filename,
-      .fileAccess,
-      .embargoDate {
+      .file-access,
+      .embargo-date {
         justify-content: flex-start !important;
 
         .icon {
@@ -53,73 +133,4 @@
       display: none !important;
     }
   }
-
-  .metadataRow {
-    margin: 0px auto !important;
-    background: #FFF !important;
-    padding: 0px !important;
-    border-bottom: 1px solid #bfbfbf !important;
-
-    .filename {
-      flex: 3;
-    }
-
-    .fileAccess {
-      div > div > div:first-child {
-        font-size: 14px !important;
-      }
-    }
-
-    .embargoDate {
-      .progressCircle {
-        align-self: center;
-        opacity: 0.5;
-      }
-    }
-
-    .fileAccess,
-    .embargoDate {
-      flex: 1;
-      align-items: flex-end !important;
-      hr {
-        display: none;
-      }
-
-      input {
-        font-size: 14px !important;
-      }
-    }
-
-    .filename,
-    .fileAccess,
-    .embargoDate {
-      .icon,
-      .label {
-        display: none;
-      }
-    }
-
-    .header {
-      align-self: center;
-    }
-
-    .greenTick {
-      color: green !important;
-      cursor: default !important;
-    }
-
-    .uploadProgress {
-      align-self: center;
-
-      circle {
-        stroke: #adadad !important;
-      }
-    }
-  }
-
-  .openAccessCheckbox {
-    margin-top: 20px;
-  }
-
-
 }

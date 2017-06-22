@@ -2,10 +2,10 @@
 
 exports[`File metadata snapshots tests renders default file metadata component 1`] = `
 <div
-  className="metadataContainer"
+  className="metadata-container"
 >
   <Toolbar
-    className="header metadataRow"
+    className="header metadata-row"
     noGutter={false}
   >
     <ToolbarGroup
@@ -16,18 +16,18 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       Filename
     </ToolbarGroup>
     <ToolbarGroup
-      className="fileAccess header"
+      className="file-access header"
       firstChild={false}
       lastChild={false}
     >
-      File access
+      Access conditions
     </ToolbarGroup>
     <ToolbarGroup
-      className="embargoDate header"
+      className="embargo-date header"
       firstChild={false}
       lastChild={false}
     >
-      Embargo date
+      Embargo release date
     </ToolbarGroup>
     <ToolbarGroup
       firstChild={false}
@@ -43,7 +43,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
     </ToolbarGroup>
   </Toolbar>
   <Toolbar
-    className="metadataRow"
+    className="metadata-row"
     noGutter={false}
   >
     <ToolbarGroup
@@ -52,21 +52,23 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       lastChild={false}
     >
       <FontIcon
-        className="material-icons icon"
+        className="material-icons mobile-icon"
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
       >
         attachment
       </FontIcon>
-      <span />
+      <span
+        className="filename-label"
+      />
     </ToolbarGroup>
     <ToolbarGroup
-      className="fileAccess"
+      className="file-access"
       firstChild={false}
       lastChild={false}
     >
       <FontIcon
-        className="material-icons icon"
+        className="material-icons mobile-icon"
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
       >
@@ -140,12 +142,12 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       </SelectField>
     </ToolbarGroup>
     <ToolbarGroup
-      className="embargoDate"
+      className="embargo-date"
       firstChild={false}
       lastChild={false}
     >
       <FontIcon
-        className="material-icons icon"
+        className="material-icons mobile-icon"
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
       >
@@ -165,7 +167,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         disabled={true}
         firstDayOfWeek={0}
         hideCalendarDate={false}
-        hintText="21/6/2017"
+        hintText="22/6/2017"
         locale="en-AU"
         name="accessDate0"
         style={
@@ -185,7 +187,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
     </ToolbarGroup>
   </Toolbar>
   <Checkbox
-    className="openAccessCheckbox"
+    className="open-access-checkbox"
     disabled={false}
     label={
       <div>

@@ -300,7 +300,7 @@ export default class AddJournalArticleForm extends Component {
 
                 <div className="buttonWrapper">
                     <RaisedButton
-                        label={buttonLabels.cancel}
+                        label={buttonLabels.abandon}
                         style={{marginLeft: '12px'}}
                         onTouchTap={this.cancelAddingRecord} />
                     <RaisedButton
