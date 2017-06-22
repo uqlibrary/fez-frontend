@@ -39,6 +39,10 @@ export default class FileUploader extends PureComponent {
             [validFiles, continueFileValidation] = this.validateFileDoesNotExist(validFiles);
         }
 
+        if (continueFileValidation) {
+            [validFiles, continueFileValidation] = this.validFilenameLength(validFiles);
+        }
+
         // always run this validation because there could still be valid files to be added AND
         // the total number of files added is still less than the limit
         [validFiles, continueFileValidation] = this.validateNumberOfFiles(validFiles, maxNumberOfFiles);
@@ -79,6 +83,19 @@ export default class FileUploader extends PureComponent {
         if (addedFiles.length > 1) {
             const updatedString = invalidFileCount === 1 ? `${invalidFileCount} file` : `${invalidFileCount} files`;
             msg = multipleFilesMsg.replace('[numberOfRejectedFiles]', updatedString);
+        }
+        this.props.showSnackbar(msg);
+    };
+
+    showInvalidFileLengthMessage = (addedFiles, invalidFileLengthCount) => {
+        const fileInformation = locale.sharedComponents.files;
+        const multipleFilesMsg = fileInformation.messages.invalidFileLengths;
+        const singleFileMsg = fileInformation.messages.invalidFileLength;
+        let msg = singleFileMsg;
+
+        if (addedFiles.length > 1) {
+            const updatedString = invalidFileLengthCount === 1 ? `${invalidFileLengthCount} file` : `${invalidFileLengthCount} files`;
+            msg = multipleFilesMsg.replace('[numberOfLongFiles]', updatedString);
         }
         this.props.showSnackbar(msg);
     };
@@ -130,6 +147,29 @@ export default class FileUploader extends PureComponent {
             }
             continueFileValidation = true;
         }
+        return [validFiles, continueFileValidation];
+    };
+
+    validFilenameLength = (addedFiles) => {
+        const validFiles = [];
+        const fileInformation = locale.sharedComponents.files;
+
+        let continueFileValidation = true;
+        let invalidFileLengthCount = 0;
+
+        addedFiles.map(file => {
+            if (file.name.length <= fileInformation.filenameLimit) {
+                validFiles.push(file);
+            } else {
+                continueFileValidation = false;
+                invalidFileLengthCount++;
+            }
+        });
+
+        if (invalidFileLengthCount > 0) {
+            this.showInvalidFileLengthMessage(addedFiles, invalidFileLengthCount);
+        }
+
         return [validFiles, continueFileValidation];
     };
 
