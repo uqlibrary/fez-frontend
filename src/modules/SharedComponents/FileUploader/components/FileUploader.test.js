@@ -89,7 +89,7 @@ describe('File upload dropzone unit tests', () => {
 
         const validFiles = app.instance().validateNumberOfFiles(fileList);
 
-        expect(validFiles.length).toEqual(10);
+        expect(validFiles.length).toEqual(2);
     });
 
     it('validates the files names', () => {
@@ -133,9 +133,9 @@ describe('File upload dropzone unit tests', () => {
             }
         ];
 
-        let validFiles = app.instance().validateFileNotAdded(fileData);
+        let validFiles = app.instance().validateFileDoesNotExist(fileData);
 
-        expect(validFiles.length).toEqual(0);
+        expect(validFiles.length).toEqual(2);
 
         fileData = [
             {
@@ -145,9 +145,9 @@ describe('File upload dropzone unit tests', () => {
             }
         ];
 
-        validFiles = app.instance().validateFileNotAdded(fileData);
+        validFiles = app.instance().validateFileDoesNotExist(fileData);
 
-        expect(validFiles.length).toEqual(1);
+        expect(validFiles.length).toEqual(2);
     });
 
     it('sets the accepted list in the state', () => {
