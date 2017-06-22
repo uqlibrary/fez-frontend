@@ -20,6 +20,7 @@ export default class FileMetadata extends Component {
         acceptedFiles: PropTypes.object.isRequired,
         deleteFile: PropTypes.func,
         form: PropTypes.string.isRequired,
+        setCheckboxState: PropTypes.func,
         uploadError: PropTypes.string
     };
 
@@ -157,7 +158,7 @@ export default class FileMetadata extends Component {
     };
 
     render() {
-        const {acceptedFiles} = this.props;
+        const {acceptedFiles, setCheckboxState} = this.props;
         const fileInformation = locale.sharedComponents.files;
         const messages = fileInformation.messages;
 
@@ -188,6 +189,7 @@ export default class FileMetadata extends Component {
                     <Checkbox
                         className="open-access-checkbox"
                         label={messages.openAccessConfirmation}
+                        onCheck={setCheckboxState}
                     />
                 )}
             </div>
