@@ -144,7 +144,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div className="columns">
+                        <div className="columns is-gapless">
                             <div className="column">
                                 <Field component={TextField}
                                        autoFocus
