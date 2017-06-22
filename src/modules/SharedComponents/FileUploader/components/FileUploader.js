@@ -62,42 +62,45 @@ export default class FileUploader extends PureComponent {
 
     showFileDoesNotExistMessage = (addedFiles, existingFileCount) => {
         const fileInformation = locale.sharedComponents.files;
-        const multipleFilesMsg = fileInformation.messages.existingFiles;
-        const singleFileMsg = fileInformation.messages.existingFile;
-        let msg = singleFileMsg;
-
-        if (addedFiles.length > 1) {
-            const updatedString = existingFileCount === 1 ? `${existingFileCount} file` : `${existingFileCount} files`;
-            msg = multipleFilesMsg.replace('[numberOfExistingFiles]', updatedString);
-        }
+        const msg = this.processErrorMessage(
+            addedFiles,
+            existingFileCount,
+            fileInformation.messages.existingFile,
+            fileInformation.messages.existingFiles);
         this.props.showSnackbar(msg);
     };
 
     showFilenameFormatMessage = (addedFiles, invalidFileCount) => {
         const fileInformation = locale.sharedComponents.files;
-        const multipleFilesMsg = fileInformation.messages.invalidFormatFiles;
-        const singleFileMsg = fileInformation.messages.invalidFormatFile;
-        let msg = singleFileMsg;
+        const msg = this.processErrorMessage(
+            addedFiles,
+            invalidFileCount,
+            fileInformation.messages.invalidFormatFile,
+            fileInformation.messages.invalidFormatFiles);
 
-
-        if (addedFiles.length > 1) {
-            const updatedString = invalidFileCount === 1 ? `${invalidFileCount} file` : `${invalidFileCount} files`;
-            msg = multipleFilesMsg.replace('[numberOfRejectedFiles]', updatedString);
-        }
         this.props.showSnackbar(msg);
     };
 
     showInvalidFileLengthMessage = (addedFiles, invalidFileLengthCount) => {
         const fileInformation = locale.sharedComponents.files;
-        const multipleFilesMsg = fileInformation.messages.invalidFileLengths;
-        const singleFileMsg = fileInformation.messages.invalidFileLength;
+        const msg = this.processErrorMessage(
+            addedFiles,
+            invalidFileLengthCount,
+            fileInformation.messages.invalidFileLength,
+            fileInformation.messages.invalidFileLengths);
+
+        this.props.showSnackbar(msg);
+    };
+
+    processErrorMessage = (addedFiles, count, singleFileMsg, multipleFilesMsg) => {
         let msg = singleFileMsg;
 
         if (addedFiles.length > 1) {
-            const updatedString = invalidFileLengthCount === 1 ? `${invalidFileLengthCount} file` : `${invalidFileLengthCount} files`;
+            const updatedString = count === 1 ? `${count} file` : `${count} files`;
             msg = multipleFilesMsg.replace('[numberOfLongFiles]', updatedString);
         }
-        this.props.showSnackbar(msg);
+
+        return msg;
     };
 
     // checks if we're uploading the same file again
