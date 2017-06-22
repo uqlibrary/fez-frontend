@@ -279,8 +279,10 @@ export default {
             limit: 10,
             messages: {
                 maxFiles: 'Only [maxNumberOfFiles] files are allowed to be uploaded.',
-                rejectedFiles: '[numberOfRejectedFiles] file/s was not included in this upload.',
-                acceptedFiles: 'File/s have already been added.',
+                invalidFormatFile: 'Invalid filename format.',
+                invalidFormatFiles: '[numberOfRejectedFiles] has an invalid filename format.',
+                existingFile: 'File has already been added.',
+                existingFiles: '[numberOfExistingFiles] have already been added.',
                 cancelledUpload: 'File upload cancelled.',
                 uploadError: {
                     default: 'There seems to be a problem uploading the file. Please try again later.'
