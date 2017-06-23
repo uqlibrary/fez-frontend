@@ -280,8 +280,8 @@ export default {
             filenameLimit: 45,
             messages: {
                 maxFiles: 'Only [maxNumberOfFiles] files are allowed to be uploaded.',
-                invalidFormatFile: 'Invalid filename format.',
-                invalidFormatFiles: '[numberOfRejectedFiles] has an invalid filename format.',
+                invalidFormatFile: 'Invalid file name.',
+                invalidFormatFiles: '[numberOfRejectedFiles] have an invalid file name.',
                 invalidFileLength: 'Filename is too long',
                 invalidFileLengths: '[numberOfLongFiles] filenames are too long',
                 existingFile: 'File has already been added.',
