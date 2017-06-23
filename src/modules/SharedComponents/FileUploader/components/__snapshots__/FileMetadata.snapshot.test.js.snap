@@ -4,6 +4,46 @@ exports[`File metadata snapshots tests renders default file metadata component 1
 <div
   className="metadata-container"
 >
+  <Dialog
+    actions={
+      Array [
+        <FlatButton
+          disabled={false}
+          fullWidth={false}
+          label="Cancel"
+          labelPosition="after"
+          labelStyle={Object {}}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onTouchStart={[Function]}
+          onTouchTap={[Function]}
+          primary={true}
+          secondary={false}
+      />,
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          label="Delete"
+          labelPosition="after"
+          onTouchTap={[Function]}
+          primary={false}
+          secondary={true}
+          style={
+              Object {
+                  "marginLeft": "12px",
+                }
+          }
+      />,
+      ]
+    }
+    autoDetectWindowHeight={true}
+    autoScrollBodyContent={false}
+    modal={false}
+    onRequestClose={[Function]}
+    open={false}
+    repositionOnUpdate={true}
+  />
   <Toolbar
     className="header metadata-row"
     noGutter={false}
@@ -33,13 +73,23 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       firstChild={false}
       lastChild={false}
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <IconButton
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onClick={[Function]}
+        tooltip="Delete all files"
+        tooltipPosition="bottom-left"
+        touch={false}
       >
-        delete
-      </FontIcon>
+        <FontIcon
+          className="material-icons"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          delete_sweep
+        </FontIcon>
+      </IconButton>
     </ToolbarGroup>
   </Toolbar>
   <Toolbar
@@ -176,14 +226,23 @@ exports[`File metadata snapshots tests renders default file metadata component 1
           }
         }
       />
-      <FontIcon
-        className="material-icons"
+      <IconButton
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
         onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+        tooltip="Delete this file"
+        tooltipPosition="bottom-left"
+        touch={false}
       >
-        delete
-      </FontIcon>
+        <FontIcon
+          className="material-icons"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          delete
+        </FontIcon>
+      </IconButton>
     </ToolbarGroup>
   </Toolbar>
   <Checkbox

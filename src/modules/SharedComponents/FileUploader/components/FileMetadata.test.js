@@ -37,12 +37,4 @@ describe('File metadata unit tests', () => {
         app.state('accessFields').testField1 = accessIds.closedAccessId;
         expect(app.instance().isOpenAccessSelected()).toEqual(false);
     });
-
-
-    it('deletes a file', () => {
-        const INDEX = 0;
-
-        app.instance().deleteRow(INDEX);
-        expect(deleteFile.calledOnce).toEqual(true);
-    });
 });

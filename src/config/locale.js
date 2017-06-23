@@ -10,6 +10,7 @@ export default {
                 abandon: 'Abandon and search again',
                 cancel: 'Cancel',
                 close: 'Close',
+                delete: 'Delete',
                 submitForApproval: 'Submit for approval'
             }
         }
@@ -279,6 +280,10 @@ export default {
             limit: 10,
             filenameLimit: 45,
             messages: {
+                deleteAllFilesDialogContent: 'Are you sure you want to delete all these files?',
+                deleteFileDialogContent: 'Are you sure you want to delete this file?',
+                deleteAllFilesToolTip: 'Delete all files',
+                deleteFileToolTip: 'Delete this file',
                 maxFiles: 'Only [maxNumberOfFiles] files are allowed to be uploaded.',
                 invalidFormatFile: 'Invalid file name.',
                 invalidFormatFiles: '[numberOfRejectedFiles] have an invalid file name.',

@@ -2,6 +2,14 @@
   display: none;
 }
 
+.deleteIcon {
+  color: #CCC !important;
+
+  &:hover {
+    color: #757575 !important;
+  }
+}
+
 .metadata-container {
   padding: 0px !important;
   > div:first-child {

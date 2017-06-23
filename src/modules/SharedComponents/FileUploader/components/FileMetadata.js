@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import DatePicker from 'material-ui/DatePicker';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
 import Checkbox from 'material-ui/Checkbox';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import FontIcon from 'material-ui/FontIcon';
+import IconButton from 'material-ui/IconButton';
 import CircularProgress from 'material-ui/CircularProgress';
+import RaisedButton from 'material-ui/RaisedButton';
 
 // custom components
 import {locale} from 'config';
@@ -18,6 +22,7 @@ export default class FileMetadata extends Component {
 
     static propTypes = {
         acceptedFiles: PropTypes.object.isRequired,
+        deleteAllFiles: PropTypes.func,
         deleteFile: PropTypes.func,
         form: PropTypes.string.isRequired,
         setCheckboxState: PropTypes.func,
@@ -31,6 +36,10 @@ export default class FileMetadata extends Component {
             isOpenAccess: false,
             accessFields: [],
             completed: 0,
+            deleteSingleFile: true,
+            deleteFileIndex: -1,
+            deleteDialogContent: '',
+            deleteDialogOpen: false
         };
     }
 
@@ -86,6 +95,8 @@ export default class FileMetadata extends Component {
 
     buildInterface = () => {
         const {acceptedFiles, uploadError} = this.props;
+        const fileInformation = locale.sharedComponents.files;
+        const messages = fileInformation.messages;
 
         return(
             acceptedFiles.map((file, index) => {
@@ -123,9 +134,12 @@ export default class FileMetadata extends Component {
                                 <FontIcon
                                 className="material-icons green-tick">done</FontIcon>
                             )}
-                            <FontIcon
-                                onClick={() => this.deleteRow(index)}
-                                className="material-icons">delete</FontIcon>
+                            <IconButton
+                                tooltip={messages.deleteFileToolTip}
+                                tooltipPosition="bottom-left"
+                                onClick={() => this.deleteFileConfirmation(index)}>
+                                <FontIcon className="material-icons deleteIcon">delete</FontIcon>
+                            </IconButton>
                         </ToolbarGroup>
                     </Toolbar>
                 );
@@ -133,8 +147,47 @@ export default class FileMetadata extends Component {
         );
     };
 
-    deleteRow = (index) => {
-        this.props.deleteFile(index);
+    deleteFileAction = () => {
+        if (this.state.deleteSingleFile) {
+            this.props.deleteFile(this.state.deleteFileIndex);
+        } else {
+            this.props.deleteAllFiles();
+        }
+
+        this.handleClose();
+    };
+
+    deleteAllFilesConfirmation = () => {
+        const fileInformation = locale.sharedComponents.files;
+        const messages = fileInformation.messages;
+
+        this.setState({
+            deleteSingleFile: false,
+            deleteFileIndex: -1,
+            deleteDialogOpen: true,
+            deleteDialogContent: messages.deleteAllFilesDialogContent
+        });
+    };
+
+    deleteFileConfirmation = (index) => {
+        const fileInformation = locale.sharedComponents.files;
+        const messages = fileInformation.messages;
+
+        this.setState({
+            deleteSingleFile: true,
+            deleteFileIndex: index,
+            deleteDialogOpen: true,
+            deleteDialogContent: messages.deleteFileDialogContent
+        });
+    };
+
+    handleClose = () => {
+        this.setState({
+            deleteAction: '',
+            deleteFileIndex: -1,
+            deleteDialogOpen: false,
+            deleteDialogContent: ''
+        });
     };
 
     isOpenAccessSelected = () => {
@@ -160,14 +213,37 @@ export default class FileMetadata extends Component {
     render() {
         const {acceptedFiles, setCheckboxState} = this.props;
         const fileInformation = locale.sharedComponents.files;
+        const buttonLabels = locale.global.labels.buttons;
         const messages = fileInformation.messages;
 
         // check if open access OR
         // check if the number of manipulated selectFields is less than the total number of accepted files (because we default all selectFields to open access)
         const showOpenAccessNotice = this.state.isOpenAccess || Object.keys(this.state.accessFields).length < acceptedFiles.size;
 
+        const deleteActions = [
+            <FlatButton
+                label={buttonLabels.cancel}
+                primary
+                onTouchTap={this.handleClose}
+            />,
+            <RaisedButton
+                label={buttonLabels.delete}
+                secondary
+                style={{marginLeft: '12px'}}
+                onTouchTap={this.deleteFileAction}
+            />,
+        ];
+
         return (
             <div className="metadata-container">
+                <Dialog
+                    actions={deleteActions}
+                    modal={false}
+                    open={this.state.deleteDialogOpen}
+                    onRequestClose={this.handleClose}
+                >
+                    {this.state.deleteDialogContent}
+                </Dialog>
                 <Toolbar className="header metadata-row">
                     <ToolbarGroup className="filename">
                         {fileInformation.list.filenameLabel}
@@ -179,8 +255,12 @@ export default class FileMetadata extends Component {
                         {fileInformation.list.embargoDateLabel}
                     </ToolbarGroup>
                     <ToolbarGroup>
-                        <FontIcon
-                            className="material-icons">delete</FontIcon>
+                        <IconButton
+                            tooltip={messages.deleteAllFilesToolTip}
+                            tooltipPosition="bottom-left"
+                            onClick={this.deleteAllFilesConfirmation}>
+                            <FontIcon className="material-icons deleteIcon">delete_sweep</FontIcon>
+                        </IconButton>
                     </ToolbarGroup>
                 </Toolbar>
                 {this.buildInterface()}

@@ -8,6 +8,7 @@ export const FILE_DELETED = 'FILE_DELETED';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADING = 'FILE_DOCUMENT_ACCESS_TYPES_LOADING';
 export const FILE_DOCUMENT_ACCESS_TYPES_LOADED = 'FILE_DOCUMENT_ACCESS_TYPES_LOADED';
 export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
+export const FILE_LIST_DELETED = 'FILE_LIST_DELETED';
 export const FILE_OPEN_ACCESS_CHECKBOX_ACCEPTED = 'FILE_OPEN_ACCESS_CHECKBOX_ACCEPTED';
 export const FILE_SET_OPEN_ACCESS = 'FILE_SET_OPEN_ACCESS';
 export const FILE_STATE_RESTORED = 'FILE_STATE_RESTORED';
@@ -116,6 +117,12 @@ export function deleteFile(index) {
     return {
         type: FILE_DELETED,
         payload: index
+    };
+}
+
+export function deleteAllFiles() {
+    return {
+        type: FILE_LIST_DELETED
     };
 }
 
