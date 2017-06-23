@@ -83,7 +83,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         touch={false}
       >
         <FontIcon
-          className="material-icons"
+          className="material-icons deleteIcon"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -236,7 +236,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         touch={false}
       >
         <FontIcon
-          className="material-icons"
+          className="material-icons deleteIcon"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
