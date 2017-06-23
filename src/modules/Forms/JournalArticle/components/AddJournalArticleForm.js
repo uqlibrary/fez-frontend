@@ -5,7 +5,7 @@ import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-import {HelpIcon, TextField, DatePicker} from 'uqlibrary-react-toolbox';
+import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import {Authors, FileUploader, SelectField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 
@@ -99,9 +99,9 @@ export default class AddJournalArticleForm extends Component {
 
         // construct partial date
         formData.rek_date = new Date(
-            parseInt(formData.partialDateYear),
-            formData.partialDateMonth ? parseInt(formData.partialDateMonth) : 0,
-            formData.partialDateDay ? parseInt(formData.partialDateDay) : 1);
+            parseInt(formData.partialDateYear, 10),
+            formData.partialDateMonth ? parseInt(formData.partialDateMonth, 10) : 0,
+            formData.partialDateDay ? parseInt(formData.partialDateDay, 10) : 1);
 
         const fileData = this.setFileData();
         const authorData = this.setAuthorData();
@@ -118,8 +118,7 @@ export default class AddJournalArticleForm extends Component {
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
 
-        const {formValues, form, handleSubmit} = this.props;
-        const DateTimeFormat = global.Intl.DateTimeFormat;
+        const {form, handleSubmit} = this.props;
 
         return (
             <form onSubmit={handleSubmit(this.submitRecord)}>
@@ -223,8 +222,7 @@ export default class AddJournalArticleForm extends Component {
                                        validate={[validation.required]}>
                                     {
                                         this.props.publicationSubTypeList.map(item => (
-                                            <MenuItem key={item.get('id')} value={item.get('label')}
-                                                      primaryText={item.get('label')}/>
+                                            <MenuItem key={item.get('id')} value={item.get('label')} primaryText={item.get('label')}/>
                                         ))
                                     }
                                 </Field>

@@ -100,8 +100,8 @@ export default class PublicationTypeForm extends Component {
                                        formValue={formValues.get('publicationType')}
                                        onChange={loadSelectedPublicationType}>
                                     {
-                                        this.state.displayPublicationTypeList.map(item => (
-                                            item.id !== 0 ? <MenuItem value={item.id} primaryText={item.name}/> :
+                                        this.state.displayPublicationTypeList.map((item, index) => (
+                                            item.id !== 0 ? <MenuItem key={index} value={item.id} primaryText={item.name}/> :
                                                 <Divider/>
                                         ))
                                     }

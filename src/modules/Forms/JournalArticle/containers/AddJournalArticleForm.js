@@ -1,7 +1,4 @@
-/* eslint-disable */
-
 import {connect} from 'react-redux';
-
 import {reduxForm, getFormValues} from 'redux-form/immutable';
 import AddJournalArticleForm from '../components/AddJournalArticleForm';
 import {loadPublicationSubTypesList, cancelAddRecord, loadAuthorsList, submitRecordForApproval} from '../actions';
@@ -12,24 +9,21 @@ const scrollToElement = require('scrollto-element');
 
 let AddJournalArticleFormContainer = reduxForm({
     validate: (values) => {
-
-        console.dir(values);
-
-        //validate partial date of custom date picker
+        // validate partial date of custom date picker
         if (values.get('partialDateYear') && values.get('partialDateMonth') && values.get('partialDateDay')) {
             const parsedDate = new Date(
-                parseInt(values.get('partialDateYear')),
-                parseInt(values.get('partialDateMonth')),
-                parseInt(values.get('partialDateDay')));
+                parseInt(values.get('partialDateYear'), 10),
+                parseInt(values.get('partialDateMonth'), 10),
+                parseInt(values.get('partialDateDay'), 10));
 
-            if (parsedDate.getMonth() !== parseInt(values.get('partialDateMonth'))) {
+            if (parsedDate.getMonth() !== parseInt(values.get('partialDateMonth'), 10)) {
                 return { partialDateDay: 'Invalid date'};
             }
         }
         return null;
     },
 
-    onSubmitFail: (result, dispatch, submitError, props) => {
+    onSubmitFail: (result) => {
         try {
             const target = Object.keys(result);
             const invalidField = document.getElementsByName(target[0])[0];
