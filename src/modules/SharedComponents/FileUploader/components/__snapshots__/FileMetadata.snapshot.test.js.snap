@@ -24,6 +24,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         <RaisedButton
           disabled={false}
           fullWidth={false}
+          keyboardFocused={true}
           label="Delete"
           labelPosition="after"
           onTouchTap={[Function]}
@@ -137,13 +138,23 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         multiple={false}
         name="fileAccess0"
         onChange={[Function]}
-        style={
-          Object {
-            "width": 180,
-          }
-        }
-        value={9}
+        value={null}
       >
+        <MenuItem
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          checked={false}
+          desktop={false}
+          disabled={false}
+          focusState="none"
+          insetChildren={false}
+          primaryText="Select access conditions"
+          value={null}
+        />
         <MenuItem
           anchorOrigin={
             Object {
@@ -173,21 +184,6 @@ exports[`File metadata snapshots tests renders default file metadata component 1
           insetChildren={false}
           primaryText="Closed Access"
           value={8}
-        />
-        <MenuItem
-          anchorOrigin={
-            Object {
-              "horizontal": "right",
-              "vertical": "top",
-            }
-          }
-          checked={false}
-          desktop={false}
-          disabled={false}
-          focusState="none"
-          insetChildren={false}
-          primaryText="Embargoed access"
-          value={2}
         />
       </SelectField>
     </ToolbarGroup>

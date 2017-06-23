@@ -56,7 +56,7 @@ export default class FileMetadata extends Component {
         const datepickerFieldName = `${fileInformation.fields.datepickerAccess}${id}`;
         const selectFieldName = `${fileInformation.fields.fileAccess}${id}`;
         const accessIds = fileInformation.constants;
-        const disabled = this.state.accessFields[selectFieldName] !== accessIds.embargoAccessId;
+        const disabled = this.state.accessFields[selectFieldName] !== accessIds.openAccessId;
 
         return (
         <DatePicker
@@ -83,12 +83,11 @@ export default class FileMetadata extends Component {
                 key={fieldName}
                 name={fieldName}
                 onChange={this.updateLocalState(fieldName)}
-                style={{width: 180}}
-                value={this.state.accessFields[fieldName] || accessIds.openAccessId}
+                value={this.state.accessFields[fieldName] || null}
             >
+                <MenuItem value={null} primaryText={selectFieldValues.initialValue} />
                 <MenuItem value={accessIds.openAccessId} primaryText={selectFieldValues.openAccessValue} />
                 <MenuItem value={accessIds.closedAccessId} primaryText={selectFieldValues.closedAccessValue} />
-                <MenuItem value={accessIds.embargoAccessId} primaryText={selectFieldValues.embargoedAccessValue} />
             </SelectField>
         );
     };
@@ -228,6 +227,7 @@ export default class FileMetadata extends Component {
             <RaisedButton
                 label={buttonLabels.delete}
                 secondary
+                keyboardFocused
                 style={{marginLeft: '12px'}}
                 onTouchTap={this.deleteFileAction}
             />,
