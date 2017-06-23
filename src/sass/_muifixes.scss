@@ -6,7 +6,7 @@ label {
 }
 
 // Negates the 12px vertical padding by Bulma - only in the body of each card - allowing MUI components to space themselves
-.body-1 .column {
+form .column {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
 }
