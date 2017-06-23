@@ -65,6 +65,7 @@ export default class FileUploader extends PureComponent {
         const msg = this.processErrorMessage(
             addedFiles,
             existingFileCount,
+            '[numberOfExistingFiles]',
             fileInformation.messages.existingFile,
             fileInformation.messages.existingFiles);
         this.props.showSnackbar(msg);
@@ -75,6 +76,7 @@ export default class FileUploader extends PureComponent {
         const msg = this.processErrorMessage(
             addedFiles,
             invalidFileCount,
+            '[numberOfRejectedFiles]',
             fileInformation.messages.invalidFormatFile,
             fileInformation.messages.invalidFormatFiles);
 
@@ -86,18 +88,19 @@ export default class FileUploader extends PureComponent {
         const msg = this.processErrorMessage(
             addedFiles,
             invalidFileLengthCount,
+            '[numberOfLongFiles]',
             fileInformation.messages.invalidFileLength,
             fileInformation.messages.invalidFileLengths);
 
         this.props.showSnackbar(msg);
     };
 
-    processErrorMessage = (addedFiles, count, singleFileMsg, multipleFilesMsg) => {
+    processErrorMessage = (addedFiles, count, template, singleFileMsg, multipleFilesMsg) => {
         let msg = singleFileMsg;
 
         if (addedFiles.length > 1) {
             const updatedString = count === 1 ? `${count} file` : `${count} files`;
-            msg = multipleFilesMsg.replace('[numberOfLongFiles]', updatedString);
+            msg = multipleFilesMsg.replace(template, updatedString);
         }
 
         return msg;
