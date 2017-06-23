@@ -27,8 +27,13 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
           <h2
             className="title"
           >
-            Upload open access or administrative files
+            Files
           </h2>
+          <h4
+            className="sub-title"
+          >
+            Upload new files
+          </h4>
         </div>
         <div
           className="column is-narrow is-helpicon"
@@ -43,15 +48,13 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
     <CardText
       className="body-1"
     >
-      <p
-        className="sub-title"
-      />
       <div
         className="columns"
       >
         <div
           className="column"
         >
+          <br />
           <Dropzone
             disableClick={false}
             disablePreview={true}
@@ -73,7 +76,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
                 className="column"
               >
                 <h3>
-                  File name restrictions
+                  File upload restrictions
                 </h3>
                 <div>
                   <ul>
@@ -81,19 +84,16 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
                       No folders
                     </li>
                     <li>
-                      Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9)
+                      Limited to 10 files
                     </li>
                     <li>
-                      Only numbers and lowercase characters in the file extension
+                      Begin with a letter and are less than 45 characters long
                     </li>
                     <li>
-                      Under 45 characters
+                      Contain only upper and lowercase alphanumeric characters, and underscores
                     </li>
                     <li>
-                      Only one file extension (on period (.) character) and
-                    </li>
-                    <li>
-                      Starting with a letter. Eg "s12345678_phd_thesis.pdf"
+                      Have only a single period which precedes the file extension: “.pdf”
                     </li>
                   </ul>
                 </div>
