@@ -26,3 +26,7 @@ export const cannotBeCI = value => {
 
 // Project short code
 export const shortCode = value => /^[a-zA-Z0-9]{8}$/.test(value) !== true ? 'The project short code must consist of 8 alpha numeric characters' : undefined;
+
+// DateTime
+export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? 'Invalid date' : undefined;
+export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? 'Invalid year' : undefined;

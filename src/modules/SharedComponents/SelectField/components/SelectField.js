@@ -15,7 +15,7 @@ export default function SelectFieldWrapper(props) {
         }
     };
     return (
-        <div style={{position: 'relative', width: '100%'}}>
+        <div className="selectField" style={{position: 'relative', width: '100%'}}>
             <SelectField {...filteredProps} />
 
             {props.helpText && (

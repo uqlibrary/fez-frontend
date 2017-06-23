@@ -5,7 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import DatePickerDialog from 'material-ui/DatePicker/DatePickerDialog';
 import {HelpIcon, TextField, DatePicker} from 'uqlibrary-react-toolbox';
 import {Authors, FileUploader, SelectField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
@@ -98,10 +98,11 @@ export default class AddJournalArticleForm extends Component {
 
         const formData = formValues.toJS();
 
-        // check if the date object is set otherwise default to today
-        if (!formData.rek_date) {
-            formData.rek_date = new Date();
-        }
+        // construct partial date
+        formData.rek_date = new Date(
+            parseInt(formData.partialDateYear),
+            formData.partialDateMonth ? parseInt(formData.partialDateMonth) : 0,
+            formData.partialDateDay ? parseInt(formData.partialDateDay) : 1);
 
         const fileData = this.setFileData();
         const authorData = this.setAuthorData();
@@ -119,7 +120,6 @@ export default class AddJournalArticleForm extends Component {
         const buttonLabels = locale.global.labels.buttons;
 
         const {formValues, form, handleSubmit} = this.props;
-
         const DateTimeFormat = global.Intl.DateTimeFormat;
 
         return (
@@ -163,13 +163,55 @@ export default class AddJournalArticleForm extends Component {
                                 />
                             </div>
                             <div className="column" style={{paddingTop: '0', paddingBottom: '0'}}>
-                                <Field component={DatePicker}
-                                       floatingLabelText={journalArticleInformation.fields.publishDateLabel}
-                                       fullWidth
-                                       locale="en-AU"
-                                       DateTimeFormat={DateTimeFormat}
-                                       name="rek_date"
-                                />
+                                <div className="columns">
+                                    <div className="column">
+                                        <Field component={TextField}
+                                               name="partialDateDay"
+                                               maxLength="2"
+                                               type="text"
+                                               fullWidth
+                                               floatingLabelText="Day"
+                                               floatingLabelFixed
+                                               validate={[validation.dateTimeDay]}
+                                        />
+                                    </div>
+                                    <div className="form-spacer"/>
+                                    <div className="column">
+                                        <Field component={SelectField}
+                                               name="partialDateMonth"
+                                               style={{width: '100%'}}
+                                               fullWidth
+                                               floatingLabelText="Month"
+                                               floatingLabelFixed>
+                                            <MenuItem key={-1} value="-1" primaryText=""/>
+                                            <MenuItem key={0} value="0" primaryText="January"/>
+                                            <MenuItem key={1} value="1" primaryText="February"/>
+                                            <MenuItem key={2} value="2" primaryText="March"/>
+                                            <MenuItem key={3} value="3" primaryText="April"/>
+                                            <MenuItem key={4} value="4" primaryText="May"/>
+                                            <MenuItem key={5} value="5" primaryText="June"/>
+                                            <MenuItem key={6} value="6" primaryText="July"/>
+                                            <MenuItem key={7} value="7" primaryText="August"/>
+                                            <MenuItem key={8} value="8" primaryText="September"/>
+                                            <MenuItem key={9} value="9" primaryText="October"/>
+                                            <MenuItem key={10} value="10" primaryText="November"/>
+                                            <MenuItem key={11} value="11" primaryText="December"/>
+                                        </Field>
+                                    </div>
+                                    <div className="form-spacer"/>
+                                    <div className="column">
+                                        <Field component={TextField}
+                                               name="partialDateYear"
+                                               type="text"
+                                               fullWidth
+                                               maxLength="4"
+                                               floatingLabelText="Year"
+                                               floatingLabelFixed
+                                               validate={[validation.dateTimeYear]}
+                                        />
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <div className="columns is-gapless">
@@ -253,7 +295,7 @@ export default class AddJournalArticleForm extends Component {
 
                                 <div className="columns">
                                     <div className="column is-textarea">
-                                        <Field component={TextField} name="" type="text" fullWidth multiLine
+                                        <Field component={TextField} name="fez_record_search_key_article_number.rek_article_number" type="text" fullWidth multiLine
                                                floatingLabelText={optionalInformation.fields.articleNumber}  />
                                     </div>
                                 </div>
