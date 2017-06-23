@@ -167,7 +167,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         disabled={true}
         firstDayOfWeek={0}
         hideCalendarDate={false}
-        hintText="22/6/2017"
+        hintText="23/6/2017"
         locale="en-AU"
         name="accessDate0"
         style={
