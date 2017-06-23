@@ -144,7 +144,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div className="columns is-gapless">
+                        <div className="columns">
                             <div className="column">
                                 <Field component={TextField}
                                        autoFocus
@@ -188,7 +188,7 @@ export default class AddJournalArticleForm extends Component {
                                                       primaryText={item.get('label')}/>
                                         ))
                                     }
-                                </Field><br />
+                                </Field>
                             </div>
                         </div>
                     </CardText>
@@ -285,7 +285,7 @@ export default class AddJournalArticleForm extends Component {
                                                fullWidth
                                                floatingLabelText={optionalInformation.fields.urlLabel}
                                                validate={[validation.url]}
-                                        /><br />
+                                        />
                                     </div>
                                 </div>
                     </CardText>

@@ -23,17 +23,21 @@ class Dashboard extends React.Component {
         return (
             <div className="layout-fill">
                 <div className="layout-card">
-                    <div className="image-cover">
-                        <div className="user-information" style={{color: '#FFF'}}>
-                            <span className="display-1">{account.get('title')} {account.get('name')}</span><br/>
-                            <span className="subhead">{account.get('fullTitle')}</span><span className="body-1">{account.get('school')}</span>
+                    <div className="columns">
+                        <div className="column">
+                            <div className="image-cover">
+                                <div className="user-information" style={{color: '#FFF'}}>
+                                    <span className="display-1">{account.get('title')} {account.get('name')}</span><br/>
+                                    <span className="subhead">{account.get('fullTitle')}</span><span
+                                    className="body-1">{account.get('school')}</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="time-display-wrap"/>
 
-                    <div className="columns is-gapless">
+                    <div className="columns">
                         <div className="column is-one-third">
-                            <Card style={{backgroundColor: '#ED5C8F', marginRight: '12px', marginTop: '24px', height: '100%'}}>
+                            <Card style={{backgroundColor: '#ED5C8F', height: '100%'}}>
                                 <CardHeader className="card-header">
                                     <h2 className="title" style={{color: '#FFF'}}>eSpace publications by type</h2>
                                 </CardHeader>
@@ -46,14 +50,15 @@ class Dashboard extends React.Component {
 
                             </Card>
                         </div>
-                        <div className="column is-two-thirds">
-                            <Card style={{marginLeft: '12px', marginTop: '24px', height: '100%'}}>
+                        <div className="column">
+                            <Card style={{height: '100%'}}>
                                 <CardHeader className="card-header">
                                     <h2 className="title">eSpace publications by year</h2>
                                 </CardHeader>
 
-                                <CardText className="body-1"><br />
-                                    <div><AuthorsPublicationsPerYearChart rawData={publicationYearsMockData} yAxisTitle="Total publications"/>
+                                <CardText className="body-1"><br/>
+                                    <div><AuthorsPublicationsPerYearChart rawData={publicationYearsMockData}
+                                                                          yAxisTitle="Total publications"/>
                                     </div>
                                 </CardText>
 

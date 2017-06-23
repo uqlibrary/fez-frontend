@@ -38,7 +38,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       className="body-1"
     >
       <div
-        className="columns is-gapless"
+        className="columns"
       >
         <div
           className="column"
@@ -243,7 +243,6 @@ exports[`Add Journal article form snapshot tests renders default add journal art
               value="Others"
             />
           </Field>
-          <br />
         </div>
       </div>
     </CardText>
@@ -423,7 +422,6 @@ exports[`Add Journal article form snapshot tests renders default add journal art
               ]
             }
           />
-          <br />
         </div>
       </div>
     </CardText>
