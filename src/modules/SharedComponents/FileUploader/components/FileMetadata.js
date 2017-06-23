@@ -223,7 +223,6 @@ export default class FileMetadata extends Component {
         const deleteActions = [
             <FlatButton
                 label={buttonLabels.cancel}
-                primary
                 onTouchTap={this.handleClose}
             />,
             <RaisedButton

@@ -18,7 +18,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
           onMouseLeave={[Function]}
           onTouchStart={[Function]}
           onTouchTap={[Function]}
-          primary={true}
+          primary={false}
           secondary={false}
       />,
         <RaisedButton
