@@ -1,11 +1,10 @@
-/* eslint-disable */
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import MenuItem from 'material-ui/MenuItem';
 import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-import DatePickerDialog from 'material-ui/DatePicker/DatePickerDialog';
+import FlatButton from 'material-ui/FlatButton';
 import {HelpIcon, TextField, DatePicker} from 'uqlibrary-react-toolbox';
 import {Authors, FileUploader, SelectField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
@@ -143,18 +142,20 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div className="columns is-gapless">
-                            <Field component={TextField}
-                                   autoFocus
-                                   name="rek_title"
-                                   type="text"
-                                   fullWidth
-                                   floatingLabelText={journalArticleInformation.fields.titleLabel}
-                                   validate={[validation.required]}
-                            />
+                        <div className="columns">
+                            <div className="column">
+                                <Field component={TextField}
+                                       autoFocus
+                                       name="rek_title"
+                                       type="text"
+                                       fullWidth
+                                       floatingLabelText={journalArticleInformation.fields.titleLabel}
+                                       validate={[validation.required]}
+                                />
+                            </div>
                         </div>
-                        <div className="columns is-gapless">
-                            <div className="column is-two-thirds" style={{paddingTop: '0', paddingBottom: '0'}}>
+                        <div className="columns">
+                            <div className="column is-two-thirds">
                                 <Field component={TextField}
                                        name="fez_record_search_key_journal_name.rek_journal_name"
                                        type="text" fullWidth
@@ -162,7 +163,7 @@ export default class AddJournalArticleForm extends Component {
                                        validate={[validation.required]}
                                 />
                             </div>
-                            <div className="column" style={{paddingTop: '0', paddingBottom: '0'}}>
+                            <div className="column">
                                 <div className="columns">
                                     <div className="column">
                                         <Field component={TextField}
@@ -211,21 +212,23 @@ export default class AddJournalArticleForm extends Component {
                                         />
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-                        <div className="columns is-gapless">
-                            <Field component={SelectField}
-                                   name="rek_subtype"
-                                   fullWidth
-                                   floatingLabelText={journalArticleInformation.fields.publicationSubType}
-                                   validate={[validation.required]}>
-                                {
-                                    this.props.publicationSubTypeList.map(item => (
-                                    <MenuItem key={item.get('id')} value={item.get('label')} primaryText={item.get('label')}/>
-                                    ))
-                                }
-                            </Field>
+                        <div className="columns">
+                            <div className="column">
+                                <Field component={SelectField}
+                                       name="rek_subtype"
+                                       fullWidth
+                                       floatingLabelText={journalArticleInformation.fields.publicationSubType}
+                                       validate={[validation.required]}>
+                                    {
+                                        this.props.publicationSubTypeList.map(item => (
+                                            <MenuItem key={item.get('id')} value={item.get('label')}
+                                                      primaryText={item.get('label')}/>
+                                        ))
+                                    }
+                                </Field>
+                            </div>
                         </div>
                     </CardText>
                 </Card>
@@ -249,7 +252,8 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <Authors form={form} dataSource={this.props.authorList} authorFieldLabel={authorsInformation.fields.dropdownLabel} />
+                        <Authors form={form} dataSource={this.props.authorList}
+                                 authorFieldLabel={authorsInformation.fields.dropdownLabel}/>
                     </CardText>
                 </Card>
 
@@ -272,43 +276,48 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
+                        <div className="columns">
+                            <div className="column">
+                                <Field component={TextField}
+                                       name="fez_record_search_key_volume_number.rek_volume_number" type="text"
+                                       fullWidth
+                                       floatingLabelText={optionalInformation.fields.volumeLabel}/>
+                            </div>
+                            <div className="column">
+                                <Field component={TextField} name="fez_record_search_key_issue_number.rek_issue_number"
+                                       type="text" fullWidth
+                                       floatingLabelText={optionalInformation.fields.issueLabel}/>
+                            </div>
 
+                            <div className="column">
+                                <Field component={TextField} name="fez_record_search_key_start_page.rek_start_page"
+                                       type="text" fullWidth
+                                       floatingLabelText={optionalInformation.fields.startPageLabel}/>
+                            </div>
+                            <div className="column">
+                                <Field component={TextField} name="fez_record_search_key_end_page.rek_end_page"
+                                       type="text" fullWidth
+                                       floatingLabelText={optionalInformation.fields.endPageLabel}/>
+                            </div>
+                        </div>
+
+                        <div className="columns">
+                            <div className="column">
+                                <Field component={TextField} name="fez_record_search_key_article_number.rek_article_number"
+                                       type="text" fullWidth multiLine
+                                       floatingLabelText={optionalInformation.fields.articleNumber}/>
+                            </div>
+                        </div>
+
+                        <div className="columns">
+                            <div className="column">
+                                <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text"
+                                       fullWidth multiLine
+                                       rows={1} floatingLabelText={optionalInformation.fields.notesLabel}/>
+                            </div>
+                        </div>
                                 <div className="columns">
                                     <div className="column">
-                                        <Field component={TextField} name="fez_record_search_key_volume_number.rek_volume_number" type="text" fullWidth
-                                               floatingLabelText={optionalInformation.fields.volumeLabel}/>
-                                    </div>
-                                    <div className="column">
-                                        <Field component={TextField} name="fez_record_search_key_issue_number.rek_issue_number" type="text" fullWidth
-                                               floatingLabelText={optionalInformation.fields.issueLabel}/>
-                                    </div>
-
-                                    <div className="column">
-                                        <Field component={TextField} name="fez_record_search_key_start_page.rek_start_page" type="text" fullWidth
-                                               floatingLabelText={optionalInformation.fields.startPageLabel}/>
-                                    </div>
-                                    <div className="column">
-                                        <Field component={TextField} name="fez_record_search_key_end_page.rek_end_page" type="text" fullWidth
-                                               floatingLabelText={optionalInformation.fields.endPageLabel}/>
-                                    </div>
-                                </div>
-
-                                <div className="columns">
-                                    <div className="column is-textarea">
-                                        <Field component={TextField} name="fez_record_search_key_article_number.rek_article_number" type="text" fullWidth multiLine
-                                               floatingLabelText={optionalInformation.fields.articleNumber}  />
-                                    </div>
-                                </div>
-
-                                <div className="columns">
-                                    <div className="column is-textarea">
-                                        <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text" fullWidth multiLine
-                                               rows={1} floatingLabelText={optionalInformation.fields.notesLabel} />
-                                    </div>
-                                </div>
-
-                                <div className="columns">
-                                    <div className="column is-textarea">
                                         <Field component={TextField}
                                                name="fez_record_search_key_link.rek_link"
                                                type="text"
@@ -322,11 +331,13 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
 
                 {/* Files */}
-                <FileUploader form="FileUploadForm" />
+                <FileUploader form="FileUploadForm"/>
 
                 <div className="buttonWrapper">
-                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddingRecord}/>
-                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}} type="submit"/>
+                    <FlatButton label={buttonLabels.cancel} style={{marginLeft: '12px'}}
+                                  onTouchTap={this.cancelAddingRecord} secondary />
+                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}}
+                                  type="submit"/>
                 </div>
             </form>
         );

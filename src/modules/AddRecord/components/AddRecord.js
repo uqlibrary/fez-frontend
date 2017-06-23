@@ -169,7 +169,6 @@ export default class AddRecord extends React.Component {
                             dataSource={this.props.publicationTypeList}
                             popularTypesList={publicationTypeInformation.popularTypesList} />
 
-
                             {/* Journal Article is selected. Size check needed as it is an empty Immutable Map on initial load */}
                             {formType === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE &&
                             <AddJournalArticleForm form="AddJournalArticleForm" />

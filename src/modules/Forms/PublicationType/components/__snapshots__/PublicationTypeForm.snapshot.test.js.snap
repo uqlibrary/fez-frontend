@@ -33,423 +33,427 @@ exports[`Document type form snapshot tests renders default document type compone
       className="body-1"
     >
       <div
-        className="columns is-gapless"
+        className="columns"
       >
-        <Field
-          component={[Function]}
-          formValue={179}
-          fullWidth={true}
-          name="publicationType"
+        <div
+          className="column"
         >
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+          <Field
+            component={[Function]}
+            formValue={179}
+            fullWidth={true}
+            name="publicationType"
+          >
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Book"
-            value={174}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Book"
+              value={174}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Book Chapter"
-            value={177}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Book Chapter"
+              value={177}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Conference Paper"
-            value={130}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Conference Paper"
+              value={130}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Journal Article"
-            value={179}
-          />
-          <Divider
-            inset={false}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Journal Article"
+              value={179}
+            />
+            <Divider
+              inset={false}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Generic Document"
-            value={202}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Generic Document"
+              value={202}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Audio Document"
-            value={263}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Audio Document"
+              value={263}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Book"
-            value={174}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Book"
+              value={174}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Book Chapter"
-            value={177}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Book Chapter"
+              value={177}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Conference Paper"
-            value={130}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Conference Paper"
+              value={130}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Conference Proceedings"
-            value={197}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Conference Proceedings"
+              value={197}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Creative Work"
-            value={313}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Creative Work"
+              value={313}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Data Collection"
-            value={371}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Data Collection"
+              value={371}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Department Technical Report"
-            value={181}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Department Technical Report"
+              value={181}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Design"
-            value={316}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Design"
+              value={316}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Digilib Image"
-            value={228}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Digilib Image"
+              value={228}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Image"
-            value={238}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Image"
+              value={238}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Journal"
-            value={294}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Journal"
+              value={294}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Journal Article"
-            value={179}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Journal Article"
+              value={179}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Manuscript"
-            value={374}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Manuscript"
+              value={374}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Newspaper Article"
-            value={191}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Newspaper Article"
+              value={191}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Patent"
-            value={185}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Patent"
+              value={185}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Preprint"
-            value={204}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Preprint"
+              value={204}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Research Report"
-            value={275}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Research Report"
+              value={275}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Seminar Paper"
-            value={189}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Seminar Paper"
+              value={189}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Thesis"
-            value={187}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Thesis"
+              value={187}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Video Document"
-            value={310}
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Video Document"
+              value={310}
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Working Paper"
-            value={183}
-          />
-        </Field>
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Working Paper"
+              value={183}
+            />
+          </Field>
+        </div>
       </div>
     </CardText>
   </Card>

@@ -152,6 +152,7 @@ export default class FileUploader extends PureComponent {
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="title">{fileInformation.title}</h2>
+                                <h4 className="sub-title">{fileInformation.subTitle}</h4>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {fileInformation.help && (
@@ -165,9 +166,8 @@ export default class FileUploader extends PureComponent {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <p className="sub-title">{fileInformation.subTitle}</p>
                         <div className="columns">
-                            <div className="column">
+                            <div className="column"><br />
                                 <Dropzone onDrop={this.openDialog.bind(this)} style={{padding: '10px'}} disablePreview>
                                     {fileInformation.fields.filenameRestrictions}
                                 </Dropzone>

@@ -91,20 +91,23 @@ export default class PublicationTypeForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                       <div className="columns is-gapless">
-                           <Field component={SelectField}
-                                  name="publicationType"
-                                  fullWidth
-                                  floatingLabelText={publicationTypeLabel}
-                                  formValue={formValues.get('publicationType')}
-                                  onChange={loadSelectedPublicationType}>
-                                   {
-                                       this.state.displayPublicationTypeList.map(item => (
-                                           item.id !== 0 ? <MenuItem value={item.id} primaryText={item.name} /> : <Divider />
-                                       ))
-                                   }
-                           </Field>
-                       </div>
+                        <div className="columns">
+                            <div className="column">
+                                <Field component={SelectField}
+                                       name="publicationType"
+                                       fullWidth
+                                       floatingLabelText={publicationTypeLabel}
+                                       formValue={formValues.get('publicationType')}
+                                       onChange={loadSelectedPublicationType}>
+                                    {
+                                        this.state.displayPublicationTypeList.map(item => (
+                                            item.id !== 0 ? <MenuItem value={item.id} primaryText={item.name}/> :
+                                                <Divider/>
+                                        ))
+                                    }
+                                </Field>
+                            </div>
+                        </div>
                     </CardText>
                 </Card>
                 {children}

@@ -7,7 +7,7 @@ export default {
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         labels: {
             buttons: {
-                cancel: 'Cancel',
+                cancel: 'Abandon and search again',
                 close: 'Close',
                 submitForApproval: 'Submit for approval'
             }
@@ -75,8 +75,21 @@ export default {
             text: (
                 <div>
                     <h3>Information</h3>
-                    <p>UQ eSpace is the single authoritative source for the research outputs and research data of the staff and students of the University of Queensland and is the archival home of UQ Research Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ publications to the wider world and provides data for mandatory Government reporting requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ systems, including Academic Portal and the DataHub. It operates as an institutional repository for open access publications, research datasets and other digitised materials created by staff of the University such as print materials, photographs, audio materials, videos, manuscripts and other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the publication profile of researchers at UQ.</p>
-                    <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that requires UQ researchers to make publications arising from their research openly available via UQ eSpace. It has also implemented a Research Data Management policy that sets out the requirements for University of Queensland researchers to ensure that their research data are managed according to legal, statutory, ethical and funding body requirements.</p>
+                    <p>UQ eSpace is the single authoritative source for the research outputs and research data of the
+                        staff and students of the University of Queensland and is the archival home of UQ Research
+                        Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
+                        publications to the wider world and provides data for mandatory Government reporting
+                        requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
+                        systems, including Academic Portal and the DataHub. It operates as an institutional repository
+                        for open access publications, research datasets and other digitised materials created by staff
+                        of the University such as print materials, photographs, audio materials, videos, manuscripts and
+                        other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
+                        publication profile of researchers at UQ.</p>
+                    <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
+                        requires UQ researchers to make publications arising from their research openly available via UQ
+                        eSpace. It has also implemented a Research Data Management policy that sets out the requirements
+                        for University of Queensland researchers to ensure that their research data are managed
+                        according to legal, statutory, ethical and funding body requirements.</p>
                     <h3>General Enquiries</h3>
                     <p>
                         Tel: 07 334 69775 <br/>
@@ -117,11 +130,11 @@ export default {
         browse: {
             title: 'Browse eSpace',
             text: ( <div>
-                        <p>
-                            <a href="https://auth.library.uq.edu.au/login">Temporary login link...</a>
-                        </p>
-                    </div>
-                    ),
+                    <p>
+                        <a href="https://auth.library.uq.edu.au/login">Temporary login link...</a>
+                    </p>
+                </div>
+            ),
             help: {
                 title: 'Search help',
                 text: (
@@ -244,7 +257,7 @@ export default {
                         endPageLabel: 'End page',
                         articleNumber: 'Article number',
                         notesLabel: 'Notes (not publicly viewable)',
-                        urlLabel: 'URL for this publication'
+                        urlLabel: 'Link (URL)'
                     }
                 }
             }
@@ -272,8 +285,8 @@ export default {
     },
     sharedComponents: {
         files: {
-            title: 'Upload open access or administrative files',
-            subTitle: '',
+            title: 'Files',
+            subTitle: 'Upload new files',
             help: {
                 title: 'Files',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
@@ -294,15 +307,14 @@ export default {
                 filenameRestrictions: (
                     <div className="columns fileInstructions">
                         <div className="column">
-                            <h3>File name restrictions</h3>
+                            <h3>File upload restrictions</h3>
                             <div>
                                 <ul>
                                     <li>No folders</li>
-                                    <li>Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9)</li>
-                                    <li>Only numbers and lowercase characters in the file extension</li>
-                                    <li>Under 45 characters</li>
-                                    <li>Only one file extension (on period (.) character) and</li>
-                                    <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
+                                    <li>Limited to 10 files</li>
+                                    <li>Begin with a letter and are less than 45 characters long</li>
+                                    <li>Contain only upper and lowercase alphanumeric characters, and underscores</li>
+                                    <li>Have only a single period which precedes the file extension: “.pdf”</li>
                                 </ul>
                             </div>
                         </div>
@@ -328,7 +340,13 @@ export default {
                 explanationText: 'The following steps will allow you to identify, describe and assign a date which will allow/restrict open access to each file you upload. At the end of this process, the files themselves will be uploaded to the server for review.',
                 disclaimer: (
                     <div className="disclaimer">
-                        <span>DISCLAIMER</span>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus, mauris vitae euismod iaculis, orci nulla tristique neque, eu mattis justo lorem in tellus. Pellentesque ultrices tempor felis, vitae sodales risus hendrerit vel. Cras vitae rutrum mauris. Suspendisse vitae est eleifend, imperdiet est sit amet, sagittis odio. Vivamus quis velit nibh. Fusce ullamcorper pulvinar viverra. Quisque mi nisl, pharetra id massa eget, euismod ullamcorper lectus. Quisque id ligula ullamcorper, efficitur lectus sed, tristique ipsum. Pellentesque quis ipsum ut turpis mattis sodales id ac metus.
+                        <span>DISCLAIMER</span>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                        faucibus, mauris vitae euismod iaculis, orci nulla tristique neque, eu mattis justo lorem in
+                        tellus. Pellentesque ultrices tempor felis, vitae sodales risus hendrerit vel. Cras vitae rutrum
+                        mauris. Suspendisse vitae est eleifend, imperdiet est sit amet, sagittis odio. Vivamus quis
+                        velit nibh. Fusce ullamcorper pulvinar viverra. Quisque mi nisl, pharetra id massa eget, euismod
+                        ullamcorper lectus. Quisque id ligula ullamcorper, efficitur lectus sed, tristique ipsum.
+                        Pellentesque quis ipsum ut turpis mattis sodales id ac metus.
                     </div>
                 )
             },

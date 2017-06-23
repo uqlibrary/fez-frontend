@@ -38,33 +38,31 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       className="body-1"
     >
       <div
-        className="columns is-gapless"
+        className="columns"
       >
-        <Field
-          autoFocus={true}
-          component={[Function]}
-          floatingLabelText="Journal title"
-          fullWidth={true}
-          name="rek_title"
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-        />
+        <div
+          className="column"
+        >
+          <Field
+            autoFocus={true}
+            component={[Function]}
+            floatingLabelText="Journal title"
+            fullWidth={true}
+            name="rek_title"
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </div>
       </div>
       <div
-        className="columns is-gapless"
+        className="columns"
       >
         <div
           className="column is-two-thirds"
-          style={
-            Object {
-              "paddingBottom": "0",
-              "paddingTop": "0",
-            }
-          }
         >
           <Field
             component={[Function]}
@@ -81,12 +79,6 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         </div>
         <div
           className="column"
-          style={
-            Object {
-              "paddingBottom": "0",
-              "paddingTop": "0",
-            }
-          }
         >
           <Field
             DateTimeFormat={[Function]}
@@ -99,155 +91,159 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         </div>
       </div>
       <div
-        className="columns is-gapless"
+        className="columns"
       >
-        <Field
-          component={[Function]}
-          floatingLabelText="Select publication subtype"
-          fullWidth={true}
-          name="rek_subtype"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
+        <div
+          className="column"
         >
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
-              }
+          <Field
+            component={[Function]}
+            floatingLabelText="Select publication subtype"
+            fullWidth={true}
+            name="rek_subtype"
+            validate={
+              Array [
+                [Function],
+              ]
             }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Article (original research)"
-            value="Article (original research)"
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+          >
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Critical review of research, literature review, critical commentary"
-            value="Critical review of research, literature review, critical commentary"
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Article (original research)"
+              value="Article (original research)"
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Letter to editor, brief commentary or brief communication"
-            value="Letter to editor, brief commentary or brief communication"
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Critical review of research, literature review, critical commentary"
+              value="Critical review of research, literature review, critical commentary"
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Correction/erratum"
-            value="Correction/erratum"
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Letter to editor, brief commentary or brief communication"
+              value="Letter to editor, brief commentary or brief communication"
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Review of book, film, TV, video, software, performance, music etc ..."
-            value="Review of book, film, TV, video, software, performance, music etc ..."
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Correction/erratum"
+              value="Correction/erratum"
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Editorial"
-            value="Editorial"
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Review of book, film, TV, video, software, performance, music etc ..."
+              value="Review of book, film, TV, video, software, performance, music etc ..."
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Discussion - respones, round table/panel discussions. Q&A, reply"
-            value="Discussion - respones, round table/panel discussions. Q&A, reply"
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Editorial"
+              value="Editorial"
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Creative work"
-            value="Creative work"
-          />
-          <MenuItem
-            anchorOrigin={
-              Object {
-                "horizontal": "right",
-                "vertical": "top",
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Discussion - respones, round table/panel discussions. Q&A, reply"
+              value="Discussion - respones, round table/panel discussions. Q&A, reply"
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
               }
-            }
-            checked={false}
-            desktop={false}
-            disabled={false}
-            focusState="none"
-            insetChildren={false}
-            primaryText="Others"
-            value="Others"
-          />
-        </Field>
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Creative work"
+              value="Creative work"
+            />
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={false}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Others"
+              value="Others"
+            />
+          </Field>
+        </div>
       </div>
     </CardText>
   </Card>
@@ -379,7 +375,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         className="columns"
       >
         <div
-          className="column is-textarea"
+          className="column"
         >
           <Field
             component={[Function]}
@@ -395,7 +391,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         className="columns"
       >
         <div
-          className="column is-textarea"
+          className="column"
         >
           <Field
             component={[Function]}
@@ -412,11 +408,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         className="columns"
       >
         <div
-          className="column is-textarea"
+          className="column"
         >
           <Field
             component={[Function]}
-            floatingLabelText="URL for this publication"
+            floatingLabelText="Link (URL)"
             fullWidth={true}
             name="fez_record_search_key_link.rek_link"
             type="text"
@@ -436,14 +432,19 @@ exports[`Add Journal article form snapshot tests renders default add journal art
   <div
     className="buttonWrapper"
   >
-    <RaisedButton
+    <FlatButton
       disabled={false}
       fullWidth={false}
-      label="Cancel"
+      label="Abandon and search again"
       labelPosition="after"
+      labelStyle={Object {}}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
       onTouchTap={[Function]}
       primary={false}
-      secondary={false}
+      secondary={true}
       style={
         Object {
           "marginLeft": "12px",
