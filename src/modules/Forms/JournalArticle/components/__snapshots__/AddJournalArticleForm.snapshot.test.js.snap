@@ -80,14 +80,264 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         <div
           className="column"
         >
-          <Field
-            DateTimeFormat={[Function]}
-            component={[Function]}
-            floatingLabelText="Journal publish date"
-            fullWidth={true}
-            locale="en-AU"
-            name="rek_date"
-          />
+          <div
+            className="columns"
+          >
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelFixed={true}
+                floatingLabelText="Day"
+                fullWidth={true}
+                maxLength="2"
+                name="partialDateDay"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </div>
+            <div
+              className="form-spacer"
+            />
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelFixed={true}
+                floatingLabelText="Month"
+                fullWidth={true}
+                name="partialDateMonth"
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText=""
+                  value="-1"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="January"
+                  value="0"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="February"
+                  value="1"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="March"
+                  value="2"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="April"
+                  value="3"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="May"
+                  value="4"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="June"
+                  value="5"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="July"
+                  value="6"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="August"
+                  value="7"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="September"
+                  value="8"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="October"
+                  value="9"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="November"
+                  value="10"
+                />
+                <MenuItem
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="December"
+                  value="11"
+                />
+              </Field>
+            </div>
+            <div
+              className="form-spacer"
+            />
+            <div
+              className="column"
+            >
+              <Field
+                component={[Function]}
+                floatingLabelFixed={true}
+                floatingLabelText="Year"
+                fullWidth={true}
+                maxLength="4"
+                name="partialDateYear"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -382,7 +632,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
             floatingLabelText="Article number"
             fullWidth={true}
             multiLine={true}
-            name=""
+            name="fez_record_search_key_article_number.rek_article_number"
             type="text"
           />
         </div>
