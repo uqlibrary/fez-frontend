@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 
 import FileMetadata from '../components/FileMetadata';
-import {deleteAllFiles, deleteFile, setCheckboxState, setOpenAccessState} from '../actions';
+import {deleteAllFiles, deleteFile, setCheckboxState} from '../actions';
 import {showSnackbar} from 'modules/App/actions';
 
 const FileMetadataContainer = connect((state) => {
