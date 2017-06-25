@@ -15,7 +15,6 @@ const FileMetadataContainer = connect((state) => {
 }, dispatch => {
     return {
         setCheckboxState: (event, isInputChecked) => dispatch(setCheckboxState(event, isInputChecked)),
-        setOpenAccessState: (isOpenAccess) => dispatch(setOpenAccessState(isOpenAccess)),
         deleteAllFiles: () => dispatch(deleteAllFiles()),
         deleteFile: (file) => dispatch(deleteFile(file)),
         showSnackbar: (msg) => dispatch(showSnackbar(msg))

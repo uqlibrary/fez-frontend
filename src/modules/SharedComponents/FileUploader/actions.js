@@ -138,10 +138,3 @@ export function resetToInitialState() {
         type: FILE_STATE_RESTORED
     };
 }
-
-export function setOpenAccessState(isOpenAccess) {
-    return {
-        type: FILE_SET_OPEN_ACCESS,
-        payload: isOpenAccess
-    };
-}
