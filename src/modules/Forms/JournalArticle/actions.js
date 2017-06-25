@@ -11,7 +11,8 @@ export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
 export const PUBLICATION_SUB_TYPES_LOADED = 'PUBLICATION_SUB_TYPES_LOADED';
 export const AUTHORS_LOADING = 'AUTHORS_LOADING';
 export const AUTHORS_LOADED = 'AUTHORS_LOADED';
-export const RECORD_SUBMITTED_RESETTED = 'RECORD_SUBMITTED_RESETTED';
+export const RECORD_SUBMITTED_RESET = 'RECORD_SUBMITTED_RESET';
+export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
 
 // module imports
 import {showSnackbar} from 'modules/App';
@@ -77,17 +78,16 @@ export function cancelAddRecord(message) {
 
 /**
  * Submits the record for approval
- * @returns {Promise}
+ * @returns {function(*)}
  */
 export function submitRecordForApproval(data) {
-    return new Promise((resolve, reject) => {
-        submitRecord(data).then(response => {
-            resolve(response.data);
+    return dispatch => {
+        submitRecord(data).then(() => {
+            dispatch({type: RECORD_SUBMITTED});
         }).catch(error => {
-            reject(error);
             throw(error);
         });
-    });
+    };
 }
 
 /**
@@ -96,6 +96,6 @@ export function submitRecordForApproval(data) {
  */
 export function resetFormSubmissionFlag() {
     return {
-        type: RECORD_SUBMITTED_RESETTED
+        type: RECORD_SUBMITTED_RESET
     };
 }
