@@ -18,11 +18,39 @@ import {showSnackbar} from 'modules/App/actions';
 const scrollToElement = require('scrollto-element');
 
 let AddJournalArticleFormContainer = reduxForm({
+    validate: (values) => {
+        const errors = {};
+
+        // validate partial date of custom date picker
+        if (values.get('partialDateYear') && values.get('partialDateMonth') && values.get('partialDateDay')) {
+            const parsedDate = new Date(
+                parseInt(values.get('partialDateYear'), 10),
+                parseInt(values.get('partialDateMonth'), 10),
+                parseInt(values.get('partialDateDay'), 10));
+
+            if (parsedDate.getMonth() !== parseInt(values.get('partialDateMonth'), 10)) {
+                errors.partialDateDay = 'Invalid date';
+            }
+        }
+        return errors;
+    },
+
     onSubmitFail: (result) => {
-        if (result) {
+        try {
             const target = Object.keys(result);
-            // scroll to the first erroneous field
-            scrollToElement(document.getElementsByName(target[0])[0], 800);
+            const invalidField = document.getElementsByName(target[0])[0];
+            if (invalidField) {
+                // scroll to the first erroneous field
+                scrollToElement(invalidField, 800);
+                // set focus to first invalid field
+                invalidField.focus();
+                const invalidFieldSubElements = invalidField.querySelectorAll('button, select, input, textArea, a');
+                if (invalidFieldSubElements.length > 0) {
+                    invalidFieldSubElements[0].focus();
+                }
+            }
+        } catch (e) {
+            console.debug(e);
         }
     }
 })(AddJournalArticleForm);

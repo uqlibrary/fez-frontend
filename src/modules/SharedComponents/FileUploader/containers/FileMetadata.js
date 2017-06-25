@@ -1,15 +1,10 @@
 import {connect} from 'react-redux';
 
-import {reduxForm} from 'redux-form/immutable';
 import FileMetadata from '../components/FileMetadata';
 import {deleteAllFiles, deleteFile, setCheckboxState, setOpenAccessState} from '../actions';
 import {showSnackbar} from 'modules/App/actions';
 
-let FileMetadataContainer = reduxForm({
-    destroyOnUnmount: false
-})(FileMetadata);
-
-FileMetadataContainer = connect((state) => {
+const FileMetadataContainer = connect((state) => {
     const fileUploadState = state.get('fileUpload');
     return {
         acceptedFiles: fileUploadState.get('acceptedFiles'),
@@ -25,6 +20,6 @@ FileMetadataContainer = connect((state) => {
         deleteFile: (file) => dispatch(deleteFile(file)),
         showSnackbar: (msg) => dispatch(showSnackbar(msg))
     };
-})(FileMetadataContainer);
+})(FileMetadata);
 
 export default FileMetadataContainer;

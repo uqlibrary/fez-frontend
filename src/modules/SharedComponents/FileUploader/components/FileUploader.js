@@ -13,7 +13,6 @@ export default class FileUploader extends PureComponent {
 
     static propTypes = {
         acceptedFiles: PropTypes.object,
-        form: PropTypes.string.isRequired,
         resetToInitialState: PropTypes.func,
         setAcceptedFileList: PropTypes.func,
         showSnackbar: PropTypes.func,
@@ -202,7 +201,7 @@ export default class FileUploader extends PureComponent {
     };
 
     render() {
-        const {acceptedFiles, form, showSnackbar, uploadError} = this.props;
+        const {acceptedFiles, showSnackbar, uploadError} = this.props;
         const fileInformation = locale.sharedComponents.files;
 
         if (uploadError && uploadError.length > 0) {
@@ -241,8 +240,7 @@ export default class FileUploader extends PureComponent {
                         </div>
                         {acceptedFiles.size > 0 && (
                             <FileMetadata
-                                acceptedFiles={acceptedFiles}
-                                form={form} />
+                                acceptedFiles={acceptedFiles} />
                         )}
                     </CardText>
                 </Card>

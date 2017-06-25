@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
-import {Field} from 'redux-form/immutable';
+import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
@@ -296,7 +296,9 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
 
                 {/* Files */}
-                <FileUploader form={form} />
+                <FormSection name="fileUploader">
+                    <FileUploader />
+                </FormSection>
 
                 <div className="buttonWrapper">
                     <RaisedButton

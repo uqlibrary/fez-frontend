@@ -5,16 +5,18 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
 import Checkbox from 'material-ui/Checkbox';
-import SelectField from 'material-ui/SelectField';
+import {SelectField} from 'uqlibrary-react-toolbox';
 import MenuItem from 'material-ui/MenuItem';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import CircularProgress from 'material-ui/CircularProgress';
 import RaisedButton from 'material-ui/RaisedButton';
+import {Field} from 'redux-form/immutable';
 
 // custom components
 import {locale} from 'config';
 import './FileMetadata.scss';
+import {validation} from 'config';
 
 const fileUploadProgress = [];
 
@@ -24,7 +26,6 @@ export default class FileMetadata extends Component {
         acceptedFiles: PropTypes.object.isRequired,
         deleteAllFiles: PropTypes.func,
         deleteFile: PropTypes.func,
-        form: PropTypes.string.isRequired,
         setCheckboxState: PropTypes.func,
         uploadError: PropTypes.string
     };
@@ -78,17 +79,19 @@ export default class FileMetadata extends Component {
         const selectFieldValues = fileInformation.fields.selectField;
 
         return(
-            <SelectField
+            <Field
+                component={SelectField}
                 className="selectField"
                 key={fieldName}
                 name={fieldName}
                 onChange={this.updateLocalState(fieldName)}
                 value={this.state.accessFields[fieldName] || null}
+                validate={[validation.required]}
             >
                 <MenuItem value={null} primaryText={selectFieldValues.initialValue} />
                 <MenuItem value={accessIds.openAccessId} primaryText={selectFieldValues.openAccessValue} />
                 <MenuItem value={accessIds.closedAccessId} primaryText={selectFieldValues.closedAccessValue} />
-            </SelectField>
+            </Field>
         );
     };
 
