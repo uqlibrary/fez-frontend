@@ -36,6 +36,15 @@ export default class PublicationTypeForm extends Component {
         };
     }
 
+    componentDidMount() {
+        // TODO: find a better alternative to set focus to elements
+        const selectField = document.querySelectorAll('.selectField button');
+        console.log(selectField);
+        if (selectField.length > 0) {
+            selectField[0].focus();
+        }
+    }
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.dataSource.size > 0) {
             this.setState({
@@ -102,7 +111,7 @@ export default class PublicationTypeForm extends Component {
                                     {
                                         this.state.displayPublicationTypeList.map((item, index) => (
                                             item.id !== 0 ? <MenuItem key={index} value={item.id} primaryText={item.name}/> :
-                                                <Divider/>
+                                                <Divider key="-1"/>
                                         ))
                                     }
                                 </Field>

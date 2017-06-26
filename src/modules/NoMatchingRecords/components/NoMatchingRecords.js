@@ -56,6 +56,8 @@ const NoMatchingRecords = ({handleNext, handlePrevious, stepIndex, title, explan
                     <RaisedButton
                         label={addPublicationBtnLabel}
                         secondary
+                        autoFocus
+                        keyboardFocused
                         onTouchTap={handleNext}
                     />
                 </div>
