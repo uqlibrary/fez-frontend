@@ -62,7 +62,7 @@ export default class PublicationSearchForm extends Component {
     performSearch = (event) => {
         // TODO: fix form submit, all data fetching should be done outside of the form
         // workaround: if user clicks Enter on search field OR search button, search is initiated and form is submitted
-        if (event && event.key && !event.key === 'Enter') {
+        if (event && event.key && event.key !== 'Enter') {
             return;
         }
 
