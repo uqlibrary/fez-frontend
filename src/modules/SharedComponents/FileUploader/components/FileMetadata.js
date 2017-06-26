@@ -4,8 +4,7 @@ import DatePicker from 'material-ui/DatePicker';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
-import Checkbox from 'material-ui/Checkbox';
-import {SelectField} from 'uqlibrary-react-toolbox';
+import {Checkbox, SelectField} from 'uqlibrary-react-toolbox';
 import MenuItem from 'material-ui/MenuItem';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
@@ -225,7 +224,6 @@ export default class FileMetadata extends Component {
     };
 
     render() {
-        const {setCheckboxState} = this.props;
         const fileInformation = locale.sharedComponents.files;
         const buttonLabels = locale.global.labels.buttons;
         const messages = fileInformation.messages;
@@ -276,10 +274,12 @@ export default class FileMetadata extends Component {
                 {this.buildInterface()}
 
                 {this.state.isOpenAccess && (
-                    <Checkbox
+                    <Field
+                        component={Checkbox}
+                        name="acceptOpenAccess"
                         className="open-access-checkbox"
                         label={messages.openAccessConfirmation}
-                        onCheck={setCheckboxState}
+                        validate={[validation.required]}
                     />
                 )}
             </div>

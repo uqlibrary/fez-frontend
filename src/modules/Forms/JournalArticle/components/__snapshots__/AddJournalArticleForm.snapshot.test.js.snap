@@ -705,7 +705,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       }
     />
     <RaisedButton
-      disabled={true}
+      disabled={false}
       fullWidth={false}
       label="Submit for approval"
       labelPosition="after"

@@ -5,8 +5,6 @@ import {
     FILE_DOCUMENT_ACCESS_TYPES_LOADED,
     FILE_LIST_CREATED,
     FILE_LIST_DELETED,
-    FILE_OPEN_ACCESS_CHECKBOX_ACCEPTED,
-    FILE_SET_OPEN_ACCESS,
     FILE_STATE_RESTORED,
     FILE_UPLOAD_TERMINATED,
     FILE_UPLOADING,
@@ -18,8 +16,6 @@ export const initialState = Immutable.fromJS({
     acceptedFiles: [],
     completedFiles: 0,
     documentAccessTypes: [],
-    hasOpenAccess: false,
-    isOpenAccessAccepted: false,
     isUploadCompleted: false,
     progress: {},
     uploadError: ''
@@ -36,10 +32,6 @@ const fileUploadReducer = (state = initialState, action) => {
             return state.set('acceptedFiles', Immutable.fromJS(newList));
         case FILE_LIST_DELETED:
             return state.set('acceptedFiles', Immutable.fromJS([]));
-        case FILE_OPEN_ACCESS_CHECKBOX_ACCEPTED:
-            return state.set('isOpenAccessAccepted', action.payload);
-        case FILE_SET_OPEN_ACCESS:
-            return state.set('hasOpenAccess', action.payload);
         case FILE_UPLOADING:
             return state.set('progress', Immutable.fromJS(action.payload));
         case FILE_UPLOAD_TERMINATED:

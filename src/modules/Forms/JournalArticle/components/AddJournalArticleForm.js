@@ -153,12 +153,9 @@ export default class AddJournalArticleForm extends Component {
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
 
-        const {acceptedFiles, formValues, form, handleSubmit, hasOpenAccess, isOpenAccessAccepted} = this.props;
+        const {formValues, form, handleSubmit} = this.props;
         const required = value => value && value.replace(/\s/, '').length > 0 ? undefined : 'This field is required';
         const DateTimeFormat = global.Intl.DateTimeFormat;
-
-        // disable if files are being uploaded and the open access checkbox is ticked OR no files are being uploaded
-        const isSubmitDisabled = !(acceptedFiles.size === 0 || (acceptedFiles.size > 0  && (hasOpenAccess || isOpenAccessAccepted)));
 
         return (
             <form onSubmit={handleSubmit(this.submitRecord)}>
@@ -306,7 +303,6 @@ export default class AddJournalArticleForm extends Component {
                         style={{marginLeft: '12px'}}
                         onTouchTap={this.cancelAddingRecord} />
                     <RaisedButton
-                        disabled={isSubmitDisabled}
                         secondary
                         label={buttonLabels.submitForApproval}
                         style={{marginLeft: '12px'}}

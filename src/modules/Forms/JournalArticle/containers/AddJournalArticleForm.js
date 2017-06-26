@@ -64,8 +64,6 @@ AddJournalArticleFormContainer = connect(state => {
         acceptedFiles: fileUploadState.get('acceptedFiles'),
         authorList: journalArticleState.get('authorList') || Immutable.Map({}),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
-        hasOpenAccess: fileUploadState.get('hasOpenAccess'),
-        isOpenAccessAccepted: fileUploadState.get('isOpenAccessAccepted'),
         isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         publicationSubTypeList: journalArticleState.get('publicationSubTypeList'),
         selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType'),
