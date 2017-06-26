@@ -7,7 +7,6 @@ import sinon from 'sinon';
 import FileUploader from './FileUploader';
 import Immutable from 'immutable';
 
-let showSnackbar;
 let setAcceptedFileList;
 let showInvalidFileLengthMessage;
 let app;
@@ -22,7 +21,6 @@ describe('File upload dropzone unit tests', () => {
             }
         ]);
 
-        showSnackbar = sinon.spy();
         setAcceptedFileList = sinon.spy();
         showInvalidFileLengthMessage = jest.fn();
 
@@ -30,7 +28,6 @@ describe('File upload dropzone unit tests', () => {
             acceptedFiles,
             form: 'testForm',
             setAcceptedFileList,
-            showSnackbar: showSnackbar,
             showInvalidFileLengthMessage,
             uploadError: 'there is an error'
         };
@@ -177,19 +174,5 @@ describe('File upload dropzone unit tests', () => {
 
         app.instance().setAcceptedFileList(fileData);
         expect(setAcceptedFileList.calledOnce).toEqual(true);
-    });
-
-    it('fires the snackbar due to invalid filename', () => {
-        const fileData = [
-            {
-                name: '1af ile.zip',
-                size: 5307669356,
-                type: 'application/zip'
-            }
-        ];
-
-        app.instance().setAcceptedFileList(fileData);
-        expect(setAcceptedFileList.calledOnce).toEqual(false);
-        expect(showSnackbar.called).toEqual(true);
     });
 });
