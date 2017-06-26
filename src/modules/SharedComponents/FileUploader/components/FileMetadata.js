@@ -46,7 +46,10 @@ export default class FileMetadata extends Component {
 
     componentWillUpdate(nextProps) {
         const {uploadProgress} = nextProps;
-        fileUploadProgress[uploadProgress.get('name')] = uploadProgress.get('progress');
+
+        if (uploadProgress) {
+            fileUploadProgress[uploadProgress.get('name')] = uploadProgress.get('progress');
+        }
     }
 
     buildDatePicker = (id) => {
@@ -198,7 +201,6 @@ export default class FileMetadata extends Component {
 
     isOpenAccessSelected = () => {
         let found = false;
-
         Object.keys(this.state.accessFields).map(field => {
             if (this.state.accessFields[field] === locale.sharedComponents.files.constants.openAccessId) {
                 found = true;

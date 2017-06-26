@@ -320,9 +320,12 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       </div>
     </CardText>
   </Card>
-  <Connect(ReduxForm)
-    form="testForm"
-  />
+  <FormSection
+    component="div"
+    name="fileUploader"
+  >
+    <Connect(FileUploader) />
+  </FormSection>
   <div
     className="buttonWrapper"
   >
@@ -678,9 +681,12 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       </div>
     </CardText>
   </Card>
-  <Connect(ReduxForm)
-    form="testForm"
-  />
+  <FormSection
+    component="div"
+    name="fileUploader"
+  >
+    <Connect(FileUploader) />
+  </FormSection>
   <div
     className="buttonWrapper"
   >
