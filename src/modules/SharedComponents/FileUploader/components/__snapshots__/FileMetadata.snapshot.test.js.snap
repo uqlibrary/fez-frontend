@@ -46,31 +46,32 @@ exports[`File metadata snapshots tests renders default file metadata component 1
     repositionOnUpdate={true}
   />
   <Toolbar
-    className="header metadata-row"
+    className="columns"
     noGutter={false}
   >
     <ToolbarGroup
-      className="filename"
+      className="column is-half-tablet filename header"
       firstChild={false}
       lastChild={false}
     >
       Filename
     </ToolbarGroup>
     <ToolbarGroup
-      className="file-access header"
+      className="column file-access header"
       firstChild={false}
       lastChild={false}
     >
       Access conditions
     </ToolbarGroup>
     <ToolbarGroup
-      className="embargo-date header"
+      className="column embargo-date header"
       firstChild={false}
       lastChild={false}
     >
       Embargo release date
     </ToolbarGroup>
     <ToolbarGroup
+      className="column is-narrow"
       firstChild={false}
       lastChild={false}
     >
@@ -79,7 +80,6 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         disabled={false}
         iconStyle={Object {}}
         onClick={[Function]}
-        tooltip="Delete all files"
         tooltipPosition="bottom-left"
         touch={false}
       >
@@ -94,11 +94,11 @@ exports[`File metadata snapshots tests renders default file metadata component 1
     </ToolbarGroup>
   </Toolbar>
   <Toolbar
-    className="metadata-row"
+    className="columns"
     noGutter={false}
   >
     <ToolbarGroup
-      className="filename"
+      className="column is-half-tablet filename"
       firstChild={false}
       lastChild={false}
     >
@@ -114,7 +114,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       />
     </ToolbarGroup>
     <ToolbarGroup
-      className="file-access"
+      className="column file-access"
       firstChild={false}
       lastChild={false}
     >
@@ -130,14 +130,18 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       >
         File Access
       </span>
-      <SelectField
-        autoWidth={false}
+      <Field
+        autoWidth={true}
         className="selectField"
-        disabled={false}
-        fullWidth={false}
-        multiple={false}
+        component={[Function]}
+        hintText="Select access conditions"
         name="fileAccess0"
         onChange={[Function]}
+        validate={
+          Array [
+            [Function],
+          ]
+        }
         value={null}
       >
         <MenuItem
@@ -185,10 +189,10 @@ exports[`File metadata snapshots tests renders default file metadata component 1
           primaryText="Closed Access"
           value={8}
         />
-      </SelectField>
+      </Field>
     </ToolbarGroup>
     <ToolbarGroup
-      className="embargo-date"
+      className="column embargo-date"
       firstChild={false}
       lastChild={false}
     >
@@ -213,15 +217,22 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         disabled={true}
         firstDayOfWeek={0}
         hideCalendarDate={false}
-        hintText="23/6/2017"
+        hintText="26/6/2017"
         locale="en-AU"
-        name="accessDate0"
-        style={
+        menuItemStyle={
           Object {
-            "width": 90,
+            "width": "90px",
           }
         }
+        name="accessDate0"
+        style={Object {}}
       />
+    </ToolbarGroup>
+    <ToolbarGroup
+      className="column is-narrow"
+      firstChild={false}
+      lastChild={false}
+    >
       <IconButton
         disableTouchRipple={false}
         disabled={false}
@@ -241,15 +252,5 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       </IconButton>
     </ToolbarGroup>
   </Toolbar>
-  <Checkbox
-    className="open-access-checkbox"
-    disabled={false}
-    label={
-      <div>
-        I understand that the files indicated above will be submitted as open access and will be made publicaly available immediately, or where indicated as closed access, will be made available on the indicated embargo date.
-      </div>
-    }
-    labelPosition="right"
-  />
 </div>
 `;

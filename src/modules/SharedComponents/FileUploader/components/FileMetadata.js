@@ -68,7 +68,7 @@ export default class FileMetadata extends Component {
             hintText={currentDateStr}
             locale="en-AU"
             name={datepickerFieldName}
-            style={{width: 90}}
+            menuItemStyle={{width: '90px'}}
         />);
     };
 
@@ -80,8 +80,10 @@ export default class FileMetadata extends Component {
 
         return(
             <Field
+                autoWidth
                 component={SelectField}
                 className="selectField"
+                hintText={selectFieldValues.initialValue}
                 key={fieldName}
                 name={fieldName}
                 onChange={this.updateLocalState(fieldName)}
@@ -105,17 +107,17 @@ export default class FileMetadata extends Component {
                 const fieldName = `${file}${index}`;
 
                 return (
-                    <Toolbar className="metadata-row" key={fieldName}>
-                        <ToolbarGroup className="filename">
+                    <Toolbar className="columns" key={fieldName}>
+                        <ToolbarGroup className="column is-half-tablet filename">
                             <FontIcon className="material-icons mobile-icon">attachment</FontIcon>
                             <span className="filename-label">{file.name}</span>
                         </ToolbarGroup>
-                        <ToolbarGroup className="file-access">
+                        <ToolbarGroup className="column file-access">
                             <FontIcon className="material-icons mobile-icon">lock_outline</FontIcon>
                             <span className="label">File Access</span>
                             {this.buildSelectField(index)}
                         </ToolbarGroup>
-                        <ToolbarGroup className="embargo-date">
+                        <ToolbarGroup className="column embargo-date">
                             <FontIcon className="material-icons mobile-icon">date_range</FontIcon>
                             <span className="label">Embargo Date</span>
                             {this.buildDatePicker(index)}
@@ -136,6 +138,8 @@ export default class FileMetadata extends Component {
                                 <FontIcon
                                 className="material-icons green-tick">done</FontIcon>
                             )}
+                        </ToolbarGroup>
+                        <ToolbarGroup className="column is-narrow">
                             <IconButton
                                 tooltip={messages.deleteFileToolTip}
                                 tooltipPosition="bottom-left"
@@ -213,14 +217,10 @@ export default class FileMetadata extends Component {
     };
 
     render() {
-        const {acceptedFiles, setCheckboxState} = this.props;
+        const {setCheckboxState} = this.props;
         const fileInformation = locale.sharedComponents.files;
         const buttonLabels = locale.global.labels.buttons;
         const messages = fileInformation.messages;
-
-        // check if open access OR
-        // check if the number of manipulated selectFields is less than the total number of accepted files (because we default all selectFields to open access)
-        const showOpenAccessNotice = this.state.isOpenAccess || Object.keys(this.state.accessFields).length < acceptedFiles.size;
 
         const deleteActions = [
             <FlatButton
@@ -246,19 +246,19 @@ export default class FileMetadata extends Component {
                 >
                     {this.state.deleteDialogContent}
                 </Dialog>
-                <Toolbar className="header metadata-row">
-                    <ToolbarGroup className="filename">
+                <Toolbar className="columns">
+                    <ToolbarGroup className="column is-half-tablet filename header">
                         {fileInformation.list.filenameLabel}
                     </ToolbarGroup>
-                    <ToolbarGroup className="file-access header">
+                    <ToolbarGroup className="column file-access header">
                         {fileInformation.list.fileAccessLabel}
                     </ToolbarGroup>
-                    <ToolbarGroup className="embargo-date header">
+                    <ToolbarGroup className="column embargo-date header">
                         {fileInformation.list.embargoDateLabel}
                     </ToolbarGroup>
-                    <ToolbarGroup>
+                    <ToolbarGroup className="column is-narrow">
                         <IconButton
-                            tooltip={messages.deleteAllFilesToolTip}
+                            tooltip={messages.deleteAlslFilesToolTip}
                             tooltipPosition="bottom-left"
                             onClick={this.deleteAllFilesConfirmation}>
                             <FontIcon className="material-icons deleteIcon">delete_sweep</FontIcon>
@@ -267,7 +267,7 @@ export default class FileMetadata extends Component {
                 </Toolbar>
                 {this.buildInterface()}
 
-                {showOpenAccessNotice && (
+                {this.state.isOpenAccess && (
                     <Checkbox
                         className="open-access-checkbox"
                         label={messages.openAccessConfirmation}

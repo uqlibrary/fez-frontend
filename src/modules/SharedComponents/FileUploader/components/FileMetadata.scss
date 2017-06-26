@@ -11,69 +11,68 @@
 }
 
 .metadata-container {
-  padding: 0px !important;
-  > div:first-child {
-    padding: 0px !important;
+  .columns {
+    background: #fff !important;
   }
-  .metadata-row {
-    margin: 0px auto !important;
-    background: #FFF !important;
-    padding: 0px !important;
-    border-bottom: 1px solid #bfbfbf !important;
+  .filename {
+    overflow: hidden;
 
-    .filename {
-      flex: 3;
+    .filename-label {
       overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 10px;
+    }
+  }
 
-      .filename-label {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding-right: 10px;
-      }
+  .file-access {
+    div > div > div:first-child {
+      font-size: 14px !important;
     }
 
-    .file-access {
-      div > div > div:first-child {
-        font-size: 14px !important;
-      }
+    .selectField {
+      width: 190px !important;
+    }
+  }
+
+  .file-access,
+  .embargo-date {
+    hr {
+      display: none;
     }
 
-    .file-access,
-    .embargo-date {
-      flex: 1;
-      align-items: flex-end !important;
-      hr {
-        display: none;
-      }
+    input {
+      font-size: 14px !important;
+    }
+  }
 
-      input {
-        font-size: 14px !important;
-      }
+  .filename,
+  .file-access,
+  .embargo-date {
+    .label {
+      display: none;
     }
 
-    .filename,
-    .file-access,
-    .embargo-date {
-      .label {
-        display: none;
-      }
+    .datepicker,
+    .datepicker > div:first-child {
+      width: 90px !important;
     }
+  }
 
-    .header {
-      align-self: center;
-    }
+  .header {
+    font-size: 12px;
+    white-space: nowrap;
+  }
 
-    .green-tick {
-      color: green !important;
-      cursor: default !important;
-    }
+  .green-tick {
+    color: green !important;
+    cursor: default !important;
+  }
 
-    .upload-progress {
-      align-self: center;
+  .upload-progress {
+    align-self: center;
 
-      circle {
-        stroke: #adadad !important;
-      }
+    circle {
+      stroke: #adadad !important;
     }
   }
 
@@ -89,10 +88,6 @@
 
   @media (max-width: 768px) {
     .metadata-row {
-      height: initial !important;
-      flex-direction: column;
-      padding: 10px 0px !important;
-
       &:nth-child(2) {
         border-top: 1px solid #bfbfbf !important;
       }
@@ -119,8 +114,6 @@
       .filename,
       .file-access,
       .embargo-date {
-        justify-content: flex-start !important;
-
         .icon {
           display: inline-block !important;
           color: #7d7d7d !important;
