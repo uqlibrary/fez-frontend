@@ -1,6 +1,6 @@
 /* eslint-disable */
-export const publicationSubTypeList =
-    [{
+export const publicationSubTypeList = [
+    {
         "cvr_id": 4699,
         "cvr_parent_cvo_id": 453573,
         "cvr_child_cvo_id": 453574,
@@ -153,4 +153,5 @@ export const publicationSubTypeList =
             "cvo_policy": null,
             "controlled_vocab_children": []
         }
-    }];
+    }
+];

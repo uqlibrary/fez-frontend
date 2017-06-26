@@ -37,11 +37,13 @@ exports[`Publication search form snapshots tests renders default publication sea
       </div>
       <Field
         autoComplete="off"
+        autoFocus={true}
         component={[Function]}
         floatingLabelText="Search for publication"
         fullWidth={true}
         name="doiSearch"
         onChange={[Function]}
+        onKeyPress={[Function]}
       />
       <div
         style={

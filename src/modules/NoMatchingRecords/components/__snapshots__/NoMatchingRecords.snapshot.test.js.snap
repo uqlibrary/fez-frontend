@@ -60,8 +60,10 @@ exports[`No matching record component snapshots tests renders default no matchin
         }
       />
       <RaisedButton
+        autoFocus={true}
         disabled={false}
         fullWidth={false}
+        keyboardFocused={true}
         label="Add new publication"
         labelPosition="after"
         primary={false}
