@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const externalDoiSearchResultList = [
     {
         'rek_display_type': 179,
@@ -6,6 +7,7 @@ export const externalDoiSearchResultList = [
         'fez_record_search_key_doi': {
             'rek_doi': '10.1111/j.1755-5922.2010.00189.x'
         },
+        'rek_thomson_citation_count': 10,
         'fez_record_search_key_publisher': {
             'rek_publisher': 'Wiley-Blackwell'
         },
@@ -55,6 +57,28 @@ export const externalDoiSearchResultList = [
                 'rek_issn': '1755-5922',
                 'rek_issn_order': 2
             }
+        ],
+        'fez_record_search_key_author': [
+            {
+                rek_author: "Ramsby, Blake D.",
+                rek_author_order: 1
+            },
+            {
+                rek_author: "Hoogenboom, Mia O.",
+                rek_author_order: 2
+            },
+            {
+                rek_author: "Whalan, Steve",
+                rek_author_order: 3
+            },
+            {
+                rek_author: "Webster, Nicole S.",
+                rek_author_order: 4
+            },
+            {
+                rek_author: "Thompson, Angus",
+                rek_author_order: 5
+            }
         ]
     }
 ];
@@ -70,6 +94,7 @@ export const internalDoiSearchResultList = [
         'fez_record_search_key_publisher': {
             'rek_publisher': 'Wiley-Blackwell'
         },
+        'rek_thomson_citation_count': 10,
         'rek_title': 'Internal - Nutraceuticals and Atherosclerosis: Human Trials',
         'rek_date': '2010-07-05 00:00:00',
         'fez_record_search_key_collection_year': {
@@ -116,6 +141,28 @@ export const internalDoiSearchResultList = [
                 'rek_issn': '1755-5922',
                 'rek_issn_order': 2
             }
+        ],
+        'fez_record_search_key_author': [
+            {
+                rek_author: "Ramsby, Blake D.",
+                rek_author_order: 1
+            },
+            {
+                rek_author: "Hoogenboom, Mia O.",
+                rek_author_order: 2
+            },
+            {
+                rek_author: "Whalan, Steve",
+                rek_author_order: 3
+            },
+            {
+                rek_author: "Webster, Nicole S.",
+                rek_author_order: 4
+            },
+            {
+                rek_author: "Thompson, Angus",
+                rek_author_order: 5
+            }
         ]
     }
 ];
@@ -132,6 +179,7 @@ export const externalPubMedSearchResultsList = [
             'rek_publisher': 'Wiley-Blackwell'
         },
         'rek_title': 'External - Defining ‘nutraceuticals’: neither nutritious nor pharmaceutical',
+        'rek_thomson_citation_count': 10,
         'rek_date': '2016-04-25 00:00:00',
         'fez_record_search_key_collection_year': {
             'rek_collection_year': '2016-04-25 00:00:00'
@@ -168,6 +216,28 @@ export const externalPubMedSearchResultsList = [
             {
                 'rek_issn': '0306-5251',
                 'rek_issn_order': 1
+            }
+        ],
+        'fez_record_search_key_author': [
+            {
+                rek_author: "Ramsby, Blake D.",
+                rek_author_order: 1
+            },
+            {
+                rek_author: "Hoogenboom, Mia O.",
+                rek_author_order: 2
+            },
+            {
+                rek_author: "Whalan, Steve",
+                rek_author_order: 3
+            },
+            {
+                rek_author: "Webster, Nicole S.",
+                rek_author_order: 4
+            },
+            {
+                rek_author: "Thompson, Angus",
+                rek_author_order: 5
             }
         ]
     }
@@ -222,6 +292,28 @@ export const internalPubMedSearchResultsList = [
                 'rek_issn': '0306-5251',
                 'rek_issn_order': 1
             }
+        ],
+        'fez_record_search_key_author': [
+            {
+                rek_author: "Ramsby, Blake D.",
+                rek_author_order: 1
+            },
+            {
+                rek_author: "Hoogenboom, Mia O.",
+                rek_author_order: 2
+            },
+            {
+                rek_author: "Whalan, Steve",
+                rek_author_order: 3
+            },
+            {
+                rek_author: "Webster, Nicole S.",
+                rek_author_order: 4
+            },
+            {
+                rek_author: "Thompson, Angus",
+                rek_author_order: 5
+            }
         ]
     }
 ];
@@ -238,6 +330,7 @@ export const internalTitleSearchResultsList = [
             'rek_publisher': 'Wiley-Blackwell'
         },
         'rek_title': 'Internal - Defining ‘nutraceuticals’: neither nutritious nor pharmaceutical',
+        'rek_thomson_citation_count': 10,
         'rek_date': '2016-04-25 00:00:00',
         'fez_record_search_key_collection_year': {
             'rek_collection_year': '2016-04-25 00:00:00'
@@ -275,6 +368,28 @@ export const internalTitleSearchResultsList = [
                 'rek_issn': '0306-5251',
                 'rek_issn_order': 1
             }
+        ],
+        'fez_record_search_key_author': [
+            {
+                rek_author: "Ramsby, Blake D.",
+                rek_author_order: 1
+            },
+            {
+                rek_author: "Hoogenboom, Mia O.",
+                rek_author_order: 2
+            },
+            {
+                rek_author: "Whalan, Steve",
+                rek_author_order: 3
+            },
+            {
+                rek_author: "Webster, Nicole S.",
+                rek_author_order: 4
+            },
+            {
+                rek_author: "Thompson, Angus",
+                rek_author_order: 5
+            }
         ]
     }
 ];
@@ -291,6 +406,7 @@ export const externalTitleSearchResultsList = [
             'rek_publisher': 'Wiley-Blackwell'
         },
         'rek_title': 'External - Defining ‘nutraceuticals’: neither nutritious nor pharmaceutical',
+        'rek_thomson_citation_count': 10,
         'rek_date': '2016-04-25 00:00:00',
         'fez_record_search_key_collection_year': {
             'rek_collection_year': '2016-04-25 00:00:00'
@@ -535,6 +651,28 @@ export const externalTitleSearchResultsList = [
             {
                 'rek_issn': '1755-5922',
                 'rek_issn_order': 2
+            }
+        ],
+        'fez_record_search_key_author': [
+            {
+                rek_author: "Ramsby, Blake D.",
+                rek_author_order: 1
+            },
+            {
+                rek_author: "Hoogenboom, Mia O.",
+                rek_author_order: 2
+            },
+            {
+                rek_author: "Whalan, Steve",
+                rek_author_order: 3
+            },
+            {
+                rek_author: "Webster, Nicole S.",
+                rek_author_order: 4
+            },
+            {
+                rek_author: "Thompson, Angus",
+                rek_author_order: 5
             }
         ]
     }

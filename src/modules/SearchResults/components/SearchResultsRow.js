@@ -37,9 +37,10 @@ export default class SearchResultsRow extends Component {
                 {authors &&
                     <div className="claimAuthors">
                     <FontIcon className="material-icons claimAuthorsIcon" data-tip="Authors"
-                    data-for="claimTooltips" data-place="left">people</FontIcon> Palomino,
-                    Sheyla - Unger, Corinne - Edraki, Mansour
-                    {{authors}}
+                    data-for="claimTooltips" data-place="left">people</FontIcon>
+                    {authors.map((author) => (
+                        <span>{author.get('rek_author')}, </span>
+                    ))}
                     </div>
                 }
 
@@ -50,19 +51,41 @@ export default class SearchResultsRow extends Component {
                 </div>
 
                 <div className="claimStats">
-                    <img src={thompsonIcon} alt="Thomson Routers"
-                         data-tip="Thomson Routers Web of Science citation count"
-                         data-for="claimTooltips"/> {counts.thomson}
-                    <img src={scopusIcon} alt="Scopus" data-tip="Scopus citation count"
-                         data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.scopus}
+                    {counts.thomson > 0 &&
+                    <span>
+                        <img src={thompsonIcon} alt="Thomson Routers"
+                             data-tip="Thomson Routers Web of Science citation count"
+                             data-for="claimTooltips"/> {counts.thomson}
+                    </span>
+                    }
+                    {counts.scopus > 0 &&
+                    <span>
+                        <img src={scopusIcon} alt="Scopus"
+                             data-tip="Scopus citation count"
+                             data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.scopus}
+                    </span>
+                    }
+                    {counts.google > 0 &&
+                    <span>
                     <img src={googleScholarIcon} alt="Google Scholar"
                          data-tip="Google Scholar citation count" data-for="claimTooltips"
                          style={{marginLeft: '10px'}}/> {counts.google}
+                    </span>
+                    }
+                    {counts.altmetric > 0 &&
+                    <span>
                     <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score"
                          data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.altmetric}
+                    </span>
+                    }
+                    {counts.downloads > 1 && (
+                    <span>
                     <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads"
                               data-for="claimTooltips" data-place="bottom"
                               style={{marginLeft: '10px'}}>file_download</FontIcon> {counts.downloads}
+                    </span>
+                    )
+                    }
                 </div>
 
                 <div className="claimButtonWrapper">

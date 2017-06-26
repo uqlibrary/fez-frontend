@@ -1,7 +1,7 @@
 import Immutable from 'immutable';
 
 // Generic
-export const required = value => value && value.replace(/\s/g, '').length > 0 ? undefined : 'This field is required';
+export const required = value => value && value.trim().length > 0 ? undefined : 'This field is required';
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Please enter a valid email address' : undefined;
 export const requiredTrue = value => value === true ? undefined : 'This field is required';
 export const unique = (value, array) => array.indexOf(value) !== -1 ? 'This value has already been used' : undefined;
@@ -10,9 +10,10 @@ export const url = (value) => value && !/^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/
 // Min Length
 export const maxLength = max => value => value && value.length > max ? `Must be ${max} characters or less` : undefined;
 export const maxLength10 = maxLength(10);
+export const maxLength255 = maxLength(255);
 
 // Max Length
-export const minLength = min => value => value && value.length < min ? `Must be at least ${min} characters` : undefined;
+export const minLength = min => value => value && value.trim().length < min ? `Must be at least ${min} characters` : undefined;
 export const minLength10 = minLength(10);
 
 // Array

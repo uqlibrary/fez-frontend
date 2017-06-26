@@ -56,5 +56,6 @@ export function searchPubmedEndpoint(pubMedId) {
  * @returns {Promise}
  */
 export function searchTitleEndpoint(rekDisplayType, title) {
-    return performSearch(`rek_display_type=${rekDisplayType}&title=${title}`);
+    // TODO: update source API endpoint, needs to all all external sources
+    return performSearch(`source=wos&rek_display_type=${rekDisplayType}&title=${title}`);
 }

@@ -38,13 +38,34 @@ exports[`Search results snapshots tests renders default search results page 1`] 
       claimRecordBtnLabel="Claim Record"
       entry={
         Object {
-          "authors": "",
+          "authors": Array [
+            Object {
+              "rek_author": "Ramsby, Blake D.",
+              "rek_author_order": 1,
+            },
+            Object {
+              "rek_author": "Hoogenboom, Mia O.",
+              "rek_author_order": 2,
+            },
+            Object {
+              "rek_author": "Whalan, Steve",
+              "rek_author_order": 3,
+            },
+            Object {
+              "rek_author": "Webster, Nicole S.",
+              "rek_author_order": 4,
+            },
+            Object {
+              "rek_author": "Thompson, Angus",
+              "rek_author_order": 5,
+            },
+          ],
           "counts": Object {
-            "altmetric": 4,
-            "downloads": 100,
-            "google": 3,
-            "scopus": 2,
-            "thomson": 1,
+            "altmetric": 0,
+            "downloads": 0,
+            "google": 0,
+            "scopus": undefined,
+            "thomson": 10,
           },
           "journalName": "Cardiovascular Therapeutics",
           "title": "External - Nutraceuticals and Atherosclerosis: Human Trials",

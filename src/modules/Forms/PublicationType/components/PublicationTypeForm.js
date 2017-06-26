@@ -39,7 +39,6 @@ export default class PublicationTypeForm extends Component {
     componentDidMount() {
         // TODO: find a better alternative to set focus to elements
         const selectField = document.querySelectorAll('.selectField button');
-        console.log(selectField);
         if (selectField.length > 0) {
             selectField[0].focus();
         }
