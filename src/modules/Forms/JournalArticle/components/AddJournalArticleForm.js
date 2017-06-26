@@ -222,7 +222,9 @@ export default class AddJournalArticleForm extends Component {
                                        validate={[validation.required]}>
                                     {
                                         this.props.publicationSubTypeList.map(item => (
-                                            <MenuItem key={item.get('id')} value={item.get('label')} primaryText={item.get('label')}/>
+                                            <MenuItem key={item.get('controlled_vocab').get('cvo_id')}
+                                                      value={item.get('controlled_vocab').get('cvo_title')}
+                                                      primaryText={item.get('controlled_vocab').get('cvo_title')}/>
                                         ))
                                     }
                                 </Field>
