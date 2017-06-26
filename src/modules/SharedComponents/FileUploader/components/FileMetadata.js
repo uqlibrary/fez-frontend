@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import DatePicker from 'material-ui/DatePicker';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
 import {Checkbox, SelectField} from 'uqlibrary-react-toolbox';
 import MenuItem from 'material-ui/MenuItem';
 import FontIcon from 'material-ui/FontIcon';
@@ -110,19 +109,19 @@ export default class FileMetadata extends Component {
                 const accessIds = fileInformation.constants;
 
                 return (
-                    <Toolbar className="columns" key={fieldName}>
-                        <ToolbarGroup className="column is-half-tablet filename">
+                    <div className="columns is-gapless data" key={fieldName}>
+                        <div className="column is-6 is-12-mobile filename">
                             <FontIcon className="material-icons mobile-icon">attachment</FontIcon>
                             <span className="filename-label">{file.name}</span>
-                        </ToolbarGroup>
-                        <ToolbarGroup className="column file-access">
+                            <span className="label">File name</span>
+                        </div>
+                        <div className="column is-3 is-8-mobile file-access">
                             <FontIcon className="material-icons mobile-icon">lock_outline</FontIcon>
-                            <span className="label">File Access</span>
                             {this.buildSelectField(index)}
-                        </ToolbarGroup>
-                        <ToolbarGroup className="column embargo-date">
+                            <span className="label">File Access</span>
+                        </div>
+                        <div className="column is-2 is-8-mobile embargo-date">
                             <FontIcon className="material-icons mobile-icon">date_range</FontIcon>
-                            <span className="label">Embargo Date</span>
 
                             {this.state.accessFields[selectFieldName] === accessIds.openAccessId && (
                                 this.buildDatePicker(index)
@@ -134,7 +133,7 @@ export default class FileMetadata extends Component {
 
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
-                                fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&
+                                    fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&
                                 <CircularProgress
                                     className="upload-progress"
                                     mode="determinate"
@@ -147,18 +146,19 @@ export default class FileMetadata extends Component {
                             {fileUploadProgress[file.name] && (
                                 (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
                                 <FontIcon
-                                className="material-icons green-tick">done</FontIcon>
+                                    className="material-icons green-tick">done</FontIcon>
                             )}
-                        </ToolbarGroup>
-                        <ToolbarGroup className="column is-narrow">
+                            <span className="label">Embargo Date</span>
+                        </div>
+                        <div className="column is-1 is-1-mobile delete-button">
                             <IconButton
                                 tooltip={messages.deleteFileToolTip}
                                 tooltipPosition="bottom-left"
                                 onClick={() => this.deleteFileConfirmation(index)}>
                                 <FontIcon className="material-icons deleteIcon">delete</FontIcon>
                             </IconButton>
-                        </ToolbarGroup>
-                    </Toolbar>
+                        </div>
+                    </div>
                 );
             })
         );
@@ -255,25 +255,25 @@ export default class FileMetadata extends Component {
                 >
                     {this.state.deleteDialogContent}
                 </Dialog>
-                <Toolbar className="columns">
-                    <ToolbarGroup className="column is-half-tablet filename header">
+                <div className="columns is-gapless headers">
+                    <div className="column is-6 is-12-mobile filename header">
                         {fileInformation.list.filenameLabel}
-                    </ToolbarGroup>
-                    <ToolbarGroup className="column file-access header">
+                    </div>
+                    <div className="column is-3 is-12-mobile file-access header">
                         {fileInformation.list.fileAccessLabel}
-                    </ToolbarGroup>
-                    <ToolbarGroup className="column embargo-date header">
+                    </div>
+                    <div className="column is-2 is-12-mobile embargo-date header">
                         {fileInformation.list.embargoDateLabel}
-                    </ToolbarGroup>
-                    <ToolbarGroup className="column is-narrow">
+                    </div>
+                    <div className="column is-1 is-12-mobile delete-button header">
                         <IconButton
-                            tooltip={messages.deleteAlslFilesToolTip}
+                            tooltip={messages.deleteAllFilesToolTip}
                             tooltipPosition="bottom-left"
                             onClick={this.deleteAllFilesConfirmation}>
                             <FontIcon className="material-icons deleteIcon">delete_sweep</FontIcon>
                         </IconButton>
-                    </ToolbarGroup>
-                </Toolbar>
+                    </div>
+                </div>
                 {this.buildInterface()}
 
                 {this.state.isOpenAccess && (
