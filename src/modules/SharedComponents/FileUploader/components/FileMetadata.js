@@ -58,14 +58,10 @@ export default class FileMetadata extends Component {
         const currentDateStr = `${currentDate.getUTCDate()}/${currentDate.getUTCMonth() + 1}/${currentDate.getUTCFullYear()}`;
         const fileInformation = locale.sharedComponents.files;
         const datepickerFieldName = `${fileInformation.fields.datepickerAccess}${id}`;
-        const selectFieldName = `${fileInformation.fields.fileAccess}${id}`;
-        const accessIds = fileInformation.constants;
-        const disabled = this.state.accessFields[selectFieldName] !== accessIds.openAccessId;
 
         return (
         <DatePicker
             className="datepicker"
-            disabled={disabled}
             DateTimeFormat={DateTimeFormat}
             firstDayOfWeek={0}
             hintText={currentDateStr}
@@ -108,6 +104,8 @@ export default class FileMetadata extends Component {
         return(
             acceptedFiles.map((file, index) => {
                 const fieldName = `${file}${index}`;
+                const selectFieldName = `${fileInformation.fields.fileAccess}${index}`;
+                const accessIds = fileInformation.constants;
 
                 return (
                     <Toolbar className="columns" key={fieldName}>
@@ -123,7 +121,15 @@ export default class FileMetadata extends Component {
                         <ToolbarGroup className="column embargo-date">
                             <FontIcon className="material-icons mobile-icon">date_range</FontIcon>
                             <span className="label">Embargo Date</span>
-                            {this.buildDatePicker(index)}
+
+                            {this.state.accessFields[selectFieldName] === accessIds.openAccessId && (
+                                this.buildDatePicker(index)
+                            )}
+
+                            {this.state.accessFields[selectFieldName] !== accessIds.openAccessId && (
+                                <div>{messages.noDate}</div>
+                            )}
+
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
                                 fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&

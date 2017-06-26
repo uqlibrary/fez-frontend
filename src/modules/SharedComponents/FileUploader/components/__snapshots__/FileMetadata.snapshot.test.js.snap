@@ -208,25 +208,9 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       >
         Embargo Date
       </span>
-      <DatePicker
-        DateTimeFormat={[Function]}
-        autoOk={false}
-        className="datepicker"
-        container="dialog"
-        disableYearSelection={false}
-        disabled={true}
-        firstDayOfWeek={0}
-        hideCalendarDate={false}
-        hintText="26/6/2017"
-        locale="en-AU"
-        menuItemStyle={
-          Object {
-            "width": "90px",
-          }
-        }
-        name="accessDate0"
-        style={Object {}}
-      />
+      <div>
+        No Date
+      </div>
     </ToolbarGroup>
     <ToolbarGroup
       className="column is-narrow"

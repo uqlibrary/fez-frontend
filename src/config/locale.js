@@ -293,6 +293,7 @@ export default {
                 existingFile: 'File has already been added.',
                 existingFiles: '[numberOfExistingFiles] have already been added.',
                 cancelledUpload: 'File upload cancelled.',
+                noDate: 'No Date',
                 uploadError: {
                     default: 'There seems to be a problem uploading the file. Please try again later.'
                 },
