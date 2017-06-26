@@ -7,16 +7,13 @@ import {helpDrawerReducer} from 'uqlibrary-react-toolbox';
 import {reducer as dashboardReducer} from 'modules/Dashboard';
 import {addRecordReducer} from 'modules/AddRecord';
 import {publicationTypeReducer, publicationSearchReducer, publicationSubTypeReducer} from './modules/Forms';
-import {authorsReducer, fileUploadReducer} from './modules/SharedComponents';
 
 const rootReducer = combineReducers({
     form: formReducer,
     // App reducers
     addRecord: addRecordReducer,
     app: appReducer,
-    authors: authorsReducer,
     dashboard: dashboardReducer,
-    fileUpload: fileUploadReducer,
     helpDrawer: helpDrawerReducer,
     publicationTypes: publicationTypeReducer,
     publicationSubTypes: publicationSubTypeReducer,

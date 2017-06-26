@@ -5,6 +5,7 @@ import {Card, CardText, CardHeader} from 'material-ui/Card';
 
 // import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox';
 import './Dashboard.scss';
+import AddAuthors from '../../SharedComponents/AddAuthors/components/AddAuthors';
 
 class Dashboard extends React.Component {
 
@@ -24,39 +25,30 @@ class Dashboard extends React.Component {
         return (
             <div className="layout-fill">
                 <div className="layout-card">
-                    <div className="image-cover">
-                        <div className="user-information" style={{color: '#FFF'}}>
-                            <span className="display-1">{account.get('title')} {account.get('name')}</span><br/>
-                            <span className="subhead">{account.get('fullTitle')}</span><br/>
-                            <span className="body-1">{account.get('school')}</span>
+                    <div className="columns">
+                        <div className="column">
+                            <div className="image-cover">
+                                <div className="user-information" style={{color: '#FFF'}}>
+                                    <span className="display-1">{account.get('title')} {account.get('name')}</span><br/>
+                                    <span className="subhead">{account.get('fullTitle')}</span><br/>
+                                    <span className="body-1">{account.get('school')}</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="time-display-wrap"/>
 
-                    <div className="columns is-gapless">
+                    <div className="columns">
                         <div className="column">
-                            <Card style={{backgroundColor: '#ED5C8F', marginRight: '10px', marginTop: '20px'}}>
+                            <Card>
                                 <CardHeader className="card-header">
-                                    <h2 className="headline" style={{color: '#FFF'}}>eSpace publications by type</h2>
+                                    <h2 className="headline">Authors module test</h2>
                                 </CardHeader>
 
                                 <CardText className="body-1">
-                                    <div><br/>
-                                        Some content
-                                    </div>
-                                </CardText>
-
-                            </Card>
-                        </div>
-                        <div className="column">
-                            <Card style={{marginLeft: '10px', marginTop: '20px'}}>
-                                <CardHeader className="card-header">
-                                    <h2 className="headline">eSpace publications by year</h2>
-                                </CardHeader>
-
-                                <CardText className="body-1">
-                                    <div><br/>
-                                        Some content
+                                    <div className="columns">
+                                        <div className="column">
+                                            <AddAuthors/>
+                                        </div>
                                     </div>
                                 </CardText>
 

@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Authors snapshots tests renders authors field 1`] = `
-<Connect(ReduxForm)
-  form="aTestForm"
-/>
-`;

@@ -191,7 +191,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
     <CardText
       className="body-1"
     >
-      <Connect(ReduxForm)
+      <undefined
         authorFieldLabel="Add an author (Name as published)"
         form="testForm"
       />
