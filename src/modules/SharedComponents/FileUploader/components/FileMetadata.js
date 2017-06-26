@@ -204,7 +204,7 @@ export default class FileMetadata extends Component {
         return found;
     };
 
-    updateLocalState = (fieldName) => (event, index, value) => {
+    updateLocalState = (fieldName) => (event, value) => {
         const data = this.state.accessFields;
         data[fieldName] = value;
 
