@@ -15,12 +15,15 @@ export default class FileUploader extends PureComponent {
         acceptedFiles: PropTypes.object,
         resetToInitialState: PropTypes.func,
         setAcceptedFileList: PropTypes.func,
-        showSnackbar: PropTypes.func,
         uploadError: PropTypes.string
     };
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            uploadErrorMessage: ''
+        };
     }
 
     componentWillUnmount() {
@@ -30,7 +33,7 @@ export default class FileUploader extends PureComponent {
     setAcceptedFileList = (addedFiles) => {
         const fileInformation = locale.sharedComponents.files;
         const maxNumberOfFiles = fileInformation.limit;
-        const {acceptedFiles, setAcceptedFileList, showSnackbar} = this.props;
+        const {acceptedFiles, setAcceptedFileList} = this.props;
 
         let [validFiles, continueFileValidation] = this.validateFilenameFormat(addedFiles, maxNumberOfFiles);
 
@@ -51,12 +54,19 @@ export default class FileUploader extends PureComponent {
 
         if (isOverLimit) {
             const msg = fileInformation.messages.maxFiles.replace('[maxNumberOfFiles]', fileInformation.limit);
-            showSnackbar(msg);
+            this.setErrorMessage(msg);
         } else {
             if (validFiles.length > 0) {
                 setAcceptedFileList(validFiles);
+                if (continueFileValidation) {
+                    this.setErrorMessage('');
+                }
             }
         }
+    };
+
+    setErrorMessage = (msg) => {
+        this.setState({uploadErrorMessage: msg});
     };
 
     showFileDoesNotExistMessage = (addedFiles, existingFileCount) => {
@@ -67,7 +77,7 @@ export default class FileUploader extends PureComponent {
             '[numberOfExistingFiles]',
             fileInformation.messages.existingFile,
             fileInformation.messages.existingFiles);
-        this.props.showSnackbar(msg);
+        this.setErrorMessage(msg);
     };
 
     showFilenameFormatMessage = (addedFiles, invalidFileCount) => {
@@ -79,7 +89,7 @@ export default class FileUploader extends PureComponent {
             fileInformation.messages.invalidFormatFile,
             fileInformation.messages.invalidFormatFiles);
 
-        this.props.showSnackbar(msg);
+        this.setErrorMessage(msg);
     };
 
     showInvalidFileLengthMessage = (addedFiles, invalidFileLengthCount) => {
@@ -91,7 +101,7 @@ export default class FileUploader extends PureComponent {
             fileInformation.messages.invalidFileLength,
             fileInformation.messages.invalidFileLengths);
 
-        this.props.showSnackbar(msg);
+        this.setErrorMessage(msg);
     };
 
     processErrorMessage = (addedFiles, count, template, singleFileMsg, multipleFilesMsg) => {
@@ -179,7 +189,7 @@ export default class FileUploader extends PureComponent {
     };
 
     validateNumberOfFiles = (addedFiles, maxNumberOfFiles) => {
-        const {acceptedFiles, showSnackbar} = this.props;
+        const {acceptedFiles} = this.props;
         const fileInformation = locale.sharedComponents.files;
         const msg = fileInformation.messages.maxFiles.replace('[maxNumberOfFiles]', maxNumberOfFiles);
         let validFiles = addedFiles;
@@ -194,18 +204,18 @@ export default class FileUploader extends PureComponent {
         if ((acceptedFiles.size < maxNumberOfFiles && (acceptedFiles.size + addedFiles.length) > maxNumberOfFiles) ||
          (acceptedFiles.size === maxNumberOfFiles)) {
             continueFileValidation = false;
-            showSnackbar(msg);
+            this.setErrorMessage(msg);
         }
 
         return [validFiles, continueFileValidation];
     };
 
     render() {
-        const {acceptedFiles, showSnackbar, uploadError} = this.props;
+        const {acceptedFiles, uploadError} = this.props;
         const fileInformation = locale.sharedComponents.files;
 
         if (uploadError && uploadError.length > 0) {
-            showSnackbar(fileInformation.messages.uploadError.default);
+            this.setErrorMessage(fileInformation.messages.uploadError.default);
         }
 
         let dropzoneRef;
@@ -238,6 +248,13 @@ export default class FileUploader extends PureComponent {
                                 </Dropzone>
                             </div>
                         </div>
+
+                        {this.state.uploadErrorMessage.length > 0 && (
+                            <div>
+                                {this.state.uploadErrorMessage}
+                            </div>
+                        )}
+
                         {acceptedFiles.size > 0 && (
                             <FileMetadata
                                 acceptedFiles={acceptedFiles} />

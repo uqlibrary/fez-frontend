@@ -2,7 +2,6 @@ import {connect} from 'react-redux';
 
 import FileUploader from '../components/FileUploader';
 import {resetToInitialState, setAcceptedFileList} from '../actions';
-import {showSnackbar} from 'modules/App/actions';
 
 const FileUploaderContainer = connect((state) => {
     const fileUploadState = state.get('fileUpload');
@@ -14,8 +13,7 @@ const FileUploaderContainer = connect((state) => {
 }, dispatch => {
     return {
         resetToInitialState: () => dispatch(resetToInitialState()),
-        setAcceptedFileList: (acceptedFiles) => dispatch(setAcceptedFileList(acceptedFiles)),
-        showSnackbar: (msg) => dispatch(showSnackbar(msg))
+        setAcceptedFileList: (acceptedFiles) => dispatch(setAcceptedFileList(acceptedFiles))
     };
 })(FileUploader);
 
