@@ -17,7 +17,7 @@ import {locale} from 'config';
 import './FileMetadata.scss';
 import {validation} from 'config';
 
-const fileUploadProgress = [];
+let fileUploadProgress = [];
 
 export default class FileMetadata extends Component {
 
@@ -41,7 +41,10 @@ export default class FileMetadata extends Component {
             deleteDialogContent: '',
             deleteDialogOpen: false
         };
+
+        fileUploadProgress = [];
     }
+
 
     componentWillUpdate(nextProps) {
         const {uploadProgress} = nextProps;
