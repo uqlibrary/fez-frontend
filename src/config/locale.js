@@ -227,7 +227,16 @@ export default {
                         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
                     },
                     fields: {
-                        dropdownLabel: 'Add an author (Name as published)'
+                        authorName: 'authorName',
+                        authorIdentifier: 'authorIdentifier',
+                        authorNameLabel: 'Add an author (name as published)',
+                        authorNameHintText: 'Add author\'s name as published',
+                        authorIdentifierLabel: 'UQ identifier'
+                    },
+                    rows: {
+                        moveRecordUp: 'Move record up the order',
+                        moveRecordDown: 'Move record down the order',
+                        removeRecord: 'Remove this author'
                     }
                 },
                 optionalDetails: {

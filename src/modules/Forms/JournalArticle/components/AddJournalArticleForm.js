@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import {AutoCompleteSelect, HelpIcon, TextField, DatePicker} from 'uqlibrary-react-toolbox';
-import {Authors, FileUploader} from 'modules/SharedComponents';
+import {AddAuthors} from 'modules/SharedComponents';
 import {locale} from 'config';
 
 import './AddJournalArticleForm.scss';
@@ -33,9 +33,8 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentDidMount() {
-        const {loadAuthorsList, loadPublicationSubTypesList, selectedPublicationId} = this.props;
+        const {loadPublicationSubTypesList, selectedPublicationId} = this.props;
         loadPublicationSubTypesList(selectedPublicationId.get('id'));
-        loadAuthorsList();
     }
 
     cancelAddingRecord = () => {
@@ -207,7 +206,10 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <Authors form={form} dataSource={this.props.authorList} authorFieldLabel={authorsInformation.fields.dropdownLabel} />
+                        <Field
+                            component={AddAuthors}
+                            name="authors"
+                        />
                     </CardText>
                 </Card>
 
@@ -266,7 +268,6 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
 
                 {/* Files */}
-                <FileUploader form="FileUploadForm" />
 
                 <div className="buttonWrapper">
                     <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddingRecord}/>
