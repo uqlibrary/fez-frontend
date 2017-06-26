@@ -45,41 +45,33 @@ exports[`File metadata snapshots tests renders default file metadata component 1
     open={false}
     repositionOnUpdate={true}
   />
-  <Toolbar
-    className="columns"
-    noGutter={false}
+  <div
+    className="columns is-gapless headers"
   >
-    <ToolbarGroup
-      className="column is-half-tablet filename header"
-      firstChild={false}
-      lastChild={false}
+    <div
+      className="column is-6 is-12-mobile filename header"
     >
       Filename
-    </ToolbarGroup>
-    <ToolbarGroup
-      className="column file-access header"
-      firstChild={false}
-      lastChild={false}
+    </div>
+    <div
+      className="column is-3 is-12-mobile file-access header"
     >
       Access conditions
-    </ToolbarGroup>
-    <ToolbarGroup
-      className="column embargo-date header"
-      firstChild={false}
-      lastChild={false}
+    </div>
+    <div
+      className="column is-2 is-12-mobile embargo-date header"
     >
       Embargo release date
-    </ToolbarGroup>
-    <ToolbarGroup
-      className="column is-narrow"
-      firstChild={false}
-      lastChild={false}
+    </div>
+    <div
+      className="column is-1 is-12-mobile delete-button header"
     >
       <IconButton
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
         onClick={[Function]}
+        tooltip="Delete all files"
         tooltipPosition="bottom-left"
         touch={false}
       >
@@ -91,16 +83,13 @@ exports[`File metadata snapshots tests renders default file metadata component 1
           delete_sweep
         </FontIcon>
       </IconButton>
-    </ToolbarGroup>
-  </Toolbar>
-  <Toolbar
-    className="columns"
-    noGutter={false}
+    </div>
+  </div>
+  <div
+    className="columns is-gapless data"
   >
-    <ToolbarGroup
-      className="column is-half-tablet filename"
-      firstChild={false}
-      lastChild={false}
+    <div
+      className="column is-6 is-12-mobile filename"
     >
       <FontIcon
         className="material-icons mobile-icon"
@@ -112,11 +101,14 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       <span
         className="filename-label"
       />
-    </ToolbarGroup>
-    <ToolbarGroup
-      className="column file-access"
-      firstChild={false}
-      lastChild={false}
+      <span
+        className="label"
+      >
+        File name
+      </span>
+    </div>
+    <div
+      className="column is-3 is-8-mobile file-access"
     >
       <FontIcon
         className="material-icons mobile-icon"
@@ -125,11 +117,6 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       >
         lock_outline
       </FontIcon>
-      <span
-        className="label"
-      >
-        File Access
-      </span>
       <Field
         autoWidth={true}
         className="selectField"
@@ -190,11 +177,14 @@ exports[`File metadata snapshots tests renders default file metadata component 1
           value={8}
         />
       </Field>
-    </ToolbarGroup>
-    <ToolbarGroup
-      className="column embargo-date"
-      firstChild={false}
-      lastChild={false}
+      <span
+        className="label"
+      >
+        File Access
+      </span>
+    </div>
+    <div
+      className="column is-2 is-8-mobile embargo-date"
     >
       <FontIcon
         className="material-icons mobile-icon"
@@ -203,19 +193,17 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       >
         date_range
       </FontIcon>
+      <div>
+        No Date
+      </div>
       <span
         className="label"
       >
         Embargo Date
       </span>
-      <div>
-        No Date
-      </div>
-    </ToolbarGroup>
-    <ToolbarGroup
-      className="column is-narrow"
-      firstChild={false}
-      lastChild={false}
+    </div>
+    <div
+      className="column is-1 is-1-mobile delete-button"
     >
       <IconButton
         disableTouchRipple={false}
@@ -234,7 +222,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
           delete
         </FontIcon>
       </IconButton>
-    </ToolbarGroup>
-  </Toolbar>
+    </div>
+  </div>
 </div>
 `;
