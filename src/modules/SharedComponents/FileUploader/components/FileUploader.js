@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
+import FontIcon from 'material-ui/FontIcon';
 
 // custom components
 import {HelpIcon} from 'uqlibrary-react-toolbox';
@@ -250,8 +251,13 @@ export default class FileUploader extends PureComponent {
                         </div>
 
                         {this.state.uploadErrorMessage.length > 0 && (
-                            <div>
-                                {this.state.uploadErrorMessage}
+                            <div className="fileUploadErrorMessage">
+                                <div className="Icon">
+                                    <FontIcon className="material-icons">error</FontIcon>
+                                </div>
+                                <div className="Message">
+                                    {this.state.uploadErrorMessage}
+                                </div>
                             </div>
                         )}
 
