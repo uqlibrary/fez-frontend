@@ -31,12 +31,14 @@ export default class AddRecord extends React.Component {
         loadPublicationTypesList: PropTypes.func,
         publicationTypeList: PropTypes.object,
         searchResultsList: PropTypes.object,
+        loadingSearch: PropTypes.bool,
         selectedPublicationType: PropTypes.object,
         stepperIndex: PropTypes.number
     };
 
     static defaultProps = {
-        searchResultsList: null
+        searchResultsList: null,
+        loadingSearch: false
     };
 
     constructor(props) {
@@ -112,7 +114,6 @@ export default class AddRecord extends React.Component {
                 );
             case STEP_2:
                 // on initial load this will be null
-                const loaded = this.props.searchResultsList !== null;
                 const inlineLoaderInformation = locale.pages.addRecord.inlineLoader;
                 const searchResultsInformation = locale.pages.addRecord.searchResults;
                 const noMatchingRecordsInformation = locale.pages.addRecord.noMatchingRecords;
@@ -121,13 +122,13 @@ export default class AddRecord extends React.Component {
 
                 return (
                     <div>
-                        {!loaded &&
+                        {this.props.loadingSearch &&
                             <div className="is-centered">
                                 <InlineLoader message={inlineLoaderInformation.message} />
                             </div>
                         }
 
-                        {loaded && this.props.searchResultsList.size > 0 &&
+                        {!this.props.loadingSearch && this.props.searchResultsList.size > 0 &&
                         <SearchResults
                             dataSource={this.props.searchResultsList}
                             title={searchResultsInformation.title}
@@ -137,7 +138,7 @@ export default class AddRecord extends React.Component {
                         />
                         }
 
-                        {loaded &&
+                        {!this.props.loadingSearch &&
                             <NoMatchingRecords
                                 handleNext={this.handleNext}
                                 handlePrevious={this.handlePrev}

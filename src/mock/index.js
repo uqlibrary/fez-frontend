@@ -13,7 +13,7 @@ import {publicationYearsBig} from './data/academic/publicationYears';
 import {documentAccessTypes} from './data/documentAccessTypes';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api);
+const mock = new MockAdapter(api, { delayResponse: 2000 });
 
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
@@ -44,10 +44,10 @@ mock.onGet(/search\/external\?pub_med_id=*/).reply(200, externalPubMedSearchResu
 mock.onGet(/search\/internal\?pub_med_id=*/).reply(200, internalPubMedSearchResultsList);
 
 // Mock the publication form external title search endpoint
-mock.onGet(/search\/external\?rek_display_type=[0-9]*/).reply(200, externalTitleSearchResultsList);
+mock.onGet(/search\/external\?source=wos&rek_display_type=[0-9]*/).reply(200, externalTitleSearchResultsList);
 
 // Mock the publication form internal title search endpoint
-mock.onGet(/search\/internal\?rek_display_type=[0-9]*/).reply(200, internalTitleSearchResultsList);
+mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(200, internalTitleSearchResultsList);
 
 // Mock the publication types endpoint
 mock.onGet('records/types').reply(200, publicationTypeList);
