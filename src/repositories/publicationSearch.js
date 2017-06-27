@@ -5,8 +5,6 @@ import {api} from 'config';
  * @returns {Promise}
  */
 function performExternalSearch(querystring) {
-    console.log('performExternalSearch....');
-
     return new Promise((resolve, reject) => {
         api.get(`search/external?${querystring}`).then(response => {
             resolve(response.data);
@@ -22,8 +20,6 @@ function performExternalSearch(querystring) {
  * @returns {Promise}
  */
 function performSearch(querystring) {
-    console.log('performSearch....');
-
     return new Promise((resolve) => {
         api.get(`search/internal?${querystring}`).then(response => {
             if (response.data.length > 0) {
