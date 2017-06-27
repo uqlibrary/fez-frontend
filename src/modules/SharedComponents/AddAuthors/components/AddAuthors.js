@@ -130,11 +130,9 @@ export default class AddAuthors extends Component {
                     <TableRow key={key}>
                         <TableRowColumn>
                             {author.get('name')}
-                            {index === FIRST_ROW && (
-                                <div className="priority-author">
-                                    {authorOrderText}
-                                </div>
-                            )}
+                            <div className="priority-author">
+                                {authorOrderText}
+                            </div>
                         </TableRowColumn>
                         <TableRowColumn>{author.get('identifier')}</TableRowColumn>
                         <TableRowColumn style={actionRowStyle}>
@@ -190,7 +188,6 @@ export default class AddAuthors extends Component {
             deleteDialogContent: messages.deleteAuthorDialogContent
         });
     };
-
 
     handleDialogClose = () => {
         this.setState({
