@@ -270,7 +270,8 @@ export default {
                 authorIdentifier: 'authorIdentifier',
                 authorNameLabel: 'Add an author (name as published)',
                 authorNameHintText: 'Add author\'s name as published',
-                authorIdentifierLabel: 'UQ identifier'
+                authorIdentifierLabel: 'UQ identifier',
+                leadAuthor: 'Lead Author'
             },
             rows: {
                 moveRecordUp: 'Move record up the order',

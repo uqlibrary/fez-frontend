@@ -50,14 +50,14 @@ const FIRST_ROW = 0;
 export default class AddAuthors extends Component {
 
     static propTypes = {
-        formValues: PropTypes.object
+        authorsList: PropTypes.object,
+        updateAuthorsList: PropTypes.func
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            authorsList: [],
             deleteSingleAuthor: true,
             deleteAuthorIndex: -1,
             deleteDialogContent: '',
@@ -70,10 +70,10 @@ export default class AddAuthors extends Component {
     addAuthor = () => {
         const authorInformation = locale.sharedComponents.authors;
         const messages = authorInformation.messages;
-        const authorsList = this.state.authorsList;
+        const authorsList = this.props.authorsList.toJS();
 
         let found = false;
-        if (this.state.identifier.length > 0) {
+        if (this.state.identifier.length > 0 && authorsList) {
             found = authorsList.filter(author => author.identifier === this.state.identifier).length > 0;
         }
 
@@ -87,9 +87,11 @@ export default class AddAuthors extends Component {
 
             this.setState({
                 name: '',
-                identifier: '',
-                authorsList
+                identifier: ''
             });
+
+            // update the the authors reducer
+            this.props.updateAuthorsList(authorsList);
         } else {
             this.setState({
                 name: '',
@@ -102,16 +104,25 @@ export default class AddAuthors extends Component {
     buildAuthorRow = () => {
         const authorInformation = locale.sharedComponents.authors;
         const authorRowInfo = authorInformation.rows;
-        LAST_ROW = this.state.authorsList.length;
+        const authorRowFields = authorInformation.fields;
+        const authorsList = this.props.authorsList;
 
-        // removed from tablerow cos it's throwing errors displayRowCheckbox={false}
+        LAST_ROW = authorsList.size;
+
         return (
-             this.state.authorsList.map((author, index) => {
+             authorsList.map((author, index) => {
                  const key = `${author}${index}`;
                  return (
-                    <TableRow key={key}>
-                        <TableRowColumn>{author.name}</TableRowColumn>
-                        <TableRowColumn>{author.identifier}</TableRowColumn>
+                    <TableRow key={key} displayRowCheckbox={false}>
+                        <TableRowColumn>
+                            {author.get('name')}
+                            {index === FIRST_ROW && (
+                                <div className="lead-author">
+                                    {authorRowFields.leadAuthor}
+                                </div>
+                            )}
+                        </TableRowColumn>
+                        <TableRowColumn>{author.get('identifier')}</TableRowColumn>
                         <TableRowColumn style={actionRowStyle}>
                             <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === FIRST_ROW} iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={() => this.moveAuthorUp(index)}>
                                 <KeyboardUp />
@@ -127,8 +138,19 @@ export default class AddAuthors extends Component {
         );
     };
 
-    deleteFileAction = () => {
-        this.handleClose();
+    deleteAuthorAction = () => {
+        let authorsList = this.props.authorsList.toJS();
+
+        if (this.state.deleteSingleAuthor) {
+            authorsList.splice(this.state.deleteAuthorIndex, 1);
+        } else {
+            authorsList = [];
+        }
+
+        // update the the authors reducer
+        this.props.updateAuthorsList(authorsList);
+
+        this.handleDialogClose();
     };
 
     deleteAllAuthorsConfirmation = () => {
@@ -186,18 +208,20 @@ export default class AddAuthors extends Component {
     };
 
     reorderAuthor = (oldIndex, newIndex) => {
-        const authorList = this.state.authorsList;
-        const currentAuthor = authorList[oldIndex];
+        const authorsList = this.props.authorsList.toJS();
+        const currentAuthor = authorsList[oldIndex];
 
-        authorList[oldIndex] = authorList[newIndex];
-        authorList[newIndex] = currentAuthor;
+        authorsList[oldIndex] = authorsList[newIndex];
+        authorsList[newIndex] = currentAuthor;
 
-        this.setState({authorList});
+        // update the the authors reducer
+        this.props.updateAuthorsList(authorsList);
     };
 
     render() {
         const authorInformation = locale.sharedComponents.authors;
         const authorFields = authorInformation.fields;
+        const authorsList = this.props.authorsList;
         const buttonLabels = locale.global.labels.buttons;
 
         const deleteActions = [
@@ -210,7 +234,7 @@ export default class AddAuthors extends Component {
                 secondary
                 keyboardFocused
                 style={{marginLeft: '12px'}}
-                onTouchTap={this.deleteFileAction}
+                onTouchTap={this.deleteAuthorAction}
             />,
         ];
 
@@ -268,7 +292,7 @@ export default class AddAuthors extends Component {
                 )}
 
                 {/* List area */}
-                {this.state.authorsList.length > 0 && (
+                {authorsList.size > 0 && (
                 <div className="columns">
                     <div className="column">
                         <Table selectable={false} >
