@@ -85,14 +85,20 @@ export default class AddJournalArticleForm extends Component {
 
     submitRecord = () => {
         const {decreaseStep, formValues, submitRecordForApproval} = this.props;
+
+        // TODO: move these constants to a config, there will be more types -> keep it in one place
         const RECORD_TYPE = 3;
         const SUBMITTED_FOR_APPROVAL = 3;
-        const JOURNAL_TYPE = 179;
+        const DISPLAY_TYPE = 179;
+        const MEMBER_OF = 'UQ:218198';
 
         const defaultData = {
             rek_object_type: RECORD_TYPE,
             rek_status: SUBMITTED_FOR_APPROVAL,
-            rek_display_type: JOURNAL_TYPE
+            rek_display_type: DISPLAY_TYPE,
+            fez_record_search_key_ismemberof: [
+                { rek_ismemberof: MEMBER_OF }
+            ]
         };
 
         const formData = formValues.toJS();
@@ -319,7 +325,7 @@ export default class AddJournalArticleForm extends Component {
                                 <div className="columns">
                                     <div className="column">
                                         <Field component={TextField}
-                                               name="fez_record_search_key_link.rek_link"
+                                               name="fez_record_search_key_link.0.rek_link"
                                                type="text"
                                                fullWidth
                                                floatingLabelText={optionalInformation.fields.urlLabel}
