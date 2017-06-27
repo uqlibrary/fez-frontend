@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {TextField} from 'uqlibrary-react-toolbox';
+import TextField from 'material-ui/TextField';
 import ContentLink from 'material-ui/svg-icons/content/link';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
 import ActionDeleteAll from 'material-ui/svg-icons/action/delete-forever';
@@ -64,7 +64,9 @@ export default class AddAuthors extends Component {
             deleteAuthorIndex: -1,
             deleteDialogContent: '',
             deleteDialogOpen: false,
+            error: '',
             name: '',
+            nameError: '',
             identifier: ''
         };
 
@@ -93,7 +95,8 @@ export default class AddAuthors extends Component {
             this.setState({
                 name: '',
                 identifier: '',
-                error: ''
+                error: '',
+                nameError: ''
             });
 
             // update the the authors reducer
@@ -102,7 +105,8 @@ export default class AddAuthors extends Component {
             this.setState({
                 name: '',
                 identifier: '',
-                error: messages.authorExists
+                error: messages.authorExists,
+                nameError: ''
             });
         }
 
@@ -208,7 +212,7 @@ export default class AddAuthors extends Component {
                 const authorFields = authorInformation.fields;
                 const messages = authorInformation.messages;
 
-                this.setState({error: messages.authorNameMissing});
+                this.setState({nameError: messages.authorNameMissing});
 
                 // tried using the other ways recommended by facebook with refs but they didn't work
                 document.getElementsByName(authorFields.authorName)[0].focus();
@@ -290,6 +294,7 @@ export default class AddAuthors extends Component {
                             onChange={this.handleNameChange}
                             onKeyPress={this.handleKeyPress}
                             value={this.state.name}
+                            errorText={this.state.nameError}
                         />
                     </div>
                     <div className="column is-narrow">

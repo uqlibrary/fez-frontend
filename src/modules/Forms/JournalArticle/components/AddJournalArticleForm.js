@@ -207,10 +207,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <Field
-                            component={AddAuthors}
-                            name="authors"
-                        />
+                        <AddAuthors />
                     </CardText>
                 </Card>
 
