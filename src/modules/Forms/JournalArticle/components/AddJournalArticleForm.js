@@ -120,7 +120,7 @@ export default class AddJournalArticleForm extends Component {
     render() {
         // path to the locale data for each of the sections
         const journalArticleInformation = locale.pages.addRecord.addJournalArticle.journalArticleInformation;
-        const authorsInformation = locale.pages.addRecord.addJournalArticle.authors;
+        const authorsInformation = locale.sharedComponents.authors;
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
 

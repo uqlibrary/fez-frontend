@@ -1,6 +1,5 @@
 // Repositories
 import {loadPublicationSubTypeData} from 'repositories/publicationSubTypes';
-import {loadAuthorsData} from 'repositories/authors';
 import {submitRecord} from 'repositories/addRecord';
 
 // config
@@ -39,24 +38,6 @@ export function loadPublicationSubTypesList(id) {
             dispatch({
                 type: PUBLICATION_SUB_TYPES_LOADED,
                 payload: publicationTypes
-            });
-        }).catch((error) => {
-            throw(error);
-        });
-    };
-}
-
-/**
- * Loads a list of authors
- * @returns {function(*)}
- */
-export function loadAuthorsList() {
-    return dispatch => {
-        dispatch({type: AUTHORS_LOADING});
-        loadAuthorsData().then(authorList => {
-            dispatch({
-                type: AUTHORS_LOADED,
-                payload: authorList
             });
         }).catch((error) => {
             throw(error);
