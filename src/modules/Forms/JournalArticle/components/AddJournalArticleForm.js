@@ -13,7 +13,7 @@ import './AddJournalArticleForm.scss';
 export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
-        authorList: PropTypes.object,
+        authorsList: PropTypes.object,
         cancelAddRecord: PropTypes.func,
         decreaseStep: PropTypes.func,
         fileMetadata: PropTypes.object,
@@ -52,11 +52,11 @@ export default class AddJournalArticleForm extends Component {
     };
 
     setAuthorData = () => {
-        const {authorList} = this.props;
+        const {authorsList} = this.props;
 
-        if (authorList.size > 0) {
+        if (authorsList.size > 0) {
             const data = {'fez_record_search_key_author': []};
-            authorList.toJS().map((author, index) => {
+            authorsList.toJS().map((author, index) => {
                 data.fez_record_search_key_author.push({
                     'rek_author': author.aut_display_name,
                     'rek_author_order': (index + 1)
@@ -108,9 +108,10 @@ export default class AddJournalArticleForm extends Component {
             formData.rek_date = new Date();
         }
 
-        const fileData = this.setFileData();
+        // const fileData = this.setFileData();
+        const fileData = {};
         const authorData = this.setAuthorData();
-        console.log('authorData', authorData);
+
         const combinedData = Object.assign({}, defaultData, formData, tempData, fileData, authorData);
 
         submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
@@ -130,7 +131,7 @@ export default class AddJournalArticleForm extends Component {
         const DateTimeFormat = global.Intl.DateTimeFormat;
 
         return (
-            <form onSubmit={handleSubmit(this.submitRecord)}>
+            <form>
                 {/* Journal Information */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
@@ -268,10 +269,10 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
 
                 {/* Files */}
-
                 <div className="buttonWrapper">
                     <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddingRecord}/>
-                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}} type="submit"/>
+                    {/* Moved the submit function onto this button so that hitting the enter key on a field can trigger other actions instead of a submit form */}
+                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}}  onClick={handleSubmit(this.submitRecord)}/>
                 </div>
             </form>
         );

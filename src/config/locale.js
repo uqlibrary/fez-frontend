@@ -269,9 +269,7 @@ export default {
                 authorName: 'authorName',
                 authorIdentifier: 'authorIdentifier',
                 authorNameLabel: 'Add an author (name as published)',
-                authorNameHintText: 'Add author\'s name as published',
-                authorIdentifierLabel: 'UQ identifier',
-                leadAuthor: 'Lead Author'
+                authorIdentifierLabel: 'UQ identifier'
             },
             rows: {
                 moveRecordUp: 'Move record up the order',
@@ -280,11 +278,19 @@ export default {
             },
             messages: {
                 authorExists: 'Author exists',
+                authorNameMissing: 'Please enter an author\s name',
                 deleteAllAuthorsDialogContent: 'Are you sure you want to remove all these authors?',
                 deleteAuthorDialogContent: 'Are you sure you want to remove this author?',
             },
             buttons: {
                 addAuthorLabel: 'Add Author'
+            },
+            ordinalData: {
+                list: [
+                    'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Nineth', 'Tenth'
+                ],
+                default: 'Next',
+                suffix: 'listed author'
             }
         },
         files: {

@@ -349,7 +349,6 @@ exports[`Add Journal article form snapshot tests renders default add journal art
           "marginLeft": "12px",
         }
       }
-      type="submit"
     />
   </div>
 </form>

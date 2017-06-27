@@ -10,6 +10,7 @@ import KeyboardDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import RaisedButton from 'material-ui/RaisedButton';
 import IconButton from 'material-ui/IconButton';
 import Dialog from 'material-ui/Dialog';
+
 import {
     Table,
     TableBody,
@@ -44,8 +45,9 @@ const actionRowStyle = {
     width: '50px'
 };
 
-let LAST_ROW = 1;
 const FIRST_ROW = 0;
+const ENTER_KEY = 'Enter';
+let LAST_ROW = 1;
 
 export default class AddAuthors extends Component {
 
@@ -65,10 +67,13 @@ export default class AddAuthors extends Component {
             name: '',
             identifier: ''
         };
+
+        this.addAuthor = this.addAuthor.bind(this);
     }
 
     addAuthor = () => {
         const authorInformation = locale.sharedComponents.authors;
+        const authorFields = authorInformation.fields;
         const messages = authorInformation.messages;
         const authorsList = this.props.authorsList.toJS();
 
@@ -87,7 +92,8 @@ export default class AddAuthors extends Component {
 
             this.setState({
                 name: '',
-                identifier: ''
+                identifier: '',
+                error: ''
             });
 
             // update the the authors reducer
@@ -99,12 +105,15 @@ export default class AddAuthors extends Component {
                 error: messages.authorExists
             });
         }
+
+        // tried using the other ways recommended by facebook with refs but they didn't work
+        document.getElementsByName(authorFields.authorName)[0].focus();
     };
 
     buildAuthorRow = () => {
         const authorInformation = locale.sharedComponents.authors;
+        const authorOrdinalInfo = authorInformation.ordinalData;
         const authorRowInfo = authorInformation.rows;
-        const authorRowFields = authorInformation.fields;
         const authorsList = this.props.authorsList;
 
         LAST_ROW = authorsList.size;
@@ -112,13 +121,18 @@ export default class AddAuthors extends Component {
         return (
              authorsList.map((author, index) => {
                  const key = `${author}${index}`;
+
+                 const authorOrderText = authorOrdinalInfo.list[index] ?
+                     `${authorOrdinalInfo.list[index]} ${authorOrdinalInfo.suffix}` :
+                     `${authorOrdinalInfo.default} ${authorOrdinalInfo.suffix}`;
+
                  return (
-                    <TableRow key={key} displayRowCheckbox={false}>
+                    <TableRow key={key}>
                         <TableRowColumn>
                             {author.get('name')}
                             {index === FIRST_ROW && (
-                                <div className="lead-author">
-                                    {authorRowFields.leadAuthor}
+                                <div className="priority-author">
+                                    {authorOrderText}
                                 </div>
                             )}
                         </TableRowColumn>
@@ -185,6 +199,24 @@ export default class AddAuthors extends Component {
             deleteDialogOpen: false,
             deleteDialogContent: ''
         });
+    };
+
+    handleKeyPress = (e) => {
+        if (e.key === ENTER_KEY) {
+            e.preventDefault();
+            if (this.state.name.trim().length > 0) {
+                this.addAuthor();
+            } else {
+                const authorInformation = locale.sharedComponents.authors;
+                const authorFields = authorInformation.fields;
+                const messages = authorInformation.messages;
+
+                this.setState({error: messages.authorNameMissing});
+
+                // tried using the other ways recommended by facebook with refs but they didn't work
+                document.getElementsByName(authorFields.authorName)[0].focus();
+            }
+        }
     };
 
     handleNameChange = (e) => {
@@ -258,8 +290,8 @@ export default class AddAuthors extends Component {
                             type="text"
                             fullWidth
                             floatingLabelText={authorFields.authorNameLabel}
-                            hintText={authorFields.authorNameHintText}
                             onChange={this.handleNameChange}
+                            onKeyPress={this.handleKeyPress}
                             value={this.state.name}
                         />
                     </div>
@@ -272,6 +304,7 @@ export default class AddAuthors extends Component {
                             fullWidth
                             floatingLabelText={authorFields.authorIdentifierLabel}
                             onChange={this.handleIdentifierChange}
+                            onKeyPress={this.handleKeyPress}
                             value={this.state.identifier}
                         />
                     </div>
@@ -308,7 +341,7 @@ export default class AddAuthors extends Component {
                                     </TableHeaderColumn>
                                 </TableRow>
                             </TableHeader>
-                            <TableBody displayRowCheckbox={false}>
+                            <TableBody>
                                 {this.buildAuthorRow()}
                             </TableBody>
                         </Table>
