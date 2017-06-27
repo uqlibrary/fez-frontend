@@ -220,6 +220,7 @@ export default class AddAuthors extends Component {
 
     render() {
         const authorInformation = locale.sharedComponents.authors;
+        const authorButtonFields = authorInformation.buttons;
         const authorFields = authorInformation.fields;
         const authorsList = this.props.authorsList;
         const buttonLabels = locale.global.labels.buttons;
@@ -276,9 +277,10 @@ export default class AddAuthors extends Component {
                     </div>
                     <div className="column is-narrow">
                         <RaisedButton
-                            label="ADD AUTHOR"
+                            label={authorButtonFields.addAuthorLabel}
                             primary
                             style={buttonStyles}
+                            disabled={this.state.name.trim().length === 0}
                             onClick={this.addAuthor} />
                     </div>
                 </div>
@@ -292,7 +294,7 @@ export default class AddAuthors extends Component {
                 )}
 
                 {/* List area */}
-                {authorsList.size > 0 && (
+                {authorsList & authorsList.size > 0 && (
                 <div className="columns">
                     <div className="column">
                         <Table selectable={false} >

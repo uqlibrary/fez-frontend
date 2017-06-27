@@ -23,7 +23,6 @@ export default class AddJournalArticleForm extends Component {
         loadAuthorsList: PropTypes.func,
         loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
-        selectedAuthors: PropTypes.object,
         selectedPublicationId: PropTypes.object,
         submitRecordForApproval: PropTypes.func
     };
@@ -53,11 +52,11 @@ export default class AddJournalArticleForm extends Component {
     };
 
     setAuthorData = () => {
-        const {selectedAuthors} = this.props;
+        const {authorList} = this.props;
 
-        if (selectedAuthors.size > 0) {
+        if (authorList.size > 0) {
             const data = {'fez_record_search_key_author': []};
-            selectedAuthors.toJS().map((author, index) => {
+            authorList.toJS().map((author, index) => {
                 data.fez_record_search_key_author.push({
                     'rek_author': author.aut_display_name,
                     'rek_author_order': (index + 1)
@@ -111,6 +110,7 @@ export default class AddJournalArticleForm extends Component {
 
         const fileData = this.setFileData();
         const authorData = this.setAuthorData();
+        console.log('authorData', authorData);
         const combinedData = Object.assign({}, defaultData, formData, tempData, fileData, authorData);
 
         submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);

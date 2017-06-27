@@ -282,6 +282,9 @@ export default {
                 authorExists: 'Author exists',
                 deleteAllAuthorsDialogContent: 'Are you sure you want to remove all these authors?',
                 deleteAuthorDialogContent: 'Are you sure you want to remove this author?',
+            },
+            buttons: {
+                addAuthorLabel: 'Add Author'
             }
         },
         files: {
