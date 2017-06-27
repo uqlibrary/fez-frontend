@@ -7,7 +7,7 @@ import {
 
 // Immutable state
 export const initialState = Immutable.fromJS({
-    stepperIndex: 0
+    stepperIndex: 2
 });
 
 const addRecordReducer = (state = initialState, action) => {
