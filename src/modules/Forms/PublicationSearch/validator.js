@@ -1,5 +1,10 @@
 import {validation, locale} from 'config';
 
+export const isPartialDOIValue = value => {
+    const isPartialDOI = /^10\..*/;
+    return isPartialDOI.test(value);
+};
+
 export const isDOIValue = value => {
     // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
     const doiRegex1 = /^10.\d{4,9}\/[-._;()/:A-Z0-9]+$/i;
@@ -13,8 +18,9 @@ export const isDOIValue = value => {
 };
 
 export const isPubMedValue = value => {
-    const numbersOnlyRegex = /^[\d]*$/; // pubmed regex
-    return numbersOnlyRegex.test(value);
+    // pubmed id is all digits, min 3 digits
+    const isPubmedId = /^[\d]{3,}$/;
+    return isPubmedId.test(value);
 };
 
 export const validate = values => {
@@ -22,21 +28,12 @@ export const validate = values => {
 
     const errors = {};
     const fieldValue = values.get('doiSearch');
+    const validTitle = /^[a-z\s\d\!\?\-]{10,255}$/i;
 
-    errors.doiSearch = validation.required(fieldValue);
-    const titleRegex = /^[a-zA-Z\s\d\!\?\-]+$/; // title regex
-
-    if (!isDOIValue(fieldValue) && !isPubMedValue(fieldValue)) {
-        // title search is min 10 characters and max 255 characters
-        errors.doiSearch = validation.minLength10(fieldValue);
-        if (!errors.doiSearch) {
-            errors.doiSearch = validation.maxLength255(fieldValue);
-        }
-
-        if(!titleRegex.test(fieldValue)) {
-            errors.doiSearch = locale.pages.addRecord.searchForPublication.errorMsg;
-        }
+    if (!validation.required(fieldValue) && !isDOIValue(fieldValue) && !isPubMedValue(fieldValue) && !validTitle.test(fieldValue)) {
+        errors.doiSearch = locale.pages.addRecord.searchForPublication.errorMsg;
     }
+
 
     return errors;
 };

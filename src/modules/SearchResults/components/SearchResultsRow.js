@@ -38,8 +38,8 @@ export default class SearchResultsRow extends Component {
                     <div className="claimAuthors">
                     <FontIcon className="material-icons claimAuthorsIcon" data-tip="Authors"
                     data-for="claimTooltips" data-place="left">people</FontIcon>
-                    {authors.map((author) => (
-                        <span>{author.get('rek_author')}, </span>
+                    {authors.map((author, index) => (
+                        <span key={index}>{author.get('rek_author')}, </span>
                     ))}
                     </div>
                 }
