@@ -191,9 +191,9 @@ exports[`Add Journal article form snapshot tests renders default add journal art
     <CardText
       className="body-1"
     >
-      <undefined
-        authorFieldLabel="Add an author (Name as published)"
-        form="testForm"
+      <Field
+        component={[Function]}
+        name="authors"
       />
     </CardText>
   </Card>
@@ -320,9 +320,6 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       </div>
     </CardText>
   </Card>
-  <Connect(ReduxForm)
-    form="FileUploadForm"
-  />
   <div
     className="buttonWrapper"
   >
