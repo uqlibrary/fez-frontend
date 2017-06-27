@@ -294,7 +294,7 @@ export default class AddAuthors extends Component {
                 )}
 
                 {/* List area */}
-                {authorsList.size > 0 && (
+                {authorsList && authorsList.size > 0 && (
                 <div className="columns">
                     <div className="column">
                         <Table selectable={false} >
