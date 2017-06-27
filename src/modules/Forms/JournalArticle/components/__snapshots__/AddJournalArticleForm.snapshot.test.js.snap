@@ -559,7 +559,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
             component={[Function]}
             floatingLabelText="Link (URL)"
             fullWidth={true}
-            name="fez_record_search_key_link.rek_link"
+            name="fez_record_search_key_link.0.rek_link"
             type="text"
             validate={
               Array [
