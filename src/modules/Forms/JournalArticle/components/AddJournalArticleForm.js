@@ -103,11 +103,18 @@ export default class AddJournalArticleForm extends Component {
 
         const formData = formValues.toJS();
 
-        // construct partial date
-        formData.rek_date = new Date(
-            parseInt(formData.partialDateYear, 10),
-            formData.partialDateMonth ? parseInt(formData.partialDateMonth, 10) : 0,
-            formData.partialDateDay ? parseInt(formData.partialDateDay, 10) : 1);
+        // construct partial date "YYYY-MM-DD"
+        formData.rek_date = `${parseInt(formData.partialDateYear, 10)}-${formData.partialDateMonth ? (parseInt(formData.partialDateMonth, 10) + 1) : 1}-${formData.partialDateDay ? parseInt(formData.partialDateDay, 10) : 1 }`;
+
+        // construct url value
+        if (formData.publicationUrl) {
+            formData.fez_record_search_key_link = [
+                {
+                    rek_link: formData.publicationUrl,
+                    rek_link_order: 1
+                }
+            ];
+        }
 
         const fileData = this.setFileData();
         const authorData = this.setAuthorData();
@@ -325,11 +332,11 @@ export default class AddJournalArticleForm extends Component {
                                 <div className="columns">
                                     <div className="column">
                                         <Field component={TextField}
-                                               name="fez_record_search_key_link.0.rek_link"
+                                               name="publicationUrl"
                                                type="text"
                                                fullWidth
                                                floatingLabelText={optionalInformation.fields.urlLabel}
-                                               validate={[validation.url]}
+                                               validate={[validation.url, validation.maxLength255]}
                                         />
                                     </div>
                                 </div>

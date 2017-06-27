@@ -46,7 +46,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
           <Field
             autoFocus={true}
             component={[Function]}
-            floatingLabelText="Journal title"
+            floatingLabelText="Title"
             fullWidth={true}
             name="rek_title"
             type="text"
@@ -348,7 +348,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
         >
           <Field
             component={[Function]}
-            floatingLabelText="Select publication subtype"
+            floatingLabelText="Publication subtype"
             fullWidth={true}
             name="rek_subtype"
             validate={
@@ -559,10 +559,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
             component={[Function]}
             floatingLabelText="Link (URL)"
             fullWidth={true}
-            name="fez_record_search_key_link.0.rek_link"
+            name="publicationUrl"
             type="text"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }
