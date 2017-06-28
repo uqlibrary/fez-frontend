@@ -232,16 +232,6 @@ export default {
                         publicationSubType: 'Publication subtype'
                     }
                 },
-                authors: {
-                    title: 'Authors',
-                    help: {
-                        title: 'Authors',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
-                    },
-                    fields: {
-                        dropdownLabel: 'Add an author (name as published)'
-                    }
-                },
                 optionalDetails: {
                     title: 'Optional publication details',
                     help: {
@@ -282,6 +272,40 @@ export default {
         },
     },
     sharedComponents: {
+        authors: {
+            title: 'Authors',
+            help: {
+                title: 'Authors',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
+            },
+            fields: {
+                authorName: 'authorName',
+                authorIdentifier: 'authorIdentifier',
+                authorNameLabel: 'Add an author (name as published)',
+                authorIdentifierLabel: 'UQ identifier'
+            },
+            rows: {
+                moveRecordUp: 'Move record up the order',
+                moveRecordDown: 'Move record down the order',
+                removeRecord: 'Remove this author'
+            },
+            messages: {
+                authorExists: 'Author exists',
+                authorNameMissing: 'Please enter an author\s name',
+                deleteAllAuthorsDialogContent: 'Are you sure you want to remove all these authors?',
+                deleteAuthorDialogContent: 'Are you sure you want to remove this author?',
+            },
+            buttons: {
+                addAuthorLabel: 'Add Author'
+            },
+            ordinalData: {
+                list: [
+                    'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Nineth', 'Tenth'
+                ],
+                default: 'Next',
+                suffix: 'listed author'
+            }
+        },
         files: {
             title: 'Files',
             subTitle: 'Upload new files',

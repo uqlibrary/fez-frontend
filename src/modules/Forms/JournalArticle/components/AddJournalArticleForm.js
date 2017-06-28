@@ -5,16 +5,17 @@ import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
-import {Authors, FileUploader, SelectField} from 'modules/SharedComponents';
+import {AddAuthors, FileUploader, SelectField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
+
 
 import './AddJournalArticleForm.scss';
 
 export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
-        authorList: PropTypes.object,
         acceptedFiles: PropTypes.object,
+        authorsList: PropTypes.object,
         cancelAddRecord: PropTypes.func,
         completeFormSubmission: PropTypes.func,
         decreaseStep: PropTypes.func,
@@ -28,7 +29,6 @@ export default class AddJournalArticleForm extends Component {
         loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
         resetFormSubmissionFlag: PropTypes.func,
-        selectedAuthors: PropTypes.object,
         selectedPublicationId: PropTypes.object,
         showSnackbar: PropTypes.func,
         submitRecordForApproval: PropTypes.func,
@@ -40,20 +40,8 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentDidMount() {
-        const {loadAuthorsList, loadPublicationSubTypesList, resetFormSubmissionFlag, selectedPublicationId} = this.props;
+        const {loadPublicationSubTypesList, selectedPublicationId} = this.props;
         loadPublicationSubTypesList(selectedPublicationId.get('id'));
-        loadAuthorsList();
-        resetFormSubmissionFlag();
-    }
-
-    componentWillUpdate(nextProps) {
-        // this is for when we do a file upload
-        // we want to redirect once the file upload is complete
-        if (nextProps.isUploadCompleted) {
-            const {showSnackbar, decreaseStep} = this.props;
-            showSnackbar(locale.notifications.addRecord.submitMessage);
-            decreaseStep();
-        }
     }
 
     cancelAddingRecord = () => {
@@ -63,13 +51,13 @@ export default class AddJournalArticleForm extends Component {
     };
 
     setAuthorData = () => {
-        const {selectedAuthors} = this.props;
+        const {authorsList} = this.props;
 
-        if (selectedAuthors.size > 0) {
+        if (authorsList.size > 0) {
             const data = {'fez_record_search_key_author': []};
-            selectedAuthors.toJS().map((author, index) => {
+            authorsList.toJS().map((author, index) => {
                 data.fez_record_search_key_author.push({
-                    'rek_author': author.aut_display_name,
+                    'rek_author': author.name,
                     'rek_author_order': (index + 1)
                 });
             });
@@ -131,7 +119,8 @@ export default class AddJournalArticleForm extends Component {
             ];
         }
 
-        const fileData = this.setFileData();
+        // const fileData = this.setFileData(); commented this out as it is old so will just wait for merge to sort this out
+        const fileData = {};
         const authorData = this.setAuthorData();
         const combinedData = Object.assign({}, defaultData, formData, fileData, authorData);
 
@@ -153,13 +142,13 @@ export default class AddJournalArticleForm extends Component {
     render() {
         // path to the locale data for each of the sections
         const journalArticleInformation = locale.pages.addRecord.addJournalArticle.journalArticleInformation;
-        const authorsInformation = locale.pages.addRecord.addJournalArticle.authors;
+        const authorsInformation = locale.sharedComponents.authors;
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
         const {form, handleSubmit} = this.props;
 
         return (
-            <form onSubmit={handleSubmit(this.submitRecord)}>
+            <form>
                 {/* Journal Information */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
@@ -290,8 +279,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <Authors form={form} dataSource={this.props.authorList}
-                                 authorFieldLabel={authorsInformation.fields.dropdownLabel}/>
+                        <AddAuthors />
                     </CardText>
                 </Card>
 
@@ -382,7 +370,7 @@ export default class AddJournalArticleForm extends Component {
                         secondary
                         label={buttonLabels.submitForApproval}
                         style={{marginLeft: '12px'}}
-                        type="submit" />
+                        onClick={handleSubmit(this.submitRecord)} />
                 </div>
             </form>
         );

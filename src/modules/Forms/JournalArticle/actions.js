@@ -1,6 +1,5 @@
 // Repositories
 import {loadPublicationSubTypeData} from 'repositories/publicationSubTypes';
-import {loadAuthorsData} from 'repositories/authors';
 import {submitRecord} from 'repositories/addRecord';
 
 // config
@@ -9,9 +8,6 @@ import {locale} from 'config';
 // Types
 export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
 export const PUBLICATION_SUB_TYPES_LOADED = 'PUBLICATION_SUB_TYPES_LOADED';
-export const AUTHORS_LOADING = 'AUTHORS_LOADING';
-export const AUTHORS_LOADED = 'AUTHORS_LOADED';
-export const RECORD_SUBMITTED_RESET = 'RECORD_SUBMITTED_RESET';
 export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
 
 // module imports
@@ -47,24 +43,6 @@ export function loadPublicationSubTypesList(id) {
     };
 }
 
-/**
- * Loads a list of authors
- * @returns {function(*)}
- */
-export function loadAuthorsList() {
-    return dispatch => {
-        dispatch({type: AUTHORS_LOADING});
-        loadAuthorsData().then(authorList => {
-            dispatch({
-                type: AUTHORS_LOADED,
-                payload: authorList
-            });
-        }).catch((error) => {
-            throw(error);
-        });
-    };
-}
-
 
 /**
  * Cancels the add record functionality
@@ -87,15 +65,5 @@ export function submitRecordForApproval(data) {
         }).catch(error => {
             throw(error);
         });
-    };
-}
-
-/**
- * Resets the isFormSubmissionComplete state
- * @returns {{type: string}}
- */
-export function resetFormSubmissionFlag() {
-    return {
-        type: RECORD_SUBMITTED_RESET
     };
 }

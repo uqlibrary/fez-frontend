@@ -1,14 +1,9 @@
 import {connect} from 'react-redux';
 import {reduxForm, getFormValues} from 'redux-form/immutable';
 import AddJournalArticleForm from '../components/AddJournalArticleForm';
-import {
-    loadPublicationSubTypesList,
-    cancelAddRecord,
-    loadAuthorsList,
-    resetFormSubmissionFlag,
-    submitRecordForApproval
-} from '../actions';
+
 import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
+import {loadPublicationSubTypesList, cancelAddRecord, submitRecordForApproval} from '../actions';
 import {decreaseStep} from '../../../AddRecord/actions';
 import Immutable from 'immutable';
 import {showSnackbar} from 'modules/App/actions';
@@ -56,26 +51,24 @@ let AddJournalArticleFormContainer = reduxForm({
 AddJournalArticleFormContainer = connect(state => {
     const journalArticleState = state.get('journalArticle');
     const fileUploadState = state.get('fileUpload');
-    const authorsState = state.get('authors') || Immutable.Map({});
+    // const publicationTypeState = state.get('publicationSubTypes');
+    const authorsState = state.get('authors');
 
     return {
         acceptedFiles: fileUploadState.get('acceptedFiles'),
-        authorList: journalArticleState.get('authorList') || Immutable.Map({}),
+        authorsList: authorsState.get('authorsList') || Immutable.Map({}),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
         isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         publicationSubTypeList: journalArticleState.get('publicationSubTypeList'),
-        selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType'),
-        selectedAuthors: authorsState.get('selectedAuthors') || Immutable.Map({})
+        selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType')
     };
 }, dispatch => {
     return {
         cancelAddRecord: (message) => dispatch(cancelAddRecord(message)),
         decreaseStep: () => dispatch(decreaseStep()),
         loadPublicationSubTypesList: (id) => dispatch(loadPublicationSubTypesList(id)),
-        loadAuthorsList: () => dispatch(loadAuthorsList()),
-        resetFormSubmissionFlag: () => dispatch(resetFormSubmissionFlag()),
-        showSnackbar: (msg) => dispatch(showSnackbar(msg)),
         submitRecordForApproval: (data, message) => dispatch(submitRecordForApproval(data, message)),
+        showSnackbar: (msg) => dispatch(showSnackbar(msg)),
         uploadFile: (acceptedFiles) => dispatch(uploadFile(acceptedFiles))
     };
 })(AddJournalArticleFormContainer);
