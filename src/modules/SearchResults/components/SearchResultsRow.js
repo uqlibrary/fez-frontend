@@ -9,52 +9,62 @@ const scopusIcon = require('images/scopus_icon.svg');
 const googleScholarIcon = require('images/googlescholar_icon.svg');
 const altmetricIcon = require('images/altmetric_icon.svg');
 
+import './SearchResultsRow.scss';
+
 export default class SearchResultsRow extends Component {
 
     static propTypes = {
         entry: PropTypes.object.isRequired,
-        claimRecordBtnLabel: PropTypes.string
+        claimRecordBtnLabel: PropTypes.string,
     };
 
     static defaultProps = {
         claimRecordBtnLabel: 'Claim Record'
-    };
+    }
 
     constructor(props) {
         super(props);
     }
 
     render() {
-        const {title, journalName, authors, counts} = this.props.entry;
+        const {title, journalName, authors, counts, publisher, volumeNumber, issueNumber, startPage, endPage, doi} = this.props.entry;
+
         return (
             <div className="claimWrapper">
-                <a href="#claimTitle">
-                    <h3 className="claimTitle">{title}
-                        <FontIcon className="material-icons claimTitleIcon">open_in_new</FontIcon>
-                    </h3>
-                </a>
+                <h3 className="claimTitle">
+                    <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}">{title}</a>
+                    <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}" target="_blank"><FontIcon className="material-icons claimTitleIcon">open_in_new</FontIcon></a>
+                </h3>
 
-                {authors &&
-                    <div className="claimAuthors">
-                    <FontIcon className="material-icons claimAuthorsIcon" data-tip="Authors"
-                    data-for="claimTooltips" data-place="left">people</FontIcon>
-                    {authors.map((author, index) => (
-                        <span key={index}>{author.get('rek_author')}, </span>
-                    ))}
-                    </div>
-                }
+                <div className="claimCitation JournalArticle">
+                    <FontIcon className="material-icons claimAuthorsIcon"
+                              data-tip="Full citation"
+                              data-for="claimTooltips"
+                              data-place="left">
+                        format_quote
+                    </FontIcon>
 
-                <div className="claimJournal">
-                    <FontIcon className="material-icons claimJournalIcon" data-tip="Published"
-                              data-for="claimTooltips" data-place="left">library_books</FontIcon>
-                    {journalName}
+                    <span className="claimAuthors">
+                        <span className="allAuthors">{authors.map((author) => (<span>{author.get('rek_author')} </span>))}</span>
+                    </span>
+
+                    ({publisher}) {title}.
+                    <i><span className="citation_journal_name"> {journalName}</span></i>
+                    ,
+                    <i><span className="citation_volume_number"> {volumeNumber}:</span></i>
+                    <span className="citation_issue_number">{issueNumber}</span>
+                    :
+                    <span className="citation_start_page">{startPage}</span>
+                    -
+                    <span className="citation_end_page">{endPage}</span>.
+                    doi:<span className="citation_doi">{doi}</span>
                 </div>
 
                 <div className="claimStats">
                     {counts.thomson > 0 &&
                     <span>
                         <img src={thompsonIcon} alt="Thomson Routers"
-                             data-tip="Thomson Routers Web of Science citation count"
+                             data-tip="Thomson Routers Web of Science citation count" data-place="bottom"
                              data-for="claimTooltips"/> {counts.thomson}
                     </span>
                     }
@@ -79,7 +89,7 @@ export default class SearchResultsRow extends Component {
                     </span>
                     }
                     {counts.downloads > 1 && (
-                    <span>
+                        <span>
                     <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads"
                               data-for="claimTooltips" data-place="bottom"
                               style={{marginLeft: '10px'}}>file_download</FontIcon> {counts.downloads}
@@ -89,8 +99,8 @@ export default class SearchResultsRow extends Component {
                 </div>
 
                 <div className="claimButtonWrapper">
-                    <FlatButton label={this.props.claimRecordBtnLabel} secondary />
-                </div><div style={{clear: 'both'}} />
+                    <FlatButton label={this.props.claimRecordBtnLabel} secondary/>
+                </div>
             </div>
         );
     }
