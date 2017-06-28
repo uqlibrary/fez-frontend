@@ -186,7 +186,7 @@ export default {
             },
             searchResults: {
                 title: 'Possible matches found',
-                explanationText: 'Top [noOfResults] matches displayed below. To refine your search and narrow down results, please click the "search again" button below - or create a new record.',
+                explanationText: 'Top [noOfResults] match(es) displayed below. To refine your search and narrow down results, please click the SEARCH AGAIN button below - or CREATE A NEW RECORD.',
                 claimRecordBtnLabel: 'Claim This Record',
                 help: {
                     title: 'Possible matches found',
