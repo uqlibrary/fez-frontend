@@ -61,10 +61,6 @@ exports[`Search results snapshots tests renders default search results page 1`] 
             },
           ],
           "counts": Object {
-            "altmetric": 44,
-            "downloads": 55,
-            "google": 33,
-            "scopus": 22,
             "thomson": 10,
           },
           "doi": "10.1111/j.1755-5922.2010.00189.x",
