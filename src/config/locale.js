@@ -27,7 +27,7 @@ export default {
             primaryText: 'My research'
         },
         addMissingRecord: {
-            primaryText: 'Add missing record'
+            primaryText: 'Add a missing record'
         },
         claimPublication: {
             primaryText: 'Claim publications'
@@ -155,7 +155,7 @@ export default {
             }
         },
         addRecord: {
-            title: 'Add missing record',
+            title: 'Add a missing record to eSpace',
             stepper: {
                 step1Label: 'Search for your publication',
                 step2Label: 'Search results',
@@ -183,7 +183,7 @@ export default {
             },
             searchResults: {
                 title: 'Possible matches found',
-                explanationText: 'Top [noOfResults] match(es) displayed below. To refine your search and narrow down results, please click the SEARCH AGAIN button below - or CREATE A NEW RECORD.',
+                explanationText: 'Top [noOfResults] potential match(es) displayed - claim a matching article below, refine your search or create a new eSpace record.',
                 claimRecordBtnLabel: 'Claim This Record',
                 help: {
                     title: 'Possible matches found',
@@ -192,8 +192,8 @@ export default {
                 limit: 5
             },
             noMatchingRecords: {
-                title: 'No matching records?',
-                explanationText: 'Refine your search and narrow down results, or create a new eSpace record for your publication.',
+                title: 'No matching records found',
+                explanationText: 'We were unable to match any results to your search criteria. Please, search again or create a new eSpace record.',
                 searchAgainBtnLabel: 'Search again',
                 addPublicationBtnLabel: 'Add a new publication',
                 help: {

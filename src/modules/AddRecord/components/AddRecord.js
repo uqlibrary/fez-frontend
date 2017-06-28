@@ -3,6 +3,8 @@ import ExpandTransition from 'material-ui/internal/ExpandTransition';
 import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
+import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -99,7 +101,6 @@ export default class AddRecord extends React.Component {
                 );
             case STEP_2:
                 // on initial load this will be null
-                const inlineLoaderInformation = locale.pages.addRecord.inlineLoader;
                 const searchResultsInformation = locale.pages.addRecord.searchResults;
                 const noMatchingRecordsInformation = locale.pages.addRecord.noMatchingRecords;
 
@@ -107,7 +108,7 @@ export default class AddRecord extends React.Component {
                     <div>
                         {this.props.loadingSearch &&
                             <div className="is-centered">
-                                <InlineLoader message={inlineLoaderInformation.message} />
+                                <InlineLoader message="Searching for your publications..." />
                             </div>
                         }
 
@@ -121,10 +122,8 @@ export default class AddRecord extends React.Component {
                         />
                         }
 
-                        {!this.props.loadingSearch &&
+                        {!this.props.loadingSearch && this.props.searchResultsList.size === 0 &&
                             <NoMatchingRecords
-                                handleNext={this.handleNext}
-                                handlePrevious={this.handlePrev}
                                 title={noMatchingRecordsInformation.title}
                                 explanationText={noMatchingRecordsInformation.explanationText}
                                 searchAgainBtnLabel={noMatchingRecordsInformation.searchAgainBtnLabel}
@@ -132,6 +131,28 @@ export default class AddRecord extends React.Component {
                                 help={noMatchingRecordsInformation.help}
                             />
                         }
+
+                        {!this.props.loadingSearch &&
+                            <div className="layout-container">
+                                <div className="layout-card">
+                                    <div style={{textAlign: 'right'}}>
+                                        <FlatButton
+                                            label="Abandon and search again"
+                                            style={{marginRight: 12}}
+                                            onTouchTap={this.handlePrev}
+                                        />
+                                        <RaisedButton
+                                            label="Create a new espace record"
+                                            secondary
+                                            autoFocus
+                                            keyboardFocused
+                                            onTouchTap={this.handleNext}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
                         <ReactTooltip id="claimTooltips" effect="solid" place="bottom"/>
                     </div>
                 );

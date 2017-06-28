@@ -19,10 +19,6 @@ export default class SearchResults extends Component {
         super(props);
     }
 
-    setExplanationText = () => {
-        return this.props.explanationText.replace('[noOfResults]', this.props.dataSource.size);
-    };
-
     render() {
         const {dataSource, help, title} = this.props;
         const searchResultEntries = dataSource.map((source, i) => {
@@ -64,7 +60,11 @@ export default class SearchResults extends Component {
                     </div>
                 </CardHeader>
                 <CardText className="body-1">
-                    <div>{this.setExplanationText()}</div>
+                    <div>
+                        {this.props.explanationText.replace('[noOfResults]', this.props.dataSource.size)}
+
+
+                    </div>
                     {searchResultEntries}
                 </CardText>
             </Card>

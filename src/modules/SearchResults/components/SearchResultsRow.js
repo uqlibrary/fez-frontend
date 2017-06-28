@@ -98,7 +98,7 @@ export default class SearchResultsRow extends Component {
                     }
 
                     <div className="claimButtonWrapper">
-                        <FlatButton label={this.props.claimRecordBtnLabel} secondary/>
+                        <FlatButton label={this.props.claimRecordBtnLabel} autoFocus secondary/>
                     </div>
                 </div>
             </div>
