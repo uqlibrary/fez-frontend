@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxWrapper snapshots tests renders Checkbox component 1`] = `
+<div
+  className={Object {}}
+  style={
+    Object {
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <Checkbox
+    disabled={false}
+    label="This is a test checkbox component"
+    labelPosition="right"
+    onCheck={[Function]}
+  />
+</div>
+`;
