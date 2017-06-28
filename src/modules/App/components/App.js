@@ -101,7 +101,7 @@ export default class App extends React.Component {
             defaultMenuItems(locale, components);
 
         // TODO: implement error display if required
-        if (error && error.get('"displayError"')) {
+        if (error) {
             console.log(error);
         }
 
