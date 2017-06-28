@@ -5,6 +5,10 @@
     display: none;
   }
 
+  .data {
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+  }
+
   .label {
     display: none;
   }
@@ -93,7 +97,7 @@
 @media (max-width: 768px) {
   .data {
     padding: 0px 0 10px 0;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
   }
   .headers, .header {
     display: none;
@@ -147,6 +151,9 @@
   }
   .filename, .datepicker, .file-access {
     font-size: 16px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 
   .delete-button {
