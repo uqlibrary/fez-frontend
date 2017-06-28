@@ -179,7 +179,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div className="columns">
+                        <div className="columns" style={{marginTop: '-12px'}}>
                             <div className="column">
                                 <Field component={TextField}
                                        autoFocus
@@ -188,6 +188,7 @@ export default class AddJournalArticleForm extends Component {
                                        fullWidth
                                        floatingLabelText={journalArticleInformation.fields.titleLabel}
                                        validate={[validation.required]}
+                                       style={{marginBottom: '-12px'}}
                                 />
                             </div>
                         </div>
@@ -207,6 +208,7 @@ export default class AddJournalArticleForm extends Component {
                                                name="partialDateDay"
                                                maxLength="2"
                                                type="text"
+                                               style={{marginTop: '12px'}}
                                                fullWidth
                                                floatingLabelText="Day"
                                                floatingLabelFixed
@@ -217,8 +219,8 @@ export default class AddJournalArticleForm extends Component {
                                     <div className="column">
                                         <Field component={SelectField}
                                                name="partialDateMonth"
-                                               style={{width: '100%'}}
                                                fullWidth
+                                               style={{marginTop: '12px'}}
                                                floatingLabelText="Month"
                                                floatingLabelFixed>
                                             <MenuItem key={-1} value="-1" primaryText=""/>
@@ -242,6 +244,7 @@ export default class AddJournalArticleForm extends Component {
                                                name="partialDateYear"
                                                type="text"
                                                fullWidth
+                                               style={{marginTop: '12px'}}
                                                maxLength="4"
                                                floatingLabelText="Year"
                                                floatingLabelFixed

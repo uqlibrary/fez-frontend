@@ -39,6 +39,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
     >
       <div
         className="columns"
+        style={
+          Object {
+            "marginTop": "-12px",
+          }
+        }
       >
         <div
           className="column"
@@ -49,6 +54,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
             floatingLabelText="Title"
             fullWidth={true}
             name="rek_title"
+            style={
+              Object {
+                "marginBottom": "-12px",
+              }
+            }
             type="text"
             validate={
               Array [
@@ -93,6 +103,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
                 fullWidth={true}
                 maxLength="2"
                 name="partialDateDay"
+                style={
+                  Object {
+                    "marginTop": "12px",
+                  }
+                }
                 type="text"
                 validate={
                   Array [
@@ -115,7 +130,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
                 name="partialDateMonth"
                 style={
                   Object {
-                    "width": "100%",
+                    "marginTop": "12px",
                   }
                 }
               >
@@ -329,6 +344,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
                 fullWidth={true}
                 maxLength="4"
                 name="partialDateYear"
+                style={
+                  Object {
+                    "marginTop": "12px",
+                  }
+                }
                 type="text"
                 validate={
                   Array [
@@ -652,6 +672,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
     >
       <div
         className="columns"
+        style={
+          Object {
+            "marginTop": "-12px",
+          }
+        }
       >
         <div
           className="column"
@@ -662,6 +687,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
             floatingLabelText="Title"
             fullWidth={true}
             name="rek_title"
+            style={
+              Object {
+                "marginBottom": "-12px",
+              }
+            }
             type="text"
             validate={
               Array [
@@ -706,6 +736,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
                 fullWidth={true}
                 maxLength="2"
                 name="partialDateDay"
+                style={
+                  Object {
+                    "marginTop": "12px",
+                  }
+                }
                 type="text"
                 validate={
                   Array [
@@ -728,7 +763,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
                 name="partialDateMonth"
                 style={
                   Object {
-                    "width": "100%",
+                    "marginTop": "12px",
                   }
                 }
               >
@@ -942,6 +977,11 @@ exports[`Add Journal article form snapshot tests renders default add journal art
                 fullWidth={true}
                 maxLength="4"
                 name="partialDateYear"
+                style={
+                  Object {
+                    "marginTop": "12px",
+                  }
+                }
                 type="text"
                 validate={
                   Array [
