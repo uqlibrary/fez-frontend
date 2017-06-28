@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
 import ContentLink from 'material-ui/svg-icons/content/link';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
 import ActionDeleteAll from 'material-ui/svg-icons/action/delete-forever';
@@ -10,6 +9,7 @@ import KeyboardDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import RaisedButton from 'material-ui/RaisedButton';
 import IconButton from 'material-ui/IconButton';
 import Dialog from 'material-ui/Dialog';
+import AutoComplete from 'material-ui/AutoComplete';
 
 import {
     Table,
@@ -45,14 +45,17 @@ const actionRowStyle = {
     width: '50px'
 };
 
-const FIRST_ROW = 0;
-const ENTER_KEY = 'Enter';
 let LAST_ROW = 1;
 
 export default class AddAuthors extends Component {
 
     static propTypes = {
         authorsList: PropTypes.object,
+        clearAuthorsSearchResults: PropTypes.func,
+        clearIdentifiersSearchResults: PropTypes.func,
+        searchForAuthors: PropTypes.func,
+        searchFromIdentifiersField: PropTypes.func,
+        searchResults: PropTypes.object,
         updateAuthorsList: PropTypes.func
     };
 
@@ -65,9 +68,12 @@ export default class AddAuthors extends Component {
             deleteDialogContent: '',
             deleteDialogOpen: false,
             error: '',
+            identifier: '',
+            identifierTimeout: null,
             name: '',
             nameError: '',
-            identifier: ''
+            nameTimeout: null,
+            showIdentifierField: false
         };
     }
 
@@ -76,7 +82,9 @@ export default class AddAuthors extends Component {
         const authorFields = authorInformation.fields;
         const messages = authorInformation.messages;
         const authorsList = this.props.authorsList.toJS();
+        const {clearAuthorsSearchResults, clearIdentifiersSearchResults} = this.props;
 
+        let errorMessage = '';
         let found = false;
         if (this.state.identifier.length > 0 && authorsList) {
             found = authorsList.filter(author => author.identifier === this.state.identifier).length > 0;
@@ -90,23 +98,22 @@ export default class AddAuthors extends Component {
 
             authorsList.push(newAuthor);
 
-            this.setState({
-                name: '',
-                identifier: '',
-                error: '',
-                nameError: ''
-            });
-
             // update the the authors reducer
             this.props.updateAuthorsList(authorsList);
         } else {
-            this.setState({
-                name: '',
-                identifier: '',
-                error: messages.authorExists,
-                nameError: ''
-            });
+            errorMessage = messages.authorExists;
         }
+
+        this.setState({
+            error: errorMessage,
+            identifier: '',
+            name: '',
+            nameError: '',
+            showIdentifierField: false
+        });
+
+        clearAuthorsSearchResults();
+        clearIdentifiersSearchResults();
 
         // tried using the other ways recommended by facebook with refs but they didn't work
         document.getElementsByName(authorFields.authorName)[0].focus();
@@ -116,6 +123,7 @@ export default class AddAuthors extends Component {
         const authorInformation = locale.sharedComponents.authors;
         const authorOrdinalInfo = authorInformation.ordinalData;
         const authorRowInfo = authorInformation.rows;
+        const authorConstants = authorInformation.constants;
         const authorsList = this.props.authorsList;
 
         LAST_ROW = authorsList.size;
@@ -138,7 +146,7 @@ export default class AddAuthors extends Component {
                         </TableRowColumn>
                         <TableRowColumn>{author.get('identifier')}</TableRowColumn>
                         <TableRowColumn style={actionRowStyle}>
-                            <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === FIRST_ROW} iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={() => this.moveAuthorUp(index)}>
+                            <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === authorConstants.firstRow} iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={() => this.moveAuthorUp(index)}>
                                 <KeyboardUp />
                             </IconButton>
                             <IconButton tooltip={authorRowInfo.moveRecordDown} disabled={(index + 1) === LAST_ROW} iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={() => this.moveAuthorDown(index)}>
@@ -200,30 +208,70 @@ export default class AddAuthors extends Component {
         });
     };
 
-    handleKeyPress = (e) => {
-        if (e.key === ENTER_KEY) {
-            e.preventDefault();
-            if (this.state.name.trim().length > 0) {
-                this.addAuthor();
-            } else {
-                const authorInformation = locale.sharedComponents.authors;
-                const authorFields = authorInformation.fields;
-                const messages = authorInformation.messages;
+    handleNameChangeAutoComplete = (value) => {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorConstants = authorInformation.constants;
 
-                this.setState({nameError: messages.authorNameMissing});
+        if (value.length === 0) {
+            this.setState({showIdentifierField: false});
+        }
+
+        setTimeout(() => {
+            this.props.searchForAuthors(value);
+        }, authorConstants.timeoutLimit);
+
+        this.setState({name: value});
+    };
+
+    handleNameAction = (selectedMenuItem, index) => {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorFields = authorInformation.fields;
+        const authorConstants = authorInformation.constants;
+
+        if (index === authorConstants.autoCompleteEnterKey || index > authorConstants.autoCompleteFirstOption) {
+            this.setState({
+                identifier: selectedMenuItem.identifier,
+                name: selectedMenuItem.name,
+            });
+            this.addAuthor();
+        } else {
+            if (index === authorConstants.autoCompleteFirstOption) {
+                // this is the non-uq staff member name
+                this.setState({
+                    name: selectedMenuItem.name,
+                    showIdentifierField: true
+                });
 
                 // tried using the other ways recommended by facebook with refs but they didn't work
-                document.getElementsByName(authorFields.authorName)[0].focus();
+                document.getElementsByName(authorFields.authorIdentifier)[0].focus();
             }
         }
     };
 
-    handleNameChange = (e) => {
-        this.setState({name: e.target.value});
+    handleIdentifierChangeAutoComplete = (value) => {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorConstants = authorInformation.constants;
+
+        setTimeout(() => {
+            this.props.searchFromIdentifiersField(this.state.identifier);
+        }, authorConstants.timeoutLimit);
+
+        this.setState({identifier: value});
     };
 
-    handleIdentifierChange = (e) => {
-        this.setState({identifier: e.target.value});
+    handleIdentifierAction = (selectedMenuItem, index) => {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorConstants = authorInformation.constants;
+
+        // we can add an author without an identifier
+        if ((index === authorConstants.autoCompleteEnterKey && this.state.identifier.length === 0) ||
+            (index >= authorConstants.autoCompleteFirstOption)) {
+            this.setState({
+                identifier: selectedMenuItem.identifier,
+                name: selectedMenuItem.name,
+            });
+            this.addAuthor();
+        }
     };
 
     moveAuthorDown = (currentIndex) => {
@@ -233,7 +281,10 @@ export default class AddAuthors extends Component {
     };
 
     moveAuthorUp = (currentIndex) => {
-        if (currentIndex > FIRST_ROW) {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorConstants = authorInformation.constants;
+
+        if (currentIndex > authorConstants.firstRow) {
             this.reorderAuthor(currentIndex, currentIndex - 1);
         }
     };
@@ -270,6 +321,11 @@ export default class AddAuthors extends Component {
             />,
         ];
 
+        const dataSourceConfig = {
+            text: 'label',
+            value: 'name'
+        };
+
         return (
             <div>
                 {/* Dialog */}
@@ -284,30 +340,38 @@ export default class AddAuthors extends Component {
                 {/* Input area */}
                 <div className="columns">
                     <div className="column">
-                        <TextField
+                        <AutoComplete
                             name={authorFields.authorName}
-                            type="text"
-                            fullWidth
                             floatingLabelText={authorFields.authorNameLabel}
-                            onChange={this.handleNameChange}
-                            onKeyPress={this.handleKeyPress}
-                            value={this.state.name}
+                            fullWidth
+                            dataSource={this.props.searchResults.toJS()}
+                            dataSourceConfig={dataSourceConfig}
+                            onUpdateInput={this.handleNameChangeAutoComplete}
+                            onNewRequest={this.handleNameAction}
                             errorText={this.state.nameError}
+                            value={this.state.name}
                         />
                     </div>
+                    {this.state.showIdentifierField && (
                     <div className="column is-narrow">
                         <ContentLink style={iconStyles}/>
                     </div>
+                    )}
+                    {this.state.showIdentifierField && (
                     <div className="column">
-                        <TextField
+                        <AutoComplete
                             name={authorFields.authorIdentifier}
-                            fullWidth
                             floatingLabelText={authorFields.authorIdentifierLabel}
-                            onChange={this.handleIdentifierChange}
-                            onKeyPress={this.handleKeyPress}
+                            openOnFocus
+                            fullWidth
+                            dataSource={this.props.searchResults.toJS()}
+                            dataSourceConfig={dataSourceConfig}
+                            onUpdateInput={this.handleIdentifierChangeAutoComplete}
+                            onNewRequest={this.handleIdentifierAction}
                             value={this.state.identifier}
                         />
                     </div>
+                    )}
                     <div className="column is-narrow">
                         <RaisedButton
                             label={authorButtonFields.addAuthorLabel}

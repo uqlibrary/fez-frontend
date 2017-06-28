@@ -291,6 +291,12 @@ export default {
                 ],
                 default: 'Next',
                 suffix: 'listed author'
+            },
+            constants: {
+                autoCompleteEnterKey: -1,
+                autoCompleteFirstOption: 0,
+                firstRow: 0,
+                timeoutLimit: 300
             }
         },
         files: {
