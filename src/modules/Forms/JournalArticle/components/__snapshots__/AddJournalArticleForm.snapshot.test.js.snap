@@ -447,16 +447,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
     <CardText
       className="body-1"
     >
-<<<<<<< HEAD
-      <Connect(ReduxForm)
-        authorFieldLabel="Add an author (name as published)"
-        form="testForm"
-=======
-      <Field
-        component={[Function]}
-        name="authors"
->>>>>>> feature-authors
-      />
+      <Connect(AddAuthors) />
     </CardText>
   </Card>
   <Card
@@ -633,7 +624,6 @@ exports[`Add Journal article form snapshot tests renders default add journal art
           "marginLeft": "12px",
         }
       }
-      type="submit"
     />
   </div>
 </form>
@@ -1086,10 +1076,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
     <CardText
       className="body-1"
     >
-      <Connect(ReduxForm)
-        authorFieldLabel="Add an author (name as published)"
-        form="testForm"
-      />
+      <Connect(AddAuthors) />
     </CardText>
   </Card>
   <Card
@@ -1231,15 +1218,12 @@ exports[`Add Journal article form snapshot tests renders default add journal art
       </div>
     </CardText>
   </Card>
-<<<<<<< HEAD
   <FormSection
     component="div"
     name="fileUploader"
   >
     <Connect(FileUploader) />
   </FormSection>
-=======
->>>>>>> feature-authors
   <div
     className="buttonWrapper"
   >
