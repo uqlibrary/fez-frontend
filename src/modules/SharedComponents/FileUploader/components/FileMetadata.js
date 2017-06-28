@@ -110,7 +110,7 @@ export default class FileMetadata extends Component {
                 const accessIds = fileInformation.constants;
 
                 return (
-                    <div className="columns is-gapless data" key={fieldName}>
+                    <div className="columns is-gapless data metadata-container" key={fieldName}>
                         <div className="column is-6-desktop is-6-tablet is-12-mobile filename">
                             <FontIcon className="material-icons mobile-icon">attachment</FontIcon>
                             <span className="filename-label">{file.name}</span>
