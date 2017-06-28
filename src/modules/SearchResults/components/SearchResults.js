@@ -37,11 +37,7 @@ export default class SearchResults extends Component {
                 endPage: source.get('fez_record_search_key_end_page').get('rek_end_page'),
                 doi: source.get('fez_record_search_key_doi').get('rek_doi'),
                 counts: {
-                    thomson: source.get('rek_thomson_citation_count'),
-                    scopus: 22,
-                    google: 33,
-                    altmetric: 44,
-                    downloads: 55
+                    thomson: source.get('rek_thomson_citation_count')
                 }
             };
             return (
