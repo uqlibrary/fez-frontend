@@ -49,22 +49,22 @@ exports[`File metadata snapshots tests renders default file metadata component 1
     className="columns is-gapless headers"
   >
     <div
-      className="column is-6 is-12-mobile filename header"
+      className="column is-6-desktop is-6-tablet is-12-mobile filename header"
     >
       Filename
     </div>
     <div
-      className="column is-3 is-12-mobile file-access header"
+      className="column is-3-desktop is-3-tablet is-12-mobile file-access header"
     >
       Access conditions
     </div>
     <div
-      className="column is-2 is-12-mobile embargo-date header"
+      className="column is-2-desktop is-2-tablet is-12-mobile embargo-date header"
     >
       Embargo release date
     </div>
     <div
-      className="column is-1 is-12-mobile delete-button header"
+      className="column is-1-desktop is-1-tablet is-12-mobile delete-button header"
     >
       <IconButton
         disableTouchRipple={false}
@@ -89,7 +89,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
     className="columns is-gapless data"
   >
     <div
-      className="column is-6 is-12-mobile filename"
+      className="column is-6-desktop is-6-tablet is-12-mobile filename"
     >
       <FontIcon
         className="material-icons mobile-icon"
@@ -108,7 +108,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       </span>
     </div>
     <div
-      className="column is-3 is-8-mobile file-access"
+      className="column is-3-desktop is-3-tablet is-8-mobile file-access"
     >
       <FontIcon
         className="material-icons mobile-icon"
@@ -184,7 +184,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       </span>
     </div>
     <div
-      className="column is-2 is-8-mobile embargo-date"
+      className="column is-2-desktop is-2-tablet is-8-mobile embargo-date"
     >
       <FontIcon
         className="material-icons mobile-icon"
@@ -203,7 +203,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       </span>
     </div>
     <div
-      className="column is-1 is-1-mobile delete-button"
+      className="column is-1-desktop is-1-tablet is-1-mobile delete-button"
     >
       <IconButton
         disableTouchRipple={false}
