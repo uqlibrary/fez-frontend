@@ -58,7 +58,7 @@ export default class AddJournalArticleForm extends Component {
             const data = {'fez_record_search_key_author': []};
             authorsList.toJS().map((author, index) => {
                 data.fez_record_search_key_author.push({
-                    'rek_author': author.aut_display_name,
+                    'rek_author': author.name,
                     'rek_author_order': (index + 1)
                 });
             });
@@ -108,7 +108,7 @@ export default class AddJournalArticleForm extends Component {
             formData.rek_date = new Date();
         }
 
-        // const fileData = this.setFileData();
+        // const fileData = this.setFileData(); commented this out as it is old so will just wait for merge to sort this out
         const fileData = {};
         const authorData = this.setAuthorData();
 

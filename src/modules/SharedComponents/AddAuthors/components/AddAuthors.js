@@ -69,8 +69,6 @@ export default class AddAuthors extends Component {
             nameError: '',
             identifier: ''
         };
-
-        this.addAuthor = this.addAuthor.bind(this);
     }
 
     addAuthor = () => {
