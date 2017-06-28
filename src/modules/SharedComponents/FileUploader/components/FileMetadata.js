@@ -257,7 +257,7 @@ export default class FileMetadata extends Component {
                     {this.state.deleteDialogContent}
                 </Dialog>
                 <div className="columns is-gapless headers">
-                    <div className="column is-6-desktop is-6-tablet is-12-mobile filename header">
+                    <div className="column is-6-desktop is-6-tablet is-12-mobile filename header" style={{textIndent: '12px'}}>
                         {fileInformation.list.filenameLabel}
                     </div>
                     <div className="column is-3-desktop is-3-tablet is-12-mobile file-access header">
@@ -271,7 +271,7 @@ export default class FileMetadata extends Component {
                             tooltip={messages.deleteAllFilesToolTip}
                             tooltipPosition="bottom-left"
                             onClick={this.deleteAllFilesConfirmation}>
-                            <FontIcon className="material-icons deleteIcon">delete_sweep</FontIcon>
+                            <FontIcon className="material-icons deleteIcon">delete_forever</FontIcon>
                         </IconButton>
                     </div>
                 </div>
