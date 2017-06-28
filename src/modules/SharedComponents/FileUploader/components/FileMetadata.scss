@@ -53,14 +53,25 @@
   }
 
   .embargo-date {
+    line-height: 48px;
     hr {
       display: none;
     }
-    .datepicker > div {
-      font-size: 14px !important;
-      width: 98% !important;
+    .upload-progress, .green-tick{
+      float: right;
+      margin-top: 10px;
+    }
+    .datepicker {
+      float: left;
+      display: inline-block !important;
+      width: 66% !important;
+
       & > div {
-        color: rgba(0, 0, 0, 0.82) !important;
+        font-size: 14px !important;
+        width: 98% !important;
+        & > div {
+          color: rgba(0, 0, 0, 0.82) !important;
+        }
       }
     }
   }
@@ -152,13 +163,26 @@
   .datepicker {
     margin-top: -12px !important;
     display: inline-block !important;
-    margin-bottom: -10px !important;
+    margin-bottom: -18px !important;
     margin-right: -120px !important;
+    height: 48px; line-height: 48px;
+
     & > div > div {
       color: rgba(0, 0, 0, 0.82) !important;
     }
     hr {
       display: none !important;
+    }
+  }
+  .embargo-date {
+    .label{
+      display: block;
+      width: 50%;
+    }
+    .upload-progress, .green-tick{
+      float: right;
+      margin-top: -40px !important;
+      margin-right: -80px;
     }
   }
   .filename, .datepicker, .file-access {
@@ -172,5 +196,12 @@
     float: right;
     margin-top: -50px !important;
     margin-right: 20px !important;
+  }
+  .deleteIcon {
+    color: rgba(0, 0, 0, 0.3) !important;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.9) !important;
+    }
   }
 }

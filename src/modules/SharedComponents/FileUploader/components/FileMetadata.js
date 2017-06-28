@@ -129,8 +129,10 @@ export default class FileMetadata extends Component {
                             )}
 
                             {this.state.accessFields[selectFieldName] !== accessIds.openAccessId && (
-                                <div>{messages.noDate}</div>
+                                <div className="datepicker">{messages.noDate}</div>
                             )}
+
+                            <span className="label">Embargo Date</span>
 
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
@@ -146,10 +148,8 @@ export default class FileMetadata extends Component {
 
                             {fileUploadProgress[file.name] && (
                                 (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
-                                <FontIcon
-                                    className="material-icons green-tick">done</FontIcon>
+                                <FontIcon className="material-icons green-tick">done</FontIcon>
                             )}
-                            <span className="label">Embargo Date</span>
                         </div>
                         <div className="column is-1-desktop is-1-tablet is-1-mobile delete-button">
                             <IconButton

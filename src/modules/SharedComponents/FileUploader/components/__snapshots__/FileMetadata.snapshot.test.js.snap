@@ -10,7 +10,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         <FlatButton
           disabled={false}
           fullWidth={false}
-          label="Abandon and search again"
+          label="Cancel"
           labelPosition="after"
           labelStyle={Object {}}
           onKeyboardFocus={[Function]}
@@ -193,7 +193,9 @@ exports[`File metadata snapshots tests renders default file metadata component 1
       >
         date_range
       </FontIcon>
-      <div>
+      <div
+        className="datepicker"
+      >
         No Date
       </div>
       <span
