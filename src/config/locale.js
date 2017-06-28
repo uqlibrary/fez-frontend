@@ -7,7 +7,7 @@ export default {
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         labels: {
             buttons: {
-                cancel: 'Abandon and search again',
+                cancel: 'Cancel',
                 abandon: 'Abandon and search again',
                 close: 'Close',
                 delete: 'Delete',
