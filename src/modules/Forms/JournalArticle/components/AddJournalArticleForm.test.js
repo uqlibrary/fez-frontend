@@ -10,11 +10,15 @@ import AddJournalArticleForm from './AddJournalArticleForm';
 let decreaseStep;
 let submitRecordForApproval;
 let cancelAddRecord;
+let uploadFile;
+let showSnackbar;
 
 function setup(testData = {}) {
     decreaseStep = sinon.spy();
     submitRecordForApproval = sinon.spy();
     cancelAddRecord = sinon.spy();
+    uploadFile = sinon.spy();
+    showSnackbar = sinon.spy();
 
     const publicationSubTypeList = [
         {'id': 1, 'label': 'Article (original research)'},
@@ -30,15 +34,17 @@ function setup(testData = {}) {
 
     // adding these props allows the snapshot to cover a larger amount fields
     const props = {
+        acceptedFiles: Immutable.fromJS((typeof testData.acceptedFiles === 'undefined') ? [] : testData.acceptedFiles),
         cancelAddRecord,
         decreaseStep,
-        fileMetadata: (typeof testData.fileMetadata === 'undefined') ? {} : Immutable.fromJS(testData.fileMetadata),
         form: 'testform',
         formValues: Immutable.fromJS({rek_subtype: 1}),
         handleSubmit: jest.fn(),
         publicationSubTypeList: Immutable.fromJS(publicationSubTypeList),
         selectedAuthors: (typeof testData.selectedAuthors === 'undefined') ? {} : Immutable.fromJS(testData.selectedAuthors),
-        submitRecordForApproval
+        showSnackbar,
+        submitRecordForApproval,
+        uploadFile
     };
 
     return shallow(<AddJournalArticleForm {...props} />);
@@ -47,11 +53,23 @@ function setup(testData = {}) {
 
 describe('Add Journal article form unit tests', () => {
     it('checks the form was submitted', () => {
-        const app = setup();
+        let app = setup();
+        const testData = {};
 
         app.instance().submitRecord();
-        expect(decreaseStep.calledOnce).toEqual(true);
         expect(submitRecordForApproval.calledOnce).toEqual(true);
+        expect(uploadFile.calledOnce).toEqual(false);
+        expect(showSnackbar.calledOnce).toEqual(true);
+
+        testData.acceptedFiles = [{
+            name: 's12345678_test_file_archive.zip'
+        }];
+
+        app = setup(testData);
+        app.instance().submitRecord();
+        expect(submitRecordForApproval.calledOnce).toEqual(true);
+        expect(uploadFile.calledOnce).toEqual(true);
+        expect(showSnackbar.calledOnce).toEqual(false);
     });
 
     it('checked the file data was set', () => {
@@ -61,17 +79,15 @@ describe('Add Journal article form unit tests', () => {
         let result = app.instance().setFileData();
         expect(result).toEqual({});
 
-        testData.fileMetadata = {
-            'file1': {
-                name: 's12345678_test_file_archive.zip',
-            }
-        };
+        testData.acceptedFiles = [{
+            name: 's12345678_test_file_archive.zip'
+        }];
         app = setup(testData);
         result = app.instance().setFileData();
         const match = {
             fez_record_search_key_file_attachment_name: [
                 {
-                    rek_file_attachment_name: 'file1',
+                    rek_file_attachment_name: 's12345678_test_file_archive.zip',
                     rek_file_attachment_name_order: 1
                 }
             ]

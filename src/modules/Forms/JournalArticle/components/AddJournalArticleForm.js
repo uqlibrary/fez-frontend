@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
-import {Field} from 'redux-form/immutable';
+import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 
@@ -14,18 +14,25 @@ export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
         authorList: PropTypes.object,
+        acceptedFiles: PropTypes.object,
         cancelAddRecord: PropTypes.func,
+        completeFormSubmission: PropTypes.func,
         decreaseStep: PropTypes.func,
-        fileMetadata: PropTypes.object,
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
+        hasOpenAccess: PropTypes.bool,
+        isOpenAccessAccepted: PropTypes.bool,
+        isUploadCompleted: PropTypes.bool,
         loadAuthorsList: PropTypes.func,
         loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
+        resetFormSubmissionFlag: PropTypes.func,
         selectedAuthors: PropTypes.object,
         selectedPublicationId: PropTypes.object,
-        submitRecordForApproval: PropTypes.func
+        showSnackbar: PropTypes.func,
+        submitRecordForApproval: PropTypes.func,
+        uploadFile: PropTypes.func
     };
 
     constructor(props) {
@@ -33,16 +40,26 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentDidMount() {
-        const {loadAuthorsList, loadPublicationSubTypesList, selectedPublicationId} = this.props;
+        const {loadAuthorsList, loadPublicationSubTypesList, resetFormSubmissionFlag, selectedPublicationId} = this.props;
         loadPublicationSubTypesList(selectedPublicationId.get('id'));
         loadAuthorsList();
+        resetFormSubmissionFlag();
+    }
+
+    componentWillUpdate(nextProps) {
+        // this is for when we do a file upload
+        // we want to redirect once the file upload is complete
+        if (nextProps.isUploadCompleted) {
+            const {showSnackbar, decreaseStep} = this.props;
+            showSnackbar(locale.notifications.addRecord.submitMessage);
+            decreaseStep();
+        }
     }
 
     cancelAddingRecord = () => {
         const {cancelAddRecord, decreaseStep} = this.props;
-        // go back to step 1
-        decreaseStep();
         cancelAddRecord(locale.notifications.addRecord.cancelMessage);
+        decreaseStep();
     };
 
     getElementLabel = (elementData, elementKey, formData, formKey, matchedLabel) => {
@@ -72,14 +89,13 @@ export default class AddJournalArticleForm extends Component {
     };
 
     setFileData = () => {
-        const {fileMetadata} = this.props;
+        const {acceptedFiles} = this.props;
 
-        if (fileMetadata.size > 0) {
+        if (acceptedFiles.size > 0) {
             const data = {'fez_record_search_key_file_attachment_name': []};
-
-            Object.keys(fileMetadata.toJS()).map((file, index) => {
+            acceptedFiles.toJS().map((file, index) => {
                 data.fez_record_search_key_file_attachment_name.push({
-                    'rek_file_attachment_name': file,
+                    'rek_file_attachment_name': file.name,
                     'rek_file_attachment_name_order': (index + 1)
                 });
             });
@@ -91,7 +107,8 @@ export default class AddJournalArticleForm extends Component {
     };
 
     submitRecord = () => {
-        const {decreaseStep, formValues, submitRecordForApproval} = this.props;
+        const {acceptedFiles, decreaseStep, formValues, showSnackbar, submitRecordForApproval, uploadFile} = this.props;
+
         const RECORD_TYPE = 3;
         const SUBMITTED_FOR_APPROVAL = 3;
         const JOURNAL_TYPE = 179;
@@ -114,8 +131,19 @@ export default class AddJournalArticleForm extends Component {
         const authorData = this.setAuthorData();
         const combinedData = Object.assign({}, defaultData, formData, tempData, fileData, authorData);
 
-        submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
-        decreaseStep();
+        // this flag is for those cases where we want the 'Your submission was successful' message
+        // to only appear once the files were successfully uploaded
+        const hasFilesToUpload = acceptedFiles.size > 0;
+        submitRecordForApproval(combinedData);
+
+        if (hasFilesToUpload) {
+            uploadFile(acceptedFiles);
+        }
+
+        if (!hasFilesToUpload) {
+            showSnackbar(locale.notifications.addRecord.submitMessage);
+            decreaseStep();
+        }
     };
 
     render() {
@@ -127,7 +155,6 @@ export default class AddJournalArticleForm extends Component {
 
         const {formValues, form, handleSubmit} = this.props;
         const required = value => value && value.replace(/\s/, '').length > 0 ? undefined : 'This field is required';
-
         const DateTimeFormat = global.Intl.DateTimeFormat;
 
         return (
@@ -266,11 +293,20 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
 
                 {/* Files */}
-                <FileUploader form="FileUploadForm" />
+                <FormSection name="fileUploader">
+                    <FileUploader />
+                </FormSection>
 
                 <div className="buttonWrapper">
-                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddingRecord}/>
-                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}} type="submit"/>
+                    <RaisedButton
+                        label={buttonLabels.abandon}
+                        style={{marginLeft: '12px'}}
+                        onTouchTap={this.cancelAddingRecord} />
+                    <RaisedButton
+                        secondary
+                        label={buttonLabels.submitForApproval}
+                        style={{marginLeft: '12px'}}
+                        type="submit" />
                 </div>
             </form>
         );

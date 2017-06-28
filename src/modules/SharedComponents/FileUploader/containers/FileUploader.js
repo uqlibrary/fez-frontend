@@ -1,27 +1,20 @@
 import {connect} from 'react-redux';
 
-import {reduxForm} from 'redux-form/immutable';
 import FileUploader from '../components/FileUploader';
-import {openDialog, setAcceptedFileList, initializeDialog, initializeMetadata} from '../actions';
-import {showSnackbar} from 'modules/App/actions';
+import {resetToInitialState, setAcceptedFileList} from '../actions';
 
-let FileUploaderContainer = reduxForm({
-    destroyOnUnmount: false
-})(FileUploader);
-
-FileUploaderContainer = connect((state) => {
+const FileUploaderContainer = connect((state) => {
     const fileUploadState = state.get('fileUpload');
     return {
-        fileMetadata: fileUploadState.get('fileMetadata')
+        acceptedFiles: fileUploadState.get('acceptedFiles'),
+        fileMetadata: fileUploadState.get('fileMetadata'),
+        uploadError: fileUploadState.get('uploadError')
     };
 }, dispatch => {
     return {
-        initializeDialog: () => dispatch(initializeDialog()),
-        initializeMetadata: () => dispatch(initializeMetadata()),
-        openDialog: () => dispatch(openDialog()),
-        setAcceptedFileList: (acceptedFiles) => dispatch(setAcceptedFileList(acceptedFiles)),
-        showSnackbar: (msg) => dispatch(showSnackbar(msg))
+        resetToInitialState: () => dispatch(resetToInitialState()),
+        setAcceptedFileList: (acceptedFiles) => dispatch(setAcceptedFileList(acceptedFiles))
     };
-})(FileUploaderContainer);
+})(FileUploader);
 
 export default FileUploaderContainer;

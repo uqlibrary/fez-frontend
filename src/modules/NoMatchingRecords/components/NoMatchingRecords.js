@@ -24,7 +24,7 @@ const defaultProps = {
     addPublicationBtnLabel: locale.pages.addRecord.noMatchingRecords.defaultProps.addPublicationBtnLabel
 };
 
-const NoMatchingRecords = ({handleNext, handlePrevious, stepIndex, title, explanationText, help, searchAgainBtnLabel, addPublicationBtnLabel}) => {
+const NoMatchingRecords = ({handleNext, handlePrevious, title, explanationText, help, searchAgainBtnLabel, addPublicationBtnLabel}) => {
     return (
         <Card className="layout-card">
             <CardHeader className="card-header">
@@ -50,7 +50,6 @@ const NoMatchingRecords = ({handleNext, handlePrevious, stepIndex, title, explan
                 <div style={{textAlign: 'right'}}>
                     <FlatButton
                         label={searchAgainBtnLabel}
-                        disabled={stepIndex === 0}
                         onTouchTap={handlePrevious}
                         style={{marginRight: 12}}
                     />

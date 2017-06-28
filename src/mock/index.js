@@ -64,7 +64,7 @@ mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYears
 
 // Allow the file upload calls to pass through to the S3 bucket directly
 mock.onGet(/file\/upload\/presigned/).passThrough();
-mock.onPut(/https:\/\/s3-ap-southeast-2\.amazonaws\.com\/uqlapp-file-upload/).passThrough();
+mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
 
 // Mock the document access types
 mock.onGet('acml/quick-templates').reply(200, documentAccessTypes);
