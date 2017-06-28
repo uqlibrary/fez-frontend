@@ -26,7 +26,6 @@ export default class SearchResults extends Component {
     render() {
         const {dataSource, help, title} = this.props;
         const searchResultEntries = dataSource.map((source, i) => {
-            console.dir(source.get('rek_thomson_citation_count'));
             const entry = {
                 title: source.get('rek_title'),
                 journalName: source.get('fez_record_search_key_journal_name').get('rek_journal_name'),
