@@ -9,9 +9,6 @@ const STEP_1 = 0;
 const STEP_2 = 1;
 const STEP_3 = 2;
 
-// for displaying different types of fields depending on publication type selected
-let formType;
-
 // forms & custom components
 import {PublicationSearchForm} from 'modules/Forms';
 import {SearchResults} from 'modules/SearchResults';
@@ -30,13 +27,16 @@ export default class AddRecord extends React.Component {
         increaseStep: PropTypes.func,
         loadPublicationTypesList: PropTypes.func,
         publicationTypeList: PropTypes.object,
+        resetStepper: PropTypes.func,
         searchResultsList: PropTypes.object,
+        loadingSearch: PropTypes.bool,
         selectedPublicationType: PropTypes.object,
         stepperIndex: PropTypes.number
     };
 
     static defaultProps = {
-        searchResultsList: null
+        searchResultsList: null,
+        loadingSearch: false
     };
 
     constructor(props) {
@@ -54,6 +54,10 @@ export default class AddRecord extends React.Component {
 
     componentDidMount() {
         this.props.loadPublicationTypesList();
+    }
+
+    componentWillUnmount() {
+        this.props.resetStepper();
     }
 
     dummyAsync = (cb) => {
@@ -78,23 +82,6 @@ export default class AddRecord extends React.Component {
         this.setState({submitOpen: true});
     };
 
-    setFormDetails = (selectedPublicationType, publicationTypeInformation) => {
-        if (selectedPublicationType.size > 0) {
-            switch(selectedPublicationType.get('name').toLowerCase()) {
-                case publicationTypeInformation.documentTypes.JOURNAL_ARTICLE:
-                    formType = publicationTypeInformation.documentTypes.JOURNAL_ARTICLE;
-                    break;
-                default:
-                    formType = 'defaultFormType';
-                    break;
-            }
-        }
-    };
-
-    resetFormType = () => {
-        formType = 'defaultFormType';
-    };
-
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case STEP_1:
@@ -112,22 +99,19 @@ export default class AddRecord extends React.Component {
                 );
             case STEP_2:
                 // on initial load this will be null
-                const loaded = this.props.searchResultsList !== null;
                 const inlineLoaderInformation = locale.pages.addRecord.inlineLoader;
                 const searchResultsInformation = locale.pages.addRecord.searchResults;
                 const noMatchingRecordsInformation = locale.pages.addRecord.noMatchingRecords;
 
-                this.resetFormType();
-
                 return (
                     <div>
-                        {!loaded &&
+                        {this.props.loadingSearch &&
                             <div className="is-centered">
                                 <InlineLoader message={inlineLoaderInformation.message} />
                             </div>
                         }
 
-                        {loaded && this.props.searchResultsList.size > 0 &&
+                        {!this.props.loadingSearch && this.props.searchResultsList.size > 0 &&
                         <SearchResults
                             dataSource={this.props.searchResultsList}
                             title={searchResultsInformation.title}
@@ -137,11 +121,10 @@ export default class AddRecord extends React.Component {
                         />
                         }
 
-                        {loaded &&
+                        {!this.props.loadingSearch &&
                             <NoMatchingRecords
                                 handleNext={this.handleNext}
                                 handlePrevious={this.handlePrev}
-                                stepIndex={this.state.stepIndex}
                                 title={noMatchingRecordsInformation.title}
                                 explanationText={noMatchingRecordsInformation.explanationText}
                                 searchAgainBtnLabel={noMatchingRecordsInformation.searchAgainBtnLabel}
@@ -156,8 +139,6 @@ export default class AddRecord extends React.Component {
                 const {selectedPublicationType} = this.props;
                 const publicationTypeInformation = locale.pages.addRecord.publicationTypeForm;
 
-                this.setFormDetails(selectedPublicationType, publicationTypeInformation);
-
                 return (
                     <div>
                         <PublicationTypeForm
@@ -170,7 +151,7 @@ export default class AddRecord extends React.Component {
                             popularTypesList={publicationTypeInformation.popularTypesList} />
 
                             {/* Journal Article is selected. Size check needed as it is an empty Immutable Map on initial load */}
-                            {formType === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE &&
+                            {selectedPublicationType.size > 0 && selectedPublicationType.get('name').toLowerCase() === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE &&
                             <AddJournalArticleForm form="AddJournalArticleForm" />
                             }
                     </div>

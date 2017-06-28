@@ -50,11 +50,17 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
     >
       <div
         className="columns"
+        style={
+          Object {
+            "marginTop": "12px",
+          }
+        }
       >
         <div
           className="column"
+          onKeyPress={[Function]}
+          tabIndex="0"
         >
-          <br />
           <Dropzone
             disableClick={false}
             disablePreview={true}
@@ -70,7 +76,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
             }
           >
             <div
-              className="columns fileInstructions"
+              className="columns file-instructions"
             >
               <div
                 className="column"
@@ -99,7 +105,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
                 </div>
               </div>
               <div
-                className="column uploadInstructions"
+                className="column upload-instructions"
               >
                 <FontIcon
                   className="material-icons"
@@ -116,44 +122,18 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
           </Dropzone>
         </div>
       </div>
-    </CardText>
-  </Card>
-  <Card
-    className="layout-card metadataContainer"
-    expandable={false}
-    expanded={null}
-    initiallyExpanded={false}
-  >
-    <CardText
-      className="body-1"
-    >
-      <Connect(ReduxForm)
-        dataSource={
-          Object {
-            "name": "s12345678_test_file_archive.zip",
-            "size": 5307669356,
-            "type": "application/zip",
-          }
+      <Connect(FileMetadata)
+        acceptedFiles={
+          Array [
+            Object {
+              "name": "s12345678_test_file_archive.zip",
+              "size": 5307669356,
+              "type": "application/zip",
+            },
+          ]
         }
-        form="testForm"
-      />
-      <Connect(ReduxForm)
-        dataSource="test file description"
-        form="testForm"
-      />
-      <Connect(ReduxForm)
-        dataSource={1}
-        form="testForm"
-      />
-      <Connect(ReduxForm)
-        dataSource="Thu May 25 2017 00:00:00 GMT+1000 (AEST)"
-        form="testForm"
       />
     </CardText>
   </Card>
-  <Connect(ReduxForm)
-    acceptedFiles={Array []}
-    form="testForm"
-  />
 </div>
 `;

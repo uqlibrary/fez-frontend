@@ -1,4 +1,6 @@
-.fileInstructions {
+@import '~uqlibrary-react-toolbox/sass/variables';
+
+.file-instructions {
   margin: 20px 0 0 0;
   padding: 16px;
   background-color: #F5F5F5;
@@ -14,7 +16,7 @@
     font-weight: bold !important;
   }
 
-  .uploadInstructions {
+  .upload-instructions {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -36,5 +38,24 @@
 
   span {
     font-weight: bold;
+  }
+}
+
+.fileUploadErrorMessage {
+  padding: 12px;
+  height: 48px;
+  line-height: 48px;
+  margin: -24px auto 24px auto;
+  color: darken($error-color, 10%);
+  width: calc(100% - 24px);
+  border: 1px solid darken($error-color, 10%);
+  background-color: rgba($error-color, 0.025);
+  .Icon{
+    float: left;
+    margin: 0px 10px;
+    font-size: 38px;
+    .material-icons{
+      color: darken($error-color, 10%) !important;
+    }
   }
 }

@@ -4,7 +4,7 @@ import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
-import {isDOIValue, isPubMedValue} from '../validator';
+import {isDOIValue, isPartialDOIValue, isPubMedValue} from '../validator';
 import {locale} from 'config';
 
 import './PublicationSearchForm.scss';
@@ -28,8 +28,8 @@ export default class PublicationSearchForm extends Component {
     };
 
     static defaultProps = {
-        defaultSearchFieldLabel: locale.pages.addRecord.searchForPublication.defaultProps.defaultSearchFieldLabel,
-        defaultButtonLabel: locale.pages.addRecord.searchForPublication.defaultProps.defaultButtonLabel,
+        defaultSearchFieldLabel: locale.pages.addRecord.searchForPublication.defaultSearchFieldLabel,
+        defaultButtonLabel: locale.pages.addRecord.searchForPublication.defaultButtonLabel
     };
 
     constructor(props) {
@@ -41,18 +41,21 @@ export default class PublicationSearchForm extends Component {
         };
     }
 
-    updateButtonLabel = () => {
-        const {formValues} = this.props;
-        const fieldValue = formValues.get('doiSearch');
-        const buttonLabels = locale.pages.addRecord.searchForPublication.buttonLabelVariants;
-        let label = buttonLabels.default;
-        if (fieldValue) {
-            label = buttonLabels.title;
+    doiSearchChanged = (event, value) => {
+        this.updateButtonLabel(value);
+    }
 
-            if (isDOIValue(fieldValue)) {
+    updateButtonLabel = (value) => {
+        const buttonLabels = locale.pages.addRecord.searchForPublication.buttonLabelVariants;
+        let label = locale.pages.addRecord.searchForPublication.defaultButtonLabel;
+
+        if (value) {
+            if (isPartialDOIValue(value) || isDOIValue(value)) {
                 label = buttonLabels.doi;
-            } else if (isPubMedValue(fieldValue)) {
+            } else if (isPubMedValue(value)) {
                 label = buttonLabels.pubmed;
+            } else if (/^\D.*/i.test(value) || value.trim().length > 5) {
+                label = buttonLabels.title;
             }
         }
 
@@ -106,7 +109,7 @@ export default class PublicationSearchForm extends Component {
                                name="doiSearch"
                                fullWidth
                                floatingLabelText={defaultSearchFieldLabel}
-                               onChange={this.updateButtonLabel}
+                               onChange={this.doiSearchChanged}
                                autoComplete="off"
                                autoFocus
                                onKeyPress={this.performSearch}

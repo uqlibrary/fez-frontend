@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import MenuItem from 'material-ui/MenuItem';
-import {Field} from 'redux-form/immutable';
+import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import {Authors, FileUploader, SelectField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
@@ -15,18 +14,25 @@ export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
         authorList: PropTypes.object,
+        acceptedFiles: PropTypes.object,
         cancelAddRecord: PropTypes.func,
+        completeFormSubmission: PropTypes.func,
         decreaseStep: PropTypes.func,
-        fileMetadata: PropTypes.object,
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
+        hasOpenAccess: PropTypes.bool,
+        isOpenAccessAccepted: PropTypes.bool,
+        isUploadCompleted: PropTypes.bool,
         loadAuthorsList: PropTypes.func,
         loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
+        resetFormSubmissionFlag: PropTypes.func,
         selectedAuthors: PropTypes.object,
         selectedPublicationId: PropTypes.object,
-        submitRecordForApproval: PropTypes.func
+        showSnackbar: PropTypes.func,
+        submitRecordForApproval: PropTypes.func,
+        uploadFile: PropTypes.func
     };
 
     constructor(props) {
@@ -34,16 +40,26 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentDidMount() {
-        const {loadAuthorsList, loadPublicationSubTypesList, selectedPublicationId} = this.props;
+        const {loadAuthorsList, loadPublicationSubTypesList, resetFormSubmissionFlag, selectedPublicationId} = this.props;
         loadPublicationSubTypesList(selectedPublicationId.get('id'));
         loadAuthorsList();
+        resetFormSubmissionFlag();
+    }
+
+    componentWillUpdate(nextProps) {
+        // this is for when we do a file upload
+        // we want to redirect once the file upload is complete
+        if (nextProps.isUploadCompleted) {
+            const {showSnackbar, decreaseStep} = this.props;
+            showSnackbar(locale.notifications.addRecord.submitMessage);
+            decreaseStep();
+        }
     }
 
     cancelAddingRecord = () => {
         const {cancelAddRecord, decreaseStep} = this.props;
-        // go back to step 1
-        decreaseStep();
         cancelAddRecord(locale.notifications.addRecord.cancelMessage);
+        decreaseStep();
     };
 
     setAuthorData = () => {
@@ -65,14 +81,13 @@ export default class AddJournalArticleForm extends Component {
     };
 
     setFileData = () => {
-        const {fileMetadata} = this.props;
+        const {acceptedFiles} = this.props;
 
-        if (fileMetadata.size > 0) {
+        if (acceptedFiles.size > 0) {
             const data = {'fez_record_search_key_file_attachment_name': []};
-
-            Object.keys(fileMetadata.toJS()).map((file, index) => {
+            acceptedFiles.toJS().map((file, index) => {
                 data.fez_record_search_key_file_attachment_name.push({
-                    'rek_file_attachment_name': file,
+                    'rek_file_attachment_name': file.name,
                     'rek_file_attachment_name_order': (index + 1)
                 });
             });
@@ -84,31 +99,55 @@ export default class AddJournalArticleForm extends Component {
     };
 
     submitRecord = () => {
-        const {decreaseStep, formValues, submitRecordForApproval} = this.props;
+        const {acceptedFiles, decreaseStep, formValues, showSnackbar, submitRecordForApproval, uploadFile} = this.props;
+
+        // TODO: move these constants to a config, there will be more types -> keep it in one place
         const RECORD_TYPE = 3;
         const SUBMITTED_FOR_APPROVAL = 3;
-        const JOURNAL_TYPE = 179;
+        const DISPLAY_TYPE = 179;
+        const MEMBER_OF = 'UQ:218198';
 
         const defaultData = {
             rek_object_type: RECORD_TYPE,
             rek_status: SUBMITTED_FOR_APPROVAL,
-            rek_display_type: JOURNAL_TYPE
+            rek_display_type: DISPLAY_TYPE,
+            fez_record_search_key_ismemberof: [
+                { rek_ismemberof: MEMBER_OF }
+            ]
         };
 
         const formData = formValues.toJS();
 
-        // construct partial date
-        formData.rek_date = new Date(
-            parseInt(formData.partialDateYear, 10),
-            formData.partialDateMonth ? parseInt(formData.partialDateMonth, 10) : 0,
-            formData.partialDateDay ? parseInt(formData.partialDateDay, 10) : 1);
+        // construct partial date "YYYY-MM-DD"
+        formData.rek_date = `${parseInt(formData.partialDateYear, 10)}-${formData.partialDateMonth ? (parseInt(formData.partialDateMonth, 10) + 1) : 1}-${formData.partialDateDay ? parseInt(formData.partialDateDay, 10) : 1 }`;
+
+        // construct url value
+        if (formData.publicationUrl) {
+            formData.fez_record_search_key_link = [
+                {
+                    rek_link: formData.publicationUrl,
+                    rek_link_order: 1
+                }
+            ];
+        }
 
         const fileData = this.setFileData();
         const authorData = this.setAuthorData();
         const combinedData = Object.assign({}, defaultData, formData, fileData, authorData);
 
-        submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
-        decreaseStep();
+        // this flag is for those cases where we want the 'Your submission was successful' message
+        // to only appear once the files were successfully uploaded
+        const hasFilesToUpload = acceptedFiles.size > 0;
+        submitRecordForApproval(combinedData);
+
+        if (hasFilesToUpload) {
+            uploadFile(acceptedFiles);
+        }
+
+        if (!hasFilesToUpload) {
+            showSnackbar(locale.notifications.addRecord.submitMessage);
+            decreaseStep();
+        }
     };
 
     render() {
@@ -117,7 +156,6 @@ export default class AddJournalArticleForm extends Component {
         const authorsInformation = locale.pages.addRecord.addJournalArticle.authors;
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
-
         const {form, handleSubmit} = this.props;
 
         return (
@@ -319,11 +357,11 @@ export default class AddJournalArticleForm extends Component {
                                 <div className="columns">
                                     <div className="column">
                                         <Field component={TextField}
-                                               name="fez_record_search_key_link.rek_link"
+                                               name="publicationUrl"
                                                type="text"
                                                fullWidth
                                                floatingLabelText={optionalInformation.fields.urlLabel}
-                                               validate={[validation.url]}
+                                               validate={[validation.url, validation.maxLength255]}
                                         />
                                     </div>
                                 </div>
@@ -331,13 +369,20 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
 
                 {/* Files */}
-                <FileUploader form="FileUploadForm"/>
+                <FormSection name="fileUploader">
+                    <FileUploader />
+                </FormSection>
 
                 <div className="buttonWrapper">
-                    <FlatButton label={buttonLabels.cancel} style={{marginLeft: '12px'}}
-                                  onTouchTap={this.cancelAddingRecord} secondary />
-                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}}
-                                  type="submit"/>
+                    <RaisedButton
+                        label={buttonLabels.abandon}
+                        style={{marginLeft: '12px'}}
+                        onTouchTap={this.cancelAddingRecord} />
+                    <RaisedButton
+                        secondary
+                        label={buttonLabels.submitForApproval}
+                        style={{marginLeft: '12px'}}
+                        type="submit" />
                 </div>
             </form>
         );

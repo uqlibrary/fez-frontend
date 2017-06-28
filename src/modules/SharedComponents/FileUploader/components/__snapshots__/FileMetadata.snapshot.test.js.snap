@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File metadata snapshots tests renders default file metadata component 1`] = `
+<div
+  className="metadata-container"
+>
+  <Dialog
+    actions={
+      Array [
+        <FlatButton
+          disabled={false}
+          fullWidth={false}
+          label="Abandon and search again"
+          labelPosition="after"
+          labelStyle={Object {}}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onTouchStart={[Function]}
+          onTouchTap={[Function]}
+          primary={false}
+          secondary={false}
+      />,
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          keyboardFocused={true}
+          label="Delete"
+          labelPosition="after"
+          onTouchTap={[Function]}
+          primary={false}
+          secondary={true}
+          style={
+              Object {
+                  "marginLeft": "12px",
+                }
+          }
+      />,
+      ]
+    }
+    autoDetectWindowHeight={true}
+    autoScrollBodyContent={false}
+    modal={false}
+    onRequestClose={[Function]}
+    open={false}
+    repositionOnUpdate={true}
+  />
+  <div
+    className="columns is-gapless headers"
+  >
+    <div
+      className="column is-6-desktop is-6-tablet is-12-mobile filename header"
+    >
+      Filename
+    </div>
+    <div
+      className="column is-3-desktop is-3-tablet is-12-mobile file-access header"
+    >
+      Access conditions
+    </div>
+    <div
+      className="column is-2-desktop is-2-tablet is-12-mobile embargo-date header"
+    >
+      Embargo release date
+    </div>
+    <div
+      className="column is-1-desktop is-1-tablet is-12-mobile delete-button header"
+    >
+      <IconButton
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onClick={[Function]}
+        tooltip="Delete all files"
+        tooltipPosition="bottom-left"
+        touch={false}
+      >
+        <FontIcon
+          className="material-icons deleteIcon"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          delete_sweep
+        </FontIcon>
+      </IconButton>
+    </div>
+  </div>
+  <div
+    className="columns is-gapless data"
+  >
+    <div
+      className="column is-6-desktop is-6-tablet is-12-mobile filename"
+    >
+      <FontIcon
+        className="material-icons mobile-icon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        attachment
+      </FontIcon>
+      <span
+        className="filename-label"
+      />
+      <span
+        className="label"
+      >
+        File name
+      </span>
+    </div>
+    <div
+      className="column is-3-desktop is-3-tablet is-8-mobile file-access"
+    >
+      <FontIcon
+        className="material-icons mobile-icon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        lock_outline
+      </FontIcon>
+      <Field
+        autoWidth={true}
+        className="selectField"
+        component={[Function]}
+        hintText="Select access conditions"
+        name="fileAccess0"
+        onChange={[Function]}
+        validate={
+          Array [
+            [Function],
+          ]
+        }
+        value={null}
+      >
+        <MenuItem
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          checked={false}
+          desktop={false}
+          disabled={false}
+          focusState="none"
+          insetChildren={false}
+          primaryText="Select access conditions"
+          value={null}
+        />
+        <MenuItem
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          checked={false}
+          desktop={false}
+          disabled={false}
+          focusState="none"
+          insetChildren={false}
+          primaryText="Open Access"
+          value={9}
+        />
+        <MenuItem
+          anchorOrigin={
+            Object {
+              "horizontal": "right",
+              "vertical": "top",
+            }
+          }
+          checked={false}
+          desktop={false}
+          disabled={false}
+          focusState="none"
+          insetChildren={false}
+          primaryText="Closed Access"
+          value={8}
+        />
+      </Field>
+      <span
+        className="label"
+      >
+        File Access
+      </span>
+    </div>
+    <div
+      className="column is-2-desktop is-2-tablet is-8-mobile embargo-date"
+    >
+      <FontIcon
+        className="material-icons mobile-icon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        date_range
+      </FontIcon>
+      <div>
+        No Date
+      </div>
+      <span
+        className="label"
+      >
+        Embargo Date
+      </span>
+    </div>
+    <div
+      className="column is-1-desktop is-1-tablet is-1-mobile delete-button"
+    >
+      <IconButton
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onClick={[Function]}
+        tooltip="Delete this file"
+        tooltipPosition="bottom-left"
+        touch={false}
+      >
+        <FontIcon
+          className="material-icons deleteIcon"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          delete
+        </FontIcon>
+      </IconButton>
+    </div>
+  </div>
+</div>
+`;

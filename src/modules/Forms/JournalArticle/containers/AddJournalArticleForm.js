@@ -1,14 +1,24 @@
 import {connect} from 'react-redux';
 import {reduxForm, getFormValues} from 'redux-form/immutable';
 import AddJournalArticleForm from '../components/AddJournalArticleForm';
-import {loadPublicationSubTypesList, cancelAddRecord, loadAuthorsList, submitRecordForApproval} from '../actions';
+import {
+    loadPublicationSubTypesList,
+    cancelAddRecord,
+    loadAuthorsList,
+    resetFormSubmissionFlag,
+    submitRecordForApproval
+} from '../actions';
+import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
 import {decreaseStep} from '../../../AddRecord/actions';
 import Immutable from 'immutable';
+import {showSnackbar} from 'modules/App/actions';
+
 
 const scrollToElement = require('scrollto-element');
 
 let AddJournalArticleFormContainer = reduxForm({
     validate: (values) => {
+        const errors = {};
         // validate partial date of custom date picker
         if (values.get('partialDateYear') && values.get('partialDateMonth') && values.get('partialDateDay')) {
             const parsedDate = new Date(
@@ -17,10 +27,10 @@ let AddJournalArticleFormContainer = reduxForm({
                 parseInt(values.get('partialDateDay'), 10));
 
             if (parsedDate.getMonth() !== parseInt(values.get('partialDateMonth'), 10)) {
-                return { partialDateDay: 'Invalid date'};
+                errors.partialDateDay = 'Invalid date';
             }
         }
-        return null;
+        return errors;
     },
 
     onSubmitFail: (result) => {
@@ -44,15 +54,16 @@ let AddJournalArticleFormContainer = reduxForm({
 })(AddJournalArticleForm);
 
 AddJournalArticleFormContainer = connect(state => {
-    const publicationTypeState = state.get('publicationSubTypes');
+    const journalArticleState = state.get('journalArticle');
     const fileUploadState = state.get('fileUpload');
     const authorsState = state.get('authors') || Immutable.Map({});
 
     return {
-        authorList: publicationTypeState.get('authorList') || Immutable.Map({}),
-        fileMetadata: fileUploadState.get('fileMetadata'),
+        acceptedFiles: fileUploadState.get('acceptedFiles'),
+        authorList: journalArticleState.get('authorList') || Immutable.Map({}),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
-        publicationSubTypeList: publicationTypeState.get('publicationSubTypeList'),
+        isUploadCompleted: fileUploadState.get('isUploadCompleted'),
+        publicationSubTypeList: journalArticleState.get('publicationSubTypeList'),
         selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType'),
         selectedAuthors: authorsState.get('selectedAuthors') || Immutable.Map({})
     };
@@ -62,7 +73,10 @@ AddJournalArticleFormContainer = connect(state => {
         decreaseStep: () => dispatch(decreaseStep()),
         loadPublicationSubTypesList: (id) => dispatch(loadPublicationSubTypesList(id)),
         loadAuthorsList: () => dispatch(loadAuthorsList()),
-        submitRecordForApproval: (data, message) => dispatch(submitRecordForApproval(data, message))
+        resetFormSubmissionFlag: () => dispatch(resetFormSubmissionFlag()),
+        showSnackbar: (msg) => dispatch(showSnackbar(msg)),
+        submitRecordForApproval: (data, message) => dispatch(submitRecordForApproval(data, message)),
+        uploadFile: (acceptedFiles) => dispatch(uploadFile(acceptedFiles))
     };
 })(AddJournalArticleFormContainer);
 

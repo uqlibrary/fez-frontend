@@ -100,7 +100,10 @@ export default class App extends React.Component {
             :
             defaultMenuItems(locale, components);
 
-        console.log(error);
+        // TODO: implement error display if required
+        if (error && error.get('"displayError"')) {
+            console.log(error);
+        }
 
         return (
             <div className="layout-fill">

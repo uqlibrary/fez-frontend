@@ -37,20 +37,20 @@ function searchSetup(testValue) {
 
 describe('Publication search form integration tests', () => {
     it('updates the search button to the doi label', () => {
-        searchSetup('10.1163/9789004326828');
-        app.instance().updateButtonLabel();
+        searchSetup();
+        app.instance().updateButtonLabel('10.1163/9789004326828');
         expect(app.state('buttonLabel')).toEqual(buttonLabels.doi);
     });
 
     it('updates the search button to the pubmed label', () => {
-        searchSetup('123456');
-        app.instance().updateButtonLabel();
+        searchSetup();
+        app.instance().updateButtonLabel('123456');
         expect(app.state('buttonLabel')).toEqual(buttonLabels.pubmed);
     });
 
     it('updates the search button to the title label', () => {
-        searchSetup('Title Search');
-        app.instance().updateButtonLabel();
+        searchSetup();
+        app.instance().updateButtonLabel('Title Search min 10 characters');
         expect(app.state('buttonLabel')).toEqual(buttonLabels.title);
     });
 
@@ -67,7 +67,7 @@ describe('Publication search form integration tests', () => {
     });
 
     it('performs a title search', () => {
-        searchSetup('Title Search');
+        searchSetup('Title Search min 10 characters');
         app.instance().performSearch();
         expect(loadTitleResultsList.calledOnce).toEqual(true);
     });

@@ -31,7 +31,6 @@ export default class SearchResultsRow extends Component {
 
         return (
             <div className="claimWrapper">
-
                 <h3 className="claimTitle">
                     <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}">{title}</a>
                     <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}" target="_blank"><FontIcon className="material-icons claimTitleIcon">open_in_new</FontIcon></a>

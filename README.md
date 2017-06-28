@@ -20,7 +20,8 @@ UQ's branding for Fez is UQ eSpace.
 - Tests: `Jest/Nightwatch`
 
 ## Development
-
+This project is using `yarn` for dependency management.  Make sure `yarn` is installed on your machine.
+- `npm install yarn -g` - install `yarn` globally
 - `yarn`
 - `yarn start` - The website is now running on `http://localhost:3000/` on dev api (requires additional setup of uqlibrary/api project)
 - `yarn start:mock` - The website is now running on `http://localhost:3000/` on mock data

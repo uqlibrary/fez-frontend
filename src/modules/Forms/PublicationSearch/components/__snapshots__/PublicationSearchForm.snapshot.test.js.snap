@@ -39,7 +39,7 @@ exports[`Publication search form snapshots tests renders default publication sea
         autoComplete="off"
         autoFocus={true}
         component={[Function]}
-        floatingLabelText="Search for publication"
+        floatingLabelText="Enter DOI, Pubmed Id or Title"
         fullWidth={true}
         name="doiSearch"
         onChange={[Function]}
