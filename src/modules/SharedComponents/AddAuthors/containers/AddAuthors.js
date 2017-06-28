@@ -6,7 +6,8 @@ const AddAuthorsContainer = connect((state) => {
     const authorsState = state.get('authors');
     return {
         authorsList: authorsState.get('authorsList'),
-        searchResults: authorsState.get('searchResults')
+        authorsSearchResults: authorsState.get('authorsSearchResults'),
+        identifiersSearchResults: authorsState.get('identifiersSearchResults')
     };
 }, dispatch => {
     return {

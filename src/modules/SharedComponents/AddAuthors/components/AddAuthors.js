@@ -51,11 +51,12 @@ export default class AddAuthors extends Component {
 
     static propTypes = {
         authorsList: PropTypes.object,
+        authorsSearchResults: PropTypes.object,
         clearAuthorsSearchResults: PropTypes.func,
         clearIdentifiersSearchResults: PropTypes.func,
+        identifiersSearchResults: PropTypes.object,
         searchForAuthors: PropTypes.func,
         searchFromIdentifiersField: PropTypes.func,
-        searchResults: PropTypes.object,
         updateAuthorsList: PropTypes.func
     };
 
@@ -69,7 +70,6 @@ export default class AddAuthors extends Component {
             deleteDialogOpen: false,
             error: '',
             identifier: '',
-            identifierTimeout: null,
             name: '',
             nameError: '',
             nameTimeout: null,
@@ -171,7 +171,6 @@ export default class AddAuthors extends Component {
 
         // update the the authors reducer
         this.props.updateAuthorsList(authorsList);
-
         this.handleDialogClose();
     };
 
@@ -209,16 +208,10 @@ export default class AddAuthors extends Component {
     };
 
     handleNameChangeAutoComplete = (value) => {
-        const authorInformation = locale.sharedComponents.authors;
-        const authorConstants = authorInformation.constants;
-
         if (value.length === 0) {
             this.setState({showIdentifierField: false});
         }
-
-        setTimeout(() => {
-            this.props.searchForAuthors(value);
-        }, authorConstants.timeoutLimit);
+        this.props.searchForAuthors(value);
 
         this.setState({name: value});
     };
@@ -242,21 +235,13 @@ export default class AddAuthors extends Component {
                     showIdentifierField: true
                 });
 
+                // populate the potential authors in the identifiers autocomplete
+                this.props.searchFromIdentifiersField(selectedMenuItem.name);
+
                 // tried using the other ways recommended by facebook with refs but they didn't work
                 document.getElementsByName(authorFields.authorIdentifier)[0].focus();
             }
         }
-    };
-
-    handleIdentifierChangeAutoComplete = (value) => {
-        const authorInformation = locale.sharedComponents.authors;
-        const authorConstants = authorInformation.constants;
-
-        setTimeout(() => {
-            this.props.searchFromIdentifiersField(this.state.identifier);
-        }, authorConstants.timeoutLimit);
-
-        this.setState({identifier: value});
     };
 
     handleIdentifierAction = (selectedMenuItem, index) => {
@@ -267,8 +252,7 @@ export default class AddAuthors extends Component {
         if ((index === authorConstants.autoCompleteEnterKey && this.state.identifier.length === 0) ||
             (index >= authorConstants.autoCompleteFirstOption)) {
             this.setState({
-                identifier: selectedMenuItem.identifier,
-                name: selectedMenuItem.name,
+                identifier: selectedMenuItem.identifier
             });
             this.addAuthor();
         }
@@ -300,6 +284,16 @@ export default class AddAuthors extends Component {
         this.props.updateAuthorsList(authorsList);
     };
 
+    formatDataSourceForAuthors = () => {
+        const searchResults = this.props.authorsSearchResults.toJS();
+        const currentItem = [{
+            label: `Add author as entered: ${this.state.name}`,
+            name: this.state.name
+        }];
+
+        return currentItem.concat(searchResults);
+    };
+
     render() {
         const authorInformation = locale.sharedComponents.authors;
         const authorButtonFields = authorInformation.buttons;
@@ -321,10 +315,8 @@ export default class AddAuthors extends Component {
             />,
         ];
 
-        const dataSourceConfig = {
-            text: 'label',
-            value: 'name'
-        };
+        const authorsDataSource = this.formatDataSourceForAuthors();
+        const dataSourceConfig = {text: 'label', value: 'name'};
 
         return (
             <div>
@@ -344,7 +336,7 @@ export default class AddAuthors extends Component {
                             name={authorFields.authorName}
                             floatingLabelText={authorFields.authorNameLabel}
                             fullWidth
-                            dataSource={this.props.searchResults.toJS()}
+                            dataSource={authorsDataSource}
                             dataSourceConfig={dataSourceConfig}
                             onUpdateInput={this.handleNameChangeAutoComplete}
                             onNewRequest={this.handleNameAction}
@@ -364,9 +356,8 @@ export default class AddAuthors extends Component {
                             floatingLabelText={authorFields.authorIdentifierLabel}
                             openOnFocus
                             fullWidth
-                            dataSource={this.props.searchResults.toJS()}
+                            dataSource={this.props.identifiersSearchResults.toJS()}
                             dataSourceConfig={dataSourceConfig}
-                            onUpdateInput={this.handleIdentifierChangeAutoComplete}
                             onNewRequest={this.handleIdentifierAction}
                             value={this.state.identifier}
                         />

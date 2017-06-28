@@ -39,26 +39,6 @@ export function updateAuthorsList(authorsList) {
     };
 }
 
-// function performSearch(querystring) {
-//     return dispatch => {
-//         loadAuthorsData(querystring).then(authors => {
-//             const formattedData = authors.map(author => {
-//                 return {
-//                     identifier: author.aut_id,
-//                     label: `${author.aut_display_name} (UQ:${author.aut_id})`,
-//                     name: author.aut_display_name
-//                 };
-//             });
-//
-//             dispatch({
-//                 type: AUTHORS_SEARCH_COMPLETED,
-//                 payload: formattedData
-//             });
-//         }).catch((error) => {
-//             throw(error);
-//         });
-//     };
-// }
 
 /**
  * CURRENTLY GETTING A TYPE ERROR WHEN TRYING TO CONSOLIDATE THE CODE TO USE performSearch ABOVE

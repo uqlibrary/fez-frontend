@@ -5,7 +5,7 @@ import {AUTHORS_LIST_UPDATED, AUTHORS_SEARCH_COMPLETED, AUTHORS_SEARCH_RESULTS_R
 // Immutable state
 export const initialState = Immutable.fromJS({
     authorsList: [],
-    searchResults: [],
+    authorsSearchResults: [],
     identifiersSearchResults: []
 });
 
@@ -14,9 +14,9 @@ const authorsReducer = (state = initialState, action) => {
         case AUTHORS_LIST_UPDATED:
             return state.set('authorsList', Immutable.fromJS(action.payload));
         case AUTHORS_SEARCH_RESULTS_RESET:
-            return state.set('searchResults', Immutable.fromJS([]));
+            return state.set('authorsSearchResults', Immutable.fromJS([]));
         case AUTHORS_SEARCH_COMPLETED:
-            return state.set('searchResults', Immutable.fromJS(action.payload));
+            return state.set('authorsSearchResults', Immutable.fromJS(action.payload));
         case IDENTIFIERS_SEARCH_COMPLETED:
             return state.set('identifiersSearchResults', Immutable.fromJS(action.payload));
         case IDENTIFIERS_SEARCH_RESULTS_RESET:
