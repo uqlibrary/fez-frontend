@@ -50,6 +50,11 @@ exports[`File metadata snapshots tests renders default file metadata component 1
   >
     <div
       className="column is-6-desktop is-6-tablet is-12-mobile filename header"
+      style={
+        Object {
+          "textIndent": "12px",
+        }
+      }
     >
       Filename
     </div>
@@ -80,7 +85,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
-          delete_sweep
+          delete_forever
         </FontIcon>
       </IconButton>
     </div>

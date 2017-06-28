@@ -2,48 +2,17 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import ContentLink from 'material-ui/svg-icons/content/link';
-import ActionDelete from 'material-ui/svg-icons/action/delete';
-import ActionDeleteAll from 'material-ui/svg-icons/action/delete-forever';
+import FontIcon from 'material-ui/FontIcon';
+import IconButton from 'material-ui/IconButton';
 import FlatButton from 'material-ui/FlatButton';
 import KeyboardUp from 'material-ui/svg-icons/hardware/keyboard-arrow-up';
 import KeyboardDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 import RaisedButton from 'material-ui/RaisedButton';
-import IconButton from 'material-ui/IconButton';
 import Dialog from 'material-ui/Dialog';
-
-import {
-    Table,
-    TableBody,
-    TableHeader,
-    TableHeaderColumn,
-    TableRow,
-    TableRowColumn,
-} from 'material-ui/Table';
 
 import {locale} from 'config';
 
-const iconStyles = {
-    marginTop: '35px',
-    color: '#CCC'
-};
-const buttonStyles = {
-    marginTop: '30px'
-};
-
-const listStyle = {
-    opacity: 0.3,
-    zIndex: 999
-};
-
-const hoveredListstyle = {
-    opacity: 0.9,
-    zIndex: 999
-};
-
-const actionRowStyle = {
-    overflow: 'visible',
-    width: '50px'
-};
+import './AddAuthors.scss';
 
 const FIRST_ROW = 0;
 const ENTER_KEY = 'Enter';
@@ -129,24 +98,28 @@ export default class AddAuthors extends Component {
                      `${authorOrdinalInfo.default} ${authorOrdinalInfo.suffix}`;
 
                  return (
-                    <TableRow key={key}>
-                        <TableRowColumn>
+                    <div key={key} className="columns is-gapless is-mobile is-record">
+                        <div className="column is-7-desktop is-7-tablet is-6-mobile is-author">
                             {author.get('name')}
                             <div className="priority-author">
                                 {authorOrderText}
                             </div>
-                        </TableRowColumn>
-                        <TableRowColumn>{author.get('identifier')}</TableRowColumn>
-                        <TableRowColumn style={actionRowStyle}>
-                            <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === FIRST_ROW} iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={() => this.moveAuthorUp(index)}>
+                        </div>
+                        <div className="column is-2-desktop is-2-tablet is-5-mobile is-uqid">{author.get('identifier')}</div>
+                        <div className="column is-2-desktop is-2-tablet is-0-mobile is-reorder">
+                            <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === FIRST_ROW}   onClick={() => this.moveAuthorUp(index)}>
                                 <KeyboardUp />
                             </IconButton>
-                            <IconButton tooltip={authorRowInfo.moveRecordDown} disabled={(index + 1) === LAST_ROW} iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={() => this.moveAuthorDown(index)}>
+                            <IconButton tooltip={authorRowInfo.moveRecordDown} disabled={(index + 1) === LAST_ROW}   onClick={() => this.moveAuthorDown(index)}>
                                 <KeyboardDown />
                             </IconButton>
-                        </TableRowColumn>
-                        <TableRowColumn style={actionRowStyle}><IconButton tooltip={authorRowInfo.removeRecord} iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={() => this.deleteAuthorConfirmation(index)}><ActionDelete /></IconButton></TableRowColumn>
-                    </TableRow>
+                        </div>
+                        <div className="column is-1-desktop is-1-tablet is-1-mobile is-delete">
+                            <IconButton tooltip={authorRowInfo.removeRecord} onClick={() => this.deleteAuthorConfirmation(index)}>
+                                <FontIcon className="material-icons deleteIcon">delete</FontIcon>
+                            </IconButton>
+                        </div>
+                    </div>
                  );
              })
         );
@@ -282,8 +255,8 @@ export default class AddAuthors extends Component {
                     {this.state.deleteDialogContent}
                 </Dialog>
                 {/* Input area */}
-                <div className="columns">
-                    <div className="column">
+                <div className="columns" style={{marginTop: '-20px'}}>
+                    <div className="column is-addAuthor">
                         <TextField
                             name={authorFields.authorName}
                             type="text"
@@ -295,10 +268,10 @@ export default class AddAuthors extends Component {
                             errorText={this.state.nameError}
                         />
                     </div>
-                    <div className="column is-narrow">
-                        <ContentLink style={iconStyles}/>
+                    <div className="column is-narrow linkIcon">
+                        <ContentLink className="iconLink"/>
                     </div>
-                    <div className="column">
+                    <div className="column is-addUQid">
                         <TextField
                             name={authorFields.authorIdentifier}
                             fullWidth
@@ -312,7 +285,7 @@ export default class AddAuthors extends Component {
                         <RaisedButton
                             label={authorButtonFields.addAuthorLabel}
                             primary
-                            style={buttonStyles}
+                            className="authorAddButton"
                             disabled={this.state.name.trim().length === 0}
                             onClick={this.addAuthor} />
                     </div>
@@ -328,25 +301,24 @@ export default class AddAuthors extends Component {
 
                 {/* List area */}
                 {authorsList && authorsList.size > 0 && (
-                <div className="columns">
-                    <div className="column">
-                        <Table selectable={false} >
-                            <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
-                                <TableRow>
-                                    <TableHeaderColumn>Name</TableHeaderColumn>
-                                    <TableHeaderColumn>UQ identifier</TableHeaderColumn>
-                                    <TableHeaderColumn style={actionRowStyle}>Reorder</TableHeaderColumn>
-                                    <TableHeaderColumn style={actionRowStyle}>
-                                        <IconButton tooltip="Remove all authors" iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={this.deleteAllAuthorsConfirmation}><ActionDeleteAll /></IconButton>
-                                    </TableHeaderColumn>
-                                </TableRow>
-                            </TableHeader>
-                            <TableBody>
-                                {this.buildAuthorRow()}
-                            </TableBody>
-                        </Table>
+                    <div className="metadata-container">
+                        <div className="columns is-gapless is-mobile headers">
+                            <div className="column is-7-desktop is-7-tablet is-6-mobile header is-author">Author name</div>
+                            <div className="column is-2-desktop is-2-tablet is-5-mobile header is-uqid">UQ identifier</div>
+                            <div className="column is-2-desktop is-2-tablet is-0-mobile header is-reorder">&nbsp;&nbsp;&nbsp;&nbsp;Reorder</div>
+                            <div className="column is-1-desktop is-1-tablet is-1-mobile header is-delete">
+                                <IconButton
+                                    tooltip="Remove all authors"
+                                    onClick={this.deleteAllAuthorsConfirmation}>
+                                    <FontIcon className="material-icons deleteIcon">delete_forever</FontIcon>
+                                </IconButton>
+                            </div>
+                        </div>
+
+                        <div>
+                            {this.buildAuthorRow()}
+                        </div>
                     </div>
-                </div>
                 )}
             </div>
 
