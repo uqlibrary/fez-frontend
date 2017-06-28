@@ -8,7 +8,9 @@ export default {
         labels: {
             buttons: {
                 cancel: 'Abandon and search again',
+                abandon: 'Abandon and search again',
                 close: 'Close',
+                delete: 'Delete',
                 submitForApproval: 'Submit for approval'
             }
         }
@@ -186,7 +188,8 @@ export default {
                 help: {
                     title: 'Possible matches found',
                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
-                }
+                },
+                limit: 5
             },
             noMatchingRecords: {
                 title: 'No matching records?',
@@ -287,20 +290,32 @@ export default {
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
             },
             limit: 10,
+            filenameLimit: 45,
             messages: {
-                maxFiles: 'Only [maxNumberOfFiles] are allowed to be selected per upload.',
-                rejectedFiles: '[numberOfRejectedFiles] file was not included in this upload.',
-                acceptedFiles: 'There are no valid files to upload or these files have already been uploaded.',
-                alreadyUploaded: '[numberOfUploadedFiles] files have already been uploaded.',
+                deleteAllFilesDialogContent: 'Are you sure you want to delete all these files?',
+                deleteFileDialogContent: 'Are you sure you want to delete this file?',
+                deleteAllFilesToolTip: 'Delete all files',
+                deleteFileToolTip: 'Delete this file',
+                maxFiles: 'Only [maxNumberOfFiles] files are allowed to be uploaded.',
+                invalidFormatFile: 'Invalid file name.',
+                invalidFormatFiles: '[numberOfRejectedFiles] have an invalid file name.',
+                invalidFileLength: 'Filename is too long',
+                invalidFileLengths: '[numberOfLongFiles] filenames are too long',
+                existingFile: 'File has already been added.',
+                existingFiles: '[numberOfExistingFiles] have already been added.',
                 cancelledUpload: 'File upload cancelled.',
+                noDate: 'No Date',
                 uploadError: {
                     default: 'There seems to be a problem uploading the file. Please try again later.'
-                }
+                },
+                openAccessConfirmation: (
+                    <div>I understand that the files indicated above will be submitted as open access and will be made publicaly available immediately,
+                        or where indicated as closed access, will be made available on the indicated embargo date.</div>
+                )
             },
             fields: {
-                filenameLabel: 'Filename selected',
                 filenameRestrictions: (
-                    <div className="columns fileInstructions">
+                    <div className="columns file-instructions">
                         <div className="column">
                             <h3>File upload restrictions</h3>
                             <div>
@@ -313,45 +328,30 @@ export default {
                                 </ul>
                             </div>
                         </div>
-                        <div className="column uploadInstructions">
+                        <div className="column upload-instructions">
                             <FontIcon
                                 className="material-icons">cloud_upload</FontIcon>
                             <p>Click here to select files, or drag files into this area to upload</p>
                         </div>
                     </div>
                 ),
-                accessConditionsLabel: 'File is public (open access)',
-                embargoDateLabel: 'Embargo date',
-                descriptionLabel: 'Enter a short description of file e.g. author manuscript',
-                metadata: {
-                    description: 'fileDescription',
-                    accessCondition: 'accessCondition',
-                    embargoDate: 'embargoDate'
+                fileAccess: 'fileAccess',
+                datepickerAccess: 'accessDate',
+                selectField: {
+                    openAccessValue: 'Open Access',
+                    closedAccessValue: 'Closed Access',
+                    initialValue: 'Select access conditions'
                 }
             },
-            dialog: {
-                title: 'File uploader',
-                lastStepTitle: 'The following files are ready to upload',
-                explanationText: 'The following steps will allow you to identify, describe and assign a date which will allow/restrict open access to each file you upload. At the end of this process, the files themselves will be uploaded to the server for review.',
-                disclaimer: (
-                    <div className="disclaimer">
-                        <span>DISCLAIMER</span>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        faucibus, mauris vitae euismod iaculis, orci nulla tristique neque, eu mattis justo lorem in
-                        tellus. Pellentesque ultrices tempor felis, vitae sodales risus hendrerit vel. Cras vitae rutrum
-                        mauris. Suspendisse vitae est eleifend, imperdiet est sit amet, sagittis odio. Vivamus quis
-                        velit nibh. Fusce ullamcorper pulvinar viverra. Quisque mi nisl, pharetra id massa eget, euismod
-                        ullamcorper lectus. Quisque id ligula ullamcorper, efficitur lectus sed, tristique ipsum.
-                        Pellentesque quis ipsum ut turpis mattis sodales id ac metus.
-                    </div>
-                )
+            list: {
+                filenameLabel: 'Filename',
+                fileAccessLabel: 'Access conditions',
+                embargoDateLabel: 'Embargo release date'
             },
-            buttons: {
-                backLabel: 'Back',
-                cancelUpload: 'Cancel upload',
-                deleteLabel: 'Remove',
-                getStartedLabel: 'Get Started',
-                stepperNextLabel: 'Agree and continue',
-                uploadFilesLabel: 'Upload all files'
+            constants: {
+                openAccessId: 9,
+                closedAccessId: 8,
+                completed: 100
             }
         }
     }

@@ -8,7 +8,7 @@ import {createStore} from 'redux';
 
 import AddJournalArticleForm from './AddJournalArticleForm';
 
-function setup() {
+function setup(acceptedFiles) {
     const store = createStore(jest.fn());
     const publicationSubTypeList = [
         {
@@ -49,12 +49,13 @@ function setup() {
 
     // adding these props allows the snapshot to cover a larger amount fields
     const props = {
-        publicationSubTypeList: Immutable.fromJS(publicationSubTypeList),
-        loadPublicationSubTypeList: jest.fn(),
-        loadAuthorData: jest.fn(),
+        acceptedFiles,
         form: 'testForm',
         formValues: Immutable.fromJS({publicationType: 179}),
         handleSubmit: jest.fn(),
+        loadAuthorData: jest.fn(),
+        loadPublicationSubTypeList: jest.fn(),
+        publicationSubTypeList: Immutable.fromJS(publicationSubTypeList),
         store: store
     };
 
@@ -64,7 +65,15 @@ function setup() {
 
 describe('Add Journal article form snapshot tests', () => {
     it('renders default add journal article form', () => {
-        const app = setup();
+        let app = setup(Immutable.fromJS([]));
+        expect(toJson(app)).toMatchSnapshot();
+
+        const acceptedFiles = Immutable.fromJS([{
+            name: 's12345678_test_file_archive.zip',
+            size: 5307669356,
+            type: 'application/zip'
+        }]);
+        app = setup(acceptedFiles);
         expect(toJson(app)).toMatchSnapshot();
     });
 });

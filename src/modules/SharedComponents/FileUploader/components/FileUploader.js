@@ -2,148 +2,224 @@ import React, {PureComponent} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
+import FontIcon from 'material-ui/FontIcon';
 
 // custom components
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-import UploadDialog from '../containers/UploadDialog';
-import UploadedFileMetadata from '../containers/UploadedFileMetadata';
+import FileMetadata from '../containers/FileMetadata';
 import './FileUpload.scss';
 
 export default class FileUploader extends PureComponent {
 
     static propTypes = {
-        form: PropTypes.string.isRequired,
-        fileMetadata: PropTypes.object,
-        isUploadCompleted: PropTypes.bool,
-        initializeDialog: PropTypes.func,
-        initializeMetadata: PropTypes.func,
-        openDialog: PropTypes.func,
+        acceptedFiles: PropTypes.object,
+        resetToInitialState: PropTypes.func,
         setAcceptedFileList: PropTypes.func,
-        showSnackbar: PropTypes.func
+        uploadError: PropTypes.string
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            filesToUpload: []
+            uploadErrorMessage: ''
         };
     }
 
     componentWillUnmount() {
-        this.props.initializeMetadata();
+        this.props.resetToInitialState();
     }
 
-    openDialog = (acceptedFiles, rejectedFiles) => {
+    setAcceptedFileList = (addedFiles) => {
         const fileInformation = locale.sharedComponents.files;
+        const maxNumberOfFiles = fileInformation.limit;
+        const {acceptedFiles, setAcceptedFileList} = this.props;
 
-        let [validFiles, invalidFiles] = this.validateNumberOfFiles(acceptedFiles, rejectedFiles);
-        [validFiles, invalidFiles] = this.validateFilenameFormat(validFiles, invalidFiles);
+        let [validFiles, continueFileValidation] = this.validateFilenameFormat(addedFiles, maxNumberOfFiles);
 
-        if (this.props.fileMetadata.size > 0) {
-            [validFiles, invalidFiles] = this.validateFileNotUploaded(validFiles, invalidFiles);
+        if (continueFileValidation) {
+            [validFiles, continueFileValidation] = this.validateFileDoesNotExist(validFiles);
         }
 
-        if (invalidFiles && invalidFiles.length > 0) {
-            const msg = fileInformation.messages.rejectedFiles.replace('[numberOfRejectedFiles]', invalidFiles.length);
-            this.props.showSnackbar(msg);
+        if (continueFileValidation) {
+            [validFiles, continueFileValidation] = this.validFilenameLength(validFiles);
         }
 
-        if (validFiles.length > 0) {
-            this.setState({filesToUpload: validFiles});
+        // always run this validation because there could still be valid files to be added AND
+        // the total number of files added is still less than the limit
+        [validFiles, continueFileValidation] = this.validateNumberOfFiles(validFiles, maxNumberOfFiles);
 
-            this.props.initializeDialog();
-            this.props.setAcceptedFileList(validFiles);
-            this.props.openDialog();
+        // check if the total number of files dropped/added plus the files already added are over the limit
+        const isOverLimit = ((validFiles.length + acceptedFiles.size) > fileInformation.limit);
+
+        if (isOverLimit) {
+            const msg = fileInformation.messages.maxFiles.replace('[maxNumberOfFiles]', fileInformation.limit);
+            this.setErrorMessage(msg);
         } else {
-            this.props.showSnackbar(fileInformation.messages.acceptedFiles);
+            if (validFiles.length > 0) {
+                setAcceptedFileList(validFiles);
+                if (continueFileValidation) {
+                    this.setErrorMessage('');
+                }
+            }
         }
     };
 
-    getListOfUploadedFiles = () => {
-        const {
-            fileMetadata,
-        } = this.props;
+    setErrorMessage = (msg) => {
+        this.setState({uploadErrorMessage: msg});
+    };
 
-        if (fileMetadata) {
-            const data = fileMetadata.toJS();
-            return Object.keys(data).map(id => {
-                return <UploadedFileMetadata key={id} dataSource={data[id]} form={this.props.form} />;
-            });
+    showFileDoesNotExistMessage = (addedFiles, existingFileCount) => {
+        const fileInformation = locale.sharedComponents.files;
+        const msg = this.processErrorMessage(
+            addedFiles,
+            existingFileCount,
+            '[numberOfExistingFiles]',
+            fileInformation.messages.existingFile,
+            fileInformation.messages.existingFiles);
+        this.setErrorMessage(msg);
+    };
+
+    showFilenameFormatMessage = (addedFiles, invalidFileCount) => {
+        const fileInformation = locale.sharedComponents.files;
+        const msg = this.processErrorMessage(
+            addedFiles,
+            invalidFileCount,
+            '[numberOfRejectedFiles]',
+            fileInformation.messages.invalidFormatFile,
+            fileInformation.messages.invalidFormatFiles);
+
+        this.setErrorMessage(msg);
+    };
+
+    showInvalidFileLengthMessage = (addedFiles, invalidFileLengthCount) => {
+        const fileInformation = locale.sharedComponents.files;
+        const msg = this.processErrorMessage(
+            addedFiles,
+            invalidFileLengthCount,
+            '[numberOfLongFiles]',
+            fileInformation.messages.invalidFileLength,
+            fileInformation.messages.invalidFileLengths);
+
+        this.setErrorMessage(msg);
+    };
+
+    processErrorMessage = (addedFiles, count, template, singleFileMsg, multipleFilesMsg) => {
+        let msg = singleFileMsg;
+
+        if (addedFiles.length > 1) {
+            const updatedString = count === 1 ? `${count} file` : `${count} files`;
+            msg = multipleFilesMsg.replace(template, updatedString);
         }
 
-        return '';
+        return msg;
     };
 
     // checks if we're uploading the same file again
-    validateFileNotUploaded = (acceptedFiles, rejectedFiles) => {
-        const {fileMetadata} = this.props;
-
+    validateFileDoesNotExist = (addedFiles) => {
+        const {acceptedFiles} = this.props;
         const validFiles = [];
-        const invalidFiles = rejectedFiles;
+        let existingFileCount = 0;
+        let continueFileValidation = true;
 
-        acceptedFiles.map(file => {
-            const found = fileMetadata.find(metadata => {
+        addedFiles.map(file => {
+            const found = acceptedFiles.toJS().find(metadata => {
                 return metadata.name === file.name;
             });
 
             if (!found) {
                 validFiles.push(file);
             } else {
-                invalidFiles.push(file);
+                existingFileCount++;
+                continueFileValidation = false;
             }
         });
 
-        if (acceptedFiles.length !== validFiles.length) {
-            const msg = locale.sharedComponents.files.messages.alreadyUploaded.replace('[numberOfUploadedFiles]', acceptedFiles.length - validFiles.length);
-            this.props.showSnackbar(msg);
+        if (existingFileCount > 0) {
+            this.showFileDoesNotExistMessage(addedFiles, existingFileCount);
         }
 
-        return [validFiles, invalidFiles];
+        return [validFiles, continueFileValidation];
     };
 
-    validateFilenameFormat = (acceptedFiles, rejectedFiles) => {
+    validateFilenameFormat = (addedFiles, maxNumberOfFiles) => {
         const validFiles = [];
-        const invalidFiles = rejectedFiles;
+        let invalidFileCount = 0;
+        let continueFileValidation = true;
 
-        acceptedFiles.map(file => {
+        addedFiles.map(file => {
             if (file.name.match(/^[a-zA-Z][a-zA-Z0-9_]*[.][a-z0-9]+$/)) {
                 validFiles.push(file);
             } else {
-                invalidFiles.push(file);
+                continueFileValidation = false;
+                invalidFileCount++;
             }
         });
 
-        return [validFiles, invalidFiles];
+        if (validFiles.length < maxNumberOfFiles) {
+            if (!continueFileValidation) {
+                this.showFilenameFormatMessage(addedFiles, invalidFileCount);
+            }
+            continueFileValidation = true;
+        }
+        return [validFiles, continueFileValidation];
     };
 
-    validateNumberOfFiles = (acceptedFiles, rejectedFiles) => {
+    validFilenameLength = (addedFiles) => {
+        const validFiles = [];
         const fileInformation = locale.sharedComponents.files;
-        const maxNumberOfFiles = fileInformation.limit;
-        let validFiles = acceptedFiles;
-        let invalidFiles = rejectedFiles;
 
-        // check if the user has more than the maximum of files uploaded in one hit
-        if (acceptedFiles.length > maxNumberOfFiles) {
-            // alert user they're trying to upload more than files than maxNumberOfFiles
-            const msg = fileInformation.messages.maxFiles.replace('[maxNumberOfFiles]', maxNumberOfFiles);
-            this.props.showSnackbar(msg);
+        let continueFileValidation = true;
+        let invalidFileLengthCount = 0;
 
-            // only allow maxNumberOfFiles to upload
-            validFiles = acceptedFiles.slice(0, maxNumberOfFiles);
+        addedFiles.map(file => {
+            if (file.name.length <= fileInformation.filenameLimit) {
+                validFiles.push(file);
+            } else {
+                continueFileValidation = false;
+                invalidFileLengthCount++;
+            }
+        });
 
-            // push to the array of rejected files
-            invalidFiles = acceptedFiles.slice(maxNumberOfFiles);
+        if (invalidFileLengthCount > 0) {
+            this.showInvalidFileLengthMessage(addedFiles, invalidFileLengthCount);
         }
 
-        return [validFiles, invalidFiles];
+        return [validFiles, continueFileValidation];
+    };
+
+    validateNumberOfFiles = (addedFiles, maxNumberOfFiles) => {
+        const {acceptedFiles} = this.props;
+        const fileInformation = locale.sharedComponents.files;
+        const msg = fileInformation.messages.maxFiles.replace('[maxNumberOfFiles]', maxNumberOfFiles);
+        let validFiles = addedFiles;
+        let continueFileValidation = true;
+
+        // check if the total number of accepted files is less than the limit
+        if (acceptedFiles.size < maxNumberOfFiles) {
+            // only allow maxNumberOfFiles to upload
+            validFiles = addedFiles.slice(0, (maxNumberOfFiles - acceptedFiles.size));
+        }
+
+        if ((acceptedFiles.size < maxNumberOfFiles && (acceptedFiles.size + addedFiles.length) > maxNumberOfFiles) ||
+         (acceptedFiles.size === maxNumberOfFiles)) {
+            continueFileValidation = false;
+            this.setErrorMessage(msg);
+        }
+
+        return [validFiles, continueFileValidation];
     };
 
     render() {
+        const {acceptedFiles, uploadError} = this.props;
         const fileInformation = locale.sharedComponents.files;
 
-        const uploadedFiles = this.getListOfUploadedFiles();
+        if (uploadError && uploadError.length > 0) {
+            this.setErrorMessage(fileInformation.messages.uploadError.default);
+        }
+
+        let dropzoneRef;
 
         return (
             <div style={{marginBottom: '-60px'}}>
@@ -167,23 +243,30 @@ export default class FileUploader extends PureComponent {
                     </CardHeader>
                     <CardText className="body-1">
                         <div className="columns">
-                            <div className="column"><br />
-                                <Dropzone onDrop={this.openDialog.bind(this)} style={{padding: '10px'}} disablePreview>
+                            <div className="column"  tabIndex="0" onKeyPress={() => dropzoneRef.open()}>
+                                <Dropzone ref={(node) => {dropzoneRef = node;}} onDrop={this.setAcceptedFileList.bind(this)} style={{padding: '10px'}} disablePreview>
                                     {fileInformation.fields.filenameRestrictions}
                                 </Dropzone>
                             </div>
                         </div>
-                    </CardText>
-                </Card>
 
-                {this.props.fileMetadata && this.props.fileMetadata.size > 0 && (
-                <Card className="layout-card metadataContainer">
-                    <CardText className="body-1">
-                        {uploadedFiles}
+                        {this.state.uploadErrorMessage.length > 0 && (
+                            <div className="fileUploadErrorMessage">
+                                <div className="Icon">
+                                    <FontIcon className="material-icons">error</FontIcon>
+                                </div>
+                                <div className="Message">
+                                    {this.state.uploadErrorMessage}
+                                </div>
+                            </div>
+                        )}
+
+                        {acceptedFiles.size > 0 && (
+                            <FileMetadata
+                                acceptedFiles={acceptedFiles} />
+                        )}
                     </CardText>
                 </Card>
-                )}
-                <UploadDialog form={this.props.form} acceptedFiles={this.state.filesToUpload} />
             </div>
         );
     }
