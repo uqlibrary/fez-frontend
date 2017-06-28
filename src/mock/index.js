@@ -2,11 +2,10 @@ import {api} from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
 import {SESSION_COOKIE_NAME} from 'config';
-
+/* eslint-disable */
 // mocked data
 import {accounts} from './data/accounts';
 import {externalDoiSearchResultList, internalDoiSearchResultList, externalPubMedSearchResultsList, internalPubMedSearchResultsList, externalTitleSearchResultsList, internalTitleSearchResultsList} from './data/publicationSearch';
-// import {authorsList} from './data/authors';
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
@@ -45,9 +44,11 @@ mock.onGet(/search\/internal\?pub_med_id=*/).reply(200, internalPubMedSearchResu
 
 // Mock the publication form external title search endpoint
 mock.onGet(/search\/external\?source=wos&rek_display_type=[0-9]*/).reply(200, externalTitleSearchResultsList);
+// mock.onGet(/search\/external\?source=wos&rek_display_type=[0-9]*/).reply(404);
 
 // Mock the publication form internal title search endpoint
 mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(200, internalTitleSearchResultsList);
+// mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(500);
 
 // Mock the publication types endpoint
 mock.onGet('records/types').reply(200, publicationTypeList);
