@@ -96,10 +96,10 @@ export default class SearchResultsRow extends Component {
                     </span>
                     )
                     }
-                </div>
 
-                <div className="claimButtonWrapper">
-                    <FlatButton label={this.props.claimRecordBtnLabel} secondary/>
+                    <div className="claimButtonWrapper">
+                        <FlatButton label={this.props.claimRecordBtnLabel} secondary/>
+                    </div>
                 </div>
             </div>
         );
