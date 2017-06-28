@@ -1,6 +1,11 @@
 // DESKTOP
 
 @media (min-width: 768px) {
+
+  .open-access-checkbox {
+    margin-top: 24px;
+  }
+
   .accessibility-button {
     display: none;
   }
@@ -35,13 +40,15 @@
       width: calc(100% - 48px) !important;
       max-width: 200px;
       font-size: 14px !important;
-
-    }
-    .selectField > div {
-      width: 80%;
-      white-space: nowrap !important;
-      overflow: hidden !important;
-      text-overflow: ellipsis !important;
+      & > div:nth-child(4) {
+        margin-top: -12px !important;
+      }
+      & > div {
+        width: 80%;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
     }
   }
 
@@ -95,6 +102,9 @@
 // MOBILE
 
 @media (max-width: 768px) {
+  .open-access-checkbox {
+    margin-top: 24px;
+  }
   .data {
     padding: 0px 0 10px 0;
     border-bottom: 1px solid rgba(0,0,0,0.03);
@@ -122,8 +132,10 @@
     & > div {
       font-size: 16px !important;
     }
-    & > div > div {
-
+    & > div:nth-child(4) {
+      margin-top: -12px !important;
+      font-size: 9px !important;
+      margin-left: 95px !important;
     }
     hr {
       display: none;
