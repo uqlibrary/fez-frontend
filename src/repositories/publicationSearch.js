@@ -9,8 +9,13 @@ function performExternalSearch(querystring) {
         api.get(`search/external?${querystring}`).then(response => {
             resolve(response.data);
         }).catch(e => {
-            reject(e);
-            throw e;
+            if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
+                && e.response.hasOwnProperty('status') && e.response.status === 404) {
+                resolve([]);
+            } else {
+                reject(e);
+                throw e;
+            }
         });
     });
 }

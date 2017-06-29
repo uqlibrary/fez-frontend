@@ -242,7 +242,7 @@ export default class FileUploader extends PureComponent {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div className="columns">
+                        <div className="columns" style={{marginTop: '12px'}}>
                             <div className="column"  tabIndex="0" onKeyPress={() => dropzoneRef.open()}>
                                 <Dropzone ref={(node) => {dropzoneRef = node;}} onDrop={this.setAcceptedFileList.bind(this)} style={{padding: '10px'}} disablePreview>
                                     {fileInformation.fields.filenameRestrictions}

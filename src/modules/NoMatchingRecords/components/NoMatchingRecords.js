@@ -1,10 +1,10 @@
+/* eslint-disable */
+
 import React from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import PropTypes from 'prop-types';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
-import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
 import {locale} from 'config';
 
 
@@ -13,8 +13,6 @@ const propTypes = {
     explanationText: PropTypes.string.isRequired,
     searchAgainBtnLabel: PropTypes.string,
     addPublicationBtnLabel: PropTypes.string,
-    handlePrevious: PropTypes.func,
-    handleNext: PropTypes.func,
     stepIndex: PropTypes.number,
     help: PropTypes.object
 };
@@ -24,7 +22,7 @@ const defaultProps = {
     addPublicationBtnLabel: locale.pages.addRecord.noMatchingRecords.defaultProps.addPublicationBtnLabel
 };
 
-const NoMatchingRecords = ({handleNext, handlePrevious, title, explanationText, help, searchAgainBtnLabel, addPublicationBtnLabel}) => {
+const NoMatchingRecords = ({title, explanationText, help, searchAgainBtnLabel, addPublicationBtnLabel}) => {
     return (
         <Card className="layout-card">
             <CardHeader className="card-header">
@@ -45,20 +43,8 @@ const NoMatchingRecords = ({handleNext, handlePrevious, title, explanationText, 
             </CardHeader>
 
             <CardText className="body-1">
-                <div>{explanationText}</div>
-                <div style={{textAlign: 'right'}}>
-                    <FlatButton
-                        label={searchAgainBtnLabel}
-                        onTouchTap={handlePrevious}
-                        style={{marginRight: 12}}
-                    />
-                    <RaisedButton
-                        label={addPublicationBtnLabel}
-                        secondary
-                        autoFocus
-                        keyboardFocused
-                        onTouchTap={handleNext}
-                    />
+                <div>
+                    {explanationText}
                 </div>
             </CardText>
         </Card>

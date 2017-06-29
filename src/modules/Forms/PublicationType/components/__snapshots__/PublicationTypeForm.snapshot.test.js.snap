@@ -40,10 +40,25 @@ exports[`Document type form snapshot tests renders default document type compone
         >
           <Field
             component={[Function]}
+            floatingLabelFixed={true}
             formValue={179}
             fullWidth={true}
             name="publicationType"
           >
+            <MenuItem
+              anchorOrigin={
+                Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                }
+              }
+              checked={false}
+              desktop={false}
+              disabled={true}
+              focusState="none"
+              insetChildren={false}
+              primaryText="Please select a publication type"
+            />
             <MenuItem
               anchorOrigin={
                 Object {

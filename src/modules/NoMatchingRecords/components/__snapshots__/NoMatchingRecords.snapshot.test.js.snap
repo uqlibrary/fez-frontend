@@ -34,42 +34,6 @@ exports[`No matching record component snapshots tests renders default no matchin
     <div>
        Lorem ipsum
     </div>
-    <div
-      style={
-        Object {
-          "textAlign": "right",
-        }
-      }
-    >
-      <FlatButton
-        disabled={false}
-        fullWidth={false}
-        label="Search again?"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-        style={
-          Object {
-            "marginRight": 12,
-          }
-        }
-      />
-      <RaisedButton
-        autoFocus={true}
-        disabled={false}
-        fullWidth={false}
-        keyboardFocused={true}
-        label="Add new publication"
-        labelPosition="after"
-        primary={false}
-        secondary={true}
-      />
-    </div>
   </CardText>
 </Card>
 `;

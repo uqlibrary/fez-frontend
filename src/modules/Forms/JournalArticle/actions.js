@@ -1,7 +1,6 @@
 // Repositories
 import {loadPublicationSubTypeData} from 'repositories/publicationSubTypes';
-import {loadAuthorsData} from 'repositories/authors';
-import {submitRecord} from 'repositories/addRecord';
+// import {submitRecord} from 'repositories/addRecord';
 
 // config
 import {locale} from 'config';
@@ -9,10 +8,9 @@ import {locale} from 'config';
 // Types
 export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
 export const PUBLICATION_SUB_TYPES_LOADED = 'PUBLICATION_SUB_TYPES_LOADED';
-export const AUTHORS_LOADING = 'AUTHORS_LOADING';
-export const AUTHORS_LOADED = 'AUTHORS_LOADED';
-export const RECORD_SUBMITTED_RESET = 'RECORD_SUBMITTED_RESET';
-export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
+// export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
+// export const RECORD_SUBMIT_FAILED = 'RECORD_SUBMIT_FAILED';
+// export const RECORD_SUBMITTING = 'RECORD_SUBMITTING';
 
 // module imports
 import {showSnackbar} from 'modules/App';
@@ -47,24 +45,6 @@ export function loadPublicationSubTypesList(id) {
     };
 }
 
-/**
- * Loads a list of authors
- * @returns {function(*)}
- */
-export function loadAuthorsList() {
-    return dispatch => {
-        dispatch({type: AUTHORS_LOADING});
-        loadAuthorsData().then(authorList => {
-            dispatch({
-                type: AUTHORS_LOADED,
-                payload: authorList
-            });
-        }).catch((error) => {
-            throw(error);
-        });
-    };
-}
-
 
 /**
  * Cancels the add record functionality
@@ -80,22 +60,15 @@ export function cancelAddRecord(message) {
  * Submits the record for approval
  * @returns {function(*)}
  */
-export function submitRecordForApproval(data) {
-    return dispatch => {
-        submitRecord(data).then(() => {
-            dispatch({type: RECORD_SUBMITTED});
-        }).catch(error => {
-            throw(error);
-        });
-    };
-}
-
-/**
- * Resets the isFormSubmissionComplete state
- * @returns {{type: string}}
- */
-export function resetFormSubmissionFlag() {
-    return {
-        type: RECORD_SUBMITTED_RESET
-    };
-}
+// export function submitRecordForApproval(data) {
+//     return dispatch => {
+//         dispatch({type: RECORD_SUBMITTING});
+//
+//         submitRecord(data).then(() => {
+//             dispatch({type: RECORD_SUBMITTED});
+//         }).catch(error => {
+//             dispatch({type: RECORD_SUBMIT_FAILED});
+//             throw(error);
+//         });
+//     };
+// }

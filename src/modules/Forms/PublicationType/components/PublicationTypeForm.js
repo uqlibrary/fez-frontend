@@ -105,8 +105,11 @@ export default class PublicationTypeForm extends Component {
                                        name="publicationType"
                                        fullWidth
                                        floatingLabelText={publicationTypeLabel}
+                                       floatingLabelFixed
                                        formValue={formValues.get('publicationType')}
-                                       onChange={loadSelectedPublicationType}>
+                                       onChange={loadSelectedPublicationType}
+                                       >
+                                    <MenuItem primaryText="Please select a publication type" disabled />
                                     {
                                         this.state.displayPublicationTypeList.map((item, index) => (
                                             item.id !== 0 ? <MenuItem key={index} value={item.id} primaryText={item.name}/> :

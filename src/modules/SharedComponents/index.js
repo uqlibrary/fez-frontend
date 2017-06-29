@@ -1,8 +1,8 @@
 export {FileUploader} from './FileUploader';
-export {Authors} from './Authors';
 export {SelectField} from './SelectField';
 export {Checkbox} from './Checkbox';
+export {AddAuthors} from './AddAuthors';
 
-// Reducers
+// reducers
+export {authorsReducer} from './AddAuthors';
 export {fileUploadReducer} from './FileUploader';
-export {authorsReducer} from './Authors';

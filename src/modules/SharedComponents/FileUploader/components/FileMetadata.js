@@ -110,7 +110,7 @@ export default class FileMetadata extends Component {
                 const accessIds = fileInformation.constants;
 
                 return (
-                    <div className="columns is-gapless data" key={fieldName}>
+                    <div className="columns is-gapless data metadata-container" key={fieldName}>
                         <div className="column is-6-desktop is-6-tablet is-12-mobile filename">
                             <FontIcon className="material-icons mobile-icon">attachment</FontIcon>
                             <span className="filename-label">{file.name}</span>
@@ -129,8 +129,10 @@ export default class FileMetadata extends Component {
                             )}
 
                             {this.state.accessFields[selectFieldName] !== accessIds.openAccessId && (
-                                <div>{messages.noDate}</div>
+                                <div className="datepicker">{messages.noDate}</div>
                             )}
+
+                            <span className="label">Embargo Date</span>
 
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
@@ -146,10 +148,8 @@ export default class FileMetadata extends Component {
 
                             {fileUploadProgress[file.name] && (
                                 (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
-                                <FontIcon
-                                    className="material-icons green-tick">done</FontIcon>
+                                <FontIcon className="material-icons green-tick">done</FontIcon>
                             )}
-                            <span className="label">Embargo Date</span>
                         </div>
                         <div className="column is-1-desktop is-1-tablet is-1-mobile delete-button">
                             <IconButton
@@ -257,7 +257,7 @@ export default class FileMetadata extends Component {
                     {this.state.deleteDialogContent}
                 </Dialog>
                 <div className="columns is-gapless headers">
-                    <div className="column is-6-desktop is-6-tablet is-12-mobile filename header">
+                    <div className="column is-6-desktop is-6-tablet is-12-mobile filename header" style={{textIndent: '12px'}}>
                         {fileInformation.list.filenameLabel}
                     </div>
                     <div className="column is-3-desktop is-3-tablet is-12-mobile file-access header">
@@ -271,7 +271,7 @@ export default class FileMetadata extends Component {
                             tooltip={messages.deleteAllFilesToolTip}
                             tooltipPosition="bottom-left"
                             onClick={this.deleteAllFilesConfirmation}>
-                            <FontIcon className="material-icons deleteIcon">delete_sweep</FontIcon>
+                            <FontIcon className="material-icons deleteIcon">delete_forever</FontIcon>
                         </IconButton>
                     </div>
                 </div>
