@@ -42,13 +42,21 @@ export function updateAuthorsList(authorsList) {
 export function performSearch(querystring, actionType) {
     return dispatch => {
         loadAuthorsData(querystring).then(authors => {
+            let addUser = false;
+
             const formattedData = authors.map(author => {
                 const username = author.aut_org_username ? ` (${author.aut_org_username})` : '';
-                return {
-                    identifier: author.aut_org_username || '',
-                    label: `${author.aut_display_name}${username}`,
-                    name: author.aut_display_name
-                };
+                addUser = ((actionType === AUTHORS_SEARCH_COMPLETED) || (actionType === IDENTIFIERS_SEARCH_COMPLETED && username.length > 0));
+
+                if (addUser) {
+                    return {
+                        identifier: author.aut_org_username || '',
+                        label: `${author.aut_display_name}${username}`,
+                        name: author.aut_display_name
+                    };
+                }
+
+                return {};
             });
 
             dispatch({
