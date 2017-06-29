@@ -243,7 +243,7 @@ export default class AddAuthors extends Component {
         const authorConstants = authorInformation.constants;
 
         // we can add an author without an identifier
-        if ((index === authorConstants.autoCompleteEnterKey && this.state.identifier.length === 0) ||
+        if ((index === authorConstants.autoCompleteEnterKey) ||
             (index >= authorConstants.autoCompleteFirstOption)) {
             this.setState({
                 identifier: selectedMenuItem.identifier
@@ -313,7 +313,7 @@ export default class AddAuthors extends Component {
         // need to add this timeout otherwise the document.getElement... call will be undefined
         setTimeout(() => {
             // populate the potential authors in the identifiers autocomplete
-            if (name.length > 0) {
+            if (name && name.length > 0) {
                 self.props.searchFromIdentifiersField(name);
             }
 
