@@ -172,7 +172,7 @@ export default class AddRecord extends React.Component {
                             popularTypesList={publicationTypeInformation.popularTypesList} />
 
                             {/* Journal Article is selected. Size check needed as it is an empty Immutable Map on initial load */}
-                            {selectedPublicationType.size > 0 && selectedPublicationType.get('name').toLowerCase() === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE &&
+                            {selectedPublicationType && selectedPublicationType.size > 0 && selectedPublicationType.get('name').toLowerCase() === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE &&
                             <AddJournalArticleForm form="AddJournalArticleForm" />
                             }
                     </div>

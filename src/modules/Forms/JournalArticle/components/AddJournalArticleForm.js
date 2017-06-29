@@ -44,6 +44,16 @@ export default class AddJournalArticleForm extends Component {
         loadPublicationSubTypesList(selectedPublicationId.get('id'));
     }
 
+    componentWillUpdate(nextProps) {
+        // this is for when we do a file upload
+        // we want to redirect once the file upload is complete
+        if (nextProps.isUploadCompleted) {
+            const {showSnackbar, decreaseStep} = this.props;
+            showSnackbar(locale.notifications.addRecord.submitMessage);
+            decreaseStep();
+        }
+    }
+
     cancelAddingRecord = () => {
         const {cancelAddRecord, decreaseStep} = this.props;
         cancelAddRecord(locale.notifications.addRecord.cancelMessage);
@@ -125,7 +135,7 @@ export default class AddJournalArticleForm extends Component {
         const combinedData = Object.assign({}, defaultData, formData, fileData, authorData);
 
         // this flag is for those cases where we want the 'Your submission was successful' message
-        // to only appear once the files were successfully uploaded
+        // to only appear once the files were successfully uploadedx
         const hasFilesToUpload = acceptedFiles.size > 0;
         submitRecordForApproval(combinedData);
 
