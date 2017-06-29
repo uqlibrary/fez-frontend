@@ -116,10 +116,10 @@ export default class AddAuthors extends Component {
                         </div>
                         <div className="column is-2-desktop is-2-tablet is-5-mobile is-uqid">{author.get('identifier')}</div>
                         <div className="column is-2-desktop is-2-tablet is-0-mobile is-reorder">
-                            <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === FIRST_ROW}   onClick={() => this.moveAuthorUp(index)}>
+                            <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === authorConstants.firstRow} onClick={() => this.moveAuthorUp(index)}>
                                 <KeyboardUp />
                             </IconButton>
-                            <IconButton tooltip={authorRowInfo.moveRecordDown} disabled={(index + 1) === LAST_ROW}   onClick={() => this.moveAuthorDown(index)}>
+                            <IconButton tooltip={authorRowInfo.moveRecordDown} disabled={(index + 1) === LAST_ROW} onClick={() => this.moveAuthorDown(index)}>
                                 <KeyboardDown />
                             </IconButton>
                         </div>
@@ -364,7 +364,7 @@ export default class AddAuthors extends Component {
                             floatingLabelText={authorFields.authorNameLabel}
                             fullWidth
                             filter={AutoComplete.fuzzyFilter}
-                            openOnFocus
+                            openOnFocus={this.state.name.length > 0}
                             dataSource={authorsDataSource}
                             dataSourceConfig={dataSourceConfig}
                             onUpdateInput={this.handleNameChangeAutoComplete}
