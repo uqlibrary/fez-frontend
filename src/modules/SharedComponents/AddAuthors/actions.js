@@ -70,7 +70,7 @@ export function searchFromIdentifiersField(querystring) {
  * Searches for an author based on the querystring from the authors field
  * @returns {function(*)}
  */
-export function searchForAuthors(querystring) {
+export function searchFromAuthorsField(querystring) {
     return dispatch => {
         loadAuthorsData(querystring).then(authors => {
             const formattedData = authors.map(author => {

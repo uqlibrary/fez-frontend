@@ -55,7 +55,7 @@ export default class AddAuthors extends Component {
         clearAuthorsSearchResults: PropTypes.func,
         clearIdentifiersSearchResults: PropTypes.func,
         identifiersSearchResults: PropTypes.object,
-        searchForAuthors: PropTypes.func,
+        searchFromAuthorsField: PropTypes.func,
         searchFromIdentifiersField: PropTypes.func,
         updateAuthorsList: PropTypes.func
     };
@@ -81,8 +81,8 @@ export default class AddAuthors extends Component {
         const authorInformation = locale.sharedComponents.authors;
         const authorFields = authorInformation.fields;
         const messages = authorInformation.messages;
+        const {clearAuthorsSearchResults, clearIdentifiersSearchResults, updateAuthorsList} = this.props;
         const authorsList = this.props.authorsList.toJS();
-        const {clearAuthorsSearchResults, clearIdentifiersSearchResults} = this.props;
 
         let errorMessage = '';
         let found = false;
@@ -100,7 +100,7 @@ export default class AddAuthors extends Component {
             authorsList.push(newAuthor);
 
             // update the the authors reducer
-            this.props.updateAuthorsList(authorsList);
+            updateAuthorsList(authorsList);
         } else {
             errorMessage = messages.authorExists;
         }
@@ -212,7 +212,7 @@ export default class AddAuthors extends Component {
         if (value.length === 0) {
             this.setState({showIdentifierField: false});
         } else {
-            this.props.searchForAuthors(value);
+            this.props.searchFromAuthorsField(value);
         }
 
         this.setState({name: value});
@@ -239,11 +239,7 @@ export default class AddAuthors extends Component {
                         showIdentifierField: true
                     });
 
-                    // populate the potential authors in the identifiers autocomplete
-                    this.props.searchFromIdentifiersField(selectedMenuItem.name);
-
-                    // tried using the other ways recommended by facebook with refs but they didn't work
-                    document.getElementsByName(authorFields.authorIdentifier)[0].focus();
+                    this.searchForIdentifier(selectedMenuItem.name, authorFields.authorIdentifier);
                 }
             }
         }
@@ -253,17 +249,20 @@ export default class AddAuthors extends Component {
     handleNameKeyPress = (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            if (this.state.name.trim().length > 0) {
+            if (this.state.name.trim().length > 0 && e.key === 'Enter') {
                 this.addAuthor();
             } else {
                 const authorInformation = locale.sharedComponents.authors;
                 const authorFields = authorInformation.fields;
-                const messages = authorInformation.messages;
+                if (e.key === 'Tab' && this.state.showIdentifierField === true) {
+                    this.searchForIdentifier(this.state.name, authorFields.authorIdentifier);
+                } else {
+                    const messages = authorInformation.messages;
+                    this.setState({nameError: messages.authorNameMissing});
 
-                this.setState({nameError: messages.authorNameMissing});
-
-                // tried using the other ways recommended by facebook with refs but they didn't work
-                document.getElementsByName(authorFields.authorName)[0].focus();
+                    // tried using the other ways recommended by facebook with refs but they didn't work
+                    document.getElementsByName(authorFields.authorName)[0].focus();
+                }
             }
         }
     };
@@ -332,6 +331,14 @@ export default class AddAuthors extends Component {
         return currentItem.concat(searchResults);
     };
 
+    searchForIdentifier = (name, field) => {
+        // populate the potential authors in the identifiers autocomplete
+        this.props.searchFromIdentifiersField(name);
+
+        // tried using the other ways recommended by facebook with refs but they didn't work
+        document.getElementsByName(field)[0].focus();
+    };
+
     render() {
         const authorInformation = locale.sharedComponents.authors;
         const authorButtonFields = authorInformation.buttons;
@@ -374,11 +381,13 @@ export default class AddAuthors extends Component {
                             name={authorFields.authorName}
                             floatingLabelText={authorFields.authorNameLabel}
                             fullWidth
+                            filter={AutoComplete.fuzzyFilter}
+                            openOnFocus
                             dataSource={authorsDataSource}
                             dataSourceConfig={dataSourceConfig}
                             onUpdateInput={this.handleNameChangeAutoComplete}
                             onNewRequest={this.handleNameAction}
-                            onKeyPress={this.handleNameKeyPress}
+                            onKeyDown={this.handleNameKeyPress}
                             errorText={this.state.nameError}
                             value={this.state.name}
                         />
@@ -393,7 +402,8 @@ export default class AddAuthors extends Component {
                         <AutoComplete
                             name={authorFields.authorIdentifier}
                             floatingLabelText={authorFields.authorIdentifierLabel}
-                            open={this.state.showIdentifierField}
+                            filter={AutoComplete.fuzzyFilter}
+                            openOnFocus
                             fullWidth
                             dataSource={this.props.identifiersSearchResults.toJS()}
                             dataSourceConfig={dataSourceConfig}
