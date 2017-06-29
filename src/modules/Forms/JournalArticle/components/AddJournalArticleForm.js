@@ -43,8 +43,13 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        if (nextProps.isUploadCompleted) {
+            this.tryRecordSave();
+        }
+
         if (nextProps.recordSubmissionState.get('submitted')) {
             // TODO: display big confirmation dialog box
+            // this.props.dispatch(showDialog());
             this.props.dispatch(resetStepper());
         }
     }
@@ -90,8 +95,8 @@ export default class AddJournalArticleForm extends Component {
         return {};
     };
 
-    submitRecord = () => {
-        const {acceptedFiles, formValues} = this.props;
+    tryRecordSave = () => {
+        const {formValues} = this.props;
 
         // TODO: move these constants to a config, there will be more types -> keep it in one place
         const RECORD_TYPE = 3;
@@ -123,20 +128,18 @@ export default class AddJournalArticleForm extends Component {
             ];
         }
 
-        // const fileData = this.setFileData(); commented this out as it is old so will just wait for merge to sort this out
-        const fileData = {};
+        const fileData = this.setFileData();
         const authorData = this.setAuthorData();
         const combinedData = Object.assign({}, defaultData, formData, fileData, authorData);
 
-        // this flag is for those cases where we want the 'Your submission was successful' message
-        // to only appear once the files were successfully uploaded
-        const hasFilesToUpload = acceptedFiles.size > 0;
         this.props.dispatch(saveRecord(combinedData));
+    };
 
-        // TODO: what if files failed to upload but record was saved.... how long does it take to upload/save record??
-        // TODO: what if record save failed but files have started to upload????
-        if (hasFilesToUpload) {
-            this.props.dispatch(uploadFile(acceptedFiles));
+    tryFileUpload = () => {
+        if (this.props.acceptedFiles.size > 0) {
+            this.props.dispatch(uploadFile(this.props.acceptedFiles));
+        } else {
+            this.tryRecordSave();
         }
     };
 
@@ -399,7 +402,7 @@ export default class AddJournalArticleForm extends Component {
                         label={ recordSubmissionState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.submitForApproval}
                         style={{marginLeft: '12px'}}
                         disabled={recordSubmissionState.get('submitting')}
-                        onClick={handleSubmit(this.submitRecord)} />
+                        onClick={handleSubmit(this.tryFileUpload)} />
                 </div>
             </form>
         );

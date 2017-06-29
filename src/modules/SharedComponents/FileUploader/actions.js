@@ -67,7 +67,7 @@ export function uploadFile(acceptedFiles) {
                             type: FILE_UPLOAD_TERMINATED,
                             payload: getErrorMssage(e)
                         });
-                        throw(e);
+                        // throw(e);
                     }
                 });
             }).catch(e => {
@@ -75,7 +75,7 @@ export function uploadFile(acceptedFiles) {
                     type: FILE_UPLOAD_TERMINATED,
                     payload: getErrorMssage(e)
                 });
-                throw e;
+                // throw e;
             });
         });
     };

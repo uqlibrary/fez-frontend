@@ -331,7 +331,7 @@ export default {
                 cancelledUpload: 'File upload cancelled.',
                 noDate: 'No Date',
                 uploadError: {
-                    default: 'There seems to be a problem uploading the file. Please try again later.'
+                    default: 'There seems to be a problem uploading file(s). Please, try again later.'
                 },
                 openAccessConfirmation: (
                     <div>I understand that the files indicated above will be submitted as open access and will be made publicaly available immediately,
