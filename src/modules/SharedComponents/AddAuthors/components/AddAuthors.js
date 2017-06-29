@@ -347,6 +347,7 @@ export default class AddAuthors extends Component {
                             openOnFocus={this.state.name.length > 0}
                             dataSource={authorsDataSource}
                             dataSourceConfig={dataSourceConfig}
+                            maxSearchResults={authorInformation.limit}
                             onUpdateInput={this.handleNameChangeAutoComplete}
                             onNewRequest={this.handleNameDropdown}
                             errorText={this.state.nameError}
@@ -366,6 +367,7 @@ export default class AddAuthors extends Component {
                             filter={AutoComplete.fuzzyFilter}
                             openOnFocus
                             fullWidth
+                            maxSearchResults={authorInformation.limit}
                             dataSource={this.props.identifiersSearchResults.toJS()}
                             dataSourceConfig={dataSourceConfig}
                             onNewRequest={this.handleIdentifierDropdown}
