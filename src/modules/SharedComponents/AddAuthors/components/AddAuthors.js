@@ -86,7 +86,8 @@ export default class AddAuthors extends Component {
 
         let errorMessage = '';
         let found = false;
-        if (this.state.identifier.length > 0 && authorsList) {
+
+        if (this.state.identifier !== '' && authorsList) {
             found = authorsList.filter(author => author.identifier === this.state.identifier).length > 0;
         }
 
@@ -210,8 +211,9 @@ export default class AddAuthors extends Component {
     handleNameChangeAutoComplete = (value) => {
         if (value.length === 0) {
             this.setState({showIdentifierField: false});
+        } else {
+            this.props.searchForAuthors(value);
         }
-        this.props.searchForAuthors(value);
 
         this.setState({name: value});
     };
@@ -221,25 +223,47 @@ export default class AddAuthors extends Component {
         const authorFields = authorInformation.fields;
         const authorConstants = authorInformation.constants;
 
-        if (index === authorConstants.autoCompleteEnterKey || index > authorConstants.autoCompleteFirstOption) {
-            this.setState({
-                identifier: selectedMenuItem.identifier,
-                name: selectedMenuItem.name,
-            });
-            this.addAuthor();
-        } else {
-            if (index === authorConstants.autoCompleteFirstOption) {
-                // this is the non-uq staff member name
+        // only process the name if there is at least one character
+        if (this.state.name.trim().length > 0) {
+            if (index === authorConstants.autoCompleteEnterKey || index > authorConstants.autoCompleteFirstOption) {
                 this.setState({
+                    identifier: selectedMenuItem.identifier,
                     name: selectedMenuItem.name,
-                    showIdentifierField: true
                 });
+                this.addAuthor();
+            } else {
+                if (index === authorConstants.autoCompleteFirstOption) {
+                    // this is the non-uq staff member name
+                    this.setState({
+                        name: selectedMenuItem.name,
+                        showIdentifierField: true
+                    });
 
-                // populate the potential authors in the identifiers autocomplete
-                this.props.searchFromIdentifiersField(selectedMenuItem.name);
+                    // populate the potential authors in the identifiers autocomplete
+                    this.props.searchFromIdentifiersField(selectedMenuItem.name);
+
+                    // tried using the other ways recommended by facebook with refs but they didn't work
+                    document.getElementsByName(authorFields.authorIdentifier)[0].focus();
+                }
+            }
+        }
+    };
+
+    // this is needed because handleNameAction can't handle enter key presses
+    handleNameKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            if (this.state.name.trim().length > 0) {
+                this.addAuthor();
+            } else {
+                const authorInformation = locale.sharedComponents.authors;
+                const authorFields = authorInformation.fields;
+                const messages = authorInformation.messages;
+
+                this.setState({nameError: messages.authorNameMissing});
 
                 // tried using the other ways recommended by facebook with refs but they didn't work
-                document.getElementsByName(authorFields.authorIdentifier)[0].focus();
+                document.getElementsByName(authorFields.authorName)[0].focus();
             }
         }
     };
@@ -255,6 +279,20 @@ export default class AddAuthors extends Component {
                 identifier: selectedMenuItem.identifier
             });
             this.addAuthor();
+        }
+    };
+
+    handleIdentifierKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            if (this.state.name.trim().length > 0) {
+                this.addAuthor();
+            } else {
+                const authorInformation = locale.sharedComponents.authors;
+                const messages = authorInformation.messages;
+
+                this.setState({nameError: messages.authorNameMissing});
+            }
         }
     };
 
@@ -340,6 +378,7 @@ export default class AddAuthors extends Component {
                             dataSourceConfig={dataSourceConfig}
                             onUpdateInput={this.handleNameChangeAutoComplete}
                             onNewRequest={this.handleNameAction}
+                            onKeyPress={this.handleNameKeyPress}
                             errorText={this.state.nameError}
                             value={this.state.name}
                         />
@@ -354,12 +393,12 @@ export default class AddAuthors extends Component {
                         <AutoComplete
                             name={authorFields.authorIdentifier}
                             floatingLabelText={authorFields.authorIdentifierLabel}
-                            openOnFocus
+                            open={this.state.showIdentifierField}
                             fullWidth
                             dataSource={this.props.identifiersSearchResults.toJS()}
                             dataSourceConfig={dataSourceConfig}
                             onNewRequest={this.handleIdentifierAction}
-                            value={this.state.identifier}
+                            onKeyPress={this.handleIdentifierKeyPress}
                         />
                     </div>
                     )}
