@@ -71,7 +71,7 @@ export default class AddAuthors extends Component {
             // update the the authors reducer
             updateAuthorsList(authorsList);
         } else {
-            errorMessage = messages.authorExists;
+            errorMessage = messages.authorIdentifierExists;
         }
 
         this.setState({
@@ -223,7 +223,7 @@ export default class AddAuthors extends Component {
         const authorInformation = locale.sharedComponents.authors;
         const authorConstants = authorInformation.constants;
 
-        if (e.key === authorConstants.enterKey || e.key === authorConstants.tabKey) {
+        if (e.key === authorConstants.enterKey || (e.key === authorConstants.tabKey && this.state.showIdentifierField)) {
             e.preventDefault();
             if (this.state.name.trim().length > 0 && e.key === authorConstants.enterKey) {
                 this.addAuthor();
@@ -318,7 +318,9 @@ export default class AddAuthors extends Component {
         this.props.searchFromIdentifiersField(name);
 
         // tried using the other ways recommended by facebook with refs but they didn't work
-        document.getElementsByName(field)[0].focus();
+        if (document.getElementsByName(field)[0]) {
+            document.getElementsByName(field)[0].focus();
+        }
     };
 
     render() {
