@@ -1,6 +1,6 @@
 // Repositories
 import {loadPublicationSubTypeData} from 'repositories/publicationSubTypes';
-import {submitRecord} from 'repositories/addRecord';
+// import {submitRecord} from 'repositories/addRecord';
 
 // config
 import {locale} from 'config';
@@ -8,7 +8,9 @@ import {locale} from 'config';
 // Types
 export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
 export const PUBLICATION_SUB_TYPES_LOADED = 'PUBLICATION_SUB_TYPES_LOADED';
-export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
+// export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
+// export const RECORD_SUBMIT_FAILED = 'RECORD_SUBMIT_FAILED';
+// export const RECORD_SUBMITTING = 'RECORD_SUBMITTING';
 
 // module imports
 import {showSnackbar} from 'modules/App';
@@ -58,12 +60,15 @@ export function cancelAddRecord(message) {
  * Submits the record for approval
  * @returns {function(*)}
  */
-export function submitRecordForApproval(data) {
-    return dispatch => {
-        submitRecord(data).then(() => {
-            dispatch({type: RECORD_SUBMITTED});
-        }).catch(error => {
-            throw(error);
-        });
-    };
-}
+// export function submitRecordForApproval(data) {
+//     return dispatch => {
+//         dispatch({type: RECORD_SUBMITTING});
+//
+//         submitRecord(data).then(() => {
+//             dispatch({type: RECORD_SUBMITTED});
+//         }).catch(error => {
+//             dispatch({type: RECORD_SUBMIT_FAILED});
+//             throw(error);
+//         });
+//     };
+// }

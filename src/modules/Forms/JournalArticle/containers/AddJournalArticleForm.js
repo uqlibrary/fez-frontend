@@ -1,13 +1,7 @@
 import {connect} from 'react-redux';
 import {reduxForm, getFormValues} from 'redux-form/immutable';
-import AddJournalArticleForm from '../components/AddJournalArticleForm';
-
-import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
-import {loadPublicationSubTypesList, cancelAddRecord, submitRecordForApproval} from '../actions';
-import {decreaseStep} from '../../../AddRecord/actions';
 import Immutable from 'immutable';
-import {showSnackbar} from 'modules/App/actions';
-
+import AddJournalArticleForm from '../components/AddJournalArticleForm';
 
 const scrollToElement = require('scrollto-element');
 
@@ -48,10 +42,9 @@ let AddJournalArticleFormContainer = reduxForm({
     }
 })(AddJournalArticleForm);
 
-AddJournalArticleFormContainer = connect(state => {
+const mapStateToProps = (state) => {
     const journalArticleState = state.get('journalArticle');
     const fileUploadState = state.get('fileUpload');
-    // const publicationTypeState = state.get('publicationSubTypes');
     const authorsState = state.get('authors');
 
     return {
@@ -60,17 +53,12 @@ AddJournalArticleFormContainer = connect(state => {
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
         isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         publicationSubTypeList: journalArticleState.get('publicationSubTypeList'),
+        recordSubmissionState: journalArticleState.get('recordSubmissionState'),
+        recordSubmissionErrorMessage: journalArticleState.get('recordSubmissionErrorMessage'),
         selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType')
     };
-}, dispatch => {
-    return {
-        cancelAddRecord: (message) => dispatch(cancelAddRecord(message)),
-        decreaseStep: () => dispatch(decreaseStep()),
-        loadPublicationSubTypesList: (id) => dispatch(loadPublicationSubTypesList(id)),
-        submitRecordForApproval: (data, message) => dispatch(submitRecordForApproval(data, message)),
-        showSnackbar: (msg) => dispatch(showSnackbar(msg)),
-        uploadFile: (acceptedFiles) => dispatch(uploadFile(acceptedFiles))
-    };
-})(AddJournalArticleFormContainer);
+};
+
+AddJournalArticleFormContainer = connect(mapStateToProps)(AddJournalArticleFormContainer);
 
 export default AddJournalArticleFormContainer;
