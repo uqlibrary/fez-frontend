@@ -19,16 +19,21 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
       className="card-header"
     >
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile"
       >
         <div
           className="column"
         >
           <h2
-            className="headline"
+            className="title"
           >
             Files
           </h2>
+          <h4
+            className="sub-title"
+          >
+            Upload new files
+          </h4>
         </div>
         <div
           className="column is-narrow is-helpicon"
@@ -43,16 +48,18 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
     <CardText
       className="body-1"
     >
-      <p
-        className="sub-title"
-      >
-        Upload a new file
-      </p>
       <div
         className="columns"
+        style={
+          Object {
+            "marginTop": "12px",
+          }
+        }
       >
         <div
           className="column"
+          onKeyPress={[Function]}
+          tabIndex="0"
         >
           <Dropzone
             disableClick={false}
@@ -69,13 +76,13 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
             }
           >
             <div
-              className="columns fileInstructions"
+              className="columns file-instructions"
             >
               <div
                 className="column"
               >
                 <h3>
-                  File name restrictions
+                  File upload restrictions
                 </h3>
                 <div>
                   <ul>
@@ -83,25 +90,22 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
                       No folders
                     </li>
                     <li>
-                      Only upper or lowercase alphanumeric characters or underscores (a-z, A-Z, _ and 0-9 only)
+                      Limited to 10 files
                     </li>
                     <li>
-                      Only numbers and lowercase characters in the file extension
+                      Begin with a letter and are less than 45 characters long
                     </li>
                     <li>
-                      Under 45 characters
+                      Contain only upper and lowercase alphanumeric characters, and underscores
                     </li>
                     <li>
-                      Only one file extension (on period (.) character) and
-                    </li>
-                    <li>
-                      Starting with a letter. Eg "s12345678_phd_thesis.pdf"
+                      Have only a single period which precedes the file extension: “.pdf”
                     </li>
                   </ul>
                 </div>
               </div>
               <div
-                className="column uploadInstructions"
+                className="column upload-instructions"
               >
                 <FontIcon
                   className="material-icons"
@@ -118,44 +122,18 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
           </Dropzone>
         </div>
       </div>
-    </CardText>
-  </Card>
-  <Card
-    className="layout-card metadataContainer"
-    expandable={false}
-    expanded={null}
-    initiallyExpanded={false}
-  >
-    <CardText
-      className="body-1"
-    >
-      <Connect(ReduxForm)
-        dataSource={
-          Object {
-            "name": "s12345678_test_file_archive.zip",
-            "size": 5307669356,
-            "type": "application/zip",
-          }
+      <Connect(FileMetadata)
+        acceptedFiles={
+          Array [
+            Object {
+              "name": "s12345678_test_file_archive.zip",
+              "size": 5307669356,
+              "type": "application/zip",
+            },
+          ]
         }
-        form="testForm"
-      />
-      <Connect(ReduxForm)
-        dataSource="test file description"
-        form="testForm"
-      />
-      <Connect(ReduxForm)
-        dataSource={1}
-        form="testForm"
-      />
-      <Connect(ReduxForm)
-        dataSource="Thu May 25 2017 00:00:00 GMT+1000 (AEST)"
-        form="testForm"
       />
     </CardText>
   </Card>
-  <Connect(ReduxForm)
-    acceptedFiles={Array []}
-    form="testForm"
-  />
 </div>
 `;

@@ -6,8 +6,9 @@ import {appReducer} from 'modules/App';
 import {helpDrawerReducer} from 'uqlibrary-react-toolbox';
 import {reducer as dashboardReducer} from 'modules/Dashboard';
 import {addRecordReducer} from 'modules/AddRecord';
-import {publicationTypeReducer, publicationSearchReducer, publicationSubTypeReducer} from './modules/Forms';
-import {authorsReducer} from 'modules/SharedComponents';
+
+import {publicationTypeReducer, publicationSearchReducer, journalArticleReducer} from './modules/Forms';
+import {authorsReducer, fileUploadReducer} from './modules/SharedComponents';
 
 const rootReducer = combineReducers({
     form: formReducer,
@@ -15,11 +16,12 @@ const rootReducer = combineReducers({
     addRecord: addRecordReducer,
     app: appReducer,
     authors: authorsReducer,
+    fileUpload: fileUploadReducer,
     dashboard: dashboardReducer,
     helpDrawer: helpDrawerReducer,
     publicationTypes: publicationTypeReducer,
-    publicationSubTypes: publicationSubTypeReducer,
-    publicationSearch: publicationSearchReducer,
+    journalArticle: journalArticleReducer,
+    publicationSearch: publicationSearchReducer
 });
 
 export default rootReducer;

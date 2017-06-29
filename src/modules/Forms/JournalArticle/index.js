@@ -1,2 +1,2 @@
 export {default as AddJournalArticleForm} from './containers/AddJournalArticleForm';
-export {default as publicationSubTypeReducer} from './reducer';
+export {default as journalArticleReducer} from './reducer';

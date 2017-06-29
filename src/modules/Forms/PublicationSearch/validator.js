@@ -1,4 +1,9 @@
-import {validation} from 'config';
+import {validation, locale} from 'config';
+
+export const isPartialDOIValue = value => {
+    const isPartialDOI = /^10\..*/;
+    return isPartialDOI.test(value);
+};
 
 export const isDOIValue = value => {
     // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
@@ -8,26 +13,27 @@ export const isDOIValue = value => {
     const doiRegex4 = /^10.1021\/\w\w\d+$/i;
     const doiRegex5 = /^10.1207\/[\w\d]+\&\d+_\d+$/i;
 
+    // TODO: update with regex groups/or matching
     return (!doiRegex1.test(value) && !doiRegex2.test(value) && !doiRegex3.test(value) && !doiRegex4.test(value) && !doiRegex5.test(value)) ? false : true;
 };
 
 export const isPubMedValue = value => {
-    const numbersOnlyRegex = /^[\d]*$/; // pubmed regex
-    return numbersOnlyRegex.test(value);
+    // pubmed id is all digits, min 3 digits
+    const isPubmedId = /^[\d]{3,}$/;
+    return isPubmedId.test(value);
 };
 
 export const validate = values => {
+    // TODO: all validation should be handled by the validation in config
+
     const errors = {};
     const fieldValue = values.get('doiSearch');
+    const validTitle = /^[a-z\s\d\!\?\-]{10,255}$/i;
 
-    errors.doiSearch = validation.required(fieldValue);
-
-
-    const titleRegex = /^[a-zA-Z\s\d\!\?\-]+$/; // title regex
-
-    if (!isDOIValue(fieldValue) && !isPubMedValue(fieldValue) && !titleRegex.test(fieldValue)) {
-        errors.doiSearch = 'Please enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title of the publication';
+    if (!validation.required(fieldValue) && !isDOIValue(fieldValue) && !isPubMedValue(fieldValue) && !validTitle.test(fieldValue)) {
+        errors.doiSearch = locale.pages.addRecord.searchForPublication.errorMsg;
     }
+
 
     return errors;
 };

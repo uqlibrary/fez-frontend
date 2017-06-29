@@ -7,7 +7,7 @@ export const initialState = Immutable.fromJS({
     publicationSubTypeList: {}
 });
 
-const publicationSubTypeReducer = (state = initialState, action) => {
+const journalArticleReducer = (state = initialState, action) => {
     switch (action.type) {
         case PUBLICATION_SUB_TYPES_LOADED:
             return state.set('publicationSubTypeList', Immutable.fromJS(action.payload));
@@ -16,4 +16,4 @@ const publicationSubTypeReducer = (state = initialState, action) => {
     }
 };
 
-export default publicationSubTypeReducer;
+export default journalArticleReducer;

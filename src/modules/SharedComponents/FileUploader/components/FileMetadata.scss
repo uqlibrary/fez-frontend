@@ -1,0 +1,217 @@
+// DESKTOP
+
+@media (min-width: 768px) {
+
+  .metadata-container {
+    margin-bottom: 0px !important;
+
+    .open-access-checkbox {
+      margin-top: 24px;
+    }
+
+    .accessibility-button {
+      display: none;
+    }
+
+    .data {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .label {
+      display: none;
+    }
+
+    .deleteIcon {
+      color: rgba(0, 0, 0, 0.3) !important;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.9) !important;
+      }
+    }
+
+    .filename {
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+
+    .file-access {
+      hr {
+        display: none;
+      }
+      .selectField {
+        width: calc(100% - 48px) !important;
+        max-width: 200px;
+        font-size: 14px !important;
+        & > div:nth-child(4) {
+          margin-top: -12px !important;
+        }
+        & > div {
+          width: 80%;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+      }
+    }
+
+    .embargo-date {
+      line-height: 48px;
+      hr {
+        display: none;
+      }
+      .upload-progress, .green-tick {
+        float: right;
+        margin-top: 10px;
+      }
+      .datepicker {
+        float: left;
+        display: inline-block !important;
+        width: 66% !important;
+
+        & > div {
+          font-size: 14px !important;
+          width: 98% !important;
+          & > div {
+            color: rgba(0, 0, 0, 0.82) !important;
+          }
+        }
+      }
+    }
+
+    .delete-button {
+      text-align: right !important;
+    }
+
+    .mobile-icon {
+      display: none !important;
+    }
+
+    .headers {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.7);
+      .header {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        line-height: 40px !important;
+      }
+    }
+
+    .metadata-container {
+      margin-top: -20px;
+      .columns {
+        margin-bottom: 0px !important;
+      }
+      .column {
+        padding: 0px;
+        margin: 0px;
+        height: 48px;
+        line-height: 48px;
+      }
+    }
+
+  }
+}
+
+// MOBILE
+
+@media (max-width: 768px) {
+
+  .metadata-container {
+
+    .open-access-checkbox {
+      margin-top: 24px;
+    }
+    .data {
+      padding: 0px 0 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }
+    .headers, .header {
+      display: none;
+    }
+    .label {
+      color: rgba(0, 0, 0, 0.5);
+      display: block !important;
+      font-size: 10px !important;
+      margin-top: -5px !important;
+    }
+    .metadata-container .column {
+      height: 40px !important;
+      line-height: 20px !important;
+    }
+    .selectField {
+      height: 48px !important;
+      width: 100% !important;
+      margin-top: -20px !important;
+      margin-right: -120px !important;
+      margin-bottom: -18px !important;
+      overflow: hidden !important;
+      & > div {
+        font-size: 16px !important;
+      }
+      & > div:nth-child(4) {
+        margin-top: -12px !important;
+        font-size: 9px !important;
+        margin-left: 95px !important;
+      }
+      hr {
+        display: none;
+      }
+    }
+    .mobile-icon {
+      display: inline-block !important;
+      font-size: 25px !important;
+      line-height: 30px !important;
+      float: left !important;
+      margin-right: 10px !important;
+      color: rgba(0, 0, 0, 0.6) !important;
+    }
+    .datepicker {
+      margin-top: -12px !important;
+      display: inline-block !important;
+      margin-bottom: -18px !important;
+      margin-right: -120px !important;
+      height: 48px;
+      line-height: 48px;
+
+      & > div > div {
+        color: rgba(0, 0, 0, 0.82) !important;
+      }
+      hr {
+        display: none !important;
+      }
+    }
+    .embargo-date {
+      .label {
+        display: block;
+        width: 50%;
+      }
+      .upload-progress, .green-tick {
+        float: right;
+        margin-top: -40px !important;
+        margin-right: -80px;
+      }
+    }
+    .filename, .datepicker, .file-access {
+      font-size: 16px !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+
+    .delete-button {
+      float: right;
+      margin-top: -50px !important;
+      margin-right: 20px !important;
+    }
+    .deleteIcon {
+      color: rgba(0, 0, 0, 0.3) !important;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.9) !important;
+      }
+    }
+  }
+}

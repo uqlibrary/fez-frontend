@@ -41,7 +41,7 @@ describe('Publication type reducer', () => {
         ).toEqual(
             Immutable.fromJS({
                 publicationTypeList: publicationTypeList,
-                selectedPublicationType: Immutable.fromJS({id: 179, name: 'Journal Article'})
+                selectedPublicationType: Immutable.fromJS({id: 179, name: 'Journal Article', class: 'Uqlibrary\\FezCore\\Types\\JournalArticle'})
             })
         );
     });

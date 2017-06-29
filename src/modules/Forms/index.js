@@ -4,5 +4,5 @@ export {PublicationSearchForm} from './PublicationSearch';
 
 // Reducers
 export {publicationTypeReducer} from './PublicationType';
-export {publicationSubTypeReducer} from './JournalArticle';
+export {journalArticleReducer} from './JournalArticle';
 export {publicationSearchReducer} from './PublicationSearch';

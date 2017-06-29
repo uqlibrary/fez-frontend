@@ -8,7 +8,6 @@ import {locale} from 'config';
 // Types
 export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
 export const PUBLICATION_SUB_TYPES_LOADED = 'PUBLICATION_SUB_TYPES_LOADED';
-export const AUTHORS_LOADING = 'AUTHORS_LOADING';
 export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
 
 // module imports
@@ -59,11 +58,10 @@ export function cancelAddRecord(message) {
  * Submits the record for approval
  * @returns {function(*)}
  */
-export function submitRecordForApproval(data, message) {
+export function submitRecordForApproval(data) {
     return dispatch => {
         submitRecord(data).then(() => {
             dispatch({type: RECORD_SUBMITTED});
-            dispatch(showSnackbar(message));
         }).catch(error => {
             throw(error);
         });

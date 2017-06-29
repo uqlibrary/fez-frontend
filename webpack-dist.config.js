@@ -176,5 +176,10 @@ module.exports = {
             'src',
             'node_modules',
         ]
-    }
+    },
+    performance: {
+        maxAssetSize: 1000000,
+        maxEntrypointSize: 1000000,
+        hints: 'warning'
+    },
 };

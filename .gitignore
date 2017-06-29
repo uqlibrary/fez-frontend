@@ -2,9 +2,9 @@
 node_modules
 dist
 npm-debug.log*
+.DS_Store
 
 e2eTestLog
 chromedriver.log
 coverage
 /yarn.lock
-/package-lock.json

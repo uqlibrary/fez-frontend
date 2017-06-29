@@ -1,30 +1,38 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
-import {Field} from 'redux-form/immutable';
+import MenuItem from 'material-ui/MenuItem';
+import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
+import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
+import {AddAuthors, FileUploader, SelectField} from 'modules/SharedComponents';
+import {validation, locale} from 'config';
 
-import {AutoCompleteSelect, HelpIcon, TextField, DatePicker} from 'uqlibrary-react-toolbox';
-import {AddAuthors} from 'modules/SharedComponents';
-import {locale} from 'config';
 
 import './AddJournalArticleForm.scss';
 
 export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
+        acceptedFiles: PropTypes.object,
         authorsList: PropTypes.object,
         cancelAddRecord: PropTypes.func,
+        completeFormSubmission: PropTypes.func,
         decreaseStep: PropTypes.func,
-        fileMetadata: PropTypes.object,
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
+        hasOpenAccess: PropTypes.bool,
+        isOpenAccessAccepted: PropTypes.bool,
+        isUploadCompleted: PropTypes.bool,
         loadAuthorsList: PropTypes.func,
         loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
+        resetFormSubmissionFlag: PropTypes.func,
         selectedPublicationId: PropTypes.object,
-        submitRecordForApproval: PropTypes.func
+        showSnackbar: PropTypes.func,
+        submitRecordForApproval: PropTypes.func,
+        uploadFile: PropTypes.func
     };
 
     constructor(props) {
@@ -38,17 +46,8 @@ export default class AddJournalArticleForm extends Component {
 
     cancelAddingRecord = () => {
         const {cancelAddRecord, decreaseStep} = this.props;
-        // go back to step 1
-        decreaseStep();
         cancelAddRecord(locale.notifications.addRecord.cancelMessage);
-    };
-
-    getElementLabel = (elementData, elementKey, formData, formKey, matchedLabel) => {
-        const matched = elementData.find(entry => {
-            return entry[elementKey] === formData[formKey];
-        });
-
-        return matched ? {'rek_subtype': matched[matchedLabel]} : {};
+        decreaseStep();
     };
 
     setAuthorData = () => {
@@ -70,14 +69,13 @@ export default class AddJournalArticleForm extends Component {
     };
 
     setFileData = () => {
-        const {fileMetadata} = this.props;
+        const {acceptedFiles} = this.props;
 
-        if (fileMetadata.size > 0) {
+        if (acceptedFiles.size > 0) {
             const data = {'fez_record_search_key_file_attachment_name': []};
-
-            Object.keys(fileMetadata.toJS()).map((file, index) => {
+            acceptedFiles.toJS().map((file, index) => {
                 data.fez_record_search_key_file_attachment_name.push({
-                    'rek_file_attachment_name': file,
+                    'rek_file_attachment_name': file.name,
                     'rek_file_attachment_name_order': (index + 1)
                 });
             });
@@ -89,33 +87,56 @@ export default class AddJournalArticleForm extends Component {
     };
 
     submitRecord = () => {
-        const {decreaseStep, formValues, submitRecordForApproval} = this.props;
+        const {acceptedFiles, decreaseStep, formValues, showSnackbar, submitRecordForApproval, uploadFile} = this.props;
+
+        // TODO: move these constants to a config, there will be more types -> keep it in one place
         const RECORD_TYPE = 3;
         const SUBMITTED_FOR_APPROVAL = 3;
-        const JOURNAL_TYPE = 179;
+        const DISPLAY_TYPE = 179;
+        const MEMBER_OF = 'UQ:218198';
 
         const defaultData = {
             rek_object_type: RECORD_TYPE,
             rek_status: SUBMITTED_FOR_APPROVAL,
-            rek_display_type: JOURNAL_TYPE
+            rek_display_type: DISPLAY_TYPE,
+            fez_record_search_key_ismemberof: [
+                { rek_ismemberof: MEMBER_OF }
+            ]
         };
 
         const formData = formValues.toJS();
-        const tempData = this.getElementLabel(this.props.publicationSubTypeList.toJS(), 'id', formData, 'rek_subtype', 'label');
 
-        // check if the date object is set otherwise default to today
-        if (!formData.rek_date) {
-            formData.rek_date = new Date();
+        // construct partial date "YYYY-MM-DD"
+        formData.rek_date = `${parseInt(formData.partialDateYear, 10)}-${formData.partialDateMonth ? (parseInt(formData.partialDateMonth, 10) + 1) : 1}-${formData.partialDateDay ? parseInt(formData.partialDateDay, 10) : 1 }`;
+
+        // construct url value
+        if (formData.publicationUrl) {
+            formData.fez_record_search_key_link = [
+                {
+                    rek_link: formData.publicationUrl,
+                    rek_link_order: 1
+                }
+            ];
         }
 
         // const fileData = this.setFileData(); commented this out as it is old so will just wait for merge to sort this out
         const fileData = {};
         const authorData = this.setAuthorData();
+        const combinedData = Object.assign({}, defaultData, formData, fileData, authorData);
 
-        const combinedData = Object.assign({}, defaultData, formData, tempData, fileData, authorData);
+        // this flag is for those cases where we want the 'Your submission was successful' message
+        // to only appear once the files were successfully uploaded
+        const hasFilesToUpload = acceptedFiles.size > 0;
+        submitRecordForApproval(combinedData);
 
-        submitRecordForApproval(combinedData, locale.notifications.addRecord.submitMessage);
-        decreaseStep();
+        if (hasFilesToUpload) {
+            uploadFile(acceptedFiles);
+        }
+
+        if (!hasFilesToUpload) {
+            showSnackbar(locale.notifications.addRecord.submitMessage);
+            decreaseStep();
+        }
     };
 
     render() {
@@ -124,20 +145,16 @@ export default class AddJournalArticleForm extends Component {
         const authorsInformation = locale.sharedComponents.authors;
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
-
-        const {formValues, form, handleSubmit} = this.props;
-        const required = value => value && value.replace(/\s/, '').length > 0 ? undefined : 'This field is required';
-
-        const DateTimeFormat = global.Intl.DateTimeFormat;
+        const {form, handleSubmit} = this.props;
 
         return (
             <form>
                 {/* Journal Information */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="headline">{journalArticleInformation.title}</h2>
+                                <h2 className="title">{journalArticleInformation.title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {journalArticleInformation.help && (
@@ -151,39 +168,97 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <div className="columns is-gapless">
-                            <Field component={TextField}
-                                   name="rek_title"
-                                   type="text"
-                                   fullWidth
-                                   floatingLabelText={journalArticleInformation.fields.titleLabel}
-                                   validate={[required]}
-                            />
-                        </div>
-                        <div className="columns">
-                            <div className="column is-two-thirds" style={{paddingTop: '0', paddingBottom: '0'}}>
-                                <Field component={TextField} name="fez_record_search_key_journal_name.rek_journal_name" type="text" fullWidth
-                                       floatingLabelText={journalArticleInformation.fields.nameLabel}/>
-                            </div>
-                            <div className="column" style={{paddingTop: '0', paddingBottom: '0'}}>
-                                <Field component={DatePicker}
-                                       floatingLabelText={journalArticleInformation.fields.publishDateLabel}
+                        <div className="columns" style={{marginTop: '-12px'}}>
+                            <div className="column">
+                                <Field component={TextField}
+                                       autoFocus
+                                       name="rek_title"
+                                       type="text"
                                        fullWidth
-                                       locale="en-AU"
-                                       DateTimeFormat={DateTimeFormat}
-                                       name="rek_date"
+                                       floatingLabelText={journalArticleInformation.fields.titleLabel}
+                                       validate={[validation.required]}
+                                       style={{marginBottom: '-12px'}}
                                 />
                             </div>
                         </div>
-                        <div className="columns" style={{paddingTop: '0', paddingBottom: '0'}}>
-                            <Field component={AutoCompleteSelect}
-                                   name="rek_subtype"
-                                   fullWidth
-                                   label={journalArticleInformation.fields.publicationTypeLabel}
-                                   formValue={formValues.get('rek_subtype')}
-                                   dataSource={[].concat(this.props.publicationSubTypeList.toJS())}
-                                   dataSourceConfig={{text: 'label', value: 'id'}}
-                            />
+                        <div className="columns">
+                            <div className="column is-two-thirds">
+                                <Field component={TextField}
+                                       name="fez_record_search_key_journal_name.rek_journal_name"
+                                       type="text" fullWidth
+                                       floatingLabelText={journalArticleInformation.fields.nameLabel}
+                                       validate={[validation.required]}
+                                />
+                            </div>
+                            <div className="column">
+                                <div className="columns">
+                                    <div className="column">
+                                        <Field component={TextField}
+                                               name="partialDateDay"
+                                               maxLength="2"
+                                               type="text"
+                                               style={{marginTop: '12px'}}
+                                               fullWidth
+                                               floatingLabelText="Day"
+                                               floatingLabelFixed
+                                               validate={[validation.dateTimeDay]}
+                                        />
+                                    </div>
+                                    <div className="form-spacer"/>
+                                    <div className="column">
+                                        <Field component={SelectField}
+                                               name="partialDateMonth"
+                                               fullWidth
+                                               style={{marginTop: '12px'}}
+                                               floatingLabelText="Month"
+                                               floatingLabelFixed>
+                                            <MenuItem key={-1} value="-1" primaryText=""/>
+                                            <MenuItem key={0} value="0" primaryText="January"/>
+                                            <MenuItem key={1} value="1" primaryText="February"/>
+                                            <MenuItem key={2} value="2" primaryText="March"/>
+                                            <MenuItem key={3} value="3" primaryText="April"/>
+                                            <MenuItem key={4} value="4" primaryText="May"/>
+                                            <MenuItem key={5} value="5" primaryText="June"/>
+                                            <MenuItem key={6} value="6" primaryText="July"/>
+                                            <MenuItem key={7} value="7" primaryText="August"/>
+                                            <MenuItem key={8} value="8" primaryText="September"/>
+                                            <MenuItem key={9} value="9" primaryText="October"/>
+                                            <MenuItem key={10} value="10" primaryText="November"/>
+                                            <MenuItem key={11} value="11" primaryText="December"/>
+                                        </Field>
+                                    </div>
+                                    <div className="form-spacer"/>
+                                    <div className="column">
+                                        <Field component={TextField}
+                                               name="partialDateYear"
+                                               type="text"
+                                               fullWidth
+                                               style={{marginTop: '12px'}}
+                                               maxLength="4"
+                                               floatingLabelText="Year"
+                                               floatingLabelFixed
+                                               validate={[validation.dateTimeYear]}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="columns">
+                            <div className="column">
+                                <Field component={SelectField}
+                                       name="rek_subtype"
+                                       fullWidth
+                                       floatingLabelText={journalArticleInformation.fields.publicationSubType}
+                                       validate={[validation.required]}>
+                                    {
+                                        this.props.publicationSubTypeList.map(item => (
+                                            <MenuItem key={item.get('controlled_vocab').get('cvo_id')}
+                                                      value={item.get('controlled_vocab').get('cvo_title')}
+                                                      primaryText={item.get('controlled_vocab').get('cvo_title')}/>
+                                        ))
+                                    }
+                                </Field>
+                            </div>
                         </div>
                     </CardText>
                 </Card>
@@ -191,9 +266,9 @@ export default class AddJournalArticleForm extends Component {
                 {/* Author Information */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="headline">{authorsInformation.title}</h2>
+                                <h2 className="title">{authorsInformation.title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {authorsInformation.help && (
@@ -214,9 +289,9 @@ export default class AddJournalArticleForm extends Component {
                 {/* Optional publication details */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="headline">{optionalInformation.title}</h2>
+                                <h2 className="title">{optionalInformation.title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {optionalInformation.help && (
@@ -232,44 +307,73 @@ export default class AddJournalArticleForm extends Component {
                     <CardText className="body-1">
                         <div className="columns">
                             <div className="column">
-                                <div className="columns">
-                                    <div className="column">
-                                        <Field component={TextField} name="fez_record_search_key_volume_number.rek_volume_number" type="text" fullWidth
-                                               floatingLabelText={optionalInformation.fields.volumeLabel}/>
-                                    </div>
-                                    <div className="column">
-                                        <Field component={TextField} name="fez_record_search_key_issue_number.rek_issue_number" type="text" fullWidth
-                                               floatingLabelText={optionalInformation.fields.issueLabel}/>
-                                    </div>
-                                </div>
+                                <Field component={TextField}
+                                       name="fez_record_search_key_volume_number.rek_volume_number" type="text"
+                                       fullWidth
+                                       floatingLabelText={optionalInformation.fields.volumeLabel}/>
                             </div>
                             <div className="column">
-                                <div className="columns">
-                                    <div className="column">
-                                        <Field component={TextField} name="fez_record_search_key_start_page.rek_start_page" type="text" fullWidth
-                                               floatingLabelText={optionalInformation.fields.startPageLabel}/>
-                                    </div>
-                                    <div className="column">
-                                        <Field component={TextField} name="fez_record_search_key_end_page.rek_end_page" type="text" fullWidth
-                                               floatingLabelText={optionalInformation.fields.endPageLabel}/>
-                                    </div>
-                                </div>
+                                <Field component={TextField} name="fez_record_search_key_issue_number.rek_issue_number"
+                                       type="text" fullWidth
+                                       floatingLabelText={optionalInformation.fields.issueLabel}/>
+                            </div>
+
+                            <div className="column">
+                                <Field component={TextField} name="fez_record_search_key_start_page.rek_start_page"
+                                       type="text" fullWidth
+                                       floatingLabelText={optionalInformation.fields.startPageLabel}/>
+                            </div>
+                            <div className="column">
+                                <Field component={TextField} name="fez_record_search_key_end_page.rek_end_page"
+                                       type="text" fullWidth
+                                       floatingLabelText={optionalInformation.fields.endPageLabel}/>
                             </div>
                         </div>
+
                         <div className="columns">
                             <div className="column">
-                                <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text" fullWidth multiLine
-                                       rows={5} floatingLabelText={optionalInformation.fields.notesLabel} style={{marginTop: '-36px'}} />
+                                <Field component={TextField} name="fez_record_search_key_article_number.rek_article_number"
+                                       type="text" fullWidth multiLine
+                                       floatingLabelText={optionalInformation.fields.articleNumber}/>
                             </div>
                         </div>
+
+                        <div className="columns">
+                            <div className="column">
+                                <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text"
+                                       fullWidth multiLine
+                                       rows={1} floatingLabelText={optionalInformation.fields.notesLabel}/>
+                            </div>
+                        </div>
+                                <div className="columns">
+                                    <div className="column">
+                                        <Field component={TextField}
+                                               name="publicationUrl"
+                                               type="text"
+                                               fullWidth
+                                               floatingLabelText={optionalInformation.fields.urlLabel}
+                                               validate={[validation.url, validation.maxLength255]}
+                                        />
+                                    </div>
+                                </div>
                     </CardText>
                 </Card>
 
                 {/* Files */}
+                <FormSection name="fileUploader">
+                    <FileUploader />
+                </FormSection>
+
                 <div className="buttonWrapper">
-                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.cancelAddingRecord}/>
-                    {/* Moved the submit function onto this button so that hitting the enter key on a field can trigger other actions instead of a submit form */}
-                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}}  onClick={handleSubmit(this.submitRecord)}/>
+                    <RaisedButton
+                        label={buttonLabels.abandon}
+                        style={{marginLeft: '12px'}}
+                        onTouchTap={this.cancelAddingRecord} />
+                    <RaisedButton
+                        secondary
+                        label={buttonLabels.submitForApproval}
+                        style={{marginLeft: '12px'}}
+                        onClick={handleSubmit(this.submitRecord)} />
                 </div>
             </form>
         );

@@ -20,7 +20,8 @@ UQ's branding for Fez is UQ eSpace.
 - Tests: `Jest/Nightwatch`
 
 ## Development
-
+This project is using `yarn` for dependency management.  Make sure `yarn` is installed on your machine.
+- `npm install yarn -g` - install `yarn` globally
 - `yarn`
 - `yarn start` - The website is now running on `http://localhost:3000/` on dev api (requires additional setup of uqlibrary/api project)
 - `yarn start:mock` - The website is now running on `http://localhost:3000/` on mock data
@@ -44,6 +45,8 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 - install jest `npm install jest -g`
 - run tests `npm test`
 
+Before committing changes, locally run tests and update stapshots (if required). To update snapshots run `npm test -- -u`. 
+
 ### E2E testing
 [Nightwatch.js](http://nightwatchjs.org/) is used to run end to end tests. 
  
@@ -57,11 +60,13 @@ Codeship setup:
 
 ## Mocking
 
-TBA: how to run project with local mocked data only...
+To run website on mock data run `yarn start:mock` webserver will start on `http://localhost:3000/`
 
-To review:
 The project allows the user to "login" as any test user. Simply add `?user=<username>` to the request and it will log you
-in as that user. Usernames can be found in the `src/mock/data/staff.js` file.
+in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.
+
+- anonymous user: http://localhost:3000/?user=anon#/
+- registered user: http://localhost:3000/?user=uqinewton#/
 
 ## Deployment
 Application deployment is 100% automated using Codeship, and is hosted in S3. All deployment data is stored within Codeship. 

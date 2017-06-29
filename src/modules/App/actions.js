@@ -30,8 +30,6 @@ export function loadAccount() {
                 && error.response.hasOwnProperty('status') && (error.response.status === 401 || error.response.status === 403)) {
                 dispatch({type: APP_ACCOUNT_ANONYMOUS});
             } else {
-                console.dir(error);
-
                 dispatch({
                     type: APP_LOADING_ERROR,
                     payload: error

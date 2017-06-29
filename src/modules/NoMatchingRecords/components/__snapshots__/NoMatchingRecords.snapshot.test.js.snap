@@ -12,13 +12,13 @@ exports[`No matching record component snapshots tests renders default no matchin
     className="card-header"
   >
     <div
-      className="columns is-gapless"
+      className="columns is-gapless is-mobile"
     >
       <div
         className="column"
       >
         <h2
-          className="headline"
+          className="title"
         >
           No Records
         </h2>
@@ -31,43 +31,8 @@ exports[`No matching record component snapshots tests renders default no matchin
   <CardText
     className="body-1"
   >
-    <br />
     <div>
        Lorem ipsum
-    </div>
-    <div
-      style={
-        Object {
-          "textAlign": "right",
-        }
-      }
-    >
-      <FlatButton
-        disabled={false}
-        fullWidth={false}
-        label="Search again?"
-        labelPosition="after"
-        labelStyle={Object {}}
-        onKeyboardFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onTouchStart={[Function]}
-        primary={false}
-        secondary={false}
-        style={
-          Object {
-            "marginRight": 12,
-          }
-        }
-      />
-      <RaisedButton
-        disabled={false}
-        fullWidth={false}
-        label="Add new publication"
-        labelPosition="after"
-        primary={false}
-        secondary={true}
-      />
     </div>
   </CardText>
 </Card>
