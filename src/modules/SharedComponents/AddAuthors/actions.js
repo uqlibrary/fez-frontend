@@ -39,25 +39,20 @@ export function updateAuthorsList(authorsList) {
     };
 }
 
-
-/**
- * CURRENTLY GETTING A TYPE ERROR WHEN TRYING TO CONSOLIDATE THE CODE TO USE performSearch ABOVE
- * Searches for an author based on the querystring from the identifiers field
- * @returns {function(*)}
- */
-export function searchFromIdentifiersField(querystring) {
+export function performSearch(querystring, actionType) {
     return dispatch => {
         loadAuthorsData(querystring).then(authors => {
             const formattedData = authors.map(author => {
+                const username = author.aut_org_username ? ` (${author.aut_org_username})` : '';
                 return {
                     identifier: author.aut_id,
-                    label: `${author.aut_display_name} (UQ:${author.aut_id})`,
+                    label: `${author.aut_display_name}${username}`,
                     name: author.aut_display_name
                 };
             });
 
             dispatch({
-                type: IDENTIFIERS_SEARCH_COMPLETED,
+                type: actionType,
                 payload: formattedData
             });
         }).catch((error) => {
@@ -67,26 +62,17 @@ export function searchFromIdentifiersField(querystring) {
 }
 
 /**
+ * Searches for an author based on the querystring from the identifiers field
+ * @returns {function(*)}
+ */
+export function searchFromIdentifiersField(querystring) {
+    return performSearch(querystring, IDENTIFIERS_SEARCH_COMPLETED);
+}
+
+/**
  * Searches for an author based on the querystring from the authors field
  * @returns {function(*)}
  */
 export function searchFromAuthorsField(querystring) {
-    return dispatch => {
-        loadAuthorsData(querystring).then(authors => {
-            const formattedData = authors.map(author => {
-                return {
-                    identifier: author.aut_id,
-                    label: `${author.aut_display_name} (UQ:${author.aut_id})`,
-                    name: author.aut_display_name
-                };
-            });
-
-            dispatch({
-                type: AUTHORS_SEARCH_COMPLETED,
-                payload: formattedData
-            });
-        }).catch((error) => {
-            throw(error);
-        });
-    };
+    return performSearch(querystring, AUTHORS_SEARCH_COMPLETED);
 }
