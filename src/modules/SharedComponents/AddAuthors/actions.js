@@ -45,7 +45,7 @@ export function performSearch(querystring, actionType) {
             const formattedData = authors.map(author => {
                 const username = author.aut_org_username ? ` (${author.aut_org_username})` : '';
                 return {
-                    identifier: author.aut_id,
+                    identifier: author.aut_org_username || '',
                     label: `${author.aut_display_name}${username}`,
                     name: author.aut_display_name
                 };
