@@ -191,10 +191,7 @@ exports[`Add Journal article form snapshot tests renders default add journal art
     <CardText
       className="body-1"
     >
-      <Field
-        component={[Function]}
-        name="authors"
-      />
+      <Connect(AddAuthors) />
     </CardText>
   </Card>
   <Card
