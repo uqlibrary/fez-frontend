@@ -212,12 +212,21 @@ export default class AddAuthors extends Component {
                     showIdentifierField: true
                 });
 
-                // need to add this timeout otherwise the document.getElement... call will be undefined
-                const self = this;
-                setTimeout( () => {
-                    self.searchForIdentifier(name, authorFields.authorIdentifier);
-                }, 50);
+                this.searchForIdentifier(name, authorFields.authorIdentifier);
             }
+        }
+    };
+
+    // this is needed because handleNameAction can't handle tab key presses
+    handleNameKeyDown = (e) => {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorConstants = authorInformation.constants;
+
+        if (e.key === authorConstants.tabKey) {
+            e.preventDefault();
+            const authorFields = authorInformation.fields;
+            this.setState({showIdentifierField: true});
+            this.searchForIdentifier(this.state.name, authorFields.authorIdentifier);
         }
     };
 
@@ -292,13 +301,17 @@ export default class AddAuthors extends Component {
     };
 
     searchForIdentifier = (name, field) => {
-        // populate the potential authors in the identifiers autocomplete
-        this.props.searchFromIdentifiersField(name);
+        const self = this;
+        // need to add this timeout otherwise the document.getElement... call will be undefined
+        setTimeout(() => {
+            // populate the potential authors in the identifiers autocomplete
+            self.props.searchFromIdentifiersField(name);
 
-        // tried using the other ways recommended by facebook with refs but they didn't work
-        if (document.getElementsByName(field)[0]) {
-            document.getElementsByName(field)[0].focus();
-        }
+            // tried using the other ways recommended by facebook with refs but they didn't work
+            if (document.getElementsByName(field)[0]) {
+                document.getElementsByName(field)[0].focus();
+            }
+        }, 50);
     };
 
     render() {
@@ -350,6 +363,7 @@ export default class AddAuthors extends Component {
                             maxSearchResults={authorInformation.limit}
                             onUpdateInput={this.handleNameChangeAutoComplete}
                             onNewRequest={this.handleNameDropdown}
+                            onKeyDown={this.handleNameKeyDown}
                             errorText={this.state.nameError}
                             value={this.state.name}
                         />
