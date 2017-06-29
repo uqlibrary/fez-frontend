@@ -107,7 +107,7 @@ export default class AddAuthors extends Component {
                      `${authorOrdinalInfo.default} ${authorOrdinalInfo.suffix}`;
 
                  return (
-                    <div key={key} className="columns is-gapless is-mobile is-record">
+                    <div key={key} className="columns is-gapless is-mobile is-record is-authors">
                         <div className="column is-7-desktop is-7-tablet is-6-mobile is-author">
                             {author.get('name')}
                             <div className="priority-author">
@@ -348,7 +348,7 @@ export default class AddAuthors extends Component {
         const dataSourceConfig = {text: 'label', value: 'name'};
 
         return (
-            <div>
+            <div className="is-authors">
                 {/* Dialog */}
                 <Dialog
                     actions={deleteActions}
@@ -407,7 +407,7 @@ export default class AddAuthors extends Component {
                 </div>
                 {/* Error */}
                 {this.state.error && (
-                <div className="columns">
+                <div className="columns is-authors">
                     <div className="column errorMessage">
                         {this.state.error}
                     </div>
@@ -416,7 +416,7 @@ export default class AddAuthors extends Component {
 
                 {/* List area */}
                 {authorsList && authorsList.size > 0 && (
-                    <div className="metadata-container">
+                    <div className="metadata-container is-authors">
                         <div className="columns is-gapless is-mobile headers">
                             <div className="column is-7-desktop is-7-tablet is-6-mobile header is-author">Author name</div>
                             <div className="column is-2-desktop is-2-tablet is-5-mobile header is-uqid">UQ identifier</div>

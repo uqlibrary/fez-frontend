@@ -3,90 +3,88 @@
 // DESKTOP
 
 @media (min-width: 768px) {
-
-  .deleteIcon {
-    svg {
-      color: rgba(0, 0, 0, 0.3) !important;
-    }
-    &:hover {
-      z-index: 999;
+  .is-authors {
+    .deleteIcon {
       svg {
-        color: rgba(0, 0, 0, 0.9) !important;
+        color: rgba(0, 0, 0, 0.3) !important;
+      }
+      &:hover {
+        z-index: 999;
+        svg {
+          color: rgba(0, 0, 0, 0.9) !important;
+        }
       }
     }
-  }
 
-  .delete-button {
-    text-align: right !important;
-  }
-  .is-delete {
-    text-align: right !important;
-  }
-
-  .headers {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 0px !important;
-    overflow: visible !important;
-    .is-author {
-      text-indent: 12px;
+    .delete-button, .is-delete {
+      text-align: right !important;
     }
-    .header {
-      height: 48px;
-      line-height: 50px;
-      white-space: nowrap !important;
-      text-overflow: ellipsis !important;
+
+    .headers {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 0px !important;
       overflow: visible !important;
+      .is-author {
+        text-indent: 12px;
+      }
+      .header {
+        height: 48px;
+        line-height: 50px;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+        overflow: visible !important;
+      }
     }
-  }
-  .iconLink {
-    color: #CCC !important;
-    margin-top: 35px;
-  }
-  .authorAddButton {
-    margin-top: 30px;
-  }
-  .is-record {
-    line-height: 48px;
-    height: 48px;
-    margin-bottom: 0px !important;
-    border-bottom: 1px solid rgba(0,0,0,0.03);
-    &:hover {
-      cursor: pointer;
-      background-color: rgba(0, 0, 0, 0.05);
+    .iconLink {
+      color: #CCC !important;
+      margin-top: 35px;
     }
-    .is-author {
-      text-indent: 12px;
-      line-height: 40px !important;
-      text-overflow: ellipsis;
-      overflow: hidden;
+    .authorAddButton {
+      margin-top: 30px;
     }
-    .is-subtitle {
-      font-size: 10px;
-      line-height: 15px;
-      margin-top: -12px;
-      opacity: 0.82;
+    .is-record {
+      line-height: 48px;
+      height: 48px;
+      margin-bottom: 0px !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      .is-author {
+        text-indent: 12px;
+        line-height: 40px !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .is-subtitle {
+        font-size: 10px;
+        line-height: 15px;
+        margin-top: -12px;
+        opacity: 0.82;
+      }
+      .is-uqid {
+        line-height: 40px !important;
+      }
     }
-    .is-uqid{
-      line-height: 40px !important;
-    }
-  }
-  .errorMessage {
-    padding: 12px;
-    height: 48px;
-    line-height: 48px;
-    margin: -24px auto 24px auto;
-    color: darken($error-color, 10%);
-    width: calc(100% - 24px);
-    border: 1px solid darken($error-color, 10%);
-    background-color: rgba($error-color, 0.025);
-    .Icon{
-      float: left;
-      margin: 0px 10px;
-      font-size: 38px;
-      .material-icons{
-        color: darken($error-color, 10%) !important;
+    .errorMessage {
+      padding: 12px;
+      height: 48px;
+      line-height: 48px;
+      margin: -24px auto 24px auto;
+      color: darken($error-color, 10%);
+      width: calc(100% - 24px);
+      border: 1px solid darken($error-color, 10%);
+      background-color: rgba($error-color, 0.025);
+      .Icon {
+        float: left;
+        margin: 0px 10px;
+        font-size: 38px;
+        .material-icons {
+          color: darken($error-color, 10%) !important;
+        }
       }
     }
   }
@@ -95,101 +93,102 @@
 // MOBILE
 
 @media (max-width: 768px) {
-
-  .deleteIcon {
-    svg {
-      color: rgba(0, 0, 0, 0.3) !important;
-    }
-    &:hover {
-      z-index: 999;
+  .is-authors {
+    .deleteIcon {
       svg {
-        color: rgba(0, 0, 0, 0.9) !important;
+        color: rgba(0, 0, 0, 0.3) !important;
+      }
+      &:hover {
+        z-index: 999;
+        svg {
+          color: rgba(0, 0, 0, 0.9) !important;
+        }
       }
     }
-  }
 
-  .delete-button {
-    text-align: right !important;
-  }
+    .delete-button {
+      text-align: right !important;
+    }
 
-  .is-addUQid {
-    margin-top: -12px;
-    margin-bottom: -12px;
-  }
-  .is-delete {
-    text-align: right !important;
-    float: right !important;
-  }
-
-  .headers {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 0px !important;
-    .is-author {
-      text-indent: 12px;
-    }
-    .is-reorder{
-      display: none;
-    }
-    .header {
-      height: 48px;
-      line-height: 50px;
-      white-space: nowrap !important;
-      text-overflow: ellipsis !important;
-    }
-  }
-  .iconLink, .linkIcon {
-    display: none !important;
-  }
-  .authorAddButton {
-    margin-top: 24px;
-    margin-bottom: 12px;
-    width: 100% !important;
-  }
-  .is-record {
-    line-height: 48px;
-    height: 48px;
-    margin-bottom: 0px !important;
-    border-bottom: 1px solid rgba(0,0,0,0.03);
-    &:hover {
-      cursor: pointer;
-      background-color: rgba(0, 0, 0, 0.05);
-    }
-    .is-author {
-      text-indent: 12px;
-      line-height: 40px !important;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-    .is-subtitle {
-      font-size: 10px;
-      line-height: 15px;
+    .is-addUQid {
       margin-top: -12px;
-      opacity: 0.82;
+      margin-bottom: -12px;
     }
-    .is-reorder{
-      display: none;
+    .is-delete {
+      text-align: right !important;
+      float: right !important;
     }
-    .is-uqid{
-      line-height: 40px !important;
+
+    .headers {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 0px !important;
+      .is-author {
+        text-indent: 12px;
+      }
+      .is-reorder {
+        display: none;
+      }
+      .header {
+        height: 48px;
+        line-height: 50px;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+      }
     }
-  }
-  .errorMessage {
-    padding: 12px;
-    height: 48px;
-    line-height: 48px;
-    margin: -24px auto 24px auto;
-    color: darken($error-color, 10%);
-    width: calc(100% - 24px);
-    border: 1px solid darken($error-color, 10%);
-    background-color: rgba($error-color, 0.025);
-    .Icon{
-      float: left;
-      margin: 0px 10px;
-      font-size: 38px;
-      .material-icons{
-        color: darken($error-color, 10%) !important;
+    .iconLink, .linkIcon {
+      display: none !important;
+    }
+    .authorAddButton {
+      margin-top: 24px;
+      margin-bottom: 12px;
+      width: 100% !important;
+    }
+    .is-record {
+      line-height: 48px;
+      height: 48px;
+      margin-bottom: 0px !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      .is-author {
+        text-indent: 12px;
+        line-height: 40px !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .is-subtitle {
+        font-size: 10px;
+        line-height: 15px;
+        margin-top: -12px;
+        opacity: 0.82;
+      }
+      .is-reorder {
+        display: none;
+      }
+      .is-uqid {
+        line-height: 40px !important;
+      }
+    }
+    .errorMessage {
+      padding: 12px;
+      height: 48px;
+      line-height: 48px;
+      margin: -24px auto 24px auto;
+      color: darken($error-color, 10%);
+      width: calc(100% - 24px);
+      border: 1px solid darken($error-color, 10%);
+      background-color: rgba($error-color, 0.025);
+      .Icon {
+        float: left;
+        margin: 0px 10px;
+        font-size: 38px;
+        .material-icons {
+          color: darken($error-color, 10%) !important;
+        }
       }
     }
   }
