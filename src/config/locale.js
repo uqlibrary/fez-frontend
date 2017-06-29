@@ -279,11 +279,13 @@ export default {
                 title: 'Authors',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
             },
+            limit: 5,
             fields: {
                 authorName: 'authorName',
                 authorIdentifier: 'authorIdentifier',
                 authorNameLabel: 'Add an author (name as published)',
-                authorIdentifierLabel: 'UQ identifier'
+                authorIdentifierLabel: 'UQ identifier',
+                autoCompleteFirstEntryLabel: 'Add author as entered:'
             },
             rows: {
                 moveRecordUp: 'Move record up the order',
@@ -291,13 +293,14 @@ export default {
                 removeRecord: 'Remove this author'
             },
             messages: {
-                authorExists: 'Author exists',
+                authorIdentifierExists: 'Author identifier is already added',
                 authorNameMissing: 'Please enter an author\s name',
                 deleteAllAuthorsDialogContent: 'Are you sure you want to remove all these authors?',
                 deleteAuthorDialogContent: 'Are you sure you want to remove this author?',
             },
             buttons: {
-                addAuthorLabel: 'Add Author'
+                addAuthorLabel: 'Add Author',
+                removeAllLabel: 'Remove all authors'
             },
             ordinalData: {
                 list: [
@@ -305,6 +308,14 @@ export default {
                 ],
                 default: 'Next',
                 suffix: 'listed author'
+            },
+            constants: {
+                autoCompleteEnterKey: -1,
+                autoCompleteFirstOption: 0,
+                enterKey: 'Enter',
+                firstRow: 0,
+                tabKey: 'Tab',
+                timeoutLimit: 300
             }
         },
         files: {
