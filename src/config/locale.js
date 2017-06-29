@@ -291,7 +291,7 @@ export default {
                 removeRecord: 'Remove this author'
             },
             messages: {
-                authorExists: 'Author exists',
+                authorIdentifierExists: 'Author identifier is already added',
                 authorNameMissing: 'Please enter an author\s name',
                 deleteAllAuthorsDialogContent: 'Are you sure you want to remove all these authors?',
                 deleteAuthorDialogContent: 'Are you sure you want to remove this author?',
