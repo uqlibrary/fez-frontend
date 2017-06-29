@@ -408,7 +408,7 @@ export default class AddAuthors extends Component {
                 {/* Error */}
                 {this.state.error && (
                 <div className="columns">
-                    <div className="column">
+                    <div className="column errorMessage">
                         {this.state.error}
                     </div>
                 </div>
