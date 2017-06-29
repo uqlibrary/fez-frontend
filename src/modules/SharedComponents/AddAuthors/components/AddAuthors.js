@@ -223,7 +223,7 @@ export default class AddAuthors extends Component {
         const authorInformation = locale.sharedComponents.authors;
         const authorConstants = authorInformation.constants;
 
-        if (e.key === authorConstants.enterKey) {
+        if (e.key === authorConstants.enterKey || e.key === authorConstants.tabKey) {
             e.preventDefault();
             if (this.state.name.trim().length > 0 && e.key === authorConstants.enterKey) {
                 this.addAuthor();
