@@ -212,7 +212,7 @@ export default class AddAuthors extends Component {
                     showIdentifierField: true
                 });
 
-                this.searchForIdentifier(name, authorFields.authorIdentifier);
+                this.searchForIdentifier(authorFields.authorIdentifier);
             }
         }
     };
@@ -226,8 +226,16 @@ export default class AddAuthors extends Component {
             e.preventDefault();
             const authorFields = authorInformation.fields;
             this.setState({showIdentifierField: true});
-            this.searchForIdentifier(this.state.name, authorFields.authorIdentifier);
+            this.searchForIdentifier(authorFields.authorIdentifier, this.state.identifier);
         }
+    };
+
+    handleIdentifierChangeAutoComplete = (value) => {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorFields = authorInformation.fields;
+
+        this.setState({identifier: value});
+        this.searchForIdentifier(authorFields.authorIdentifier, value);
     };
 
     handleIdentifierDropdown = (selectedMenuItem, index) => {
@@ -300,12 +308,14 @@ export default class AddAuthors extends Component {
         return currentItem.concat(searchResults);
     };
 
-    searchForIdentifier = (name, field) => {
+    searchForIdentifier = (field, name) => {
         const self = this;
         // need to add this timeout otherwise the document.getElement... call will be undefined
         setTimeout(() => {
             // populate the potential authors in the identifiers autocomplete
-            self.props.searchFromIdentifiersField(name);
+            if (name.length > 0) {
+                self.props.searchFromIdentifiersField(name);
+            }
 
             // tried using the other ways recommended by facebook with refs but they didn't work
             if (document.getElementsByName(field)[0]) {
@@ -384,8 +394,10 @@ export default class AddAuthors extends Component {
                             maxSearchResults={authorInformation.limit}
                             dataSource={this.props.identifiersSearchResults.toJS()}
                             dataSourceConfig={dataSourceConfig}
+                            onUpdateInput={this.handleIdentifierChangeAutoComplete}
                             onNewRequest={this.handleIdentifierDropdown}
                             onKeyPress={this.handleIdentifierKeyPress}
+                            value={this.state.identifier}
                         />
                     </div>
                     )}
