@@ -111,6 +111,24 @@
         line-height: 48px;
       }
     }
+    .fileUploadErrorMessage {
+      padding: 12px;
+      height: 48px;
+      line-height: 48px;
+      margin: -24px auto 24px auto;
+      color: darken($error-color, 10%);
+      width: calc(100% - 24px);
+      border: 1px solid darken($error-color, 10%);
+      background-color: rgba($error-color, 0.025);
+      .Icon{
+        float: left;
+        margin: 0px 10px;
+        font-size: 38px;
+        .material-icons{
+          color: darken($error-color, 10%) !important;
+        }
+      }
+    }
 
   }
 }
@@ -211,6 +229,24 @@
 
       &:hover {
         color: rgba(0, 0, 0, 0.9) !important;
+      }
+    }
+    .fileUploadErrorMessage {
+      padding: 12px;
+      height: 48px;
+      line-height: 48px;
+      margin: -24px auto 24px auto;
+      color: darken($error-color, 10%);
+      width: calc(100% - 24px);
+      border: 1px solid darken($error-color, 10%);
+      background-color: rgba($error-color, 0.025);
+      .Icon{
+        float: left;
+        margin: 0px 10px;
+        font-size: 38px;
+        .material-icons{
+          color: darken($error-color, 10%) !important;
+        }
       }
     }
   }
