@@ -247,14 +247,17 @@ export default class AddAuthors extends Component {
 
     // this is needed because handleNameAction can't handle enter key presses
     handleNameKeyPress = (e) => {
-        if (e.key === 'Enter') {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorConstants = authorInformation.constants;
+
+        if (e.key === authorConstants.enterKey) {
             e.preventDefault();
-            if (this.state.name.trim().length > 0 && e.key === 'Enter') {
+            if (this.state.name.trim().length > 0 && e.key === authorConstants.enterKey) {
                 this.addAuthor();
             } else {
                 const authorInformation = locale.sharedComponents.authors;
                 const authorFields = authorInformation.fields;
-                if (e.key === 'Tab' && this.state.showIdentifierField === true) {
+                if (e.key === authorConstants.tabKey) {
                     this.searchForIdentifier(this.state.name, authorFields.authorIdentifier);
                 } else {
                     const messages = authorInformation.messages;
@@ -282,7 +285,10 @@ export default class AddAuthors extends Component {
     };
 
     handleIdentifierKeyPress = (e) => {
-        if (e.key === 'Enter') {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorConstants = authorInformation.constants;
+
+        if (e.key === authorConstants.enterKey) {
             e.preventDefault();
             if (this.state.name.trim().length > 0) {
                 this.addAuthor();
@@ -322,9 +328,12 @@ export default class AddAuthors extends Component {
     };
 
     formatDataSourceForAuthors = () => {
+        const authorInformation = locale.sharedComponents.authors;
+        const authorFields = authorInformation.fields;
+
         const searchResults = this.props.authorsSearchResults.toJS();
         const currentItem = [{
-            label: `Add author as entered: ${this.state.name}`,
+            label: `${authorFields.autoCompleteFirstEntryLabel} ${this.state.name}`,
             name: this.state.name
         }];
 
@@ -441,7 +450,7 @@ export default class AddAuthors extends Component {
                                     <TableHeaderColumn>UQ identifier</TableHeaderColumn>
                                     <TableHeaderColumn style={actionRowStyle}>Reorder</TableHeaderColumn>
                                     <TableHeaderColumn style={actionRowStyle}>
-                                        <IconButton tooltip="Remove all authors" iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={this.deleteAllAuthorsConfirmation}><ActionDeleteAll /></IconButton>
+                                        <IconButton tooltip={authorButtonFields.removeAllLabel} iconStyle={listStyle} hoveredStyle={hoveredListstyle} onClick={this.deleteAllAuthorsConfirmation}><ActionDeleteAll /></IconButton>
                                     </TableHeaderColumn>
                                 </TableRow>
                             </TableHeader>

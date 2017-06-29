@@ -269,7 +269,8 @@ export default {
                 authorName: 'authorName',
                 authorIdentifier: 'authorIdentifier',
                 authorNameLabel: 'Add an author (name as published)',
-                authorIdentifierLabel: 'UQ identifier'
+                authorIdentifierLabel: 'UQ identifier',
+                autoCompleteFirstEntryLabel: 'Add author as entered:'
             },
             rows: {
                 moveRecordUp: 'Move record up the order',
@@ -283,7 +284,8 @@ export default {
                 deleteAuthorDialogContent: 'Are you sure you want to remove this author?',
             },
             buttons: {
-                addAuthorLabel: 'Add Author'
+                addAuthorLabel: 'Add Author',
+                removeAllLabel: 'Remove all authors'
             },
             ordinalData: {
                 list: [
@@ -295,7 +297,9 @@ export default {
             constants: {
                 autoCompleteEnterKey: -1,
                 autoCompleteFirstOption: 0,
+                enterKey: 'Enter',
                 firstRow: 0,
+                tabKey: 'Tab',
                 timeoutLimit: 300
             }
         },
