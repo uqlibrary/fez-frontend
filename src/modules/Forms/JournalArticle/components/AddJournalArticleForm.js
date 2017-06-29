@@ -133,8 +133,7 @@ export default class AddJournalArticleForm extends Component {
             ];
         }
 
-        // const fileData = this.setFileData(); commented this out as it is old so will just wait for merge to sort this out
-        const fileData = {};
+        const fileData = this.setFileData();
         const authorData = this.setAuthorData();
         const combinedData = Object.assign({}, defaultData, formData, fileData, authorData);
 
