@@ -71,4 +71,5 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
 mock.onGet('acml/quick-templates').reply(200, documentAccessTypes);
 
 // Let the create records endpoint go through to staging
-mock.onPost('records').passThrough();
+mock.onPost('records').reply(200, {});
+// mock.onPost('records').reply(422);

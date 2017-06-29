@@ -8,31 +8,30 @@ import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import {AddAuthors, FileUploader, SelectField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 
+import {loadPublicationSubTypesList} from '../actions';
+import {saveRecord} from 'actions';
+import {resetStepper} from '../../../AddRecord/actions';
+import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
+
 
 import './AddJournalArticleForm.scss';
 
 export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
-        acceptedFiles: PropTypes.object,
-        authorsList: PropTypes.object,
-        cancelAddRecord: PropTypes.func,
-        completeFormSubmission: PropTypes.func,
-        decreaseStep: PropTypes.func,
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
+        acceptedFiles: PropTypes.object,
+        authorsList: PropTypes.object,
         hasOpenAccess: PropTypes.bool,
         isOpenAccessAccepted: PropTypes.bool,
         isUploadCompleted: PropTypes.bool,
-        loadAuthorsList: PropTypes.func,
-        loadPublicationSubTypesList: PropTypes.func,
         publicationSubTypeList: PropTypes.object,
-        resetFormSubmissionFlag: PropTypes.func,
         selectedPublicationId: PropTypes.object,
-        showSnackbar: PropTypes.func,
-        submitRecordForApproval: PropTypes.func,
-        uploadFile: PropTypes.func
+        recordSubmissionState: PropTypes.object,
+        recordSubmissionErrorMessage: PropTypes.object,
+        dispatch: PropTypes.func
     };
 
     constructor(props) {
@@ -40,8 +39,14 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentDidMount() {
-        const {loadPublicationSubTypesList, selectedPublicationId} = this.props;
-        loadPublicationSubTypesList(selectedPublicationId.get('id'));
+        this.props.dispatch(loadPublicationSubTypesList(this.props.selectedPublicationId.get('id')));
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.recordSubmissionState.get('submitted')) {
+            // TODO: display big confirmation dialog box
+            this.props.dispatch(resetStepper());
+        }
     }
 
     componentWillUpdate(nextProps) {
@@ -55,9 +60,8 @@ export default class AddJournalArticleForm extends Component {
     }
 
     cancelAddingRecord = () => {
-        const {cancelAddRecord, decreaseStep} = this.props;
-        cancelAddRecord(locale.notifications.addRecord.cancelMessage);
-        decreaseStep();
+        // this.props.dispatch(cancelAddRecord(locale.notifications.addRecord.cancelMessage));
+        this.props.dispatch(resetStepper());
     };
 
     setAuthorData = () => {
@@ -97,7 +101,7 @@ export default class AddJournalArticleForm extends Component {
     };
 
     submitRecord = () => {
-        const {acceptedFiles, decreaseStep, formValues, showSnackbar, submitRecordForApproval, uploadFile} = this.props;
+        const {acceptedFiles, formValues} = this.props;
 
         // TODO: move these constants to a config, there will be more types -> keep it in one place
         const RECORD_TYPE = 3;
@@ -137,15 +141,12 @@ export default class AddJournalArticleForm extends Component {
         // this flag is for those cases where we want the 'Your submission was successful' message
         // to only appear once the files were successfully uploadedx
         const hasFilesToUpload = acceptedFiles.size > 0;
-        submitRecordForApproval(combinedData);
+        this.props.dispatch(saveRecord(combinedData));
 
+        // TODO: what if files failed to upload but record was saved.... how long does it take to upload/save record??
+        // TODO: what if record save failed but files have started to upload????
         if (hasFilesToUpload) {
-            uploadFile(acceptedFiles);
-        }
-
-        if (!hasFilesToUpload) {
-            showSnackbar(locale.notifications.addRecord.submitMessage);
-            decreaseStep();
+            this.props.dispatch(uploadFile(acceptedFiles));
         }
     };
 
@@ -155,7 +156,7 @@ export default class AddJournalArticleForm extends Component {
         const authorsInformation = locale.sharedComponents.authors;
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
-        const {form, handleSubmit} = this.props;
+        const {form, handleSubmit, recordSubmissionState, recordSubmissionErrorMessage} = this.props;
 
         return (
             <form>
@@ -261,11 +262,11 @@ export default class AddJournalArticleForm extends Component {
                                        floatingLabelText={journalArticleInformation.fields.publicationSubType}
                                        validate={[validation.required]}>
                                     {
-                                        this.props.publicationSubTypeList.map(item => (
+                                        (this.props.publicationSubTypeList.map(item => (
                                             <MenuItem key={item.get('controlled_vocab').get('cvo_id')}
                                                       value={item.get('controlled_vocab').get('cvo_title')}
                                                       primaryText={item.get('controlled_vocab').get('cvo_title')}/>
-                                        ))
+                                        )))
                                     }
                                 </Field>
                             </div>
@@ -374,6 +375,30 @@ export default class AddJournalArticleForm extends Component {
                     <FileUploader />
                 </FormSection>
 
+                {recordSubmissionState && recordSubmissionState.get('failed') &&
+                <Card className="layout-card">
+                    <CardHeader className="card-header">
+                        <div className="columns is-gapless is-mobile">
+                            <div className="column">
+                                <h2 className="title">Submission failed</h2>
+                            </div>
+                        </div>
+                    </CardHeader>
+
+                    <CardText className="body-1">
+                        <div className="columns">
+                            <div className="column">
+                                <p>
+                                {recordSubmissionErrorMessage && recordSubmissionErrorMessage.message && <span>{recordSubmissionErrorMessage.message}</span>}
+                                {(!recordSubmissionErrorMessage || !recordSubmissionErrorMessage.message) && <span>Unexpected error.</span>}
+                                </p>
+                                <p> Review your data and try again. </p>
+                            </div>
+                        </div>
+                    </CardText>
+                </Card>
+                }
+
                 <div className="buttonWrapper">
                     <RaisedButton
                         label={buttonLabels.abandon}
@@ -381,8 +406,9 @@ export default class AddJournalArticleForm extends Component {
                         onTouchTap={this.cancelAddingRecord} />
                     <RaisedButton
                         secondary
-                        label={buttonLabels.submitForApproval}
+                        label={ recordSubmissionState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.submitForApproval}
                         style={{marginLeft: '12px'}}
+                        disabled={recordSubmissionState.get('submitting')}
                         onClick={handleSubmit(this.submitRecord)} />
                 </div>
             </form>

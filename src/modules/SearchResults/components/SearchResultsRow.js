@@ -27,7 +27,7 @@ export default class SearchResultsRow extends Component {
     }
 
     render() {
-        const {title, journalName, authors, counts, publisher, volumeNumber, issueNumber, startPage, endPage, doi} = this.props.entry;
+        const {title, journalName, authors, counts, publisher, volumeNumber, issueNumber, startPage, endPage, doi, index} = this.props.entry;
 
         return (
             <div className="claimWrapper">
@@ -98,7 +98,11 @@ export default class SearchResultsRow extends Component {
                     }
 
                     <div className="claimButtonWrapper">
-                        <FlatButton label={this.props.claimRecordBtnLabel} autoFocus secondary/>
+                        <FlatButton
+                            label={this.props.claimRecordBtnLabel}
+                            autoFocus={index === 0}
+                            keyboardFocused={index === 0}
+                            secondary/>
                     </div>
                 </div>
             </div>

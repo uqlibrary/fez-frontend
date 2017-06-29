@@ -21,8 +21,9 @@ export default class SearchResults extends Component {
 
     render() {
         const {dataSource, help, title} = this.props;
-        const searchResultEntries = dataSource.map((source, i) => {
+        const searchResultEntries = dataSource.map((source, index) => {
             const entry = {
+                index,
                 title: source.get('rek_title'),
                 journalName: source.get('fez_record_search_key_journal_name') ? source.get('fez_record_search_key_journal_name').get('rek_journal_name') : null,
                 authors: source.get('fez_record_search_key_author'),
@@ -37,7 +38,7 @@ export default class SearchResults extends Component {
                 }
             };
             return (
-                <SearchResultsRow key={i} entry={entry} claimRecordBtnLabel={this.props.claimRecordBtnLabel} />
+                <SearchResultsRow key={index} entry={entry} claimRecordBtnLabel={this.props.claimRecordBtnLabel} />
             );
         });
 
@@ -62,8 +63,6 @@ export default class SearchResults extends Component {
                 <CardText className="body-1">
                     <div>
                         {this.props.explanationText.replace('[noOfResults]', this.props.dataSource.size)}
-
-
                     </div>
                     {searchResultEntries}
                 </CardText>

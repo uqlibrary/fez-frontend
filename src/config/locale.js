@@ -11,7 +11,8 @@ export default {
                 abandon: 'Abandon and search again',
                 close: 'Close',
                 delete: 'Delete',
-                submitForApproval: 'Submit for approval'
+                submitForApproval: 'Submit for approval',
+                submissionInProgress: 'Submitting...'
             }
         }
     },
