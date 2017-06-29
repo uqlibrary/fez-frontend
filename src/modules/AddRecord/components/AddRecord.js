@@ -144,8 +144,8 @@ export default class AddRecord extends React.Component {
                                         <RaisedButton
                                             label="Create a new espace record"
                                             secondary
-                                            autoFocus
-                                            keyboardFocused
+                                            autoFocus={this.props.searchResultsList.size === 0}
+                                            keyboardFocused={this.props.searchResultsList.size === 0}
                                             onTouchTap={this.handleNext}
                                         />
                                     </div>
