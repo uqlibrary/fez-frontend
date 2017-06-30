@@ -13,6 +13,8 @@ let deleteAllFiles;
 let handleClose;
 let app;
 
+// TODO: Need to fix this test and rename back to FileMetadata.test.js
+
 describe('File metadata unit tests', () => {
     beforeEach(() => {
         const acceptedFiles = Immutable.fromJS([{

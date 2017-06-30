@@ -47,7 +47,6 @@ export default class FileMetadata extends Component {
     }
 
     componentDidMount() {
-        console.log('componentDidMount');
         this.focusOnFirstRow();
     }
 
@@ -60,7 +59,6 @@ export default class FileMetadata extends Component {
     }
 
     componentDidUpdate() {
-        console.log('componentDidUpdate');
         this.focusOnFirstRow();
     }
 
@@ -100,7 +98,6 @@ export default class FileMetadata extends Component {
                 onChange={this.updateLocalState(fieldName)}
                 value={this.state.accessFields[fieldName] || null}
                 validate={[validation.required]}
-                autoFocus
             >
                 <MenuItem value={null} primaryText={selectFieldValues.initialValue} />
                 <MenuItem value={accessIds.openAccessId} primaryText={selectFieldValues.openAccessValue} />
@@ -119,8 +116,6 @@ export default class FileMetadata extends Component {
                 const fieldName = `${file}${index}`;
                 const selectFieldName = `${fileInformation.fields.fileAccess}${index}`;
                 const accessIds = fileInformation.constants;
-
-                console.log('selectFieldName', selectFieldName);
 
                 if (index === 0) {
                     this.firstRowTarget = `${fileInformation.formSectionPrefix}.${selectFieldName}`;
@@ -217,7 +212,6 @@ export default class FileMetadata extends Component {
     };
 
     focusOnFirstRow = () => {
-        console.log('componentdid2222', this.firstRowTarget);
         const firstRow = document.getElementsByName(this.firstRowTarget)[0];
         firstRow.getElementsByTagName('button')[0].focus();
     };
