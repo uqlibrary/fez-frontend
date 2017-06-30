@@ -62,6 +62,11 @@ export default class AddRecord extends React.Component {
         this.props.resetStepper();
     }
 
+    cancelAddingRecord = () => {
+        console.log('cancelAddingRecord');
+        this.props.resetStepper();
+    };
+
     dummyAsync = (cb) => {
         this.setState({loading: true}, () => {
             this.asyncTimer = setTimeout(cb, 500);
@@ -159,6 +164,8 @@ export default class AddRecord extends React.Component {
             case STEP_3:
                 const {selectedPublicationType} = this.props;
                 const publicationTypeInformation = locale.pages.addRecord.publicationTypeForm;
+                const buttonLabels = locale.global.labels.buttons;
+                const showButton = !selectedPublicationType || (selectedPublicationType && selectedPublicationType.size === 0);
 
                 return (
                     <div>
@@ -170,8 +177,18 @@ export default class AddRecord extends React.Component {
                             publicationTypeLabel={publicationTypeInformation.publicationTypeLabel}
                             dataSource={this.props.publicationTypeList}
                             popularTypesList={publicationTypeInformation.popularTypesList} />
+
+                            {showButton &&
+                                <div style={{maxWidth: '1200px', margin: '24px auto', width: '90%', textAlign: 'right'}}>
+                                    <RaisedButton
+                                        label={buttonLabels.abandon}
+                                        style={{marginLeft: '12px'}}
+                                        onTouchTap={this.cancelAddingRecord}/>
+                                </div>
+                            }
+
                             {/* TODO: fix this warning */}
-                            {selectedPublicationType.size > 0
+                            {selectedPublicationType && selectedPublicationType.size > 0
                                 && selectedPublicationType.get('name').toLowerCase() === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE
                                 && <AddJournalArticleForm form="AddJournalArticleForm" />
                             }
