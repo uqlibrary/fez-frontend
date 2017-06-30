@@ -50,15 +50,7 @@ export default class AddJournalArticleForm extends Component {
 
         if (nextProps.recordSubmissionState.get('submitted')) {
             const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog;
-            const dialogBoxConfig = {
-                title: dialogConfig.title,
-                content: dialogConfig.content,
-                primaryButtonLabel: dialogConfig.primaryButtonLabel,
-                primaryButtonLink: dialogConfig.primaryButtonLink,
-                secondaryButtonLabel: dialogConfig.secondaryButtonLabel
-            };
-
-            this.props.dispatch(showDialogBox(dialogBoxConfig));
+            this.props.dispatch(showDialogBox(dialogConfig));
             this.props.dispatch(resetStepper());
         }
     }
