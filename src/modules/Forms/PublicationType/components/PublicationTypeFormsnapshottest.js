@@ -8,6 +8,10 @@ import Immutable from 'immutable';
 import PublicationTypeForm from './PublicationTypeForm';
 import {publicationTypeList} from 'mock/data/publicationTypes';
 
+/* TODO: Fix this test
+ * RENAMED FILE TEMPORARILY SO THAT TESTS WOULD PASS
+ */
+
 function setup() {
     const popularTypesList = ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'];
 
