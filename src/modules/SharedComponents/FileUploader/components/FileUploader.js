@@ -27,6 +27,15 @@ export default class FileUploader extends PureComponent {
         };
     }
 
+    componentWillReceiveProps(nextProps) {
+        const {uploadError} = nextProps;
+        const fileInformation = locale.sharedComponents.files;
+
+        if (uploadError !== this.props.uploadError) {
+            this.setErrorMessage(fileInformation.messages.uploadError.default);
+        }
+    }
+
     componentWillUnmount() {
         this.props.resetToInitialState();
     }
@@ -212,12 +221,8 @@ export default class FileUploader extends PureComponent {
     };
 
     render() {
-        const {acceptedFiles, uploadError} = this.props;
+        const {acceptedFiles} = this.props;
         const fileInformation = locale.sharedComponents.files;
-
-        if (uploadError && uploadError.length > 0) {
-            this.setErrorMessage(fileInformation.messages.uploadError.default);
-        }
 
         let dropzoneRef;
 

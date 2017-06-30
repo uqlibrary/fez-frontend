@@ -170,7 +170,6 @@ export default class AddRecord extends React.Component {
                             publicationTypeLabel={publicationTypeInformation.publicationTypeLabel}
                             dataSource={this.props.publicationTypeList}
                             popularTypesList={publicationTypeInformation.popularTypesList} />
-
                             {/* TODO: fix this warning */}
                             {selectedPublicationType.size > 0
                                 && selectedPublicationType.get('name').toLowerCase() === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE
