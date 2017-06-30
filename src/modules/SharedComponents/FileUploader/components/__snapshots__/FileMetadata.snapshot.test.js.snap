@@ -123,7 +123,6 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         lock_outline
       </FontIcon>
       <Field
-        autoFocus={true}
         autoWidth={true}
         className="selectField"
         component={[Function]}
