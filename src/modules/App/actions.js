@@ -13,6 +13,9 @@ export const APP_SNACKBAR_HIDE = 'CORE_SNACKBAR_HIDE';
 
 export const APP_LOADING_ERROR = 'APP_LOADING_ERROR';
 
+export const APP_DIALOGBOX_HIDE = 'APP_DIALOGBOX_HIDE';
+export const APP_DIALOGBOX_SHOW = 'APP_DIALOGBOX_SHOW';
+
 /**
  * Loads the user's account into the application
  * @returns {function(*)}
@@ -70,4 +73,28 @@ export function showSnackbar(message) {
  */
 export function hideSnackbar() {
     return {type: APP_SNACKBAR_HIDE};
+}
+
+/**
+ * Shows the dialog box
+ * @param config
+ * @returns {{type: string, payload: *}}
+ */
+export function showDialogBox(config) {
+    return {
+        type: APP_DIALOGBOX_SHOW,
+        payload: config
+    };
+}
+
+/**
+ * Hides the dialog box
+ * @param config
+ * @returns {{type: string, payload: *}}
+ */
+export function hideDialogBox(config) {
+    return {
+        type: APP_DIALOGBOX_HIDE,
+        payload: config
+    };
 }

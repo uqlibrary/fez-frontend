@@ -12,6 +12,7 @@ import {loadPublicationSubTypesList} from '../actions';
 import {saveRecord} from 'actions';
 import {resetStepper} from '../../../AddRecord/actions';
 import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
+import {showDialogBox} from 'modules/App';
 
 
 import './AddJournalArticleForm.scss';
@@ -48,8 +49,16 @@ export default class AddJournalArticleForm extends Component {
         }
 
         if (nextProps.recordSubmissionState.get('submitted')) {
-            // TODO: display big confirmation dialog box
-            // this.props.dispatch(showDialog());
+            const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog;
+            const dialogBoxConfig = {
+                title: dialogConfig.title,
+                content: dialogConfig.content,
+                primaryButtonLabel: dialogConfig.primaryButtonLabel,
+                primaryButtonLink: dialogConfig.primaryButtonLink,
+                secondaryButtonLabel: dialogConfig.secondaryButtonLabel
+            };
+
+            this.props.dispatch(showDialogBox(dialogBoxConfig));
             this.props.dispatch(resetStepper());
         }
     }

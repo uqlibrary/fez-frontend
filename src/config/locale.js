@@ -248,6 +248,13 @@ export default {
                         notesLabel: 'Notes (not publicly viewable)',
                         urlLabel: 'Link (URL)'
                     }
+                },
+                dialog: {
+                    title: 'Submission sent',
+                    content: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
+                    primaryButtonLabel: 'Ok',
+                    primaryButtonLink: '/dashboard',
+                    secondaryButtonLabel: 'Add another missing record'
                 }
             }
         },

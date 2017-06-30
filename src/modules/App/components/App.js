@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import Snackbar from 'material-ui/Snackbar';
+import {DialogBox} from 'modules/SharedComponents';
 
 import {AppLoader, MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
 
@@ -37,6 +38,7 @@ export default class App extends React.Component {
         menuDrawerOpen: PropTypes.bool.isRequired,
         hideSnackbar: PropTypes.func.isRequired,
         snackbar: PropTypes.object.isRequired,
+        dialogbox: PropTypes.object.isRequired,
         toggleMenuDrawer: PropTypes.func.isRequired
     };
 
@@ -80,7 +82,8 @@ export default class App extends React.Component {
             loaded,
             menuDrawerOpen,
             snackbar,
-            hideSnackbar
+            hideSnackbar,
+            dialogbox
         } = this.props;
 
         const {
@@ -153,6 +156,16 @@ export default class App extends React.Component {
                             message={snackbar.get('message')}
                             autoHideDuration={4000}
                             onRequestClose={hideSnackbar} />
+
+
+                        <DialogBox
+                            open={dialogbox.get('open')}
+                            title={dialogbox.get('title')}
+                            content={dialogbox.get('content')}
+                            primaryButtonLabel={dialogbox.get('primaryButtonLabel')}
+                            primaryButtonLink={dialogbox.get('primaryButtonLink')}
+                            secondaryButtonLabel={dialogbox.get('secondaryButtonLabel')}
+                        />
 
                         <HelpDrawer />
                     </div>
