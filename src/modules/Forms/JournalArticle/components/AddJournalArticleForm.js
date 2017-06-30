@@ -148,6 +148,7 @@ export default class AddJournalArticleForm extends Component {
         // path to the locale data for each of the sections
         const journalArticleInformation = locale.pages.addRecord.addJournalArticle.journalArticleInformation;
         const authorsInformation = locale.sharedComponents.authors;
+        const fileInformation = locale.sharedComponents.files;
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
         const {form, handleSubmit, recordSubmissionState, recordSubmissionErrorMessage} = this.props;
@@ -365,7 +366,7 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
 
                 {/* Files */}
-                <FormSection name="fileUploader">
+                <FormSection name={fileInformation.formSectionPrefix}>
                     <FileUploader />
                 </FormSection>
 

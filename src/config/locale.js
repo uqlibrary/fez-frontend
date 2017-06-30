@@ -334,6 +334,7 @@ export default {
             },
             limit: 10,
             filenameLimit: 45,
+            formSectionPrefix: 'fileUploader',
             messages: {
                 deleteAllFilesDialogContent: 'Are you sure you want to delete all these files?',
                 deleteFileDialogContent: 'Are you sure you want to delete this file?',
