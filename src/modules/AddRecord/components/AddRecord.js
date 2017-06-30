@@ -175,6 +175,7 @@ export default class AddRecord extends React.Component {
                             help={publicationTypeInformation.help}
                             maxSearchResults={publicationTypeInformation.maxSearchResults}
                             publicationTypeLabel={publicationTypeInformation.publicationTypeLabel}
+                            selectFirstOptionLabel={publicationTypeInformation.selectFirstOptionLabel}
                             dataSource={this.props.publicationTypeList}
                             popularTypesList={publicationTypeInformation.popularTypesList} />
 

@@ -24,6 +24,7 @@ export default class PublicationTypeForm extends Component {
         ]),
         maxSearchResults: PropTypes.number,
         publicationTypeLabel: PropTypes.string,
+        selectFirstOptionLabel: PropTypes.string,
         help: PropTypes.object,
         clearSelectedPublicationType: PropTypes.func,
         formValues: PropTypes.object
@@ -76,7 +77,8 @@ export default class PublicationTypeForm extends Component {
             help,
             formValues,
             children,
-            publicationTypeLabel
+            publicationTypeLabel,
+            selectFirstOptionLabel
         } = this.props;
 
         return (
@@ -106,10 +108,11 @@ export default class PublicationTypeForm extends Component {
                                        fullWidth
                                        floatingLabelText={publicationTypeLabel}
                                        floatingLabelFixed
+                                       hintText={selectFirstOptionLabel}
                                        formValue={formValues.get('publicationType')}
                                        onChange={loadSelectedPublicationType}
                                        >
-                                    <MenuItem primaryText="Please select a publication type" disabled />
+                                    <MenuItem primaryText={selectFirstOptionLabel} disabled />
                                     {
                                         this.state.displayPublicationTypeList.map((item, index) => (
                                             item.id !== 0 ? <MenuItem key={index} value={item.id} primaryText={item.name}/> :
