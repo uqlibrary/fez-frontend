@@ -31,8 +31,9 @@ const initialState = Immutable.fromJS({
         title: '',
         content: '',
         primaryButtonLabel: '',
-        primaryButtonLink: '/',
-        secondaryButtonLabel: ''
+        primaryLink: '/',
+        secondaryButtonLabel: '',
+        secondaryLink: ''
     }
 });
 
@@ -56,14 +57,15 @@ const appReducer = (state = initialState, action) => {
         case APP_DIALOGBOX_HIDE:
             return state.set('dialogbox', initialState.get('dialogbox'));
         case APP_DIALOGBOX_SHOW:
-            const {title, content, primaryButtonLabel, primaryButtonLink, secondaryButtonLabel} = action.payload;
+            const {title, content, primaryButtonLabel, primaryLink, secondaryButtonLabel, secondaryLink} = action.payload;
             return state.set('dialogbox', Immutable.fromJS({
                 open: true,
                 title,
                 content,
                 primaryButtonLabel,
-                primaryButtonLink,
-                secondaryButtonLabel
+                primaryLink,
+                secondaryButtonLabel,
+                secondaryLink: secondaryLink || ''
             }));
         case LOCATION_CHANGE:
             return state.set('menuDrawerOpen', false);
