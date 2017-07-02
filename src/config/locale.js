@@ -226,7 +226,8 @@ export default {
                         titleLabel: 'Title',
                         nameLabel: 'Journal name',
                         publishDateLabel: 'Publishing date',
-                        publicationSubType: 'Publication subtype'
+                        publicationSubType: 'Publication subtype',
+                        selectFirstPublicationSubTypeLabel: 'Choose a publication subtype',
                     }
                 },
                 optionalDetails: {

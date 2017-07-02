@@ -256,6 +256,7 @@ export default class AddJournalArticleForm extends Component {
                                        fullWidth
                                        floatingLabelText={journalArticleInformation.fields.publicationSubType}
                                        validate={[validation.required]}>
+                                        <MenuItem primaryText={journalArticleInformation.fields.selectFirstPublicationSubTypeLabel} disabled />
                                     {
                                         (this.props.publicationSubTypeList.map(item => (
                                             <MenuItem key={item.get('controlled_vocab').get('cvo_id')}
