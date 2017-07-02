@@ -4,7 +4,7 @@ import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
-import {isDOIValue, isPartialDOIValue, isPubMedValue} from '../validator';
+import {isDOIValue, isPubMedValue} from '../validator';
 import {locale} from 'config';
 
 import './PublicationSearchForm.scss';
@@ -16,8 +16,6 @@ export default class PublicationSearchForm extends Component {
     static propTypes = {
         title: PropTypes.string.isRequired,
         explanationText: PropTypes.string.isRequired,
-        defaultSearchFieldLabel: PropTypes.string,
-        defaultButtonLabel: PropTypes.string,
         pristine: PropTypes.bool,
         handleSubmit: PropTypes.func,
         loadDoiResultsList: PropTypes.func,
@@ -27,40 +25,9 @@ export default class PublicationSearchForm extends Component {
         help: PropTypes.object
     };
 
-    static defaultProps = {
-        defaultSearchFieldLabel: locale.pages.addRecord.searchForPublication.defaultSearchFieldLabel,
-        defaultButtonLabel: locale.pages.addRecord.searchForPublication.defaultButtonLabel
-    };
-
     constructor(props) {
         super(props);
-
-        // setup the state
-        this.state = {
-            buttonLabel: this.props.defaultButtonLabel
-        };
     }
-
-    doiSearchChanged = (event, value) => {
-        this.updateButtonLabel(value);
-    }
-
-    updateButtonLabel = (value) => {
-        const buttonLabels = locale.pages.addRecord.searchForPublication.buttonLabelVariants;
-        let label = locale.pages.addRecord.searchForPublication.defaultButtonLabel;
-
-        if (value) {
-            if (isPartialDOIValue(value) || isDOIValue(value)) {
-                label = buttonLabels.doi;
-            } else if (isPubMedValue(value)) {
-                label = buttonLabels.pubmed;
-            } else if (/^\D.*/i.test(value) || value.trim().length > 5) {
-                label = buttonLabels.title;
-            }
-        }
-
-        this.setState({buttonLabel: label});
-    };
 
     performSearch = (event) => {
         // TODO: fix form submit, all data fetching should be done outside of the form
@@ -82,7 +49,8 @@ export default class PublicationSearchForm extends Component {
     };
 
     render() {
-        const {pristine, handleSubmit, title, help, explanationText, defaultSearchFieldLabel} = this.props;
+        const {pristine, handleSubmit, title, help, explanationText} = this.props;
+        const searchForPublicationInformation = locale.pages.addRecord.searchForPublication;
 
         return (
             <form ref="publicationSearchForm" onSubmit={handleSubmit}>
@@ -108,7 +76,7 @@ export default class PublicationSearchForm extends Component {
                         <Field component={TextField}
                                name="doiSearch"
                                fullWidth
-                               floatingLabelText={defaultSearchFieldLabel}
+                               floatingLabelText={searchForPublicationInformation.defaultSearchFieldLabel}
                                onChange={this.doiSearchChanged}
                                autoComplete="off"
                                autoFocus
@@ -116,7 +84,7 @@ export default class PublicationSearchForm extends Component {
                         />
                         <div style={{textAlign: 'right', marginTop: '20px'}}>
                             <RaisedButton
-                                label={this.state.buttonLabel}
+                                label={searchForPublicationInformation.defaultButtonLabel}
                                 secondary
                                 onTouchTap={this.performSearch}
                                 disabled={pristine}

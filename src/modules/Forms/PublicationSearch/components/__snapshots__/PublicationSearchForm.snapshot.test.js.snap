@@ -42,7 +42,6 @@ exports[`Publication search form snapshots tests renders default publication sea
         floatingLabelText="Enter DOI, Pubmed Id or Title"
         fullWidth={true}
         name="doiSearch"
-        onChange={[Function]}
         onKeyPress={[Function]}
       />
       <div

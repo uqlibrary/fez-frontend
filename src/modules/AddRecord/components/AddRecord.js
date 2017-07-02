@@ -98,8 +98,6 @@ export default class AddRecord extends React.Component {
                         <PublicationSearchForm onSubmit={this.handleNext}
                            title={searchForPublicationInformation.title}
                            explanationText={searchForPublicationInformation.explanationText}
-                           defaultSearchFieldLabel={searchForPublicationInformation.defaultSearchFieldLabel}
-                           defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
                            help={searchForPublicationInformation.help}
                            />
                     </div>
