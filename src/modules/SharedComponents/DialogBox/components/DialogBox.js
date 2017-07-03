@@ -17,7 +17,7 @@ export default class DialogBox extends PureComponent {
         primaryLink: PropTypes.string.isRequired,
         secondaryButtonLabel: PropTypes.string.isRequired,
         secondaryLink: PropTypes.string,
-        hideDialogBox: PropTypes.funcs
+        hideDialogBox: PropTypes.func
     };
 
     constructor(props) {
