@@ -7,6 +7,7 @@ import {SelectField} from 'modules/SharedComponents';
 
 import PropTypes from 'prop-types';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
+import {locale} from 'config';
 
 export default class PublicationTypeForm extends Component {
 
@@ -81,6 +82,9 @@ export default class PublicationTypeForm extends Component {
             selectFirstOptionLabel
         } = this.props;
 
+        // TODO: Remove the code to disable the menuitems on line 122 as more publication types are built
+        const publicationTypeInformation = locale.pages.addRecord.publicationTypeForm;
+
         return (
             <form onSubmit={handleSubmit}>
                 <Card className="layout-card">
@@ -115,7 +119,7 @@ export default class PublicationTypeForm extends Component {
                                     <MenuItem primaryText={selectFirstOptionLabel} disabled />
                                     {
                                         this.state.displayPublicationTypeList.map((item, index) => (
-                                            item.id !== 0 ? <MenuItem key={index} value={item.id} primaryText={item.name}/> :
+                                            item.id !== 0 ? <MenuItem key={index} value={item.id} primaryText={item.name} disabled={item.name.toLowerCase() !== publicationTypeInformation.documentTypes.JOURNAL_ARTICLE}/> :
                                                 <Divider key="-1"/>
                                         ))
                                     }

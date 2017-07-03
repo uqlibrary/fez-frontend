@@ -77,7 +77,6 @@ export default class PublicationSearchForm extends Component {
                                name="doiSearch"
                                fullWidth
                                floatingLabelText={searchForPublicationInformation.defaultSearchFieldLabel}
-                               onChange={this.doiSearchChanged}
                                autoComplete="off"
                                autoFocus
                                onKeyPress={this.performSearch}
