@@ -1,10 +1,12 @@
 // Repositories
-import {loadPublicationTypesData} from '../../../repositories/publicationTypes';
+import {loadPublicationTypesData} from 'repositories/publicationTypes';
 
 // Types
 export const PUBLICATION_TYPES_LOADING = 'PUBLICATION_TYPES_LOADING';
 export const PUBLICATION_TYPES_LOADED = 'PUBLICATION_TYPES_LOADED';
 export const PUBLICATION_TYPE_SELECTED = 'PUBLICATION_TYPE_SELECTED';
+export const PUBLICATION_TYPE_CLEARED = 'PUBLICATION_TYPE_CLEARED';
+
 
 /**
  * Loads the publication types into the application
@@ -34,3 +36,16 @@ export function loadSelectedPublicationType(selectedId) {
         payload: selectedId
     };
 }
+
+
+/**
+ * Clears the selected publication type to an empty immutable map
+ * @returns {{type: string, payload: object}}
+ */
+export function clearSelectedPublicationType() {
+    return {
+        type: PUBLICATION_TYPE_CLEARED,
+        payload: {}
+    };
+}
+

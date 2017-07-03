@@ -1,6 +1,6 @@
 import Immutable from 'immutable';
 
-import {PUBLICATION_TYPES_LOADED, PUBLICATION_TYPE_SELECTED} from './actions';
+import {PUBLICATION_TYPES_LOADED, PUBLICATION_TYPE_SELECTED, PUBLICATION_TYPE_CLEARED} from './actions';
 
 // Immutable state
 export const initialState = Immutable.fromJS({
@@ -18,6 +18,8 @@ const publicationTypeReducer = (state = initialState, action) => {
             });
 
             return state.set('selectedPublicationType', selectedArticleType);
+        case PUBLICATION_TYPE_CLEARED:
+            return state.set('selectedPublicationType', Immutable.fromJS(action.payload));
         default:
             return state;
     }

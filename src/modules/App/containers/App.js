@@ -10,7 +10,8 @@ const AppContainer = connect(state => {
         account: appState.get('account'),
         loaded: appState.get('accountLoaded'),
         menuDrawerOpen: appState.get('menuDrawerOpen'),
-        snackbar: appState.get('snackbar')
+        snackbar: appState.get('snackbar'),
+        dialogbox: appState.get('dialogbox')
     };
 }, dispatch => {
     return {

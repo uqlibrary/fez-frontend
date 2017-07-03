@@ -1,10 +1,10 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
 import ExpandTransition from 'material-ui/internal/ExpandTransition';
 import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
-
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
+import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -12,27 +12,33 @@ const STEP_2 = 1;
 const STEP_3 = 2;
 
 // forms & custom components
-import {PublicationSearchForm} from '../../Forms';
-import {SearchResults} from '../../SearchResults';
-import {NoMatchingRecords} from '../../NoMatchingRecords';
-import {PublicationTypeForm} from '../../Forms/PublicationType';
-import {AddJournalArticleForm} from '../../Forms/JournalArticle';
+import {PublicationSearchForm} from 'modules/Forms';
+import {SearchResults} from 'modules/SearchResults';
+import {NoMatchingRecords} from 'modules/NoMatchingRecords';
+import {PublicationTypeForm} from 'modules/Forms/PublicationType';
+import {AddJournalArticleForm} from 'modules/Forms/JournalArticle';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
-import {locale} from '../../../config';
+import {locale} from 'config';
 
 import './AddRecord.scss';
 
-class addRecord extends React.Component {
+export default class AddRecord extends React.Component {
 
     static propTypes = {
-        searchResultsList: PropTypes.object,
-        selectedPublicationType: PropTypes.object,
+        decreaseStep: PropTypes.func,
+        increaseStep: PropTypes.func,
         loadPublicationTypesList: PropTypes.func,
-        publicationTypeList: PropTypes.object
+        publicationTypeList: PropTypes.object,
+        resetStepper: PropTypes.func,
+        searchResultsList: PropTypes.object,
+        loadingSearch: PropTypes.bool,
+        selectedPublicationType: PropTypes.object,
+        stepperIndex: PropTypes.number
     };
 
     static defaultProps = {
-        searchResultsList: null
+        searchResultsList: null,
+        loadingSearch: false
     };
 
     constructor(props) {
@@ -42,7 +48,6 @@ class addRecord extends React.Component {
         this.state = {
             loading: false,
             finished: false,
-            stepIndex: 0,
             submitOpen: false,
             saveOpen: false,
             publicationType: 0
@@ -53,6 +58,14 @@ class addRecord extends React.Component {
         this.props.loadPublicationTypesList();
     }
 
+    componentWillUnmount() {
+        this.props.resetStepper();
+    }
+
+    cancelAddingRecord = () => {
+        this.props.resetStepper();
+    };
+
     dummyAsync = (cb) => {
         this.setState({loading: true}, () => {
             this.asyncTimer = setTimeout(cb, 500);
@@ -60,77 +73,50 @@ class addRecord extends React.Component {
     };
 
     handleNext = () => {
-        const {stepIndex} = this.state;
-        if (!this.state.loading) {
-            this.dummyAsync(() => {
-                this.setState({
-                    loading: false,
-                    stepIndex: stepIndex + 1,
-                    finished: stepIndex >= 2,
-                });
-            });
-        }
+        this.props.increaseStep();
     };
 
     handlePrev = () => {
-        const {stepIndex} = this.state;
-        if (!this.state.loading) {
-            this.dummyAsync(() => this.setState({
-                loading: false,
-                stepIndex: stepIndex - 1,
-            }));
-        }
+        this.props.decreaseStep();
     };
 
     handleCloseSubmitForApproval = () => {
         this.setState({submitOpen: false});
     };
 
-    handleCloseSaveForLater = () => {
-        this.setState({saveOpen: false});
-    };
-
     handleOpenSubmitForApproval = () => {
         this.setState({submitOpen: true});
-    };
-
-    handleOpenSaveForLater = () => {
-        this.setState({saveOpen: true});
     };
 
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case STEP_1:
                 const searchForPublicationInformation = locale.pages.addRecord.searchForPublication;
-
                 return (
-                    <PublicationSearchForm onSubmit={this.handleNext}
-                       title={searchForPublicationInformation.title}
-                       explanationText={searchForPublicationInformation.explanationText}
-                       defaultSearchFieldLabel={searchForPublicationInformation.defaultSearchFieldLabel}
-                       defaultButtonLabel={searchForPublicationInformation.defaultButtonLabel}
-                       help={searchForPublicationInformation.help}
-                       />
+                    <div>
+                        <PublicationSearchForm onSubmit={this.handleNext}
+                           title={searchForPublicationInformation.title}
+                           explanationText={searchForPublicationInformation.explanationText}
+                           help={searchForPublicationInformation.help}
+                           />
+                    </div>
                 );
             case STEP_2:
-                const {searchResultsList} = this.props;
                 // on initial load this will be null
-                const loaded = searchResultsList !== null;
-                const inlineLoaderInformation = locale.pages.addRecord.inlineLoader;
                 const searchResultsInformation = locale.pages.addRecord.searchResults;
                 const noMatchingRecordsInformation = locale.pages.addRecord.noMatchingRecords;
 
                 return (
                     <div>
-                        {!loaded &&
+                        {this.props.loadingSearch &&
                             <div className="is-centered">
-                                <InlineLoader message={inlineLoaderInformation.message} />
+                                <InlineLoader message="Searching for your publications..." />
                             </div>
                         }
 
-                        {loaded && searchResultsList.size > 0 &&
+                        {!this.props.loadingSearch && this.props.searchResultsList.size > 0 &&
                         <SearchResults
-                            dataSource={searchResultsList}
+                            dataSource={this.props.searchResultsList}
                             title={searchResultsInformation.title}
                             explanationText={searchResultsInformation.explanationText}
                             claimRecordBtnLabel={searchResultsInformation.claimRecordBtnLabel}
@@ -138,11 +124,8 @@ class addRecord extends React.Component {
                         />
                         }
 
-                        {loaded &&
+                        {!this.props.loadingSearch && this.props.searchResultsList.size === 0 &&
                             <NoMatchingRecords
-                                handleNext={this.handleNext}
-                                handlePrevious={this.handlePrev}
-                                stepIndex={this.state.stepIndex}
                                 title={noMatchingRecordsInformation.title}
                                 explanationText={noMatchingRecordsInformation.explanationText}
                                 searchAgainBtnLabel={noMatchingRecordsInformation.searchAgainBtnLabel}
@@ -150,6 +133,28 @@ class addRecord extends React.Component {
                                 help={noMatchingRecordsInformation.help}
                             />
                         }
+
+                        {!this.props.loadingSearch &&
+                            <div className="layout-container">
+                                <div className="layout-card">
+                                    <div style={{textAlign: 'right'}}>
+                                        <FlatButton
+                                            label="Abandon and search again"
+                                            style={{marginRight: 12}}
+                                            onTouchTap={this.handlePrev}
+                                        />
+                                        <RaisedButton
+                                            label="Create a new espace record"
+                                            secondary
+                                            autoFocus={this.props.searchResultsList.size === 0}
+                                            keyboardFocused={this.props.searchResultsList.size === 0}
+                                            onTouchTap={this.handleNext}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
                         <ReactTooltip id="claimTooltips" effect="solid" place="bottom"/>
                     </div>
                 );
@@ -157,33 +162,35 @@ class addRecord extends React.Component {
                 const {selectedPublicationType} = this.props;
                 const publicationTypeInformation = locale.pages.addRecord.publicationTypeForm;
                 const buttonLabels = locale.global.labels.buttons;
+                const showButton = !selectedPublicationType || (selectedPublicationType && selectedPublicationType.size === 0);
 
                 return (
-                    <PublicationTypeForm
-                        title={publicationTypeInformation.title}
-                        explanationText={publicationTypeInformation.explanationText}
-                        help={publicationTypeInformation.help}
-                        maxSearchResults={publicationTypeInformation.maxSearchResults}
-                        publicationTypeLabel={publicationTypeInformation.publicationTypeLabel}
-                        dataSource={this.props.publicationTypeList}
-                        popularTypesList={publicationTypeInformation.popularTypesList}>
-                            <div>
-                            {/* Journal Article is selected. Size check needed as it is an empty Immutable Map on initial load */}
-                            {selectedPublicationType.size > 0 && selectedPublicationType.get('name').toLowerCase() === locale.pages.addRecord.publicationTypeForm.documentTypes.JOURNAL_ARTICLE &&
-                                <AddJournalArticleForm />
-                            }
+                    <div>
+                        <PublicationTypeForm
+                            title={publicationTypeInformation.title}
+                            explanationText={publicationTypeInformation.explanationText}
+                            help={publicationTypeInformation.help}
+                            maxSearchResults={publicationTypeInformation.maxSearchResults}
+                            publicationTypeLabel={publicationTypeInformation.publicationTypeLabel}
+                            selectFirstOptionLabel={publicationTypeInformation.selectFirstOptionLabel}
+                            dataSource={this.props.publicationTypeList}
+                            popularTypesList={publicationTypeInformation.popularTypesList} />
 
-                            {selectedPublicationType.size > 0 &&
-                                <div className="buttonWrapper">
-                                    <RaisedButton label={buttonLabels.saveForLater} style={{marginLeft: '12px'}}
-                                                  onTouchTap={this.handleOpenSaveForLater}/>
-                                    <RaisedButton label={buttonLabels.cancel} style={{marginLeft: '12px'}} onTouchTap={this.handlePrev}/>
-                                    <RaisedButton secondary label={buttonLabels.submitForApproval} style={{marginLeft: '12px'}}
-                                                  onTouchTap={this.handleOpenSubmitForApproval}/>
+                            {showButton &&
+                                <div style={{maxWidth: '1200px', margin: '24px auto', width: '90%', textAlign: 'right'}}>
+                                    <RaisedButton
+                                        label={buttonLabels.abandon}
+                                        style={{marginLeft: '12px'}}
+                                        onTouchTap={this.cancelAddingRecord}/>
                                 </div>
                             }
-                            </div>
-                    </PublicationTypeForm>
+
+                            {/* TODO: fix this warning */}
+                            {selectedPublicationType && selectedPublicationType.size > 0
+                                && selectedPublicationType.get('name').toLowerCase() === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE
+                                && <AddJournalArticleForm form="AddJournalArticleForm" />
+                            }
+                    </div>
                 );
             default:
                 const stepperInformation = locale.pages.addRecord.stepper;
@@ -192,12 +199,11 @@ class addRecord extends React.Component {
     }
 
     renderContent() {
-        const {stepIndex} = this.state;
-        const contentStyle = {margin: '0 16px', overflow: 'hidden'};
+        const contentStyle = {margin: '0', overflow: 'hidden'};
 
         return (
             <div style={contentStyle}>
-                <div>{this.getStepContent(stepIndex)}</div>
+                <div>{this.getStepContent(this.props.stepperIndex)}</div>
             </div>
         );
     }
@@ -205,14 +211,13 @@ class addRecord extends React.Component {
     render() {
         const {loading} = this.state;
         const stepperInformation = locale.pages.addRecord.stepper;
-
         return (
-            <div className="layout-fill">
-                <h1 className="page-title display-1">{locale.pages.addRecord.title}</h1>
+            <div>
+                <h1 className="page-title headline">{locale.pages.addRecord.title}</h1>
 
                 {/* Stepper start */}
                 <div className="Stepper">
-                <Stepper activeStep={this.state.stepIndex} style={{padding: '0 25px', margin: '-10px auto' }} onChange={this.handleNext}>
+                <Stepper activeStep={this.props.stepperIndex} style={{padding: '0', margin: '-10px auto' }} onChange={this.handleNext}>
                     <Step>
                         <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{stepperInformation.step1Label}</StepLabel>
                     </Step>
@@ -226,7 +231,7 @@ class addRecord extends React.Component {
                 </div>
 
 
-                <div style={{width: '100%', maxWidth: '1200px', margin: 'auto'}}>
+                <div style={{width: '100%', maxWidth: '1320px', margin: '0 auto'}}>
                     <ExpandTransition loading={loading} open>
                         {this.renderContent()}
                     </ExpandTransition>
@@ -236,5 +241,3 @@ class addRecord extends React.Component {
         );
     }
 }
-
-export default addRecord;

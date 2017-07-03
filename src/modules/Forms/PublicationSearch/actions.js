@@ -1,12 +1,12 @@
 // Repositories
-import {searchDoiEndpoint, searchPubmedEndpoint, searchTitleEndpoint} from '../../../repositories/publicationSearchForm';
+import {searchDoiEndpoint, searchPubmedEndpoint, searchTitleEndpoint} from 'repositories/publicationSearch';
 
 // Types
-export const DOI_SEARCH = 'DOI_SEARCH';
+export const DOI_SEARCH_LOADING = 'DOI_SEARCH_LOADING';
 export const DOI_SEARCH_COMPLETED = 'DOI_SEARCH_COMPLETED';
-export const PUBMED_SEARCH = 'PUBMED_SEARCH';
+export const PUBMED_SEARCH_LOADING = 'PUBMED_SEARCH_LOADING';
 export const PUBMED_SEARCH_COMPLETED = 'PUBMED_SEARCH_COMPLETED';
-export const TITLE_SEARCH = 'TITLE_SEARCH';
+export const TITLE_SEARCH_LOADING = 'TITLE_SEARCH_LOADING';
 export const TITLE_SEARCH_COMPLETED = 'TITLE_SEARCH_COMPLETED';
 
 /**
@@ -15,7 +15,7 @@ export const TITLE_SEARCH_COMPLETED = 'TITLE_SEARCH_COMPLETED';
  */
 export function loadDoiResultsList(doi) {
     return dispatch => {
-        dispatch({type: DOI_SEARCH});
+        dispatch({type: DOI_SEARCH_LOADING});
         searchDoiEndpoint(doi).then(authorList => {
             dispatch({
                 type: DOI_SEARCH_COMPLETED,
@@ -33,7 +33,7 @@ export function loadDoiResultsList(doi) {
  */
 export function loadPubmedResultsList(pubMedId) {
     return dispatch => {
-        dispatch({type: PUBMED_SEARCH});
+        dispatch({type: PUBMED_SEARCH_LOADING});
         searchPubmedEndpoint(pubMedId).then(payload => {
             dispatch({
                 type: PUBMED_SEARCH_COMPLETED,
@@ -51,7 +51,7 @@ export function loadPubmedResultsList(pubMedId) {
  */
 export function loadTitleResultsList(rekDisplayType, title) {
     return dispatch => {
-        dispatch({type: TITLE_SEARCH});
+        dispatch({type: TITLE_SEARCH_LOADING});
         searchTitleEndpoint(rekDisplayType, title).then(payload => {
             dispatch({
                 type: TITLE_SEARCH_COMPLETED,

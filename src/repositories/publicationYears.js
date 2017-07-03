@@ -1,4 +1,4 @@
-import {api} from '../config';
+import {api} from 'config';
 
 /**
  * Fetches the the current list of authors

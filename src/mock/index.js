@@ -6,14 +6,14 @@ import {SESSION_COOKIE_NAME} from 'config';
 // mocked data
 import {accounts} from './data/accounts';
 import {externalDoiSearchResultList, internalDoiSearchResultList, externalPubMedSearchResultsList, internalPubMedSearchResultsList, externalTitleSearchResultsList, internalTitleSearchResultsList} from './data/publicationSearch';
-import {authorsList} from './data/authors';
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
 import {claimPublication} from './data/claimPublication';
+import {documentAccessTypes} from './data/documentAccessTypes';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api);
+const mock = new MockAdapter(api, { delayResponse: 2000 });
 
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
@@ -44,23 +44,36 @@ mock.onGet(/search\/external\?pub_med_id=*/).reply(200, externalPubMedSearchResu
 mock.onGet(/search\/internal\?pub_med_id=*/).reply(200, internalPubMedSearchResultsList);
 
 // Mock the publication form external title search endpoint
-mock.onGet(/search\/external\?rek_display_type=[0-9]*/).reply(200, externalTitleSearchResultsList);
+mock.onGet(/search\/external\?source=wos&rek_display_type=[0-9]*/).reply(200, externalTitleSearchResultsList);
+// mock.onGet(/search\/external\?source=wos&rek_display_type=[0-9]*/).reply(404);
 
 // Mock the publication form internal title search endpoint
-mock.onGet(/search\/internal\?rek_display_type=[0-9]*/).reply(200, internalTitleSearchResultsList);
+mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(200, internalTitleSearchResultsList);
+// mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(500);
 
 // Mock the publication types endpoint
 mock.onGet('records/types').reply(200, publicationTypeList);
 
 // Mock the publication sub types endpoint
-mock.onGet('records/sub/types').reply(200, publicationSubTypeList);
+mock.onGet(/vocabularies\/[0-9]/).reply(200, publicationSubTypeList);
 
 // Mock the authors endpoint
-mock.onGet('authors/search').reply(200, authorsList);
+// mock.onGet(/authors\/search\?query=*/).reply(200, authorsList);
+mock.onGet(/authors\/search\?query=*/).passThrough();
 
 // Mock academics publication years endpoint response
 mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsBig);
 
+// Allow the file upload calls to pass through to the S3 bucket directly
+mock.onGet(/file\/upload\/presigned/).passThrough();
+mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
+
 // Mock claim publication results endpoint response
 mock.onGet(/claimPublication\/?user_id=*/).reply(200, claimPublication);
 
+// Mock the document access types
+mock.onGet('acml/quick-templates').reply(200, documentAccessTypes);
+
+// Let the create records endpoint go through to staging
+mock.onPost('records').reply(200, {});
+// mock.onPost('records').reply(422);

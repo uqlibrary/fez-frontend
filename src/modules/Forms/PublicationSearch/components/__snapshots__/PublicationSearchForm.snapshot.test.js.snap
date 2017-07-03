@@ -13,36 +13,36 @@ exports[`Publication search form snapshots tests renders default publication sea
       className="card-header"
     >
       <div
-        className="columns is-gapless"
+        className="columns is-gapless is-mobile"
       >
         <div
           className="column"
         >
           <h2
-            className="headline"
+            className="title"
           >
             Component Title
           </h2>
         </div>
         <div
-          className="column"
+          className="column is-narrow is-helpicon"
         />
       </div>
     </CardHeader>
     <CardText
       className="body-1"
     >
-      <br />
       <div>
         Component Search Text
       </div>
       <Field
         autoComplete="off"
+        autoFocus={true}
         component={[Function]}
-        floatingLabelText="Search for publication"
+        floatingLabelText="Enter DOI, Pubmed Id or Title"
         fullWidth={true}
         name="doiSearch"
-        onChange={[Function]}
+        onKeyPress={[Function]}
       />
       <div
         style={

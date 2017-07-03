@@ -1,5 +1,5 @@
 export {default as App} from './containers/App';
 
-export {showSnackbar} from './actions';
+export {showSnackbar, showDialogBox, hideDialogBox} from './actions';
 
 export {default as appReducer} from './reducer';

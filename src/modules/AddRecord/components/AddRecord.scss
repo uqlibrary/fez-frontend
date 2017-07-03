@@ -1,4 +1,56 @@
 // Styles for the "claim a publication" panel
+.claimWrapper {
+  padding: 20px;
+  margin: 20px auto 5px auto;
+  width: calc(100% - 40px);
+  background-color: rgba(0,0,0,0.05);
+}
+.claimTitle{
+  font-size: 1.5em;
+}
+a .claimTitle {
+  color: #000;
+}
+.claimTitleIcon {
+  opacity: 0.5;
+  font-size: 0.66em !important;
+  vertical-align: super !important;
+  margin-left: 5px;
+}
+a:hover .claimTitleIcon {
+  opacity: 1.0;
+  color: #000 !important;
+}
+.claimAuthors, .claimJournal {
+  margin: 10px 0 5px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.claimStats {
+  margin: 15px 0 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.claimAuthorsIcon, .claimJournalIcon {
+  font-size: 1.2em !important;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+
+.claimStats img {
+  width: 1em;
+  height: 1em;
+  filter: grayscale(1);
+  vertical-align: sub;
+}
+.claimStatsIcon{
+  font-size: 1.2em !important;
+  vertical-align: sub;
+  color: #333;
+}
+
 @media (max-width: 600px) { //XS
   .claimButtonWrapper {
     text-align: right;
@@ -23,6 +75,11 @@
 // Override Material UI wanting to nowrap the card titles
 div.layout-card > div > div { white-space: normal !important;}
 
+.Stepper {
+  width: 90% !important;
+  margin: 0px auto !important;
+  max-width: 1280;
+}
 
 // Stepper: Targets the div wrapping just the stepper
 .Stepper>div:first-child {

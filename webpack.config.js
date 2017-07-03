@@ -49,6 +49,7 @@ module.exports = {
         quiet: false,
         stats: 'errors-only',
         watchContentBase: false,
+        disableHostCheck: true
     },
     module: {
         rules: [
@@ -60,6 +61,7 @@ module.exports = {
             },
             {
                 test: /\.js?$/,
+                exclude: /node_modules/,
                 include: [
                     path.resolve(__dirname, 'src')
                 ],

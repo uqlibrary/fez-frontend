@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import AddRecord from '../components/AddRecord';
-import {loadPublicationTypesList} from '../actions';
+import {decreaseStep, increaseStep, loadPublicationTypesList, resetStepper} from '../actions';
 
 let AddRecordContainer = reduxForm({
     form: 'AddRecordForm'
@@ -10,13 +10,19 @@ let AddRecordContainer = reduxForm({
 
 AddRecordContainer = connect((state) => {
     return {
-        searchResultsList: state.get('claimPublication').get('claimPublicationResults'),
+        searchResultsList: state.get('publicationSearch').get('searchResultsList'),
+        loadingSearch: state.get('publicationSearch').get('loadingSearch'),
+        searchResultsList2: state.get('claimPublication').get('claimPublicationResults'),
         selectedPublicationType: state.get('publicationTypes').get('selectedPublicationType'),
+        stepperIndex: state.get('addRecord').get('stepperIndex'),
         publicationTypeList: state.get('publicationTypes').get('publicationTypeList')
     };
 }, dispatch => {
     return {
-        loadPublicationTypesList: () => dispatch(loadPublicationTypesList())
+        loadPublicationTypesList: () => dispatch(loadPublicationTypesList()),
+        increaseStep: () => dispatch(increaseStep()),
+        decreaseStep: () => dispatch(decreaseStep()),
+        resetStepper: () => dispatch(resetStepper())
     };
 })(AddRecordContainer);
 

@@ -8,7 +8,9 @@ import {
     APP_MENU_DRAWER_TOGGLE,
     APP_SNACKBAR_HIDE,
     APP_SNACKBAR_SHOW,
-    APP_LOADING_ERROR
+    APP_LOADING_ERROR,
+    APP_DIALOGBOX_HIDE,
+    APP_DIALOGBOX_SHOW
 } from './actions';
 
 // Immutable state
@@ -23,6 +25,15 @@ const initialState = Immutable.fromJS({
     error: {
         displayError: false,
         message: ''
+    },
+    dialogbox: {
+        open: false,
+        title: '',
+        content: '',
+        primaryButtonLabel: '',
+        primaryLink: '/',
+        secondaryButtonLabel: '',
+        secondaryLink: ''
     }
 });
 
@@ -43,6 +54,19 @@ const appReducer = (state = initialState, action) => {
             }));
         case APP_SNACKBAR_HIDE:
             return state.set('snackbar', initialState.get('snackbar'));
+        case APP_DIALOGBOX_HIDE:
+            return state.set('dialogbox', initialState.get('dialogbox'));
+        case APP_DIALOGBOX_SHOW:
+            const {title, content, primaryButtonLabel, primaryLink, secondaryButtonLabel, secondaryLink} = action.payload;
+            return state.set('dialogbox', Immutable.fromJS({
+                open: true,
+                title,
+                content,
+                primaryButtonLabel,
+                primaryLink,
+                secondaryButtonLabel,
+                secondaryLink: secondaryLink || ''
+            }));
         case LOCATION_CHANGE:
             return state.set('menuDrawerOpen', false);
         case APP_MENU_DRAWER_TOGGLE:

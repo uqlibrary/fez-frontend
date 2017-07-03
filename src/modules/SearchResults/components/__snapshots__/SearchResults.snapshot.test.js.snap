@@ -12,98 +12,71 @@ exports[`Search results snapshots tests renders default search results page 1`] 
     className="card-header"
   >
     <div
-      className="columns is-gapless"
+      className="columns is-gapless is-mobile"
     >
       <div
         className="column"
       >
         <h2
-          className="headline"
+          className="title"
         >
           Component Title
         </h2>
       </div>
       <div
-        className="column"
+        className="column is-narrow is-helpicon"
       />
     </div>
   </CardHeader>
   <CardText
     className="body-1"
   >
-    <br />
     <div>
       Lorem Ipsum
     </div>
-    <div>
-      <withRouter(Connect(ReduxForm))
-        entry={
-          Object {
-            "fez_record_search_key_collection_year": Object {
-              "rek_collection_year": "2010-07-05 00:00:00",
+    <SearchResultsRow
+      claimRecordBtnLabel="Claim Record"
+      entry={
+        Object {
+          "authors": Array [
+            Object {
+              "rek_author": "Ramsby, Blake D.",
+              "rek_author_order": 1,
             },
-            "fez_record_search_key_date_available": Object {
-              "rek_date_available": "2010-07-05 00:00:00",
+            Object {
+              "rek_author": "Hoogenboom, Mia O.",
+              "rek_author_order": 2,
             },
-            "fez_record_search_key_doi": Object {
-              "rek_doi": "10.1111/j.1755-5922.2010.00189.x",
+            Object {
+              "rek_author": "Whalan, Steve",
+              "rek_author_order": 3,
             },
-            "fez_record_search_key_end_page": Object {
-              "rek_end_page": "215",
+            Object {
+              "rek_author": "Webster, Nicole S.",
+              "rek_author_order": 4,
             },
-            "fez_record_search_key_issn": Array [
-              Object {
-                "rek_issn": "1755-5914",
-                "rek_issn_order": 1,
-              },
-              Object {
-                "rek_issn": "1755-5922",
-                "rek_issn_order": 2,
-              },
-            ],
-            "fez_record_search_key_issue_number": Object {
-              "rek_issue_number": "4",
+            Object {
+              "rek_author": "Thompson, Angus",
+              "rek_author_order": 5,
             },
-            "fez_record_search_key_journal_name": Object {
-              "rek_journal_name": "Cardiovascular Therapeutics",
-            },
-            "fez_record_search_key_keywords": Array [
-              Object {
-                "rek_keywords": "Pharmacology (medical)",
-                "rek_keywords_order": 1,
-              },
-              Object {
-                "rek_keywords": "Pharmacology",
-                "rek_keywords_order": 2,
-              },
-              Object {
-                "rek_keywords": "Cardiology and Cardiovascular Medicine",
-                "rek_keywords_order": 3,
-              },
-            ],
-            "fez_record_search_key_publisher": Object {
-              "rek_publisher": "Wiley-Blackwell",
-            },
-            "fez_record_search_key_start_page": Object {
-              "rek_start_page": "202",
-            },
-            "fez_record_search_key_volume_number": Object {
-              "rek_volume_number": "28",
-            },
-            "rek_date": "2010-07-05 00:00:00",
-            "rek_display_type": 179,
-            "rek_object_type": 1,
-            "rek_pid": 123,
-            "rek_status": 2,
-            "rek_title": "External - Nutraceuticals and Atherosclerosis: Human Trials",
-          }
+          ],
+          "counts": Object {
+            "thomson": 10,
+          },
+          "doi": "10.1111/j.1755-5922.2010.00189.x",
+          "endPage": "215",
+          "index": 0,
+          "issueNumber": "4",
+          "journalName": "Cardiovascular Therapeutics",
+          "publisher": Object {
+            "rek_publisher": "Wiley-Blackwell",
+          },
+          "startPage": "202",
+          "title": "External - Nutraceuticals and Atherosclerosis: Human Trials",
+          "volumeNumber": "28",
         }
-        form="SearchResultsForm"
-      />
-      <Divider
-        inset={false}
-      />
-    </div>
+      }
+    />
   </CardText>
 </Card>
 `;

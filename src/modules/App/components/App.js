@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import Snackbar from 'material-ui/Snackbar';
+import {DialogBox} from 'modules/SharedComponents';
 
 import {AppLoader, MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
 
@@ -24,6 +25,10 @@ import {ClaimPublicationForm} from 'modules/Forms';
 
 // Import specific style for the AppBar
 import '../../../sass/_appbar.scss';
+// Import a style for the helpicon placement
+import '../../../sass/_helpicon.scss';
+// Import styles to override MUI defaults for UX
+import '../../../sass/_muifixes.scss';
 
 export default class App extends React.Component {
 
@@ -35,6 +40,7 @@ export default class App extends React.Component {
         menuDrawerOpen: PropTypes.bool.isRequired,
         hideSnackbar: PropTypes.func.isRequired,
         snackbar: PropTypes.object.isRequired,
+        dialogbox: PropTypes.object.isRequired,
         toggleMenuDrawer: PropTypes.func.isRequired
     };
 
@@ -78,7 +84,8 @@ export default class App extends React.Component {
             loaded,
             menuDrawerOpen,
             snackbar,
-            hideSnackbar
+            hideSnackbar,
+            dialogbox
         } = this.props;
 
         const {
@@ -98,7 +105,10 @@ export default class App extends React.Component {
             :
             defaultMenuItems(locale, components);
 
-        console.log(error);
+        // TODO: implement error display if required
+        if (error) {
+            console.log(error);
+        }
 
         return (
             <div className="layout-fill">
@@ -148,6 +158,17 @@ export default class App extends React.Component {
                             message={snackbar.get('message')}
                             autoHideDuration={4000}
                             onRequestClose={hideSnackbar} />
+
+
+                        <DialogBox
+                            open={dialogbox.get('open')}
+                            title={dialogbox.get('title')}
+                            content={dialogbox.get('content')}
+                            primaryButtonLabel={dialogbox.get('primaryButtonLabel')}
+                            primaryLink={dialogbox.get('primaryLink')}
+                            secondaryButtonLabel={dialogbox.get('secondaryButtonLabel')}
+                            secondaryLink={dialogbox.get('secondaryLink')}
+                        />
 
                         <HelpDrawer />
                     </div>
