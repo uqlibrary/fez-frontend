@@ -15,7 +15,7 @@ export default class SearchResultsRow extends Component {
 
     static propTypes = {
         entry: PropTypes.object.isRequired,
-        claimRecordBtnLabel: PropTypes.string,
+        claimRecordBtnLabel: PropTypes.string
     };
 
     static defaultProps = {

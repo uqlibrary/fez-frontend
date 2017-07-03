@@ -7,5 +7,4 @@ export {ClaimPublicationForm, ClaimPublicationRow} from './ClaimPublication';
 export {publicationTypeReducer} from './PublicationType';
 export {journalArticleReducer} from './JournalArticle';
 export {publicationSearchReducer} from './PublicationSearch';
-export {publicationSubTypeReducer} from './JournalArticle';
 export {claimPublicationsReducer} from './ClaimPublication';

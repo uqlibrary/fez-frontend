@@ -28,7 +28,18 @@ exports[`Publication row results snapshots tests renders default publication row
   </div>
   <div
     className="claimStats"
-  />
+  >
+    <span>
+      <img
+        alt="Thomson Routers"
+        data-for="claimTooltips"
+        data-tip="Thomson Routers Web of Science citation count"
+        src=""
+      />
+       
+      10
+    </span>
+  </div>
   <div
     className="claimButtonWrapper"
   >

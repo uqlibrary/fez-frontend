@@ -8,7 +8,6 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import {publicationYearsBig as publicationYearsMockData} from '../../../mock/data/academic/publicationYears';
 
 import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox';
 import './Dashboard.scss';

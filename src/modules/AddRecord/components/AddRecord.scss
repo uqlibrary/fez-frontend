@@ -51,21 +51,6 @@ a:hover .claimTitleIcon {
   color: #333;
 }
 
-@media (max-width: 600px) { //XS
-  .claimButtonWrapper {
-    text-align: right;
-    margin: 10px 0 0 0;
-  }
-}
-@media (min-width: 600px) { //LG
-  .claimButtonWrapper {
-    text-align: right;
-    margin: -35px 0 0 0;
-    display: inline-block;
-    float: right;
-  }
-}
-
 .buttonWrapper {
   text-align: right;
   margin: -70px auto 20px auto;

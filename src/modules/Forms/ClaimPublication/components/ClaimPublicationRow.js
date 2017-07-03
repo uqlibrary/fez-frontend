@@ -40,17 +40,17 @@ export default class ClaimPublicationRow extends Component {
         this.props.history.push(`/claim-publications/${id}`);
     };
 
-    getPublicationYear = (entry) => {
-        if (entry.get('fez_record_search_key_collection_year')) {
-            return `(${new Date(entry.get('fez_record_search_key_collection_year').get('rek_collection_year')).getFullYear()}) `;
+    getPublicationYear = (collectionYear) => {
+        if (collectionYear) {
+            return `(${new Date(collectionYear).getFullYear()}) `;
         }
 
         return '';
     };
 
-    getPageNumbers = (entry) => {
-        if (entry.get('fez_record_search_key_start_page') && entry.get('fez_record_search_key_end_page')) {
-            return ` ${entry.get('fez_record_search_key_start_page').get('rek_start_page')}-${entry.get('fez_record_search_key_end_page').get('rek_end_page')}`;
+    getPageNumbers = (startPage, endPage) => {
+        if (startPage && endPage) {
+            return ` ${startPage}-${endPage}`;
         }
 
         return '';
@@ -99,22 +99,24 @@ export default class ClaimPublicationRow extends Component {
 
     render() {
         const {entry, hideClaimButton, claimRecordBtnLabel} = this.props;
-        const authorListSize = entry.get('rek_authors') ? entry.get('fez_record_search_key_author_count').get('rek_author_count') : 0;
+
+        console.log('ClaimPublicationRow', entry);
+        const authorListSize = entry.authors.size;
 
         return (
             <div className="claimWrapper">
-                <h3 className="claimTitle">{entry.get('rek_title')}</h3>
+                <h3 className="claimTitle">{entry.rek_title}</h3>
 
-                {entry.get('rek_authors') &&
+                {entry.authors.size > 0 &&
                     <div className="claimAuthors">
                     <FontIcon className="material-icons claimAuthorsIcon" data-tip="Authors"
                     data-for="claimTooltips" data-place="left">people</FontIcon>
                     {authorListSize <= 10 && (
-                        this.getAuthorsList(entry.get('rek_authors'), authorListSize)
+                        this.getAuthorsList(entry.authors, authorListSize)
                     )}
 
                     {authorListSize > 10 && (
-                        this.getExtendedAuthorsList(entry.get('rek_authors'), authorListSize)
+                        this.getExtendedAuthorsList(entry.authors, authorListSize)
                     )}
                     </div>
                 }
@@ -122,44 +124,44 @@ export default class ClaimPublicationRow extends Component {
                 <div className="claimJournal">
                     <FontIcon className="material-icons claimJournalIcon" data-tip="Published"
                               data-for="claimTooltips" data-place="left">library_books</FontIcon>
-                    {this.getPublicationYear(entry)}
-                    {entry.get('fez_record_search_key_journal_name').get('rek_journal_name')}
-                    {this.getPageNumbers(entry)}
+                    {this.getPublicationYear(entry.collectionYear)}
+                    {entry.rek_journal_name}
+                    {this.getPageNumbers(entry.startPage, entry.endPage)}
                 </div>
 
 
                 <div className="claimStats">
-                    {entry.get('rek_thomson_citation_count') &&
+                    {entry.counts.thomson &&
                         <span>
                             <img src={thompsonIcon} alt="Thomson Routers"
                             data-tip="Thomson Routers Web of Science citation count"
-                            data-for="claimTooltips"/> {entry.get('rek_thomson_citation_count')}
+                            data-for="claimTooltips"/> {entry.counts.thomson}
                         </span>
                     }
-                    {entry.get('rek_scopus_citation_count') &&
+                    {entry.counts.scopus &&
                         <span>
                             <img src={scopusIcon} alt="Scopus" data-tip="Scopus citation count"
-                            data-for="claimTooltips" style={{marginLeft: '10px'}}/> {entry.get('rek_scopus_citation_count')}
+                            data-for="claimTooltips" style={{marginLeft: '10px'}}/> {entry.counts.scopus}
                         </span>
                     }
-                    {entry.get('rek_gs_citation_count') &&
+                    {entry.counts.google &&
                         <span>
                             <img src={googleScholarIcon} alt="Google Scholar"
                             data-tip="Google Scholar citation count" data-for="claimTooltips"
-                            style={{marginLeft: '10px'}}/> {entry.get('rek_gs_citation_count')}
+                            style={{marginLeft: '10px'}}/> {entry.counts.google}
                         </span>
                     }
-                    {entry.get('rek_altmetric_score') &&
+                    {entry.counts.altmetric &&
                         <span>
                             <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score"
-                            data-for="claimTooltips" style={{marginLeft: '10px'}}/> {entry.get('rek_altmetric_score')}
+                            data-for="claimTooltips" style={{marginLeft: '10px'}}/> {entry.counts.altmetric}
                         </span>
                     }
-                    {entry.get('rek_file_downloads') &&
+                    {entry.counts.downloads &&
                         <span>
                         <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads"
                               data-for="claimTooltips" data-place="bottom"
-                              style={{marginLeft: '10px'}}>file_download</FontIcon> {entry.get('rek_file_downloads')}
+                              style={{marginLeft: '10px'}}>file_download</FontIcon> {entry.counts.downloads}
                         </span>
                     }
                 </div>

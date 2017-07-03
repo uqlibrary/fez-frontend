@@ -10,7 +10,7 @@ import DatePicker from 'material-ui/DatePicker';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from '../../../../config';
 
-import ClaimPublicationRow from '../containers/ClaimPublicationRow';
+import {SearchResultsRow} from 'modules/SearchResults';
 
 export default class ClaimPublicationForm extends Component {
 
@@ -65,7 +65,7 @@ export default class ClaimPublicationForm extends Component {
                     </CardHeader>
                     <CardText className="body-1" style={{padding: '0px'}}>
                         <Divider />
-                        <ClaimPublicationRow entry={this.props.selectedPublication} form="ClaimPublicationForm" hideClaimButton />
+                        <SearchResultsRow entry={this.props.selectedPublication} form="ClaimPublicationForm" hideClaimButton />
                         <Divider />
                     </CardText>
                 </Card>
