@@ -10,6 +10,7 @@ import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
 import {documentAccessTypes} from './data/documentAccessTypes';
+import {authorsList} from './data/authors';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 2000 });
@@ -47,8 +48,8 @@ mock.onGet(/search\/external\?source=wos&rek_display_type=[0-9]*/).reply(200, ex
 // mock.onGet(/search\/external\?source=wos&rek_display_type=[0-9]*/).reply(404);
 
 // Mock the publication form internal title search endpoint
-// mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(200, internalTitleSearchResultsList);
-mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(500);
+mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(200, internalTitleSearchResultsList);
+// mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(500);
 
 // Mock the publication types endpoint
 mock.onGet('records/types').reply(200, publicationTypeList);
@@ -57,8 +58,8 @@ mock.onGet('records/types').reply(200, publicationTypeList);
 mock.onGet(/vocabularies\/[0-9]/).reply(200, publicationSubTypeList);
 
 // Mock the authors endpoint
-// mock.onGet(/authors\/search\?query=*/).reply(200, authorsList);
-mock.onGet(/authors\/search\?query=*/).passThrough();
+mock.onGet(/authors\/search\?query=*/).reply(200, authorsList);
+// mock.onGet(/authors\/search\?query=*/).passThrough();
 
 // Mock academics publication years endpoint response
 mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsBig);
