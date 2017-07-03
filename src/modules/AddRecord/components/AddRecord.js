@@ -4,7 +4,6 @@ import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -89,6 +88,8 @@ export default class AddRecord extends React.Component {
     };
 
     getStepContent(stepIndex) {
+        const buttonLabels = locale.global.labels.buttons;
+
         switch (stepIndex) {
             case STEP_1:
                 const searchForPublicationInformation = locale.pages.addRecord.searchForPublication;
@@ -138,11 +139,10 @@ export default class AddRecord extends React.Component {
                             <div className="layout-container">
                                 <div className="layout-card">
                                     <div style={{textAlign: 'right'}}>
-                                        <FlatButton
-                                            label="Abandon and search again"
-                                            style={{marginRight: 12}}
-                                            onTouchTap={this.handlePrev}
-                                        />
+                                        <RaisedButton
+                                            label={buttonLabels.abandon}
+                                            style={{marginRight: '12px'}}
+                                            onTouchTap={this.handlePrev}/>
                                         <RaisedButton
                                             label="Create a new espace record"
                                             secondary
@@ -161,7 +161,6 @@ export default class AddRecord extends React.Component {
             case STEP_3:
                 const {selectedPublicationType} = this.props;
                 const publicationTypeInformation = locale.pages.addRecord.publicationTypeForm;
-                const buttonLabels = locale.global.labels.buttons;
                 const showButton = !selectedPublicationType || (selectedPublicationType && selectedPublicationType.size === 0);
 
                 return (
