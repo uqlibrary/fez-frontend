@@ -47,6 +47,19 @@ export default class AddAuthors extends Component {
         };
     }
 
+    componentDidMount() {
+        // TODO: fix this hack! it makes me wannacry! UGLY HACK!
+        // I need to catch scrolling event of scrolled container (which is not a window) to set position of autosuggest list when user scrolls
+        // another solution, close the box when user tries to scroll
+        const div = document.querySelector('div.layout-fill.align-stretch');
+        div.addEventListener('scroll', this.handleParentContainerScroll.bind(this));
+    }
+
+    handleParentContainerScroll() {
+        if (this.refs.authorInput) this.refs.authorInput.close();
+        if (this.refs.authorIdInput) this.refs.authorIdInput.close();
+    }
+
     addAuthor = () => {
         const authorInformation = locale.sharedComponents.authors;
         const authorFields = authorInformation.fields;
@@ -367,6 +380,7 @@ export default class AddAuthors extends Component {
                 <div className="columns" style={{marginTop: '-20px'}}>
                     <div className="column is-addAuthor">
                         <AutoComplete
+                            ref="authorInput"
                             name={authorFields.authorName}
                             floatingLabelText={authorFields.authorNameLabel}
                             fullWidth
@@ -390,6 +404,7 @@ export default class AddAuthors extends Component {
                     {this.state.showIdentifierField && (
                     <div className="column is-addUQid">
                         <AutoComplete
+                            ref="authorIdInput"
                             name={authorFields.authorIdentifier}
                             floatingLabelText={authorFields.authorIdentifierLabel}
                             filter={AutoComplete.fuzzyFilter}
