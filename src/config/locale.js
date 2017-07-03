@@ -251,11 +251,20 @@ export default {
                     }
                 },
                 dialog: {
-                    title: 'Submission sent',
-                    content: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
-                    primaryButtonLabel: 'Ok',
-                    primaryLink: '/dashboard',
-                    secondaryButtonLabel: 'Add another missing record'
+                    success: {
+                        title: 'Submission sent',
+                        content: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
+                        primaryButtonLabel: 'Ok',
+                        primaryLink: '/dashboard',
+                        secondaryButtonLabel: 'Add another missing record'
+                    },
+                    cancel: {
+                        title: 'Abandoned workflow',
+                        content: 'Workflow has been abandoned',
+                        primaryButtonLabel: 'Ok',
+                        primaryLink: '/dashboard',
+                        secondaryButtonLabel: 'Add another missing record'
+                    }
                 }
             }
         },

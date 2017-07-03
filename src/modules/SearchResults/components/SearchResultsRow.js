@@ -45,7 +45,7 @@ export default class SearchResultsRow extends Component {
                     </FontIcon>
 
                     <span className="claimAuthors">
-                        <span className="allAuthors">{authors.map((author) => (<span>{author.get('rek_author')} </span>))}</span>
+                        <span className="allAuthors">{authors && authors.size > 0 && authors.map((author, index) => (<span key={index}>{author.get('rek_author')} </span>))}</span>
                     </span>
 
                     ({publisher}) {title}.

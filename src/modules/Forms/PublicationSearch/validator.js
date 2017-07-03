@@ -28,9 +28,9 @@ export const validate = values => {
 
     const errors = {};
     const fieldValue = values.get('doiSearch');
-    const validTitle = /^[a-z\s\d\!\?\-]{10,255}$/i;
+    const validTitle = /.{10,255}$/i;
 
-    if (!validation.required(fieldValue) && !isDOIValue(fieldValue) && !isPubMedValue(fieldValue) && !validTitle.test(fieldValue)) {
+    if (!validation.required(fieldValue) && !isDOIValue(fieldValue) && !isPubMedValue(fieldValue) && (fieldValue.trim().length === 0 || !validTitle.test(fieldValue))) {
         errors.doiSearch = locale.pages.addRecord.searchForPublication.errorMsg;
     }
 
