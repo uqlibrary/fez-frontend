@@ -218,6 +218,7 @@ export default class AddAuthors extends Component {
                 this.setState({
                     identifier: selectedMenuItem.identifier,
                     name: selectedMenuItem.name,
+                    identifierLabel: `(${selectedMenuItem.name} - ${selectedMenuItem.identifier})`
                 });
                 this.addAuthor();
             } else {
@@ -263,7 +264,7 @@ export default class AddAuthors extends Component {
             (index >= authorConstants.autoCompleteFirstOption)) {
             this.setState({
                 identifier: selectedMenuItem.identifier,
-                identifierLabel: `(${selectedMenuItem.name} ${selectedMenuItem.identifier})`
+                identifierLabel: `(${selectedMenuItem.name} - ${selectedMenuItem.identifier})`
             });
             this.addAuthor();
         }
