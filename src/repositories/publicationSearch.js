@@ -10,7 +10,7 @@ function performExternalSearch(querystring) {
             resolve(response.data);
         }).catch(e => {
             if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
-                && e.response.hasOwnProperty('status') && e.response.status === 404) {
+                && e.response.hasOwnProperty('status') && (e.response.status === 404 || e.response.status === 500)) {
                 resolve([]);
             } else {
                 reject(e);
