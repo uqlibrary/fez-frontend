@@ -39,6 +39,7 @@ export default class AddAuthors extends Component {
             deleteDialogOpen: false,
             error: '',
             identifier: '',
+            identifierLabel: '',
             name: '',
             nameError: '',
             nameTimeout: null,
@@ -63,7 +64,8 @@ export default class AddAuthors extends Component {
         if (!found) {
             const newAuthor = {
                 name: this.state.name,
-                identifier: this.state.identifier
+                identifier: this.state.identifier,
+                identifierLabel: this.state.identifierLabel
             };
 
             authorsList.push(newAuthor);
@@ -77,6 +79,7 @@ export default class AddAuthors extends Component {
         this.setState({
             error: errorMessage,
             identifier: '',
+            identifierLabel: '',
             name: '',
             nameError: '',
             showIdentifierField: false
@@ -114,7 +117,7 @@ export default class AddAuthors extends Component {
                                 {authorOrderText}
                             </div>
                         </div>
-                        <div className="column is-2-desktop is-2-tablet is-5-mobile is-uqid">{author.get('identifier')}</div>
+                        <div className="column is-2-desktop is-2-tablet is-5-mobile is-uqid">{author.get('identifierLabel')}</div>
                         <div className="column is-2-desktop is-2-tablet is-0-mobile is-reorder">
                             <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === authorConstants.firstRow} onClick={() => this.moveAuthorUp(index)}>
                                 <KeyboardUp />
@@ -246,7 +249,8 @@ export default class AddAuthors extends Component {
         if ((index === authorConstants.autoCompleteEnterKey) ||
             (index >= authorConstants.autoCompleteFirstOption)) {
             this.setState({
-                identifier: selectedMenuItem.identifier
+                identifier: selectedMenuItem.identifier,
+                identifierLabel: `(${selectedMenuItem.name} ${selectedMenuItem.identifier})`
             });
             this.addAuthor();
         }
