@@ -63,7 +63,6 @@ export default class AddRecord extends React.Component {
     }
 
     cancelAddingRecord = () => {
-        console.log('cancelAddingRecord');
         this.props.resetStepper();
     };
 

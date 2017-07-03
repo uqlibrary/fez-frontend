@@ -15,6 +15,7 @@ export const researcherMenuItems = (locale, email, components) => [
     {
         linkTo: '/add-record',
         path: '/add-record',
+        key: `AddRecord${(new Date()).getTime()}`, // added dynamic key allows for component to be recreated if side menu is clicked in conjunction with the reset code within AddRecord component's lifecycle method componentWillUnmount()
         primaryText: locale.menu.addMissingRecord.primaryText,
         component: components.AddRecord
     },
