@@ -64,9 +64,13 @@
         line-height: 15px;
         margin-top: -12px;
         opacity: 0.82;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
       .is-uqid {
         line-height: 40px !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
     }
     .errorMessage {
@@ -126,6 +130,8 @@
       margin-bottom: 0px !important;
       .is-author {
         text-indent: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
       .is-reorder {
         display: none;
@@ -157,20 +163,24 @@
       .is-author {
         text-indent: 12px;
         line-height: 40px !important;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
       }
       .is-subtitle {
         font-size: 10px;
         line-height: 15px;
         margin-top: -12px;
         opacity: 0.82;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
       }
       .is-reorder {
         display: none;
       }
       .is-uqid {
         line-height: 40px !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
       }
     }
     .errorMessage {

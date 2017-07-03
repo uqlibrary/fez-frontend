@@ -124,13 +124,13 @@ export default class AddAuthors extends Component {
 
                  return (
                     <div key={key} className="columns is-gapless is-mobile is-record is-authors">
-                        <div className="column is-7-desktop is-7-tablet is-6-mobile is-author">
+                        <div className="column is-6-desktop is-6-tablet is-6-mobile is-author">
                             {author.get('name')}
                             <div className="priority-author">
                                 {authorOrderText}
                             </div>
                         </div>
-                        <div className="column is-2-desktop is-2-tablet is-5-mobile is-uqid">{author.get('identifierLabel')}</div>
+                        <div className="column is-3-desktop is-3-tablet is-5-mobile is-uqid">{author.get('identifierLabel')}</div>
                         <div className="column is-2-desktop is-2-tablet is-0-mobile is-reorder">
                             <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === authorConstants.firstRow} onClick={() => this.moveAuthorUp(index)}>
                                 <KeyboardUp />
@@ -443,8 +443,8 @@ export default class AddAuthors extends Component {
                 {authorsList && authorsList.size > 0 && (
                     <div className="metadata-container is-authors">
                         <div className="columns is-gapless is-mobile headers">
-                            <div className="column is-7-desktop is-7-tablet is-6-mobile header is-author">Author name</div>
-                            <div className="column is-2-desktop is-2-tablet is-5-mobile header is-uqid">UQ identifier</div>
+                            <div className="column is-6-desktop is-6-tablet is-6-mobile header is-author">Author name</div>
+                            <div className="column is-3-desktop is-3-tablet is-5-mobile header is-uqid">UQ identifier</div>
                             <div className="column is-2-desktop is-2-tablet is-0-mobile header is-reorder">&nbsp;&nbsp;&nbsp;&nbsp;Reorder</div>
                             <div className="column is-1-desktop is-1-tablet is-1-mobile header is-delete">
                                 <IconButton
