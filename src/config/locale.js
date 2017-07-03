@@ -290,7 +290,8 @@ export default {
                         </div>
                     ),
                     button: 'OK'
-                }
+                },
+                claimRecordBtnLabel: 'Claim This Record'
             },
             formButtons: {
                 claimLabel: 'Claim this article',

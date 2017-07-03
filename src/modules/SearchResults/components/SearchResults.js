@@ -40,7 +40,7 @@ export default class SearchResults extends Component {
             };
 
             return (
-                <SearchResultsRow key={new Date()} entry={entry} claimRecordBtnLabel={this.props.claimRecordBtnLabel} />
+                <SearchResultsRow key={index} entry={entry} claimRecordBtnLabel={this.props.claimRecordBtnLabel} />
             );
         });
 

@@ -50,8 +50,6 @@ const handlers = {
 };
 
 export default function journalArticleReducer(state = initialState, action) {
-    console.log(action.type);
-    console.log(actionTypes.FOCUS);
     const handler = handlers[action.type];
     if (!handler) {
         return state;
