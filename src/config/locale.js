@@ -256,10 +256,10 @@ export default {
                     },
                     cancel: {
                         title: 'Abandoned workflow',
-                        content: 'Workflow has been abandoned',
-                        primaryButtonLabel: 'Ok',
+                        content: 'Are you sure you wish to abandon this form?',
+                        primaryButtonLabel: 'Yes',
                         primaryLink: '/dashboard',
-                        secondaryButtonLabel: 'Add another missing record'
+                        secondaryButtonLabel: 'No'
                     }
                 }
             }
