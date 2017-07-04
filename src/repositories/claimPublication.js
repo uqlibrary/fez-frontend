@@ -19,7 +19,7 @@ export function loadUsersPublicationData(username) {
  * Marks the pid list as not theirs
  * @returns {Promise}
  */
-export function markPublicationsNotMine(username, pids) {
+export function markPublicationsDataNotMine(username, pids) {
     return new Promise((resolve, reject) => {
         const data = {
             author_id: username,

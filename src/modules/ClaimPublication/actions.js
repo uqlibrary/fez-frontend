@@ -1,5 +1,5 @@
 // repositories
-import {loadUsersPublicationData}  from 'repositories/claimPublication';
+import {loadUsersPublicationData, markPublicationsDataNotMine}  from 'repositories/claimPublication';
 // repositories
 
 export const PUBLICATION_RESULTS_CLEARED = 'PUBLICATION_RESULTS_CLEARED';
@@ -31,14 +31,13 @@ export function loadUsersPublications(username) {
 }
 
 /**
- * TODO: Fire off call to endpoint to mark the id's that were marked as not theirs
  * Loads the publication types into the application
  * @returns {function(*)}
  */
 export function markPublicationsNotMine(username, pids) {
     return dispatch => {
         dispatch({type: USERS_PUBLICATIONS_LOADING});
-        loadUsersPublicationData(username, pids).then(data => {
+        markPublicationsDataNotMine(username, pids).then(data => {
             dispatch({
                 type: USERS_PUBLICATIONS_LOADED,
                 payload: data

@@ -75,7 +75,7 @@ mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublication);
 // mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublicationEmpty);
 
 // Mock hide publication results endpoint response
-mock.onGet(/(publications\/hide-possible)/).reply(200, hidePublications);
+mock.onPost(/(publications\/hide-possible)/).reply(200, hidePublications);
 
 // Mock the document access types
 mock.onGet('acml/quick-templates').reply(200, documentAccessTypes);
