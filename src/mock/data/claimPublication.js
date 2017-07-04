@@ -869,3 +869,8 @@ export const claimPublication = {
         }
     ]
 };
+
+export const hidePublications = {
+    total: 0,
+    rows: []
+};
