@@ -31,6 +31,7 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
               "rek_volume_number": "122",
             },
             "rek_display_type": "Conference Paper",
+            "rek_pid": 1,
             "rek_title": "The future of HPV vaccination",
           },
           Object {
@@ -62,6 +63,7 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
               "rek_volume_number": "24",
             },
             "rek_display_type": "Conference Paper",
+            "rek_pid": 2,
             "rek_title": "Rapamycin, But Not Tacrolimus, Promotes Cd8 Memory T-Cell Differentiation and Function in the Skin",
           },
           Object {
@@ -873,6 +875,7 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
               "rek_volume_number": "24",
             },
             "rek_display_type": "Journal Article",
+            "rek_pid": 3,
             "rek_title": "200 authors test",
           },
         ]

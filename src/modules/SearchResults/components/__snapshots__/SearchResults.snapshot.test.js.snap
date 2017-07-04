@@ -34,8 +34,7 @@ exports[`Search results snapshots tests renders default search results page 1`] 
     <div>
       Lorem Ipsum
     </div>
-    <SearchResultsRow
-      claimRecordBtnLabel="Claim Record"
+    <withRouter(SearchResultsRow)
       entry={
         Object {
           "authors": Array [

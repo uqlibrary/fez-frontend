@@ -67,8 +67,7 @@ exports[`Claim publication page test renders default claim publication test 1`] 
       <Divider
         inset={false}
       />
-      <SearchResultsRow
-        claimRecordBtnLabel="Claim Record"
+      <withRouter(SearchResultsRow)
         form="ClaimPublicationForm"
         hideClaimButton={true}
       />
