@@ -256,11 +256,11 @@ export default class FileUploader extends PureComponent {
                         </div>
 
                         {this.state.uploadErrorMessage.length > 0 && (
-                            <div className="fileUploadErrorMessage">
-                                <div className="Icon">
+                            <div className="fileUploadErrorMessage columns  ">
+                                <div className="column Icon">
                                     <FontIcon className="material-icons">error</FontIcon>
                                 </div>
-                                <div className="Message">
+                                <div className="column Message">
                                     {this.state.uploadErrorMessage}
                                 </div>
                             </div>
