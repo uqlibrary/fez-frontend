@@ -49,14 +49,15 @@ export default class AddJournalArticleForm extends Component {
         }
 
         if (nextProps.recordSubmissionState.get('submitted')) {
-            const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog;
+            const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog.success;
             this.props.dispatch(showDialogBox(dialogConfig));
             this.props.dispatch(resetStepper());
         }
     }
 
     cancelAddingRecord = () => {
-        // this.props.dispatch(cancelAddRecord(locale.notifications.addRecord.cancelMessage));
+        const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog.cancel;
+        this.props.dispatch(showDialogBox(dialogConfig));
         this.props.dispatch(resetStepper());
     };
 

@@ -25,7 +25,6 @@ export default class PublicationTypeForm extends Component {
         ]),
         maxSearchResults: PropTypes.number,
         publicationTypeLabel: PropTypes.string,
-        selectFirstOptionLabel: PropTypes.string,
         help: PropTypes.object,
         clearSelectedPublicationType: PropTypes.func,
         formValues: PropTypes.object
@@ -78,8 +77,7 @@ export default class PublicationTypeForm extends Component {
             help,
             formValues,
             children,
-            publicationTypeLabel,
-            selectFirstOptionLabel
+            publicationTypeLabel
         } = this.props;
 
         // TODO: Remove the code to disable the menuitems on line 122 as more publication types are built
@@ -112,11 +110,11 @@ export default class PublicationTypeForm extends Component {
                                        fullWidth
                                        floatingLabelText={publicationTypeLabel}
                                        floatingLabelFixed
-                                       hintText={selectFirstOptionLabel}
+                                       hintText={publicationTypeLabel}
                                        formValue={formValues.get('publicationType')}
                                        onChange={loadSelectedPublicationType}
                                        >
-                                    <MenuItem primaryText={selectFirstOptionLabel} disabled />
+                                    <MenuItem primaryText={publicationTypeLabel} disabled />
                                     {
                                         this.state.displayPublicationTypeList.map((item, index) => (
                                             item.id !== 0 ? <MenuItem key={index} value={item.id} primaryText={item.name} disabled={item.name.toLowerCase() !== publicationTypeInformation.documentTypes.JOURNAL_ARTICLE}/> :
