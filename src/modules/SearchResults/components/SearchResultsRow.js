@@ -66,34 +66,34 @@ export default class SearchResultsRow extends Component {
                 </div>
 
                 <div className="claimStats">
-                    {counts.thomson > 0 &&
+                    {counts.thomson && counts.thomson > 0 &&
                     <span>
                         <img src={thompsonIcon} alt="Thomson Routers"
                              data-tip="Thomson Routers Web of Science citation count" data-place="bottom"
                              data-for="claimTooltips"/> {counts.thomson}
                     </span>
                     }
-                    {counts.scopus > 0 &&
+                    {counts.scopus && counts.scopus > 0 &&
                     <span>
                         <img src={scopusIcon} alt="Scopus"
                              data-tip="Scopus citation count"
                              data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.scopus}
                     </span>
                     }
-                    {counts.google > 0 &&
+                    {counts.google && counts.google > 0 &&
                     <span>
                     <img src={googleScholarIcon} alt="Google Scholar"
                          data-tip="Google Scholar citation count" data-for="claimTooltips"
                          style={{marginLeft: '10px'}}/> {counts.google}
                     </span>
                     }
-                    {counts.altmetric > 0 &&
+                    {counts.altmetric && counts.altmetric > 0 &&
                     <span>
                     <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score"
                          data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.altmetric}
                     </span>
                     }
-                    {counts.downloads > 1 && (
+                    {counts.downloads && counts.downloads > 1 && (
                         <span>
                     <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads"
                               data-for="claimTooltips" data-place="bottom"

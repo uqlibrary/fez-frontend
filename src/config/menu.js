@@ -19,15 +19,15 @@ export const researcherMenuItems = (locale, email, components) => [
         component: components.AddRecord
     },
     {
+        path: '/claim-publications/:id',
+        linkTo: '/claim-publications/:id',
+        component: components.ClaimPublicationForm
+    },
+    {
         linkTo: '/claim-publications',
         path: '/claim-publications',
         primaryText: locale.menu.claimPublication.primaryText,
         component: components.ClaimPublication
-    },
-    {
-        path: '/claim-publications/:id',
-        linkTo: '/claim-publications',
-        component: components.ClaimPublicationForm
     },
     {
         divider: true,
