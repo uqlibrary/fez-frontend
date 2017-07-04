@@ -16,6 +16,7 @@ export default class SearchResultsRow extends Component {
     static propTypes = {
         entry: PropTypes.object.isRequired,
         history: PropTypes.object,
+        hideClaimButton: PropTypes.bool,
         claimRecordBtnLabel: PropTypes.string
     };
 
@@ -102,6 +103,7 @@ export default class SearchResultsRow extends Component {
                     )
                     }
 
+                    {!this.props.hideClaimButton &&
                     <div className="claimButtonWrapper">
                         <FlatButton
                             label={this.props.claimRecordBtnLabel}
@@ -110,6 +112,7 @@ export default class SearchResultsRow extends Component {
                             onTouchTap={() => this.claimThisPublication(id)}
                             secondary/>
                     </div>
+                    }
                 </div>
             </div>
         );
