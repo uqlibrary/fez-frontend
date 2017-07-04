@@ -124,13 +124,13 @@ export default class AddAuthors extends Component {
 
                  return (
                     <div key={key} className="columns is-gapless is-mobile is-record is-authors">
-                        <div className="column is-6-desktop is-6-tablet is-6-mobile is-author">
+                        <div className="column is-6-desktop is-6-tablet is-6-mobile is-author" title={author.get('name')}>
                             {author.get('name')}
-                            <div className="priority-author">
+                            <div className="priority-author" title={authorOrderText}>
                                 {authorOrderText}
                             </div>
                         </div>
-                        <div className="column is-3-desktop is-3-tablet is-5-mobile is-uqid">{author.get('identifierLabel')}</div>
+                        <div className="column is-3-desktop is-3-tablet is-5-mobile is-uqid" title={author.get('identifierLabel')}>{author.get('identifierLabel')}</div>
                         <div className="column is-2-desktop is-2-tablet is-0-mobile is-reorder">
                             <IconButton tooltip={authorRowInfo.moveRecordUp} disabled={index === authorConstants.firstRow} onClick={() => this.moveAuthorUp(index)}>
                                 <KeyboardUp />
