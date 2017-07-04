@@ -860,7 +860,7 @@ export const claimPublication = {
             'fez_record_search_key_start_page': {
                 'rek_start_page': 'A19'
             },
-            'rek_title': '2000+ authors test'
+            'rek_title': '200 authors test'
         }
     ]
 };
