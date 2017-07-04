@@ -15,9 +15,18 @@ export function loadUsersPublicationData(username) {
     });
 }
 
-export function markPublicationsNotMine(username) {
+/**
+ * Marks the pid list as not theirs
+ * @returns {Promise}
+ */
+export function markPublicationsNotMine(username, pids) {
     return new Promise((resolve, reject) => {
-        api.get(`publications/hide-possible/${username}`).then(response => {
+        const data = {
+            author_id: username,
+            publications: pids
+        };
+
+        api.post('publications/hide-possible', data).then(response => {
             resolve(response.data);
         }).catch(e => {
             reject(e);

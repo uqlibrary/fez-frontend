@@ -33,9 +33,33 @@ export default class ClaimPublication extends React.Component {
         loadUsersPublications(account.get('id'));
     }
 
+    extractResultSet = () => {
+        const {claimPublicationResults} = this.props;
+        const claimPublicationsInformation = locale.pages.claimPublications;
+        let resultSet = {};
+
+        // limit the number of results
+        if (claimPublicationResults.size > 0 && Immutable.fromJS(claimPublicationResults.get('rows').size > 0)) {
+            resultSet = Immutable.fromJS(claimPublicationResults.get('rows'));
+
+            if (resultSet.length > claimPublicationsInformation.maxSearchResults) {
+                resultSet = resultSet.slice(0, claimPublicationsInformation.maxSearchResults);
+            }
+        }
+
+        return resultSet;
+    };
+
     markPublicationsNotMine = () => {
         const {account, markPublicationsNotMine} = this.props;
-        markPublicationsNotMine(account.get('id'));
+        const resultSet = this.extractResultSet();
+
+        // retrieve the publication ids
+        const pids = resultSet.map(result => {
+            return {pid: result.get('rek_pid')};
+        });
+
+        markPublicationsNotMine(account.get('id'), pids.toJS());
     };
 
     render() {
@@ -49,18 +73,9 @@ export default class ClaimPublication extends React.Component {
             loadingSearch
         } = this.props;
 
-        // limit the number of results
-        let resultSet = {};
-        let noOfResults = 0;
+        const resultSet = this.extractResultSet();
+        const noOfResults = claimPublicationResults.get('total');
 
-        if (claimPublicationResults.size > 0 && Immutable.fromJS(claimPublicationResults.get('rows').size > 0)) {
-            resultSet = Immutable.fromJS(claimPublicationResults.get('rows'));
-            noOfResults = claimPublicationResults.get('total');
-
-            if (resultSet.length > claimPublicationsInformation.maxSearchResults) {
-                resultSet = resultSet.slice(0, claimPublicationsInformation.maxSearchResults);
-            }
-        }
         const resultsCountText = `${resultSet.size} out of ${noOfResults} potential match(es) displayed. Select any item to claim it as your work.`;
         return (
             <div className="layout-fill">

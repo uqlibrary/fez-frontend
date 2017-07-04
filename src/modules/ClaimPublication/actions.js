@@ -35,10 +35,10 @@ export function loadUsersPublications(username) {
  * Loads the publication types into the application
  * @returns {function(*)}
  */
-export function markPublicationsNotMine(username) {
+export function markPublicationsNotMine(username, pids) {
     return dispatch => {
         dispatch({type: USERS_PUBLICATIONS_LOADING});
-        loadUsersPublicationData(username).then(data => {
+        loadUsersPublicationData(username, pids).then(data => {
             dispatch({
                 type: USERS_PUBLICATIONS_LOADED,
                 payload: data
