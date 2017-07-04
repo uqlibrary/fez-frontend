@@ -1,3 +1,4 @@
+export const claimPublicationEmpty = [];
 export const claimPublication = {
     'total': 3,
     'rows': [

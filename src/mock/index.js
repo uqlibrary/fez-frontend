@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {api} from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
@@ -9,7 +10,7 @@ import {externalDoiSearchResultList, internalDoiSearchResultList, externalPubMed
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
-import {claimPublication} from './data/claimPublication';
+import {claimPublication, claimPublicationEmpty} from './data/claimPublication';
 import {documentAccessTypes} from './data/documentAccessTypes';
 import {authorsList} from './data/authors';
 
@@ -71,6 +72,7 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
 
 // Mock claim publication results endpoint response
 mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublication);
+// mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublicationEmpty);
 
 // Mock the document access types
 mock.onGet('acml/quick-templates').reply(200, documentAccessTypes);
