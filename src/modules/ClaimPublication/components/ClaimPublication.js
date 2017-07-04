@@ -52,7 +52,7 @@ export default class ClaimPublication extends React.Component {
         // limit the number of results
         let resultSet = {};
         if (claimPublicationResults.size > 0) {
-            resultSet = Immutable.fromJS(claimPublicationResults.toJS().slice(0, claimPublicationsInformation.maxSearchResults));
+            resultSet = Immutable.fromJS(claimPublicationResults.toJS().rows.slice(0, claimPublicationsInformation.maxSearchResults));
         }
         const noOfResults = claimPublicationsInformation.maxSearchResults > claimPublicationResults.size ? claimPublicationResults.size : claimPublicationsInformation.maxSearchResults;
 
