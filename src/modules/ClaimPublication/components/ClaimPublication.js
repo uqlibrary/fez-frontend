@@ -87,7 +87,7 @@ export default class ClaimPublication extends React.Component {
                     </div>
                 }
 
-                {!loadingSearch && claimPublicationResults.size > 0 &&
+                {!loadingSearch && noOfResults > 0 &&
                     <div>
                         <SearchResults
                             dataSource={resultSet}
@@ -112,7 +112,7 @@ export default class ClaimPublication extends React.Component {
                     </div>
                 }
 
-                {!loadingSearch && claimPublicationResults.size === 0 &&
+                {!loadingSearch && noOfResults === 0 &&
                     <NoMatchingRecords
                         title={noRecordsInformation.title}
                         explanationText={noRecordsInformation.explanationText.replace('[username]', account.get('id'))}
