@@ -3,7 +3,7 @@ import {Card, CardHeader, CardText} from 'material-ui/Card';
 import PropTypes from 'prop-types';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
-import SearchResultsRow from './SearchResultsRow';
+import SearchResultsRow from '../containers/SearchResultsRow';
 
 export default class SearchResults extends Component {
 

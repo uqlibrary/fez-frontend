@@ -15,19 +15,24 @@ export default class SearchResultsRow extends Component {
 
     static propTypes = {
         entry: PropTypes.object.isRequired,
+        history: PropTypes.object,
         claimRecordBtnLabel: PropTypes.string
     };
 
     static defaultProps = {
         claimRecordBtnLabel: 'Claim Record'
-    }
+    };
 
     constructor(props) {
         super(props);
     }
 
+    claimThisPublication = (id) => {
+        this.props.history.push(`/claim-publications/${id}`);
+    };
+
     render() {
-        const {title, journalName, authors, counts, publisher, volumeNumber, issueNumber, startPage, endPage, doi, index} = this.props.entry;
+        const {id, title, journalName, authors, counts, publisher, volumeNumber, issueNumber, startPage, endPage, doi, index} = this.props.entry;
 
         return (
             <div className="claimWrapper">
@@ -102,6 +107,7 @@ export default class SearchResultsRow extends Component {
                             label={this.props.claimRecordBtnLabel}
                             autoFocus={index === 0}
                             keyboardFocused={index === 0}
+                            onTouchTap={() => this.claimThisPublication(id)}
                             secondary/>
                     </div>
                 </div>
