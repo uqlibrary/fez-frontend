@@ -311,59 +311,59 @@ export default {
             formButtons: {
                 claimLabel: 'Claim this article',
                 notMineLabel: 'None of these publications are mine'
-            }
-        },
-    },
-    claimPublicationForm: {
-        title: 'Claim a publication',
-        publicationDetails: {
-            title: 'You are claiming to be an author for the following item:',
-            help: {
+            },
+            form: {
                 title: 'Claim a publication',
-                text: (
-                    <div>
-                        <p>
-                            Mauris pharetra vel arcu in hendrerit. Ut iaculis, quam id cursus fringilla, velit enim sodales dui, sed commodo massa justo quis dui. Nulla ornare massa nibh, quis laoreet eros ultrices nec. Curabitur efficitur ipsum ut metus dignissim ornare. Vestibulum fringilla viverra tortor ac hendrerit.
-                        </p>
-                    </div>
-                ),
-                button: 'OK'
-            },
-        },
-        comments: {
-            title: 'If necessary, please suggest changes or upload additional files below',
-            fields: {
-                descriptionLabel: 'Type edits/changes/comments here'
+                publicationDetails: {
+                    title: 'You are claiming to be an author for the following item:',
+                    help: {
+                        title: 'Claim a publication',
+                        text: (
+                            <div>
+                                <p>
+                                    Mauris pharetra vel arcu in hendrerit. Ut iaculis, quam id cursus fringilla, velit enim sodales dui, sed commodo massa justo quis dui. Nulla ornare massa nibh, quis laoreet eros ultrices nec. Curabitur efficitur ipsum ut metus dignissim ornare. Vestibulum fringilla viverra tortor ac hendrerit.
+                                </p>
+                            </div>
+                        ),
+                        button: 'OK'
+                    },
+                },
+                comments: {
+                    title: 'If necessary, please suggest changes or upload additional files below',
+                    fields: {
+                        descriptionLabel: 'Type edits/changes/comments here'
+                    }
+                },
+                files: {
+                    title: 'Upload new files',
+                    fields: {
+                        filenameLabel: 'Filename selected',
+                        filenameRestrictions: (
+                            <div className="fileInstructions">
+                                <h3>File name restrictions</h3>
+                                <div style={{width: '100%'}}>
+                                    <ul>
+                                        <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
+                                        <li>Only numbers and lowercase characters in the file extension</li>
+                                        <li>Under 45 characters</li>
+                                        <li>Only one file extension (on period (.) character) and</li>
+                                        <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        ),
+                        accessConditionsLabel: 'Access conditions',
+                        embargoDateLabel: 'Embargo date',
+                        descriptionLabel: 'Description'
+                    },
+                    buttons: {
+                        browseLabel: 'Browse files'
+                    }
+                },
+                formButtons: {
+                    claimLabel: 'Claim this publication'
+                }
             }
-        },
-        files: {
-            title: 'Upload new files',
-            fields: {
-                filenameLabel: 'Filename selected',
-                filenameRestrictions: (
-                    <div className="fileInstructions">
-                        <h3>File name restrictions</h3>
-                        <div style={{width: '100%'}}>
-                            <ul>
-                                <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
-                                <li>Only numbers and lowercase characters in the file extension</li>
-                                <li>Under 45 characters</li>
-                                <li>Only one file extension (on period (.) character) and</li>
-                                <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
-                            </ul>
-                        </div>
-                    </div>
-                ),
-                accessConditionsLabel: 'Access conditions',
-                embargoDateLabel: 'Embargo date',
-                descriptionLabel: 'Description'
-            },
-            buttons: {
-                browseLabel: 'Browse files'
-            }
-        },
-        formButtons: {
-            claimLabel: 'Claim this publication'
         }
     },
     sharedComponents: {

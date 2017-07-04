@@ -10,7 +10,7 @@ import {externalDoiSearchResultList} from '../../../mock/data/publicationSearch'
 
 function setup(ds) {
     const props = {
-        searchResultsList: Immutable.fromJS(ds),
+        claimPublicationResults: Immutable.fromJS(ds),
         loadUsersPublications: jest.fn(),
         markPublicationsNotMine: jest.fn()
     };

@@ -36,7 +36,7 @@ export default class ClaimPublicationForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const claimPublicationsInformation = locale.pages.claimPublicationForm;
+        const claimPublicationsInformation = locale.pages.claimPublications.form;
         const publicationDetailsInformation = claimPublicationsInformation.publicationDetails;
         const commentsInformation = claimPublicationsInformation.comments;
         const fileInformation = claimPublicationsInformation.files;
