@@ -51,11 +51,17 @@ export default class ClaimPublication extends React.Component {
 
         // limit the number of results
         let resultSet = {};
-        if (claimPublicationResults.size > 0) {
-            resultSet = Immutable.fromJS(claimPublicationResults.get('rows').toJS().slice(0, claimPublicationsInformation.maxSearchResults));
+        let noOfResults = 0;
+
+        if (claimPublicationResults.size > 0 && Immutable.fromJS(claimPublicationResults.get('rows').size > 0)) {
+            resultSet = Immutable.fromJS(claimPublicationResults.get('rows'));
+            noOfResults = claimPublicationResults.get('total');
+
+            if (resultSet.length > claimPublicationsInformation.maxSearchResults) {
+                resultSet = resultSet.slice(0, claimPublicationsInformation.maxSearchResults);
+            }
         }
-        const noOfResults = claimPublicationsInformation.maxSearchResults > claimPublicationResults.size ? claimPublicationResults.size : claimPublicationsInformation.maxSearchResults;
-        const resultsCountText = `${noOfResults} out of ${claimPublicationResults.size} potential match(es) displayed. Select any item to claim it as your work.`;
+        const resultsCountText = `${resultSet.size} out of ${noOfResults} potential match(es) displayed. Select any item to claim it as your work.`;
         return (
             <div className="layout-fill">
                 <h1 className="page-title display-1">{claimPublicationsInformation.title}</h1>

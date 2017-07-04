@@ -17,3 +17,16 @@ form .column {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
 }
+
+
+// Bulma helper
+@media (max-width: 768px){
+  .is-hidden-mobile{
+    display: none !important;
+  }
+}
+
+// remove the X clear button in microsoft edge
+input::-ms-clear {
+  display: none;
+}

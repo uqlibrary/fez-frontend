@@ -4,7 +4,6 @@ import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -139,15 +138,15 @@ export default class AddRecord extends React.Component {
                         {!this.props.loadingSearch &&
                             <div className="layout-card">
                                     <div className="columns">
-                                        <div className="column is-hidden-mobile" />
-                                        <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
-                                        <FlatButton
+                                        <div className="column is-hidden-mobile"/>
+                                        <div className="column is-narrow-desktop">
+                                        <RaisedButton
+                                            fullWidth
                                             label={buttonLabels.abandon}
                                             onTouchTap={this.handlePrev}
-                                            fullWidth
                                         />
                                         </div>
-                                        <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
+                                        <div className="column is-narrow-desktop">
                                         <RaisedButton
                                             label="Create a new espace record"
                                             secondary
@@ -182,7 +181,7 @@ export default class AddRecord extends React.Component {
 
                             {showButton &&
                                 <div style={{maxWidth: '1200px', margin: '24px auto', width: '90%', textAlign: 'right'}}>
-                                    <FlatButton
+                                    <RaisedButton
                                         label={buttonLabels.abandon}
                                         onTouchTap={this.cancelAddingRecord}/>
                                 </div>

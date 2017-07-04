@@ -4,7 +4,6 @@ import MenuItem from 'material-ui/MenuItem';
 import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import {AddAuthors, FileUploader, SelectField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
@@ -403,13 +402,13 @@ export default class AddJournalArticleForm extends Component {
                 <div className="layout-card">
                     <div className="columns">
                         <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
-                            <FlatButton
+                        <div className="column is-narrow-desktop" style={{marginBottom: 24}}>
+                           <RaisedButton
                                 fullWidth
                                 label={buttonLabels.abandon}
                                 onTouchTap={this.cancelAddingRecord}/>
                         </div>
-                        <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
+                        <div className="column is-narrow-desktop">
                             <RaisedButton
                                 secondary
                                 fullWidth

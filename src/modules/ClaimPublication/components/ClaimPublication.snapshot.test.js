@@ -6,7 +6,7 @@ import toJson from 'enzyme-to-json';
 import Immutable from 'immutable';
 
 import ClaimPublication from './ClaimPublication';
-import {externalDoiSearchResultList} from '../../../mock/data/publicationSearch';
+import {claimPublication} from 'mock/data/claimPublication';
 
 function setup(ds) {
     const props = {
@@ -19,7 +19,7 @@ function setup(ds) {
 
 describe('Add record page snapshots tests', () => {
     it('renders default add record page', () => {
-        const app = setup(externalDoiSearchResultList);
+        const app = setup(claimPublication);
         expect(toJson(app)).toMatchSnapshot();
     });
 });
