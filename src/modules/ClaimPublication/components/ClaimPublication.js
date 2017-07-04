@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
+import Immutable from 'immutable';
 
 // forms & custom components
 import {SearchResults} from 'modules/SearchResults';
@@ -39,6 +40,11 @@ export default class ClaimPublication extends React.Component {
             markPublicationsNotMine
         } = this.props;
 
+        // limit the number of results
+        let resultSet = {};
+        if (claimPublicationResults.size > 0) {
+            resultSet = Immutable.fromJS(claimPublicationResults.toJS().slice(0, claimPublicationsInformation.maxSearchResults));
+        }
         const noOfResults = claimPublicationsInformation.maxSearchResults > claimPublicationResults.size ? claimPublicationResults.size : claimPublicationsInformation.maxSearchResults;
 
         return (
@@ -54,7 +60,7 @@ export default class ClaimPublication extends React.Component {
                 {!this.props.loadingSearch && claimPublicationResults.size > 0 &&
                     <div>
                         <SearchResults
-                            dataSource={claimPublicationResults}
+                            dataSource={resultSet}
                             title={resultsInformation.title}
                             explanationText={resultsInformation.explanationText}
                             claimRecordBtnLabel={resultsInformation.claimRecordBtnLabel}
