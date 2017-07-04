@@ -18,8 +18,8 @@ ClaimPublicationContainer = connect((state) => {
     };
 }, dispatch => {
     return {
-        loadUsersPublications: (userId) => dispatch(loadUsersPublications(userId)),
-        markPublicationsNotMine: () => dispatch(markPublicationsNotMine())
+        loadUsersPublications: (username) => dispatch(loadUsersPublications(username)),
+        markPublicationsNotMine: (username) => dispatch(markPublicationsNotMine(username))
     };
 })(ClaimPublicationContainer);
 

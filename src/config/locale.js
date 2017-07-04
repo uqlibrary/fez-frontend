@@ -291,7 +291,22 @@ export default {
                     ),
                     button: 'OK'
                 },
-                claimRecordBtnLabel: 'Claim This Record'
+                claimRecordBtnLabel: 'Claim This Record',
+                noMatchingPublications: {
+                    title: 'No matching publications found',
+                    explanationText: 'No publications were found to match [username].',
+                    help: {
+                        title: 'No publications found',
+                        text: (
+                            <div>
+                                <p>
+                                    Help on no publications found...
+                                </p>
+                            </div>
+                        ),
+                        button: 'OK'
+                    }
+                }
             },
             formButtons: {
                 claimLabel: 'Claim this article',

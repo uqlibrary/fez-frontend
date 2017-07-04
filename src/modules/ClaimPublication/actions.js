@@ -16,10 +16,10 @@ export const USER_PUBLICATIONS_MARKED_NOT_MINE_COMPLETED = 'USER_PUBLICATIONS_MA
  * Loads the publication types into the application
  * @returns {function(*)}
  */
-export function loadUsersPublications(userId) {
+export function loadUsersPublications(username) {
     return dispatch => {
         dispatch({type: USERS_PUBLICATIONS_LOADING});
-        loadUsersPublicationData(userId).then(data => {
+        loadUsersPublicationData(username).then(data => {
             dispatch({
                 type: USERS_PUBLICATIONS_LOADED,
                 payload: data
@@ -35,10 +35,17 @@ export function loadUsersPublications(userId) {
  * Loads the publication types into the application
  * @returns {function(*)}
  */
-export function markPublicationsNotMine() {
-    return {
-        type: USER_PUBLICATIONS_MARKED_NOT_MINE_COMPLETED,
-        payload: {}
+export function markPublicationsNotMine(username) {
+    return dispatch => {
+        dispatch({type: USERS_PUBLICATIONS_LOADING});
+        loadUsersPublicationData(username).then(data => {
+            dispatch({
+                type: USERS_PUBLICATIONS_LOADED,
+                payload: data
+            });
+        }).catch((error) => {
+            throw(error);
+        });
     };
 }
 

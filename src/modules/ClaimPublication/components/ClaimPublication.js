@@ -5,6 +5,7 @@ import Immutable from 'immutable';
 
 // forms & custom components
 import {SearchResults} from 'modules/SearchResults';
+import {NoMatchingRecords} from 'modules/NoMatchingRecords';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import './ClaimPublication.scss';
@@ -28,16 +29,24 @@ export default class ClaimPublication extends React.Component {
     }
 
     componentDidMount() {
-        const {account} = this.props;
-        this.props.loadUsersPublications(account.id);
+        const {account, loadUsersPublications} = this.props;
+        loadUsersPublications(account.get('id'));
     }
+
+    markPublicationsNotMine = () => {
+        const {account, markPublicationsNotMine} = this.props;
+        markPublicationsNotMine(account.get('id'));
+    };
 
     render() {
         const claimPublicationsInformation = locale.pages.claimPublications;
         const resultsInformation = claimPublicationsInformation.claimPublicationResults;
+        const noRecordsInformation = resultsInformation.noMatchingPublications;
+        const noMatchingRecordsInformation = locale.pages.addRecord.noMatchingRecords;
         const {
+            account,
             claimPublicationResults,
-            markPublicationsNotMine
+            loadingSearch
         } = this.props;
 
         // limit the number of results
@@ -51,13 +60,13 @@ export default class ClaimPublication extends React.Component {
             <div className="layout-fill">
                 <h1 className="page-title display-1">{claimPublicationsInformation.title}</h1>
 
-                {this.props.loadingSearch &&
+                {loadingSearch &&
                     <div className="is-centered">
                         <InlineLoader message="Searching for your publications..." />
                     </div>
                 }
 
-                {!this.props.loadingSearch && claimPublicationResults.size > 0 &&
+                {!loadingSearch && claimPublicationResults.size > 0 &&
                     <div>
                         <SearchResults
                             dataSource={resultSet}
@@ -71,10 +80,18 @@ export default class ClaimPublication extends React.Component {
                                 {noOfResults} matches shown of {claimPublicationResults.size}
                             </div>
                             <div className="column has-text-right">
-                                <RaisedButton label={claimPublicationsInformation.formButtons.notMineLabel} primary onTouchTap={markPublicationsNotMine} />
+                                <RaisedButton label={claimPublicationsInformation.formButtons.notMineLabel} primary onTouchTap={this.markPublicationsNotMine} />
                             </div>
                         </div>
                     </div>
+                }
+
+                {!loadingSearch && claimPublicationResults.size === 0 &&
+                    <NoMatchingRecords
+                        title={noRecordsInformation.title}
+                        explanationText={noRecordsInformation.explanationText.replace('[username]', account.get('id'))}
+                        help={noMatchingRecordsInformation.help}
+                    />
                 }
             </div>
         );
