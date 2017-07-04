@@ -31,7 +31,7 @@ export default {
             primaryText: 'Add a missing record'
         },
         claimPublication: {
-            primaryText: 'Claim publications'
+            primaryText: 'Claim possible publications'
         },
         manageUsers: {
             primaryText: 'Manage users'
@@ -269,7 +269,7 @@ export default {
             }
         },
         claimPublications: {
-            title: 'Claim publications',
+            title: 'Claim possible publications',
             maxSearchResults: 5,
             claimPublicationResults: {
                 title: 'Possible publications found',

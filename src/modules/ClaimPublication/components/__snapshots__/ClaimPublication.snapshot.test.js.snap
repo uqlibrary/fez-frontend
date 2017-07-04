@@ -7,7 +7,7 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
   <h1
     className="page-title display-1"
   >
-    Claim publications
+    Claim possible publications
   </h1>
   <div>
     <ReduxForm
@@ -880,7 +880,7 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
           },
         ]
       }
-      explanationText="Select any items below to claim them as your work"
+      explanationText="3 out of 3 potential match(es) displayed. Select any item to claim it as your work."
       help={
         Object {
           "button": "OK",
@@ -895,27 +895,27 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
       title="Possible publications found"
     />
     <div
-      className="columns notMineButtonWrapper"
+      className="layout-card"
     >
       <div
-        className="column"
+        className="columns"
       >
-        2
-         matches shown of 
-        2
-      </div>
-      <div
-        className="column has-text-right"
-      >
-        <RaisedButton
-          disabled={false}
-          fullWidth={false}
-          label="None of these publications are mine"
-          labelPosition="after"
-          onTouchTap={[Function]}
-          primary={true}
-          secondary={false}
+        <div
+          className="column is-hidden-mobile"
         />
+        <div
+          className="column is-narrow-desktop is-12-mobile is-pulled-right"
+        >
+          <RaisedButton
+            disabled={false}
+            fullWidth={true}
+            label="None of these publications are mine"
+            labelPosition="after"
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={true}
+          />
+        </div>
       </div>
     </div>
   </div>
