@@ -402,7 +402,7 @@ export default class AddJournalArticleForm extends Component {
                 </Card>
                 }
                 <div className="layout-card">
-                    <div className="columns is-gapless">
+                    <div className="columns">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
                             <FlatButton
