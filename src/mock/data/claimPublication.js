@@ -20,7 +20,8 @@ export const claimPublication = {
                     'rek_author_order': 1
                 }
             ],
-            'rek_title': 'The future of HPV vaccination'
+            'rek_title': 'The future of HPV vaccination',
+            'rek_thomson_citation_count': 5
         },
         {
             'rek_pid': 2,
