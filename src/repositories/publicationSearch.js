@@ -1,23 +1,40 @@
 import {api} from 'config';
 
+const SOURCE_WOS = 'wos';
+const SOURCE_CROSSREF = 'crossref';
+const SOURCE_SCOPUS = 'scopus';
+const SOURCE_PUBMED = 'pubmed';
+
+function processError(error, resolve, reject) {
+    if (error.hasOwnProperty('response') && error.response !== null && typeof(error.response) !== 'undefined'
+        && error.response.hasOwnProperty('status') && (error.response.status === 404 || error.response.status === 500 || error.response.status === 422)) {
+        resolve([]);
+    } else {
+        reject(error);
+        throw error;
+    }
+}
+
+function getPromise(url) {
+    return new Promise((resolve, reject) => {
+        api.get(url)
+            .then(response => { resolve(response.data); })
+            .catch(error => { processError(error, resolve, reject); });
+    });
+}
+
 /**
  * Generic search function that searches externally
  * @returns {Promise}
  */
 function performExternalSearch(querystring) {
-    return new Promise((resolve, reject) => {
-        api.get(`search/external?${querystring}`).then(response => {
-            resolve(response.data);
-        }).catch(e => {
-            if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
-                && e.response.hasOwnProperty('status') && (e.response.status === 404 || e.response.status === 500)) {
-                resolve([]);
-            } else {
-                reject(e);
-                throw e;
-            }
-        });
-    });
+    const url = encodeURI(`search/external?${querystring}`);
+    return  Promise.all([
+        getPromise(`${url}&source=${SOURCE_WOS}`),
+        getPromise(`${url}&source=${SOURCE_SCOPUS}`),
+        getPromise(`${url}&source=${SOURCE_PUBMED}`),
+        getPromise(`${url}&source=${SOURCE_CROSSREF}`)
+    ]);
 }
 
 /**
@@ -62,5 +79,5 @@ export function searchPubmedEndpoint(pubMedId) {
  */
 export function searchTitleEndpoint(rekDisplayType, title) {
     // TODO: update source API endpoint, needs to all all external sources
-    return performSearch(`source=wos&rek_display_type=${rekDisplayType}&title=${title}`);
+    return performSearch(`rek_display_type=${rekDisplayType}&title=${title}`);
 }

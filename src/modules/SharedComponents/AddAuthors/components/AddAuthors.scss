@@ -58,15 +58,19 @@
         line-height: 40px !important;
         text-overflow: ellipsis;
         overflow: hidden;
-      }
-      .is-subtitle {
-        font-size: 10px;
-        line-height: 15px;
-        margin-top: -12px;
-        opacity: 0.82;
+        white-space: nowrap;
+        .priority-author {
+          padding: 0px !important;
+          margin-top: -8px !important;
+          font-size: 10px;
+          line-height: 10px;
+          color: lighten($text-color, 33%);
+        }
       }
       .is-uqid {
         line-height: 40px !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
     }
     .errorMessage {
@@ -126,6 +130,8 @@
       margin-bottom: 0px !important;
       .is-author {
         text-indent: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
       .is-reorder {
         display: none;
@@ -157,20 +163,34 @@
       .is-author {
         text-indent: 12px;
         line-height: 40px !important;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        .priority-author {
+          padding: 0px !important;
+          margin-top: -10px !important;
+          font-size: 10px;
+          line-height: 10px;
+          color: lighten($text-color, 33%);
+        }
       }
       .is-subtitle {
         font-size: 10px;
         line-height: 15px;
         margin-top: -12px;
         opacity: 0.82;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
       }
       .is-reorder {
         display: none;
       }
       .is-uqid {
         line-height: 40px !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
       }
     }
     .errorMessage {
