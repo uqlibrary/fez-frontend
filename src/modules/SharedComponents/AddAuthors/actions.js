@@ -3,10 +3,21 @@ import {loadAuthorsData} from 'repositories/authors';
 
 // Types
 export const AUTHORS_LIST_UPDATED = 'AUTHORS_LIST_UPDATED';
+export const AUTHORS_LIST_RESET = 'AUTHORS_LIST_RESET';
 export const AUTHORS_SEARCH_RESULTS_RESET = 'AUTHORS_SEARCH_RESULTS_RESET';
 export const AUTHORS_SEARCH_COMPLETED = 'AUTHORS_SEARCH_COMPLETED';
 export const IDENTIFIERS_SEARCH_COMPLETED = 'IDENTIFIERS_SEARCH_COMPLETED';
 export const IDENTIFIERS_SEARCH_RESULTS_RESET = 'IDENTIFIERS_SEARCH_RESULTS_RESET';
+
+/**
+ * Updates the redux state with an empty author search results
+ * @returns {{type: string}}
+ */
+export function clearAuthorsList() {
+    return {
+        type: AUTHORS_LIST_RESET
+    };
+}
 
 /**
  * Updates the redux state with an empty author search results

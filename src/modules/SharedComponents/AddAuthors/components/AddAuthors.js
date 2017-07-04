@@ -21,6 +21,7 @@ export default class AddAuthors extends Component {
     static propTypes = {
         authorsList: PropTypes.object,
         authorsSearchResults: PropTypes.object,
+        clearAuthorsList: PropTypes.func,
         clearAuthorsSearchResults: PropTypes.func,
         clearIdentifiersSearchResults: PropTypes.func,
         identifiersSearchResults: PropTypes.object,
@@ -53,6 +54,14 @@ export default class AddAuthors extends Component {
         // another solution, close the box when user tries to scroll
         const div = document.querySelector('div.layout-fill.align-stretch');
         div.addEventListener('scroll', this.handleParentContainerScroll.bind(this));
+    }
+
+    componentWillUnmount() {
+        const {clearAuthorsList, clearAuthorsSearchResults, clearIdentifiersSearchResults} = this.props;
+
+        clearAuthorsList();
+        clearAuthorsSearchResults();
+        clearIdentifiersSearchResults();
     }
 
     handleParentContainerScroll() {

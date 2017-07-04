@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {clearAuthorsSearchResults, clearIdentifiersSearchResults, searchFromAuthorsField, searchFromIdentifiersField, updateAuthorsList} from '../actions';
+import {clearAuthorsList, clearAuthorsSearchResults, clearIdentifiersSearchResults, searchFromAuthorsField, searchFromIdentifiersField, updateAuthorsList} from '../actions';
 import AddAuthors from '../components/AddAuthors';
 
 const AddAuthorsContainer = connect((state) => {
@@ -11,6 +11,7 @@ const AddAuthorsContainer = connect((state) => {
     };
 }, dispatch => {
     return {
+        clearAuthorsList: () => dispatch(clearAuthorsList()),
         clearAuthorsSearchResults: () => dispatch(clearAuthorsSearchResults()),
         clearIdentifiersSearchResults: () => dispatch(clearIdentifiersSearchResults()),
         searchFromAuthorsField: (querystring) => dispatch(searchFromAuthorsField(querystring)),
