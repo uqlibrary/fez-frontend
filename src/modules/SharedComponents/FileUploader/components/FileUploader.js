@@ -227,7 +227,7 @@ export default class FileUploader extends PureComponent {
         let dropzoneRef;
 
         return (
-            <div style={{marginBottom: '-60px'}}>
+            <div>
                 <Card className="layout-card">
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">

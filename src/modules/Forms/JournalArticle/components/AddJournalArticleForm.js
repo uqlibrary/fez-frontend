@@ -4,6 +4,7 @@ import MenuItem from 'material-ui/MenuItem';
 import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import {AddAuthors, FileUploader, SelectField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
@@ -111,7 +112,7 @@ export default class AddJournalArticleForm extends Component {
             rek_status: SUBMITTED_FOR_APPROVAL,
             rek_display_type: DISPLAY_TYPE,
             fez_record_search_key_ismemberof: [
-                { rek_ismemberof: MEMBER_OF }
+                {rek_ismemberof: MEMBER_OF}
             ]
         };
 
@@ -257,7 +258,9 @@ export default class AddJournalArticleForm extends Component {
                                        fullWidth
                                        floatingLabelText={journalArticleInformation.fields.publicationSubType}
                                        validate={[validation.required]}>
-                                        <MenuItem primaryText={journalArticleInformation.fields.selectFirstPublicationSubTypeLabel} disabled />
+                                    <MenuItem
+                                        primaryText={journalArticleInformation.fields.selectFirstPublicationSubTypeLabel}
+                                        disabled/>
                                     {
                                         (this.props.publicationSubTypeList.map(item => (
                                             <MenuItem key={item.get('controlled_vocab').get('cvo_id')}
@@ -290,7 +293,7 @@ export default class AddJournalArticleForm extends Component {
                         </div>
                     </CardHeader>
                     <CardText className="body-1">
-                        <AddAuthors />
+                        <AddAuthors/>
                     </CardText>
                 </Card>
 
@@ -340,7 +343,8 @@ export default class AddJournalArticleForm extends Component {
 
                         <div className="columns">
                             <div className="column">
-                                <Field component={TextField} name="fez_record_search_key_article_number.rek_article_number"
+                                <Field component={TextField}
+                                       name="fez_record_search_key_article_number.rek_article_number"
                                        type="text" fullWidth multiLine
                                        floatingLabelText={optionalInformation.fields.articleNumber}/>
                             </div>
@@ -353,23 +357,23 @@ export default class AddJournalArticleForm extends Component {
                                        rows={1} floatingLabelText={optionalInformation.fields.notesLabel}/>
                             </div>
                         </div>
-                                <div className="columns">
-                                    <div className="column">
-                                        <Field component={TextField}
-                                               name="publicationUrl"
-                                               type="text"
-                                               fullWidth
-                                               floatingLabelText={optionalInformation.fields.urlLabel}
-                                               validate={[validation.url, validation.maxLength255]}
-                                        />
-                                    </div>
-                                </div>
+                        <div className="columns">
+                            <div className="column">
+                                <Field component={TextField}
+                                       name="publicationUrl"
+                                       type="text"
+                                       fullWidth
+                                       floatingLabelText={optionalInformation.fields.urlLabel}
+                                       validate={[validation.url, validation.maxLength255]}
+                                />
+                            </div>
+                        </div>
                     </CardText>
                 </Card>
 
                 {/* Files */}
                 <FormSection name={fileInformation.formSectionPrefix}>
-                    <FileUploader />
+                    <FileUploader/>
                 </FormSection>
 
                 {recordSubmissionState && recordSubmissionState.get('failed') &&
@@ -386,8 +390,10 @@ export default class AddJournalArticleForm extends Component {
                         <div className="columns">
                             <div className="column">
                                 <p>
-                                {recordSubmissionErrorMessage && recordSubmissionErrorMessage.message && <span>{recordSubmissionErrorMessage.message}</span>}
-                                {(!recordSubmissionErrorMessage || !recordSubmissionErrorMessage.message) && <span>Unexpected error.</span>}
+                                    {recordSubmissionErrorMessage && recordSubmissionErrorMessage.message &&
+                                    <span>{recordSubmissionErrorMessage.message}</span>}
+                                    {(!recordSubmissionErrorMessage || !recordSubmissionErrorMessage.message) &&
+                                    <span>Unexpected error.</span>}
                                 </p>
                                 <p> Review your data and try again. </p>
                             </div>
@@ -395,18 +401,24 @@ export default class AddJournalArticleForm extends Component {
                     </CardText>
                 </Card>
                 }
-
-                <div className="buttonWrapper">
-                    <RaisedButton
-                        label={buttonLabels.abandon}
-                        style={{marginLeft: '12px'}}
-                        onTouchTap={this.cancelAddingRecord} />
-                    <RaisedButton
-                        secondary
-                        label={ recordSubmissionState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.submitForApproval}
-                        style={{marginLeft: '12px'}}
-                        disabled={recordSubmissionState.get('submitting')}
-                        onClick={handleSubmit(this.tryFileUpload)} />
+                <div className="layout-card">
+                    <div className="columns is-gapless">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
+                            <FlatButton
+                                fullWidth
+                                label={buttonLabels.abandon}
+                                onTouchTap={this.cancelAddingRecord}/>
+                        </div>
+                        <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
+                            <RaisedButton
+                                secondary
+                                fullWidth
+                                label={recordSubmissionState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.submitForApproval}
+                                disabled={recordSubmissionState.get('submitting')}
+                                onClick={handleSubmit(this.tryFileUpload)}/>
+                        </div>
+                    </div>
                 </div>
             </form>
         );
