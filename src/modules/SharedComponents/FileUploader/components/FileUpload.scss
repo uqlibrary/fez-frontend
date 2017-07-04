@@ -43,16 +43,13 @@
 
 .fileUploadErrorMessage {
   padding: 12px;
-  height: 48px;
-  line-height: 48px;
-  margin: -24px auto 24px auto;
+  line-height: 16px;
   color: darken($error-color, 10%);
-  width: calc(100% - 24px);
   border: 1px solid darken($error-color, 10%);
   background-color: rgba($error-color, 0.025);
   .Icon{
     float: left;
-    margin: 0px 10px;
+    margin: 0 10px 10px 0;
     font-size: 38px;
     .material-icons{
       color: darken($error-color, 10%) !important;
