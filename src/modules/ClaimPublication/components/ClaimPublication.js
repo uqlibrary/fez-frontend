@@ -11,6 +11,7 @@ import './ClaimPublication.scss';
 export default class ClaimPublication extends React.Component {
 
     static propTypes = {
+        account: PropTypes.object,
         claimPublicationResults: PropTypes.object,
         loadingSearch: PropTypes.bool,
         loadUsersPublications: PropTypes.func,
@@ -26,13 +27,17 @@ export default class ClaimPublication extends React.Component {
     }
 
     componentDidMount() {
-        this.props.loadUsersPublications(123);
+        const {account} = this.props;
+        this.props.loadUsersPublications(account.id);
     }
 
     render() {
         const claimPublicationsInformation = locale.pages.claimPublications;
         const resultsInformation = claimPublicationsInformation.claimPublicationResults;
-        const {claimPublicationResults, markPublicationsNotMine} = this.props;
+        const {
+            claimPublicationResults,
+            markPublicationsNotMine
+        } = this.props;
 
         const noOfResults = claimPublicationsInformation.maxSearchResults > claimPublicationResults.size ? claimPublicationResults.size : claimPublicationsInformation.maxSearchResults;
 

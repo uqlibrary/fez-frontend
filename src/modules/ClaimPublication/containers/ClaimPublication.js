@@ -9,8 +9,10 @@ let ClaimPublicationContainer = reduxForm({
 })(ClaimPublication);
 
 ClaimPublicationContainer = connect((state) => {
+    const appState = state.get('app');
     const claimPublications = state.get('claimPublication');
     return {
+        account: appState.get('account'),
         loadingSearch: claimPublications.get('loadingSearch'),
         claimPublicationResults: claimPublications.get('claimPublicationResults')
     };
