@@ -9,6 +9,13 @@ export const PUBMED_SEARCH_COMPLETED = 'PUBMED_SEARCH_COMPLETED';
 export const TITLE_SEARCH_LOADING = 'TITLE_SEARCH_LOADING';
 export const TITLE_SEARCH_COMPLETED = 'TITLE_SEARCH_COMPLETED';
 
+// search is performed on multiple sources, flatten search results into a single array of items
+
+function flattenResults(results) {
+    const flattenedResults = [].concat.apply([], results);
+    return flattenedResults.slice(0, Math.min(5, flattenedResults.length));
+}
+
 /**
  * Performs a DOI search
  * @returns {function(*)}
@@ -16,10 +23,10 @@ export const TITLE_SEARCH_COMPLETED = 'TITLE_SEARCH_COMPLETED';
 export function loadDoiResultsList(doi) {
     return dispatch => {
         dispatch({type: DOI_SEARCH_LOADING});
-        searchDoiEndpoint(doi).then(authorList => {
+        searchDoiEndpoint(doi).then(results => {
             dispatch({
                 type: DOI_SEARCH_COMPLETED,
-                payload: authorList
+                payload: flattenResults(results)
             });
         }).catch((error) => {
             throw(error);
@@ -34,10 +41,10 @@ export function loadDoiResultsList(doi) {
 export function loadPubmedResultsList(pubMedId) {
     return dispatch => {
         dispatch({type: PUBMED_SEARCH_LOADING});
-        searchPubmedEndpoint(pubMedId).then(payload => {
+        searchPubmedEndpoint(pubMedId).then(results => {
             dispatch({
                 type: PUBMED_SEARCH_COMPLETED,
-                payload: payload
+                payload: flattenResults(results)
             });
         }).catch((error) => {
             throw(error);
@@ -52,10 +59,10 @@ export function loadPubmedResultsList(pubMedId) {
 export function loadTitleResultsList(rekDisplayType, title) {
     return dispatch => {
         dispatch({type: TITLE_SEARCH_LOADING});
-        searchTitleEndpoint(rekDisplayType, title).then(payload => {
+        searchTitleEndpoint(rekDisplayType, title).then(results => {
             dispatch({
                 type: TITLE_SEARCH_COMPLETED,
-                payload: payload
+                payload: flattenResults(results)
             });
         }).catch((error) => {
             throw(error);
