@@ -21,6 +21,7 @@ export default class AddAuthors extends Component {
     static propTypes = {
         authorsList: PropTypes.object,
         authorsSearchResults: PropTypes.object,
+        clearAuthorsList: PropTypes.func,
         clearAuthorsSearchResults: PropTypes.func,
         clearIdentifiersSearchResults: PropTypes.func,
         identifiersSearchResults: PropTypes.object,
@@ -53,6 +54,14 @@ export default class AddAuthors extends Component {
         // another solution, close the box when user tries to scroll
         const div = document.querySelector('div.layout-fill.align-stretch');
         div.addEventListener('scroll', this.handleParentContainerScroll.bind(this));
+    }
+
+    componentWillUnmount() {
+        const {clearAuthorsList, clearAuthorsSearchResults, clearIdentifiersSearchResults} = this.props;
+
+        clearAuthorsList();
+        clearAuthorsSearchResults();
+        clearIdentifiersSearchResults();
     }
 
     handleParentContainerScroll() {
@@ -382,6 +391,7 @@ export default class AddAuthors extends Component {
                     <div className="column is-addAuthor">
                         <AutoComplete
                             ref="authorInput"
+                            listStyle={{maxHeight: 200, overflow: 'auto'}}
                             name={authorFields.authorName}
                             floatingLabelText={authorFields.authorNameLabel}
                             fullWidth
@@ -389,7 +399,6 @@ export default class AddAuthors extends Component {
                             openOnFocus={this.state.name.length > 0}
                             dataSource={authorsDataSource}
                             dataSourceConfig={dataSourceConfig}
-                            maxSearchResults={authorInformation.limit}
                             onUpdateInput={this.handleNameChangeAutoComplete}
                             onNewRequest={this.handleNameDropdown}
                             onKeyDown={this.handleNameKeyDown}
@@ -405,13 +414,13 @@ export default class AddAuthors extends Component {
                     {this.state.showIdentifierField && (
                     <div className="column is-addUQid">
                         <AutoComplete
+                            listStyle={{maxHeight: 200, overflow: 'auto'}}
                             ref="authorIdInput"
                             name={authorFields.authorIdentifier}
                             floatingLabelText={authorFields.authorIdentifierLabel}
                             filter={AutoComplete.fuzzyFilter}
                             openOnFocus
                             fullWidth
-                            maxSearchResults={authorInformation.limit}
                             dataSource={this.props.identifiersSearchResults.toJS()}
                             dataSourceConfig={dataSourceConfig}
                             onUpdateInput={this.handleIdentifierChangeAutoComplete}
