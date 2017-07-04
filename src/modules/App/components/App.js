@@ -20,8 +20,7 @@ import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
 import {StaticPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
-import {ClaimPublication} from 'modules/ClaimPublication';
-import {ClaimPublicationForm} from 'modules/Forms';
+import {ClaimPublication, ClaimPublicationForm} from 'modules/ClaimPublication';
 
 // Import specific style for the AppBar
 import '../../../sass/_appbar.scss';

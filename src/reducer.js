@@ -6,8 +6,9 @@ import {appReducer} from 'modules/App';
 import {helpDrawerReducer} from 'uqlibrary-react-toolbox';
 import {reducer as dashboardReducer} from 'modules/Dashboard';
 import {addRecordReducer} from 'modules/AddRecord';
+import {claimPublicationsReducer} from 'modules/ClaimPublication';
 
-import {publicationTypeReducer, publicationSearchReducer, journalArticleReducer, claimPublicationsReducer} from './modules/Forms';
+import {publicationTypeReducer, publicationSearchReducer, journalArticleReducer} from './modules/Forms';
 import {authorsReducer, fileUploadReducer} from './modules/SharedComponents';
 
 const rootReducer = combineReducers({
