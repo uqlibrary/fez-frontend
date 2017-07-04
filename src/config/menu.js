@@ -20,7 +20,7 @@ export const researcherMenuItems = (locale, email, components) => [
     },
     {
         path: '/claim-publications/:id',
-        linkTo: '/add-record',
+        linkTo: '/claim-publications/:id',
         component: components.ClaimPublicationForm
     },
     {

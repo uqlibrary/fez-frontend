@@ -14,7 +14,7 @@ function setup(ds) {
     };
     return shallow(<ClaimPublicationForm {...props} />);
 }
-
+// TODO: rename this back to ClaimPublicationForm.snapshot.test when tests need to be re-activated
 
 describe('Claim publication page test', () => {
     it('renders default claim publication test', () => {

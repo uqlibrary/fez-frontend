@@ -3,7 +3,7 @@ import {Card, CardHeader, CardText} from 'material-ui/Card';
 import PropTypes from 'prop-types';
 
 import {HelpIcon} from 'uqlibrary-react-toolbox';
-import SearchResultsRow from './SearchResultsRow';
+import SearchResultsRow from '../containers/SearchResultsRow';
 
 export default class SearchResults extends Component {
 
@@ -35,7 +35,7 @@ export default class SearchResults extends Component {
                 endPage: source.get('fez_record_search_key_end_page') ? source.get('fez_record_search_key_end_page').get('rek_end_page') : null,
                 doi: source.get('fez_record_search_key_doi') ? source.get('fez_record_search_key_doi').get('rek_doi') : null,
                 counts: {
-                    thomson: source.get('rek_thomson_citation_count')
+                    thomson: source.get('rek_thomson_citation_count') ? source.get('rek_thomson_citation_count') : null
                 }
             };
 

@@ -271,6 +271,7 @@ export default {
         claimPublications: {
             title: 'Claim possible publications',
             maxSearchResults: 5,
+            claimUrl: '/claim-publications',
             claimPublicationResults: {
                 title: 'Possible publications found',
                 explanationText: 'Select any items below to claim them as your work',
