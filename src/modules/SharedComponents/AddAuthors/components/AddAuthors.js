@@ -218,7 +218,7 @@ export default class AddAuthors extends Component {
                 this.setState({
                     identifier: selectedMenuItem.identifier,
                     name: selectedMenuItem.name,
-                    identifierLabel: `(${selectedMenuItem.name} - ${selectedMenuItem.identifier})`
+                    identifierLabel: `${selectedMenuItem.name} (${selectedMenuItem.identifier})`
                 });
                 this.addAuthor();
             } else {
@@ -264,7 +264,7 @@ export default class AddAuthors extends Component {
             (index >= authorConstants.autoCompleteFirstOption)) {
             this.setState({
                 identifier: selectedMenuItem.identifier,
-                identifierLabel: `(${selectedMenuItem.name} - ${selectedMenuItem.identifier})`
+                identifierLabel: `${selectedMenuItem.name} (${selectedMenuItem.identifier})`
             });
             this.addAuthor();
         }
@@ -441,7 +441,7 @@ export default class AddAuthors extends Component {
 
                 {/* List area */}
                 {authorsList && authorsList.size > 0 && (
-                    <div className="metadata-container is-authors">
+                    <div className="is-authors">
                         <div className="columns is-gapless is-mobile headers">
                             <div className="column is-6-desktop is-6-tablet is-6-mobile header is-author">Author name</div>
                             <div className="column is-3-desktop is-3-tablet is-5-mobile header is-uqid">UQ identifier</div>

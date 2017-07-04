@@ -4,6 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -136,23 +137,28 @@ export default class AddRecord extends React.Component {
                         }
 
                         {!this.props.loadingSearch &&
-                            <div className="layout-container">
-                                <div className="layout-card">
-                                    <div style={{textAlign: 'right'}}>
-                                        <RaisedButton
+                            <div className="layout-card">
+                                    <div className="columns">
+                                        <div className="column is-hidden-mobile" />
+                                        <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
+                                        <FlatButton
                                             label={buttonLabels.abandon}
-                                            style={{marginRight: '12px'}}
-                                            onTouchTap={this.handlePrev}/>
+                                            onTouchTap={this.handlePrev}
+                                            fullWidth
+                                        />
+                                        </div>
+                                        <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
                                         <RaisedButton
                                             label="Create a new espace record"
                                             secondary
+                                            fullWidth
                                             autoFocus={this.props.searchResultsList.size === 0}
                                             keyboardFocused={this.props.searchResultsList.size === 0}
                                             onTouchTap={this.handleNext}
                                         />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                         }
 
                         <ReactTooltip id="claimTooltips" effect="solid" place="bottom"/>
@@ -176,9 +182,8 @@ export default class AddRecord extends React.Component {
 
                             {showButton &&
                                 <div style={{maxWidth: '1200px', margin: '24px auto', width: '90%', textAlign: 'right'}}>
-                                    <RaisedButton
+                                    <FlatButton
                                         label={buttonLabels.abandon}
-                                        style={{marginLeft: '12px'}}
                                         onTouchTap={this.cancelAddingRecord}/>
                                 </div>
                             }
