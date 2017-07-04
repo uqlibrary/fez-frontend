@@ -52,10 +52,10 @@ export default class ClaimPublication extends React.Component {
         // limit the number of results
         let resultSet = {};
         if (claimPublicationResults.size > 0) {
-            resultSet = Immutable.fromJS(claimPublicationResults.toJS().slice(0, claimPublicationsInformation.maxSearchResults));
+            resultSet = Immutable.fromJS(claimPublicationResults.get('rows').toJS().slice(0, claimPublicationsInformation.maxSearchResults));
         }
         const noOfResults = claimPublicationsInformation.maxSearchResults > claimPublicationResults.size ? claimPublicationResults.size : claimPublicationsInformation.maxSearchResults;
-
+        const resultsCountText = `${noOfResults} out of ${claimPublicationResults.size} potential match(es) displayed. Select any item to claim it as your work.`;
         return (
             <div className="layout-fill">
                 <h1 className="page-title display-1">{claimPublicationsInformation.title}</h1>
@@ -71,16 +71,21 @@ export default class ClaimPublication extends React.Component {
                         <SearchResults
                             dataSource={resultSet}
                             title={resultsInformation.title}
-                            explanationText={resultsInformation.explanationText}
+                            explanationText={resultsCountText}
                             claimRecordBtnLabel={resultsInformation.claimRecordBtnLabel}
                             help={resultsInformation.help}
                         />
-                        <div className="columns notMineButtonWrapper">
-                            <div className="column">
-                                {noOfResults} matches shown of {claimPublicationResults.size}
-                            </div>
-                            <div className="column has-text-right">
-                                <RaisedButton label={claimPublicationsInformation.formButtons.notMineLabel} primary onTouchTap={this.markPublicationsNotMine} />
+                        <div className="layout-card">
+                            <div className="columns">
+                                <div className="column is-hidden-mobile" />
+                                <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
+                                    <RaisedButton
+                                        label={claimPublicationsInformation.formButtons.notMineLabel}
+                                        secondary
+                                        fullWidth
+                                        onTouchTap={this.markPublicationsNotMine}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
