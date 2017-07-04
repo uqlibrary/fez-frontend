@@ -59,7 +59,6 @@ export default class AddJournalArticleForm extends Component {
     cancelAddingRecord = () => {
         const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog.cancel;
         this.props.dispatch(showDialogBox(dialogConfig));
-        this.props.dispatch(resetStepper());
     };
 
     setAuthorData = () => {
