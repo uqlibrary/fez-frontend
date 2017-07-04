@@ -11,7 +11,7 @@ import './ClaimPublication.scss';
 export default class ClaimPublication extends React.Component {
 
     static propTypes = {
-        searchResultsList: PropTypes.object,
+        claimPublicationResults: PropTypes.object,
         loadingSearch: PropTypes.bool,
         loadUsersPublications: PropTypes.func,
         markPublicationsNotMine: PropTypes.func
@@ -32,7 +32,9 @@ export default class ClaimPublication extends React.Component {
     render() {
         const claimPublicationsInformation = locale.pages.claimPublications;
         const resultsInformation = claimPublicationsInformation.claimPublicationResults;
-        const noOfResults = claimPublicationsInformation.maxSearchResults > this.props.searchResultsList.size ? this.props.searchResultsList.size : claimPublicationsInformation.maxSearchResults;
+        const {claimPublicationResults, markPublicationsNotMine} = this.props;
+
+        const noOfResults = claimPublicationsInformation.maxSearchResults > claimPublicationResults.size ? claimPublicationResults.size : claimPublicationsInformation.maxSearchResults;
 
         return (
             <div className="layout-fill">
@@ -44,10 +46,10 @@ export default class ClaimPublication extends React.Component {
                     </div>
                 }
 
-                {!this.props.loadingSearch && this.props.searchResultsList.size > 0 &&
+                {!this.props.loadingSearch && claimPublicationResults.size > 0 &&
                     <div>
                         <SearchResults
-                            dataSource={this.props.searchResultsList}
+                            dataSource={claimPublicationResults}
                             title={resultsInformation.title}
                             explanationText={resultsInformation.explanationText}
                             claimRecordBtnLabel={resultsInformation.claimRecordBtnLabel}
@@ -55,10 +57,10 @@ export default class ClaimPublication extends React.Component {
                         />
                         <div className="columns notMineButtonWrapper">
                             <div className="column">
-                                {noOfResults} matches shown of {this.props.searchResultsList.size}
+                                {noOfResults} matches shown of {claimPublicationResults.size}
                             </div>
                             <div className="column has-text-right">
-                                <RaisedButton label={claimPublicationsInformation.formButtons.notMineLabel} primary onTouchTap={this.props.markPublicationsNotMine} />
+                                <RaisedButton label={claimPublicationsInformation.formButtons.notMineLabel} primary onTouchTap={markPublicationsNotMine} />
                             </div>
                         </div>
                     </div>

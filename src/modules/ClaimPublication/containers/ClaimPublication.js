@@ -12,7 +12,7 @@ ClaimPublicationContainer = connect((state) => {
     const claimPublications = state.get('claimPublication');
     return {
         loadingSearch: claimPublications.get('loadingSearch'),
-        searchResultsList: claimPublications.get('claimPublicationResults')
+        claimPublicationResults: claimPublications.get('claimPublicationResults')
     };
 }, dispatch => {
     return {

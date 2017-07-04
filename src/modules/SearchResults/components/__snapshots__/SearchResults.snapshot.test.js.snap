@@ -65,6 +65,7 @@ exports[`Search results snapshots tests renders default search results page 1`] 
           },
           "doi": "10.1111/j.1755-5922.2010.00189.x",
           "endPage": "215",
+          "id": 123,
           "index": 0,
           "issueNumber": "4",
           "journalName": "Cardiovascular Therapeutics",
