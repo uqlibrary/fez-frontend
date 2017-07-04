@@ -32,6 +32,7 @@ exports[`Add record page snapshots tests renders default add record page 1`] = `
             },
             "rek_display_type": "Conference Paper",
             "rek_pid": 1,
+            "rek_thomson_citation_count": 5,
             "rek_title": "The future of HPV vaccination",
           },
           Object {
