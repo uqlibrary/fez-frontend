@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`File upload dropzone snapshots tests renders default file upload dropzone component 1`] = `
-<div
-  style={
-    Object {
-      "marginBottom": "-60px",
-    }
-  }
->
+<div>
   <Card
     className="layout-card"
     expandable={false}
