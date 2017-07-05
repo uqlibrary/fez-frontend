@@ -11,7 +11,6 @@ import {locale} from 'config';
 import {FileUploader, SubmissionErrorMessage} from 'modules/SharedComponents';
 import {showDialogBox} from 'modules/App';
 
-import {saveRecord} from 'actions';
 import {uploadFile} from 'modules/SharedComponents/FileUploader/actions';
 
 import {SearchResultsRow} from 'modules/SearchResults';
@@ -21,6 +20,7 @@ export default class ClaimPublicationForm extends Component {
     static propTypes = {
         acceptedFiles: PropTypes.object,
         claimPublicationResults: PropTypes.object,
+        claimPublication: PropTypes.func,
         dispatch: PropTypes.func,
         handleSubmit: PropTypes.func,
         history: PropTypes.object,
@@ -91,6 +91,7 @@ export default class ClaimPublicationForm extends Component {
     };
 
     tryRecordSave = () => {
+        const {claimPublication, dispatch} = this.props;
         const source = this.getCurrentArticle();
 
         const publicationData = {
@@ -101,7 +102,7 @@ export default class ClaimPublicationForm extends Component {
         const fileData = this.setFileData();
         const combinedData = Object.assign({}, publicationData, fileData);
 
-        this.props.dispatch(saveRecord(combinedData));
+        dispatch(claimPublication(combinedData));
     };
 
     render() {

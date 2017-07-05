@@ -21,9 +21,8 @@ export const USER_PUBLICATIONS_MARKED_NOT_MINE_COMPLETED = 'USER_PUBLICATIONS_MA
  */
 export function claimPublication(data) {
     return dispatch => {
-        console.log('actions/records - savings....');
+        console.log('actions/records - claiming....');
         dispatch({type: CLAIM_SUBMITTING});
-
         claimPublicationRecord(data).then((data) => {
             dispatch({
                 type: CLAIM_SUBMITTED,
