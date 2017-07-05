@@ -169,7 +169,6 @@ export default class FileMetadata extends Component {
                                 (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
                                 <FontIcon className="material-icons green-tick">done</FontIcon>
                             )}
-
                         </div>
                         <div className="column is-1-desktop is-1-tablet is-1-mobile delete-button">
                             <IconButton

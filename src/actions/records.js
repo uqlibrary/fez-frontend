@@ -4,16 +4,14 @@ import {submitRecord} from '../repositories';
 export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
 export const RECORD_SUBMIT_FAILED = 'RECORD_SUBMIT_FAILED';
 export const RECORD_SUBMITTING = 'RECORD_SUBMITTING';
+export const RECORD_SUBMIT_RESET = 'RECORD_SUBMIT_RESET';
 
 /**
  * Submits the record for approval
  * @returns {function(*)}
  */
 export function saveRecord(data) {
-    console.log('actions/records - saveRecord....');
-
     return dispatch => {
-        console.log('actions/records - savings....');
         dispatch({type: RECORD_SUBMITTING});
 
         submitRecord(data).then((data) => {
@@ -28,5 +26,11 @@ export function saveRecord(data) {
             });
             // throw(error);
         });
+    };
+}
+
+export function resetRecord() {
+    return dispatch => {
+        dispatch({type: RECORD_SUBMIT_RESET});
     };
 }

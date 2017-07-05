@@ -9,7 +9,7 @@ import {AddAuthors, FileUploader, SelectField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 
 import {loadPublicationSubTypesList} from '../actions';
-import {saveRecord} from 'actions';
+import {saveRecord, resetRecord} from 'actions';
 import {resetStepper} from '../../../AddRecord/actions';
 import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
 import {showDialogBox} from 'modules/App';
@@ -37,6 +37,10 @@ export default class AddJournalArticleForm extends Component {
 
     constructor(props) {
         super(props);
+    }
+
+    componentWillMount() {
+        this.props.dispatch(resetRecord());
     }
 
     componentDidMount() {
@@ -140,7 +144,7 @@ export default class AddJournalArticleForm extends Component {
         if (this.props.acceptedFiles.size > 0) {
             this.props.dispatch(uploadFile(this.props.acceptedFiles));
         } else {
-            this.tryRecordSave();
+            // this.tryRecordSave();
         }
     };
 
@@ -152,6 +156,7 @@ export default class AddJournalArticleForm extends Component {
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
         const {form, handleSubmit, recordSubmissionState, recordSubmissionErrorMessage} = this.props;
+        console.log('submitting: ' + recordSubmissionState.get('submitting'));
 
         return (
             <form>
@@ -387,12 +392,8 @@ export default class AddJournalArticleForm extends Component {
                     <CardText className="body-1">
                         <div className="columns">
                             <div className="column">
-                                <p>
-                                    {recordSubmissionErrorMessage && recordSubmissionErrorMessage.message &&
-                                    <span>{recordSubmissionErrorMessage.message}</span>}
-                                    {(!recordSubmissionErrorMessage || !recordSubmissionErrorMessage.message) &&
-                                    <span>Unexpected error.</span>}
-                                </p>
+                                {recordSubmissionErrorMessage && recordSubmissionErrorMessage.message &&
+                                <p>{recordSubmissionErrorMessage.message}</p>}
                                 <p> Review your data and try again. </p>
                             </div>
                         </div>
