@@ -156,7 +156,6 @@ export default class AddJournalArticleForm extends Component {
         const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
         const buttonLabels = locale.global.labels.buttons;
         const {form, handleSubmit, recordSubmissionState, recordSubmissionErrorMessage} = this.props;
-        console.log('submitting: ' + recordSubmissionState.get('submitting'));
 
         return (
             <form>

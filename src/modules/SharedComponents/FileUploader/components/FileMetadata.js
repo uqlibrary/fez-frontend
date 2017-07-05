@@ -235,7 +235,6 @@ export default class FileMetadata extends Component {
     isOpenAccessSelected = () => {
         let found = false;
         Object.keys(this.state.accessFields).map(field => {
-            console.log(field);
             if (this.state.accessFields[field] === locale.sharedComponents.files.constants.openAccessId) {
                 found = true;
             }
