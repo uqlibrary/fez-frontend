@@ -144,7 +144,7 @@ export default class AddJournalArticleForm extends Component {
         if (this.props.acceptedFiles.size > 0) {
             this.props.dispatch(uploadFile(this.props.acceptedFiles));
         } else {
-            // this.tryRecordSave();
+            this.tryRecordSave();
         }
     };
 

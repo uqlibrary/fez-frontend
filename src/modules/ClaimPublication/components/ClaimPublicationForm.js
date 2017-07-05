@@ -57,7 +57,7 @@ export default class ClaimPublicationForm extends Component {
 
     getCurrentArticle = () => {
         const {claimPublicationResults, location} = this.props;
-        const articleId = Number(location.pathname.replace(`${locale.pages.claimPublications.claimUrl}/`, ''));
+        const articleId = location.pathname.replace(`${locale.pages.claimPublications.claimUrl}/`, '');
         const article = claimPublicationResults.get('rows').filter(article => article.get('rek_pid') === articleId);
 
         // found the article so load it
