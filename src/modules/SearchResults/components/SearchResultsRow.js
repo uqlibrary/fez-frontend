@@ -39,11 +39,13 @@ export default class SearchResultsRow extends Component {
             <div className="claimWrapper">
                 <h3 className="claimTitle">
                     <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}">{title}</a>
-                    <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}" target="_blank"><FontIcon className="material-icons claimTitleIcon">open_in_new</FontIcon></a>
+                    <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}" target="_blank"><FontIcon
+                        className="material-icons claimTitleIcon">open_in_new</FontIcon></a>
                 </h3>
 
-                <div className="claimCitation JournalArticle">
+                <div className="claimCitation">
                     <FontIcon className="material-icons claimAuthorsIcon"
+                              title="Full citation"
                               data-tip="Full citation"
                               data-for="claimTooltips"
                               data-place="left">
@@ -51,26 +53,25 @@ export default class SearchResultsRow extends Component {
                     </FontIcon>
 
                     <span className="claimAuthors">
-                        <span className="allAuthors">{authors && authors.size > 0 && authors.map((author, index) => (<span key={index}>{author.get('rek_author')} </span>))}</span>
+                        <span className="allAuthors">{authors && authors.size > 0 && authors.map((author, index) => (
+                            <span key={index}>{author.get('rek_author')} </span>))}</span>
                     </span>
-
-                    ({publisher}) {title}.
-                    <i><span className="citation_journal_name"> {journalName}</span></i>
-                    ,
-                    <i><span className="citation_volume_number"> {volumeNumber}:</span></i>
-                    <span className="citation_issue_number">{issueNumber}</span>
-                    :
-                    <span className="citation_start_page">{startPage}</span>
-                    -
-                    <span className="citation_end_page">{endPage}</span>.
-                    doi:<span className="citation_doi">{doi}</span>
+                    {publisher} {title}.
+                    {journalName && <i><span className="citation_journal_name"> {journalName}, </span></i>}
+                    {volumeNumber && <i><span className="citation_volume_number"> {volumeNumber}:</span></i>}
+                    {issueNumber && <span className="citation_issue_number">{issueNumber}:</span>}
+                    {startPage && <span className="citation_start_page">{startPage}-</span>}
+                    {endPage && <span className="citation_end_page">{endPage}.</span>}
+                    {doi && <span className="citation_doi">doi: {doi}</span>}
                 </div>
 
                 <div className="claimStats">
                     {counts.thomson && counts.thomson > 0 &&
                     <span>
                         <img src={thompsonIcon} alt="Thomson Routers"
-                             data-tip="Thomson Routers Web of Science citation count" data-place="bottom"
+                             data-tip="Thomson Routers Web of Science citation count"
+                             title="Thomson Routers Web of Science citation count"
+                             data-place="bottom"
                              data-for="claimTooltips"/> {counts.thomson}
                     </span>
                     }
@@ -78,25 +79,27 @@ export default class SearchResultsRow extends Component {
                     <span>
                         <img src={scopusIcon} alt="Scopus"
                              data-tip="Scopus citation count"
+                             title="Scopus citation count"
                              data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.scopus}
                     </span>
                     }
                     {counts.google && counts.google > 0 &&
                     <span>
                     <img src={googleScholarIcon} alt="Google Scholar"
-                         data-tip="Google Scholar citation count" data-for="claimTooltips"
+                         data-tip="Google Scholar citation count" title="Google Scholar citation count"
+                         data-for="claimTooltips"
                          style={{marginLeft: '10px'}}/> {counts.google}
                     </span>
                     }
                     {counts.altmetric && counts.altmetric > 0 &&
                     <span>
-                    <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score"
+                    <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score" title="Altmetric score"
                          data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.altmetric}
                     </span>
                     }
                     {counts.downloads && counts.downloads > 1 && (
                         <span>
-                    <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads"
+                    <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads" title="Downloads"
                               data-for="claimTooltips" data-place="bottom"
                               style={{marginLeft: '10px'}}>file_download</FontIcon> {counts.downloads}
                     </span>
