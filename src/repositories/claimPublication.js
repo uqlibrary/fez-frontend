@@ -34,3 +34,19 @@ export function markPublicationsDataNotMine(username, pids) {
         });
     });
 }
+
+/**
+ * Submits the record to be claimed
+ * @returns {function(*)}
+ */
+export function claimPublicationRecord(data) {
+    return new Promise((resolve, reject) => {
+        api.post('publications/claim-possible', data).then(response => {
+            resolve(response.data);
+        }).catch(e => {
+            console.log('claimRecord:' + e);
+            reject(e);
+            // throw e;
+        });
+    });
+}

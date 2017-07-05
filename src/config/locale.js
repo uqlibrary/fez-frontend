@@ -12,7 +12,8 @@ export default {
                 close: 'Close',
                 delete: 'Delete',
                 submitForApproval: 'Submit for approval',
-                submissionInProgress: 'Submitting...'
+                submissionInProgress: 'Submitting...',
+                claimPublication: 'Claim this publication'
             }
         }
     },
@@ -361,17 +362,12 @@ export default {
                         browseLabel: 'Browse files'
                     }
                 },
-                formButtons: {
-                    claimLabel: 'Claim this publication'
-                },
                 dialog: {
                     success: {
                         title: 'Claim publication sent',
-                        content: 'Claim you',
-                        primaryButtonLabel: 'Claim another publication',
-                        primaryLink: '/claim-publications',
-                        secondaryButtonLabel: 'View dashboard',
-                        secondaryLink: '/Dashboard'
+                        content: 'The publication has been successfully claimed.',
+                        primaryButtonLabel: 'Ok',
+                        primaryLink: '/claim-publications'
                     },
                     cancel: {
                         title: 'Abandoned publication claim',
@@ -431,7 +427,7 @@ export default {
         },
         files: {
             title: 'Files',
-            subTitle: 'Upload new files',
+            subTitle: 'You may add up to 10 files (max 5Gb each)',
             help: {
                 title: 'Files',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
@@ -440,10 +436,10 @@ export default {
             filenameLimit: 45,
             formSectionPrefix: 'fileUploader',
             messages: {
-                deleteAllFilesDialogContent: 'Are you sure you want to delete all these files?',
-                deleteFileDialogContent: 'Are you sure you want to delete this file?',
-                deleteAllFilesToolTip: 'Delete all files',
-                deleteFileToolTip: 'Delete this file',
+                deleteAllFilesDialogContent: 'Are you sure you want to remove all these files from the upload queue?',
+                deleteFileDialogContent: 'Are you sure you want to remove this file from the upload queue?',
+                deleteAllFilesToolTip: 'Remove all files from the upload queue',
+                deleteFileToolTip: 'Remove this file from the upload queue',
                 maxFiles: 'Only [maxNumberOfFiles] files are allowed to be uploaded.',
                 invalidFormatFile: 'Invalid file name.',
                 invalidFormatFiles: '[numberOfRejectedFiles] have an invalid file name.',
@@ -457,8 +453,7 @@ export default {
                     default: 'There seems to be a problem uploading file(s). Please, try again later.'
                 },
                 openAccessConfirmation: (
-                    <div>I understand that the files indicated above will be submitted as open access and will be made publicaly available immediately,
-                        or where indicated as closed access, will be made available on the indicated embargo date.</div>
+                    <div>I understand that the Open Access files above will be publically available immediately and that the Closed Access files will be available from the Embargo release date.</div>
                 )
             },
             fields: {
@@ -467,12 +462,12 @@ export default {
                         <div className="column">
                             <h3>File upload restrictions</h3>
                             <div>
+                                Please ensure your files:
                                 <ul>
-                                    <li>No folders</li>
-                                    <li>Limited to 10 files</li>
-                                    <li>Begin with a letter and are less than 45 characters long</li>
-                                    <li>Contain only upper and lowercase alphanumeric characters, and underscores</li>
-                                    <li>Have only a single period which precedes the file extension: “.pdf”</li>
+                                    <li>begin with a letter and are less than 45 characters long</li>
+                                    <li>contain only upper and lowercase alphanumeric characters, and underscores</li>
+                                    <li>have only a single period which precedes the file extension: “.pdf”</li>
+                                    <li>are uploaded individually and not inside a folder</li>
                                 </ul>
                             </div>
                         </div>

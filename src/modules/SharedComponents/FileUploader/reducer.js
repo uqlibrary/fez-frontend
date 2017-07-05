@@ -26,6 +26,7 @@ const fileUploadReducer = (state = initialState, action) => {
         case FILE_DELETED:
             const acceptedFiles = state.get('acceptedFiles').toJS();
             acceptedFiles.splice(action.payload, 1);
+            console.dir(acceptedFiles);
             return state.set('acceptedFiles', Immutable.fromJS(acceptedFiles));
         case FILE_LIST_CREATED:
             const newList = state.get('acceptedFiles').concat(action.payload);
