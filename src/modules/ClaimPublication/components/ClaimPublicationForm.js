@@ -43,7 +43,7 @@ export default class ClaimPublicationForm extends Component {
             this.tryRecordSave();
         }
 
-        if (nextProps.recordClaimState.get('claimed')) {
+        if (nextProps.recordClaimState.get('submitted')) {
             const dialogConfig = locale.pages.claimPublications.form.dialog.success;
             this.props.dispatch(showDialogBox(dialogConfig));
         }

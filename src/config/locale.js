@@ -365,11 +365,9 @@ export default {
                 dialog: {
                     success: {
                         title: 'Claim publication sent',
-                        content: 'Claim you',
-                        primaryButtonLabel: 'Claim another publication',
-                        primaryLink: '/claim-publications',
-                        secondaryButtonLabel: 'View dashboard',
-                        secondaryLink: '/Dashboard'
+                        content: 'The publication has been successfully claimed.',
+                        primaryButtonLabel: 'Ok',
+                        primaryLink: '/claim-publications'
                     },
                     cancel: {
                         title: 'Abandoned publication claim',
