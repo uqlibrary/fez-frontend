@@ -9,7 +9,7 @@ import {AddAuthors, FileUploader, SelectField, SubmissionErrorMessage} from 'mod
 import {validation, locale} from 'config';
 
 import {loadPublicationSubTypesList} from '../actions';
-import {saveRecord} from 'actions';
+import {saveRecord, resetRecord} from 'actions';
 import {resetStepper} from '../../../AddRecord/actions';
 import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
 import {showDialogBox} from 'modules/App';
@@ -37,6 +37,10 @@ export default class AddJournalArticleForm extends Component {
 
     constructor(props) {
         super(props);
+    }
+
+    componentWillMount() {
+        this.props.dispatch(resetRecord());
     }
 
     componentDidMount() {
