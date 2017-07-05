@@ -3,6 +3,7 @@ import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
+import {Redirect} from 'react-router';
 
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -15,6 +16,7 @@ import {SearchResultsRow} from 'modules/SearchResults';
 export default class ClaimPublicationForm extends Component {
 
     static propTypes = {
+        acceptedFiles: PropTypes.object,
         claimPublicationResults: PropTypes.object,
         dispatch: PropTypes.func,
         history: PropTypes.object,
@@ -30,25 +32,66 @@ export default class ClaimPublicationForm extends Component {
         };
     }
 
+    componentWillReceiveProps() {
+        // if (nextProps.recordSubmissionState.get('submitted')) {
+        //     // const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog.success;
+        //     // this.props.dispatch(showDialogBox(dialogConfig));
+        //     // this.props.dispatch(resetStepper());
+        // }
+    }
+
     cancelClaimPublication = () => {
         const dialogConfig = locale.pages.claimPublications.form.dialog.cancel;
         this.props.dispatch(showDialogBox(dialogConfig));
     };
 
     claimPublication = () => {
-        this.props.showSnackbar(locale.notifications.claimPublicationForm.claimMessage);
-        this.props.history.goBack();
+        const source = this.getCurrentArticle();
+
+        const publicationData = {
+            pid: source.get('rek_pid'),
+            author_id: source.get('author_id')
+        };
+
+        const fileData = this.setFileData();
+        const combinedData = Object.assign({}, publicationData, fileData);
+
+        console.log('claimPublication', publicationData, '||', fileData, '|||', combinedData);
     };
 
     getCurrentArticle = () => {
-        const articleId = Number(this.props.location.pathname.replace(`${locale.pages.claimPublications.claimUrl}/`, ''));
-        const article = this.props.claimPublicationResults.get('rows').filter(article => article.get('rek_pid') === articleId);
+        const {claimPublicationResults, location} = this.props;
+        const articleId = Number(location.pathname.replace(`${locale.pages.claimPublications.claimUrl}/`, ''));
+        const article = claimPublicationResults.get('rows').filter(article => article.get('rek_pid') === articleId);
 
         // found the article so load it
         return article.size === 1 ? article.get(0) : null;
     };
 
+    setFileData = () => {
+        const {acceptedFiles} = this.props;
+
+        if (acceptedFiles.size > 0) {
+            const data = {'fez_record_search_key_file_attachment_name': []};
+            acceptedFiles.toJS().map((file, index) => {
+                data.fez_record_search_key_file_attachment_name.push({
+                    'rek_file_attachment_name': file.name,
+                    'rek_file_attachment_name_order': (index + 1)
+                });
+            });
+
+            return data;
+        }
+
+        return {};
+    };
+
     render() {
+        // detects if something is trying to go to /claim-publications/:id. For now we just redirect back to the claim-publications page
+        if (this.props.claimPublicationResults.size === 0) {
+            return (<Redirect to="/claim-publications" />);
+        }
+
         // path to the locale data for each of the sections
         const claimPublicationsInformation = locale.pages.claimPublications.form;
         const publicationDetailsInformation = claimPublicationsInformation.publicationDetails;

@@ -10,7 +10,9 @@ let ClaimPublicationFormContainer = reduxForm({
 
 ClaimPublicationFormContainer = connect((state) => {
     const claimPublication = state.get('claimPublication');
+    const fileUploadState = state.get('fileUpload');
     return {
+        acceptedFiles: fileUploadState.get('acceptedFiles'),
         claimPublicationResults: claimPublication.get('claimPublicationResults'),
         selectedPublication: claimPublication.get('selectedPublication')
     };
