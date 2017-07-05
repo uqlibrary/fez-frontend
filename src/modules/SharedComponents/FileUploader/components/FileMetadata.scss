@@ -11,13 +11,13 @@
     border: 1px dashed cyan;
 
     .upload-progress-ghost {
+      margin-top: -30px !important;
       display: block !important;
       border: 1px dotted red;
       position: relative !important;
     }
     .upload-progress {
       display: block !important;
-      margin-top: -30px !important;
       border: 1px solid green;
       position: relative !important;
     }
