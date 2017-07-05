@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import DialogBox from '../components/DialogBox';
 import {hideDialogBox} from 'modules/App';
+import {withRouter} from 'react-router-dom';
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -8,6 +9,8 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-const DialogBoxContaier = connect(null, mapDispatchToProps)(DialogBox);
+let DialogBoxContainer = connect(null, mapDispatchToProps)(DialogBox);
 
-export default DialogBoxContaier;
+DialogBoxContainer = withRouter(DialogBoxContainer);
+
+export default DialogBoxContainer;

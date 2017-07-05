@@ -2,7 +2,6 @@ import {connect} from 'react-redux';
 
 import {reduxForm} from 'redux-form/immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
-import {showSnackbar} from 'modules/App/actions';
 
 
 let ClaimPublicationFormContainer = reduxForm({
@@ -14,10 +13,6 @@ ClaimPublicationFormContainer = connect((state) => {
     return {
         claimPublicationResults: claimPublication.get('claimPublicationResults'),
         selectedPublication: claimPublication.get('selectedPublication')
-    };
-}, dispatch => {
-    return {
-        showSnackbar: (message) => dispatch(showSnackbar(message))
     };
 })(ClaimPublicationFormContainer);
 

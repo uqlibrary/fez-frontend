@@ -363,6 +363,23 @@ export default {
                 },
                 formButtons: {
                     claimLabel: 'Claim this publication'
+                },
+                dialog: {
+                    success: {
+                        title: 'Claim publication sent',
+                        content: 'Claim you',
+                        primaryButtonLabel: 'Claim another publication',
+                        primaryLink: '/claim-publications',
+                        secondaryButtonLabel: 'View dashboard',
+                        secondaryLink: '/Dashboard'
+                    },
+                    cancel: {
+                        title: 'Abandoned publication claim',
+                        content: 'Are you sure you wish to abandon claiming this publication?',
+                        primaryButtonLabel: 'Yes',
+                        primaryLink: '/claim-publications',
+                        secondaryButtonLabel: 'No'
+                    }
                 }
             }
         }

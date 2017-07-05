@@ -2,7 +2,6 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import {Redirect} from 'react-router';
 
 // custom components
 import './DialogBox.scss';
@@ -17,40 +16,27 @@ export default class DialogBox extends PureComponent {
         primaryLink: PropTypes.string.isRequired,
         secondaryButtonLabel: PropTypes.string.isRequired,
         secondaryLink: PropTypes.string,
-        hideDialogBox: PropTypes.func
+        hideDialogBox: PropTypes.func,
+        history: PropTypes.object
     };
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            primaryRedirect: false,
-            secondaryRedirect: false
-        };
-    }
-
-    componentWillReceiveProps(nextProps) {
-        // onRequestClose for FlatButton isn't triggered so have put the resetState call in here
-        if (nextProps.open) {
-            this.resetState();
-        }
     }
 
     handlePrimaryRedirect = () => {
-        this.setState({primaryRedirect: true});
-        this.props.hideDialogBox();
+        const {hideDialogBox, history, primaryLink} = this.props;
+        history.push(`/claim-publications/${primaryLink}`);
+        hideDialogBox();
     };
 
     handleSecondaryRedirect = () => {
-        this.setState({secondaryRedirect: true});
-        this.props.hideDialogBox();
-    };
+        const {hideDialogBox, history, secondaryLink} = this.props;
 
-    resetState = () => {
-        this.setState({
-            primaryRedirect: false,
-            secondaryRedirect: false
-        });
+        if (secondaryLink && secondaryLink.length > 0) {
+            history.push(`/claim-publications/${secondaryLink}`);
+        }
+        hideDialogBox();
     };
 
     render() {
@@ -59,9 +45,7 @@ export default class DialogBox extends PureComponent {
             title,
             content,
             primaryButtonLabel,
-            primaryLink,
             secondaryButtonLabel,
-            secondaryLink
         } = this.props;
 
         const actions = [
@@ -77,14 +61,6 @@ export default class DialogBox extends PureComponent {
                 onTouchTap={this.handlePrimaryRedirect}
             />,
         ];
-
-        if (this.state.primaryRedirect && primaryLink.length > 0) {
-            return (<Redirect to={primaryLink} />);
-        }
-
-        if (this.state.secondaryRedirect && secondaryLink.length > 0) {
-            return (<Redirect to={secondaryLink} />);
-        }
 
         return (
             <div>

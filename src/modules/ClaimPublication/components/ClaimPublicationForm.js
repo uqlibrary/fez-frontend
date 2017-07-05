@@ -8,16 +8,18 @@ import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from 'config';
 import {FileUploader} from 'modules/SharedComponents';
+import {showDialogBox} from 'modules/App';
 
 import {SearchResultsRow} from 'modules/SearchResults';
 
 export default class ClaimPublicationForm extends Component {
 
     static propTypes = {
+        claimPublicationResults: PropTypes.object,
+        dispatch: PropTypes.func,
         history: PropTypes.object,
         location: PropTypes.object,
-        showSnackbar: PropTypes.func,
-        claimPublicationResults: PropTypes.object
+        showSnackbar: PropTypes.func
     };
 
     constructor(props) {
@@ -29,8 +31,8 @@ export default class ClaimPublicationForm extends Component {
     }
 
     cancelClaimPublication = () => {
-        this.props.showSnackbar(locale.notifications.claimPublicationForm.cancelMessage);
-        this.props.history.goBack();
+        const dialogConfig = locale.pages.claimPublications.form.dialog.cancel;
+        this.props.dispatch(showDialogBox(dialogConfig));
     };
 
     claimPublication = () => {
@@ -123,18 +125,23 @@ export default class ClaimPublicationForm extends Component {
                 </FormSection>
 
                 {/* Buttons */}
-                <Card className="layout-card" id="formButtons">
-                    <CardText className="body-1">
-                        <div className="columns">
-                            <div className="column is-narrow is-offset-two-thirds">
-                                <FlatButton label={locale.global.labels.buttons.cancel} secondary onTouchTap={this.cancelClaimPublication}/>
-                            </div>
-                            <div className="column is-narrow">
-                                <RaisedButton label={actionButtonsInformation.claimLabel} secondary onTouchTap={this.claimPublication} />
-                            </div>
+                <div className="layout-card">
+                    <div className="columns">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-desktop" style={{marginBottom: 24}}>
+                            <FlatButton
+                                label={locale.global.labels.buttons.cancel}
+                                secondary
+                                onTouchTap={this.cancelClaimPublication}/>
                         </div>
-                    </CardText>
-                </Card>
+                        <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                label={actionButtonsInformation.claimLabel}
+                                secondary
+                                onTouchTap={this.claimPublication} />
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
