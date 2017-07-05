@@ -1,8 +1,8 @@
 import Immutable from 'immutable';
 
 import {PUBLICATION_SUB_TYPES_LOADED} from './actions';
-import {RECORD_SUBMITTED, RECORD_SUBMIT_FAILED, RECORD_SUBMITTING} from 'actions';
-import {actionTypes} from 'redux-form';
+import {RECORD_SUBMITTED, RECORD_SUBMIT_FAILED, RECORD_SUBMITTING, RECORD_SUBMIT_RESET} from 'actions';
+// import {actionTypes} from 'redux-form';
 
 const RecordState = {
     clear: {
@@ -44,9 +44,7 @@ const handlers = {
 
     [RECORD_SUBMITTING]: (state) => (state.set('recordSubmissionState', Immutable.fromJS(RecordState.submitting)).set('recordSubmissionErrorMessage', undefined)),
 
-    // TODO: refactor: rely on redux-form failed submission api, not on manual state reset
-    // reset failed submit state when user 'starts' to modify something on the form by moving focus
-    [actionTypes.FOCUS]: (state) => (state.set('recordSubmissionState', Immutable.fromJS(RecordState.clear)).set('recordSubmissionErrorMessage', undefined))
+    [RECORD_SUBMIT_RESET]: (state) => (state.set('recordSubmissionState', Immutable.fromJS(RecordState.clear)).set('recordSubmissionErrorMessage', undefined))
 };
 
 export default function journalArticleReducer(state = initialState, action) {
