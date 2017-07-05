@@ -1,8 +1,8 @@
 import {connect} from 'react-redux';
-
-import {reduxForm} from 'redux-form/immutable';
+import {reduxForm, getFormValues} from 'redux-form/immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
 import {claimPublication} from '../actions';
+import Immutable from 'immutable';
 
 let ClaimPublicationFormContainer = reduxForm({
     form: 'ClaimPublicationForm'
@@ -14,6 +14,7 @@ ClaimPublicationFormContainer = connect((state) => {
     return {
         acceptedFiles: fileUploadState.get('acceptedFiles'),
         claimPublicationResults: claimPublication.get('claimPublicationResults'),
+        formValues: getFormValues('ClaimPublicationForm')(state) || Immutable.Map({}),
         isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         recordClaimState: claimPublication.get('recordClaimState'),
         recordClaimErrorMessage: claimPublication.get('recordClaimErrorMessage'),
