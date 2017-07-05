@@ -11,6 +11,9 @@ import {locale} from 'config';
 import {FileUploader} from 'modules/SharedComponents';
 import {showDialogBox} from 'modules/App';
 
+import {saveRecord} from 'actions';
+import {uploadFile} from 'modules/SharedComponents/FileUploader/actions';
+
 import {SearchResultsRow} from 'modules/SearchResults';
 
 export default class ClaimPublicationForm extends Component {
@@ -19,9 +22,11 @@ export default class ClaimPublicationForm extends Component {
         acceptedFiles: PropTypes.object,
         claimPublicationResults: PropTypes.object,
         dispatch: PropTypes.func,
+        handleSubmit: PropTypes.func,
         history: PropTypes.object,
+        isUploadCompleted: PropTypes.bool,
         location: PropTypes.object,
-        showSnackbar: PropTypes.func
+        recordClaimState: PropTypes.object
     };
 
     constructor(props) {
@@ -32,31 +37,20 @@ export default class ClaimPublicationForm extends Component {
         };
     }
 
-    componentWillReceiveProps() {
-        // if (nextProps.recordSubmissionState.get('submitted')) {
-        //     // const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog.success;
-        //     // this.props.dispatch(showDialogBox(dialogConfig));
-        //     // this.props.dispatch(resetStepper());
-        // }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.isUploadCompleted) {
+            this.tryRecordSave();
+        }
+
+        if (nextProps.recordClaimState.get('claimed')) {
+            const dialogConfig = locale.pages.claimPublications.form.dialog.success;
+            this.props.dispatch(showDialogBox(dialogConfig));
+        }
     }
 
     cancelClaimPublication = () => {
         const dialogConfig = locale.pages.claimPublications.form.dialog.cancel;
         this.props.dispatch(showDialogBox(dialogConfig));
-    };
-
-    claimPublication = () => {
-        const source = this.getCurrentArticle();
-
-        const publicationData = {
-            pid: source.get('rek_pid'),
-            author_id: source.get('author_id')
-        };
-
-        const fileData = this.setFileData();
-        const combinedData = Object.assign({}, publicationData, fileData);
-
-        console.log('claimPublication', publicationData, '||', fileData, '|||', combinedData);
     };
 
     getCurrentArticle = () => {
@@ -84,6 +78,30 @@ export default class ClaimPublicationForm extends Component {
         }
 
         return {};
+    };
+
+    tryFileUpload = () => {
+        const {acceptedFiles, dispatch} = this.props;
+        if (acceptedFiles.size > 0) {
+            dispatch(uploadFile(acceptedFiles));
+        } else {
+            this.tryRecordSave();
+        }
+    };
+
+    tryRecordSave = () => {
+        const source = this.getCurrentArticle();
+
+        const publicationData = {
+            pid: source.get('rek_pid'),
+            author_id: source.get('author_id')
+        };
+
+        const fileData = this.setFileData();
+        const combinedData = Object.assign({}, publicationData, fileData);
+
+        console.log('claimPublication', publicationData, '||', fileData, '|||', combinedData);
+        this.props.dispatch(saveRecord(combinedData));
     };
 
     render() {
@@ -119,8 +137,10 @@ export default class ClaimPublicationForm extends Component {
             }
         };
 
+        const {handleSubmit} = this.props;
+
         return (
-            <div style={{marginBottom: '-60px'}}>
+            <form style={{marginBottom: '-60px'}}>
                 <h1 className="page-title display-1">{claimPublicationsInformation.title}</h1>
                 {/* Claim Publication */}
                 <Card className="layout-card">
@@ -181,11 +201,11 @@ export default class ClaimPublicationForm extends Component {
                             <RaisedButton
                                 label={actionButtonsInformation.claimLabel}
                                 secondary
-                                onTouchTap={this.claimPublication} />
+                                onClick={handleSubmit(this.tryFileUpload)} />
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         );
     }
 }
