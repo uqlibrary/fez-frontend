@@ -14,7 +14,7 @@ export default class DialogBox extends PureComponent {
         content: PropTypes.string.isRequired,
         primaryButtonLabel: PropTypes.string.isRequired,
         primaryLink: PropTypes.string.isRequired,
-        secondaryButtonLabel: PropTypes.string.isRequired,
+        secondaryButtonLabel: PropTypes.string,
         secondaryLink: PropTypes.string,
         hideDialogBox: PropTypes.func,
         history: PropTypes.object
