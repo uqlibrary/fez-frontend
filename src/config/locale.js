@@ -357,9 +357,7 @@ export default {
                 uploadError: {
                     default: 'There seems to be a problem uploading file(s). Please, try again later.'
                 },
-                openAccessConfirmation: (
-                    <div>I understand that the Open Access files above will be publically available immediately and that the Closed Access files will be available from the Embargo release date.</div>
-                )
+                openAccessConfirmation: 'I understand that the Open Access file(s) above will be publicly available on the embargo release date. Closed Access file(s) will not be publicly available.'
             },
             fields: {
                 filenameRestrictions: (
