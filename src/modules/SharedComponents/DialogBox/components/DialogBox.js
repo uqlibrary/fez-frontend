@@ -26,7 +26,7 @@ export default class DialogBox extends PureComponent {
 
     handlePrimaryRedirect = () => {
         const {hideDialogBox, history, primaryLink} = this.props;
-        history.push(`/claim-publications/${primaryLink}`);
+        history.push(primaryLink);
         hideDialogBox();
     };
 
@@ -34,7 +34,7 @@ export default class DialogBox extends PureComponent {
         const {hideDialogBox, history, secondaryLink} = this.props;
 
         if (secondaryLink && secondaryLink.length > 0) {
-            history.push(`/claim-publications/${secondaryLink}`);
+            history.push(secondaryLink);
         }
         hideDialogBox();
     };
