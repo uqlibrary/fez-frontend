@@ -4,19 +4,18 @@
 
 @media (min-width: 768px) {
   .upload-progress-wrapper {
+    width: 30px;
+    height: 30px;
     border: 1px dashed cyan;
 
     .upload-progress-ghost {
       border: 1px dotted red;
-      position: absolute !important;
-      top: 0px;
-      left: 0px;
+      position: relative !important;
     }
     .upload-progress {
+      margin-top: -30px;
       border: 1px solid green;
-      position: absolute !important;
-      top: 0px;
-      left: 0px;
+      position: relative !important;
     }
   }
 
