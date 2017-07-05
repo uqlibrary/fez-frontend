@@ -199,14 +199,14 @@ export default class ClaimPublicationForm extends Component {
                             <FlatButton
                                 label={locale.global.labels.buttons.cancel}
                                 secondary
-                                disabled={recordClaimState.get('submitting')}
+                                disabled={recordClaimState && recordClaimState.get('submitting')}
                                 onTouchTap={this.cancelClaimPublication}/>
                         </div>
                         <div className="column is-narrow-desktop">
                             <RaisedButton
                                 secondary
-                                label={recordClaimState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.claimPublication}
-                                disabled={recordClaimState.get('submitting')}
+                                label={recordClaimState && recordClaimState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.claimPublication}
+                                disabled={recordClaimState && recordClaimState.get('submitting')}
                                 onClick={handleSubmit(this.tryFileUpload)} />
                         </div>
                     </div>
