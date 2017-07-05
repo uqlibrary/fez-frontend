@@ -54,7 +54,7 @@ export default class FileMetadata extends Component {
         const {uploadProgress} = nextProps;
 
         if (uploadProgress) {
-            fileUploadProgress[uploadProgress.get('name')] = uploadProgress.get('progress');
+            fileUploadProgress[uploadProgress.get('name')] = parseInt(uploadProgress.get('progress'), 10);
         }
     }
 
@@ -149,19 +149,19 @@ export default class FileMetadata extends Component {
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
                                     fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&
-                                <CircularProgress
-                                    className="upload-progress"
-                                    mode="determinate"
-                                    value={fileUploadProgress[file.name]}
-                                    size={30}
-                                    thickness={4}
-                                />
+                                    <CircularProgress
+                                            className="upload-progress"
+                                            mode="determinate"
+                                            value={fileUploadProgress[file.name]}
+                                            size={30}
+                                            thickness={4}
+                                    />
                             )}
-
                             {fileUploadProgress[file.name] && (
                                 (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
                                 <FontIcon className="material-icons green-tick">done</FontIcon>
                             )}
+
                         </div>
                         <div className="column is-1-desktop is-1-tablet is-1-mobile delete-button">
                             <IconButton
