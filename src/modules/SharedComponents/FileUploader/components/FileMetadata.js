@@ -72,15 +72,15 @@ export default class FileMetadata extends Component {
         const datepickerFieldName = `${fileInformation.fields.datepickerAccess}${id}`;
 
         return (
-        <DatePicker
-            className="datepicker"
-            DateTimeFormat={DateTimeFormat}
-            firstDayOfWeek={0}
-            hintText={currentDateStr}
-            locale="en-AU"
-            name={datepickerFieldName}
-            menuItemStyle={{width: '90px'}}
-        />);
+            <DatePicker
+                className="datepicker"
+                DateTimeFormat={DateTimeFormat}
+                firstDayOfWeek={0}
+                hintText={currentDateStr}
+                locale="en-AU"
+                name={datepickerFieldName}
+                menuItemStyle={{width: '90px'}}
+            />);
     };
 
     buildSelectField = (id) => {
@@ -155,13 +155,21 @@ export default class FileMetadata extends Component {
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
                                     fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&
+                                <div className="upload-progress-wrapper">
                                     <CircularProgress
-                                            className="upload-progress"
-                                            mode="determinate"
-                                            value={fileUploadProgress[file.name]}
-                                            size={30}
-                                            thickness={4}
+                                        className="upload-progress-ghost"
+                                        color="rgba(0,0,0,0.1)"
+                                        size={30}
+                                        thickness={4}
                                     />
+                                    <CircularProgress
+                                        className="upload-progress"
+                                        mode="determinate"
+                                        value={fileUploadProgress[file.name]}
+                                        size={30}
+                                        thickness={4}
+                                    />
+                                </div>
                             )}
                             {fileUploadProgress[file.name] && (
                                 (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
