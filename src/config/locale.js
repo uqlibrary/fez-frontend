@@ -12,7 +12,8 @@ export default {
                 close: 'Close',
                 delete: 'Delete',
                 submitForApproval: 'Submit for approval',
-                submissionInProgress: 'Submitting...'
+                submissionInProgress: 'Submitting...',
+                claimPublication: 'Claim this publication'
             }
         }
     },
@@ -360,9 +361,6 @@ export default {
                     buttons: {
                         browseLabel: 'Browse files'
                     }
-                },
-                formButtons: {
-                    claimLabel: 'Claim this publication'
                 },
                 dialog: {
                     success: {

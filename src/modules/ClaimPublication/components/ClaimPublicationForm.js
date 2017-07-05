@@ -8,7 +8,7 @@ import {Redirect} from 'react-router';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from 'config';
-import {FileUploader} from 'modules/SharedComponents';
+import {FileUploader, SubmissionErrorMessage} from 'modules/SharedComponents';
 import {showDialogBox} from 'modules/App';
 
 import {saveRecord} from 'actions';
@@ -26,7 +26,8 @@ export default class ClaimPublicationForm extends Component {
         history: PropTypes.object,
         isUploadCompleted: PropTypes.bool,
         location: PropTypes.object,
-        recordClaimState: PropTypes.object
+        recordClaimState: PropTypes.object,
+        recordClaimErrorMessage: PropTypes.object,
     };
 
     constructor(props) {
@@ -115,7 +116,7 @@ export default class ClaimPublicationForm extends Component {
         const publicationDetailsInformation = claimPublicationsInformation.publicationDetails;
         const commentsInformation = claimPublicationsInformation.comments;
         const fileInformation = locale.sharedComponents.files;
-        const actionButtonsInformation = claimPublicationsInformation.formButtons;
+        const buttonLabels = locale.global.labels.buttons;
 
         // TODO: Put this data structure into a central location
         const source = this.getCurrentArticle();
@@ -137,7 +138,7 @@ export default class ClaimPublicationForm extends Component {
             }
         };
 
-        const {handleSubmit} = this.props;
+        const {handleSubmit, recordClaimState, recordClaimErrorMessage} = this.props;
 
         return (
             <form style={{marginBottom: '-60px'}}>
@@ -187,6 +188,10 @@ export default class ClaimPublicationForm extends Component {
                     <FileUploader />
                 </FormSection>
 
+                <SubmissionErrorMessage
+                    submissionState={recordClaimState}
+                    submissionErrorMessage={recordClaimErrorMessage} />
+
                 {/* Buttons */}
                 <div className="layout-card">
                     <div className="columns">
@@ -195,12 +200,14 @@ export default class ClaimPublicationForm extends Component {
                             <FlatButton
                                 label={locale.global.labels.buttons.cancel}
                                 secondary
+                                disabled={recordClaimState.get('submitting')}
                                 onTouchTap={this.cancelClaimPublication}/>
                         </div>
                         <div className="column is-narrow-desktop">
                             <RaisedButton
-                                label={actionButtonsInformation.claimLabel}
                                 secondary
+                                label={recordClaimState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.claimPublication}
+                                disabled={recordClaimState.get('submitting')}
                                 onClick={handleSubmit(this.tryFileUpload)} />
                         </div>
                     </div>

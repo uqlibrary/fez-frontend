@@ -5,7 +5,7 @@ import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
-import {AddAuthors, FileUploader, SelectField} from 'modules/SharedComponents';
+import {AddAuthors, FileUploader, SelectField, SubmissionErrorMessage} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 
 import {loadPublicationSubTypesList} from '../actions';
@@ -374,31 +374,10 @@ export default class AddJournalArticleForm extends Component {
                     <FileUploader/>
                 </FormSection>
 
-                {recordSubmissionState && recordSubmissionState.get('failed') &&
-                <Card className="layout-card">
-                    <CardHeader className="card-header">
-                        <div className="columns is-gapless is-mobile">
-                            <div className="column">
-                                <h2 className="title">Submission failed</h2>
-                            </div>
-                        </div>
-                    </CardHeader>
+                <SubmissionErrorMessage
+                    submissionState={recordSubmissionState}
+                    submissionErrorMessage={recordSubmissionErrorMessage} />
 
-                    <CardText className="body-1">
-                        <div className="columns">
-                            <div className="column">
-                                <p>
-                                    {recordSubmissionErrorMessage && recordSubmissionErrorMessage.message &&
-                                    <span>{recordSubmissionErrorMessage.message}</span>}
-                                    {(!recordSubmissionErrorMessage || !recordSubmissionErrorMessage.message) &&
-                                    <span>Unexpected error.</span>}
-                                </p>
-                                <p> Review your data and try again. </p>
-                            </div>
-                        </div>
-                    </CardText>
-                </Card>
-                }
                 <div className="layout-card">
                     <div className="columns">
                         <div className="column is-hidden-mobile"/>
