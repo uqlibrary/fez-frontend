@@ -149,13 +149,22 @@ export default class FileMetadata extends Component {
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
                                     fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&
+                                <div>
                                     <CircularProgress
-                                            className="upload-progress"
-                                            mode="determinate"
-                                            value={fileUploadProgress[file.name]}
-                                            size={30}
-                                            thickness={4}
+                                        className="upload-progress-ghost"
+                                        color="rgba(0,0,0,0.1)"
+                                        size={30}
+                                        thickness={4}
                                     />
+                                    <CircularProgress
+                                        style={{marginTop: '-30px'}}
+                                        className="upload-progress"
+                                        mode="determinate"
+                                        value={fileUploadProgress[file.name]}
+                                        size={30}
+                                        thickness={4}
+                                    />
+                                </div>
                             )}
                             {fileUploadProgress[file.name] && (
                                 (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
