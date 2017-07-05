@@ -54,7 +54,7 @@ export default class FileMetadata extends Component {
         const {uploadProgress} = nextProps;
 
         if (uploadProgress) {
-            fileUploadProgress[uploadProgress.get('name')] = uploadProgress.get('progress');
+            fileUploadProgress[uploadProgress.get('name')] = parseInt(uploadProgress.get('progress'), 10);
         }
     }
 
@@ -87,7 +87,7 @@ export default class FileMetadata extends Component {
         const accessIds = fileInformation.constants;
         const selectFieldValues = fileInformation.fields.selectField;
 
-        return (
+        return(
             <Field
                 autoWidth
                 component={SelectField}
@@ -99,9 +99,9 @@ export default class FileMetadata extends Component {
                 value={this.state.accessFields[fieldName] || null}
                 validate={[validation.required]}
             >
-                <MenuItem value={null} primaryText={selectFieldValues.initialValue}/>
-                <MenuItem value={accessIds.openAccessId} primaryText={selectFieldValues.openAccessValue}/>
-                <MenuItem value={accessIds.closedAccessId} primaryText={selectFieldValues.closedAccessValue}/>
+                <MenuItem value={null} primaryText={selectFieldValues.initialValue} />
+                <MenuItem value={accessIds.openAccessId} primaryText={selectFieldValues.openAccessValue} />
+                <MenuItem value={accessIds.closedAccessId} primaryText={selectFieldValues.closedAccessValue} />
             </Field>
         );
     };
@@ -111,7 +111,7 @@ export default class FileMetadata extends Component {
         const fileInformation = locale.sharedComponents.files;
         const messages = fileInformation.messages;
 
-        return (
+        return(
             acceptedFiles.map((file, index) => {
                 const fieldName = `${file}${index}`;
                 const selectFieldName = `${fileInformation.fields.fileAccess}${index}`;
@@ -149,29 +149,19 @@ export default class FileMetadata extends Component {
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
                                     fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&
-                                <div>
-                                    <CircularProgress
-                                        className="upload-progress-ghost"
-                                        color="rgba(0,0,0,0.1)"
-                                        value="100"
-                                        size={30}
-                                        thickness={4}
-                                    />
-                                    <CircularProgress
-                                        style={{marginTop: '-30px'}}
-                                        className="upload-progress"
-                                        mode="determinate"
-                                        value={fileUploadProgress[file.name]}
-                                        size={30}
-                                        thickness={4}
-                                    />
-                                </div>
+                                <CircularProgress
+                                    className="upload-progress"
+                                    mode="determinate"
+                                    value={fileUploadProgress[file.name]}
+                                    size={30}
+                                    thickness={4}
+                                />
                             )}
-
                             {fileUploadProgress[file.name] && (
                                 (fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed) && uploadError.length === 0 &&
                                 <FontIcon className="material-icons green-tick">done</FontIcon>
                             )}
+
                         </div>
                         <div className="column is-1-desktop is-1-tablet is-1-mobile delete-button">
                             <IconButton
@@ -284,8 +274,7 @@ export default class FileMetadata extends Component {
                     {this.state.deleteDialogContent}
                 </Dialog>
                 <div className="columns is-gapless headers">
-                    <div className="column is-6-desktop is-6-tablet is-12-mobile filename header"
-                         style={{textIndent: '12px'}}>
+                    <div className="column is-6-desktop is-6-tablet is-12-mobile filename header" style={{textIndent: '12px'}}>
                         {fileInformation.list.filenameLabel}
                     </div>
                     <div className="column is-3-desktop is-3-tablet is-12-mobile file-access header">
