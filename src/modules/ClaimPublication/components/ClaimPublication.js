@@ -74,7 +74,7 @@ export default class ClaimPublication extends React.Component {
         } = this.props;
 
         const resultSet = this.extractResultSet();
-        const noOfResults = claimPublicationResults.get('total');
+        const noOfResults = claimPublicationResults.get('total') ? claimPublicationResults.get('total') : 0;
 
         const resultsCountText = `${resultSet.size} out of ${noOfResults} potential match(es) displayed. Select any item to claim it as your work.`;
         return (

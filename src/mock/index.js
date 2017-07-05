@@ -71,8 +71,8 @@ mock.onGet(/file\/upload\/presigned/).passThrough();
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
 
 // Mock claim publication results endpoint response
-mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublication);
-// mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublicationEmpty);
+// mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublication);
+mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublicationEmpty);
 
 // Mock hide publication results endpoint response
 mock.onPost(/(publications\/hide-possible)/).reply(200, hidePublications);
