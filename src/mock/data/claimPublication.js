@@ -3,7 +3,7 @@ export const claimPublication = {
     'total': 3,
     'rows': [
         {
-            'rek_pid': 1,
+            'rek_pid': 'UQ:366663',
             'fez_record_search_key_volume_number': {
                 'rek_volume_number': '122'
             },
@@ -24,7 +24,7 @@ export const claimPublication = {
             'rek_thomson_citation_count': 5
         },
         {
-            'rek_pid': 2,
+            'rek_pid': 'UQ:366664',
             'rek_display_type': 'Conference Paper',
             'fez_record_search_key_volume_number': {
                 'rek_volume_number': '24'
@@ -56,7 +56,7 @@ export const claimPublication = {
             'rek_title': 'Rapamycin, But Not Tacrolimus, Promotes Cd8 Memory T-Cell Differentiation and Function in the Skin'
         },
         {
-            'rek_pid': 3,
+            'rek_pid': 'UQ:366665',
             'rek_display_type': 'Journal Article',
             'fez_record_search_key_volume_number': {
                 'rek_volume_number': '24'
