@@ -126,15 +126,20 @@ export default class ClaimPublicationForm extends Component {
                     </CardText>
                 </Card>
 
-                {/* Buttons */}
                 <Card className="layout-card" id="formButtons">
                     <CardText className="body-1">
                         <div className="columns">
                             <div className="column is-narrow is-offset-two-thirds">
-                                <FlatButton label={locale.global.labels.buttons.cancel} secondary onTouchTap={this.cancelClaimPublication}/>
+                                <RaisedButton
+                                    fullWidth
+                                    label={locale.global.labels.buttons.cancel}
+                                    onTouchTap={this.cancelClaimPublication}/>
                             </div>
                             <div className="column is-narrow">
-                                <RaisedButton label={actionButtonsInformation.claimLabel} secondary onTouchTap={this.claimPublication} />
+                                <RaisedButton
+                                    secondary
+                                    label={actionButtonsInformation.claimLabel}
+                                    onTouchTap={this.claimPublication} />
                             </div>
                         </div>
                     </CardText>

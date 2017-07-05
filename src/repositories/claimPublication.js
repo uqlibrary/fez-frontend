@@ -10,7 +10,7 @@ export function loadUsersPublicationData(username) {
             resolve(response.data);
         }).catch(e => {
             reject(e);
-            throw e;
+            // throw e;
         });
     });
 }
@@ -29,8 +29,9 @@ export function markPublicationsDataNotMine(username, pids) {
         api.post('publications/hide-possible', data).then(response => {
             resolve(response.data);
         }).catch(e => {
+            console.log(e);
             reject(e);
-            throw e;
+            // throw e;
         });
     });
 }
