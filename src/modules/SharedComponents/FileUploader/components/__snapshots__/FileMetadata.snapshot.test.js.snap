@@ -127,7 +127,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         className="selectField"
         component={[Function]}
         hintText="Select access conditions"
-        name="fileAccess0"
+        name="fileAccessundefined"
         onChange={[Function]}
         validate={
           Array [
