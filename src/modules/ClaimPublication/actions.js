@@ -15,7 +15,10 @@ export const CLAIM_SUBMIT_FAILED = 'CLAIM_SUBMIT_FAILED';
 // export const USER_PUBLICATIONS_MARKED_NOT_MINE_UPDATING = 'USER_PUBLICATIONS_MARKED_NOT_MINE_UPDATING';
 export const USER_PUBLICATIONS_MARKED_NOT_MINE_COMPLETED = 'USER_PUBLICATIONS_MARKED_NOT_MINE_COMPLETED';
 
-
+/**
+ * Claims the publication for the user
+ * @returns {function(*)}
+ */
 export function claimPublication(data) {
     return dispatch => {
         console.log('actions/records - savings....');
@@ -71,8 +74,6 @@ export function markPublicationsNotMine(username, pids) {
         });
     };
 }
-
-
 
 /**
  * Clear the selected publication

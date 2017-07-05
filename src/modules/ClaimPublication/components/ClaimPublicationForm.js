@@ -101,7 +101,6 @@ export default class ClaimPublicationForm extends Component {
         const fileData = this.setFileData();
         const combinedData = Object.assign({}, publicationData, fileData);
 
-        console.log('claimPublication', publicationData, '||', fileData, '|||', combinedData);
         this.props.dispatch(saveRecord(combinedData));
     };
 
