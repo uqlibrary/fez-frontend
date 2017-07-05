@@ -3,6 +3,22 @@
 // DESKTOP
 
 @media (min-width: 768px) {
+  .upload-progress-wrapper {
+    border: 1px dashed cyan;
+
+    .upload-progress-ghost {
+      border: 1px dotted red;
+      position: absolute !important;
+      top: 0px;
+      left: 0px;
+    }
+    .upload-progress {
+      border: 1px solid green;
+      position: absolute !important;
+      top: 0px;
+      left: 0px;
+    }
+  }
 
   .metadata-container {
     margin-bottom: 0px !important;
@@ -65,6 +81,9 @@
       .upload-progress, .green-tick {
         float: right;
         margin-top: 10px;
+      }
+      .green-tick {
+        color: green;
       }
       .datepicker {
         float: left;
@@ -211,6 +230,9 @@
         float: right;
         margin-top: -40px !important;
         margin-right: -80px;
+      }
+      .green-tick {
+        color: green;
       }
     }
     .filename, .datepicker, .file-access {

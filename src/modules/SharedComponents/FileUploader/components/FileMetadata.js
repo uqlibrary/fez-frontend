@@ -149,7 +149,7 @@ export default class FileMetadata extends Component {
                             {fileUploadProgress[file.name] && (
                                 ((fileUploadProgress[file.name] < locale.sharedComponents.files.constants.completed) ||
                                     fileUploadProgress[file.name] === locale.sharedComponents.files.constants.completed && uploadError.length > 0) &&
-                                <div>
+                                <div className="upload-progress-wrapper">
                                     <CircularProgress
                                         className="upload-progress-ghost"
                                         color="rgba(0,0,0,0.1)"
@@ -157,7 +157,6 @@ export default class FileMetadata extends Component {
                                         thickness={4}
                                     />
                                     <CircularProgress
-                                        style={{marginTop: '-30px'}}
                                         className="upload-progress"
                                         mode="determinate"
                                         value={fileUploadProgress[file.name]}
