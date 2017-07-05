@@ -42,7 +42,7 @@ export default class SearchResultsRow extends Component {
                     <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}" target="_blank"><FontIcon className="material-icons claimTitleIcon">open_in_new</FontIcon></a>
                 </h3>
 
-                <div className="claimCitation JournalArticle">
+                <div className="claimCitation">
                     <FontIcon className="material-icons claimAuthorsIcon"
                               data-tip="Full citation"
                               data-for="claimTooltips"

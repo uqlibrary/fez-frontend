@@ -296,7 +296,7 @@ export default {
                 claimRecordBtnLabel: 'Claim This Record',
                 noMatchingPublications: {
                     title: 'No matching publications found',
-                    explanationText: 'No publications were found to match [username].',
+                    explanationText: 'No publications were automatically matched for you to claim.',
                     help: {
                         title: 'No publications found',
                         text: (
