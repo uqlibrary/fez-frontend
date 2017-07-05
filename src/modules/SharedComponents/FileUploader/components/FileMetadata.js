@@ -44,6 +44,8 @@ export default class FileMetadata extends Component {
         };
 
         fileUploadProgress = [];
+
+        this.isOpenAccess = false;
     }
 
     componentDidMount() {
@@ -111,15 +113,19 @@ export default class FileMetadata extends Component {
         const fileInformation = locale.sharedComponents.files;
         const messages = fileInformation.messages;
 
+        this.isOpenAccess = false;
+
         return(
             acceptedFiles.map((file, index) => {
                 const fieldName = `${file}${index}`;
-                const selectFieldName = `${fileInformation.fields.fileAccess}${index}`;
+                const selectFieldName = `${fileInformation.fields.fileAccess}${file.name}`;
                 const accessIds = fileInformation.constants;
 
                 if (index === 0) {
                     this.firstRowTarget = `${fileInformation.formSectionPrefix}.${selectFieldName}`;
                 }
+
+                this.isOpenAccess = this.isOpenAccess || this.state.accessFields[selectFieldName] === accessIds.openAccessId;
 
                 return (
                     <div className="columns is-gapless data metadata-container" key={fieldName}>
@@ -130,14 +136,14 @@ export default class FileMetadata extends Component {
                         </div>
                         <div className="column is-3-desktop is-3-tablet is-8-mobile file-access">
                             <FontIcon className="material-icons mobile-icon">lock_outline</FontIcon>
-                            {this.buildSelectField(index)}
+                            {this.buildSelectField(file.name)}
                             <span className="label">File Access</span>
                         </div>
                         <div className="column is-2-desktop is-2-tablet is-8-mobile embargo-date">
                             <FontIcon className="material-icons mobile-icon">date_range</FontIcon>
 
                             {this.state.accessFields[selectFieldName] === accessIds.openAccessId && (
-                                this.buildDatePicker(index)
+                                this.buildDatePicker(file.name)
                             )}
 
                             {this.state.accessFields[selectFieldName] !== accessIds.openAccessId && (
@@ -228,6 +234,7 @@ export default class FileMetadata extends Component {
     isOpenAccessSelected = () => {
         let found = false;
         Object.keys(this.state.accessFields).map(field => {
+            console.log(field);
             if (this.state.accessFields[field] === locale.sharedComponents.files.constants.openAccessId) {
                 found = true;
             }
@@ -240,7 +247,6 @@ export default class FileMetadata extends Component {
         const data = this.state.accessFields;
         data[fieldName] = value;
 
-        this.setState({accessFields: data});
         this.setState({isOpenAccess: this.isOpenAccessSelected()});
     };
 
@@ -294,7 +300,7 @@ export default class FileMetadata extends Component {
                 </div>
                 {this.buildInterface()}
 
-                {this.state.isOpenAccess && (
+                {this.isOpenAccess && (
                     <Field
                         component={Checkbox}
                         name="acceptOpenAccess"
