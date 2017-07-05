@@ -22,6 +22,7 @@ export default class ClaimPublicationForm extends Component {
         claimPublicationResults: PropTypes.object,
         claimPublication: PropTypes.func,
         dispatch: PropTypes.func,
+        formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
         history: PropTypes.object,
         isUploadCompleted: PropTypes.bool,
@@ -91,12 +92,13 @@ export default class ClaimPublicationForm extends Component {
     };
 
     tryRecordSave = () => {
-        const {claimPublication, dispatch} = this.props;
+        const {claimPublication, dispatch, formValues} = this.props;
         const source = this.getCurrentArticle();
 
         const publicationData = {
             pid: source.get('rek_pid'),
-            author_id: source.get('author_id')
+            author_id: source.get('author_id'),
+            comments: formValues.get('comments')
         };
 
         const fileData = this.setFileData();
