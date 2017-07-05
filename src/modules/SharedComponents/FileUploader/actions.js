@@ -2,6 +2,7 @@ import {api, generateCancelToken, locale} from 'config';
 
 // Repositories
 import {loadDocumentAccessData} from 'repositories/documentAccessTypes';
+import {RECORD_SUBMITTING, RECORD_SUBMIT_FAILED} from 'actions';
 
 // Types
 export const FILE_DELETED = 'FILE_DELETED';
@@ -33,6 +34,8 @@ export function uploadFile(acceptedFiles) {
     cancelToken = generateCancelToken();
 
     return dispatch => {
+        dispatch({type: RECORD_SUBMITTING});
+
         acceptedFiles.map(file => {
             api.get(`file/upload/presigned/${file.name}`).then(response => {
                 const options = {
@@ -41,6 +44,7 @@ export function uploadFile(acceptedFiles) {
                     },
                     onUploadProgress: progressEvent => {
                         const percentCompleted = Math.floor((progressEvent.loaded * 100) / progressEvent.total);
+
                         dispatch({
                             type: FILE_UPLOADING,
                             payload: {
@@ -58,6 +62,7 @@ export function uploadFile(acceptedFiles) {
                         type: FILE_UPLOADED
                     });
                 }).catch(e => {
+                    dispatch({type: RECORD_SUBMIT_FAILED});
                     if (api.isCancel(e)) {
                         dispatch({
                             type: FILE_UPLOAD_CANCELLED
@@ -71,6 +76,7 @@ export function uploadFile(acceptedFiles) {
                     }
                 });
             }).catch(e => {
+                dispatch({type: RECORD_SUBMIT_FAILED});
                 dispatch({
                     type: FILE_UPLOAD_TERMINATED,
                     payload: getErrorMssage(e)

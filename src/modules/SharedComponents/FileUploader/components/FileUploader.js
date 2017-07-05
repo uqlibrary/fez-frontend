@@ -256,8 +256,8 @@ export default class FileUploader extends PureComponent {
                         </div>
 
                         {this.state.uploadErrorMessage.length > 0 && (
-                            <div className="fileUploadErrorMessage columns  ">
-                                <div className="column Icon">
+                            <div className="fileUploadErrorMessage columns is-gapless is-mobile">
+                                <div className="column is-narrow Icon">
                                     <FontIcon className="material-icons">error</FontIcon>
                                 </div>
                                 <div className="column Message">

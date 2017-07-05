@@ -76,7 +76,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         disabled={false}
         iconStyle={Object {}}
         onClick={[Function]}
-        tooltip="Delete all files"
+        tooltip="Remove all files from the upload queue"
         tooltipPosition="bottom-left"
         touch={false}
       >
@@ -127,7 +127,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         className="selectField"
         component={[Function]}
         hintText="Select access conditions"
-        name="fileAccess0"
+        name="fileAccessundefined"
         onChange={[Function]}
         validate={
           Array [
@@ -217,7 +217,7 @@ exports[`File metadata snapshots tests renders default file metadata component 1
         disabled={false}
         iconStyle={Object {}}
         onClick={[Function]}
-        tooltip="Delete this file"
+        tooltip="Remove this file from the upload queue"
         tooltipPosition="bottom-left"
         touch={false}
       >
