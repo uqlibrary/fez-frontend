@@ -5,21 +5,8 @@
 @media (min-width: 768px) {
 
   .upload-progress-wrapper {
-    display: block !important;
-    width: 30px;
-    height: 30px;
-    border: 1px dashed cyan;
 
-    .upload-progress-ghost {
-      margin-top: -30px !important;
-      display: block !important;
-      border: 1px dotted red;
-      position: relative !important;
-    }
     .upload-progress {
-      display: block !important;
-      border: 1px solid green;
-      position: relative !important;
     }
   }
 

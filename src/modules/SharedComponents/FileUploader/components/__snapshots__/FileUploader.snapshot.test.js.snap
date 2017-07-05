@@ -26,7 +26,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
           <h4
             className="sub-title"
           >
-            Upload new files
+            You may add up to 10 files (max 5Gb each)
           </h4>
         </div>
         <div
@@ -79,21 +79,19 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
                   File upload restrictions
                 </h3>
                 <div>
+                  Please ensure your files:
                   <ul>
                     <li>
-                      No folders
+                      begin with a letter and are less than 45 characters long
                     </li>
                     <li>
-                      Limited to 10 files
+                      contain only upper and lowercase alphanumeric characters, and underscores
                     </li>
                     <li>
-                      Begin with a letter and are less than 45 characters long
+                      have only a single period which precedes the file extension: “.pdf”
                     </li>
                     <li>
-                      Contain only upper and lowercase alphanumeric characters, and underscores
-                    </li>
-                    <li>
-                      Have only a single period which precedes the file extension: “.pdf”
+                      are uploaded individually and not inside a folder
                     </li>
                   </ul>
                 </div>
