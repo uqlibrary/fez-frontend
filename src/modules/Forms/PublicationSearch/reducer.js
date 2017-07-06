@@ -1,6 +1,6 @@
 import Immutable from 'immutable';
 
-import {DOI_SEARCH_COMPLETED, PUBMED_SEARCH_COMPLETED, TITLE_SEARCH_COMPLETED} from './actions';
+import {DOI_SEARCH_COMPLETED, PUBMED_SEARCH_COMPLETED, TITLE_SEARCH_COMPLETED, SEARCH_RESULTS_CLEARED} from './actions';
 import {TITLE_SEARCH_LOADING, PUBMED_SEARCH_LOADING, DOI_SEARCH_LOADING} from './actions';
 
 // Immutable state
@@ -19,6 +19,8 @@ const publicationSearchReducer = (state = initialState, action) => {
         case PUBMED_SEARCH_COMPLETED:
         case TITLE_SEARCH_COMPLETED:
             return state.set('searchResultsList', Immutable.fromJS(action.payload)).set('loadingSearch', false);
+        case SEARCH_RESULTS_CLEARED:
+            return state.set('searchResultsList', Immutable.fromJS({}));
         default:
             return state;
     }
