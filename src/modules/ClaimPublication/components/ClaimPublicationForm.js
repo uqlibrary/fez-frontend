@@ -181,7 +181,7 @@ export default class ClaimPublicationForm extends Component {
                 {/* Comments */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="title">{commentsInformation.title}</h2>
                             </div>
