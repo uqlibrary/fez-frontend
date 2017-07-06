@@ -92,7 +92,6 @@ export default class ClaimPublicationForm extends Component {
 
     tryRecordSave = () => {
         const {claimPublication, formValues, selectedAuthorId} = this.props;
-       //  const {formValues, selectedAuthorId} = this.props;
         const source = this.getCurrentArticle();
 
         const publicationData = {

@@ -380,7 +380,7 @@ export default {
                 },
                 dialog: {
                     success: {
-                        title: 'Claim publication sent',
+                        title: 'Claim publication',
                         content: 'The publication has been successfully claimed.',
                         primaryButtonLabel: 'Ok',
                         primaryLink: '/claim-publications'

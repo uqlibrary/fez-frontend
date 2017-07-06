@@ -35,8 +35,6 @@ export default class AuthorLinking extends React.Component {
             const selectedClass = selectedAuthorId === authorId ? 'selectedAuthor' : 'unSelectedAuthor';
             const subTitleClass = selectedAuthorId !== authorId ? 'subTitleHidden' : '';
 
-            console.log('author', author.toJS());
-
             return (
                 <div
                     key={key} onTouchTap={() => this.selectAuthor(authorId)}
