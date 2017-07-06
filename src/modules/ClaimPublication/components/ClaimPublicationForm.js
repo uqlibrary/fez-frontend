@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
-import FlatButton from 'material-ui/FlatButton';
 import {Redirect} from 'react-router';
 
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
@@ -199,10 +198,10 @@ export default class ClaimPublicationForm extends Component {
                     <div className="columns">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop" style={{marginBottom: 24}}>
-                            <FlatButton
-                                label={locale.global.labels.buttons.cancel}
-                                secondary
+                            <RaisedButton
+                                fullWidth
                                 disabled={recordClaimState && recordClaimState.get('submitting')}
+                                label={locale.global.labels.buttons.cancel}
                                 onTouchTap={this.cancelClaimPublication}/>
                         </div>
                         <div className="column is-narrow-desktop">
