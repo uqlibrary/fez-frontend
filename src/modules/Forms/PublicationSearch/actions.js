@@ -28,7 +28,7 @@ export function loadDoiResultsList(doi) {
                 type: DOI_SEARCH_COMPLETED,
                 payload: flattenResults(results)
             });
-        }).catch((error) => {
+        }).catch(() => {
             // throw(error);
             // TODO: send loading fail action
             dispatch({
@@ -51,7 +51,7 @@ export function loadPubmedResultsList(pubMedId) {
                 type: PUBMED_SEARCH_COMPLETED,
                 payload: flattenResults(results)
             });
-        }).catch((error) => {
+        }).catch(() => {
             // throw(error);
             dispatch({
                 type: PUBMED_SEARCH_COMPLETED,
@@ -73,7 +73,7 @@ export function loadTitleResultsList(rekDisplayType, title) {
                 type: TITLE_SEARCH_COMPLETED,
                 payload: flattenResults(results)
             });
-        }).catch((error) => {
+        }).catch(() => {
             // throw(error);
             dispatch({
                 type: TITLE_SEARCH_COMPLETED,

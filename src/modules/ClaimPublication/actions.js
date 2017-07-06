@@ -50,7 +50,7 @@ export function loadUsersPublications(username) {
                 type: USERS_PUBLICATIONS_LOADED,
                 payload: data
             });
-        }).catch((error) => {
+        }).catch(() => {
             // throw(error);
             // TODO: dispatch fail action
             dispatch({
@@ -73,7 +73,7 @@ export function markPublicationsNotMine(username, pids) {
                 type: USERS_PUBLICATIONS_LOADED,
                 payload: data
             });
-        }).catch((error) => {
+        }).catch(() => {
             // throw(error);
             // TODO: dispatch fail action
             dispatch({

@@ -74,7 +74,7 @@ export function performSearch(querystring, actionType) {
                 type: actionType,
                 payload: formattedData
             });
-        }).catch((error) => {
+        }).catch(() => {
             // throw(error);
             // TODO: dispatch fail action
             dispatch({

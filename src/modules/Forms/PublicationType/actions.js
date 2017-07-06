@@ -20,7 +20,7 @@ export function loadPublicationTypesList() {
                 type: PUBLICATION_TYPES_LOADED,
                 payload: publicationTypes
             });
-        }).catch((error) => {
+        }).catch(() => {
             // TODO: dispatch fail action
             dispatch({
                 type: PUBLICATION_TYPES_LOADED,

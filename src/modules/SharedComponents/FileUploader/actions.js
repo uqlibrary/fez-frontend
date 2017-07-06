@@ -99,7 +99,7 @@ export function loadDocumentAccessTypes() {
                 type: FILE_DOCUMENT_ACCESS_TYPES_LOADED,
                 payload: accessTypes
             });
-        }).catch((error) => {
+        }).catch(() => {
             // TODO: dispatch fail action
             dispatch({
                 type: FILE_DOCUMENT_ACCESS_TYPES_LOADED,
