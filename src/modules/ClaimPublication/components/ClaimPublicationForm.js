@@ -94,7 +94,7 @@ export default class ClaimPublicationForm extends Component {
     };
 
     tryRecordSave = () => {
-        const {claimPublication, formValues, selectedAuthorId} = this.props;
+        const {claimPublication, formValues} = this.props;
         const source = this.getCurrentArticle();
 
         const publicationData = {
@@ -103,7 +103,8 @@ export default class ClaimPublicationForm extends Component {
         };
 
         // if in the event that the user has to manually link the author name to their account
-        const authorId = selectedAuthorId ? {author_id: selectedAuthorId} : {};
+        // TODO: commented this out until the endpoint is ready const authorId = selectedAuthorId ? {author_id: selectedAuthorId} : {};
+        const authorId = {};
         const fileData = this.setFileData();
         const combinedData = Object.assign({}, publicationData, fileData, authorId);
 

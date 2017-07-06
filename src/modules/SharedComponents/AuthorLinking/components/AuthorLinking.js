@@ -31,17 +31,18 @@ export default class AuthorLinking extends React.Component {
         return dataSource.map((author, index) => {
             const key = `${author}${index}`;
             // TODO: Update the author id once the API has been updated
-            const authorId = author.get('rek_author');
+            const authorId = author.get('rek_author_order');
             const selectedClass = selectedAuthorId === authorId ? 'selectedAuthor' : 'unSelectedAuthor';
-            const subTitleClass = selectedAuthorId !== authorId ? 'subTitleHidden' : '';
+            // TODO: commented out for now until the endpoint returns the data <div className={subTitleClass}>{authorId}</div>
+            // const subTitleClass = selectedAuthorId !== authorId ? 'subTitleHidden' : '';
 
             return (
                 <div
+                    tabIndex="0"
                     key={key} onTouchTap={() => this.selectAuthor(authorId)}
                     className={selectedClass}
                 >
                     {author.get('rek_author')}
-                    <div className={subTitleClass}>{authorId}</div>
                 </div>
             );
         });
