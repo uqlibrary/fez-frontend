@@ -154,7 +154,7 @@ export default class ClaimPublicationForm extends Component {
                 {/* Claim Publication */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="title" style={{marginBottom: '30px'}}>{publicationDetailsInformation.title}</h2>
                             </div>
