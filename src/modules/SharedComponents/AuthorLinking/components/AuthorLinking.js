@@ -32,7 +32,7 @@ export default class AuthorLinking extends React.Component {
             const key = `${author}${index}`;
             // TODO: Update the author id once the API has been updated
             const authorId = author.get('rek_author');
-            const selectedClass = selectedAuthorId === authorId ? 'selectedAuthor' : '';
+            const selectedClass = selectedAuthorId === authorId ? 'selectedAuthor' : 'unSelectedAuthor';
             const subTitleClass = selectedAuthorId !== authorId ? 'subTitleHidden' : '';
 
             console.log('author', author.toJS());
