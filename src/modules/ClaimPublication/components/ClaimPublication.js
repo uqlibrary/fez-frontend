@@ -82,8 +82,6 @@ export default class ClaimPublication extends React.Component {
             loadingSearch
         } = this.props;
 
-        console.log('account', account);
-
         const resultSet = this.extractResultSet();
         const noOfResults = claimPublicationResults.get('total') ? claimPublicationResults.get('total') : 0;
 

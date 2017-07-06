@@ -33,6 +33,9 @@ export default class AuthorLinking extends React.Component {
             // TODO: Update the author id once the API has been updated
             const authorId = author.get('rek_author');
             const selectedClass = selectedAuthorId === authorId ? 'selectedAuthor' : '';
+            const subTitleClass = selectedAuthorId !== authorId ? 'subTitleHidden' : '';
+
+            console.log('author', author.toJS());
 
             return (
                 <div
@@ -40,6 +43,7 @@ export default class AuthorLinking extends React.Component {
                     className={selectedClass}
                 >
                     {author.get('rek_author')}
+                    <div className={subTitleClass}>{authorId}</div>
                 </div>
             );
         });
