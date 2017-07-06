@@ -50,8 +50,8 @@ class Dashboard extends React.Component {
         return (
             <div className="layout-fill">
                 <div className="layout-card">
-                    <div className="columns">
-                        <div className="column">
+                    <div className="columns is-multiline">
+                        <div className="column is-12">
                             <div className="image-cover">
                                 <div className="user-information" style={{color: '#FFF'}}>
                                     <span className="display-1">{account.get('title')} {account.get('name')}</span><br/>
@@ -60,7 +60,8 @@ class Dashboard extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="notification-wrap">
+
+                        <div className="notification-wrap column is-12" >
                             <CSSTransitionGroup
                                 transitionName="claim-publication-lure"
                                 transitionEnterTimeout={100}

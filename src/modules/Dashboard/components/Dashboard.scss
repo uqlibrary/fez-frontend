@@ -22,13 +22,6 @@
   }
 }
 
-.notification-wrap {
-  padding: 26px 0 0 0px;
-  height: 64px;
-  margin-top: -90px;
-  overflow: hidden;
-}
-
 .time-display {
   color: #FFFF !important;
   white-space: nowrap;
@@ -46,6 +39,12 @@
 }
 
 .notification-wrap {
+
+  padding: 26px 0 0 0px;
+  height: 64px;
+  margin-top: -88px;
+  overflow: hidden;
+
   .claim-publication-lure {
     background-color: #F26D00 !important;
 
