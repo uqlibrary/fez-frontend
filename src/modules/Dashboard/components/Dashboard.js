@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardText, CardHeader} from 'material-ui/Card';
-import {publicationYearsSmall as publicationYearsMockData} from '../../../mock/data/academic/publicationYears';
+import {publicationYearsBig as publicationYearsMockData} from '../../../mock/data/academic/publicationYears';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
         return (
             <div className="layout-fill">
                 <div className="layout-card">
-                    <div className="columns is-multiline">
+                    <div className="columns is-multiline is-gapless">
                         <div className="column is-12">
                             <div className="image-cover">
                                 <div className="user-information" style={{color: '#FFF'}}>
@@ -81,23 +81,9 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
 
-                    <div className="columns">
-                        <div className="column is-one-third">
-                            <Card style={{backgroundColor: '#ED5C8F', height: '100%'}}>
-                                <CardHeader className="card-header">
-                                    <h2 className="title" style={{color: '#FFF'}}>eSpace publications by type</h2>
-                                </CardHeader>
-
-                                <CardText className="body-1">
-                                    <div><br/>
-                                        Some content
-                                    </div>
-                                </CardText>
-
-                            </Card>
-                        </div>
-                        <div className="column">
-                            <Card style={{height: '100%'}}>
+                    <div className="columns is-gapless">
+                        <div className="column is-12">
+                            <Card>
                                 <CardHeader className="card-header">
                                     <h2 className="title">eSpace publications by year</h2>
                                 </CardHeader>
