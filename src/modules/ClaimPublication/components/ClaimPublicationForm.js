@@ -12,7 +12,7 @@ import {FileUploader, SubmissionErrorMessage} from 'modules/SharedComponents';
 import {showDialogBox} from 'modules/App';
 
 import {uploadFile} from 'modules/SharedComponents/FileUploader/actions';
-
+import AuthorLinking from './AuthorLinking';
 import {SearchResultsRow} from 'modules/SearchResults';
 
 export default class ClaimPublicationForm extends Component {
@@ -118,17 +118,19 @@ export default class ClaimPublicationForm extends Component {
         const publicationDetailsInformation = claimPublicationsInformation.publicationDetails;
         const commentsInformation = claimPublicationsInformation.comments;
         const fileInformation = locale.sharedComponents.files;
+        const authorLinkingInformation = locale.pages.claimPublications.authorLinking;
         const buttonLabels = locale.global.labels.buttons;
 
         // TODO: Put this data structure into a central location
         const source = this.getCurrentArticle();
         const INDEX = 0;
+        const authors = source.get('fez_record_search_key_author') ? source.get('fez_record_search_key_author') : null;
         const entry = {
             INDEX,
             id: source.get('rek_pid'),
             title: source.get('rek_title'),
             journalName: source.get('fez_record_search_key_journal_name') ? source.get('fez_record_search_key_journal_name').get('rek_journal_name') : null,
-            authors: source.get('fez_record_search_key_author') ? source.get('fez_record_search_key_author') : null,
+            authors: authors,
             publisher: source.get('fez_record_search_key_publisher') ? source.get('fez_record_search_key_publisher') : null,
             volumeNumber: source.get('fez_record_search_key_volume_number') ? source.get('fez_record_search_key_volume_number').get('rek_volume_number') : null,
             issueNumber: source.get('fez_record_search_key_issue_number') ? source.get('fez_record_search_key_issue_number').get('rek_issue_number') : null,
@@ -167,6 +169,10 @@ export default class ClaimPublicationForm extends Component {
                         <SearchResultsRow entry={entry} form="ClaimPublicationForm" hideClaimButton />
                     </CardText>
                 </Card>
+
+                <FormSection name={authorLinkingInformation.formSectionPrefix}>
+                    <AuthorLinking dataSource={authors} />
+                </FormSection>
 
                 {/* Comments */}
                 <Card className="layout-card">

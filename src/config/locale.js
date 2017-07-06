@@ -273,6 +273,12 @@ export default {
             title: 'Claim possible publications',
             maxSearchResults: 5,
             claimUrl: '/claim-publications',
+            authorLinking: {
+                title: 'Author Linking',
+                subTitle: 'We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below:',
+                confirmation: 'I confirm and understand that I am claiming this article under the above name, and confirm this is me',
+                formSectionPrefix: 'authorLinking'
+            },
             claimPublicationResults: {
                 title: 'Possible publications found',
                 explanationText: 'Select any items below to claim them as your work',
