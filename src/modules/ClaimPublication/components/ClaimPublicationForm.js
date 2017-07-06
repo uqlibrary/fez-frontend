@@ -183,7 +183,7 @@ export default class ClaimPublicationForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns">
                             <div className="column">
-                                <h2 className="headline">{commentsInformation.title}</h2>
+                                <h2 className="title">{commentsInformation.title}</h2>
                             </div>
                         </div>
                         <div className="columns">
