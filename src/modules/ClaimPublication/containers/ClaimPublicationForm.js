@@ -19,6 +19,7 @@ ClaimPublicationFormContainer = connect((state) => {
         isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         recordClaimState: claimPublication.get('recordClaimState'),
         recordClaimErrorMessage: claimPublication.get('recordClaimErrorMessage'),
+        searchResultsList: state.get('publicationSearch') ? state.get('publicationSearch').get('searchResultsList') : {},
         selectedPublication: claimPublication.get('selectedPublication'),
         selectedAuthorId: authorLinking.get('selectedAuthor')
     };
