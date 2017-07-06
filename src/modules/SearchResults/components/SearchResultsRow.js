@@ -96,7 +96,7 @@ export default class SearchResultsRow extends Component {
                              data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.altmetric}
                     </span>)
                     }
-                    {counts.downloads && counts.downloads > 1 &&
+                    {counts.downloads && counts.downloads > 0 &&
                     (<span>
                         <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads" title="Downloads"
                               data-for="claimTooltips" data-place="bottom"
