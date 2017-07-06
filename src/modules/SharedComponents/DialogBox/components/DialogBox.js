@@ -13,9 +13,11 @@ export default class DialogBox extends PureComponent {
         title: PropTypes.string.isRequired,
         content: PropTypes.string.isRequired,
         primaryButtonLabel: PropTypes.string.isRequired,
-        primaryLink: PropTypes.string.isRequired,
+        primaryLink: PropTypes.string,
+        primaryHandleFn: PropTypes.func,
         secondaryButtonLabel: PropTypes.string,
         secondaryLink: PropTypes.string,
+        secondaryHandleFn: PropTypes.func,
         hideDialogBox: PropTypes.func,
         history: PropTypes.object
     };
@@ -25,17 +27,30 @@ export default class DialogBox extends PureComponent {
     }
 
     handlePrimaryRedirect = () => {
-        const {hideDialogBox, history, primaryLink} = this.props;
-        history.push(primaryLink);
+        const {hideDialogBox, history, primaryLink, primaryHandleFn} = this.props;
+
+        if (primaryLink && primaryLink.length > 0) {
+            history.push(primaryLink);
+        }
+
+        if (primaryHandleFn) {
+            primaryHandleFn();
+        }
+
         hideDialogBox();
     };
 
     handleSecondaryRedirect = () => {
-        const {hideDialogBox, history, secondaryLink} = this.props;
+        const {hideDialogBox, history, secondaryLink, secondaryHandleFn} = this.props;
 
         if (secondaryLink && secondaryLink.length > 0) {
             history.push(secondaryLink);
         }
+
+        if (secondaryHandleFn) {
+            secondaryHandleFn();
+        }
+
         hideDialogBox();
     };
 

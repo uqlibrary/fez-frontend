@@ -165,8 +165,10 @@ export default class App extends React.Component {
                             content={dialogbox.get('content')}
                             primaryButtonLabel={dialogbox.get('primaryButtonLabel')}
                             primaryLink={dialogbox.get('primaryLink')}
+                            primaryHandleFn={dialogbox.get('primaryHandleFn')}
                             secondaryButtonLabel={dialogbox.get('secondaryButtonLabel')}
                             secondaryLink={dialogbox.get('secondaryLink')}
+                            secondaryHandleFn={dialogbox.get('secondaryHandleFn')}
                         />
 
                         <HelpDrawer />

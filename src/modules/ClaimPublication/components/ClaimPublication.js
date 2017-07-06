@@ -8,6 +8,8 @@ import {SearchResults} from 'modules/SearchResults';
 import {NoMatchingRecords} from 'modules/NoMatchingRecords';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
+import {showDialogBox} from 'modules/App';
+
 import './ClaimPublication.scss';
 
 export default class ClaimPublication extends React.Component {
@@ -15,6 +17,7 @@ export default class ClaimPublication extends React.Component {
     static propTypes = {
         account: PropTypes.object,
         claimPublicationResults: PropTypes.object,
+        dispatch: PropTypes.func,
         loadingSearch: PropTypes.bool,
         loadUsersPublications: PropTypes.func,
         markPublicationsNotMine: PropTypes.func
@@ -48,6 +51,12 @@ export default class ClaimPublication extends React.Component {
         }
 
         return resultSet;
+    };
+
+    confirmMarkPublicationsNotMine = () => {
+        const dialogConfig = locale.pages.claimPublications.claimPublicationResults.dialog.markNotMine;
+        const combinedConfig = Object.assign({}, dialogConfig, {primaryHandleFn: this.markPublicationsNotMine});
+        this.props.dispatch(showDialogBox(combinedConfig));
     };
 
     markPublicationsNotMine = () => {
@@ -104,7 +113,7 @@ export default class ClaimPublication extends React.Component {
                                         label={claimPublicationsInformation.formButtons.notMineLabel}
                                         secondary
                                         fullWidth
-                                        onTouchTap={this.markPublicationsNotMine}
+                                        onTouchTap={this.confirmMarkPublicationsNotMine}
                                     />
                                 </div>
                             </div>

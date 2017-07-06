@@ -315,6 +315,15 @@ export default {
                         ),
                         button: 'OK'
                     }
+                },
+                dialog: {
+                    markNotMine: {
+                        title: 'Mark publications as not yours?',
+                        content: 'Are you sure you wish to mark these publications as not yours?',
+                        primaryButtonLabel: 'Yes',
+                        primaryLink: '/claim-publications',
+                        secondaryButtonLabel: 'No'
+                    }
                 }
             },
             formButtons: {
