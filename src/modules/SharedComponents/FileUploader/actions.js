@@ -100,7 +100,12 @@ export function loadDocumentAccessTypes() {
                 payload: accessTypes
             });
         }).catch((error) => {
-            throw(error);
+            // TODO: dispatch fail action
+            dispatch({
+                type: FILE_DOCUMENT_ACCESS_TYPES_LOADED,
+                payload: []
+            });
+            // throw(error);
         });
     };
 }

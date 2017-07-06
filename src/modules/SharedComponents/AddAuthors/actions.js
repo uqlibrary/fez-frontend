@@ -75,7 +75,12 @@ export function performSearch(querystring, actionType) {
                 payload: formattedData
             });
         }).catch((error) => {
-            throw(error);
+            // throw(error);
+            // TODO: dispatch fail action
+            dispatch({
+                type: actionType,
+                payload: []
+            });
         });
     };
 }

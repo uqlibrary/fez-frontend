@@ -40,7 +40,12 @@ export function loadPublicationSubTypesList(id) {
                 payload: publicationTypes
             });
         }).catch((error) => {
-            throw(error);
+            // throw(error);
+            // TODO: dispatch fail action
+            dispatch({
+                type: PUBLICATION_SUB_TYPES_LOADED,
+                payload: []
+            });
         });
     };
 }

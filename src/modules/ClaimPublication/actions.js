@@ -51,7 +51,12 @@ export function loadUsersPublications(username) {
                 payload: data
             });
         }).catch((error) => {
-            throw(error);
+            // throw(error);
+            // TODO: dispatch fail action
+            dispatch({
+                type: USERS_PUBLICATIONS_LOADED,
+                payload: []
+            });
         });
     };
 }
@@ -69,7 +74,12 @@ export function markPublicationsNotMine(username, pids) {
                 payload: data
             });
         }).catch((error) => {
-            throw(error);
+            // throw(error);
+            // TODO: dispatch fail action
+            dispatch({
+                type: USERS_PUBLICATIONS_LOADED,
+                payload: []
+            });
         });
     };
 }

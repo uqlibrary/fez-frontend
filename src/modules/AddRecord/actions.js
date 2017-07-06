@@ -22,7 +22,12 @@ export function loadPublicationTypesList() {
                 payload: publicationTypes
             });
         }).catch((error) => {
-            throw(error);
+            // TODO: dispatch fail action
+            dispatch({
+                type: PUBLICATION_TYPES_LOADED,
+                payload: []
+            });
+            // throw(error);
         });
     };
 }

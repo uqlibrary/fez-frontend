@@ -29,7 +29,12 @@ export function loadDoiResultsList(doi) {
                 payload: flattenResults(results)
             });
         }).catch((error) => {
-            throw(error);
+            // throw(error);
+            // TODO: send loading fail action
+            dispatch({
+                type: DOI_SEARCH_COMPLETED,
+                payload: []
+            });
         });
     };
 }
@@ -47,7 +52,11 @@ export function loadPubmedResultsList(pubMedId) {
                 payload: flattenResults(results)
             });
         }).catch((error) => {
-            throw(error);
+            // throw(error);
+            dispatch({
+                type: PUBMED_SEARCH_COMPLETED,
+                payload: []
+            });
         });
     };
 }
@@ -65,7 +74,11 @@ export function loadTitleResultsList(rekDisplayType, title) {
                 payload: flattenResults(results)
             });
         }).catch((error) => {
-            throw(error);
+            // throw(error);
+            dispatch({
+                type: TITLE_SEARCH_COMPLETED,
+                payload: []
+            });
         });
     };
 }
