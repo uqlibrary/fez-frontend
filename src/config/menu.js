@@ -6,12 +6,12 @@ export const researcherMenuItems = (locale, email, components) => [
         secondaryText: email,
         component: components.Dashboard
     },
-    {
-        linkTo: '/research',
-        path: '/research',
-        primaryText: locale.menu.myResearch.primaryText,
-        component: components.Research
-    },
+    // {
+    //     linkTo: '/research',
+    //     path: '/research',
+    //     primaryText: locale.menu.myResearch.primaryText,
+    //     component: components.Research
+    // },
     {
         linkTo: '/add-record',
         path: '/add-record',
