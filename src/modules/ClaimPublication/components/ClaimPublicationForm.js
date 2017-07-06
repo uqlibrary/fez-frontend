@@ -54,8 +54,12 @@ export default class ClaimPublicationForm extends Component {
     }
 
     cancelClaimPublication = () => {
+        const {dispatch, searchResultsList} = this.props;
+        const goBackUrl = {primaryLink: searchResultsList.size > 0 ? '/add-record' : '/claim-publications'};
         const dialogConfig = locale.pages.claimPublications.form.dialog.cancel;
-        this.props.dispatch(showDialogBox(dialogConfig));
+        const combinedConfig = Object.assign({}, dialogConfig, goBackUrl);
+
+        dispatch(showDialogBox(combinedConfig));
     };
 
     getCurrentPublication = () => {
@@ -114,7 +118,7 @@ export default class ClaimPublicationForm extends Component {
 
     render() {
         // detects if something is trying to go to /claim-publications/:id. For now we just redirect back to the claim-publications page
-        if (this.props.claimPublicationResults.size === 0 || this.props.searchResultsList.size === 0) {
+        if (this.props.claimPublicationResults.size === 0 && this.props.searchResultsList.size === 0) {
             return (<Redirect to="/claim-publications" />);
         }
 
