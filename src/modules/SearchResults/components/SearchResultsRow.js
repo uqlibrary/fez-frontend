@@ -38,8 +38,8 @@ export default class SearchResultsRow extends Component {
         return (
             <div className="claimWrapper">
                 <h3 className="claimTitle">
-                    <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}">{title}</a>
-                    <a href="https://fez-staging.library.uq.edu.au/view/UQ:{}" target="_blank"><FontIcon
+                    <a href="#">{title}</a>
+                    <a href="#" target="_blank"><FontIcon
                         className="material-icons claimTitleIcon">open_in_new</FontIcon></a>
                 </h3>
 
@@ -67,43 +67,42 @@ export default class SearchResultsRow extends Component {
 
                 <div className="claimStats">
                     {counts.thomson && counts.thomson > 0 &&
-                    <span>
+                    (<span>
                         <img src={thompsonIcon} alt="Thomson Routers"
                              data-tip="Thomson Routers Web of Science citation count"
                              title="Thomson Routers Web of Science citation count"
                              data-place="bottom"
                              data-for="claimTooltips"/> {counts.thomson}
-                    </span>
+                    </span>)
                     }
                     {counts.scopus && counts.scopus > 0 &&
-                    <span>
+                    (<span>
                         <img src={scopusIcon} alt="Scopus"
                              data-tip="Scopus citation count"
                              title="Scopus citation count"
                              data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.scopus}
-                    </span>
+                    </span>)
                     }
                     {counts.google && counts.google > 0 &&
-                    <span>
-                    <img src={googleScholarIcon} alt="Google Scholar"
-                         data-tip="Google Scholar citation count" title="Google Scholar citation count"
-                         data-for="claimTooltips"
-                         style={{marginLeft: '10px'}}/> {counts.google}
-                    </span>
+                    (<span>
+                        <img src={googleScholarIcon} alt="Google Scholar"
+                             data-tip="Google Scholar citation count" title="Google Scholar citation count"
+                             data-for="claimTooltips"
+                             style={{marginLeft: '10px'}}/> {counts.google}
+                    </span>)
                     }
                     {counts.altmetric && counts.altmetric > 0 &&
-                    <span>
-                    <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score" title="Altmetric score"
-                         data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.altmetric}
-                    </span>
+                    (<span>
+                        <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score" title="Altmetric score"
+                             data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.altmetric}
+                    </span>)
                     }
-                    {counts.downloads && counts.downloads > 1 && (
-                        <span>
-                    <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads" title="Downloads"
+                    {counts.downloads && counts.downloads > 1 &&
+                    (<span>
+                        <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads" title="Downloads"
                               data-for="claimTooltips" data-place="bottom"
                               style={{marginLeft: '10px'}}>file_download</FontIcon> {counts.downloads}
-                    </span>
-                    )
+                    </span>)
                     }
 
                     {!this.props.hideClaimButton &&

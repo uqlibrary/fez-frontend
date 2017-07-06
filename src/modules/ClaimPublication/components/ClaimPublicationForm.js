@@ -216,6 +216,7 @@ export default class ClaimPublicationForm extends Component {
                         </div>
                         <div className="column is-narrow-desktop">
                             <RaisedButton
+                                fullWidth
                                 secondary
                                 label={recordClaimState && recordClaimState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.claimPublication}
                                 disabled={recordClaimState && recordClaimState.get('submitting')}
