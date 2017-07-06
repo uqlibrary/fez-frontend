@@ -1,25 +1,35 @@
+@import '../../../../sass/index';
+
 .authorList {
-    min-height: 100px;
-    width: 100%;
-    overflow: hidden;
-    -webkit-columns: 5;
-    -moz-columns: 5;
-    columns: 5;
-    -moz-column-fill: balance;
-    column-fill: balance;
+  min-height: 20px !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  -webkit-columns: 5 !important;
+  -moz-columns: 5 !important;
+  columns: 5 !important;
+  -moz-column-fill: balance !important;
+  column-fill: balance !important;
 
-    .selectedAuthor {
-        color: green !important;
-        font-weight: bold !important;
-    }
-    .unselectedAuthor {
-        cursor: pointer;
-    }
+  div.selectedAuthor {
+    color: green !important;
+    opacity: 1.0 !important;
+    font-weight: bold !important;
+  }
 
-    .subTitleHidden {
-        display: none;
+  div.unSelectedAuthor {
+    opacity: 0.6 !important;
+    cursor: pointer !important;
+    &:hover {
+      opacity: 1.0 !important;
     }
+  }
+
+  .subTitleHidden {
+    display: none !important;
+  }
 }
+
 .confirmBox {
-    margin: 24px !important;
+  margin: 24px !important;
 }
