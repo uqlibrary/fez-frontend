@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {reduxForm, getFormValues} from 'redux-form/immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
-import {claimPublication} from '../actions';
+import {claimPublication, claimPublicationReset} from '../actions';
 import Immutable from 'immutable';
 
 let ClaimPublicationFormContainer = reduxForm({
@@ -24,7 +24,8 @@ ClaimPublicationFormContainer = connect((state) => {
     };
 }, dispatch => {
     return {
-        claimPublication: (data) => dispatch(claimPublication(data))
+        claimPublication: (data) => dispatch(claimPublication(data)),
+        claimPublicationReset: () => dispatch(claimPublicationReset())
     };
 })(ClaimPublicationFormContainer);
 

@@ -3,6 +3,7 @@ import {
     CLAIM_SUBMITTING,
     CLAIM_SUBMITTED,
     CLAIM_SUBMIT_FAILED,
+    CLAIM_SUBMIT_RESET,
     PUBLICATION_SELECTED,
     PUBLICATION_SELECTED_CLEARED,
     PUBLICATION_RESULTS_CLEARED,
@@ -73,6 +74,8 @@ const handlers = {
     [CLAIM_SUBMIT_FAILED]: (state, action) => (state.set('recordClaimState', Immutable.fromJS(RecordState.failed)).set('recordClaimErrorMessage', Immutable.fromJS(action.payload))),
 
     [CLAIM_SUBMITTING]: (state) => (state.set('recordClaimState', Immutable.fromJS(RecordState.submitting)).set('recordClaimErrorMessage', undefined)),
+
+    [CLAIM_SUBMIT_RESET]: (state) => (state.set('recordClaimState', Immutable.fromJS(RecordState.clear)).set('recordClaimErrorMessage', undefined)),
 
     // TODO: refactor: rely on redux-form failed submission api, not on manual state reset
     // reset failed submit state when user 'starts' to modify something on the form by moving focus
