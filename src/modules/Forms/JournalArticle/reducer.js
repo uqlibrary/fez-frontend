@@ -29,7 +29,7 @@ const RecordState = {
 
 export const initialState = Immutable.fromJS({
     publicationSubTypeList: {},
-    recordSubmissionState: undefined,
+    recordSubmissionState: RecordState.clear,
     recordSubmissionErrorMessage: undefined
 });
 

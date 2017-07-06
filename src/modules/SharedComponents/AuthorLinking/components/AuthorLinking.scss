@@ -1,8 +1,25 @@
-.selectedAuthor {
-    color: green !important;
-    font-weight: bold !important;
-}
+.authorList {
+    min-height: 100px;
+    width: 100%;
+    overflow: hidden;
+    -webkit-columns: 5;
+    -moz-columns: 5;
+    columns: 5;
+    -moz-column-fill: balance;
+    column-fill: balance;
 
-.subTitleHidden {
-    display: none;
+    .selectedAuthor {
+        color: green !important;
+        font-weight: bold !important;
+    }
+    .unselectedAuthor {
+        cursor: pointer;
+    }
+
+    .subTitleHidden {
+        display: none;
+    }
+}
+.confirmBox {
+    margin: 24px !important;
 }
