@@ -57,17 +57,6 @@ export default {
             primaryText: 'About',
         },
     },
-    notifications: {
-        addRecord: {
-            cancelMessage: 'Publication has not been saved',
-            saveMessage: 'Publication has been saved for later',
-            submitMessage: 'Publication has been submitted for approval'
-        },
-        claimPublicationForm: {
-            cancelMessage: 'Your publication claim has been canceled',
-            claimMessage: 'Your publication claim has been sent for approval'
-        }
-    },
     mapping: {
         vocabs: [
             {'documentId': 174, 'vocabId': 453581},
@@ -185,8 +174,8 @@ export default {
             },
             searchResults: {
                 title: 'Possible matches found',
-                explanationText: 'Top [noOfResults] potential match(es) displayed - claim a matching article below, refine your search or create a new eSpace record.',
-                claimRecordBtnLabel: 'Claim This Record',
+                explanationText: 'Top [noOfResults] potential match(es) displayed - claim a matching publication below, refine your search or create a new eSpace record.',
+                claimRecordBtnLabel: 'Claim This Publication',
                 help: {
                     title: 'Possible matches found',
                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
@@ -254,15 +243,15 @@ export default {
                 },
                 dialog: {
                     success: {
-                        title: 'Submission sent',
+                        title: 'Your record has been submitted',
                         content: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
                         primaryButtonLabel: 'Ok',
                         primaryLink: '/dashboard',
                         secondaryButtonLabel: 'Add another missing record'
                     },
                     cancel: {
-                        title: 'Abandoned workflow',
-                        content: 'Are you sure you wish to abandon this form?',
+                        title: 'Cancel adding a missing record',
+                        content: 'Are you sure you want to cancel adding this record?',
                         primaryButtonLabel: 'Yes',
                         primaryLink: '/dashboard',
                         secondaryButtonLabel: 'No'
@@ -275,9 +264,9 @@ export default {
             maxSearchResults: 5,
             claimUrl: '/claim-publications',
             authorLinking: {
-                title: 'Author Linking',
+                title: 'Author linking',
                 subTitle: 'We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below:',
-                confirmation: 'I confirm and understand that I am claiming this article under the above name, and confirm this is me',
+                confirmation: 'I confirm and understand that I am claiming this publication under the above name, and confirm this is me',
                 formSectionPrefix: 'authorLinking'
             },
             claimPublicationResults: {
@@ -300,7 +289,7 @@ export default {
                     ),
                     button: 'OK'
                 },
-                claimRecordBtnLabel: 'Claim This Record',
+                claimRecordBtnLabel: 'Claim This Publication',
                 noMatchingPublications: {
                     title: 'No matching publications found',
                     explanationText: 'No publications were automatically matched for you to claim.',
@@ -318,8 +307,8 @@ export default {
                 },
                 dialog: {
                     markNotMine: {
-                        title: 'Mark publications as not yours?',
-                        content: 'Are you sure you wish to mark these publications as not yours?',
+                        title: 'Hide publications',
+                        content: 'Are you sure you want to hide these publications?',
                         primaryButtonLabel: 'Yes',
                         primaryLink: '/claim-publications',
                         secondaryButtonLabel: 'No'
@@ -327,7 +316,7 @@ export default {
                 }
             },
             formButtons: {
-                claimLabel: 'Claim this article',
+                claimLabel: 'Claim this publication',
                 notMineLabel: 'None of these publications are mine'
             },
             form: {
@@ -386,8 +375,8 @@ export default {
                         primaryLink: '/claim-publications'
                     },
                     cancel: {
-                        title: 'Abandoned publication claim',
-                        content: 'Are you sure you wish to abandon claiming this publication?',
+                        title: 'Cancel claiming publication',
+                        content: 'Are you sure you want to cancel claiming this publication?',
                         primaryButtonLabel: 'Yes',
                         primaryLink: '/claim-publications',
                         secondaryButtonLabel: 'No'

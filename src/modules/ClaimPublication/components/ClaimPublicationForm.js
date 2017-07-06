@@ -37,6 +37,8 @@ export default class ClaimPublicationForm extends Component {
         this.state = {
             selectedPublication: {}
         };
+
+        this.props.claimPublicationReset();
     }
 
     componentWillReceiveProps(nextProps) {
@@ -48,10 +50,6 @@ export default class ClaimPublicationForm extends Component {
             const dialogConfig = locale.pages.claimPublications.form.dialog.success;
             this.props.dispatch(showDialogBox(dialogConfig));
         }
-    }
-
-    componentWillUnmount() {
-        this.props.claimPublicationReset();
     }
 
     cancelClaimPublication = () => {
