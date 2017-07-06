@@ -14,15 +14,12 @@ export default class AuthorLinking extends React.Component {
         account: PropTypes.object,
         dataSource: PropTypes.object,
         resetSelectedAuthor: PropTypes.func,
+        selectedAuthorId: PropTypes.string,
         setSelectedAuthor: PropTypes.func
     };
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            authorId: ''
-        };
     }
 
     componentWillUnmount() {
@@ -30,11 +27,12 @@ export default class AuthorLinking extends React.Component {
     }
 
     buildAuthorList = () => {
-        return this.props.dataSource.map((author, index) => {
+        const {dataSource, selectedAuthorId} = this.props;
+        return dataSource.map((author, index) => {
             const key = `${author}${index}`;
             // TODO: Update the author id once the API has been updated
             const authorId = author.get('rek_author');
-            const selectedClass = this.state.authorId === authorId ? 'selectedAuthor' : '';
+            const selectedClass = selectedAuthorId === authorId ? 'selectedAuthor' : '';
 
             return (
                 <div
@@ -55,7 +53,6 @@ export default class AuthorLinking extends React.Component {
     };
 
     selectAuthor = (authorId) => {
-        this.setState({authorId});
         this.props.setSelectedAuthor(authorId);
     };
 
