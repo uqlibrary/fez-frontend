@@ -27,6 +27,7 @@ export default class ClaimPublicationForm extends Component {
         location: PropTypes.object,
         recordClaimState: PropTypes.object,
         recordClaimErrorMessage: PropTypes.object,
+        selectedAuthorId: PropTypes.string
     };
 
     constructor(props) {
@@ -42,7 +43,7 @@ export default class ClaimPublicationForm extends Component {
             this.tryRecordSave();
         }
 
-        if (nextProps.recordClaimState.get('submitted')) {
+        if (nextProps.recordClaimState && nextProps.recordClaimState.get('submitted')) {
             const dialogConfig = locale.pages.claimPublications.form.dialog.success;
             this.props.dispatch(showDialogBox(dialogConfig));
         }
@@ -90,19 +91,23 @@ export default class ClaimPublicationForm extends Component {
     };
 
     tryRecordSave = () => {
-        const {claimPublication, dispatch, formValues} = this.props;
+       // const {claimPublication, dispatch, formValues, selectedAuthorId} = this.props;
+        const {formValues, selectedAuthorId} = this.props;
         const source = this.getCurrentArticle();
 
         const publicationData = {
             pid: source.get('rek_pid'),
-            author_id: source.get('author_id'),
             comments: formValues.get('comments')
         };
 
+        // if in the event that the user has to manually link the author name to their account
+        const authorId = selectedAuthorId ? {author_id: selectedAuthorId} : {};
         const fileData = this.setFileData();
-        const combinedData = Object.assign({}, publicationData, fileData);
+        const combinedData = Object.assign({}, publicationData, fileData, authorId);
 
-        dispatch(claimPublication(combinedData));
+        console.log('submitted', combinedData);
+
+        // dispatch(claimPublication(combinedData));
     };
 
     render() {

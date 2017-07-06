@@ -15,7 +15,7 @@ const authorsLinkingReducer = (state = initialState, action) => {
         case AUTHOR_SELECTED:
             return state.set('selectedAuthor', Immutable.fromJS(action.payload));
         case AUTHOR_SELECTED_RESET:
-            return state.set('selectedAuthor', null);
+            return state.set('selectedAuthor', initialState.get('selectedAuthor'));
         default:
             return state;
     }

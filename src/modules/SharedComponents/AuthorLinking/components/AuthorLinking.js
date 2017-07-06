@@ -21,7 +21,6 @@ export default class AuthorLinking extends React.Component {
         super(props);
 
         this.state = {
-            showConfirmation: false,
             authorId: ''
         };
     }
@@ -33,6 +32,7 @@ export default class AuthorLinking extends React.Component {
     buildAuthorList = () => {
         return this.props.dataSource.map((author, index) => {
             const key = `${author}${index}`;
+            // TODO: Update the author id once the API has been updated
             const authorId = author.get('rek_author');
             const selectedClass = this.state.authorId === authorId ? 'selectedAuthor' : '';
 
@@ -47,12 +47,15 @@ export default class AuthorLinking extends React.Component {
         });
     };
 
-    selectAuthor = (authorId) => {
-        this.setState({
-            showConfirmation: true,
-            authorId
-        });
+    authorFound = () => {
+        const {dataSource, account} = this.props;
+        const found = dataSource.filter(author => author.get('author_id') === account.get('id'));
 
+        return !(found.size === 0);
+    };
+
+    selectAuthor = (authorId) => {
+        this.setState({authorId});
         this.props.setSelectedAuthor(authorId);
     };
 
@@ -62,6 +65,7 @@ export default class AuthorLinking extends React.Component {
 
         return (
             <div className="layout-fill">
+                {!this.authorFound() && (
                 <Card className="layout-card">
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
@@ -84,19 +88,18 @@ export default class AuthorLinking extends React.Component {
                         <div className="columns" style={{marginTop: '12px'}}>
                             <div className="column">
                                 {this.buildAuthorList()}
-                                {this.state.showConfirmation && (
-                                    <Field
-                                        component={Checkbox}
-                                        name="authorLinkConfirmation"
-                                        className="open-access-checkbox"
-                                        label={authorLinkingInformation.confirmation}
-                                        validate={[validation.required]}
-                                    />
-                                )}
+                                <Field
+                                    component={Checkbox}
+                                    name="authorLinkConfirmation"
+                                    className="open-access-checkbox"
+                                    label={authorLinkingInformation.confirmation}
+                                    validate={[validation.required]}
+                                />
                             </div>
                         </div>
                     </CardText>
                 </Card>
+                )}
             </div>
         );
     }

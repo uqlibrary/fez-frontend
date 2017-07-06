@@ -10,6 +10,7 @@ let ClaimPublicationFormContainer = reduxForm({
 
 ClaimPublicationFormContainer = connect((state) => {
     const claimPublication = state.get('claimPublication');
+    const authorLinking = state.get('authorLinking');
     const fileUploadState = state.get('fileUpload');
     return {
         acceptedFiles: fileUploadState.get('acceptedFiles'),
@@ -18,7 +19,8 @@ ClaimPublicationFormContainer = connect((state) => {
         isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         recordClaimState: claimPublication.get('recordClaimState'),
         recordClaimErrorMessage: claimPublication.get('recordClaimErrorMessage'),
-        selectedPublication: claimPublication.get('selectedPublication')
+        selectedPublication: claimPublication.get('selectedPublication'),
+        selectedAuthorId: authorLinking.get('selectedAuthor')
     };
 }, dispatch => {
     return {
