@@ -328,6 +328,187 @@ export const internalPubMedSearchResultsList = [
 
 export const externalTitleSearchResultsList = [
     {
+        "rek_object_type":3,
+        "rek_status":2,
+        "fez_record_search_key_publisher":{
+            "rek_publisher":"SAGE Publications Inc."
+        },
+        "fez_record_search_key_subject":[
+            {
+                "rek_subject":453384,
+                "rek_subject_order":1
+            },
+            {
+                "rek_subject":453363,
+                "rek_subject_order":2
+            },
+            {
+                "rek_subject":453360,
+                "rek_subject_order":3
+            },
+            {
+                "rek_subject":453359,
+                "rek_subject_order":4
+            }
+        ],
+        "fez_record_search_key_author":[
+            {
+                "rek_author":"Carter R.M.",
+                "rek_author_order":1
+            }
+        ],
+        "fez_record_search_key_author_count":{
+            "rek_author_count":1
+        },
+        "fez_record_search_key_author_affiliation_name":[
+            {
+                "rek_author_affiliation_name":"Marine Geophysical Laboratory,James Cook University",
+                "rek_author_affiliation_name_order":1
+            }
+        ],
+        "fez_record_search_key_author_affiliation_full_address":[
+            {
+                "rek_author_affiliation_full_address":"Townsville, QLD 4811",
+                "rek_author_affiliation_full_address_order":1
+            }
+        ],
+        "fez_record_search_key_author_affiliation_country":[
+            {
+                "rek_author_affiliation_country":"aus",
+                "rek_author_affiliation_country_order":1
+            }
+        ],
+        "rek_scopus_citation_count":"1",
+        "fez_record_search_key_corresponding_name":[
+            {
+                "rek_corresponding_name":"Carter R.M.",
+                "rek_corresponding_name_order":1
+            }
+        ],
+        "fez_record_search_key_corresponding_email":[
+            {
+                "rek_corresponding_email":"bob.carter@jcu.edu.au",
+                "rek_corresponding_email_order":1
+            }
+        ],
+        "fez_record_search_key_corresponding_organization":[
+            {
+                "rek_corresponding_organization":"Marine Geophysical Laboratory,James Cook University",
+                "rek_corresponding_organization_order":1
+            }
+        ],
+        "fez_record_search_key_corresponding_country":[
+            {
+                "rek_corresponding_country":"aus",
+                "rek_corresponding_country_order":1
+            }
+        ],
+        "rek_description":"A prerequisite for meaningful environmental legislation is that it be based upon an adequate scientific understanding of the natural system to which it is applied. In 2003, the Australian Commonwealth and Queensland State governments introduced a Reef Water Quality Protection Plan, which aimed to \"improve\" water quality in river catchments adjacent to the Great Barrier Reef (GBR) and in nearby coastal waters. The Plan was introduced in the absence of any substantive evidence for regional degradation of GBR water quality. This paper reviews the available data regarding nutrient contents in the Tully River, north Queensland, which is cited as the best (available) evidence for human-related changes in nutrient export from (GBR) catchments [1]. It is shown that the claim of human-related nutrient enrichment in the Tully River, and regionally, is without substance. No detectable trends in GBR water quality have occurred since systematic measurements were first started in the 1980s. Environmental policies that are based on mischievous claims of chimerical damage to the Great Barrier Reef damage the reputation of science as a tool for disinterested analysis, and provoke widespread cynicism in the community regarding the integrity of contemporary environmental politics.",
+        "fez_record_search_key_keywords":[
+            {
+                "rek_keywords":"Anthropogenic",
+                "rek_keywords_order":1
+            },
+            {
+                "rek_keywords":"Environmental legislation",
+                "rek_keywords_order":2
+            },
+            {
+                "rek_keywords":"Great Barrier Reef",
+                "rek_keywords_order":3
+            },
+            {
+                "rek_keywords":"Nutrient",
+                "rek_keywords_order":4
+            }
+        ],
+        "rek_title":"Great news for the Great Barrier Reef: Tully River water quality",
+        "fez_record_search_key_doi":{
+            "rek_doi":"10.1260\/095830506778644233"
+        },
+        "fez_record_search_key_issn":[
+            {
+                "rek_issn":"0958-305X",
+                "rek_issn_order":1
+            }
+        ],
+        "fez_record_search_key_issue_number":{
+            "rek_issue_number":"4"
+        },
+        "rek_date":"2006-01-01",
+        "fez_record_search_key_volume_number":{
+            "rek_volume_number":"17"
+        },
+        "fez_record_search_key_start_page":{
+            "rek_start_page":"527"
+        },
+        "fez_record_search_key_end_page":{
+            "rek_end_page":"548"
+        },
+        "fez_record_search_key_total_pages":{
+            "rek_total_pages":22
+        },
+        "fez_record_search_key_embase_id":{
+            "rek_embase_id":"44613646"
+        },
+        "fez_record_search_key_scopus_id":{
+            "rek_scopus_id":"2-s2.0-33750314864"
+        },
+        "fez_record_search_key_language":[
+            {
+                "rek_language":"eng",
+                "rek_language_order":1
+            }
+        ],
+        "rek_scopus_doc_type":"re",
+        "rek_display_type":179,
+        "rek_genre":"Journal Article",
+        "rek_genre_type":"Critical review of research, literature review, critical commentary",
+        "rek_subtype":"Critical review of research, literature review, critical commentary",
+        "fez_record_search_key_journal_name":{
+            "rek_journal_name":"Energy and Environment"
+        }
+    },
+    {
+        "rek_title":"News Briefs: Soil dust swept off the African deserts and deposited in the Caribbean may be the cause of coral reef death and decline.",
+        "fez_record_search_key_journal_name":{
+            "rek_journal_name":"Environmental science & technology"
+        },
+        "fez_record_search_key_doi":{
+            "rek_doi":"10.1021\/es003491w"
+        },
+        "fez_record_search_key_issn":[
+            {
+                "rek_issn":"0013-936X",
+                "rek_issn_order":1
+            }
+        ],
+        "fez_record_search_key_pubmed_id":{
+            "rek_pubmed_id":"21662309"
+        },
+        "rek_date":"2000-12-01 00:00:00",
+        "fez_record_search_key_issue_number":{
+            "rek_issue_number":"23"
+        },
+        "fez_record_search_key_volume_number":{
+            "rek_volume_number":"34"
+        },
+        "fez_record_search_key_start_page":{
+            "rek_start_page":"506A"
+        },
+        "fez_record_search_key_end_page":{
+            "rek_end_page":"506A"
+        },
+        "fez_record_search_key_total_pages":{
+            "rek_total_pages":1
+        },
+        "fez_record_search_key_oa_status":{
+            "rek_oa_status":"453698"
+        },
+        "rek_display_type":179,
+        "rek_genre":"Journal Article"
+    },
+    {
         'rek_pid': 123,
         'rek_display_type': 179,
         'rek_status': 2,
@@ -407,7 +588,7 @@ export const externalTitleSearchResultsList = [
         "fez_record_search_key_isi_loc": {"rek_isi_loc": "000402219100018"},
         "rek_status": 2,
         "fez_record_search_key_publisher": {"rek_publisher": "ACADEMIC PRESS INC ELSEVIER SCIENCE"},
-        "rek_title": "Maternal obesity increases inflammation and exacerbates damage following neonatal hypoxic-ischaemic brain injury in rats",
+        "rek_title": "1Maternal obesity increases inflammation and exacerbates damage following neonatal hypoxic-ischaemic brain injury in rats",
         "fez_record_search_key_issn": [{"rek_issn": "0889-1591", "rek_issn_order": 1}],
         "fez_record_search_key_doi": {"rek_doi": "10.1016\/j.bbi.2016.10.010"},
         "rek_date": "2017-07-01 00:00:00",
@@ -1575,7 +1756,7 @@ export const internalTitleSearchResultsList = [
         "fez_record_search_key_isi_loc": {"rek_isi_loc": "000402219100018"},
         "rek_status": 2,
         "fez_record_search_key_publisher": {"rek_publisher": "ACADEMIC PRESS INC ELSEVIER SCIENCE"},
-        "rek_title": "Maternal obesity increases inflammation and exacerbates damage following neonatal hypoxic-ischaemic brain injury in rats",
+        "rek_title": "2Maternal obesity increases inflammation and exacerbates damage following neonatal hypoxic-ischaemic brain injury in rats",
         "fez_record_search_key_issn": [{"rek_issn": "0889-1591", "rek_issn_order": 1}],
         "fez_record_search_key_doi": {"rek_doi": "10.1016\/j.bbi.2016.10.010"},
         "rek_date": "2017-07-01 00:00:00",

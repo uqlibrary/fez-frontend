@@ -28,6 +28,7 @@ export default class ClaimPublicationForm extends Component {
         location: PropTypes.object,
         recordClaimState: PropTypes.object,
         recordClaimErrorMessage: PropTypes.object,
+        searchResultsList: PropTypes.object,
         selectedAuthorId: PropTypes.string
     };
 
@@ -53,17 +54,21 @@ export default class ClaimPublicationForm extends Component {
     }
 
     cancelClaimPublication = () => {
+        const {dispatch, searchResultsList} = this.props;
+        const goBackUrl = {primaryLink: searchResultsList.size > 0 ? '/add-record' : '/claim-publications'};
         const dialogConfig = locale.pages.claimPublications.form.dialog.cancel;
-        this.props.dispatch(showDialogBox(dialogConfig));
+        const combinedConfig = Object.assign({}, dialogConfig, goBackUrl);
+
+        dispatch(showDialogBox(combinedConfig));
     };
 
-    getCurrentArticle = () => {
-        const {claimPublicationResults, location} = this.props;
-        const articleId = location.pathname.replace(`${locale.pages.claimPublications.claimUrl}/`, '');
-        const article = claimPublicationResults.get('rows').filter(article => article.get('rek_pid') === articleId);
-
-        // found the article so load it
-        return article.size === 1 ? article.get(0) : null;
+    getCurrentPublication = () => {
+        // TODO: Currently inconsistent data structures so kept these seperate
+        // claimPublicationResults returns data like this { total: int, rows: List }
+        // searchResultsList returns data like this { List of Objects }
+        const {claimPublicationResults, searchResultsList, location} = this.props;
+        const index = location.pathname.replace(`${locale.pages.claimPublications.claimUrl}`, '');
+        return searchResultsList.size === 0 ? claimPublicationResults.get('rows').get(index) : searchResultsList.get(index);
     };
 
     setFileData = () => {
@@ -95,7 +100,7 @@ export default class ClaimPublicationForm extends Component {
 
     tryRecordSave = () => {
         const {claimPublication, formValues} = this.props;
-        const source = this.getCurrentArticle();
+        const source = this.getCurrentPublication();
 
         const publicationData = {
             pid: source.get('rek_pid'),
@@ -113,7 +118,7 @@ export default class ClaimPublicationForm extends Component {
 
     render() {
         // detects if something is trying to go to /claim-publications/:id. For now we just redirect back to the claim-publications page
-        if (this.props.claimPublicationResults.size === 0) {
+        if (this.props.claimPublicationResults.size === 0 && this.props.searchResultsList.size === 0) {
             return (<Redirect to="/claim-publications" />);
         }
 
@@ -126,7 +131,7 @@ export default class ClaimPublicationForm extends Component {
         const buttonLabels = locale.global.labels.buttons;
 
         // TODO: Put this data structure into a central location
-        const source = this.getCurrentArticle();
+        const source = this.getCurrentPublication();
         const INDEX = 0;
         const authors = source.get('fez_record_search_key_author') ? source.get('fez_record_search_key_author') : null;
         const entry = {
@@ -154,7 +159,7 @@ export default class ClaimPublicationForm extends Component {
                 {/* Claim Publication */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns is-gapless">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="title" style={{marginBottom: '30px'}}>{publicationDetailsInformation.title}</h2>
                             </div>
@@ -181,7 +186,7 @@ export default class ClaimPublicationForm extends Component {
                 {/* Comments */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
-                        <div className="columns">
+                        <div className="columns is-gapless is-mobile">
                             <div className="column">
                                 <h2 className="title">{commentsInformation.title}</h2>
                             </div>

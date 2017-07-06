@@ -9,6 +9,7 @@ const scopusIcon = require('images/scopus_icon.svg');
 const googleScholarIcon = require('images/googlescholar_icon.svg');
 const altmetricIcon = require('images/altmetric_icon.svg');
 
+import {locale} from 'config';
 import './SearchResultsRow.scss';
 
 export default class SearchResultsRow extends Component {
@@ -29,11 +30,11 @@ export default class SearchResultsRow extends Component {
     }
 
     claimThisPublication = (id) => {
-        this.props.history.push(`/claim-publications/${id}`);
+        this.props.history.push(`${locale.pages.claimPublications.claimUrl}${id}`);
     };
 
     render() {
-        const {id, title, journalName, authors, counts, publisher, volumeNumber, issueNumber, startPage, endPage, doi, index} = this.props.entry;
+        const {title, journalName, authors, counts, publisher, volumeNumber, issueNumber, startPage, endPage, doi, index} = this.props.entry;
 
         return (
             <div className="claimWrapper">
@@ -96,7 +97,7 @@ export default class SearchResultsRow extends Component {
                              data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.altmetric}
                     </span>)
                     }
-                    {counts.downloads && counts.downloads > 1 &&
+                    {counts.downloads && counts.downloads > 0 &&
                     (<span>
                         <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads" title="Downloads"
                               data-for="claimTooltips" data-place="bottom"
@@ -110,7 +111,7 @@ export default class SearchResultsRow extends Component {
                             label={this.props.claimRecordBtnLabel}
                             autoFocus={index === 0}
                             keyboardFocused={index === 0}
-                            onTouchTap={() => this.claimThisPublication(id)}
+                            onTouchTap={() => this.claimThisPublication(index)}
                             secondary/>
                     </div>
                     }
