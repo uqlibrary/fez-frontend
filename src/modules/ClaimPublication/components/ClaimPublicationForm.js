@@ -7,11 +7,10 @@ import {Redirect} from 'react-router';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from 'config';
-import {FileUploader, SubmissionErrorMessage} from 'modules/SharedComponents';
+import {FileUploader, SubmissionErrorMessage, AuthorLinking} from 'modules/SharedComponents';
 import {showDialogBox} from 'modules/App';
 
 import {uploadFile} from 'modules/SharedComponents/FileUploader/actions';
-
 import {SearchResultsRow} from 'modules/SearchResults';
 
 export default class ClaimPublicationForm extends Component {
@@ -28,6 +27,7 @@ export default class ClaimPublicationForm extends Component {
         location: PropTypes.object,
         recordClaimState: PropTypes.object,
         recordClaimErrorMessage: PropTypes.object,
+        selectedAuthorId: PropTypes.string
     };
 
     constructor(props) {
@@ -43,7 +43,7 @@ export default class ClaimPublicationForm extends Component {
             this.tryRecordSave();
         }
 
-        if (nextProps.recordClaimState.get('submitted')) {
+        if (nextProps.recordClaimState && nextProps.recordClaimState.get('submitted')) {
             const dialogConfig = locale.pages.claimPublications.form.dialog.success;
             this.props.dispatch(showDialogBox(dialogConfig));
         }
@@ -91,19 +91,23 @@ export default class ClaimPublicationForm extends Component {
     };
 
     tryRecordSave = () => {
-        const {claimPublication, dispatch, formValues} = this.props;
+       // const {claimPublication, dispatch, formValues, selectedAuthorId} = this.props;
+        const {formValues, selectedAuthorId} = this.props;
         const source = this.getCurrentArticle();
 
         const publicationData = {
             pid: source.get('rek_pid'),
-            author_id: source.get('author_id'),
             comments: formValues.get('comments')
         };
 
+        // if in the event that the user has to manually link the author name to their account
+        const authorId = selectedAuthorId ? {author_id: selectedAuthorId} : {};
         const fileData = this.setFileData();
-        const combinedData = Object.assign({}, publicationData, fileData);
+        const combinedData = Object.assign({}, publicationData, fileData, authorId);
 
-        dispatch(claimPublication(combinedData));
+        console.log('submitted', combinedData);
+
+        // dispatch(claimPublication(combinedData));
     };
 
     render() {
@@ -117,17 +121,19 @@ export default class ClaimPublicationForm extends Component {
         const publicationDetailsInformation = claimPublicationsInformation.publicationDetails;
         const commentsInformation = claimPublicationsInformation.comments;
         const fileInformation = locale.sharedComponents.files;
+        const authorLinkingInformation = locale.pages.claimPublications.authorLinking;
         const buttonLabels = locale.global.labels.buttons;
 
         // TODO: Put this data structure into a central location
         const source = this.getCurrentArticle();
         const INDEX = 0;
+        const authors = source.get('fez_record_search_key_author') ? source.get('fez_record_search_key_author') : null;
         const entry = {
             INDEX,
             id: source.get('rek_pid'),
             title: source.get('rek_title'),
             journalName: source.get('fez_record_search_key_journal_name') ? source.get('fez_record_search_key_journal_name').get('rek_journal_name') : null,
-            authors: source.get('fez_record_search_key_author') ? source.get('fez_record_search_key_author') : null,
+            authors: authors,
             publisher: source.get('fez_record_search_key_publisher') ? source.get('fez_record_search_key_publisher') : null,
             volumeNumber: source.get('fez_record_search_key_volume_number') ? source.get('fez_record_search_key_volume_number').get('rek_volume_number') : null,
             issueNumber: source.get('fez_record_search_key_issue_number') ? source.get('fez_record_search_key_issue_number').get('rek_issue_number') : null,
@@ -166,6 +172,10 @@ export default class ClaimPublicationForm extends Component {
                         <SearchResultsRow entry={entry} form="ClaimPublicationForm" hideClaimButton />
                     </CardText>
                 </Card>
+
+                <FormSection name={authorLinkingInformation.formSectionPrefix}>
+                    <AuthorLinking dataSource={authors} />
+                </FormSection>
 
                 {/* Comments */}
                 <Card className="layout-card">
