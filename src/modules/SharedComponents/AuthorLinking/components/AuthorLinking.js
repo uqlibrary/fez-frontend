@@ -85,8 +85,12 @@ export default class AuthorLinking extends React.Component {
                     </CardHeader>
                     <CardText className="body-1">
                         <div className="columns" style={{marginTop: '12px'}}>
-                            <div className="column">
+                            <div className="column authorList">
                                 {this.buildAuthorList()}
+                            </div>
+                        </div>
+                        <div className="columns">
+                            <div className="column confirmBox">
                                 <Field
                                     component={Checkbox}
                                     name="authorLinkConfirmation"
