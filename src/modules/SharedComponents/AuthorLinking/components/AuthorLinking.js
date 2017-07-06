@@ -69,7 +69,7 @@ export default class AuthorLinking extends React.Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title">{authorLinkingInformation.title}</h2>
+                                <h2 className="headline">{authorLinkingInformation.title}</h2>
                                 <h4 className="sub-title">{authorLinkingInformation.subTitle}</h4>
                             </div>
                             <div className="column is-narrow is-helpicon">
