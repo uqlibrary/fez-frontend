@@ -32,7 +32,15 @@ export const researcherMenuItems = (locale, email, components) => [
     {
         divider: true,
         path: '/' + (new Date()).getTime() // TODO: fix: workaround: empty Route is constructed from divider
-    }
+    },
+    {
+        linkTo: 'https://www.library.uq.edu.au/mylibrary/#!masquerade',
+        path: 'https://www.library.uq.edu.au/mylibrary/#!masquerade',
+        primaryText: 'Masquerade as a user',
+        secondaryText: 'for testing purposes only',
+        target: '_blank'
+    },
+
 ];
 
 export const adminMenuItems = (locale, email, components) => [
@@ -68,18 +76,19 @@ export const defaultMenuItems = (locale, components) => [
         path: '/browse',
         render: () => components.Browse(locale.pages.browse)
     },
-    {
-        linkTo: '/search',
-        path: '/search',
-        primaryText: 'Search',
-        render: () => components.StaticPage({title: 'Search', text: 'public search coming soon...'})
-    },
-    {
-        linkTo: '/faqs',
-        path: '/faqs',
-        primaryText: locale.menu.faqs.primaryText,
-        render: () => components.StaticPage({title: 'FAQs', text: 'public FAQs coming soon...'})
-    },
+    // TODO: coming soon
+    // {
+    //     linkTo: '/search',
+    //     path: '/search',
+    //     primaryText: 'Search',
+    //     render: () => components.StaticPage({title: 'Search', text: 'public search coming soon...'})
+    // },
+    // {
+    //     linkTo: '/faqs',
+    //     path: '/faqs',
+    //     primaryText: locale.menu.faqs.primaryText,
+    //     render: () => components.StaticPage({title: 'FAQs', text: 'public FAQs coming soon...'})
+    // },
     {
         linkTo: '/about',
         path: '/about',

@@ -138,8 +138,9 @@ export default {
         browse: {
             title: 'Browse eSpace',
             text: ( <div>
+                    <p>Welcome to The University of Queensland's institutional digital repository</p>
                     <p>
-                        <a href="https://auth.library.uq.edu.au/login">Temporary login link...</a>
+                        <a href="https://auth.library.uq.edu.au/login">Please, login to continue.</a>
                     </p>
                 </div>
             ),
