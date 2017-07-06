@@ -91,8 +91,8 @@ export default class ClaimPublicationForm extends Component {
     };
 
     tryRecordSave = () => {
-       // const {claimPublication, dispatch, formValues, selectedAuthorId} = this.props;
-        const {formValues, selectedAuthorId} = this.props;
+        const {claimPublication, formValues, selectedAuthorId} = this.props;
+       //  const {formValues, selectedAuthorId} = this.props;
         const source = this.getCurrentArticle();
 
         const publicationData = {
@@ -105,9 +105,7 @@ export default class ClaimPublicationForm extends Component {
         const fileData = this.setFileData();
         const combinedData = Object.assign({}, publicationData, fileData, authorId);
 
-        console.log('submitted', combinedData);
-
-        // dispatch(claimPublication(combinedData));
+        claimPublication(combinedData);
     };
 
     render() {
