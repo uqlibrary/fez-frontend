@@ -4,6 +4,7 @@ import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {Checkbox} from 'modules/SharedComponents/Checkbox';
 import {Field} from 'redux-form/immutable';
+import FlatButton from 'material-ui/FlatButton';
 import {locale, validation} from 'config';
 
 import './AuthorLinking.scss';
@@ -37,13 +38,12 @@ export default class AuthorLinking extends React.Component {
             // const subTitleClass = selectedAuthorId !== authorId ? 'subTitleHidden' : '';
 
             return (
-                <div
-                    tabIndex="0"
-                    key={key} onTouchTap={() => this.selectAuthor(authorId)}
+                <FlatButton
+                    key={key}
+                    label={author.get('rek_author')}
+                    onTouchTap={() => this.selectAuthor(authorId)}
                     className={selectedClass}
-                >
-                    {author.get('rek_author')}
-                </div>
+                />
             );
         });
     };

@@ -14,13 +14,13 @@
     -moz-column-fill: balance !important;
     column-fill: balance !important;
 
-    div.selectedAuthor {
+    button.selectedAuthor {
       color: green !important;
       opacity: 1.0 !important;
       font-weight: bold !important;
     }
 
-    div.unSelectedAuthor {
+    button.unSelectedAuthor {
       opacity: 0.6 !important;
       cursor: pointer !important;
       &:hover {
@@ -52,13 +52,13 @@
     -moz-column-fill: balance !important;
     column-fill: balance !important;
 
-    div.selectedAuthor {
+    button.selectedAuthor {
       color: green !important;
       opacity: 1.0 !important;
       font-weight: bold !important;
     }
 
-    div.unSelectedAuthor {
+    button.unSelectedAuthor {
       opacity: 0.6 !important;
       cursor: pointer !important;
       &:hover {
