@@ -8,11 +8,10 @@ import {Redirect} from 'react-router';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from 'config';
-import {FileUploader, SubmissionErrorMessage} from 'modules/SharedComponents';
+import {FileUploader, SubmissionErrorMessage, AuthorLinking} from 'modules/SharedComponents';
 import {showDialogBox} from 'modules/App';
 
 import {uploadFile} from 'modules/SharedComponents/FileUploader/actions';
-import AuthorLinking from './AuthorLinking';
 import {SearchResultsRow} from 'modules/SearchResults';
 
 export default class ClaimPublicationForm extends Component {

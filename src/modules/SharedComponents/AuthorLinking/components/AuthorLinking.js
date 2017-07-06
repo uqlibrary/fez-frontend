@@ -11,7 +11,10 @@ import './AuthorLinking.scss';
 export default class AuthorLinking extends React.Component {
 
     static propTypes = {
-        dataSource: PropTypes.object
+        account: PropTypes.object,
+        dataSource: PropTypes.object,
+        resetSelectedAuthor: PropTypes.func,
+        setSelectedAuthor: PropTypes.func
     };
 
     constructor(props) {
@@ -21,6 +24,10 @@ export default class AuthorLinking extends React.Component {
             showConfirmation: false,
             authorId: ''
         };
+    }
+
+    componentWillUnmount() {
+        this.props.resetSelectedAuthor();
     }
 
     buildAuthorList = () => {
@@ -45,6 +52,8 @@ export default class AuthorLinking extends React.Component {
             showConfirmation: true,
             authorId
         });
+
+        this.props.setSelectedAuthor(authorId);
     };
 
     render() {
