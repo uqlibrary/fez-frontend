@@ -38,9 +38,8 @@ export default class SearchResultsRow extends Component {
         return (
             <div className="claimWrapper">
                 <h3 className="claimTitle">
-                    <a href="#">{title}</a>
-                    <a href="#" target="_blank"><FontIcon
-                        className="material-icons claimTitleIcon">open_in_new</FontIcon></a>
+                    {title}
+                    {/* <a href="#" target="_blank"><FontIcon className="material-icons claimTitleIcon">open_in_new</FontIcon></a> */}
                 </h3>
 
                 <div className="claimCitation">
