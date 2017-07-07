@@ -110,7 +110,6 @@ export default class ClaimPublicationForm extends Component {
         const {claimPublication, formValues} = this.props;
         const source = this.getCurrentPublication();
 
-        console.dir(source.toJS());
         const publicationData = {
             pid: source.get('rek_pid'),
             comments: formValues.get('comments')
