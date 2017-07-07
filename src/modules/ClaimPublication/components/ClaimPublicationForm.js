@@ -68,7 +68,7 @@ export default class ClaimPublicationForm extends Component {
         // searchResultsList returns data like this { List of Objects }
         const {claimPublicationResults, searchResultsList, location} = this.props;
         const index = location.pathname.replace(`${locale.pages.claimPublications.claimUrl}`, '');
-        return searchResultsList.size === 0 ? claimPublicationResults.get('rows').get(index) : searchResultsList.get(index);
+        return searchResultsList.size === 0 ? claimPublicationResults.get(index) : searchResultsList.get(index);
     };
 
     setFileData = () => {

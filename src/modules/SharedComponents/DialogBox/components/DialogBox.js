@@ -22,11 +22,6 @@ export default class DialogBox extends PureComponent {
         history: PropTypes.object
     };
 
-    static defaultProps = {
-        secondaryButtonLabel: 'OK',
-        primaryButtonLabel: 'Cancel'
-    };
-
     constructor(props) {
         super(props);
     }
