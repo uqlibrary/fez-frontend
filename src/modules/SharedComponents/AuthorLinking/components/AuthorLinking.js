@@ -31,7 +31,7 @@ export default class AuthorLinking extends React.Component {
         const {dataSource, selectedAuthorId} = this.props;
         return dataSource.map((author, index) => {
             const key = `${author}${index}`;
-            const authorId = author.get('rek_author_id');
+            const authorId = author.get('rek_author_id') || index;
             const selectedClass = selectedAuthorId === authorId ? 'selectedAuthor' : 'unSelectedAuthor';
             // TODO: commented out for now until the endpoint returns the data <div className={subTitleClass}>{authorId}</div>
             // const subTitleClass = selectedAuthorId !== authorId ? 'subTitleHidden' : '';
@@ -64,11 +64,6 @@ export default class AuthorLinking extends React.Component {
         const authorLinkingInformation = locale.pages.claimPublications.authorLinking;
         const fileInformation = locale.sharedComponents.files;
 
-        const {setSelectedAuthor, account} = this.props;
-
-        if (this.authorFound()) {
-            setSelectedAuthor(account.id);
-        }
 
         return (
             <div className="layout-fill">
