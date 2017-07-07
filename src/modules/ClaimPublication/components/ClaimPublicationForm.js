@@ -159,7 +159,7 @@ export default class ClaimPublicationForm extends Component {
             }
         };
 
-        const {recordClaimState, recordClaimErrorMessage} = this.props;
+        const {handleSubmit, recordClaimState, recordClaimErrorMessage} = this.props;
 
         return (
             <form style={{marginBottom: '-60px'}}>
