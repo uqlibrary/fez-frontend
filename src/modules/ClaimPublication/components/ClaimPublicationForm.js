@@ -43,7 +43,7 @@ export default class ClaimPublicationForm extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.isUploadCompleted) {
+        if (this.props.isUploadCompleted !== nextProps.isUploadCompleted) {
             this.tryRecordSave();
         }
 
@@ -102,6 +102,7 @@ export default class ClaimPublicationForm extends Component {
         const {claimPublication, formValues} = this.props;
         const source = this.getCurrentPublication();
 
+        console.dir(source.toJS());
         const publicationData = {
             pid: source.get('rek_pid'),
             comments: formValues.get('comments')

@@ -3,7 +3,7 @@ import {api} from 'config';
 const SOURCE_WOS = 'wos';
 const SOURCE_CROSSREF = 'crossref';
 const SOURCE_SCOPUS = 'scopus';
-const SOURCE_PUBMED = 'pubmed';
+// const SOURCE_PUBMED = 'pubmed';
 
 function processError(error, resolve, reject) {
     if (error.hasOwnProperty('response') && error.response !== null && typeof(error.response) !== 'undefined'
@@ -32,7 +32,7 @@ function performExternalSearch(querystring) {
     return  Promise.all([
         getPromise(`${url}&source=${SOURCE_WOS}`),
         getPromise(`${url}&source=${SOURCE_SCOPUS}`),
-        getPromise(`${url}&source=${SOURCE_PUBMED}`),
+        // getPromise(`${url}&source=${SOURCE_PUBMED}`),
         getPromise(`${url}&source=${SOURCE_CROSSREF}`)
     ]);
 }

@@ -41,13 +41,17 @@ export function markPublicationsDataNotMine(username, pids) {
  * @returns {function(*)}
  */
 export function claimPublicationRecord(data) {
-    return new Promise((resolve, reject) => {
-        api.post('publications/claim-possible', data).then(response => {
-            resolve(response.data);
-        }).catch(e => {
-            console.log('claimRecord:' + e);
-            reject(e);
-            // throw e;
-        });
+    console.log(data);
+    // return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
+        resolve({});
+
+        // api.post('publications/claim-possible', data).then(response => {
+        //     resolve(response.data);
+        // }).catch(e => {
+        //     console.log('claimRecord:' + e);
+        //     reject(e);
+        //     // throw e;
+        // });
     });
 }

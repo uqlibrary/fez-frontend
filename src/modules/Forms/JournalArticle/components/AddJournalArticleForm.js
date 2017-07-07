@@ -48,7 +48,7 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.isUploadCompleted) {
+        if (this.props.isUploadCompleted !== nextProps.isUploadCompleted) {
             this.tryRecordSave();
         }
 
@@ -136,7 +136,6 @@ export default class AddJournalArticleForm extends Component {
         const fileData = this.setFileData();
         const authorData = this.setAuthorData();
         const combinedData = Object.assign({}, defaultData, formData, fileData, authorData);
-
         this.props.dispatch(saveRecord(combinedData));
     };
 
