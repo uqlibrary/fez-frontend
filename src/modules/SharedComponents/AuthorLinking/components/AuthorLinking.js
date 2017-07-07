@@ -38,13 +38,13 @@ export default class AuthorLinking extends React.Component {
             // const subTitleClass = selectedAuthorId !== authorId ? 'subTitleHidden' : '';
 
             return (
-                <div className="column">
+                <div className="column" key={index}>
                     <FlatButton
                     key={key}
                     label={author.get('rek_author')}
                     onTouchTap={() => this.selectAuthor(authorId)}
                     className={selectedClass}
-                />
+                    />
                 </div>
             );
         });

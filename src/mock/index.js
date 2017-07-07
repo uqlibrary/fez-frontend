@@ -46,12 +46,12 @@ mock.onGet(/search\/external\?pub_med_id=*/).reply(200, externalPubMedSearchResu
 mock.onGet(/search\/internal\?pub_med_id=*/).reply(200, internalPubMedSearchResultsList);
 
 // Mock the publication form external title search endpoint
-mock.onGet(/search\/external\?source=wos&rek_display_type=[0-9]*/).reply(200, externalTitleSearchResultsList);
+mock.onGet(/search\/external\?rek_display_type=[0-9]*/).reply(200, externalTitleSearchResultsList);
 // mock.onGet(/search\/external\?source=wos&rek_display_type=[0-9]*/).reply(404);
 
 // Mock the publication form internal title search endpoint
-mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(200, internalTitleSearchResultsList);
-// mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(500);
+// mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(200, internalTitleSearchResultsList);
+mock.onGet(/search\/internal\?source=wos&rek_display_type=[0-9]*/).reply(500);
 
 // Mock the publication types endpoint
 mock.onGet('records/types').reply(200, publicationTypeList);

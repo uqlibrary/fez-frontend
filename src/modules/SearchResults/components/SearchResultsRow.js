@@ -35,7 +35,6 @@ export default class SearchResultsRow extends Component {
 
     render() {
         const {title, journalName, authors, counts, publisher, volumeNumber, issueNumber, startPage, endPage, doi, index} = this.props.entry;
-
         return (
             <div className="claimWrapper">
                 <h3 className="claimTitle">
@@ -66,7 +65,7 @@ export default class SearchResultsRow extends Component {
                 </div>
 
                 <div className="claimStats">
-                    {counts.thomson && counts.thomson > 0 &&
+                    {!!counts.thomson && counts.thomson > 0 &&
                     (<span>
                         <img src={thompsonIcon} alt="Thomson Routers"
                              data-tip="Thomson Routers Web of Science citation count"
@@ -75,7 +74,7 @@ export default class SearchResultsRow extends Component {
                              data-for="claimTooltips"/> {counts.thomson}
                     </span>)
                     }
-                    {counts.scopus && counts.scopus > 0 &&
+                    {!!counts.scopus && counts.scopus > 0 &&
                     (<span>
                         <img src={scopusIcon} alt="Scopus"
                              data-tip="Scopus citation count"
@@ -83,7 +82,7 @@ export default class SearchResultsRow extends Component {
                              data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.scopus}
                     </span>)
                     }
-                    {counts.google && counts.google > 0 &&
+                    {!!counts.google && counts.google > 0 &&
                     (<span>
                         <img src={googleScholarIcon} alt="Google Scholar"
                              data-tip="Google Scholar citation count" title="Google Scholar citation count"
@@ -91,13 +90,13 @@ export default class SearchResultsRow extends Component {
                              style={{marginLeft: '10px'}}/> {counts.google}
                     </span>)
                     }
-                    {counts.altmetric && counts.altmetric > 0 &&
+                    {!!counts.altmetric && counts.altmetric > 0 &&
                     (<span>
                         <img src={altmetricIcon} alt="Altmetric" data-tip="Altmetric score" title="Altmetric score"
                              data-for="claimTooltips" style={{marginLeft: '10px'}}/> {counts.altmetric}
                     </span>)
                     }
-                    {counts.downloads && counts.downloads > 0 &&
+                    {!!counts.downloads && counts.downloads > 0 &&
                     (<span>
                         <FontIcon className="material-icons claimStatsIcon" data-tip="Downloads" title="Downloads"
                               data-for="claimTooltips" data-place="bottom"
