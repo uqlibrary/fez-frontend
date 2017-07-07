@@ -70,8 +70,6 @@ export default class AuthorLinking extends React.Component {
             setSelectedAuthor(account.id);
         }
 
-        console.log('datasource', this.props.dataSource);
-
         return (
             <div className="layout-fill">
                 {!this.authorFound() && (
