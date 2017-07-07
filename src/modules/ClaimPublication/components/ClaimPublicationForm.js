@@ -44,7 +44,7 @@ export default class ClaimPublicationForm extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.isUploadCompleted) {
+        if (this.props.isUploadCompleted !== nextProps.isUploadCompleted) {
             this.tryRecordSave();
         }
 
@@ -69,7 +69,7 @@ export default class ClaimPublicationForm extends Component {
         // searchResultsList returns data like this { List of Objects }
         const {claimPublicationResults, searchResultsList, location} = this.props;
         const index = location.pathname.replace(`${locale.pages.claimPublications.claimUrl}`, '');
-        return searchResultsList.size === 0 ? claimPublicationResults.get('rows').get(index) : searchResultsList.get(index);
+        return searchResultsList.size === 0 ? claimPublicationResults.get(index) : searchResultsList.get(index);
     };
 
     setFileData = () => {
@@ -110,6 +110,7 @@ export default class ClaimPublicationForm extends Component {
         const {claimPublication, formValues} = this.props;
         const source = this.getCurrentPublication();
 
+        console.dir(source.toJS());
         const publicationData = {
             pid: source.get('rek_pid'),
             comments: formValues.get('comments')

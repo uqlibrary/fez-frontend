@@ -45,8 +45,8 @@ export default class ClaimPublication extends React.Component {
         let resultSet = {};
 
         // limit the number of results
-        if (claimPublicationResults.size > 0 && Immutable.fromJS(claimPublicationResults.get('rows').size > 0)) {
-            resultSet = Immutable.fromJS(claimPublicationResults.get('rows'));
+        if (claimPublicationResults.size > 0) {
+            resultSet = Immutable.fromJS(claimPublicationResults);
 
             if (resultSet.length > claimPublicationsInformation.maxSearchResults) {
                 resultSet = resultSet.slice(0, claimPublicationsInformation.maxSearchResults);
@@ -86,7 +86,7 @@ export default class ClaimPublication extends React.Component {
         } = this.props;
 
         const resultSet = this.extractResultSet();
-        const noOfResults = claimPublicationResults.get('total') ? claimPublicationResults.get('total') : 0;
+        const noOfResults = claimPublicationResults.size;
 
         const resultsCountText = `${resultSet.size} out of ${noOfResults} potential match(es) displayed. Select any item to claim it as your work.`;
         return (
