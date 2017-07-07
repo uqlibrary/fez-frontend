@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {reduxForm} from 'redux-form/immutable';
 import AddRecord from '../components/AddRecord';
 import {decreaseStep, increaseStep, loadPublicationTypesList, resetStepper} from '../actions';
+import {clearPublicationResults} from 'modules/ClaimPublication/actions';
 
 let AddRecordContainer = reduxForm({
     form: 'AddRecordForm'
@@ -21,7 +22,8 @@ AddRecordContainer = connect((state) => {
         loadPublicationTypesList: () => dispatch(loadPublicationTypesList()),
         increaseStep: () => dispatch(increaseStep()),
         decreaseStep: () => dispatch(decreaseStep()),
-        resetStepper: () => dispatch(resetStepper())
+        resetStepper: () => dispatch(resetStepper()),
+        clearPublicationResults: () => dispatch(clearPublicationResults())
     };
 })(AddRecordContainer);
 

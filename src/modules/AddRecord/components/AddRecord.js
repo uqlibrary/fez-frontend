@@ -32,7 +32,8 @@ export default class AddRecord extends React.Component {
         searchResultsList: PropTypes.object,
         loadingSearch: PropTypes.bool,
         selectedPublicationType: PropTypes.object,
-        stepperIndex: PropTypes.number
+        stepperIndex: PropTypes.number,
+        clearPublicationResults: PropTypes.func
     };
 
     static defaultProps = {
@@ -51,6 +52,8 @@ export default class AddRecord extends React.Component {
             saveOpen: false,
             publicationType: 0
         };
+
+        this.props.clearPublicationResults();
     }
 
     componentDidMount() {

@@ -8,6 +8,7 @@ export const PUBMED_SEARCH_LOADING = 'PUBMED_SEARCH_LOADING';
 export const PUBMED_SEARCH_COMPLETED = 'PUBMED_SEARCH_COMPLETED';
 export const TITLE_SEARCH_LOADING = 'TITLE_SEARCH_LOADING';
 export const TITLE_SEARCH_COMPLETED = 'TITLE_SEARCH_COMPLETED';
+export const SEARCH_RESULTS_CLEARED = 'SEARCH_RESULTS_CLEARED';
 
 // search is performed on multiple sources, flatten search results into a single array of items
 
@@ -80,5 +81,15 @@ export function loadTitleResultsList(rekDisplayType, title) {
                 payload: []
             });
         });
+    };
+}
+
+/**
+ * Clears the search results from the searchResultsList state
+ * @returns {type: String}
+ */
+export function clearSearchResults() {
+    return {
+        type: SEARCH_RESULTS_CLEARED
     };
 }

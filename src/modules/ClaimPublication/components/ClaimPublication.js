@@ -17,6 +17,7 @@ export default class ClaimPublication extends React.Component {
     static propTypes = {
         account: PropTypes.object,
         claimPublicationResults: PropTypes.object,
+        clearSearchResults: PropTypes.func,
         dispatch: PropTypes.func,
         loadingSearch: PropTypes.bool,
         loadUsersPublications: PropTypes.func,
@@ -29,6 +30,8 @@ export default class ClaimPublication extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.props.clearSearchResults();
     }
 
     componentDidMount() {
