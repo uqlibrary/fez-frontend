@@ -15,7 +15,7 @@ export default class AuthorLinking extends React.Component {
         account: PropTypes.object,
         dataSource: PropTypes.object,
         resetSelectedAuthor: PropTypes.func,
-        selectedAuthorId: PropTypes.string,
+        selectedAuthorId: PropTypes.number,
         setSelectedAuthor: PropTypes.func
     };
 
@@ -64,6 +64,12 @@ export default class AuthorLinking extends React.Component {
     render() {
         const authorLinkingInformation = locale.pages.claimPublications.authorLinking;
         const fileInformation = locale.sharedComponents.files;
+
+        const {setSelectedAuthor, account} = this.props;
+
+        if (this.authorFound()) {
+            setSelectedAuthor(account.id);
+        }
 
         return (
             <div className="layout-fill">
