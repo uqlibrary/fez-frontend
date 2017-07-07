@@ -15,7 +15,7 @@ export default class AuthorLinking extends React.Component {
         account: PropTypes.object,
         dataSource: PropTypes.object,
         resetSelectedAuthor: PropTypes.func,
-        selectedAuthorId: PropTypes.string,
+        selectedAuthorId: PropTypes.number,
         setSelectedAuthor: PropTypes.func
     };
 
@@ -31,8 +31,7 @@ export default class AuthorLinking extends React.Component {
         const {dataSource, selectedAuthorId} = this.props;
         return dataSource.map((author, index) => {
             const key = `${author}${index}`;
-            // TODO: Update the author id once the API has been updated
-            const authorId = author.get('rek_author_order');
+            const authorId = author.get('rek_author_id');
             const selectedClass = selectedAuthorId === authorId ? 'selectedAuthor' : 'unSelectedAuthor';
             // TODO: commented out for now until the endpoint returns the data <div className={subTitleClass}>{authorId}</div>
             // const subTitleClass = selectedAuthorId !== authorId ? 'subTitleHidden' : '';
@@ -52,7 +51,7 @@ export default class AuthorLinking extends React.Component {
 
     authorFound = () => {
         const {dataSource, account} = this.props;
-        const found = dataSource.filter(author => author.get('author_id') === account.get('id'));
+        const found = dataSource.filter(author => account.get('aut_id') && author.get('author_id') === account.get('aut_id'));
 
         return !(found.size === 0);
     };
@@ -64,6 +63,14 @@ export default class AuthorLinking extends React.Component {
     render() {
         const authorLinkingInformation = locale.pages.claimPublications.authorLinking;
         const fileInformation = locale.sharedComponents.files;
+
+        const {setSelectedAuthor, account} = this.props;
+
+        if (this.authorFound()) {
+            setSelectedAuthor(account.id);
+        }
+
+        console.log('datasource', this.props.dataSource);
 
         return (
             <div className="layout-fill">

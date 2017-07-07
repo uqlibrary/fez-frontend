@@ -268,7 +268,8 @@ export default {
                 subTitle: 'We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below:',
                 confirmation: 'I confirm and understand that I am claiming this publication under the above name, and confirm this is me',
                 formSectionPrefix: 'authorLinking',
-                instructions: 'Please select an author to proceed'
+                instructions: 'Please select an author to proceed',
+                noAuthorSelectedMessage: 'Please select an author before submitting the form'
             },
             claimPublicationResults: {
                 title: 'Possible publications found',

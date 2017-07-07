@@ -29,14 +29,15 @@ export default class ClaimPublicationForm extends Component {
         recordClaimState: PropTypes.object,
         recordClaimErrorMessage: PropTypes.object,
         searchResultsList: PropTypes.object,
-        selectedAuthorId: PropTypes.string
+        selectedAuthorId: PropTypes.number
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            selectedPublication: {}
+            selectedPublication: {},
+            showAuthorSelectionError: false
         };
 
         this.props.claimPublicationReset();
@@ -90,11 +91,18 @@ export default class ClaimPublicationForm extends Component {
     };
 
     tryFileUpload = () => {
-        const {acceptedFiles, dispatch} = this.props;
-        if (acceptedFiles.size > 0) {
-            dispatch(uploadFile(acceptedFiles));
+        const {acceptedFiles, dispatch, selectedAuthorId} = this.props;
+
+        // check if an author has been selected
+        if (selectedAuthorId) {
+            this.setState({showAuthorSelectionError: false});
+            if (acceptedFiles.size > 0) {
+                dispatch(uploadFile(acceptedFiles));
+            } else {
+                this.tryRecordSave();
+            }
         } else {
-            this.tryRecordSave();
+            this.setState({showAuthorSelectionError: true});
         }
     };
 
@@ -209,6 +217,27 @@ export default class ClaimPublicationForm extends Component {
                 <SubmissionErrorMessage
                     submissionState={recordClaimState}
                     submissionErrorMessage={recordClaimErrorMessage} />
+
+                {this.state.showAuthorSelectionError && (
+                    <Card className="layout-card">
+                        <CardHeader className="card-header">
+                            <div className="columns is-gapless is-mobile">
+                                <div className="column">
+                                    <h2 className="title">Submission failed</h2>
+                                </div>
+                            </div>
+                        </CardHeader>
+                        <CardText className="body-1">
+                            <div className="columns">
+                                <div className="column">
+                                    <p>
+                                        {authorLinkingInformation.noAuthorSelectedMessage}
+                                    </p>
+                                </div>
+                            </div>
+                        </CardText>
+                    </Card>
+                )}
 
                 {/* Buttons */}
                 <div className="layout-card">
