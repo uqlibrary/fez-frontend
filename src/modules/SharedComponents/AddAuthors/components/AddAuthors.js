@@ -43,8 +43,7 @@ export default class AddAuthors extends Component {
             identifierLabel: '',
             name: '',
             nameError: '',
-            nameTimeout: null,
-            showIdentifierField: false
+            nameTimeout: null
         };
     }
 
@@ -103,8 +102,7 @@ export default class AddAuthors extends Component {
             identifier: '',
             identifierLabel: '',
             name: '',
-            nameError: '',
-            showIdentifierField: false
+            nameError: ''
         });
 
         clearAuthorsSearchResults();
@@ -207,10 +205,8 @@ export default class AddAuthors extends Component {
     };
 
     handleNameChangeAutoComplete = (value) => {
-        if (value.length === 0) {
-            this.setState({showIdentifierField: false});
-        } else {
-            this.props.searchFromAuthorsField(value);
+        if (value.length > 0) {
+            // this.props.searchFromAuthorsField(value);
         }
 
         this.setState({name: value});
@@ -233,10 +229,7 @@ export default class AddAuthors extends Component {
             } else {
                 const name = (index === authorConstants.autoCompleteFirstOption) ? selectedMenuItem.name : this.state.name;
 
-                this.setState({
-                    name,
-                    showIdentifierField: true
-                });
+                this.setState({name});
 
                 this.searchForIdentifier(authorFields.authorIdentifier);
             }
@@ -251,7 +244,6 @@ export default class AddAuthors extends Component {
         if (e.key === authorConstants.tabKey) {
             e.preventDefault();
             const authorFields = authorInformation.fields;
-            this.setState({showIdentifierField: true});
             this.searchForIdentifier(authorFields.authorIdentifier, this.state.identifier);
         }
     };
@@ -390,7 +382,7 @@ export default class AddAuthors extends Component {
                 <div className="columns" style={{marginTop: '-20px'}}>
                     <div className="column is-addAuthor">
                         <AutoComplete
-                            ref="authorInput"
+                            ref="authorInput22"
                             listStyle={{maxHeight: 200, overflow: 'auto'}}
                             name={authorFields.authorName}
                             floatingLabelText={authorFields.authorNameLabel}
@@ -406,12 +398,9 @@ export default class AddAuthors extends Component {
                             value={this.state.name}
                         />
                     </div>
-                    {this.state.showIdentifierField && (
                         <div className="column is-narrow linkIcon">
                             <ContentLink className="iconLink"/>
                         </div>
-                    )}
-                    {this.state.showIdentifierField && (
                     <div className="column is-addUQid">
                         <AutoComplete
                             listStyle={{maxHeight: 200, overflow: 'auto'}}
@@ -429,7 +418,6 @@ export default class AddAuthors extends Component {
                             value={this.state.identifier}
                         />
                     </div>
-                    )}
                     <div className="column is-narrow">
                         <RaisedButton
                             label={authorButtonFields.addAuthorLabel}
