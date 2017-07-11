@@ -42,7 +42,7 @@ let AddJournalArticleFormContainer = reduxForm({
     }
 })(AddJournalArticleForm);
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, props) => {
     const journalArticleState = state.get('journalArticle');
     const fileUploadState = state.get('fileUpload');
     const authorsState = state.get('authors');
@@ -50,7 +50,8 @@ const mapStateToProps = (state) => {
     return {
         acceptedFiles: fileUploadState.get('acceptedFiles'),
         authorsList: authorsState.get('authorsList') || Immutable.Map({}),
-        formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
+        formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map(),
+        initialValues: Immutable.Map({rek_title: props.suggestedFormTitle}),
         isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         publicationSubTypeList: journalArticleState.get('publicationSubTypeList'),
         recordSubmissionState: journalArticleState.get('recordSubmissionState'),
