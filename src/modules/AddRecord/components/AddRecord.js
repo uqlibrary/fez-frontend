@@ -18,6 +18,7 @@ import {PublicationTypeForm} from 'modules/Forms/PublicationType';
 import {AddJournalArticleForm} from 'modules/Forms/JournalArticle';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
+import {isDOIValue, isPartialDOIValue, isPubMedValue} from 'modules/Forms/PublicationSearch/validator';
 
 import './AddRecord.scss';
 
@@ -50,7 +51,8 @@ export default class AddRecord extends React.Component {
             finished: false,
             submitOpen: false,
             saveOpen: false,
-            publicationType: 0
+            publicationType: 0,
+            doiSearchValue: ''
         };
 
         this.props.clearPublicationResults();
@@ -72,6 +74,15 @@ export default class AddRecord extends React.Component {
         this.setState({loading: true}, () => {
             this.asyncTimer = setTimeout(cb, 500);
         });
+    };
+
+    handleSearch = values => {
+        let value = values.get('doiSearch');
+        if (isPubMedValue(value) || isPartialDOIValue(value) || isDOIValue(value)) {
+            value = '';
+        }
+
+        this.setState({doiSearchValue: value}, this.handleNext);
     };
 
     handleNext = () => {
@@ -98,7 +109,7 @@ export default class AddRecord extends React.Component {
                 const searchForPublicationInformation = locale.pages.addRecord.searchForPublication;
                 return (
                     <div>
-                        <PublicationSearchForm onSubmit={this.handleNext}
+                        <PublicationSearchForm onSubmit={this.handleSearch}
                            title={searchForPublicationInformation.title}
                            explanationText={searchForPublicationInformation.explanationText}
                            help={searchForPublicationInformation.help}
@@ -193,7 +204,7 @@ export default class AddRecord extends React.Component {
                             {/* TODO: fix this warning */}
                             {selectedPublicationType.size > 0
                                 && selectedPublicationType.get('name').toLowerCase() === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE
-                                && <AddJournalArticleForm form="AddJournalArticleForm" />
+                                && <AddJournalArticleForm form="AddJournalArticleForm" suggestedFormTitle={this.state.doiSearchValue} />
                             }
                     </div>
                 );

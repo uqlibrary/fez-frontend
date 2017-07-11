@@ -32,7 +32,8 @@ export default class AddJournalArticleForm extends Component {
         selectedPublicationId: PropTypes.object,
         recordSubmissionState: PropTypes.object,
         recordSubmissionErrorMessage: PropTypes.object,
-        dispatch: PropTypes.func
+        dispatch: PropTypes.func,
+        searchTitleField: PropTypes.string
     };
 
     constructor(props) {
@@ -184,6 +185,8 @@ export default class AddJournalArticleForm extends Component {
                                        name="rek_title"
                                        type="text"
                                        fullWidth
+                                       multiLine
+                                       rows={1}
                                        floatingLabelText={journalArticleInformation.fields.titleLabel}
                                        validate={[validation.required]}
                                        style={{marginBottom: '-12px'}}

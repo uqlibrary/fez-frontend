@@ -34,6 +34,9 @@ export const validate = values => {
         errors.doiSearch = locale.pages.addRecord.searchForPublication.errorMsg;
     }
 
+    // I want to store the inputted value for a publication search, tested as a valid title, to use in the AddJournalArticleForm.js
+    // validTitle.test(fieldValue);
+
 
     return errors;
 };

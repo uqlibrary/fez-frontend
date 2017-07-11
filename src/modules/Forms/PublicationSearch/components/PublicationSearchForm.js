@@ -22,7 +22,8 @@ export default class PublicationSearchForm extends Component {
         loadPubmedResultsList: PropTypes.func,
         loadTitleResultsList: PropTypes.func,
         formValues: PropTypes.object,
-        help: PropTypes.object
+        help: PropTypes.object,
+        searchTitleField: PropTypes.string
     };
 
     constructor(props) {
@@ -44,6 +45,7 @@ export default class PublicationSearchForm extends Component {
         } else if (isPubMedValue(fieldValue)) {
             this.props.loadPubmedResultsList(fieldValue);
         } else {
+            // Pass fieldValue map through to the form component
             this.props.loadTitleResultsList(JOURNAL_ARTICLE, fieldValue);
         }
     };
