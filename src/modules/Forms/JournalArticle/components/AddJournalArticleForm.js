@@ -188,7 +188,6 @@ export default class AddJournalArticleForm extends Component {
                                        floatingLabelText={journalArticleInformation.fields.titleLabel}
                                        validate={[validation.required]}
                                        style={{marginBottom: '-12px'}}
-                                       value={this.props.searchTitleField}
                                 />
                             </div>
                         </div>

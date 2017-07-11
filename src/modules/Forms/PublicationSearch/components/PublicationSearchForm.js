@@ -45,9 +45,7 @@ export default class PublicationSearchForm extends Component {
         } else if (isPubMedValue(fieldValue)) {
             this.props.loadPubmedResultsList(fieldValue);
         } else {
-            // So its a text string search, store the value to pass into the form
-            this.props.searchTitleField = fieldValue;
-            // Then load the results of the search
+            // Pass fieldValue map through to the form component
             this.props.loadTitleResultsList(JOURNAL_ARTICLE, fieldValue);
         }
     };

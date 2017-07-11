@@ -34,8 +34,7 @@ export default class AddRecord extends React.Component {
         loadingSearch: PropTypes.bool,
         selectedPublicationType: PropTypes.object,
         stepperIndex: PropTypes.number,
-        clearPublicationResults: PropTypes.func,
-        searchTitleField: PropTypes.string
+        clearPublicationResults: PropTypes.func
     };
 
     static defaultProps = {
