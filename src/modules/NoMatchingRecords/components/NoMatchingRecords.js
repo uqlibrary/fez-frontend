@@ -28,7 +28,7 @@ const NoMatchingRecords = ({title, explanationText, help, searchAgainBtnLabel, a
             <CardHeader className="card-header">
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
-                        <h2 className="title">{title}</h2>
+                        <h2 className="title is-4">{title}</h2>
                     </div>
                     <div className="column is-narrow is-helpicon">
                         {help && (

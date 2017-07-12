@@ -28,6 +28,8 @@ import '../../../sass/_appbar.scss';
 import '../../../sass/_helpicon.scss';
 // Import styles to override MUI defaults for UX
 import '../../../sass/_muifixes.scss';
+// Import title bulma styles
+import '../../../sass/_titles.scss';
 
 export default class App extends React.Component {
 

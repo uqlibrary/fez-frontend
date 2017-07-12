@@ -19,7 +19,7 @@ exports[`File upload dropzone snapshots tests renders default file upload dropzo
           className="column"
         >
           <h2
-            className="title"
+            className="title is-4"
           >
             Files
           </h2>

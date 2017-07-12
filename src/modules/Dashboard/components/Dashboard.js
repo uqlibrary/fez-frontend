@@ -54,8 +54,8 @@ class Dashboard extends React.Component {
                         <div className="column is-12">
                             <div className="image-cover">
                                 <div className="user-information" style={{color: '#FFF'}}>
-                                    <span className="display-1">{account.get('title')} {account.get('name')}</span><br/>
-                                    <span className="subhead">{account.get('fullTitle')}</span><span
+                                    <span className="title is-4">{account.get('title')} {account.get('name')}</span><br/>
+                                    <span className="subtitle is-5">{account.get('fullTitle')}</span><span
                                     className="body-1">{account.get('school')}</span>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ class Dashboard extends React.Component {
                         <div className="column is-12">
                             <Card>
                                 <CardHeader className="card-header">
-                                    <h2 className="title">eSpace publications by year</h2>
+                                    <h2 className="title is-4">eSpace publications by year</h2>
                                 </CardHeader>
 
                                 <CardText className="body-1"><br/>

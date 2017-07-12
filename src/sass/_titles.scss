@@ -1,0 +1,28 @@
+@import '~uqlibrary-react-toolbox/sass/variables';
+
+//Desktop
+@media (min-width: 768px) {
+  // Fix for page titles to sit in MUI space
+  div.layout-fill h1.title {
+    max-width: 1200px;
+    width: 90%;
+    margin: 24px auto !important;
+    padding: 0 !important;
+    white-space: normal !important;
+    color: $theme-color !important;
+  }
+}
+
+
+//Mobile
+@media (max-width: 768px) {
+  // Fix for page titles to sit in MUI space
+  div.layout-fill h1.title {
+    max-width: 1200px;
+    width: 90%;
+    margin: 24px auto !important;
+    padding: 0 !important;
+    white-space: normal !important;
+    color: $theme-color !important;
+  }
+}

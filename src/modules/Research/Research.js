@@ -14,7 +14,7 @@ export default function Research({title, text, help}) {
                     <div className="columns is-gapless is-mobile">
 
                         <div className="column">
-                            <h2 className="title">{title ? title : 'Research placeholder title'}</h2>
+                            <h2 className="title is-4">{title ? title : 'Research placeholder title'}</h2>
                         </div>
 
                         <div className="column is-narrow is-helpicon">

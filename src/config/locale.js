@@ -69,10 +69,10 @@ export default {
     pages: {
         about: {
             title: 'About UQ eSpace',
+            cardtitle: 'Information',
             text: (
                 <div>
-                    <h3>Information</h3>
-                    <p>UQ eSpace is the single authoritative source for the research outputs and research data of the
+                    UQ eSpace is the single authoritative source for the research outputs and research data of the
                         staff and students of the University of Queensland and is the archival home of UQ Research
                         Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
                         publications to the wider world and provides data for mandatory Government reporting
@@ -81,7 +81,7 @@ export default {
                         for open access publications, research datasets and other digitised materials created by staff
                         of the University such as print materials, photographs, audio materials, videos, manuscripts and
                         other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
-                        publication profile of researchers at UQ.</p>
+                        publication profile of researchers at UQ.
                     <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
                         requires UQ researchers to make publications arising from their research openly available via UQ
                         eSpace. It has also implemented a Research Data Management policy that sets out the requirements

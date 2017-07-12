@@ -9,6 +9,9 @@
 
 .user-information {
   padding: 20px 20px !important;
+  span.title, span.subtitle {
+    color: $text-color-reverse !important;
+  }
 }
 
 .image-cover {
@@ -16,9 +19,9 @@
   background-size: cover;
   background-position: 0;
   overflow: hidden;
-  height: 300px;
-  @media all and (max-width: 599px) {
-    height: 250px;
+  height: 200px;
+  @media all and (max-width: 768px) {
+    height: 0px;
   }
 }
 

@@ -18,7 +18,7 @@ exports[`No matching record component snapshots tests renders default no matchin
         className="column"
       >
         <h2
-          className="title"
+          className="title is-4"
         >
           No Records
         </h2>
