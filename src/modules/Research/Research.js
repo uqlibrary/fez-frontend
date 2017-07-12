@@ -7,7 +7,7 @@ export default function Research({title, text, help}) {
     return (
         <div className="layout-fill">
 
-            <h1 className="page-title headline">{title ? title : 'My research'}</h1>
+            <h1 className="title is-3">{title ? title : 'My research'}</h1>
 
             <Card className="layout-card">
                 <CardHeader className="card-header">
