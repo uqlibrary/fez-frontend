@@ -8,6 +8,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import {Alerts} from '../../../modules/Alerts';
 
 import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox';
 import './Dashboard.scss';
@@ -91,6 +92,8 @@ class Dashboard extends React.Component {
                                 <CardText className="body-1"><br/>
                                     <div><AuthorsPublicationsPerYearChart rawData={publicationYearsMockData}
                                                                           yAxisTitle="Total publications"/>
+
+                                        <Alerts />
                                     </div>
                                 </CardText>
 
