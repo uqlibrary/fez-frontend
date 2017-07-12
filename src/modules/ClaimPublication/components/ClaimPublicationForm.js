@@ -202,7 +202,8 @@ export default class ClaimPublicationForm extends Component {
                         <div className="columns">
                             <div className="column">
                                 <Field component={TextField} name="comments" type="text" fullWidth multiLine
-                                       rows={3} floatingLabelText={commentsInformation.fields.descriptionLabel}/>
+                                       rows={1} floatingLabelText={commentsInformation.fields.descriptionLabel}
+                                style={{marginTop: 0}}/>
                             </div>
                         </div>
                     </CardHeader>
