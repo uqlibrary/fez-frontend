@@ -140,11 +140,12 @@ export default class AddJournalArticleForm extends Component {
         this.props.dispatch(saveRecord(combinedData));
     };
 
-    tryFileUpload = () => {
+    saveRecord = () => {
+        // save record, get pid
+        this.tryRecordSave();
+
         if (this.props.acceptedFiles.size > 0) {
             this.props.dispatch(uploadFile(this.props.acceptedFiles));
-        } else {
-            this.tryRecordSave();
         }
     };
 
@@ -399,7 +400,7 @@ export default class AddJournalArticleForm extends Component {
                                 fullWidth
                                 label={recordSubmissionState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.submitForApproval}
                                 disabled={recordSubmissionState.get('submitting')}
-                                onClick={handleSubmit(this.tryFileUpload)}/>
+                                onClick={handleSubmit(this.saveRecord)}/>
                         </div>
                     </div>
                 </div>

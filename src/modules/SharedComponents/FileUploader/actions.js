@@ -37,7 +37,7 @@ export function uploadFile(acceptedFiles) {
         dispatch({type: RECORD_SUBMITTING});
 
         acceptedFiles.map(file => {
-            api.get(`file/upload/presigned/${file.name}`).then(response => {
+            api.get(`file/upload/presigned/UQ:658917/${file.name}`).then(response => {
                 const options = {
                     headers: {
                         'Content-Type': 'multipart/form-data'
