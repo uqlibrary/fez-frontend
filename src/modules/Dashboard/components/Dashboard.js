@@ -12,6 +12,7 @@ import {Alerts} from 'uqlibrary-react-toolbox';
 import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox';
 import './Dashboard.scss';
 
+
 class Dashboard extends React.Component {
 
     static propTypes = {
@@ -82,6 +83,12 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
 
+                  <Alerts
+                    alertText="This is an error!"
+                    alertType="error_outline"
+                    alertStatus="show"
+                  />
+
                     <div className="columns is-gapless">
                         <div className="column is-12">
                             <Card>
@@ -92,18 +99,44 @@ class Dashboard extends React.Component {
                                 <CardText className="body-1"><br/>
                                     <Alerts
                                         alertText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur commodo commodo felis, et interdum ex tincidunt at. Donec arcu diam, pulvinar eget commodo non, congue ac erat. Nunc et molestie mi, at volutpat tortor. Proin molestie, lacus eu ullamcorper vehicula, elit turpis fermentum mi, sit amet ornare felis neque id neque. Morbi non ex porttitor, facilisis orci in, venenatis diam. Integer nec hendrerit orci, sit amet porttitor nibh. Nullam eleifend ut purus et mattis. Proin pellentesque velit et ante rhoncus, at tristique ipsum iaculis. Aliquam ante ligula, lacinia id vehicula sed, tristique quis metus. Proin neque eros, varius ut justo ullamcorper, condimentum molestie odio. In feugiat sit amet magna eget malesuada."
-                                        alertType="help"
-                                        alertStatus="hidden"
+                                        alertType="help_outline"
+                                        alertStatus="hide"
                                     />
 
                                     <div><AuthorsPublicationsPerYearChart rawData={publicationYearsMockData}
                                                                           yAxisTitle="Total publications"/>
+
+                                      <Alerts
+                                        alertText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur commodo commodo felis, et interdum ex tincidunt at. Donec arcu diam, pulvinar eget commodo non, congue ac erat. Nunc et molestie mi, at volutpat tortor. Proin molestie, lacus eu ullamcorper vehicula, elit turpis fermentum mi, sit amet ornare felis neque id neque. Morbi non ex porttitor, facilisis orci in, venenatis diam. Integer nec hendrerit orci, sit amet porttitor nibh. Nullam eleifend ut purus et mattis. Proin pellentesque velit et ante rhoncus, at tristique ipsum iaculis. Aliquam ante ligula, lacinia id vehicula sed, tristique quis metus. Proin neque eros, varius ut justo ullamcorper, condimentum molestie odio. In feugiat sit amet magna eget malesuada."
+                                        alertType="info_outline"
+                                        alertStatus="show"
+                                      />
+
                                     </div>
                                 </CardText>
 
                             </Card>
                         </div>
                     </div>
+
+                  <Alerts
+                    alertText="This is a warning!"
+                    alertType="warning"
+                    alertStatus="show"
+                  />
+
+                  <Alerts
+                    alertText="This has an invalid alertType"
+                    alertType="cat"
+                    alertStatus="show"
+                  />
+
+                  <Alerts
+                    alertText="This is just some information"
+                    alertType="info"
+                    alertStatus="show"
+                  />
+
                 </div>
             </div>
         );
