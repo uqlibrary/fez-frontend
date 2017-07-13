@@ -20,7 +20,8 @@ class ContributorForm extends Component {
     static defaultProps = {
         locale: {
             nameAsPublishedLabel: 'Name as published',
-            identifierLabel: 'UQ identifier (if available)'
+            identifierLabel: 'UQ identifier (if available)',
+            addButton: 'Add'
         }
     }
 
@@ -104,7 +105,6 @@ class ContributorForm extends Component {
                         hintText={this.props.locale.nameAsPublishedLabel}
                         value={this.state.nameAsPublished}
                         onChange={this._onNameChanged}
-                        onKe
                     />
                 </div>
                 {this.props.showIdentifierLookup &&
@@ -129,7 +129,7 @@ class ContributorForm extends Component {
                 <div className="column is-1-desktop is-1-tablet is-12-mobile is-centered">
                     <RaisedButton
                         primary
-                        label="Add"
+                        label={this.props.locale.addButton}
                         disabled={this.state.nameAsPublished.trim().length === 0}
                         onClick={this._addContributor} />
                 </div>
@@ -140,7 +140,7 @@ class ContributorForm extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        authorsList: state.get('authorsReducer2').authorsList || []
+        authorsList: state.get('authorsReducer').authorsList || []
     };
 };
 

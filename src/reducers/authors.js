@@ -25,7 +25,7 @@ const handlers = {
     })
 };
 
-export default function authorsReducer2(state = initialState, action) {
+export default function authorsReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

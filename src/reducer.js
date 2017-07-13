@@ -9,16 +9,15 @@ import {addRecordReducer} from 'modules/AddRecord';
 import {claimPublicationsReducer} from 'modules/ClaimPublication';
 
 import {publicationTypeReducer, publicationSearchReducer, journalArticleReducer} from './modules/Forms';
-import {authorsReducer, fileUploadReducer, authorLinkingReducer} from './modules/SharedComponents';
+import {fileUploadReducer, authorLinkingReducer} from './modules/SharedComponents';
 
-import authorsReducer2 from 'reducers/authors';
+import authorsReducer from 'reducers/authors';
 
 const rootReducer = combineReducers({
     form: formReducer,
     // App reducers
     addRecord: addRecordReducer,
     app: appReducer,
-    authors: authorsReducer,
     authorLinking: authorLinkingReducer,
     fileUpload: fileUploadReducer,
     claimPublication: claimPublicationsReducer,
@@ -27,7 +26,8 @@ const rootReducer = combineReducers({
     publicationTypes: publicationTypeReducer,
     journalArticle: journalArticleReducer,
     publicationSearch: publicationSearchReducer,
-    authorsReducer2
+    // migrated reducers
+    authorsReducer
 });
 
 export default rootReducer;
