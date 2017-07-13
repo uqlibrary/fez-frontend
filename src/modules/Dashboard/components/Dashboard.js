@@ -43,6 +43,7 @@ class Dashboard extends React.Component {
     };
 
     render() {
+        console.log('***** -> ' + Alerts);
         const {
             account
         } = this.props;
@@ -89,7 +90,11 @@ class Dashboard extends React.Component {
                                 </CardHeader>
 
                                 <CardText className="body-1"><br/>
-                                    <Alerts />
+                                    <Alerts
+                                        alertText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur commodo commodo felis, et interdum ex tincidunt at. Donec arcu diam, pulvinar eget commodo non, congue ac erat. Nunc et molestie mi, at volutpat tortor. Proin molestie, lacus eu ullamcorper vehicula, elit turpis fermentum mi, sit amet ornare felis neque id neque. Morbi non ex porttitor, facilisis orci in, venenatis diam. Integer nec hendrerit orci, sit amet porttitor nibh. Nullam eleifend ut purus et mattis. Proin pellentesque velit et ante rhoncus, at tristique ipsum iaculis. Aliquam ante ligula, lacinia id vehicula sed, tristique quis metus. Proin neque eros, varius ut justo ullamcorper, condimentum molestie odio. In feugiat sit amet magna eget malesuada."
+                                        alertType="help"
+                                        alertStatus="hidden"
+                                    />
 
                                     <div><AuthorsPublicationsPerYearChart rawData={publicationYearsMockData}
                                                                           yAxisTitle="Total publications"/>
