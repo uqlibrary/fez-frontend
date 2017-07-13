@@ -5,7 +5,7 @@ import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
-import {AddAuthors, FileUploader, SelectField, SubmissionErrorMessage} from 'modules/SharedComponents';
+import {ContributorsEditorField, FileUploader, SelectField, SubmissionErrorMessage} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 
 import {loadPublicationSubTypesList} from '../actions';
@@ -13,7 +13,6 @@ import {saveRecord, resetRecord} from 'actions';
 import {resetStepper} from '../../../AddRecord/actions';
 import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
 import {showDialogBox} from 'modules/App';
-
 
 import './AddJournalArticleForm.scss';
 
@@ -23,6 +22,7 @@ export default class AddJournalArticleForm extends Component {
         form: PropTypes.string.isRequired,
         formValues: PropTypes.object,
         handleSubmit: PropTypes.func,
+        change: PropTypes.func,
         acceptedFiles: PropTypes.object,
         authorsList: PropTypes.object,
         hasOpenAccess: PropTypes.bool,
@@ -57,6 +57,10 @@ export default class AddJournalArticleForm extends Component {
             this.props.dispatch(showDialogBox(dialogConfig));
             this.props.dispatch(resetStepper());
         }
+    }
+
+    _authorsUpdated = (authorsList) => {
+        this.props.change('authors', authorsList);
     }
 
     cancelAddingRecord = () => {
@@ -101,6 +105,8 @@ export default class AddJournalArticleForm extends Component {
     };
 
     tryRecordSave = () => {
+        console.log(this.props.formValues);
+
         const {formValues} = this.props;
 
         // TODO: move these constants to a config, there will be more types -> keep it in one place
@@ -293,8 +299,11 @@ export default class AddJournalArticleForm extends Component {
                             </div>
                         </div>
                     </CardHeader>
+
                     <CardText className="body-1">
-                        <AddAuthors/>
+                        <Field component={ContributorsEditorField}
+                               name="fez_record_search_key_author"
+                        />
                     </CardText>
                 </Card>
 

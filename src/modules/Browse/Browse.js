@@ -2,13 +2,10 @@ import React from 'react';
 import {PropTypes} from 'prop-types';
 import {Card, CardText, CardHeader} from 'material-ui/Card';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
-import ContributorEditor from '../SharedComponents/ContributorsEditor/components/ContributorEditor';
 
 export default function Browse({title, text, help}) {
     return (
         <div className="layout-fill">
-            <ContributorEditor />
-            <ContributorEditor />
             <h1 className="page-title headline">{title ? title : 'Browse'}</h1>
             <Card className="layout-card">
                 <CardHeader className="card-header">

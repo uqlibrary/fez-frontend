@@ -1,2 +1,2 @@
-export {default as AddAuthors} from './containers/AddAuthors';
-export {default as authorsReducer} from './reducer';
+export {default as ContributorsEditorField} from './ContributorsEditorField';
+

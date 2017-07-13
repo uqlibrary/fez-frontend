@@ -8,6 +8,7 @@ export default class ContributorRowHeader extends Component {
 
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
+        showIdentifierLookup: PropTypes.bool,
         locale: PropTypes.object
     };
 
@@ -28,10 +29,9 @@ export default class ContributorRowHeader extends Component {
 
     constructor(props) {
         super(props);
-        this._showConfirmation = this._showConfirmation.bind(this);
     }
 
-    _showConfirmation() {
+    _showConfirmation = () => {
         this.confirmationBox.showConfirmation();
     }
 
@@ -44,12 +44,14 @@ export default class ContributorRowHeader extends Component {
                                   onAction={this.props.onDeleteAll}
                                   locale={deleteAllConfirmation} />
 
-                <div className="column is-6-desktop is-6-tablet is-6-mobile is-centered">
+                <div className="column">
                     <strong>{nameColumn}</strong>
                 </div>
-                <div className="column is-3-desktop is-3-tablet is-5-mobile is-centered">
+                {this.props.showIdentifierLookup &&
+                <div className="column is-3-desktop is-3-tablet is-5-mobile">
                     <strong>{identifierColumn}</strong>
                 </div>
+                }
                 <div className="column is-2-desktop is-2-tablet is-hidden-mobile is-centered">
                     <strong>{reorderColumn}</strong>
                 </div>

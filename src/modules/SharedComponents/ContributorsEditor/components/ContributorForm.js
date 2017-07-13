@@ -12,8 +12,17 @@ class ContributorForm extends Component {
     static propTypes = {
         authorsList: PropTypes.array,
         onAdd: PropTypes.func.isRequired,
-        dispatch: PropTypes.func
+        showIdentifierLookup: PropTypes.bool,
+        dispatch: PropTypes.func,
+        locale: PropTypes.object
     };
+
+    static defaultProps = {
+        locale: {
+            nameAsPublishedLabel: 'Name as published',
+            identifierLabel: 'UQ identifier (if available)'
+        }
+    }
 
     constructor(props) {
         super(props);
@@ -23,11 +32,6 @@ class ContributorForm extends Component {
             uqIdentifier: '',
             contributor: {}
         };
-
-        this._addContributor = this._addContributor.bind(this);
-        this._onNameChanged = this._onNameChanged.bind(this);
-        this._onUQIdentifierChanged = this._onUQIdentifierChanged.bind(this);
-        this._onUQIdentifierSelected = this._onUQIdentifierSelected.bind(this);
     }
 
     componentDidMount() {
@@ -45,7 +49,7 @@ class ContributorForm extends Component {
         if (this.refs.identifierField) this.refs.identifierField.close();
     }
 
-    _addContributor() {
+    _addContributor = () => {
         // pass on the selected contributor
         this.props.onAdd({...this.state.contributor, ...{nameAsPublished: this.state.nameAsPublished}});
 
@@ -60,13 +64,13 @@ class ContributorForm extends Component {
         this.refs.nameAsPublishedField.focus();
     }
 
-    _onNameChanged(event, newValue) {
+    _onNameChanged = (event, newValue) => {
         this.setState({
             nameAsPublished: newValue
         });
     }
 
-    _onUQIdentifierSelected(selectedItem, index) {
+    _onUQIdentifierSelected = (selectedItem, index) => {
         // items has to be selected from the list
         if (index === -1) return;
 
@@ -77,7 +81,7 @@ class ContributorForm extends Component {
         this._addContributor();
     }
 
-    _onUQIdentifierChanged(newValue) {
+    _onUQIdentifierChanged = (newValue) => {
         this.setState({
             uqIdentifier: newValue
         });
@@ -92,25 +96,26 @@ class ContributorForm extends Component {
 
         return (
             <div className="columns">
-                <div className="column is-5-desktop is-5-tablet is-12-mobile">
+                <div className="column">
                     <TextField
                         fullWidth
                         ref="nameAsPublishedField"
-                        floatingLabelText="Name as published"
-                        hintText="Name as published"
+                        floatingLabelText={this.props.locale.nameAsPublishedLabel}
+                        hintText={this.props.locale.nameAsPublishedLabel}
                         value={this.state.nameAsPublished}
                         onChange={this._onNameChanged}
                         onKe
                     />
                 </div>
+                {this.props.showIdentifierLookup &&
                 <div className="column is-5-desktop is-5-tablet is-12-mobile">
                     <AutoComplete
                         disabled={this.state.nameAsPublished.trim().length === 0}
                         listStyle={{maxHeight: 200, overflow: 'auto'}}
                         filter={() => true}
                         ref="identifierField"
-                        floatingLabelText="UQ identifier (if available)"
-                        hintText="UQ identifier (if available)"
+                        floatingLabelText={this.props.locale.identifierLabel}
+                        hintText={this.props.locale.identifierLabel}
                         dataSource={this.props.authorsList}
                         dataSourceConfig={autoCompleteDataFormat}
                         openOnFocus
@@ -120,7 +125,7 @@ class ContributorForm extends Component {
                         onUpdateInput={this._onUQIdentifierChanged}
                         onNewRequest={this._onUQIdentifierSelected}
                     />
-                </div>
+                </div>}
                 <div className="column is-1-desktop is-1-tablet is-12-mobile is-centered">
                     <RaisedButton
                         primary

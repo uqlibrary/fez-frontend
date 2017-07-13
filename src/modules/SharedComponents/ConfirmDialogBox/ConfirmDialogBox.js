@@ -15,8 +15,8 @@ export default class ConfirmDialogBox extends Component {
         locale: {
             confirmationTitle: 'Confirmation',
             confirmationMessage: 'Are you sure?',
-            cancelButtonLabel: 'Cancel',
-            confirmButtonLabel: 'OK'
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes'
         }
     };
 

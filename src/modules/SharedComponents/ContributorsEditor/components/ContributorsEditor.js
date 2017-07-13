@@ -1,24 +1,27 @@
 import React, {Component} from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import AlertMessage from '../../AlertMessage';
 
-export default class ContributorEditor extends Component {
+export default class ContributorsEditor extends Component {
 
     static propTypes = {
+        showIdentifierLookup: PropTypes.bool,
+        onChange: PropTypes.func,
+        locale: PropTypes.object
+    };
 
+    static defaultProps = {
+        showIdentifierLookup: false,
+        locale: {
+            errorMessage: 'Unable to add an item with the same identifier.'
+        }
     };
 
     constructor(props) {
         super(props);
-
-        this.deleteContributor = this.deleteContributor.bind(this);
-        this.deleteAllContributors = this.deleteAllContributors.bind(this);
-        this.moveUpContributor = this.moveUpContributor.bind(this);
-        this.moveDownContributor = this.moveDownContributor.bind(this);
-        this.addContributor = this.addContributor.bind(this);
 
         this.state = {
             contributors: [],
@@ -26,19 +29,18 @@ export default class ContributorEditor extends Component {
         };
     }
 
-    componentDidMount() {
+    componentWillUpdate(nextProps, nextState) {
+        // notify parent component when local state has been updated, eg contributors added/removed/reordered
+        if (this.props.onChange) this.props.onChange(nextState.contributors);
     }
 
-    componentWillUnmount() {
-    }
-
-    addContributor(contributor) {
+    addContributor = (contributor) => {
+        // only unique identifiers can be added
         if (this.state.contributors.filter(item => {
             return !!contributor.aut_id && item.aut_id === contributor.aut_id;
         }).length > 0) {
-            // contributor with this identifier has been added, display error
             this.setState({
-                errorMessage: 'Unable to add an item with the same identifier.'
+                errorMessage: this.props.locale.errorMessage
             });
         } else {
             this.setState({
@@ -48,7 +50,7 @@ export default class ContributorEditor extends Component {
         }
     }
 
-    moveUpContributor(contributor, index) {
+    moveUpContributor = (contributor, index) => {
         if (index === 0) return;
         const nextContributor = this.state.contributors[index - 1];
         this.setState({
@@ -59,7 +61,7 @@ export default class ContributorEditor extends Component {
         });
     }
 
-    moveDownContributor(contributor, index) {
+    moveDownContributor = (contributor, index) => {
         if (index === (this.state.contributors.length - 1)) return;
         const nextContributor = this.state.contributors[index + 1];
         this.setState({
@@ -70,13 +72,13 @@ export default class ContributorEditor extends Component {
         });
     }
 
-    deleteContributor(contributor, index) {
+    deleteContributor = (contributor, index) => {
         this.setState({
             contributors: this.state.contributors.filter((_, i) => i !== index)
         });
     }
 
-    deleteAllContributors() {
+    deleteAllContributors = () => {
         this.setState({contributors: []});
     }
 
@@ -91,18 +93,26 @@ export default class ContributorEditor extends Component {
                 onMoveUp={this.moveUpContributor}
                 onMoveDown={this.moveDownContributor}
                 onDelete={this.deleteContributor}
+                showIdentifierLookup={this.props.showIdentifierLookup}
             />
         );
 
         return (
             <div>
-                <ContributorForm onAdd={this.addContributor} />
-
+                <ContributorForm
+                    onAdd={this.addContributor}
+                    showIdentifierLookup={this.props.showIdentifierLookup}
+                />
                 {this.state.errorMessage &&
-                    <AlertMessage title="Error!" message={this.state.errorMessage} context="warning" />}
+                    <AlertMessage
+                        title="Error!"
+                        message={this.state.errorMessage}
+                        context="warning" />}
 
                 {this.state.contributors.length > 0 &&
-                    <ContributorRowHeader onDeleteAll={this.deleteAllContributors} />}
+                    <ContributorRowHeader
+                        onDeleteAll={this.deleteAllContributors}
+                        showIdentifierLookup={this.props.showIdentifierLookup} />}
 
                 {renderContributorsRows}
             </div>
