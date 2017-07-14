@@ -48,6 +48,7 @@ const mapStateToProps = (state, props) => {
     const authorsState = state.get('authors');
 
     return {
+        uploadedFilesCount: journalArticleState.get('uploadedFilesCount'),
         acceptedFiles: fileUploadState.get('acceptedFiles'),
         authorsList: authorsState.get('authorsList') || Immutable.Map({}),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map(),

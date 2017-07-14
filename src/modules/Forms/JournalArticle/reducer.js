@@ -2,6 +2,8 @@ import Immutable from 'immutable';
 
 import {PUBLICATION_SUB_TYPES_LOADED} from './actions';
 import {RECORD_SUBMITTED, RECORD_SUBMIT_FAILED, RECORD_SUBMITTING, RECORD_SUBMIT_RESET} from 'actions';
+import {FILE_UPLOADED} from '../../SharedComponents/FileUploader/actions';
+
 // import {actionTypes} from 'redux-form';
 
 const RecordState = {
@@ -30,7 +32,9 @@ const RecordState = {
 export const initialState = Immutable.fromJS({
     publicationSubTypeList: {},
     recordSubmissionState: RecordState.clear,
-    recordSubmissionErrorMessage: undefined
+    recordSubmissionErrorMessage: undefined,
+    uploadedFilesCount: 0
+
 });
 
 
@@ -44,7 +48,9 @@ const handlers = {
 
     [RECORD_SUBMITTING]: (state) => (state.set('recordSubmissionState', Immutable.fromJS(RecordState.submitting)).set('recordSubmissionErrorMessage', undefined)),
 
-    [RECORD_SUBMIT_RESET]: (state) => (state.set('recordSubmissionState', Immutable.fromJS(RecordState.clear)).set('recordSubmissionErrorMessage', undefined))
+    [RECORD_SUBMIT_RESET]: (state) => (state.set('recordSubmissionState', Immutable.fromJS(RecordState.clear)).set('recordSubmissionErrorMessage', undefined)),
+
+    [FILE_UPLOADED]: (state) => (state.set('uploadedFilesCount', state.get('uploadedFilesCount') + 1))
 };
 
 export default function journalArticleReducer(state = initialState, action) {

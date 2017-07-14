@@ -26,6 +26,7 @@ export default class AddJournalArticleForm extends Component {
         acceptedFiles: PropTypes.object,
         authorsList: PropTypes.object,
         hasOpenAccess: PropTypes.bool,
+        uploadedFilesCount: PropTypes.number,
         isOpenAccessAccepted: PropTypes.bool,
         isUploadCompleted: PropTypes.bool,
         publicationSubTypeList: PropTypes.object,
@@ -49,6 +50,10 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        if (this.props.uploadedFilesCount !== nextProps.uploadedFilesCount) {
+            console.log(nextProps.uploadedFilesCount);
+        }
+
         if (this.props.isUploadCompleted !== nextProps.isUploadCompleted) {
             this.tryRecordSave();
         }

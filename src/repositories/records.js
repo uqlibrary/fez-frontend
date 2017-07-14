@@ -4,13 +4,22 @@ import {api} from 'config';
  * Submits the metadata for approval
  * @returns {Promise}
  */
-export function submitRecord(data) {
+export function postRecord(data) {
     return new Promise((resolve, reject) => {
         api.post('records', data).then(response => {
             resolve(response.data);
         }).catch(e => {
             reject(e);
-            // throw e;
+        });
+    });
+}
+
+export function patchRecord(data) {
+    return new Promise((resolve, reject) => {
+        api.patch('records', data).then(response => {
+            resolve(response.data);
+        }).catch(e => {
+            reject(e);
         });
     });
 }

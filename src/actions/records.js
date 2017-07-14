@@ -1,4 +1,4 @@
-import {submitRecord} from '../repositories';
+import {postRecord, patchRecord} from '../repositories';
 
 // Available actions for /records/ api
 export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
@@ -14,7 +14,7 @@ export function saveRecord(data) {
     return dispatch => {
         dispatch({type: RECORD_SUBMITTING});
 
-        submitRecord(data).then((data) => {
+        postRecord(data).then((data) => {
             dispatch({
                 type: RECORD_SUBMITTED,
                 payload: data
@@ -24,7 +24,23 @@ export function saveRecord(data) {
                 type: RECORD_SUBMIT_FAILED,
                 payload: error
             });
-            // throw(error);
+        });
+    };
+}
+
+export function updateRecord(data) {
+    return dispatch => {
+        dispatch({type: RECORD_SUBMITTING});
+        patchRecord(data).then((data) => {
+            dispatch({
+                type: RECORD_SUBMITTED,
+                payload: data
+            });
+        }).catch(error => {
+            dispatch({
+                type: RECORD_SUBMIT_FAILED,
+                payload: error
+            });
         });
     };
 }
