@@ -137,7 +137,6 @@ export default class App extends React.Component {
                                 </div>
                             }
                         />
-
                         <MenuDrawer menuItems={menuItems}
                                     drawerOpen={docked || menuDrawerOpen}
                                     docked={docked}
