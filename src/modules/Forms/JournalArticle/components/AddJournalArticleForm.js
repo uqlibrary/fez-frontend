@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import MenuItem from 'material-ui/MenuItem';
+import {propTypes} from 'redux-form';
 import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -20,9 +21,7 @@ import './AddJournalArticleForm.scss';
 export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
-        form: PropTypes.string.isRequired,
-        formValues: PropTypes.object,
-        handleSubmit: PropTypes.func,
+        ...propTypes,
         acceptedFiles: PropTypes.object,
         authorsList: PropTypes.object,
         hasOpenAccess: PropTypes.bool,

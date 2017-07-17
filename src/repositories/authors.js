@@ -1,16 +1,12 @@
-import {api} from 'config';
+import {get} from './generic';
+
+export const GET_AUTHORS_SEARCH_API = 'authors/search';
 
 /**
  * Fetches the the current list of authors
+ * @param {string} searchValue
  * @returns {Promise}
  */
-export function loadAuthorsData(querystring) {
-    return new Promise((resolve, reject) => {
-        api.get(`authors/search?query=${querystring}`).then(response => {
-            resolve(response.data);
-        }).catch(e => {
-            reject(e);
-            throw e;
-        });
-    });
+export function getAuthorsSearch(searchValue) {
+    return get(`${GET_AUTHORS_SEARCH_API}?query=${searchValue}`);
 }

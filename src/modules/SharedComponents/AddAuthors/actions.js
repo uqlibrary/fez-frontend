@@ -1,5 +1,5 @@
 // Repositories
-import {loadAuthorsData} from 'repositories/authors';
+import {getAuthorsSearch} from 'repositories/authors';
 
 // Types
 export const AUTHORS_LIST_UPDATED = 'AUTHORS_LIST_UPDATED';
@@ -52,7 +52,7 @@ export function updateAuthorsList(authorsList) {
 
 export function performSearch(querystring, actionType) {
     return dispatch => {
-        loadAuthorsData(querystring).then(authors => {
+        getAuthorsSearch(querystring).then(authors => {
             let addUser = false;
 
             const formattedData = authors.map(author => {

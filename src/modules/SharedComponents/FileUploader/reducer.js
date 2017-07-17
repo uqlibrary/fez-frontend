@@ -2,7 +2,6 @@ import Immutable from 'immutable';
 
 import {
     FILE_DELETED,
-    FILE_DOCUMENT_ACCESS_TYPES_LOADED,
     FILE_LIST_CREATED,
     FILE_LIST_DELETED,
     FILE_STATE_RESTORED,
@@ -40,8 +39,6 @@ const fileUploadReducer = (state = initialState, action) => {
         case FILE_UPLOADED:
             const completedCount = state.get('completedFiles') + 1;
             return state.set('completedFiles', completedCount).set('isUploadCompleted', state.get('acceptedFiles').size === completedCount);
-        case FILE_DOCUMENT_ACCESS_TYPES_LOADED:
-            return state.set('documentAccessTypes', Immutable.fromJS(action.payload));
         case FILE_STATE_RESTORED:
             return initialState;
         default:
