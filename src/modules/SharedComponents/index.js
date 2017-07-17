@@ -1,5 +1,4 @@
 export {FileUploader} from './FileUploader';
-export {SelectField} from './SelectField';
 export {AddAuthors} from './AddAuthors';
 export {DialogBox} from './DialogBox';
 export {SubmissionErrorMessage} from './SubmissionErrorMessage';
