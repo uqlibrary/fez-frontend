@@ -22,7 +22,7 @@ export function uploadFile(acceptedFiles) {
     return dispatch => {
         dispatch({type: FILES_UPLOADING});
 
-        putUploadFiles(acceptedFiles).then((data) => {
+        putUploadFiles('UQ:658917', acceptedFiles).then((data) => {
             dispatch({
                 type: FILES_UPLOADED,
                 payload: data
