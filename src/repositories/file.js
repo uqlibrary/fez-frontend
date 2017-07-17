@@ -16,8 +16,9 @@ export function putUploadFile(pid, file) {
                     'Content-Type': 'multipart/form-data'
                 },
                 onUploadProgress: event => {
+                    // TODO: dispatch file upload progress
                     const completed = Math.floor((event.loaded * 100) / event.total);
-                    console.log(`File upload: ${completed} %`);
+                    console.log(`File upload (${file.name}): ${completed} %`);
                 },
                 cancelToken: generateCancelToken().token
             };

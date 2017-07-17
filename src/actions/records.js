@@ -1,4 +1,4 @@
-import {postRecord, patchRecord} from '../repositories';
+import {postRecord, patchRecord, putUploadFiles} from '../repositories';
 
 // Available actions for /records/ api
 export const RECORD_CREATED = 'RECORD_CREATED';
@@ -12,21 +12,33 @@ export const RECORD_RESET = 'RECORD_RESET';
  * Submits the record for approval
  * @returns {function(*)}
  */
-export function saveRecord(data) {
+export function saveRecord(data, files, fileDataPatch) {
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
 
-        postRecord(data).then((data) => {
-            dispatch({
-                type: RECORD_CREATED,
-                payload: data
+        postRecord(data)
+            .then(response => {
+                // update original record data
+                data.rek_pid = response.rek_pid;
+                if (files.length === 0) return response;
+                return putUploadFiles(response.rek_pid, files);
+            })
+            .then(response => {
+                if (files.length === 0) return response;
+                return patchRecord(data.rek_pid, fileDataPatch);
+            })
+            .then(response => {
+                dispatch({
+                    type: RECORD_CREATED,
+                    payload: response
+                });
+            })
+            .catch(error => {
+                dispatch({
+                    type: RECORD_CREATE_FAILED,
+                    payload: error
+                });
             });
-        }).catch(error => {
-            dispatch({
-                type: RECORD_CREATE_FAILED,
-                payload: error
-            });
-        });
     };
 }
 

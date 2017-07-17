@@ -48,12 +48,12 @@ const mapStateToProps = (state, props) => {
     const authorsState = state.get('authors');
 
     return {
-        uploadedFilesCount: journalArticleState.get('uploadedFilesCount'),
+        isUploadCompleted: journalArticleState.get('isUploadCompleted'),
         acceptedFiles: fileUploadState.get('acceptedFiles'),
         authorsList: authorsState.get('authorsList') || Immutable.Map({}),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map(),
         initialValues: Immutable.Map({rek_title: props.suggestedFormTitle}),
-        isUploadCompleted: fileUploadState.get('isUploadCompleted'),
+        // isUploadCompleted: fileUploadState.get('isUploadCompleted'),
         publicationSubTypeList: journalArticleState.get('publicationSubTypeList'),
         recordSubmissionState: journalArticleState.get('recordSubmissionState'),
         recordSubmissionErrorMessage: journalArticleState.get('recordSubmissionErrorMessage'),

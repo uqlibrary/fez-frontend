@@ -14,9 +14,10 @@ export function postRecord(data) {
 
 /**
  * Patches a records item
+ * @param {string} pid of object to be updated
  * @param {object} data to be posted, refer to backend API
  * @returns {Promise}
  */
-export function patchRecord(data) {
-    return patch(PATCH_RECORDS_API, data);
+export function patchRecord(pid, data) {
+    return patch(`${PATCH_RECORDS_API}/${pid}`, data);
 }

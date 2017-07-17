@@ -12,7 +12,7 @@ import {validation, locale} from 'config';
 import {loadPublicationSubTypesList} from '../actions';
 import {saveRecord, resetRecord} from 'actions';
 import {resetStepper} from '../../../AddRecord/actions';
-import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
+// import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
 import {showDialogBox} from 'modules/App';
 
 
@@ -25,6 +25,7 @@ export default class AddJournalArticleForm extends Component {
         acceptedFiles: PropTypes.object,
         authorsList: PropTypes.object,
         hasOpenAccess: PropTypes.bool,
+        fileUploadCompleted: PropTypes.bool,
         uploadedFilesCount: PropTypes.number,
         isOpenAccessAccepted: PropTypes.bool,
         isUploadCompleted: PropTypes.bool,
@@ -49,14 +50,6 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (this.props.uploadedFilesCount !== nextProps.uploadedFilesCount) {
-            console.log(nextProps.uploadedFilesCount);
-        }
-
-        if (this.props.isUploadCompleted !== nextProps.isUploadCompleted) {
-            this.tryRecordSave();
-        }
-
         if (nextProps.recordSubmissionState.get('submitted')) {
             const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog.success;
             this.props.dispatch(showDialogBox(dialogConfig));
@@ -138,19 +131,10 @@ export default class AddJournalArticleForm extends Component {
             ];
         }
 
-        const fileData = this.setFileData();
         const authorData = this.setAuthorData();
-        const combinedData = Object.assign({}, defaultData, formData, fileData, authorData);
-        this.props.dispatch(saveRecord(combinedData));
-    };
+        const combinedData = Object.assign({}, defaultData, formData, authorData);
 
-    saveRecord = () => {
-        // save record, get pid
-        this.tryRecordSave();
-
-        if (this.props.acceptedFiles.size > 0) {
-            this.props.dispatch(uploadFile(this.props.acceptedFiles));
-        }
+        this.props.dispatch(saveRecord(combinedData, this.props.acceptedFiles, this.setFileData()));
     };
 
     render() {
@@ -404,7 +388,7 @@ export default class AddJournalArticleForm extends Component {
                                 fullWidth
                                 label={recordSubmissionState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.submitForApproval}
                                 disabled={recordSubmissionState.get('submitting')}
-                                onClick={handleSubmit(this.saveRecord)}/>
+                                onClick={handleSubmit(this.tryRecordSave)}/>
                         </div>
                     </div>
                 </div>
