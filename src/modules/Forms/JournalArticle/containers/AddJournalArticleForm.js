@@ -10,14 +10,13 @@ const mapStateToProps = (state, props) => {
     const fileUploadState = state.get('fileUpload');
 
     return {
-        acceptedFiles: fileUploadState.get('acceptedFiles'),
         formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map(),
         initialValues: Immutable.Map({rek_title: props.suggestedFormTitle}),
-        isUploadCompleted: fileUploadState.get('isUploadCompleted'),
-        publicationSubTypeList: journalArticleState.get('publicationSubTypeList'),
+        acceptedFiles: fileUploadState.get('acceptedFiles'),
         recordSubmissionState: journalArticleState.get('recordSubmissionState'),
         recordSubmissionErrorMessage: journalArticleState.get('recordSubmissionErrorMessage'),
-        selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType')
+        selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType'),
+        publicationSubTypeList: journalArticleState.get('publicationSubTypeList')
     };
 };
 

@@ -1,25 +1,15 @@
-import {api} from 'config';
+import {api} from '../config';
 
+export const GET_AUTHORS_SEARCH_API = 'authors/search';
 
-// TODO: loadAUthorsData - depricate - remove when cleaned up
 /**
  * Fetches the the current list of authors
+ * @param {string} searchValue
  * @returns {Promise}
  */
-export function loadAuthorsData(querystring) {
+export function fetchAuthors(searchValue) {
     return new Promise((resolve, reject) => {
-        api.get(`authors/search?query=${querystring}`).then(response => {
-            resolve(response.data);
-        }).catch(e => {
-            reject(e);
-            throw e;
-        });
-    });
-}
-
-export function fetchAuthors(query) {
-    return new Promise((resolve, reject) => {
-        const url = encodeURI(`authors/search?query=${query}`);
+        const url = encodeURI(`${GET_AUTHORS_SEARCH_API}?query=${searchValue}`);
         api.get(url).then(response => {
             resolve(
                 response.data.map((item) => {
@@ -28,8 +18,8 @@ export function fetchAuthors(query) {
                     return item;
                 })
             );
-        }).catch(e => {
-            reject(e);
+        }).catch(error => {
+            reject(error);
         });
     });
 }

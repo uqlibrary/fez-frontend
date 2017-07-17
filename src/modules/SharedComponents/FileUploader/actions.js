@@ -1,13 +1,9 @@
-import {api, generateCancelToken, locale} from 'config';
 
-// Repositories
-import {loadDocumentAccessData} from 'repositories/documentAccessTypes';
-import {RECORD_SUBMITTING, RECORD_SUBMIT_FAILED} from 'actions';
+
+import {putUploadFiles} from '../../../repositories';
 
 // Types
 export const FILE_DELETED = 'FILE_DELETED';
-export const FILE_DOCUMENT_ACCESS_TYPES_LOADING = 'FILE_DOCUMENT_ACCESS_TYPES_LOADING';
-export const FILE_DOCUMENT_ACCESS_TYPES_LOADED = 'FILE_DOCUMENT_ACCESS_TYPES_LOADED';
 export const FILE_LIST_CREATED = 'FILE_LIST_CREATED';
 export const FILE_LIST_DELETED = 'FILE_LIST_DELETED';
 export const FILE_OPEN_ACCESS_CHECKBOX_ACCEPTED = 'FILE_OPEN_ACCESS_CHECKBOX_ACCEPTED';
@@ -17,71 +13,23 @@ export const FILE_UPLOAD_TERMINATED = 'FILE_UPLOAD_TERMINATED';
 export const FILE_UPLOADING = 'FILE_UPLOADING';
 export const FILE_UPLOADED = 'FILE_UPLOADED';
 
-let cancelToken;
-const errorMsg = locale.sharedComponents.files.messages.uploadError;
+export const FILES_UPLOADING = 'FILES_UPLOADING';
+export const FILES_UPLOADED = 'FILES_UPLOADED';
+export const FILES_UPLOAD_FAILED = 'FILES_UPLOAD_FAILED';
 
-
-function getErrorMssage(e) {
-    return e.response ? errorMsg[e.response.status] : errorMsg.default;
-}
-
-
-/**
- * Uploads a file/s directly into an S3 bucket
- * @returns {function(*)}
- */
 export function uploadFile(acceptedFiles) {
-    cancelToken = generateCancelToken();
-
     return dispatch => {
-        dispatch({type: RECORD_SUBMITTING});
+        dispatch({type: FILES_UPLOADING});
 
-        acceptedFiles.map(file => {
-            api.get(`file/upload/presigned/${file.name}`).then(response => {
-                const options = {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    },
-                    onUploadProgress: progressEvent => {
-                        const percentCompleted = Math.floor((progressEvent.loaded * 100) / progressEvent.total);
-
-                        dispatch({
-                            type: FILE_UPLOADING,
-                            payload: {
-                                name: file.name,
-                                progress: percentCompleted
-                            }
-                        });
-                    },
-                    cancelToken: cancelToken.token
-                };
-
-                // push the file into the S3 bucket
-                api.put(response.data, file, options).then(() => {
-                    dispatch({
-                        type: FILE_UPLOADED
-                    });
-                }).catch(e => {
-                    dispatch({type: RECORD_SUBMIT_FAILED});
-                    if (api.isCancel(e)) {
-                        dispatch({
-                            type: FILE_UPLOAD_CANCELLED
-                        });
-                    } else {
-                        dispatch({
-                            type: FILE_UPLOAD_TERMINATED,
-                            payload: getErrorMssage(e)
-                        });
-                        // throw(e);
-                    }
-                });
-            }).catch(e => {
-                dispatch({type: RECORD_SUBMIT_FAILED});
-                dispatch({
-                    type: FILE_UPLOAD_TERMINATED,
-                    payload: getErrorMssage(e)
-                });
-                // throw e;
+        putUploadFiles('UQ:658917', acceptedFiles).then((data) => {
+            dispatch({
+                type: FILES_UPLOADED,
+                payload: data
+            });
+        }).catch(error => {
+            dispatch({
+                type: FILES_UPLOAD_FAILED,
+                payload: error
             });
         });
     };
@@ -91,24 +39,7 @@ export function uploadFile(acceptedFiles) {
  * Loads the document access types from the endpoint
  * @returns {function(*)}
  */
-export function loadDocumentAccessTypes() {
-    return dispatch => {
-        dispatch({type: FILE_DOCUMENT_ACCESS_TYPES_LOADING});
-        loadDocumentAccessData().then(accessTypes => {
-            dispatch({
-                type: FILE_DOCUMENT_ACCESS_TYPES_LOADED,
-                payload: accessTypes
-            });
-        }).catch(() => {
-            // TODO: dispatch fail action
-            dispatch({
-                type: FILE_DOCUMENT_ACCESS_TYPES_LOADED,
-                payload: []
-            });
-            // throw(error);
-        });
-    };
-}
+
 
 /**
  * Sets the list of files that have been uploaded
@@ -121,7 +52,6 @@ export function setAcceptedFileList(files) {
         payload: files
     };
 }
-
 
 export function deleteFile(index) {
     return {

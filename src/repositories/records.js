@@ -1,16 +1,23 @@
-import {api} from 'config';
+import {post, patch} from './generic';
+
+export const POST_RECORDS_API = 'records';
+export const PATCH_RECORDS_API = 'records';
 
 /**
- * Submits the metadata for approval
+ * Posts a records item
+ * @param {object} data to be posted, refer to backend API
  * @returns {Promise}
  */
-export function submitRecord(data) {
-    return new Promise((resolve, reject) => {
-        api.post('records', data).then(response => {
-            resolve(response.data);
-        }).catch(e => {
-            reject(e);
-            // throw e;
-        });
-    });
+export function postRecord(data) {
+    return post(POST_RECORDS_API, data);
+}
+
+/**
+ * Patches a records item
+ * @param {string} pid of object to be updated
+ * @param {object} data to be posted, refer to backend API
+ * @returns {Promise}
+ */
+export function patchRecord(pid, data) {
+    return patch(`${PATCH_RECORDS_API}/${pid}`, data);
 }

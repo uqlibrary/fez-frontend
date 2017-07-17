@@ -1,6 +1,5 @@
 // Repositories
 import {loadPublicationSubTypeData} from 'repositories/publicationSubTypes';
-// import {submitRecord} from 'repositories/addRecord';
 
 // config
 import {locale} from 'config';
@@ -8,9 +7,6 @@ import {locale} from 'config';
 // Types
 export const PUBLICATION_SUB_TYPES_LOADING = 'PUBLICATION_SUB_TYPES_LOADING';
 export const PUBLICATION_SUB_TYPES_LOADED = 'PUBLICATION_SUB_TYPES_LOADED';
-// export const RECORD_SUBMITTED = 'RECORD_SUBMITTED';
-// export const RECORD_SUBMIT_FAILED = 'RECORD_SUBMIT_FAILED';
-// export const RECORD_SUBMITTING = 'RECORD_SUBMITTING';
 
 // module imports
 import {showSnackbar} from 'modules/App';
@@ -67,12 +63,12 @@ export function cancelAddRecord(message) {
  */
 // export function submitRecordForApproval(data) {
 //     return dispatch => {
-//         dispatch({type: RECORD_SUBMITTING});
+//         dispatch({type: RECORD_PROCESSING});
 //
 //         submitRecord(data).then(() => {
-//             dispatch({type: RECORD_SUBMITTED});
+//             dispatch({type: RECORD_CREATED});
 //         }).catch(error => {
-//             dispatch({type: RECORD_SUBMIT_FAILED});
+//             dispatch({type: RECORD_CREATE_FAILED});
 //             throw(error);
 //         });
 //     };
