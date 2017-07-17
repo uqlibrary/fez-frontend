@@ -10,9 +10,8 @@ import {AddAuthors, FileUploader, SelectField, SubmissionErrorMessage} from 'mod
 import {validation, locale} from 'config';
 
 import {loadPublicationSubTypesList} from '../actions';
-import {saveRecord, resetRecord} from 'actions';
+import {createNewRecord, resetRecordState} from 'actions';
 import {resetStepper} from '../../../AddRecord/actions';
-// import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
 import {showDialogBox} from 'modules/App';
 
 
@@ -42,7 +41,7 @@ export default class AddJournalArticleForm extends Component {
     }
 
     componentWillMount() {
-        this.props.dispatch(resetRecord());
+        this.props.dispatch(resetRecordState());
     }
 
     componentDidMount() {
@@ -71,24 +70,6 @@ export default class AddJournalArticleForm extends Component {
                 data.fez_record_search_key_author.push({
                     'rek_author': author.name,
                     'rek_author_order': (index + 1)
-                });
-            });
-
-            return data;
-        }
-
-        return {};
-    };
-
-    setFileData = () => {
-        const {acceptedFiles} = this.props;
-
-        if (acceptedFiles.size > 0) {
-            const data = {'fez_record_search_key_file_attachment_name': []};
-            acceptedFiles.toJS().map((file, index) => {
-                data.fez_record_search_key_file_attachment_name.push({
-                    'rek_file_attachment_name': file.name,
-                    'rek_file_attachment_name_order': (index + 1)
                 });
             });
 
@@ -134,7 +115,7 @@ export default class AddJournalArticleForm extends Component {
         const authorData = this.setAuthorData();
         const combinedData = Object.assign({}, defaultData, formData, authorData);
 
-        this.props.dispatch(saveRecord(combinedData, this.props.acceptedFiles, this.setFileData()));
+        this.props.dispatch(createNewRecord(combinedData, this.props.acceptedFiles));
     };
 
     render() {

@@ -1,18 +1,18 @@
 import {postRecord, patchRecord, putUploadFiles} from '../repositories';
 
-// Available actions for /records/ api
+export const RECORD_RESET = 'RECORD_RESET';
 export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
-export const RECORD_UPDATED = 'RECORD_UPDATED';
-export const RECORD_UPDATE_FAILED = 'RECORD_UPDATE_FAILED';
 export const RECORD_PROCESSING = 'RECORD_PROCESSING';
-export const RECORD_RESET = 'RECORD_RESET';
 
 /**
- * Submits the record for approval
- * @returns {function(*)}
+ * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
+ * If error occurs on any stage failed action is displated
+ * @param {object} data to be posted, refer to backend API
+ * @param {array} files to be uploaded for this record
+ * @returns {action}
  */
-export function saveRecord(data, files, fileDataPatch) {
+export function createNewRecord(data, files) {
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
 
@@ -25,6 +25,17 @@ export function saveRecord(data, files, fileDataPatch) {
             })
             .then(response => {
                 if (files.length === 0) return response;
+
+                // process uploaded files into API format for a patch
+                const fileDataPatch = {
+                    fez_record_search_key_file_attachment_name: files.map((file, index) => {
+                        return {
+                            'rek_file_attachment_name': file.name,
+                            'rek_file_attachment_name_order': (index + 1)
+                        };
+                    })
+                };
+
                 return patchRecord(data.rek_pid, fileDataPatch);
             })
             .then(response => {
@@ -42,25 +53,10 @@ export function saveRecord(data, files, fileDataPatch) {
     };
 }
 
-export function updateRecord(data) {
-    return dispatch => {
-        dispatch({type: RECORD_PROCESSING});
-        patchRecord(data).then((data) => {
-            dispatch({
-                type: RECORD_UPDATED,
-                payload: data
-            });
-        }).catch(error => {
-            dispatch({
-                type: RECORD_UPDATE_FAILED,
-                payload: error
-            });
-        });
-    };
-}
-
-export function resetRecord() {
-    return dispatch => {
-        dispatch({type: RECORD_RESET});
-    };
+/**
+ * Reset record state
+ * @returns {action}
+ */
+export function resetRecordState() {
+    return dispatch => dispatch({type: RECORD_RESET});
 }
