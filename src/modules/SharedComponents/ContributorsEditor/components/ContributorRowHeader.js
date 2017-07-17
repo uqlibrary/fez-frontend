@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
-import ConfirmDialogBox from '../../ConfirmDialogBox/ConfirmDialogBox';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 export default class ContributorRowHeader extends Component {
 
@@ -19,7 +19,7 @@ export default class ContributorRowHeader extends Component {
             reorderColumn: 'Reorder records',
             deleteAll: 'Remove all records',
             deleteAllConfirmation: {
-                confirmationTitle: 'Delete',
+                confirmationTitle: 'Delete all',
                 confirmationMessage: 'Are you sure you want to delete all records?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'

@@ -44,13 +44,18 @@ class ContributorForm extends Component {
     }
 
     componentWillUnmount() {
+        const div = document.querySelector('div.layout-fill.align-stretch');
+        div.removeEventListener('scroll', this.handleParentContainerScroll.bind(this));
     }
 
     handleParentContainerScroll() {
         if (this.refs.identifierField) this.refs.identifierField.close();
     }
 
-    _addContributor = () => {
+    _addContributor = (event) => {
+        // add contributor if user hits 'enter' key on input field
+        if(event.key && event.key !== 'Enter') return;
+
         // pass on the selected contributor
         this.props.onAdd({...this.state.contributor, ...{nameAsPublished: this.state.nameAsPublished}});
 
@@ -105,6 +110,7 @@ class ContributorForm extends Component {
                         hintText={this.props.locale.nameAsPublishedLabel}
                         value={this.state.nameAsPublished}
                         onChange={this._onNameChanged}
+                        onKeyPress={this._addContributor}
                     />
                 </div>
                 {this.props.showIdentifierLookup &&

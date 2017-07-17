@@ -26,11 +26,9 @@ export function putUploadFile(pid, file) {
             api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
                 resolve(uploadResponse.data);
             }).catch(uploadError => {
-                console.log(uploadError);
                 reject(uploadError);
             });
         }).catch(getPresignedError => {
-            console.log(getPresignedError);
             reject(getPresignedError);
         });
     });

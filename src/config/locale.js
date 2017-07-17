@@ -134,20 +134,20 @@ export default {
                 </div>
             ),
             help: {
-                title: 'Search help',
+                title: 'Browse eSpace help',
                 text: (
                     <div>
-                        <h3>Simple search</h3>
+                        <h3>Browse</h3>
                         <p>
-                            Searching all fields is the default when using the front page or upper right search field.
+                            Latest articles....
                         </p>
-                        <h3>Advanced search</h3>
+                        <h3>Browse collections</h3>
                         <p>
-                            Select SEARCH in the navigation bar above for advanced search options. (Link)
+                            Latest collections....
                         </p>
                     </div>
                 ),
-                button: 'OK'
+                buttonLabel: 'OK'
             }
         },
         addRecord: {

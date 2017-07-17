@@ -14,13 +14,7 @@ export default function Browse({title, text, help}) {
                             <h2 className="title is-4">{title ? title : 'Browse'}</h2>
                         </div>
                         <div className="column is-narrow is-helpicon">
-                            {help && (
-                                <HelpIcon
-                                    title={help.title}
-                                    text={help.text}
-                                    buttonLabel={help.button}
-                                    />
-                            )}
+                            {help && <HelpIcon {...help} />}
                         </div>
                     </div>
                 </CardHeader>
@@ -39,6 +33,10 @@ export default function Browse({title, text, help}) {
 Browse.propTypes = {
     title: PropTypes.string,
     text: PropTypes.string,
-    help: PropTypes.object
+    help: PropTypes.shape({
+        title: PropTypes.string,
+        text: PropTypes.string,
+        buttonLabel: PropTypes.string
+    })
 };
 

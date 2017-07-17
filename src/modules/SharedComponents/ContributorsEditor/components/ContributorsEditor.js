@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
-import AlertMessage from '../../AlertMessage';
+import {Alert} from 'uqlibrary-react-toolbox';
 
 export default class ContributorsEditor extends Component {
 
@@ -104,10 +104,10 @@ export default class ContributorsEditor extends Component {
                     showIdentifierLookup={this.props.showIdentifierLookup}
                 />
                 {this.state.errorMessage &&
-                    <AlertMessage
+                    <Alert
                         title="Error!"
                         message={this.state.errorMessage}
-                        context="warning" />}
+                        type="warning" />}
 
                 {this.state.contributors.length > 0 &&
                     <ContributorRowHeader

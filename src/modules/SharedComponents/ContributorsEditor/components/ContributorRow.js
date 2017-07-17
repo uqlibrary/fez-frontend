@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
-import ConfirmDialogBox from '../../ConfirmDialogBox/ConfirmDialogBox';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 export default class ContributorRow extends Component {
 
@@ -25,7 +25,13 @@ export default class ContributorRow extends Component {
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
             contributorSuffix: ' listed contributor',
-            ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Nineth', 'Tenth']
+            ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Nineth', 'Tenth'],
+            deleteRecordConfirmation: {
+                confirmationTitle: 'Delete record',
+                confirmationMessage: 'Are you sure you want to delete this record?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
+            }
         }
     };
 
@@ -50,7 +56,7 @@ export default class ContributorRow extends Component {
     }
 
     render() {
-        const {ordinalData, contributorSuffix} = this.props.locale;
+        const {ordinalData, contributorSuffix, deleteRecordConfirmation} = this.props.locale;
         const contributorOrder = (this.props.index < ordinalData.length ?
             ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + contributorSuffix;
 
@@ -59,7 +65,7 @@ export default class ContributorRow extends Component {
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}
-                />
+                    locale={deleteRecordConfirmation} />
                 <div className="column">
                     <strong>{this.props.contributor.nameAsPublished}</strong>
                     <br/>

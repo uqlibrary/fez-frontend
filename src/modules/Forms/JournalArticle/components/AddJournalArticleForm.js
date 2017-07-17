@@ -5,8 +5,8 @@ import {propTypes} from 'redux-form';
 import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
-import {ContributorsEditorField, FileUploader, SelectField, SubmissionErrorMessage} from 'modules/SharedComponents';
+import {HelpIcon, TextField, Alert, SelectField} from 'uqlibrary-react-toolbox';
+import {ContributorsEditorField, FileUploader} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 
 import {loadPublicationSubTypesList} from '../actions';
@@ -104,7 +104,6 @@ export default class AddJournalArticleForm extends Component {
     }
 
     render() {
-        console.dir(this.props);
         // path to the locale data for each of the sections
         const journalArticleInformation = locale.pages.addRecord.addJournalArticle.journalArticleInformation;
         const authorsInformation = locale.sharedComponents.authors;
@@ -335,9 +334,12 @@ export default class AddJournalArticleForm extends Component {
                     <FileUploader/>
                 </FormSection>
 
-                <SubmissionErrorMessage
-                    submissionState={recordSubmissionState}
-                    submissionErrorMessage={recordSubmissionErrorMessage} />
+                {recordSubmissionErrorMessage &&
+                    <Alert
+                        title="ERROR"
+                        message={recordSubmissionErrorMessage}
+                        type="error" />
+                }
 
                 <div className="layout-card">
                     <div className="columns">

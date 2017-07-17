@@ -4,10 +4,10 @@ import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import {Redirect} from 'react-router';
 
-import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
+import {HelpIcon, TextField, Alert} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from 'config';
-import {FileUploader, SubmissionErrorMessage, AuthorLinking} from 'modules/SharedComponents';
+import {FileUploader, AuthorLinking} from 'modules/SharedComponents';
 import {showDialogBox} from 'modules/App';
 
 import {uploadFile} from 'modules/SharedComponents/FileUploader/actions';
@@ -214,9 +214,13 @@ export default class ClaimPublicationForm extends Component {
                     <FileUploader />
                 </FormSection>
 
-                <SubmissionErrorMessage
-                    submissionState={recordClaimState}
-                    submissionErrorMessage={recordClaimErrorMessage} />
+
+                {recordClaimErrorMessage &&
+                    <Alert
+                        title="ERROR"
+                        message={recordClaimErrorMessage}
+                        type="error" />
+                }
 
                 {this.state.showAuthorSelectionError && (
                     <Card className="layout-card">
