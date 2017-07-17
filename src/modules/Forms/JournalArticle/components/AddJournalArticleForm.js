@@ -5,7 +5,8 @@ import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
-import {AddAuthors, FileUploader, SelectField, SubmissionErrorMessage} from 'modules/SharedComponents';
+import {AddAuthors, FileUploader, SubmissionErrorMessage} from 'modules/SharedComponents';
+import SelectField from 'uqlibrary-react-toolbox';
 import {validation, locale} from 'config';
 
 import {loadPublicationSubTypesList} from '../actions';

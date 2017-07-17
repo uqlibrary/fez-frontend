@@ -3,7 +3,7 @@ import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
 import Divider from 'material-ui/Divider';
 import MenuItem from 'material-ui/MenuItem';
-import {SelectField} from 'modules/SharedComponents';
+import SelectField from 'uqlibrary-react-toolbox';
 
 import PropTypes from 'prop-types';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
