@@ -4,7 +4,7 @@ import DatePicker from 'material-ui/DatePicker';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import {SelectField} from 'uqlibrary-react-toolbox';
-import {Checkbox} from 'modules/SharedComponents/Checkbox';
+import {Checkbox} from 'uqlibrary-react-toolbox';
 import MenuItem from 'material-ui/MenuItem';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';

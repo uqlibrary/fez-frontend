@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
-import {Checkbox} from 'modules/SharedComponents/Checkbox';
+import {Checkbox} from 'uqlibrary-react-toolbox';
 import {Field} from 'redux-form/immutable';
 import FlatButton from 'material-ui/FlatButton';
 import {locale, validation} from 'config';
