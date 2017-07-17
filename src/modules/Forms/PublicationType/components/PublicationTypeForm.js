@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
 import Divider from 'material-ui/Divider';
 import MenuItem from 'material-ui/MenuItem';
-
-import PropTypes from 'prop-types';
 import {HelpIcon, SelectField} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 
