@@ -14,8 +14,6 @@ import {resetStepper} from '../../../AddRecord/actions';
 import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
 import {showDialogBox} from 'modules/App';
 
-import './AddJournalArticleForm.scss';
-
 export default class AddJournalArticleForm extends Component {
 
     static propTypes = {
@@ -31,7 +29,8 @@ export default class AddJournalArticleForm extends Component {
         selectedPublicationId: PropTypes.object,
         recordSubmissionState: PropTypes.object,
         recordSubmissionErrorMessage: PropTypes.object,
-        dispatch: PropTypes.func
+        dispatch: PropTypes.func,
+        searchTitleField: PropTypes.string
     };
 
     constructor(props) {
@@ -154,7 +153,7 @@ export default class AddJournalArticleForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title">{journalArticleInformation.title}</h2>
+                                <h2 className="title is-4">{journalArticleInformation.title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {journalArticleInformation.help && (
@@ -175,6 +174,8 @@ export default class AddJournalArticleForm extends Component {
                                        name="rek_title"
                                        type="text"
                                        fullWidth
+                                       multiLine
+                                       rows={1}
                                        floatingLabelText={journalArticleInformation.fields.titleLabel}
                                        validate={[validation.required]}
                                        style={{marginBottom: '-12px'}}
@@ -271,7 +272,7 @@ export default class AddJournalArticleForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title">{authorsInformation.title}</h2>
+                                <h2 className="title is-4">{authorsInformation.title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {authorsInformation.help && (
@@ -297,7 +298,7 @@ export default class AddJournalArticleForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title">{optionalInformation.title}</h2>
+                                <h2 className="title is-4">{optionalInformation.title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {optionalInformation.help && (

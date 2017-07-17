@@ -19,7 +19,7 @@ exports[`Publication search form snapshots tests renders default publication sea
           className="column"
         >
           <h2
-            className="title"
+            className="title is-4"
           >
             Component Title
           </h2>

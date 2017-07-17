@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
-import {Checkbox} from 'modules/SharedComponents/Checkbox';
+import {Checkbox} from 'uqlibrary-react-toolbox';
 import {Field} from 'redux-form/immutable';
 import FlatButton from 'material-ui/FlatButton';
 import {locale, validation} from 'config';
-
-import './AuthorLinking.scss';
 
 export default class AuthorLinking extends React.Component {
 
@@ -72,7 +70,7 @@ export default class AuthorLinking extends React.Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title">{authorLinkingInformation.title}</h2>
+                                <h2 className="title is-4">{authorLinkingInformation.title}</h2>
                                 <h4 className="sub-title">{authorLinkingInformation.subTitle}</h4>
                             </div>
                             <div className="column is-narrow is-helpicon">

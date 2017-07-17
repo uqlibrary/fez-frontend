@@ -5,6 +5,22 @@ import AddJournalArticleForm from '../components/AddJournalArticleForm';
 
 const scrollToElement = require('scrollto-element');
 
+const mapStateToProps = (state, props) => {
+    const journalArticleState = state.get('journalArticle');
+    const fileUploadState = state.get('fileUpload');
+
+    return {
+        acceptedFiles: fileUploadState.get('acceptedFiles'),
+        formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map(),
+        initialValues: Immutable.Map({rek_title: props.suggestedFormTitle}),
+        isUploadCompleted: fileUploadState.get('isUploadCompleted'),
+        publicationSubTypeList: journalArticleState.get('publicationSubTypeList'),
+        recordSubmissionState: journalArticleState.get('recordSubmissionState'),
+        recordSubmissionErrorMessage: journalArticleState.get('recordSubmissionErrorMessage'),
+        selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType')
+    };
+};
+
 let AddJournalArticleFormContainer = reduxForm({
     validate: (values) => {
         const errors = {};
@@ -41,21 +57,6 @@ let AddJournalArticleFormContainer = reduxForm({
         }
     }
 })(AddJournalArticleForm);
-
-const mapStateToProps = (state) => {
-    const journalArticleState = state.get('journalArticle');
-    const fileUploadState = state.get('fileUpload');
-
-    return {
-        acceptedFiles: fileUploadState.get('acceptedFiles'),
-        formValues: getFormValues('AddJournalArticleForm')(state) || Immutable.Map({}),
-        isUploadCompleted: fileUploadState.get('isUploadCompleted'),
-        publicationSubTypeList: journalArticleState.get('publicationSubTypeList'),
-        recordSubmissionState: journalArticleState.get('recordSubmissionState'),
-        recordSubmissionErrorMessage: journalArticleState.get('recordSubmissionErrorMessage'),
-        selectedPublicationId: state.get('publicationTypes').get('selectedPublicationType')
-    };
-};
 
 AddJournalArticleFormContainer = connect(mapStateToProps)(AddJournalArticleFormContainer);
 

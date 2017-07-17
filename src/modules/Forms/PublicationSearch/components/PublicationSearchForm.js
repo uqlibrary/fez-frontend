@@ -7,8 +7,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {isDOIValue, isPubMedValue} from '../validator';
 import {locale} from 'config';
 
-import './PublicationSearchForm.scss';
-
 const JOURNAL_ARTICLE = 179;
 
 export default class PublicationSearchForm extends Component {
@@ -22,7 +20,8 @@ export default class PublicationSearchForm extends Component {
         loadPubmedResultsList: PropTypes.func,
         loadTitleResultsList: PropTypes.func,
         formValues: PropTypes.object,
-        help: PropTypes.object
+        help: PropTypes.object,
+        searchTitleField: PropTypes.string
     };
 
     constructor(props) {
@@ -44,6 +43,7 @@ export default class PublicationSearchForm extends Component {
         } else if (isPubMedValue(fieldValue)) {
             this.props.loadPubmedResultsList(fieldValue);
         } else {
+            // Pass fieldValue map through to the form component
             this.props.loadTitleResultsList(JOURNAL_ARTICLE, fieldValue);
         }
     };
@@ -58,7 +58,7 @@ export default class PublicationSearchForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title">{title}</h2>
+                                <h2 className="title is-4">{title}</h2>
                             </div>
                             <div className="column is-narrow is-helpicon">
                                 {help && (

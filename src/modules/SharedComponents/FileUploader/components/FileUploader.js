@@ -232,7 +232,7 @@ export default class FileUploader extends PureComponent {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title">{fileInformation.title}</h2>
+                                <h2 className="title is-4">{fileInformation.title}</h2>
                                 <h4 className="sub-title">{fileInformation.subTitle}</h4>
                             </div>
                             <div className="column is-narrow is-helpicon">

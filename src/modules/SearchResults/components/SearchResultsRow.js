@@ -10,7 +10,6 @@ const googleScholarIcon = require('images/googlescholar_icon.svg');
 const altmetricIcon = require('images/altmetric_icon.svg');
 
 import {locale} from 'config';
-import './SearchResultsRow.scss';
 
 export default class SearchResultsRow extends Component {
 
@@ -37,7 +36,7 @@ export default class SearchResultsRow extends Component {
         const {title, journalName, authors, counts, publisher, volumeNumber, issueNumber, startPage, endPage, doi, index} = this.props.entry;
         return (
             <div className="claimWrapper">
-                <h3 className="claimTitle">
+                <h3 className="title is-5" style={{marginBottom: 0}}>
                     {title}
                     {/* <a href="#" target="_blank"><FontIcon className="material-icons claimTitleIcon">open_in_new</FontIcon></a> */}
                 </h3>

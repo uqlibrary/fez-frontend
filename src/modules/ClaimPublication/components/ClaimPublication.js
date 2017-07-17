@@ -10,8 +10,6 @@ import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import {showDialogBox} from 'modules/App';
 
-import './ClaimPublication.scss';
-
 export default class ClaimPublication extends React.Component {
 
     static propTypes = {
@@ -91,7 +89,7 @@ export default class ClaimPublication extends React.Component {
         const resultsCountText = `${resultSet.size} out of ${noOfResults} potential match(es) displayed. Select any item to claim it as your work.`;
         return (
             <div className="layout-fill">
-                <h1 className="page-title display-1">{claimPublicationsInformation.title}</h1>
+                <h1 className="title is-3">{claimPublicationsInformation.title}</h1>
 
                 {loadingSearch &&
                     <div className="is-centered">

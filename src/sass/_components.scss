@@ -1,0 +1,12 @@
+// Importing module styles
+
+@import '../modules/Dashboard/components/Dashboard';
+@import '../modules/ClaimPublication/components/ClaimPublication';
+@import '../modules/AddRecord/components/AddRecord';
+@import '../modules/Forms/JournalArticle/components/AddJournalArticleForm';
+@import '../modules/Forms/PublicationSearch/components/PublicationSearchForm';
+@import '../modules/SearchResults/components/SearchResultsRow';
+@import '../modules/SharedComponents/AuthorLinking/components/AuthorLinking';
+@import '../modules/SharedComponents/DialogBox/components/DialogBox';
+@import '../modules/SharedComponents/FileUploader/components/FileMetadata';
+@import '../modules/SharedComponents/SubmissionErrorMessage/components/SubmissionErrorMessage';

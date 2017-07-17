@@ -1,0 +1,130 @@
+@import '~uqlibrary-react-toolbox/sass/variables';
+
+@media all and (min-width: 768px) {
+  .grey-cover {
+    z-index: 2;
+    background-color: #000;
+    opacity: 0.30;
+    height: 80px;
+  }
+  .image-cover {
+    background-image: url('../../public/images/dashboard_cover.jpg');
+    background-size: cover;
+    background-position: center 25%;
+    overflow: hidden;
+    height: 200px;
+  }
+  .user-information {
+    background-color: rgba(black, 0.33);
+    height: 100%;
+    padding: 20px 20px !important;
+    span.title, span.subtitle {
+      color: $text-color-reverse !important;
+    }
+  }
+  .time-display {
+    color: #FFFF !important;
+    white-space: nowrap;
+  }
+
+  .time {
+    font-size: 14px;
+    color: #FFF;
+  }
+
+  .location {
+    font-size: 12px;
+    color: #FFF;
+    opacity: 0.8;
+  }
+
+  .notification-wrap {
+    margin: -1px 0 0 0 !important;
+    .button-wrap {
+      padding-top: 15px !important;
+    }
+    .hide-appbar {
+      color: rgba($text-color-reverse, 0.5) !important;
+      &:hover {
+        color: rgba($text-color-reverse, 1) !important;
+      }
+    }
+    .alertText{
+      padding-top: 18px !important;
+    }
+    .alertIcon{
+      padding: 18px 12px 0px 12px !important;
+    }
+    .alertWrapper {
+      margin: 0px !important;
+      button.claim-publications {
+        color: #FFF !important;
+        background-color: darken($warning-color, 7.5%) !important;
+        margin-top: 6px !important;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+
+  .notification-wrap {
+    margin: -1px 0 0 0 !important;
+    .button-wrap {
+      padding-top: 0px !important;
+    }
+    .alertText {
+      padding: 32px 12px 0px 12px !important;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    .alertIcon span.material-icons {
+        height: 40px;
+        margin: 12px 12px 0px 0 !important;
+        padding-bottom: 0px !important;
+        font-size: 50px !important;
+    }
+    .alertWrapper{
+      margin: 0px !important;
+      button.claim-publications{
+        color: #FFF !important;
+        background-color: darken($warning-color, 7.5%) !important;
+        width: 100% !important;
+      }
+    }
+  }
+
+  .time {
+    font-size: 14px !important;
+  }
+
+  .dashboard-plans {
+    width: 100%;
+
+    .head {
+      padding: 20px;
+      background-color: $theme-color;
+
+      h2 {
+        color: #FFF;
+      }
+    }
+  }
+
+  .dashboard-collaborators {
+    width: 100%;
+
+    .head {
+      padding: 20px;
+      background-color: $accent-color;
+
+      h2 {
+        color: #FFF;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

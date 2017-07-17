@@ -163,13 +163,13 @@ export default class ClaimPublicationForm extends Component {
 
         return (
             <form style={{marginBottom: '-60px'}}>
-                <h1 className="page-title display-1">{claimPublicationsInformation.title}</h1>
+                <h1 className="title is-3">{claimPublicationsInformation.title}</h1>
                 {/* Claim Publication */}
                 <Card className="layout-card">
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title" style={{marginBottom: '30px'}}>{publicationDetailsInformation.title}</h2>
+                                <h2 className="title is-4" style={{marginBottom: '30px'}}>{publicationDetailsInformation.title}</h2>
                             </div>
                             <div className="column is-narrow">
                                 {publicationDetailsInformation.help && (
@@ -196,13 +196,14 @@ export default class ClaimPublicationForm extends Component {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title">{commentsInformation.title}</h2>
+                                <h2 className="title is-4">{commentsInformation.title}</h2>
                             </div>
                         </div>
                         <div className="columns">
                             <div className="column">
                                 <Field component={TextField} name="comments" type="text" fullWidth multiLine
-                                       rows={3} floatingLabelText={commentsInformation.fields.descriptionLabel}/>
+                                       rows={1} floatingLabelText={commentsInformation.fields.descriptionLabel}
+                                style={{marginTop: 0}}/>
                             </div>
                         </div>
                     </CardHeader>
@@ -222,7 +223,7 @@ export default class ClaimPublicationForm extends Component {
                         <CardHeader className="card-header">
                             <div className="columns is-gapless is-mobile">
                                 <div className="column">
-                                    <h2 className="title">Submission failed</h2>
+                                    <h2 className="title is-4">Submission failed</h2>
                                 </div>
                             </div>
                         </CardHeader>

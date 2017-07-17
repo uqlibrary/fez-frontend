@@ -2,8 +2,6 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 
-import './SubmissionErrorMessage.scss';
-
 export default class SubmissionErrorMessage extends PureComponent {
 
     static propTypes = {
@@ -25,7 +23,7 @@ export default class SubmissionErrorMessage extends PureComponent {
                     <CardHeader className="card-header">
                         <div className="columns is-gapless is-mobile">
                             <div className="column">
-                                <h2 className="title">Submission failed</h2>
+                                <h2 className="title is-4">Submission failed</h2>
                             </div>
                         </div>
                     </CardHeader>
