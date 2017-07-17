@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import propFilter from '../../helpers/_filterProps';
 import {HelpIcon} from 'uqlibrary-react-toolbox';
-import './Checkbox.scss';
 
 const CheckboxWrapper = props => {
     const filteredProps = propFilter(props, Checkbox.propTypes);

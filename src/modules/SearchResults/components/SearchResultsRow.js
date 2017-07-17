@@ -10,7 +10,6 @@ const googleScholarIcon = require('images/googlescholar_icon.svg');
 const altmetricIcon = require('images/altmetric_icon.svg');
 
 import {locale} from 'config';
-import './SearchResultsRow.scss';
 
 export default class SearchResultsRow extends Component {
 

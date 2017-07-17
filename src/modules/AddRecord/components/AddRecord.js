@@ -20,8 +20,6 @@ import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import {isDOIValue, isPartialDOIValue, isPubMedValue} from 'modules/Forms/PublicationSearch/validator';
 
-import './AddRecord.scss';
-
 export default class AddRecord extends React.Component {
 
     static propTypes = {

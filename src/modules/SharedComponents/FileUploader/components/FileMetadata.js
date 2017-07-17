@@ -14,7 +14,6 @@ import {Field} from 'redux-form/immutable';
 
 // custom components
 import {locale} from 'config';
-import './FileMetadata.scss';
 import {validation} from 'config';
 
 let fileUploadProgress = [];

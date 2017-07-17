@@ -7,8 +7,6 @@ import {Field} from 'redux-form/immutable';
 import FlatButton from 'material-ui/FlatButton';
 import {locale, validation} from 'config';
 
-import './AuthorLinking.scss';
-
 export default class AuthorLinking extends React.Component {
 
     static propTypes = {

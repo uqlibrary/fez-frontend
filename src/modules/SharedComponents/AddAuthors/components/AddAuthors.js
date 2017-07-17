@@ -12,8 +12,6 @@ import AutoComplete from 'material-ui/AutoComplete';
 
 import {locale} from 'config';
 
-import './AddAuthors.scss';
-
 let LAST_ROW = 1;
 
 export default class AddAuthors extends Component {

@@ -16,9 +16,9 @@
   }
 
   .image-cover {
-    background-image: url('../../../../public/images/dashboard_cover.jpg');
+    background-image: url('../../public/images/dashboard_cover.jpg');
     background-size: cover;
-    background-position: 0;
+    background-position: center center;
     overflow: hidden;
     height: 200px;
   }
@@ -76,7 +76,7 @@
     }
     .alertText {
       padding: 32px 12px 0px 12px !important;
-      font-size: 24px !important;
+      font-size: 16px;
       line-height: 16px;
     }
     .alertIcon span.material-icons {

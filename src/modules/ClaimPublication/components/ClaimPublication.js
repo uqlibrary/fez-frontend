@@ -10,8 +10,6 @@ import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import {showDialogBox} from 'modules/App';
 
-import './ClaimPublication.scss';
-
 export default class ClaimPublication extends React.Component {
 
     static propTypes = {

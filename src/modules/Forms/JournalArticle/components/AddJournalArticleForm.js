@@ -14,9 +14,6 @@ import {resetStepper} from '../../../AddRecord/actions';
 import {uploadFile} from '../../../SharedComponents/FileUploader/actions';
 import {showDialogBox} from 'modules/App';
 
-
-import './AddJournalArticleForm.scss';
-
 export default class AddJournalArticleForm extends Component {
 
     static propTypes = {

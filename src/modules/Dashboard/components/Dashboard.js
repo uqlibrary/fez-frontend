@@ -10,7 +10,6 @@ import FontIcon from 'material-ui/FontIcon';
 // import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { Alert } from 'uqlibrary-react-toolbox';
 import { AuthorsPublicationsPerYearChart } from 'uqlibrary-react-toolbox';
-import './Dashboard.scss';
 
 class Dashboard extends React.Component {
 
@@ -70,7 +69,7 @@ class Dashboard extends React.Component {
                                                 <FontIcon className="material-icons">warning</FontIcon>
                                             </div>
                                             <div className="column alertText">
-                                                {`We have found ${this.props.claimPublicationResults.size} articles that could possibly be your work.`}
+                                                {`We have found ${this.props.claimPublicationResults.size} article(s) that could possibly be your work.`}
                                             </div>
                                             <div className="column is-narrow claim-button">
                                                 <FlatButton label="Claim your publications now"

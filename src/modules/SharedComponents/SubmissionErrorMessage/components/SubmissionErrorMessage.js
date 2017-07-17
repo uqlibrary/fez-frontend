@@ -2,8 +2,6 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 
-import './SubmissionErrorMessage.scss';
-
 export default class SubmissionErrorMessage extends PureComponent {
 
     static propTypes = {

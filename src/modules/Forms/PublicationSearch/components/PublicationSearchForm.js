@@ -7,8 +7,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {isDOIValue, isPubMedValue} from '../validator';
 import {locale} from 'config';
 
-import './PublicationSearchForm.scss';
-
 const JOURNAL_ARTICLE = 179;
 
 export default class PublicationSearchForm extends Component {

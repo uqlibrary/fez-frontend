@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 
-// custom components
-import './DialogBox.scss';
-
 export default class DialogBox extends PureComponent {
 
     static propTypes = {

@@ -22,15 +22,6 @@ import {StaticPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 import {ClaimPublication, ClaimPublicationForm} from 'modules/ClaimPublication';
 
-// Import specific style for the AppBar
-import '../../../sass/_appbar.scss';
-// Import a style for the helpicon placement
-import '../../../sass/_helpicon.scss';
-// Import styles to override MUI defaults for UX
-import '../../../sass/_muifixes.scss';
-// Import title bulma styles
-import '../../../sass/_titles.scss';
-
 export default class App extends React.Component {
 
     static propTypes = {
