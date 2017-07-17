@@ -1,103 +1,98 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
-.grey-cover {
-  z-index: 2;
-  background-color: #000;
-  opacity: 0.30;
-  height: 80px;
-}
-
-.user-information {
-  padding: 20px 20px !important;
-  span.title, span.subtitle {
-    color: $text-color-reverse !important;
+@media all and (min-width: 768px) {
+  .grey-cover {
+    z-index: 2;
+    background-color: #000;
+    opacity: 0.30;
+    height: 80px;
   }
-}
 
-.image-cover {
-  background-image: url('../../../../public/images/dashboard_cover.jpg');
-  background-size: cover;
-  background-position: 0;
-  overflow: hidden;
-  height: 200px;
-}
-
-.time-display {
-  color: #FFFF !important;
-  white-space: nowrap;
-}
-
-.time {
-  font-size: 14px;
-  color: #FFF;
-}
-
-.location {
-  font-size: 12px;
-  color: #FFF;
-  opacity: 0.8;
-}
-
-.notification-wrap {
-
-  padding: 26px 0 0 0px;
-  margin-top: -88px;
-  overflow: hidden;
-
-  .claim-publication-lure {
-    background-color: #F26D00 !important;
-    z-index: 1 !important;
-
-    h1 {
-      font-size: 14px !important;
-    }
-
-    .error_outline {
-      color: #FFF !important;
-      font-size: 38px !important;
-      line-height: 64px;
-      margin: -8px 12px 0 6px;
-      vertical-align: middle;
+  .user-information {
+    padding: 20px 20px !important;
+    span.title, span.subtitle {
+      color: $text-color-reverse !important;
     }
   }
 
-  .button-wrap {
-    display: flex;
+  .image-cover {
+    background-image: url('../../../../public/images/dashboard_cover.jpg');
+    background-size: cover;
+    background-position: 0;
+    overflow: hidden;
+    height: 200px;
   }
 
-  .claim-publications {
-    background-color: #D04908 !important;
-    color: #FFF !important;
-    align-self: center;
+  .time-display {
+    color: #FFFF !important;
+    white-space: nowrap;
   }
 
-  .hide-appbar {
-    font-size: 34px;
-    color: #FFAB91 !important;
+  .time {
+    font-size: 14px;
+    color: #FFF;
   }
-}
 
-.claim-publication-lure-enter {
-  transition-timing-function: ease-out;
-  transition: 0.2s;
-
-  /* Hide appbar by pushing it outside by default */
-  transform: translateY(-130%);
-}
-
-.claim-publication-lure-leave {
-  transition-timing-function: ease-in;
-  transition: 0.2s;
-
-  /* Hide appbar by pushing it outside by default */
-  transform: translateY(130%);
-}
-
-@media all and (max-width: 600px) {
+  .location {
+    font-size: 12px;
+    color: #FFF;
+    opacity: 0.8;
+  }
 
   .notification-wrap {
-    padding: 15px 0px 0px 0px !important;
-    margin-top: -79px;
+    margin: -1px 0 0 0 !important;
+    .button-wrap {
+      padding-top: 15px !important;
+    }
+    .hide-appbar {
+      color: rgba($text-color-reverse, 0.5) !important;
+      &:hover {
+        color: rgba($text-color-reverse, 1) !important;
+      }
+    }
+    .alertText{
+      padding-top: 18px !important;
+    }
+    .alertIcon{
+      padding: 18px 12px 0px 12px !important;
+    }
+    .alertWrapper {
+      margin: 0px !important;
+      button.claim-publications {
+        color: #FFF !important;
+        background-color: darken($warning-color, 7.5%) !important;
+        margin-top: 6px !important;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+
+  .notification-wrap {
+    margin: -1px 0 0 0 !important;
+    .button-wrap {
+      padding-top: 0px !important;
+    }
+    .alertText {
+      padding: 32px 12px 0px 12px !important;
+      font-size: 24px !important;
+      line-height: 16px;
+    }
+    .alertIcon span.material-icons {
+        height: 40px;
+        margin: 12px 12px 0px 0 !important;
+        padding-bottom: 0px !important;
+        font-size: 50px !important;
+    }
+    .alertWrapper{
+      margin: 0px !important;
+      button.claim-publications{
+        color: #FFF !important;
+        background-color: darken($warning-color, 7.5%) !important;
+        width: 100% !important;
+      }
+    }
   }
 
   .time {
