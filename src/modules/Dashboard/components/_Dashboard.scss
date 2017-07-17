@@ -7,22 +7,21 @@
     opacity: 0.30;
     height: 80px;
   }
-
+  .image-cover {
+    background-image: url('../../public/images/dashboard_cover.jpg');
+    background-size: cover;
+    background-position: center 25%;
+    overflow: hidden;
+    height: 200px;
+  }
   .user-information {
+    background-color: rgba(black, 0.33);
+    height: 100%;
     padding: 20px 20px !important;
     span.title, span.subtitle {
       color: $text-color-reverse !important;
     }
   }
-
-  .image-cover {
-    background-image: url('../../public/images/dashboard_cover.jpg');
-    background-size: cover;
-    background-position: center center;
-    overflow: hidden;
-    height: 200px;
-  }
-
   .time-display {
     color: #FFFF !important;
     white-space: nowrap;

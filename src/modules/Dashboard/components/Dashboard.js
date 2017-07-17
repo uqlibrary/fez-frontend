@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
             <div className="layout-fill">
                 <div className="layout-card">
                     <div className="columns is-multiline is-gapless">
-                        <div className="column is-12 is-hidden-mobile">
+                        <div className="column is-12 is-hidden-mobile" style={{overflow: 'hidden !important'}}>
                             <div className="image-cover">
                                 <div className="user-information" style={{color: '#FFF'}}>
                                     <span
