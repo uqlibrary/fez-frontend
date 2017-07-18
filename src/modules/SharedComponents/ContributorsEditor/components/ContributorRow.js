@@ -77,7 +77,7 @@ export default class ContributorRow extends Component {
                     <small>{this.props.contributor.aut_org_username}</small>
                 </div>
                 }
-                <div className="column is-narrow is-hidden-mobile is-centered contributorReorder datalist-buttons">
+                <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
                     {this.props.canMoveUp &&
                     <IconButton tooltip={this.props.locale.moveUpHint} onTouchTap={this._onMoveUp} className="reorderUp">
                         <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
@@ -89,7 +89,7 @@ export default class ContributorRow extends Component {
                     </IconButton>
                     }
                 </div>
-                <div className="column is-1-desktop is-1-tablet is-1-mobile is-delete is-centered delete datalist-buttons">
+                <div className="column is-narrow contributorDelete datalist-buttons">
                     <IconButton tooltip={this.props.locale.deleteHint} onTouchTap={this._showConfirmation}>
                         <FontIcon className="material-icons deleteIcon">delete</FontIcon>
                     </IconButton>

@@ -51,7 +51,7 @@ export default class ContributorRowHeader extends Component {
             }
                 <div className="column is-narrow is-hidden-mobile order datalist-title">{reorderColumn}</div>
 
-                <div className="column is-1-desktop is-1-tablet is-1-mobile is-delete is-centered buttons datalist-buttons">
+                <div className="column is-narrow buttons datalist-buttons">
                     <IconButton tooltip={deleteAll} onTouchTap={this._showConfirmation}>
                         <FontIcon className="material-icons">delete_forever</FontIcon>
                     </IconButton>
