@@ -39,25 +39,21 @@ export default class ContributorRowHeader extends Component {
         const {nameColumn, identifierColumn, reorderColumn, deleteAll, deleteAllConfirmation} = this.props.locale;
 
         return (
-            <div className="columns is-gapless is-mobile">
+            <div className="columns is-gapless is-mobile contributorsHeader datalist datalist-header">
                 <ConfirmDialogBox onRef={ref => (this.confirmationBox = ref)}
                                   onAction={this.props.onDeleteAll}
                                   locale={deleteAllConfirmation} />
 
-                <div className="column">
-                    <strong>{nameColumn}</strong>
-                </div>
-                {this.props.showIdentifierLookup &&
-                <div className="column is-3-desktop is-3-tablet is-5-mobile">
-                    <strong>{identifierColumn}</strong>
-                </div>
-                }
-                <div className="column is-2-desktop is-2-tablet is-hidden-mobile is-centered">
-                    <strong>{reorderColumn}</strong>
-                </div>
-                <div className="column is-1-desktop is-1-tablet is-1-mobile is-delete is-centered">
+                <div className="column name datalist-title">{nameColumn}</div>
+
+            {this.props.showIdentifierLookup &&
+                <div className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title">{identifierColumn}</div>
+            }
+                <div className="column is-narrow is-hidden-mobile order datalist-title">{reorderColumn}</div>
+
+                <div className="column is-narrow buttons datalist-buttons">
                     <IconButton tooltip={deleteAll} onTouchTap={this._showConfirmation}>
-                        <FontIcon className="material-icons deleteIcon">delete_icon</FontIcon>
+                        <FontIcon className="material-icons">delete_forever</FontIcon>
                     </IconButton>
                 </div>
             </div>
