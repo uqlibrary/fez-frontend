@@ -1,5 +1,6 @@
 import React from 'react';
 import FontIcon from 'material-ui/FontIcon';
+import {StandardCard} from 'uqlibrary-react-toolbox';
 
 export default {
     global: {
@@ -69,9 +70,8 @@ export default {
     pages: {
         about: {
             title: 'About UQ eSpace',
-            cardtitle: 'Information',
-            text: (
-                <div>
+            children: (
+                <StandardCard>
                     UQ eSpace is the single authoritative source for the research outputs and research data of the
                         staff and students of the University of Queensland and is the archival home of UQ Research
                         Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
@@ -105,24 +105,8 @@ export default {
                         Tel: 07 334 69775<br/>
                         Email: m.marrington@library.uq.edu.au<br/>
                     </p>
-                </div>
-            ),
-            help: {
-                title: 'Search help',
-                text: (
-                    <div>
-                        <h3>Simple search</h3>
-                        <p>
-                            Searching all fields is the default when using the front page or upper right search field.
-                        </p>
-                        <h3>Advanced search</h3>
-                        <p>
-                            Select SEARCH in the navigation bar above for advanced search options. (Link)
-                        </p>
-                    </div>
-                ),
-                button: 'OK'
-            }
+                </StandardCard>
+            )
         },
         browse: {
             title: 'Browse eSpace',
@@ -147,7 +131,7 @@ export default {
                         </p>
                     </div>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'no worries!'
             }
         },
         addRecord: {
@@ -294,7 +278,7 @@ export default {
                 claimRecordBtnLabel: 'Claim This Publication',
                 noMatchingPublications: {
                     title: 'No matching publications found',
-                    explanationText: 'No publications were automatically matched for you to claim.',
+                    children: ('No publications were automatically matched for you to claim.'),
                     help: {
                         title: 'No publications found',
                         text: (
@@ -304,7 +288,7 @@ export default {
                                 </p>
                             </div>
                         ),
-                        button: 'OK'
+                        buttonLabel: 'OK'
                     }
                 },
                 dialog: {

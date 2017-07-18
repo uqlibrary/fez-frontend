@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
 import Divider from 'material-ui/Divider';
 import MenuItem from 'material-ui/MenuItem';
-import {HelpIcon, SelectField} from 'uqlibrary-react-toolbox';
+import {SelectField, StandardCard} from 'uqlibrary-react-toolbox';
+
 import {locale} from 'config';
 
 export default class PublicationTypeForm extends Component {
@@ -73,7 +73,7 @@ export default class PublicationTypeForm extends Component {
             loadSelectedPublicationType,
             title,
             help,
-            formValues,
+            // formValues,
             children,
             publicationTypeLabel
         } = this.props;
@@ -83,47 +83,29 @@ export default class PublicationTypeForm extends Component {
 
         return (
             <form onSubmit={handleSubmit}>
-                <Card className="layout-card">
-                    <CardHeader className="card-header">
-                        <div className="columns is-gapless is-mobile">
-                            <div className="column">
-                                <h2 className="title is-4">{title}</h2>
-                            </div>
-                            <div className="column is-narrow is-helpicon">
-                                {help && (
-                                    <HelpIcon
-                                        title={help.title}
-                                        text={help.text}
-                                        buttonLabel={help.buttonLabel}
-                                    />
-                                )}
-                            </div>
+                <StandardCard title={title} help={help}>
+                    <div className="columns">
+                        <div className="column">
+                            <Field component={SelectField}
+                                   name="publicationType"
+                                   fullWidth
+                                   floatingLabelText={publicationTypeLabel}
+                                   floatingLabelFixed
+                                   hintText={publicationTypeLabel}
+                                   onChange={loadSelectedPublicationType}>
+                                <MenuItem primaryText={publicationTypeLabel} disabled/>
+                                {
+                                    this.state.displayPublicationTypeList.map((item, index) => (
+                                        item.id !== 0 ? <MenuItem key={index} value={item.id} primaryText={item.name}
+                                                                  disabled={item.name.toLowerCase() !== publicationTypeInformation.documentTypes.JOURNAL_ARTICLE}/> :
+                                            <Divider key="-1"/>
+                                    ))
+                                }
+                            </Field>
                         </div>
-                    </CardHeader>
-                    <CardText className="body-1">
-                        <div className="columns">
-                            <div className="column">
-                                <Field component={SelectField}
-                                       name="publicationType"
-                                       fullWidth
-                                       floatingLabelText={publicationTypeLabel}
-                                       floatingLabelFixed
-                                       hintText={publicationTypeLabel}
-                                       formValue={formValues.get('publicationType')}
-                                       onChange={loadSelectedPublicationType}
-                                       >
-                                    <MenuItem primaryText={publicationTypeLabel} disabled />
-                                    {
-                                        this.state.displayPublicationTypeList.map((item, index) => (
-                                            item.id !== 0 ? <MenuItem key={index} value={item.id} primaryText={item.name} disabled={item.name.toLowerCase() !== publicationTypeInformation.documentTypes.JOURNAL_ARTICLE}/> :
-                                                <Divider key="-1"/>
-                                        ))
-                                    }
-                                </Field>
-                            </div>
-                        </div>
-                    </CardText>
-                </Card>
+                    </div>
+                </StandardCard>
+
                 {children}
             </form>
         );

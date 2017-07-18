@@ -1,17 +1,20 @@
 import React, {Component} from 'react';
-import {Card, CardHeader, CardText} from 'material-ui/Card';
-import MenuItem from 'material-ui/MenuItem';
-import {propTypes} from 'redux-form';
-import {Field, FormSection} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
-import RaisedButton from 'material-ui/RaisedButton';
 
-import {HelpIcon, TextField, Alert, SelectField} from 'uqlibrary-react-toolbox';
+import {Field, FormSection} from 'redux-form/immutable';
+import {propTypes} from 'redux-form';
+
+import RaisedButton from 'material-ui/RaisedButton';
+import MenuItem from 'material-ui/MenuItem';
+
+import {TextField, Alert, SelectField, StandardCard} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField, FileUploader} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 
-import {loadPublicationSubTypesList} from '../actions';
 import {createNewRecord, resetRecordState} from 'actions';
+
+// TODO: refactor this:
+import {loadPublicationSubTypesList} from '../actions';
 import {resetStepper} from '../../../AddRecord/actions';
 import {showDialogBox} from 'modules/App';
 
@@ -98,10 +101,10 @@ export default class AddJournalArticleForm extends Component {
 
     renderSubTypeItems = () => {
         return this.props.publicationSubTypeList.size > 0 ? this.props.publicationSubTypeList.map(item => (
-            <MenuItem key={item.get('controlled_vocab').get('cvo_id')}
-                      value={item.get('controlled_vocab').get('cvo_title')}
-                      primaryText={item.get('controlled_vocab').get('cvo_title')}/>
-        )) : [];
+                <MenuItem key={item.get('controlled_vocab').get('cvo_id')}
+                          value={item.get('controlled_vocab').get('cvo_title')}
+                          primaryText={item.get('controlled_vocab').get('cvo_title')}/>
+            )) : [];
     }
 
     render() {
@@ -117,236 +120,175 @@ export default class AddJournalArticleForm extends Component {
 
         return (
             <form>
-                {/* Journal Information */}
-                <Card className="layout-card">
-                    <CardHeader className="card-header">
-                        <div className="columns is-gapless is-mobile">
-                            <div className="column">
-                                <h2 className="title is-4">{journalArticleInformation.title}</h2>
-                            </div>
-                            <div className="column is-narrow is-helpicon">
-                                {journalArticleInformation.help && (
-                                    <HelpIcon
-                                        title={journalArticleInformation.help.title}
-                                        text={journalArticleInformation.help.text}
-                                        buttonLabel={journalArticleInformation.help.buttonLabel}
+                <StandardCard title={journalArticleInformation.title} help={journalArticleInformation.help}>
+                    <div className="columns" style={{marginTop: '-12px'}}>
+                        <div className="column">
+                            <Field component={TextField}
+                                   autoFocus
+                                   name="rek_title"
+                                   type="text"
+                                   fullWidth
+                                   multiLine
+                                   rows={1}
+                                   floatingLabelText={journalArticleInformation.fields.titleLabel}
+                                   validate={[validation.required]}
+                                   style={{marginBottom: '-12px'}}
+                            />
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column is-two-thirds">
+                            <Field component={TextField}
+                                   name="fez_record_search_key_journal_name.rek_journal_name"
+                                   type="text" fullWidth
+                                   floatingLabelText={journalArticleInformation.fields.nameLabel}
+                                   validate={[validation.required]}
+                            />
+                        </div>
+                        <div className="column">
+                            <div className="columns">
+                                <div className="column">
+                                    <Field component={TextField}
+                                           name="partialDateDay"
+                                           maxLength="2"
+                                           type="text"
+                                           style={{marginTop: '12px'}}
+                                           fullWidth
+                                           floatingLabelText="Day"
+                                           floatingLabelFixed
+                                           validate={[validation.dateTimeDay]}
                                     />
-                                )}
-                            </div>
-                        </div>
-                    </CardHeader>
-                    <CardText className="body-1">
-                        <div className="columns" style={{marginTop: '-12px'}}>
-                            <div className="column">
-                                <Field component={TextField}
-                                       autoFocus
-                                       name="rek_title"
-                                       type="text"
-                                       fullWidth
-                                       multiLine
-                                       rows={1}
-                                       floatingLabelText={journalArticleInformation.fields.titleLabel}
-                                       validate={[validation.required]}
-                                       style={{marginBottom: '-12px'}}
-                                />
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column is-two-thirds">
-                                <Field component={TextField}
-                                       name="fez_record_search_key_journal_name.rek_journal_name"
-                                       type="text" fullWidth
-                                       floatingLabelText={journalArticleInformation.fields.nameLabel}
-                                       validate={[validation.required]}
-                                />
-                            </div>
-                            <div className="column">
-                                <div className="columns">
-                                    <div className="column">
-                                        <Field component={TextField}
-                                               name="partialDateDay"
-                                               maxLength="2"
-                                               type="text"
-                                               style={{marginTop: '12px'}}
-                                               fullWidth
-                                               floatingLabelText="Day"
-                                               floatingLabelFixed
-                                               validate={[validation.dateTimeDay]}
-                                        />
-                                    </div>
-                                    <div className="form-spacer"/>
-                                    <div className="column">
-                                        <Field component={SelectField}
-                                               name="partialDateMonth"
-                                               fullWidth
-                                               style={{marginTop: '12px'}}
-                                               floatingLabelText="Month"
-                                               floatingLabelFixed>
-                                            <MenuItem key={-1} value="-1" primaryText=""/>
-                                            <MenuItem key={0} value="0" primaryText="January"/>
-                                            <MenuItem key={1} value="1" primaryText="February"/>
-                                            <MenuItem key={2} value="2" primaryText="March"/>
-                                            <MenuItem key={3} value="3" primaryText="April"/>
-                                            <MenuItem key={4} value="4" primaryText="May"/>
-                                            <MenuItem key={5} value="5" primaryText="June"/>
-                                            <MenuItem key={6} value="6" primaryText="July"/>
-                                            <MenuItem key={7} value="7" primaryText="August"/>
-                                            <MenuItem key={8} value="8" primaryText="September"/>
-                                            <MenuItem key={9} value="9" primaryText="October"/>
-                                            <MenuItem key={10} value="10" primaryText="November"/>
-                                            <MenuItem key={11} value="11" primaryText="December"/>
-                                        </Field>
-                                    </div>
-                                    <div className="form-spacer"/>
-                                    <div className="column">
-                                        <Field component={TextField}
-                                               name="partialDateYear"
-                                               type="text"
-                                               fullWidth
-                                               style={{marginTop: '12px'}}
-                                               maxLength="4"
-                                               floatingLabelText="Year"
-                                               floatingLabelFixed
-                                               validate={[validation.dateTimeYear]}
-                                        />
-                                    </div>
+                                </div>
+                                <div className="form-spacer"/>
+                                <div className="column">
+                                    <Field component={SelectField}
+                                           name="partialDateMonth"
+                                           fullWidth
+                                           style={{marginTop: '12px'}}
+                                           floatingLabelText="Month"
+                                           floatingLabelFixed>
+                                        <MenuItem key={-1} value="-1" primaryText=""/>
+                                        <MenuItem key={0} value="0" primaryText="January"/>
+                                        <MenuItem key={1} value="1" primaryText="February"/>
+                                        <MenuItem key={2} value="2" primaryText="March"/>
+                                        <MenuItem key={3} value="3" primaryText="April"/>
+                                        <MenuItem key={4} value="4" primaryText="May"/>
+                                        <MenuItem key={5} value="5" primaryText="June"/>
+                                        <MenuItem key={6} value="6" primaryText="July"/>
+                                        <MenuItem key={7} value="7" primaryText="August"/>
+                                        <MenuItem key={8} value="8" primaryText="September"/>
+                                        <MenuItem key={9} value="9" primaryText="October"/>
+                                        <MenuItem key={10} value="10" primaryText="November"/>
+                                        <MenuItem key={11} value="11" primaryText="December"/>
+                                    </Field>
+                                </div>
+                                <div className="form-spacer"/>
+                                <div className="column">
+                                    <Field component={TextField}
+                                           name="partialDateYear"
+                                           type="text"
+                                           fullWidth
+                                           style={{marginTop: '12px'}}
+                                           maxLength="4"
+                                           floatingLabelText="Year"
+                                           floatingLabelFixed
+                                           validate={[validation.dateTimeYear]}
+                                    />
                                 </div>
                             </div>
                         </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Field component={SelectField}
-                                       name="rek_subtype"
-                                       fullWidth
-                                       floatingLabelText={journalArticleInformation.fields.publicationSubType}
-                                       validate={[validation.required]}>
-                                    <MenuItem
-                                        primaryText={journalArticleInformation.fields.selectFirstPublicationSubTypeLabel}
-                                        disabled/>
-                                    {renderSubTypeItems}
-                                </Field>
-                            </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column">
+                            <Field component={SelectField}
+                                   name="rek_subtype"
+                                   fullWidth
+                                   floatingLabelText={journalArticleInformation.fields.publicationSubType}
+                                   validate={[validation.required]}>
+                                <MenuItem
+                                    primaryText={journalArticleInformation.fields.selectFirstPublicationSubTypeLabel}
+                                    disabled/>
+                                {renderSubTypeItems}
+                            </Field>
                         </div>
-                    </CardText>
-                </Card>
+                    </div>
+                </StandardCard>
 
-                {/* Author Information */}
-                <Card className="layout-card">
-                    <CardHeader className="card-header">
-                        <div className="columns is-gapless is-mobile">
-                            <div className="column">
-                                <h2 className="title is-4">{authorsInformation.title}</h2>
-                            </div>
-                            <div className="column is-narrow is-helpicon">
-                                {authorsInformation.help && (
-                                    <HelpIcon
-                                        title={authorsInformation.help.title}
-                                        text={authorsInformation.help.text}
-                                        buttonLabel={authorsInformation.help.buttonLabel}
-                                    />
-                                )}
-                            </div>
+                <StandardCard title={authorsInformation.title} help={authorsInformation.help}>
+                    <Field component={ContributorsEditorField} name="authors"/>
+                </StandardCard>
+
+                <StandardCard title={optionalInformation.title} help={optionalInformation.help}>
+                    <div className="columns">
+                        <div className="column">
+                            <Field component={TextField}
+                                   name="fez_record_search_key_volume_number.rek_volume_number" type="text"
+                                   fullWidth
+                                   floatingLabelText={optionalInformation.fields.volumeLabel}/>
                         </div>
-                    </CardHeader>
-
-                    <CardText className="body-1">
-                        <Field component={ContributorsEditorField}
-                               name="authors"
-                        />
-                    </CardText>
-                </Card>
-
-                {/* Optional publication details */}
-                <Card className="layout-card">
-                    <CardHeader className="card-header">
-                        <div className="columns is-gapless is-mobile">
-                            <div className="column">
-                                <h2 className="title is-4">{optionalInformation.title}</h2>
-                            </div>
-                            <div className="column is-narrow is-helpicon">
-                                {optionalInformation.help && (
-                                    <HelpIcon
-                                        title={optionalInformation.help.title}
-                                        text={optionalInformation.help.text}
-                                        buttonLabel={optionalInformation.help.buttonLabel}
-                                    />
-                                )}
-                            </div>
-                        </div>
-                    </CardHeader>
-                    <CardText className="body-1">
-                        <div className="columns">
-                            <div className="column">
-                                <Field component={TextField}
-                                       name="fez_record_search_key_volume_number.rek_volume_number" type="text"
-                                       fullWidth
-                                       floatingLabelText={optionalInformation.fields.volumeLabel}/>
-                            </div>
-                            <div className="column">
-                                <Field component={TextField} name="fez_record_search_key_issue_number.rek_issue_number"
-                                       type="text" fullWidth
-                                       floatingLabelText={optionalInformation.fields.issueLabel}/>
-                            </div>
-
-                            <div className="column">
-                                <Field component={TextField} name="fez_record_search_key_start_page.rek_start_page"
-                                       type="text" fullWidth
-                                       floatingLabelText={optionalInformation.fields.startPageLabel}/>
-                            </div>
-                            <div className="column">
-                                <Field component={TextField} name="fez_record_search_key_end_page.rek_end_page"
-                                       type="text" fullWidth
-                                       floatingLabelText={optionalInformation.fields.endPageLabel}/>
-                            </div>
+                        <div className="column">
+                            <Field component={TextField} name="fez_record_search_key_issue_number.rek_issue_number"
+                                   type="text" fullWidth
+                                   floatingLabelText={optionalInformation.fields.issueLabel}/>
                         </div>
 
-                        <div className="columns">
-                            <div className="column">
-                                <Field component={TextField}
-                                       name="fez_record_search_key_article_number.rek_article_number"
-                                       type="text" fullWidth multiLine
-                                       floatingLabelText={optionalInformation.fields.articleNumber}/>
-                            </div>
+                        <div className="column">
+                            <Field component={TextField} name="fez_record_search_key_start_page.rek_start_page"
+                                   type="text" fullWidth
+                                   floatingLabelText={optionalInformation.fields.startPageLabel}/>
                         </div>
+                        <div className="column">
+                            <Field component={TextField} name="fez_record_search_key_end_page.rek_end_page"
+                                   type="text" fullWidth
+                                   floatingLabelText={optionalInformation.fields.endPageLabel}/>
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column">
+                            <Field component={TextField}
+                                   name="fez_record_search_key_article_number.rek_article_number"
+                                   type="text" fullWidth multiLine
+                                   floatingLabelText={optionalInformation.fields.articleNumber}/>
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column">
+                            <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text"
+                                   fullWidth multiLine
+                                   rows={1} floatingLabelText={optionalInformation.fields.notesLabel}/>
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column">
+                            <Field component={TextField}
+                                   name="publicationUrl"
+                                   type="text"
+                                   fullWidth
+                                   floatingLabelText={optionalInformation.fields.urlLabel}
+                                   validate={[validation.url, validation.maxLength255]}
+                            />
+                        </div>
+                    </div>
+                </StandardCard>
 
-                        <div className="columns">
-                            <div className="column">
-                                <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text"
-                                       fullWidth multiLine
-                                       rows={1} floatingLabelText={optionalInformation.fields.notesLabel}/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Field component={TextField}
-                                       name="publicationUrl"
-                                       type="text"
-                                       fullWidth
-                                       floatingLabelText={optionalInformation.fields.urlLabel}
-                                       validate={[validation.url, validation.maxLength255]}
-                                />
-                            </div>
-                        </div>
-                    </CardText>
-                </Card>
-
-                {/* Files */}
-                <FormSection name={fileInformation.formSectionPrefix}>
-                    <FileUploader/>
-                </FormSection>
+                <StandardCard>
+                    <FormSection name={fileInformation.formSectionPrefix}>
+                        <FileUploader/>
+                    </FormSection>
+                </StandardCard>
 
                 {recordSubmissionErrorMessage &&
-                    <Alert
-                        title="ERROR"
-                        message={recordSubmissionErrorMessage}
-                        type="error" />
+                <Alert
+                    title="ERROR"
+                    message={recordSubmissionErrorMessage}
+                    type="error"/>
                 }
 
                 <div className="layout-card">
                     <div className="columns">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop" style={{marginBottom: 24}}>
-                           <RaisedButton
+                            <RaisedButton
                                 fullWidth
                                 label={buttonLabels.abandon}
                                 onTouchTap={this.cancelAddingRecord}/>

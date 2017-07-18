@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form/immutable';
 import PropTypes from 'prop-types';
-import {HelpIcon, TextField} from 'uqlibrary-react-toolbox';
+import {TextField, StandardCard} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {isDOIValue, isPubMedValue} from '../validator';
 import {locale} from 'config';
@@ -35,7 +34,7 @@ export default class PublicationSearchForm extends Component {
             return;
         }
 
-        const { formValues } = this.props;
+        const {formValues} = this.props;
         const fieldValue = formValues.get('doiSearch');
 
         if (isDOIValue(fieldValue)) {
@@ -54,34 +53,20 @@ export default class PublicationSearchForm extends Component {
 
         return (
             <form ref="publicationSearchForm" onSubmit={handleSubmit}>
-                <Card className="layout-card">
-                    <CardHeader className="card-header">
-                        <div className="columns is-gapless is-mobile">
-                            <div className="column">
-                                <h2 className="title is-4">{title}</h2>
-                            </div>
-                            <div className="column is-narrow is-helpicon">
-                                {help && (
-                                    <HelpIcon
-                                        title={help.title}
-                                        text={help.text}
-                                        buttonLabel={help.buttonLabel}
-                                    />
-                                )}
-                            </div>
+                <StandardCard title={title} help={help}>
+                    <div>{explanationText}</div>
+                    <div className="columns is-gapless is-mobile">
+                        <div className="column">
+                            <Field component={TextField}
+                                   name="doiSearch"
+                                   fullWidth
+                                   floatingLabelText={searchForPublicationInformation.defaultSearchFieldLabel}
+                                   autoComplete="off"
+                                   autoFocus
+                                   onKeyPress={this.performSearch}
+                            />
                         </div>
-                    </CardHeader>
-                    <CardText className="body-1">
-                        <div>{explanationText}</div>
-                        <Field component={TextField}
-                               name="doiSearch"
-                               fullWidth
-                               floatingLabelText={searchForPublicationInformation.defaultSearchFieldLabel}
-                               autoComplete="off"
-                               autoFocus
-                               onKeyPress={this.performSearch}
-                        />
-                        <div style={{textAlign: 'right', marginTop: '20px'}}>
+                        <div className="column is-narrow is-helpicon">
                             <RaisedButton
                                 label={searchForPublicationInformation.defaultButtonLabel}
                                 secondary
@@ -90,8 +75,8 @@ export default class PublicationSearchForm extends Component {
                                 type="submit"
                             />
                         </div>
-                    </CardText>
-                </Card>
+                    </div>
+                </StandardCard>
             </form>
         );
     }

@@ -18,7 +18,7 @@ import {AuthButton} from 'uqlibrary-react-toolbox';
 import {Dashboard} from 'modules/Dashboard';
 import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
-import {StaticPage} from 'uqlibrary-react-toolbox';
+import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 import {ClaimPublication, ClaimPublicationForm} from 'modules/ClaimPublication';
 
@@ -89,7 +89,7 @@ export default class App extends React.Component {
 
         const isAuthorizedUser = loaded && account !== null && account.get('id') !== undefined;
         const components = {
-            Browse, StaticPage, Dashboard, Research, AddRecord, ClaimPublicationForm, ClaimPublication
+            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublicationForm, ClaimPublication
         };
         const landingPage =  isAuthorizedUser ? Dashboard : Browse;
         const menuItems = isAuthorizedUser ?

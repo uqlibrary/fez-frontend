@@ -5,8 +5,7 @@ import Immutable from 'immutable';
 
 // forms & custom components
 import {SearchResults} from 'modules/SearchResults';
-import {NoMatchingRecords} from 'modules/NoMatchingRecords';
-import {InlineLoader} from 'uqlibrary-react-toolbox';
+import {InlineLoader, StandardCard} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import {showDialogBox} from 'modules/App';
 
@@ -76,9 +75,7 @@ export default class ClaimPublication extends React.Component {
         const claimPublicationsInformation = locale.pages.claimPublications;
         const resultsInformation = claimPublicationsInformation.claimPublicationResults;
         const noRecordsInformation = resultsInformation.noMatchingPublications;
-        const noMatchingRecordsInformation = locale.pages.addRecord.noMatchingRecords;
         const {
-            account,
             claimPublicationResults,
             loadingSearch
         } = this.props;
@@ -123,11 +120,7 @@ export default class ClaimPublication extends React.Component {
                 }
 
                 {!loadingSearch && noOfResults === 0 &&
-                    <NoMatchingRecords
-                        title={noRecordsInformation.title}
-                        explanationText={noRecordsInformation.explanationText.replace('[username]', account.get('id'))}
-                        help={noMatchingRecordsInformation.help}
-                    />
+                    <StandardCard {...noRecordsInformation} />
                 }
             </div>
         );

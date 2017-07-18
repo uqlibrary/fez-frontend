@@ -94,6 +94,6 @@ export const defaultMenuItems = (locale, components) => [
         path: '/about',
         primaryText: locale.menu.about.primaryText,
         secondaryText: locale.menu.about.secondaryText,
-        render: () => components.StaticPage(locale.pages.about)
+        render: () => components.StandardPage(locale.pages.about)
     }
 ];

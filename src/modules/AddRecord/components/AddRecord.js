@@ -4,6 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
+import {StandardCard} from 'uqlibrary-react-toolbox';
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -13,7 +14,6 @@ const STEP_3 = 2;
 // forms & custom components
 import {PublicationSearchForm} from 'modules/Forms';
 import {SearchResults} from 'modules/SearchResults';
-import {NoMatchingRecords} from 'modules/NoMatchingRecords';
 import {PublicationTypeForm} from 'modules/Forms/PublicationType';
 import {AddJournalArticleForm} from 'modules/Forms/JournalArticle';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
@@ -138,13 +138,7 @@ export default class AddRecord extends React.Component {
                         }
 
                         {!this.props.loadingSearch && this.props.searchResultsList.size === 0 &&
-                            <NoMatchingRecords
-                                title={noMatchingRecordsInformation.title}
-                                explanationText={noMatchingRecordsInformation.explanationText}
-                                searchAgainBtnLabel={noMatchingRecordsInformation.searchAgainBtnLabel}
-                                addPublicationBtnLabel={noMatchingRecordsInformation.addPublicationBtnLabel}
-                                help={noMatchingRecordsInformation.help}
-                            />
+                            <StandardCard {...noMatchingRecordsInformation} />
                         }
 
                         {!this.props.loadingSearch &&
