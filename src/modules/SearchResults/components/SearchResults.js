@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {Card, CardHeader, CardText} from 'material-ui/Card';
 import PropTypes from 'prop-types';
 
-import {HelpIcon} from 'uqlibrary-react-toolbox';
+import {StandardCard} from 'uqlibrary-react-toolbox';
 import SearchResultsRow from '../containers/SearchResultsRow';
 
 export default class SearchResults extends Component {
@@ -45,30 +44,13 @@ export default class SearchResults extends Component {
         });
 
         return (
-            <Card className="layout-card">
-                <CardHeader className="card-header">
-                    <div className="columns is-gapless is-mobile">
-                        <div className="column">
-                            <h2 className="title is-4">{title}</h2>
-                        </div>
-                        <div className="column is-narrow is-helpicon">
-                            {help && (
-                                <HelpIcon
-                                    title={help.title}
-                                    text={help.text}
-                                    buttonLabel={help.buttonLabel}
-                                />
-                            )}
-                        </div>
-                    </div>
-                </CardHeader>
-                <CardText className="body-1">
-                    <div>
-                        {this.props.explanationText.replace('[noOfResults]', this.props.dataSource.size)}
-                    </div>
-                    {searchResultEntries}
-                </CardText>
-            </Card>
+            <StandardCard title={title} help={help}>
+                <div>
+                    {this.props.explanationText.replace('[noOfResults]', this.props.dataSource.size)}
+                </div>
+
+                {searchResultEntries}
+            </StandardCard>
         );
     }
 }
