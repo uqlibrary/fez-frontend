@@ -5,13 +5,8 @@
   .addContributorAddButton {
     margin-top: 30px;
   }
-  .contributorsHeader {
-    .order {
-      width: 96px !important;
-    }
-  }
   .contributorsRow {
-    .contributorReorder {width: 96px !important;}
+    .contributorReorder, .contributorsHeader .order {width: 96px !important;}
     .reorderDown{ float: right !important;}
     .reorderUp{ float: left !important;}
   }
@@ -22,9 +17,7 @@
   .addContributorAddButton {
    width: 100%;
   }
-  .contributorsHeader {
-    .material-icons {
-      padding-right: 6px;
+  .contributorsHeader .material-icons, .contributorsRow .deleteIcon {
+      margin-left: -12px;
     }
-  }
 }
