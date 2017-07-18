@@ -1,0 +1,81 @@
+// Common styles for list data for ContributorsEditor and FileUpload
+
+//Desktop
+@media (min-width: 768px) {
+  .datalist {
+    //Buttons
+    .datalist-buttons, .datalist-buttons .material-icons {
+      color: rgba($text-color, 0.3) !important;
+      &:hover {
+        color: rgba($text-color, 0.9) !important;
+      }
+    }
+    // Header
+    &.datalist-header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      margin: 24px 0 12px 0 !important;
+
+      .datalist-title {
+        color: rgba($text-color, 0.66);
+        font-size: 12px;
+        padding-top: 16px !important;
+      }
+    }
+    //Row
+    &.datalist-row {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      margin-bottom: 12px !important;
+
+      .datalist-text {
+        font-weight: bold;
+        display: block;
+        & .datalist-text-subtitle {
+          display: block;
+          font-size: 11px;
+          margin-top: -4px;
+          color: rgba($text-color, 0.8);
+        }
+      }
+    }
+  }
+}
+
+//Mobile
+@media (max-width: 768px) {
+  .datalist {
+    //Buttons
+    .datalist-buttons, .datalist-buttons .material-icons {
+      color: rgba($text-color, 0.3) !important;
+      &:hover {
+        color: rgba($text-color, 0.9) !important;
+      }
+    }
+    // Header
+    &.datalist-header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      margin: 24px 0 12px 0 !important;
+
+      .datalist-title {
+        color: rgba($text-color, 0.66);
+        font-size: 12px;
+        padding-top: 16px !important;
+      }
+    }
+    //Row
+    &.datalist-row {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      margin-bottom: 12px !important;
+
+      .datalist-text {
+        font-weight: bold;
+        display: block;
+        & .datalist-text-subtitle {
+          display: block;
+          font-size: 11px;
+          margin-top: -4px;
+          color: rgba($text-color, 0.8);
+        }
+      }
+    }
+  }
+}

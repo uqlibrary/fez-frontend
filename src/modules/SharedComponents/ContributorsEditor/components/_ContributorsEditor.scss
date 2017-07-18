@@ -1,0 +1,30 @@
+@import '../../../../sass/dataList';
+
+//Desktop
+@media (min-width: 768px) {
+  .addContributorAddButton {
+    margin-top: 30px;
+  }
+  .contributorsHeader {
+    .order {
+      width: 96px !important;
+    }
+  }
+  .contributorsRow {
+    .contributorReorder {width: 96px !important;}
+    .reorderDown{ float: right !important;}
+    .reorderUp{ float: left !important;}
+  }
+}
+
+//Mobile
+@media (max-width: 768px) {
+  .addContributorAddButton {
+   width: 100%;
+  }
+  .contributorsHeader {
+    .material-icons {
+      padding-right: 6px;
+    }
+  }
+}
