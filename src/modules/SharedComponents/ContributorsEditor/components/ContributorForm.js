@@ -55,7 +55,6 @@ class ContributorForm extends Component {
 
     _addContributor = (event) => {
         // add contributor if user hits 'enter' key on input field
-        console.log(this.state.nameAsPublished);
         if(event.key && (event.key !== 'Enter' || this.state.nameAsPublished.length === 0)) return;
 
         // pass on the selected contributor
