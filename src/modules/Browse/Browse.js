@@ -1,6 +1,7 @@
 import React from 'react';
 import {PropTypes} from 'prop-types';
 import {StandardPage, StandardCard} from 'uqlibrary-react-toolbox';
+import {PublicationForm} from '../PublicationForm';
 
 export default function Browse({title, text, help}) {
     return (
@@ -8,6 +9,9 @@ export default function Browse({title, text, help}) {
             <StandardCard title={title} help={help}>
                 {text}
             </StandardCard>
+
+            <PublicationForm />
+
         </StandardPage>
     );
 }

@@ -14,8 +14,8 @@ const STEP_3 = 2;
 // forms & custom components
 import {PublicationSearchForm} from 'modules/Forms';
 import {SearchResults} from 'modules/SearchResults';
-import {PublicationTypeForm} from 'modules/Forms/PublicationType';
-import {AddJournalArticleForm} from 'modules/Forms/JournalArticle';
+// import {PublicationTypeForm} from 'modules/Forms/PublicationType';
+import {PublicationForm} from 'modules/PublicationForm';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import {isDOIValue, isPartialDOIValue, isPubMedValue} from 'modules/Forms/PublicationSearch/validator';
@@ -170,35 +170,8 @@ export default class AddRecord extends React.Component {
                     </div>
                 );
             case STEP_3:
-                const {selectedPublicationType} = this.props;
-                const publicationTypeInformation = locale.pages.addRecord.publicationTypeForm;
-                const showButton = !selectedPublicationType || (selectedPublicationType && selectedPublicationType.size === 0);
-
                 return (
-                    <div>
-                        <PublicationTypeForm
-                            title={publicationTypeInformation.title}
-                            explanationText={publicationTypeInformation.explanationText}
-                            help={publicationTypeInformation.help}
-                            maxSearchResults={publicationTypeInformation.maxSearchResults}
-                            publicationTypeLabel={publicationTypeInformation.publicationTypeLabel}
-                            dataSource={this.props.publicationTypeList}
-                            popularTypesList={publicationTypeInformation.popularTypesList} />
-
-                            {showButton &&
-                                <div style={{maxWidth: '1200px', margin: '24px auto', width: '90%', textAlign: 'right'}}>
-                                    <RaisedButton
-                                        label={buttonLabels.abandon}
-                                        onTouchTap={this.cancelAddingRecord}/>
-                                </div>
-                            }
-
-                            {/* TODO: fix this warning */}
-                            {selectedPublicationType.size > 0
-                                && selectedPublicationType.get('name').toLowerCase() === publicationTypeInformation.documentTypes.JOURNAL_ARTICLE
-                                && <AddJournalArticleForm form="AddJournalArticleForm" suggestedFormTitle={this.state.doiSearchValue} />
-                            }
-                    </div>
+                    <PublicationForm />
                 );
             default:
                 const stepperInformation = locale.pages.addRecord.stepper;

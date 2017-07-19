@@ -8,7 +8,8 @@ import {reducer as dashboardReducer} from 'modules/Dashboard';
 import {addRecordReducer} from 'modules/AddRecord';
 import {claimPublicationsReducer} from 'modules/ClaimPublication';
 
-import {publicationTypeReducer, publicationSearchReducer, journalArticleReducer} from './modules/Forms';
+import {publicationTypeReducer, publicationSearchReducer} from './modules/Forms';
+import {publicationFormReducer} from './modules/PublicationForm';
 import {fileUploadReducer, authorLinkingReducer} from './modules/SharedComponents';
 
 import authorsReducer from 'reducers/authors';
@@ -24,10 +25,10 @@ const rootReducer = combineReducers({
     dashboard: dashboardReducer,
     helpDrawer: helpDrawerReducer,
     publicationTypes: publicationTypeReducer,
-    journalArticle: journalArticleReducer,
     publicationSearch: publicationSearchReducer,
     // migrated reducers
-    authorsReducer
+    authorsReducer,
+    publicationFormReducer
 });
 
 export default rootReducer;

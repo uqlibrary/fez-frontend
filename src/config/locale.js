@@ -59,12 +59,32 @@ export default {
         },
     },
     mapping: {
-        vocabs: [
-            {'documentId': 174, 'vocabId': 453581},
-            {'documentId': 177, 'vocabId': 453588},
-            {'documentId': 130, 'vocabId': 453596},
-            {'documentId': 313, 'vocabId': 453594},
-            {'documentId': 179, 'vocabId': 453573}
+        publicationTypes: [
+            {
+                name: 'Book',
+                documentId: 174,
+                vocabId: 453581
+            },
+            {
+                name: 'Book Chapter',
+                documentId: 177,
+                vocabId: 453588
+            },
+            {
+                name: 'Conference Paper',
+                documentId: 130,
+                vocabId: 453596
+            },
+            {
+                name: 'Creative Work',
+                documentId: 313,
+                vocabId: 453594
+            },
+            {
+                name: 'Journal Article',
+                documentId: 179,
+                vocabId: 453573
+            }
         ]
     },
     pages: {
@@ -178,68 +198,6 @@ export default {
                 defaultProps: {
                     searchAgainBtnLabel: 'Search again?',
                     addPublicationBtnLabel: 'Add new publication'
-                }
-            },
-            publicationTypeForm: {
-                popularTypesList: ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'],
-                title: 'Add your publication',
-                maxSearchResults: 10,
-                publicationTypeLabel: 'Select publication type',
-                selectFirstOptionLabel: 'Choose a publication type',
-                help: {
-                    title: 'Add your publication',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
-                },
-                documentTypes: {
-                    JOURNAL_ARTICLE: 'journal article'
-                }
-            },
-            addJournalArticle: {
-                journalArticleInformation: {
-                    title: 'Journal article information',
-                    help: {
-                        title: 'Journal article information',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
-                    },
-                    fields: {
-                        titleLabel: 'Title',
-                        nameLabel: 'Journal name',
-                        publishDateLabel: 'Publishing date',
-                        publicationSubType: 'Publication subtype',
-                        selectFirstPublicationSubTypeLabel: 'Choose a publication subtype',
-                    }
-                },
-                optionalDetails: {
-                    title: 'Optional publication details',
-                    help: {
-                        title: 'Optional publication details',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
-                    },
-                    fields: {
-                        volumeLabel: 'Volume',
-                        issueLabel: 'Issue',
-                        startPageLabel: 'Start page',
-                        endPageLabel: 'End page',
-                        articleNumber: 'Article number',
-                        notesLabel: 'Notes (not publicly viewable)',
-                        urlLabel: 'Link (URL)'
-                    }
-                },
-                dialog: {
-                    success: {
-                        title: 'Your record has been submitted',
-                        content: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
-                        primaryButtonLabel: 'Ok',
-                        primaryLink: '/dashboard',
-                        secondaryButtonLabel: 'Add another missing record'
-                    },
-                    cancel: {
-                        title: 'Cancel adding a missing record',
-                        content: 'Are you sure you want to cancel adding this record?',
-                        primaryButtonLabel: 'Yes',
-                        primaryLink: '/dashboard',
-                        secondaryButtonLabel: 'No'
-                    }
                 }
             }
         },
@@ -367,6 +325,120 @@ export default {
                         primaryLink: '/claim-publications',
                         secondaryButtonLabel: 'No'
                     }
+                }
+            }
+        }
+    },
+    components: {
+        publicationForm: {
+            cancel: 'Abandon and search again',
+            submit: 'Submit for approval',
+            publicationType: {
+                popularTypesList: ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'],
+                title: 'Publication type',
+                inputLabelText: 'Select publication type',
+                help: {
+                    title: 'Publication type',
+                    text: 'Help about publication types, eg journal article, book, conference paper etc',
+                    buttonLabel: 'OK'
+                }
+            },
+            journalArticle: {
+                information: {
+                    title: 'Journal article information',
+                    help: {
+                        title: 'Journal article information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        articleTitle: 'Title',
+                        journalTitle: 'Journal name',
+                        date: {
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        subtype: 'Publication subtype'
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    }
+                },
+                optional: {
+                    title: 'Optional publication details',
+                    help: {
+                        title: 'Optional publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        volume: 'Volume',
+                        issue: 'Issue',
+                        startPage: 'Start page',
+                        endPage: 'End page',
+                        articleNumber: 'Article number',
+                        notes: 'Notes (not publicly viewable)',
+                        url: 'Link (URL)'
+                    }
+                }
+            },
+            book: {
+                information: {
+                    title: 'Book information',
+                    help: {
+                        title: 'Book information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        bookTitle: 'Book title'
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    }
+                },
+                editors: {
+                    title: 'Editors',
+                    help: {
+                        title: 'Editors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    }
+                }
+            },
+            fileUpload: {
+                title: 'Files',
+                help: {
+                    title: 'Files',
+                    text: '...',
+                    buttonLabel: 'OK'
+                }
+            },
+            dialog: {
+                success: {
+                    title: 'Your record has been submitted',
+                    content: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
+                    primaryButtonLabel: 'Ok',
+                    primaryLink: '/dashboard',
+                    secondaryButtonLabel: 'Add another missing record'
+                },
+                cancel: {
+                    title: 'Cancel adding a missing record',
+                    content: 'Are you sure you want to cancel adding this record?',
+                    primaryButtonLabel: 'Yes',
+                    primaryLink: '/dashboard',
+                    secondaryButtonLabel: 'No'
                 }
             }
         }

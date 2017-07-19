@@ -1,126 +1,28 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 
-import {Field, FormSection} from 'redux-form/immutable';
-import {propTypes} from 'redux-form';
-
-import RaisedButton from 'material-ui/RaisedButton';
+import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 
-import {TextField, Alert, SelectField, StandardCard} from 'uqlibrary-react-toolbox';
-import {ContributorsEditorField, FileUploader} from 'modules/SharedComponents';
+import {TextField, SelectField, StandardCard} from 'uqlibrary-react-toolbox';
+import {ContributorsEditorField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 
-import {createNewRecord, resetRecordState} from 'actions';
-
-// TODO: refactor this:
-import {loadPublicationSubTypesList} from '../actions';
-import {resetStepper} from '../../../AddRecord/actions';
-import {showDialogBox} from 'modules/App';
-
-export default class AddJournalArticleForm extends Component {
-
-    static propTypes = {
-        ...propTypes,
-        acceptedFiles: PropTypes.object,
-        hasOpenAccess: PropTypes.bool,
-        fileUploadCompleted: PropTypes.bool,
-        uploadedFilesCount: PropTypes.number,
-        isOpenAccessAccepted: PropTypes.bool,
-        isUploadCompleted: PropTypes.bool,
-        publicationSubTypeList: PropTypes.object,
-        selectedPublicationId: PropTypes.object,
-        recordSubmissionState: PropTypes.object,
-        recordSubmissionErrorMessage: PropTypes.object,
-        dispatch: PropTypes.func,
-        searchTitleField: PropTypes.string
-    };
+export default class JournalArticleForm extends Component {
 
     constructor(props) {
         super(props);
     }
 
-    componentWillMount() {
-        this.props.dispatch(resetRecordState());
-    }
-
-    componentDidMount() {
-        this.props.dispatch(loadPublicationSubTypesList(this.props.selectedPublicationId.get('id')));
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.recordSubmissionState.get('submitted')) {
-            const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog.success;
-            this.props.dispatch(showDialogBox(dialogConfig));
-            this.props.dispatch(resetStepper());
-        }
-    }
-
-    cancelAddingRecord = () => {
-        const dialogConfig = locale.pages.addRecord.addJournalArticle.dialog.cancel;
-        this.props.dispatch(showDialogBox(dialogConfig));
-    };
-
-
-    tryRecordSave = () => {
-        const {formValues} = this.props;
-
-        // TODO: move these constants to a config, there will be more types -> keep it in one place
-        const RECORD_TYPE = 3;
-        const SUBMITTED_FOR_APPROVAL = 3;
-        const DISPLAY_TYPE = 179;
-        const MEMBER_OF = 'UQ:218198';
-
-        const defaultData = {
-            rek_object_type: RECORD_TYPE,
-            rek_status: SUBMITTED_FOR_APPROVAL,
-            rek_display_type: DISPLAY_TYPE,
-            fez_record_search_key_ismemberof: [
-                {rek_ismemberof: MEMBER_OF}
-            ]
-        };
-
-        const formData = formValues.toJS();
-
-        // construct partial date "YYYY-MM-DD"
-        formData.rek_date = `${parseInt(formData.partialDateYear, 10)}-${formData.partialDateMonth ? (parseInt(formData.partialDateMonth, 10) + 1) : 1}-${formData.partialDateDay ? parseInt(formData.partialDateDay, 10) : 1 }`;
-
-        // construct url value
-        if (formData.publicationUrl) {
-            formData.fez_record_search_key_link = [
-                {
-                    rek_link: formData.publicationUrl,
-                    rek_link_order: 1
-                }
-            ];
-        }
-
-        const combinedData = Object.assign({}, defaultData, formData);
-        this.props.dispatch(createNewRecord(combinedData, this.props.acceptedFiles));
-    };
-
-    renderSubTypeItems = () => {
-        return this.props.publicationSubTypeList.size > 0 ? this.props.publicationSubTypeList.map(item => (
-                <MenuItem key={item.get('controlled_vocab').get('cvo_id')}
-                          value={item.get('controlled_vocab').get('cvo_title')}
-                          primaryText={item.get('controlled_vocab').get('cvo_title')}/>
-            )) : [];
-    }
-
     render() {
         // path to the locale data for each of the sections
-        const journalArticleInformation = locale.pages.addRecord.addJournalArticle.journalArticleInformation;
-        const authorsInformation = locale.sharedComponents.authors;
-        const fileInformation = locale.sharedComponents.files;
-        const optionalInformation = locale.pages.addRecord.addJournalArticle.optionalDetails;
-        const buttonLabels = locale.global.labels.buttons;
-        const {form, handleSubmit, recordSubmissionState, recordSubmissionErrorMessage} = this.props;
+        const txt = locale.components.publicationForm.journalArticle;
 
-        const renderSubTypeItems = this.renderSubTypeItems();
+        // TODO: get publication sub types for this publication type
+        const renderSubTypeItems = [];
 
         return (
-            <form>
-                <StandardCard title={journalArticleInformation.title} help={journalArticleInformation.help}>
+            <div>
+                <StandardCard title={txt.information.title} help={txt.information.help}>
                     <div className="columns" style={{marginTop: '-12px'}}>
                         <div className="column">
                             <Field component={TextField}
@@ -130,7 +32,7 @@ export default class AddJournalArticleForm extends Component {
                                    fullWidth
                                    multiLine
                                    rows={1}
-                                   floatingLabelText={journalArticleInformation.fields.titleLabel}
+                                   floatingLabelText={txt.information.fieldLabels.articleTitle}
                                    validate={[validation.required]}
                                    style={{marginBottom: '-12px'}}
                             />
@@ -141,7 +43,7 @@ export default class AddJournalArticleForm extends Component {
                             <Field component={TextField}
                                    name="fez_record_search_key_journal_name.rek_journal_name"
                                    type="text" fullWidth
-                                   floatingLabelText={journalArticleInformation.fields.nameLabel}
+                                   floatingLabelText={txt.information.fieldLabels.journalTitle}
                                    validate={[validation.required]}
                             />
                         </div>
@@ -154,7 +56,7 @@ export default class AddJournalArticleForm extends Component {
                                            type="text"
                                            style={{marginTop: '12px'}}
                                            fullWidth
-                                           floatingLabelText="Day"
+                                           floatingLabelText={txt.information.fieldLabels.date.day}
                                            floatingLabelFixed
                                            validate={[validation.dateTimeDay]}
                                     />
@@ -165,7 +67,7 @@ export default class AddJournalArticleForm extends Component {
                                            name="partialDateMonth"
                                            fullWidth
                                            style={{marginTop: '12px'}}
-                                           floatingLabelText="Month"
+                                           floatingLabelText={txt.information.fieldLabels.date.month}
                                            floatingLabelFixed>
                                         <MenuItem key={-1} value="-1" primaryText=""/>
                                         <MenuItem key={0} value="0" primaryText="January"/>
@@ -190,7 +92,7 @@ export default class AddJournalArticleForm extends Component {
                                            fullWidth
                                            style={{marginTop: '12px'}}
                                            maxLength="4"
-                                           floatingLabelText="Year"
+                                           floatingLabelText={txt.information.fieldLabels.date.year}
                                            floatingLabelFixed
                                            validate={[validation.dateTimeYear]}
                                     />
@@ -203,10 +105,9 @@ export default class AddJournalArticleForm extends Component {
                             <Field component={SelectField}
                                    name="rek_subtype"
                                    fullWidth
-                                   floatingLabelText={journalArticleInformation.fields.publicationSubType}
-                                   validate={[validation.required]}>
+                                   floatingLabelText={txt.information.fieldLabels.subtype}>
                                 <MenuItem
-                                    primaryText={journalArticleInformation.fields.selectFirstPublicationSubTypeLabel}
+                                    primaryText={txt.information.fieldLabels.subtype}
                                     disabled/>
                                 {renderSubTypeItems}
                             </Field>
@@ -214,33 +115,33 @@ export default class AddJournalArticleForm extends Component {
                     </div>
                 </StandardCard>
 
-                <StandardCard title={authorsInformation.title} help={authorsInformation.help}>
+                <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Field component={ContributorsEditorField} name="authors"/>
                 </StandardCard>
 
-                <StandardCard title={optionalInformation.title} help={optionalInformation.help}>
+                <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <div className="columns">
                         <div className="column">
                             <Field component={TextField}
                                    name="fez_record_search_key_volume_number.rek_volume_number" type="text"
                                    fullWidth
-                                   floatingLabelText={optionalInformation.fields.volumeLabel}/>
+                                   floatingLabelText={txt.optional.fieldLabels.volume}/>
                         </div>
                         <div className="column">
                             <Field component={TextField} name="fez_record_search_key_issue_number.rek_issue_number"
                                    type="text" fullWidth
-                                   floatingLabelText={optionalInformation.fields.issueLabel}/>
+                                   floatingLabelText={txt.optional.fieldLabels.issue}/>
                         </div>
 
                         <div className="column">
                             <Field component={TextField} name="fez_record_search_key_start_page.rek_start_page"
                                    type="text" fullWidth
-                                   floatingLabelText={optionalInformation.fields.startPageLabel}/>
+                                   floatingLabelText={txt.optional.fieldLabels.startPage}/>
                         </div>
                         <div className="column">
                             <Field component={TextField} name="fez_record_search_key_end_page.rek_end_page"
                                    type="text" fullWidth
-                                   floatingLabelText={optionalInformation.fields.endPageLabel}/>
+                                   floatingLabelText={txt.optional.fieldLabels.endPage}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -248,14 +149,14 @@ export default class AddJournalArticleForm extends Component {
                             <Field component={TextField}
                                    name="fez_record_search_key_article_number.rek_article_number"
                                    type="text" fullWidth multiLine
-                                   floatingLabelText={optionalInformation.fields.articleNumber}/>
+                                   floatingLabelText={txt.optional.fieldLabels.articleNumber}/>
                         </div>
                     </div>
                     <div className="columns">
                         <div className="column">
                             <Field component={TextField} name="fez_record_search_key_notes.rek_notes" type="text"
                                    fullWidth multiLine
-                                   rows={1} floatingLabelText={optionalInformation.fields.notesLabel}/>
+                                   rows={1} floatingLabelText={txt.optional.fieldLabels.notes}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -264,46 +165,13 @@ export default class AddJournalArticleForm extends Component {
                                    name="publicationUrl"
                                    type="text"
                                    fullWidth
-                                   floatingLabelText={optionalInformation.fields.urlLabel}
+                                   floatingLabelText={txt.optional.fieldLabels.url}
                                    validate={[validation.url, validation.maxLength255]}
                             />
                         </div>
                     </div>
                 </StandardCard>
-
-                <StandardCard>
-                    <FormSection name={fileInformation.formSectionPrefix}>
-                        <FileUploader/>
-                    </FormSection>
-                </StandardCard>
-
-                {recordSubmissionErrorMessage &&
-                <Alert
-                    title="ERROR"
-                    message={recordSubmissionErrorMessage}
-                    type="error"/>
-                }
-
-                <div className="layout-card">
-                    <div className="columns">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop" style={{marginBottom: 24}}>
-                            <RaisedButton
-                                fullWidth
-                                label={buttonLabels.abandon}
-                                onTouchTap={this.cancelAddingRecord}/>
-                        </div>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                secondary
-                                fullWidth
-                                label={recordSubmissionState.get('submitting') ? buttonLabels.submissionInProgress : buttonLabels.submitForApproval}
-                                disabled={recordSubmissionState.get('submitting')}
-                                onClick={handleSubmit(this.tryRecordSave)}/>
-                        </div>
-                    </div>
-                </div>
-            </form>
+            </div>
         );
     }
 }

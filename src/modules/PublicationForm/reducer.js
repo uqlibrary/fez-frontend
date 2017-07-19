@@ -1,6 +1,5 @@
 import Immutable from 'immutable';
 
-import {PUBLICATION_SUB_TYPES_LOADED} from './actions';
 import {RECORD_CREATED, RECORD_CREATE_FAILED, RECORD_PROCESSING, RECORD_RESET} from 'actions';
 
 const RecordState = {
@@ -34,8 +33,6 @@ export const initialState = Immutable.fromJS({
 
 
 const handlers = {
-    [PUBLICATION_SUB_TYPES_LOADED]: (state, action) => (state.set('publicationSubTypeList', Immutable.fromJS(action.payload))),
-
     [RECORD_PROCESSING]: (state) => (state.set('recordSubmissionState', Immutable.fromJS(RecordState.submitting)).set('recordSubmissionErrorMessage', undefined)),
 
     [RECORD_CREATED]: (state) => (state.set('recordSubmissionState', Immutable.fromJS(RecordState.submitted)).set('recordSubmissionErrorMessage', undefined)),
@@ -45,7 +42,7 @@ const handlers = {
     [RECORD_RESET]: (state) => (state.set('recordSubmissionState', Immutable.fromJS(RecordState.clear)).set('recordSubmissionErrorMessage', undefined))
 };
 
-export default function journalArticleReducer(state = initialState, action) {
+export default function publicationFormReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;
