@@ -116,7 +116,7 @@ export default class JournalArticleForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <Field component={ContributorsEditorField} name="authors"/>
+                    <Field component={ContributorsEditorField} name="authors" locale={{contributorSuffix: txt.authors.suffix}} />
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>

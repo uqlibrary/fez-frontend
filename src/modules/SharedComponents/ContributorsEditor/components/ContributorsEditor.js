@@ -83,6 +83,7 @@ export default class ContributorsEditor extends Component {
     }
 
     render() {
+        console.log(this.props.locale);
         const renderContributorsRows = this.state.contributors.map((contributor, index) =>
             <ContributorRow
                 key={index}
@@ -94,6 +95,7 @@ export default class ContributorsEditor extends Component {
                 onMoveDown={this.moveDownContributor}
                 onDelete={this.deleteContributor}
                 showIdentifierLookup={this.props.showIdentifierLookup}
+                contributorSuffix={this.props.locale.contributorSuffix}
             />
         );
 
@@ -112,7 +114,8 @@ export default class ContributorsEditor extends Component {
                 {this.state.contributors.length > 0 &&
                     <ContributorRowHeader
                         onDeleteAll={this.deleteAllContributors}
-                        showIdentifierLookup={this.props.showIdentifierLookup} />}
+                        showIdentifierLookup={this.props.showIdentifierLookup}
+                    />}
 
                 {renderContributorsRows}
             </div>

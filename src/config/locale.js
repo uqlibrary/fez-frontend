@@ -368,7 +368,8 @@ export default {
                         title: 'Authors',
                         text: 'some help',
                         buttonLabel: 'OK'
-                    }
+                    },
+                    suffix: ' listed author'
                 },
                 optional: {
                     title: 'Optional publication details',
@@ -406,7 +407,8 @@ export default {
                         title: 'Authors',
                         text: 'some help',
                         buttonLabel: 'OK'
-                    }
+                    },
+                    suffix: ' listed author'
                 },
                 editors: {
                     title: 'Editors',
@@ -414,7 +416,8 @@ export default {
                         title: 'Editors',
                         text: 'some help',
                         buttonLabel: 'OK'
-                    }
+                    },
+                    suffix: ' listed editor'
                 }
             },
             fileUpload: {

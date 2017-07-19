@@ -15,16 +15,16 @@ export default class ContributorRow extends Component {
         onMoveDown: PropTypes.func,
         onDelete: PropTypes.func,
         showIdentifierLookup: PropTypes.bool,
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        contributorSuffix: PropTypes.string
     };
 
     static defaultProps = {
-        contributorSuffix: 'listed contributor',
+        contributorSuffix: ' listed contributor',
         locale: {
             moveUpHint: 'Move record up the order',
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
-            contributorSuffix: ' listed contributor',
             ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Nineth', 'Tenth'],
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
@@ -56,9 +56,9 @@ export default class ContributorRow extends Component {
     }
 
     render() {
-        const {ordinalData, contributorSuffix, deleteRecordConfirmation} = this.props.locale;
+        const {ordinalData, deleteRecordConfirmation} = this.props.locale;
         const contributorOrder = (this.props.index < ordinalData.length ?
-            ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + contributorSuffix;
+            ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.contributorSuffix;
 
         return (
             <div className="columns is-gapless is-mobile contributorsRow datalist datalist-row">

@@ -34,11 +34,11 @@ export default class BookForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <Field component={ContributorsEditorField} name="authors"/>
+                    <Field component={ContributorsEditorField} name="authors" locale={{contributorSuffix: txt.authors.suffix}}/>
                 </StandardCard>
 
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                    <Field component={ContributorsEditorField} name="editors"/>
+                    <Field component={ContributorsEditorField} name="editors" locale={{contributorSuffix: txt.editors.suffix}}/>
                 </StandardCard>
 
             </div>
