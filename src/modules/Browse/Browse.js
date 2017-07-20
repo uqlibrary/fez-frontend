@@ -1,7 +1,8 @@
 import React from 'react';
 import {PropTypes} from 'prop-types';
 import {StandardPage, StandardCard} from 'uqlibrary-react-toolbox';
-import {PublicationForm} from '../PublicationForm';
+import {PublicationsList} from '../PublicationsList';
+import {externalTitleSearchResultsList} from 'mock/data/publicationSearch';
 
 export default function Browse({title, text, help}) {
     return (
@@ -10,7 +11,9 @@ export default function Browse({title, text, help}) {
                 {text}
             </StandardCard>
 
-            <PublicationForm onFormSubmitSuccess={()=>{ console.log('success!');}} onFormCancel={()=>{ console.log('good bye!');}} />
+            <StandardCard title="External search results">
+                <PublicationsList publicationsList={externalTitleSearchResultsList} />
+            </StandardCard>
 
         </StandardPage>
     );

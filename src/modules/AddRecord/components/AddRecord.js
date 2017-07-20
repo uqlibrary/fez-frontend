@@ -1,6 +1,5 @@
 import React from 'react';
 import ExpandTransition from 'material-ui/internal/ExpandTransition';
-import ReactTooltip from 'react-tooltip';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -14,7 +13,6 @@ const STEP_3 = 2;
 // forms & custom components
 import {PublicationSearchForm} from 'modules/Forms';
 import {SearchResults} from 'modules/SearchResults';
-// import {PublicationTypeForm} from 'modules/Forms/PublicationType';
 import {PublicationForm} from 'modules/PublicationForm';
 import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
@@ -179,8 +177,6 @@ export default class AddRecord extends React.Component {
                                     </div>
                                 </div>
                         }
-
-                        <ReactTooltip id="claimTooltips" effect="solid" place="bottom"/>
                     </div>
                 );
             case STEP_3:

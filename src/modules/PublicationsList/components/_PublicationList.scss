@@ -1,0 +1,50 @@
+.publicationCitation {
+
+  .publicationTitle {
+    margin-bottom: 0;
+  }
+
+  .citationContent {
+    .citationAuthors {
+      .citationAuthor {}
+    }
+
+    .citationPublisher {}
+
+    .citationTitle {}
+
+    .citationJournalName {
+      font-style: italic;
+    }
+    .citationVolumeNumber {
+      font-style: italic;
+    }
+
+    .citationIssueNumber {}
+
+    .citationStartPage {}
+
+    .citationEndPage {}
+
+    .citationDOI {}
+
+    .citationIcon {}
+  }
+
+  .citationCounts {
+    .citationCount{
+      .citationCountIcon {
+        margin-left: 10px;
+      }
+
+      .citationCountNumber {
+
+      }
+    }
+  }
+
+  .publicationActions {}
+
+}
+
+
