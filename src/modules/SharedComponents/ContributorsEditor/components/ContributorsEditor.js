@@ -83,7 +83,6 @@ export default class ContributorsEditor extends Component {
     }
 
     render() {
-        console.log(this.props.locale);
         const renderContributorsRows = this.state.contributors.map((contributor, index) =>
             <ContributorRow
                 key={index}

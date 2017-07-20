@@ -16,7 +16,7 @@ export function createNewRecord(data, files) {
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
 
-        postRecord(data)
+        return postRecord(data)
             .then(response => {
                 // update original record data
                 data.rek_pid = response.rek_pid;
@@ -43,12 +43,14 @@ export function createNewRecord(data, files) {
                     type: RECORD_CREATED,
                     payload: response
                 });
+                return Promise.resolve(response);
             })
             .catch(error => {
                 dispatch({
                     type: RECORD_CREATE_FAILED,
                     payload: error
                 });
+                return Promise.reject(error);
             });
     };
 }

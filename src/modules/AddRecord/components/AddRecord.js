@@ -68,6 +68,20 @@ export default class AddRecord extends React.Component {
         this.props.resetStepper();
     };
 
+    _recordSaved = () => {
+        // TODO: record has been saved... what to do?
+        console.log('display a dialog box with options...');
+        this.props.resetStepper();
+    };
+
+    _cancelWorkflow = () => {
+        this.props.resetStepper();
+    };
+
+    _re = () => {
+        this.props.resetStepper();
+    };
+
     dummyAsync = (cb) => {
         this.setState({loading: true}, () => {
             this.asyncTimer = setTimeout(cb, 500);
@@ -171,7 +185,7 @@ export default class AddRecord extends React.Component {
                 );
             case STEP_3:
                 return (
-                    <PublicationForm />
+                    <PublicationForm onFormSubmitSuccess={this._recordSaved} onFormCancel={this._cancelWorkflow} />
                 );
             default:
                 const stepperInformation = locale.pages.addRecord.stepper;

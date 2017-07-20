@@ -443,6 +443,12 @@ export default {
                     primaryLink: '/dashboard',
                     secondaryButtonLabel: 'No'
                 }
+            },
+            cancelWorkflowConfirmation: {
+                confirmationTitle: 'Abandon workflow',
+                confirmationMessage: 'Are you sure you want to abandon workflow?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
             }
         }
     },

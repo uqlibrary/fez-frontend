@@ -9,7 +9,6 @@ import {addRecordReducer} from 'modules/AddRecord';
 import {claimPublicationsReducer} from 'modules/ClaimPublication';
 
 import {publicationTypeReducer, publicationSearchReducer} from './modules/Forms';
-import {publicationFormReducer} from './modules/PublicationForm';
 import {fileUploadReducer, authorLinkingReducer} from './modules/SharedComponents';
 
 import authorsReducer from 'reducers/authors';
@@ -27,8 +26,7 @@ const rootReducer = combineReducers({
     publicationTypes: publicationTypeReducer,
     publicationSearch: publicationSearchReducer,
     // migrated reducers
-    authorsReducer,
-    publicationFormReducer
+    authorsReducer
 });
 
 export default rootReducer;

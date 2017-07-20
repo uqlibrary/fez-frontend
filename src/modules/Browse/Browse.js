@@ -10,7 +10,7 @@ export default function Browse({title, text, help}) {
                 {text}
             </StandardCard>
 
-            <PublicationForm />
+            <PublicationForm onFormSubmitSuccess={()=>{ console.log('success!');}} onFormCancel={()=>{ console.log('good bye!');}} />
 
         </StandardPage>
     );
