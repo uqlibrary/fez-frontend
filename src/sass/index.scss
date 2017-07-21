@@ -9,13 +9,11 @@
 
 // Import the fez-frontend modules styles
 @import './components';
-
 // Import specific style for the AppBar
 @import './appbar';
 // Import a style for the helpicon placement
 @import './helpicon';
 // Import styles to override MUI defaults for UX
 @import './muifixes';
-// Import bulma title styles
+// Fixes for bulma title styles
 @import './titles';
-
