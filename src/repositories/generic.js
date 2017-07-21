@@ -1,6 +1,25 @@
 import {api} from '../config';
 
 /**
+ * TODO: figure out error handling....
+ * Process error
+ *
+ * @param error
+ * @param resolve
+ * @param reject
+ */
+function processError(error, resolve, reject) {
+    if (error.hasOwnProperty('response')
+        && error.response !== null && typeof(error.response) !== 'undefined'
+        && error.response.hasOwnProperty('status')
+        && (error.response.status === 404 || error.response.status === 500 || error.response.status === 422 || error.response.status === 504)) {
+        resolve([]);
+    } else {
+        reject(error);
+    }
+}
+
+/**
  * Send a post request
  * @param {string} apiUrl
  * @param {object} data to be posted, refer to backend API
@@ -8,7 +27,7 @@ import {api} from '../config';
  */
 export function post(apiUrl, data) {
     return new Promise((resolve, reject) => {
-        api.post(apiUrl, data).then(response => {
+        api.post(encodeURI(apiUrl), data).then(response => {
             resolve(response.data);
         }).catch(error => {
             reject(error);
@@ -24,7 +43,7 @@ export function post(apiUrl, data) {
  */
 export function patch(apiUrl, data) {
     return new Promise((resolve, reject) => {
-        api.patch(apiUrl, data).then(response => {
+        api.patch(encodeURI(apiUrl), data).then(response => {
             resolve(response.data);
         }).catch(error => {
             reject(error);
@@ -39,10 +58,10 @@ export function patch(apiUrl, data) {
  */
 export function get(apiUrl) {
     return new Promise((resolve, reject) => {
-        api.get(apiUrl).then(response => {
+        api.get(encodeURI(apiUrl)).then(response => {
             resolve(response.data);
         }).catch(error => {
-            reject(error);
+            processError(error, resolve, reject);
         });
     });
 }

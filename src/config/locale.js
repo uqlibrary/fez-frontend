@@ -156,12 +156,11 @@ export default {
         },
         addRecord: {
             title: 'Add a missing record to eSpace',
-            stepper: {
-                step1Label: 'Search for your publication',
-                step2Label: 'Search results',
-                step3Label: 'Add your publication',
-                defaultErrorMessage: 'Error'
-            },
+            stepper: [
+                { label: 'Search for your publication' },
+                { label: 'Search results' },
+                { label: 'Add your publication' }
+            ],
             searchForPublication: {
                 title: 'Search for your publication',
                 explanationText: 'Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',

@@ -6,8 +6,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {isDOIValue, isPubMedValue} from '../validator';
 import {locale} from 'config';
 
-const JOURNAL_ARTICLE = 179;
-
 export default class PublicationSearchForm extends Component {
 
     static propTypes = {
@@ -43,7 +41,7 @@ export default class PublicationSearchForm extends Component {
             this.props.loadPubmedResultsList(fieldValue);
         } else {
             // Pass fieldValue map through to the form component
-            this.props.loadTitleResultsList(JOURNAL_ARTICLE, fieldValue);
+            // this.props.loadTitleResultsList(JOURNAL_ARTICLE, fieldValue);
         }
     };
 

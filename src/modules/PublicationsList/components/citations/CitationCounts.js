@@ -22,7 +22,7 @@ export default class CitationCounts extends Component {
             thomson: this.props.publication.rek_thomson_citation_count ? this.props.publication.rek_thomson_citation_count : null,
             scopus: this.props.publication.rek_scopus_citation_count ? this.props.publication.rek_scopus_citation_count : null,
             google: this.props.publication.rek_gs_citation_count ? this.props.publication.rek_gs_citation_count : null,
-            altmetric: this.props.publication.rek_thomson_citation_count ? this.props.publication.rek_thomson_citation_count : null,
+            altmetric: this.props.publication.rek_altmetric_score ? this.props.publication.rek_altmetric_score : null,
             downloads: this.props.publication.rek_file_downloads ? this.props.publication.rek_file_downloads : null
         };
         return (

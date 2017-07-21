@@ -6,17 +6,16 @@ import FlatButton from 'material-ui/FlatButton';
 import CitationCounts from './citations/CitationCounts';
 import JournalArticleCitation from './citations/JournalArticleCitation';
 
+/*
+ * @props:
+ *   publication {object} item to be displayed
+ *   actions {array} of {label: string, actionHandler: function} which will be rendered as FlatButtons
+ * */
 export default class PublicationCitation extends Component {
 
     static propTypes = {
         publication: PropTypes.object.isRequired,
         actions: PropTypes.array
-    };
-
-    static defaultProps = {
-        actions: [
-            {buttonLabel: 'Claim this publication'}
-        ]
     };
 
     constructor(props) {
@@ -34,6 +33,19 @@ export default class PublicationCitation extends Component {
     }
 
     render() {
+        const actions = this.props.actions && this.props.actions.length > 0 ?
+            this.props.actions.map((action, index) => {
+                return (
+                    <FlatButton
+                        key={index}
+                        secondary
+                        label={action.label}
+                        className="publicationAction"
+                        onTouchTap={() => (action.handleAction(this.props.publication))}
+                    />
+                );
+            }) : null;
+
         return (
             <div className="publicationCitation">
                 <h3 className="title is-5 publicationTitle">{this.props.publication.rek_title}</h3>
@@ -47,15 +59,7 @@ export default class PublicationCitation extends Component {
                 {
                     this.props.actions && this.props.actions.length > 0 &&
                     <div className="publicationActions">
-                        <FlatButton
-                            label="CLAIM"
-                            secondary/>
-                        <FlatButton
-                            label="HIDE"
-                            secondary/>
-                        <FlatButton
-                            label="Bla..."
-                            secondary/>
+                        {actions}
                     </div>
                 }
             </div>

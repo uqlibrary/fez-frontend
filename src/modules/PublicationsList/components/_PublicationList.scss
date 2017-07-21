@@ -34,11 +34,13 @@
   .citationCounts {
     .citationCount{
       .citationCountIcon {
-        margin-left: 10px;
+        width: 1em;
+        height: 1em;
+        filter: grayscale(1);
       }
 
       .citationCountNumber {
-
+        margin: 0 10px;
       }
     }
   }

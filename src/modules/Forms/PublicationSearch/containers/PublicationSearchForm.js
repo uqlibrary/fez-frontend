@@ -1,26 +1,20 @@
 import {connect} from 'react-redux';
-
 import {reduxForm, getFormValues} from 'redux-form/immutable';
-import PublicationSearchForm from '../components/PublicationSearchForm';
-import {validate} from '../validator';
 import Immutable from 'immutable';
-import {loadDoiResultsList, loadPubmedResultsList, loadTitleResultsList} from '../actions';
+import PublicationSearchForm from '../components/PublicationSearchForm';
+
+const FORM_NAME = 'PublicationSearchForm';
 
 let PublicationSearchFormContainer = reduxForm({
-    form: 'PublicationSearchForm',
-    validate
+    form: FORM_NAME,
 })(PublicationSearchForm);
 
-PublicationSearchFormContainer = connect((state) => {
+const mapStateToProps = (state) => {
     return {
-        formValues: getFormValues('PublicationSearchForm')(state) || Immutable.Map({})
+        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
     };
-}, dispatch => {
-    return {
-        loadDoiResultsList: doi => dispatch(loadDoiResultsList(doi)),
-        loadPubmedResultsList: pubMedId => dispatch(loadPubmedResultsList(pubMedId)),
-        loadTitleResultsList: (rekDisplayType, title) => dispatch(loadTitleResultsList(rekDisplayType, title))
-    };
-})(PublicationSearchFormContainer);
+};
+
+PublicationSearchFormContainer = connect(mapStateToProps)(PublicationSearchFormContainer);
 
 export default PublicationSearchFormContainer;

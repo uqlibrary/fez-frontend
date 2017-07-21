@@ -1,9 +1,8 @@
 import React from 'react';
-import ExpandTransition from 'material-ui/internal/ExpandTransition';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardCard} from 'uqlibrary-react-toolbox';
+import {StandardPage, StandardCard} from 'uqlibrary-react-toolbox';
 
 // the stepper's step constants
 const STEP_1 = 0;
@@ -12,95 +11,58 @@ const STEP_3 = 2;
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/Forms';
-import {SearchResults} from 'modules/SearchResults';
 import {PublicationForm} from 'modules/PublicationForm';
+import {PublicationsList} from 'modules/PublicationsList';
+
 import {InlineLoader} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-import {isDOIValue, isPartialDOIValue, isPubMedValue} from 'modules/Forms/PublicationSearch/validator';
+import {searchPublications} from 'actions';
 
 export default class AddRecord extends React.Component {
 
     static propTypes = {
-        decreaseStep: PropTypes.func,
-        increaseStep: PropTypes.func,
-        loadPublicationTypesList: PropTypes.func,
-        publicationTypeList: PropTypes.object,
-        resetStepper: PropTypes.func,
-        searchResultsList: PropTypes.object,
+        publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
-        selectedPublicationType: PropTypes.object,
-        stepperIndex: PropTypes.number,
-        clearPublicationResults: PropTypes.func
-    };
-
-    static defaultProps = {
-        searchResultsList: null,
-        loadingSearch: false
+        loadingSearchSources: PropTypes.number,
+        dispatch: PropTypes.func
     };
 
     constructor(props) {
         super(props);
 
-        // setup the state
         this.state = {
-            loading: false,
-            finished: false,
-            submitOpen: false,
-            saveOpen: false,
-            publicationType: 0,
-            doiSearchValue: ''
+            stepperIndex: 0
         };
-
-        this.props.clearPublicationResults();
     }
 
     componentDidMount() {
-        this.props.loadPublicationTypesList();
     }
 
     componentWillUnmount() {
-        this.props.resetStepper();
+        this._cancelWorkflow();
     }
 
-    cancelAddingRecord = () => {
-        this.props.resetStepper();
-    };
+    handleSearch = values => {
+        console.log(values);
 
-    _recordSaved = () => {
-        // TODO: record has been saved... what to do?
-        console.log('display a dialog box with options...');
-        this.props.resetStepper();
-    };
+        this.props.dispatch(searchPublications('vaccinations in Brazil'));
 
-    _cancelWorkflow = () => {
-        this.props.resetStepper();
-    };
-
-    _re = () => {
-        this.props.resetStepper();
-    };
-
-    dummyAsync = (cb) => {
-        this.setState({loading: true}, () => {
-            this.asyncTimer = setTimeout(cb, 500);
+        // TODO: move to next step - search results display
+        this.setState({
+            stepperIndex: this.state.stepperIndex + 1
         });
     };
 
-    handleSearch = values => {
-        let value = values.get('doiSearch');
-        if (isPubMedValue(value) || isPartialDOIValue(value) || isDOIValue(value)) {
-            value = '';
-        }
-
-        this.setState({doiSearchValue: value}, this.handleNext);
-    };
-
     handleNext = () => {
-        this.props.increaseStep();
+        this.setState({
+            stepperIndex: this.state.stepperIndex + 1
+        });
     };
 
     handlePrev = () => {
-        this.props.decreaseStep();
+        this.setState({
+            stepperIndex: this.state.stepperIndex - 1
+        });
     };
 
     handleCloseSubmitForApproval = () => {
@@ -111,8 +73,37 @@ export default class AddRecord extends React.Component {
         this.setState({submitOpen: true});
     };
 
+    _recordSaved = () => {
+        // TODO: record has been saved... what to do?
+        console.log('display a dialog box with options...');
+
+        // reset stepper to publications search form
+        this.setState({
+            stepperIndex: 0
+        });
+    };
+
+    _cancelWorkflow = () => {
+        // TODO: what's required to clean up - stepper, search results, etc?
+        this.setState({
+            stepperIndex: 0
+        });
+    };
+
+    _claimPublication = (item) => {
+        console.log('claim clicked... TODO: redirect to claim publication');
+        console.log(item);
+    }
+
     getStepContent(stepIndex) {
         const buttonLabels = locale.global.labels.buttons;
+
+        const actions = [
+            {
+                label: 'Claim this publication',
+                handleAction: this._claimPublication
+            }
+        ];
 
         switch (stepIndex) {
             case STEP_1:
@@ -134,22 +125,21 @@ export default class AddRecord extends React.Component {
                 return (
                     <div>
                         {this.props.loadingSearch &&
-                            <div className="is-centered">
-                                <InlineLoader message="Searching for your publications..." />
-                            </div>
+                            (<div className="is-centered">
+                                ${this.props.loadingSearchSources} our of 4
+                                <InlineLoader message="Searching for your publications out of 4)..." />
+                            </div>)
                         }
 
-                        {!this.props.loadingSearch && this.props.searchResultsList.size > 0 &&
-                        <SearchResults
-                            dataSource={this.props.searchResultsList}
-                            title={searchResultsInformation.title}
-                            explanationText={searchResultsInformation.explanationText}
-                            claimRecordBtnLabel={searchResultsInformation.claimRecordBtnLabel}
-                            help={searchResultsInformation.help}
-                        />
+                        {
+                            (!this.props.loadingSearch || this.props.publicationsList.length > 0) &&
+                            <StandardCard title={searchResultsInformation.title} help={searchResultsInformation.help}>
+                                <div>{searchResultsInformation.explanationText.replace('[noOfResults]', this.props.publicationsList.length)}</div>
+                                <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
+                            </StandardCard>
                         }
 
-                        {!this.props.loadingSearch && this.props.searchResultsList.size === 0 &&
+                        {!this.props.loadingSearch && this.props.publicationsList.length === 0 &&
                             <StandardCard {...noMatchingRecordsInformation} />
                         }
 
@@ -169,8 +159,8 @@ export default class AddRecord extends React.Component {
                                             label="Create a new espace record"
                                             secondary
                                             fullWidth
-                                            autoFocus={this.props.searchResultsList.size === 0}
-                                            keyboardFocused={this.props.searchResultsList.size === 0}
+                                            autoFocus={this.props.publicationsList.length === 0}
+                                            keyboardFocused={this.props.publicationsList.length === 0}
                                             onTouchTap={this.handleNext}
                                         />
                                         </div>
@@ -189,46 +179,32 @@ export default class AddRecord extends React.Component {
         }
     }
 
-    renderContent() {
-        const contentStyle = {margin: '0', overflow: 'hidden'};
-
-        return (
-            <div style={contentStyle}>
-                <div>{this.getStepContent(this.props.stepperIndex)}</div>
-            </div>
-        );
-    }
-
     render() {
-        const {loading} = this.state;
-        const stepperInformation = locale.pages.addRecord.stepper;
+        console.log(this.props.loadingSearch);
+        console.log(this.props.publicationsList);
         return (
-            <div>
-                <h1 className="title is-3">{locale.pages.addRecord.title}</h1>
-
-                {/* Stepper start */}
+            <StandardPage title={locale.pages.addRecord.title}>
                 <div className="Stepper">
-                <Stepper activeStep={this.props.stepperIndex} style={{padding: '0', margin: '-10px auto' }} onChange={this.handleNext}>
-                    <Step>
-                        <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{stepperInformation.step1Label}</StepLabel>
-                    </Step>
-                    <Step>
-                        <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{stepperInformation.step2Label}</StepLabel>
-                    </Step>
-                    <Step>
-                        <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{stepperInformation.step3Label}</StepLabel>
-                    </Step>
-                </Stepper>
+                    <Stepper activeStep={this.state.stepperIndex} style={{padding: '0', margin: '-10px auto' }}>
+                        {
+                            locale.pages.addRecord.stepper.map((step, index) => {
+                                return (<Step key={index}>
+                                    <StepLabel style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{step.label}</StepLabel>
+                                </Step>);
+                            })
+                        }
+                    </Stepper>
                 </div>
-
-
+                {
+                    // TODO: remove all inline styles
+                }
                 <div style={{width: '100%', maxWidth: '1320px', margin: '0 auto'}}>
-                    <ExpandTransition loading={loading} open>
-                        {this.renderContent()}
-                    </ExpandTransition>
+                    <div style={{margin: '0', overflow: 'hidden'}}>
+                        <div>{this.getStepContent(this.state.stepperIndex)}</div>
+                    </div>
                 </div>
-                {/* Stepper end */}
-            </div>
+
+            </StandardPage>
         );
     }
 }

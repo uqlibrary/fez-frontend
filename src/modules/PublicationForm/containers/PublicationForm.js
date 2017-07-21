@@ -50,7 +50,7 @@ let PublicationFormContainer = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        formValues: getFormValues('PublicationForm')(state) || Immutable.Map({}),
+        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {
             rek_title: 'default title value...'
         }

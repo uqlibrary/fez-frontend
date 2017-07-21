@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {reduxForm} from 'redux-form/immutable';
 import ClaimPublication from '../components/ClaimPublication';
 import {loadUsersPublications, markPublicationsNotMine} from '../actions';
-import {clearSearchResults} from 'modules/Forms/PublicationSearch/actions';
+// import {clearSearchResults} from 'modules/Forms/PublicationSearch/actions';
 
 let ClaimPublicationContainer = reduxForm({
     form: 'ClaimPublicationResultsForm'
@@ -19,7 +19,7 @@ ClaimPublicationContainer = connect((state) => {
     };
 }, dispatch => {
     return {
-        clearSearchResults: () => dispatch(clearSearchResults()),
+        clearSearchResults: () => dispatch(()=>{}),
         loadUsersPublications: (username) => dispatch(loadUsersPublications(username)),
         markPublicationsNotMine: (username, pids) => dispatch(markPublicationsNotMine(username, pids))
     };
