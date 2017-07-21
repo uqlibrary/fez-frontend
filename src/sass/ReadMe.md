@@ -2,6 +2,7 @@ SASS Styling for fez-frontend
 ======
 
 ###Material Design
+
 Fez-frontend is based on Material Design, and while we are using Material UI for React as a component library, not all components are included, or adhere to Google's philosophy or specifications. As Material design is considered a "guide" more than strict rules, we have liberty to add functionality as we see, but it must :
 * Adhere as closely as possible to Materual Design specifications
 * Be usable, and have a UX approach
@@ -9,6 +10,7 @@ Fez-frontend is based on Material Design, and while we are using Material UI for
 * Be minimal, and not make a simple process more drawn out
 
 ###Card Layout
+
 Janna has build a Card wrapping component to minimise the potential for misuse (or for future upgrades etc).
 
 However, in general - we have the following format:
@@ -117,7 +119,8 @@ Examples:
 * _is-offset-1_ - Will move the container to the 2nd column of .columns
 
 ###Typography
-We are using [Bulma titles](http://bulma.io/documentation/elements/title/)for all titles in fez-frontend. Titles require their h1/h2 assignments for search indexing.
+
+We are using [Bulma titles](http://bulma.io/documentation/elements/title/) for all titles in fez-frontend. Titles require their h1/h2 assignments for search indexing.
 
 __Page Titles__ (appear at the top of the page)
 ```
@@ -134,6 +137,7 @@ __Body copy__
 <div className="body-1">Body Text</div>
 ```
 ### Helpers
+
 We have extracted the [helpers](http://bulma.io/documentation/modifiers/helpers/)and [responsive helpers](http://bulma.io/documentation/modifiers/responsive-helpers/) from Bulma, as their CSS file contained alot of CSS resetting etc we didnt require. You may use these on elements within .column or on .column elements themselves. You can apply these classes to any element for the intended result.
 
 __Float__
@@ -159,6 +163,7 @@ __Other__
 * _is-hidden_ - Hides element
 
 ### Responsive helpers
+
 In addition to the helpers above, we also have helpers for responsive elements. These, too, have been extracted from [Bulma responsive helpers](http://bulma.io/documentation/modifiers/responsive-helpers/).
 
 * _is-hidden-mobile_ - Hides the element for mobile only (up to 768px)
