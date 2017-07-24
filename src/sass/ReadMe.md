@@ -331,6 +331,6 @@ By applying the class _is-mui-spacing-button_ on the button element...
 
 ![After](http://i.imgur.com/Is1Enyu.png)
 
-NOTE: That this spacing issue doesn't happen when the input and button are in the same cell/.column.
+NOTE: That this spacing issue doesn't happen when the input and button are in the same cell/.column
 
 
