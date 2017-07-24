@@ -1,53 +1,74 @@
-import Immutable from 'immutable';
 import {
     SEARCH_LOADING,
     SEARCH_COMPLETED,
     SEARCH_FAILED
 } from 'actions';
 
-export const initialState = Immutable.fromJS({
+const initialSearchSources = {
+    loadingPublicationSources: {
+        totalSearchedCount: 0
+    }
+};
+
+export const initialState = {
     publicationsList: [],
     loadingSearch: false,
-    loadingSearchSources: 0
-});
+    ...initialSearchSources
+};
 
 const handlers = {
 
     [SEARCH_LOADING]: (state) => {
-        return state
-            .set('loadingSearch', true)
-            .set('publicationsList', [])
-            .set('loadingSearchSources', 0);
+        return {
+            ...state,
+            loadingSearch: true,
+            publicationsList: [],
+            ...initialSearchSources
+        };
     },
 
     [SEARCH_COMPLETED]: (state, action) => {
-        console.log(action.payload);
-        return state
-            .set('loadingSearch', false)
-            .set('publicationsList', action.payload);
+        return {
+            ...state,
+            loadingSearch: false,
+            publicationsList: action.payload
+        };
     },
 
     [SEARCH_FAILED]: (state) => {
-        return state
-            .set('loadingSearch', false)
-            .set('publicationsList', [])
-            .set('loadingSearchSources', 0);
+        return {
+            ...state,
+            loadingSearch: true,
+            publicationsList: [],
+            ...initialSearchSources
+        };
     },
 
     [`${SEARCH_COMPLETED}@`]: (state, action) => {
-        console.log(action.payload);
-        return state
-            .set('publicationsList', [...state.get('publicationsList'), ...action.payload])
-            .set('loadingSearchSources', state.get('loadingSearchSources') + 1);
+        // get search source, eg wos/pubmed/etc
+        const source = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
+
+        // set search completed for a specific source
+        const loadingPublicationSources = {
+            loadingPublicationSources: {
+                ...state.loadingPublicationSources,
+                totalSearchedCount: state.loadingPublicationSources.totalSearchedCount + 1,
+                [source]: true
+            }
+        };
+
+        return {
+            ...state,
+            loadingSearch: true,
+            publicationsList: [...state.publicationsList, ...action.payload],
+            ...loadingPublicationSources
+        };
     }
 };
 
-
 export default function addRecordReducer(state = initialState, action) {
-    if (action.type.indexOf('SEARCH_COMPLETED@') >= 0) console.log(action.type.substring(0, action.type.indexOf('@') + 1));
     const handler = action.type.indexOf('SEARCH_COMPLETED@') < 0 ?
         handlers[action.type] : handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
-
     if (!handler) {
         return state;
     }

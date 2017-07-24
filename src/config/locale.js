@@ -161,43 +161,50 @@ export default {
                 { label: 'Search results' },
                 { label: 'Add your publication' }
             ],
-            searchForPublication: {
+            step1: {
                 title: 'Search for your publication',
-                explanationText: 'Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',
-                defaultSearchFieldLabel: 'Enter DOI, Pubmed Id or Title',
-                defaultButtonLabel: 'Search',
-                errorMsg: 'Please enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
+                text: 'Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',
                 help: {
                     title: 'Search for your publication',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
-                }
+                    text: 'Help about search....',
+                    buttonLabel: 'Ok'
+                },
+                fieldLabels: {
+                    search: 'Enter DOI, Pubmed Id or Title'
+                },
+                submit: 'Search'
             },
-            inlineLoader: {
-                message: 'Loading ...'
-            },
-            searchResults: {
-                title: 'Possible matches found',
-                explanationText: 'Top [noOfResults] potential match(es) displayed - claim a matching publication below, refine your search or create a new eSpace record.',
-                claimRecordBtnLabel: 'Claim This Publication',
-                help: {
+            step2: {
+                noResultsFound: {
+                    title: 'No matching records found',
+                    text: 'We were unable to match any results to your search criteria. Please, search again or create a new eSpace record.',
+                    help: {
+                        title: 'No matching records found',
+                        text: 'Why search didn\'t return any items....',
+                        buttonLabel: 'Ok'
+                    }
+                },
+                searchResults: {
                     title: 'Possible matches found',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
+                    text: 'Top [noOfResults] potential match(es) displayed - claim a matching publication below, refine your search or create a new eSpace record.',
+                    help: {
+                        title: 'Possible matches found',
+                        text: 'Why search displays these items....',
+                        buttonLabel: 'Ok'
+                    },
                 },
-                limit: 5
+                cancel: 'Abandon and search again',
+                submit: 'Create a new eSpace record',
+                claim: 'Claim this publication'
             },
-            noMatchingRecords: {
-                title: 'No matching records found',
-                explanationText: 'We were unable to match any results to your search criteria. Please, search again or create a new eSpace record.',
-                searchAgainBtnLabel: 'Search again',
-                addPublicationBtnLabel: 'Add a new publication',
-                help: {
-                    title: 'No matchings records?',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
-                },
-                defaultProps: {
-                    searchAgainBtnLabel: 'Search again?',
-                    addPublicationBtnLabel: 'Add new publication'
-                }
+            step3: {
+                // all text values come from components.publicationForm
+            },
+            confirmationDialog: {
+                title: 'Your record has been submitted',
+                text: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
+                action1: 'Add another missing record',
+                action2: 'OK'
             }
         },
         claimPublications: {
@@ -566,6 +573,9 @@ export default {
                 completed: 100
             }
         }
+    },
+    validationErrors: {
+        publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication'
     }
 };
 

@@ -33,9 +33,9 @@ export default class JournalArticleCitation extends Component {
             doi: this.props.publication.fez_record_search_key_doi ?
                 this.props.publication.fez_record_search_key_doi.rek_doi : null
         };
-        const authors = journalArticle.authors.map((author, index) => {
+        const authors = journalArticle.authors ? journalArticle.authors.map((author, index) => {
             return (<span className="citationAuthor" key={index}> {author.rek_author}</span>);
-        });
+        }) : null;
         return (
             <div className="citationContent citationJournalArticle">
                 <FontIcon className="material-icons citationIcon" data-place="left">

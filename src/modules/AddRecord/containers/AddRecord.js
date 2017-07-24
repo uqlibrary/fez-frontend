@@ -1,12 +1,11 @@
 import {connect} from 'react-redux';
 import AddRecord from '../components/AddRecord';
 
-
 const mapStateToProps = (state) => {
     return {
-        publicationsList: state.get('addRecordReducer') ? state.get('addRecordReducer').get('publicationsList') : {},
-        loadingSearch: state.get('addRecordReducer').get('loadingSearch'),
-        // authorsList: state.get('authorsReducer').authorsList || []
+        publicationsList: state.get('addRecordReducer') ? state.get('addRecordReducer').publicationsList : {},
+        loadingSearch: state.get('addRecordReducer').loadingSearch,
+        loadingPublicationSources: state.get('addRecordReducer') ? state.get('addRecordReducer').loadingPublicationSources : {}
     };
 };
 

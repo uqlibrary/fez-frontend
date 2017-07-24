@@ -33,7 +33,7 @@ export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10
 export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? 'Invalid year' : undefined;
 
 // TODO: fix validation, make it generic etc....
-export const isDOIValue = value => {
+export const isValidDOIValue = value => {
     // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
     const doiRegex1 = /^10.\d{4,9}\/[-._;()/:A-Z0-9]+$/i;
     const doiRegex2 = /^10.1002\/[^\s]+$/i;
@@ -44,8 +44,19 @@ export const isDOIValue = value => {
     return (!doiRegex1.test(value) && !doiRegex2.test(value) && !doiRegex3.test(value) && !doiRegex4.test(value) && !doiRegex5.test(value)) ? false : true;
 };
 
-export const isPubMedValue = value => {
+export const isValidPubMedValue = value => {
     // pubmed id is all digits, min 3 digits
-    const isPubmedId = /^[\d]{3,}$/;
-    return isPubmedId.test(value);
+    const isValid = /^[\d]{3,}$/;
+    return isValid.test(value);
 };
+
+export const isValidPartialDOIValue = value => {
+    const isValid = /^10\..*/;
+    return isValid.test(value);
+};
+
+export const isValidPublicationTitle = value => {
+    const isValid = /.{10,255}$/i;
+    return isValid.test(value);
+};
+
