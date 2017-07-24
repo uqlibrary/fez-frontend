@@ -30,3 +30,8 @@ form .column {
 input::-ms-clear {
   display: none;
 }
+
+// Bring a button down to meet the baseline of an input on the same row
+.is-mui-spacing-button {
+  margin-top: 30px !important;
+}

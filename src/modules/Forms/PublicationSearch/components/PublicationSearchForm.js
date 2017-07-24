@@ -53,7 +53,7 @@ export default class PublicationSearchForm extends Component {
             <form ref="publicationSearchForm" onSubmit={handleSubmit}>
                 <StandardCard title={title} help={help}>
                     <div>{explanationText}</div>
-                    <div className="columns is-gapless is-mobile">
+                    <div className="columns">
                         <div className="column">
                             <Field component={TextField}
                                    name="doiSearch"
@@ -64,9 +64,10 @@ export default class PublicationSearchForm extends Component {
                                    onKeyPress={this.performSearch}
                             />
                         </div>
-                        <div className="column is-narrow is-helpicon">
+                        <div className="column is-narrow">
                             <RaisedButton
-                                label={searchForPublicationInformation.defaultButtonLabel}
+                              className="is-mui-spacing-button"
+                              label={searchForPublicationInformation.defaultButtonLabel}
                                 secondary
                                 onTouchTap={this.performSearch}
                                 disabled={pristine}
