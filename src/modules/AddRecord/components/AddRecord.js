@@ -6,8 +6,8 @@ import {StandardPage, StandardCard, InlineLoader} from 'uqlibrary-react-toolbox'
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
-import {PublicationForm} from 'modules/PublicationForm';
 import {PublicationsList} from 'modules/PublicationsList';
+import {PublicationForm} from 'modules/PublicationForm';
 
 import {locale} from 'config';
 import {searchPublications} from 'actions';
@@ -72,7 +72,7 @@ export default class AddRecord extends React.Component {
         });
     }
 
-    getStepContent() {
+    renderSearchResultsStep() {
         const txt = locale.pages.addRecord.step2;
         const actions = [
             {
@@ -84,11 +84,16 @@ export default class AddRecord extends React.Component {
             <div>
                 {this.props.loadingSearch &&
                     (<div className="is-centered">
+                        {
+                            // can be a nice component... search loading b
+                        }
                         <span>{this.props.loadingPublicationSources ? this.props.loadingPublicationSources.totalSearchedCount : 0} out of 4 (WOS, Scopus, CrossRef, Pubmed)</span>
-                        <div>{this.props.loadingPublicationSources && this.props.loadingPublicationSources.wos && 'WOS - done'} </div>
-                        <div>{this.props.loadingPublicationSources && this.props.loadingPublicationSources.scopus && 'Scopus - done'} </div>
-                        <div>{this.props.loadingPublicationSources && this.props.loadingPublicationSources.pubmed && 'PubMed - done'} </div>
-                        <div>{this.props.loadingPublicationSources && this.props.loadingPublicationSources.crossref && 'CrossRef - done'} </div>
+                        <div>
+                            <span>WOS {this.props.loadingPublicationSources && this.props.loadingPublicationSources.wos ? 'done' : 'loading...'} </span>
+                            <span>SCOPUS {this.props.loadingPublicationSources && this.props.loadingPublicationSources.scopus ? 'done' : 'loading...'} </span>
+                            <span>PUBMED {this.props.loadingPublicationSources && this.props.loadingPublicationSources.pubmed ? 'done' : 'loading...'} </span>
+                            <span>CROSSREF {this.props.loadingPublicationSources && this.props.loadingPublicationSources.crossref ? 'done' : 'loading...'} </span>
+                        </div>
                         <InlineLoader message="Searching for your publications..." />
                     </div>)
                 }
@@ -160,7 +165,7 @@ export default class AddRecord extends React.Component {
                         }
                         {
                             this.state.stepperIndex === 1 &&
-                                this.getStepContent(this.state.stepperIndex)
+                                this.renderSearchResultsStep() // TODO: should this be a separate component or it's ok like this?
                         }
                         {
                             this.state.stepperIndex === 2 &&
@@ -172,7 +177,6 @@ export default class AddRecord extends React.Component {
 
                     </div>
                 </div>
-
             </StandardPage>
         );
     }
