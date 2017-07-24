@@ -135,7 +135,7 @@ class ContributorForm extends Component {
                 </div>}
                 <div className="column is-narrow contributorsButton">
                     <RaisedButton
-                        className="addContributorAddButton"
+                        className="is-mui-spacing-button"
                         primary
                         label={this.props.locale.addButton}
                         disabled={this.state.nameAsPublished.trim().length === 0}

@@ -24,13 +24,13 @@ __Table of Contents__
     * Multiline
     * Gapless
     * Narrow
-*Material UI edge cases
-    * Inputs and Buttons in same row
+* Known issues in fez-frontend
+    * Material UI & Bulma issues
 
 
 ------
 
-### Material Design ###
+### Material Design
 
 Fez-frontend is based on Material Design, and while we are using Material UI for React as a component library, not all components are included, or adhere to Google's philosophy or specifications. As Material design is considered a "guide" more than strict rules, we have liberty to add functionality as we see, but it must :
 * Adhere as closely as possible to Materual Design specifications
@@ -313,16 +313,24 @@ As for the size modifiers, you can have narrow columns for different breakpoints
 * _is-narrow-desktop_
 
 
-Material UI & Bulma issue edge cases
+Material UI & Bulma issues
 ======
 
-#### Inputs and Buttons in same row
+#### MUI Inputs and Buttons in same _.columns_ but different _.column_ on the same row
 When placing a MUI input and MUI button in the same row, due to MUI wanting to make space for its floating label, and validation error messages - its height pushes the height of the row out such that the button sits in limbo:
 
 ![Before](http://i.imgur.com/ehliZgD.png)
 
-By applying the class _is-mui-spacing-button_ on the button element, you move the botton to meet the input:
+By applying the class _is-mui-spacing-button_ on the button element...
+
+```
+<RaisedButton className="is-mui-spacing-button" />
+```
+
+...you move the botton to meet the input:
 
 ![After](http://i.imgur.com/Is1Enyu.png)
+
+NOTE: That this spacing issue doesn't happen when the input and button are in the same cell/.column.
 
 
