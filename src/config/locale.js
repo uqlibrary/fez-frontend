@@ -58,35 +58,6 @@ export default {
             primaryText: 'About',
         },
     },
-    mapping: {
-        publicationTypes: [
-            {
-                name: 'Book',
-                documentId: 174,
-                vocabId: 453581
-            },
-            {
-                name: 'Book Chapter',
-                documentId: 177,
-                vocabId: 453588
-            },
-            {
-                name: 'Conference Paper',
-                documentId: 130,
-                vocabId: 453596
-            },
-            {
-                name: 'Creative Work',
-                documentId: 313,
-                vocabId: 453594
-            },
-            {
-                name: 'Journal Article',
-                documentId: 179,
-                vocabId: 453573
-            }
-        ]
-    },
     pages: {
         about: {
             title: 'About UQ eSpace',

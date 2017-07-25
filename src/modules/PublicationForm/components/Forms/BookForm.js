@@ -4,8 +4,13 @@ import {Field} from 'redux-form/immutable';
 import {TextField, StandardCard} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
+import PropTypes from 'prop-types';
 
 export default class BookForm extends Component {
+
+    static propTypes = {
+        vocabId: PropTypes.number
+    }
 
     constructor(props) {
         super(props);

@@ -25,6 +25,7 @@ export default class PublicationForm extends Component {
 
         // keep a list of all available forms
         this.formComponents = {BookForm, JournalArticleForm};
+        this.publicationTypes = publicationTypes(this.formComponents);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -43,21 +44,21 @@ export default class PublicationForm extends Component {
 
     _getPublicationTypeForm = (publicationTypeId) => {
         const filteredPublicationType = publicationTypeId ?
-            publicationTypes(this.formComponents).filter((item) => { return item.id === publicationTypeId; }) : null;
+            this.publicationTypes.filter((item) => { return item.id === publicationTypeId; }) : null;
         return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].formComponent ?
-            React.createElement(filteredPublicationType[0].formComponent) : null;
+            React.createElement(filteredPublicationType[0].formComponent, {vocabId: filteredPublicationType[0].vocabId}) : null;
     };
 
     render() {
         // populate publication types select box
         const publicationTypeItems = [
-            ...(publicationTypes(this.formComponents).filter((item) => {
+            ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;
             }).map((item, index) => {
                 return <MenuItem value={item.id} primaryText={item.name} key={'fav_' + index} disabled={!item.formComponent}/>;
             })),
             ...[<Divider key="div_0"/>],
-            ...publicationTypes(this.formComponents).map((item, index) => {
+            ...this.publicationTypes.map((item, index) => {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })
         ];
