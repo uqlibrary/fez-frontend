@@ -2,7 +2,7 @@ SASS Styling for fez-frontend
 ======
 
 __Table of Contents__
-* [Material Design](#material-design)
+* Material Design
 * Card Layoutgit
 * Content Grid
     * The Grid
@@ -24,7 +24,7 @@ __Table of Contents__
     * Multiline
     * Gapless
     * Narrow
-* Known issues in fez-frontend
+* Known issues
     * Material UI & Bulma issues
 
 
@@ -327,7 +327,7 @@ By applying the class _is-mui-spacing-button_ on the button element...
 <RaisedButton className="is-mui-spacing-button" />
 ```
 
-...you move the botton to meet the input:
+...you move the button to meet the input:
 
 ![After](http://i.imgur.com/Is1Enyu.png)
 
