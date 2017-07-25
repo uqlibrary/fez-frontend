@@ -1,6 +1,3 @@
-JavaScript: true
-
-## other configuration excluded from example...
 exclude_paths:
 - src/config/locale.js
 - src/mock/data/
