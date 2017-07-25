@@ -2,7 +2,6 @@ import {connect} from 'react-redux';
 
 import FileMetadata from '../components/FileMetadata';
 import {deleteAllFiles, deleteFile, setCheckboxState} from '../actions';
-import {showSnackbar} from 'modules/App/actions';
 
 const FileMetadataContainer = connect((state) => {
     const fileUploadState = state.get('fileUpload');
@@ -17,7 +16,6 @@ const FileMetadataContainer = connect((state) => {
         setCheckboxState: (event, isInputChecked) => dispatch(setCheckboxState(event, isInputChecked)),
         deleteAllFiles: () => dispatch(deleteAllFiles()),
         deleteFile: (file) => dispatch(deleteFile(file)),
-        showSnackbar: (msg) => dispatch(showSnackbar(msg))
     };
 })(FileMetadata);
 

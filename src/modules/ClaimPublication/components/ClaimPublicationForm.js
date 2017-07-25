@@ -8,7 +8,6 @@ import {HelpIcon, TextField, Alert} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
 import {locale} from 'config';
 import {FileUploader, AuthorLinking} from 'modules/SharedComponents';
-import {showDialogBox} from 'modules/App';
 
 import {uploadFile} from 'modules/SharedComponents/FileUploader/actions';
 import {SearchResultsRow} from 'modules/SearchResults';
@@ -48,19 +47,18 @@ export default class ClaimPublicationForm extends Component {
             this.tryRecordSave();
         }
 
-        if (nextProps.recordClaimState && nextProps.recordClaimState.get('submitted')) {
-            const dialogConfig = locale.pages.claimPublications.form.dialog.success;
-            this.props.dispatch(showDialogBox(dialogConfig));
-        }
+        // if (nextProps.recordClaimState && nextProps.recordClaimState.get('submitted')) {
+        //     const dialogConfig = locale.pages.claimPublications.form.dialog.success;
+        // }
     }
 
     cancelClaimPublication = () => {
-        const {dispatch, searchResultsList} = this.props;
-        const goBackUrl = {primaryLink: searchResultsList.size > 0 ? '/add-record' : '/claim-publications'};
-        const dialogConfig = locale.pages.claimPublications.form.dialog.cancel;
-        const combinedConfig = Object.assign({}, dialogConfig, goBackUrl);
-
-        dispatch(showDialogBox(combinedConfig));
+        // const {dispatch, searchResultsList} = this.props;
+        // const goBackUrl = {primaryLink: searchResultsList.size > 0 ? '/add-record' : '/claim-publications'};
+        // const dialogConfig = locale.pages.claimPublications.form.dialog.cancel;
+        // const combinedConfig = Object.assign({}, dialogConfig, goBackUrl);
+        //
+        // dispatch(showDialogBox(combinedConfig));
     };
 
     getCurrentPublication = () => {

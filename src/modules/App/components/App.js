@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
-import Snackbar from 'material-ui/Snackbar';
-import {DialogBox} from 'modules/SharedComponents';
 
 import {AppLoader, MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
 
@@ -30,8 +28,6 @@ export default class App extends React.Component {
         loaded: PropTypes.bool.isRequired,
         loadAccount: PropTypes.func.isRequired,
         menuDrawerOpen: PropTypes.bool.isRequired,
-        hideSnackbar: PropTypes.func.isRequired,
-        snackbar: PropTypes.object.isRequired,
         dialogbox: PropTypes.object.isRequired,
         toggleMenuDrawer: PropTypes.func.isRequired
     };
@@ -75,9 +71,6 @@ export default class App extends React.Component {
             account,
             loaded,
             menuDrawerOpen,
-            snackbar,
-            hideSnackbar,
-            dialogbox
         } = this.props;
 
         const {
@@ -143,25 +136,6 @@ export default class App extends React.Component {
                                 ))}
                             </Switch>
                         </div>
-
-                        <Snackbar
-                            open={snackbar.get('open')}
-                            message={snackbar.get('message')}
-                            autoHideDuration={4000}
-                            onRequestClose={hideSnackbar} />
-
-
-                        <DialogBox
-                            open={dialogbox.get('open')}
-                            title={dialogbox.get('title')}
-                            content={dialogbox.get('content')}
-                            primaryButtonLabel={dialogbox.get('primaryButtonLabel')}
-                            primaryLink={dialogbox.get('primaryLink')}
-                            primaryHandleFn={dialogbox.get('primaryHandleFn')}
-                            secondaryButtonLabel={dialogbox.get('secondaryButtonLabel')}
-                            secondaryLink={dialogbox.get('secondaryLink')}
-                            secondaryHandleFn={dialogbox.get('secondaryHandleFn')}
-                        />
 
                         <HelpDrawer />
                     </div>
