@@ -46,7 +46,6 @@ export default class PublicationCitation extends Component {
                     />
                 );
             }) : null;
-
         return (
             <div className="publicationCitation">
                 <h3 className="title is-5 publicationTitle">{this.props.publication.rek_title}</h3>

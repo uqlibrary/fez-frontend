@@ -49,17 +49,18 @@ export default class PublicationForm extends Component {
     };
 
     render() {
-        const favouritePublicationTypeItems = publicationTypes(this.formComponents).filter((item) => {
-            return item.isFavourite;
-        }).map((item, index) => {
-            return <MenuItem value={item.id} primaryText={item.name} key={'fav_' + index} disabled={!item.formComponent} />;
-        });
-
-        const publicationTypeItems = favouritePublicationTypeItems
-            .concat([<Divider />])
-            .concat(publicationTypes().map((item, index) => {
+        // populate publication types select box
+        const publicationTypeItems = [
+            ...(publicationTypes(this.formComponents).filter((item) => {
+                return item.isFavourite;
+            }).map((item, index) => {
+                return <MenuItem value={item.id} primaryText={item.name} key={'fav_' + index} disabled={!item.formComponent}/>;
+            })),
+            ...[<Divider key="div_0"/>],
+            ...publicationTypes(this.formComponents).map((item, index) => {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
-            }));
+            })
+        ];
 
         const txt = locale.components.publicationForm;
         return (

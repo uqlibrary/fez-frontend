@@ -91,7 +91,7 @@ export default class AddRecord extends React.Component {
         const txt = locale.pages.addRecord.step2;
         const actions = [
             {
-                label: locale.claim,
+                label: txt.claim,
                 handleAction: this._claimPublication
             }
         ];
