@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import AddRecord from '../components/AddRecord';
+import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
     return {
@@ -9,5 +10,7 @@ const mapStateToProps = (state) => {
     };
 };
 
-const AddRecordContainer = connect(mapStateToProps)(AddRecord);
+let AddRecordContainer = connect(mapStateToProps)(AddRecord);
+AddRecordContainer = withRouter(AddRecordContainer);
+
 export default AddRecordContainer;

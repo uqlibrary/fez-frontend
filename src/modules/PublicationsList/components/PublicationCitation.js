@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
+import {publicationTypes} from 'config';
 
 // citations for different publication types
 import CitationCounts from './citations/CitationCounts';
@@ -20,16 +21,16 @@ export default class PublicationCitation extends Component {
 
     constructor(props) {
         super(props);
+
+        // keep a list of all available citations
+        this.citationComponents = {JournalArticleCitation};
     }
 
-    _renderCitation = (publicationType) => {
-        // TODO: publication types management!!!
-        switch (publicationType) {
-            case 179:
-                return (<JournalArticleCitation publication={this.props.publication}/>);
-            default:
-                return (<div>Citation coming soon for this publication type: {publicationType}</div>);
-        }
+    _renderCitation = (publicationTypeId) => {
+        const filteredPublicationType = publicationTypeId ?
+            publicationTypes(this.citationComponents).filter((item) => { return item.id === publicationTypeId; }) : null;
+        return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent ?
+            React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication}) : null;
     }
 
     render() {
