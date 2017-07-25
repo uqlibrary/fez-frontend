@@ -4,12 +4,13 @@ import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import {FileUploader} from 'modules/SharedComponents';
 import MenuItem from 'material-ui/MenuItem';
+import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 import {SelectField, StandardCard, Alert, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
-import {locale} from 'config';
+import {locale, publicationTypes} from 'config';
 
-import {BookForm, JournalArticleForm } from './Forms';
+import {BookForm, JournalArticleForm} from './Forms';
 
 export default class PublicationForm extends Component {
 
@@ -21,10 +22,9 @@ export default class PublicationForm extends Component {
 
     constructor(props) {
         super(props);
-    }
 
-    componentWillMount() {
-        this.props.reset();
+        // keep a list of all available forms
+        this.formComponents = {BookForm, JournalArticleForm};
     }
 
     componentWillReceiveProps(nextProps) {
@@ -42,20 +42,26 @@ export default class PublicationForm extends Component {
     }
 
     _getPublicationTypeForm = (publicationTypeId) => {
-        switch(publicationTypeId) {
-            case 179:
-                return (<JournalArticleForm />);
-            case 174:
-                return (<BookForm />);
-            default:
-                return (<div/>);
-        }
+        const filteredPublicationType = publicationTypeId ?
+            publicationTypes(this.formComponents).filter((item) => { return item.id === publicationTypeId; }) : null;
+        return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].formComponent ?
+            React.createElement(filteredPublicationType[0].formComponent) : null;
     };
 
     render() {
-        const publicationTypeItems = locale.mapping.publicationTypes.map((item, index) => {
-            return <MenuItem value={item.documentId} primaryText={item.name} key={index}/>;
-        });
+        // populate publication types select box
+        const publicationTypeItems = [
+            ...(publicationTypes(this.formComponents).filter((item) => {
+                return item.isFavourite;
+            }).map((item, index) => {
+                return <MenuItem value={item.id} primaryText={item.name} key={'fav_' + index} disabled={!item.formComponent}/>;
+            })),
+            ...[<Divider key="div_0"/>],
+            ...publicationTypes(this.formComponents).map((item, index) => {
+                return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
+            })
+        ];
+
         const txt = locale.components.publicationForm;
         return (
             <form>

@@ -1,5 +1,7 @@
 import Immutable from 'immutable';
 
+// TODO: move all validation error text to locale.validationErrors = { ... }
+
 // Generic
 export const required = value => value ? undefined : 'This field is required';
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Please enter a valid email address' : undefined;

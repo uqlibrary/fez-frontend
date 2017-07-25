@@ -15,7 +15,7 @@ export default class PublicationsList extends Component {
 
     render() {
         const publications = this.props.publicationsList.map((publication, index) => {
-            return (<PublicationCitation key={index} publication={publication} actions={this.props.actions} />);
+            return <PublicationCitation key={index} publication={publication} actions={this.props.actions} />;
         });
 
         return (

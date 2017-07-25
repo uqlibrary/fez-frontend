@@ -44,6 +44,26 @@ const handlers = {
         };
     },
 
+    [`${SEARCH_FAILED}@`]: (state, action) => {
+        // get search source, eg wos/pubmed/etc
+        const source = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
+
+        // set search completed for a specific source
+        const loadingPublicationSources = {
+            loadingPublicationSources: {
+                ...state.loadingPublicationSources,
+                totalSearchedCount: state.loadingPublicationSources.totalSearchedCount + 1,
+                [source]: true,
+                [`${source}Count`]: 0
+            }
+        };
+
+        return {
+            ...state,
+            ...loadingPublicationSources
+        };
+    },
+
     [`${SEARCH_COMPLETED}@`]: (state, action) => {
         // get search source, eg wos/pubmed/etc
         const source = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
@@ -53,7 +73,8 @@ const handlers = {
             loadingPublicationSources: {
                 ...state.loadingPublicationSources,
                 totalSearchedCount: state.loadingPublicationSources.totalSearchedCount + 1,
-                [source]: true
+                [source]: true,
+                [`${source}Count`]: action.payload.length
             }
         };
 

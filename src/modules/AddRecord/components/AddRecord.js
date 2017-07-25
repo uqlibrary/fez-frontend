@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardPage, StandardCard, InlineLoader} from 'uqlibrary-react-toolbox';
+import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
 import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationForm} from 'modules/PublicationForm';
 
-import {locale} from 'config';
+import {locale, validation} from 'config';
 import {searchPublications} from 'actions';
 
 export default class AddRecord extends React.Component {
@@ -18,6 +18,7 @@ export default class AddRecord extends React.Component {
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
         loadingPublicationSources: PropTypes.object,
+        history: PropTypes.object.isRequired,
         dispatch: PropTypes.func
     };
 
@@ -26,7 +27,7 @@ export default class AddRecord extends React.Component {
 
         this.state = {
             stepperIndex: 0,
-            searchQuery: ''
+            initialValues: {}
         };
     }
 
@@ -41,33 +42,47 @@ export default class AddRecord extends React.Component {
     };
 
     _recordSaved = () => {
-        // TODO: record has been saved... what to do?
-        console.log('display a dialog box with options...');
-        console.log(locale.pages.addRecord.confirmationDialog);
-
         // reset stepper to publications search form
         this.setState({
-            stepperIndex: 0
+            stepperIndex: 0,
+            initialValues: {}
         });
+
+        // show record save successfully confirmation box
+        this.confirmationBox.showConfirmation();
     };
 
     _cancelWorkflow = () => {
         this.setState({
             stepperIndex: 0,
-            searchQuery: ''
+            initialValues: {}
         });
     };
 
     _claimPublication = (item) => {
-        console.log('claim clicked... TODO: redirect to claim publication');
+        // TODO: pass item to claim form
+        // TODO: route should not be hardcoded, should come from config/menu
+        console.log('todo: pass item to claim form');
         console.log(item);
+        this.props.history.push('/claim-publications');
+    }
+
+    _navigateToDashboard = () => {
+        // TODO: route should not be hardcoded, should come from config/menu
+        // TODO: should navigation be handled by top-level container only, eg pass on as props:
+        // TODO: this.props.navigateToDashboard() and this.props.navigateToClaimForm(item) <- fixes issue of linking item
+        this.props.history.push('/dashboard');
     }
 
     _performSearch = (values) => {
         this.props.dispatch(searchPublications(values.get('searchQuery')));
 
         this.setState({
-            searchQuery: values.get('searchQuery'),
+            initialValues: {
+                // set initial value only if it's a title (not pubmed/DOI)
+                rek_title: (!validation.isValidDOIValue(values.get('searchQuery')) && !validation.isValidPubMedValue(values.get('searchQuery'))) ?
+                    values.get('searchQuery') : ''
+            },
             stepperIndex: this.state.stepperIndex + 1
         });
     }
@@ -76,7 +91,7 @@ export default class AddRecord extends React.Component {
         const txt = locale.pages.addRecord.step2;
         const actions = [
             {
-                label: locale.claim,
+                label: txt.claim,
                 handleAction: this._claimPublication
             }
         ];
@@ -85,14 +100,14 @@ export default class AddRecord extends React.Component {
                 {this.props.loadingSearch &&
                     (<div className="is-centered">
                         {
-                            // can be a nice component... search loading b
+                            // TODO: KL: move into a component with nice loading indicators?
                         }
                         <span>{this.props.loadingPublicationSources ? this.props.loadingPublicationSources.totalSearchedCount : 0} out of 4 (WOS, Scopus, CrossRef, Pubmed)</span>
                         <div>
-                            <span>WOS {this.props.loadingPublicationSources && this.props.loadingPublicationSources.wos ? 'done' : 'loading...'} </span>
-                            <span>SCOPUS {this.props.loadingPublicationSources && this.props.loadingPublicationSources.scopus ? 'done' : 'loading...'} </span>
-                            <span>PUBMED {this.props.loadingPublicationSources && this.props.loadingPublicationSources.pubmed ? 'done' : 'loading...'} </span>
-                            <span>CROSSREF {this.props.loadingPublicationSources && this.props.loadingPublicationSources.crossref ? 'done' : 'loading...'} </span>
+                            <span>WOS {this.props.loadingPublicationSources && this.props.loadingPublicationSources.wos ? this.props.loadingPublicationSources.wosCount : 'loading...'} </span>
+                            <span>SCOPUS {this.props.loadingPublicationSources && this.props.loadingPublicationSources.scopus ? this.props.loadingPublicationSources.scopusCount : 'loading...'} </span>
+                            <span>PUBMED {this.props.loadingPublicationSources && this.props.loadingPublicationSources.pubmed ? this.props.loadingPublicationSources.pubmedCount : 'loading...'} </span>
+                            <span>CROSSREF {this.props.loadingPublicationSources && this.props.loadingPublicationSources.crossref ? this.props.loadingPublicationSources.crossrefCount : 'loading...'} </span>
                         </div>
                         <InlineLoader message="Searching for your publications..." />
                     </div>)
@@ -141,6 +156,10 @@ export default class AddRecord extends React.Component {
     render() {
         return (
             <StandardPage title={locale.pages.addRecord.title}>
+                <ConfirmDialogBox onRef={ref => (this.confirmationBox = ref)}
+                                  onAction={this._navigateToDashboard}
+                                  locale={locale.pages.addRecord.confirmationDialog} />
+
                 <div className="Stepper">
                     <Stepper activeStep={this.state.stepperIndex} style={{padding: '0', margin: '-10px auto' }}>
                         {
@@ -153,7 +172,7 @@ export default class AddRecord extends React.Component {
                     </Stepper>
                 </div>
                 {
-                    // TODO: remove all inline styles
+                    // TODO: KL: remove all inline styles
                 }
                 <div style={{width: '100%', maxWidth: '1320px', margin: '0 auto'}}>
                     <div style={{margin: '0', overflow: 'hidden'}}>
@@ -172,7 +191,7 @@ export default class AddRecord extends React.Component {
                             <PublicationForm
                                 onFormSubmitSuccess={this._recordSaved}
                                 onFormCancel={this._cancelWorkflow}
-                                initialValues={{rek_title: this.state.searchQuery}} />
+                                initialValues={this.state.initialValues} />
                         }
 
                     </div>

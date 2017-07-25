@@ -7,7 +7,6 @@ import Immutable from 'immutable';
 import {SearchResults} from 'modules/SearchResults';
 import {InlineLoader, StandardCard} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-import {showDialogBox} from 'modules/App';
 
 export default class ClaimPublication extends React.Component {
 
@@ -54,9 +53,9 @@ export default class ClaimPublication extends React.Component {
     };
 
     confirmMarkPublicationsNotMine = () => {
-        const dialogConfig = locale.pages.claimPublications.claimPublicationResults.dialog.markNotMine;
-        const combinedConfig = Object.assign({}, dialogConfig, {primaryHandleFn: this.markPublicationsNotMine});
-        this.props.dispatch(showDialogBox(combinedConfig));
+        // const dialogConfig = locale.pages.claimPublications.claimPublicationResults.dialog.markNotMine;
+        // const combinedConfig = Object.assign({}, dialogConfig, {primaryHandleFn: this.markPublicationsNotMine});
+        // this.props.dispatch(showDialogBox(combinedConfig));
     };
 
     markPublicationsNotMine = () => {
