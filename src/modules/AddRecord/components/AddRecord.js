@@ -176,11 +176,7 @@ export default class AddRecord extends React.Component {
                         }
                     </Stepper>
                 </div>
-                {
-                    // TODO: KL: remove all inline styles
-                }
-                <div style={{width: '100%', maxWidth: '1320px', margin: '0 auto'}}>
-                    <div style={{margin: '0', overflow: 'hidden'}}>
+                <div className="layout-fill">
                         {
                             this.state.stepperIndex === 0  &&
                             <PublicationSearchForm
@@ -198,8 +194,6 @@ export default class AddRecord extends React.Component {
                                 onFormCancel={this._cancelWorkflow}
                                 initialValues={this.state.initialValues} />
                         }
-
-                    </div>
                 </div>
             </StandardPage>
         );

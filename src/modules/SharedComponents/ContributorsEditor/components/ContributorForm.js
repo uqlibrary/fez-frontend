@@ -22,7 +22,7 @@ class ContributorForm extends Component {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
             identifierLabel: 'UQ identifier (if available)',
-            addButton: 'Add'
+            addButton: 'Add author'
         }
     }
 
