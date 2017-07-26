@@ -5,8 +5,8 @@ import {reducer as formReducer} from 'redux-form/immutable';
 import {appReducer} from 'modules/App';
 import {helpDrawerReducer} from 'uqlibrary-react-toolbox';
 import {reducer as dashboardReducer} from 'modules/Dashboard';
-import {claimPublicationsReducer} from 'modules/ClaimPublication';
 
+import {claimPublicationReducer} from 'modules/ClaimPublication';
 import {addRecordReducer} from './modules/AddRecord';
 
 import {fileUploadReducer, authorLinkingReducer} from './modules/SharedComponents';
@@ -19,11 +19,12 @@ const rootReducer = combineReducers({
     app: appReducer,
     authorLinking: authorLinkingReducer,
     fileUpload: fileUploadReducer,
-    claimPublication: claimPublicationsReducer,
     dashboard: dashboardReducer,
     helpDrawer: helpDrawerReducer,
-    addRecordReducer,
+
     // migrated reducers
+    addRecordReducer,
+    claimPublicationReducer,
     authorsReducer
 });
 

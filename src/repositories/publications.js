@@ -1,6 +1,6 @@
 import {post, get} from './generic';
 
-export const GET_POSSIBLE_PUBLICATIONS_API = 'publications/possible-unclaimed/';
+export const GET_POSSIBLE_PUBLICATIONS_API = 'publications/possible-unclaimed';
 export const POST_HIDE_POSSIBLE_PUBLICATIONS_API = 'publications/hide-possible';
 export const POST_CLAIM_POSSIBLE_PUBLICATIONS_API = 'publications/claim-possible';
 
@@ -10,7 +10,7 @@ export const POST_CLAIM_POSSIBLE_PUBLICATIONS_API = 'publications/claim-possible
  * @returns {Promise}
  */
 export function getPossibleUnclaimedPublications(userName) {
-    return get(`${GET_POSSIBLE_PUBLICATIONS_API}${userName}`);
+    return get(`${GET_POSSIBLE_PUBLICATIONS_API}/${userName}`);
 }
 
 /**

@@ -110,7 +110,7 @@ export default class AddRecord extends React.Component {
                             <span>PUBMED {this.props.loadingPublicationSources && this.props.loadingPublicationSources.pubmed ? this.props.loadingPublicationSources.pubmedCount : 'loading...'} </span>
                             <span>CROSSREF {this.props.loadingPublicationSources && this.props.loadingPublicationSources.crossref ? this.props.loadingPublicationSources.crossrefCount : 'loading...'} </span>
                         </div>
-                        <InlineLoader message="Searching for your publications..." />
+                        <InlineLoader message={txt.loadingMessage} />
                     </div>
                 }
 

@@ -147,7 +147,7 @@ export default {
             },
             step2: {
                 noResultsFound: {
-                    title: 'No matching records found',
+                    title: 'No matching publications found',
                     text: 'We were unable to match any results to your search criteria. Please, search again or create a new eSpace record.',
                     help: {
                         title: 'No matching records found',
@@ -164,6 +164,7 @@ export default {
                         buttonLabel: 'Ok'
                     },
                 },
+                loadingMessage: 'Searching for your publications...',
                 cancel: 'Abandon and search again',
                 submit: 'Create a new eSpace record',
                 claim: 'Claim this publication'
@@ -180,129 +181,45 @@ export default {
         },
         claimPublications: {
             title: 'Claim possible publications',
-            maxSearchResults: 5,
-            claimUrl: '/claim-publications/publication-',
-            authorLinking: {
-                title: 'Author linking',
-                subTitle: 'We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below:',
-                confirmation: 'I confirm and understand that I am claiming this publication under the above name, and confirm this is me',
-                formSectionPrefix: 'authorLinking',
-                instructions: 'Please select an author to proceed',
-                noAuthorSelectedMessage: 'Please select an author before submitting the form'
-            },
-            claimPublicationResults: {
-                title: 'Possible publications found',
-                explanationText: 'Select any items below to claim them as your work',
-                text: ( <div>
-                        <p>
-                            possibly your publications....
-                        </p>
-                    </div>
-                ),
+            loadingMessage: 'Searching for your publications...',
+            noResultsFound: {
+                title: 'No matching publications found',
+                text: 'No publications were automatically matched for you to claim.',
                 help: {
-                    title: 'Help',
-                    text: (
-                        <div>
-                            <p>
-                                Help on possibly your publications...
-                            </p>
-                        </div>
-                    ),
-                    button: 'OK'
-                },
-                claimRecordBtnLabel: 'Claim This Publication',
-                noMatchingPublications: {
-                    title: 'No matching publications found',
-                    children: ('No publications were automatically matched for you to claim.'),
-                    help: {
-                        title: 'No publications found',
-                        text: (
-                            <div>
-                                <p>
-                                    Help on no publications found...
-                                </p>
-                            </div>
-                        ),
-                        buttonLabel: 'OK'
-                    }
-                },
-                dialog: {
-                    markNotMine: {
-                        title: 'Hide publications',
-                        content: 'Are you sure you want to hide these publications?',
-                        primaryButtonLabel: 'Yes',
-                        primaryLink: '/claim-publications',
-                        secondaryButtonLabel: 'No'
-                    }
+                    title: 'No matching records found',
+                    text: 'Why search didn\'t return any items....',
+                    buttonLabel: 'Ok'
                 }
             },
-            formButtons: {
-                claimLabel: 'Claim this publication',
-                notMineLabel: 'None of these publications are mine'
+            searchResults: {
+                title: 'Possibly your publications',
+                text: '[resultsCount] potential match(es) displayed. Select any item to claim it as your work.',
+                help: {
+                    title: 'Possibly your publications',
+                    text: 'Help about ....',
+                    buttonLabel: 'Ok'
+                },
+                hide: 'Not mine',
+                claim: 'Claim this publication',
+                hideAll: 'None of these publications are mine'
             },
-            form: {
-                title: 'Claim a publication',
-                publicationDetails: {
-                    title: 'You are claiming to be an author for the following item:',
-                    help: {
-                        title: 'Claim a publication',
-                        text: (
-                            <div>
-                                <p>
-                                    Mauris pharetra vel arcu in hendrerit. Ut iaculis, quam id cursus fringilla, velit enim sodales dui, sed commodo massa justo quis dui. Nulla ornare massa nibh, quis laoreet eros ultrices nec. Curabitur efficitur ipsum ut metus dignissim ornare. Vestibulum fringilla viverra tortor ac hendrerit.
-                                </p>
-                            </div>
-                        ),
-                        button: 'OK'
-                    },
-                },
-                comments: {
-                    title: 'If necessary, please suggest changes or upload additional files below',
-                    fields: {
-                        descriptionLabel: 'Type edits/changes/comments here'
-                    }
-                },
-                files: {
-                    title: 'Upload new files',
-                    fields: {
-                        filenameLabel: 'Filename selected',
-                        filenameRestrictions: (
-                            <div className="fileInstructions">
-                                <h3>File name restrictions</h3>
-                                <div style={{width: '100%'}}>
-                                    <ul>
-                                        <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
-                                        <li>Only numbers and lowercase characters in the file extension</li>
-                                        <li>Under 45 characters</li>
-                                        <li>Only one file extension (on period (.) character) and</li>
-                                        <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        ),
-                        accessConditionsLabel: 'Access conditions',
-                        embargoDateLabel: 'Embargo date',
-                        descriptionLabel: 'Description'
-                    },
-                    buttons: {
-                        browseLabel: 'Browse files'
-                    }
-                },
-                dialog: {
-                    success: {
-                        title: 'Claim publication',
-                        content: 'The publication has been successfully claimed.',
-                        primaryButtonLabel: 'Ok',
-                        primaryLink: '/claim-publications'
-                    },
-                    cancel: {
-                        title: 'Cancel claiming publication',
-                        content: 'Are you sure you want to cancel claiming this publication?',
-                        primaryButtonLabel: 'Yes',
-                        primaryLink: '/claim-publications',
-                        secondaryButtonLabel: 'No'
-                    }
-                }
+            hidePublicationConfirmation: {
+                confirmationTitle: 'Hide publication',
+                confirmationMessage: 'Are you sure you want to hide selected possibly your publication from this view?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
+            },
+            hideAllPublicationsConfirmation: {
+                confirmationTitle: 'Hide publications',
+                confirmationMessage: 'Are you sure you want to hide all possibly your publications from this view?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
+            },
+            claimPublicationConfirmation: {
+                confirmationTitle: 'Claim has been submitted',
+                confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.',
+                cancelButtonLabel: 'Claim more publications',
+                confirmButtonLabel: 'OK'
             }
         }
     },
@@ -426,6 +343,78 @@ export default {
                 confirmationMessage: 'Are you sure you want to abandon workflow?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
+            }
+        },
+        publicationClaimFrom: {
+            title: 'Claim a publication',
+            authorLinking: {
+                title: 'Author linking',
+                subTitle: 'We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below:',
+                confirmation: 'I confirm and understand that I am claiming this publication under the above name, and confirm this is me',
+                formSectionPrefix: 'authorLinking',
+                instructions: 'Please select an author to proceed',
+                noAuthorSelectedMessage: 'Please select an author before submitting the form'
+            },
+            publicationDetails: {
+                title: 'You are claiming to be an author for the following item:',
+                help: {
+                    title: 'Claim a publication',
+                    text: (
+                        <div>
+                            <p>
+                                Mauris pharetra vel arcu in hendrerit. Ut iaculis, quam id cursus fringilla, velit enim sodales dui, sed commodo massa justo quis dui. Nulla ornare massa nibh, quis laoreet eros ultrices nec. Curabitur efficitur ipsum ut metus dignissim ornare. Vestibulum fringilla viverra tortor ac hendrerit.
+                            </p>
+                        </div>
+                    ),
+                    button: 'OK'
+                },
+            },
+            comments: {
+                title: 'If necessary, please suggest changes or upload additional files below',
+                fields: {
+                    descriptionLabel: 'Type edits/changes/comments here'
+                }
+            },
+            files: {
+                title: 'Upload new files',
+                fields: {
+                    filenameLabel: 'Filename selected',
+                    filenameRestrictions: (
+                        <div className="fileInstructions">
+                            <h3>File name restrictions</h3>
+                            <div style={{width: '100%'}}>
+                                <ul>
+                                    <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
+                                    <li>Only numbers and lowercase characters in the file extension</li>
+                                    <li>Under 45 characters</li>
+                                    <li>Only one file extension (on period (.) character) and</li>
+                                    <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    ),
+                    accessConditionsLabel: 'Access conditions',
+                    embargoDateLabel: 'Embargo date',
+                    descriptionLabel: 'Description'
+                },
+                buttons: {
+                    browseLabel: 'Browse files'
+                }
+            },
+            dialog: {
+                success: {
+                    title: 'Claim publication',
+                    content: 'The publication has been successfully claimed.',
+                    primaryButtonLabel: 'Ok',
+                    primaryLink: '/claim-publications'
+                },
+                cancel: {
+                    title: 'Cancel claiming publication',
+                    content: 'Are you sure you want to cancel claiming this publication?',
+                    primaryButtonLabel: 'Yes',
+                    primaryLink: '/claim-publications',
+                    secondaryButtonLabel: 'No'
+                }
             }
         }
     },
