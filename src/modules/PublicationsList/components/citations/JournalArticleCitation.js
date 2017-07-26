@@ -42,12 +42,9 @@ export default class JournalArticleCitation extends Component {
                     format_quote
                 </FontIcon>
 
-                <span className="citationAuthors">
-                    {authors}
-                </span>
-
-                <span className="citationPublisher">{journalArticle.publisher}</span>
-                <span className="citationTitle">{journalArticle.title}.</span>
+                <span className="citationAuthors">{authors} </span>
+                <span className="citationPublisher">({journalArticle.publisher}) </span>
+                <span className="citationTitle">{journalArticle.title}. </span>
                 {
                     journalArticle.journalName &&
                     <span className="citationJournalName"> {journalArticle.journalName}, </span>
@@ -62,7 +59,7 @@ export default class JournalArticleCitation extends Component {
                 }
                 {
                     journalArticle.startPage &&
-                    <span className="citationStartPage"> {journalArticle.startPage} -</span>
+                    <span className="citationStartPage"> {journalArticle.startPage} - </span>
                 }
                 {
                     journalArticle.endPage &&

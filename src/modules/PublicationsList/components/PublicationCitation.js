@@ -38,6 +38,7 @@ export default class PublicationCitation extends Component {
             this.props.actions.map((action, index) => {
                 return (
                     <FlatButton
+                      fullWidth
                         key={index}
                         secondary
                         label={action.label}
@@ -58,8 +59,11 @@ export default class PublicationCitation extends Component {
 
                 {
                     this.props.actions && this.props.actions.length > 0 &&
-                    <div className="publicationActions">
-                        {actions}
+                    <div className="publicationActions columns is-gapless">
+                        <div className="column is-hidden-mobile" />
+                            <div className="column is-narrow">
+                                {actions}
+                            </div>
                     </div>
                 }
             </div>

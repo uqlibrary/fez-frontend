@@ -1,17 +1,36 @@
+@import '~uqlibrary-react-toolbox/sass/variables';
+.publicationsList {
+  margin-top: 24px;
+}
 .publicationCitation {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  padding: 6px 0;
+
+  &:first-child {
+    padding-top: 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+  }
 
   .publicationTitle {
-    margin-bottom: 0;
+    margin-bottom: 6px;
   }
 
   .citationContent {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba($text-color, 0.88);
+
     .citationAuthors {
-      .citationAuthor {}
+      .citationAuthor {
+      }
     }
 
-    .citationPublisher {}
+    .citationPublisher {
+    }
 
-    .citationTitle {}
+    .citationTitle {
+    }
 
     .citationJournalName {
       font-style: italic;
@@ -20,19 +39,25 @@
       font-style: italic;
     }
 
-    .citationIssueNumber {}
+    .citationIssueNumber {
+    }
 
-    .citationStartPage {}
+    .citationStartPage {
+    }
 
-    .citationEndPage {}
+    .citationEndPage {
+    }
 
-    .citationDOI {}
+    .citationDOI {
+    }
 
-    .citationIcon {}
+    .citationIcon {
+      font-size: 12px !important;
+    }
   }
 
   .citationCounts {
-    .citationCount{
+    .citationCount {
       .citationCountIcon {
         width: 1em;
         height: 1em;
@@ -45,8 +70,11 @@
     }
   }
 
-  .publicationActions {}
-
+  @media (max-width: 768px) {
+    .publicationActions {
+      margin-top: 12px;
+    }
+  }
 }
 
 

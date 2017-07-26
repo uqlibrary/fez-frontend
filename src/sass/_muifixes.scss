@@ -32,8 +32,10 @@ input::-ms-clear {
 }
 
 // Bring a button down to meet the baseline of an input on the same row
-.is-mui-spacing-button {
-  margin-top: 30px !important;
+@media (min-width: 768px) {
+  .is-mui-spacing-button {
+    margin-top: 30px !important;
+  }
 }
 
 // Adds red asterix to required fields
