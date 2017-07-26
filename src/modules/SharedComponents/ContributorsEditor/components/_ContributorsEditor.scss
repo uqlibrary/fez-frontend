@@ -2,9 +2,6 @@
 
 //Desktop
 @media (min-width: 768px) {
-  .addContributorAddButton {
-    margin-top: 30px;
-  }
   .contributorsRow {
     .contributorReorder, .contributorsHeader .order {width: 96px !important;}
     .reorderDown{ float: right !important;}
@@ -14,7 +11,8 @@
 
 //Mobile
 @media (max-width: 768px) {
-  .addContributorAddButton {
-   width: 100%;
+
+  .contributorsButton{
+    margin-top: -30px;
   }
 }
