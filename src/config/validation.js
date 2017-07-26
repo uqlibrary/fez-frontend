@@ -7,7 +7,7 @@ export const required = value => value ? undefined : 'This field is required';
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Please enter a valid email address' : undefined;
 export const requiredTrue = value => value === true ? undefined : 'This field is required';
 export const unique = (value, array) => array.indexOf(value) !== -1 ? 'This value has already been used' : undefined;
-export const url = (value) => value && !/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/i.test(value) ? 'Please enter a valid URL' : undefined;
+export const url = (value) => value && !/^((http[s]?|ftp):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/i.test(value) ? 'Please enter a valid URL' : undefined;
 
 // Min Length
 export const maxLength = max => value => value && value.length > max ? `Must be ${max} characters or less` : undefined;
