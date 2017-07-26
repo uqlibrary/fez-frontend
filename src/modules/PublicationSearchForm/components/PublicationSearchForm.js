@@ -22,9 +22,10 @@ export default class PublicationSearchForm extends Component {
             <StandardCard title={this.props.locale.title} help={this.props.locale.help}>
                 <div>{this.props.locale.text}</div>
                 <form onSubmit={this.props.handleSubmit}>
-                    <div className="columns is-gapless is-mobile">
+                    <div className="columns">
                         <div className="column">
                             <Field component={TextField}
+                                   className="requiredField"
                                    name="searchQuery"
                                    fullWidth
                                    floatingLabelText={this.props.locale.fieldLabels.search}
@@ -33,9 +34,11 @@ export default class PublicationSearchForm extends Component {
                                    validate={[validation.required]}
                             />
                         </div>
-                        <div className="column is-narrow is-helpicon">
+                        <div className="column is-narrow">
                             <RaisedButton
+                                className="is-mui-spacing-button"
                                 label={this.props.locale.submit}
+                                fullWidth
                                 secondary
                                 onTouchTap={this.props.handleSubmit}
                                 disabled={this.props.invalid}

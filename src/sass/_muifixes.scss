@@ -36,6 +36,7 @@ input::-ms-clear {
   margin-top: 30px !important;
 }
 
+// Adds red asterix to required fields
 .requiredField label:after {
   content: " *";
   color: $error-color;
