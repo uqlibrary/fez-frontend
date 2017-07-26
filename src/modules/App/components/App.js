@@ -18,7 +18,7 @@ import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
 import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
-import {ClaimPublication, ClaimPublicationForm} from 'modules/ClaimPublication';
+import {ClaimPublication} from 'modules/ClaimPublication';
 
 export default class App extends React.Component {
 
@@ -28,7 +28,6 @@ export default class App extends React.Component {
         loaded: PropTypes.bool.isRequired,
         loadAccount: PropTypes.func.isRequired,
         menuDrawerOpen: PropTypes.bool.isRequired,
-        dialogbox: PropTypes.object.isRequired,
         toggleMenuDrawer: PropTypes.func.isRequired
     };
 
@@ -82,7 +81,7 @@ export default class App extends React.Component {
 
         const isAuthorizedUser = loaded && account !== null && account.get('id') !== undefined;
         const components = {
-            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublicationForm, ClaimPublication
+            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication
         };
         const landingPage =  isAuthorizedUser ? Dashboard : Browse;
         const menuItems = isAuthorizedUser ?

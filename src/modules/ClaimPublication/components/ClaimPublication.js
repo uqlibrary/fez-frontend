@@ -1,127 +1,135 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-import Immutable from 'immutable';
 
 // forms & custom components
-import {SearchResults} from 'modules/SearchResults';
-import {InlineLoader, StandardCard} from 'uqlibrary-react-toolbox';
+import {PublicationsList} from 'modules/PublicationsList';
+import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+
 import {locale} from 'config';
+import {searchPossiblyYourPublications, hidePublications} from 'actions';
 
 export default class ClaimPublication extends React.Component {
 
     static propTypes = {
-        account: PropTypes.object,
-        claimPublicationResults: PropTypes.object,
-        clearSearchResults: PropTypes.func,
-        dispatch: PropTypes.func,
+        publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
-        loadUsersPublications: PropTypes.func,
-        markPublicationsNotMine: PropTypes.func
+        history: PropTypes.object.isRequired,
+        dispatch: PropTypes.func
     };
-
-    static defaultProps = {
-        searchResultsList: null
-    };
-
     constructor(props) {
         super(props);
 
-        this.props.clearSearchResults();
+        this.state = {
+            publicationToHide: null
+        };
     }
 
     componentDidMount() {
-        const {account, loadUsersPublications} = this.props;
-        loadUsersPublications(account.get('id'));
+        this.props.dispatch(searchPossiblyYourPublications('uqifraze'));
     }
 
-    extractResultSet = () => {
-        const {claimPublicationResults} = this.props;
-        const claimPublicationsInformation = locale.pages.claimPublications;
-        let resultSet = {};
-
-        // limit the number of results
-        if (claimPublicationResults.size > 0) {
-            resultSet = Immutable.fromJS(claimPublicationResults);
-
-            if (resultSet.length > claimPublicationsInformation.maxSearchResults) {
-                resultSet = resultSet.slice(0, claimPublicationsInformation.maxSearchResults);
-            }
+    _hidePublication = () => {
+        if (this.state.publicationToHide) {
+            this.props.dispatch(hidePublications([this.state.publicationToHide]))
+                .then(() => {
+                    this.props.dispatch(searchPossiblyYourPublications('uqifraze'));
+                    this.setState({publicationToHide: null});
+                });
         }
+    }
 
-        return resultSet;
+    _confirmHidePublication = (item) => {
+        this.setState({publicationToHide: item});
+        this.hideConfirmationBox.showConfirmation();
     };
 
-    confirmMarkPublicationsNotMine = () => {
-        // const dialogConfig = locale.pages.claimPublications.claimPublicationResults.dialog.markNotMine;
-        // const combinedConfig = Object.assign({}, dialogConfig, {primaryHandleFn: this.markPublicationsNotMine});
-        // this.props.dispatch(showDialogBox(combinedConfig));
+    _hideAllPublications = () => {
+        this.props.dispatch(hidePublications(this.props.publicationsList))
+            .then(() => {
+                this.props.dispatch(searchPossiblyYourPublications('uqifraze'));
+                this.setState({publicationToHide: null});
+            });
+    }
+
+    _confirmHideAllPublications = () => {
+        this.hideAllConfirmationBox.showConfirmation();
     };
 
-    markPublicationsNotMine = () => {
-        const {account, markPublicationsNotMine} = this.props;
-        const resultSet = this.extractResultSet();
+    _claimPublication = (item) => {
+        // TODO: pass item to claim form
+        // TODO: route should not be hardcoded, should come from config/menu
+        console.log('todo: pass item to claim form');
+        console.log(item);
+        // this.props.history.push('/claim-publications');
+    }
 
-        // retrieve the publication ids
-        const pids = resultSet.map(result => {
-            return {pid: result.get('rek_pid')};
-        });
-
-        markPublicationsNotMine(account.get('id'), pids.toJS());
-    };
+    _navigateToDashboard = () => {
+        // TODO: route should not be hardcoded, should come from config/menu
+        // TODO: should navigation be handled by top-level container only, eg pass on as props:
+        // TODO: this.props.navigateToDashboard() and this.props.navigateToClaimForm(item) <- fixes issue of linking item
+        this.props.history.push('/dashboard');
+    }
 
     render() {
-        const claimPublicationsInformation = locale.pages.claimPublications;
-        const resultsInformation = claimPublicationsInformation.claimPublicationResults;
-        const noRecordsInformation = resultsInformation.noMatchingPublications;
-        const {
-            claimPublicationResults,
-            loadingSearch
-        } = this.props;
-
-        const resultSet = this.extractResultSet();
-        const noOfResults = claimPublicationResults.size;
-
-        const resultsCountText = `${resultSet.size} out of ${noOfResults} potential match(es) displayed. Select any item to claim it as your work.`;
+        const txt = locale.pages.claimPublications;
+        const actions = [
+            {
+                label: txt.searchResults.claim,
+                handleAction: this._claimPublication
+            },
+            {
+                label: txt.searchResults.hide,
+                handleAction: this._confirmHidePublication
+            }
+        ];
         return (
-            <div className="layout-fill">
-                <h1 className="title is-3">{claimPublicationsInformation.title}</h1>
+            <StandardPage title={txt.title}>
+                <ConfirmDialogBox onRef={ref => (this.hideAllConfirmationBox = ref)}
+                                  onAction={this._hideAllPublications}
+                                  locale={txt.hideAllPublicationsConfirmation} />
 
-                {loadingSearch &&
+                <ConfirmDialogBox onRef={ref => (this.hideConfirmationBox = ref)}
+                                  onAction={this._confirmHidePublication}
+                                  locale={txt.hidePublicationConfirmation} />
+
+                {
+                    this.props.loadingSearch &&
                     <div className="is-centered">
-                        <InlineLoader message="Searching for your publications..." />
+                        <InlineLoader message={txt.loadingMessage} />
                     </div>
                 }
-
-                {!loadingSearch && noOfResults > 0 &&
+                {
+                    !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
+                    <StandardCard {...txt.noResultsFound}>
+                        {txt.noResultsFound.text}
+                    </StandardCard>
+                }
+                {
+                    !this.props.loadingSearch && this.props.publicationsList.length > 0 &&
                     <div>
-                        <SearchResults
-                            dataSource={resultSet}
-                            title={resultsInformation.title}
-                            explanationText={resultsCountText}
-                            claimRecordBtnLabel={resultsInformation.claimRecordBtnLabel}
-                            help={resultsInformation.help}
-                        />
+                        <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
+                            <div>
+                                {txt.searchResults.text.replace('[resultsCount]', this.props.publicationsList.length)}
+                            </div>
+                            <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
+                        </StandardCard>
                         <div className="layout-card">
                             <div className="columns">
                                 <div className="column is-hidden-mobile" />
                                 <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
                                     <RaisedButton
-                                        label={claimPublicationsInformation.formButtons.notMineLabel}
+                                        label={txt.searchResults.hideAll}
                                         secondary
                                         fullWidth
-                                        onTouchTap={this.confirmMarkPublicationsNotMine}
+                                        onTouchTap={this._confirmHideAllPublications}
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
                 }
-
-                {!loadingSearch && noOfResults === 0 &&
-                    <StandardCard {...noRecordsInformation} />
-                }
-            </div>
+            </StandardPage>
         );
     }
 }
