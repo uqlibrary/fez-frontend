@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {TextField, StandardCard} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
+import {validation} from 'config';
 
 export default class PublicationSearchForm extends Component {
 
@@ -29,6 +30,7 @@ export default class PublicationSearchForm extends Component {
                                    floatingLabelText={this.props.locale.fieldLabels.search}
                                    autoComplete="off"
                                    autoFocus
+                                   validate={[validation.required]}
                             />
                         </div>
                         <div className="column is-narrow is-helpicon">

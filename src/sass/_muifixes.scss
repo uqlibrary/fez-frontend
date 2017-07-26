@@ -35,3 +35,8 @@ input::-ms-clear {
 .is-mui-spacing-button {
   margin-top: 30px !important;
 }
+
+.requiredField label:after {
+  content: " *";
+  color: $error-color;
+}

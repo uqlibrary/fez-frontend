@@ -97,8 +97,9 @@ export default class AddRecord extends React.Component {
         ];
         return (
             <div>
-                {this.props.loadingSearch &&
-                    (<div className="is-centered">
+                {
+                    this.props.loadingSearch &&
+                    <div className="is-centered">
                         {
                             // TODO: KL: move into a component with nice loading indicators?
                         }
@@ -110,44 +111,48 @@ export default class AddRecord extends React.Component {
                             <span>CROSSREF {this.props.loadingPublicationSources && this.props.loadingPublicationSources.crossref ? this.props.loadingPublicationSources.crossrefCount : 'loading...'} </span>
                         </div>
                         <InlineLoader message="Searching for your publications..." />
-                    </div>)
+                    </div>
                 }
 
                 {
-                    (!this.props.loadingSearch || this.props.publicationsList.length > 0) &&
+                    !this.props.loadingSearch && this.props.publicationsList.length > 0 &&
                     <StandardCard {...txt.searchResults}>
                         <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length)}</div>
                         <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
                     </StandardCard>
                 }
 
-                {!this.props.loadingSearch && this.props.publicationsList.length === 0 &&
-                    <StandardCard {...txt.noResultsFound} />
+                {
+                    !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
+                    <StandardCard {...txt.noResultsFound}>
+                        {txt.noResultsFound.text}
+                    </StandardCard>
                 }
 
-                {!this.props.loadingSearch &&
+                {
+                    !this.props.loadingSearch &&
                     <div className="layout-card">
-                            <div className="columns">
-                                <div className="column is-hidden-mobile"/>
-                                <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    fullWidth
-                                    label={txt.cancel}
-                                    onTouchTap={this._cancelWorkflow}
-                                />
-                                </div>
-                                <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    label={txt.submit}
-                                    secondary
-                                    fullWidth
-                                    autoFocus={this.props.publicationsList.length === 0}
-                                    keyboardFocused={this.props.publicationsList.length === 0}
-                                    onTouchTap={this._showNewRecordForm}
-                                />
-                                </div>
+                        <div className="columns">
+                            <div className="column is-hidden-mobile"/>
+                            <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                fullWidth
+                                label={txt.cancel}
+                                onTouchTap={this._cancelWorkflow}
+                            />
+                            </div>
+                            <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                label={txt.submit}
+                                secondary
+                                fullWidth
+                                autoFocus={this.props.publicationsList.length === 0}
+                                keyboardFocused={this.props.publicationsList.length === 0}
+                                onTouchTap={this._showNewRecordForm}
+                            />
                             </div>
                         </div>
+                    </div>
                 }
             </div>
         );

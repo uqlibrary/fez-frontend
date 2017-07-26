@@ -21,60 +21,62 @@ export default class JournalArticleForm extends Component {
         const txt = locale.components.publicationForm.journalArticle;
 
         // TODO: get publication sub types for this publication type
-        const subtypeValues = [{
-            'cvr_id': 4699,
-            'cvr_parent_cvo_id': 453573,
-            'cvr_child_cvo_id': 453574,
-            'controlled_vocab': {
-                'cvo_id': 453574,
-                'cvo_title': 'Article (original research)',
-                'cvo_desc': '',
-                'cvo_image_filename': null,
-                'cvo_external_id': null,
-                'cvo_hide': 0,
-                'cvo_order': 2,
-                'cvo_lat': null,
-                'cvo_long': null,
-                'cvo_policy': null,
-                'controlled_vocab_children': []
-            }
-        },
+        const subtypeValues = [
             {
-            'cvr_id': 4700,
-            'cvr_parent_cvo_id': 453573,
-            'cvr_child_cvo_id': 453575,
-            'controlled_vocab': {
-                'cvo_id': 453575,
-                'cvo_title': 'Critical review of research, literature review, critical commentary',
-                'cvo_desc': '',
-                'cvo_image_filename': null,
-                'cvo_external_id': null,
-                'cvo_hide': 0,
-                'cvo_order': 4,
-                'cvo_lat': null,
-                'cvo_long': null,
-                'cvo_policy': null,
-                'controlled_vocab_children': []
-            }
-        },
+                'cvr_id': 4699,
+                'cvr_parent_cvo_id': 453573,
+                'cvr_child_cvo_id': 453574,
+                'controlled_vocab': {
+                    'cvo_id': 453574,
+                    'cvo_title': 'Article (original research)',
+                    'cvo_desc': '',
+                    'cvo_image_filename': null,
+                    'cvo_external_id': null,
+                    'cvo_hide': 0,
+                    'cvo_order': 2,
+                    'cvo_lat': null,
+                    'cvo_long': null,
+                    'cvo_policy': null,
+                    'controlled_vocab_children': []
+                }
+            },
             {
-            'cvr_id': 4704,
-            'cvr_parent_cvo_id': 453573,
-            'cvr_child_cvo_id': 453579,
-            'controlled_vocab': {
-                'cvo_id': 453579,
-                'cvo_title': 'Creative work',
-                'cvo_desc': '',
-                'cvo_image_filename': null,
-                'cvo_external_id': null,
-                'cvo_hide': 0,
-                'cvo_order': 16,
-                'cvo_lat': null,
-                'cvo_long': null,
-                'cvo_policy': null,
-                'controlled_vocab_children': []
+                'cvr_id': 4700,
+                'cvr_parent_cvo_id': 453573,
+                'cvr_child_cvo_id': 453575,
+                'controlled_vocab': {
+                    'cvo_id': 453575,
+                    'cvo_title': 'Critical review of research, literature review, critical commentary',
+                    'cvo_desc': '',
+                    'cvo_image_filename': null,
+                    'cvo_external_id': null,
+                    'cvo_hide': 0,
+                    'cvo_order': 4,
+                    'cvo_lat': null,
+                    'cvo_long': null,
+                    'cvo_policy': null,
+                    'controlled_vocab_children': []
+                }
+            },
+            {
+                'cvr_id': 4704,
+                'cvr_parent_cvo_id': 453573,
+                'cvr_child_cvo_id': 453579,
+                'controlled_vocab': {
+                    'cvo_id': 453579,
+                    'cvo_title': 'Creative work',
+                    'cvo_desc': '',
+                    'cvo_image_filename': null,
+                    'cvo_external_id': null,
+                    'cvo_hide': 0,
+                    'cvo_order': 16,
+                    'cvo_lat': null,
+                    'cvo_long': null,
+                    'cvo_policy': null,
+                    'controlled_vocab_children': []
+                }
             }
-        }];
+        ];
 
         const renderSubTypeItems = subtypeValues.map((item) => {
             return <MenuItem value={item.controlled_vocab.cvo_title} primaryText={item.controlled_vocab.cvo_title} key={item.controlled_vocab.cvo_id}/>;
@@ -93,6 +95,7 @@ export default class JournalArticleForm extends Component {
                                    multiLine
                                    rows={1}
                                    floatingLabelText={txt.information.fieldLabels.articleTitle}
+                                   className="requiredField"
                                    validate={[validation.required]}
                                    style={{marginBottom: '-12px'}}
                             />
@@ -102,7 +105,9 @@ export default class JournalArticleForm extends Component {
                         <div className="column is-two-thirds">
                             <Field component={TextField}
                                    name="fez_record_search_key_journal_name.rek_journal_name"
-                                   type="text" fullWidth
+                                   type="text"
+                                   className="requiredField"
+                                   fullWidth
                                    floatingLabelText={txt.information.fieldLabels.journalTitle}
                                    validate={[validation.required]}
                             />
@@ -154,6 +159,7 @@ export default class JournalArticleForm extends Component {
                                            maxLength="4"
                                            floatingLabelText={txt.information.fieldLabels.date.year}
                                            floatingLabelFixed
+                                           className="requiredField"
                                            validate={[validation.dateTimeYear]}
                                     />
                                 </div>
@@ -165,6 +171,7 @@ export default class JournalArticleForm extends Component {
                             <Field component={SelectField}
                                    name="rek_subtype"
                                    fullWidth
+                                   className="requiredField"
                                    floatingLabelText={txt.information.fieldLabels.subtype}>
                                 <MenuItem
                                     primaryText={txt.information.fieldLabels.subtype}

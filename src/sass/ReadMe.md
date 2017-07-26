@@ -10,6 +10,7 @@ __Table of Contents__
     * 12 Columns
     * Offsets
 * Typography
+    * Form required fields
 * Helpers
     * Float
     * Overlay
@@ -165,6 +166,21 @@ __Body copy__
 ```
 <div className="body-1">Body Text</div>
 ```
+
+__Required field indicator__
+
+`.requiredField` class added to Redux-form Field MUI component to add a required field indicator (a red *)
+
+```
+<Field component={SelectField}
+       name="fieldXXX"
+       className="requiredField"
+       hintText="Publication subtype">
+    ...
+</Field>
+```
+
+
 ### Helpers
 
 We have extracted the [helpers](http://bulma.io/documentation/modifiers/helpers/)and [responsive helpers](http://bulma.io/documentation/modifiers/responsive-helpers/) from Bulma, as their CSS file contained alot of CSS resetting etc we didnt require. You may use these on elements within .column or on .column elements themselves. You can apply these classes to any element for the intended result.

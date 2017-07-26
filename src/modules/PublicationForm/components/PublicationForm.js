@@ -77,6 +77,7 @@ export default class PublicationForm extends Component {
                            fullWidth
                            floatingLabelText={txt.publicationType.inputLabelText}
                            floatingLabelFixed
+                           className="requiredField"
                            hintText={txt.publicationType.inputLabelText}>
                         {publicationTypeItems}
                     </Field>
