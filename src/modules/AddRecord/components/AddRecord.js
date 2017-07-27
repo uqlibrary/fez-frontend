@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
 import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import SearchDashboard from 'modules/PublicationsList/components/SearchDashboard';
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
@@ -96,24 +97,13 @@ export default class AddRecord extends React.Component {
             }
         ];
         return (
-            <div>
-                {
-                    this.props.loadingSearch &&
-                    <div className="is-centered">
-                        {
-                            // TODO: KL: move into a component with nice loading indicators?
-                        }
-                        <span>{this.props.loadingPublicationSources ? this.props.loadingPublicationSources.totalSearchedCount : 0} out of 4 (WOS, Scopus, CrossRef, Pubmed)</span>
-                        <div>
-                            <span>WOS {this.props.loadingPublicationSources && this.props.loadingPublicationSources.wos ? this.props.loadingPublicationSources.wosCount : 'loading...'} </span>
-                            <span>SCOPUS {this.props.loadingPublicationSources && this.props.loadingPublicationSources.scopus ? this.props.loadingPublicationSources.scopusCount : 'loading...'} </span>
-                            <span>PUBMED {this.props.loadingPublicationSources && this.props.loadingPublicationSources.pubmed ? this.props.loadingPublicationSources.pubmedCount : 'loading...'} </span>
-                            <span>CROSSREF {this.props.loadingPublicationSources && this.props.loadingPublicationSources.crossref ? this.props.loadingPublicationSources.crossrefCount : 'loading...'} </span>
-                        </div>
-                        <InlineLoader message={txt.loadingMessage} />
-                    </div>
-                }
-
+            <div className="columns is-gapless is-multiline searchWrapper">
+                {/* Mobile search dashboard (progress bar) */}
+                <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">
+                    <SearchDashboard loadingPublicationSources={this.props.loadingPublicationSources} mobile />
+                </div>
+                {/* Search results */}
+                <div className="column is-10-desktop is-8-tablet is-12-mobile">
                 {
                     !this.props.loadingSearch && this.props.publicationsList.length > 0 &&
                     <StandardCard {...txt.searchResults}>
@@ -121,7 +111,10 @@ export default class AddRecord extends React.Component {
                         <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
                     </StandardCard>
                 }
-
+                {
+                    this.props.loadingSearch &&
+                    <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
+                }
                 {
                     !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
                     <StandardCard {...txt.noResultsFound}>
@@ -135,25 +128,30 @@ export default class AddRecord extends React.Component {
                         <div className="columns">
                             <div className="column is-hidden-mobile"/>
                             <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                fullWidth
-                                label={txt.cancel}
-                                onTouchTap={this._cancelWorkflow}
-                            />
+                                <RaisedButton
+                                    fullWidth
+                                    label={txt.cancel}
+                                    onTouchTap={this._cancelWorkflow}
+                                />
                             </div>
                             <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                label={txt.submit}
-                                secondary
-                                fullWidth
-                                autoFocus={this.props.publicationsList.length === 0}
-                                keyboardFocused={this.props.publicationsList.length === 0}
-                                onTouchTap={this._showNewRecordForm}
-                            />
+                                <RaisedButton
+                                    label={txt.submit}
+                                    secondary
+                                    fullWidth
+                                    autoFocus={this.props.publicationsList.length === 0}
+                                    keyboardFocused={this.props.publicationsList.length === 0}
+                                    onTouchTap={this._showNewRecordForm}
+                                />
                             </div>
                         </div>
                     </div>
                 }
+                </div>
+                {/* Desktop search dashboard */}
+                <div className="column is-2-desktop is-4-tablet is-hidden-mobile">
+                    <SearchDashboard loadingPublicationSources={this.props.loadingPublicationSources} />
+                </div>
             </div>
         );
     }
@@ -176,11 +174,7 @@ export default class AddRecord extends React.Component {
                         }
                     </Stepper>
                 </div>
-                {
-                    // TODO: KL: remove all inline styles
-                }
-                <div style={{width: '100%', maxWidth: '1320px', margin: '0 auto'}}>
-                    <div style={{margin: '0', overflow: 'hidden'}}>
+                <div className="layout-fill">
                         {
                             this.state.stepperIndex === 0  &&
                             <PublicationSearchForm
@@ -198,8 +192,6 @@ export default class AddRecord extends React.Component {
                                 onFormCancel={this._cancelWorkflow}
                                 initialValues={this.state.initialValues} />
                         }
-
-                    </div>
                 </div>
             </StandardPage>
         );

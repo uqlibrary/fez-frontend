@@ -7,7 +7,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import AuthorsPublicationsCount from '../../DonutChart/components/AuthorsPublicationsCount';
-import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox';
+import {AuthorsPublicationsPerYearChart, Alert} from 'uqlibrary-react-toolbox';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 class Dashboard extends React.Component {
 
@@ -80,6 +80,8 @@ class Dashboard extends React.Component {
                                     </div> )}
                         </div>
                     </div>
+
+                    <Alert type="help" title="Title" message="This is a test" />
 
                     <div className="columns">
                         <div className="column">

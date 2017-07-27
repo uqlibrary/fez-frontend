@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 
-import {TextField, SelectField, StandardCard} from 'uqlibrary-react-toolbox';
+import { TextField, SelectField, StandardCard, PartialDateField } from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 
@@ -113,57 +113,7 @@ export default class JournalArticleForm extends Component {
                             />
                         </div>
                         <div className="column">
-                            <div className="columns">
-                                <div className="column">
-                                    <Field component={TextField}
-                                           name="partialDateDay"
-                                           maxLength="2"
-                                           type="text"
-                                           style={{marginTop: '12px'}}
-                                           fullWidth
-                                           floatingLabelText={txt.information.fieldLabels.date.day}
-                                           floatingLabelFixed
-                                           validate={[validation.dateTimeDay]}
-                                    />
-                                </div>
-                                <div className="form-spacer"/>
-                                <div className="column">
-                                    <Field component={SelectField}
-                                           name="partialDateMonth"
-                                           fullWidth
-                                           style={{marginTop: '12px'}}
-                                           floatingLabelText={txt.information.fieldLabels.date.month}
-                                           floatingLabelFixed>
-                                        <MenuItem key={-1} value="-1" primaryText=""/>
-                                        <MenuItem key={0} value="0" primaryText="January"/>
-                                        <MenuItem key={1} value="1" primaryText="February"/>
-                                        <MenuItem key={2} value="2" primaryText="March"/>
-                                        <MenuItem key={3} value="3" primaryText="April"/>
-                                        <MenuItem key={4} value="4" primaryText="May"/>
-                                        <MenuItem key={5} value="5" primaryText="June"/>
-                                        <MenuItem key={6} value="6" primaryText="July"/>
-                                        <MenuItem key={7} value="7" primaryText="August"/>
-                                        <MenuItem key={8} value="8" primaryText="September"/>
-                                        <MenuItem key={9} value="9" primaryText="October"/>
-                                        <MenuItem key={10} value="10" primaryText="November"/>
-                                        <MenuItem key={11} value="11" primaryText="December"/>
-                                    </Field>
-                                </div>
-                                <div className="form-spacer"/>
-                                <div className="column">
-                                    <Field component={TextField}
-                                           name="partialDateYear"
-                                           type="text"
-                                           fullWidth
-                                           style={{marginTop: '12px'}}
-                                           maxLength="4"
-                                           floatingLabelText={txt.information.fieldLabels.date.year}
-                                           floatingLabelFixed
-                                           className="requiredField"
-                                           validate={[validation.dateTimeYear]}
-                                    />
-                                </div>
-                            </div>
+                            <Field name="rek_date" component={ PartialDateField } allowPartial />
                         </div>
                     </div>
                     <div className="columns">

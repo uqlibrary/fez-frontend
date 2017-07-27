@@ -1,6 +1,6 @@
 import React from 'react';
 import FontIcon from 'material-ui/FontIcon';
-import {StandardCard} from 'uqlibrary-react-toolbox';
+import { StandardCard } from 'uqlibrary-react-toolbox';
 
 export default {
     global: {
@@ -62,65 +62,65 @@ export default {
         about: {
             title: 'About UQ eSpace',
             children: (
-                <StandardCard>
-                    UQ eSpace is the single authoritative source for the research outputs and research data of the
-                        staff and students of the University of Queensland and is the archival home of UQ Research
-                        Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
-                        publications to the wider world and provides data for mandatory Government reporting
-                        requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
-                        systems, including Academic Portal and the DataHub. It operates as an institutional repository
-                        for open access publications, research datasets and other digitised materials created by staff
-                        of the University such as print materials, photographs, audio materials, videos, manuscripts and
-                        other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
-                        publication profile of researchers at UQ.
-                    <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
-                        requires UQ researchers to make publications arising from their research openly available via UQ
-                        eSpace. It has also implemented a Research Data Management policy that sets out the requirements
-                        for University of Queensland researchers to ensure that their research data are managed
-                        according to legal, statutory, ethical and funding body requirements.</p>
-                    <h3>General Enquiries</h3>
-                    <p>
-                        Tel: 07 334 69775 <br/>
-                        Email: espace@library.uq.edu.au <br/>
-                    </p>
-                    <h3>Staff contact</h3>
-                    <p>
-                        Andrew Heath <br/>
-                        Manager, UQ eSpace<br/>
-                        Tel: 07 334 69981<br/>
-                        Email: a.heath@library.uq.edu.au<br/>
-                    </p>
-                    <p>
-                        Mary-Anne Marrington<br/>
-                        Senior Librarian, UQ eSpace<br/>
-                        Tel: 07 334 69775<br/>
-                        Email: m.marrington@library.uq.edu.au<br/>
-                    </p>
-                </StandardCard>
+              <StandardCard>
+                  UQ eSpace is the single authoritative source for the research outputs and research data of the
+                  staff and students of the University of Queensland and is the archival home of UQ Research
+                  Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
+                  publications to the wider world and provides data for mandatory Government reporting
+                  requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
+                  systems, including Academic Portal and the DataHub. It operates as an institutional repository
+                  for open access publications, research datasets and other digitised materials created by staff
+                  of the University such as print materials, photographs, audio materials, videos, manuscripts and
+                  other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
+                  publication profile of researchers at UQ.
+                  <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
+                      requires UQ researchers to make publications arising from their research openly available via UQ
+                      eSpace. It has also implemented a Research Data Management policy that sets out the requirements
+                      for University of Queensland researchers to ensure that their research data are managed
+                      according to legal, statutory, ethical and funding body requirements.</p>
+                  <h3>General Enquiries</h3>
+                  <p>
+                      Tel: 07 334 69775 <br/>
+                      Email: espace@library.uq.edu.au <br/>
+                  </p>
+                  <h3>Staff contact</h3>
+                  <p>
+                      Andrew Heath <br/>
+                      Manager, UQ eSpace<br/>
+                      Tel: 07 334 69981<br/>
+                      Email: a.heath@library.uq.edu.au<br/>
+                  </p>
+                  <p>
+                      Mary-Anne Marrington<br/>
+                      Senior Librarian, UQ eSpace<br/>
+                      Tel: 07 334 69775<br/>
+                      Email: m.marrington@library.uq.edu.au<br/>
+                  </p>
+              </StandardCard>
             )
         },
         browse: {
             title: 'Browse eSpace',
             text: ( <div>
-                    <p>Welcome to The University of Queensland's institutional digital repository</p>
-                    <p>
-                        <a href="https://auth.library.uq.edu.au/login">Please, login to continue.</a>
-                    </p>
-                </div>
+                  <p>Welcome to The University of Queensland's institutional digital repository</p>
+                  <p>
+                      <a href="https://auth.library.uq.edu.au/login">Please, login to continue.</a>
+                  </p>
+              </div>
             ),
             help: {
                 title: 'Browse eSpace help',
                 text: (
-                    <div>
-                        <h3>Browse</h3>
-                        <p>
-                            Latest articles....
-                        </p>
-                        <h3>Browse collections</h3>
-                        <p>
-                            Latest collections....
-                        </p>
-                    </div>
+                  <div>
+                      <h3>Browse</h3>
+                      <p>
+                          Latest articles....
+                      </p>
+                      <h3>Browse collections</h3>
+                      <p>
+                          Latest collections....
+                      </p>
+                  </div>
                 ),
                 buttonLabel: 'no worries!'
             }
@@ -128,9 +128,9 @@ export default {
         addRecord: {
             title: 'Add a missing record to eSpace',
             stepper: [
-                { label: 'Search for your publication' },
-                { label: 'Search results' },
-                { label: 'Add your publication' }
+                {label: 'Search for your publication'},
+                {label: 'Search results'},
+                {label: 'Add your publication'}
             ],
             step1: {
                 title: 'Search for your publication',
@@ -360,11 +360,14 @@ export default {
                 help: {
                     title: 'Claim a publication',
                     text: (
-                        <div>
-                            <p>
-                                Mauris pharetra vel arcu in hendrerit. Ut iaculis, quam id cursus fringilla, velit enim sodales dui, sed commodo massa justo quis dui. Nulla ornare massa nibh, quis laoreet eros ultrices nec. Curabitur efficitur ipsum ut metus dignissim ornare. Vestibulum fringilla viverra tortor ac hendrerit.
-                            </p>
-                        </div>
+                      <div>
+                          <p>
+                              Mauris pharetra vel arcu in hendrerit. Ut iaculis, quam id cursus fringilla, velit enim
+                              sodales dui, sed commodo massa justo quis dui. Nulla ornare massa nibh, quis laoreet eros
+                              ultrices nec. Curabitur efficitur ipsum ut metus dignissim ornare. Vestibulum fringilla
+                              viverra tortor ac hendrerit.
+                          </p>
+                      </div>
                     ),
                     button: 'OK'
                 },
@@ -380,18 +383,20 @@ export default {
                 fields: {
                     filenameLabel: 'Filename selected',
                     filenameRestrictions: (
-                        <div className="fileInstructions">
-                            <h3>File name restrictions</h3>
-                            <div style={{width: '100%'}}>
-                                <ul>
-                                    <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and 0-9 only)</li>
-                                    <li>Only numbers and lowercase characters in the file extension</li>
-                                    <li>Under 45 characters</li>
-                                    <li>Only one file extension (on period (.) character) and</li>
-                                    <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
-                                </ul>
-                            </div>
-                        </div>
+                      <div className="fileInstructions">
+                          <h3>File name restrictions</h3>
+                          <div style={{width: '100%'}}>
+                              <ul>
+                                  <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and
+                                      0-9 only)
+                                  </li>
+                                  <li>Only numbers and lowercase characters in the file extension</li>
+                                  <li>Under 45 characters</li>
+                                  <li>Only one file extension (on period (.) character) and</li>
+                                  <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
+                              </ul>
+                          </div>
+                      </div>
                     ),
                     accessConditionsLabel: 'Access conditions',
                     embargoDateLabel: 'Embargo date',
@@ -416,7 +421,39 @@ export default {
                     secondaryButtonLabel: 'No'
                 }
             }
-        }
+        },
+        searchDashboard: {
+            title: 'Repository search',
+            repositories: [
+                {
+                    id: 'wos',
+                    title: 'WOS',
+                    icon: '../../../images/wos_icon.svg'
+                },
+                {
+                    id: 'scopus',
+                    title: 'SCOPUS',
+                    icon: '../../../images/scopus_icon.svg'
+                },
+                {
+                    id: 'espace',
+                    title: 'ESPACE',
+                    icon: '../../../images/espace_icon.svg'
+                },
+                {
+                    id: 'pubmed',
+                    title: 'PUBMED',
+                    icon: '../../../images/pubmed_icon.svg'
+                },
+                {
+                    id: 'crossref',
+                    title: 'CROSSREF',
+                    icon: '../../../images/crossref_icon.svg'
+                },
+            ],
+            pubtitle: ' records',
+            noOfRepos: 4
+        },
     },
     sharedComponents: {
         authors: {
@@ -494,25 +531,25 @@ export default {
             },
             fields: {
                 filenameRestrictions: (
-                    <div className="columns file-instructions">
-                        <div className="column">
-                            <h3>File upload restrictions</h3>
-                            <div>
-                                Please ensure your files:
-                                <ul>
-                                    <li>begin with a letter and are less than 45 characters long</li>
-                                    <li>contain only upper and lowercase alphanumeric characters, and underscores</li>
-                                    <li>have only a single period which precedes the file extension: “.pdf”</li>
-                                    <li>are uploaded individually and not inside a folder</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="column upload-instructions">
-                            <FontIcon
-                                className="material-icons">cloud_upload</FontIcon>
-                            <p>Click here to select files, or drag files into this area to upload</p>
-                        </div>
-                    </div>
+                  <div className="columns file-instructions">
+                      <div className="column">
+                          <h3>File upload restrictions</h3>
+                          <div>
+                              Please ensure your files:
+                              <ul>
+                                  <li>begin with a letter and are less than 45 characters long</li>
+                                  <li>contain only upper and lowercase alphanumeric characters, and underscores</li>
+                                  <li>have only a single period which precedes the file extension: “.pdf”</li>
+                                  <li>are uploaded individually and not inside a folder</li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div className="column upload-instructions">
+                          <FontIcon
+                            className="material-icons">cloud_upload</FontIcon>
+                          <p>Click here to select files, or drag files into this area to upload</p>
+                      </div>
+                  </div>
                 ),
                 fileAccess: 'fileAccess',
                 datepickerAccess: 'accessDate',

@@ -11,7 +11,7 @@ const onSubmit = (values, dispatch) => {
     const files = []; // TODO: will become a part of values
     // set default values for a new unapproved record
     // TODO: date should be a part of redux-form data
-    const data = {...values.toJS(), ...NEW_RECORD_DEFAULT_VALUES, rek_date: '2000-1-1'};
+    const data = {...values.toJS(), ...NEW_RECORD_DEFAULT_VALUES};
     return dispatch(createNewRecord(data, files))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
@@ -26,23 +26,9 @@ const onSubmit = (values, dispatch) => {
         });
 };
 
-const validate = (values) => {
+const validate = () => {
     // reset global errors, eg form submit failure
     stopSubmit(FORM_NAME, null);
-
-    const errors = {};
-    // validate partial date of custom date picker
-    if (values.get('partialDateYear') && values.get('partialDateMonth') && values.get('partialDateDay')) {
-        const parsedDate = new Date(
-            parseInt(values.get('partialDateYear'), 10),
-            parseInt(values.get('partialDateMonth'), 10),
-            parseInt(values.get('partialDateDay'), 10));
-
-        if (parsedDate.getMonth() !== parseInt(values.get('partialDateMonth'), 10)) {
-            errors.partialDateDay = 'Invalid date';
-        }
-    }
-    return errors;
 };
 
 let PublicationFormContainer = reduxForm({
