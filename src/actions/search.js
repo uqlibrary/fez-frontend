@@ -30,7 +30,7 @@ export const externalSources = [
 ];
 
 export function createSearchPromise(source, queryString, dispatch) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         dispatch({type: `${SEARCH_LOADING}@${source}`});
         getSearchExternal(source, queryString)
             .then(data => {
@@ -41,12 +41,12 @@ export function createSearchPromise(source, queryString, dispatch) {
                 resolve(data);
             })
             .catch((error) => {
-                console.log(error);
                 dispatch({
                     type: `${SEARCH_FAILED}@${source}`,
                     payload: error
                 });
-                reject(error);
+                // do not reject - not to prevent Promise.all throwing an error
+                resolve([]);
             });
     });
 }
