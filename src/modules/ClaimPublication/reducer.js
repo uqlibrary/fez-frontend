@@ -6,7 +6,7 @@ import {
 } from 'actions';
 
 export const initialState = {
-    possibleCounts: 0,
+    possibleCounts: null,
     publicationsList: [],
     loadingSearch: true,
     hidingPublications: false
