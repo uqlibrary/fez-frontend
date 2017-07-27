@@ -108,6 +108,10 @@ export default class AddRecord extends React.Component {
                       <StandardCard {...txt.searchResults}>
                           <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length)}</div>
                           <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
+                          {
+                              this.props.loadingSearch &&
+                              <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
+                          }
                       </StandardCard>
                   }
 
@@ -142,10 +146,6 @@ export default class AddRecord extends React.Component {
                               </div>
                           </div>
                       </div>
-                  }
-                  {
-                      this.props.loadingSearch &&
-                      <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                   }
               </div>
               {/* Desktop search dashboard */}
