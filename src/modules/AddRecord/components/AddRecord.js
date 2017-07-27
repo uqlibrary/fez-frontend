@@ -102,7 +102,7 @@ export default class AddRecord extends React.Component {
                   <SearchDashboard loadingPublicationSources={this.props.loadingPublicationSources} mobile/>
               </div>
               {/* Search results */}
-              <div className="column is-10-desktop is-8-tablet is-12-mobile">
+              <div className="column is-9-desktop is-8-tablet is-12-mobile">
                   {
                       this.props.publicationsList.length > 0 &&
                       <StandardCard {...txt.searchResults}>
@@ -149,7 +149,7 @@ export default class AddRecord extends React.Component {
                   }
               </div>
               {/* Desktop search dashboard */}
-              <div className="column is-2-desktop is-4-tablet is-hidden-mobile">
+              <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
                   <SearchDashboard loadingPublicationSources={this.props.loadingPublicationSources}/>
               </div>
           </div>
