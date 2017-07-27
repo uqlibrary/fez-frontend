@@ -4,10 +4,6 @@ import LinearProgress from 'material-ui/LinearProgress';
 import CircularProgress from 'material-ui/CircularProgress';
 import { locale } from 'config';
 
-const thompsonIcon = require('images/loader_bg.gif');
-
-import './_SearchDashboard.scss';
-
 const SearchDashboard = ({loadingPublicationSources, mobile}) => {
     const txt = locale.components.searchDashboard;
 
@@ -22,9 +18,7 @@ const SearchDashboard = ({loadingPublicationSources, mobile}) => {
                           {item.title}
                           <span className="is-pulled-right">
                               {loadingPublicationSources && loadingPublicationSources[item.id] ? ( loadingPublicationSources[`${item.id}Count`] + ' record(s)')
-                                : ( <CircularProgress size={14} thickness={2}
-                                                      style={{backgroundImage: thompsonIcon}}
-                                /> )}
+                                : ( <CircularProgress size={14} thickness={2} /> )}
                           </span>
                       </div>
                     ))}
