@@ -15,20 +15,15 @@ const SearchDashboard = ({loadingPublicationSources, mobile}) => {
             <div className="searchDashboardDesktop">
                 <h3 className="title is-5">{txt.title}</h3>
                 <div className="body-2">
-
-                    {locale.components.searchDashboard.repositories.map(item => (
-                      <div>
-                          <img className="repoIcon" src={item.icon} alt={item.title}/>
+                    {locale.components.searchDashboard.repositories.map((item, index) => (
+                      <div key={index} className="searchDashboardList">
                           {item.title}
                           <span className="is-pulled-right">
-                              {loadingPublicationSources &&
-                              loadingPublicationSources[item.id] ? loadingPublicationSources[item.id + 'Count'] + ' record(s)' :
-                                <CircularProgress size={12} thickness={2}/>
-                              }
+                              {loadingPublicationSources && loadingPublicationSources[item.id] ? ( loadingPublicationSources[`${item.id}Count`] + ' record(s)')
+                                : ( <CircularProgress size={14} thickness={2}/> )}
                           </span>
                       </div>
                     ))}
-
                 </div>
             </div>
           )}

@@ -436,11 +436,6 @@ export default {
                     icon: '../../../images/scopus_icon.svg'
                 },
                 {
-                    id: 'espace',
-                    title: 'ESPACE',
-                    icon: '../../../images/espace_icon.svg'
-                },
-                {
                     id: 'pubmed',
                     title: 'PUBMED',
                     icon: '../../../images/pubmed_icon.svg'
