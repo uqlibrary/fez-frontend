@@ -109,12 +109,12 @@ export default class AddRecord extends React.Component {
                     <StandardCard {...txt.searchResults}>
                         <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length)}</div>
                         <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
+                    </StandardCard>
+                 }
                     {
                         this.props.loadingSearch &&
                         <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                     }
-                    </StandardCard>
-                 }
                 {
                     !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
                     <StandardCard {...txt.noResultsFound}>

@@ -164,7 +164,7 @@ export default {
                         buttonLabel: 'Ok'
                     },
                 },
-                loadingMessage: 'Searching for your publications...',
+                loadingMessage: 'Searching for publications...',
                 cancel: 'Abandon and search again',
                 submit: 'Create a new eSpace record',
                 claim: 'Claim this publication'
