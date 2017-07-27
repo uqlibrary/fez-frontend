@@ -1,0 +1,26 @@
+@import '~uqlibrary-react-toolbox/sass/variables';
+div.searchWrapper.columns {
+    max-width: 1300px !important;
+    margin: 0 auto;
+}
+.searchDashboardDesktop {
+  padding: 24px 24px 0 0;
+  min-width: 140px;
+  h3.title {
+    color: $theme-color;
+    margin-bottom: 6px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+}
+
+.mobileWrapper {
+  padding: 12px 5% !important;
+  .mobileSearchBar {
+    background-color: lighten($theme-color, 50) !important;
+    height: 12px !important;
+    & div {
+      background-color: $theme-color !important;
+    }
+  }
+}
