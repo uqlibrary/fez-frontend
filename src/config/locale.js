@@ -427,22 +427,22 @@ export default {
             repositories: [
                 {
                     id: 'wos',
-                    title: 'WOS',
+                    title: 'World of science',
                     icon: '../../../images/wos_icon.svg'
                 },
                 {
                     id: 'scopus',
-                    title: 'SCOPUS',
+                    title: 'Scopus',
                     icon: '../../../images/scopus_icon.svg'
                 },
                 {
                     id: 'pubmed',
-                    title: 'PUBMED',
+                    title: 'PubMed',
                     icon: '../../../images/pubmed_icon.svg'
                 },
                 {
                     id: 'crossref',
-                    title: 'CROSSREF',
+                    title: 'Crossref',
                     icon: '../../../images/crossref_icon.svg'
                 },
             ],
