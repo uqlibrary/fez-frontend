@@ -26,23 +26,9 @@ const onSubmit = (values, dispatch) => {
         });
 };
 
-const validate = (values) => {
+const validate = () => {
     // reset global errors, eg form submit failure
     stopSubmit(FORM_NAME, null);
-
-    const errors = {};
-    // validate partial date of custom date picker
-    if (values.get('partialDateYear') && values.get('partialDateMonth') && values.get('partialDateDay')) {
-        const parsedDate = new Date(
-            parseInt(values.get('partialDateYear'), 10),
-            parseInt(values.get('partialDateMonth'), 10),
-            parseInt(values.get('partialDateDay'), 10));
-
-        if (parsedDate.getMonth() !== parseInt(values.get('partialDateMonth'), 10)) {
-            errors.partialDateDay = 'Invalid date';
-        }
-    }
-    return errors;
 };
 
 let PublicationFormContainer = reduxForm({
