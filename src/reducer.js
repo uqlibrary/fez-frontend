@@ -12,6 +12,7 @@ import {addRecordReducer} from './modules/AddRecord';
 import {fileUploadReducer, authorLinkingReducer} from './modules/SharedComponents';
 
 import authorsReducer from 'reducers/authors';
+import currentAuthorReducer from 'reducers/currentAuthor';
 
 const rootReducer = combineReducers({
     form: formReducer,
@@ -25,6 +26,7 @@ const rootReducer = combineReducers({
     // migrated reducers
     addRecordReducer,
     claimPublicationReducer,
+    currentAuthorReducer,
     authorsReducer
 });
 

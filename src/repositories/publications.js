@@ -1,6 +1,7 @@
 import {post, get} from './generic';
 
 export const GET_POSSIBLE_PUBLICATIONS_API = 'publications/possible-unclaimed';
+export const GET_COUNT_POSSIBLE_PUBLICATIONS_API = 'publications/possible-counts';
 export const POST_HIDE_POSSIBLE_PUBLICATIONS_API = 'publications/hide-possible';
 export const POST_CLAIM_POSSIBLE_PUBLICATIONS_API = 'publications/claim-possible';
 
@@ -11,6 +12,15 @@ export const POST_CLAIM_POSSIBLE_PUBLICATIONS_API = 'publications/claim-possible
  */
 export function getPossibleUnclaimedPublications(userName) {
     return get(`${GET_POSSIBLE_PUBLICATIONS_API}/${userName}`);
+}
+
+/**
+ * Loads a count of possible unclaimed publications per user name
+ * @param {string} userName of user for whom to apply the action
+ * @returns {Promise}
+ */
+export function getCountPossibleUnclaimedPublications(userName) {
+    return get(`${GET_COUNT_POSSIBLE_PUBLICATIONS_API}/${userName}`);
 }
 
 /**

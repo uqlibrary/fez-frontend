@@ -10,9 +10,9 @@ import {externalDoiSearchResultList, internalDoiSearchResultList, externalPubMed
 import {publicationTypeList} from './data/publicationTypes';
 import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
-import {claimPublication, claimPublicationEmpty, hidePublications} from './data/claimPublication';
+import {claimPublication, claimPublicationEmpty, hidePublications, possibleCounts} from './data/claimPublication';
 import {documentAccessTypes} from './data/documentAccessTypes';
-import {authorsList} from './data/authors';
+import {authorsList, existingAuthor} from './data/authors';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 2000 });
@@ -56,8 +56,17 @@ mock.onGet('records/types').reply(200, publicationTypeList);
 mock.onGet(/vocabularies\/[0-9]/).reply(200, publicationSubTypeList);
 
 // Mock the authors endpoint
+// get authors search results
 mock.onGet(/authors\/search\?query=*/).reply(200, authorsList);
-// mock.onGet(/authors\/search\?query=*/).passThrough();
+
+// Mock get current author details
+mock.onGet(/authors/).reply(200, existingAuthor);
+
+// Error codes:
+// 404: author not found
+// mock.onGet(/authors/).reply(404);
+// 403: current user is not authorised
+// mock.onGet(/authors/).reply(403);
 
 // Mock academics publication years endpoint response
 mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsBig);
@@ -68,6 +77,7 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
 
 // Mock claim publication results endpoint response
 mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublication);
+mock.onGet(/(publications\/possible-counts)/).reply(200, possibleCounts);
 // mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublicationEmpty);
 
 // Mock hide publication results endpoint response

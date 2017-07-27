@@ -6,7 +6,7 @@ import Dashboard from '../components/Dashboard';
 let DashboardPage = connect(state => {
     return {
         account: state.getIn(['app', 'account']),
-        claimPublicationResults: state.get('claimPublication').get('claimPublicationResults')
+        claimPublicationResults: [] // state.get('claimPublication').get('claimPublicationResults')
     };
 }, () => {
     return {

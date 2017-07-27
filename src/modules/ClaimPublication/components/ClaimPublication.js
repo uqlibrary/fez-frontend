@@ -14,7 +14,9 @@ export default class ClaimPublication extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
+        possibleCounts: PropTypes.object,
         history: PropTypes.object.isRequired,
+        currentAuthor: PropTypes.object,
         dispatch: PropTypes.func
     };
     constructor(props) {
@@ -25,31 +27,34 @@ export default class ClaimPublication extends React.Component {
         };
     }
 
-    componentDidMount() {
-        this.props.dispatch(searchPossiblyYourPublications('uqifraze'));
+    componentWillMount() {
+        if (this.props.currentAuthor) {
+            this.props.dispatch(searchPossiblyYourPublications(this.props.currentAuthor));
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.currentAuthor && nextProps.currentAuthor !== this.props.currentAuthor) {
+            // wait until props are updated and current author is set to get their possible publications
+            this.props.dispatch(searchPossiblyYourPublications(nextProps.currentAuthor));
+        }
     }
 
     _hidePublication = () => {
         if (this.state.publicationToHide) {
-            this.props.dispatch(hidePublications([this.state.publicationToHide]))
-                .then(() => {
-                    this.props.dispatch(searchPossiblyYourPublications('uqifraze'));
-                    this.setState({publicationToHide: null});
-                });
+            this.props.dispatch(hidePublications([this.state.publicationToHide], this.props.currentAuthor));
+            this.setState({publicationToHide: null});
         }
     }
 
     _confirmHidePublication = (item) => {
+        // temporary keep which publication to hide in the state
         this.setState({publicationToHide: item});
         this.hideConfirmationBox.showConfirmation();
     };
 
     _hideAllPublications = () => {
-        this.props.dispatch(hidePublications(this.props.publicationsList))
-            .then(() => {
-                this.props.dispatch(searchPossiblyYourPublications('uqifraze'));
-                this.setState({publicationToHide: null});
-            });
+        this.props.dispatch(hidePublications(this.props.publicationsList, this.props.currentAuthor));
     }
 
     _confirmHideAllPublications = () => {
@@ -90,7 +95,7 @@ export default class ClaimPublication extends React.Component {
                                   locale={txt.hideAllPublicationsConfirmation} />
 
                 <ConfirmDialogBox onRef={ref => (this.hideConfirmationBox = ref)}
-                                  onAction={this._confirmHidePublication}
+                                  onAction={this._hidePublication}
                                   locale={txt.hidePublicationConfirmation} />
 
                 {
@@ -110,7 +115,11 @@ export default class ClaimPublication extends React.Component {
                     <div>
                         <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                             <div>
-                                {txt.searchResults.text.replace('[resultsCount]', this.props.publicationsList.length)}
+                                {
+                                    txt.searchResults.text
+                                        .replace('[resultsCount]', this.props.publicationsList.length)
+                                        .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
+                                }
                             </div>
                             <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
                         </StandardCard>

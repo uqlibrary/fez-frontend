@@ -13,7 +13,8 @@ function processError(error, resolve, reject) {
         && error.response !== null && typeof(error.response) !== 'undefined'
         && error.response.hasOwnProperty('status')
         && (error.response.status === 404 || error.response.status === 500 || error.response.status === 422 || error.response.status === 504)) {
-        resolve([]);
+        reject(error);
+        // resolve([]);
     } else {
         reject(error);
     }

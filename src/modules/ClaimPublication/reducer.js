@@ -1,21 +1,20 @@
 import {
-    POSSIBLY_YOURS_PUBLICATIONS_LOADING,
-    POSSIBLY_YOURS_PUBLICATIONS_COMPLETED,
-    POSSIBLY_YOURS_PUBLICATIONS_FAILED,
-    // HIDE_PUBLICATIONS_LOADING,
-    HIDE_PUBLICATIONS_COMPLETED
+    POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+    POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+    POSSIBLY_YOUR_PUBLICATIONS_FAILED,
+    COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
 } from 'actions';
 
 export const initialState = {
-    totalCount: 0, // TODO: get total count
+    possibleCounts: 0,
     publicationsList: [],
-    loadingSearch: false,
+    loadingSearch: true,
     hidingPublications: false
 };
 
 const handlers = {
 
-    [POSSIBLY_YOURS_PUBLICATIONS_LOADING]: (state) => {
+    [POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
             loadingSearch: true,
@@ -23,7 +22,7 @@ const handlers = {
         };
     },
 
-    [POSSIBLY_YOURS_PUBLICATIONS_COMPLETED]: (state, action) => {
+    [POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
         return {
             ...state,
             loadingSearch: false,
@@ -31,19 +30,20 @@ const handlers = {
         };
     },
 
-    [POSSIBLY_YOURS_PUBLICATIONS_FAILED]: (state) => {
+    [POSSIBLY_YOUR_PUBLICATIONS_FAILED]: (state) => {
         return {
             ...state,
-            loadingSearch: true,
+            loadingSearch: false,
             publicationsList: []
         };
     },
 
-    [HIDE_PUBLICATIONS_COMPLETED]: (state) => {
+    [COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
         return {
-            ...state
+            ...state,
+            possibleCounts: action.payload
         };
-    },
+    }
 };
 
 export default function claimPublicationReducer(state = initialState, action) {
@@ -51,6 +51,5 @@ export default function claimPublicationReducer(state = initialState, action) {
     if (!handler) {
         return state;
     }
-    console.log(action.type);
     return handler(state, action);
 }

@@ -27,6 +27,7 @@ export default class App extends React.Component {
         account: PropTypes.object,
         loaded: PropTypes.bool.isRequired,
         loadAccount: PropTypes.func.isRequired,
+        getCurrentAuthor: PropTypes.func.isRequired,
         menuDrawerOpen: PropTypes.bool.isRequired,
         toggleMenuDrawer: PropTypes.func.isRequired
     };
@@ -43,6 +44,8 @@ export default class App extends React.Component {
      */
     componentDidMount() {
         this.props.loadAccount();
+        this.props.getCurrentAuthor();
+
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
     }

@@ -4,8 +4,8 @@ import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
     return {
-        publicationsList: state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationsList : {},
-        loadingSearch: state.get('claimPublicationReducer').loadingSearch
+        ...state.get('claimPublicationReducer'),
+        ...state.get('currentAuthorReducer')
     };
 };
 
