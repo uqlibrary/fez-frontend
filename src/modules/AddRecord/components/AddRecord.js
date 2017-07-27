@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
 import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
-import SearchDashboard from './SearchDashboard';
+import SearchDashboard from 'modules/PublicationsList/components/SearchDashboard';
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
@@ -98,12 +98,12 @@ export default class AddRecord extends React.Component {
         ];
         return (
             <div className="columns is-gapless is-multiline searchWrapper">
-                {/* Mobile loading bar */}
+                {/* Mobile search dashboard (progress bar) */}
                 <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">
                     <SearchDashboard loadingPublicationSources={this.props.loadingPublicationSources} mobile />
                 </div>
                 {/* Search results */}
-                <div className="column is-9-desktop is-8-tablet is-12-mobile">
+                <div className="column is-10-desktop is-8-tablet is-12-mobile">
                 {
                     !this.props.loadingSearch && this.props.publicationsList.length > 0 &&
                     <StandardCard {...txt.searchResults}>
@@ -128,27 +128,28 @@ export default class AddRecord extends React.Component {
                         <div className="columns">
                             <div className="column is-hidden-mobile"/>
                             <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                fullWidth
-                                label={txt.cancel}
-                                onTouchTap={this._cancelWorkflow}
-                            />
+                                <RaisedButton
+                                    fullWidth
+                                    label={txt.cancel}
+                                    onTouchTap={this._cancelWorkflow}
+                                />
                             </div>
                             <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                label={txt.submit}
-                                secondary
-                                fullWidth
-                                autoFocus={this.props.publicationsList.length === 0}
-                                keyboardFocused={this.props.publicationsList.length === 0}
-                                onTouchTap={this._showNewRecordForm}
-                            />
+                                <RaisedButton
+                                    label={txt.submit}
+                                    secondary
+                                    fullWidth
+                                    autoFocus={this.props.publicationsList.length === 0}
+                                    keyboardFocused={this.props.publicationsList.length === 0}
+                                    onTouchTap={this._showNewRecordForm}
+                                />
                             </div>
                         </div>
                     </div>
                 }
                 </div>
-                <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
+                {/* Desktop search dashboard */}
+                <div className="column is-2-desktop is-4-tablet is-hidden-mobile">
                     <SearchDashboard loadingPublicationSources={this.props.loadingPublicationSources} />
                 </div>
             </div>

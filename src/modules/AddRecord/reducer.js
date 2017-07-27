@@ -1,12 +1,14 @@
 import {
     SEARCH_LOADING,
     SEARCH_COMPLETED,
-    SEARCH_FAILED
+    SEARCH_FAILED,
+    SEARCH_SOURCE_COUNT
 } from 'actions';
 
 const initialSearchSources = {
     loadingPublicationSources: {
-        totalSearchedCount: 0
+        totalSearchedCount: 0,
+        totalSourcesCount: 0
     }
 };
 
@@ -17,6 +19,21 @@ export const initialState = {
 };
 
 const handlers = {
+
+    [SEARCH_SOURCE_COUNT]: (state, action) => {
+        // set search completed for a specific source
+        const loadingPublicationSources = {
+            loadingPublicationSources: {
+                ...state.loadingPublicationSources,
+                totalSourcesCount: action.payload
+            }
+        };
+
+        return {
+            ...state,
+            ...loadingPublicationSources
+        };
+    },
 
     [SEARCH_LOADING]: (state) => {
         return {

@@ -7,6 +7,7 @@ import {getSearchExternal} from 'repositories/search';
 export const SEARCH_LOADING = 'SEARCH_LOADING';
 export const SEARCH_COMPLETED = 'SEARCH_COMPLETED';
 export const SEARCH_FAILED = 'SEARCH_FAILED';
+export const SEARCH_SOURCE_COUNT = 'SEARCH_SOURCE_COUNT';
 
 /**
  * External search sources
@@ -62,6 +63,11 @@ export function searchPublications(searchQuery) {
         // TODO: implement internal search when available
         // const internalSearchPropmise = ...
         const externalSearchPropmises = externalSources.map(source => createSearchPromise(source, searchQuery, dispatch));
+
+        dispatch({
+            type: SEARCH_SOURCE_COUNT,
+            payload: externalSearchPropmises.length
+        });
 
         Promise.all(externalSearchPropmises)
             .then((data) => {

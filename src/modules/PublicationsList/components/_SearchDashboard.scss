@@ -1,11 +1,16 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 div.searchWrapper.columns {
-    max-width: 1300px !important;
+    max-width: 1280px !important;
     margin: 0 auto;
 }
 .searchDashboardDesktop {
   padding: 24px 24px 0 0;
   min-width: 140px;
+  .repoIcon{
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+  }
   h3.title {
     color: $theme-color;
     margin-bottom: 6px;
@@ -14,10 +19,10 @@ div.searchWrapper.columns {
   }
 }
 
-.mobileWrapper {
+.searchDashboardMobile {
   padding: 12px 5% !important;
-  .mobileSearchBar {
-    background-color: lighten($theme-color, 50) !important;
+  .searchDashboardBar {
+    background-color: lighten($secondary-color, 30) !important;
     height: 12px !important;
     & div {
       background-color: $theme-color !important;
