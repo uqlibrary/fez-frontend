@@ -93,19 +93,19 @@ export default class PublicationForm extends Component {
                 }
                     {
                         this.props.submitFailed && this.props.error &&
-                        <Alert type="error_outline" title="Error" message={this.props.error} outsidelayout />
+                        <Alert type="error_outline" title="Error" message={this.props.error} outsideLayout />
                     }
                     {
                         this.props.dirty && this.props.invalid && !this.props.submitFailed &&
-                        <Alert type="warning" title="Validation" message={'Form cannot be submitted until all fields are valid...'} outsidelayout />
+                        <Alert type="warning" title="Validation" message={'Form cannot be submitted until all fields are valid...'} outsideLayout />
                     }
                     {
                         this.props.submitting &&
-                        <Alert type="info_outline" title="Saving" message={'New publication is being saved...'} outsidelayout />
+                        <Alert type="info_outline" title="Saving" message={'New publication is being saved...'} outsideLayout />
                     }
                     {
                         this.props.submitSucceeded &&
-                        <Alert type="info" title="Success" message={'New publication has been saved...'} outsidelayout />
+                        <Alert type="info" title="Success" message={'New publication has been saved...'} outsideLayout />
                     }
                 <div className="layout-card">
                     <div className="columns">
