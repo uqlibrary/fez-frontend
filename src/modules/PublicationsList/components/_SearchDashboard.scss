@@ -21,7 +21,6 @@ div.searchWrapper.columns {
   padding: 12px 5% !important;
   .searchDashboardBar {
     background-color: lighten($secondary-color, 30) !important;
-    background-image: url('../../../images/loader_bg.gif');
     height: 12px !important;
     & div {
       background-color: $theme-color !important;

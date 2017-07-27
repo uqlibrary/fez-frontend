@@ -123,7 +123,7 @@ export default class AddRecord extends React.Component {
                 }
 
                 {
-                    !this.props.loadingSearch &&
+                    this.props.publicationsList.length > 0 &&
                     <div className="layout-card">
                         <div className="columns">
                             <div className="column is-hidden-mobile"/>
