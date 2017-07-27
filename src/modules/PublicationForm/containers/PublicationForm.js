@@ -11,7 +11,7 @@ const onSubmit = (values, dispatch) => {
     const files = []; // TODO: will become a part of values
     // set default values for a new unapproved record
     // TODO: date should be a part of redux-form data
-    const data = {...values.toJS(), ...NEW_RECORD_DEFAULT_VALUES, rek_date: '2000-1-1'};
+    const data = {...values.toJS(), ...NEW_RECORD_DEFAULT_VALUES};
     return dispatch(createNewRecord(data, files))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
