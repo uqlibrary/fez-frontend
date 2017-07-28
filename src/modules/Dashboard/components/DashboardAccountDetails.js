@@ -5,14 +5,14 @@ import Avatar from 'material-ui/Avatar';
 import DashboardResearcherIDs from 'modules/Dashboard/components/DashboardResearcherIDs';
 
 const DashboardAccountDetails = ({account}) => {
-    const avatar = require('../../../../public/images/avatar.png');
+    // const avatar = require('https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_228.jpg');
 
     return (
       <div className="userDetails columns">
            {/* Photo */}
           <div className="column is-narrow">
               <div className="accountHeadshot">
-                  <Avatar size={150} src={avatar} backgroundColor="transparent"/>
+                  <Avatar size={150} src="https://its-ss-uqresearchers.s3.amazonaws.com/photo/228.jpg" backgroundColor="transparent"/>
               </div>
           </div>
           {/* Account details */}
