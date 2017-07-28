@@ -1,12 +1,8 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
 @media all and (min-width: 768px) {
-  .grey-cover {
-    z-index: 2;
-    background-color: #000;
-    opacity: 0.30;
-    height: 80px;
-  }
+
+  //DashbaordAccountDetails
   .image-cover {
     background-image: url('../../public/images/dashboard_cover.jpg');
     background-size: cover;
@@ -15,29 +11,55 @@
     height: 200px;
   }
   .user-information {
-    background-color: rgba(black, 0.33);
-    height: 100%;
-    padding: 20px 20px !important;
-    span.title, span.subtitle {
-      color: $text-color-reverse !important;
+    padding: 24px;
+    .title{
+      margin-bottom: 6px;
+    }
+    .subtitle{
+
+    }
+    .accountHeadshot{
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      overflow: hidden;
+      background-color: $theme-color;
+      color: $text-color-reverse;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 100px;
     }
   }
-  .time-display {
-    color: #FFFF !important;
-    white-space: nowrap;
+
+
+  //ArticleCount
+  .articleCount{
+    height: 100%;
+    padding: 24px;
+    .noOfArticles{
+      font-size: 110px;
+      line-height: 90px;
+      font-weight: 100;
+    }
+    .articlesFrom{
+      font-size: 18px;
+      line-height: 26px;
+      opacity: 0.75;
+      font-weight: 100;
+    }
+    .dateRange{
+     font-size: 30px;
+      line-height: 30px;
+      font-weight: 100;
+      & span {
+        font-size: 24px;
+        opacity: 0.75;
+      }
+    }
   }
 
-  .time {
-    font-size: 14px;
-    color: #FFF;
-  }
 
-  .location {
-    font-size: 12px;
-    color: #FFF;
-    opacity: 0.8;
-  }
-
+  // Lure
   .notification-wrap {
     margin: -1px 0 0 0 !important;
     .button-wrap {
@@ -70,6 +92,11 @@
 
   }
 }
+
+
+
+
+
 
 @media all and (max-width: 768px) {
 
