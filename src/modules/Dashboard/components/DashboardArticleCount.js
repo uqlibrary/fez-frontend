@@ -6,7 +6,7 @@ class DashboardArticleCount extends React.Component {
         return (
           <div className="columns articleCount color-reverse">
               <div className="column is-centered">
-                  <div className="noOfArticles">270</div>
+                  <div className="noOfArticles">38</div>
                   <div className="articlesFrom">eSpace articles from</div>
                   <div className="dateRange">1990<span> to </span>2017</div>
               </div>

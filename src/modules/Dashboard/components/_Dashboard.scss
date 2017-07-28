@@ -2,7 +2,6 @@
 
 @media all and (min-width: 768px) {
 
-  //DashbaordAccountDetails
   .image-cover {
     background-image: url('../../public/images/dashboard_cover.jpg');
     background-size: cover;
@@ -10,7 +9,17 @@
     overflow: hidden;
     height: 200px;
   }
-  .user-information {
+
+  //ResearcherIDs
+  .researcherIDs{
+    padding: 12px;
+    .ORCID{
+
+    }
+  }
+
+  //DashbaordAccountDetails
+  .userDetails {
     padding: 24px;
     .title{
       margin-bottom: 6px;
@@ -19,30 +28,63 @@
 
     }
     .accountHeadshot{
-      width: 100px;
-      height: 100px;
-      border-radius: 50px;
-      overflow: hidden;
-      background-color: $theme-color;
-      color: $text-color-reverse;
-      vertical-align: middle;
-      text-align: center;
-      line-height: 100px;
+      width: 150px;
+      height: 150px;
     }
-  }
+    .accountDetails{
+      .accountTitleName {
+        font-weight: 100;
+      }
+      .accountPositionOrg{
+        font-weight: 100;
+        font-size: 12px;
+      }
+    }
+
+    .researcherIDs{
+      margin: -12px -12px -24px -24px;
+    }
+
+    .researchIDBadge {
+      &.ok {
+        & span {
+          background-color: $available-color !important;
+          color: $text-color-reverse !important;
+        }
+        .researchIDAvatar {
+        }
+      }
+      &.error {
+        & span {
+          background-color: $error-color !important;
+          color: $text-color-reverse !important;
+        }
+        & .researchIDAvatar {
+        }
+      }
+    }
+
+      .researchIDAvatar{
+        margin-right: -20px;
+      }
+      .material-icons{
+        font-size: 16px !important;
+      }
+    }
 
 
   //ArticleCount
   .articleCount{
+    margin: auto 0;
     height: 100%;
     padding: 24px;
     .noOfArticles{
       font-size: 110px;
-      line-height: 90px;
+      line-height: 80px;
       font-weight: 100;
     }
     .articlesFrom{
-      font-size: 18px;
+      font-size: 16px;
       line-height: 26px;
       opacity: 0.75;
       font-weight: 100;

@@ -21,7 +21,10 @@ export const accounts = [
         'hasSession': true,
         'tokenBased': false,
         'canMasquerade': false,
-        'blocked': false
+        'blocked': false,
+        'position': 'Affil Professorial Research Fellow',
+        'org_unit': 'Faculty of Medicine',
+        'orcid_id': 'orcid.org/0000-0000-1234-5678'
     },
     {
         'id': 'uqpfermat',
