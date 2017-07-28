@@ -4,58 +4,63 @@ import Badge from 'material-ui/Badge';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 
-
 const SCOPUSlogo = require('images/scopus_icon.svg');
 const PUBMEDlogo = require('images/pubmed_icon.svg');
 const RIDlogo = require('images/rid_icon.svg');
 const ORCIDlogo = require('images/orcid_icon.svg');
+const GOOGLElogo = require('images/googlescholar_icon.svg');
+
+
+const badgeStyle = {
+    top: 15,
+    right: -5
+};
 
 const DashboardResearcherIDs = ({account}) => {
-    const ORCIDbadgeLink = (
-      <a href={'http://' + account.get('orcid_id')} target="_blank" ><FontIcon className="material-icons">done</FontIcon></a>
-    );
-
-    const RIDbadgeLink = (
-      <a href={'http://' + account.get('orcid_id')} target="_blank" ><FontIcon className="material-icons">close</FontIcon></a>
-    );
-
-    const PUBMEDbadgeLink = (
-      <a href={'http://' + account.get('orcid_id')} target="_blank" ><FontIcon className="material-icons">done</FontIcon></a>
-    );
-
-    const SCOPUSbadgeLink = (
-      <a href={'http://' + account.get('orcid_id')} target="_blank" ><FontIcon className="material-icons">close</FontIcon></a>
-    );
+    const badgeOK = (<FontIcon className="material-icons">done</FontIcon>);
+    const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
 
     return (
       <div className="columns researcherIDs is-gapless">
 
-          {/* ORCHID */}
-          <div className="ORCID column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={ORCIDbadgeLink} badgeStyle={{top: 12, right: -5}}>
-                  <Avatar className="researchIDAvatar" src={ORCIDlogo} backgroundColor="white"/>
-              </Badge>
-          </div>
-
           {/* RESEARCHID */}
           <div className="RID column is-narrow">
-              <Badge className="researchIDBadge error" badgeContent={RIDbadgeLink} badgeStyle={{top: 12, right: -5}}>
-                  <Avatar className="researchIDAvatar" src={RIDlogo} backgroundColor="white"/>
+              <Badge className="researchIDBadge error" badgeContent={badgeOK} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={RIDlogo}/>
               </Badge>
           </div>
 
           {/* SCOPUS */}
           <div className="Scopus column is-narrow">
-              <Badge className="researchIDBadge error" badgeContent={SCOPUSbadgeLink} badgeStyle={{top: 12, right: -5}}>
-                  <Avatar className="researchIDAvatar" src={SCOPUSlogo} backgroundColor="#126370"/>
+              <Badge className="researchIDBadge error" badgeContent={badgeOK} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={SCOPUSlogo}/>
               </Badge>
           </div>
 
           {/* PUBMED */}
           <div className="PubMed column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={PUBMEDbadgeLink} badgeStyle={{top: 12, right: -5}}>
-                  <Avatar className="researchIDAvatar" src={PUBMEDlogo} backgroundColor="white"/>
+              <Badge className="researchIDBadge ok" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={PUBMEDlogo}/>
               </Badge>
+          </div>
+
+          {/* GOOGLE SCHOLAR */}
+          <div className="GoogleScholar column is-narrow">
+              <Badge className="researchIDBadge ok" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={GOOGLElogo}/>
+              </Badge>
+          </div>
+
+          {/* ORCHID */}
+          <div className="ORCID column is-narrow">
+              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={ORCIDlogo}/>
+              </Badge>
+          </div>
+
+          {/* ORCHID LINK */}
+          <div className="column is-narrow">
+              <a className="ORCIDlink" href={'http://' + account.get('orcid_id')} target="_blank">{account.get('orcid_id')}</a>
           </div>
 
       </div>

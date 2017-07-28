@@ -56,18 +56,14 @@ class Dashboard extends React.Component {
 
                       <div className="column is-12 is-hidden-mobile">
                           <div className="image-cover">
-                              <div className="columns is-gapless" style={{height: '100%'}}>
-
-                                  <div className="column" style={{height: '100%'}}>
+                              <div className="columns is-gapless">
+                                  <div className="column">
                                       <DashboardAccountDetails account={account} />
                                   </div>
-
-                                  <div className="column is-narrow" style={{height: '100%'}}s>
+                                  <div className="articleCountColumn column is-narrow">
                                       <DashboardArticleCount />
                                   </div>
                               </div>
-
-
                           </div>
                       </div>
 

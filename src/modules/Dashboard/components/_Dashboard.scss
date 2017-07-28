@@ -6,52 +6,81 @@
     background-image: url('../../public/images/dashboard_cover.jpg');
     background-size: cover;
     background-position: center 25%;
-    overflow: hidden;
-    height: 200px;
+    min-height: 200px;
   }
 
   //ResearcherIDs
-  .researcherIDs{
+  .researcherIDs {
     padding: 12px;
-    .ORCID{
+    .ORCID {
 
     }
   }
 
-  //DashbaordAccountDetails
+  //DashboardAccountDetails
   .userDetails {
     padding: 24px;
-    .title{
+    .title {
       margin-bottom: 6px;
     }
-    .subtitle{
+    .subtitle {
 
     }
-    .accountHeadshot{
+    .accountHeadshot {
       width: 150px;
       height: 150px;
+      &>img {
+        box-shadow: 0 0 15px rgba(black, 0.3);
+      }
     }
-    .accountDetails{
+    .accountDetails {
       .accountTitleName {
         font-weight: 100;
       }
-      .accountPositionOrg{
+      .accountPositionOrg {
         font-weight: 100;
         font-size: 12px;
       }
     }
 
-    .researcherIDs{
-      margin: -12px -12px -24px -24px;
+    // Researcher ID's
+    .researcherIDs {
+      margin: -32px -12px 0px -24px;
+      bottom: -24px !important;
+      position: relative;
+      .researchIDAvatar {
+        margin-right: -20px;
+        box-shadow: 0 0 15px rgba(black, 0.3);
+      }
+      .ORCID { // ORCID required to be more prominent
+        margin-top: -10px;
+        zoom: 1.25;
+        -moz-transform: scale(1.25);
+        @-moz-document url-prefix() {
+         margin-top: 0px;
+        }
+      }
+      a.ORCIDlink {
+        color: rgba($text-color-reverse, 0.8);
+        font-size: 12px;
+        line-height: 7.5;
+        margin: 0 6px;
+        &:hover {
+          color: rgba($text-color-reverse, 1);
+        }
+      }
     }
-
     .researchIDBadge {
+      .material-icons {
+        font-size: 16px !important;
+      }
+      img {
+        background-color: transparent !important;
+      }
       &.ok {
         & span {
           background-color: $available-color !important;
           color: $text-color-reverse !important;
-        }
-        .researchIDAvatar {
         }
       }
       &.error {
@@ -59,48 +88,39 @@
           background-color: $error-color !important;
           color: $text-color-reverse !important;
         }
-        & .researchIDAvatar {
-        }
-      }
-    }
-
-      .researchIDAvatar{
-        margin-right: -20px;
-      }
-      .material-icons{
-        font-size: 16px !important;
-      }
-    }
-
-
-  //ArticleCount
-  .articleCount{
-    margin: auto 0;
-    height: 100%;
-    padding: 24px;
-    .noOfArticles{
-      font-size: 110px;
-      line-height: 80px;
-      font-weight: 100;
-    }
-    .articlesFrom{
-      font-size: 16px;
-      line-height: 26px;
-      opacity: 0.75;
-      font-weight: 100;
-    }
-    .dateRange{
-     font-size: 30px;
-      line-height: 30px;
-      font-weight: 100;
-      & span {
-        font-size: 24px;
-        opacity: 0.75;
       }
     }
   }
 
-
+  //ArticleCount
+  .articleCountColumn {
+    display: inline-flex;
+    .articleCount {
+      color: $text-color-reverse;
+      margin: auto 24px;
+      height: auto;
+      .noOfArticles {
+        font-size: 110px;
+        line-height: 80px;
+        font-weight: 100;
+      }
+      .articlesFrom {
+        font-size: 16px;
+        line-height: 26px;
+        opacity: 0.75;
+        font-weight: 100;
+      }
+      .dateRange {
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 100;
+        & span {
+          font-size: 24px;
+          opacity: 0.75;
+        }
+      }
+    }
+  }
   // Lure
   .notification-wrap {
     margin: -1px 0 0 0 !important;
@@ -113,10 +133,10 @@
         color: rgba($text-color-reverse, 1) !important;
       }
     }
-    .alertText{
+    .alertText {
       padding-top: 18px !important;
     }
-    .alertIcon{
+    .alertIcon {
       padding: 18px 12px 0px 12px !important;
     }
     .alertWrapper {
@@ -135,11 +155,6 @@
   }
 }
 
-
-
-
-
-
 @media all and (max-width: 768px) {
 
   .notification-wrap {
@@ -154,52 +169,18 @@
       line-height: 16px;
     }
     .alertIcon span.material-icons {
-        height: 40px;
-        margin: 0px 12px 0px 0 !important;
-        padding-bottom: 0px !important;
-        font-size: 50px !important;
+      height: 40px;
+      margin: 0px 12px 0px 0 !important;
+      padding-bottom: 0px !important;
+      font-size: 50px !important;
     }
-    .alertWrapper{
+    .alertWrapper {
       margin: 0px !important;
-      button.claim-publications{
+      button.claim-publications {
         color: #FFF !important;
         background-color: darken($warning-color, 7.5%) !important;
         width: 100% !important;
       }
-    }
-  }
-
-  .time {
-    font-size: 14px !important;
-  }
-
-  .dashboard-plans {
-    width: 100%;
-
-    .head {
-      padding: 20px;
-      background-color: $theme-color;
-
-      h2 {
-        color: #FFF;
-      }
-    }
-  }
-
-  .dashboard-collaborators {
-    width: 100%;
-
-    .head {
-      padding: 20px;
-      background-color: $accent-color;
-
-      h2 {
-        color: #FFF;
-      }
-    }
-
-    a {
-      text-decoration: none;
     }
   }
 }
