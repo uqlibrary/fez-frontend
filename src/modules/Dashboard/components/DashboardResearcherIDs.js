@@ -9,6 +9,7 @@ const PUBMEDlogo = require('images/pubmed_icon.svg');
 const RIDlogo = require('images/rid_icon.svg');
 const ORCIDlogo = require('images/orcid_icon.svg');
 const GOOGLElogo = require('images/googlescholar_icon.svg');
+const PUBLONSlogo = require('images/publons_icon.svg');
 
 
 const badgeStyle = {
@@ -23,38 +24,45 @@ const DashboardResearcherIDs = ({account}) => {
     return (
       <div className="columns researcherIDs is-gapless">
 
+          {/* PUBLONS */}
+          <div className="PUBLONS column is-narrow">
+              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={PUBLONSlogo} title="Publons ID is valid"/>
+              </Badge>
+          </div>
+
           {/* RESEARCHID */}
           <div className="RID column is-narrow">
-              <Badge className="researchIDBadge error" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={RIDlogo}/>
+              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={RIDlogo} title="ResearchID is valid"/>
               </Badge>
           </div>
 
           {/* SCOPUS */}
           <div className="Scopus column is-narrow">
-              <Badge className="researchIDBadge error" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={SCOPUSlogo}/>
+              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={SCOPUSlogo} title="Scopus ID is valid"/>
               </Badge>
           </div>
 
           {/* PUBMED */}
           <div className="PubMed column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={PUBMEDlogo}/>
+              <Badge className="researchIDBadge error" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={PUBMEDlogo} title="PubMed ID is missing"/>
               </Badge>
           </div>
 
           {/* GOOGLE SCHOLAR */}
           <div className="GoogleScholar column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={GOOGLElogo}/>
+              <Badge className="researchIDBadge error" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
+                  <Avatar className="researchIDAvatar" src={GOOGLElogo} title="Google Scholar ID is missing"/>
               </Badge>
           </div>
 
           {/* ORCHID */}
           <div className="ORCID column is-narrow">
               <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={ORCIDlogo}/>
+                  <Avatar className="researchIDAvatar" src={ORCIDlogo} title="Orcid ID is valid"/>
               </Badge>
           </div>
 

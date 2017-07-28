@@ -45,7 +45,7 @@
 
     // Researcher ID's
     .researcherIDs {
-      margin: -32px -12px 0px -24px;
+      margin: -32px -12px 0 -24px;
       bottom: -24px !important;
       position: relative;
       .researchIDAvatar {
@@ -57,7 +57,7 @@
         zoom: 1.25;
         -moz-transform: scale(1.25);
         @-moz-document url-prefix() {
-         margin-top: 0px;
+         margin-top: 0;
         }
       }
       a.ORCIDlink {
@@ -137,10 +137,10 @@
       padding-top: 18px !important;
     }
     .alertIcon {
-      padding: 18px 12px 0px 12px !important;
+      padding: 18px 12px 0 12px !important;
     }
     .alertWrapper {
-      margin: 0px !important;
+      margin: 0 !important;
       button.claim-publications {
         color: #FFF !important;
         background-color: darken($warning-color, 7.5%) !important;
@@ -160,22 +160,22 @@
   .notification-wrap {
     margin: -1px 0 0 0 !important;
     .button-wrap {
-      padding-top: 0px !important;
+      padding-top: 0 !important;
     }
     .alertText {
-      padding: 20px 0px 0px 12px !important;
-      margin: 0px 12px 0px 0px !important;
+      padding: 20px 0 0 12px !important;
+      margin: 0 12px 0 0 !important;
       font-size: 16px;
       line-height: 16px;
     }
     .alertIcon span.material-icons {
       height: 40px;
-      margin: 0px 12px 0px 0 !important;
-      padding-bottom: 0px !important;
+      margin: 0 12px 0 0 !important;
+      padding-bottom: 0 !important;
       font-size: 50px !important;
     }
     .alertWrapper {
-      margin: 0px !important;
+      margin: 0 !important;
       button.claim-publications {
         color: #FFF !important;
         background-color: darken($warning-color, 7.5%) !important;
