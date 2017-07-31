@@ -4,3 +4,4 @@ export * from './file';
 export * from './publications';
 export * from './records';
 export * from './search';
+export * from './publicationTypes';
