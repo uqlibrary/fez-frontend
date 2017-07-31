@@ -6,7 +6,7 @@ import { SelectField } from 'uqlibrary-react-toolbox';
 class PublicationSubtypeForm extends Component {
     static propTypes = {
         onChange: PropTypes.func,
-        publicationTypeId: PropTypes.string.isRequired,
+        vocabId: PropTypes.number.isRequired,
         locale: PropTypes.object,
         subtypeList: PropTypes.array
     };
