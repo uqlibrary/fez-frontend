@@ -6,7 +6,7 @@ import FontIcon from 'material-ui/FontIcon';
 
 const thompsonIcon = require('images/thomson_icon.svg');
 const scopusIcon = require('images/scopus_icon.svg');
-const googleScholarIcon = require('images/googlescholar_icon.svg');
+const googleScholarIcon = require('images/google_scholar_icon.svg');
 const altmetricIcon = require('images/altmetric_icon.svg');
 
 import {locale} from 'config';

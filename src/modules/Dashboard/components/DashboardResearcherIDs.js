@@ -4,74 +4,36 @@ import Badge from 'material-ui/Badge';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 
-const SCOPUSlogo = require('images/scopus_icon.svg');
-const PUBMEDlogo = require('images/pubmed_icon.svg');
-const RIDlogo = require('images/rid_icon.svg');
-const ORCIDlogo = require('images/orcid_icon.svg');
-const GOOGLElogo = require('images/googlescholar_icon.svg');
-const PUBLONSlogo = require('images/publons_icon.svg');
-
-
-const badgeStyle = {
-    top: 15,
-    right: -5
-};
+const badgeStyle = {top: 15, right: -5};
 
 const DashboardResearcherIDs = ({account}) => {
     const badgeOK = (<FontIcon className="material-icons">done</FontIcon>);
     const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
 
+    const idList = ['publons', 'researcher', 'scopus', 'pubmed', 'google_scholar', 'orcid'];
+
     return (
-      <div className="columns researcherIDs is-gapless">
+        <div className="columns researcherIDs is-gapless">
+            {idList.map((item, index) => {
+                return (
+                    <div key={index} className={[`${item} column is-narrow`]}>
+                    <Badge className={account.get(`${item}_id`) ? 'researchIDBadge ok' : 'researchIDBadge error'}
+                           badgeContent={account.get(`${item}_id`) ? badgeOK : badgeERROR} badgeStyle={badgeStyle}
+                           title={account.get(`${item}_id`) ? account.get(`${item}_id`) : 'NOT FOUND'}>
+                        <Avatar className="researchIDAvatar" src={`../../src/images/${item}_icon.svg`} title={`${item} ID`}/>
+                    </Badge>
+                </div>
+                );
+            })};
 
-          {/* PUBLONS */}
-          <div className="PUBLONS column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={PUBLONSlogo} title="Publons ID is valid"/>
-              </Badge>
-          </div>
+            {account.get('orcid_id') &&
+            <div className="column is-narrow">
+                <a className="orcidLink" href={'http://orcid.org/' + account.get('orcid_id')}
+                   target="_blank">orcid.org/{account.get('orcid_id')}</a>
+            </div>
+            }
 
-          {/* RESEARCHID */}
-          <div className="RID column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={RIDlogo} title="ResearchID is valid"/>
-              </Badge>
-          </div>
-
-          {/* SCOPUS */}
-          <div className="Scopus column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={SCOPUSlogo} title="Scopus ID is valid"/>
-              </Badge>
-          </div>
-
-          {/* PUBMED */}
-          <div className="PubMed column is-narrow">
-              <Badge className="researchIDBadge error" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={PUBMEDlogo} title="PubMed ID is missing"/>
-              </Badge>
-          </div>
-
-          {/* GOOGLE SCHOLAR */}
-          <div className="GoogleScholar column is-narrow">
-              <Badge className="researchIDBadge error" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={GOOGLElogo} title="Google Scholar ID is missing"/>
-              </Badge>
-          </div>
-
-          {/* ORCHID */}
-          <div className="ORCID column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={ORCIDlogo} title="Orcid ID is valid"/>
-              </Badge>
-          </div>
-
-          {/* ORCHID LINK */}
-          <div className="column is-narrow">
-              <a className="ORCIDlink" href={'http://' + account.get('orcid_id')} target="_blank">{account.get('orcid_id')}</a>
-          </div>
-
-      </div>
+        </div>
     );
 };
 

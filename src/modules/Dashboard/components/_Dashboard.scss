@@ -40,6 +40,7 @@
       .accountPositionOrg {
         font-weight: 100;
         font-size: 12px;
+        min-height: 30px;
       }
     }
 
@@ -52,7 +53,7 @@
         margin-right: -20px;
         box-shadow: 0 0 15px rgba(black, 0.3);
       }
-      .ORCID { // ORCID required to be more prominent
+      .orcid { // ORCID required to be more prominent
         margin-top: -10px;
         zoom: 1.25;
         -moz-transform: scale(1.25);
@@ -60,7 +61,7 @@
          margin-top: 0;
         }
       }
-      a.ORCIDlink {
+      a.orcidLink {
         color: rgba($text-color-reverse, 0.8);
         font-size: 12px;
         line-height: 7.5;
@@ -71,6 +72,9 @@
       }
     }
     .researchIDBadge {
+      &:hover{
+        cursor: pointer;
+      }
       .material-icons {
         font-size: 16px !important;
       }

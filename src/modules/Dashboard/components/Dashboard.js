@@ -8,7 +8,7 @@ import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import AuthorsPublicationsCount from '../../DonutChart/components/AuthorsPublicationsCount';
 import { AuthorsPublicationsPerYearChart } from 'uqlibrary-react-toolbox';
-import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
+// import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
 
 // Dashboard sub-components
 import DashboardArticleCount from 'modules/Dashboard/components/DashboardArticleCount';
@@ -61,7 +61,7 @@ class Dashboard extends React.Component {
                                       <DashboardAccountDetails account={account} />
                                   </div>
                                   <div className="articleCountColumn column is-narrow">
-                                      <DashboardArticleCount />
+                                      <DashboardArticleCount account={account} />
                                   </div>
                               </div>
                           </div>
@@ -116,46 +116,6 @@ class Dashboard extends React.Component {
                               <CardText className="body-1">
                                   <AuthorsPublicationsCount/>
                               </CardText>
-                          </Card>
-                      </div>
-                      <div className="column">
-                          <Card style={{height: '100%'}}>
-                              <Table className="linkedPubsTable" selectable="false">
-                                  <TableHeader adjustForCheckbox="false">
-                                      <TableRow>
-                                          <TableHeaderColumn>eSpace publications linked from:</TableHeaderColumn>
-                                          <TableHeaderColumn>Web of Science</TableHeaderColumn>
-                                          <TableHeaderColumn>Scopus</TableHeaderColumn>
-                                      </TableRow>
-                                  </TableHeader>
-                                  <TableBody>
-                                      <TableRow>
-                                          <TableRowColumn>h-index score</TableRowColumn>
-                                          <TableRowColumn>1</TableRowColumn>
-                                          <TableRowColumn>2</TableRowColumn>
-                                      </TableRow>
-                                      <TableRow>
-                                          <TableRowColumn>Average citation count per publication</TableRowColumn>
-                                          <TableRowColumn>3</TableRowColumn>
-                                          <TableRowColumn>4</TableRowColumn>
-                                      </TableRow>
-                                      <TableRow>
-                                          <TableRowColumn>Total citations</TableRowColumn>
-                                          <TableRowColumn>5</TableRowColumn>
-                                          <TableRowColumn>6</TableRowColumn>
-                                      </TableRow>
-                                      <TableRow>
-                                          <TableRowColumn>Total Publications</TableRowColumn>
-                                          <TableRowColumn>7</TableRowColumn>
-                                          <TableRowColumn>8</TableRowColumn>
-                                      </TableRow>
-                                      <TableRow>
-                                          <TableRowColumn>Publication range</TableRowColumn>
-                                          <TableRowColumn>9</TableRowColumn>
-                                          <TableRowColumn>10</TableRowColumn>
-                                      </TableRow>
-                                  </TableBody>
-                              </Table>
                           </Card>
                       </div>
                   </div>

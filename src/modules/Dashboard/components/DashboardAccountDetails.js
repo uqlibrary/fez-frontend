@@ -17,17 +17,12 @@ const DashboardAccountDetails = ({account}) => {
           </div>
           {/* Account details */}
           <div className="column is-narrow accountDetails">
-              <div className="accountTitleName title is-3 color-reverse">{account.get('title')} {account.get('name')}</div>
+              <div className="accountTitleName title is-3 color-reverse">{account.get('title')} {account.get('given_name')} {account.get('family_name')}</div>
               {/* TODO This will be passed through an array map to produce the list */}
               <div className="accountPositionOrg color-reverse">
                   <strong>{account.get('position')}</strong>
                   {account.get('position').length > 0 ? ', ' : ''}
                   <span className="color-reverse">{account.get('org_unit')}</span></div>
-              <div className="accountPositionOrg color-reverse">
-                  <strong>{account.get('position')}</strong>
-                  {account.get('position').length > 0 ? ', ' : ''}
-                  <span className="color-reverse">{account.get('org_unit')}</span></div>
-              {/* ------------ */}
               <DashboardResearcherIDs account={account} />
           </div>
 
