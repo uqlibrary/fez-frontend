@@ -12,16 +12,21 @@ const DashboardAccountDetails = ({account}) => {
             <div className="column is-narrow">
                 <div className="accountHeadshot">
                     <Avatar size={150}
-                            src={'https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_' + account.get('uqr_id') + '.jpg'}
-                            backgroundColor="transparent"/>
+                            style={{
+                                backgroundImage: 'url("https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_' + account.get('uqr_id') + '.jpg"), url("/public/images/avatar.jpg")',
+                                backgroundSize: 'cover, cover'
+                            }}
+                            backgroundColor="transparent"
+                            aria-label={'Photograph of ' + account.get('title') + ' ' + account.get('given_name') + ' ' + account.get('family_name')}
+                            title={account.get('title') + ' ' + account.get('given_name') + ' ' + account.get('family_name')}/>
                 </div>
             </div>
-            {/* Account details */}
+            {/* Account Name/Positions/OrgUnits */}
             <div className="column is-narrow accountDetails">
                 <div className="accountTitleName title is-3 color-reverse">
                     {account.get('title')} {account.get('given_name')} {account.get('family_name')}
                 </div>
-                <div className="column is-narrow">
+                <div className="column is-paddingless is-marginless is-narrow">
                     {positions.map((item, index) => (
                         <div key={index} className="accountPositionOrg color-reverse">
                             <strong>{item}</strong>

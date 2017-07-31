@@ -21,7 +21,10 @@ const DashboardResearcherIDs = ({account}) => {
                             <Badge
                                 className={account.get(`${item}_id`) ? 'researchIDBadge ok' : 'researchIDBadge error'}
                                 badgeContent={account.get(`${item}_id`) ? badgeOK : badgeERROR} badgeStyle={badgeStyle}
-                                title={account.get(`${item}_id`) ? (account.get(`${item}_id`) + ' - Click to review') : 'Not yet linked - Click to review'}>
+                                aria-label={account.get(`${item}_id`) ? (`Your ${item} ID is ` + account.get(`${item}_id`) + ' - Click to review') :
+                                    (`Your ${item} ID is not yet linked - Click to review`)}
+                                title={account.get(`${item}_id`) ? (`Your ${item} ID is ` + account.get(`${item}_id`) + ' - Click to review') :
+                                    (`Your ${item} ID is not yet linked - Click to review`)}>
                                 <Avatar className="researchIDAvatar" src={`../../src/images/${item}_icon.svg`}
                                         title={`${item} ID`}/>
                             </Badge></a>
@@ -34,7 +37,8 @@ const DashboardResearcherIDs = ({account}) => {
                 <a className="orcidLink"
                    href={'http://orcid.org/' + account.get('orcid_id')}
                    target="_blank"
-                    title="Click to visit your ORCID profile">
+                   aria-label="Click to visit your ORCID profile"
+                   title="Click to visit your ORCID profile">
                     orcid.org/{account.get('orcid_id')}</a>
             </div>
             }
