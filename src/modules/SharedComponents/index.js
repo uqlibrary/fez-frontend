@@ -8,5 +8,6 @@ export {fileUploadReducer} from './FileUploader';
 export {authorLinkingReducer} from './AuthorLinking';
 
 export {PublicationSubtype} from './PublicationSubtype';
+export {SampleForm} from './PublicationSubtype';
 
 
