@@ -1,12 +1,16 @@
 import React from 'react';
-import {PropTypes} from 'prop-types';
+import PropTypes from 'prop-types';
 import {StandardPage, StandardCard} from 'uqlibrary-react-toolbox';
 import {PublicationsList} from '../PublicationsList';
 import {externalTitleSearchResultsList} from 'mock/data/publicationSearch';
+import {SampleForm} from '../SharedComponents';
 
 export default function Browse({title, text, help}) {
     return (
         <StandardPage title={title}>
+            <StandardCard>
+                <SampleForm vocabId={ 174 } />
+            </StandardCard>
             <StandardCard title={title} help={help}>
                 {text}
             </StandardCard>
