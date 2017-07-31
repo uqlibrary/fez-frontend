@@ -17,19 +17,25 @@ const DashboardResearcherIDs = ({account}) => {
             {idList.map((item, index) => {
                 return (
                     <div key={index} className={[`${item} column is-narrow`]}>
-                    <Badge className={account.get(`${item}_id`) ? 'researchIDBadge ok' : 'researchIDBadge error'}
-                           badgeContent={account.get(`${item}_id`) ? badgeOK : badgeERROR} badgeStyle={badgeStyle}
-                           title={account.get(`${item}_id`) ? account.get(`${item}_id`) : 'NOT FOUND'}>
-                        <Avatar className="researchIDAvatar" src={`../../src/images/${item}_icon.svg`} title={`${item} ID`}/>
-                    </Badge>
-                </div>
+                        <a href="https://app.library.uq.edu.au/#/id" target="_blank">
+                            <Badge
+                                className={account.get(`${item}_id`) ? 'researchIDBadge ok' : 'researchIDBadge error'}
+                                badgeContent={account.get(`${item}_id`) ? badgeOK : badgeERROR} badgeStyle={badgeStyle}
+                                title={account.get(`${item}_id`) ? (account.get(`${item}_id`) + ' - Click to review') : 'Not yet linked - Click to review'}>
+                                <Avatar className="researchIDAvatar" src={`../../src/images/${item}_icon.svg`}
+                                        title={`${item} ID`}/>
+                            </Badge></a>
+                    </div>
                 );
             })};
 
             {account.get('orcid_id') &&
             <div className="column is-narrow">
-                <a className="orcidLink" href={'http://orcid.org/' + account.get('orcid_id')}
-                   target="_blank">orcid.org/{account.get('orcid_id')}</a>
+                <a className="orcidLink"
+                   href={'http://orcid.org/' + account.get('orcid_id')}
+                   target="_blank"
+                    title="Click to visit your ORCID profile">
+                    orcid.org/{account.get('orcid_id')}</a>
             </div>
             }
 

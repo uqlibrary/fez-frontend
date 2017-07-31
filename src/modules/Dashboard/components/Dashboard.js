@@ -60,35 +60,35 @@ class Dashboard extends React.Component {
                                   <div className="column">
                                       <DashboardAccountDetails account={account} />
                                   </div>
-                                  <div className="articleCountColumn column is-narrow">
+                                  <div className="articleCountColumn column is-narrow is-hidden-tablet-only">
                                       <DashboardArticleCount account={account} />
                                   </div>
                               </div>
                           </div>
                       </div>
 
-                      <div className="notification-wrap column is-12">
-                          {this.props.claimPublicationResults.size > 0 && this.state.showAppbar && (
-                            <div className="warning alertWrapper">
-                                <div className="columns">
-                                    <div className="column is-narrow alertIcon">
-                                        <FontIcon className="material-icons">warning</FontIcon>
-                                    </div>
-                                    <div className="column alertText">
-                                        {`We have found ${this.props.claimPublicationResults.size} article(s) that could possibly be your work.`}
-                                    </div>
-                                    <div className="column is-narrow claim-button">
-                                        <FlatButton label="Claim your publications now"
-                                                    onTouchTap={this.claimYourPublications}
-                                                    className="claim-publications"/>
-                                    </div>
-                                    <div className="column is-narrow is-hidden-mobile">
-                                        <IconButton onTouchTap={this.hideAppBar}><NavigationClose
-                                          className="hide-appbar"/></IconButton>
-                                    </div>
-                                </div>
-                            </div> )}
-                      </div>
+                       <div className="notification-wrap column is-12">
+                           {this.props.claimPublicationResults.size > 0 && this.state.showAppbar && (
+                             <div className="warning alertWrapper">
+                                 <div className="columns">
+                                     <div className="column is-narrow alertIcon">
+                                         <FontIcon className="material-icons">warning</FontIcon>
+                                     </div>
+                                     <div className="column alertText">
+                                         {`We have found ${this.props.claimPublicationResults.size} article(s) that could possibly be your work.`}
+                                     </div>
+                                     <div className="column is-narrow claim-button">
+                                         <FlatButton label="Claim your publications now"
+                                                     onTouchTap={this.claimYourPublications}
+                                                     className="claim-publications"/>
+                                     </div>
+                                     <div className="column is-narrow is-hidden-mobile">
+                                         <IconButton onTouchTap={this.hideAppBar}><NavigationClose
+                                           className="hide-appbar"/></IconButton>
+                                     </div>
+                                 </div>
+                             </div> )}
+                       </div>
                   </div>
 
                   <div className="columns">

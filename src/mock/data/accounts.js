@@ -24,8 +24,8 @@ export const accounts = [
         'blocked': false,
         'position': 'Affil Professorial Research Fellow',
         'org_unit': 'Faculty of Medicine',
-        'orcid_id': '0000-0000-1234-5678',
-        // Data from authors API from app.lib below
+        'orcid_id': '0000-0001-5386-7925',
+        // Extra data from authors API from app.lib below
         'uqr_id': 14,
         'espace_id': 20288,
         'image_exists': 1,

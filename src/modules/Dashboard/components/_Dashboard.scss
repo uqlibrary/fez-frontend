@@ -9,14 +9,6 @@
     min-height: 200px;
   }
 
-  //ResearcherIDs
-  .researcherIDs {
-    padding: 12px;
-    .ORCID {
-
-    }
-  }
-
   //DashboardAccountDetails
   .userDetails {
     padding: 24px;
@@ -40,13 +32,14 @@
       .accountPositionOrg {
         font-weight: 100;
         font-size: 12px;
-        min-height: 30px;
+        min-height: 16px;
       }
     }
 
     // Researcher ID's
     .researcherIDs {
-      margin: -32px -12px 0 -24px;
+      padding: 12px;
+      margin: -48px -12px 0 -24px;
       bottom: -24px !important;
       position: relative;
       .researchIDAvatar {
