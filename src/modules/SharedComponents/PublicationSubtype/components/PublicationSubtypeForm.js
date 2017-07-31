@@ -6,16 +6,15 @@ import { SelectField } from 'uqlibrary-react-toolbox';
 class PublicationSubtypeForm extends Component {
     static propTypes = {
         onChange: PropTypes.func,
-        vocabId: PropTypes.number.isRequired,
         locale: PropTypes.object,
-        subtypeList: PropTypes.array
+        list: PropTypes.array
     };
 
     static defaultProps = {
         locale: {
             label: 'Publication subtype'
         },
-        subtypeList: []
+        list: []
     };
 
     componentWillUpdate(nextProps, nextState) {
@@ -23,9 +22,9 @@ class PublicationSubtypeForm extends Component {
     }
 
     render() {
-        const { locale, subtypeList } = this.props;
+        const { locale, list } = this.props;
 
-        const renderSubTypeItems = subtypeList.map((item) => {
+        const renderSubTypeItems = list.map((item) => {
             return <MenuItem value={ item.controlled_vocab.cvo_title } primaryText={ item.controlled_vocab.cvo_title } key={ item.controlled_vocab.cvo_id }/>;
         });
 
