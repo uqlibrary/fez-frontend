@@ -13,6 +13,7 @@ import {fileUploadReducer, authorLinkingReducer} from './modules/SharedComponent
 
 import authorsReducer from 'reducers/authors';
 import currentAuthorReducer from 'reducers/currentAuthor';
+import publicationSubtypesReducer from 'reducers/publicationSubtypes';
 
 const rootReducer = combineReducers({
     form: formReducer,
@@ -27,7 +28,8 @@ const rootReducer = combineReducers({
     addRecordReducer,
     claimPublicationReducer,
     currentAuthorReducer,
-    authorsReducer
+    authorsReducer,
+    publicationSubtypesReducer
 });
 
 export default rootReducer;
