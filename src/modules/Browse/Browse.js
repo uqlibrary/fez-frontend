@@ -9,7 +9,7 @@ export default function Browse({title, text, help}) {
     return (
         <StandardPage title={title}>
             <StandardCard>
-                <SampleForm vocabId={ 174 } />
+                <SampleForm/>
             </StandardCard>
             <StandardCard title={title} help={help}>
                 {text}
