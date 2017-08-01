@@ -12,7 +12,7 @@ class SampleForm extends React.Component {
             <form>
                 <StandardCard>
                     <h3>Publication Subtypes</h3>
-                    <Field name="subtypeOne" component={ PublicationSubtype } vocabId={ 453573 } />
+                    <Field name="subtypeOne" component={ PublicationSubtype } vocabId={ 453573 } valueFrom="cvo_id" />
                 </StandardCard>
             </form>
         );

@@ -30,6 +30,5 @@ export default function publicationSubtypesReducer(state = initialState, action)
     if (!handler) {
         return state;
     }
-    console.log(action);
     return handler(state, action);
 }

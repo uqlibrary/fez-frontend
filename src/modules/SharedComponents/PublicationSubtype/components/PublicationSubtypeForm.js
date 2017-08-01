@@ -9,10 +9,12 @@ class PublicationSubtypeForm extends Component {
         onChange: PropTypes.func,
         locale: PropTypes.object,
         subtypes: PropTypes.array,
-        rek_subtype: PropTypes.string
+        rek_subtype: PropTypes.string,
+        valueFrom: PropTypes.string
     };
 
     static defaultProps = {
+        valueFrom: 'cvo_title',
         locale: {
             label: 'Publication subtype'
         }
@@ -36,10 +38,9 @@ class PublicationSubtypeForm extends Component {
     };
 
     render() {
-        const { locale, subtypes } = this.props;
-
+        const { locale, subtypes, valueFrom } = this.props;
         const renderSubTypeItems = subtypes.map((item) => {
-            return <MenuItem value={ item.controlled_vocab.cvo_title } primaryText={ item.controlled_vocab.cvo_title } key={ item.controlled_vocab.cvo_id }/>;
+            return <MenuItem value={ item.controlled_vocab[valueFrom] } primaryText={ item.controlled_vocab.cvo_title } key={ item.controlled_vocab.cvo_id }/>;
         });
 
         return (
