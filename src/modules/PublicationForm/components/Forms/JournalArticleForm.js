@@ -55,7 +55,9 @@ export default class JournalArticleForm extends Component {
                         </div>
                     </div>
                     <div className="columns">
-                        <Field component={ PublicationSubtypeField } vocabId={ this.props.vocabId } />
+                        <div className="column">
+                            <Field name="rek_subtype" component={ PublicationSubtypeField } vocabId={ this.props.vocabId } />
+                        </div>
                     </div>
                 </StandardCard>
 

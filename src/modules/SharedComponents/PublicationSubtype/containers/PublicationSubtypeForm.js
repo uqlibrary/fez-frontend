@@ -28,11 +28,9 @@ class PublicationSubtypeFormContainer extends Component {
             <div>
                 {
                     this.props.subtypesLoading &&
-                    <div className="column">
-                        <SelectField fullWidth className="requiredField">
-                            <MenuItem disabled />
-                        </SelectField>
-                    </div>
+                    <SelectField fullWidth className="requiredField">
+                        <MenuItem disabled />
+                    </SelectField>
                 }
                 {
                     !this.props.subtypesLoading &&

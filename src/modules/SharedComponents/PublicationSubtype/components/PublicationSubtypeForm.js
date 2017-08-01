@@ -44,21 +44,19 @@ class PublicationSubtypeForm extends Component {
         });
 
         return (
-            <div className="column">
-                <SelectField
-                    name="rek_subtype"
-                    fullWidth
-                    value={ this.state.rek_subtype }
-                    className="requiredField"
-                    maxHeight={ 250 }
-                    onChange={ this._onSubtypeSelected }
-                    floatingLabelText={ locale.label }>
-                    <MenuItem
-                        primaryText={ locale.label }
-                        disabled/>
-                    { renderSubTypeItems }
-                </SelectField>
-            </div>
+            <SelectField
+                name="rek_subtype"
+                fullWidth
+                value={ this.state.rek_subtype }
+                className="requiredField"
+                maxHeight={ 250 }
+                onChange={ this._onSubtypeSelected }
+                floatingLabelText={ locale.label }>
+                <MenuItem
+                    primaryText={ locale.label }
+                    disabled/>
+                { renderSubTypeItems }
+            </SelectField>
         );
     }
 }
