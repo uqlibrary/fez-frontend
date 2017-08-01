@@ -2,6 +2,11 @@
 
 @media all and (min-width: 768px) {
 
+  .isLoading{
+    margin: 5% auto;
+    height: 100%;
+    opacity: 0.5;
+  }
   .image-cover {
     background-image: url('../../public/images/dashboard_cover.jpg');
     background-size: cover;
@@ -38,7 +43,7 @@
     // Researcher ID's
     .researcherIDs {
       padding: 12px;
-      margin: -32px -12px 0 -24px;
+      margin: -12px -12px -24px -24px;
       bottom: -24px !important;
       position: relative;
       .researchIDAvatar {
@@ -47,8 +52,8 @@
       }
       .orcid { // ORCID required to be more prominent
         margin-top: -10px;
-        zoom: 1.25;
-        -moz-transform: scale(1.25);
+        zoom: 1.2;
+        -moz-transform: scale(1.2);
         @-moz-document url-prefix() {
          margin-top: 0;
         }

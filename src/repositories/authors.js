@@ -3,6 +3,7 @@ import {get} from './generic';
 
 export const GET_AUTHORS_SEARCH_API = 'authors/search';
 export const GET_CURRENT_AUTHOR_API = 'authors';
+export const GET_AUTHOR_DETAILS_API = 'authors/details';
 
 /**
  * Fetches a list of authors based on search query
@@ -32,4 +33,12 @@ export function fetchAuthors(searchValue) {
  */
 export function fetchCurrentAuthor() {
     return get(GET_CURRENT_AUTHOR_API);
+}
+
+/**
+ * Fetches details for specified author
+ * @returns {Promise}
+ */
+export function fetchAuthorDetails(authorId) {
+    return get(`${GET_AUTHOR_DETAILS_API}/${authorId}`);
 }

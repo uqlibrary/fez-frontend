@@ -12,7 +12,7 @@ import {publicationSubTypeList} from './data/publicationSubTypes';
 import {publicationYearsBig} from './data/academic/publicationYears';
 import {claimPublication, claimPublicationEmpty, hidePublications, possibleCounts} from './data/claimPublication';
 import {documentAccessTypes} from './data/documentAccessTypes';
-import {authorsList, existingAuthor} from './data/authors';
+import {authorsList, existingAuthor, authorDetails} from './data/authors';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 2000 });
@@ -27,7 +27,7 @@ if (queryString.parse(location.search).user === 'null') {
     let account = accounts.find(s => s.id === queryString.parse(location.search).user);
 
     if (account === undefined) {
-        account = accounts.find(s => s.id === 'uqinewton');
+        account = accounts.find(s => s.id === 'uqphugen');
     }
     // mock account route
     mock.onGet(/account\?[0-9]*/).reply(200, account);
@@ -58,6 +58,9 @@ mock.onGet(/vocabularies\/[0-9]/).reply(200, publicationSubTypeList);
 // Mock the authors endpoint
 // get authors search results
 mock.onGet(/authors\/search\?query=*/).reply(200, authorsList);
+
+// Mock get current author details
+mock.onGet(/authors\/details*/).reply(200, authorDetails);
 
 // Mock get current author details
 mock.onGet(/authors/).reply(200, existingAuthor);

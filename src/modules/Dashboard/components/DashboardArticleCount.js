@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DashboardArticleCount = ({account}) => {
-    const articleCount = account.get('espace').get('doc_count');
-    const articleFirstYear = account.get('espace').get('first_year');
-    const articleLastYear = account.get('espace').get('last_year');
-
+const DashboardArticleCount = ({articleCount, articleFirstYear, articleLastYear}) => {
     return (
         <div className="articleCount is-centered">
             {articleCount && (
@@ -20,7 +16,9 @@ const DashboardArticleCount = ({account}) => {
 };
 
 DashboardArticleCount.propTypes = {
-    account: PropTypes.object.isRequired,
+    articleCount: PropTypes.string,
+    articleFirstYear: PropTypes.number,
+    articleLastYear: PropTypes.number,
 };
 
 export default DashboardArticleCount;
