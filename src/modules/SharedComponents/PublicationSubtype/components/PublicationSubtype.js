@@ -1,6 +1,6 @@
 import React from 'react';
-import PublicationSubTypeContainer from '../containers/PublicationSubtype';
+import PublicationSubtypeForm from '../containers/PublicationSubtypeForm';
 
 export default function PublicationSubtype(fieldProps) {
-    return (<PublicationSubTypeContainer onChange={ fieldProps.input.onChange } { ...fieldProps }/>);
+    return (<PublicationSubtypeForm onChange={ fieldProps.input.onChange } { ...fieldProps } />);
 }
