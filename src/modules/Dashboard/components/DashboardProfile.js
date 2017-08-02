@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from './DashboardArticleCount';
-import DashboardResearcherIDs from './DashboardResearcherIDs';
+import DashboardResearcherIDs from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
 const DashboardProfile = ({authorDetails}) => {

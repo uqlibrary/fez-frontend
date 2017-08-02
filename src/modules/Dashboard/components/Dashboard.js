@@ -58,7 +58,7 @@ class Dashboard extends React.Component {
 
                         {/* dashboardProfile */}
                             <div className="column is-12 is-hidden-mobile">
-                                {authorDetails && (
+                                {authorDetails && !authorDetailsLoading && (
                                     <DashboardProfile authorDetails={authorDetails} />
                                 )}
                                 {!authorDetails && authorDetailsLoading && (
