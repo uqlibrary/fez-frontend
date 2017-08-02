@@ -21,11 +21,13 @@ const DashboardAuthorDetails = ({authorDetails}) => {
                             title={authorDetails.title + ' ' + authorDetails.given_name + ' ' + authorDetails.family_name}/>
                 </div>
             </div>
+
+            {/* Account Name/Positions/OrgUnits */}
             <div className="column is-narrow accountDetails">
                 <div className="accountTitleName title is-3 color-reverse">
                     {authorDetails.title} {authorDetails.given_name} {authorDetails.family_name}
                 </div>
-                <div className="accountPositions column is-paddingless is-marginless is-narrow">
+                <div className="column is-paddingless is-marginless is-narrow">
 
                     {authorDetails.positions.map((item, index) => (
                         <div key={index} className="accountPositionOrg color-reverse">

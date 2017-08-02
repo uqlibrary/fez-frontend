@@ -7,7 +7,7 @@ import FontIcon from 'material-ui/FontIcon';
 const DashboardResearcherIDs = ({publonsId, researcherId, scopusId, googleScholarId, orcidId}) => {
     const badgeOK = (<FontIcon className="material-icons">done</FontIcon>);
     const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
-    const badgeStyle = {top: 15, right: -5};
+    const badgeStyle = {right: -5};
 
     // TODO: Not sure this is best practise? Add to locale?
     const idName = ['Publons', 'Researcher', 'Scopus', 'Google_Scholar', 'ORCid'];

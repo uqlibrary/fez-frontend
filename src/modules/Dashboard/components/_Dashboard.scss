@@ -2,7 +2,7 @@
 
 @media all and (min-width: 768px) {
 
-  .isLoading{
+  .isLoading {
     margin: 5% auto;
     height: 100%;
     opacity: 0.5;
@@ -11,7 +11,6 @@
     background-image: url('../../public/images/dashboard_cover.jpg');
     background-size: cover;
     background-position: center 25%;
-    min-height: 200px;
   }
 
   //DashboardAccountDetails
@@ -26,7 +25,7 @@
     .accountHeadshot {
       width: 150px;
       height: 150px;
-      &>img {
+      & > img {
         box-shadow: 0 0 15px rgba(black, 0.3);
       }
     }
@@ -37,6 +36,7 @@
       .accountPositionOrg {
         font-weight: 100;
         font-size: 12px;
+        line-height: 16px;
       }
       .accountPositions {
         min-height: 40px;
@@ -45,24 +45,27 @@
 
     // Researcher ID's
     .researcherIDs {
-      padding: 0;
-      margin: 12px 0 -24px -120;
+      margin: 18px 0 -6px -12px !important;
+      height: 60px !important;
       .researchIDAvatar {
         margin-right: -20px;
         box-shadow: 0 0 15px rgba(black, 0.3);
+      }
+      .Publons, .Scopus, .Researcher, .Google_Scholar, .ORCid {
+        height: 60px;
       }
       .orcid { // ORCID required to be more prominent
         margin-top: -10px;
         zoom: 1.2;
         -moz-transform: scale(1.2);
         @-moz-document url-prefix() {
-         margin-top: 0;
+          margin-top: 0;
         }
       }
       a.orcidLink {
         color: rgba($text-color-reverse, 0.8);
         font-size: 12px;
-        line-height: 7.5;
+        line-height: 5;
         margin: 0 6px;
         &:hover {
           color: rgba($text-color-reverse, 1);
@@ -70,7 +73,9 @@
       }
     }
     .researchIDBadge {
-      &:hover{
+      padding-bottom: 0px !important;
+      padding-top: 12px !important;
+      &:hover {
         cursor: pointer;
       }
       .material-icons {
