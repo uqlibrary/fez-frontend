@@ -8,6 +8,7 @@ import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 const DashboardProfile = ({authorDetails}) => {
     return (
         <div className="imageCover">
+            {authorDetails && (
             <div className="columns userDetails is-gapless">
 
                 {/* Profile avatar */}
@@ -40,12 +41,13 @@ const DashboardProfile = ({authorDetails}) => {
                                            articleLastYear={authorDetails.espace.last_year} />
                 </div>
             </div>
+            )}
         </div>
     );
 };
 
 DashboardProfile.propTypes = {
-    authorDetails: PropTypes.object.isRequired
+    authorDetails: PropTypes.object
 };
 
 export default DashboardProfile;

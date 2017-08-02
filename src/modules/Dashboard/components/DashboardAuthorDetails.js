@@ -25,7 +25,6 @@ const DashboardAuthorDetails = ({title, familyName, givenName, orgUnits, positio
 };
 
 DashboardAuthorDetails.propTypes = {
-    authorDetails: PropTypes.object.isRequired,
     title: PropTypes.string,
     familyName: PropTypes.string,
     givenName: PropTypes.string,
