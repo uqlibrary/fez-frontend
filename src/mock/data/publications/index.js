@@ -1,6 +1,5 @@
 /* eslint-disable */
-export const claimPublicationEmpty = [];
-export const claimPublication = [
+export const possibleUnclaimed = [
     {
         'rek_pid': 'UQ:492459',
         'rek_title_xsdmf_id': 10605,
@@ -941,7 +940,7 @@ export const claimPublication = [
         }
     }
 ];
-export const hidePublications = [];
+
 export const possibleCounts = {
     "most_likely_match_count": 95,
     "automatically_match_count": 0,

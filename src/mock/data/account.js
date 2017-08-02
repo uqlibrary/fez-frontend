@@ -1,20 +1,93 @@
-export const accounts = [
-    // anonymous user
-    {
-        'id': 'anon',
-        'hasSession': false
+/* eslint-disable */
+export const accounts = {
+    // staff, no espace data
+    uqstaff : {
+        "id": "uqstaff",
+        "class": ["libstaff", "IS_CURRENT"],
+        "type": 18,
+        "homeLib": "St Lucia",
+        "firstName": "J",
+        "lastName": "Staff",
+        "name": "J STAFF",
+        "mail": "j.staff@example.uq.edu.au",
+        "barcode": "111111111111111",
+        "groups": ["DC=uq,DC=edu,DC=au"],
+        "classes": [],
+        "expiryDate": "31-12-19",
+        "hasSession": true,
+        "tokenBased": false,
+        "canMasquerade": true,
+        "blocked": false
+    },
+    // student
+    s1111111: {
+        "id": "s1111111",
+        "class": ["IS_UQ_STUDENT_PLACEMENT", "IS_CURRENT"],
+        "type": 1,
+        "homeLib": "St Lucia",
+        "firstName": "J",
+        "lastName": "Undegraduate",
+        "name": "J Undegraduate",
+        "mail": "undegraduate@student.uq.edu.au",
+        "barcode": "111111111111111",
+        "groups": null,
+        "classes": [
+            {
+            "ACAD_CAREER": "UGRD",
+            "DESCR": "Real Estate Development Plg",
+            "SUBJECT": "REDE",
+            "CATALOG_NBR": "3200",
+            "CAMPUS": "STLUC",
+            "INSTRUCTION_MODE": "IN",
+            "ACAD_GROUP": "SCI",
+            "STRM": "6720"
+        },
+            {
+            "ACAD_CAREER": "UGRD",
+            "DESCR": "Reg F\/works for Envl Mmgt &",
+            "SUBJECT": "ENVM",
+            "CATALOG_NBR": "3103",
+            "CAMPUS": "STLUC",
+            "INSTRUCTION_MODE": "IN",
+            "ACAD_GROUP": "SCI",
+            "STRM": "6720"}
+            ],
+        "expiryDate": "31-03-18",
+        "hasSession": true,
+        "tokenBased": false,
+        "canMasquerade": false,
+        "blocked": false
+    },
+    // rhd student
+    s2222222: {
+        "id": "s1111111",
+        "class": ["hass"],
+        "type": 2,
+        "homeLib": "St Lucia",
+        "firstName": "J",
+        "lastName": "RHD Student",
+        "name": "J RHD Student",
+        "mail": "rhd@student.uq.edu.au",
+        "barcode": "111111111111111",
+        "groups": null,
+        "classes": [],
+        "expiryDate": "14-12-19",
+        "hasSession": true,
+        "tokenBased": false,
+        "canMasquerade": false,
+        "blocked": false
     },
     // researchers
-    {
-        'id': 'uqphugen',
+    uqresearcher: {
+        'id': 'uqresearcher',
         'class': 'uqd',
         'type': 3,
         'homeLib': 'PACE',
-        'firstName': 'Philip',
-        'lastName': 'Hugenholtz',
-        'name': 'Philip Hugenholtz',
-        'mail': 'i.neweton@uq.edu.au',
-        'barcode': '00001111222233',
+        'firstName': 'J',
+        'lastName': 'Researcher',
+        'name': 'J Researcher',
+        'mail': 'j.researcher@example.uq.edu.au',
+        'barcode': '111111111111111',
         'groups': ['DC=uq,DC=edu,DC=au'],
         'classes': [],
         'expiryDate': '31-12-19',
@@ -24,47 +97,8 @@ export const accounts = [
         'blocked': false,
         'position': 'Affil Professorial Research Fellow',
         'org_unit': 'Faculty of Medicine',
-        'orcid_id': '0000-0001-5386-7925'
-    },
-    {
-        'id': 'uqinewton',
-        'class': 'uqd',
-        'type': 3,
-        'homeLib': 'PACE',
-        'firstName': 'Isaac',
-        'lastName': 'NEWTON',
-        'name': 'Isaac Newton',
-        'mail': 'i.neweton@uq.edu.au',
-        'barcode': '00001111222233',
-        'groups': ['DC=uq,DC=edu,DC=au'],
-        'classes': [],
-        'expiryDate': '31-12-19',
-        'hasSession': true,
-        'tokenBased': false,
-        'canMasquerade': false,
-        'blocked': false,
-        'position': 'Affil Professorial Research Fellow',
-        'org_unit': 'Faculty of Medicine',
-        'orcid_id': 'orcid.org/0000-0000-1234-5678'
-    },
-    {
-        'id': 'uqpfermat',
-        'class': 'uqd',
-        'type': 3,
-        'homeLib': 'PACE',
-        'firstName': 'Pierre',
-        'lastName': 'DE FERMAT',
-        'name': 'Pierre de Fermat',
-        'mail': 'p.defermat@uq.edu.au',
-        'barcode': '00001111222244',
-        'groups': ['DC=uq,DC=edu,DC=au'],
-        'classes': [],
-        'expiryDate': '31-12-19',
-        'hasSession': true,
-        'tokenBased': false,
-        'canMasquerade': false,
-        'blocked': false
+        'orcid_id': '0000-0000-0000-00001'
     }
     // upos
     // admins
-];
+};

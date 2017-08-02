@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const authorsList = [
+export const authorsSearch = [
     {
         "aut_id": 61940,
         "aut_org_username": null,
@@ -320,52 +320,62 @@ export const authorsList = [
         "aut_student_username": null
     }];
 
-export const existingAuthor = {
-    "aut_id": 410,
-    "aut_org_username": "uqifraze",
-    "aut_org_staff_id": "0001952",
-    "aut_org_student_id": null,
-    "aut_email": "",
-    "aut_display_name": "Frazer, Ian H.",
-    "aut_fname": "Ian",
-    "aut_mname": "",
-    "aut_lname": "Frazer",
-    "aut_title": "Professor",
-    "aut_position": "",
-    "aut_homepage_link": "",
-    "aut_created_date": null,
-    "aut_update_date": "2017-07-23",
-    "aut_external_id": "0000040357",
-    "aut_ref_num": "",
-    "aut_researcher_id": "A-1137-2007",
-    "aut_scopus_id": "35478294000",
-    "aut_mypub_url": "",
-    "aut_rid_password": "",
-    "aut_people_australia_id": "",
-    "aut_description": "",
-    "aut_orcid_id": "0000-0002-8002-4680",
-    "aut_google_scholar_id": "kUemDfMAAAAJ",
-    "aut_rid_last_updated": "2013-05-17",
-    "aut_publons_id": null,
-    "aut_student_username": null
+export const currentAuthor = {
+        uqresearcher: {
+            "aut_id": 410,
+            "aut_org_username": "uqresearcher",
+            "aut_org_staff_id": "0001952",
+            "aut_org_student_id": null,
+            "aut_email": "",
+            "aut_display_name": "Researcher, J",
+            "aut_fname": "J",
+            "aut_mname": "",
+            "aut_lname": "Researcher",
+            "aut_title": "Professor",
+            "aut_position": "",
+            "aut_homepage_link": "",
+            "aut_created_date": null,
+            "aut_update_date": "2017-07-23",
+            "aut_external_id": "0000040357",
+            "aut_ref_num": "",
+            "aut_researcher_id": "A-1137-2007",
+            "aut_scopus_id": "35478294000",
+            "aut_mypub_url": "",
+            "aut_rid_password": "",
+            "aut_people_australia_id": "",
+            "aut_description": "",
+            "aut_orcid_id": "0000-0001-1111-1111",
+            "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "aut_rid_last_updated": "2013-05-17",
+            "aut_publons_id": null,
+            "aut_student_username": null
+        }
 };
 
 export const authorDetails = {
-    "uqr_id": 14,
-    "espace_id": 20288,
-    "image_exists": 1,
-    "username": "uqphugen",
-    "staff_id": "0000243",
-    "given_name": "Philip",
-    "family_name": "Hugenholtz",
-    "title": "Professor",
-    "scopus_id": "",
-    "google_scholar_id": "",
-    "researcher_id": "G-9608-2011",
-    "orcid_id": "0000-0001-5386-7925",
-    "publons_id": "",
-    "mypub_url": "phugenholtz",
-    "org_units": ["Institute for Molecular Bioscience", "School of Chemistry and Molecular Biosciences", "The University of Queensland Diamantina Institute"],
-    "positions": ["Affiliate Professor", "Affiliate Professorial Res Fellow", "ARC Australian Laureate Fellow"],
-    "espace": {"first_year": 1990, "last_year": 2017, "doc_count": "282"}
+    uqresearcher: {
+        "uqr_id": 14,
+        "espace_id": 20288,
+        "image_exists": 1,
+        "username": "uqresearcher",
+        "staff_id": "0000111",
+        "given_name": "J",
+        "family_name": "Researcher",
+        "title": "Professor",
+        "scopus_id": "",
+        "google_scholar_id": "",
+        "researcher_id": "G-111-1111",
+        "orcid_id": "0000-0001-1111-1111",
+        "publons_id": "",
+        "mypub_url": "uqresearcher",
+        "org_units": ["Institute for Molecular Bioscience", "School of Chemistry and Molecular Biosciences", "The University of Queensland Diamantina Institute"],
+        "positions": ["Affiliate Professor", "Affiliate Professorial Res Fellow", "ARC Australian Laureate Fellow"],
+        "espace": {"first_year": 1990, "last_year": 2017, "doc_count": "282"}
+    },
+    s2222222: {
+        "orcid_id": null,
+        "researcher_id": null,
+        "scopus_id": null,
+        "publons_id": null
+    }
 };

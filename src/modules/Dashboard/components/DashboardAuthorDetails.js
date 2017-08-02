@@ -38,11 +38,15 @@ const DashboardAuthorDetails = ({authorDetails}) => {
                     ))}
 
                 </div>
-                <DashboardResearcherIDs publonsId={authorDetails.publons_id}
-                                        researcherId={authorDetails.researcher_id}
-                                        scopusId={authorDetails.scopus_id}
-                                        googleScholarId={authorDetails.google_scholar_id}
-                                        orcidId={authorDetails.orcid_id}/>
+                <DashboardResearcherIDs
+                    values={{
+                        Publons: authorDetails.publons_id,
+                        Researcher: authorDetails.researcher_id,
+                        Scopus: authorDetails.scopus_id,
+                        Google_Scholar: authorDetails.google_scholar_id,
+                        ORCid: authorDetails.orcid_id
+                    }}
+                />
             </div>
         </div>
     );
