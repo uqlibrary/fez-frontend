@@ -27,7 +27,7 @@ const DashboardResearcherIDs = ({publonsId, researcherId, scopusId, googleSchola
                             >
                                 <Avatar
                                     className="researchIDAvatar"
-                                    src={`../../src/images/${idName[index].toLowerCase()}_icon.svg`}
+                                    src={require(`../../../../src/images/${idName[index].toLowerCase()}_icon.svg`)}
                                     title={`${idName[index]} ID`}/>
                             </Badge>
                         </a>

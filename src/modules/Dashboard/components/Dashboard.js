@@ -60,7 +60,7 @@ class Dashboard extends React.Component {
                         <div className="column is-12 is-hidden-mobile">
                             {authorDetailsLoading ? (
                                 <div className="isLoading is-centered">
-                                    <CircularProgress size={30} thickness={3} primary />
+                                    <CircularProgress size={30} thickness={3} />
                                 </div>
                             ) : (
                                 <div className="image-cover">
