@@ -55,6 +55,8 @@ class Dashboard extends React.Component {
             <div className="layout-fill">
                 <div className="layout-card">
                     <div className="columns is-multiline is-gapless">
+
+                        {/* dashboardProfile */}
                         {authorDetails && (
                             <div className="column is-12 is-hidden-mobile">
                                 {authorDetails && !authorDetailsLoading ? (
@@ -65,12 +67,9 @@ class Dashboard extends React.Component {
                                     </div>
                                 )}
                                 {!authorDetails && !authorDetailsLoading && (
-                                    <div className="column is-gapless">
                                         <Alert title="You are not registered in UQ eSpace Staging as an author"
                                                message="Please contact the UQ Manager to resolve this."
-                                               type="info_outline"
-                                        />
-                                    </div>
+                                               type="info_outline"/>
                                 )}
                             </div>
                         )}
