@@ -10,11 +10,12 @@ class PublicationSubtypeForm extends Component {
     static propTypes = {
         onChange: PropTypes.func,
         locale: PropTypes.object,
-        subtypes: PropTypes.array,
-        rek_subtype: PropTypes.string,
+        subtypesList: PropTypes.array,
+        selectedValue: PropTypes.string,
         valueFrom: PropTypes.string,
         dispatch: PropTypes.func,
-        vocabId: PropTypes.number
+        vocabId: PropTypes.number,
+        className: PropTypes.string
     };
 
     static defaultProps = {
@@ -27,7 +28,7 @@ class PublicationSubtypeForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            rek_subtype: props.rek_subtype || null
+            selectedValue: props.selectedValue || null
         };
     }
 
@@ -36,27 +37,27 @@ class PublicationSubtypeForm extends Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange && nextState.rek_subtype !== this.state.rek_subtype) this.props.onChange(nextState.rek_subtype);
+        if (this.props.onChange && nextState.selectedValue !== this.state.selectedValue) this.props.onChange(nextState.selectedValue);
     }
 
     _onSubtypeSelected = (event, index, value) => {
         this.setState({
-            rek_subtype: value
+            selectedValue: value
         });
     };
 
     render() {
-        const { locale, subtypes, valueFrom } = this.props;
-        const renderSubTypeItems = subtypes.map((item) => {
+        const { locale, subtypesList, valueFrom } = this.props;
+        const renderSubTypeItems = subtypesList.map((item) => {
             return <MenuItem value={ item.controlled_vocab[valueFrom] } primaryText={ item.controlled_vocab.cvo_title } key={ item.controlled_vocab.cvo_id }/>;
         });
 
         return (
             <SelectField
-                name="rek_subtype"
+                name="selectedValue"
                 fullWidth
-                value={ this.state.rek_subtype }
-                className="requiredField"
+                className={ this.props.className }
+                value={ this.state.selectedValue }
                 maxHeight={ 250 }
                 onChange={ this._onSubtypeSelected }
                 floatingLabelText={ locale.label }>
@@ -71,7 +72,7 @@ class PublicationSubtypeForm extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        subtypes: state.get('publicationSubtypesReducer').subtypes || []
+        subtypesList: state.get('publicationSubtypesReducer').subtypesList || []
     };
 };
 

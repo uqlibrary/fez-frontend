@@ -3,18 +3,18 @@ import {PUBLICATION_SUBTYPES_LOADING, PUBLICATION_SUBTYPES_LOAD_FAILED, PUBLICAT
 export const initialState = {
     subtypesLoading: false,
     subtypesLoadingError: false,
-    subtypes: []
+    subtypesList: []
 };
 
 const handlers = {
     [PUBLICATION_SUBTYPES_LOAD_FAILED]: () => ({
-        subtypes: [],
+        subtypesList: [],
         subtypesLoading: false,
         subtypesLoadingError: true
     }),
 
     [PUBLICATION_SUBTYPES_LOADED]: (state, action) => ({
-        subtypes: action.payload,
+        subtypesList: action.payload,
         subtypesLoading: false,
         subtypesLoadingError: false
     }),
