@@ -289,6 +289,35 @@ export const authorsList = [
         "aut_rid_last_updated": "2017-02-24",
         "aut_publons_id": "1",
         "aut_student_username": null
+    },
+    {
+        "aut_id": 20288,
+        "aut_org_username": "uqphugen",
+        "aut_org_staff_id": "0000243",
+        "aut_org_student_id": null,
+        "aut_email": "",
+        "aut_display_name": "Hugenholtz, Philip",
+        "aut_fname": "Philip",
+        "aut_mname": "",
+        "aut_lname": "Hugenholtz",
+        "aut_title": "Professor",
+        "aut_position": "",
+        "aut_homepage_link": "",
+        "aut_created_date": "2007-08-09",
+        "aut_update_date": "2017-07-23",
+        "aut_external_id": "0000041266",
+        "aut_ref_num": "",
+        "aut_researcher_id": "G-9608-2011",
+        "aut_scopus_id": "",
+        "aut_mypub_url": "phugenholtz",
+        "aut_rid_password": "",
+        "aut_people_australia_id": "",
+        "aut_description": "",
+        "aut_orcid_id": "",
+        "aut_google_scholar_id": "",
+        "aut_rid_last_updated": "2016-01-08",
+        "aut_publons_id": null,
+        "aut_student_username": null
     }];
 
 export const existingAuthor = {
@@ -319,4 +348,24 @@ export const existingAuthor = {
     "aut_rid_last_updated": "2013-05-17",
     "aut_publons_id": null,
     "aut_student_username": null
+};
+
+export const authorDetails = {
+    "uqr_id": 14,
+    "espace_id": 20288,
+    "image_exists": 1,
+    "username": "uqphugen",
+    "staff_id": "0000243",
+    "given_name": "Philip",
+    "family_name": "Hugenholtz",
+    "title": "Professor",
+    "scopus_id": "",
+    "google_scholar_id": "",
+    "researcher_id": "G-9608-2011",
+    "orcid_id": "0000-0001-5386-7925",
+    "publons_id": "",
+    "mypub_url": "phugenholtz",
+    "org_units": ["Institute for Molecular Bioscience", "School of Chemistry and Molecular Biosciences", "The University of Queensland Diamantina Institute"],
+    "positions": ["Affiliate Professor", "Affiliate Professorial Res Fellow", "ARC Australian Laureate Fellow"],
+    "espace": {"first_year": 1990, "last_year": 2017, "doc_count": "282"}
 };

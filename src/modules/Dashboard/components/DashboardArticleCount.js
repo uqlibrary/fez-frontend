@@ -1,16 +1,22 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-class DashboardArticleCount extends React.Component {
-    render() {
-        return (
-              <div className="articleCount is-centered">
-                  <div className="noOfArticles">38</div>
-                  <div className="articlesFrom">eSpace articles from</div>
-                  <div className="dateRange">1990<span> to </span>2017</div>
-              </div>
-        );
-    }
-}
+const DashboardArticleCount = ({articleCount, articleFirstYear, articleLastYear}) => {
+    return (
+        <div className="articleCount is-centered">
+                <div>
+                    <div className="noOfArticles">{articleCount}</div>
+                    <div className="articlesFrom">eSpace articles from</div>
+                    <div className="dateRange">{articleFirstYear}<span> to </span>{articleLastYear}</div>
+                </div>
+        </div>
+    );
+};
+
+DashboardArticleCount.propTypes = {
+    articleCount: PropTypes.string,
+    articleFirstYear: PropTypes.number,
+    articleLastYear: PropTypes.number,
+};
 
 export default DashboardArticleCount;

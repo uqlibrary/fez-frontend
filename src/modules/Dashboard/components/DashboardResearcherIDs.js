@@ -4,79 +4,57 @@ import Badge from 'material-ui/Badge';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 
-const SCOPUSlogo = require('images/scopus_icon.svg');
-const PUBMEDlogo = require('images/pubmed_icon.svg');
-const RIDlogo = require('images/rid_icon.svg');
-const ORCIDlogo = require('images/orcid_icon.svg');
-const GOOGLElogo = require('images/googlescholar_icon.svg');
-const PUBLONSlogo = require('images/publons_icon.svg');
-
-
-const badgeStyle = {
-    top: 15,
-    right: -5
-};
-
-const DashboardResearcherIDs = ({account}) => {
+const DashboardResearcherIDs = ({publonsId, researcherId, scopusId, googleScholarId, orcidId}) => {
     const badgeOK = (<FontIcon className="material-icons">done</FontIcon>);
     const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
+    const badgeStyle = {right: -5};
+
+    // TODO: Not sure this is best practise? Add to locale?
+    const idName = ['Publons', 'Researcher', 'Scopus', 'Google_Scholar', 'ORCid'];
+    const idValues = [publonsId, researcherId, scopusId, googleScholarId, orcidId];
 
     return (
-      <div className="columns researcherIDs is-gapless">
+        <div className="columns researcherIDs is-gapless">
+            {idName.map((item, index) => (
+                    <div key={index} className={`${item} column is-narrow`}>
+                        <a href="https://app.library.uq.edu.au/#/id" target="_blank">
+                            <Badge
+                                badgeStyle={badgeStyle}
+                                className={idValues[index] ? (`${idName[index].toLowerCase()} researchIDBadge ok`) : (`${idName[index].toLowerCase()} researchIDBadge error`)}
+                                badgeContent={idValues[index] ? badgeOK : badgeERROR}
 
-          {/* PUBLONS */}
-          <div className="PUBLONS column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={PUBLONSlogo} title="Publons ID is valid"/>
-              </Badge>
-          </div>
-
-          {/* RESEARCHID */}
-          <div className="RID column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={RIDlogo} title="ResearchID is valid"/>
-              </Badge>
-          </div>
-
-          {/* SCOPUS */}
-          <div className="Scopus column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={SCOPUSlogo} title="Scopus ID is valid"/>
-              </Badge>
-          </div>
-
-          {/* PUBMED */}
-          <div className="PubMed column is-narrow">
-              <Badge className="researchIDBadge error" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={PUBMEDlogo} title="PubMed ID is missing"/>
-              </Badge>
-          </div>
-
-          {/* GOOGLE SCHOLAR */}
-          <div className="GoogleScholar column is-narrow">
-              <Badge className="researchIDBadge error" badgeContent={badgeERROR} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={GOOGLElogo} title="Google Scholar ID is missing"/>
-              </Badge>
-          </div>
-
-          {/* ORCHID */}
-          <div className="ORCID column is-narrow">
-              <Badge className="researchIDBadge ok" badgeContent={badgeOK} badgeStyle={badgeStyle}>
-                  <Avatar className="researchIDAvatar" src={ORCIDlogo} title="Orcid ID is valid"/>
-              </Badge>
-          </div>
-
-          {/* ORCHID LINK */}
-          <div className="column is-narrow">
-              <a className="ORCIDlink" href={'http://' + account.get('orcid_id')} target="_blank">{account.get('orcid_id')}</a>
-          </div>
-
-      </div>
+                                title={idValues[index] ? `Your ${idName[index]} ID is ${idValues[index]}` : `Your ${idName[index]} ID is not linked`}
+                                aria-label={idValues[index] ? `Your ${idName[index]} ID is ${idValues[index]}` : `Your ${idName[index]} ID is not linked`}
+                            >
+                                <Avatar
+                                    className="researchIDAvatar"
+                                    src={require(`../../../../src/images/${idName[index].toLowerCase()}_icon.svg`)}
+                                    title={`${idName[index]} ID`}/>
+                            </Badge>
+                        </a>
+                    </div>
+                )
+            )};
+            {orcidId &&
+            <div className="column is-narrow">
+                <a className="orcidLink"
+                   href={'http://orcid.org/' + orcidId}
+                   target="_blank"
+                   aria-label="Click to visit your ORCID profile"
+                   title="Click to visit your ORCID profile">
+                    orcid.org/{orcidId}</a>
+            </div>
+            }
+        </div>
     );
 };
 
 DashboardResearcherIDs.propTypes = {
-    account: PropTypes.object.isRequired,
+    publonsId: PropTypes.string,
+    researcherId: PropTypes.string,
+    scopusId: PropTypes.string,
+    googleScholarId: PropTypes.string,
+    orcidId: PropTypes.string,
 };
 
 export default DashboardResearcherIDs;

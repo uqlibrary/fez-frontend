@@ -2,19 +2,15 @@
 
 @media all and (min-width: 768px) {
 
+  .isLoading {
+    margin: 5% auto;
+    height: 100%;
+    opacity: 0.5;
+  }
   .image-cover {
     background-image: url('../../public/images/dashboard_cover.jpg');
     background-size: cover;
     background-position: center 25%;
-    min-height: 200px;
-  }
-
-  //ResearcherIDs
-  .researcherIDs {
-    padding: 12px;
-    .ORCID {
-
-    }
   }
 
   //DashboardAccountDetails
@@ -29,7 +25,7 @@
     .accountHeadshot {
       width: 150px;
       height: 150px;
-      &>img {
+      & > img {
         box-shadow: 0 0 15px rgba(black, 0.3);
       }
     }
@@ -40,30 +36,36 @@
       .accountPositionOrg {
         font-weight: 100;
         font-size: 12px;
+        line-height: 16px;
+      }
+      .accountPositions {
+        min-height: 40px;
       }
     }
 
     // Researcher ID's
     .researcherIDs {
-      margin: -32px -12px 0 -24px;
-      bottom: -24px !important;
-      position: relative;
+      margin: 18px 0 -6px -12px !important;
+      height: 60px !important;
       .researchIDAvatar {
         margin-right: -20px;
         box-shadow: 0 0 15px rgba(black, 0.3);
       }
-      .ORCID { // ORCID required to be more prominent
+      .Publons, .Scopus, .Researcher, .Google_Scholar, .ORCid {
+        height: 60px;
+      }
+      .orcid { // ORCID required to be more prominent
         margin-top: -10px;
-        zoom: 1.25;
-        -moz-transform: scale(1.25);
+        zoom: 1.2;
+        -moz-transform: scale(1.2);
         @-moz-document url-prefix() {
-         margin-top: 0;
+          margin-top: 0;
         }
       }
-      a.ORCIDlink {
+      a.orcidLink {
         color: rgba($text-color-reverse, 0.8);
         font-size: 12px;
-        line-height: 7.5;
+        line-height: 5;
         margin: 0 6px;
         &:hover {
           color: rgba($text-color-reverse, 1);
@@ -71,6 +73,11 @@
       }
     }
     .researchIDBadge {
+      padding-bottom: 0px !important;
+      padding-top: 12px !important;
+      &:hover {
+        cursor: pointer;
+      }
       .material-icons {
         font-size: 16px !important;
       }

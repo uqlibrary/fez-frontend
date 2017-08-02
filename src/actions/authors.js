@@ -1,4 +1,4 @@
-import {fetchAuthors, fetchCurrentAuthor} from '../repositories';
+import {fetchAuthors, fetchCurrentAuthor, fetchAuthorDetails} from '../repositories';
 
 export const AUTHORS_LOADING = 'AUTHORS_LOADING';
 export const AUTHORS_LOAD_FAILED = 'AUTHORS_LOAD_FAILED';
@@ -7,6 +7,10 @@ export const AUTHORS_LOADED = 'AUTHORS_LOADED';
 export const CURRENT_AUTHOR_LOADING = 'CURRENT_AUTHOR_LOADING';
 export const CURRENT_AUTHOR_FAILED = 'CURRENT_AUTHOR_FAILED';
 export const CURRENT_AUTHOR_LOADED = 'CURRENT_AUTHOR_LOADED';
+
+export const AUTHOR_DETAILS_LOADING = 'AUTHOR_DETAILS_LOADING';
+export const AUTHOR_DETAILS_FAILED = 'AUTHOR_DETAILS_FAILED';
+export const AUTHOR_DETAILS_LOADED = 'AUTHOR_DETAILS_LOADED';
 
 export function searchAuthors(query, filterBy) {
     return dispatch => {
@@ -43,6 +47,29 @@ export function getCurrentAuthor() {
                     payload: {}
                 });
             });
+    };
+}
+
+/**
+ * Returns the authors details from app.libarary api
+ * @param {string} author username
+ * @returns {action}
+ */
+export function loadAuthorDetails(authorId) {
+    return dispatch => {
+        dispatch({type: AUTHOR_DETAILS_LOADING});
+
+        fetchAuthorDetails(authorId).then((data) => {
+            dispatch({
+                type: AUTHOR_DETAILS_LOADED,
+                payload: data
+            });
+        }).catch(error => {
+            dispatch({
+                type: AUTHOR_DETAILS_FAILED,
+                payload: error
+            });
+        });
     };
 }
 

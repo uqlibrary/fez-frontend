@@ -1,20 +1,17 @@
 import {connect} from 'react-redux';
+import Dashboard from '../components/Dashboard';
 import {withRouter} from 'react-router-dom';
 
-import Dashboard from '../components/Dashboard';
-
-let DashboardPage = connect(state => {
+const mapStateToProps = (reduxStore) => {
     return {
-        account: state.getIn(['app', 'account']),
-        claimPublicationResults: {} // state.get('claimPublication').get('claimPublicationResults')
+        account: reduxStore.getIn(['app', 'account']),
+        claimPublicationResults: {},
+        authorDetailsLoading: reduxStore.get('authorDetailsReducer').authorDetailsLoading,
+        authorDetails: reduxStore.get('authorDetailsReducer').authorDetails,
     };
-}, () => {
-    return {
-        loadUsersPublications: () => () => { return []; }
-    };
-})(Dashboard);
+};
 
-// Add router
-DashboardPage = withRouter(DashboardPage);
+let DashboardContainer = connect(mapStateToProps)(Dashboard);
+DashboardContainer = withRouter(DashboardContainer);
 
-export default DashboardPage;
+export default DashboardContainer;
