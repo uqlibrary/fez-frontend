@@ -5,6 +5,7 @@ import { reduxForm, getFormValues } from 'redux-form/immutable';
 import { Field } from 'redux-form';
 import { StandardCard } from 'uqlibrary-react-toolbox';
 import { PublicationSubtypeField } from '.';
+import PublicationSubtypeForm from './components/PublicationSubtypeForm';
 
 class SampleForm extends React.Component {
     render() {
@@ -12,7 +13,8 @@ class SampleForm extends React.Component {
             <form>
                 <StandardCard>
                     <h3>Publication Subtypes</h3>
-                    <Field name="subtypeOne" component={ PublicationSubtypeField } vocabId={ 453573 } valueFrom="cvo_id" />
+                    <Field name="rek_subtype" component={ PublicationSubtypeField } vocabId={ 123 } />
+                    <PublicationSubtypeForm vocabId={ 123 }/>
                 </StandardCard>
             </form>
         );

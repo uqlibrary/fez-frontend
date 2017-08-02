@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { loadPublicationSubtypesList } from 'actions';
 
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
@@ -10,7 +12,9 @@ class PublicationSubtypeForm extends Component {
         locale: PropTypes.object,
         subtypes: PropTypes.array,
         rek_subtype: PropTypes.string,
-        valueFrom: PropTypes.string
+        valueFrom: PropTypes.string,
+        dispatch: PropTypes.func,
+        vocabId: PropTypes.number
     };
 
     static defaultProps = {
@@ -27,8 +31,12 @@ class PublicationSubtypeForm extends Component {
         };
     }
 
+    componentDidMount() {
+        this.props.dispatch(loadPublicationSubtypesList(this.props.vocabId));
+    }
+
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange) this.props.onChange(nextState.rek_subtype);
+        if (this.props.onChange && nextState.rek_subtype !== this.state.rek_subtype) this.props.onChange(nextState.rek_subtype);
     }
 
     _onSubtypeSelected = (event, index, value) => {
@@ -61,4 +69,10 @@ class PublicationSubtypeForm extends Component {
     }
 }
 
-export default PublicationSubtypeForm;
+const mapStateToProps = (state) => {
+    return {
+        subtypes: state.get('publicationSubtypesReducer').subtypes || []
+    };
+};
+
+export default connect(mapStateToProps)(PublicationSubtypeForm);

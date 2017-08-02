@@ -36,18 +36,15 @@ export function loadPublicationTypesList() {
 export function loadPublicationSubtypesList(id) {
     return dispatch => {
         dispatch({
-            vocabId: id,
             type: PUBLICATION_SUBTYPES_LOADING
         });
         getPublicationSubtypesList(id).then(subtypes => {
             dispatch({
-                vocabId: id,
                 type: PUBLICATION_SUBTYPES_LOADED,
                 payload: subtypes
             });
         }).catch(() => {
             dispatch({
-                vocabId: id,
                 type: PUBLICATION_SUBTYPES_LOAD_FAILED,
                 payload: []
             });
