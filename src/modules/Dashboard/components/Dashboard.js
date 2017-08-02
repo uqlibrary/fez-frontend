@@ -16,7 +16,7 @@ class Dashboard extends React.Component {
 
     static propTypes = {
         account: PropTypes.object.isRequired,
-        authorDetails: PropTypes.object.isRequired,
+        authorDetails: PropTypes.object,
         authorDetailsLoading: PropTypes.bool.isRequired,
         history: PropTypes.object,
         claimPublicationResults: PropTypes.object,
@@ -57,11 +57,11 @@ class Dashboard extends React.Component {
                     <div className="columns is-multiline is-gapless">
 
                         {/* dashboardProfile */}
-                        {authorDetails && (
                             <div className="column is-12 is-hidden-mobile">
-                                {authorDetails && !authorDetailsLoading ? (
+                                {authorDetails && (
                                     <DashboardProfile authorDetails={authorDetails} />
-                                ) : (
+                                )}
+                                {!authorDetails && authorDetailsLoading && (
                                     <div className="isLoading is-centered">
                                         <CircularProgress size={30} thickness={3}/>
                                     </div>
@@ -72,7 +72,6 @@ class Dashboard extends React.Component {
                                                type="info_outline"/>
                                 )}
                             </div>
-                        )}
 
                     <div className="notification-wrap column is-12">
                         {this.props.claimPublicationResults.size > 0 && this.state.showAppbar && (
@@ -99,7 +98,7 @@ class Dashboard extends React.Component {
                     </div>
                 </div>
 
-                <div className="columns">
+                <div className="columns is-gapless">
                     <div className="column">
                         <Card style={{backgroundColor: '#36B6D6'}}>
                             <CardHeader className="card-header">

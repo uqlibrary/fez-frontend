@@ -20,7 +20,7 @@ const DashboardAuthorAvatar = ({authorDetails}) => {
 };
 
 DashboardAuthorAvatar.propTypes = {
-    authorDetails: PropTypes.object.isRequired,
+    authorDetails: PropTypes.object,
 };
 
 export default DashboardAuthorAvatar;
