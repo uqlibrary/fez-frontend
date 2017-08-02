@@ -26,17 +26,17 @@ export const initialState = {
 const handlers = {
     [AUTHOR_DETAILS_LOADING]: () => ({
         authorDetailsLoading: true,
-        authorDetails: initialState.authorDetails,
+        authorDetails: initialState.authorDetails
     }),
 
     [AUTHOR_DETAILS_LOADED]: (state, action) => ({
         authorDetailsLoading: false,
-        authorDetails: action.payload,
+        authorDetails: action.payload
     }),
 
     [AUTHOR_DETAILS_FAILED]: () => ({
         authorDetailsLoading: false,
-        authorDetails: null,
+        authorDetails: null
     })
 };
 

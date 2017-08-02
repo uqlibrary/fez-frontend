@@ -8,25 +8,26 @@ const DashboardResearcherIDs = ({publonsId, researcherId, scopusId, googleSchola
     const badgeOK = (<FontIcon className="material-icons">done</FontIcon>);
     const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
     const badgeStyle = {top: 15, right: -5};
-    const idLabel = ['publons', 'researcher', 'scopus', 'google_scholar', 'orcid'];
-    const idName = ['Publons', 'Researcher', 'Scopus', 'Google Scholar', 'ORCid'];
+
+    const idName = ['Publons', 'Researcher', 'Scopus', 'Google_Scholar', 'ORCid'];
     const idValues = [publonsId, researcherId, scopusId, googleScholarId, orcidId];
 
     return (
-        <div className="columns researcherIDs is-gapless is-marginless is-paddingless">
-            {idLabel.map((item, index) => (
+        <div className="columns researcherIDs is-gapless">
+            {idName.map((item, index) => (
                     <div key={index} className={`${item} column is-narrow`}>
                         <a href="https://app.library.uq.edu.au/#/id" target="_blank">
                             <Badge
                                 badgeStyle={badgeStyle}
-                                className={idValues[index] ? (`${idLabel[index]} researchIDBadge ok`) : (`${idLabel[index]} researchIDBadge error`)}
+                                className={idValues[index] ? (`${idName[index].toLowerCase()} researchIDBadge ok`) : (`${idName[index].toLowerCase()} researchIDBadge error`)}
                                 badgeContent={idValues[index] ? badgeOK : badgeERROR}
+
                                 title={idValues[index] ? `Your ${idName[index]} ID is ${idValues[index]}` : `Your ${idName[index]} ID is not linked`}
                                 aria-label={idValues[index] ? `Your ${idName[index]} ID is ${idValues[index]}` : `Your ${idName[index]} ID is not linked`}
                             >
                                 <Avatar
                                     className="researchIDAvatar"
-                                    src={`../../src/images/${idLabel[index]}_icon.svg`}
+                                    src={`../../src/images/${idName[index].toLowerCase()}_icon.svg`}
                                     title={`${idName[index]} ID`}/>
                             </Badge>
                         </a>

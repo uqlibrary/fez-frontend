@@ -4,6 +4,8 @@ import Avatar from 'material-ui/Avatar';
 
 import DashboardResearcherIDs from './DashboardResearcherIDs';
 
+const profileFallbackImage = require('../../../../public/images/avatar.jpg');
+
 const DashboardAuthorDetails = ({authorDetails}) => {
     return (
         <div className="columns userDetails">
@@ -11,7 +13,7 @@ const DashboardAuthorDetails = ({authorDetails}) => {
                 <div className="accountHeadshot">
                     <Avatar size={150}
                             style={{
-                                backgroundImage: 'url("https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_' + authorDetails.uqr_id + '.jpg"), url("/public/images/avatar.jpg")',
+                                backgroundImage: `url("https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_${authorDetails.uqr_id}.jpg"), url(${profileFallbackImage})`,
                                 backgroundSize: 'cover, cover'
                             }}
                             backgroundColor="transparent"
@@ -30,7 +32,7 @@ const DashboardAuthorDetails = ({authorDetails}) => {
                     {authorDetails.positions.map((item, index) => (
                         <div key={index} className="accountPositionOrg color-reverse">
                             <strong>{item}</strong>
-                            {item.length > 0 ? ', ' : ''}
+                            {authorDetails.org_units[index] ? ', ' : ''}
                             <span className="color-reverse">{authorDetails.org_units[index]}</span>
                         </div>
                     ))}

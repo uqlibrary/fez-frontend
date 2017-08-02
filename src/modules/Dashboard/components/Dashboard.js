@@ -56,31 +56,31 @@ class Dashboard extends React.Component {
             <div className="layout-fill">
                 <div className="layout-card">
                     <div className="columns is-multiline is-gapless">
-
+                        {authorDetails && (
                         <div className="column is-12 is-hidden-mobile">
-                            <div className="image-cover">
-                                <div className="columns is-gapless">
-                                    <div className="column">
-                                        {authorDetailsLoading ? (
-                                            <div className="isLoading is-centered">
-                                                <CircularProgress size={60} thickness={7} color="white"/>
-                                            </div>
-                                        ) : (
+                            {authorDetailsLoading ? (
+                                <div className="isLoading is-centered">
+                                    <CircularProgress size={30} thickness={3} primary />
+                                </div>
+                            ) : (
+                                <div className="image-cover">
+                                    <div className="columns is-gapless">
+                                        <div className="column">
                                             <DashboardAuthorDetails authorDetails={authorDetails}/>
-                                        )}
-                                    </div>
-                                    <div className="articleCountColumn column is-narrow is-hidden-tablet-only">
-                                        <DashboardArticleCount articleFirstYear={authorDetails.espace.first_year}
-                                                               articleLastYear={authorDetails.espace.last_year}
-                                                               articleCount={authorDetails.espace.doc_count}
-                                        />
+                                        </div>
+                                        <div className="articleCountColumn column is-narrow is-hidden-tablet-only">
+                                            <DashboardArticleCount articleFirstYear={authorDetails.espace.first_year}
+                                                                   articleLastYear={authorDetails.espace.last_year}
+                                                                   articleCount={authorDetails.espace.doc_count}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
+                        )}
 
                         <div className="notification-wrap column is-12">
-
                             {this.props.claimPublicationResults.size > 0 && this.state.showAppbar && (
                                 <div className="warning alertWrapper">
                                     <div className="columns">
