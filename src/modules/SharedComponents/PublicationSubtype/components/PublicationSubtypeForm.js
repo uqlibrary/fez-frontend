@@ -12,14 +12,17 @@ class PublicationSubtypeForm extends Component {
         locale: PropTypes.object,
         subtypesList: PropTypes.array,
         selectedValue: PropTypes.string,
-        valueFrom: PropTypes.string,
+        dataSourceConfig: PropTypes.object,
         dispatch: PropTypes.func,
         vocabId: PropTypes.number,
         className: PropTypes.string
     };
 
     static defaultProps = {
-        valueFrom: 'cvo_title',
+        dataSourceConfig: {
+            text: 'controlled_vocab.cvo_title',
+            value: 'controlled_vocab.cvo_title'
+        },
         locale: {
             label: 'Publication subtype'
         }
@@ -46,10 +49,16 @@ class PublicationSubtypeForm extends Component {
         });
     };
 
+    getValue = (item, path) => {
+        return path.split('.').reduce((objectValue, pathProperty) => objectValue[pathProperty], item);
+    };
+
     render() {
-        const { locale, subtypesList, valueFrom } = this.props;
+        const { locale, subtypesList, dataSourceConfig } = this.props;
         const renderSubTypeItems = subtypesList.map((item) => {
-            return <MenuItem value={ item.controlled_vocab[valueFrom] } primaryText={ item.controlled_vocab.cvo_title } key={ item.controlled_vocab.cvo_id }/>;
+            const value = this.getValue(item, dataSourceConfig.value);
+            const text = this.getValue(item, dataSourceConfig.text);
+            return <MenuItem value={ value } primaryText={ text } key={ value }/>;
         });
 
         return (
