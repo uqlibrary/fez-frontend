@@ -14,22 +14,12 @@
     overflow: visible;
   }
 
-  //DashboardAccountDetails
+  //DashboardProfile
   .userDetails {
     height: calc(100% - 48px);
     padding: 24px;
     .title {
       margin-bottom: 6px;
-    }
-    .subtitle {
-
-    }
-    .accountHeadshot {
-      width: 150px;
-      height: 150px;
-      & > img {
-        box-shadow: 0 0 15px rgba(black, 0.3);
-      }
     }
     .authorDetails {
       margin-left: 24px;
@@ -45,7 +35,6 @@
         min-height: 40px;
       }
     }
-
     //Avatar
     .authorAvatar{
       display: flex;
@@ -55,7 +44,6 @@
         margin: auto 0;
       }
     }
-
     // Researcher Id's
     .researcherIds {
       margin: 24px 0 -6px 12px !important;
@@ -84,33 +72,34 @@
           color: rgba($text-color-reverse, 1);
         }
       }
-    }
-    .researchIdBadge {
-      padding-bottom: 0px !important;
-      padding-top: 12px !important;
-      &:hover {
-        cursor: pointer;
-      }
-      .material-icons {
-        font-size: 16px !important;
-      }
-      img {
-        background-color: transparent !important;
-      }
-      &.ok {
-        & span {
-          background-color: $available-color !important;
-          color: $text-color-reverse !important;
+      .researchIdBadge {
+        padding-bottom: 0px !important;
+        padding-top: 12px !important;
+        &:hover {
+          cursor: pointer;
+        }
+        .material-icons {
+          font-size: 16px !important;
+        }
+        img {
+          background-color: transparent !important;
+        }
+        &.ok {
+          & span {
+            background-color: $available-color !important;
+            color: $text-color-reverse !important;
+          }
+        }
+        &.error {
+          & span {
+            background-color: $error-color !important;
+            color: $text-color-reverse !important;
+          }
         }
       }
-      &.error {
-        & span {
-          background-color: $error-color !important;
-          color: $text-color-reverse !important;
-        }
-      }
     }
-  }
+    }
+
 
   //ArticleCount
   .authorCount {
@@ -169,11 +158,6 @@
         margin-top: 6px !important;
       }
     }
-  }
-
-  // Publications linked from table on dashboard
-  .linkedPubsTable {
-
   }
 }
 
