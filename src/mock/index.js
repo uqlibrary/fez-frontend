@@ -95,7 +95,7 @@ mock.onGet(/file\/upload\/presigned/).passThrough();
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
 
 // Mock claim publication results endpoint response
-mock.onGet(/(publications\/possible-unclaimed)/).reply(200, possibleUnclaimed);
+mock.onGet(/publications\/possible-unclaimed\/[a-z0-9]/).reply(200, possibleUnclaimed);
 mock.onGet(/(publications\/possible-counts)/).reply(200, possibleCounts);
 // mock.onGet(/(publications\/possible-unclaimed)/).reply(200, []);
 

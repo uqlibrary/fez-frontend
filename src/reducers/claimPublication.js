@@ -8,8 +8,7 @@ import {
 export const initialState = {
     possibleCounts: null,
     publicationsList: [],
-    loadingSearch: true,
-    hidingPublications: false
+    loadingSearch: true
 };
 
 const handlers = {

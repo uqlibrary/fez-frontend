@@ -15,10 +15,11 @@ export default class ClaimPublication extends React.Component {
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
         possibleCounts: PropTypes.object,
-        history: PropTypes.object.isRequired,
         currentAuthor: PropTypes.object,
+        history: PropTypes.object.isRequired,
         dispatch: PropTypes.func
     };
+
     constructor(props) {
         super(props);
 
@@ -27,14 +28,14 @@ export default class ClaimPublication extends React.Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         if (this.props.currentAuthor) {
             this.props.dispatch(searchPossiblyYourPublications(this.props.currentAuthor));
         }
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.currentAuthor && nextProps.currentAuthor !== this.props.currentAuthor) {
+        if (nextProps.currentAuthor && (!this.props.currentAuthor || nextProps.currentAuthor.aut_org_username !== this.props.currentAuthor.aut_org_username)) {
             // wait until props are updated and current author is set to get their possible publications
             this.props.dispatch(searchPossiblyYourPublications(nextProps.currentAuthor));
         }
@@ -111,7 +112,7 @@ export default class ClaimPublication extends React.Component {
                     </StandardCard>
                 }
                 {
-                    !this.props.loadingSearch && this.props.publicationsList.length > 0 &&
+                    !this.props.loadingSearch && this.props.publicationsList.length > 0 && this.props.possibleCounts &&
                     <div>
                         <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                             <div>
