@@ -68,12 +68,14 @@ class Dashboard extends React.Component {
                                         <div className="column">
                                             <DashboardAuthorDetails authorDetails={authorDetails}/>
                                         </div>
+                                        {authorDetails.espace.doc_count > 0 && (
                                         <div className="articleCountColumn column is-narrow is-hidden-tablet-only">
                                             <DashboardArticleCount articleFirstYear={authorDetails.espace.first_year}
                                                                    articleLastYear={authorDetails.espace.last_year}
                                                                    articleCount={authorDetails.espace.doc_count}
                                             />
                                         </div>
+                                        )}
                                     </div>
                                 </div>
                             )}

@@ -4,7 +4,7 @@ import Avatar from 'material-ui/Avatar';
 
 import DashboardResearcherIDs from './DashboardResearcherIDs';
 
-const profileFallbackImage = require('../../../../public/images/avatar.jpg');
+const profileFallbackImage = require('../../../../public/images/avatar.svg');
 
 const DashboardAuthorDetails = ({authorDetails}) => {
     return (
@@ -21,13 +21,11 @@ const DashboardAuthorDetails = ({authorDetails}) => {
                             title={authorDetails.title + ' ' + authorDetails.given_name + ' ' + authorDetails.family_name}/>
                 </div>
             </div>
-
-            {/* Account Name/Positions/OrgUnits */}
             <div className="column is-narrow accountDetails">
                 <div className="accountTitleName title is-3 color-reverse">
                     {authorDetails.title} {authorDetails.given_name} {authorDetails.family_name}
                 </div>
-                <div className="column is-paddingless is-marginless is-narrow">
+                <div className="accountPositions column is-paddingless is-marginless is-narrow">
 
                     {authorDetails.positions.map((item, index) => (
                         <div key={index} className="accountPositionOrg color-reverse">

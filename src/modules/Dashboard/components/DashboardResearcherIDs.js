@@ -9,6 +9,7 @@ const DashboardResearcherIDs = ({publonsId, researcherId, scopusId, googleSchola
     const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
     const badgeStyle = {top: 15, right: -5};
 
+    // TODO: Not sure this is best practise? Add to locale?
     const idName = ['Publons', 'Researcher', 'Scopus', 'Google_Scholar', 'ORCid'];
     const idValues = [publonsId, researcherId, scopusId, googleScholarId, orcidId];
 
