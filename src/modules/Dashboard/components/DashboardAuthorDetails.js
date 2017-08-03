@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DashboardAuthorDetails = ({title, familyName, givenName, orgUnits, positions}) => {
+const DashboardAuthorDetails = ({values}) => {
     return (
         <div className="authorDetails">
                 {/* Title and name */}
                 <div className="authorTitleName title is-3 color-reverse">
-                    {title}&nbsp;{givenName}&nbsp;{familyName}
+                    {values.title}&nbsp;{values.givenName}&nbsp;{values.familyName}
                 </div>
                 {/* Author Name/Positions/OrgUnits */}
                 <div className="is-paddingless is-marginless is-narrow">
                     {
-                        positions && positions.length > 0 && positions.map((item, index) => (
+                        values.positions && values.positions.length > 0 && values.positions.map((item, index) => (
                         <div key={index} className="authorPositionOrg color-reverse">
                             <strong>{item}</strong>
                             {
-                                orgUnits && orgUnits.length > 0 && orgUnits[index] &&
-                                <span className="color-reverse">, {orgUnits[index]}</span>
+                                values.orgUnits && values.orgUnits.length > 0 && values.orgUnits[index] &&
+                                <span className="color-reverse">, {values.orgUnits[index]}</span>
                             }
                         </div>
                     ))
@@ -28,11 +28,13 @@ const DashboardAuthorDetails = ({title, familyName, givenName, orgUnits, positio
 };
 
 DashboardAuthorDetails.propTypes = {
-    title: PropTypes.string,
-    familyName: PropTypes.string,
-    givenName: PropTypes.string,
-    orgUnits: PropTypes.array,
-    positions: PropTypes.array
+    values: PropTypes.shape({
+        title: PropTypes.string,
+        familyName: PropTypes.string,
+        givenName: PropTypes.string,
+        orgUnits: PropTypes.array,
+        positions: PropTypes.array
+    })
 };
 
 export default DashboardAuthorDetails;
