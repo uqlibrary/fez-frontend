@@ -4,7 +4,6 @@ import {locale} from 'config';
 
 const DashboardArticleCount = ({articleCount, articleFirstYear, articleLastYear}) => {
     const txt = locale.components.dashboardArticleCount;
-
     return (
         <div className="authorCounter is-centered">
             {articleCount && articleFirstYear && articleLastYear && (
@@ -19,9 +18,9 @@ const DashboardArticleCount = ({articleCount, articleFirstYear, articleLastYear}
 };
 
 DashboardArticleCount.propTypes = {
-    articleCount: PropTypes.string,
-    articleFirstYear: PropTypes.number,
-    articleLastYear: PropTypes.number,
+    articleCount: PropTypes.any,
+    articleFirstYear: PropTypes.any,
+    articleLastYear: PropTypes.any,
 };
 
 export default DashboardArticleCount;

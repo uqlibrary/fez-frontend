@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert snapshots test Render the eSpace document count, and years spanning 1`] = `
+<div
+  className="authorCounter is-centered"
+>
+  <div>
+    <div
+      className="noOfArticles"
+    >
+      999
+    </div>
+    <div
+      className="articlesFrom"
+    >
+      eSpace articles from
+    </div>
+    <div
+      className="dateRange"
+    >
+      1234
+      <span>
+         to 
+      </span>
+      5678
+    </div>
+  </div>
+</div>
+`;
