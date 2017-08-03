@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PublicationSubtypeForm snapshots tests renders correctly 1`] = `
+<SelectField
+  autoWidth={false}
+  disabled={false}
+  floatingLabelText="Publication subtype"
+  fullWidth={true}
+  maxHeight={250}
+  multiple={false}
+  name="selectedValue"
+  onChange={[Function]}
+  value={null}
+>
+  <MenuItem
+    anchorOrigin={
+      Object {
+        "horizontal": "right",
+        "vertical": "top",
+      }
+    }
+    checked={false}
+    desktop={false}
+    disabled={true}
+    focusState="none"
+    insetChildren={false}
+    primaryText="Publication subtype"
+  />
+</SelectField>
+`;

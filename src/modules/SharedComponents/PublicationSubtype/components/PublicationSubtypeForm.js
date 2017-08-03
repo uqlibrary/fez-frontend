@@ -6,7 +6,7 @@ import { loadPublicationSubtypesList } from 'actions';
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
 
-class PublicationSubtypeForm extends Component {
+export class PublicationSubtypeForm extends Component {
     static propTypes = {
         onChange: PropTypes.func,
         locale: PropTypes.object,
