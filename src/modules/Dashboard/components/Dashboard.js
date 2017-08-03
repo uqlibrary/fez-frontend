@@ -8,16 +8,15 @@ import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import CircularProgress from 'material-ui/CircularProgress';
 import AuthorsPublicationsCount from '../../DonutChart/components/AuthorsPublicationsCount';
-import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox';
+import {AuthorsPublicationsPerYearChart, Alert} from 'uqlibrary-react-toolbox';
 import {loadAuthorDetails} from 'actions';
-import DashboardAuthorDetails from './DashboardAuthorDetails';
-import DashboardArticleCount from './DashboardArticleCount';
+import DashboardProfile from './DashboardProfile';
 
 class Dashboard extends React.Component {
 
     static propTypes = {
         account: PropTypes.object.isRequired,
-        authorDetails: PropTypes.object.isRequired,
+        authorDetails: PropTypes.object,
         authorDetailsLoading: PropTypes.bool.isRequired,
         history: PropTypes.object,
         claimPublicationResults: PropTypes.object,
@@ -56,31 +55,23 @@ class Dashboard extends React.Component {
             <div className="layout-fill">
                 <div className="layout-card">
                     <div className="columns is-multiline is-gapless">
-                        {authorDetails && (
+
+                        {/* dashboardProfile */}
                         <div className="column is-12 is-hidden-mobile">
-                            {authorDetailsLoading ? (
+                            {authorDetails && !authorDetailsLoading && (
+                                <DashboardProfile authorDetails={authorDetails}/>
+                            )}
+                            {!authorDetails && authorDetailsLoading && (
                                 <div className="isLoading is-centered">
-                                    <CircularProgress size={30} thickness={3} />
-                                </div>
-                            ) : (
-                                <div className="image-cover">
-                                    <div className="columns is-gapless">
-                                        <div className="column">
-                                            <DashboardAuthorDetails authorDetails={authorDetails}/>
-                                        </div>
-                                        {authorDetails.espace.doc_count > 0 && (
-                                        <div className="articleCountColumn column is-narrow is-hidden-tablet-only">
-                                            <DashboardArticleCount articleFirstYear={authorDetails.espace.first_year}
-                                                                   articleLastYear={authorDetails.espace.last_year}
-                                                                   articleCount={authorDetails.espace.doc_count}
-                                            />
-                                        </div>
-                                        )}
-                                    </div>
+                                    <CircularProgress size={30} thickness={3}/>
                                 </div>
                             )}
+                            {!authorDetails && !authorDetailsLoading && (
+                                <Alert title="You are not registered in UQ eSpace Staging as an author"
+                                       message="Please contact the UQ Manager to resolve this."
+                                       type="info_outline"/>
+                            )}
                         </div>
-                        )}
 
                         <div className="notification-wrap column is-12">
                             {this.props.claimPublicationResults.size > 0 && this.state.showAppbar && (
@@ -107,7 +98,7 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
 
-                    <div className="columns">
+                    <div className="columns is-gapless">
                         <div className="column">
                             <Card style={{backgroundColor: '#36B6D6'}}>
                                 <CardHeader className="card-header">

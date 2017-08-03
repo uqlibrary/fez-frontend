@@ -5,14 +5,14 @@ import Cookies from 'js-cookie';
 import {SESSION_COOKIE_NAME} from 'config';
 
 // mocked data
-import {accounts} from './data/accounts';
-import {externalDoiSearchResultList, internalDoiSearchResultList, externalPubMedSearchResultsList, internalPubMedSearchResultsList, externalTitleSearchResultsList, internalTitleSearchResultsList} from './data/publicationSearch';
-import {publicationTypeList} from './data/publicationTypes';
-import {publicationSubTypeList} from './data/publicationSubTypes';
+import {accounts} from './data/account';
+import {externalDoiSearchResultList, externalPubMedSearchResultsList, externalTitleSearchResultsList} from './data/search/external';
+import {publicationTypeList} from './data/records';
+import {publicationSubtypeList} from './data/vocabularies';
 import {publicationYearsBig} from './data/academic/publicationYears';
-import {claimPublication, claimPublicationEmpty, hidePublications, possibleCounts} from './data/claimPublication';
-import {documentAccessTypes} from './data/documentAccessTypes';
-import {authorsList, existingAuthor, authorDetails} from './data/authors';
+import {possibleUnclaimed, possibleCounts} from './data/publications';
+import {authorsSearch, currentAuthor, authorDetails} from './data/authors';
+import {quickTemplates} from './data/acml';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 2000 });
@@ -20,19 +20,38 @@ const mock = new MockAdapter(api, { delayResponse: 2000 });
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
 
-// Mock the account that the user is logged in as
-if (queryString.parse(location.search).user === 'null') {
-    mock.onGet(/account\?[0-9]*/).reply(200, null);
-} else {
-    let account = accounts.find(s => s.id === queryString.parse(location.search).user);
+//get user from query string
+let user = queryString.parse(location.search || location.hash.substring(location.hash.indexOf('?'))).user;
 
-    if (account === undefined) {
-        account = accounts.find(s => s.id === 'uqphugen');
-    }
-    // mock account route
-    mock.onGet(/account\?[0-9]*/).reply(200, account);
+if (user && !accounts[user]) {
+    console.warn("API MOCK DATA: User name is not found, please use one of the usernames from mock data only...");
 }
 
+if (user === 'anon') {
+    // Mock unauthorised response
+    mock.onGet(/account\?[0-9]*/).reply(403, {});
+    mock.onGet(/authors\/details*/).reply(403, {});
+    mock.onGet(/authors/).reply(403, {});
+} else {
+    // use default uqresearcher
+    user = user || 'uqresearcher';
+
+    // Mock the account that the user is logged in as
+    mock.onGet(/account\?[0-9]*/).reply(200, accounts[user]);
+
+    // Mock get current author details
+    if (authorDetails[user])
+        mock.onGet(/authors\/details*/).reply(200, authorDetails[user]);
+    else
+        mock.onGet(/authors\/details*/).reply(404, {});
+
+    // Mock get current author details
+    if (currentAuthor[user]) {
+        mock.onGet(/authors/).reply(200, currentAuthor[user]);
+    } else {
+        mock.onGet(/authors/).reply(404, []);
+    }
+}
 
 // Mock the publication form internal search
 mock.onGet(/search\/internal\?*/).reply(500);
@@ -53,17 +72,14 @@ mock.onGet(/search\/external\?doi=*/).reply(200, externalDoiSearchResultList);
 mock.onGet('records/types').reply(200, publicationTypeList);
 
 // Mock the publication sub types endpoint
-mock.onGet(/vocabularies\/[0-9]/).reply(200, publicationSubTypeList);
+mock.onGet(/vocabularies\/[0-9]/).reply((config) => {
+    const vocabId = config.url.substring(config.url.indexOf('/')+1);
+    return [200, publicationSubtypeList[vocabId]];
+});
 
 // Mock the authors endpoint
 // get authors search results
-mock.onGet(/authors\/search\?query=*/).reply(200, authorsList);
-
-// Mock get current author details
-mock.onGet(/authors\/details*/).reply(200, authorDetails);
-
-// Mock get current author details
-mock.onGet(/authors/).reply(200, existingAuthor);
+mock.onGet(/authors\/search\?query=*/).reply(200, authorsSearch);
 
 // Error codes:
 // 404: author not found
@@ -79,19 +95,19 @@ mock.onGet(/file\/upload\/presigned/).passThrough();
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
 
 // Mock claim publication results endpoint response
-mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublication);
+mock.onGet(/publications\/possible-unclaimed\/[a-z0-9]/).reply(200, possibleUnclaimed);
 mock.onGet(/(publications\/possible-counts)/).reply(200, possibleCounts);
-// mock.onGet(/(publications\/possible-unclaimed)/).reply(200, claimPublicationEmpty);
+// mock.onGet(/(publications\/possible-unclaimed)/).reply(200, []);
 
 // Mock hide publication results endpoint response
-mock.onPost(/(publications\/hide-possible)/).reply(200, hidePublications);
+mock.onPost(/(publications\/hide-possible)/).reply(200, {});
 
 // Mock claim possible publication endpoint response
 mock.onPost('publications/claim-possible').reply(200, {});
 
 // Mock the document access types
-mock.onGet('acml/quick-templates').reply(200, documentAccessTypes);
+mock.onGet('acml/quick-templates').reply(200, quickTemplates);
 
 // Let the create records endpoint go through to staging
 mock.onPost('records').reply(200, {});
-// mock.onPost('records').reply(422);
+

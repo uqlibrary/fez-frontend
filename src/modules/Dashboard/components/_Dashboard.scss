@@ -4,58 +4,59 @@
 
   .isLoading {
     margin: 5% auto;
-    height: 100%;
     opacity: 0.5;
   }
-  .image-cover {
+  .imageCover {
     background-image: url('../../public/images/dashboard_cover.jpg');
     background-size: cover;
     background-position: center 25%;
+    min-height: 200px;
+    overflow: visible;
   }
 
-  //DashboardAccountDetails
+  //DashboardProfile
   .userDetails {
+    height: calc(100% - 48px);
     padding: 24px;
     .title {
       margin-bottom: 6px;
     }
-    .subtitle {
-
-    }
-    .accountHeadshot {
-      width: 150px;
-      height: 150px;
-      & > img {
-        box-shadow: 0 0 15px rgba(black, 0.3);
-      }
-    }
-    .accountDetails {
+    .authorDetails {
+      margin-left: 24px;
       .accountTitleName {
         font-weight: 100;
       }
-      .accountPositionOrg {
+      .authorPositionOrg {
         font-weight: 100;
         font-size: 12px;
         line-height: 16px;
       }
-      .accountPositions {
+      .authorPositions {
         min-height: 40px;
       }
     }
-
-    // Researcher ID's
-    .researcherIDs {
-      margin: 18px 0 -6px -12px !important;
+    //Avatar
+    .authorAvatar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &div.authorAvatar{
+        margin: auto 0;
+      }
+    }
+    // Researcher Id's
+    .researcherIds {
+      margin: 24px 0 -6px 12px !important;
       height: 60px !important;
-      .researchIDAvatar {
+      .researchIdAvatar {
         margin-right: -20px;
         box-shadow: 0 0 15px rgba(black, 0.3);
       }
-      .Publons, .Scopus, .Researcher, .Google_Scholar, .ORCid {
+      .publons, .scopus, .researcher, .google_scholar {
         height: 60px;
       }
-      .orcid { // ORCID required to be more prominent
-        margin-top: -10px;
+      .orcid { // orcid required to be more prominent
+        margin-top: -6px;
         zoom: 1.2;
         -moz-transform: scale(1.2);
         @-moz-document url-prefix() {
@@ -71,40 +72,43 @@
           color: rgba($text-color-reverse, 1);
         }
       }
-    }
-    .researchIDBadge {
-      padding-bottom: 0px !important;
-      padding-top: 12px !important;
-      &:hover {
-        cursor: pointer;
-      }
-      .material-icons {
-        font-size: 16px !important;
-      }
-      img {
-        background-color: transparent !important;
-      }
-      &.ok {
-        & span {
-          background-color: $available-color !important;
-          color: $text-color-reverse !important;
+      .researchIdBadge {
+        padding-bottom: 0px !important;
+        padding-top: 12px !important;
+        &:hover {
+          cursor: pointer;
+        }
+        .material-icons {
+          font-size: 16px !important;
+        }
+        img {
+          background-color: transparent !important;
+        }
+        &.ok {
+          & span {
+            background-color: $available-color !important;
+            color: $text-color-reverse !important;
+          }
+        }
+        &.error {
+          & span {
+            background-color: $error-color !important;
+            color: $text-color-reverse !important;
+          }
         }
       }
-      &.error {
-        & span {
-          background-color: $error-color !important;
-          color: $text-color-reverse !important;
-        }
-      }
     }
-  }
+    }
+
 
   //ArticleCount
-  .articleCountColumn {
-    display: inline-flex;
-    .articleCount {
+  .authorCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .authorCounter {
       color: $text-color-reverse;
-      margin: auto 24px;
+      margin: auto 0;
       height: auto;
       .noOfArticles {
         font-size: 110px;
@@ -154,11 +158,6 @@
         margin-top: 6px !important;
       }
     }
-  }
-
-  // Publications linked from table on dashboard
-  .linkedPubsTable {
-
   }
 }
 

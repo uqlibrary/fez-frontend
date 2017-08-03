@@ -1,4 +1,4 @@
-export const documentAccessTypes = [
+export const quickTemplates = [
     {
         'id': 1,
         'title': 'UQ staff and students view only'

@@ -1,55 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Avatar from 'material-ui/Avatar';
 
-import DashboardResearcherIDs from './DashboardResearcherIDs';
-
-const profileFallbackImage = require('../../../../public/images/avatar.svg');
-
-const DashboardAuthorDetails = ({authorDetails}) => {
+const DashboardAuthorDetails = ({title, familyName, givenName, orgUnits, positions}) => {
     return (
-        <div className="columns userDetails">
-            <div className="column is-narrow">
-                <div className="accountHeadshot">
-                    <Avatar size={150}
-                            style={{
-                                backgroundImage: `url("https://its-ss-uqresearchers.s3.amazonaws.com/photo/thumbnail_${authorDetails.uqr_id}.jpg"), url(${profileFallbackImage})`,
-                                backgroundSize: 'cover, cover'
-                            }}
-                            backgroundColor="transparent"
-                            aria-label={'Photograph of ' + authorDetails.title + ' ' + authorDetails.given_name + ' ' + authorDetails.family_name}
-                            title={authorDetails.title + ' ' + authorDetails.given_name + ' ' + authorDetails.family_name}/>
+        <div className="authorDetails">
+                {/* Title and name */}
+                <div className="authorTitleName title is-3 color-reverse">
+                    {title}&nbsp;{givenName}&nbsp;{familyName}
                 </div>
-            </div>
-
-            {/* Account Name/Positions/OrgUnits */}
-            <div className="column is-narrow accountDetails">
-                <div className="accountTitleName title is-3 color-reverse">
-                    {authorDetails.title} {authorDetails.given_name} {authorDetails.family_name}
-                </div>
-                <div className="column is-paddingless is-marginless is-narrow">
-
-                    {authorDetails.positions.map((item, index) => (
-                        <div key={index} className="accountPositionOrg color-reverse">
+                {/* Author Name/Positions/OrgUnits */}
+                <div className="is-paddingless is-marginless is-narrow">
+                    {
+                        positions && positions.length > 0 && positions.map((item, index) => (
+                        <div key={index} className="authorPositionOrg color-reverse">
                             <strong>{item}</strong>
-                            {authorDetails.org_units[index] ? ', ' : ''}
-                            <span className="color-reverse">{authorDetails.org_units[index]}</span>
+                            {
+                                orgUnits && orgUnits.length > 0 && orgUnits[index] &&
+                                <span className="color-reverse">, {orgUnits[index]}</span>
+                            }
                         </div>
-                    ))}
+                    ))
+                    }
 
                 </div>
-                <DashboardResearcherIDs publonsId={authorDetails.publons_id}
-                                        researcherId={authorDetails.researcher_id}
-                                        scopusId={authorDetails.scopus_id}
-                                        googleScholarId={authorDetails.google_scholar_id}
-                                        orcidId={authorDetails.orcid_id}/>
             </div>
-        </div>
     );
 };
 
 DashboardAuthorDetails.propTypes = {
-    authorDetails: PropTypes.object.isRequired,
+    title: PropTypes.string,
+    familyName: PropTypes.string,
+    givenName: PropTypes.string,
+    orgUnits: PropTypes.array,
+    positions: PropTypes.array
 };
 
 export default DashboardAuthorDetails;
