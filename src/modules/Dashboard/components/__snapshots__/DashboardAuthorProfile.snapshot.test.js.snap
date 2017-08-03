@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert snapshots test Render the collective dashboard author profile area (all components) 1`] = `
+<div
+  className="imageCover"
+>
+  <div
+    className="columns userDetails is-gapless"
+  >
+    <div
+      className="column is-narrow authorAvatar"
+    >
+      <DashboardAuthorAvatar
+        authorDetails={
+          Object {
+            "espace": Object {
+              "doc_count": "282",
+              "first_year": 1990,
+              "last_year": 2017,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
+          }
+        }
+      />
+    </div>
+    <div
+      className="column authorDetails"
+    >
+      <DashboardAuthorDetails
+        familyName="Researcher"
+        givenName="J"
+        orgUnits={
+          Array [
+            "Institute for Molecular Bioscience",
+            "School of Chemistry and Molecular Biosciences",
+            "The University of Queensland Diamantina Institute",
+          ]
+        }
+        positions={
+          Array [
+            "Affiliate Professor",
+            "Affiliate Professorial Res Fellow",
+            "ARC Australian Laureate Fellow",
+          ]
+        }
+        title="Professor"
+      />
+      <DashboardResearcherIds
+        values={
+          Object {
+            "google_scholar": "",
+            "orcid": "0000-0001-1111-1111",
+            "publons": "",
+            "researcher": "G-111-1111",
+            "scopus": "",
+          }
+        }
+      />
+    </div>
+    <div
+      className="column is-narrow authorCount"
+    >
+      <DashboardArticleCount
+        articleCount="282"
+        articleFirstYear={1990}
+        articleLastYear={2017}
+      />
+    </div>
+  </div>
+</div>
+`;

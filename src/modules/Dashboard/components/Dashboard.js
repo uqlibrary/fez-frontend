@@ -10,7 +10,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 import AuthorsPublicationsCount from '../../DonutChart/components/AuthorsPublicationsCount';
 import {AuthorsPublicationsPerYearChart, Alert} from 'uqlibrary-react-toolbox';
 import {loadAuthorDetails} from 'actions';
-import DashboardProfile from './DashboardProfile';
+import DashboardAuthorProfile from './DashboardAuthorProfile';
 
 class Dashboard extends React.Component {
 
@@ -59,7 +59,7 @@ class Dashboard extends React.Component {
                         {/* dashboardProfile */}
                         <div className="column is-12 is-hidden-mobile">
                             {authorDetails && !authorDetailsLoading && (
-                                <DashboardProfile authorDetails={authorDetails}/>
+                                <DashboardAuthorProfile authorDetails={authorDetails}/>
                             )}
                             {!authorDetails && authorDetailsLoading && (
                                 <div className="isLoading is-centered">
