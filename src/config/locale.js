@@ -449,6 +449,10 @@ export default {
             pubtitle: ' records',
             noOfRepos: 4
         },
+        dashboardArticleCount: {
+            yearSeparator: ' to ',
+            countTitle: 'eSpace articles from'
+        }
     },
     sharedComponents: {
         authors: {
