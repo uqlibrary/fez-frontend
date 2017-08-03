@@ -49,8 +49,7 @@ describe('Dashboard test', () => {
                 'tokenBased': false,
                 'canMasquerade': true,
                 'blocked': false
-            },
-            authorDetailsLoading: false
+            }
         };
         const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -81,8 +80,7 @@ describe('Dashboard test', () => {
                 'tokenBased': false,
                 'canMasquerade': false,
                 'blocked': false
-            },
-            authorDetailsLoading: false
+            }
         };
         const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();

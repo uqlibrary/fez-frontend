@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
     static propTypes = {
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
-        authorDetailsLoading: PropTypes.bool.isRequired,
+        authorDetailsLoading: PropTypes.bool,
         history: PropTypes.object,
         claimPublicationResults: PropTypes.object,
         dispatch: PropTypes.func

@@ -24,4 +24,14 @@ describe('Dashboard Rsearcher IDs test', () => {
         const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('Render the authors Researcher IDs with weird values as expected for a UQ researcher', () => {
+        const props = {
+            values: {
+                anId: 'This is an edge case example'
+            }
+        };
+        const wrapper = setup(props);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
