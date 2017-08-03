@@ -29,11 +29,11 @@ const DashboardAuthorDetails = ({values}) => {
 
 DashboardAuthorDetails.propTypes = {
     values: PropTypes.shape({
-        title: PropTypes.any,
-        familyName: PropTypes.any,
-        givenName: PropTypes.any,
-        orgUnits: PropTypes.any,
-        positions: PropTypes.any
+        title: PropTypes.string,
+        familyName: PropTypes.string,
+        givenName: PropTypes.string,
+        orgUnits: PropTypes.array,
+        positions: PropTypes.array
     })
 };
 

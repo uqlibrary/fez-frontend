@@ -19,9 +19,9 @@ const DashboardArticleCount = ({values}) => {
 
 DashboardArticleCount.propTypes = {
     values: PropTypes.shape({
-        articleCount: PropTypes.any,
-        articleFirstYear: PropTypes.any,
-        articleLastYear: PropTypes.any,
+        articleCount: PropTypes.string,
+        articleFirstYear: PropTypes.number,
+        articleLastYear: PropTypes.number,
     })
 };
 

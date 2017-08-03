@@ -48,7 +48,8 @@ class Dashboard extends React.Component {
     render() {
         const {
             authorDetails,
-            authorDetailsLoading
+            authorDetailsLoading,
+            claimPublicationResults,
         } = this.props;
 
         return (
@@ -74,14 +75,14 @@ class Dashboard extends React.Component {
                         </div>
 
                         <div className="notification-wrap column is-12">
-                            {this.props.claimPublicationResults.size > 0 && this.state.showAppbar && (
+                            {claimPublicationResults && claimPublicationResults.size > 0 && this.state.showAppbar && (
                                 <div className="warning alertWrapper">
                                     <div className="columns">
                                         <div className="column is-narrow alertIcon">
                                             <FontIcon className="material-icons">warning</FontIcon>
                                         </div>
                                         <div className="column alertText">
-                                            {`We have found ${this.props.claimPublicationResults.size} article(s) that could possibly be your work.`}
+                                            {`We have found ${claimPublicationResults.size} article(s) that could possibly be your work.`}
                                         </div>
                                         <div className="column is-narrow claim-button">
                                             <FlatButton label="Claim your publications now"

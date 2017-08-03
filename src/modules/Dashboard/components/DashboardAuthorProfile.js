@@ -13,7 +13,13 @@ const DashboardProfile = ({authorDetails}) => {
 
                     {/* Profile avatar */}
                     <div className="column is-narrow authorAvatar">
-                        <DashboardAuthorAvatar authorDetails={authorDetails}/>
+                        <DashboardAuthorAvatar
+                            values={{
+                                uqr_id: authorDetails.uqr_id,
+                                title: authorDetails.title,
+                                givenName: authorDetails.given_name,
+                                familyName: authorDetails.family_name,
+                            }}/>
                     </div>
 
                     {/* Author Details/Name/Orgs/ResearcherIDs */}

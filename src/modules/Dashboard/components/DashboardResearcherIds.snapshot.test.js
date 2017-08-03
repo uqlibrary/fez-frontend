@@ -6,30 +6,22 @@ import React from 'react';
 import DashboardResearcherIds from './DashboardResearcherIds';
 
 function setup({values}) {
-    const props = {
-        values: {
-            'publons': '1',
-            'researcher': '2',
-            'scopus': '3',
-            'google_scholar': '4',
-            'orcid': '5'
-        }
-    };
+    const props = {values};
     return shallow(<DashboardResearcherIds {...props} />);
 }
 
-describe('Alert snapshots test', () => {
-    it('Render the researcher IDs', () => {
-        const values = {
+describe('Dashboard Rsearcher IDs test', () => {
+    it('Render the authors Researcher IDs as expected for a UQ researcher', () => {
+        const props = {
             values: {
-                'publons': '1',
-                'researcher': '2',
-                'scopus': '3',
-                'google_scholar': '4',
-                'orcid': '5'
+                scopus: '',
+                google_scholar: '',
+                researcher: 'G-111-1111',
+                orcid: '0000-0001-1111-1111',
+                publons: ''
             }
         };
-        const wrapper = setup(values);
+        const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

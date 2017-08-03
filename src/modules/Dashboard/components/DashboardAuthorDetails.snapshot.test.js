@@ -5,26 +5,23 @@ import toJson from 'enzyme-to-json';
 import React from 'react';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 
-function setup({title, familyName, givenName, orgUnits, positions}) {
-    const props = {
-        title: 'title',
-        familyName: 'family name',
-        givenName: 'given name',
-        orgUnits: ['1', '2', '3'],
-        positions: ['1', '2', '3'],
-    };
+function setup({values}) {
+    const props = {values};
     return shallow(<DashboardAuthorDetails {...props} />);
 }
 
-describe('Alert snapshots test', () => {
-    it('Render the logged in users details', () => {
-        const title = 'title';
-        const familyName = 'given name';
-        const givenName = 'family name';
-        const orgUnits = ['1', '2', '3'];
-        const positions = ['1', '2', '3'];
-
-        const wrapper = setup(title, familyName, givenName, orgUnits, positions);
+describe('Dashboard Author Details test', () => {
+    it('Render the authors details as expected for a UQ researcher)', () => {
+        const props = {
+            values: {
+                given_name: 'J',
+                family_name: 'Researcher',
+                title: 'Professor',
+                org_units: ['Institute for Molecular Bioscience', 'School of Chemistry and Molecular Biosciences', 'The University of Queensland Diamantina Institute'],
+                positions: ['Affiliate Professor', 'Affiliate Professorial Res Fellow', 'ARC Australian Laureate Fellow'],
+            }
+        };
+        const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
