@@ -1,6 +1,6 @@
 import React from 'react';
-import PublicationSubtypeForm from './components/PublicationSubtypeForm';
+import PublicationSubtypesList from './components/PublicationSubtypesList';
 
 export default function PublicationSubtypeField(fieldProps) {
-    return (<PublicationSubtypeForm onChange={ fieldProps.input.onChange } { ...fieldProps } />);
+    return (<PublicationSubtypesList onChange={ fieldProps.input.onChange } { ...fieldProps } />);
 }

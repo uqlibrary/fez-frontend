@@ -6,7 +6,7 @@ import { loadPublicationSubtypesList } from 'actions';
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
 
-export class PublicationSubtypeForm extends Component {
+export class PublicationSubtypesList extends Component {
     static propTypes = {
         onChange: PropTypes.func,
         locale: PropTypes.object,
@@ -15,7 +15,8 @@ export class PublicationSubtypeForm extends Component {
         dataSourceConfig: PropTypes.object,
         dispatch: PropTypes.func,
         vocabId: PropTypes.number,
-        className: PropTypes.string
+        className: PropTypes.string,
+        loadPublicationSubtypesList: PropTypes.func
     };
 
     static defaultProps = {
@@ -36,7 +37,7 @@ export class PublicationSubtypeForm extends Component {
     }
 
     componentDidMount() {
-        this.props.dispatch(loadPublicationSubtypesList(this.props.vocabId));
+        this.props.loadPublicationSubtypesList(this.props.vocabId);
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -85,4 +86,10 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(PublicationSubtypeForm);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadPublicationSubtypesList: (id) => dispatch(loadPublicationSubtypesList(id))
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PublicationSubtypesList);

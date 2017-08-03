@@ -1,21 +1,30 @@
-jest.dontMock('./PublicationSubtypeForm');
+jest.dontMock('./PublicationSubtypesList');
 
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import { PublicationSubtypeForm } from './PublicationSubtypeForm';
+import { PublicationSubtypesList } from './PublicationSubtypesList';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import PropTypes from 'prop-types';
 
 function setup(props) {
-    return shallow(<PublicationSubtypeForm {...props} />);
+    return mount(<PublicationSubtypesList {...props} />, {
+        context: {
+            muiTheme: getMuiTheme()
+        },
+        childContextTypes: {
+            muiTheme: PropTypes.object.isRequired
+        }
+    });
 }
 
-describe('PublicationSubtypeForm snapshots tests', () => {
-    it('renders correctly', () => {
+describe('PublicationSubtypesList renders correctly', () => {
+    it('without subtypes list', () => {
         const props = {
             vocabId: 453581,
-            subtypesList: []
+            subtypesList: [],
+            loadPublicationSubtypesList: jest.fn()
         };
-
         const wrapper = setup(props);
 
         const tree = toJson(wrapper);
@@ -23,7 +32,7 @@ describe('PublicationSubtypeForm snapshots tests', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders correctly 2', () => {
+    it('with subtypes list', () => {
         const props = {
             vocabId: 453581,
             subtypesList: [
@@ -130,7 +139,8 @@ describe('PublicationSubtypeForm snapshots tests', () => {
                         'controlled_vocab_children': []
                     }
                 }
-            ]
+            ],
+            loadPublicationSubtypesList: jest.fn()
         };
 
         const wrapper = setup(props);
@@ -138,5 +148,22 @@ describe('PublicationSubtypeForm snapshots tests', () => {
         const tree = toJson(wrapper);
 
         expect(tree).toMatchSnapshot();
+    });
+
+    it('calls componentDidMount and componentWillUpdate', () => {
+        const mounted = jest.fn();
+        const updated = jest.fn();
+        const props = {
+            vocabId: 453581,
+            subtypesList: [],
+            loadPublicationSubtypesList: mounted,
+            onChange: updated
+        };
+
+        const wrapper = setup(props);
+        expect(mounted).toHaveBeenCalled();
+
+        wrapper.instance()._onSubtypeSelected({}, 0, 'Test');
+        expect(updated).toHaveBeenCalled();
     });
 });
