@@ -7,7 +7,7 @@ import {PublicationsList} from 'modules/PublicationsList';
 import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 import {locale} from 'config';
-import {searchPossiblyYourPublications, hidePublications} from 'actions';
+import {searchPossiblyYourPublications, hidePublications, setClaimPublication} from 'actions';
 
 export default class ClaimPublication extends React.Component {
 
@@ -63,11 +63,8 @@ export default class ClaimPublication extends React.Component {
     };
 
     _claimPublication = (item) => {
-        // TODO: pass item to claim form
-        // TODO: route should not be hardcoded, should come from config/menu
-        console.log('todo: pass item to claim form');
-        console.log(item);
-        // this.props.history.push('/claim-publications');
+        this.props.history.push('/claim-publication-form');
+        this.props.dispatch(setClaimPublication(item));
     }
 
     _navigateToDashboard = () => {

@@ -1,835 +1,256 @@
 /* eslint-disable */
 export const externalDoiSearchResultList = [
-    {
-        'rek_pid': 123,
-        'rek_display_type': 179,
-        'rek_status': 2,
-        'rek_object_type': 1,
-        'fez_record_search_key_doi': {
-            'rek_doi': '10.1111/j.1755-5922.2010.00189.x'
-        },
-        'rek_thomson_citation_count': 10,
-        'fez_record_search_key_publisher': {
-            'rek_publisher': 'Wiley-Blackwell'
-        },
-        'rek_title': 'External - Nutraceuticals and Atherosclerosis: Human Trials',
-        'rek_date': '2010-07-05 00:00:00',
-        'fez_record_search_key_collection_year': {
-            'rek_collection_year': '2010-07-05 00:00:00'
-        },
-        'fez_record_search_key_date_available': {
-            'rek_date_available': '2010-07-05 00:00:00'
-        },
-        'fez_record_search_key_journal_name': {
-            'rek_journal_name': 'Cardiovascular Therapeutics'
-        },
-        'fez_record_search_key_issue_number': {
-            'rek_issue_number': '4'
-        },
-        'fez_record_search_key_volume_number': {
-            'rek_volume_number': '28'
-        },
-        'fez_record_search_key_start_page': {
-            'rek_start_page': '202'
-        },
-        'fez_record_search_key_end_page': {
-            'rek_end_page': '215'
-        },
-        'fez_record_search_key_keywords': [
-            {
-                'rek_keywords': 'Pharmacology (medical)',
-                'rek_keywords_order': 1
-            },
-            {
-                'rek_keywords': 'Pharmacology',
-                'rek_keywords_order': 2
-            },
-            {
-                'rek_keywords': 'Cardiology and Cardiovascular Medicine',
-                'rek_keywords_order': 3
-            }
-        ],
-        'fez_record_search_key_issn': [
-            {
-                'rek_issn': '1755-5914',
-                'rek_issn_order': 1
-            },
-            {
-                'rek_issn': '1755-5922',
-                'rek_issn_order': 2
-            }
-        ],
-        'fez_record_search_key_author': [
-            {
-                rek_author: "Ramsby, Blake D.",
-                rek_author_order: 1
-            },
-            {
-                rek_author: "Hoogenboom, Mia O.",
-                rek_author_order: 2
-            },
-            {
-                rek_author: "Whalan, Steve",
-                rek_author_order: 3
-            },
-            {
-                rek_author: "Webster, Nicole S.",
-                rek_author_order: 4
-            },
-            {
-                rek_author: "Thompson, Angus",
-                rek_author_order: 5
-            }
-        ]
-    }
+    {"rek_title":"Nutraceuticals and atherosclerosis: human trials.","fez_record_search_key_journal_name":{"rek_journal_name":"Cardiovascular therapeutics"},"fez_record_search_key_doi":{"rek_doi":"10.1111\/j.1755-5922.2010.00189.x"},"fez_record_search_key_issn":[{"rek_issn":"1755-5922","rek_issn_order":1}],"fez_record_search_key_pubmed_id":{"rek_pubmed_id":"20633023"},"fez_record_search_key_issue_number":{"rek_issue_number":"4"},"fez_record_search_key_volume_number":{"rek_volume_number":"28"},"fez_record_search_key_start_page":{"rek_start_page":"202"},"fez_record_search_key_end_page":{"rek_end_page":"15"},"fez_record_search_key_total_pages":{"rek_total_pages":-186},"fez_record_search_key_language":[{"rek_language":false,"rek_language_order":1}],"fez_record_search_key_author":[{"rek_author":"Badimon, Lina","rek_author_order":1},{"rek_author":"Vilahur, Gemma","rek_author_order":2},{"rek_author":"Padro, Teresa","rek_author_order":3}],"fez_record_search_key_author_affiliation_full_address":[{"rek_author_affiliation_full_address":"Cardiovascular Research Center, CSIC-ICCC, Hospital de la Santa Creu i Sant Pau and IIB-Santpau, Barcelona, Spain. lbadimon@csic-iccc.org","rek_author_affiliation_full_address_order":1}],"rek_description":"The high prevalence of obesity, atherosclerosis, and cardiovascular disease (CVD) is largely attributable to the contemporary lifestyle that is often sedentary and includes a diet high in saturated fats and sugars and low ingestion polyunsaturated fatty acids (PUFAs), fruit, vegetables, and fiber. Epidemiological studies have confirmed a strong association between fat intake, especially saturated- and transfatty acids, plasma cholesterol levels, and rate of coronary heart disease (CHD) mortality. In counterpart, beneficial cardiovascular effects have been reported in populations consuming the \"healthy\" Mediterranean-type diet. Indeed, many nutrients and phytochemicals in fruits, vegetables, and wine, including fiber, vitamins, minerals, antioxidants, have shown to be independently or jointly responsible for the apparent reduction in CVD risk. Therefore, in patients with overt CVD, efforts have focused on combining both drug treatments and nutrition interventions. Undoubtedly, the advances in the knowledge of both the disease processes and healthy dietary components have provided new avenues to develop pharmaceutical and\/or dietary strategies to halt the development of vascular disease. In this regard, within the last years, pioneering nutritional strategies, such as nutraceuticals, have been developed aimed at reducing the main atherosclerotic risk factors and promoting cardiovascular health. Furthermore, a growing body of clinical evidence has demonstrated positive cardiovascular effects associated with dietary fibers, cholesterol-lowering natural agents, olive oil, omega-3 PUFAs, antioxidants, and polyphenols intake. Moreover, monounsaturated fatty acids intake has shown to modulate the expression of key atherosclerotic-related genes. Yet, in the case of antioxidants, some large clinical trials have failed to confirm such atheroprotective effects. Furthermore, there might be interactions between these natural food supplements and cardiovascular medications that cannot be overlooked. Hence, there is a need for a better understanding and more scientific evidence of the relative contribution of major nutraceutical constituents to the inhibition of the progression of atherosclerosis and its clinical consequences.","fez_record_search_key_oa_status":{"rek_oa_status":"453698"},"rek_display_type":179,"rek_genre":"Journal Article"}
 ];
 
 export const externalPubMedSearchResultsList = [
-    {
-        'rek_pid': 123,
-        'rek_display_type': 222,
-        'rek_status': 2,
-        'rek_object_type': 1,
-        'fez_record_search_key_doi': {
-            'rek_doi': '10.1111/bcp.12935'
-        },
-        'fez_record_search_key_publisher': {
-            'rek_publisher': 'Wiley-Blackwell'
-        },
-        'rek_title': 'External - Defining ‘nutraceuticals’: neither nutritious nor pharmaceutical',
-        'rek_thomson_citation_count': 10,
-        'rek_date': '2016-04-25 00:00:00',
-        'fez_record_search_key_collection_year': {
-            'rek_collection_year': '2016-04-25 00:00:00'
-        },
-        'fez_record_search_key_date_available': {
-            'rek_date_available': '2016-04-25 00:00:00'
-        },
-        'fez_record_search_key_journal_name': {
-            'rek_journal_name': 'British Journal of Clinical Pharmacology'
-        },
-        'fez_record_search_key_issue_number': {
-            'rek_issue_number': '1'
-        },
-        'fez_record_search_key_volume_number': {
-            'rek_volume_number': '83'
-        },
-        'fez_record_search_key_start_page': {
-            'rek_start_page': '8'
-        },
-        'fez_record_search_key_end_page': {
-            'rek_end_page': '19'
-        },
-        'fez_record_search_key_keywords': [
-            {
-                'rek_keywords': 'Pharmacology (medical)',
-                'rek_keywords_order': 1
-            },
-            {
-                'rek_keywords': 'Pharmacology',
-                'rek_keywords_order': 2
-            }
-        ],
-        'fez_record_search_key_issn': [
-            {
-                'rek_issn': '0306-5251',
-                'rek_issn_order': 1
-            }
-        ],
-        'fez_record_search_key_author': [
-            {
-                rek_author: "Ramsby, Blake D.",
-                rek_author_order: 1
-            },
-            {
-                rek_author: "Hoogenboom, Mia O.",
-                rek_author_order: 2
-            },
-            {
-                rek_author: "Whalan, Steve",
-                rek_author_order: 3
-            },
-            {
-                rek_author: "Webster, Nicole S.",
-                rek_author_order: 4
-            },
-            {
-                rek_author: "Thompson, Angus",
-                rek_author_order: 5
-            }
-        ]
-    }
+    {"rek_title":"Nutraceuticals and atherosclerosis: human trials.","fez_record_search_key_journal_name":{"rek_journal_name":"Cardiovascular therapeutics"},"fez_record_search_key_doi":{"rek_doi":"10.1111\/j.1755-5922.2010.00189.x"},"fez_record_search_key_issn":[{"rek_issn":"1755-5922","rek_issn_order":1}],"fez_record_search_key_pubmed_id":{"rek_pubmed_id":"20633023"},"fez_record_search_key_issue_number":{"rek_issue_number":"4"},"fez_record_search_key_volume_number":{"rek_volume_number":"28"},"fez_record_search_key_start_page":{"rek_start_page":"202"},"fez_record_search_key_end_page":{"rek_end_page":"15"},"fez_record_search_key_total_pages":{"rek_total_pages":-186},"fez_record_search_key_language":[{"rek_language":false,"rek_language_order":1}],"fez_record_search_key_author":[{"rek_author":"Badimon, Lina","rek_author_order":1},{"rek_author":"Vilahur, Gemma","rek_author_order":2},{"rek_author":"Padro, Teresa","rek_author_order":3}],"fez_record_search_key_author_affiliation_full_address":[{"rek_author_affiliation_full_address":"Cardiovascular Research Center, CSIC-ICCC, Hospital de la Santa Creu i Sant Pau and IIB-Santpau, Barcelona, Spain. lbadimon@csic-iccc.org","rek_author_affiliation_full_address_order":1}],"rek_description":"The high prevalence of obesity, atherosclerosis, and cardiovascular disease (CVD) is largely attributable to the contemporary lifestyle that is often sedentary and includes a diet high in saturated fats and sugars and low ingestion polyunsaturated fatty acids (PUFAs), fruit, vegetables, and fiber. Epidemiological studies have confirmed a strong association between fat intake, especially saturated- and transfatty acids, plasma cholesterol levels, and rate of coronary heart disease (CHD) mortality. In counterpart, beneficial cardiovascular effects have been reported in populations consuming the \"healthy\" Mediterranean-type diet. Indeed, many nutrients and phytochemicals in fruits, vegetables, and wine, including fiber, vitamins, minerals, antioxidants, have shown to be independently or jointly responsible for the apparent reduction in CVD risk. Therefore, in patients with overt CVD, efforts have focused on combining both drug treatments and nutrition interventions. Undoubtedly, the advances in the knowledge of both the disease processes and healthy dietary components have provided new avenues to develop pharmaceutical and\/or dietary strategies to halt the development of vascular disease. In this regard, within the last years, pioneering nutritional strategies, such as nutraceuticals, have been developed aimed at reducing the main atherosclerotic risk factors and promoting cardiovascular health. Furthermore, a growing body of clinical evidence has demonstrated positive cardiovascular effects associated with dietary fibers, cholesterol-lowering natural agents, olive oil, omega-3 PUFAs, antioxidants, and polyphenols intake. Moreover, monounsaturated fatty acids intake has shown to modulate the expression of key atherosclerotic-related genes. Yet, in the case of antioxidants, some large clinical trials have failed to confirm such atheroprotective effects. Furthermore, there might be interactions between these natural food supplements and cardiovascular medications that cannot be overlooked. Hence, there is a need for a better understanding and more scientific evidence of the relative contribution of major nutraceutical constituents to the inhibition of the progression of atherosclerosis and its clinical consequences.","fez_record_search_key_oa_status":{"rek_oa_status":"453698"},"rek_display_type":179,"rek_genre":"Journal Article"}
 ];
 
 export const externalTitleSearchResultsList = [
     {
-    "fez_record_search_key_ismemberof": [{
-        "rek_ismemberof": "UQ:180159",
-        "rek_ismemberof_order": 1
-    }],
-    "rek_object_type": 3,
-    "fez_record_search_key_isi_loc": {"rek_isi_loc": "000403737200014"},
-    "rek_status": 2,
-    "fez_record_search_key_publisher": {"rek_publisher": "ELSEVIER SCI LTD"},
-    "rek_title": "Setting ecologically relevant targets for river pollutant loads to meet marine water quality requirements for the Great Barrier Reef, Australia: A preliminary methodology and analysis",
-    "fez_record_search_key_issn": [{"rek_issn": "0964-5691", "rek_issn_order": 1}],
-    "fez_record_search_key_doi": {"rek_doi": "10.1016\/j.ocecoaman.2016.09.028"},
-    "rek_date": "2017-07-01 00:00:00",
-    "fez_record_search_key_collection_year": {"rek_collection_year": "2017-07-01 00:00:00"},
-    "fez_record_search_key_date_available": {"rek_date_available": "2017-07-01 00:00:00"},
-    "fez_record_search_key_keywords": [{
-        "rek_keywords": "Oceanography",
-        "rek_keywords_order": 1
-    }, {"rek_keywords": "Water Resources", "rek_keywords_order": 2}, {
-        "rek_keywords": "Oceanography",
-        "rek_keywords_order": 3
-    }, {"rek_keywords": "Water Resources", "rek_keywords_order": 4}],
-    "fez_record_search_key_volume_number": {"rek_volume_number": "143"},
-    "fez_record_search_key_start_page": {"rek_start_page": "136"},
-    "fez_record_search_key_end_page": {"rek_end_page": "147"},
-    "fez_record_search_key_total_pages": {"rek_total_pages": "12"},
-    "fez_record_search_key_language": [{"rek_language": "eng", "rek_language_order": 1}],
-    "fez_record_search_key_author": [{
-        "rek_author": "Brodie, Jon E.",
-        "rek_author_order": 1
-    }, {"rek_author": "Lewis, Stephen E.", "rek_author_order": 2}, {
-        "rek_author": "Collier, Catherine J.",
-        "rek_author_order": 3
-    }, {"rek_author": "Wooldridge, Scott", "rek_author_order": 4}, {
-        "rek_author": "Bainbridge, Zoe T.",
-        "rek_author_order": 5
-    }, {"rek_author": "Waterhouse, Jane", "rek_author_order": 6}, {
-        "rek_author": "Rasheed, Michael A.",
-        "rek_author_order": 7
-    }, {"rek_author": "Honchin, Carol", "rek_author_order": 8}, {
-        "rek_author": "Holmes, Glen",
-        "rek_author_order": 9
-    }, {"rek_author": "Fabricius, Katharina", "rek_author_order": 10}],
-    "fez_record_search_key_author_affiliation_name": [{
-        "rek_author_affiliation_name": "James Cook University|C2O Consulting|James Cook University",
-        "rek_author_affiliation_name_order": 1
-    }, {
-        "rek_author_affiliation_name": "James Cook University",
-        "rek_author_affiliation_name_order": 2
-    }, {
-        "rek_author_affiliation_name": "James Cook University",
-        "rek_author_affiliation_name_order": 3
-    }, {
-        "rek_author_affiliation_name": "Catchment Reef Management Solut Ltd",
-        "rek_author_affiliation_name_order": 4
-    }, {
-        "rek_author_affiliation_name": "James Cook University",
-        "rek_author_affiliation_name_order": 5
-    }, {
-        "rek_author_affiliation_name": "James Cook University|C2O Consulting",
-        "rek_author_affiliation_name_order": 6
-    }, {
-        "rek_author_affiliation_name": "James Cook University",
-        "rek_author_affiliation_name_order": 7
-    }, {
-        "rek_author_affiliation_name": "Great Barrier Reef Marine Pk Author",
-        "rek_author_affiliation_name_order": 8
-    }, {
-        "rek_author_affiliation_name": "University of Queensland",
-        "rek_author_affiliation_name_order": 9
-    }, {
-        "rek_author_affiliation_name": "Australian Institute of Marine Science",
-        "rek_author_affiliation_name_order": 10
-    }],
-    "fez_record_search_key_author_affiliation_country": [{
-        "rek_author_affiliation_country": "Australia|Australia|Australia",
-        "rek_author_affiliation_country_order": 1
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 2
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 3
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 4
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 5
-    }, {
-        "rek_author_affiliation_country": "Australia|Australia",
-        "rek_author_affiliation_country_order": 6
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 7
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 8
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 9
-    }, {"rek_author_affiliation_country": "Australia", "rek_author_affiliation_country_order": 10}],
-    "fez_record_search_key_author_affiliation_full_address": [{
-        "rek_author_affiliation_full_address": "James Cook Univ, Ctr Trop Water & Aquat Ecosyst Res, Townsville, Qld 4811, Australia|C2O Consulting, Townsville, Qld 4810, Australia|James Cook Univ, Australian Res Council, Ctr Excellence Coral Reef Studies, Townsville, Qld 4810, Australia",
-        "rek_author_affiliation_full_address_order": 1
-    }, {
-        "rek_author_affiliation_full_address": "James Cook Univ, Ctr Trop Water & Aquat Ecosyst Res, Townsville, Qld 4811, Australia",
-        "rek_author_affiliation_full_address_order": 2
-    }, {
-        "rek_author_affiliation_full_address": "James Cook Univ, Ctr Trop Water & Aquat Ecosyst Res, Cairns 4878, Australia",
-        "rek_author_affiliation_full_address_order": 3
-    }, {
-        "rek_author_affiliation_full_address": "Catchment Reef Management Solut Ltd, Newcastle, NSW 2300, Australia",
-        "rek_author_affiliation_full_address_order": 4
-    }, {
-        "rek_author_affiliation_full_address": "James Cook Univ, Ctr Trop Water & Aquat Ecosyst Res, Townsville, Qld 4811, Australia",
-        "rek_author_affiliation_full_address_order": 5
-    }, {
-        "rek_author_affiliation_full_address": "James Cook Univ, Ctr Trop Water & Aquat Ecosyst Res, Townsville, Qld 4811, Australia|C2O Consulting, Townsville, Qld 4810, Australia",
-        "rek_author_affiliation_full_address_order": 6
-    }, {
-        "rek_author_affiliation_full_address": "James Cook Univ, Ctr Trop Water & Aquat Ecosyst Res, Cairns 4878, Australia",
-        "rek_author_affiliation_full_address_order": 7
-    }, {
-        "rek_author_affiliation_full_address": "Great Barrier Reef Marine Pk Author, Townsville, Qld 4810, Australia",
-        "rek_author_affiliation_full_address_order": 8
-    }, {
-        "rek_author_affiliation_full_address": "Univ Queensland, Sch Geog Planning & Environm Management, St Lucia, Qld 4072, Australia",
-        "rek_author_affiliation_full_address_order": 9
-    }, {
-        "rek_author_affiliation_full_address": "Australian Inst Marine Sci, PMB 3, Townsville, Qld 4810, Australia",
-        "rek_author_affiliation_full_address_order": 10
-    }],
-    "rek_thomson_citation_count": 0,
-    "fez_record_search_key_corresponding_organisation": [{
-        "rek_corresponding_organisation": "James Cook University",
-        "rek_corresponding_organisation_order": 1
-    }, {
-        "rek_corresponding_organisation": "C2O Consulting",
-        "rek_corresponding_organisation_order": 2
-    }, {
-        "rek_corresponding_organisation": "Catchment Reef Management Solut Ltd",
-        "rek_corresponding_organisation_order": 3
-    }, {
-        "rek_corresponding_organisation": "Great Barrier Reef Marine Pk Author",
-        "rek_corresponding_organisation_order": 4
-    }, {
-        "rek_corresponding_organisation": "University of Queensland",
-        "rek_corresponding_organisation_order": 5
-    }, {
-        "rek_corresponding_organisation": "Australian Institute of Marine Science",
-        "rek_corresponding_organisation_order": 6
-    }, {
-        "rek_corresponding_organisation": "James Cook University",
-        "rek_corresponding_organisation_order": 7
-    }, {"rek_corresponding_organisation": "James Cook University", "rek_corresponding_organisation_order": 8}],
-    "fez_record_search_key_corresponding_country": [{
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 1
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 2
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 3
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 4
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 5
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 6
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 7
-    }, {"rek_corresponding_country": "Australia", "rek_corresponding_country_order": 8}],
-    "fez_record_search_key_corresponding_email": [{
-        "rek_corresponding_email": "jon.brodie@jcu.edu.au",
-        "rek_corresponding_email_order": 1
-    }, {
-        "rek_corresponding_email": "jon.brodie@jcu.edu.au",
-        "rek_corresponding_email_order": 2
-    }, {"rek_corresponding_email": "jon.brodie@jcu.edu.au", "rek_corresponding_email_order": 3}],
-    "fez_record_search_key_corresponding_name": [{
-        "rek_corresponding_name": "Brodie, Jon E.",
-        "rek_corresponding_name_order": 1
-    }, {
-        "rek_corresponding_name": "Brodie, Jon E.",
-        "rek_corresponding_name_order": 2
-    }, {"rek_corresponding_name": "Brodie, Jon E.", "rek_corresponding_name_order": 3}],
-    "fez_record_search_key_grant_agency": [{
-        "rek_grant_agency": "Port of Townsville Ltd.",
-        "rek_grant_agency_order": 1
-    }],
-    "rek_display_type": 179,
-    "rek_genre": "Article",
-    "rek_genre_type": "Article (original research)",
-    "rek_subtype": "Article (original research)",
-    "fez_record_search_key_journal_name": {"rek_journal_name": "Ocean & Coastal Management"}
-}, {
-    "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:180159", "rek_ismemberof_order": 1}],
-    "rek_object_type": 3,
-    "fez_record_search_key_isi_loc": {"rek_isi_loc": "000403985200012"},
-    "rek_status": 2,
-    "fez_record_search_key_publisher": {"rek_publisher": "PERGAMON-ELSEVIER SCIENCE LTD"},
-    "rek_title": "Variation in the health and biochemical condition of the coral Acropora tenuis along two water quality gradients on the Great Barrier Reef, Australia",
-    "fez_record_search_key_issn": [{"rek_issn": "0025-326X", "rek_issn_order": 1}],
-    "fez_record_search_key_doi": {"rek_doi": "10.1016\/j.marpolbul.2017.03.066"},
-    "rek_date": "2017-06-30 00:00:00",
-    "fez_record_search_key_collection_year": {"rek_collection_year": "2017-06-30 00:00:00"},
-    "fez_record_search_key_date_available": {"rek_date_available": "2017-06-30 00:00:00"},
-    "fez_record_search_key_keywords": [{
-        "rek_keywords": "Environmental Sciences",
-        "rek_keywords_order": 1
-    }, {
-        "rek_keywords": "Marine & Freshwater Biology",
-        "rek_keywords_order": 2
-    }, {
-        "rek_keywords": "Environmental Sciences & Ecology",
-        "rek_keywords_order": 3
-    }, {"rek_keywords": "Marine & Freshwater Biology", "rek_keywords_order": 4}],
-    "fez_record_search_key_issue_number": {"rek_issue_number": "2"},
-    "fez_record_search_key_volume_number": {"rek_volume_number": "119"},
-    "fez_record_search_key_start_page": {"rek_start_page": "106"},
-    "fez_record_search_key_end_page": {"rek_end_page": "119"},
-    "fez_record_search_key_total_pages": {"rek_total_pages": "14"},
-    "fez_record_search_key_language": [{"rek_language": "eng", "rek_language_order": 1}],
-    "fez_record_search_key_author": [{
-        "rek_author": "Rocker, Melissa M.",
-        "rek_author_order": 1
-    }, {"rek_author": "Francis, David S.", "rek_author_order": 2}, {
-        "rek_author": "Fabricius, Katharina E.",
-        "rek_author_order": 3
-    }, {"rek_author": "Willis, Bette L.", "rek_author_order": 4}, {
-        "rek_author": "Bay, Line K.",
-        "rek_author_order": 5
-    }],
-    "fez_record_search_key_author_affiliation_name": [{
-        "rek_author_affiliation_name": "Australian Inst Marine Sci|James Cook Univ|James Cook Univ|James Cook Univ|Deakin Univ",
-        "rek_author_affiliation_name_order": 1
-    }, {
-        "rek_author_affiliation_name": "Deakin Univ",
-        "rek_author_affiliation_name_order": 2
-    }, {
-        "rek_author_affiliation_name": "Australian Inst Marine Sci",
-        "rek_author_affiliation_name_order": 3
-    }, {
-        "rek_author_affiliation_name": "James Cook Univ|James Cook Univ",
-        "rek_author_affiliation_name_order": 4
-    }, {
-        "rek_author_affiliation_name": "Australian Inst Marine Sci|James Cook Univ",
-        "rek_author_affiliation_name_order": 5
-    }],
-    "fez_record_search_key_author_affiliation_country": [{
-        "rek_author_affiliation_country": "Australia|Australia|Australia|Australia|Australia",
-        "rek_author_affiliation_country_order": 1
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 2
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 3
-    }, {
-        "rek_author_affiliation_country": "Australia|Australia",
-        "rek_author_affiliation_country_order": 4
-    }, {"rek_author_affiliation_country": "Australia|Australia", "rek_author_affiliation_country_order": 5}],
-    "fez_record_search_key_author_affiliation_full_address": [{
-        "rek_author_affiliation_full_address": "Australian Inst Marine Sci, PMB 3, Townsville, Qld 4810, Australia|James Cook Univ, Australian Inst Marine Sci, AIMS JCU, Townsville, Qld 4811, Australia|James Cook Univ, Coll Marine & Environm Sci, Townsville, Qld 4811, Australia|James Cook Univ, ARC Ctr Excellence Coral Reef Studies, Townsville, Qld 4811, Australia|Deakin Univ, Sch Life & Environm Sci, Waurn Ponds Campus,Pigdons Rd, Waurn Ponds, Vic 3216, Australia",
-        "rek_author_affiliation_full_address_order": 1
-    }, {
-        "rek_author_affiliation_full_address": "Deakin Univ, Sch Life & Environm Sci, Warrnambool Campus,Sherwood Pk,POB 423, Warrnambool, Vic 3280, Australia",
-        "rek_author_affiliation_full_address_order": 2
-    }, {
-        "rek_author_affiliation_full_address": "Australian Inst Marine Sci, PMB 3, Townsville, Qld 4810, Australia",
-        "rek_author_affiliation_full_address_order": 3
-    }, {
-        "rek_author_affiliation_full_address": "James Cook Univ, Coll Marine & Environm Sci, Townsville, Qld 4811, Australia|James Cook Univ, ARC Ctr Excellence Coral Reef Studies, Townsville, Qld 4811, Australia",
-        "rek_author_affiliation_full_address_order": 4
-    }, {
-        "rek_author_affiliation_full_address": "Australian Inst Marine Sci, PMB 3, Townsville, Qld 4810, Australia|James Cook Univ, ARC Ctr Excellence Coral Reef Studies, Townsville, Qld 4811, Australia",
-        "rek_author_affiliation_full_address_order": 5
-    }],
-    "rek_thomson_citation_count": 0,
-    "fez_record_search_key_corresponding_organisation": [{
-        "rek_corresponding_organisation": "Australian Inst Marine Sci",
-        "rek_corresponding_organisation_order": 1
-    }, {
-        "rek_corresponding_organisation": "James Cook Univ",
-        "rek_corresponding_organisation_order": 2
-    }, {
-        "rek_corresponding_organisation": "James Cook Univ",
-        "rek_corresponding_organisation_order": 3
-    }, {
-        "rek_corresponding_organisation": "James Cook Univ",
-        "rek_corresponding_organisation_order": 4
-    }, {
-        "rek_corresponding_organisation": "Deakin Univ",
-        "rek_corresponding_organisation_order": 5
-    }, {"rek_corresponding_organisation": "Deakin Univ", "rek_corresponding_organisation_order": 6}],
-    "fez_record_search_key_corresponding_country": [{
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 1
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 2
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 3
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 4
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 5
-    }, {"rek_corresponding_country": "Australia", "rek_corresponding_country_order": 6}],
-    "fez_record_search_key_corresponding_email": [{
-        "rek_corresponding_email": "melissa.rocker@deakin.edu.au",
-        "rek_corresponding_email_order": 1
-    }, {
-        "rek_corresponding_email": "melissa.rocker@deakin.edu.au",
-        "rek_corresponding_email_order": 2
-    }, {
-        "rek_corresponding_email": "melissa.rocker@deakin.edu.au",
-        "rek_corresponding_email_order": 3
-    }, {
-        "rek_corresponding_email": "melissa.rocker@deakin.edu.au",
-        "rek_corresponding_email_order": 4
-    }, {"rek_corresponding_email": "melissa.rocker@deakin.edu.au", "rek_corresponding_email_order": 5}],
-    "fez_record_search_key_corresponding_name": [{
-        "rek_corresponding_name": "Rocker, Melissa M.",
-        "rek_corresponding_name_order": 1
-    }, {
-        "rek_corresponding_name": "Rocker, Melissa M.",
-        "rek_corresponding_name_order": 2
-    }, {
-        "rek_corresponding_name": "Rocker, Melissa M.",
-        "rek_corresponding_name_order": 3
-    }, {
-        "rek_corresponding_name": "Rocker, Melissa M.",
-        "rek_corresponding_name_order": 4
-    }, {"rek_corresponding_name": "Rocker, Melissa M.", "rek_corresponding_name_order": 5}],
-    "fez_record_search_key_grant_agency": [{
-        "rek_grant_agency": "Australian Institute of Marine Science",
-        "rek_grant_agency_order": 1
-    }, {
-        "rek_grant_agency": "Australian Government's National Environmental Research Program - Tropical Ecosystems Hub",
-        "rek_grant_agency_order": 2
-    }, {
-        "rek_grant_agency": "PADI Grant Foundation",
-        "rek_grant_agency_order": 3
-    }, {"rek_grant_agency": "ARC Centre of Excellence for Coral Reef Studies", "rek_grant_agency_order": 4}],
-    "fez_record_search_key_grant_id": [{"rek_grant_id": "CEO561435", "rek_grant_id_order": 1}],
-    "rek_display_type": 179,
-    "rek_genre": "Article",
-    "rek_genre_type": "Article (original research)",
-    "rek_subtype": "Article (original research)",
-    "fez_record_search_key_journal_name": {"rek_journal_name": "Marine Pollution Bulletin"}
-}, {
-    "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:180159", "rek_ismemberof_order": 1}],
-    "rek_object_type": 3,
-    "fez_record_search_key_isi_loc": {"rek_isi_loc": "000403466400021"},
-    "rek_status": 2,
-    "fez_record_search_key_publisher": {"rek_publisher": "WILEY"},
-    "rek_title": "An improved method for calculating toxicity-based pollutant loads: Part 2. Application to contaminants discharged to the Great Barrier Reef, Queensland, Australia",
-    "fez_record_search_key_issn": [{"rek_issn": "1551-3777", "rek_issn_order": 1}],
-    "fez_record_search_key_doi": {"rek_doi": "10.1002\/ieam.1860"},
-    "rek_date": "2017-07-01 00:00:00",
-    "fez_record_search_key_collection_year": {"rek_collection_year": "2017-07-01 00:00:00"},
-    "fez_record_search_key_date_available": {"rek_date_available": "2017-07-01 00:00:00"},
-    "fez_record_search_key_keywords": [{
-        "rek_keywords": "Environmental Sciences",
-        "rek_keywords_order": 1
-    }, {"rek_keywords": "Toxicology", "rek_keywords_order": 2}, {
-        "rek_keywords": "Environmental Sciences & Ecology",
-        "rek_keywords_order": 3
-    }, {"rek_keywords": "Toxicology", "rek_keywords_order": 4}],
-    "fez_record_search_key_issue_number": {"rek_issue_number": "4"},
-    "fez_record_search_key_volume_number": {"rek_volume_number": "13"},
-    "fez_record_search_key_start_page": {"rek_start_page": "754"},
-    "fez_record_search_key_end_page": {"rek_end_page": "764"},
-    "fez_record_search_key_total_pages": {"rek_total_pages": "11"},
-    "fez_record_search_key_language": [{"rek_language": "eng", "rek_language_order": 1}],
-    "fez_record_search_key_author": [{
-        "rek_author": "Smith, Rachael A.",
-        "rek_author_order": 1
-    }, {"rek_author": "Warne, Michael St J.", "rek_author_order": 2}, {
-        "rek_author": "Mengersen, Kerrie",
-        "rek_author_order": 3
-    }, {"rek_author": "Turner, Ryan D. R.", "rek_author_order": 4}],
-    "fez_record_search_key_author_affiliation_name": [{
-        "rek_author_affiliation_name": "Dept Sci Informat Technol & Innovat|Griffith University|Queensland University of Technology (QUT)",
-        "rek_author_affiliation_name_order": 1
-    }, {
-        "rek_author_affiliation_name": "Dept Sci Informat Technol & Innovat|Griffith University|University of Queensland|Coventry University",
-        "rek_author_affiliation_name_order": 2
-    }, {
-        "rek_author_affiliation_name": "Queensland University of Technology (QUT)",
-        "rek_author_affiliation_name_order": 3
-    }, {
-        "rek_author_affiliation_name": "Dept Sci Informat Technol & Innovat|Griffith University|Queensland University of Technology (QUT)",
-        "rek_author_affiliation_name_order": 4
-    }],
-    "fez_record_search_key_author_affiliation_country": [{
-        "rek_author_affiliation_country": "Australia|Australia|Australia",
-        "rek_author_affiliation_country_order": 1
-    }, {
-        "rek_author_affiliation_country": "Australia|Australia|Australia|England",
-        "rek_author_affiliation_country_order": 2
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 3
-    }, {"rek_author_affiliation_country": "Australia|Australia|Australia", "rek_author_affiliation_country_order": 4}],
-    "fez_record_search_key_author_affiliation_full_address": [{
-        "rek_author_affiliation_full_address": "Dept Sci Informat Technol & Innovat, Div Sci, Water Qual & Invest, Brisbane, Qld, Australia|Griffith Univ, Australian Rivers Insto, Nathan, Qld, Australia|Queensland Univ Technol, Fac Sci & Engn, Brisbane, Qld, Australia",
-        "rek_author_affiliation_full_address_order": 1
-    }, {
-        "rek_author_affiliation_full_address": "Dept Sci Informat Technol & Innovat, Div Sci, Water Qual & Invest, Brisbane, Qld, Australia|Griffith Univ, Australian Rivers Insto, Nathan, Qld, Australia|Univ Queensland, Natl Res Ctr Environm Toxicol, Coopers Plains, Qld, Australia|Coventry Univ, Ctr Agroecol Water & Resilience, Coventry, W Midlands, England",
-        "rek_author_affiliation_full_address_order": 2
-    }, {
-        "rek_author_affiliation_full_address": "Queensland Univ Technol, Fac Sci & Engn, Brisbane, Qld, Australia",
-        "rek_author_affiliation_full_address_order": 3
-    }, {
-        "rek_author_affiliation_full_address": "Dept Sci Informat Technol & Innovat, Div Sci, Water Qual & Invest, Brisbane, Qld, Australia|Griffith Univ, Australian Rivers Insto, Nathan, Qld, Australia|Queensland Univ Technol, Fac Sci & Engn, Brisbane, Qld, Australia",
-        "rek_author_affiliation_full_address_order": 4
-    }],
-    "rek_thomson_citation_count": 0,
-    "fez_record_search_key_corresponding_organisation": [{
-        "rek_corresponding_organisation": "Dept Sci Informat Technol & Innovat",
-        "rek_corresponding_organisation_order": 1
-    }, {
-        "rek_corresponding_organisation": "Griffith University",
-        "rek_corresponding_organisation_order": 2
-    }, {
-        "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
-        "rek_corresponding_organisation_order": 3
-    }, {
-        "rek_corresponding_organisation": "University of Queensland",
-        "rek_corresponding_organisation_order": 4
-    }, {"rek_corresponding_organisation": "Coventry University", "rek_corresponding_organisation_order": 5}],
-    "fez_record_search_key_corresponding_country": [{
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 1
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 2
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 3
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 4
-    }, {"rek_corresponding_country": "England", "rek_corresponding_country_order": 5}],
-    "fez_record_search_key_corresponding_email": [{
-        "rek_corresponding_email": "rachael.smith@dsiti.qld.gov.au",
-        "rek_corresponding_email_order": 1
-    }, {
-        "rek_corresponding_email": "rachael.smith@dsiti.qld.gov.au",
-        "rek_corresponding_email_order": 2
-    }, {"rek_corresponding_email": "rachael.smith@dsiti.qld.gov.au", "rek_corresponding_email_order": 3}],
-    "fez_record_search_key_corresponding_name": [{
-        "rek_corresponding_name": "Smith, Rachael A.",
-        "rek_corresponding_name_order": 1
-    }, {
-        "rek_corresponding_name": "Smith, Rachael A.",
-        "rek_corresponding_name_order": 2
-    }, {"rek_corresponding_name": "Smith, Rachael A.", "rek_corresponding_name_order": 3}],
-    "fez_record_search_key_grant_agency": [{
-        "rek_grant_agency": "Queensland Department of Natural Resources and Mines",
-        "rek_grant_agency_order": 1
-    }],
-    "rek_display_type": 179,
-    "rek_genre": "Article",
-    "rek_genre_type": "Article (original research)",
-    "rek_subtype": "Article (original research)",
-    "fez_record_search_key_journal_name": {"rek_journal_name": "Integrated Environmental Assessment and Management"}
-}, {
-    "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:180159", "rek_ismemberof_order": 1}],
-    "rek_object_type": 3,
-    "fez_record_search_key_isi_loc": {"rek_isi_loc": "000403834400008"},
-    "rek_status": 2,
-    "fez_record_search_key_publisher": {"rek_publisher": "WILEY"},
-    "rek_title": "Crown-of-thorns starfish undermine the resilience of coral populations on the Great Barrier Reef",
-    "fez_record_search_key_issn": [{"rek_issn": "1466-822X", "rek_issn_order": 1}],
-    "fez_record_search_key_doi": {"rek_doi": "10.1111\/geb.12590"},
-    "rek_date": "2017-07-01 00:00:00",
-    "fez_record_search_key_collection_year": {"rek_collection_year": "2017-07-01 00:00:00"},
-    "fez_record_search_key_date_available": {"rek_date_available": "2017-07-01 00:00:00"},
-    "fez_record_search_key_keywords": [{
-        "rek_keywords": "Ecology",
-        "rek_keywords_order": 1
-    }, {
-        "rek_keywords": "Geography, Physical",
-        "rek_keywords_order": 2
-    }, {
-        "rek_keywords": "Environmental Sciences & Ecology",
-        "rek_keywords_order": 3
-    }, {"rek_keywords": "Physical Geography", "rek_keywords_order": 4}],
-    "fez_record_search_key_issue_number": {"rek_issue_number": "7"},
-    "fez_record_search_key_volume_number": {"rek_volume_number": "26"},
-    "fez_record_search_key_start_page": {"rek_start_page": "846"},
-    "fez_record_search_key_end_page": {"rek_end_page": "853"},
-    "fez_record_search_key_total_pages": {"rek_total_pages": "8"},
-    "fez_record_search_key_language": [{"rek_language": "eng", "rek_language_order": 1}],
-    "fez_record_search_key_author": [{
-        "rek_author": "Vercelloni, Julie",
-        "rek_author_order": 1
-    }, {"rek_author": "Caley, M. Julian", "rek_author_order": 2}, {
-        "rek_author": "Mengersen, Kerrie",
-        "rek_author_order": 3
-    }],
-    "fez_record_search_key_author_affiliation_name": [{
-        "rek_author_affiliation_name": "Queensland University of Technology (QUT)|Australian Res Council",
-        "rek_author_affiliation_name_order": 1
-    }, {
-        "rek_author_affiliation_name": "Queensland University of Technology (QUT)|Australian Res Council",
-        "rek_author_affiliation_name_order": 2
-    }, {
-        "rek_author_affiliation_name": "Queensland University of Technology (QUT)|Australian Res Council",
-        "rek_author_affiliation_name_order": 3
-    }],
-    "fez_record_search_key_author_affiliation_country": [{
-        "rek_author_affiliation_country": "Australia|Australia",
-        "rek_author_affiliation_country_order": 1
-    }, {
-        "rek_author_affiliation_country": "Australia|Australia",
-        "rek_author_affiliation_country_order": 2
-    }, {"rek_author_affiliation_country": "Australia|Australia", "rek_author_affiliation_country_order": 3}],
-    "fez_record_search_key_author_affiliation_full_address": [{
-        "rek_author_affiliation_full_address": "Queensland Univ Technol, Sch Math Sci, Brisbane, Qld, Australia|Australian Res Council, Ctr Excellence Math & Stat Frontiers, Brisbane, Qld, Australia",
-        "rek_author_affiliation_full_address_order": 1
-    }, {
-        "rek_author_affiliation_full_address": "Queensland Univ Technol, Sch Math Sci, Brisbane, Qld, Australia|Australian Res Council, Ctr Excellence Math & Stat Frontiers, Brisbane, Qld, Australia",
-        "rek_author_affiliation_full_address_order": 2
-    }, {
-        "rek_author_affiliation_full_address": "Queensland Univ Technol, Sch Math Sci, Brisbane, Qld, Australia|Australian Res Council, Ctr Excellence Math & Stat Frontiers, Brisbane, Qld, Australia",
-        "rek_author_affiliation_full_address_order": 3
-    }],
-    "rek_thomson_citation_count": 0,
-    "fez_record_search_key_corresponding_organisation": [{
-        "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
-        "rek_corresponding_organisation_order": 1
-    }, {"rek_corresponding_organisation": "Australian Res Council", "rek_corresponding_organisation_order": 2}],
-    "fez_record_search_key_corresponding_country": [{
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 1
-    }, {"rek_corresponding_country": "Australia", "rek_corresponding_country_order": 2}],
-    "fez_record_search_key_corresponding_email": [{
-        "rek_corresponding_email": "julie.vercelloni@gmail.com",
-        "rek_corresponding_email_order": 1
-    }, {"rek_corresponding_email": "julie.vercelloni@gmail.com", "rek_corresponding_email_order": 2}],
-    "fez_record_search_key_corresponding_name": [{
-        "rek_corresponding_name": "Vercelloni, Julie",
-        "rek_corresponding_name_order": 1
-    }, {"rek_corresponding_name": "Vercelloni, Julie", "rek_corresponding_name_order": 2}],
-    "rek_display_type": 179,
-    "rek_genre": "Article",
-    "rek_genre_type": "Article (original research)",
-    "rek_subtype": "Article (original research)",
-    "fez_record_search_key_journal_name": {"rek_journal_name": "Global Ecology and Biogeography"}
-}, {
-    "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:180159", "rek_ismemberof_order": 1}],
-    "rek_object_type": 3,
-    "fez_record_search_key_isi_loc": {"rek_isi_loc": "000402879200005"},
-    "rek_status": 2,
-    "fez_record_search_key_publisher": {"rek_publisher": "NATURE PUBLISHING GROUP"},
-    "rek_title": "Variation in growth rates of branching corals along Australia's Great Barrier Reef",
-    "fez_record_search_key_issn": [{"rek_issn": "2045-2322", "rek_issn_order": 1}],
-    "fez_record_search_key_doi": {"rek_doi": "10.1038\/s41598-017-03085-1"},
-    "rek_date": "2017-06-07 00:00:00",
-    "fez_record_search_key_collection_year": {"rek_collection_year": "2017-06-07 00:00:00"},
-    "fez_record_search_key_date_available": {"rek_date_available": "2017-06-07 00:00:00"},
-    "fez_record_search_key_keywords": [{
-        "rek_keywords": "Multidisciplinary Sciences",
-        "rek_keywords_order": 1
-    }, {"rek_keywords": "Science & Technology - Other Topics", "rek_keywords_order": 2}],
-    "fez_record_search_key_volume_number": {"rek_volume_number": "7"},
-    "fez_record_search_key_total_pages": {"rek_total_pages": "13"},
-    "fez_record_search_key_language": [{"rek_language": "eng", "rek_language_order": 1}],
-    "fez_record_search_key_author": [{
-        "rek_author": "Anderson, Kristen D.",
-        "rek_author_order": 1
-    }, {"rek_author": "Cantin, Neal E.", "rek_author_order": 2}, {
-        "rek_author": "Heron, Scott F.",
-        "rek_author_order": 3
-    }, {"rek_author": "Pisapia, Chiara", "rek_author_order": 4}, {
-        "rek_author": "Pratchett, Morgan S.",
-        "rek_author_order": 5
-    }],
-    "fez_record_search_key_author_affiliation_name": [{
-        "rek_author_affiliation_name": "James Cook University|Australian Institute of Marine Science",
-        "rek_author_affiliation_name_order": 1
-    }, {
-        "rek_author_affiliation_name": "Australian Institute of Marine Science",
-        "rek_author_affiliation_name_order": 2
-    }, {
-        "rek_author_affiliation_name": "National Oceanic Atmospheric Admin (NOAA) - USA|National Aeronautics & Space Administration (NASA)|James Cook University",
-        "rek_author_affiliation_name_order": 3
-    }, {
-        "rek_author_affiliation_name": "James Cook University",
-        "rek_author_affiliation_name_order": 4
-    }, {"rek_author_affiliation_name": "James Cook University", "rek_author_affiliation_name_order": 5}],
-    "fez_record_search_key_author_affiliation_country": [{
-        "rek_author_affiliation_country": "Australia|Australia",
-        "rek_author_affiliation_country_order": 1
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 2
-    }, {
-        "rek_author_affiliation_country": "USA|USA|Australia",
-        "rek_author_affiliation_country_order": 3
-    }, {
-        "rek_author_affiliation_country": "Australia",
-        "rek_author_affiliation_country_order": 4
-    }, {"rek_author_affiliation_country": "Australia", "rek_author_affiliation_country_order": 5}],
-    "fez_record_search_key_author_affiliation_full_address": [{
-        "rek_author_affiliation_full_address": "James Cook Univ, ARC Ctr Excellence Coral Reef Studies, Townsville, Qld 4811, Australia|Australian Inst Marine Sci, PMB 3, Townsville, Qld 4810, Australia",
-        "rek_author_affiliation_full_address_order": 1
-    }, {
-        "rek_author_affiliation_full_address": "Australian Inst Marine Sci, PMB 3, Townsville, Qld 4810, Australia",
-        "rek_author_affiliation_full_address_order": 2
-    }, {
-        "rek_author_affiliation_full_address": "US Natl Ocean & Atmospher Adm, Coral Reef Watch, College Pk, MD 20740 USA|Global Sci & Technol Inc, Greenbelt, MD USA|James Cook Univ, Phys Dept, Coll Sci & Engn, Marine Geophys Lab, Townsville, Qld 4811, Australia",
-        "rek_author_affiliation_full_address_order": 3
-    }, {
-        "rek_author_affiliation_full_address": "James Cook Univ, ARC Ctr Excellence Coral Reef Studies, Townsville, Qld 4811, Australia",
-        "rek_author_affiliation_full_address_order": 4
-    }, {
-        "rek_author_affiliation_full_address": "James Cook Univ, ARC Ctr Excellence Coral Reef Studies, Townsville, Qld 4811, Australia",
-        "rek_author_affiliation_full_address_order": 5
-    }],
-    "rek_thomson_citation_count": 0,
-    "fez_record_search_key_corresponding_organisation": [{
-        "rek_corresponding_organisation": "James Cook University",
-        "rek_corresponding_organisation_order": 1
-    }, {
-        "rek_corresponding_organisation": "Australian Institute of Marine Science",
-        "rek_corresponding_organisation_order": 2
-    }, {
-        "rek_corresponding_organisation": "National Oceanic Atmospheric Admin (NOAA) - USA",
-        "rek_corresponding_organisation_order": 3
-    }, {
-        "rek_corresponding_organisation": "National Aeronautics & Space Administration (NASA)",
-        "rek_corresponding_organisation_order": 4
-    }, {"rek_corresponding_organisation": "James Cook University", "rek_corresponding_organisation_order": 5}],
-    "fez_record_search_key_corresponding_country": [{
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 1
-    }, {
-        "rek_corresponding_country": "Australia",
-        "rek_corresponding_country_order": 2
-    }, {"rek_corresponding_country": "USA", "rek_corresponding_country_order": 3}, {
-        "rek_corresponding_country": "USA",
-        "rek_corresponding_country_order": 4
-    }, {"rek_corresponding_country": "Australia", "rek_corresponding_country_order": 5}],
-    "fez_record_search_key_corresponding_email": [{
-        "rek_corresponding_email": "kristen.anderson3@jcu.edu.au",
-        "rek_corresponding_email_order": 1
-    }, {"rek_corresponding_email": "kristen.anderson3@jcu.edu.au", "rek_corresponding_email_order": 2}],
-    "fez_record_search_key_corresponding_name": [{
-        "rek_corresponding_name": "Anderson, Kristen D.",
-        "rek_corresponding_name_order": 1
-    }, {"rek_corresponding_name": "Anderson, Kristen D.", "rek_corresponding_name_order": 2}],
-    "fez_record_search_key_grant_agency": [{"rek_grant_agency": "NOAA", "rek_grant_agency_order": 1}],
-    "rek_display_type": 179,
-    "rek_genre": "Article",
-    "rek_genre_type": "Article (original research)",
-    "rek_subtype": "Article (original research)",
-    "fez_record_search_key_journal_name": {"rek_journal_name": "Scientific Reports"}
-}];
+        "rek_title": "Food and plant bioactives for reducing cardiometabolic disease risk: an evidence based approach.",
+        "fez_record_search_key_journal_name": {"rek_journal_name": "Food & function"},
+        "fez_record_search_key_doi": {"rek_doi": "10.1039\/c7fo00178a"},
+        "fez_record_search_key_issn": [{"rek_issn": "2042-650X", "rek_issn_order": 1}],
+        "fez_record_search_key_pubmed_id": {"rek_pubmed_id": "28541356"},
+        "rek_date": "2017-06-21 00:00:00",
+        "fez_record_search_key_issue_number": {"rek_issue_number": "6"},
+        "fez_record_search_key_volume_number": {"rek_volume_number": "8"},
+        "fez_record_search_key_start_page": {"rek_start_page": "2076"},
+        "fez_record_search_key_end_page": {"rek_end_page": "2088"},
+        "fez_record_search_key_total_pages": {"rek_total_pages": 13},
+        "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+        "fez_record_search_key_author": [{
+            "rek_author": "Cicero, Arrigo F G",
+            "rek_author_order": 1
+        }, {"rek_author": "Fogacci, Federica", "rek_author_order": 2}, {
+            "rek_author": "Colletti, Alessandro",
+            "rek_author_order": 3
+        }],
+        "fez_record_search_key_author_affiliation_full_address": [{
+            "rek_author_affiliation_full_address": "Atherosclerosis and Metabolic Diseases Research Center, Medical & Surgical Sciences Dept., Alma Mater Studiorum - University of Bologna, Bologna, Italy. arrigo.cicero@unibo.it.",
+            "rek_author_affiliation_full_address_order": 1
+        }],
+        "rek_description": "Cardiovascular diseases (CVDs) are one of the major causes of mortality and disability in Western countries. Prevention is known to be the cornerstone to lessen the incidence of CVDs and also to reduce the economic burden of both the citizen and the healthcare system. \"Interventional medicine\" certainly puts lifestyle modification as the first therapeutic step, including a healthy diet and physical activity. Secondly, a large body of research individuated a number of food and plant bioactives, which are potentially efficacious in preventing and reducing some highly prevalent CV risk factors, such as hypercholesterolemia, hypertension, vascular inflammation and vascular compliance. Some lipid- and blood pressure-lowering bioactives were studied for their impact on human vascular health, particularly as regards endothelial function and arterial stiffness. Several nutraceuticals showed additive or synergistic properties in combination, sometimes (but not always) allowing a reduction of the administered dose of extracts and determining a \"multi-factorial\" final effect on many cardiovascular risk factors. Thus, this review focuses on available evidence regarding the effects of berberine, plant sterols, green tea extract, soy, curcumin, cocoa, pycnogenol, lycopene, olive oil, soluble fibers, garlic, resveratrol, beetroot, mineral salts and vitamins on the lipid profile, blood pressure, inflammatory and endothelial markers, and vascular compliance. Future clinical research studies will have to focus more on middle term modification of the instrumental markers of vascular aging than on short-term effects on indirect laboratory risk markers.",
+        "fez_record_search_key_oa_status": {"rek_oa_status": "453698"},
+        "rek_display_type": 179,
+        "rek_genre": "Journal Article"
+    },
+    {
+        "rek_title": "Effect of diets rich in either saturated fat or n-6 polyunsaturated fatty acids and supplemented with long-chain n-3 polyunsaturated fatty acids on plasma lipoprotein profiles.",
+        "fez_record_search_key_journal_name": {"rek_journal_name": "European journal of clinical nutrition"},
+        "fez_record_search_key_doi": {"rek_doi": "10.1038\/ejcn.2017.56"},
+        "fez_record_search_key_issn": [{"rek_issn": "1476-5640", "rek_issn_order": 1}],
+        "fez_record_search_key_pubmed_id": {"rek_pubmed_id": "28488685"},
+        "rek_date": "2017-05-10 00:00:00",
+        "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+        "fez_record_search_key_author": [{"rek_author": "Dias, C B", "rek_author_order": 1}, {
+            "rek_author": "Amigo, N",
+            "rek_author_order": 2
+        }, {"rek_author": "Wood, L G", "rek_author_order": 3}, {
+            "rek_author": "Correig, X",
+            "rek_author_order": 4
+        }, {"rek_author": "Garg, M L", "rek_author_order": 5}],
+        "fez_record_search_key_author_affiliation_full_address": [{
+            "rek_author_affiliation_full_address": "Nutraceuticals Research Group, School of Biomedical Sciences and Pharmacy, The University of Newcastle, Callaghan, New South Wales, Australia.",
+            "rek_author_affiliation_full_address_order": 1
+        }, {
+            "rek_author_affiliation_full_address": "Metabolomics Platform, Rovira i Virgili University, IISPV, Tarragona, Spain.",
+            "rek_author_affiliation_full_address_order": 2
+        }, {
+            "rek_author_affiliation_full_address": "Spanish Biomedical Research Centre in Diabetes and Associated Metabolic Disorders (CIBERDEM), C\/ Monforte de Lemos 3-5, Madrid, Spain.",
+            "rek_author_affiliation_full_address_order": 3
+        }, {
+            "rek_author_affiliation_full_address": "Biosfer Teslab, Pla\u00e7a Prim 10, 2on 5a, Reus, Spain.",
+            "rek_author_affiliation_full_address_order": 4
+        }, {
+            "rek_author_affiliation_full_address": "Centre for Asthma and Respiratory Disease, School of Biomedical Sciences and Pharmacy, The University of Newcastle, New Lambton, New South Wales, Australia.",
+            "rek_author_affiliation_full_address_order": 5
+        }, {
+            "rek_author_affiliation_full_address": "Metabolomics Platform, Rovira i Virgili University, IISPV, Tarragona, Spain.",
+            "rek_author_affiliation_full_address_order": 6
+        }, {
+            "rek_author_affiliation_full_address": "Spanish Biomedical Research Centre in Diabetes and Associated Metabolic Disorders (CIBERDEM), C\/ Monforte de Lemos 3-5, Madrid, Spain.",
+            "rek_author_affiliation_full_address_order": 7
+        }, {
+            "rek_author_affiliation_full_address": "Nutraceuticals Research Group, School of Biomedical Sciences and Pharmacy, The University of Newcastle, Callaghan, New South Wales, Australia.",
+            "rek_author_affiliation_full_address_order": 8
+        }],
+        "rek_description": "Abnormalities in lipoprotein profiles (size, distribution and concentration) play an important role in the pathobiology of atherosclerosis and coronary artery disease. Dietary fat, among other factors, has been demonstrated to modulate lipoprotein profiles. We aimed to investigate if background dietary fat (saturated, SFA versus omega-6 polyunsaturated fatty acids, n-6PUFA) was a determinant of the effects of LCn-3PUFA supplementation on lipoprotein profiles.",
+        "fez_record_search_key_oa_status": {"rek_oa_status": "453698"},
+        "rek_display_type": 179,
+        "rek_genre": "Journal Article"
+    },
+    {
+        "rek_title": "Preventing cardiovascular heart disease: Promising nutraceutical and non-nutraceutical treatments for cholesterol management.",
+        "fez_record_search_key_journal_name": {"rek_journal_name": "Pharmacological research"},
+        "fez_record_search_key_doi": {"rek_doi": "10.1016\/j.phrs.2017.04.008"},
+        "fez_record_search_key_issn": [{"rek_issn": "1096-1186", "rek_issn_order": 1}],
+        "fez_record_search_key_pubmed_id": {"rek_pubmed_id": "28408313"},
+        "fez_record_search_key_volume_number": {"rek_volume_number": "120"},
+        "fez_record_search_key_start_page": {"rek_start_page": "219"},
+        "fez_record_search_key_end_page": {"rek_end_page": "225"},
+        "fez_record_search_key_total_pages": {"rek_total_pages": 7},
+        "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+        "fez_record_search_key_author": [{
+            "rek_author": "Johnston, T P",
+            "rek_author_order": 1
+        }, {"rek_author": "Korolenko, T A", "rek_author_order": 2}, {
+            "rek_author": "Pirro, M",
+            "rek_author_order": 3
+        }, {"rek_author": "Sahebkar, A", "rek_author_order": 4}],
+        "fez_record_search_key_author_affiliation_full_address": [{
+            "rek_author_affiliation_full_address": "Division of Pharmaceutical Sciences, School of Pharmacy, University of Missouri-Kansas City, Kansas City, MO 64108-2718, USA. Electronic address: johnstont@umkc.edu.",
+            "rek_author_affiliation_full_address_order": 1
+        }, {
+            "rek_author_affiliation_full_address": "Institute of Physiology and Fundamental Medicine, Timakov St. 4, Novosibirsk, 630117, Russia. Electronic address: t.a.korolenko@physiol.ru.",
+            "rek_author_affiliation_full_address_order": 2
+        }, {
+            "rek_author_affiliation_full_address": "Unit of Internal Medicine, Department of Medicine, University of Perugia, Perugia, Italy. Electronic address: matteo.pirro@unipg.it.",
+            "rek_author_affiliation_full_address_order": 3
+        }, {
+            "rek_author_affiliation_full_address": "Biotechnology Research Center, Mashhad University of Medical Sciences, Mashhad, 91779-48564, Iran. Electronic address: sahebkara@mums.ac.ir.",
+            "rek_author_affiliation_full_address_order": 4
+        }],
+        "rek_description": "Hypercholesterolemia is one of the major risk factors for the development of cardiovascular disease. Atherosclerosis resulting from hypercholesterolemia causes many serious cardiovascular diseases. Statins are generally accepted as a treatment of choice for lowering low-density lipoprotein (LDL) cholesterol, which reduces coronary heart disease morbidity and mortality. Since statin use can be associated with muscle problems and other adverse symptoms, non-adherence and discontinuation of statin therapy often leads to inadequate control of plasma cholesterol levels and increased cardiovascular risk. Moreover, there is compelling evidence on the presence of still considerable residual cardiovascular risk in statin-treated patients. Ezetimibe improves cholesterol-lowering efficacy and provides mild additional cardiovascular protection when combined with statin treatment. Despite a favorable safety profile compared to statins, ezetimibe-induced cholesterol-lowering is modest when used alone. Hence, there is a critical need to identity additional effective hypolipidemic agents that can be used either in combination with statins, or alone, if statins are not tolerated. Thus, hypolipidemic agents such as proprotein convertase subtilisin\/kexin type 9 (PCSK9) inhibitors, apolipoprotein B-100 antisense oligonucleotides, cholesteryl ester transfer protein (CETP) inhibitors, and microsomal triglyceride transfer protein (MTTP) inhibitors, as well as yeast polysaccharides (beta-glucans and mannans) and compounds derived from natural sources (nutraceuticals) such as glucomannans, plant sterols, berberine, and red yeast rice are being used. In this review, we will discuss hypercholesterolemia, its impact on the development of cardiovascular disease (CVD), and the use of yeast polysaccharides, various nutraceuticals, and several therapeutic agents not derived from 'natural' sources, to treat hypercholesterolemia.",
+        "fez_record_search_key_keywords": [{
+            "rek_keywords": "Cardiovascular disease",
+            "rek_keywords_order": 1
+        }, {"rek_keywords": "Hypercholesterolemia", "rek_keywords_order": 2}, {
+            "rek_keywords": "Nutraceuticals",
+            "rek_keywords_order": 3
+        }],
+        "fez_record_search_key_oa_status": {"rek_oa_status": "453698"},
+        "rek_display_type": 179,
+        "rek_genre": "Journal Article"
+    },
+    {
+        "rek_title": "Effect of ezetimibe on low- and high-density lipoprotein subclasses in sitosterolemia.",
+        "fez_record_search_key_journal_name": {"rek_journal_name": "Atherosclerosis"},
+        "fez_record_search_key_doi": {"rek_doi": "10.1016\/j.atherosclerosis.2017.03.015"},
+        "fez_record_search_key_issn": [{"rek_issn": "1879-1484", "rek_issn_order": 1}],
+        "fez_record_search_key_pubmed_id": {"rek_pubmed_id": "28340366"},
+        "fez_record_search_key_volume_number": {"rek_volume_number": "260"},
+        "fez_record_search_key_start_page": {"rek_start_page": "27"},
+        "fez_record_search_key_end_page": {"rek_end_page": "33"},
+        "fez_record_search_key_total_pages": {"rek_total_pages": 7},
+        "fez_record_search_key_grant_agency": [{"rek_grant_agency": "NICHD NIH HHS", "rek_grant_agency_order": 1}],
+        "fez_record_search_key_grant_acronym": [{"rek_grant_acronym": "HD", "rek_grant_acronym_order": 1}],
+        "fez_record_search_key_grant_id": [{"rek_grant_id": "U54 HD061939", "rek_grant_id_order": 1}],
+        "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+        "fez_record_search_key_author": [{
+            "rek_author": "Othman, Rgia A",
+            "rek_author_order": 1
+        }, {"rek_author": "Myrie, Semone B", "rek_author_order": 2}, {
+            "rek_author": "Mymin, David",
+            "rek_author_order": 3
+        }, {"rek_author": "Roullet, Jean-Baptiste", "rek_author_order": 4}, {
+            "rek_author": "Steiner, Robert D",
+            "rek_author_order": 5
+        }, {"rek_author": "Jones, Peter J H", "rek_author_order": 6}],
+        "fez_record_search_key_author_affiliation_full_address": [{
+            "rek_author_affiliation_full_address": "Human Nutritional Sciences, University of Manitoba, Winnipeg, Manitoba, Canada; Richardson Center for Functional Foods and Nutraceuticals, University of Manitoba, Winnipeg, Manitoba, Canada.",
+            "rek_author_affiliation_full_address_order": 1
+        }, {
+            "rek_author_affiliation_full_address": "Human Nutritional Sciences, University of Manitoba, Winnipeg, Manitoba, Canada; Richardson Center for Functional Foods and Nutraceuticals, University of Manitoba, Winnipeg, Manitoba, Canada. Electronic address: myrie@cc.umanitoba.ca.",
+            "rek_author_affiliation_full_address_order": 2
+        }, {
+            "rek_author_affiliation_full_address": "Internal Medicine, University of Manitoba, Winnipeg, Manitoba, Canada.",
+            "rek_author_affiliation_full_address_order": 3
+        }, {
+            "rek_author_affiliation_full_address": "College of Pharmacy, Washington State University, Spokane, WA, United States; Knight Cardiovascular Institute, Oregon Health & Science University, Portland, OR, United States.",
+            "rek_author_affiliation_full_address_order": 4
+        }, {
+            "rek_author_affiliation_full_address": "University of Wisconsin School of Medicine and Public Health, Madison, WI, United States.",
+            "rek_author_affiliation_full_address_order": 5
+        }, {
+            "rek_author_affiliation_full_address": "Human Nutritional Sciences, University of Manitoba, Winnipeg, Manitoba, Canada; Richardson Center for Functional Foods and Nutraceuticals, University of Manitoba, Winnipeg, Manitoba, Canada.",
+            "rek_author_affiliation_full_address_order": 6
+        }],
+        "rek_description": "Sitosterolemia displays high plasma total sterols [high plant sterols (PS)\u00a0+\u00a0normal to high total cholesterol (TC)] with normal to moderately elevated low-density lipoprotein (LDL) levels. High LDL, intermediate-density lipoprotein (IDL) and very low-density lipoprotein (VLDL) particles, low high-density lipoprotein (HDL), and increased non-HDL and the ratios of TC and triglycerides (TG) to HDL can increase the risk for atherosclerosis. Ezetimibe (EZE) can reduce plasma PS and TC levels in sitosterolemia, but its effect on lipoprotein subclasses has not been previously reported.",
+        "fez_record_search_key_keywords": [{
+            "rek_keywords": "Ezetimibe",
+            "rek_keywords_order": 1
+        }, {"rek_keywords": "HDL subclasses", "rek_keywords_order": 2}, {
+            "rek_keywords": "LDL cholesterol",
+            "rek_keywords_order": 3
+        }, {"rek_keywords": "LDL subclasses", "rek_keywords_order": 4}, {
+            "rek_keywords": "Mean LDL particle size",
+            "rek_keywords_order": 5
+        }, {"rek_keywords": "Non-HDL cholesterol", "rek_keywords_order": 6}, {
+            "rek_keywords": "Sitosterolemia",
+            "rek_keywords_order": 7
+        }, {"rek_keywords": "Sterols", "rek_keywords_order": 8}],
+        "fez_record_search_key_oa_status": {"rek_oa_status": "453693"},
+        "rek_display_type": 179,
+        "rek_genre": "Journal Article"
+    },
+    {
+        "rek_title": "Nutraceuticals as an Important Part of Combination Therapy in Dyslipidaemia.",
+        "fez_record_search_key_journal_name": {"rek_journal_name": "Current pharmaceutical design"},
+        "fez_record_search_key_doi": {"rek_doi": "10.2174\/1381612823666170317145851"},
+        "fez_record_search_key_issn": [{"rek_issn": "1873-4286", "rek_issn_order": 1}],
+        "fez_record_search_key_pubmed_id": {"rek_pubmed_id": "28317482"},
+        "rek_date": "2017-03-17 00:00:00",
+        "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+        "fez_record_search_key_author": [{
+            "rek_author": "Patti, Angelo Maria",
+            "rek_author_order": 1
+        }, {"rek_author": "Toth, Peter P", "rek_author_order": 2}, {
+            "rek_author": "Giglio, Rosaria Vincenza",
+            "rek_author_order": 3
+        }, {"rek_author": "Banach, Maciej", "rek_author_order": 4}, {
+            "rek_author": "Noto, Marcello",
+            "rek_author_order": 5
+        }, {"rek_author": "Nikolic, Dragana", "rek_author_order": 6}, {
+            "rek_author": "Montalto, Giuseppe",
+            "rek_author_order": 7
+        }, {"rek_author": "Rizzo, Manfredi", "rek_author_order": 8}],
+        "fez_record_search_key_author_affiliation_full_address": [{
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 1
+        }, {
+            "rek_author_affiliation_full_address": "CGH Medical Center, Sterling, IL, USA; School of Medicine, University of Illinois, Peoria, IL, USA; Johns Hopkins University School of Medicine, Baltimore, MD. United States.",
+            "rek_author_affiliation_full_address_order": 2
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 3
+        }, {
+            "rek_author_affiliation_full_address": "Department of Hypertension, Chair of Nephrology and Hypertension, Medical University of Lodz, Lodz. Poland.",
+            "rek_author_affiliation_full_address_order": 4
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 5
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 6
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 7
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 8
+        }],
+        "rek_description": "Several risk factors such as abnormality of lipid metabolism (e.g. high levels of low-density lipoprotein cholesterol (LDL-C), elevated triglycerides and low levels of high-density lipoprotein cholesterol (HDL-C)) play a central role in the aetiology of cardiovascular disease (CVD). Nutraceutical combination together with a cholesterol-lowering action, when associated with suitable lifestyle, should furnish an alternative to pharmacotherapy in patients reporting statin-intolerance and in subjects at low cardiovascular risk. The present review is focused on nutraceuticals and their synergetic combinations demonstrating a beneficial effect in the management of dyslipidaemia. Several nutraceuticals have been shown to positively modulate lipid metabolism having different functions. Plant sterols and soluble fibres can, for example, decrease the intestinal assimilation of lipids and increase their elimination. Furthermore, berberine and soybean proteins improve the cholesterol uptake in the liver. Policosanols, monacolins and bergamot inhibit hydroxy-methyl-glutaryl coenzyme A reductase (HMGCoA reductase) enzyme action determining the cholesterol hepatic synthesis. Moreover, pomegranate can decrease LDL oxidation and positively affect subclinical atherosclerosis; red yeast rice and berberine play, instead, an important role on endothelial dysfunction and psyllium, plant sterols and bergamot have positive effects on LDL subclasses. To the best of our knowledge, there are no long-term large-scale studies on the anti-atherogenic effect of the nutraceuticals that are available on the market. Thus, further clinical studies should investigate in order to achieve long term tolerability and safety and to provide a better nutraceutical combination tailored to the patient needs.",
+        "fez_record_search_key_keywords": [{
+            "rek_keywords": "Cardiovascular risk.",
+            "rek_keywords_order": 1
+        }, {"rek_keywords": "Carotid", "rek_keywords_order": 2}, {
+            "rek_keywords": "Dyslipidaemia",
+            "rek_keywords_order": 3
+        }, {
+            "rek_keywords": "Endothelial dysfunction",
+            "rek_keywords_order": 4
+        }, {
+            "rek_keywords": "Low density lipoprotein cholesterol",
+            "rek_keywords_order": 5
+        }, {"rek_keywords": "Nutraceuticals", "rek_keywords_order": 6}, {
+            "rek_keywords": "intima media thickness",
+            "rek_keywords_order": 7
+        }],
+        "fez_record_search_key_oa_status": {"rek_oa_status": "453698"},
+        "rek_display_type": 179,
+        "rek_genre": "Journal Article"
+    }
+];
