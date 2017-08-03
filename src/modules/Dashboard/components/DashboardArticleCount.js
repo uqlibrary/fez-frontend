@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'config';
 
-const DashboardArticleCount = ({articleCount, articleFirstYear, articleLastYear}) => {
+const DashboardArticleCount = ({values}) => {
     const txt = locale.components.dashboardArticleCount;
     return (
         <div className="authorCounter is-centered">
-            {articleCount && articleFirstYear && articleLastYear && (
+            {values.articleCount && values.articleFirstYear && values.articleLastYear && (
                 <div>
-                <div className="noOfArticles">{articleCount}</div>
+                <div className="noOfArticles">{values.articleCount}</div>
                 <div className="articlesFrom">{txt.countTitle}</div>
-                <div className="dateRange">{articleFirstYear}<span>{txt.yearSeparator}</span>{articleLastYear}</div>
+                <div className="dateRange">{values.articleFirstYear}<span>{txt.yearSeparator}</span>{values.articleLastYear}</div>
                 </div>
             )}
         </div>
@@ -18,9 +18,11 @@ const DashboardArticleCount = ({articleCount, articleFirstYear, articleLastYear}
 };
 
 DashboardArticleCount.propTypes = {
-    articleCount: PropTypes.any,
-    articleFirstYear: PropTypes.any,
-    articleLastYear: PropTypes.any,
+    values: PropTypes.shape({
+        articleCount: PropTypes.any,
+        articleFirstYear: PropTypes.any,
+        articleLastYear: PropTypes.any,
+    })
 };
 
 export default DashboardArticleCount;

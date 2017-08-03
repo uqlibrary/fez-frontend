@@ -18,11 +18,15 @@ const DashboardProfile = ({authorDetails}) => {
 
                     {/* Author Details/Name/Orgs/ResearcherIDs */}
                     <div className="column authorDetails">
-                        <DashboardAuthorDetails title={authorDetails.title}
-                                                givenName={authorDetails.given_name}
-                                                familyName={authorDetails.family_name}
-                                                orgUnits={authorDetails.org_units}
-                                                positions={authorDetails.positions}/>
+                        <DashboardAuthorDetails
+                            values={{
+                                title: authorDetails.title,
+                                givenName: authorDetails.given_name,
+                                familyName: authorDetails.family_name,
+                                orgUnits: authorDetails.org_units,
+                                positions: authorDetails.positions
+                            }}
+                        />
                         <DashboardResearcherIds
                             values={{
                                 publons: authorDetails.publons_id,
@@ -36,9 +40,12 @@ const DashboardProfile = ({authorDetails}) => {
 
                     {/* Publication count */}
                     <div className="column is-narrow authorCount">
-                        <DashboardArticleCount articleCount={authorDetails.espace.doc_count}
-                                               articleFirstYear={authorDetails.espace.first_year}
-                                               articleLastYear={authorDetails.espace.last_year}/>
+                        <DashboardArticleCount
+                            values={{
+                                articleCount: authorDetails.espace.doc_count,
+                                articleFirstYear: authorDetails.espace.first_year,
+                                articleLastYear: authorDetails.espace.last_year,
+                            }}/>
                     </div>
                 </div>
             )}

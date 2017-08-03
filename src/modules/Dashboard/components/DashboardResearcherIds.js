@@ -22,7 +22,8 @@ const DashboardResearcherIds = ({values}) => {
                                 <Avatar
                                     className="researchIdAvatar"
                                     src={require(`../../../../src/images/${item.toLowerCase()}_icon.svg`)}
-                                    title={`${item} Id`}/>
+                                    title={`${item} Id`}
+                                    alt={`${item} Id`}/>
                             </Badge>
                         </a>
                     </div>
