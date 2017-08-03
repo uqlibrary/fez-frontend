@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from './DashboardArticleCount';
-import DashboardResearcherIDs from './DashboardResearcherIds';
+import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
 const DashboardProfile = ({authorDetails}) => {
@@ -22,7 +22,7 @@ const DashboardProfile = ({authorDetails}) => {
                                             familyName={authorDetails.family_name}
                                             orgUnits={authorDetails.org_units}
                                             positions={authorDetails.positions} />
-                    <DashboardResearcherIDs
+                    <DashboardResearcherIds
                         values={{
                             publons: authorDetails.publons_id,
                             researcher: authorDetails.researcher_id,

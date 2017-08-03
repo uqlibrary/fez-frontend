@@ -10,14 +10,17 @@ const DashboardAuthorDetails = ({title, familyName, givenName, orgUnits, positio
                 </div>
                 {/* Author Name/Positions/OrgUnits */}
                 <div className="is-paddingless is-marginless is-narrow">
-
-                    {positions.map((item, index) => (
+                    {
+                        positions && positions.length > 0 && positions.map((item, index) => (
                         <div key={index} className="authorPositionOrg color-reverse">
                             <strong>{item}</strong>
-                            {orgUnits[index] ? ', ' : ''}
-                            <span className="color-reverse">{orgUnits[index]}</span>
+                            {
+                                orgUnits && orgUnits.length > 0 && orgUnits[index] &&
+                                <span className="color-reverse">, {orgUnits[index]}</span>
+                            }
                         </div>
-                    ))}
+                    ))
+                    }
 
                 </div>
             </div>

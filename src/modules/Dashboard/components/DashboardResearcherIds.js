@@ -47,11 +47,11 @@ const DashboardResearcherIds = ({values}) => {
 
 DashboardResearcherIds.propTypes = {
     values: PropTypes.shape({
-        Publons: PropTypes.any,
-        Researcher: PropTypes.any,
-        Scopus: PropTypes.any,
-        Google_Scholar: PropTypes.any,
-        ORCid: PropTypes.any
+        publons: PropTypes.any,
+        researcher: PropTypes.any,
+        scopus: PropTypes.any,
+        google_scholar: PropTypes.any,
+        orcid: PropTypes.any
     })
 };
 
