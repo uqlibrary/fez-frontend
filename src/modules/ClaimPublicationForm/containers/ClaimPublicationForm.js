@@ -12,9 +12,9 @@ const onSubmit = (values, dispatch) => {
     // set default values for a new unapproved record
     // TODO: date should be a part of redux-form data
     const data = {...values.toJS()};
+    console.log(data);
     return dispatch(claimPublication(data, files))
-        .then((response) => {
-            console.log(response);
+        .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
             // reset form after success action was dispatched:
@@ -41,8 +41,10 @@ let ClaimPublicationFormContainer = reduxForm({
 const mapStateToProps = (state) => {
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        publication: state.get('claimPublicationReducer').publicationToClaim,
-        author: state.get('currentAuthorReducer').currentAuthor
+        initialValues: {
+            publication: state.get('claimPublicationReducer').publicationToClaim,
+            author: state.get('currentAuthorReducer').currentAuthor
+        }
     };
 };
 

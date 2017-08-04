@@ -3,8 +3,12 @@ import {
     postHidePossiblePublications,
     getCountPossibleUnclaimedPublications,
     postClaimPossiblePublication,
-    putUploadFiles
+    putUploadFiles,
+    patchRecord, postRecord
 } from 'repositories';
+
+import {recordRekLink, recordFileAttachment, claimAttachments} from './transformers';
+import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 export const POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'POSSIBLY_YOUR_PUBLICATIONS_LOADING';
 export const POSSIBLY_YOUR_PUBLICATIONS_COMPLETED = 'POSSIBLY_YOUR_PUBLICATIONS_COMPLETED';
@@ -153,53 +157,98 @@ export function clearClaimPublication() {
  * @param {array} files to be uploaded for this record
  * @returns {action}
  */
-export function claimPublication(data, files) {
-    console.log('claimPublication');
+export function claimPublication(data) {
+    console.log(data);
 
     return dispatch => {
         dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
+        if (data.rek_pid) {
+            // claim record from eSpace
+            const claimRequest = {
+                pid: data.publication.rek_pid,
+                author_id: data.author.aut_id,
+                comments: data.comments,
+                ...claimAttachments(data)
+            };
 
-        // if (data.rek_pid) {
-        // claim record from eSpace
-        return postClaimPossiblePublication(data)
-            .then(response => {
-                if (files.length === 0) return response;
-                return putUploadFiles(data.rek_pid, files);
-            })
-            // .then(response => {
-            //     if (files.length === 0) return response;
-            //
-            //     // process uploaded files into API format for a patch
-            //     const fileDataPatch = {
-            //         fez_record_search_key_file_attachment_name: files.map((file, index) => {
-            //             return {
-            //                 'rek_file_attachment_name': file.name,
-            //                 'rek_file_attachment_name_order': (index + 1)
-            //             };
-            //         })
-            //     };
-            //
-            //     return patchRecord(data.rek_pid, fileDataPatch);
-            // })
-            .then(response => {
-                dispatch({
-                    type: CLAIM_PUBLICATION_CREATE_COMPLETED,
-                    payload: response
+            return postClaimPossiblePublication(claimRequest)
+                .then(response => {
+                    if (data.files.length === 0) return response;
+                    return putUploadFiles(data.rek_pid, data.files);
+                })
+                .then(() => {
+                    // patch the record with new data
+                    const recordPatchRequest = {
+                        rek_pid: data.rek_pid,
+                        ...recordRekLink(data),
+                        ...recordFileAttachment(data)
+                    };
+
+                    return patchRecord(data.rek_pid, recordPatchRequest);
+                })
+                .then(response => {
+                    dispatch({
+                        type: CLAIM_PUBLICATION_CREATE_COMPLETED,
+                        payload: response
+                    });
+                    return Promise.resolve(response);
+                })
+                .catch(error => {
+                    dispatch({
+                        type: CLAIM_PUBLICATION_CREATE_FAILED,
+                        payload: error
+                    });
+                    return Promise.reject(error);
                 });
-                console.log(CLAIM_PUBLICATION_CREATE_COMPLETED);
-                return Promise.resolve(response);
-            })
-            .catch(error => {
-                dispatch({
-                    type: CLAIM_PUBLICATION_CREATE_FAILED,
-                    payload: error
+        } else {
+            // claim record from external source
+            // what about required fields - are they set, eg subtype, publication year etc?
+            const recordRequest = {
+                ...data.publication,
+                ...recordRekLink(data),
+                ...NEW_RECORD_DEFAULT_VALUES
+            };
+
+            return postRecord(recordRequest)
+                .then(response => {
+                    if (data.files.length === 0) return response;
+                    return putUploadFiles(data.rek_pid, data.files);
+                })
+                .then(response => {
+                    const claimRequest = {
+                        pid: response.rek_pid,
+                        author_id: data.author.aut_id,
+                        comments: data.comments,
+                        ...claimAttachments(data)
+
+                    };
+                    return postClaimPossiblePublication(claimRequest);
+                })
+                .then(() => {
+                    // patch the record with new data
+                    const recordPatchRequest = {
+                        rek_pid: data.rek_pid,
+                        ...recordRekLink(data),
+                        ...recordFileAttachment(data)
+                    };
+
+                    return patchRecord(data.rek_pid, recordPatchRequest);
+                })
+                .then(response => {
+                    dispatch({
+                        type: CLAIM_PUBLICATION_CREATE_COMPLETED,
+                        payload: response
+                    });
+                    return Promise.resolve(response);
+                })
+                .catch(error => {
+                    dispatch({
+                        type: CLAIM_PUBLICATION_CREATE_FAILED,
+                        payload: error
+                    });
+                    return Promise.reject(error);
                 });
-                return Promise.reject(error);
-            });
-        // } else {
-        //     // claim record from external source
-        //     // what about required fields - are they set, eg subtype, publication year etc?
-        // }
+        }
     };
 }
 

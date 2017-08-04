@@ -13,9 +13,6 @@ export default class ClaimPublicationForm extends Component {
 
     static propTypes = {
         ...propTypes, // all redux-form props
-        publication: PropTypes.object, // publication to be claimed, can be eSpace or external publication
-        author: PropTypes.object,
-        publicationAuthor: PropTypes.object, // if publication exists in eSpace, try to match author to current user
         history: PropTypes.object.isRequired,
         dispatch: PropTypes.func
     };
@@ -49,8 +46,10 @@ export default class ClaimPublicationForm extends Component {
 
     render() {
         const txt = locale.components.claimPublicationForm;
+        const publication = this.props.initialValues.get('publication');
+        const author = this.props.initialValues.get('publication');
 
-        if (!this.props.publication || !this.props.author) {
+        if (!author || !publication) {
             return (
                 <StandardPage title={txt.title}>
                     <Alert type="error_outline" title="Error" message="Publication is not selected. Please, select publication to claim" outsideLayout/>
@@ -71,11 +70,11 @@ export default class ClaimPublicationForm extends Component {
                         locale={txt.successWorkflowConfirmation}/>
 
                     <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
-                        <PublicationCitation publication={this.props.publication}/>
+                        <PublicationCitation publication={publication}/>
                     </StandardCard>
 
                     {
-                        this.props.publicationAuthor &&
+                        author &&
                         <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
                             <AuthorLinking dataSource={[]}/>
                         </StandardCard>
@@ -93,7 +92,7 @@ export default class ClaimPublicationForm extends Component {
 
                         <Field
                             component={TextField}
-                            name="publicationUrl"
+                            name="rek_link"
                             type="text"
                             fullWidth
                             floatingLabelText={txt.comments.fieldLabels.url}

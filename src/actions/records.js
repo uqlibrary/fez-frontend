@@ -1,9 +1,11 @@
 import {postRecord, patchRecord, putUploadFiles} from '../repositories';
+import {recordRekLink, recordFileAttachment} from './transformers';
 
 export const RECORD_RESET = 'RECORD_RESET';
 export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
 export const RECORD_PROCESSING = 'RECORD_PROCESSING';
+import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -12,30 +14,28 @@ export const RECORD_PROCESSING = 'RECORD_PROCESSING';
  * @param {array} files to be uploaded for this record
  * @returns {action}
  */
-export function createNewRecord(data, files) {
+export function createNewRecord(data) {
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
-        return postRecord(data)
+
+        // set default values, links
+        const recordRequest = {...data, ...NEW_RECORD_DEFAULT_VALUES, ...recordRekLink(data)};
+
+        return postRecord(recordRequest)
             .then(response => {
-                // update original record data
+                // set a pid on a new record
                 data.rek_pid = response.rek_pid;
-                if (files.length === 0) return response;
-                return putUploadFiles(response.rek_pid, files);
+                // process files
+                if (!data.files || data.files.length === 0) return response;
+                return putUploadFiles(response.rek_pid, data.files);
             })
             .then(response => {
-                if (files.length === 0) return response;
-
+                if (!data.files || data.files.length === 0) return response;
                 // process uploaded files into API format for a patch
-                const fileDataPatch = {
-                    fez_record_search_key_file_attachment_name: files.map((file, index) => {
-                        return {
-                            'rek_file_attachment_name': file.name,
-                            'rek_file_attachment_name_order': (index + 1)
-                        };
-                    })
+                const recordPatch = {
+                    ...recordFileAttachment(data)
                 };
-
-                return patchRecord(data.rek_pid, fileDataPatch);
+                return patchRecord(data.rek_pid, recordPatch);
             })
             .then(response => {
                 dispatch({

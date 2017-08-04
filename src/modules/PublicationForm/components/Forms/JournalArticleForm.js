@@ -102,7 +102,7 @@ export default class JournalArticleForm extends Component {
                         </div>
                     </div>
                     <div className="columns">
-                        <div className="column is-two-thirds">
+                        <div className="column is-half">
                             <Field component={TextField}
                                    name="fez_record_search_key_journal_name.rek_journal_name"
                                    type="text"
@@ -113,7 +113,11 @@ export default class JournalArticleForm extends Component {
                             />
                         </div>
                         <div className="column">
-                            <Field name="rek_date" component={ PartialDateField } allowPartial />
+                            <Field component={ PartialDateField }
+                                   name="rek_date"
+                                   allowPartial
+                                   className="requiredField"
+                            />
                         </div>
                     </div>
                     <div className="columns">
@@ -179,7 +183,7 @@ export default class JournalArticleForm extends Component {
                     <div className="columns">
                         <div className="column">
                             <Field component={TextField}
-                                   name="publicationUrl"
+                                   name="rek_link"
                                    type="text"
                                    fullWidth
                                    floatingLabelText={txt.optional.fieldLabels.url}
