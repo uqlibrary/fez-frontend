@@ -3,7 +3,7 @@ import {
     postHidePossiblePublications,
     getCountPossibleUnclaimedPublications,
     postClaimPossiblePublication,
-    putUploadFiles,
+    // putUploadFiles,
     patchRecord, postRecord
 } from 'repositories';
 
@@ -158,33 +158,31 @@ export function clearClaimPublication() {
  * @returns {action}
  */
 export function claimPublication(data) {
-    console.log(data);
-
     return dispatch => {
         dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
-        if (data.rek_pid) {
+        if (data.publication.rek_pid) {
             // claim record from eSpace
             const claimRequest = {
                 pid: data.publication.rek_pid,
                 author_id: data.author.aut_id,
                 comments: data.comments,
-                ...claimAttachments(data)
+                ...claimAttachments(data.files)
             };
 
             return postClaimPossiblePublication(claimRequest)
-                .then(response => {
-                    if (data.files.length === 0) return response;
-                    return putUploadFiles(data.rek_pid, data.files);
-                })
+                // .then(response => {
+                //     if (data.files.length === 0) return response;
+                //     return putUploadFiles(data.rek_pid, data.files);
+                // })
                 .then(() => {
                     // patch the record with new data
                     const recordPatchRequest = {
-                        rek_pid: data.rek_pid,
+                        rek_pid: data.publication.rek_pid,
                         ...recordRekLink(data),
-                        ...recordFileAttachment(data)
+                        ...recordFileAttachment(data.files, data.publication)
+                        // TODO: updated record's author_id and order ...recordAuthors(data.publication)
                     };
-
-                    return patchRecord(data.rek_pid, recordPatchRequest);
+                    return patchRecord(data.publication.rek_pid, recordPatchRequest);
                 })
                 .then(response => {
                     dispatch({
@@ -209,30 +207,36 @@ export function claimPublication(data) {
                 ...NEW_RECORD_DEFAULT_VALUES
             };
 
+            console.log(recordRequest);
+
+            let newPid;
+
             return postRecord(recordRequest)
+                // .then(response => {
+                //     if (data.files.length === 0) return response;
+                //     return putUploadFiles(data.rek_pid, data.files);
+                // })
                 .then(response => {
-                    if (data.files.length === 0) return response;
-                    return putUploadFiles(data.rek_pid, data.files);
-                })
-                .then(response => {
+                    newPid = response.rek_pid;
                     const claimRequest = {
-                        pid: response.rek_pid,
+                        pid: newPid,
                         author_id: data.author.aut_id,
                         comments: data.comments,
-                        ...claimAttachments(data)
-
+                        ...claimAttachments(data.files)
                     };
+                    console.log(claimRequest);
                     return postClaimPossiblePublication(claimRequest);
                 })
                 .then(() => {
                     // patch the record with new data
                     const recordPatchRequest = {
-                        rek_pid: data.rek_pid,
+                        rek_pid: newPid,
                         ...recordRekLink(data),
-                        ...recordFileAttachment(data)
+                        ...recordFileAttachment(data.files)
+                        // TODO: updated record's author_id and order ...recordAuthors(data.publication)
                     };
-
-                    return patchRecord(data.rek_pid, recordPatchRequest);
+                    console.log(recordPatchRequest);
+                    return patchRecord(newPid, recordPatchRequest);
                 })
                 .then(response => {
                     dispatch({

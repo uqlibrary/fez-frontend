@@ -74,7 +74,7 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     {
-                        author &&
+                        !author &&
                         <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
                             <AuthorLinking dataSource={[]}/>
                         </StandardCard>

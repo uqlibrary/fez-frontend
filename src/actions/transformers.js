@@ -1,16 +1,13 @@
-export function claimAttachments(data) {
-    if (!data.files || data.files.length === 0) return null;
-
+export function claimAttachments(files) {
+    if (!files || files.length === 0) return null;
     return {
-        attachments: [
-            data.files.map((item) => {
-                return {
-                    access_condition_id: item.access_condition_id,
-                    file: item.file,
-                    date: item.date
-                };
-            })
-        ]
+        attachments: files.map((item) => {
+            return {
+                access_condition_id: item.access_condition_id,
+                file: item.file,
+                date: item.date
+            };
+        })
     };
 }
 
@@ -33,22 +30,32 @@ export function recordRekLink(data) {
     };
 }
 
-export function recordFileAttachment(data) {
-    if(!data.files || data.files.length === 0) return null;
+export function recordFileAttachment(files, record) {
+    if (!files || files.length === 0) return null;
 
     // if record already has files, add new files to the end of the list (for patch)
-    const initialCount = data.fez_record_search_key_file_attachment_name ?
-        data.fez_record_search_key_file_attachment_name.length : 0;
-
-    return {
-        fez_record_search_key_file_attachment_name: [
-            ...data.fez_record_search_key_file_attachment_name,
-            data.files.map((file, index) => {
-                return {
-                    rek_file_attachment_name: file.name,
-                    rek_file_attachment_name_order: initialCount + index + 1
-                };
-            })
-        ]
-    };
+    const initialCount = record && record.fez_record_search_key_file_attachment_name ?
+        record.fez_record_search_key_file_attachment_name.length : 0;
+    const attachments = files.map((item, index) => {
+        return {
+            rek_file_attachment_name: item.file,
+            rek_file_attachment_name_order: initialCount + index + 1,
+            rek_file_attachment_name_date: item.date,
+            rek_file_attachment_name_access_condition_id: item.access_condition_id,
+        };
+    });
+    if (record) {
+        return {
+            fez_record_search_key_file_attachment_name: [
+                ...record.fez_record_search_key_file_attachment_name,
+                ...attachments
+            ]
+        };
+    } else {
+        return {
+            fez_record_search_key_file_attachment_name: [
+                ...attachments
+            ]
+        };
+    }
 }

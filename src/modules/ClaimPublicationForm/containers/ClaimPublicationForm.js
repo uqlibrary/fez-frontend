@@ -8,22 +8,23 @@ import {claimPublication} from 'actions';
 const FORM_NAME = 'ClaimPublicationForm';
 
 const onSubmit = (values, dispatch) => {
-    const files = [
-        {
-            file: 'image.jpg',
-            access_condition_id: 1,
-            date: '2017-08-20'
-        },
-        {
-            file: 'image2.jpg',
-            access_condition_id: 2,
-            date: '2017-08-21'
-        },
-    ]; // TODO: will become a part of values
+    // TODO: will become a part of values
+    // const files = [
+    //     {
+    //         file: 'image.jpg',
+    //         access_condition_id: 1,
+    //         date: '2017-08-20'
+    //     },
+    //     {
+    //         file: 'image2.jpg',
+    //         access_condition_id: 2,
+    //         date: '2017-08-21'
+    //     }
+    // ];
 
     // set default values for a new unapproved record
     // TODO: date should be a part of redux-form data
-    const data = {...values.toJS(), files: [...files]};
+    const data = {...values.toJS()};
     console.log(data);
     return dispatch(claimPublication(data))
         .then(() => {
