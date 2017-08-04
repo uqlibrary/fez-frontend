@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Step, Stepper, StepLabel } from 'material-ui/Stepper';
+import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
-import { StandardPage, StandardCard, InlineLoader, ConfirmDialogBox } from 'uqlibrary-react-toolbox';
+import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 import SearchDashboard from 'modules/PublicationsList/components/SearchDashboard';
 
 // forms & custom components
-import { PublicationSearchForm } from 'modules/PublicationSearchForm';
-import { PublicationsList } from 'modules/PublicationsList';
-import { PublicationForm } from 'modules/PublicationForm';
+import {PublicationSearchForm} from 'modules/PublicationSearchForm';
+import {PublicationsList} from 'modules/PublicationsList';
+import {PublicationForm} from 'modules/PublicationForm';
 
-import { locale, validation } from 'config';
-import { searchPublications } from 'actions';
+import {locale, validation} from 'config';
+import {searchPublications, setClaimPublication} from 'actions';
 
 export default class AddRecord extends React.Component {
 
@@ -61,11 +61,8 @@ export default class AddRecord extends React.Component {
     };
 
     _claimPublication = (item) => {
-        // TODO: pass item to claim form
-        // TODO: route should not be hardcoded, should come from config/menu
-        console.log('todo: pass item to claim form');
-        console.log(item);
-        this.props.history.push('/claim-publications');
+        this.props.dispatch(setClaimPublication(item));
+        this.props.history.push('/claim-publication-form');
     };
 
     _navigateToDashboard = () => {
@@ -123,7 +120,7 @@ export default class AddRecord extends React.Component {
                   }
 
                   {
-                      this.props.publicationsList.length > 0 &&
+                      !this.props.loadingSearch &&
                       <div className="layout-card">
                           <div className="columns">
                               <div className="column is-hidden-mobile"/>

@@ -15,7 +15,6 @@ export const RECORD_PROCESSING = 'RECORD_PROCESSING';
 export function createNewRecord(data, files) {
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
-
         return postRecord(data)
             .then(response => {
                 // update original record data

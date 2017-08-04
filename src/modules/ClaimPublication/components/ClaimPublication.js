@@ -7,7 +7,7 @@ import {PublicationsList} from 'modules/PublicationsList';
 import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 import {locale} from 'config';
-import {searchPossiblyYourPublications, hidePublications} from 'actions';
+import {searchPossiblyYourPublications, hidePublications, setClaimPublication} from 'actions';
 
 export default class ClaimPublication extends React.Component {
 
@@ -63,11 +63,8 @@ export default class ClaimPublication extends React.Component {
     };
 
     _claimPublication = (item) => {
-        // TODO: pass item to claim form
-        // TODO: route should not be hardcoded, should come from config/menu
-        console.log('todo: pass item to claim form');
-        console.log(item);
-        // this.props.history.push('/claim-publications');
+        this.props.history.push('/claim-publication-form');
+        this.props.dispatch(setClaimPublication(item));
     }
 
     _navigateToDashboard = () => {
@@ -100,7 +97,7 @@ export default class ClaimPublication extends React.Component {
                                   locale={txt.hidePublicationConfirmation} />
 
                 {
-                    this.props.loadingSearch &&
+                    (this.props.loadingSearch || !this.props.possibleCounts) &&
                     <div className="is-centered">
                         <InlineLoader message={txt.loadingMessage} />
                     </div>
@@ -112,7 +109,7 @@ export default class ClaimPublication extends React.Component {
                     </StandardCard>
                 }
                 {
-                    !this.props.loadingSearch && this.props.publicationsList.length > 0 && this.props.possibleCounts &&
+                    !this.props.loadingSearch && this.props.possibleCounts && this.props.publicationsList.length > 0 &&
                     <div>
                         <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                             <div>
