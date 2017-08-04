@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Dashboard test Render the search dashboard with expected data) 1`] = `
+<div>
+  <div
+    className="searchDashboardDesktop"
+  >
+    <h3
+      className="title is-5"
+    >
+      Repository search
+    </h3>
+    <div
+      className="body-2"
+    >
+      <div
+        className="searchDashboardList"
+      >
+        World of science
+        <span
+          className="is-pulled-right"
+        >
+          <div>
+            5
+             
+             record(s)
+          </div>
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
+        Scopus
+        <span
+          className="is-pulled-right"
+        >
+          <div>
+            0
+             
+             record(s)
+          </div>
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
+        PubMed
+        <span
+          className="is-pulled-right"
+        >
+          <div>
+            0
+             
+             record(s)
+          </div>
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
+        Crossref
+        <span
+          className="is-pulled-right"
+        >
+          <div>
+            0
+             
+             record(s)
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Search Dashboard test Render the search dashboard with random data, all still loading) 1`] = `
+<div>
+  <div
+    className="searchDashboardDesktop"
+  >
+    <h3
+      className="title is-5"
+    >
+      Repository search
+    </h3>
+    <div
+      className="body-2"
+    >
+      <div
+        className="searchDashboardList"
+      >
+        World of science
+        <span
+          className="is-pulled-right"
+        >
+          <CircularProgress
+            aria-label="World of science loading"
+            max={100}
+            min={0}
+            mode="indeterminate"
+            size={14}
+            thickness={2}
+            value={0}
+          />
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
+        Scopus
+        <span
+          className="is-pulled-right"
+        >
+          <CircularProgress
+            aria-label="Scopus loading"
+            max={100}
+            min={0}
+            mode="indeterminate"
+            size={14}
+            thickness={2}
+            value={0}
+          />
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
+        PubMed
+        <span
+          className="is-pulled-right"
+        >
+          <CircularProgress
+            aria-label="PubMed loading"
+            max={100}
+            min={0}
+            mode="indeterminate"
+            size={14}
+            thickness={2}
+            value={0}
+          />
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
+        Crossref
+        <span
+          className="is-pulled-right"
+        >
+          <CircularProgress
+            aria-label="Crossref loading"
+            max={100}
+            min={0}
+            mode="indeterminate"
+            size={14}
+            thickness={2}
+            value={0}
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Search Dashboard test Render the search dashboard with random data, one still loading) 1`] = `
+<div>
+  <div
+    className="searchDashboardDesktop"
+  >
+    <h3
+      className="title is-5"
+    >
+      Repository search
+    </h3>
+    <div
+      className="body-2"
+    >
+      <div
+        className="searchDashboardList"
+      >
+        World of science
+        <span
+          className="is-pulled-right"
+        >
+          <div>
+            5
+             
+             record(s)
+          </div>
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
+        Scopus
+        <span
+          className="is-pulled-right"
+        >
+          <div>
+            4
+             
+             record(s)
+          </div>
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
+        PubMed
+        <span
+          className="is-pulled-right"
+        >
+          <div>
+            12
+             
+             record(s)
+          </div>
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
+        Crossref
+        <span
+          className="is-pulled-right"
+        >
+          <CircularProgress
+            aria-label="Crossref loading"
+            max={100}
+            min={0}
+            mode="indeterminate"
+            size={14}
+            thickness={2}
+            value={0}
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -163,6 +163,33 @@ export default {
                         text: 'Why search displays these items....',
                         buttonLabel: 'Ok'
                     },
+                    searchDashboard: {
+                        title: 'Repository search',
+                        recordSuffix: ' record(s)',
+                        ariaCircularProgressLabelSuffix: 'loading',
+                        repositories: [
+                            {
+                                id: 'wos',
+                                title: 'World of science',
+                                icon: '../../../images/wos_icon.svg'
+                            },
+                            {
+                                id: 'scopus',
+                                title: 'Scopus',
+                                icon: '../../../images/scopus_icon.svg'
+                            },
+                            {
+                                id: 'pubmed',
+                                title: 'PubMed',
+                                icon: '../../../images/pubmed_icon.svg'
+                            },
+                            {
+                                id: 'crossref',
+                                title: 'Crossref',
+                                icon: '../../../images/crossref_icon.svg'
+                            },
+                        ]
+                    }
                 },
                 loadingMessage: 'Searching for publications...',
                 cancel: 'Abandon and search again',
@@ -468,33 +495,6 @@ export default {
                     secondaryButtonLabel: 'No'
                 }
             }
-        },
-        searchDashboard: {
-            title: 'Repository search',
-            repositories: [
-                {
-                    id: 'wos',
-                    title: 'World of science',
-                    icon: '../../../images/wos_icon.svg'
-                },
-                {
-                    id: 'scopus',
-                    title: 'Scopus',
-                    icon: '../../../images/scopus_icon.svg'
-                },
-                {
-                    id: 'pubmed',
-                    title: 'PubMed',
-                    icon: '../../../images/pubmed_icon.svg'
-                },
-                {
-                    id: 'crossref',
-                    title: 'Crossref',
-                    icon: '../../../images/crossref_icon.svg'
-                },
-            ],
-            pubtitle: ' records',
-            noOfRepos: 4
         },
         dashboardArticleCount: {
             yearSeparator: ' to ',

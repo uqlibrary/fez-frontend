@@ -17,13 +17,10 @@ describe('Dashboard Article Count test', () => {
         const values = {
             values: {}
         };
-
         const articleCount = authorDetails.uqresearcher.espace.doc_count;
         const articleFirstYear = authorDetails.uqresearcher.espace.first_year;
         const articleLastYear = authorDetails.uqresearcher.espace.last_year;
-
         values.values = {articleCount, articleFirstYear, articleLastYear};
-
         const wrapper = setup(values);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
