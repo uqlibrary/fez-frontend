@@ -97,7 +97,7 @@ export default class ClaimPublication extends React.Component {
                                   locale={txt.hidePublicationConfirmation} />
 
                 {
-                    this.props.loadingSearch &&
+                    (this.props.loadingSearch || !this.props.possibleCounts) &&
                     <div className="is-centered">
                         <InlineLoader message={txt.loadingMessage} />
                     </div>
@@ -109,7 +109,7 @@ export default class ClaimPublication extends React.Component {
                     </StandardCard>
                 }
                 {
-                    !this.props.loadingSearch && this.props.publicationsList.length > 0 && this.props.possibleCounts &&
+                    !this.props.loadingSearch && this.props.possibleCounts && this.props.publicationsList.length > 0 &&
                     <div>
                         <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                             <div>
