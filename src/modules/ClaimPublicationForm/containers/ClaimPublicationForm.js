@@ -8,12 +8,24 @@ import {claimPublication} from 'actions';
 const FORM_NAME = 'ClaimPublicationForm';
 
 const onSubmit = (values, dispatch) => {
-    const files = []; // TODO: will become a part of values
+    const files = [
+        {
+            file: 'image.jpg',
+            access_condition_id: 1,
+            date: '2017-08-20'
+        },
+        {
+            file: 'image2.jpg',
+            access_condition_id: 2,
+            date: '2017-08-21'
+        },
+    ]; // TODO: will become a part of values
+
     // set default values for a new unapproved record
     // TODO: date should be a part of redux-form data
-    const data = {...values.toJS()};
+    const data = {...values.toJS(), files: [...files]};
     console.log(data);
-    return dispatch(claimPublication(data, files))
+    return dispatch(claimPublication(data))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:

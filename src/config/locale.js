@@ -312,7 +312,8 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        bookTitle: 'Book title'
+                        bookTitle: 'Book title',
+                        subtype: 'Publication subtype'
                     }
                 },
                 authors: {

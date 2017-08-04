@@ -60,7 +60,13 @@ export default class JournalArticleForm extends Component {
                     </div>
                     <div className="columns">
                         <div className="column">
-                            <Field name="rek_subtype" component={ PublicationSubtypeField } vocabId={ this.props.vocabId } className="requiredField" />
+                            <Field component={PublicationSubtypeField}
+                                   name="rek_subtype"
+                                   vocabId={this.props.vocabId}
+                                   className="requiredField"
+                                   locale={{label: txt.information.fieldLabels.subtype}}
+                                   validate={[validation.required]}
+                            />
                         </div>
                     </div>
                 </StandardCard>

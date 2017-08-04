@@ -46,8 +46,8 @@ export default class ClaimPublicationForm extends Component {
 
     render() {
         const txt = locale.components.claimPublicationForm;
-        const publication = this.props.initialValues.get('publication');
-        const author = this.props.initialValues.get('publication');
+        const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
+        const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
 
         if (!author || !publication) {
             return (
