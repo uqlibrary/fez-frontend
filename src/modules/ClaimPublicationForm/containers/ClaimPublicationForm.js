@@ -1,17 +1,19 @@
 import {connect} from 'react-redux';
 import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
 import Immutable from 'immutable';
-import PublicationForm from '../components/PublicationForm';
-import {createNewRecord} from 'actions';
+import ClaimPublicationForm from '../components/ClaimPublicationForm';
+import {withRouter} from 'react-router-dom';
+import {claimPublication} from 'actions';
 
-const FORM_NAME = 'PublicationForm';
+const FORM_NAME = 'ClaimPublicationForm';
 
 const onSubmit = (values, dispatch) => {
     const files = []; // TODO: will become a part of values
     // set default values for a new unapproved record
     // TODO: date should be a part of redux-form data
-    return dispatch(
-        createNewRecord({...values.toJS(), ...files}))
+    const data = {...values.toJS()};
+    console.log(data);
+    return dispatch(claimPublication(data, files))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
@@ -20,8 +22,7 @@ const onSubmit = (values, dispatch) => {
             setTimeout(()=>{
                 dispatch(reset(FORM_NAME));
             }, 100);
-        })
-        .catch(error => {
+        }).catch(error => {
             throw new SubmissionError({_error: error.message});
         });
 };
@@ -31,18 +32,23 @@ const validate = () => {
     stopSubmit(FORM_NAME, null);
 };
 
-let PublicationFormContainer = reduxForm({
+let ClaimPublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit
-})(PublicationForm);
+})(ClaimPublicationForm);
 
 const mapStateToProps = (state) => {
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({})
+        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        initialValues: {
+            publication: state.get('claimPublicationReducer').publicationToClaim,
+            author: state.get('currentAuthorReducer').currentAuthor
+        }
     };
 };
 
-PublicationFormContainer = connect(mapStateToProps)(PublicationFormContainer);
+ClaimPublicationFormContainer = connect(mapStateToProps)(ClaimPublicationFormContainer);
+ClaimPublicationFormContainer = withRouter(ClaimPublicationFormContainer);
 
-export default PublicationFormContainer;
+export default ClaimPublicationFormContainer;

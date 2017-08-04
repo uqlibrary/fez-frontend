@@ -38,6 +38,11 @@ input::-ms-clear {
   }
 }
 
+// Stop MUI button labels from wrapping
+button[type=button] {
+  white-space: nowrap;
+}
+
 // Adds red asterix to required fields
 .requiredField label:after {
   content: " *";

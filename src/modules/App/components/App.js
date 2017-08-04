@@ -19,6 +19,7 @@ import {AddRecord} from 'modules/AddRecord';
 import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 import {ClaimPublication} from 'modules/ClaimPublication';
+import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
 
 export default class App extends React.Component {
 
@@ -86,7 +87,7 @@ export default class App extends React.Component {
         const components = {
             Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication
         };
-        const landingPage =  isAuthorizedUser ? Dashboard : Browse;
+
         const menuItems = isAuthorizedUser ?
             [...researcherMenuItems(locale, account.get('mail'), components), ...defaultMenuItems(locale, components)]
             :
@@ -132,7 +133,8 @@ export default class App extends React.Component {
 
                         <div className="content-container" style={container}>
                             <Switch>
-                                <Route path="/" exact component={landingPage} />
+                                <Route path="/" exact component={isAuthorizedUser ? Dashboard : Browse} />
+                                <Route path="/claim-publication-form" component={ClaimPublicationForm} />
                                 {menuItems.map((route, index) => (
                                     <Route key={index} {...route} />
                                 ))}

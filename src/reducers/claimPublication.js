@@ -3,9 +3,12 @@ import {
     POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
     POSSIBLY_YOUR_PUBLICATIONS_FAILED,
     COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+    PUBLICATION_TO_CLAIM_SET,
+    PUBLICATION_TO_CLAIM_CLEAR
 } from 'actions';
 
 export const initialState = {
+    publicationToClaim: null,
     possibleCounts: null,
     publicationsList: [],
     loadingSearch: true
@@ -18,6 +21,20 @@ const handlers = {
             ...state,
             loadingSearch: true,
             publicationsList: []
+        };
+    },
+
+    [PUBLICATION_TO_CLAIM_SET]: (state, action) => {
+        return {
+            ...state,
+            publicationToClaim: action.payload
+        };
+    },
+
+    [PUBLICATION_TO_CLAIM_CLEAR]: (state) => {
+        return {
+            ...state,
+            publicationToClaim: null
         };
     },
 

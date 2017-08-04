@@ -4,6 +4,7 @@ import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
+import {authorDetails} from '../../../mock/data/authors/';
 
 function setup({values}) {
     const props = {values};
@@ -12,16 +13,11 @@ function setup({values}) {
 
 describe('Dashboard Author Details test', () => {
     it('Render the authors details as expected for a UQ researcher)', () => {
-        const props = {
-            values: {
-                given_name: 'J',
-                family_name: 'Researcher',
-                title: 'Professor',
-                org_units: ['Institute for Molecular Bioscience', 'School of Chemistry and Molecular Biosciences', 'The University of Queensland Diamantina Institute'],
-                positions: ['Affiliate Professor', 'Affiliate Professorial Res Fellow', 'ARC Australian Laureate Fellow'],
-            }
+        const values = {
+            values: {}
         };
-        const wrapper = setup(props);
+        values.values = authorDetails.uqresearcher;
+        const wrapper = setup(values);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
