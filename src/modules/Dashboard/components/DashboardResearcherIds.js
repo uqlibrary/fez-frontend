@@ -10,7 +10,6 @@ const DashboardResearcherIds = ({values}) => {
     const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
     const badgeStyle = {right: -5};
     const txt = locale.components.dashboardResearcherIds;
-
     return (
         <div className="columns researcherIds is-gapless">
             {values && Object.keys(values).map((item, index) => (
@@ -36,11 +35,11 @@ const DashboardResearcherIds = ({values}) => {
             {values.orcid &&
             <div className="column is-narrow">
                 <a className="orcidLink"
-                   href={'http://orcid.org/' + values.orcid}
+                   href={txt.orcidUrlPrefix + values.orcid}
                    target="_blank"
-                   aria-label="Click to visit your ORCId profile"
-                   title="Click to visit your ORCId profile">
-                    orcid.org/{values.orcid}</a>
+                   aria-label={txt.orcidlinkLabel}
+                   title={txt.orcidlinkLabel}>
+                    {txt.orcidLinkPrefix}{values.orcid}</a>
             </div>
             }
         </div>

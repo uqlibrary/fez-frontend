@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 1`] = `
+<div
+  className="columns researcherIds is-gapless"
+>
+  <div
+    className="publons column is-narrow"
+  >
+    <a
+      href="https://app.library.uq.edu.au/#/id"
+      target="_blank"
+    >
+      <Badge
+        aria-label="Your publons Id is not linked"
+        badgeContent={
+          <FontIcon
+            className="material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            close
+          </FontIcon>
+        }
+        badgeStyle={
+          Object {
+            "right": -5,
+          }
+        }
+        className="publons researchIdBadge error"
+        primary={false}
+        secondary={false}
+        title="Your publons Id is not linked"
+      >
+        <Avatar
+          alt="publons Id"
+          className="researchIdAvatar"
+          size={40}
+          src=""
+          title="publons Id"
+        />
+      </Badge>
+    </a>
+  </div>
+  <div
+    className="researcher column is-narrow"
+  >
+    <a
+      href="https://app.library.uq.edu.au/#/id"
+      target="_blank"
+    >
+      <Badge
+        aria-label="Your researcher Id is G-111-1111"
+        badgeContent={
+          <FontIcon
+            className="material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            done
+          </FontIcon>
+        }
+        badgeStyle={
+          Object {
+            "right": -5,
+          }
+        }
+        className="researcher researchIdBadge ok"
+        primary={false}
+        secondary={false}
+        title="Your researcher Id is G-111-1111"
+      >
+        <Avatar
+          alt="researcher Id"
+          className="researchIdAvatar"
+          size={40}
+          src=""
+          title="researcher Id"
+        />
+      </Badge>
+    </a>
+  </div>
+  <div
+    className="scopus column is-narrow"
+  >
+    <a
+      href="https://app.library.uq.edu.au/#/id"
+      target="_blank"
+    >
+      <Badge
+        aria-label="Your scopus Id is not linked"
+        badgeContent={
+          <FontIcon
+            className="material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            close
+          </FontIcon>
+        }
+        badgeStyle={
+          Object {
+            "right": -5,
+          }
+        }
+        className="scopus researchIdBadge error"
+        primary={false}
+        secondary={false}
+        title="Your scopus Id is not linked"
+      >
+        <Avatar
+          alt="scopus Id"
+          className="researchIdAvatar"
+          size={40}
+          src=""
+          title="scopus Id"
+        />
+      </Badge>
+    </a>
+  </div>
+  <div
+    className="google_scholar column is-narrow"
+  >
+    <a
+      href="https://app.library.uq.edu.au/#/id"
+      target="_blank"
+    >
+      <Badge
+        aria-label="Your google_scholar Id is not linked"
+        badgeContent={
+          <FontIcon
+            className="material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            close
+          </FontIcon>
+        }
+        badgeStyle={
+          Object {
+            "right": -5,
+          }
+        }
+        className="google_scholar researchIdBadge error"
+        primary={false}
+        secondary={false}
+        title="Your google_scholar Id is not linked"
+      >
+        <Avatar
+          alt="google_scholar Id"
+          className="researchIdAvatar"
+          size={40}
+          src=""
+          title="google_scholar Id"
+        />
+      </Badge>
+    </a>
+  </div>
+  <div
+    className="orcid column is-narrow"
+  >
+    <a
+      href="https://app.library.uq.edu.au/#/id"
+      target="_blank"
+    >
+      <Badge
+        aria-label="Your orcid Id is 0000-0001-1111-1111"
+        badgeContent={
+          <FontIcon
+            className="material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            done
+          </FontIcon>
+        }
+        badgeStyle={
+          Object {
+            "right": -5,
+          }
+        }
+        className="orcid researchIdBadge ok"
+        primary={false}
+        secondary={false}
+        title="Your orcid Id is 0000-0001-1111-1111"
+      >
+        <Avatar
+          alt="orcid Id"
+          className="researchIdAvatar"
+          size={40}
+          src=""
+          title="orcid Id"
+        />
+      </Badge>
+    </a>
+  </div>
+  <div
+    className="column is-narrow"
+  >
+    <a
+      aria-label="Click to visit your ORCId profile"
+      className="orcidLink"
+      href="http://orcid.org/0000-0001-1111-1111"
+      target="_blank"
+      title="Click to visit your ORCId profile"
+    >
+      orcid.org/
+      0000-0001-1111-1111
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs with weird values as expected for a UQ researcher 1`] = `
+<div
+  className="columns researcherIds is-gapless"
+>
+  <div
+    className="anId column is-narrow"
+  >
+    <a
+      href="https://app.library.uq.edu.au/#/id"
+      target="_blank"
+    >
+      <Badge
+        aria-label="Your anId Id is This is an edge case example"
+        badgeContent={
+          <FontIcon
+            className="material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            done
+          </FontIcon>
+        }
+        badgeStyle={
+          Object {
+            "right": -5,
+          }
+        }
+        className="anid researchIdBadge ok"
+        primary={false}
+        secondary={false}
+        title="Your anId Id is This is an edge case example"
+      >
+        <Avatar
+          alt="anId Id"
+          className="researchIdAvatar"
+          size={40}
+          src=""
+          title="anId Id"
+        />
+      </Badge>
+    </a>
+  </div>
+</div>
+`;

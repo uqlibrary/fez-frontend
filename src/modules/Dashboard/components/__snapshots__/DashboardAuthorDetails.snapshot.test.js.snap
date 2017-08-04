@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
+<div
+  className="authorDetails"
+>
+  <div
+    className="authorTitleName title is-3 color-reverse"
+  >
+    Professor
+     
+     
+  </div>
+  <div
+    className="is-paddingless is-marginless is-narrow"
+  >
+    <div
+      className="authorPositionOrg color-reverse"
+    >
+      <strong>
+        Affiliate Professor
+      </strong>
+    </div>
+    <div
+      className="authorPositionOrg color-reverse"
+    >
+      <strong>
+        Affiliate Professorial Res Fellow
+      </strong>
+    </div>
+    <div
+      className="authorPositionOrg color-reverse"
+    >
+      <strong>
+        ARC Australian Laureate Fellow
+      </strong>
+    </div>
+  </div>
+</div>
+`;

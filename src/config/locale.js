@@ -163,6 +163,33 @@ export default {
                         text: 'Why search displays these items....',
                         buttonLabel: 'Ok'
                     },
+                    searchDashboard: {
+                        title: 'Repository search',
+                        recordSuffix: ' record(s)',
+                        ariaCircularProgressLabelSuffix: 'loading',
+                        repositories: [
+                            {
+                                id: 'wos',
+                                title: 'World of science',
+                                icon: '../../../images/wos_icon.svg'
+                            },
+                            {
+                                id: 'scopus',
+                                title: 'Scopus',
+                                icon: '../../../images/scopus_icon.svg'
+                            },
+                            {
+                                id: 'pubmed',
+                                title: 'PubMed',
+                                icon: '../../../images/pubmed_icon.svg'
+                            },
+                            {
+                                id: 'crossref',
+                                title: 'Crossref',
+                                icon: '../../../images/crossref_icon.svg'
+                            },
+                        ]
+                    }
                 },
                 loadingMessage: 'Searching for publications...',
                 cancel: 'Abandon and search again',
@@ -469,33 +496,6 @@ export default {
                 }
             }
         },
-        searchDashboard: {
-            title: 'Repository search',
-            repositories: [
-                {
-                    id: 'wos',
-                    title: 'World of science',
-                    icon: '../../../images/wos_icon.svg'
-                },
-                {
-                    id: 'scopus',
-                    title: 'Scopus',
-                    icon: '../../../images/scopus_icon.svg'
-                },
-                {
-                    id: 'pubmed',
-                    title: 'PubMed',
-                    icon: '../../../images/pubmed_icon.svg'
-                },
-                {
-                    id: 'crossref',
-                    title: 'Crossref',
-                    icon: '../../../images/crossref_icon.svg'
-                },
-            ],
-            pubtitle: ' records',
-            noOfRepos: 4
-        },
         dashboardArticleCount: {
             yearSeparator: ' to ',
             countTitle: 'eSpace articles from'
@@ -506,7 +506,10 @@ export default {
         dashboardResearcherIds: {
             ariaTxt1: 'Your',
             ariaTxt2: 'Id is',
-            ariaTxt3: 'Id is not linked'
+            ariaTxt3: 'Id is not linked',
+            orcidUrlPrefix: 'http://orcid.org/',
+            orcidLinkPrefix: 'orcid.org/',
+            orcidlinkLabel: 'Click to visit your ORCId profile'
         }
     },
     sharedComponents: {

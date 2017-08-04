@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard Article Count test Render the authors article counts as expected for a UQ researcher) 1`] = `
+<div
+  className="authorCounter is-centered"
+>
+  <div>
+    <div
+      className="noOfArticles"
+    >
+      282
+    </div>
+    <div
+      className="articlesFrom"
+    >
+      eSpace articles from
+    </div>
+    <div
+      className="dateRange"
+    >
+      1990
+      <span>
+         to 
+      </span>
+      2017
+    </div>
+  </div>
+</div>
+`;
