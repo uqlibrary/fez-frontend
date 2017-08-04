@@ -166,4 +166,20 @@ describe('PublicationSubtypesList renders correctly', () => {
         wrapper.instance()._onSubtypeSelected({}, 0, 'Test');
         expect(updated).toHaveBeenCalled();
     });
+
+    it('calls componentDidMount and componentWillUpdate on providing selectedValue', () => {
+        const mounted = jest.fn();
+        const updated = jest.fn();
+
+        const props = {
+            vocabId: 453581,
+            subtypesList: [],
+            loadPublicationSubtypesList: mounted,
+            onChange: updated,
+            selectedValue: 'Testing'
+        };
+
+        setup(props);
+        expect(updated).toHaveBeenCalled();
+    });
 });
