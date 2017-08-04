@@ -12,7 +12,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
       target="_blank"
     >
       <Badge
-        aria-label="Your publons Id is not linked"
+        aria-label="You are not linked to publons"
         badgeContent={
           <FontIcon
             className="material-icons"
@@ -30,7 +30,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
         className="publons researchIdBadge error"
         primary={false}
         secondary={false}
-        title="Your publons Id is not linked"
+        title="You are not linked to publons"
       >
         <Avatar
           alt="publons Id"
@@ -88,7 +88,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
       target="_blank"
     >
       <Badge
-        aria-label="Your scopus Id is not linked"
+        aria-label="You are not linked to scopus"
         badgeContent={
           <FontIcon
             className="material-icons"
@@ -106,7 +106,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
         className="scopus researchIdBadge error"
         primary={false}
         secondary={false}
-        title="Your scopus Id is not linked"
+        title="You are not linked to scopus"
       >
         <Avatar
           alt="scopus Id"
@@ -126,7 +126,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
       target="_blank"
     >
       <Badge
-        aria-label="Your google_scholar Id is not linked"
+        aria-label="You are not linked to google_scholar"
         badgeContent={
           <FontIcon
             className="material-icons"
@@ -144,7 +144,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
         className="google_scholar researchIdBadge error"
         primary={false}
         secondary={false}
-        title="Your google_scholar Id is not linked"
+        title="You are not linked to google_scholar"
       >
         <Avatar
           alt="google_scholar Id"
