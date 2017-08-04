@@ -452,6 +452,14 @@ export default {
         dashboardArticleCount: {
             yearSeparator: ' to ',
             countTitle: 'eSpace articles from'
+        },
+        dashboardAuthorAvatar: {
+            ariaPrefix: 'Photograph of '
+        },
+        dashboardResearcherIds: {
+            ariaTxt1: 'Your',
+            ariaTxt2: 'Id is',
+            ariaTxt3: 'Id is not linked'
         }
     },
     sharedComponents: {

@@ -86,13 +86,13 @@
         }
         &.ok {
           & span {
-            background-color: $available-color !important;
+            background-color: darken($available-color,10%) !important;
             color: $text-color-reverse !important;
           }
         }
         &.error {
           & span {
-            background-color: $error-color !important;
+            background-color: darken($error-color,10%) !important;
             color: $text-color-reverse !important;
           }
         }

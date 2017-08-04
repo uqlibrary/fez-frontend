@@ -3,32 +3,35 @@ import Avatar from 'material-ui/Avatar';
 import Badge from 'material-ui/Badge';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
+import {locale} from 'config';
 
 const DashboardResearcherIds = ({values}) => {
     const badgeOK = (<FontIcon className="material-icons">done</FontIcon>);
     const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
     const badgeStyle = {right: -5};
+    const txt = locale.components.dashboardResearcherIds;
 
     return (
         <div className="columns researcherIds is-gapless">
-                    {values && Object.keys(values).map((item, index) => (
-                            <div key={index} className={`${item} column is-narrow`}>
-                                <a href="https://app.library.uq.edu.au/#/id" target="_blank">
-                                    <Badge
-                                        badgeStyle={badgeStyle}
-                                        className={values[item] ? (`${item.toLowerCase()} researchIdBadge ok`) : (`${item.toLowerCase()} researchIdBadge error`)}
-                                        badgeContent={values[item] ? badgeOK : badgeERROR}
-                                        title={values[item] ? `Your ${item} Id is ${values[item]}` : `Your ${item} Id is not linked`}
-                                        aria-label={values[item] ? `Your ${item} Id is ${values[item]}` : `Your ${item} Id is not linked`}>
-                                        <Avatar
-                                            className="researchIdAvatar"
-                                            src={require(`../../../../src/images/${item.toLowerCase()}_icon.svg`)}
-                                            title={`${item} Id`}/>
-                                    </Badge>
-                                </a>
-                            </div>
-                        )
-                    )}
+            {values && Object.keys(values).map((item, index) => (
+                    <div key={index} className={`${item} column is-narrow`}>
+                        <a href="https://app.library.uq.edu.au/#/id" target="_blank">
+                            <Badge
+                                badgeStyle={badgeStyle}
+                                className={values[item] ? (`${item.toLowerCase()} researchIdBadge ok`) : (`${item.toLowerCase()} researchIdBadge error`)}
+                                badgeContent={values[item] ? badgeOK : badgeERROR}
+                                title={values[item] ? `${txt.ariaTxt1} ${item} ${txt.ariaTxt2} ${values[item]}` : `${txt.ariaTxt1} ${item} ${txt.ariaTxt3}`}
+                                aria-label={values[item] ? `${txt.ariaTxt1} ${item} ${txt.ariaTxt2} ${values[item]}` : `${txt.ariaTxt1} ${item} ${txt.ariaTxt3}`}>
+                                <Avatar
+                                    className="researchIdAvatar"
+                                    src={require(`../../../../src/images/${item.toLowerCase()}_icon.svg`)}
+                                    title={`${item} Id`}
+                                    alt={`${item} Id`}/>
+                            </Badge>
+                        </a>
+                    </div>
+                )
+            )}
 
             {values.orcid &&
             <div className="column is-narrow">
@@ -46,11 +49,11 @@ const DashboardResearcherIds = ({values}) => {
 
 DashboardResearcherIds.propTypes = {
     values: PropTypes.shape({
-        publons: PropTypes.any,
-        researcher: PropTypes.any,
-        scopus: PropTypes.any,
-        google_scholar: PropTypes.any,
-        orcid: PropTypes.any
+        publons: PropTypes.string,
+        researcher: PropTypes.string,
+        scopus: PropTypes.string,
+        google_scholar: PropTypes.string,
+        orcid: PropTypes.string
     })
 };
 
