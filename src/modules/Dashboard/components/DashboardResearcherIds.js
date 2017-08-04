@@ -10,7 +10,6 @@ const DashboardResearcherIds = ({values}) => {
     const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
     const badgeStyle = {right: -5};
     const txt = locale.components.dashboardResearcherIds;
-
     return (
         <div className="columns researcherIds is-gapless">
             {values && Object.keys(values).map((item, index) => (
