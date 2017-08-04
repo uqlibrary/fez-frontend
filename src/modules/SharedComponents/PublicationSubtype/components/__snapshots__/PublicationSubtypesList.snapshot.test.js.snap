@@ -137,7 +137,6 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
     multiple={false}
     name="selectedValue"
     onChange={[Function]}
-    value={null}
   >
     <TextField
       disabled={false}
@@ -170,7 +169,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
       >
         <TextFieldLabel
           disabled={false}
-          htmlFor="selectedValue-undefined-Publicationsubtype-54654"
+          htmlFor="selectedValue-undefined-Publicationsubtype-57840"
           muiTheme={
             Object {
               "appBar": Object {
@@ -596,7 +595,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
           }
         >
           <label
-            htmlFor="selectedValue-undefined-Publicationsubtype-54654"
+            htmlFor="selectedValue-undefined-Publicationsubtype-57840"
             style={
               Object {
                 "color": "rgba(0, 0, 0, 0.3)",
@@ -633,7 +632,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
               "top": 8,
             }
           }
-          id="selectedValue-undefined-Publicationsubtype-54654"
+          id="selectedValue-undefined-Publicationsubtype-57840"
           labelStyle={
             Object {
               "paddingLeft": 0,
@@ -669,10 +668,9 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
               "borderTop": "none",
             }
           }
-          value={null}
         >
           <div
-            id="selectedValue-undefined-Publicationsubtype-54654"
+            id="selectedValue-undefined-Publicationsubtype-57840"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -776,7 +774,9 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
                         "whiteSpace": "nowrap",
                       }
                     }
-                  />
+                  >
+                    Publication subtype
+                  </div>
                   <IconButton
                     disableTouchRipple={false}
                     disabled={false}
@@ -1502,7 +1502,6 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
     multiple={false}
     name="selectedValue"
     onChange={[Function]}
-    value={null}
   >
     <TextField
       disabled={false}
@@ -1535,7 +1534,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
       >
         <TextFieldLabel
           disabled={false}
-          htmlFor="selectedValue-undefined-Publicationsubtype-12942"
+          htmlFor="selectedValue-undefined-Publicationsubtype-23680"
           muiTheme={
             Object {
               "appBar": Object {
@@ -1961,7 +1960,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
           }
         >
           <label
-            htmlFor="selectedValue-undefined-Publicationsubtype-12942"
+            htmlFor="selectedValue-undefined-Publicationsubtype-23680"
             style={
               Object {
                 "color": "rgba(0, 0, 0, 0.3)",
@@ -1998,7 +1997,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
               "top": 8,
             }
           }
-          id="selectedValue-undefined-Publicationsubtype-12942"
+          id="selectedValue-undefined-Publicationsubtype-23680"
           labelStyle={
             Object {
               "paddingLeft": 0,
@@ -2034,10 +2033,9 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
               "borderTop": "none",
             }
           }
-          value={null}
         >
           <div
-            id="selectedValue-undefined-Publicationsubtype-12942"
+            id="selectedValue-undefined-Publicationsubtype-23680"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -2141,7 +2139,9 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
                         "whiteSpace": "nowrap",
                       }
                     }
-                  />
+                  >
+                    Publication subtype
+                  </div>
                   <IconButton
                     disableTouchRipple={false}
                     disabled={false}
