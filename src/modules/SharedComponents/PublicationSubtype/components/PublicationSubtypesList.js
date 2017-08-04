@@ -13,7 +13,6 @@ export class PublicationSubtypesList extends Component {
         subtypesList: PropTypes.array,
         selectedValue: PropTypes.string,
         dataSourceConfig: PropTypes.object,
-        dispatch: PropTypes.func,
         vocabId: PropTypes.number,
         className: PropTypes.string,
         loadPublicationSubtypesList: PropTypes.func
