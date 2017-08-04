@@ -31,22 +31,30 @@ export class PublicationSubtypesList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedValue: props.selectedValue || null
+            selectedValue: null
         };
     }
 
     componentDidMount() {
         this.props.loadPublicationSubtypesList(this.props.vocabId);
+
+        if (this.props.selectedValue !== null) {
+            this._updateSelectedValue(this.props.selectedValue);
+        }
     }
 
     componentWillUpdate(nextProps, nextState) {
         if (this.props.onChange && nextState.selectedValue !== this.state.selectedValue) this.props.onChange(nextState.selectedValue);
     }
 
-    _onSubtypeSelected = (event, index, value) => {
+    _updateSelectedValue = (value) => {
         this.setState({
             selectedValue: value
         });
+    };
+
+    _onSubtypeSelected = (event, index, value) => {
+        this._updateSelectedValue(value);
     };
 
     getValue = (item, path) => {
