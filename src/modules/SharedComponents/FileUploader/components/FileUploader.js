@@ -41,6 +41,9 @@ export default class FileUploader extends PureComponent {
     }
 
     setAcceptedFileList = (addedFiles) => {
+        const {setAcceptedFileList} = this.props;
+        setAcceptedFileList(addedFiles);
+        /*
         const fileInformation = locale.sharedComponents.files;
         const maxNumberOfFiles = fileInformation.limit;
         const {acceptedFiles, setAcceptedFileList} = this.props;
@@ -73,6 +76,7 @@ export default class FileUploader extends PureComponent {
                 }
             }
         }
+        */
     };
 
     setErrorMessage = (msg) => {

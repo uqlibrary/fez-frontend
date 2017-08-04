@@ -11,7 +11,7 @@ import {publicationTypeList} from './data/records';
 import {publicationSubtypeList} from './data/vocabularies';
 import {publicationYearsBig} from './data/academic/publicationYears';
 import {possibleUnclaimed, possibleCounts} from './data/publications';
-import {authorsSearch, currentAuthor, authorDetails} from './data/authors';
+import {authorsSearch, currentAuthor, authorDetails} from './data/authors/index';
 import {quickTemplates} from './data/acml';
 
 const queryString = require('query-string');

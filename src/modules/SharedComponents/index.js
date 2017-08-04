@@ -7,3 +7,4 @@ export {AuthorLinking} from './AuthorLinking';
 export {fileUploadReducer} from './FileUploader';
 export {authorLinkingReducer} from './AuthorLinking';
 
+export {SampleForm} from './FileUploader';

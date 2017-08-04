@@ -116,6 +116,7 @@ export default class FileMetadata extends Component {
 
         return(
             acceptedFiles.map((file, index) => {
+                console.log(file);
                 const fieldName = `${file}${index}`;
                 const selectFieldName = `${fileInformation.fields.fileAccess}${file.name}`;
                 const accessIds = fileInformation.constants;
