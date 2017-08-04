@@ -11,7 +11,8 @@ export class PublicationSubtypesList extends Component {
         onChange: PropTypes.func,
         locale: PropTypes.object,
         subtypesList: PropTypes.array,
-        selectedValue: PropTypes.string,
+        subtypesLoading: PropTypes.bool,
+        selectedValue: PropTypes.string || PropTypes.number,
         dataSourceConfig: PropTypes.object,
         vocabId: PropTypes.number,
         className: PropTypes.string,
@@ -62,24 +63,24 @@ export class PublicationSubtypesList extends Component {
     };
 
     render() {
-        const { locale, subtypesList, dataSourceConfig } = this.props;
+        const { locale, subtypesList, dataSourceConfig, subtypesLoading } = this.props;
         const renderSubTypeItems = subtypesList.map((item) => {
             const value = this.getValue(item, dataSourceConfig.value);
             const text = this.getValue(item, dataSourceConfig.text);
             return <MenuItem value={ value } primaryText={ text } key={ value }/>;
         });
-
+        const loadingIndicationText = subtypesLoading ? locale.label + ' loading...' : locale.label;
         return (
             <SelectField
                 name="selectedValue"
                 fullWidth
                 className={ this.props.className }
-                value={ this.state.selectedValue }
+                value={ subtypesLoading ? null : this.state.selectedValue }
                 maxHeight={ 250 }
                 onChange={ this._onSubtypeSelected }
-                floatingLabelText={ locale.label }>
+                floatingLabelText={ loadingIndicationText }>
                 <MenuItem
-                    primaryText={ locale.label }
+                    primaryText={ loadingIndicationText }
                     disabled/>
                 { renderSubTypeItems }
             </SelectField>
@@ -89,7 +90,8 @@ export class PublicationSubtypesList extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        subtypesList: state.get('publicationSubtypesReducer').subtypesList || []
+        subtypesList: state.get('publicationSubtypesReducer').subtypesList || [],
+        subtypesLoading: state.get('publicationSubtypesReducer').subtypesLoading || false
     };
 };
 
