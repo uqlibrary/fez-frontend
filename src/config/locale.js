@@ -505,9 +505,8 @@ export default {
             ariaPrefix: 'Photograph of '
         },
         dashboardResearcherIds: {
-            ariaTxt1: 'Your',
-            ariaTxt2: 'Id is',
-            ariaTxt3: 'Id is not linked',
+            researcherIsLinked: 'Your [resource] Id is [id]',
+            researcherIsNotLinked: 'You are not linked to [resource]',
             orcidUrlPrefix: 'http://orcid.org/',
             orcidLinkPrefix: 'orcid.org/',
             orcidlinkLabel: 'Click to visit your ORCId profile'
