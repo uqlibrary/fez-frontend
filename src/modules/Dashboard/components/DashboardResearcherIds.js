@@ -35,11 +35,11 @@ const DashboardResearcherIds = ({values}) => {
             {values.orcid &&
             <div className="column is-narrow">
                 <a className="orcidLink"
-                   href={'http://orcid.org/' + values.orcid}
+                   href={txt.orcidUrlPrefix + values.orcid}
                    target="_blank"
-                   aria-label="Click to visit your ORCId profile"
-                   title="Click to visit your ORCId profile">
-                    orcid.org/{values.orcid}</a>
+                   aria-label={txt.orcidlinkLabel}
+                   title={txt.orcidlinkLabel}>
+                    {txt.orcidLinkPrefix}{values.orcid}</a>
             </div>
             }
         </div>

@@ -506,7 +506,10 @@ export default {
         dashboardResearcherIds: {
             ariaTxt1: 'Your',
             ariaTxt2: 'Id is',
-            ariaTxt3: 'Id is not linked'
+            ariaTxt3: 'Id is not linked',
+            orcidUrlPrefix: 'http://orcid.org/',
+            orcidLinkPrefix: 'orcid.org/',
+            orcidlinkLabel: 'Click to visit your ORCId profile'
         }
     },
     sharedComponents: {
