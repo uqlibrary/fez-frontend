@@ -168,7 +168,7 @@ export function claimPublication(data) {
                 comments: data.comments,
                 ...claimAttachments(data.files)
             };
-
+            console.log(claimRequest);
             return postClaimPossiblePublication(claimRequest)
                 // .then(response => {
                 //     if (data.files.length === 0) return response;
@@ -182,6 +182,7 @@ export function claimPublication(data) {
                         ...recordFileAttachment(data.files, data.publication)
                         // TODO: updated record's author_id and order ...recordAuthors(data.publication)
                     };
+                    console.log(recordPatchRequest);
                     return patchRecord(data.publication.rek_pid, recordPatchRequest);
                 })
                 .then(response => {
