@@ -214,8 +214,13 @@ export function claimPublication(data) {
 
             return postRecord(recordRequest)
                 // .then(response => {
+                //     newPid = response.rek_pid;
                 //     if (data.files.length === 0) return response;
                 //     return putUploadFiles(data.rek_pid, data.files);
+                // })
+                // .then(response => {
+                //     // TODO: build a request to match author to pid, should return order for current author or not found
+                //     return matchAuthor(data.rek_pid, data.author);
                 // })
                 .then(response => {
                     newPid = response.rek_pid;
