@@ -122,7 +122,7 @@ export default class AddRecord extends React.Component {
                   {
                       !this.props.loadingSearch &&
                       <div className="layout-card">
-                          <div className="columns">
+                          <div className="columns action-buttons">
                               <div className="column is-hidden-mobile"/>
                               <div className="column is-narrow-desktop">
                                   <RaisedButton

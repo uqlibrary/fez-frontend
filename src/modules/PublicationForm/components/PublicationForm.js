@@ -108,7 +108,7 @@ export default class PublicationForm extends Component {
                     <Alert type="info" title="Success" message={'New publication has been saved...'} outsideLayout />
                 }
                 <div className="layout-card">
-                    <div className="columns">
+                    <div className="columns action-buttons">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop">
                             <RaisedButton

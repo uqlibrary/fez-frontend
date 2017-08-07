@@ -6,8 +6,8 @@ import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 
 const Lure = ({claimPublicationResults}) => {
-        return (
-            <div>
+    return (
+        <div>
             {claimPublicationResults && claimPublicationResults.size > 0 && this.state.showAppbar && (
                 <div className="warning alertWrapper">
                     <div className="columns">
@@ -28,9 +28,8 @@ const Lure = ({claimPublicationResults}) => {
                         </div>
                     </div>
                 </div> )}
-            </div>
-        )
-    }
+        </div>
+    );
 };
 
 Lure.propTypes = {
