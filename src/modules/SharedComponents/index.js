@@ -7,3 +7,7 @@ export {AuthorLinking} from './AuthorLinking';
 export {fileUploadReducer} from './FileUploader';
 export {authorLinkingReducer} from './AuthorLinking';
 
+export {PublicationSubtypeField} from './PublicationSubtype';
+export {SampleForm} from './PublicationSubtype';
+
+

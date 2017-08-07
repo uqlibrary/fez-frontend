@@ -1,0 +1,104 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { loadPublicationSubtypesList } from 'actions';
+
+import MenuItem from 'material-ui/MenuItem';
+import SelectField from 'material-ui/SelectField';
+
+export class PublicationSubtypesList extends Component {
+    static propTypes = {
+        onChange: PropTypes.func,
+        locale: PropTypes.object,
+        subtypesList: PropTypes.array,
+        subtypesLoading: PropTypes.bool,
+        selectedValue: PropTypes.string || PropTypes.number,
+        dataSourceConfig: PropTypes.object,
+        vocabId: PropTypes.number,
+        className: PropTypes.string,
+        loadPublicationSubtypesList: PropTypes.func
+    };
+
+    static defaultProps = {
+        dataSourceConfig: {
+            text: 'controlled_vocab.cvo_title',
+            value: 'controlled_vocab.cvo_title'
+        },
+        locale: {
+            label: 'Publication subtype'
+        }
+    };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedValue: null
+        };
+    }
+
+    componentDidMount() {
+        this.props.loadPublicationSubtypesList(this.props.vocabId);
+
+        if (this.props.selectedValue !== null) {
+            this._updateSelectedValue(this.props.selectedValue);
+        }
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        if (this.props.onChange && nextState.selectedValue !== this.state.selectedValue) this.props.onChange(nextState.selectedValue);
+    }
+
+    _updateSelectedValue = (value) => {
+        this.setState({
+            selectedValue: value
+        });
+    };
+
+    _onSubtypeSelected = (event, index, value) => {
+        this._updateSelectedValue(value);
+    };
+
+    getValue = (item, path) => {
+        return path.split('.').reduce((objectValue, pathProperty) => objectValue[pathProperty], item);
+    };
+
+    render() {
+        const { locale, subtypesList, dataSourceConfig, subtypesLoading } = this.props;
+        const renderSubTypeItems = subtypesList.map((item) => {
+            const value = this.getValue(item, dataSourceConfig.value);
+            const text = this.getValue(item, dataSourceConfig.text);
+            return <MenuItem value={ value } primaryText={ text } key={ value }/>;
+        });
+        const loadingIndicationText = subtypesLoading ? locale.label + ' loading...' : locale.label;
+        return (
+            <SelectField
+                name="selectedValue"
+                fullWidth
+                className={ this.props.className }
+                value={ subtypesLoading ? null : this.state.selectedValue }
+                maxHeight={ 250 }
+                onChange={ this._onSubtypeSelected }
+                floatingLabelText={ loadingIndicationText }>
+                <MenuItem
+                    primaryText={ loadingIndicationText }
+                    disabled/>
+                { renderSubTypeItems }
+            </SelectField>
+        );
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        subtypesList: state.get('publicationSubtypesReducer').subtypesList || [],
+        subtypesLoading: state.get('publicationSubtypesReducer').subtypesLoading || false
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadPublicationSubtypesList: (id) => dispatch(loadPublicationSubtypesList(id))
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PublicationSubtypesList);

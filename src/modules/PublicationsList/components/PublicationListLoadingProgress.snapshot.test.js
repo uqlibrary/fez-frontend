@@ -1,4 +1,4 @@
-jest.dontMock('./SearchDashboard');
+jest.dontMock('./PublicationListLoadingProgress');
 
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';

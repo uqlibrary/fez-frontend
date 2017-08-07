@@ -110,6 +110,6 @@ mock.onPost(/publications\/claim-possible/).reply(200);
 mock.onGet('acml/quick-templates').reply(200, quickTemplates);
 
 // Let the create records endpoint go through to staging
-mock.onPost(/records/).reply(200, {});
+mock.onPost(/records/).reply(200, {rek_pid: 'UQ:1111111'});
 mock.onPatch(/records/).reply(200, {});
 

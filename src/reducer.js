@@ -13,6 +13,7 @@ import authorsReducer from 'reducers/authors';
 import authorDetailsReducer from 'reducers/authorDetails';
 import currentAuthorReducer from 'reducers/currentAuthor';
 import claimPublicationReducer from 'reducers/claimPublication';
+import publicationSubtypesReducer from 'reducers/publicationSubtypes';
 
 const rootReducer = combineReducers({
     form: formReducer,
@@ -27,7 +28,8 @@ const rootReducer = combineReducers({
     claimPublicationReducer,
     currentAuthorReducer,
     authorDetailsReducer,
-    authorsReducer
+    authorsReducer,
+    publicationSubtypesReducer
 });
 
 export default rootReducer;
