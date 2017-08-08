@@ -1,6 +1,7 @@
 export {ContributorsEditorField} from './ContributorsEditor';
 
 export {FileUploader} from './FileUploader';
+export { FileUploadField } from './FileUploader';
 export {AuthorLinking} from './AuthorLinking';
 
 // reducers
