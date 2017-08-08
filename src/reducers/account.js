@@ -33,11 +33,13 @@ const handlers = {
         authorLoading: false
     }),
 
-    [actions.ACCOUNT_AUTHOR_LOADED]: (state, action) => ({
-        ...state,
-        author: action.payload,
-        authorLoading: false
-    }),
+    [actions.ACCOUNT_AUTHOR_LOADED]: (state, action) => {
+        return {
+            ...state,
+            author: action.payload,
+            authorLoading: false
+        };
+    },
 
     [actions.ACCOUNT_AUTHOR_LOADING]: (state) => ({
         ...state,

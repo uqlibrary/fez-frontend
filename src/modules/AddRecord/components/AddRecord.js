@@ -11,7 +11,6 @@ import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationForm} from 'modules/PublicationForm';
 
 import {locale, validation} from 'config';
-import {searchPublications, setClaimPublication} from 'actions';
 
 export default class AddRecord extends React.Component {
 
@@ -20,7 +19,7 @@ export default class AddRecord extends React.Component {
         loadingSearch: PropTypes.bool,
         loadingPublicationSources: PropTypes.object,
         history: PropTypes.object.isRequired,
-        dispatch: PropTypes.func
+        actions: PropTypes.object
     };
 
     constructor(props) {
@@ -61,7 +60,7 @@ export default class AddRecord extends React.Component {
     };
 
     _claimPublication = (item) => {
-        this.props.dispatch(setClaimPublication(item));
+        this.props.actions.setClaimPublication(item);
         this.props.history.push('/claim-publication-form');
     };
 
@@ -73,7 +72,7 @@ export default class AddRecord extends React.Component {
     };
 
     _performSearch = (values) => {
-        this.props.dispatch(searchPublications(values.get('searchQuery')));
+        this.props.actions.searchPublications(values.get('searchQuery'));
 
         this.setState({
             initialValues: {

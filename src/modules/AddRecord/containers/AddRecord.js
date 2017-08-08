@@ -1,16 +1,21 @@
 import {connect} from 'react-redux';
 import AddRecord from '../components/AddRecord';
+import {bindActionCreators} from 'redux';
 import {withRouter} from 'react-router-dom';
+import * as actions from 'actions';
 
 const mapStateToProps = (state) => {
     return {
-        publicationsList: state.get('addRecordReducer') ? state.get('addRecordReducer').publicationsList : {},
-        loadingSearch: state.get('addRecordReducer').loadingSearch,
-        loadingPublicationSources: state.get('addRecordReducer') ? state.get('addRecordReducer').loadingPublicationSources : {}
+        ...state.get('searchRecordsReducer')
     };
 };
 
-let AddRecordContainer = connect(mapStateToProps)(AddRecord);
-AddRecordContainer = withRouter(AddRecordContainer);
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    };
+}
 
+let AddRecordContainer = connect(mapStateToProps, mapDispatchToProps)(AddRecord);
+AddRecordContainer = withRouter(AddRecordContainer);
 export default AddRecordContainer;

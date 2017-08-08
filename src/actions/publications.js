@@ -32,13 +32,13 @@ export const CLAIM_PUBLICATION_CREATE_FAILED = 'CLAIM_PUBLICATION_CREATE_FAILED'
 
 /**
  * Get count of possibly your publications for an author
- * @param {string} author's UQ identifier, eg uqjsmith
+ * @param {string} author user name
  * @returns {action}
  */
-export function countPossiblyYourPublications(accountId) {
+export function countPossiblyYourPublications(authorUsername) {
     return dispatch => {
         dispatch({type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
-        getCountPossibleUnclaimedPublications(accountId).then(response => {
+        getCountPossibleUnclaimedPublications(authorUsername).then(response => {
             dispatch({
                 type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                 payload: response
@@ -54,19 +54,19 @@ export function countPossiblyYourPublications(accountId) {
 
 /**
  * Search publications from eSpace which are matched to author's username
- * @param {object} author
+ * @param {string} author user name
  * @returns {action}
  */
-export function searchPossiblyYourPublications(author) {
+export function searchPossiblyYourPublications(authorUsername) {
     return dispatch => {
         dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING});
         // TODO: try some authors who are students - org username or student name to use?
-        getPossibleUnclaimedPublications(author.aut_org_username).then(response => {
+        getPossibleUnclaimedPublications(authorUsername).then(response => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                 payload: response
             });
-            dispatch(countPossiblyYourPublications(author));
+            dispatch(countPossiblyYourPublications(authorUsername));
         }).catch(() => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_FAILED,
@@ -79,7 +79,7 @@ export function searchPossiblyYourPublications(author) {
 /**
  * Hide publications form user possibly your research view, eg hide
  * @param data {array} - list of publications to hide
- * @param author {object} - should include author id/user name
+ * @param author {object} - user user name
  * @returns {action}
  */
 export function hidePublications(publicationsToHide, author) {
@@ -103,7 +103,7 @@ export function hidePublications(publicationsToHide, author) {
                 });
 
                 // reload current possibly your publications/count after user hides records
-                dispatch(searchPossiblyYourPublications(author));
+                dispatch(searchPossiblyYourPublications(author.aut_org_username));
             })
             .catch(() => {
                 dispatch({

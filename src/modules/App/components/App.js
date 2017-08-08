@@ -138,12 +138,21 @@ export default class App extends React.Component {
                                 <Alert {...locale.global.notRegisteredAuthorAlert} outsideLayout />
                             }
                             <Switch>
-                                <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
-                                {menuItems.map((route, index) => (
+                                {
+                                    isAuthorizedUser &&
+                                    <Route path="/" exact component={Dashboard}/>
+                                }
+                                {
+                                    !isAuthorizedUser &&
+                                    <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
+                                }
+                                    <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
+                                {
+                                    menuItems.map((route, index) => (
                                     <Route key={index} {...route} />
-                                ))}
+                                    ))
+                                }
                             </Switch>
-                            <Route path="/" exact render={() => (isAuthorizedUser ? Dashboard : Browse(locale.pages.browse))}/>
                         </div>
                         <HelpDrawer />
                     </div>

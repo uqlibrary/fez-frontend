@@ -16,8 +16,8 @@ class Dashboard extends React.Component {
         authorDetailsLoading: PropTypes.bool,
         publicationYearsData: PropTypes.object,
         possiblyYourPublicationsCount: PropTypes.object,
-        actions: PropTypes.object,
-        history: PropTypes.object
+        actions: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired
     };
 
     constructor(props) {
@@ -26,14 +26,14 @@ class Dashboard extends React.Component {
 
     componentDidMount() {
         if (this.props.account && this.props.account.id) {
-            this.props.actions.countPossiblyYourPublications(this.props.account.id);
+            // this.props.actions.countPossiblyYourPublications(this.props.account.id);
         }
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.account && nextProps.account.id &&
             (!this.props.account || nextProps.account.id !== this.props.account.id)) {
-            this.props.actions.countPossiblyYourPublications(this.props.account.id);
+            // this.props.actions.countPossiblyYourPublications(this.props.account.id);
         }
     }
 
@@ -67,7 +67,7 @@ class Dashboard extends React.Component {
                                 this.props.possiblyYourPublicationsCount &&
                                 <div className="notification-wrap column is-12">
                                     <Alert title={txt.possiblePublicationsLure.title}
-                                           message={txt.possiblePublicationsLure.message.replace(this.props.possiblyYourPublicationsCount.most_likely_match_count)}
+                                           message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
                                            type={txt.possiblePublicationsLure.type}
                                            actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
                                            action={this.claimYourPublications}
