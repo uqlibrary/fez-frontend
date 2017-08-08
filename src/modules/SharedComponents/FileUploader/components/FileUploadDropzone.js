@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
-import _ from 'lodash';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 
 class FileUploadDropzone extends PureComponent {
@@ -14,37 +13,46 @@ class FileUploadDropzone extends PureComponent {
     constructor(props) {
         super(props);
         this.dropzoneRef = null;
-        this.accepted = [];
+        this.accepted = new Set();
     }
 
     componentWillReceiveProps(nextProps) {
-        this.accepted = nextProps.uploadedFiles;
+        this.accepted = new Set([...nextProps.uploadedFiles]);
     }
+
+    _difference = (accepted, rejected) => {
+        return new Set([...accepted].filter(file => !rejected.has(file)));
+    };
+
+    _union = (accepted, filtered) => {
+        return new Set([...accepted, ...filtered]);
+    };
 
     _onDropAccepted = (accepted) => {
         /**
          * Filter folders
          */
-        const invalid = accepted.filter((file) => {
+        const rejected = accepted.filter((file) => {
             return file.type === '' ||                          // no type means folder
                 file.name.length > 45 ||                        // check for filename length
-                _.split(file.name, '.').length > 2;             // check for more than one period
+                file.name.split('.').length > 2;                // check for more than one period
         });
 
-        if (invalid.length > 0) {
+        if (rejected.length > 0) {
             console.log('Error');
         }
 
-        const filtered = _.difference(accepted, invalid);
-
-        this.accepted.push(...filtered);
+        /**
+         * Remove rejected files
+         */
+        const filtered = this._difference(new Set(accepted), new Set(rejected));
 
         /**
-         * Filter duplicates
+         * Duplicates will be removed as a result of default Set behavior
          */
-        const unique = _.uniqBy(this.accepted, 'name');
+        this.accepted = this._union(this.accepted, filtered);
 
-        this.props.onDropped(unique);
+        this.props.onDropped([...this.accepted]);
     };
 
     render() {
