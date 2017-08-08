@@ -4,15 +4,13 @@ import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
-export default class FileUploadedRow extends Component {
+export default class FileUploadRow extends Component {
 
     static propTypes = {
         index: PropTypes.number.isRequired,
         uploadedFile: PropTypes.object.isRequired,
         onDelete: PropTypes.func,
-        showIdentifierLookup: PropTypes.bool,
-        locale: PropTypes.object,
-        uploadedFileSuffix: PropTypes.string
+        locale: PropTypes.object
     };
 
     static defaultProps = {
@@ -44,14 +42,14 @@ export default class FileUploadedRow extends Component {
         return (
             <div className="columns is-gapless is-mobile uploadedFileRow datalist datalist-row">
                 <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this._deleteFile}
-                    locale={deleteRecordConfirmation} />
-                <div className="column datalist-text">
-                    <span className="uploadedFile">{this.props.uploadedFile.nameAsPublished}</span>
+                    onRef={ ref => (this.confirmationBox = ref) }
+                    onAction={ this._deleteFile }
+                    locale={ deleteRecordConfirmation } />
+                <div className="column datalist-text filename">
+                    <span className="filename-label">{ this.props.uploadedFile.name }</span>
                 </div>
                 <div className="column is-narrow uploadedFileDelete datalist-buttons">
-                    <IconButton tooltip={this.props.locale.deleteHint} onTouchTap={this._showConfirmation}>
+                    <IconButton tooltip={ this.props.locale.deleteHint } onTouchTap={ this._showConfirmation }>
                         <FontIcon className="material-icons deleteIcon">delete</FontIcon>
                     </IconButton>
                 </div>
