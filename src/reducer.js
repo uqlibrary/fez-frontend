@@ -7,7 +7,7 @@ import {helpDrawerReducer} from 'uqlibrary-react-toolbox';
 
 import {addRecordReducer} from './modules/AddRecord';
 
-import {fileUploadReducer, authorLinkingReducer} from './modules/SharedComponents';
+import {authorLinkingReducer} from './modules/SharedComponents';
 
 import authorsReducer from 'reducers/authors';
 import authorDetailsReducer from 'reducers/authorDetails';
@@ -19,7 +19,6 @@ const rootReducer = combineReducers({
     // App reducers
     app: appReducer,
     authorLinking: authorLinkingReducer,
-    fileUpload: fileUploadReducer,
     helpDrawer: helpDrawerReducer,
 
     // migrated reducers
