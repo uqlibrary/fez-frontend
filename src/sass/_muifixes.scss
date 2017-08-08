@@ -48,3 +48,11 @@ button[type=button] {
   content: " *";
   color: $error-color;
 }
+
+// To negate the spacing fix for column inside a form
+@media (max-width: 768px) {
+  div.columns.action-buttons > .column {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+}
