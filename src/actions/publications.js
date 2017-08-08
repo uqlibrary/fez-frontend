@@ -32,13 +32,13 @@ export const CLAIM_PUBLICATION_CREATE_FAILED = 'CLAIM_PUBLICATION_CREATE_FAILED'
 
 /**
  * Get count of possibly your publications for an author
- * @param {object} author
+ * @param {string} author's UQ identifier, eg uqjsmith
  * @returns {action}
  */
-export function countPossiblyYourPublications(author) {
+export function countPossiblyYourPublications(accountId) {
     return dispatch => {
         dispatch({type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
-        getCountPossibleUnclaimedPublications(author.aut_org_username).then(response => {
+        getCountPossibleUnclaimedPublications(accountId).then(response => {
             dispatch({
                 type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                 payload: response

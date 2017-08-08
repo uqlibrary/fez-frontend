@@ -1,50 +1,68 @@
-// Repositories
-import {getAccount as apiGetAccount} from 'repositories/account';
+import {
+    getAccount,
+    fetchCurrentAuthor,
+    fetchAuthorDetails
+} from 'repositories';
 
-// Types
-export const APP_ACCOUNT_LOADING = 'APP_ACCOUNT_LOADING';
-export const APP_ACCOUNT_LOADED = 'APP_ACCOUNT_LOADED';
-export const APP_ACCOUNT_ANONYMOUS = 'APP_ACCOUNT_ANONYMOUS';
+export const ACCOUNT_LOADING = 'ACCOUNT_LOADING';
+export const ACCOUNT_LOADED = 'ACCOUNT_LOADED';
+export const ACCOUNT_ANONYMOUS = 'ACCOUNT_ANONYMOUS';
 
-export const APP_MENU_DRAWER_TOGGLE = 'APP_MENU_DRAWER_TOGGLE';
+export const ACCOUNT_AUTHOR_LOADING = 'ACCOUNT_AUTHOR_LOADING';
+export const ACCOUNT_AUTHOR_FAILED = 'ACCOUNT_AUTHOR_LOADING';
+export const ACCOUNT_AUTHOR_LOADED = 'ACCOUNT_AUTHOR_LOADING';
 
-export const APP_LOADING_ERROR = 'APP_LOADING_ERROR';
+export const ACCOUNT_AUTHOR_DETAILS_LOADING = 'ACCOUNT_AUTHOR_DETAILS_LOADING';
+export const ACCOUNT_AUTHOR_DETAILS_FAILED = 'ACCOUNT_AUTHOR_DETAILS_FAILED';
+export const ACCOUNT_AUTHOR_DETAILS_LOADED = 'ACCOUNT_AUTHOR_DETAILS_LOADED';
 
 /**
- * Loads the user's account into the application
+ * Loads the user's account and author details into the application
  * @returns {function(*)}
  */
-export function loadAccount() {
+export function loadCurrentAccount() {
     return dispatch => {
-        dispatch({type: APP_ACCOUNT_LOADING});
-        apiGetAccount().then(account => {
+        dispatch({type: ACCOUNT_LOADING});
+
+        let account = null;
+        let currentAuthor = null;
+
+        // load UQL account (based on token)
+        getAccount().then(accountResponse => {
+            account = accountResponse;
             dispatch({
-                type: APP_ACCOUNT_LOADED,
-                payload: account
+                type: ACCOUNT_LOADED,
+                payload: accountResponse
             });
-        }).catch(error => {
-            if (error.hasOwnProperty('response') && error.response !== null && typeof(error.response) !== 'undefined'
-                && error.response.hasOwnProperty('status') && (error.response.status === 401 || error.response.status === 403)) {
-                dispatch({type: APP_ACCOUNT_ANONYMOUS});
-            } else {
-                dispatch({
-                    type: APP_LOADING_ERROR,
-                    payload: error
-                });
-                // throw(error);
+
+            // load current author details (based on token)
+            dispatch({type: ACCOUNT_AUTHOR_LOADING});
+            return fetchCurrentAuthor();
+        }).then(currentAuthorResponse => {
+            // TODO: to be decommissioned when author/details will become a part of author api
+            currentAuthor = currentAuthorResponse;
+            dispatch({
+                type: ACCOUNT_AUTHOR_LOADED,
+                payload: currentAuthorResponse
+            });
+
+            // load repository author details
+            dispatch({type: ACCOUNT_AUTHOR_DETAILS_LOADING});
+            return fetchAuthorDetails(currentAuthor.aut_org_username);
+        }).then(authorDetailsResponse => {
+            dispatch({
+                type: ACCOUNT_AUTHOR_DETAILS_LOADED,
+                payload: authorDetailsResponse
+            });
+        }).catch(() => {
+            if (!account) {
+                dispatch({type: ACCOUNT_ANONYMOUS});
+            } else if (!currentAuthor) {
+                dispatch({type: ACCOUNT_AUTHOR_FAILED});
+                dispatch({type: ACCOUNT_AUTHOR_DETAILS_FAILED});
             }
         });
     };
 }
 
-/**
- * Toggles the menu drawer
- * @param open
- * @returns {{type: string, payload: *}}
- */
-export function toggleDrawer(open) {
-    return {
-        type: APP_MENU_DRAWER_TOGGLE,
-        payload: open
-    };
-}
+

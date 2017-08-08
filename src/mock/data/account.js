@@ -98,6 +98,10 @@ export const accounts = {
         'position': 'Affil Professorial Research Fellow',
         'org_unit': 'Faculty of Medicine',
         'orcid_id': '0000-0000-0000-00001'
+    },
+    // expired session
+    uqexpired: {
+        'hasSession': false
     }
     // upos
     // admins

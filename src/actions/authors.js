@@ -1,12 +1,11 @@
-import {fetchAuthors, fetchCurrentAuthor, fetchAuthorDetails} from '../repositories';
+import {
+    fetchAuthors,
+    fetchAuthorDetails
+} from 'repositories';
 
 export const AUTHORS_LOADING = 'AUTHORS_LOADING';
 export const AUTHORS_LOAD_FAILED = 'AUTHORS_LOAD_FAILED';
 export const AUTHORS_LOADED = 'AUTHORS_LOADED';
-
-export const CURRENT_AUTHOR_LOADING = 'CURRENT_AUTHOR_LOADING';
-export const CURRENT_AUTHOR_FAILED = 'CURRENT_AUTHOR_FAILED';
-export const CURRENT_AUTHOR_LOADED = 'CURRENT_AUTHOR_LOADED';
 
 export const AUTHOR_DETAILS_LOADING = 'AUTHOR_DETAILS_LOADING';
 export const AUTHOR_DETAILS_FAILED = 'AUTHOR_DETAILS_FAILED';
@@ -37,30 +36,6 @@ export function searchAuthors(query, filterBy) {
 }
 
 /**
- * Returns currently logged in author (based on X_UQL_TOKEN)
- * @returns {action}
- */
-export function getCurrentAuthor() {
-    return dispatch => {
-        dispatch({type: CURRENT_AUTHOR_LOADING});
-
-        fetchCurrentAuthor()
-            .then((data) => {
-                dispatch({
-                    type: CURRENT_AUTHOR_LOADED,
-                    payload: data
-                });
-            })
-            .catch(() => {
-                dispatch({
-                    type: CURRENT_AUTHOR_FAILED,
-                    payload: {}
-                });
-            });
-    };
-}
-
-/**
  * Returns the authors details from app.libarary api
  * @param {string} author username
  * @returns {action}
@@ -82,4 +57,3 @@ export function loadAuthorDetails(authorId) {
         });
     };
 }
-

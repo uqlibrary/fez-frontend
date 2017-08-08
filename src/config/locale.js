@@ -6,16 +6,15 @@ export default {
     global: {
         title: 'UQ eSpace',
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
-        labels: {
-            buttons: {
-                cancel: 'Cancel',
-                abandon: 'Abandon and search again',
-                close: 'Close',
-                delete: 'Delete',
-                submitForApproval: 'Submit for approval',
-                submissionInProgress: 'Submitting...',
-                claimPublication: 'Claim this publication'
-            }
+        loginAlert: {
+            title: 'You are not logged in',
+            message: 'Please, login to UQ eSpace for full search results and more services.',
+            type: 'info_outline',
+        },
+        notRegisteredAuthorAlert: {
+            title: 'You are not registered in UQ eSpace as an author',
+            message: 'Please contact the UQ Manager to resolve this.',
+            type: 'info_outline'
         }
     },
     authentication: {
@@ -59,6 +58,15 @@ export default {
         },
     },
     pages: {
+        dashboard: {
+            loading: 'Loading your dashboard...',
+            possiblePublicationsLure: {
+                title: 'Claim now!',
+                message: 'We have found [count] record(s) that could possibly be your work.',
+                type: 'warning',
+                actionButtonLabel: 'Claim your publications now'
+            }
+        },
         about: {
             title: 'About UQ eSpace',
             children: (
