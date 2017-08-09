@@ -10,7 +10,6 @@
     background-image: url('../../public/images/dashboard_cover.jpg');
     background-size: cover;
     background-position: center 25%;
-    min-height: 200px;
     overflow: visible;
   }
 
@@ -28,8 +27,8 @@
       }
       .authorPositionOrg {
         font-weight: 100;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 14px;
+        line-height: 18px;
       }
       .authorPositions {
         min-height: 40px;
@@ -46,59 +45,42 @@
     }
     // Researcher Id's
     .researcherIds {
-      margin: 24px 0 -6px 12px !important;
+      margin: 24px 0 -12px 24px !important;
       height: 60px !important;
       .researchIdAvatar {
-        margin-right: -20px;
+        margin-right: 12px;
         box-shadow: 0 0 15px rgba(black, 0.3);
-      }
-      .researchIdBadge{
-        height: 60px;
+        background-color: transparent !important;
+        &:hover {
+          cursor: pointer;
+        }
+        &.ok {
+        }
+        &.error {
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+          opacity: 0.75;
+        }
       }
       .orcid { // orcid required to be more prominent
-        margin-top: -6px;
+        margin-top: -3px;
         zoom: 1.2;
         -moz-transform: scale(1.2);
         @-moz-document url-prefix() {
-          margin-top: 0;
+          margin-top: 0px;
         }
       }
       a.orcidLink {
         color: rgba($text-color-reverse, 0.8);
         font-size: 12px;
-        line-height: 5;
-        margin: 0 6px;
+        line-height: 3;
+        margin: 0 0 0 -6px;
         &:hover {
           color: rgba($text-color-reverse, 1);
         }
       }
-      .researchIdBadge {
-        padding-bottom: 0px !important;
-        padding-top: 12px !important;
-        &:hover {
-          cursor: pointer;
-        }
-        .material-icons {
-          font-size: 16px !important;
-        }
-        img {
-          background-color: transparent !important;
-        }
-        &.ok {
-          & span {
-            background-color: darken($available-color,10%) !important;
-            color: $text-color-reverse !important;
-          }
-        }
-        &.error {
-          & span {
-            background-color: darken($error-color,10%) !important;
-            color: $text-color-reverse !important;
-          }
-        }
-      }
     }
-    }
+  }
 
 
   //ArticleCount
@@ -108,7 +90,7 @@
     align-items: center;
     .authorCounter {
       color: $text-color-reverse;
-      margin: auto 0;
+      margin: auto -24px auto 0;
       height: auto;
       .noOfArticles {
         font-size: 110px;

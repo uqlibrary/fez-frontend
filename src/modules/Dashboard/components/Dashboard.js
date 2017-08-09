@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {Card, CardText, CardHeader} from 'material-ui/Card';
-import {AuthorsPublicationsPerYearChart, Alert, InlineLoader} from 'uqlibrary-react-toolbox';
-
+import {AuthorsPublicationsPerYearChart, AuthorsPublicationsCount, Alert, InlineLoader} from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
-import AuthorsPublicationsCount from 'modules/DonutChart/components/AuthorsPublicationsCount';
 import {locale} from 'config';
 
 class Dashboard extends React.Component {
@@ -81,7 +79,7 @@ class Dashboard extends React.Component {
                         <div className="columns is-gapless">
                             <div className="column">
 
-                                <Card style={{backgroundColor: '#36B6D6'}}>
+                                <Card className="barChart">
                                     <CardHeader className="card-header">
                                         <h2 className="title is-4 color-reverse">eSpace publications by year</h2>
                                     </CardHeader>
@@ -96,7 +94,7 @@ class Dashboard extends React.Component {
 
                         <div className="columns">
                             <div className="column is-4">
-                                <Card style={{backgroundColor: '#ed5c8f'}}>
+                                <Card className="donutChart">
                                     <CardHeader className="card-header">
                                         <h2 className="title is-4 color-reverse">Document types overview</h2>
                                     </CardHeader>
