@@ -1,9 +1,9 @@
 import React from 'react';
-import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
 import { Field } from 'redux-form';
 import { FileUploadField } from '.';
+import { StandardCard } from 'uqlibrary-react-toolbox';
 
 class SampleForm extends React.Component {
     constructor(props) {
@@ -12,9 +12,11 @@ class SampleForm extends React.Component {
 
     render() {
         return(
-            <form>
-                <Field name="files_uploaded" component={ FileUploadField } />
-            </form>
+            <StandardCard title="Files">
+                <form>
+                    <Field type="file" name="files_uploaded" component={ FileUploadField } defaultConfig={{ maxFileSize: 100, fileSizeUnit: 'K', fileUploadLimit: 4 }} />
+                </form>
+            </StandardCard>
         );
     }
 }
@@ -25,7 +27,7 @@ const SampleReduxForm = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        formValues: getFormValues('SampleForm')(state) || Immutable.Map({})
+        formValues: getFormValues('SampleForm')(state) || {}
     };
 };
 
