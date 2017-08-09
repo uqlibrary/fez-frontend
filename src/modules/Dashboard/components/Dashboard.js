@@ -13,6 +13,7 @@ class Dashboard extends React.Component {
         authorDetails: PropTypes.object,
         authorDetailsLoading: PropTypes.bool,
         publicationYearsData: PropTypes.object,
+        publicationCountData: PropTypes.object,
         possiblyYourPublicationsCount: PropTypes.object,
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
@@ -41,6 +42,7 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
+        console.log('********************:' + this.props.publicationCountData.name);
         return (
             <div className="layout-fill">
                 {
@@ -100,7 +102,7 @@ class Dashboard extends React.Component {
                                     </CardHeader>
 
                                     <CardText className="body-1">
-                                        <AuthorsPublicationsCount/>
+                                        <AuthorsPublicationsCount rawData={this.props.publicationCountData} />
                                     </CardText>
                                 </Card>
                             </div>
