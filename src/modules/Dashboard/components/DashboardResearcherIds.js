@@ -6,11 +6,11 @@ import FontIcon from 'material-ui/FontIcon';
 import {locale} from 'config';
 
 const DashboardResearcherIds = ({values}) => {
-    const badgeOK = (<FontIcon className="material-icons">done</FontIcon>);
-    const badgeERROR = (<FontIcon className="material-icons">close</FontIcon>);
+    const badgeOk = (<FontIcon className="material-icons">done</FontIcon>);
+    const badgeError = (<FontIcon className="material-icons">close</FontIcon>);
     const badgeStyle = {right: -5};
-    const txt = locale.components.dashboardResearcherIds;
 
+    const txt = locale.components.dashboardResearcherIds;
     return (
         <div className="columns researcherIds is-gapless">
             {values && Object.keys(values).map((item, index) => (
@@ -19,9 +19,9 @@ const DashboardResearcherIds = ({values}) => {
                             <Badge
                                 badgeStyle={badgeStyle}
                                 className={values[item] ? (`${item.toLowerCase()} researchIdBadge ok`) : (`${item.toLowerCase()} researchIdBadge error`)}
-                                badgeContent={values[item] ? badgeOK : badgeERROR}
-                                title={values[item] ? `${txt.ariaTxt1} ${item} ${txt.ariaTxt2} ${values[item]}` : `${txt.ariaTxt1} ${item} ${txt.ariaTxt3}`}
-                                aria-label={values[item] ? `${txt.ariaTxt1} ${item} ${txt.ariaTxt2} ${values[item]}` : `${txt.ariaTxt1} ${item} ${txt.ariaTxt3}`}>
+                                badgeContent={values[item] ? badgeOk : badgeError}
+                                title={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)}
+                                aria-label={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)} >
                                 <Avatar
                                     className="researchIdAvatar"
                                     src={require(`../../../../src/images/${item.toLowerCase()}_icon.svg`)}
@@ -36,11 +36,11 @@ const DashboardResearcherIds = ({values}) => {
             {values.orcid &&
             <div className="column is-narrow">
                 <a className="orcidLink"
-                   href={'http://orcid.org/' + values.orcid}
+                   href={txt.orcidUrlPrefix + values.orcid}
                    target="_blank"
-                   aria-label="Click to visit your ORCId profile"
-                   title="Click to visit your ORCId profile">
-                    orcid.org/{values.orcid}</a>
+                   aria-label={txt.orcidlinkLabel}
+                   title={txt.orcidlinkLabel}>
+                    {txt.orcidLinkPrefix}{values.orcid}</a>
             </div>
             }
         </div>

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Field} from 'redux-form/immutable';
 
 import {TextField, StandardCard} from 'uqlibrary-react-toolbox';
-import {ContributorsEditorField} from 'modules/SharedComponents';
+import {ContributorsEditorField, PublicationSubtypeField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
@@ -33,6 +33,17 @@ export default class BookForm extends Component {
                                    floatingLabelText={txt.information.fieldLabels.bookTitle}
                                    validate={[validation.required]}
                                    style={{marginBottom: '-12px'}}
+                            />
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column">
+                            <Field component={PublicationSubtypeField}
+                                   name="rek_subtype"
+                                   vocabId={this.props.vocabId}
+                                   className="requiredField"
+                                   locale={{label: txt.information.fieldLabels.subtype}}
+                                   validate={[validation.required]}
                             />
                         </div>
                     </div>

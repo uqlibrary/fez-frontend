@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+
 import {publicationTypes} from 'config';
 
 // citations for different publication types
@@ -28,23 +30,37 @@ export default class PublicationCitation extends Component {
 
     _renderCitation = (publicationTypeId) => {
         const filteredPublicationType = publicationTypeId ?
-            publicationTypes(this.citationComponents).filter((item) => { return item.id === publicationTypeId; }) : null;
+            publicationTypes(this.citationComponents).filter((item) => {
+                return item.id === publicationTypeId;
+            }) : null;
         return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent ?
-            React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication}) : <div>Citation display not available for {publicationTypeId}</div>;
+            React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication}) :
+            <div>Citation display not available for {publicationTypeId}</div>;
     }
 
     render() {
         const actions = this.props.actions && this.props.actions.length > 0 ?
             this.props.actions.map((action, index) => {
                 return (
-                    <FlatButton
-                      fullWidth
-                        key={index}
-                        secondary
-                        label={action.label}
-                        className="publicationAction"
-                        onTouchTap={() => (action.handleAction(this.props.publication))}
-                    />
+                    <div className="column is-narrow">
+                        {index === 0 ? (
+                        <RaisedButton
+                            secondary
+                            key={index}
+                            label={action.label}
+                            className={`publicationAction buttonOrder${index}`}
+                            onTouchTap={() => (action.handleAction(this.props.publication))}
+                        />
+                        ) : (
+                        <FlatButton
+                            secondary
+                            key={index}
+                            label={action.label}
+                            className={`publicationAction buttonOrder${index}`}
+                            onTouchTap={() => (action.handleAction(this.props.publication))}
+                        />
+                            )}
+                    </div>
                 );
             }) : null;
         return (
@@ -60,10 +76,8 @@ export default class PublicationCitation extends Component {
                 {
                     this.props.actions && this.props.actions.length > 0 &&
                     <div className="publicationActions columns is-gapless">
-                        <div className="column is-hidden-mobile" />
-                            <div className="column is-narrow">
-                                {actions}
-                            </div>
+                        <div className="column is-hidden-mobile"/>
+                            {actions}
                     </div>
                 }
             </div>

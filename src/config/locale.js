@@ -163,6 +163,33 @@ export default {
                         text: 'Why search displays these items....',
                         buttonLabel: 'Ok'
                     },
+                    searchDashboard: {
+                        title: 'Repository search',
+                        recordSuffix: ' record(s)',
+                        ariaCircularProgressLabelSuffix: 'loading',
+                        repositories: [
+                            {
+                                id: 'wos',
+                                title: 'World of science',
+                                icon: '../../../images/wos_icon.svg'
+                            },
+                            {
+                                id: 'scopus',
+                                title: 'Scopus',
+                                icon: '../../../images/scopus_icon.svg'
+                            },
+                            {
+                                id: 'pubmed',
+                                title: 'PubMed',
+                                icon: '../../../images/pubmed_icon.svg'
+                            },
+                            {
+                                id: 'crossref',
+                                title: 'Crossref',
+                                icon: '../../../images/crossref_icon.svg'
+                            },
+                        ]
+                    }
                 },
                 loadingMessage: 'Searching for publications...',
                 cancel: 'Abandon and search again',
@@ -214,12 +241,6 @@ export default {
                 confirmationMessage: 'Are you sure you want to hide all possibly your publications from this view?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
-            },
-            claimPublicationConfirmation: {
-                confirmationTitle: 'Claim has been submitted',
-                confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.',
-                cancelButtonLabel: 'Claim more publications',
-                confirmButtonLabel: 'OK'
             }
         }
     },
@@ -228,7 +249,6 @@ export default {
             cancel: 'Abandon and search again',
             submit: 'Submit for approval',
             publicationType: {
-                popularTypesList: ['Book', 'Book Chapter', 'Conference Paper', 'Journal Article'],
                 title: 'Publication type',
                 inputLabelText: 'Select publication type',
                 help: {
@@ -292,7 +312,8 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        bookTitle: 'Book title'
+                        bookTitle: 'Book title',
+                        subtype: 'Publication subtype'
                     }
                 },
                 authors: {
@@ -344,6 +365,60 @@ export default {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             }
+        },
+        claimPublicationForm: {
+            title: 'Claim a publication',
+            cancel: 'Cancel this claim',
+            submit: 'Claim this publication',
+            claimingInformation: {
+                title: 'You are claiming to be an author for the following item:',
+                help: {
+                    title: 'Claiming a publication',
+                    text: '...',
+                    buttonLabel: 'OK'
+                }
+            },
+            authorLinking: {
+                title: 'Author linking',
+                text: 'We were unable to automatically detect who you are from the list of authors on this publication. Please, select your name from the list below: ',
+                help: {
+                    title: 'Author linking',
+                    text: '...',
+                    buttonLabel: 'OK'
+                }
+            },
+            comments: {
+                title: 'If necessary, please suggest changes or upload additional files below',
+                help: {
+                    title: 'Additional information',
+                    text: '...',
+                    buttonLabel: 'OK'
+                },
+                fieldLabels: {
+                    comments: 'Type edits/changes/comments here',
+                    url: 'Link (URL)'
+                }
+            },
+            fileUpload: {
+                title: 'Upload additional files',
+                help: {
+                    title: 'Files',
+                    text: '...',
+                    buttonLabel: 'OK'
+                }
+            },
+            cancelWorkflowConfirmation: {
+                confirmationTitle: 'Cancel claiming a publication',
+                confirmationMessage: 'Are you sure you want to cancel claiming this publication?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
+            },
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Claim has been submitted',
+                confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.',
+                cancelButtonLabel: 'Claim more publications',
+                confirmButtonLabel: 'OK'
+            },
         },
         publicationClaimFrom: {
             title: 'Claim a publication',
@@ -422,33 +497,6 @@ export default {
                 }
             }
         },
-        searchDashboard: {
-            title: 'Repository search',
-            repositories: [
-                {
-                    id: 'wos',
-                    title: 'World of science',
-                    icon: '../../../images/wos_icon.svg'
-                },
-                {
-                    id: 'scopus',
-                    title: 'Scopus',
-                    icon: '../../../images/scopus_icon.svg'
-                },
-                {
-                    id: 'pubmed',
-                    title: 'PubMed',
-                    icon: '../../../images/pubmed_icon.svg'
-                },
-                {
-                    id: 'crossref',
-                    title: 'Crossref',
-                    icon: '../../../images/crossref_icon.svg'
-                },
-            ],
-            pubtitle: ' records',
-            noOfRepos: 4
-        },
         dashboardArticleCount: {
             yearSeparator: ' to ',
             countTitle: 'eSpace articles from'
@@ -457,9 +505,11 @@ export default {
             ariaPrefix: 'Photograph of '
         },
         dashboardResearcherIds: {
-            ariaTxt1: 'Your',
-            ariaTxt2: 'Id is',
-            ariaTxt3: 'Id is not linked'
+            researcherIsLinked: 'Your [resource] Id is [id]',
+            researcherIsNotLinked: 'You are not linked to [resource]',
+            orcidUrlPrefix: 'http://orcid.org/',
+            orcidLinkPrefix: 'orcid.org/',
+            orcidlinkLabel: 'Click to visit your ORCId profile'
         }
     },
     sharedComponents: {

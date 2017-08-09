@@ -103,11 +103,13 @@ mock.onGet(/(publications\/possible-counts)/).reply(200, possibleCounts);
 mock.onPost(/(publications\/hide-possible)/).reply(200, {});
 
 // Mock claim possible publication endpoint response
-mock.onPost('publications/claim-possible').reply(200, {});
+// mock.onPost('publications/claim-possible').reply(200, {});
+mock.onPost(/publications\/claim-possible/).reply(200);
 
 // Mock the document access types
 mock.onGet('acml/quick-templates').reply(200, quickTemplates);
 
 // Let the create records endpoint go through to staging
-mock.onPost('records').reply(200, {});
+mock.onPost(/records/).reply(200, {rek_pid: 'UQ:1111111'});
+mock.onPatch(/records/).reply(200, {});
 

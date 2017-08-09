@@ -1,11 +1,11 @@
 export {ContributorsEditorField} from './ContributorsEditor';
 
-export {FileUploader} from './FileUploader';
-export { FileUploadField } from './FileUploader';
+export {FileUploadField} from './FileUploader';
 export {AuthorLinking} from './AuthorLinking';
 
 // reducers
-export {fileUploadReducer} from './FileUploader';
 export {authorLinkingReducer} from './AuthorLinking';
 
-export {SampleForm} from './FileUploader';
+export {PublicationSubtypeField} from './PublicationSubtype';
+
+

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard Profile test Render the collective dashboard author profile area (all components) for a UQ researcher 1`] = `
+<div
+  className="imageCover"
+>
+  <div
+    className="columns userDetails is-gapless"
+  >
+    <div
+      className="column is-narrow authorAvatar"
+    >
+      <DashboardAuthorAvatar
+        values={
+          Object {
+            "familyName": "Researcher",
+            "givenName": "J",
+            "title": "Professor",
+            "uqr_id": 14,
+          }
+        }
+      />
+    </div>
+    <div
+      className="column authorDetails"
+    >
+      <DashboardAuthorDetails
+        values={
+          Object {
+            "familyName": "Researcher",
+            "givenName": "J",
+            "orgUnits": Array [
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "title": "Professor",
+          }
+        }
+      />
+      <DashboardResearcherIds
+        values={
+          Object {
+            "google_scholar": "",
+            "orcid": "0000-0001-1111-1111",
+            "publons": "",
+            "researcher": "G-111-1111",
+            "scopus": "",
+          }
+        }
+      />
+    </div>
+    <div
+      className="column is-narrow authorCount"
+    >
+      <DashboardArticleCount
+        values={
+          Object {
+            "articleCount": "282",
+            "articleFirstYear": 1990,
+            "articleLastYear": 2017,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

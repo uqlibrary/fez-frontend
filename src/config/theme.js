@@ -1,5 +1,5 @@
 import {white, darkBlack, fullBlack, grey300} from 'material-ui/styles/colors';
-import {fade} from 'material-ui/utils/colorManipulator';
+import {fade, darken} from 'material-ui/utils/colorManipulator';
 import spacing from 'material-ui/styles/spacing';
 
 export default {
@@ -9,7 +9,7 @@ export default {
         primary1Color: '#49075E',
         primary2Color: '#370546',
         primary3Color: '#6B0C8A',
-        accent1Color: '#4285f4',
+        accent1Color: darken('#4285f4', 0.15),
         accent2Color: '#005EA5',
         accent3Color: '#71A3F7',
         textColor: darkBlack,

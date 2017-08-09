@@ -23,4 +23,3 @@ Browse.propTypes = {
         buttonLabel: PropTypes.string
     })
 };
-

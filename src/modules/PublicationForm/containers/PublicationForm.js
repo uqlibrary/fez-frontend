@@ -3,7 +3,6 @@ import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redu
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
-import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 const FORM_NAME = 'PublicationForm';
 
@@ -11,8 +10,8 @@ const onSubmit = (values, dispatch) => {
     const files = []; // TODO: will become a part of values
     // set default values for a new unapproved record
     // TODO: date should be a part of redux-form data
-    const data = {...values.toJS(), ...NEW_RECORD_DEFAULT_VALUES};
-    return dispatch(createNewRecord(data, files))
+    return dispatch(
+        createNewRecord({...values.toJS(), ...files}))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
@@ -21,7 +20,8 @@ const onSubmit = (values, dispatch) => {
             setTimeout(()=>{
                 dispatch(reset(FORM_NAME));
             }, 100);
-        }).catch(error => {
+        })
+        .catch(error => {
             throw new SubmissionError({_error: error.message});
         });
 };

@@ -3,6 +3,8 @@ jest.dontMock('./DashboardAuthorAvatar');
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
+import {authorDetails} from '../../../mock/data/authors/';
+
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
 function setup({values}) {
@@ -12,15 +14,11 @@ function setup({values}) {
 
 describe('Dashboard Author Details test', () => {
     it('Render the authors details as expected for a UQ researcher)', () => {
-        const props = {
-            values: {
-                uqr_id: '14',
-                given_name: 'J',
-                family_name: 'Researcher',
-                title: 'Professor'
-            }
+        const values = {
+            values: {}
         };
-        const wrapper = setup(props);
+        values.values = authorDetails.uqresearcher;
+        const wrapper = setup(values);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
