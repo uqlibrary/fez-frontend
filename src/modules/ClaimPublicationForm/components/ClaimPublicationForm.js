@@ -4,7 +4,7 @@ import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert} from 'uqlibrary-react-toolbox';
-import {FileUploader, AuthorLinking} from 'modules/SharedComponents';
+import {FileUploadField, AuthorLinking} from 'modules/SharedComponents';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
 import {validation, locale} from 'config';
 import {clearClaimPublication} from 'actions';
@@ -100,7 +100,7 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <FileUploader />
+                        <Field name="files" component={ FileUploadField } />
                     </StandardCard>
                     {
                         this.props.submitFailed && this.props.error &&
