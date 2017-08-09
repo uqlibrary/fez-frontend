@@ -48,6 +48,7 @@ class FileUploadDropzone extends PureComponent {
 
     componentWillReceiveProps(nextProps) {
         this.accepted = new Set([...nextProps.uploadedFiles]);
+        this._resetErrors();
     }
 
     /**
