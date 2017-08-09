@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
-import {FileUploader} from 'modules/SharedComponents';
+import { FileUploadField } from 'modules/SharedComponents';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -88,7 +88,7 @@ export default class PublicationForm extends Component {
                 {
                     this.props.formValues.get('rek_display_type') > 0 &&
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <FileUploader/>
+                        <Field name="files" component={ FileUploadField } />
                     </StandardCard>
                 }
                     {
