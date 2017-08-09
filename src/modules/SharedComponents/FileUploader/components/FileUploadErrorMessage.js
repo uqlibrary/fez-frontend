@@ -8,7 +8,7 @@ const FileUploadErrorMessage = ({ error }) => (
             <FontIcon className="material-icons">error</FontIcon>
         </div>
         <div className="column Message">
-            { error }
+            { error.join('; ') }
         </div>
     </div>
 );
