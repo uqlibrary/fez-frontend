@@ -7,6 +7,7 @@ class FileUploadDropzone extends PureComponent {
     static propTypes = {
         onDropped: PropTypes.func.isRequired,
         maxSize: PropTypes.number.isRequired,
+        maxFiles: PropTypes.number.isRequired,
         uploadedFiles: PropTypes.array
     };
 
@@ -20,10 +21,28 @@ class FileUploadDropzone extends PureComponent {
         this.accepted = new Set([...nextProps.uploadedFiles]);
     }
 
+    /**
+     * Diff of two sets
+     *
+     * @todo Move it to better place to re-use
+     * @param accepted
+     * @param rejected
+     * @returns {Set}
+     * @private
+     */
     _difference = (accepted, rejected) => {
         return new Set([...accepted].filter(file => !rejected.has(file)));
     };
 
+    /**
+     * Union of two sets
+     *
+     * @todo Move it to better place to re-use
+     * @param accepted
+     * @param filtered
+     * @returns {Set}
+     * @private
+     */
     _union = (accepted, filtered) => {
         return new Set([...accepted, ...filtered]);
     };
@@ -52,7 +71,7 @@ class FileUploadDropzone extends PureComponent {
          */
         this.accepted = this._union(this.accepted, filtered);
 
-        this.props.onDropped([...this.accepted]);
+        this.props.onDropped([...this.accepted].slice(0, this.props.maxFiles));
     };
 
     render() {
