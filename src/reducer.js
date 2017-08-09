@@ -2,33 +2,21 @@ import {combineReducers} from 'redux-immutable';
 
 // Load reducers
 import {reducer as formReducer} from 'redux-form/immutable';
-import {appReducer} from 'modules/App';
 import {helpDrawerReducer} from 'uqlibrary-react-toolbox';
-
-import {addRecordReducer} from './modules/AddRecord';
 
 import {authorLinkingReducer} from './modules/SharedComponents';
 
-import authorsReducer from 'reducers/authors';
-import authorDetailsReducer from 'reducers/authorDetails';
-import currentAuthorReducer from 'reducers/currentAuthor';
-import claimPublicationReducer from 'reducers/claimPublication';
-import publicationSubtypesReducer from 'reducers/publicationSubtypes';
+import * as reducers from './reducers';
+
 
 const rootReducer = combineReducers({
     form: formReducer,
-    // App reducers
-    app: appReducer,
+    helpDrawer: helpDrawerReducer,
+
     authorLinking: authorLinkingReducer,
     helpDrawer: helpDrawerReducer,
 
-    // migrated reducers
-    addRecordReducer,
-    claimPublicationReducer,
-    currentAuthorReducer,
-    authorDetailsReducer,
-    authorsReducer,
-    publicationSubtypesReducer
+    ...reducers
 });
 
 export default rootReducer;

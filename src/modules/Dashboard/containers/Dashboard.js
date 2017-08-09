@@ -1,17 +1,32 @@
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 import Dashboard from '../components/Dashboard';
+import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
-const mapStateToProps = (reduxStore) => {
+// mock data for graphs
+import {publicationYearsBig as publicationYearsMockData} from '../../../mock/data/academic/publicationYears';
+import {publicationCount as publicationCountMockData} from '../../../mock/data/academic/publicationCount';
+
+
+const mapStateToProps = (state) => {
     return {
-        account: reduxStore.getIn(['app', 'account']),
-        claimPublicationResults: {},
-        authorDetailsLoading: reduxStore.get('authorDetailsReducer').authorDetailsLoading,
-        authorDetails: reduxStore.get('authorDetailsReducer').authorDetails,
+        account: state.get('accountReducer').account,
+        authorDetails: state.get('accountReducer').authorDetails,
+        authorDetailsLoading: state.get('accountReducer').authorDetailsLoading,
+        possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts,
+        publicationYearsData: publicationYearsMockData,
+        publicationCountData: publicationCountMockData
     };
 };
 
-let DashboardContainer = connect(mapStateToProps)(Dashboard);
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    };
+}
+
+let DashboardContainer = connect(mapStateToProps, mapDispatchToProps)(Dashboard);
 DashboardContainer = withRouter(DashboardContainer);
 
 export default DashboardContainer;

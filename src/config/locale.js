@@ -6,16 +6,15 @@ export default {
     global: {
         title: 'UQ eSpace',
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
-        labels: {
-            buttons: {
-                cancel: 'Cancel',
-                abandon: 'Abandon and search again',
-                close: 'Close',
-                delete: 'Delete',
-                submitForApproval: 'Submit for approval',
-                submissionInProgress: 'Submitting...',
-                claimPublication: 'Claim this publication'
-            }
+        loginAlert: {
+            title: 'You are not logged in',
+            message: 'Please, login to UQ eSpace for full search results and more services.',
+            type: 'info_outline',
+        },
+        notRegisteredAuthorAlert: {
+            title: 'You are not registered in UQ eSpace as an author',
+            message: 'Please contact the UQ Manager to resolve this.',
+            type: 'info_outline'
         }
     },
     authentication: {
@@ -59,6 +58,15 @@ export default {
         },
     },
     pages: {
+        dashboard: {
+            loading: 'Loading your dashboard...',
+            possiblePublicationsLure: {
+                title: 'Claim now!',
+                message: 'We have found [count] record(s) that could possibly be your work.',
+                type: 'warning',
+                actionButtonLabel: 'Claim your publications now'
+            }
+        },
         about: {
             title: 'About UQ eSpace',
             children: (
@@ -510,6 +518,13 @@ export default {
             orcidUrlPrefix: 'http://orcid.org/',
             orcidLinkPrefix: 'orcid.org/',
             orcidlinkLabel: 'Click to visit your ORCId profile'
+        },
+        dashboard: {
+            help: {
+                title: 'Your dashboard profile',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.',
+                button: 'OK'
+            },
         }
     },
     sharedComponents: {

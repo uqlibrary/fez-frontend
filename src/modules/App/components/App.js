@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 
-import {AppLoader, MenuDrawer, HelpDrawer} from 'uqlibrary-react-toolbox';
+import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
 
-import {defaultMenuItems, researcherMenuItems} from 'config';
-import {locale} from 'config';
-
-import {AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
-import {AuthButton} from 'uqlibrary-react-toolbox';
+import {
+    locale,
+    defaultMenuItems,
+    researcherMenuItems,
+    AUTH_URL_LOGIN,
+    AUTH_URL_LOGOUT
+} from 'config';
 
 // Pages
 import {Dashboard} from 'modules/Dashboard';
@@ -24,36 +26,26 @@ import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
 export default class App extends React.Component {
 
     static propTypes = {
-        error: PropTypes.object,
-        account: PropTypes.object,
-        loaded: PropTypes.bool.isRequired,
-        loadAccount: PropTypes.func.isRequired,
-        getCurrentAuthor: PropTypes.func.isRequired,
-        menuDrawerOpen: PropTypes.bool.isRequired,
-        toggleMenuDrawer: PropTypes.func.isRequired
+        user: PropTypes.object,
+        location: PropTypes.object, // react-router prop
+        actions: PropTypes.object
     };
 
     constructor(props) {
         super(props);
         this.state = {
+            menuDrawerOpen: false,
+            docked: false,
             mediaQuery: window.matchMedia('(min-width: 1600px)')
         };
     }
 
-    /**
-     * Set up default values, event handlers when component is mounted
-     */
     componentDidMount() {
-        this.props.loadAccount();
-        this.props.getCurrentAuthor();
-
+        this.props.actions.loadCurrentAccount();
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
     }
 
-    /**
-     * Clean up after the container has been unmounted
-     */
     componentWillUnmount() {
         this.state.mediaQuery.removeListener(this.handleResize);
     }
@@ -65,49 +57,51 @@ export default class App extends React.Component {
     };
 
     toggleDrawer = () => {
-        this.props.toggleMenuDrawer(!this.props.menuDrawerOpen);
+        this.setState({
+            menuDrawerOpen: !this.state.menuDrawerOpen
+        });
     };
 
     render() {
-        const {
-            error,
-            account,
-            loaded,
-            menuDrawerOpen,
-        } = this.props;
+        const titleStyle = this.state.docked ? { paddingLeft: 320 } : {};
+        const container = this.state.docked ? { paddingLeft: 340 } : {};
 
-        const {
-            docked
-        } = this.state;
+        const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
 
-        const titleStyle = docked ? { paddingLeft: 320 } : {};
-        const container = docked ? { paddingLeft: 340 } : {};
-
-        const isAuthorizedUser = loaded && account !== null && account.get('id') !== undefined;
         const components = {
             Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication
         };
 
-        const menuItems = isAuthorizedUser ?
-            [...researcherMenuItems(locale, account.get('mail'), components), ...defaultMenuItems(locale, components)]
+        const menuItems =
+            isAuthorizedUser ?
+            [
+                ...researcherMenuItems(locale, this.props.user.account.mail, components),
+                ...defaultMenuItems(locale, components)
+            ]
             :
             defaultMenuItems(locale, components);
 
-        // TODO: implement error display if required
-        if (error) {
-            console.log(error);
-        }
+        // TODO: check if isPublicPage === false && isAuthorizedUser === false and kick user out?
+        const isPublicPage = defaultMenuItems(locale, components).filter((menuItem) => {
+            return menuItem.path === this.props.location.pathname;
+        }).length > 0;
 
         return (
             <div className="layout-fill">
-                {!loaded ? (
-                    <AppLoader title={locale.global.title} logoImage={locale.global.logo} logoText={locale.global.title} />
-                    ) : (
+                {
+                    this.props.user.accountLoading &&
+                    <AppLoader
+                        title={locale.global.title}
+                        logoImage={locale.global.logo}
+                        logoText={locale.global.title}/>
+                }
+                {
+                    !this.props.user.accountLoading &&
                     <div className="layout-fill align-stretch">
-                        {/* TODO: app bar buttons should be components */}
+
                         <AppBar
                             className="AppBar align-center"
-                            showMenuIconButton={!docked}
+                            showMenuIconButton={!this.state.docked}
                             style={{height: 75}}
                             iconStyleLeft={{marginTop: 0}}
                             title={locale.global.title}
@@ -119,31 +113,50 @@ export default class App extends React.Component {
                                                 loginUrl={AUTH_URL_LOGIN}
                                                 logoutUrl={AUTH_URL_LOGOUT}
                                                 signInTooltipText={locale.authentication.signInText}
-                                                signOutTooltipText={isAuthorizedUser ? (locale.authentication.signOutText + ' - ' + account.get('name')) : ''}
+                                                signOutTooltipText={isAuthorizedUser ? (locale.authentication.signOutText + ' - ' + this.props.user.account.name) : ''}
                                     />
                                 </div>
                             }
                         />
+
                         <MenuDrawer menuItems={menuItems}
-                                    drawerOpen={docked || menuDrawerOpen}
-                                    docked={docked}
+                                    drawerOpen={this.state.docked || this.state.menuDrawerOpen}
+                                    docked={this.state.docked}
                                     logoImage={locale.global.logo}
                                     logoText={locale.global.title}
-                                    toggleDrawer={this.toggleDrawer} />
+                                    toggleDrawer={this.toggleDrawer}/>
 
                         <div className="content-container" style={container}>
+                            {
+                                // user is not logged in
+                                !this.props.user.accountLoading && !this.props.user.account &&
+                                <Alert {...locale.global.loginAlert} outsideLayout />
+                            }
+                            {
+                                // user is logged in, but doesn't have eSpace author identifier
+                                !isPublicPage && !this.props.user.authorDetailsLoading && !this.props.user.authorDetails &&
+                                <Alert {...locale.global.notRegisteredAuthorAlert} outsideLayout />
+                            }
                             <Switch>
-                                <Route path="/" exact component={isAuthorizedUser ? Dashboard : Browse} />
-                                <Route path="/claim-publication-form" component={ClaimPublicationForm} />
-                                {menuItems.map((route, index) => (
+                                {
+                                    isAuthorizedUser &&
+                                    <Route path="/" exact component={Dashboard}/>
+                                }
+                                {
+                                    !isAuthorizedUser &&
+                                    <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
+                                }
+                                    <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
+                                {
+                                    menuItems.map((route, index) => (
                                     <Route key={index} {...route} />
-                                ))}
+                                    ))
+                                }
                             </Switch>
                         </div>
-
                         <HelpDrawer />
                     </div>
-                )}
+                }
             </div>
         );
     }

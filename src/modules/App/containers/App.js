@@ -1,25 +1,19 @@
 import {connect} from 'react-redux';
-
 import App from '../components/App';
-import {loadAccount, toggleDrawer} from '../actions';
-import {getCurrentAuthor} from 'actions';
+import {bindActionCreators} from 'redux';
+import * as actions from 'actions';
 
-const AppContainer = connect(state => {
-    const appState = state.get('app');
-
+const mapStateToProps = (state) => {
     return {
-        error: appState.get('error'),
-        account: appState.get('account'),
-        loaded: appState.get('accountLoaded'),
-        menuDrawerOpen: appState.get('menuDrawerOpen'),
-        ...state.get('currentAuthorReducer')
+        user: {...state.get('accountReducer')}
     };
-}, dispatch => {
-    return {
-        loadAccount: () => dispatch(loadAccount()),
-        getCurrentAuthor: () => dispatch(getCurrentAuthor()),
-        toggleMenuDrawer: open => dispatch(toggleDrawer(open))
-    };
-})(App);
+};
 
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    };
+}
+
+const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
 export default AppContainer;

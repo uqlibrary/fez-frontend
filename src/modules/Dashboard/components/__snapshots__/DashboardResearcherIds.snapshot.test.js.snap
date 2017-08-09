@@ -8,190 +8,85 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     className="publons column is-narrow"
   >
     <a
+      aria-label="You are not linked to publons"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
-      <Badge
-        aria-label="You are not linked to publons"
-        badgeContent={
-          <FontIcon
-            className="material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            close
-          </FontIcon>
-        }
-        badgeStyle={
-          Object {
-            "right": -5,
-          }
-        }
-        className="publons researchIdBadge error"
-        primary={false}
-        secondary={false}
+      <Avatar
+        alt="You are not linked to publons"
+        className="publons researchIdAvatar error"
+        size={40}
+        src=""
         title="You are not linked to publons"
-      >
-        <Avatar
-          alt="publons Id"
-          className="researchIdAvatar"
-          size={40}
-          src=""
-          title="publons Id"
-        />
-      </Badge>
+      />
     </a>
   </div>
   <div
     className="researcher column is-narrow"
   >
     <a
+      aria-label="Your researcher Id is G-111-1111"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
-      <Badge
-        aria-label="Your researcher Id is G-111-1111"
-        badgeContent={
-          <FontIcon
-            className="material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            done
-          </FontIcon>
-        }
-        badgeStyle={
-          Object {
-            "right": -5,
-          }
-        }
-        className="researcher researchIdBadge ok"
-        primary={false}
-        secondary={false}
+      <Avatar
+        alt="Your researcher Id is G-111-1111"
+        className="researcher researchIdAvatar ok"
+        size={40}
+        src=""
         title="Your researcher Id is G-111-1111"
-      >
-        <Avatar
-          alt="researcher Id"
-          className="researchIdAvatar"
-          size={40}
-          src=""
-          title="researcher Id"
-        />
-      </Badge>
+      />
     </a>
   </div>
   <div
     className="scopus column is-narrow"
   >
     <a
+      aria-label="You are not linked to scopus"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
-      <Badge
-        aria-label="You are not linked to scopus"
-        badgeContent={
-          <FontIcon
-            className="material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            close
-          </FontIcon>
-        }
-        badgeStyle={
-          Object {
-            "right": -5,
-          }
-        }
-        className="scopus researchIdBadge error"
-        primary={false}
-        secondary={false}
+      <Avatar
+        alt="You are not linked to scopus"
+        className="scopus researchIdAvatar error"
+        size={40}
+        src=""
         title="You are not linked to scopus"
-      >
-        <Avatar
-          alt="scopus Id"
-          className="researchIdAvatar"
-          size={40}
-          src=""
-          title="scopus Id"
-        />
-      </Badge>
+      />
     </a>
   </div>
   <div
     className="google_scholar column is-narrow"
   >
     <a
+      aria-label="You are not linked to google_scholar"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
-      <Badge
-        aria-label="You are not linked to google_scholar"
-        badgeContent={
-          <FontIcon
-            className="material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            close
-          </FontIcon>
-        }
-        badgeStyle={
-          Object {
-            "right": -5,
-          }
-        }
-        className="google_scholar researchIdBadge error"
-        primary={false}
-        secondary={false}
+      <Avatar
+        alt="You are not linked to google_scholar"
+        className="google_scholar researchIdAvatar error"
+        size={40}
+        src=""
         title="You are not linked to google_scholar"
-      >
-        <Avatar
-          alt="google_scholar Id"
-          className="researchIdAvatar"
-          size={40}
-          src=""
-          title="google_scholar Id"
-        />
-      </Badge>
+      />
     </a>
   </div>
   <div
     className="orcid column is-narrow"
   >
     <a
+      aria-label="Your orcid Id is 0000-0001-1111-1111"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
-      <Badge
-        aria-label="Your orcid Id is 0000-0001-1111-1111"
-        badgeContent={
-          <FontIcon
-            className="material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            done
-          </FontIcon>
-        }
-        badgeStyle={
-          Object {
-            "right": -5,
-          }
-        }
-        className="orcid researchIdBadge ok"
-        primary={false}
-        secondary={false}
+      <Avatar
+        alt="Your orcid Id is 0000-0001-1111-1111"
+        className="orcid researchIdAvatar ok"
+        size={40}
+        src=""
         title="Your orcid Id is 0000-0001-1111-1111"
-      >
-        <Avatar
-          alt="orcid Id"
-          className="researchIdAvatar"
-          size={40}
-          src=""
-          title="orcid Id"
-        />
-      </Badge>
+      />
     </a>
   </div>
   <div
@@ -219,38 +114,17 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs with wei
     className="anId column is-narrow"
   >
     <a
+      aria-label="Your anId Id is This is an edge case example"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
-      <Badge
-        aria-label="Your anId Id is This is an edge case example"
-        badgeContent={
-          <FontIcon
-            className="material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            done
-          </FontIcon>
-        }
-        badgeStyle={
-          Object {
-            "right": -5,
-          }
-        }
-        className="anid researchIdBadge ok"
-        primary={false}
-        secondary={false}
+      <Avatar
+        alt="Your anId Id is This is an edge case example"
+        className="anid researchIdAvatar ok"
+        size={40}
+        src=""
         title="Your anId Id is This is an edge case example"
-      >
-        <Avatar
-          alt="anId Id"
-          className="researchIdAvatar"
-          size={40}
-          src=""
-          title="anId Id"
-        />
-      </Badge>
+      />
     </a>
   </div>
 </div>

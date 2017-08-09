@@ -7,7 +7,6 @@ import {PublicationsList} from 'modules/PublicationsList';
 import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 import {locale} from 'config';
-import {searchPossiblyYourPublications, hidePublications, setClaimPublication} from 'actions';
 
 export default class ClaimPublication extends React.Component {
 
@@ -15,9 +14,9 @@ export default class ClaimPublication extends React.Component {
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
         possibleCounts: PropTypes.object,
-        currentAuthor: PropTypes.object,
+        author: PropTypes.object,
         history: PropTypes.object.isRequired,
-        dispatch: PropTypes.func
+        actions: PropTypes.object.isRequired
     };
 
     constructor(props) {
@@ -29,21 +28,21 @@ export default class ClaimPublication extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.currentAuthor) {
-            this.props.dispatch(searchPossiblyYourPublications(this.props.currentAuthor));
+        if (this.props.author) {
+            this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username);
         }
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.currentAuthor && (!this.props.currentAuthor || nextProps.currentAuthor.aut_org_username !== this.props.currentAuthor.aut_org_username)) {
+        if (nextProps.author && (!this.props.author || nextProps.author.aut_org_username !== this.props.author.aut_org_username)) {
             // wait until props are updated and current author is set to get their possible publications
-            this.props.dispatch(searchPossiblyYourPublications(nextProps.currentAuthor));
+            this.props.actions.searchPossiblyYourPublications(nextProps.author.aut_org_username);
         }
     }
 
     _hidePublication = () => {
         if (this.state.publicationToHide) {
-            this.props.dispatch(hidePublications([this.state.publicationToHide], this.props.currentAuthor));
+            this.props.actions.hidePublications([this.state.publicationToHide], this.props.author);
             this.setState({publicationToHide: null});
         }
     }
@@ -55,7 +54,7 @@ export default class ClaimPublication extends React.Component {
     };
 
     _hideAllPublications = () => {
-        this.props.dispatch(hidePublications(this.props.publicationsList, this.props.currentAuthor));
+        this.props.actions.hidePublications(this.props.publicationsList, this.props.author);
     }
 
     _confirmHideAllPublications = () => {
@@ -64,7 +63,7 @@ export default class ClaimPublication extends React.Component {
 
     _claimPublication = (item) => {
         this.props.history.push('/claim-publication-form');
-        this.props.dispatch(setClaimPublication(item));
+        this.props.actions.setClaimPublication(item);
     }
 
     _navigateToDashboard = () => {

@@ -1,29 +1,21 @@
-import {api} from 'config';
+import {get} from './generic';
+
+export const GET_ACCOUNT_API = 'account';
 
 /**
  * Fetches the user's account
  * @returns {Promise}
  */
 export function getAccount() {
-    return new Promise((resolve, reject) => {
-        const now = new Date().getTime();
-        api.get('account?' + now).then(response => {
-            if (response.data && response.data.hasOwnProperty('hasSession') && response.data.hasSession === true) {
-                resolve(response.data);
+    const now = new Date().getTime();
+    return get(`${GET_ACCOUNT_API}?${now}`)
+        .then(account => {
+            if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
+                return Promise.resolve(account);
             } else {
-                reject({
-                    response: {
-                        status: 403,
-                        data: 'Unauthorized user'
-                    },
-                });
+                return Promise.reject('Session expired. User is unauthorized.');
             }
-        }).catch(e => {
-            if (e.hasOwnProperty('response') && e.response !== null && typeof(e.response) !== 'undefined'
-                && e.response.hasOwnProperty('status') && (e.response.status === 401 || e.response.status === 403)) {
-                console.log('Unauthorized user....');
-            }
-            reject(e);
+        }).catch((error) => {
+            return Promise.reject(error);
         });
-    });
 }

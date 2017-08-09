@@ -1,16 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import {Card, CardText, CardHeader} from 'material-ui/Card';
-import {publicationYearsBig as publicationYearsMockData} from '../../../mock/data/academic/publicationYears';
-import IconButton from 'material-ui/IconButton';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
-import FlatButton from 'material-ui/FlatButton';
-import FontIcon from 'material-ui/FontIcon';
-import CircularProgress from 'material-ui/CircularProgress';
-import AuthorsPublicationsCount from '../../DonutChart/components/AuthorsPublicationsCount';
-import {AuthorsPublicationsPerYearChart, Alert} from 'uqlibrary-react-toolbox';
-import {loadAuthorDetails} from 'actions';
+import {AuthorsPublicationsPerYearChart, AuthorsPublicationsCount, Alert, InlineLoader} from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
+import {locale} from 'config';
 
 class Dashboard extends React.Component {
 
@@ -18,116 +12,103 @@ class Dashboard extends React.Component {
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
         authorDetailsLoading: PropTypes.bool,
-        history: PropTypes.object,
-        claimPublicationResults: PropTypes.object,
-        dispatch: PropTypes.func
+        publicationYearsData: PropTypes.object,
+        publicationCountData: PropTypes.object,
+        possiblyYourPublicationsCount: PropTypes.object,
+        actions: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired
     };
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            showAppbar: true
-        };
     }
 
     componentDidMount() {
-        // fetch data to display here
-        // this.props.loadUsersPublications(123);
-        this.props.dispatch(loadAuthorDetails(this.props.account.get('id')));
+        if (this.props.account && this.props.account.id) {
+            // this.props.actions.countPossiblyYourPublications(this.props.account.id);
+        }
     }
 
-    hideAppBar = () => {
-        this.setState({showAppbar: false});
-    };
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.account && nextProps.account.id &&
+            (!this.props.account || nextProps.account.id !== this.props.account.id)) {
+            // this.props.actions.countPossiblyYourPublications(this.props.account.id);
+        }
+    }
 
     claimYourPublications = () => {
         this.props.history.push('/claim-publications');
     };
 
     render() {
-        const {
-            authorDetails,
-            authorDetailsLoading,
-            claimPublicationResults,
-        } = this.props;
-
+        const txt = locale.pages.dashboard;
+        console.log('********************:' + this.props.publicationCountData.name);
         return (
             <div className="layout-fill">
-                <div className="layout-card">
+                {
+                    this.props.authorDetailsLoading && !this.props.authorDetails &&
                     <div className="columns is-multiline is-gapless">
-
-                        {/* dashboardProfile */}
                         <div className="column is-12 is-hidden-mobile">
-                            {authorDetails && !authorDetailsLoading && (
-                                <DashboardAuthorProfile authorDetails={authorDetails}/>
-                            )}
-                            {!authorDetails && authorDetailsLoading && (
-                                <div className="isLoading is-centered">
-                                    <CircularProgress size={30} thickness={3}/>
+
+                            <div className="isLoading is-centered">
+                                <InlineLoader message={txt.loading}/>
+                            </div>
+                        </div>
+                    </div>
+                }
+                {
+                    !this.props.authorDetailsLoading && this.props.authorDetails &&
+                    <div className="layout-card">
+                        <div className="columns is-multiline is-gapless">
+                            <div className="column is-12 is-hidden-mobile">
+                                <DashboardAuthorProfile authorDetails={this.props.authorDetails}/>
+                            </div>
+                            {
+                                this.props.possiblyYourPublicationsCount &&
+                                <div className="notification-wrap column is-12">
+                                    <Alert title={txt.possiblePublicationsLure.title}
+                                           message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
+                                           type={txt.possiblePublicationsLure.type}
+                                           actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
+                                           action={this.claimYourPublications}
+                                           allowDismiss
+                                    />
                                 </div>
-                            )}
-                            {!authorDetails && !authorDetailsLoading && (
-                                <Alert title="You are not registered in UQ eSpace Staging as an author"
-                                       message="Please contact the UQ Manager to resolve this."
-                                       type="info_outline"/>
-                            )}
-                        </div>
-
-                        <div className="notification-wrap column is-12">
-                            {claimPublicationResults && claimPublicationResults.size > 0 && this.state.showAppbar && (
-                                <div className="warning alertWrapper">
-                                    <div className="columns">
-                                        <div className="column is-narrow alertIcon">
-                                            <FontIcon className="material-icons">warning</FontIcon>
-                                        </div>
-                                        <div className="column alertText">
-                                            {`We have found ${claimPublicationResults.size} article(s) that could possibly be your work.`}
-                                        </div>
-                                        <div className="column is-narrow claim-button">
-                                            <FlatButton label="Claim your publications now"
-                                                        onTouchTap={this.claimYourPublications}
-                                                        className="claim-publications"/>
-                                        </div>
-                                        <div className="column is-narrow is-hidden-mobile">
-                                            <IconButton onTouchTap={this.hideAppBar}><NavigationClose
-                                                className="hide-appbar"/></IconButton>
-                                        </div>
-                                    </div>
-                                </div> )}
+                            }
 
                         </div>
-                    </div>
 
-                    <div className="columns is-gapless">
-                        <div className="column">
-                            <Card style={{backgroundColor: '#36B6D6'}}>
-                                <CardHeader className="card-header">
-                                    <h2 className="title is-4 color-reverse">eSpace publications by year</h2>
-                                </CardHeader>
+                        <div className="columns is-gapless">
+                            <div className="column">
 
-                                <CardText className="body-1">
-                                    <AuthorsPublicationsPerYearChart rawData={publicationYearsMockData}
-                                                                     yAxisTitle="Total publications"/>
-                                </CardText>
-                            </Card>
+                                <Card className="barChart">
+                                    <CardHeader className="card-header">
+                                        <h2 className="title is-4 color-reverse">eSpace publications by year</h2>
+                                    </CardHeader>
+
+                                    <CardText className="body-1">
+                                        <AuthorsPublicationsPerYearChart rawData={this.props.publicationYearsData}
+                                                                         yAxisTitle="Total publications"/>
+                                    </CardText>
+                                </Card>
+                            </div>
+                        </div>
+
+                        <div className="columns">
+                            <div className="column is-4">
+                                <Card className="donutChart">
+                                    <CardHeader className="card-header">
+                                        <h2 className="title is-4 color-reverse">Document types overview</h2>
+                                    </CardHeader>
+
+                                    <CardText className="body-1">
+                                        <AuthorsPublicationsCount rawData={this.props.publicationCountData} />
+                                    </CardText>
+                                </Card>
+                            </div>
                         </div>
                     </div>
-
-                    <div className="columns">
-                        <div className="column is-4">
-                            <Card style={{backgroundColor: '#ed5c8f'}}>
-                                <CardHeader className="card-header">
-                                    <h2 className="title is-4 color-reverse">Document types overview</h2>
-                                </CardHeader>
-
-                                <CardText className="body-1">
-                                    <AuthorsPublicationsCount/>
-                                </CardText>
-                            </Card>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         );
     }
