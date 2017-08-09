@@ -1,0 +1,603 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App tests for user account and author status User is logged in but are still loading authorDetails) 1`] = `
+<div
+  className="layout-fill"
+>
+  <div
+    className="layout-fill align-stretch"
+  >
+    <AppBar
+      className="AppBar align-center"
+      iconElementRight={
+        <div
+          style={
+            Object {
+              "marginTop": "-10px",
+            }
+          }
+        >
+          <AuthButton
+            isAuthorizedUser={true}
+            loginUrl="https://auth.library.uq.edu.au/login"
+            logoutUrl="https://auth.library.uq.edu.au/logout"
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - J STAFF"
+          />
+        </div>
+      }
+      iconStyleLeft={
+        Object {
+          "marginTop": 0,
+        }
+      }
+      onLeftIconButtonTouchTap={[Function]}
+      showMenuIconButton={true}
+      style={
+        Object {
+          "height": 75,
+        }
+      }
+      title="UQ eSpace"
+      titleStyle={Object {}}
+      zDepth={1}
+    />
+    <MenuDrawer
+      docked={false}
+      drawerOpen={false}
+      logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+      logoText="UQ eSpace"
+      menuItems={
+        Array [
+          Object {
+            "component": [Function],
+            "linkTo": "/dashboard",
+            "path": "/dashboard",
+            "primaryText": "My dashboard",
+            "secondaryText": "j.staff@example.uq.edu.au",
+          },
+          Object {
+            "component": [Function],
+            "linkTo": "/add-record",
+            "path": "/add-record",
+            "primaryText": "Add a missing record",
+          },
+          Object {
+            "component": [Function],
+            "linkTo": "/claim-publications",
+            "path": "/claim-publications",
+            "primaryText": "Claim possible publications",
+          },
+          Object {
+            "divider": true,
+            "path": "/1502261355298",
+          },
+          Object {
+            "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
+            "path": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
+            "primaryText": "Masquerade as a user",
+            "secondaryText": "for testing purposes only",
+            "target": "_blank",
+          },
+          Object {
+            "linkTo": "/browse",
+            "path": "/browse",
+            "primaryText": "Browse",
+            "render": [Function],
+            "secondaryText": "UQ's digital repository",
+          },
+          Object {
+            "linkTo": "/about",
+            "path": "/about",
+            "primaryText": "About",
+            "render": [Function],
+            "secondaryText": undefined,
+          },
+        ]
+      }
+      toggleDrawer={[Function]}
+    />
+    <div
+      className="content-container"
+      style={Object {}}
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          path="/claim-publication-form"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/dashboard"
+          path="/dashboard"
+          primaryText="My dashboard"
+          secondaryText="j.staff@example.uq.edu.au"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/add-record"
+          path="/add-record"
+          primaryText="Add a missing record"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/claim-publications"
+          path="/claim-publications"
+          primaryText="Claim possible publications"
+        />
+        <Route
+          divider={true}
+          path="/1502261355298"
+        />
+        <Route
+          linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
+          path="https://www.library.uq.edu.au/mylibrary/#!masquerade"
+          primaryText="Masquerade as a user"
+          secondaryText="for testing purposes only"
+          target="_blank"
+        />
+        <Route
+          linkTo="/browse"
+          path="/browse"
+          primaryText="Browse"
+          render={[Function]}
+          secondaryText="UQ's digital repository"
+        />
+        <Route
+          linkTo="/about"
+          path="/about"
+          primaryText="About"
+          render={[Function]}
+        />
+      </Switch>
+    </div>
+    <Connect(HelpDrawer) />
+  </div>
+</div>
+`;
+
+exports[`App tests for user account and author status User is not logged in and is not an author) 1`] = `
+<div
+  className="layout-fill"
+>
+  <div
+    className="layout-fill align-stretch"
+  >
+    <AppBar
+      className="AppBar align-center"
+      iconElementRight={
+        <div
+          style={
+            Object {
+              "marginTop": "-10px",
+            }
+          }
+        >
+          <AuthButton
+            isAuthorizedUser={false}
+            loginUrl="https://auth.library.uq.edu.au/login"
+            logoutUrl="https://auth.library.uq.edu.au/logout"
+            signInTooltipText="Log in"
+            signOutTooltipText=""
+          />
+        </div>
+      }
+      iconStyleLeft={
+        Object {
+          "marginTop": 0,
+        }
+      }
+      onLeftIconButtonTouchTap={[Function]}
+      showMenuIconButton={true}
+      style={
+        Object {
+          "height": 75,
+        }
+      }
+      title="UQ eSpace"
+      titleStyle={Object {}}
+      zDepth={1}
+    />
+    <MenuDrawer
+      docked={false}
+      drawerOpen={false}
+      logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+      logoText="UQ eSpace"
+      menuItems={
+        Array [
+          Object {
+            "linkTo": "/browse",
+            "path": "/browse",
+            "primaryText": "Browse",
+            "render": [Function],
+            "secondaryText": "UQ's digital repository",
+          },
+          Object {
+            "linkTo": "/about",
+            "path": "/about",
+            "primaryText": "About",
+            "render": [Function],
+            "secondaryText": undefined,
+          },
+        ]
+      }
+      toggleDrawer={[Function]}
+    />
+    <div
+      className="content-container"
+      style={Object {}}
+    >
+      <Alert
+        message="Please, login to UQ eSpace for full search results and more services."
+        outsideLayout={true}
+        title="You are not logged in"
+        type="info_outline"
+      />
+      <Alert
+        message="Please contact the UQ Manager to resolve this."
+        outsideLayout={true}
+        title="You are not registered in UQ eSpace as an author"
+        type="info_outline"
+      />
+      <Switch>
+        <Route
+          exact={true}
+          path="/"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          path="/claim-publication-form"
+        />
+        <Route
+          linkTo="/browse"
+          path="/browse"
+          primaryText="Browse"
+          render={[Function]}
+          secondaryText="UQ's digital repository"
+        />
+        <Route
+          linkTo="/about"
+          path="/about"
+          primaryText="About"
+          render={[Function]}
+        />
+      </Switch>
+    </div>
+    <Connect(HelpDrawer) />
+  </div>
+</div>
+`;
+
+exports[`App tests for user account and author status User logged in and is an author) 1`] = `
+<div
+  className="layout-fill"
+>
+  <div
+    className="layout-fill align-stretch"
+  >
+    <AppBar
+      className="AppBar align-center"
+      iconElementRight={
+        <div
+          style={
+            Object {
+              "marginTop": "-10px",
+            }
+          }
+        >
+          <AuthButton
+            isAuthorizedUser={true}
+            loginUrl="https://auth.library.uq.edu.au/login"
+            logoutUrl="https://auth.library.uq.edu.au/logout"
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - J STAFF"
+          />
+        </div>
+      }
+      iconStyleLeft={
+        Object {
+          "marginTop": 0,
+        }
+      }
+      onLeftIconButtonTouchTap={[Function]}
+      showMenuIconButton={true}
+      style={
+        Object {
+          "height": 75,
+        }
+      }
+      title="UQ eSpace"
+      titleStyle={Object {}}
+      zDepth={1}
+    />
+    <MenuDrawer
+      docked={false}
+      drawerOpen={false}
+      logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+      logoText="UQ eSpace"
+      menuItems={
+        Array [
+          Object {
+            "component": [Function],
+            "linkTo": "/dashboard",
+            "path": "/dashboard",
+            "primaryText": "My dashboard",
+            "secondaryText": "j.staff@example.uq.edu.au",
+          },
+          Object {
+            "component": [Function],
+            "linkTo": "/add-record",
+            "path": "/add-record",
+            "primaryText": "Add a missing record",
+          },
+          Object {
+            "component": [Function],
+            "linkTo": "/claim-publications",
+            "path": "/claim-publications",
+            "primaryText": "Claim possible publications",
+          },
+          Object {
+            "divider": true,
+            "path": "/1502261355271",
+          },
+          Object {
+            "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
+            "path": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
+            "primaryText": "Masquerade as a user",
+            "secondaryText": "for testing purposes only",
+            "target": "_blank",
+          },
+          Object {
+            "linkTo": "/browse",
+            "path": "/browse",
+            "primaryText": "Browse",
+            "render": [Function],
+            "secondaryText": "UQ's digital repository",
+          },
+          Object {
+            "linkTo": "/about",
+            "path": "/about",
+            "primaryText": "About",
+            "render": [Function],
+            "secondaryText": undefined,
+          },
+        ]
+      }
+      toggleDrawer={[Function]}
+    />
+    <div
+      className="content-container"
+      style={Object {}}
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          path="/claim-publication-form"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/dashboard"
+          path="/dashboard"
+          primaryText="My dashboard"
+          secondaryText="j.staff@example.uq.edu.au"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/add-record"
+          path="/add-record"
+          primaryText="Add a missing record"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/claim-publications"
+          path="/claim-publications"
+          primaryText="Claim possible publications"
+        />
+        <Route
+          divider={true}
+          path="/1502261355271"
+        />
+        <Route
+          linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
+          path="https://www.library.uq.edu.au/mylibrary/#!masquerade"
+          primaryText="Masquerade as a user"
+          secondaryText="for testing purposes only"
+          target="_blank"
+        />
+        <Route
+          linkTo="/browse"
+          path="/browse"
+          primaryText="Browse"
+          render={[Function]}
+          secondaryText="UQ's digital repository"
+        />
+        <Route
+          linkTo="/about"
+          path="/about"
+          primaryText="About"
+          render={[Function]}
+        />
+      </Switch>
+    </div>
+    <Connect(HelpDrawer) />
+  </div>
+</div>
+`;
+
+exports[`App tests for user account and author status User logged in but is not an author) 1`] = `
+<div
+  className="layout-fill"
+>
+  <div
+    className="layout-fill align-stretch"
+  >
+    <AppBar
+      className="AppBar align-center"
+      iconElementRight={
+        <div
+          style={
+            Object {
+              "marginTop": "-10px",
+            }
+          }
+        >
+          <AuthButton
+            isAuthorizedUser={true}
+            loginUrl="https://auth.library.uq.edu.au/login"
+            logoutUrl="https://auth.library.uq.edu.au/logout"
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - J STAFF"
+          />
+        </div>
+      }
+      iconStyleLeft={
+        Object {
+          "marginTop": 0,
+        }
+      }
+      onLeftIconButtonTouchTap={[Function]}
+      showMenuIconButton={true}
+      style={
+        Object {
+          "height": 75,
+        }
+      }
+      title="UQ eSpace"
+      titleStyle={Object {}}
+      zDepth={1}
+    />
+    <MenuDrawer
+      docked={false}
+      drawerOpen={false}
+      logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+      logoText="UQ eSpace"
+      menuItems={
+        Array [
+          Object {
+            "component": [Function],
+            "linkTo": "/dashboard",
+            "path": "/dashboard",
+            "primaryText": "My dashboard",
+            "secondaryText": "j.staff@example.uq.edu.au",
+          },
+          Object {
+            "component": [Function],
+            "linkTo": "/add-record",
+            "path": "/add-record",
+            "primaryText": "Add a missing record",
+          },
+          Object {
+            "component": [Function],
+            "linkTo": "/claim-publications",
+            "path": "/claim-publications",
+            "primaryText": "Claim possible publications",
+          },
+          Object {
+            "divider": true,
+            "path": "/1502261355288",
+          },
+          Object {
+            "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
+            "path": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
+            "primaryText": "Masquerade as a user",
+            "secondaryText": "for testing purposes only",
+            "target": "_blank",
+          },
+          Object {
+            "linkTo": "/browse",
+            "path": "/browse",
+            "primaryText": "Browse",
+            "render": [Function],
+            "secondaryText": "UQ's digital repository",
+          },
+          Object {
+            "linkTo": "/about",
+            "path": "/about",
+            "primaryText": "About",
+            "render": [Function],
+            "secondaryText": undefined,
+          },
+        ]
+      }
+      toggleDrawer={[Function]}
+    />
+    <div
+      className="content-container"
+      style={Object {}}
+    >
+      <Alert
+        message="Please contact the UQ Manager to resolve this."
+        outsideLayout={true}
+        title="You are not registered in UQ eSpace as an author"
+        type="info_outline"
+      />
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          path="/claim-publication-form"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/dashboard"
+          path="/dashboard"
+          primaryText="My dashboard"
+          secondaryText="j.staff@example.uq.edu.au"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/add-record"
+          path="/add-record"
+          primaryText="Add a missing record"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/claim-publications"
+          path="/claim-publications"
+          primaryText="Claim possible publications"
+        />
+        <Route
+          divider={true}
+          path="/1502261355288"
+        />
+        <Route
+          linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
+          path="https://www.library.uq.edu.au/mylibrary/#!masquerade"
+          primaryText="Masquerade as a user"
+          secondaryText="for testing purposes only"
+          target="_blank"
+        />
+        <Route
+          linkTo="/browse"
+          path="/browse"
+          primaryText="Browse"
+          render={[Function]}
+          secondaryText="UQ's digital repository"
+        />
+        <Route
+          linkTo="/about"
+          path="/about"
+          primaryText="About"
+          render={[Function]}
+        />
+      </Switch>
+    </div>
+    <Connect(HelpDrawer) />
+  </div>
+</div>
+`;
