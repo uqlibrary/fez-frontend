@@ -1,3 +1,4 @@
+export * from './academic';
 export * from './account';
 export * from './acml';
 export * from './authors';

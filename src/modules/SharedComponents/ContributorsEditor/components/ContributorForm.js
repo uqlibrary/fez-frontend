@@ -5,7 +5,8 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import {connect} from 'react-redux';
-import {searchAuthors} from 'actions';
+import {bindActionCreators} from 'redux';
+import * as actions from 'actions';
 
 class ContributorForm extends Component {
 
@@ -13,7 +14,7 @@ class ContributorForm extends Component {
         authorsList: PropTypes.array,
         onAdd: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
-        dispatch: PropTypes.func,
+        actions: PropTypes.object.isRequired,
         locale: PropTypes.object
     };
 
@@ -94,7 +95,7 @@ class ContributorForm extends Component {
         });
 
         if (newValue.trim().length > 1) {
-            this.props.dispatch(searchAuthors(newValue, (item) => { return !!item.aut_org_username; }));
+            this.props.actions.searchAuthors(newValue, (item) => { return !!item.aut_org_username; });
         }
     }
 
@@ -153,4 +154,10 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(ContributorForm);
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContributorForm);

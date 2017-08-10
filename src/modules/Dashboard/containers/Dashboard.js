@@ -5,8 +5,9 @@ import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
 // mock data for graphs
-import {publicationYearsBig as publicationYearsMockData} from '../../../mock/data/academic/publicationYears';
+// import {publicationYearsBig as publicationYearsMockData} from '../../../mock/data/academic/publicationYears';
 import {publicationCount as publicationCountMockData} from '../../../mock/data/academic/publicationCount';
+import {possibleUnclaimed as possibleUnclaimedMockData} from '../../../mock/data/publications';
 
 
 const mapStateToProps = (state) => {
@@ -15,8 +16,9 @@ const mapStateToProps = (state) => {
         authorDetails: state.get('accountReducer').authorDetails,
         authorDetailsLoading: state.get('accountReducer').authorDetailsLoading,
         possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts,
-        publicationYearsData: publicationYearsMockData,
-        publicationCountData: publicationCountMockData
+        ...state.get('academicStatsReducer'),
+        publicationCountData: publicationCountMockData,
+        publicationsList: possibleUnclaimedMockData.data
     };
 };
 

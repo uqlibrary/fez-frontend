@@ -1,4 +1,5 @@
 export * from './app';
+export * from './academic';
 export * from './account';
 export * from './authors';
 export * from './records';

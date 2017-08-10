@@ -23,7 +23,9 @@ describe('PublicationSubtypesList renders correctly', () => {
         const props = {
             vocabId: 453581,
             subtypesList: [],
-            loadPublicationSubtypesList: jest.fn()
+            actions: {
+                loadPublicationSubtypesList: jest.fn()
+            }
         };
         const wrapper = setup(props);
 
@@ -140,7 +142,9 @@ describe('PublicationSubtypesList renders correctly', () => {
                     }
                 }
             ],
-            loadPublicationSubtypesList: jest.fn()
+            actions: {
+                loadPublicationSubtypesList: jest.fn()
+            }
         };
 
         const wrapper = setup(props);
@@ -156,7 +160,9 @@ describe('PublicationSubtypesList renders correctly', () => {
         const props = {
             vocabId: 453581,
             subtypesList: [],
-            loadPublicationSubtypesList: mounted,
+            actions: {
+                loadPublicationSubtypesList: mounted
+            },
             onChange: updated
         };
 
@@ -174,7 +180,9 @@ describe('PublicationSubtypesList renders correctly', () => {
         const props = {
             vocabId: 453581,
             subtypesList: [],
-            loadPublicationSubtypesList: mounted,
+            actions: {
+                loadPublicationSubtypesList: mounted
+            },
             onChange: updated,
             selectedValue: 'Testing'
         };
