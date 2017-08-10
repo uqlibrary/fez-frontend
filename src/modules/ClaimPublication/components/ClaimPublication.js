@@ -87,22 +87,26 @@ export default class ClaimPublication extends React.Component {
         ];
         return (
             <StandardPage title={txt.title}>
-                <ConfirmDialogBox onRef={ref => (this.hideAllConfirmationBox = ref)}
-                                  onAction={this._hideAllPublications}
-                                  locale={txt.hideAllPublicationsConfirmation} />
-
-                <ConfirmDialogBox onRef={ref => (this.hideConfirmationBox = ref)}
-                                  onAction={this._hidePublication}
-                                  locale={txt.hidePublicationConfirmation} />
-
                 {
-                    (this.props.loadingSearch || !this.props.possibleCounts) &&
+                    this.props.publicationsList.length > 0 &&
+                    <section>
+                        <ConfirmDialogBox onRef={ref => (this.hideAllConfirmationBox = ref)}
+                                          onAction={this._hideAllPublications}
+                                          locale={txt.hideAllPublicationsConfirmation} />
+
+                        <ConfirmDialogBox onRef={ref => (this.hideConfirmationBox = ref)}
+                                          onAction={this._hidePublication}
+                                          locale={txt.hidePublicationConfirmation} />
+                    </section>
+                }
+                {
+                    this.props.author && (this.props.loadingSearch || !this.props.possibleCounts) &&
                     <div className="is-centered">
                         <InlineLoader message={txt.loadingMessage} />
                     </div>
                 }
                 {
-                    !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
+                    (!this.props.author || (!this.props.loadingSearch && this.props.publicationsList.length === 0)) &&
                     <StandardCard {...txt.noResultsFound}>
                         {txt.noResultsFound.text}
                     </StandardCard>

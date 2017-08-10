@@ -56,7 +56,7 @@ const mapStateToProps = (state) => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {
             publication: state.get('claimPublicationReducer').publicationToClaim,
-            author: state.get('currentAuthorReducer').currentAuthor
+            author: state.get('accountReducer').author
         }
     };
 };
