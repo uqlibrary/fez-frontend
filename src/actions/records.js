@@ -33,7 +33,7 @@ export function createNewRecord(data) {
                 if (!data.files || data.files.length === 0) return response;
                 // process uploaded files into API format for a patch
                 const recordPatch = {
-                    ...recordFileAttachment(data)
+                    ...recordFileAttachment(data.files)
                 };
                 return patchRecord(data.rek_pid, recordPatch);
             })
