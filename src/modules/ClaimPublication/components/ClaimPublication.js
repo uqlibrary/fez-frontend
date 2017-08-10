@@ -12,9 +12,10 @@ export default class ClaimPublication extends React.Component {
 
     static propTypes = {
         publicationsList: PropTypes.array,
-        loadingSearch: PropTypes.bool,
-        possibleCounts: PropTypes.object,
+        loadingPublications: PropTypes.bool,
         author: PropTypes.object,
+        authorLoading: PropTypes.bool,
+        possibleCounts: PropTypes.object,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -74,6 +75,8 @@ export default class ClaimPublication extends React.Component {
     }
 
     render() {
+        console.log(this.props);
+
         const txt = locale.pages.claimPublications;
         const actions = [
             {
@@ -87,28 +90,32 @@ export default class ClaimPublication extends React.Component {
         ];
         return (
             <StandardPage title={txt.title}>
-                <ConfirmDialogBox onRef={ref => (this.hideAllConfirmationBox = ref)}
-                                  onAction={this._hideAllPublications}
-                                  locale={txt.hideAllPublicationsConfirmation} />
-
-                <ConfirmDialogBox onRef={ref => (this.hideConfirmationBox = ref)}
-                                  onAction={this._hidePublication}
-                                  locale={txt.hidePublicationConfirmation} />
-
                 {
-                    (this.props.loadingSearch || !this.props.possibleCounts) &&
+                    this.props.publicationsList.length > 0 &&
+                    <section>
+                        <ConfirmDialogBox onRef={ref => (this.hideAllConfirmationBox = ref)}
+                                          onAction={this._hideAllPublications}
+                                          locale={txt.hideAllPublicationsConfirmation} />
+
+                        <ConfirmDialogBox onRef={ref => (this.hideConfirmationBox = ref)}
+                                          onAction={this._hidePublication}
+                                          locale={txt.hidePublicationConfirmation} />
+                    </section>
+                }
+                {
+                    (this.props.authorLoading || (this.props.author && (this.props.loadingPublications || !this.props.possibleCounts))) &&
                     <div className="is-centered">
                         <InlineLoader message={txt.loadingMessage} />
                     </div>
                 }
                 {
-                    !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
+                    ((!this.props.authorLoading && !this.props.author) || (!this.props.loadingPublications && this.props.publicationsList.length === 0)) &&
                     <StandardCard {...txt.noResultsFound}>
                         {txt.noResultsFound.text}
                     </StandardCard>
                 }
                 {
-                    !this.props.loadingSearch && this.props.possibleCounts && this.props.publicationsList.length > 0 &&
+                    !this.props.loadingPublications && this.props.possibleCounts && this.props.publicationsList.length > 0 &&
                     <div>
                         <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                             <div>

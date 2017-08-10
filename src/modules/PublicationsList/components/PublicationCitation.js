@@ -42,11 +42,10 @@ export default class PublicationCitation extends Component {
         const actions = this.props.actions && this.props.actions.length > 0 ?
             this.props.actions.map((action, index) => {
                 return (
-                    <div className="column is-narrow">
+                    <div className="column is-narrow" key={index} >
                         {index === 0 ? (
                         <RaisedButton
                             secondary
-                            key={index}
                             label={action.label}
                             className={`publicationAction buttonOrder${index}`}
                             onTouchTap={() => (action.handleAction(this.props.publication))}
@@ -54,7 +53,6 @@ export default class PublicationCitation extends Component {
                         ) : (
                         <FlatButton
                             secondary
-                            key={index}
                             label={action.label}
                             className={`publicationAction buttonOrder${index}`}
                             onTouchTap={() => (action.handleAction(this.props.publication))}

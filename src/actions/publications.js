@@ -62,9 +62,10 @@ export function searchPossiblyYourPublications(authorUsername) {
         dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING});
         // TODO: try some authors who are students - org username or student name to use?
         getPossibleUnclaimedPublications(authorUsername).then(response => {
+            console.log(response);
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                payload: response
+                payload: response.data
             });
             dispatch(countPossiblyYourPublications(authorUsername));
         }).catch(() => {

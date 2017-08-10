@@ -11,7 +11,7 @@ export const initialState = {
     publicationToClaim: null,
     possibleCounts: null,
     publicationsList: [],
-    loadingSearch: true
+    loadingPublications: true
 };
 
 const handlers = {
@@ -19,7 +19,7 @@ const handlers = {
     [POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
-            loadingSearch: true,
+            loadingPublications: true,
             publicationsList: []
         };
     },
@@ -39,9 +39,10 @@ const handlers = {
     },
 
     [POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
+        console.log(action);
         return {
             ...state,
-            loadingSearch: false,
+            loadingPublications: false,
             publicationsList: action.payload
         };
     },
@@ -49,7 +50,7 @@ const handlers = {
     [POSSIBLY_YOUR_PUBLICATIONS_FAILED]: (state) => {
         return {
             ...state,
-            loadingSearch: false,
+            loadingPublications: false,
             publicationsList: []
         };
     },

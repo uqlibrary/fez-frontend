@@ -42,7 +42,6 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
-        console.log('********************:' + this.props.publicationCountData.name);
         return (
             <div className="layout-fill">
                 {
