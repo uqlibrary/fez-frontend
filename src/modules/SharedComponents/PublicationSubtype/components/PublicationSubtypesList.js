@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { loadPublicationSubtypesList } from 'actions';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as actions from 'actions';
 
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
@@ -12,11 +13,11 @@ export class PublicationSubtypesList extends Component {
         locale: PropTypes.object,
         subtypesList: PropTypes.array,
         subtypesLoading: PropTypes.bool,
-        selectedValue: PropTypes.string || PropTypes.number,
+        selectedValue: PropTypes.any,
         dataSourceConfig: PropTypes.object,
         vocabId: PropTypes.number,
         className: PropTypes.string,
-        loadPublicationSubtypesList: PropTypes.func
+        actions: PropTypes.object.isRequired
     };
 
     static defaultProps = {
@@ -37,7 +38,7 @@ export class PublicationSubtypesList extends Component {
     }
 
     componentDidMount() {
-        this.props.loadPublicationSubtypesList(this.props.vocabId);
+        this.props.actions.loadPublicationSubtypesList(this.props.vocabId);
 
         if (this.props.selectedValue !== null) {
             this._updateSelectedValue(this.props.selectedValue);
@@ -97,7 +98,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        loadPublicationSubtypesList: (id) => dispatch(loadPublicationSubtypesList(id))
+        actions: bindActionCreators(actions, dispatch)
     };
 };
 

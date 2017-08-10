@@ -7,14 +7,13 @@ import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert} from 'uq
 import {FileUploadField, AuthorLinking} from 'modules/SharedComponents';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
 import {validation, locale} from 'config';
-import {clearClaimPublication} from 'actions';
 
 export default class ClaimPublicationForm extends Component {
 
     static propTypes = {
         ...propTypes, // all redux-form props
         history: PropTypes.object.isRequired,
-        dispatch: PropTypes.func
+        actions: PropTypes.object.isRequired
     };
 
     constructor(props) {
@@ -29,7 +28,7 @@ export default class ClaimPublicationForm extends Component {
 
     componentWillUnmount() {
         // clear previously selected publication for a claim
-        this.props.dispatch(clearClaimPublication());
+        this.props.actions.clearClaimPublication();
     }
 
     _navigateToPreviousPage = () => {

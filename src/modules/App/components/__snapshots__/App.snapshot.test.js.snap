@@ -70,7 +70,7 @@ exports[`App tests for user account and author status User is logged in but are 
           },
           Object {
             "divider": true,
-            "path": "/1502261355298",
+            "path": "/1502337705644",
           },
           Object {
             "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
@@ -132,7 +132,7 @@ exports[`App tests for user account and author status User is logged in but are 
         />
         <Route
           divider={true}
-          path="/1502261355298"
+          path="/1502337705644"
         />
         <Route
           linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
@@ -344,7 +344,7 @@ exports[`App tests for user account and author status User logged in and is an a
           },
           Object {
             "divider": true,
-            "path": "/1502261355271",
+            "path": "/1502337705624",
           },
           Object {
             "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
@@ -406,7 +406,7 @@ exports[`App tests for user account and author status User logged in and is an a
         />
         <Route
           divider={true}
-          path="/1502261355271"
+          path="/1502337705624"
         />
         <Route
           linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
@@ -505,7 +505,7 @@ exports[`App tests for user account and author status User logged in but is not 
           },
           Object {
             "divider": true,
-            "path": "/1502261355288",
+            "path": "/1502337705633",
           },
           Object {
             "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
@@ -573,7 +573,7 @@ exports[`App tests for user account and author status User logged in but is not 
         />
         <Route
           divider={true}
-          path="/1502261355288"
+          path="/1502337705633"
         />
         <Route
           linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"

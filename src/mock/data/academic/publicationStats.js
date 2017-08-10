@@ -1,915 +1,592 @@
 /* eslint-disable */
-
 export const publicationStats = {
-    "responseHeader": {
-        "status": 0,
-        "QTime": 13,
-        "params": {
-            "sort": "date_year_t asc",
-            "indent": "true",
-            "stats.field": ["thomson_citation_count_i", "scopus_citation_count_i", "id"],
-            "stats": "true",
-            "q": "author_id_mi:410 AND status_i:2 AND date_year_t:[1977 TO 2017]",
-            "stats.facet": "date_year_t",
-            "wt": "json",
-            "rows": "0"
-        }
+    "took": 65,
+    "timed_out": false,
+    "_shards": {"total": 1, "successful": 1, "failed": 0},
+    "hits": {"total": 334, "max_score": 0, "hits": []},
+    "aggregations": {
+        "thomson_citation_count_i": {
+            "count": 300,
+            "min": 0,
+            "max": 336,
+            "avg": 24.326666666667,
+            "sum": 7298
+        },
+        "date_year_t": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [{
+                "key": "2004",
+                "doc_count": 22,
+                "thomson_citation_count_i": {"count": 20, "min": 0, "max": 206, "avg": 29.6, "sum": 592},
+                "scopus_citation_count_i": {"count": 18, "min": 0, "max": 130, "avg": 26.888888888889, "sum": 484}
+            }, {
+                "key": "2010",
+                "doc_count": 17,
+                "thomson_citation_count_i": {"count": 15, "min": 2, "max": 69, "avg": 24.6, "sum": 369},
+                "scopus_citation_count_i": {"count": 15, "min": 2, "max": 80, "avg": 30.533333333333, "sum": 458}
+            }, {
+                "key": "1999",
+                "doc_count": 15,
+                "thomson_citation_count_i": {"count": 9, "min": 1, "max": 142, "avg": 41.222222222222, "sum": 371},
+                "scopus_citation_count_i": {"count": 9, "min": 0, "max": 82, "avg": 28.555555555556, "sum": 257}
+            }, {
+                "key": "2001",
+                "doc_count": 14,
+                "thomson_citation_count_i": {"count": 12, "min": 0, "max": 60, "avg": 16.333333333333, "sum": 196},
+                "scopus_citation_count_i": {"count": 6, "min": 2, "max": 69, "avg": 29, "sum": 174}
+            }, {
+                "key": "2005",
+                "doc_count": 14,
+                "thomson_citation_count_i": {"count": 12, "min": 0, "max": 44, "avg": 9.75, "sum": 117},
+                "scopus_citation_count_i": {"count": 3, "min": 39, "max": 52, "avg": 44.666666666667, "sum": 134}
+            }, {
+                "key": "2007",
+                "doc_count": 14,
+                "thomson_citation_count_i": {"count": 11, "min": 0, "max": 32, "avg": 12.909090909091, "sum": 142},
+                "scopus_citation_count_i": {"count": 11, "min": 0, "max": 37, "avg": 15.090909090909, "sum": 166}
+            }, {
+                "key": "2009",
+                "doc_count": 14,
+                "thomson_citation_count_i": {"count": 11, "min": 0, "max": 119, "avg": 34.272727272727, "sum": 377},
+                "scopus_citation_count_i": {"count": 8, "min": 2, "max": 121, "avg": 51, "sum": 408}
+            }, {
+                "key": "2014",
+                "doc_count": 14,
+                "thomson_citation_count_i": {"count": 14, "min": 0, "max": 16, "avg": 7.9285714285714, "sum": 111},
+                "scopus_citation_count_i": {"count": 13, "min": 1, "max": 20, "avg": 9.1538461538462, "sum": 119}
+            }, {
+                "key": "2016",
+                "doc_count": 14,
+                "thomson_citation_count_i": {"count": 13, "min": 0, "max": 6, "avg": 1.0769230769231, "sum": 14},
+                "scopus_citation_count_i": {"count": 6, "min": 0, "max": 4, "avg": 1.6666666666667, "sum": 10}
+            }, {
+                "key": "1993",
+                "doc_count": 13,
+                "thomson_citation_count_i": {"count": 13, "min": 0, "max": 98, "avg": 17.076923076923, "sum": 222},
+                "scopus_citation_count_i": {"count": 2, "min": 13, "max": 28, "avg": 20.5, "sum": 41}
+            }, {
+                "key": "2002",
+                "doc_count": 13,
+                "thomson_citation_count_i": {"count": 12, "min": 0, "max": 107, "avg": 35.666666666667, "sum": 428},
+                "scopus_citation_count_i": {"count": 10, "min": 19, "max": 113, "avg": 41.8, "sum": 418}
+            }, {
+                "key": "1994",
+                "doc_count": 12,
+                "thomson_citation_count_i": {"count": 11, "min": 0, "max": 77, "avg": 17.454545454545, "sum": 192},
+                "scopus_citation_count_i": {"count": 2, "min": 0, "max": 0, "avg": 0, "sum": 0}
+            }, {
+                "key": "2006",
+                "doc_count": 11,
+                "thomson_citation_count_i": {"count": 9, "min": 0, "max": 81, "avg": 20.444444444444, "sum": 184},
+                "scopus_citation_count_i": {"count": 11, "min": 0, "max": 95, "avg": 19.363636363636, "sum": 213}
+            }, {
+                "key": "2012",
+                "doc_count": 11,
+                "thomson_citation_count_i": {"count": 11, "min": 0, "max": 32, "avg": 8.0909090909091, "sum": 89},
+                "scopus_citation_count_i": {"count": 9, "min": 0, "max": 37, "avg": 11.222222222222, "sum": 101}
+            }, {
+                "key": "1998",
+                "doc_count": 10,
+                "thomson_citation_count_i": {"count": 9, "min": 1, "max": 89, "avg": 38.666666666667, "sum": 348},
+                "scopus_citation_count_i": {"count": 8, "min": 4, "max": 92, "avg": 41.75, "sum": 334}
+            }, {
+                "key": "2011",
+                "doc_count": 10,
+                "thomson_citation_count_i": {"count": 9, "min": 6, "max": 176, "avg": 43.111111111111, "sum": 388},
+                "scopus_citation_count_i": {"count": 10, "min": 8, "max": 181, "avg": 43.7, "sum": 437}
+            }, {
+                "key": "1983",
+                "doc_count": 9,
+                "thomson_citation_count_i": {"count": 9, "min": 0, "max": 41, "avg": 10, "sum": 90},
+                "scopus_citation_count_i": {"count": 3, "min": 0, "max": 2, "avg": 0.66666666666667, "sum": 2}
+            }, {
+                "key": "1995",
+                "doc_count": 9,
+                "thomson_citation_count_i": {"count": 9, "min": 0, "max": 116, "avg": 30, "sum": 270},
+                "scopus_citation_count_i": {"count": 7, "min": 0, "max": 35, "avg": 18.142857142857, "sum": 127}
+            }, {
+                "key": "1985",
+                "doc_count": 8,
+                "thomson_citation_count_i": {"count": 8, "min": 3, "max": 131, "avg": 33.5, "sum": 268},
+                "scopus_citation_count_i": {"count": 2, "min": 10, "max": 26, "avg": 18, "sum": 36}
+            }, {
+                "key": "1986",
+                "doc_count": 8,
+                "thomson_citation_count_i": {"count": 8, "min": 0, "max": 166, "avg": 32.75, "sum": 262},
+                "scopus_citation_count_i": {"count": 1, "min": 0, "max": 0, "avg": 0, "sum": 0}
+            }, {
+                "key": "2000",
+                "doc_count": 8,
+                "thomson_citation_count_i": {"count": 8, "min": 0, "max": 113, "avg": 34.625, "sum": 277},
+                "scopus_citation_count_i": {"count": 4, "min": 0, "max": 140, "avg": 51.75, "sum": 207}
+            }, {
+                "key": "2003",
+                "doc_count": 8,
+                "thomson_citation_count_i": {"count": 5, "min": 7, "max": 50, "avg": 31.2, "sum": 156},
+                "scopus_citation_count_i": {"count": 7, "min": 0, "max": 53, "avg": 12.285714285714, "sum": 86}
+            }, {
+                "key": "1990",
+                "doc_count": 6,
+                "thomson_citation_count_i": {"count": 6, "min": 0, "max": 61, "avg": 25.5, "sum": 153},
+                "scopus_citation_count_i": {"count": 3, "min": 0, "max": 35, "avg": 15, "sum": 45}
+            }, {
+                "key": "1996",
+                "doc_count": 6,
+                "thomson_citation_count_i": {"count": 6, "min": 1, "max": 84, "avg": 40, "sum": 240},
+                "scopus_citation_count_i": {"count": 3, "min": 0, "max": 95, "avg": 51, "sum": 153}
+            }, {
+                "key": "2008",
+                "doc_count": 6,
+                "thomson_citation_count_i": {"count": 4, "min": 10, "max": 15, "avg": 11.75, "sum": 47},
+                "scopus_citation_count_i": {"count": 6, "min": 0, "max": 16, "avg": 9.8333333333333, "sum": 59}
+            }, {
+                "key": "2015",
+                "doc_count": 6,
+                "thomson_citation_count_i": {"count": 6, "min": 0, "max": 22, "avg": 4.6666666666667, "sum": 28},
+                "scopus_citation_count_i": {"count": 6, "min": 0, "max": 19, "avg": 5.8333333333333, "sum": 35}
+            }, {
+                "key": "1984",
+                "doc_count": 5,
+                "thomson_citation_count_i": {"count": 5, "min": 2, "max": 13, "avg": 6.8, "sum": 34},
+                "scopus_citation_count_i": {"count": 1, "min": 0, "max": 0, "avg": 0, "sum": 0}
+            }, {
+                "key": "1988",
+                "doc_count": 5,
+                "thomson_citation_count_i": {"count": 5, "min": 7, "max": 35, "avg": 18, "sum": 90},
+                "scopus_citation_count_i": {"count": 4, "min": 0, "max": 45, "avg": 11.25, "sum": 45}
+            }, {
+                "key": "2017",
+                "doc_count": 5,
+                "thomson_citation_count_i": {"count": 3, "min": 0, "max": 0, "avg": 0, "sum": 0},
+                "scopus_citation_count_i": {"count": 4, "min": 0, "max": 0, "avg": 0, "sum": 0}
+            }, {
+                "key": "1982",
+                "doc_count": 4,
+                "thomson_citation_count_i": {"count": 4, "min": 0, "max": 34, "avg": 15.25, "sum": 61},
+                "scopus_citation_count_i": {"count": 1, "min": 8, "max": 8, "avg": 8, "sum": 8}
+            }, {
+                "key": "1991",
+                "doc_count": 4,
+                "thomson_citation_count_i": {"count": 4, "min": 11, "max": 336, "avg": 140.5, "sum": 562},
+                "scopus_citation_count_i": {"count": 3, "min": 58, "max": 368, "avg": 186.66666666667, "sum": 560}
+            }, {
+                "key": "1992",
+                "doc_count": 4,
+                "thomson_citation_count_i": {"count": 4, "min": 12, "max": 86, "avg": 47, "sum": 188},
+                "scopus_citation_count_i": {"count": 2, "min": 10, "max": 44, "avg": 27, "sum": 54}
+            }, {
+                "key": "1997",
+                "doc_count": 4,
+                "thomson_citation_count_i": {"count": 4, "min": 5, "max": 208, "avg": 69, "sum": 276},
+                "scopus_citation_count_i": {"count": 3, "min": 5, "max": 48, "avg": 24.666666666667, "sum": 74}
+            }, {
+                "key": "2013",
+                "doc_count": 4,
+                "thomson_citation_count_i": {"count": 4, "min": 0, "max": 19, "avg": 12, "sum": 48},
+                "scopus_citation_count_i": {"count": 3, "min": 13, "max": 20, "avg": 17.333333333333, "sum": 52}
+            }, {
+                "key": "1989",
+                "doc_count": 3,
+                "thomson_citation_count_i": {"count": 3, "min": 6, "max": 13, "avg": 8.6666666666667, "sum": 26},
+                "scopus_citation_count_i": {"count": 2, "min": 0, "max": 8, "avg": 4, "sum": 8}
+            }, {
+                "key": "1987",
+                "doc_count": 2,
+                "thomson_citation_count_i": {"count": 2, "min": 18, "max": 25, "avg": 21.5, "sum": 43},
+                "scopus_citation_count_i": {"count": 2, "min": 0, "max": 15, "avg": 7.5, "sum": 15}
+            }, {
+                "key": "1977",
+                "doc_count": 1,
+                "thomson_citation_count_i": {"count": 1, "min": 14, "max": 14, "avg": 14, "sum": 14},
+                "scopus_citation_count_i": {"count": 1, "min": 11, "max": 11, "avg": 11, "sum": 11}
+            }, {
+                "key": "1980",
+                "doc_count": 1,
+                "thomson_citation_count_i": {"count": 1, "min": 25, "max": 25, "avg": 25, "sum": 25},
+                "scopus_citation_count_i": {"count": 1, "min": 16, "max": 16, "avg": 16, "sum": 16}
+            }]
+        },
+        "id": {"value": 334},
+        "scopus_citation_count_i": {"count": 210, "min": 0, "max": 368, "avg": 25.461904761905, "sum": 5347}
     },
-    "response": {"numFound": 322, "start": 0, "docs": []},
+    "response": {"docs": [], "numFound": 334},
     "stats": {
         "stats_fields": {
             "thomson_citation_count_i": {
+                "count": 300,
                 "min": 0,
-                "max": 335,
-                "count": 290,
-                "missing": 32,
-                "sum": 7113,
-                "sumOfSquares": 582549,
-                "mean": 24.527586206897,
-                "stddev": 37.577337981735,
+                "max": 336,
+                "avg": 24.326666666667,
+                "sum": 7298,
+                "mean": 24.326666666667,
                 "facets": {
                     "date_year_t": {
-                        "2008": {
-                            "min": 9,
-                            "max": 15,
-                            "count": 4,
-                            "missing": 2,
-                            "sum": 46,
-                            "sumOfSquares": 550,
-                            "mean": 11.5,
-                            "stddev": 2.6457513110646,
-                            "facets": []
-                        },
-                        "2009": {
+                        "2004": {
+                            "count": 22,
                             "min": 0,
-                            "max": 115,
-                            "count": 11,
-                            "missing": 3,
-                            "sum": 356,
-                            "sumOfSquares": 26984,
-                            "mean": 32.363636363636,
-                            "stddev": 39.32244327931,
-                            "facets": []
+                            "max": 206,
+                            "avg": 29.6,
+                            "sum": 592,
+                            "mean": 29.6
                         },
-                        "2006": {
+                        "2010": {"count": 17, "min": 2, "max": 69, "avg": 24.6, "sum": 369, "mean": 24.6},
+                        "1999": {
+                            "count": 15,
+                            "min": 1,
+                            "max": 142,
+                            "avg": 41.222222222222,
+                            "sum": 371,
+                            "mean": 41.222222222222
+                        },
+                        "2001": {
+                            "count": 14,
                             "min": 0,
-                            "max": 76,
-                            "count": 9,
-                            "missing": 2,
-                            "sum": 178,
-                            "sumOfSquares": 8296,
-                            "mean": 19.777777777778,
-                            "stddev": 24.432446550529,
-                            "facets": []
+                            "max": 60,
+                            "avg": 16.333333333333,
+                            "sum": 196,
+                            "mean": 16.333333333333
                         },
+                        "2005": {"count": 14, "min": 0, "max": 44, "avg": 9.75, "sum": 117, "mean": 9.75},
                         "2007": {
+                            "count": 14,
                             "min": 0,
                             "max": 32,
-                            "count": 11,
-                            "missing": 3,
-                            "sum": 138,
-                            "sumOfSquares": 2832,
-                            "mean": 12.545454545455,
-                            "stddev": 10.491555045499,
-                            "facets": []
-                        },
-                        "2004": {
-                            "min": 0,
-                            "max": 201,
-                            "count": 20,
-                            "missing": 2,
-                            "sum": 579,
-                            "sumOfSquares": 60049,
-                            "mean": 28.95,
-                            "stddev": 47.731127436043,
-                            "facets": []
-                        },
-                        "2005": {
-                            "min": 0,
-                            "max": 43,
-                            "count": 12,
-                            "missing": 2,
-                            "sum": 116,
-                            "sumOfSquares": 4518,
-                            "mean": 9.6666666666667,
-                            "stddev": 17.572361218342,
-                            "facets": []
-                        },
-                        "2002": {
-                            "min": 0,
-                            "max": 106,
-                            "count": 12,
-                            "missing": 1,
-                            "sum": 426,
-                            "sumOfSquares": 23456,
-                            "mean": 35.5,
-                            "stddev": 27.523543640772,
-                            "facets": []
-                        },
-                        "2003": {
-                            "min": 7,
-                            "max": 49,
-                            "count": 5,
-                            "missing": 3,
-                            "sum": 154,
-                            "sumOfSquares": 5910,
-                            "mean": 30.8,
-                            "stddev": 17.079227148791,
-                            "facets": []
-                        },
-                        "1995": {
-                            "min": 0,
-                            "max": 117,
-                            "count": 9,
-                            "missing": 0,
-                            "sum": 270,
-                            "sumOfSquares": 17912,
-                            "mean": 30,
-                            "stddev": 35.021422015675,
-                            "facets": []
-                        },
-                        "1996": {
-                            "min": 1,
-                            "max": 84,
-                            "count": 6,
-                            "missing": 0,
-                            "sum": 239,
-                            "sumOfSquares": 14791,
-                            "mean": 39.833333333333,
-                            "stddev": 32.467932897964,
-                            "facets": []
-                        },
-                        "1997": {
-                            "min": 5,
-                            "max": 209,
-                            "count": 4,
-                            "missing": 0,
-                            "sum": 276,
-                            "sumOfSquares": 45870,
-                            "mean": 69,
-                            "stddev": 94.562148875753,
-                            "facets": []
-                        },
-                        "1998": {
-                            "min": 1,
-                            "max": 89,
-                            "count": 9,
-                            "missing": 1,
-                            "sum": 347,
-                            "sumOfSquares": 19479,
-                            "mean": 38.555555555556,
-                            "stddev": 27.613905514754,
-                            "facets": []
-                        },
-                        "1991": {
-                            "min": 11,
-                            "max": 335,
-                            "count": 4,
-                            "missing": 0,
-                            "sum": 560,
-                            "sumOfSquares": 140244,
-                            "mean": 140,
-                            "stddev": 143.57808560733,
-                            "facets": []
-                        },
-                        "1992": {
-                            "min": 12,
-                            "max": 86,
-                            "count": 4,
-                            "missing": 0,
-                            "sum": 188,
-                            "sumOfSquares": 11718,
-                            "mean": 47,
-                            "stddev": 30.994623189622,
-                            "facets": []
-                        },
-                        "1993": {
-                            "min": 0,
-                            "max": 97,
-                            "count": 13,
-                            "missing": 0,
-                            "sum": 221,
-                            "sumOfSquares": 13895,
-                            "mean": 17,
-                            "stddev": 29.066016812307,
-                            "facets": []
-                        },
-                        "1994": {
-                            "min": 0,
-                            "max": 74,
-                            "count": 11,
-                            "missing": 0,
-                            "sum": 188,
-                            "sumOfSquares": 9800,
-                            "mean": 17.090909090909,
-                            "stddev": 25.66497436373,
-                            "facets": []
-                        },
-                        "1977": {
-                            "min": 14,
-                            "max": 14,
-                            "count": 1,
-                            "missing": 0,
-                            "sum": 14,
-                            "sumOfSquares": 196,
-                            "mean": 14,
-                            "stddev": 0,
-                            "facets": []
-                        },
-                        "2012": {
-                            "min": 0,
-                            "max": 30,
-                            "count": 11,
-                            "missing": 0,
-                            "sum": 83,
-                            "sumOfSquares": 1417,
-                            "mean": 7.5454545454545,
-                            "stddev": 8.8922847048848,
-                            "facets": []
-                        },
-                        "2011": {
-                            "min": 5,
-                            "max": 158,
-                            "count": 9,
-                            "missing": 1,
-                            "sum": 353,
-                            "sumOfSquares": 32905,
-                            "mean": 39.222222222222,
-                            "stddev": 48.810290354027,
-                            "facets": []
-                        },
-                        "2010": {
-                            "min": 2,
-                            "max": 65,
-                            "count": 15,
-                            "missing": 2,
-                            "sum": 347,
-                            "sumOfSquares": 15555,
-                            "mean": 23.133333333333,
-                            "stddev": 23.188256469498,
-                            "facets": []
-                        },
-                        "1999": {
-                            "min": 1,
-                            "max": 136,
-                            "count": 9,
-                            "missing": 6,
-                            "sum": 363,
-                            "sumOfSquares": 31677,
-                            "mean": 40.333333333333,
-                            "stddev": 46.146505826552,
-                            "facets": []
-                        },
-                        "2013": {
-                            "min": 0,
-                            "max": 15,
-                            "count": 4,
-                            "missing": 0,
-                            "sum": 41,
-                            "sumOfSquares": 565,
-                            "mean": 10.25,
-                            "stddev": 6.9462219947249,
-                            "facets": []
-                        },
-                        "2014": {
-                            "min": 0,
-                            "max": 16,
-                            "count": 14,
-                            "missing": 0,
-                            "sum": 98,
-                            "sumOfSquares": 1058,
-                            "mean": 7,
-                            "stddev": 5.3493349694504,
-                            "facets": []
-                        },
-                        "2015": {
-                            "min": 0,
-                            "max": 11,
-                            "count": 6,
-                            "missing": 0,
-                            "sum": 16,
-                            "sumOfSquares": 146,
-                            "mean": 2.6666666666667,
-                            "stddev": 4.546060565662,
-                            "facets": []
-                        },
-                        "2016": {
-                            "min": 0,
-                            "max": 2,
-                            "count": 6,
-                            "missing": 2,
-                            "sum": 2,
-                            "sumOfSquares": 4,
-                            "mean": 0.33333333333333,
-                            "stddev": 0.81649658092773,
-                            "facets": []
-                        },
-                        "1990": {
-                            "min": 0,
-                            "max": 61,
-                            "count": 6,
-                            "missing": 0,
-                            "sum": 153,
-                            "sumOfSquares": 6911,
-                            "mean": 25.5,
-                            "stddev": 24.53365036027,
-                            "facets": []
-                        },
-                        "1982": {
-                            "min": 0,
-                            "max": 34,
-                            "count": 4,
-                            "missing": 0,
-                            "sum": 61,
-                            "sumOfSquares": 1525,
-                            "mean": 15.25,
-                            "stddev": 14.080127840329,
-                            "facets": []
-                        },
-                        "1983": {
-                            "min": 0,
-                            "max": 41,
-                            "count": 9,
-                            "missing": 0,
-                            "sum": 90,
-                            "sumOfSquares": 2830,
-                            "mean": 10,
-                            "stddev": 15.532224567009,
-                            "facets": []
-                        },
-                        "1980": {
-                            "min": 25,
-                            "max": 25,
-                            "count": 1,
-                            "missing": 0,
-                            "sum": 25,
-                            "sumOfSquares": 625,
-                            "mean": 25,
-                            "stddev": 0,
-                            "facets": []
-                        },
-                        "1986": {
-                            "min": 0,
-                            "max": 165,
-                            "count": 8,
-                            "missing": 0,
-                            "sum": 260,
-                            "sumOfSquares": 30432,
-                            "mean": 32.5,
-                            "stddev": 56.038252241533,
-                            "facets": []
-                        },
-                        "1987": {
-                            "min": 18,
-                            "max": 25,
-                            "count": 2,
-                            "missing": 0,
-                            "sum": 43,
-                            "sumOfSquares": 949,
-                            "mean": 21.5,
-                            "stddev": 4.9497474683058,
-                            "facets": []
-                        },
-                        "1984": {
-                            "min": 2,
-                            "max": 13,
-                            "count": 5,
-                            "missing": 0,
-                            "sum": 34,
-                            "sumOfSquares": 322,
-                            "mean": 6.8,
-                            "stddev": 4.7644516998286,
-                            "facets": []
-                        },
-                        "1985": {
-                            "min": 3,
-                            "max": 130,
-                            "count": 8,
-                            "missing": 0,
-                            "sum": 267,
-                            "sumOfSquares": 21659,
-                            "mean": 33.375,
-                            "stddev": 42.674641181854,
-                            "facets": []
-                        },
-                        "1988": {
-                            "min": 7,
-                            "max": 34,
-                            "count": 5,
-                            "missing": 0,
-                            "sum": 89,
-                            "sumOfSquares": 2045,
-                            "mean": 17.8,
-                            "stddev": 10.733126291999,
-                            "facets": []
-                        },
-                        "1989": {
-                            "min": 6,
-                            "max": 13,
-                            "count": 3,
-                            "missing": 0,
-                            "sum": 26,
-                            "sumOfSquares": 254,
-                            "mean": 8.6666666666667,
-                            "stddev": 3.7859388972002,
-                            "facets": []
-                        },
-                        "2001": {
-                            "min": 0,
-                            "max": 58,
-                            "count": 12,
-                            "missing": 2,
-                            "sum": 191,
-                            "sumOfSquares": 6451,
-                            "mean": 15.916666666667,
-                            "stddev": 17.609183210284,
-                            "facets": []
-                        },
-                        "2000": {
-                            "min": 0,
-                            "max": 112,
-                            "count": 8,
-                            "missing": 0,
-                            "sum": 275,
-                            "sumOfSquares": 18719,
-                            "mean": 34.375,
-                            "stddev": 36.382639109491,
-                            "facets": []
-                        }
-                    }
-                }
-            },
-            "scopus_citation_count_i": {
-                "min": 0,
-                "max": 360,
-                "count": 201,
-                "missing": 121,
-                "sum": 4886,
-                "sumOfSquares": 391180,
-                "mean": 24.308457711443,
-                "stddev": 36.905885412891,
-                "facets": {
-                    "date_year_t": {
-                        "2008": {
-                            "min": 0,
-                            "max": 16,
-                            "count": 6,
-                            "missing": 0,
-                            "sum": 58,
-                            "sumOfSquares": 746,
-                            "mean": 9.6666666666667,
-                            "stddev": 6.0882400303098,
-                            "facets": []
+                            "avg": 12.909090909091,
+                            "sum": 142,
+                            "mean": 12.909090909091
                         },
                         "2009": {
+                            "count": 14,
                             "min": 0,
-                            "max": 116,
-                            "count": 8,
-                            "missing": 6,
-                            "sum": 383,
-                            "sumOfSquares": 31291,
-                            "mean": 47.875,
-                            "stddev": 43.019721391141,
-                            "facets": []
-                        },
-                        "2006": {
-                            "min": 0,
-                            "max": 90,
-                            "count": 11,
-                            "missing": 0,
-                            "sum": 200,
-                            "sumOfSquares": 13066,
-                            "mean": 18.181818181818,
-                            "stddev": 30.707712978397,
-                            "facets": []
-                        },
-                        "2007": {
-                            "min": 0,
-                            "max": 35,
-                            "count": 11,
-                            "missing": 3,
-                            "sum": 159,
-                            "sumOfSquares": 3979,
-                            "mean": 14.454545454545,
-                            "stddev": 12.964286608708,
-                            "facets": []
-                        },
-                        "2004": {
-                            "min": 0,
-                            "max": 128,
-                            "count": 18,
-                            "missing": 4,
-                            "sum": 476,
-                            "sumOfSquares": 33298,
-                            "mean": 26.444444444444,
-                            "stddev": 34.903602076412,
-                            "facets": []
-                        },
-                        "2005": {
-                            "min": 39,
-                            "max": 52,
-                            "count": 3,
-                            "missing": 11,
-                            "sum": 133,
-                            "sumOfSquares": 5989,
-                            "mean": 44.333333333333,
-                            "stddev": 6.806859285554,
-                            "facets": []
-                        },
-                        "2002": {
-                            "min": 0,
-                            "max": 75,
-                            "count": 10,
-                            "missing": 3,
-                            "sum": 302,
-                            "sumOfSquares": 12980,
-                            "mean": 30.2,
-                            "stddev": 20.708559690245,
-                            "facets": []
-                        },
-                        "2003": {
-                            "min": 0,
-                            "max": 53,
-                            "count": 7,
-                            "missing": 1,
-                            "sum": 86,
-                            "sumOfSquares": 3354,
-                            "mean": 12.285714285714,
-                            "stddev": 19.567952419831,
-                            "facets": []
-                        },
-                        "1995": {
-                            "min": 0,
-                            "max": 35,
-                            "count": 7,
-                            "missing": 2,
-                            "sum": 126,
-                            "sumOfSquares": 3576,
-                            "mean": 18,
-                            "stddev": 14.764823060233,
-                            "facets": []
-                        },
-                        "1996": {
-                            "min": 0,
-                            "max": 94,
-                            "count": 3,
-                            "missing": 3,
-                            "sum": 152,
-                            "sumOfSquares": 12200,
-                            "mean": 50.666666666667,
-                            "stddev": 47.42713709822,
-                            "facets": []
-                        },
-                        "1997": {
-                            "min": 5,
-                            "max": 45,
-                            "count": 3,
-                            "missing": 1,
-                            "sum": 71,
-                            "sumOfSquares": 2491,
-                            "mean": 23.666666666667,
-                            "stddev": 20.132891827389,
-                            "facets": []
-                        },
-                        "1998": {
-                            "min": 3,
-                            "max": 91,
-                            "count": 8,
-                            "missing": 2,
-                            "sum": 328,
-                            "sumOfSquares": 19352,
-                            "mean": 41,
-                            "stddev": 29.041841736167,
-                            "facets": []
-                        },
-                        "1991": {
-                            "min": 0,
-                            "max": 360,
-                            "count": 3,
-                            "missing": 1,
-                            "sum": 417,
-                            "sumOfSquares": 132849,
-                            "mean": 139,
-                            "stddev": 193.50193797479,
-                            "facets": []
-                        },
-                        "1992": {
-                            "min": 10,
-                            "max": 44,
-                            "count": 2,
-                            "missing": 2,
-                            "sum": 54,
-                            "sumOfSquares": 2036,
-                            "mean": 27,
-                            "stddev": 24.041630560343,
-                            "facets": []
-                        },
-                        "1993": {
-                            "min": 13,
-                            "max": 28,
-                            "count": 2,
-                            "missing": 11,
-                            "sum": 41,
-                            "sumOfSquares": 953,
-                            "mean": 20.5,
-                            "stddev": 10.606601717798,
-                            "facets": []
-                        },
-                        "1994": {
-                            "min": "Infinity",
-                            "max": "-Infinity",
-                            "count": 0,
-                            "missing": 11,
-                            "sum": 0,
-                            "sumOfSquares": 0,
-                            "mean": "NaN",
-                            "stddev": 0,
-                            "facets": []
-                        },
-                        "1977": {
-                            "min": 11,
-                            "max": 11,
-                            "count": 1,
-                            "missing": 0,
-                            "sum": 11,
-                            "sumOfSquares": 121,
-                            "mean": 11,
-                            "stddev": 0,
-                            "facets": []
-                        },
-                        "2012": {
-                            "min": 0,
-                            "max": 34,
-                            "count": 9,
-                            "missing": 2,
-                            "sum": 92,
-                            "sumOfSquares": 1778,
-                            "mean": 10.222222222222,
-                            "stddev": 10.232030318781,
-                            "facets": []
-                        },
-                        "2011": {
-                            "min": 7,
-                            "max": 159,
-                            "count": 10,
-                            "missing": 0,
-                            "sum": 394,
-                            "sumOfSquares": 35892,
-                            "mean": 39.4,
-                            "stddev": 47.572634524016,
-                            "facets": []
-                        },
-                        "2010": {
-                            "min": 2,
-                            "max": 77,
-                            "count": 15,
-                            "missing": 2,
-                            "sum": 437,
-                            "sumOfSquares": 22593,
-                            "mean": 29.133333333333,
-                            "stddev": 26.540714455521,
-                            "facets": []
-                        },
-                        "1999": {
-                            "min": 0,
-                            "max": 82,
-                            "count": 9,
-                            "missing": 6,
-                            "sum": 247,
-                            "sumOfSquares": 15881,
-                            "mean": 27.444444444444,
-                            "stddev": 33.730961708463,
-                            "facets": []
-                        },
-                        "2013": {
-                            "min": 12,
-                            "max": 18,
-                            "count": 3,
-                            "missing": 1,
-                            "sum": 46,
-                            "sumOfSquares": 724,
-                            "mean": 15.333333333333,
-                            "stddev": 3.0550504633039,
-                            "facets": []
+                            "max": 119,
+                            "avg": 34.272727272727,
+                            "sum": 377,
+                            "mean": 34.272727272727
                         },
                         "2014": {
-                            "min": 1,
-                            "max": 16,
-                            "count": 13,
-                            "missing": 1,
-                            "sum": 100,
-                            "sumOfSquares": 1076,
-                            "mean": 7.6923076923077,
-                            "stddev": 5.0560955849452,
-                            "facets": []
-                        },
-                        "2015": {
+                            "count": 14,
                             "min": 0,
-                            "max": 12,
-                            "count": 6,
-                            "missing": 0,
-                            "sum": 26,
-                            "sumOfSquares": 210,
-                            "mean": 4.3333333333333,
-                            "stddev": 4.4121045620731,
-                            "facets": []
+                            "max": 16,
+                            "avg": 7.9285714285714,
+                            "sum": 111,
+                            "mean": 7.9285714285714
                         },
                         "2016": {
+                            "count": 14,
                             "min": 0,
-                            "max": 1,
-                            "count": 4,
-                            "missing": 4,
-                            "sum": 1,
-                            "sumOfSquares": 1,
-                            "mean": 0.25,
-                            "stddev": 0.5,
-                            "facets": []
+                            "max": 6,
+                            "avg": 1.0769230769231,
+                            "sum": 14,
+                            "mean": 1.0769230769231
                         },
-                        "1990": {
-                            "min": 10,
-                            "max": 35,
-                            "count": 2,
-                            "missing": 4,
-                            "sum": 45,
-                            "sumOfSquares": 1325,
-                            "mean": 22.5,
-                            "stddev": 17.677669529664,
-                            "facets": []
-                        },
-                        "1982": {
-                            "min": 8,
-                            "max": 8,
-                            "count": 1,
-                            "missing": 3,
-                            "sum": 8,
-                            "sumOfSquares": 64,
-                            "mean": 8,
-                            "stddev": 0,
-                            "facets": []
-                        },
-                        "1983": {
+                        "1993": {
+                            "count": 13,
                             "min": 0,
-                            "max": 1,
-                            "count": 3,
-                            "missing": 6,
-                            "sum": 1,
-                            "sumOfSquares": 1,
-                            "mean": 0.33333333333333,
-                            "stddev": 0.57735026918963,
-                            "facets": []
+                            "max": 98,
+                            "avg": 17.076923076923,
+                            "sum": 222,
+                            "mean": 17.076923076923
                         },
-                        "1980": {
-                            "min": 15,
-                            "max": 15,
-                            "count": 1,
-                            "missing": 0,
-                            "sum": 15,
-                            "sumOfSquares": 225,
-                            "mean": 15,
-                            "stddev": 0,
-                            "facets": []
-                        },
-                        "1986": {
+                        "2002": {
+                            "count": 13,
                             "min": 0,
-                            "max": 0,
-                            "count": 1,
-                            "missing": 7,
-                            "sum": 0,
-                            "sumOfSquares": 0,
-                            "mean": 0,
-                            "stddev": 0,
-                            "facets": []
+                            "max": 107,
+                            "avg": 35.666666666667,
+                            "sum": 428,
+                            "mean": 35.666666666667
                         },
-                        "1987": {
+                        "1994": {
+                            "count": 12,
                             "min": 0,
-                            "max": 15,
-                            "count": 2,
-                            "missing": 0,
-                            "sum": 15,
-                            "sumOfSquares": 225,
-                            "mean": 7.5,
-                            "stddev": 10.606601717798,
-                            "facets": []
+                            "max": 77,
+                            "avg": 17.454545454545,
+                            "sum": 192,
+                            "mean": 17.454545454545
                         },
-                        "1984": {
+                        "2006": {
+                            "count": 11,
                             "min": 0,
-                            "max": 0,
-                            "count": 1,
-                            "missing": 4,
-                            "sum": 0,
-                            "sumOfSquares": 0,
-                            "mean": 0,
-                            "stddev": 0,
-                            "facets": []
+                            "max": 81,
+                            "avg": 20.444444444444,
+                            "sum": 184,
+                            "mean": 20.444444444444
                         },
-                        "1985": {
-                            "min": 10,
-                            "max": 27,
-                            "count": 2,
-                            "missing": 6,
-                            "sum": 37,
-                            "sumOfSquares": 829,
-                            "mean": 18.5,
-                            "stddev": 12.020815280171,
-                            "facets": []
-                        },
-                        "1988": {
+                        "2012": {
+                            "count": 11,
                             "min": 0,
-                            "max": 44,
-                            "count": 4,
-                            "missing": 1,
-                            "sum": 44,
-                            "sumOfSquares": 1936,
-                            "mean": 11,
-                            "stddev": 22,
-                            "facets": []
+                            "max": 32,
+                            "avg": 8.0909090909091,
+                            "sum": 89,
+                            "mean": 8.0909090909091
                         },
-                        "1989": {
-                            "min": 0,
-                            "max": 7,
-                            "count": 2,
-                            "missing": 1,
-                            "sum": 7,
-                            "sumOfSquares": 49,
-                            "mean": 3.5,
-                            "stddev": 4.9497474683058,
-                            "facets": []
+                        "1998": {
+                            "count": 10,
+                            "min": 1,
+                            "max": 89,
+                            "avg": 38.666666666667,
+                            "sum": 348,
+                            "mean": 38.666666666667
                         },
-                        "2001": {
-                            "min": 2,
-                            "max": 67,
+                        "2011": {
+                            "count": 10,
+                            "min": 6,
+                            "max": 176,
+                            "avg": 43.111111111111,
+                            "sum": 388,
+                            "mean": 43.111111111111
+                        },
+                        "1983": {"count": 9, "min": 0, "max": 41, "avg": 10, "sum": 90, "mean": 10},
+                        "1995": {"count": 9, "min": 0, "max": 116, "avg": 30, "sum": 270, "mean": 30},
+                        "1985": {"count": 8, "min": 3, "max": 131, "avg": 33.5, "sum": 268, "mean": 33.5},
+                        "1986": {"count": 8, "min": 0, "max": 166, "avg": 32.75, "sum": 262, "mean": 32.75},
+                        "2000": {"count": 8, "min": 0, "max": 113, "avg": 34.625, "sum": 277, "mean": 34.625},
+                        "2003": {"count": 8, "min": 7, "max": 50, "avg": 31.2, "sum": 156, "mean": 31.2},
+                        "1990": {"count": 6, "min": 0, "max": 61, "avg": 25.5, "sum": 153, "mean": 25.5},
+                        "1996": {"count": 6, "min": 1, "max": 84, "avg": 40, "sum": 240, "mean": 40},
+                        "2008": {"count": 6, "min": 10, "max": 15, "avg": 11.75, "sum": 47, "mean": 11.75},
+                        "2015": {
                             "count": 6,
-                            "missing": 8,
-                            "sum": 170,
-                            "sumOfSquares": 8292,
-                            "mean": 28.333333333333,
-                            "stddev": 26.364117028011,
-                            "facets": []
-                        },
-                        "2000": {
                             "min": 0,
-                            "max": 139,
-                            "count": 4,
-                            "missing": 4,
-                            "sum": 204,
-                            "sumOfSquares": 21798,
-                            "mean": 51,
-                            "stddev": 61.627915752522,
-                            "facets": []
-                        }
+                            "max": 22,
+                            "avg": 4.6666666666667,
+                            "sum": 28,
+                            "mean": 4.6666666666667
+                        },
+                        "1984": {"count": 5, "min": 2, "max": 13, "avg": 6.8, "sum": 34, "mean": 6.8},
+                        "1988": {"count": 5, "min": 7, "max": 35, "avg": 18, "sum": 90, "mean": 18},
+                        "2017": {"count": 5, "min": 0, "max": 0, "avg": 0, "sum": 0, "mean": 0},
+                        "1982": {"count": 4, "min": 0, "max": 34, "avg": 15.25, "sum": 61, "mean": 15.25},
+                        "1991": {"count": 4, "min": 11, "max": 336, "avg": 140.5, "sum": 562, "mean": 140.5},
+                        "1992": {"count": 4, "min": 12, "max": 86, "avg": 47, "sum": 188, "mean": 47},
+                        "1997": {"count": 4, "min": 5, "max": 208, "avg": 69, "sum": 276, "mean": 69},
+                        "2013": {"count": 4, "min": 0, "max": 19, "avg": 12, "sum": 48, "mean": 12},
+                        "1989": {
+                            "count": 3,
+                            "min": 6,
+                            "max": 13,
+                            "avg": 8.6666666666667,
+                            "sum": 26,
+                            "mean": 8.6666666666667
+                        },
+                        "1987": {"count": 2, "min": 18, "max": 25, "avg": 21.5, "sum": 43, "mean": 21.5},
+                        "1977": {"count": 1, "min": 14, "max": 14, "avg": 14, "sum": 14, "mean": 14},
+                        "1980": {"count": 1, "min": 25, "max": 25, "avg": 25, "sum": 25, "mean": 25}
                     }
                 }
             },
             "id": {
-                "min": "UQ:103860",
-                "max": "UQ:83055",
-                "count": 322,
-                "missing": 0,
+                "value": 334,
                 "facets": {
                     "date_year_t": {
-                        "2008": {
-                            "min": "UQ:171593",
-                            "max": "UQ:192676",
-                            "count": 6,
-                            "missing": 0,
-                            "facets": []
+                        "2004": {"count": 22},
+                        "2010": {"count": 17},
+                        "1999": {"count": 15},
+                        "2001": {"count": 14},
+                        "2005": {"count": 14},
+                        "2007": {"count": 14},
+                        "2009": {"count": 14},
+                        "2014": {"count": 14},
+                        "2016": {"count": 14},
+                        "1993": {"count": 13},
+                        "2002": {"count": 13},
+                        "1994": {"count": 12},
+                        "2006": {"count": 11},
+                        "2012": {"count": 11},
+                        "1998": {"count": 10},
+                        "2011": {"count": 10},
+                        "1983": {"count": 9},
+                        "1995": {"count": 9},
+                        "1985": {"count": 8},
+                        "1986": {"count": 8},
+                        "2000": {"count": 8},
+                        "2003": {"count": 8},
+                        "1990": {"count": 6},
+                        "1996": {"count": 6},
+                        "2008": {"count": 6},
+                        "2015": {"count": 6},
+                        "1984": {"count": 5},
+                        "1988": {"count": 5},
+                        "2017": {"count": 5},
+                        "1982": {"count": 4},
+                        "1991": {"count": 4},
+                        "1992": {"count": 4},
+                        "1997": {"count": 4},
+                        "2013": {"count": 4},
+                        "1989": {"count": 3},
+                        "1987": {"count": 2},
+                        "1977": {"count": 1},
+                        "1980": {"count": 1}
+                    }
+                },
+                "count": 334
+            },
+            "scopus_citation_count_i": {
+                "count": 210,
+                "min": 0,
+                "max": 368,
+                "avg": 25.461904761905,
+                "sum": 5347,
+                "mean": 25.461904761905,
+                "facets": {
+                    "date_year_t": {
+                        "2004": {
+                            "count": 22,
+                            "min": 0,
+                            "max": 130,
+                            "avg": 26.888888888889,
+                            "sum": 484,
+                            "mean": 26.888888888889
                         },
-                        "2009": {"min": "UQ:174136", "max": "UQ:300628", "count": 14, "missing": 0, "facets": []},
-                        "2006": {"min": "UQ:103860", "max": "UQ:83055", "count": 11, "missing": 0, "facets": []},
-                        "2007": {"min": "UQ:128398", "max": "UQ:300680", "count": 14, "missing": 0, "facets": []},
-                        "2004": {"min": "UQ:233659", "max": "UQ:72315", "count": 22, "missing": 0, "facets": []},
-                        "2005": {"min": "UQ:167790", "max": "UQ:76387", "count": 14, "missing": 0, "facets": []},
-                        "2002": {"min": "UQ:151465", "max": "UQ:61215", "count": 13, "missing": 0, "facets": []},
-                        "2003": {"min": "UQ:161130", "max": "UQ:66884", "count": 8, "missing": 0, "facets": []},
-                        "1995": {"min": "UQ:218666", "max": "UQ:300637", "count": 9, "missing": 0, "facets": []},
-                        "1996": {"min": "UQ:207574", "max": "UQ:57376", "count": 6, "missing": 0, "facets": []},
-                        "1997": {"min": "UQ:57481", "max": "UQ:57852", "count": 4, "missing": 0, "facets": []},
-                        "1998": {"min": "UQ:185127", "max": "UQ:35361", "count": 10, "missing": 0, "facets": []},
-                        "1991": {"min": "UQ:248122", "max": "UQ:300662", "count": 4, "missing": 0, "facets": []},
-                        "1992": {"min": "UQ:248120", "max": "UQ:300616", "count": 4, "missing": 0, "facets": []},
-                        "1993": {"min": "UQ:248117", "max": "UQ:300657", "count": 13, "missing": 0, "facets": []},
-                        "1994": {"min": "UQ:248115", "max": "UQ:300679", "count": 11, "missing": 0, "facets": []},
-                        "1977": {"min": "UQ:300655", "max": "UQ:300655", "count": 1, "missing": 0, "facets": []},
-                        "2012": {"min": "UQ:261985", "max": "UQ:300673", "count": 11, "missing": 0, "facets": []},
-                        "2011": {"min": "UQ:228226", "max": "UQ:270590", "count": 10, "missing": 0, "facets": []},
-                        "2010": {"min": "UQ:195329", "max": "UQ:300630", "count": 17, "missing": 0, "facets": []},
-                        "1999": {"min": "UQ:143451", "max": "UQ:35661", "count": 15, "missing": 0, "facets": []},
-                        "2013": {"min": "UQ:296130", "max": "UQ:318011", "count": 4, "missing": 0, "facets": []},
-                        "2014": {"min": "UQ:324600", "max": "UQ:355337", "count": 14, "missing": 0, "facets": []},
-                        "2015": {"min": "UQ:349734", "max": "UQ:362576", "count": 6, "missing": 0, "facets": []},
-                        "2016": {"min": "UQ:383911", "max": "UQ:415693", "count": 8, "missing": 0, "facets": []},
-                        "1990": {"min": "UQ:300598", "max": "UQ:300669", "count": 6, "missing": 0, "facets": []},
-                        "1982": {"min": "UQ:300608", "max": "UQ:300682", "count": 4, "missing": 0, "facets": []},
-                        "1983": {"min": "UQ:300609", "max": "UQ:300678", "count": 9, "missing": 0, "facets": []},
-                        "1980": {"min": "UQ:300635", "max": "UQ:300635", "count": 1, "missing": 0, "facets": []},
-                        "1986": {"min": "UQ:300595", "max": "UQ:300675", "count": 8, "missing": 0, "facets": []},
-                        "1987": {"min": "UQ:300634", "max": "UQ:300660", "count": 2, "missing": 0, "facets": []},
-                        "1984": {"min": "UQ:300603", "max": "UQ:300683", "count": 5, "missing": 0, "facets": []},
-                        "1985": {"min": "UQ:300604", "max": "UQ:300681", "count": 8, "missing": 0, "facets": []},
-                        "1988": {"min": "UQ:300593", "max": "UQ:300676", "count": 5, "missing": 0, "facets": []},
-                        "1989": {"min": "UQ:300659", "max": "UQ:300677", "count": 3, "missing": 0, "facets": []},
-                        "2001": {"min": "UQ:151498", "max": "UQ:68656", "count": 14, "missing": 0, "facets": []},
-                        "2000": {"min": "UQ:139564", "max": "UQ:37019", "count": 8, "missing": 0, "facets": []}
+                        "2010": {
+                            "count": 17,
+                            "min": 2,
+                            "max": 80,
+                            "avg": 30.533333333333,
+                            "sum": 458,
+                            "mean": 30.533333333333
+                        },
+                        "1999": {
+                            "count": 15,
+                            "min": 0,
+                            "max": 82,
+                            "avg": 28.555555555556,
+                            "sum": 257,
+                            "mean": 28.555555555556
+                        },
+                        "2001": {"count": 14, "min": 2, "max": 69, "avg": 29, "sum": 174, "mean": 29},
+                        "2005": {
+                            "count": 14,
+                            "min": 39,
+                            "max": 52,
+                            "avg": 44.666666666667,
+                            "sum": 134,
+                            "mean": 44.666666666667
+                        },
+                        "2007": {
+                            "count": 14,
+                            "min": 0,
+                            "max": 37,
+                            "avg": 15.090909090909,
+                            "sum": 166,
+                            "mean": 15.090909090909
+                        },
+                        "2009": {"count": 14, "min": 2, "max": 121, "avg": 51, "sum": 408, "mean": 51},
+                        "2014": {
+                            "count": 14,
+                            "min": 1,
+                            "max": 20,
+                            "avg": 9.1538461538462,
+                            "sum": 119,
+                            "mean": 9.1538461538462
+                        },
+                        "2016": {
+                            "count": 14,
+                            "min": 0,
+                            "max": 4,
+                            "avg": 1.6666666666667,
+                            "sum": 10,
+                            "mean": 1.6666666666667
+                        },
+                        "1993": {"count": 13, "min": 13, "max": 28, "avg": 20.5, "sum": 41, "mean": 20.5},
+                        "2002": {"count": 13, "min": 19, "max": 113, "avg": 41.8, "sum": 418, "mean": 41.8},
+                        "1994": {"count": 12, "min": 0, "max": 0, "avg": 0, "sum": 0, "mean": 0},
+                        "2006": {
+                            "count": 11,
+                            "min": 0,
+                            "max": 95,
+                            "avg": 19.363636363636,
+                            "sum": 213,
+                            "mean": 19.363636363636
+                        },
+                        "2012": {
+                            "count": 11,
+                            "min": 0,
+                            "max": 37,
+                            "avg": 11.222222222222,
+                            "sum": 101,
+                            "mean": 11.222222222222
+                        },
+                        "1998": {"count": 10, "min": 4, "max": 92, "avg": 41.75, "sum": 334, "mean": 41.75},
+                        "2011": {"count": 10, "min": 8, "max": 181, "avg": 43.7, "sum": 437, "mean": 43.7},
+                        "1983": {
+                            "count": 9,
+                            "min": 0,
+                            "max": 2,
+                            "avg": 0.66666666666667,
+                            "sum": 2,
+                            "mean": 0.66666666666667
+                        },
+                        "1995": {
+                            "count": 9,
+                            "min": 0,
+                            "max": 35,
+                            "avg": 18.142857142857,
+                            "sum": 127,
+                            "mean": 18.142857142857
+                        },
+                        "1985": {"count": 8, "min": 10, "max": 26, "avg": 18, "sum": 36, "mean": 18},
+                        "1986": {"count": 8, "min": 0, "max": 0, "avg": 0, "sum": 0, "mean": 0},
+                        "2000": {"count": 8, "min": 0, "max": 140, "avg": 51.75, "sum": 207, "mean": 51.75},
+                        "2003": {
+                            "count": 8,
+                            "min": 0,
+                            "max": 53,
+                            "avg": 12.285714285714,
+                            "sum": 86,
+                            "mean": 12.285714285714
+                        },
+                        "1990": {"count": 6, "min": 0, "max": 35, "avg": 15, "sum": 45, "mean": 15},
+                        "1996": {"count": 6, "min": 0, "max": 95, "avg": 51, "sum": 153, "mean": 51},
+                        "2008": {
+                            "count": 6,
+                            "min": 0,
+                            "max": 16,
+                            "avg": 9.8333333333333,
+                            "sum": 59,
+                            "mean": 9.8333333333333
+                        },
+                        "2015": {
+                            "count": 6,
+                            "min": 0,
+                            "max": 19,
+                            "avg": 5.8333333333333,
+                            "sum": 35,
+                            "mean": 5.8333333333333
+                        },
+                        "1984": {"count": 5, "min": 0, "max": 0, "avg": 0, "sum": 0, "mean": 0},
+                        "1988": {"count": 5, "min": 0, "max": 45, "avg": 11.25, "sum": 45, "mean": 11.25},
+                        "2017": {"count": 5, "min": 0, "max": 0, "avg": 0, "sum": 0, "mean": 0},
+                        "1982": {"count": 4, "min": 8, "max": 8, "avg": 8, "sum": 8, "mean": 8},
+                        "1991": {
+                            "count": 4,
+                            "min": 58,
+                            "max": 368,
+                            "avg": 186.66666666667,
+                            "sum": 560,
+                            "mean": 186.66666666667
+                        },
+                        "1992": {"count": 4, "min": 10, "max": 44, "avg": 27, "sum": 54, "mean": 27},
+                        "1997": {
+                            "count": 4,
+                            "min": 5,
+                            "max": 48,
+                            "avg": 24.666666666667,
+                            "sum": 74,
+                            "mean": 24.666666666667
+                        },
+                        "2013": {
+                            "count": 4,
+                            "min": 13,
+                            "max": 20,
+                            "avg": 17.333333333333,
+                            "sum": 52,
+                            "mean": 17.333333333333
+                        },
+                        "1989": {"count": 3, "min": 0, "max": 8, "avg": 4, "sum": 8, "mean": 4},
+                        "1987": {"count": 2, "min": 0, "max": 15, "avg": 7.5, "sum": 15, "mean": 7.5},
+                        "1977": {"count": 1, "min": 11, "max": 11, "avg": 11, "sum": 11, "mean": 11},
+                        "1980": {"count": 1, "min": 16, "max": 16, "avg": 16, "sum": 16, "mean": 16}
                     }
                 }
             }

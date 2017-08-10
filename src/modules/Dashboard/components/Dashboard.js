@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Card, CardText, CardHeader} from 'material-ui/Card';
-import {AuthorsPublicationsPerYearChart, AuthorsPublicationsCount, Alert, InlineLoader} from 'uqlibrary-react-toolbox';
+import {AuthorsPublicationsPerYearChart, AuthorsPublicationsCount, Alert, InlineLoader, StandardCard, StandardPage} from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
+import {PublicationsList} from 'modules/PublicationsList';
 import {locale} from 'config';
 
 class Dashboard extends React.Component {
@@ -12,9 +12,10 @@ class Dashboard extends React.Component {
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
         authorDetailsLoading: PropTypes.bool,
-        publicationYearsData: PropTypes.object,
+        publicationsPerYear: PropTypes.object,
         publicationCountData: PropTypes.object,
         possiblyYourPublicationsCount: PropTypes.object,
+        publicationsList: PropTypes.list,
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
     };
@@ -25,14 +26,18 @@ class Dashboard extends React.Component {
 
     componentDidMount() {
         if (this.props.account && this.props.account.id) {
-            // this.props.actions.countPossiblyYourPublications(this.props.account.id);
+            this.props.actions.countPossiblyYourPublications(this.props.account.id);
+            console.log(this.props.account.id);
+            this.props.actions.loadAuthorPublicationsByYear(this.props.account.id);
         }
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.account && nextProps.account.id &&
             (!this.props.account || nextProps.account.id !== this.props.account.id)) {
-            // this.props.actions.countPossiblyYourPublications(this.props.account.id);
+            this.props.actions.countPossiblyYourPublications(nextProps.account.id);
+            console.log(this.props.account.id);
+            this.props.actions.loadAuthorPublicationsByYear(nextProps.account.id);
         }
     }
 
@@ -42,17 +47,13 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
+
         return (
-            <div className="layout-fill">
+            <StandardPage>
                 {
                     this.props.authorDetailsLoading && !this.props.authorDetails &&
-                    <div className="columns is-multiline is-gapless">
-                        <div className="column is-12 is-hidden-mobile">
-
-                            <div className="isLoading is-centered">
-                                <InlineLoader message={txt.loading}/>
-                            </div>
-                        </div>
+                    <div className="isLoading is-centered">
+                        <InlineLoader message={txt.loading}/>
                     </div>
                 }
                 {
@@ -76,39 +77,41 @@ class Dashboard extends React.Component {
                             }
 
                         </div>
-
-                        <div className="columns is-gapless">
-                            <div className="column">
-
-                                <Card className="barChart">
-                                    <CardHeader className="card-header">
-                                        <h2 className="title is-4 color-reverse">eSpace publications by year</h2>
-                                    </CardHeader>
-
-                                    <CardText className="body-1">
-                                        <AuthorsPublicationsPerYearChart rawData={this.props.publicationYearsData}
-                                                                         yAxisTitle="Total publications"/>
-                                    </CardText>
-                                </Card>
-                            </div>
+                    </div>
+                }
+                {
+                    !this.props.authorDetailsLoading && this.props.publicationsPerYear &&
+                    <StandardCard className="barChart" title="eSpace publications by year">
+                        <AuthorsPublicationsPerYearChart
+                            rawData={this.props.publicationsPerYear}
+                            yAxisTitle="Total publications"/>
+                    </StandardCard>
+                }
+                {
+                    !this.props.authorDetailsLoading && this.props.publicationCountData &&
+                    <div className="columns">
+                        <div className="column is-gapless is-4 donutChart">
+                            <StandardCard title="Document types overview">
+                                <AuthorsPublicationsCount
+                                    rawData={this.props.publicationsPerYear}
+                                    yAxisTitle="Total publications" />
+                            </StandardCard>
                         </div>
 
-                        <div className="columns">
-                            <div className="column is-4">
-                                <Card className="donutChart">
-                                    <CardHeader className="card-header">
-                                        <h2 className="title is-4 color-reverse">Document types overview</h2>
-                                    </CardHeader>
-
-                                    <CardText className="body-1">
-                                        <AuthorsPublicationsCount rawData={this.props.publicationCountData} />
-                                    </CardText>
-                                </Card>
-                            </div>
+                        <div className="column is-9">
+                            <StandardCard title="Author statistics">
+                                some stats...
+                            </StandardCard>
                         </div>
                     </div>
                 }
-            </div>
+                {
+                    !this.props.authorDetailsLoading && this.props.publicationsList &&
+                    <StandardCard title="Your publications">
+                        <PublicationsList publicationsList={this.props.publicationsList} />
+                    </StandardCard>
+                }
+            </StandardPage>
         );
     }
 }

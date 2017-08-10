@@ -1,9 +1,10 @@
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
 import {withRouter} from 'react-router-dom';
-import {claimPublication} from 'actions';
+import * as actions from 'actions';
 
 const FORM_NAME = 'ClaimPublicationForm';
 
@@ -26,7 +27,7 @@ const onSubmit = (values, dispatch) => {
     // TODO: date should be a part of redux-form data
     const data = {...values.toJS()};
     console.log(data);
-    return dispatch(claimPublication(data))
+    return dispatch(actions.claimPublication(data))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
@@ -61,7 +62,13 @@ const mapStateToProps = (state) => {
     };
 };
 
-ClaimPublicationFormContainer = connect(mapStateToProps)(ClaimPublicationFormContainer);
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    };
+}
+
+ClaimPublicationFormContainer = connect(mapStateToProps, mapDispatchToProps)(ClaimPublicationFormContainer);
 ClaimPublicationFormContainer = withRouter(ClaimPublicationFormContainer);
 
 export default ClaimPublicationFormContainer;
