@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
+import { Alert } from 'uqlibrary-react-toolbox';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
-import FileUploadErrorMessage from './FileUploadErrorMessage';
 
 class FileUploadDropzone extends PureComponent {
     static propTypes = {
@@ -10,7 +10,8 @@ class FileUploadDropzone extends PureComponent {
         maxSize: PropTypes.number.isRequired,
         maxFiles: PropTypes.number.isRequired,
         uploadedFiles: PropTypes.array,
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        clearErrors: PropTypes.bool
     };
 
     static defaultProps = {
@@ -47,12 +48,16 @@ class FileUploadDropzone extends PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.uploadedFiles.length !== this.accepted.size) {
-            this._add(nextProps.uploadedFiles);
-            this._resetErrors();
-            this._processErrors();
-        }
+        this._clearAccepted();
+        this._add(nextProps.uploadedFiles);
+        this._resetErrors();
+
+        if (nextProps.clearErrors) this._processErrors(this.errors);
     }
+
+    _clearAccepted = () => {
+        this.accepted = new Map();
+    };
 
     /**
      * Diff of two sets
@@ -124,12 +129,12 @@ class FileUploadDropzone extends PureComponent {
      *
      * @private
      */
-    _processErrors = () => {
+    _processErrors = (errors) => {
         const { single, multiple } = this.props.locale.validation;
         const errorMessages = [];
         let message;
 
-        for (const [errorCode, files] of this.errors.entries()) {
+        for (const [errorCode, files] of errors.entries()) {
             const fileNames = [];
             files.map((file) => {
                 fileNames.push(file.name);
@@ -151,7 +156,7 @@ class FileUploadDropzone extends PureComponent {
         }
 
         this.setState({
-            errorMessage: errorMessages
+            errorMessage: errorMessages.join('; ')
         });
 
         this._resetErrors();
@@ -212,7 +217,7 @@ class FileUploadDropzone extends PureComponent {
         /*
          * Process any errors
          */
-        this._processErrors();
+        this._processErrors(this.errors);
     };
 
     render() {
@@ -230,10 +235,9 @@ class FileUploadDropzone extends PureComponent {
                         </Dropzone>
                     </div>
                 </div>
-
                 {
                     this.state.errorMessage.length > 0 && (
-                        <FileUploadErrorMessage error={ this.state.errorMessage } />
+                        <Alert title="Upload errors" message={ this.state.errorMessage } type="error" />
                     )
                 }
             </div>

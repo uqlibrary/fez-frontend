@@ -40,7 +40,8 @@ export default class FileUploader extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            uploadedFiles: []
+            uploadedFiles: [],
+            clearErrors: false
         };
     }
 
@@ -50,16 +51,17 @@ export default class FileUploader extends PureComponent {
 
     deleteFile = (file, index) => {
         this.setState({
-            uploadedFiles: this.state.uploadedFiles.filter((_, i) => i !== index)
+            uploadedFiles: this.state.uploadedFiles.filter((_, i) => i !== index),
+            clearErrors: true
         });
     };
 
     deleteAllFiles = () => {
-        this.setState({ uploadedFiles: [] });
+        this.setState({ uploadedFiles: [], clearErrors: true });
     };
 
     setUploadedFiles = (files) => {
-        this.setState({ uploadedFiles: [...files] });
+        this.setState({ uploadedFiles: [...files], clearErrors: false });
     };
 
     _calculateMaxFileSize = () => {
@@ -88,7 +90,8 @@ export default class FileUploader extends PureComponent {
                     maxSize={ this._calculateMaxFileSize() }
                     maxFiles={ fileUploadLimit }
                     onDropped={ this.setUploadedFiles }
-                    uploadedFiles={ this.state.uploadedFiles } />
+                    uploadedFiles={ this.state.uploadedFiles }
+                    clearErrors={ this.state.clearErrors } />
 
                 {
                      this.state.uploadedFiles.length > 0 && (
