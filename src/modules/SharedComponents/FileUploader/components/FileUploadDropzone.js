@@ -17,15 +17,15 @@ class FileUploadDropzone extends PureComponent {
         locale: {
             validation: {
                 single: {
-                    ['folder']: 'Invalid file ([filename]) (Folder can not be uploaded)',
+                    ['folder']: 'Invalid file ([filename])',
                     ['fileName']: 'Invalid file name ([filename])',
                     ['fileNameLength']: 'Filename ([filename]) is too long',
                     ['maxFileSize']: 'File ([filename]) is too big',
                     ['maxFiles']: 'Only [maxNumberOfFiles] files are allowed to be uploaded. File ([filename]) ignored'
                 },
                 multiple: {
-                    ['folder']: 'Invalid files ([filenames]) (Folders can not be uploaded)',
-                    ['fileName']: '[numberOfFiles] ([filenames]) have an invalid file name',
+                    ['folder']: 'Invalid files ([filenames])',
+                    ['fileName']: '[numberOfFiles] files ([filenames]) have an invalid file name',
                     ['fileNameLength']: '[numberOfFiles] filenames ([filenames]) are too long',
                     ['maxFileSize']: '[numberOfFiles] files ([filenames]) are too big',
                     ['maxFiles']: 'Only [maxNumberOfFiles] files are allowed to be uploaded.  Files ([filenames]) ignored'
@@ -40,21 +40,23 @@ class FileUploadDropzone extends PureComponent {
             errorMessage: []
         };
         this.dropzoneRef = null;
-        this.accepted = new Set();
+        this.accepted = new Map();
         this.errors = new Map();
 
         this.onDrop.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
-        this.accepted = new Set([...nextProps.uploadedFiles]);
-        this._resetErrors();
+        if (nextProps.uploadedFiles.length !== this.accepted.size) {
+            this._add(nextProps.uploadedFiles);
+            this._resetErrors();
+            this._processErrors();
+        }
     }
 
     /**
      * Diff of two sets
      *
-     * @todo Move it to a better place to re-use
      * @param accepted
      * @param rejected
      * @returns {Set}
@@ -65,16 +67,13 @@ class FileUploadDropzone extends PureComponent {
     };
 
     /**
-     * Union of two sets
+     * Add given files
      *
-     * @todo Move it to a better place to re-use
-     * @param accepted
-     * @param filtered
-     * @returns {Set}
+     * @param files
      * @private
      */
-    _union = (accepted, filtered) => {
-        return new Set([...accepted, ...filtered]);
+    _add = (files) => {
+        [...files].map(file => this.accepted.set(file.name, file));
     };
 
     /**
@@ -195,25 +194,20 @@ class FileUploadDropzone extends PureComponent {
         const filtered = this._difference(new Set(accepted), new Set(invalid));
 
         /*
-         * Duplicates will be removed by default behavior of ES6 Set
+         * Duplicates will be removed by setting up file.name as key
          */
-        this.accepted = this._union(this.accepted, filtered);
+        this._add(filtered);
 
         /*
-         * If max files uploaded, get ignored files
+         * If max files uploaded, send max files and set error for ignored files
          */
-        let acceptedMaxFiles;
-        if (this.accepted.size > this.props.maxFiles) {
-            acceptedMaxFiles = [...this.accepted].slice(0, this.props.maxFiles);
-            this._setError('maxFiles', [...this._difference(this.accepted, new Set(acceptedMaxFiles))]);
+        const { maxFiles } = this.props;
+        if (this.accepted.size > maxFiles) {
+            this.props.onDropped([...this.accepted.values()].slice(0, maxFiles));
+            this._setError('maxFiles', [...this.accepted.values()].slice(maxFiles));
         } else {
-            acceptedMaxFiles = [...this.accepted];
+            this.props.onDropped([...this.accepted.values()]);
         }
-
-        /*
-         * Send max number of files to parent component
-         */
-        this.props.onDropped(acceptedMaxFiles);
 
         /*
          * Process any errors
