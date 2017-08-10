@@ -15,7 +15,7 @@ import {authorsSearch, currentAuthor, authorDetails} from './data/authors';
 import {quickTemplates} from './data/acml';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, { delayResponse: 600 });
+const mock = new MockAdapter(api, { delayResponse: 2000 });
 
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
