@@ -1272,7 +1272,10 @@ export const emptyPossibleUnclaimed = {
 };
 
 export const possibleCounts = {
-    "most_likely_match_count": 95,
-    "automatically_match_count": 0,
-    "new_match_count": 0
+    "data":
+        {
+            "most_likely_match_count": 5,
+            "automatically_match_count": 0,
+            "new_match_count": 0
+        }
 };

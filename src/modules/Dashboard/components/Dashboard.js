@@ -48,7 +48,8 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear && this.props.authorDetailsLoading && !this.props.authorDetails;
+        const loading = this.props.loadingPublicationsByYear && this.props.authorDetailsLoading;
+
         return (
             <StandardPage>
                 {
@@ -58,7 +59,7 @@ class Dashboard extends React.Component {
                     </div>
                 }
                 {
-                    !loading &&
+                    !loading && this.props.authorDetails &&
                     <div className="layout-card">
                         <div className="columns is-multiline is-gapless">
                             <div className="column is-12 is-hidden-mobile">
