@@ -1,8 +1,9 @@
 import * as actions from 'actions/academic';
 
 export const initialState = {
-    loadingPublicationsPerYear: true,
-    publicationsPerYear: null
+    loadingPublicationsByYear: true,
+    publicationsByYear: null,
+    publicationTypesCount: null
 };
 
 const handlers = {
@@ -12,14 +13,19 @@ const handlers = {
 
     [actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED]: (state, action) => ({
         ...state,
-        loadingPublicationsPerYear: false,
-        publicationsPerYear: action.payload
+        loadingPublicationsByYear: false,
+        publicationsByYear: action.payload
+    }),
+
+    [actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED]: (state, action) => ({
+        ...state,
+        publicationTypesCount: action.payload
     }),
 
     [actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED]: (state) => ({
         ...state,
-        loadingPublicationsPerYear: false,
-        publicationsPerYear: null
+        loadingPublicationsByYear: false,
+        publicationsByYear: null
     })
 };
 
@@ -28,6 +34,5 @@ export default function academicStatsReducer(state = initialState, action) {
     if (!handler) {
         return state;
     }
-    console.log(action);
     return handler(state, action);
 }

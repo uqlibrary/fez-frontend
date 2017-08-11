@@ -65,6 +65,13 @@ export default {
                 message: 'We have found [count] record(s) that could possibly be your work.',
                 type: 'warning',
                 actionButtonLabel: 'Claim your publications now'
+            },
+            publicationsByYearChart: {
+                title: 'eSpace publications per year',
+                yAxisTitle: 'Total publications'
+            },
+            publicationTypesCountChart: {
+                title: 'Publication types overview'
             }
         },
         about: {

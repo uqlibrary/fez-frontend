@@ -9,7 +9,7 @@ import {accounts} from './data/account';
 import {externalDoiSearchResultList, externalPubMedSearchResultsList, externalTitleSearchResultsList} from './data/search/external';
 import {publicationTypeList} from './data/records';
 import {publicationSubtypeList} from './data/vocabularies';
-import {publicationYearsBig} from './data/academic/publicationYears';
+import {publicationYearsSmall} from './data/academic/publicationYears';
 import {possibleUnclaimed, possibleCounts} from './data/publications';
 import {authorsSearch, currentAuthor, authorDetails} from './data/authors';
 import {quickTemplates} from './data/acml';
@@ -88,7 +88,7 @@ mock.onGet(/authors\/search\?query=*/).reply(200, authorsSearch);
 // mock.onGet(/authors/).reply(403);
 
 // Mock academics publication years endpoint response
-mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsBig);
+mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsSmall);
 
 // Allow the file upload calls to pass through to the S3 bucket directly
 mock.onGet(/file\/upload\/presigned/).passThrough();
