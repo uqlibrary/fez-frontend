@@ -95,3 +95,26 @@ export function getPublicationsPerYearSeries(rawData, topPublicationTypes) {
 
     return series;
 }
+
+/**
+ * WOS/SCOPUS stats
+ * @param {object} raw data
+ * @returns {object}
+ */
+export function getPublicationsStats(rawData) {
+    const years = rawData.aggregations.date_year_t.buckets
+        .map(item => { return item.key; })
+        .sort((item1, item2) => { return item1 > item2; });
+    const formattedStats = {
+        thomson_citation_count_i: {
+            ...rawData.aggregations.thomson_citation_count_i,
+            years: `${years[0]} - ${years[years.length - 1]}`
+
+        },
+        scopus_citation_count_i: {
+            ...rawData.aggregations.scopus_citation_count_i,
+            years: `${years[0]} - ${years[years.length - 1]}`
+        }
+    };
+    return formattedStats;
+}

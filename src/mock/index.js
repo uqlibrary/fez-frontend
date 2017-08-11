@@ -82,6 +82,8 @@ mock.onGet(/authors\/search\?query=*/).reply(200, mockData.authorsSearch);
 
 // Mock academics publication years endpoint response
 mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, mockData.publicationYearsBig);
+mock.onGet(/academic\/[a-z0-9]*\/hindex/).reply(200, mockData.hindexResponse);
+mock.onGet(/academic\/[a-z0-9]*\/publication-stats/).reply(200, mockData.publicationStats);
 
 // Allow the file upload calls to pass through to the S3 bucket directly
 mock.onGet(/file\/upload\/presigned/).passThrough();

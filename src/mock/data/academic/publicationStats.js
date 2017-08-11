@@ -15,7 +15,8 @@ export const publicationStats = {
         "date_year_t": {
             "doc_count_error_upper_bound": 0,
             "sum_other_doc_count": 0,
-            "buckets": [{
+            "buckets": [
+                {
                 "key": "2004",
                 "doc_count": 22,
                 "thomson_citation_count_i": {"count": 20, "min": 0, "max": 210, "avg": 29.85, "sum": 597},
@@ -594,7 +595,7 @@ export const publicationStats = {
     }
 };
 
-const formattedData = {
+export const formattedData = {
     "thomson_citation_count_i": {
         "count": 301,
         "avg": 24.498338870432,
