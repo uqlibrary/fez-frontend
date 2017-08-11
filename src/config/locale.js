@@ -60,6 +60,9 @@ export default {
     pages: {
         dashboard: {
             loading: 'Loading your dashboard...',
+            myPublications: {
+                title: 'My publications'
+            },
             possiblePublicationsLure: {
                 title: 'Claim now!',
                 message: 'We have found [count] record(s) that could possibly be your work.',

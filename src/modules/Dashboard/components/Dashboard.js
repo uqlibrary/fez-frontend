@@ -113,7 +113,7 @@ class Dashboard extends React.Component {
                 }
                 {
                     !loading && this.props.publicationsList &&
-                    <StandardCard title="Your publications">
+                    <StandardCard title={txt.myPublications.title}>
                         <PublicationsList publicationsList={this.props.publicationsList} />
                     </StandardCard>
                 }
