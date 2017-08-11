@@ -367,7 +367,8 @@ export const publicationYearsBig = {
                             "value": "Conference Paper"
                         }
                     ]
-                }, {
+                },
+                {
                     "count": 17,
                     "field": "date_year_t",
                     "value": "2010",
@@ -376,7 +377,8 @@ export const publicationYearsBig = {
                         "field": "display_type_i_lookup_exact",
                         "value": "Journal Article"
                     }, {"count": 2, "field": "display_type_i_lookup_exact", "value": "Book Chapter"}]
-                }, {
+                },
+                {
                     "count": 15,
                     "field": "date_year_t",
                     "value": "1999",
@@ -389,7 +391,8 @@ export const publicationYearsBig = {
                         "field": "display_type_i_lookup_exact",
                         "value": "Book"
                     }]
-                }, {
+                },
+                {
                     "count": 14,
                     "field": "date_year_t",
                     "value": "2001",
@@ -402,7 +405,8 @@ export const publicationYearsBig = {
                         "field": "display_type_i_lookup_exact",
                         "value": "Book Chapter"
                     }]
-                }, {
+                },
+                {
                     "count": 14,
                     "field": "date_year_t",
                     "value": "2005",

@@ -4,6 +4,10 @@ $graph-font-size: 12px !important;
 
 // Bar Chart styles
 .barChart {
+  h2 {
+    color: $text-color-reverse;
+  }
+
   background-color: $graph-background-color-blue !important;
 
   .authors-publications-per-year-chart {
@@ -396,7 +400,12 @@ $graph-font-size: 12px !important;
 
 // Donut chart styles
 .donutChart {
+  h2 {
+    color: $text-color-reverse;
+  }
+
   background-color: $graph-background-color-pink !important;
+
   .highcharts-container {
     position: relative;
     overflow: hidden;

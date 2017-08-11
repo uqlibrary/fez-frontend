@@ -5,8 +5,6 @@ import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
 // mock data for graphs
-// import {publicationYearsBig as publicationYearsMockData} from '../../../mock/data/academic/publicationYears';
-import {publicationCount as publicationCountMockData} from '../../../mock/data/academic/publicationCount';
 import {possibleUnclaimed as possibleUnclaimedMockData} from '../../../mock/data/publications';
 
 
@@ -17,7 +15,6 @@ const mapStateToProps = (state) => {
         authorDetailsLoading: state.get('accountReducer').authorDetailsLoading,
         possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts,
         ...state.get('academicStatsReducer'),
-        publicationCountData: publicationCountMockData,
         publicationsList: possibleUnclaimedMockData.data
     };
 };

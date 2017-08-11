@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {AuthorsPublicationsPerYearChart, AuthorsPublicationsCount, Alert, InlineLoader, StandardCard, StandardPage} from 'uqlibrary-react-toolbox';
+import {AuthorsPublicationsPerYearChart, AuthorsPublicationTypesCountChart, Alert, InlineLoader, StandardCard, StandardPage} from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/PublicationsList';
 import {locale} from 'config';
@@ -12,10 +12,11 @@ class Dashboard extends React.Component {
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
         authorDetailsLoading: PropTypes.bool,
-        publicationsPerYear: PropTypes.object,
-        publicationCountData: PropTypes.object,
+        loadingPublicationsByYear: PropTypes.bool,
+        publicationsByYear: PropTypes.object,
+        publicationTypesCount: PropTypes.array,
         possiblyYourPublicationsCount: PropTypes.object,
-        publicationsList: PropTypes.list,
+        publicationsList: PropTypes.array,
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
     };
@@ -47,17 +48,17 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
-
+        const loading = this.props.loadingPublicationsByYear && this.props.authorDetailsLoading && !this.props.authorDetails;
         return (
             <StandardPage>
                 {
-                    this.props.authorDetailsLoading && !this.props.authorDetails &&
+                    loading &&
                     <div className="isLoading is-centered">
                         <InlineLoader message={txt.loading}/>
                     </div>
                 }
                 {
-                    !this.props.authorDetailsLoading && this.props.authorDetails &&
+                    !loading &&
                     <div className="layout-card">
                         <div className="columns is-multiline is-gapless">
                             <div className="column is-12 is-hidden-mobile">
@@ -80,21 +81,22 @@ class Dashboard extends React.Component {
                     </div>
                 }
                 {
-                    !this.props.authorDetailsLoading && this.props.publicationsPerYear &&
-                    <StandardCard className="barChart" title="eSpace publications by year">
+                    !loading && this.props.publicationsByYear &&
+                    <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
                         <AuthorsPublicationsPerYearChart
-                            rawData={this.props.publicationsPerYear}
-                            yAxisTitle="Total publications"/>
+                            className="barChart"
+                            {...this.props.publicationsByYear}
+                            yAxisTitle={txt.publicationsByYearChart.yAxisTitle} />
                     </StandardCard>
                 }
                 {
-                    !this.props.authorDetailsLoading && this.props.publicationCountData &&
+                    !loading && this.props.publicationTypesCount &&
                     <div className="columns">
-                        <div className="column is-gapless is-4 donutChart">
-                            <StandardCard title="Document types overview">
-                                <AuthorsPublicationsCount
-                                    rawData={this.props.publicationsPerYear}
-                                    yAxisTitle="Total publications" />
+                        <div className="column is-gapless is-4">
+                            <StandardCard className="donutChart" title={txt.publicationTypesCountChart.title}>
+                                <AuthorsPublicationTypesCountChart
+                                    className="donutChart"
+                                    series={[{name: txt.publicationTypesCountChart.title, data: this.props.publicationTypesCount}]} />
                             </StandardCard>
                         </div>
 
@@ -106,7 +108,7 @@ class Dashboard extends React.Component {
                     </div>
                 }
                 {
-                    !this.props.authorDetailsLoading && this.props.publicationsList &&
+                    !loading && this.props.publicationsList &&
                     <StandardCard title="Your publications">
                         <PublicationsList publicationsList={this.props.publicationsList} />
                     </StandardCard>
