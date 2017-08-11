@@ -55,6 +55,7 @@ export default class JournalArticleForm extends Component {
                                    name="rek_date"
                                    allowPartial
                                    className="requiredField"
+                                   validate={[validation.required]}
                             />
                         </div>
                     </div>

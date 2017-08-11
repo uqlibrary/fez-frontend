@@ -5,3 +5,4 @@ export authorsReducer from './authors';
 export claimPublicationReducer from './claimPublication';
 export publicationSubtypesReducer from './publicationSubtypes';
 export searchRecordsReducer from './searchRecords';
+export fileUploadReducer from './fileUpload';

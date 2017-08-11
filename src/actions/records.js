@@ -27,7 +27,7 @@ export function createNewRecord(data) {
                 data.rek_pid = response.rek_pid;
                 // process files
                 if (!data.files || data.files.length === 0) return response;
-                return putUploadFiles(response.rek_pid, data.files);
+                return putUploadFiles(response.rek_pid, data.files, dispatch);
             })
             .then(response => {
                 if (!data.files || data.files.length === 0) return response;
