@@ -8,7 +8,7 @@ import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
 import './FileUpload.scss';
 
-class FileUploader extends PureComponent {
+export class FileUploader extends PureComponent {
 
     static propTypes = {
         onChange: PropTypes.func,
@@ -104,15 +104,12 @@ class FileUploader extends PureComponent {
 
                 { uploadedFilesRow }
 
-
                 {
                     this.props.overallProgress > 0 &&
                     <LinearProgress
                         className="upload-overall"
                         mode="determinate"
                         value={ this.props.overallProgress }
-                        size={ 20 }
-                        thickness={ 4 }
                     />
                 }
             </div>
