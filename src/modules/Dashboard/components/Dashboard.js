@@ -17,6 +17,8 @@ class Dashboard extends React.Component {
         publicationTypesCount: PropTypes.array,
         possiblyYourPublicationsCount: PropTypes.object,
         publicationsList: PropTypes.array,
+        loadingPublicationsStats: PropTypes.bool,
+        publicationsStats: PropTypes.object,
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
     };
@@ -28,19 +30,19 @@ class Dashboard extends React.Component {
     componentDidMount() {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
-            console.log(this.props.account.id);
             this.props.actions.loadAuthorPublicationsByYear(this.props.account.id);
+            this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
         }
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.account && nextProps.account.id &&
-            (!this.props.account || nextProps.account.id !== this.props.account.id)) {
-            this.props.actions.countPossiblyYourPublications(nextProps.account.id);
-            console.log(this.props.account.id);
-            this.props.actions.loadAuthorPublicationsByYear(nextProps.account.id);
-        }
-    }
+    // componentWillReceiveProps(nextProps) {
+    //     if (nextProps.account && nextProps.account.id &&
+    //         (!this.props.account || nextProps.account.id !== this.props.account.id)) {
+    //         this.props.actions.countPossiblyYourPublications(nextProps.account.id);
+    //         this.props.actions.loadAuthorPublicationsByYear(nextProps.account.id);
+    //         this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
+    //     }
+    // }
 
     claimYourPublications = () => {
         this.props.history.push('/claim-publications');
@@ -48,7 +50,8 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear && this.props.authorDetailsLoading && !this.props.authorDetails;
+        const loading = this.props.loadingPublicationsByYear && this.props.authorDetailsLoading;
+
         return (
             <StandardPage>
                 {
@@ -58,7 +61,7 @@ class Dashboard extends React.Component {
                     </div>
                 }
                 {
-                    !loading &&
+                    !loading && this.props.authorDetails &&
                     <div className="layout-card">
                         <div className="columns is-multiline is-gapless">
                             <div className="column is-12 is-hidden-mobile">
@@ -101,15 +104,16 @@ class Dashboard extends React.Component {
                         </div>
 
                         <div className="column is-9">
-                            <StandardCard title="Author statistics">
-                                some stats...
+                            <StandardCard title="eSpace publications linked from: WOS/SCOPUS">
+                                { this.props.loadingPublicationsStats && 'loading your stats...'}
+                                { this.props.publicationsStats && JSON.stringify(this.props.publicationsStats)}
                             </StandardCard>
                         </div>
                     </div>
                 }
                 {
                     !loading && this.props.publicationsList &&
-                    <StandardCard title="Your publications">
+                    <StandardCard title={txt.myPublications.title}>
                         <PublicationsList publicationsList={this.props.publicationsList} />
                     </StandardCard>
                 }

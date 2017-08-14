@@ -1,8 +1,8 @@
 import {get} from './generic';
 
 const GET_ACADEMIC_PUBLICATION_YEARS = 'academic/[userId]/publication-years';
-const GET_ACADEMIC_PUBLICATION_HINDEX = 'academic/[userId]/hindex'; // ?endYear=2017&startYear=1977
-const GET_ACADEMIC_PUBLICATION_STATS = 'academic/[userId]/publication-stats'; // ?endYear=2017&startYear=1977
+const GET_ACADEMIC_PUBLICATION_HINDEX = 'academic/[userId]/hindex';
+const GET_ACADEMIC_PUBLICATION_STATS = 'academic/[userId]/publication-stats';
 
 /**
  * Fetches author stats

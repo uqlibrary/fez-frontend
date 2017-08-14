@@ -41,7 +41,7 @@ export function countPossiblyYourPublications(authorUsername) {
         getCountPossibleUnclaimedPublications(authorUsername).then(response => {
             dispatch({
                 type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                payload: response
+                payload: response.data
             });
         }).catch(() => {
             dispatch({

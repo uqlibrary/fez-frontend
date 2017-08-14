@@ -1,19 +1,21 @@
 import * as transformer from './academicDataTransformers';
 
-import {
-    getAuthorPublicationsByYear
-    // , getAuthorPublicationsHindex, getAuthorPublicationsStats
-} from '../repositories';
-
+import {getAuthorPublicationsByYear, getAuthorPublicationsHindex, getAuthorPublicationsStats} from '../repositories';
 
 export const ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING = 'ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING';
 export const ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED = 'ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED';
 export const ACADEMIC_PUBLICATIONS_COUNT_LOADED = 'ACADEMIC_PUBLICATIONS_COUNT_LOADED';
 export const ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED = 'ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED';
 
+export const ACADEMIC_PUBLICATIONS_STATS_LOADING = 'ACADEMIC_PUBLICATIONS_STATS_LOADING';
+export const ACADEMIC_PUBLICATIONS_STATS_LOADED = 'ACADEMIC_PUBLICATIONS_STATS_LOADED';
+export const ACADEMIC_PUBLICATIONS_STATS_FAILED = 'ACADEMIC_PUBLICATIONS_STATS_FAILED';
+
 
 /**
- * Load a list of file access types from fez, eg open access, embargo, etc
+ * Returns the author's publications per year
+ * @param {string} user name
+ * @returns {action}
  */
 export function loadAuthorPublicationsByYear(userName) {
     return dispatch => {
@@ -42,5 +44,47 @@ export function loadAuthorPublicationsByYear(userName) {
                 payload: error
             });
         });
+    };
+}
+
+/**
+ * Returns the author's publications stats
+ * @param {string} user name
+ * @returns {action}
+ */
+export function loadAuthorPublicationsStats(userName) {
+    return dispatch => {
+        dispatch({type: ACADEMIC_PUBLICATIONS_STATS_LOADING});
+        let statsData = null;
+        getAuthorPublicationsStats(userName)
+            .then(response => {
+                statsData = transformer.getPublicationsStats(response);
+                return getAuthorPublicationsHindex(userName);
+            })
+            .then(response => {
+                if (response && response.hindex_scopus && statsData && statsData.scopus_citation_count_i) {
+                    statsData.scopus_citation_count_i.hindex = response.hindex_scopus;
+                }
+                if (response && response.hindex_incites && statsData && statsData.thomson_citation_count_i) {
+                    statsData.thomson_citation_count_i.hindex = response.hindex_incites;
+                }
+                dispatch({
+                    type: ACADEMIC_PUBLICATIONS_STATS_LOADED,
+                    payload: statsData
+                });
+            })
+            .catch((error) => {
+                if (!statsData) {
+                    dispatch({
+                        type: ACADEMIC_PUBLICATIONS_STATS_LOADED,
+                        payload: statsData
+                    });
+                } else {
+                    dispatch({
+                        type: ACADEMIC_PUBLICATIONS_STATS_FAILED,
+                        payload: error
+                    });
+                }
+            });
     };
 }

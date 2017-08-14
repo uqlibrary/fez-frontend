@@ -5,14 +5,7 @@ import Cookies from 'js-cookie';
 import {SESSION_COOKIE_NAME} from 'config';
 
 // mocked data
-import {accounts} from './data/account';
-import {externalDoiSearchResultList, externalPubMedSearchResultsList, externalTitleSearchResultsList} from './data/search/external';
-import {publicationTypeList} from './data/records';
-import {publicationSubtypeList} from './data/vocabularies';
-import {publicationYearsSmall} from './data/academic/publicationYears';
-import {possibleUnclaimed, possibleCounts} from './data/publications';
-import {authorsSearch, currentAuthor, authorDetails} from './data/authors/index';
-import {quickTemplates} from './data/acml';
+import * as mockData from './data';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 2000 });
@@ -37,17 +30,17 @@ if (user === 'anon') {
     user = user || 'uqresearcher';
 
     // Mock the account that the user is logged in as
-    mock.onGet(/account\?[0-9]*/).reply(200, accounts[user]);
+    mock.onGet(/account\?[0-9]*/).reply(200, mockData.accounts[user]);
 
     // Mock get current author details
-    if (authorDetails[user])
-        mock.onGet(/authors\/details*/).reply(200, authorDetails[user]);
+    if (mockData.authorDetails[user])
+        mock.onGet(/authors\/details*/).reply(200, mockData.authorDetails[user]);
     else
         mock.onGet(/authors\/details*/).reply(404, {});
 
     // Mock get current author details
-    if (currentAuthor[user]) {
-        mock.onGet(/authors/).reply(200, currentAuthor[user]);
+    if (mockData.currentAuthor[user]) {
+        mock.onGet(/authors/).reply(200, mockData.currentAuthor[user]);
     } else {
         mock.onGet(/authors/).reply(404, []);
     }
@@ -57,29 +50,29 @@ if (user === 'anon') {
 mock.onGet(/search\/internal\?*/).reply(500);
 
 // Mock the publication form external title search endpoint
-mock.onGet(/search\/external\?source=wos&title=*/).reply(200, externalTitleSearchResultsList);
+mock.onGet(/search\/external\?source=wos&title=*/).reply(200, mockData.externalTitleSearchResultsList);
 mock.onGet(/search\/external\?source=crossref&title=*/).reply(404);
 mock.onGet(/search\/external\?source=scopus&title=*/).reply(404);
 mock.onGet(/search\/external\?source=pubmed&title=*/).reply(404);
 
 // Mock the publication form external pubMed search endpoint
-mock.onGet(/search\/external\?id=pmid=*/).reply(200, externalPubMedSearchResultsList);
+mock.onGet(/search\/external\?id=pmid=*/).reply(200, mockData.externalPubMedSearchResultsList);
 
 // Mock the publication form external doi search endpoint
-mock.onGet(/search\/external\?doi=*/).reply(200, externalDoiSearchResultList);
+mock.onGet(/search\/external\?doi=*/).reply(200, mockData.externalDoiSearchResultList);
 
 // Mock the publication types endpoint
-mock.onGet('records/types').reply(200, publicationTypeList);
+mock.onGet('records/types').reply(200, mockData.publicationTypeList);
 
 // Mock the publication sub types endpoint
 mock.onGet(/vocabularies\/[0-9]/).reply((config) => {
     const vocabId = config.url.substring(config.url.indexOf('/')+1);
-    return [200, publicationSubtypeList[vocabId]];
+    return [200, mockData.publicationSubtypeList[vocabId]];
 });
 
 // Mock the authors endpoint
 // get authors search results
-mock.onGet(/authors\/search\?query=*/).reply(200, authorsSearch);
+mock.onGet(/authors\/search\?query=*/).reply(200, mockData.authorsSearch);
 
 // Error codes:
 // 404: author not found
@@ -88,15 +81,17 @@ mock.onGet(/authors\/search\?query=*/).reply(200, authorsSearch);
 // mock.onGet(/authors/).reply(403);
 
 // Mock academics publication years endpoint response
-mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, publicationYearsSmall);
+mock.onGet(/academic\/[a-z0-9]*\/publication-years/).reply(200, mockData.publicationYearsBig);
+mock.onGet(/academic\/[a-z0-9]*\/hindex/).reply(200, mockData.hindexResponse);
+mock.onGet(/academic\/[a-z0-9]*\/publication-stats/).reply(200, mockData.publicationStats);
 
 // Allow the file upload calls to pass through to the S3 bucket directly
 mock.onGet(/file\/upload\/presigned/).passThrough();
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
 
 // Mock claim publication results endpoint response
-mock.onGet(/publications\/possible-unclaimed\/[a-z0-9]/).reply(200, possibleUnclaimed);
-mock.onGet(/(publications\/possible-counts)/).reply(200, possibleCounts);
+mock.onGet(/publications\/possible-unclaimed\/[a-z0-9]/).reply(200, mockData.possibleUnclaimed);
+mock.onGet(/(publications\/possible-counts)/).reply(200, mockData.possibleCounts);
 // mock.onGet(/(publications\/possible-unclaimed)/).reply(200, []);
 
 // Mock hide publication results endpoint response
@@ -107,7 +102,7 @@ mock.onPost(/(publications\/hide-possible)/).reply(200, {});
 mock.onPost(/publications\/claim-possible/).reply(200);
 
 // Mock the document access types
-mock.onGet('acml/quick-templates').reply(200, quickTemplates);
+mock.onGet('acml/quick-templates').reply(200, mockData.quickTemplates);
 
 // Let the create records endpoint go through to staging
 mock.onPost(/records/).reply(200, {rek_pid: 'UQ:1111111'});

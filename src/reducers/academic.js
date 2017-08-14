@@ -3,7 +3,9 @@ import * as actions from 'actions/academic';
 export const initialState = {
     loadingPublicationsByYear: true,
     publicationsByYear: null,
-    publicationTypesCount: null
+    publicationTypesCount: null,
+    loadingPublicationsStats: true,
+    publicationsStats: null
 };
 
 const handlers = {
@@ -26,6 +28,24 @@ const handlers = {
         ...state,
         loadingPublicationsByYear: false,
         publicationsByYear: null
+    }),
+
+    [actions.ACADEMIC_PUBLICATIONS_STATS_LOADING]: (state) => ({
+        ...state,
+        loadingPublicationsStats: true,
+        publicationsStats: null
+    }),
+
+    [actions.ACADEMIC_PUBLICATIONS_STATS_LOADED]: (state, action) => ({
+        ...state,
+        loadingPublicationsStats: false,
+        publicationsStats: action.payload
+    }),
+
+    [actions.ACADEMIC_PUBLICATIONS_STATS_FAILED]: (state) => ({
+        ...state,
+        loadingPublicationsStats: false,
+        publicationsStats: null
     })
 };
 

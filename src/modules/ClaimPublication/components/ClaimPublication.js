@@ -75,8 +75,6 @@ export default class ClaimPublication extends React.Component {
     }
 
     render() {
-        console.log(this.props);
-
         const txt = locale.pages.claimPublications;
         const actions = [
             {
