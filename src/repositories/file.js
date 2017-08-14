@@ -1,4 +1,5 @@
 import {api, generateCancelToken} from 'config';
+import * as fileActions from '../modules/SharedComponents/FileUploader/actions';
 
 export const GET_FILE_UPLOAD_API = 'file/upload/presigned';
 
@@ -17,10 +18,7 @@ export function putUploadFile(pid, file, dispatch) {
                 },
                 onUploadProgress: event => {
                     const completed = Math.floor((event.loaded * 100) / event.total);
-                    dispatch({
-                        type: `FILE_UPLOAD_PROGRESS@${file.name}`,
-                        complete: completed
-                    });
+                    dispatch(fileActions.notifyProgress(file.name, completed));
                 },
                 cancelToken: generateCancelToken().token
             };
@@ -28,6 +26,7 @@ export function putUploadFile(pid, file, dispatch) {
             api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
                 resolve(uploadResponse.data);
             }).catch(uploadError => {
+                dispatch(fileActions.notifyUploadFailed(file.name));
                 reject(uploadError);
             });
         }).catch(getPresignedError => {
