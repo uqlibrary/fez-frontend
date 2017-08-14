@@ -1,3 +1,4 @@
+export appReducer from './app';
 export academicStatsReducer from './academic';
 export accountReducer from './account';
 export authorDetailsReducer from './authorDetails';

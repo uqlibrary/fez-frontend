@@ -16,6 +16,7 @@ class Dashboard extends React.Component {
         publicationsByYear: PropTypes.object,
         publicationTypesCount: PropTypes.array,
         possiblyYourPublicationsCount: PropTypes.object,
+        hidePossiblyYourPublicationsLure: PropTypes.bool,
         publicationsList: PropTypes.array,
         loadingPublicationsStats: PropTypes.bool,
         publicationsStats: PropTypes.object,
@@ -34,15 +35,6 @@ class Dashboard extends React.Component {
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
         }
     }
-
-    // componentWillReceiveProps(nextProps) {
-    //     if (nextProps.account && nextProps.account.id &&
-    //         (!this.props.account || nextProps.account.id !== this.props.account.id)) {
-    //         this.props.actions.countPossiblyYourPublications(nextProps.account.id);
-    //         this.props.actions.loadAuthorPublicationsByYear(nextProps.account.id);
-    //         this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
-    //     }
-    // }
 
     claimYourPublications = () => {
         this.props.history.push('/claim-publications');
@@ -68,7 +60,7 @@ class Dashboard extends React.Component {
                                 <DashboardAuthorProfile authorDetails={this.props.authorDetails}/>
                             </div>
                             {
-                                this.props.possiblyYourPublicationsCount &&
+                                !this.props.hidePossiblyYourPublicationsLure && this.props.possiblyYourPublicationsCount &&
                                 <div className="notification-wrap column is-12">
                                     <Alert title={txt.possiblePublicationsLure.title}
                                            message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
@@ -76,6 +68,7 @@ class Dashboard extends React.Component {
                                            actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
                                            action={this.claimYourPublications}
                                            allowDismiss
+                                           dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}
                                     />
                                 </div>
                             }
