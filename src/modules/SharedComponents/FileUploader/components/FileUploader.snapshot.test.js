@@ -3,7 +3,7 @@ jest.dontMock('./FileUploader');
 import { mount } from 'enzyme';
 import { createStore } from 'redux';
 import Immutable from 'immutable';
-import fileUploadReducer from '../fileUpload';
+import fileUploadReducer from '../reducer';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import { FileUploader } from './FileUploader';
