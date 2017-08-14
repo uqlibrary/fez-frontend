@@ -50,7 +50,7 @@ export default class PublicationForm extends Component {
                 filteredPublicationType[0].formComponent,
                 {
                     vocabId: filteredPublicationType[0].vocabId,
-                    submitting: this.props.submitting
+                    submitting: true // this.props.submitting
                 })
             :
             null;

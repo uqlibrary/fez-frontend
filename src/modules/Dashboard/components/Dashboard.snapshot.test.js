@@ -51,12 +51,17 @@ describe('Dashboard test', () => {
     });
 
     it('renders possibly your publications lure', () => {
-        const wrapper = setup({authorDetails: mock.authorDetails, possiblyYourPublicationsCount: 2});
+        const wrapper = setup({
+            authorDetails: mock.authorDetails,
+            possiblyYourPublicationsCount: mock.possibleCounts.data});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('doesn\'t render possibly your publications lure', () => {
-        const wrapper = setup({authorDetails: mock.authorDetails, possiblyYourPublicationsCount: 2, hidePossiblyYourPublicationsLure: mock.possibleCounts.data});
+        const wrapper = setup({
+            authorDetails: mock.authorDetails,
+            possiblyYourPublicationsCount: mock.possibleCounts.data,
+            hidePossiblyYourPublicationsLure: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

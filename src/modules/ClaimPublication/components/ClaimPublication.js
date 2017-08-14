@@ -67,13 +67,6 @@ export default class ClaimPublication extends React.Component {
         this.props.actions.setClaimPublication(item);
     }
 
-    _navigateToDashboard = () => {
-        // TODO: route should not be hardcoded, should come from config/menu
-        // TODO: should navigation be handled by top-level container only, eg pass on as props:
-        // TODO: this.props.navigateToDashboard() and this.props.navigateToClaimForm(item) <- fixes issue of linking item
-        this.props.history.push('/dashboard');
-    }
-
     render() {
         const txt = locale.pages.claimPublications;
         const actions = [

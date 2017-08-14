@@ -173,7 +173,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
       >
         <TextFieldLabel
           disabled={false}
-          htmlFor="selectedValue-undefined-Publicationsubtype-30005"
+          htmlFor="selectedValue-undefined-Publicationsubtype-975"
           muiTheme={
             Object {
               "appBar": Object {
@@ -599,7 +599,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
           }
         >
           <label
-            htmlFor="selectedValue-undefined-Publicationsubtype-30005"
+            htmlFor="selectedValue-undefined-Publicationsubtype-975"
             style={
               Object {
                 "color": "rgba(0, 0, 0, 0.3)",
@@ -636,7 +636,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
               "top": 8,
             }
           }
-          id="selectedValue-undefined-Publicationsubtype-30005"
+          id="selectedValue-undefined-Publicationsubtype-975"
           labelStyle={
             Object {
               "paddingLeft": 0,
@@ -674,7 +674,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
           }
         >
           <div
-            id="selectedValue-undefined-Publicationsubtype-30005"
+            id="selectedValue-undefined-Publicationsubtype-975"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -1542,7 +1542,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
       >
         <TextFieldLabel
           disabled={false}
-          htmlFor="selectedValue-undefined-Publicationsubtype-29879"
+          htmlFor="selectedValue-undefined-Publicationsubtype-360"
           muiTheme={
             Object {
               "appBar": Object {
@@ -1968,7 +1968,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
           }
         >
           <label
-            htmlFor="selectedValue-undefined-Publicationsubtype-29879"
+            htmlFor="selectedValue-undefined-Publicationsubtype-360"
             style={
               Object {
                 "color": "rgba(0, 0, 0, 0.3)",
@@ -2005,7 +2005,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
               "top": 8,
             }
           }
-          id="selectedValue-undefined-Publicationsubtype-29879"
+          id="selectedValue-undefined-Publicationsubtype-360"
           labelStyle={
             Object {
               "paddingLeft": 0,
@@ -2043,7 +2043,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
           }
         >
           <div
-            id="selectedValue-undefined-Publicationsubtype-29879"
+            id="selectedValue-undefined-Publicationsubtype-360"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
