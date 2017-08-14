@@ -18,6 +18,7 @@ export class FileUploader extends PureComponent {
     };
 
     static defaultProps = {
+        overallProgress: 0,
         locale: {
             instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
             sizeExponent: {
