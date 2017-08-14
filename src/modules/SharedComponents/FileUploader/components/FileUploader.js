@@ -1,17 +1,20 @@
 import React, {PureComponent} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
+import LinearProgress from 'material-ui/LinearProgress';
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
 import './FileUpload.scss';
 
-export default class FileUploader extends PureComponent {
+class FileUploader extends PureComponent {
 
     static propTypes = {
         onChange: PropTypes.func,
         locale: PropTypes.object,
-        defaultConfig: PropTypes.object
+        defaultConfig: PropTypes.object,
+        overallProgress: PropTypes.number
     };
 
     static defaultProps = {
@@ -100,7 +103,27 @@ export default class FileUploader extends PureComponent {
                 }
 
                 { uploadedFilesRow }
+
+
+                {
+                    this.props.overallProgress > 0 &&
+                    <LinearProgress
+                        className="upload-overall"
+                        mode="determinate"
+                        value={ this.props.overallProgress }
+                        size={ 20 }
+                        thickness={ 4 }
+                    />
+                }
             </div>
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        overallProgress: state.get('fileUploadReducer').overall || 0
+    };
+};
+
+export default connect(mapStateToProps)(FileUploader);
