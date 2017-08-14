@@ -46,7 +46,7 @@ export default class BookForm extends Component {
                                 disabled={this.props.submitting}
                                 vocabId={this.props.vocabId}
                                 className="requiredField"
-                                locale={{label: txt.information.fieldLabels.subtype}}
+                                locale={{label: txt.information.fieldLabels.subtype, loading: locale.global.loading}}
                                 validate={[validation.required]} />
                         </div>
                     </div>

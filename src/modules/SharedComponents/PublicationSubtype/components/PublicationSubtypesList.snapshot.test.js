@@ -1,4 +1,5 @@
 jest.dontMock('./PublicationSubtypesList');
+// jest.mock('draft-js/lib/generateRandomKey', () => () => '123');
 
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
@@ -7,8 +8,8 @@ import { PublicationSubtypesList } from './PublicationSubtypesList';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 
-function setup(props) {
-    return mount(<PublicationSubtypesList {...props} />, {
+function setup(props, id) {
+    return mount(<PublicationSubtypesList id={id} {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -27,7 +28,7 @@ describe('PublicationSubtypesList renders correctly', () => {
                 loadPublicationSubtypesList: jest.fn()
             }
         };
-        const wrapper = setup(props);
+        const wrapper = setup(props, 'pubSubTypes1');
 
         const tree = toJson(wrapper);
 
@@ -147,7 +148,7 @@ describe('PublicationSubtypesList renders correctly', () => {
             }
         };
 
-        const wrapper = setup(props);
+        const wrapper = setup(props, 'pubSubTypes2');
 
         const tree = toJson(wrapper);
 
@@ -166,7 +167,7 @@ describe('PublicationSubtypesList renders correctly', () => {
             onChange: updated
         };
 
-        const wrapper = setup(props);
+        const wrapper = setup(props, 'pubSubTypes3');
         expect(mounted).toHaveBeenCalled();
 
         wrapper.instance()._onSubtypeSelected({}, 0, 'Test');
@@ -187,7 +188,7 @@ describe('PublicationSubtypesList renders correctly', () => {
             selectedValue: 'Testing'
         };
 
-        setup(props);
+        setup(props, 'pubSubTypes4');
         expect(updated).toHaveBeenCalled();
     });
 });

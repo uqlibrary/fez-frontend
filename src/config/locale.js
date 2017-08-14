@@ -6,6 +6,7 @@ export default {
     global: {
         title: 'UQ eSpace',
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
+        loading: 'loading...',
         loginAlert: {
             title: 'You are not logged in',
             message: 'Please, login to UQ eSpace for full search results and more services.',

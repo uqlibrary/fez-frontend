@@ -60,7 +60,9 @@ class Dashboard extends React.Component {
                                 <DashboardAuthorProfile authorDetails={this.props.authorDetails}/>
                             </div>
                             {
-                                !this.props.hidePossiblyYourPublicationsLure && this.props.possiblyYourPublicationsCount &&
+                                !this.props.hidePossiblyYourPublicationsLure
+                                && this.props.possiblyYourPublicationsCount
+                                && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
                                 <div className="notification-wrap column is-12">
                                     <Alert title={txt.possiblePublicationsLure.title}
                                            message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
