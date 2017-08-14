@@ -121,6 +121,7 @@ export default class PublicationForm extends Component {
                             <RaisedButton
                                 fullWidth
                                 label={txt.cancel}
+                                disabled={this.props.submitting}
                                 onTouchTap={this._showConfirmation} />
                         </div>
                         {this.props.formValues.get('rek_display_type') > 0 &&
