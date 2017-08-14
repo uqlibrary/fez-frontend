@@ -361,22 +361,6 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
-            dialog: {
-                success: {
-                    title: 'Your record has been submitted',
-                    content: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
-                    primaryButtonLabel: 'Ok',
-                    primaryLink: '/dashboard',
-                    secondaryButtonLabel: 'Add another missing record'
-                },
-                cancel: {
-                    title: 'Cancel adding a missing record',
-                    content: 'Are you sure you want to cancel adding this record?',
-                    primaryButtonLabel: 'Yes',
-                    primaryLink: '/dashboard',
-                    secondaryButtonLabel: 'No'
-                }
-            },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Abandon workflow',
                 confirmationMessage: 'Are you sure you want to abandon workflow?',

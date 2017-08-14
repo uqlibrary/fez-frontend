@@ -35,6 +35,13 @@ export default class ClaimPublicationForm extends Component {
         this.props.history.go(-1);
     }
 
+    _navigateToDashboard = () => {
+        // TODO: route should not be hardcoded, should come from config/menu
+        // TODO: should navigation be handled by top-level container only, eg pass on as props:
+        // TODO: this.props.navigateToDashboard() and this.props.navigateToClaimForm(item) <- fixes issue of linking item
+        this.props.history.push('/dashboard');
+    };
+
     _showConfirmation = () => {
         if (this.props.pristine) {
             this._navigateToPreviousPage();
@@ -42,6 +49,13 @@ export default class ClaimPublicationForm extends Component {
             this.cancelConfirmationBox.showConfirmation();
         }
     }
+
+    _handleKeyboardFormSubmit = (event) => {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            this.props.handleSubmit();
+        }
+    };
 
     render() {
         const txt = locale.components.claimPublicationForm;
@@ -57,7 +71,7 @@ export default class ClaimPublicationForm extends Component {
         }
         return (
             <StandardPage title={txt.title}>
-                <form>
+                <form onKeyDown={this._handleKeyboardFormSubmit}>
                     <ConfirmDialogBox
                         onRef={ref => (this.cancelConfirmationBox = ref)}
                         onAction={this._navigateToPreviousPage}
@@ -65,7 +79,8 @@ export default class ClaimPublicationForm extends Component {
 
                     <ConfirmDialogBox
                         onRef={ref => (this.successConfirmationBox = ref)}
-                        onAction={this._navigateToPreviousPage}
+                        onAction={this._navigateToDashboard}
+                        onCancelAction={this._navigateToPreviousPage}
                         locale={txt.successWorkflowConfirmation}/>
 
                     <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
@@ -75,13 +90,14 @@ export default class ClaimPublicationForm extends Component {
                     {
                         !author &&
                         <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
-                            <AuthorLinking dataSource={[]}/>
+                            <AuthorLinking disabled={this.props.submitting} dataSource={[]}/>
                         </StandardCard>
                     }
 
                     <StandardCard title={txt.comments.title} help={txt.comments.help}>
                         <Field
                             component={TextField}
+                            disabled={this.props.submitting}
                             name="comments"
                             type="text"
                             fullWidth
@@ -91,6 +107,7 @@ export default class ClaimPublicationForm extends Component {
 
                         <Field
                             component={TextField}
+                            disabled={this.props.submitting}
                             name="rek_link"
                             type="text"
                             fullWidth
@@ -99,14 +116,14 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <FileUploader />
+                        <FileUploader disabled={this.props.submitting} />
                     </StandardCard>
                     {
                         this.props.submitFailed && this.props.error &&
                         <Alert type="error_outline" title="Error" message={this.props.error} outsideLayout/>
                     }
                     {
-                        this.props.dirty && this.props.invalid && !this.props.submitFailed &&
+                        this.props.dirty && this.props.invalid &&
                         <Alert type="warning" title="Validation"
                                message={'Form cannot be submitted until all fields are valid...'} outsideLayout/>
                     }
@@ -127,6 +144,7 @@ export default class ClaimPublicationForm extends Component {
                                 <RaisedButton
                                     fullWidth
                                     label={txt.cancel}
+                                    disabled={this.props.submitting}
                                     onTouchTap={this._showConfirmation}/>
                             </div>
                             <div className="column is-narrow-desktop">
