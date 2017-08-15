@@ -24,13 +24,13 @@ export function createNewRecord(data) {
         return postRecord(recordRequest)
             .then(response => {
                 // set a pid on a new record
-                data.rek_pid = response.rek_pid;
+                data.rek_pid = response.data.rek_pid;
                 // process files
-                if (!data.files || data.files.length === 0) return response;
-                return putUploadFiles(response.rek_pid, data.files, dispatch);
+                if (!data.files || data.files.length === 0) return response.data;
+                return putUploadFiles(response.data.rek_pid, data.files, dispatch);
             })
             .then(response => {
-                if (!data.files || data.files.length === 0) return response;
+                if (!data.files || data.files.length === 0) return response.data;
                 // process uploaded files into API format for a patch
                 const recordPatch = {
                     ...recordFileAttachment(data.files)
@@ -40,9 +40,9 @@ export function createNewRecord(data) {
             .then(response => {
                 dispatch({
                     type: RECORD_CREATED,
-                    payload: response
+                    payload: response.data
                 });
-                return Promise.resolve(response);
+                return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
