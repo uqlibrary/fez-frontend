@@ -101,21 +101,20 @@ export default class PublicationForm extends Component {
                 }
                 {
                     this.props.submitFailed && this.props.error &&
-                    <Alert type="error_outline" title="Error" message={this.props.error} outsideLayout />
+                    <Alert type="error_outline" title="Error" message={this.props.error}  />
                 }
                 {
                     this.props.dirty && this.props.invalid && !this.props.submitFailed &&
-                    <Alert type="warning" title="Validation" message={'Form cannot be submitted until all fields are valid...'} outsideLayout />
+                    <Alert type="warning" title="Validation" message={'Form cannot be submitted until all fields are valid...'}  />
                 }
                 {
                     this.props.submitting &&
-                    <Alert type="info_outline" title="Saving" message={'New publication is being saved...'} outsideLayout />
+                    <Alert type="info_outline" title="Saving" message={'New publication is being saved...'}  />
                 }
                 {
                     this.props.submitSucceeded &&
-                    <Alert type="info" title="Success" message={'New publication has been saved...'} outsideLayout />
+                    <Alert type="info" title="Success" message={'New publication has been saved...'}  />
                 }
-                <div className="layout-card">
                     <div className="columns action-buttons">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop">
@@ -137,7 +136,6 @@ export default class PublicationForm extends Component {
                         </div>
                         }
                     </div>
-                </div>
             </form>
         );
     }
