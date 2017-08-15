@@ -4,22 +4,41 @@ import PropTypes from 'prop-types';
 import {AuthorsPublicationsPerYearChart, AuthorsPublicationTypesCountChart, Alert, InlineLoader, StandardCard, StandardPage} from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/PublicationsList';
+import RaisedButton from 'material-ui/RaisedButton';
+import {Tabs, Tab} from 'material-ui/Tabs';
 import {locale} from 'config';
 
 class Dashboard extends React.Component {
 
     static propTypes = {
+        // account data
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
         authorDetailsLoading: PropTypes.bool,
+
+        // graph data
         loadingPublicationsByYear: PropTypes.bool,
         publicationsByYear: PropTypes.object,
         publicationTypesCount: PropTypes.array,
+
+        // lure data
         possiblyYourPublicationsCount: PropTypes.object,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
-        publicationsList: PropTypes.array,
+
+        // wos/scopus data
         loadingPublicationsStats: PropTypes.bool,
         publicationsStats: PropTypes.object,
+
+        // author's latest publications
+        loadingLatestPublications: PropTypes.bool,
+        latestPublicationsList: PropTypes.array,
+        totalPublicationsCount: PropTypes.number,
+
+        // author's trending publications
+        loadingTrendingPublications: PropTypes.bool,
+        trendingPublicationsList: PropTypes.object,
+
+        // navigations, app actions
         actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
     };
@@ -33,11 +52,17 @@ class Dashboard extends React.Component {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsByYear(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
+            this.props.actions.searchLatestPublications(this.props.account.id);
+            this.props.actions.searchTrendingPublications(this.props.account.id);
         }
     }
 
-    claimYourPublications = () => {
+    _claimYourPublications = () => {
         this.props.history.push('/claim-publications');
+    };
+
+    _viewYourResearch = () => {
+        this.props.history.push('/research');
     };
 
     render() {
@@ -64,14 +89,14 @@ class Dashboard extends React.Component {
                                 && this.props.possiblyYourPublicationsCount
                                 && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
                                 <div className="notification-wrap column is-12">
-                                    <Alert title={txt.possiblePublicationsLure.title}
-                                           message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
-                                           type={txt.possiblePublicationsLure.type}
-                                           actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
-                                           action={this.claimYourPublications}
-                                           allowDismiss
-                                           dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}
-                                    />
+                                    <Alert
+                                        title={txt.possiblePublicationsLure.title}
+                                        message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
+                                        type={txt.possiblePublicationsLure.type}
+                                        actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
+                                        action={this._claimYourPublications}
+                                        allowDismiss
+                                        dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
                                 </div>
                             }
 
@@ -106,10 +131,50 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
                 }
+
                 {
-                    !loading && this.props.publicationsList &&
-                    <StandardCard title={txt.myPublications.title}>
-                        <PublicationsList publicationsList={this.props.publicationsList} />
+                    !loading && !this.props.loadingTrendingPublications && !this.props.loadingLatestPublications &&
+                    <StandardCard>
+                        <Tabs>
+                            <Tab label={txt.myPublications.title} value="myPublications">
+                                {
+                                    !loading && !this.props.loadingLatestPublications && this.props.latestPublicationsList &&
+                                    <div>
+                                        <PublicationsList publicationsList={this.props.latestPublicationsList}
+                                                          showDefaultActions/>
+                                        <div className="is-pulled-right">
+                                            <RaisedButton secondary
+                                                          label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
+                                                          onTouchTap={this._viewYourResearch}/>
+                                        </div>
+                                    </div>
+                                }
+                            </Tab>
+                            <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications">
+                                {
+                                    !loading && !this.props.loadingTrendingPublications && this.props.trendingPublicationsList &&
+                                    <div>
+                                        {
+                                            txt.myTrendingPublications.metrics.map((metrics, index) => (
+                                                <div key={'metrics_' + index}>
+                                                    <h2>{metrics.title}</h2>
+                                                    {/* TODO: remove tempirary publication record render */}
+                                                    {
+                                                        this.props.trendingPublicationsList[metrics.key].map((item, itemIndex) => (
+                                                            <div key={'trending_publication_' + itemIndex}>
+                                                                {item.title} {item.count} +{item.difference}
+                                                            </div>
+                                                        ))
+                                                    }
+                                                    {/* TODO: when api returns full publication record - use publicationList to display items */}
+                                                    {/* <PublicationsList publicationsList={this.props.trendingPublicationsList[metrics.key]}/> */}
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                }
+                            </Tab>
+                        </Tabs>
                     </StandardCard>
                 }
             </StandardPage>

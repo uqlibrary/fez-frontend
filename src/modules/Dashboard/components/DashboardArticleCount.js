@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {locale} from 'config';
 
 const DashboardArticleCount = ({values}) => {
-    const txt = locale.components.dashboardArticleCount;
+    const txt = locale.pages.dashboard.header.dashboardArticleCount;
     return (
         <div className="authorCounter is-centered">
             {values.articleCount && values.articleFirstYear && values.articleLastYear && (

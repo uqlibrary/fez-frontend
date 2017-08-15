@@ -1,4 +1,6 @@
-export const quickTemplates = [
+export const quickTemplates = {
+    "total": 12,
+    "data":[
     {
         'id': 1,
         'title': 'UQ staff and students view only'
@@ -47,4 +49,4 @@ export const quickTemplates = [
         'id': 12,
         'title': 'Admin List and View only'
     }
-];
+]};

@@ -92,6 +92,8 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
 // Mock claim publication results endpoint response
 mock.onGet(/publications\/possible-unclaimed\/[a-z0-9]/).reply(200, mockData.possibleUnclaimed);
 mock.onGet(/(publications\/possible-counts)/).reply(200, mockData.possibleCounts);
+mock.onGet(/(publications\/claimed)/).reply(200, mockData.claimedPublications);
+mock.onGet(/(academic\/[a-z0-9]\/trending_publications)/).reply(200, mockData.trendingPublications);
 // mock.onGet(/(publications\/possible-unclaimed)/).reply(200, []);
 
 // Mock hide publication results endpoint response

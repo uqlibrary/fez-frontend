@@ -100,7 +100,7 @@ export default class ClaimPublication extends React.Component {
                     </div>
                 }
                 {
-                    ((!this.props.authorLoading && !this.props.author) || (!this.props.loadingPublications && this.props.publicationsList.length === 0)) &&
+                    !this.props.authorLoading && ((!this.props.authorLoading && !this.props.author) || (!this.props.loadingPublications && this.props.publicationsList.length === 0)) &&
                     <StandardCard {...txt.noResultsFound}>
                         {txt.noResultsFound.text}
                     </StandardCard>
@@ -116,7 +116,7 @@ export default class ClaimPublication extends React.Component {
                                         .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
                                 }
                             </div>
-                            <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
+                            <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
                         </StandardCard>
                         <div className="layout-card">
                             <div className="columns">

@@ -50,7 +50,7 @@ export default class PublicationForm extends Component {
                 filteredPublicationType[0].formComponent,
                 {
                     vocabId: filteredPublicationType[0].vocabId,
-                    submitting: true // this.props.submitting
+                    submitting: this.props.submitting
                 })
             :
             null;
@@ -80,6 +80,7 @@ export default class PublicationForm extends Component {
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field component={SelectField}
+                           disabled={this.props.submitting}
                            name="rek_display_type"
                            fullWidth
                            floatingLabelText={txt.publicationType.inputLabelText}

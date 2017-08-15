@@ -1,11 +1,4 @@
-import {
-    POSSIBLY_YOUR_PUBLICATIONS_LOADING,
-    POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-    POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-    COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-    PUBLICATION_TO_CLAIM_SET,
-    PUBLICATION_TO_CLAIM_CLEAR
-} from 'actions';
+import * as actions from 'actions/claimPublications';
 
 export const initialState = {
     publicationToClaim: null,
@@ -16,7 +9,7 @@ export const initialState = {
 
 const handlers = {
 
-    [POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => {
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
             loadingPublications: true,
@@ -24,21 +17,21 @@ const handlers = {
         };
     },
 
-    [PUBLICATION_TO_CLAIM_SET]: (state, action) => {
+    [actions.PUBLICATION_TO_CLAIM_SET]: (state, action) => {
         return {
             ...state,
             publicationToClaim: action.payload
         };
     },
 
-    [PUBLICATION_TO_CLAIM_CLEAR]: (state) => {
+    [actions.PUBLICATION_TO_CLAIM_CLEAR]: (state) => {
         return {
             ...state,
             publicationToClaim: null
         };
     },
 
-    [POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
         console.log(action);
         return {
             ...state,
@@ -47,7 +40,7 @@ const handlers = {
         };
     },
 
-    [POSSIBLY_YOUR_PUBLICATIONS_FAILED]: (state) => {
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED]: (state) => {
         return {
             ...state,
             loadingPublications: false,
@@ -55,7 +48,7 @@ const handlers = {
         };
     },
 
-    [COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
+    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
         return {
             ...state,
             possibleCounts: action.payload

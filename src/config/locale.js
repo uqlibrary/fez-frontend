@@ -61,8 +61,26 @@ export default {
     pages: {
         dashboard: {
             loading: 'Loading your dashboard...',
-            myPublications: {
-                title: 'My publications'
+            header: {
+                help: {
+                    title: 'Your dashboard',
+                    text: 'Your profile help....',
+                    buttonLabel: 'OK'
+                },
+                dashboardArticleCount: {
+                    yearSeparator: ' to ',
+                    countTitle: 'eSpace articles from'
+                },
+                dashboardAuthorAvatar: {
+                    ariaPrefix: 'Photograph of '
+                },
+                dashboardResearcherIds: {
+                    researcherIsLinked: 'Your [resource] Id is [id]',
+                    researcherIsNotLinked: 'You are not linked to [resource]',
+                    orcidUrlPrefix: 'http://orcid.org/',
+                    orcidLinkPrefix: 'orcid.org/',
+                    orcidlinkLabel: 'Click to visit your ORCId profile'
+                }
             },
             possiblePublicationsLure: {
                 title: 'Claim now!',
@@ -76,7 +94,36 @@ export default {
             },
             publicationTypesCountChart: {
                 title: 'Publication types overview'
-            }
+            },
+            myPublications: {
+                title: 'My publications',
+                viewAllButtonLabel: 'View all'
+            },
+            myTrendingPublications: {
+                title: 'My trending publications',
+                metrics: [
+                    { key: 'altmetric', title: 'Altmetric score'},
+                    { key: 'thomson', title: 'Web of Science citation count'},
+                    { key: 'scopus', title: 'Scopus citation count'},
+                ],
+                help: {
+                    title: 'About these metrics',
+                    text: (
+                        <div>
+                            <p>
+                                For the above metrics, the larger number is the total current citation count, and the +
+                                (plus) value indicates how much the citation count has changed in the last month. The
+                                Altmetric score plus value is slightly different, as it shows the 3 most recent
+                                increases first, ranging from 1 day to 1 year.
+                            </p>
+                            <p>
+                                You can click on the number as a link to see who is citing each publication, or in the
+                                case of Altmetric who is referencing the publication in social media and news outlets.
+                            </p>
+                        </div>),
+                    buttonLabel: 'OK'
+                },
+            },
         },
         about: {
             title: 'About UQ eSpace',
@@ -141,7 +188,20 @@ export default {
                       </p>
                   </div>
                 ),
-                buttonLabel: 'no worries!'
+                buttonLabel: 'OK'
+            }
+        },
+        research: {
+            title: 'My reserach',
+            text: ( <div><p>all your publications....</p></div>),
+            help: {
+                title: 'My research help',
+                text: (
+                    <div>
+                        your research help....
+                    </div>
+                ),
+                buttonLabel: 'OK'
             }
         },
         addRecord: {
@@ -423,103 +483,12 @@ export default {
                 confirmButtonLabel: 'OK'
             },
         },
-        publicationClaimFrom: {
-            title: 'Claim a publication',
-            authorLinking: {
-                title: 'Author linking',
-                subTitle: 'We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below:',
-                confirmation: 'I confirm and understand that I am claiming this publication under the above name, and confirm this is me',
-                formSectionPrefix: 'authorLinking',
-                instructions: 'Please select an author to proceed',
-                noAuthorSelectedMessage: 'Please select an author before submitting the form'
-            },
-            publicationDetails: {
-                title: 'You are claiming to be an author for the following item:',
-                help: {
-                    title: 'Claim a publication',
-                    text: (
-                      <div>
-                          <p>
-                              Mauris pharetra vel arcu in hendrerit. Ut iaculis, quam id cursus fringilla, velit enim
-                              sodales dui, sed commodo massa justo quis dui. Nulla ornare massa nibh, quis laoreet eros
-                              ultrices nec. Curabitur efficitur ipsum ut metus dignissim ornare. Vestibulum fringilla
-                              viverra tortor ac hendrerit.
-                          </p>
-                      </div>
-                    ),
-                    button: 'OK'
-                },
-            },
-            comments: {
-                title: 'If necessary, please suggest changes or upload additional files below',
-                fields: {
-                    descriptionLabel: 'Type edits/changes/comments here'
-                }
-            },
-            files: {
-                title: 'Upload new files',
-                fields: {
-                    filenameLabel: 'Filename selected',
-                    filenameRestrictions: (
-                      <div className="fileInstructions">
-                          <h3>File name restrictions</h3>
-                          <div style={{width: '100%'}}>
-                              <ul>
-                                  <li>Only upper or lowercase alphanumeric characters or underscores (a0z, A-Z, _ and
-                                      0-9 only)
-                                  </li>
-                                  <li>Only numbers and lowercase characters in the file extension</li>
-                                  <li>Under 45 characters</li>
-                                  <li>Only one file extension (on period (.) character) and</li>
-                                  <li>Starting with a letter. Eg "s12345678_phd_thesis.pdf"</li>
-                              </ul>
-                          </div>
-                      </div>
-                    ),
-                    accessConditionsLabel: 'Access conditions',
-                    embargoDateLabel: 'Embargo date',
-                    descriptionLabel: 'Description'
-                },
-                buttons: {
-                    browseLabel: 'Browse files'
-                }
-            },
-            dialog: {
-                success: {
-                    title: 'Claim publication',
-                    content: 'The publication has been successfully claimed.',
-                    primaryButtonLabel: 'Ok',
-                    primaryLink: '/claim-publications'
-                },
-                cancel: {
-                    title: 'Cancel claiming publication',
-                    content: 'Are you sure you want to cancel claiming this publication?',
-                    primaryButtonLabel: 'Yes',
-                    primaryLink: '/claim-publications',
-                    secondaryButtonLabel: 'No'
-                }
-            }
-        },
-        dashboardArticleCount: {
-            yearSeparator: ' to ',
-            countTitle: 'eSpace articles from'
-        },
-        dashboardAuthorAvatar: {
-            ariaPrefix: 'Photograph of '
-        },
-        dashboardResearcherIds: {
-            researcherIsLinked: 'Your [resource] Id is [id]',
-            researcherIsNotLinked: 'You are not linked to [resource]',
-            orcidUrlPrefix: 'http://orcid.org/',
-            orcidLinkPrefix: 'orcid.org/',
-            orcidlinkLabel: 'Click to visit your ORCId profile'
-        },
-        dashboard: {
-            help: {
-                title: 'Your dashboard profile',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.',
-                button: 'OK'
-            },
+        publicationCitation: {
+            defaultActions: [
+                {key: 'fullMetrics', primaryText: 'Full article metrics'},
+                // {key: 'fixRecord', primaryText: 'Fix record/upload a file'}, // TODO: implement fixRecord
+                // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
+            ]
         }
     },
     sharedComponents: {

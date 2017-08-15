@@ -1,7 +1,7 @@
 /* eslint-disable */
 export const publicationSubtypeList = {
     // book
-    453581: [
+    453581: {"total":6,"data": [
         {
         "cvr_id": 4706,
         "cvr_parent_cvo_id": 453581,
@@ -104,9 +104,9 @@ export const publicationSubtypeList = {
             "cvo_policy": null,
             "controlled_vocab_children": []
         }
-    }],
+    }]},
     // journal article
-    453573: [
+    453573: {"total":6,"data": [
         {
             "cvr_id": 4699,
             "cvr_parent_cvo_id": 453573,
@@ -261,5 +261,5 @@ export const publicationSubtypeList = {
                 "controlled_vocab_children": []
             }
         }
-    ]
+    ]}
 };

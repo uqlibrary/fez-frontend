@@ -107,7 +107,7 @@ export default class AddRecord extends React.Component {
                       this.props.publicationsList.length > 0 &&
                       <StandardCard {...txt.searchResults}>
                           <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length)}</div>
-                          <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
+                          <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
                       </StandardCard>
                   }
 

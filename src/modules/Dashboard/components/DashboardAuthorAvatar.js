@@ -6,7 +6,7 @@ import {locale} from 'config';
 const profileFallbackImage = require('../../../../public/images/avatar.svg');
 
 const DashboardAuthorAvatar = ({values}) => {
-    const txt = locale.components.dashboardAuthorAvatar;
+    const txt =  locale.pages.dashboard.header.dashboardAuthorAvatar;
 
     return (
         <div className="authorAvatar">
