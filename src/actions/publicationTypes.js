@@ -38,10 +38,10 @@ export function loadPublicationSubtypesList(id) {
         dispatch({
             type: PUBLICATION_SUBTYPES_LOADING
         });
-        getPublicationSubtypesList(id).then(data => {
+        getPublicationSubtypesList(id).then(result => {
             dispatch({
                 type: PUBLICATION_SUBTYPES_LOADED,
-                payload: data
+                payload: result.data
             });
         }).catch(() => {
             dispatch({

@@ -2,12 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
-import { FileUploadField } from 'modules/SharedComponents';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-import {SelectField, StandardCard, Alert, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
-
+import {SelectField, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes} from 'config';
 
 import {BookForm, JournalArticleForm} from './Forms';
@@ -95,7 +93,7 @@ export default class PublicationForm extends Component {
                 {
                     this.props.formValues.get('rek_display_type') > 0 &&
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <Field name="files" component={ FileUploadField } />
+                        <Field name="files" component={ FileUploadField } disabled={this.props.submitting} />
                     </StandardCard>
                 }
                 {
