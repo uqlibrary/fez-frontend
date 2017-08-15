@@ -70,7 +70,7 @@ exports[`App tests for user account and author status User is logged in but are 
           },
           Object {
             "divider": true,
-            "path": "/1502337705644",
+            "path": "/234234234242",
           },
           Object {
             "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
@@ -132,7 +132,7 @@ exports[`App tests for user account and author status User is logged in but are 
         />
         <Route
           divider={true}
-          path="/1502337705644"
+          path="/234234234242"
         />
         <Route
           linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
@@ -233,12 +233,14 @@ exports[`App tests for user account and author status User is not logged in and 
       style={Object {}}
     >
       <Alert
+        allowDismiss={false}
         message="Please, login to UQ eSpace for full search results and more services."
         outsideLayout={true}
         title="You are not logged in"
         type="info_outline"
       />
       <Alert
+        allowDismiss={false}
         message="Please contact the UQ Manager to resolve this."
         outsideLayout={true}
         title="You are not registered in UQ eSpace as an author"
@@ -344,7 +346,7 @@ exports[`App tests for user account and author status User logged in and is an a
           },
           Object {
             "divider": true,
-            "path": "/1502337705624",
+            "path": "/234234234242",
           },
           Object {
             "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
@@ -406,7 +408,7 @@ exports[`App tests for user account and author status User logged in and is an a
         />
         <Route
           divider={true}
-          path="/1502337705624"
+          path="/234234234242"
         />
         <Route
           linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
@@ -505,7 +507,7 @@ exports[`App tests for user account and author status User logged in but is not 
           },
           Object {
             "divider": true,
-            "path": "/1502337705633",
+            "path": "/234234234242",
           },
           Object {
             "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
@@ -537,6 +539,7 @@ exports[`App tests for user account and author status User logged in but is not 
       style={Object {}}
     >
       <Alert
+        allowDismiss={false}
         message="Please contact the UQ Manager to resolve this."
         outsideLayout={true}
         title="You are not registered in UQ eSpace as an author"
@@ -573,7 +576,7 @@ exports[`App tests for user account and author status User logged in but is not 
         />
         <Route
           divider={true}
-          path="/1502337705633"
+          path="/234234234242"
         />
         <Route
           linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"

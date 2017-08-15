@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard test doesn't render possibly your publications lure 1`] = `
+<StandardPage>
+  <div
+    className="layout-card"
+  >
+    <div
+      className="columns is-multiline is-gapless"
+    >
+      <div
+        className="column is-12 is-hidden-mobile"
+      >
+        <DashboardProfile
+          authorDetails={
+            Object {
+              "s2222222": Object {
+                "orcid_id": null,
+                "publons_id": null,
+                "researcher_id": null,
+                "scopus_id": null,
+              },
+              "uqresearcher": Object {
+                "espace": Object {
+                  "doc_count": "282",
+                  "first_year": 1990,
+                  "last_year": 2017,
+                },
+                "espace_id": 20288,
+                "family_name": "Researcher",
+                "given_name": "J",
+                "google_scholar_id": "",
+                "image_exists": 1,
+                "mypub_url": "uqresearcher",
+                "orcid_id": "0000-0001-1111-1111",
+                "org_units": Array [
+                  "Institute for Molecular Bioscience",
+                  "School of Chemistry and Molecular Biosciences",
+                  "The University of Queensland Diamantina Institute",
+                ],
+                "positions": Array [
+                  "Affiliate Professor",
+                  "Affiliate Professorial Res Fellow",
+                  "ARC Australian Laureate Fellow",
+                ],
+                "publons_id": "",
+                "researcher_id": "G-111-1111",
+                "scopus_id": "",
+                "staff_id": "0000111",
+                "title": "Professor",
+                "uqr_id": 14,
+                "username": "uqresearcher",
+              },
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`Dashboard test renders alert for non-authors 1`] = `<StandardPage />`;
+
+exports[`Dashboard test renders dashboard header only 1`] = `
+<StandardPage>
+  <div
+    className="layout-card"
+  >
+    <div
+      className="columns is-multiline is-gapless"
+    >
+      <div
+        className="column is-12 is-hidden-mobile"
+      >
+        <DashboardProfile
+          authorDetails={
+            Object {
+              "s2222222": Object {
+                "orcid_id": null,
+                "publons_id": null,
+                "researcher_id": null,
+                "scopus_id": null,
+              },
+              "uqresearcher": Object {
+                "espace": Object {
+                  "doc_count": "282",
+                  "first_year": 1990,
+                  "last_year": 2017,
+                },
+                "espace_id": 20288,
+                "family_name": "Researcher",
+                "given_name": "J",
+                "google_scholar_id": "",
+                "image_exists": 1,
+                "mypub_url": "uqresearcher",
+                "orcid_id": "0000-0001-1111-1111",
+                "org_units": Array [
+                  "Institute for Molecular Bioscience",
+                  "School of Chemistry and Molecular Biosciences",
+                  "The University of Queensland Diamantina Institute",
+                ],
+                "positions": Array [
+                  "Affiliate Professor",
+                  "Affiliate Professorial Res Fellow",
+                  "ARC Australian Laureate Fellow",
+                ],
+                "publons_id": "",
+                "researcher_id": "G-111-1111",
+                "scopus_id": "",
+                "staff_id": "0000111",
+                "title": "Professor",
+                "uqr_id": 14,
+                "username": "uqresearcher",
+              },
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`Dashboard test renders possibly your publications lure 1`] = `
+<StandardPage>
+  <div
+    className="layout-card"
+  >
+    <div
+      className="columns is-multiline is-gapless"
+    >
+      <div
+        className="column is-12 is-hidden-mobile"
+      >
+        <DashboardProfile
+          authorDetails={
+            Object {
+              "s2222222": Object {
+                "orcid_id": null,
+                "publons_id": null,
+                "researcher_id": null,
+                "scopus_id": null,
+              },
+              "uqresearcher": Object {
+                "espace": Object {
+                  "doc_count": "282",
+                  "first_year": 1990,
+                  "last_year": 2017,
+                },
+                "espace_id": 20288,
+                "family_name": "Researcher",
+                "given_name": "J",
+                "google_scholar_id": "",
+                "image_exists": 1,
+                "mypub_url": "uqresearcher",
+                "orcid_id": "0000-0001-1111-1111",
+                "org_units": Array [
+                  "Institute for Molecular Bioscience",
+                  "School of Chemistry and Molecular Biosciences",
+                  "The University of Queensland Diamantina Institute",
+                ],
+                "positions": Array [
+                  "Affiliate Professor",
+                  "Affiliate Professorial Res Fellow",
+                  "ARC Australian Laureate Fellow",
+                ],
+                "publons_id": "",
+                "researcher_id": "G-111-1111",
+                "scopus_id": "",
+                "staff_id": "0000111",
+                "title": "Professor",
+                "uqr_id": 14,
+                "username": "uqresearcher",
+              },
+            }
+          }
+        />
+      </div>
+      <div
+        className="notification-wrap column is-12"
+      >
+        <Alert
+          action={[Function]}
+          actionButtonLabel="Claim your publications now"
+          allowDismiss={true}
+          message="We have found 5 record(s) that could possibly be your work."
+          outsideLayout={false}
+          title="Claim now!"
+          type="warning"
+        />
+      </div>
+    </div>
+  </div>
+</StandardPage>
+`;

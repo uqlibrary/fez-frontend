@@ -26,7 +26,8 @@ export class PublicationSubtypesList extends Component {
             value: 'controlled_vocab.cvo_title'
         },
         locale: {
-            label: 'Publication subtype'
+            label: 'Publication subtype',
+            loading: 'loading...'
         }
     };
 
@@ -70,9 +71,10 @@ export class PublicationSubtypesList extends Component {
             const text = this.getValue(item, dataSourceConfig.text);
             return <MenuItem value={ value } primaryText={ text } key={ value }/>;
         });
-        const loadingIndicationText = subtypesLoading ? locale.label + ' loading...' : locale.label;
+        const loadingIndicationText = `${locale.label} ${subtypesLoading ? locale.loading : ''}`;
         return (
             <SelectField
+                id="selectedValue"
                 name="selectedValue"
                 fullWidth
                 className={ this.props.className }

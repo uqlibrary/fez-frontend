@@ -153,16 +153,17 @@ export default class AddRecord extends React.Component {
     }
 
     render() {
+        const txt = locale.pages.addRecord;
         return (
-          <StandardPage title={locale.pages.addRecord.title}>
+          <StandardPage title={txt.title}>
               <ConfirmDialogBox onRef={ref => (this.confirmationBox = ref)}
                                 onAction={this._navigateToDashboard}
-                                locale={locale.pages.addRecord.confirmationDialog}/>
+                                locale={txt.confirmationDialog}/>
 
               <div className="Stepper">
                   <Stepper activeStep={this.state.stepperIndex} style={{padding: '0', margin: '-10px auto'}}>
                       {
-                          locale.pages.addRecord.stepper.map((step, index) => {
+                          txt.stepper.map((step, index) => {
                               return (<Step key={index}>
                                   <StepLabel
                                     style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{step.label}</StepLabel>
@@ -175,7 +176,7 @@ export default class AddRecord extends React.Component {
                   {
                       this.state.stepperIndex === 0 &&
                       <PublicationSearchForm
-                        locale={locale.pages.addRecord.step1}
+                        locale={txt.step1}
                         onSubmit={this._performSearch}/>
                   }
                   {

@@ -15,6 +15,7 @@ const mapStateToProps = (state) => {
         authorDetailsLoading: state.get('accountReducer').authorDetailsLoading,
         possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts,
         ...state.get('academicStatsReducer'),
+        ...state.get('appReducer'),
         publicationsList: possibleUnclaimedMockData.data
     };
 };

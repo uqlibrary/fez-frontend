@@ -13,9 +13,11 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
       "value": "controlled_vocab.cvo_title",
     }
   }
+  id="pubSubTypes2"
   locale={
     Object {
       "label": "Publication subtype",
+      "loading": "loading...",
     }
   }
   subtypesList={
@@ -135,8 +137,9 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
   <SelectField
     autoWidth={false}
     disabled={false}
-    floatingLabelText="Publication subtype"
+    floatingLabelText="Publication subtype "
     fullWidth={true}
+    id="selectedValue"
     maxHeight={250}
     multiple={false}
     name="selectedValue"
@@ -145,8 +148,9 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
     <TextField
       disabled={false}
       floatingLabelFixed={false}
-      floatingLabelText="Publication subtype"
+      floatingLabelText="Publication subtype "
       fullWidth={true}
+      id="selectedValue"
       multiLine={false}
       name="selectedValue"
       rows={1}
@@ -173,7 +177,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
       >
         <TextFieldLabel
           disabled={false}
-          htmlFor="selectedValue-undefined-Publicationsubtype-25174"
+          htmlFor="selectedValue"
           muiTheme={
             Object {
               "appBar": Object {
@@ -599,7 +603,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
           }
         >
           <label
-            htmlFor="selectedValue-undefined-Publicationsubtype-25174"
+            htmlFor="selectedValue"
             style={
               Object {
                 "color": "rgba(0, 0, 0, 0.3)",
@@ -616,7 +620,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
               }
             }
           >
-            Publication subtype
+            Publication subtype 
           </label>
         </TextFieldLabel>
         <DropDownMenu
@@ -636,7 +640,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
               "top": 8,
             }
           }
-          id="selectedValue-undefined-Publicationsubtype-25174"
+          id="selectedValue"
           labelStyle={
             Object {
               "paddingLeft": 0,
@@ -674,7 +678,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
           }
         >
           <div
-            id="selectedValue-undefined-Publicationsubtype-25174"
+            id="selectedValue"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -779,7 +783,7 @@ exports[`PublicationSubtypesList renders correctly with subtypes list 1`] = `
                       }
                     }
                   >
-                    Publication subtype
+                    Publication subtype 
                   </div>
                   <IconButton
                     disableTouchRipple={false}
@@ -1493,9 +1497,11 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
       "value": "controlled_vocab.cvo_title",
     }
   }
+  id="pubSubTypes1"
   locale={
     Object {
       "label": "Publication subtype",
+      "loading": "loading...",
     }
   }
   subtypesList={Array []}
@@ -1504,8 +1510,9 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
   <SelectField
     autoWidth={false}
     disabled={false}
-    floatingLabelText="Publication subtype"
+    floatingLabelText="Publication subtype "
     fullWidth={true}
+    id="selectedValue"
     maxHeight={250}
     multiple={false}
     name="selectedValue"
@@ -1514,8 +1521,9 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
     <TextField
       disabled={false}
       floatingLabelFixed={false}
-      floatingLabelText="Publication subtype"
+      floatingLabelText="Publication subtype "
       fullWidth={true}
+      id="selectedValue"
       multiLine={false}
       name="selectedValue"
       rows={1}
@@ -1542,7 +1550,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
       >
         <TextFieldLabel
           disabled={false}
-          htmlFor="selectedValue-undefined-Publicationsubtype-39445"
+          htmlFor="selectedValue"
           muiTheme={
             Object {
               "appBar": Object {
@@ -1968,7 +1976,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
           }
         >
           <label
-            htmlFor="selectedValue-undefined-Publicationsubtype-39445"
+            htmlFor="selectedValue"
             style={
               Object {
                 "color": "rgba(0, 0, 0, 0.3)",
@@ -1985,7 +1993,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
               }
             }
           >
-            Publication subtype
+            Publication subtype 
           </label>
         </TextFieldLabel>
         <DropDownMenu
@@ -2005,7 +2013,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
               "top": 8,
             }
           }
-          id="selectedValue-undefined-Publicationsubtype-39445"
+          id="selectedValue"
           labelStyle={
             Object {
               "paddingLeft": 0,
@@ -2043,7 +2051,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
           }
         >
           <div
-            id="selectedValue-undefined-Publicationsubtype-39445"
+            id="selectedValue"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -2148,7 +2156,7 @@ exports[`PublicationSubtypesList renders correctly without subtypes list 1`] = `
                       }
                     }
                   >
-                    Publication subtype
+                    Publication subtype 
                   </div>
                   <IconButton
                     disableTouchRipple={false}

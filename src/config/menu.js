@@ -26,7 +26,7 @@ export const researcherMenuItems = (locale, email, components) => [
     },
     {
         divider: true,
-        path: '/' + (new Date()).getTime() // TODO: fix: workaround: empty Route is constructed from divider
+        path: '/234234234242' // '/' + (new Date()).getTime() // TODO: fix: workaround: empty Route is constructed from divider
     },
     {
         linkTo: 'https://www.library.uq.edu.au/mylibrary/#!masquerade',

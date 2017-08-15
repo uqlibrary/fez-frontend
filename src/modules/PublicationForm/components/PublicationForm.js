@@ -46,7 +46,14 @@ export default class PublicationForm extends Component {
         const filteredPublicationType = publicationTypeId ?
             this.publicationTypes.filter((item) => { return item.id === publicationTypeId; }) : null;
         return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].formComponent ?
-            React.createElement(filteredPublicationType[0].formComponent, {vocabId: filteredPublicationType[0].vocabId}) : null;
+            React.createElement(
+                filteredPublicationType[0].formComponent,
+                {
+                    vocabId: filteredPublicationType[0].vocabId,
+                    submitting: true // this.props.submitting
+                })
+            :
+            null;
     };
 
     render() {
@@ -114,6 +121,7 @@ export default class PublicationForm extends Component {
                             <RaisedButton
                                 fullWidth
                                 label={txt.cancel}
+                                disabled={this.props.submitting}
                                 onTouchTap={this._showConfirmation} />
                         </div>
                         {this.props.formValues.get('rek_display_type') > 0 &&

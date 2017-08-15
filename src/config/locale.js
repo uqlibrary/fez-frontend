@@ -6,6 +6,7 @@ export default {
     global: {
         title: 'UQ eSpace',
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
+        loading: 'loading...',
         loginAlert: {
             title: 'You are not logged in',
             message: 'Please, login to UQ eSpace for full search results and more services.',
@@ -359,22 +360,6 @@ export default {
                     title: 'Files',
                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.',
                     buttonLabel: 'OK'
-                }
-            },
-            dialog: {
-                success: {
-                    title: 'Your record has been submitted',
-                    content: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
-                    primaryButtonLabel: 'Ok',
-                    primaryLink: '/dashboard',
-                    secondaryButtonLabel: 'Add another missing record'
-                },
-                cancel: {
-                    title: 'Cancel adding a missing record',
-                    content: 'Are you sure you want to cancel adding this record?',
-                    primaryButtonLabel: 'Yes',
-                    primaryLink: '/dashboard',
-                    secondaryButtonLabel: 'No'
                 }
             },
             cancelWorkflowConfirmation: {
