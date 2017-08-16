@@ -1,5 +1,5 @@
 import {api, generateCancelToken} from 'config';
-import * as fileUploadActions from '../modules/SharedComponents/FileUploader';
+import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 export const GET_FILE_UPLOAD_API = 'file/upload/presigned';
 

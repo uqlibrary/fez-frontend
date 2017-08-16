@@ -1,8 +1,8 @@
 import {api} from '../config';
 import {get} from './generic';
 
-export const GET_AUTHORS_SEARCH_API = 'authors/search';
-export const GET_CURRENT_AUTHOR_API = 'authors';
+export const GET_AUTHORS_SEARCH_API = 'fez-authors/search';
+export const GET_CURRENT_AUTHOR_API = 'fez-authors';
 export const GET_AUTHOR_DETAILS_API = 'authors/details';
 
 /**

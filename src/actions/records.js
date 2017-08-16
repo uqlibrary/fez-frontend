@@ -6,6 +6,7 @@ export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
 export const RECORD_PROCESSING = 'RECORD_PROCESSING';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -42,6 +43,7 @@ export function createNewRecord(data) {
                     type: RECORD_CREATED,
                     payload: response.data
                 });
+                dispatch(fileUploadActions.clearFileUpload());
                 return Promise.resolve(response.data);
             })
             .catch(error => {
