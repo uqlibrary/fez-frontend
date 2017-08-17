@@ -19,6 +19,13 @@ export default class ClaimPublicationForm extends Component {
         super(props);
     }
 
+    componentDidMount() {
+        console.log('componentDidMount');
+        console.log(this.props.actions);
+        // TODO: fix file upload clear state when opening a new form
+        this.props.actions.fileUploadActions.clearFileUpload();
+    }
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
@@ -57,17 +64,16 @@ export default class ClaimPublicationForm extends Component {
     };
 
     render() {
+        console.log(this.props);
         const txt = locale.components.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
 
         if (!author || !publication) {
-            return (
-                <StandardPage title={txt.title}>
-                    <Alert type="error_outline" title="Error" message="Publication is not selected. Please, select publication to claim" outsideLayout/>
-                </StandardPage>
-            );
+            this.props.history.go(-1);
+            return (<div />);
         }
+
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>

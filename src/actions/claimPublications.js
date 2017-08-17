@@ -3,7 +3,7 @@ import {
     postHidePossiblePublications,
     getCountPossibleUnclaimedPublications,
     postClaimPossiblePublication,
-    // putUploadFiles,
+    putUploadFiles,
     patchRecord, postRecord
 } from 'repositories';
 
@@ -174,10 +174,10 @@ export function claimPublication(data) {
             };
             console.log(claimRequest);
             return postClaimPossiblePublication(claimRequest)
-                // .then(response => {
-                //     if (data.files.length === 0) return response;
-                //     return putUploadFiles(data.rek_pid, data.files);
-                // })
+                .then(response => {
+                    if (data.files.length === 0) return response;
+                    return putUploadFiles(data.publication.rek_pid, data.files, dispatch);
+                })
                 .then(() => {
                     // patch the record with new data
                     const recordPatchRequest = {
