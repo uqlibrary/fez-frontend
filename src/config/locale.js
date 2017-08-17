@@ -85,7 +85,7 @@ export default {
             possiblePublicationsLure: {
                 title: 'Claim now!',
                 message: 'We have found [count] record(s) that could possibly be your work.',
-                type: 'error',
+                type: 'warning',
                 actionButtonLabel: 'Claim your publications now'
             },
             publicationsByYearChart: {
