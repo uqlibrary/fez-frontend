@@ -45,6 +45,7 @@ const handlers = {
     },
 
     [actions.TRENDING_PUBLICATIONS_COMPLETED]: (state, action) => {
+        console.log(action);
         return {
             ...state,
             trendingPublicationsList: action.payload,
