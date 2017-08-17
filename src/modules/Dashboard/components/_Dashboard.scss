@@ -1,5 +1,14 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
+.possiblePublicationLure {
+  margin: -1px 0 0 0 !important;
+  .alertWrapper {
+    margin: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
 @media all and (min-width: 768px) {
 
   .isLoading {
@@ -111,63 +120,6 @@
           font-size: 24px;
           opacity: 0.75;
         }
-      }
-    }
-  }
-  // Lure
-  .notification-wrap {
-    margin: -1px 0 0 0 !important;
-    .button-wrap {
-      padding-top: 15px !important;
-    }
-    .hide-appbar {
-      color: rgba($text-color-reverse, 0.5) !important;
-      &:hover {
-        color: rgba($text-color-reverse, 1) !important;
-      }
-    }
-    .alertText {
-      padding-top: 18px !important;
-    }
-    .alertIcon {
-      padding: 18px 12px 0 12px !important;
-    }
-    .alertWrapper {
-      margin: 0 !important;
-      button.claim-publications {
-        color: #FFF !important;
-        background-color: darken($warning-color, 7.5%) !important;
-        margin-top: 6px !important;
-      }
-    }
-  }
-}
-
-@media all and (max-width: 768px) {
-
-  .notification-wrap {
-    margin: -1px 0 0 0 !important;
-    .button-wrap {
-      padding-top: 0 !important;
-    }
-    .alertText {
-      padding: 20px 0 0 12px !important;
-      margin: 0 12px 0 0 !important;
-      font-size: 16px;
-      line-height: 16px;
-    }
-    .alertIcon span.material-icons {
-      height: 40px;
-      margin: 0 12px 0 0 !important;
-      padding-bottom: 0 !important;
-      font-size: 50px !important;
-    }
-    .alertWrapper {
-      margin: 0 !important;
-      button.claim-publications {
-        color: #FFF !important;
-        background-color: darken($warning-color, 7.5%) !important;
-        width: 100% !important;
       }
     }
   }

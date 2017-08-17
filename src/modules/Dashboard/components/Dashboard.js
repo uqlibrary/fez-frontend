@@ -94,7 +94,7 @@ class Dashboard extends React.Component {
                             !this.props.hidePossiblyYourPublicationsLure
                             && this.props.possiblyYourPublicationsCount
                             && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
-                            <div className="notification-wrap column is-12">
+                            <div className="column is-12 possiblePublicationLure">
                                 <Alert
                                     title={txt.possiblePublicationsLure.title}
                                     message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
