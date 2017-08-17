@@ -81,8 +81,6 @@
       }
     }
   }
-
-
   //ArticleCount
   .authorCount {
     display: flex;
@@ -114,61 +112,68 @@
       }
     }
   }
-  // Lure
-  .notification-wrap {
-    margin: -1px 0 0 0 !important;
-    .button-wrap {
-      padding-top: 15px !important;
+  // Publication Stats WOS/Scopus
+  .pubStatsTable {
+    & thead tr th {
+      white-space: normal !important;
+      padding: 12px 12px 12px 24px !important;
     }
-    .hide-appbar {
-      color: rgba($text-color-reverse, 0.5) !important;
-      &:hover {
-        color: rgba($text-color-reverse, 1) !important;
+    & thead tr th:nth-child(2), & thead tr th:nth-child(3) {
+      text-align: center !important;
+      width: 30% !important;
+    }
+    & tbody tr td {
+      font-size: 16px !important;
+    }
+    & tbody tr td:nth-child(2), & tbody tr td:nth-child(3) {
+      text-align: center !important;
+      width: 30% !important;
+    }
+    .pubStatsHeader {
+      background-color: $accent-color;
+      & .pubStatsHeaderTitle {
+        color: $text-color-reverse !important;
+        font-size: 16px !important;
+        font-weight: bold !important;
       }
     }
-    .alertText {
-      padding-top: 18px !important;
-    }
-    .alertIcon {
-      padding: 18px 12px 0 12px !important;
-    }
-    .alertWrapper {
-      margin: 0 !important;
-      button.claim-publications {
-        color: #FFF !important;
-        background-color: darken($warning-color, 7.5%) !important;
-        margin-top: 6px !important;
-      }
+    .pubStatsRowTitle {
+      font-weight: bold !important;
+      white-space: normal !important;
     }
   }
 }
 
 @media all and (max-width: 768px) {
 
-  .notification-wrap {
-    margin: -1px 0 0 0 !important;
-    .button-wrap {
-      padding-top: 0 !important;
+  // Publication Stats WOS/Scopus
+  .pubStatsTable {
+    & thead tr th {
+      white-space: normal !important;
+      padding: 12px 12px 12px 24px !important;
     }
-    .alertText {
-      padding: 20px 0 0 12px !important;
-      margin: 0 12px 0 0 !important;
-      font-size: 16px;
-      line-height: 16px;
+    & thead tr th:nth-child(2), & thead tr th:nth-child(3) {
+      text-align: center !important;
+      width: 30% !important;
     }
-    .alertIcon span.material-icons {
-      height: 40px;
-      margin: 0 12px 0 0 !important;
-      padding-bottom: 0 !important;
-      font-size: 50px !important;
+    & tbody tr td {
+      font-size: 14px !important;
     }
-    .alertWrapper {
-      margin: 0 !important;
-      button.claim-publications {
-        color: #FFF !important;
-        background-color: darken($warning-color, 7.5%) !important;
-        width: 100% !important;
+    & tbody tr td:nth-child(2), & tbody tr td:nth-child(3) {
+      text-align: center !important;
+      width: 30% !important;
+    }
+    .pubStatsHeader {
+      background-color: $accent-color;
+      & .pubStatsHeaderTitle {
+        color: $text-color-reverse !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
       }
+    }
+    .pubStatsRowTitle {
+      font-weight: bold !important;
+      white-space: normal !important;
     }
   }
 }

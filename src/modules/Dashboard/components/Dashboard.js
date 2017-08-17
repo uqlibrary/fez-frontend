@@ -13,6 +13,14 @@ import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/PublicationsList';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import {
+    Table,
+    TableBody,
+    TableHeader,
+    TableHeaderColumn,
+    TableRow,
+    TableRowColumn,
+} from 'material-ui/Table';
 import {locale} from 'config';
 
 class Dashboard extends React.Component {
@@ -75,7 +83,7 @@ class Dashboard extends React.Component {
     render() {
         const txt = locale.pages.dashboard;
         const loading = this.props.loadingPublicationsByYear && this.props.authorDetailsLoading;
-
+        const pubStats = this.props.publicationsStats;
         return (
             <StandardPage>
                 {
@@ -94,7 +102,7 @@ class Dashboard extends React.Component {
                             !this.props.hidePossiblyYourPublicationsLure
                             && this.props.possiblyYourPublicationsCount
                             && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
-                            <div className="notification-wrap column is-12">
+                            <div className="column is-12 forAlerts">
                                 <Alert
                                     title={txt.possiblePublicationsLure.title}
                                     message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
@@ -135,8 +143,53 @@ class Dashboard extends React.Component {
                         <div className="column">
                             <StandardCard className="card-full-height card-paddingless"
                                           title="eSpace publications linked from: WOS/SCOPUS">
-                                {this.props.loadingPublicationsStats && 'loading your stats...'}
-                                {this.props.publicationsStats && JSON.stringify(this.props.publicationsStats)}
+                                {this.props.publicationsStats && (
+                                <Table selectable={false} className="pubStatsTable">
+                                    <TableHeader displaySelectAll={false} adjustForCheckbox={false} className="pubStatsHeader">
+                                        <TableRow>
+                                            <TableHeaderColumn className="pubStatsHeaderTitle">eSpace publications linked from:</TableHeaderColumn>
+                                            <TableHeaderColumn className="pubStatsHeaderTitle">Web of Science</TableHeaderColumn>
+                                            <TableHeaderColumn className="pubStatsHeaderTitle">Scopus</TableHeaderColumn>
+                                        </TableRow>
+                                    </TableHeader>
+                                    <TableBody displayRowCheckbox={false}>
+                                        <TableRow>
+                                            <TableRowColumn className="pubStatsRowTitle">h-index score</TableRowColumn>
+                                            <TableRowColumn>{pubStats.thomson_citation_count_i.hindex}</TableRowColumn>
+                                            <TableRowColumn>{pubStats.scopus_citation_count_i.hindex}</TableRowColumn>
+                                        </TableRow>
+
+                                        <TableRow>
+                                            <TableRowColumn className="pubStatsRowTitle">Average citation count per publication</TableRowColumn>
+                                            <TableRowColumn>{pubStats.thomson_citation_count_i.avg.toFixed(1)}</TableRowColumn>
+                                            <TableRowColumn>{pubStats.scopus_citation_count_i.avg.toFixed(1)}</TableRowColumn>
+                                        </TableRow>
+
+                                        <TableRow>
+                                            <TableRowColumn className="pubStatsRowTitle">Total citations</TableRowColumn>
+                                            <TableRowColumn>{pubStats.thomson_citation_count_i.sum}</TableRowColumn>
+                                            <TableRowColumn>{pubStats.scopus_citation_count_i.sum}</TableRowColumn>
+                                        </TableRow>
+
+                                        <TableRow>
+                                            <TableRowColumn className="pubStatsRowTitle">Total publications</TableRowColumn>
+                                            <TableRowColumn>{pubStats.thomson_citation_count_i.count}</TableRowColumn>
+                                            <TableRowColumn>{pubStats.scopus_citation_count_i.count}</TableRowColumn>
+                                        </TableRow>
+
+                                        <TableRow>
+                                            <TableRowColumn className="pubStatsRowTitle">Publication range</TableRowColumn>
+                                            <TableRowColumn>{pubStats.thomson_citation_count_i.years}</TableRowColumn>
+                                            <TableRowColumn>{pubStats.scopus_citation_count_i.years}</TableRowColumn>
+                                        </TableRow>
+                                    </TableBody>
+                                </Table>
+                                )}
+                                 {this.props.loadingPublicationsStats && (
+                                     <div className="isLoading is-centered">
+                                         <InlineLoader message="Loading your publication stats"/>
+                                     </div>
+                                 )}
                             </StandardCard>
                         </div>
                     </div>
