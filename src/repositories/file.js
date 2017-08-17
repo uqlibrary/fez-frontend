@@ -1,4 +1,5 @@
 import {api, generateCancelToken} from 'config';
+import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 export const GET_FILE_UPLOAD_API = 'file/upload/presigned';
 
@@ -8,7 +9,7 @@ export const GET_FILE_UPLOAD_API = 'file/upload/presigned';
  * @param {object} file to be uploaded
  * @returns {Promise}
  */
-export function putUploadFile(pid, file) {
+export function putUploadFile(pid, file, dispatch) {
     return new Promise((resolve, reject) => {
         api.get(`${GET_FILE_UPLOAD_API}/${pid}/${file.name}`).then(getPresignedResponse => {
             const options = {
@@ -16,9 +17,8 @@ export function putUploadFile(pid, file) {
                     'Content-Type': 'multipart/form-data'
                 },
                 onUploadProgress: event => {
-                    // TODO: dispatch file upload progress
                     const completed = Math.floor((event.loaded * 100) / event.total);
-                    console.log(`File upload (${file.name}): ${completed} %`);
+                    dispatch(fileUploadActions.notifyProgress(file.name, completed));
                 },
                 cancelToken: generateCancelToken().token
             };
@@ -26,6 +26,7 @@ export function putUploadFile(pid, file) {
             api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
                 resolve(uploadResponse.data);
             }).catch(uploadError => {
+                dispatch(fileUploadActions.notifyUploadFailed(file.name));
                 reject(uploadError);
             });
         }).catch(getPresignedError => {
@@ -40,10 +41,10 @@ export function putUploadFile(pid, file) {
  * @param {array} files to be uploaded
  * @returns {Promise.all}
  */
-export function putUploadFiles(pid, files) {
+export function putUploadFiles(pid, files, dispatch) {
     const uploadFilesPromises = files.map(file => {
-        return putUploadFile(pid, file);
+        return putUploadFile(pid, file, dispatch);
     });
 
-    return  Promise.all(uploadFilesPromises);
+    return Promise.all(uploadFilesPromises);
 }

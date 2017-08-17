@@ -1,13 +1,8 @@
 export {ContributorsEditorField} from './ContributorsEditor';
-
-export {FileUploader} from './FileUploader';
-export {AuthorLinking} from './AuthorLinking';
-
-// reducers
-export {fileUploadReducer} from './FileUploader';
-export {authorLinkingReducer} from './AuthorLinking';
-
 export {PublicationSubtypeField} from './PublicationSubtype';
-export {SampleForm} from './PublicationSubtype';
+
+// TODO: refactor
+export {AuthorLinking} from './AuthorLinking';
+export {authorLinkingReducer} from './AuthorLinking';
 
 

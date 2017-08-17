@@ -6,6 +6,7 @@ export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
 export const RECORD_PROCESSING = 'RECORD_PROCESSING';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -24,25 +25,26 @@ export function createNewRecord(data) {
         return postRecord(recordRequest)
             .then(response => {
                 // set a pid on a new record
-                data.rek_pid = response.rek_pid;
+                data.rek_pid = response.data.rek_pid;
                 // process files
-                if (!data.files || data.files.length === 0) return response;
-                return putUploadFiles(response.rek_pid, data.files);
+                if (!data.files || data.files.length === 0) return response.data;
+                return putUploadFiles(response.data.rek_pid, data.files, dispatch);
             })
             .then(response => {
-                if (!data.files || data.files.length === 0) return response;
+                if (!data.files || data.files.length === 0) return response.data;
                 // process uploaded files into API format for a patch
                 const recordPatch = {
-                    ...recordFileAttachment(data)
+                    ...recordFileAttachment(data.files)
                 };
                 return patchRecord(data.rek_pid, recordPatch);
             })
             .then(response => {
                 dispatch({
                     type: RECORD_CREATED,
-                    payload: response
+                    payload: response.data
                 });
-                return Promise.resolve(response);
+                dispatch(fileUploadActions.clearFileUpload());
+                return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({

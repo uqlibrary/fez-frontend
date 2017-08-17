@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert} from 'uqlibrary-react-toolbox';
-import {FileUploader, AuthorLinking} from 'modules/SharedComponents';
+import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
 import {validation, locale} from 'config';
 
@@ -90,7 +89,7 @@ export default class ClaimPublicationForm extends Component {
                     {
                         !author &&
                         <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
-                            <AuthorLinking disabled={this.props.submitting} dataSource={[]}/>
+                            {/* <AuthorLinking disabled={this.props.submitting} dataSource={[]}/> */}
                         </StandardCard>
                     }
 
@@ -116,7 +115,7 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <FileUploader disabled={this.props.submitting} />
+                        <Field name="files" component={ FileUploadField } disabled={this.props.submitting} />
                     </StandardCard>
                     {
                         this.props.submitFailed && this.props.error &&
@@ -137,25 +136,23 @@ export default class ClaimPublicationForm extends Component {
                         <Alert type="info" title="Success"
                                message={'Publication claim has been submitted successfully...'} outsideLayout/>
                     }
-                    <div className="layout-card">
-                        <div className="columns">
-                            <div className="column is-hidden-mobile"/>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    fullWidth
-                                    label={txt.cancel}
-                                    disabled={this.props.submitting}
-                                    onTouchTap={this._showConfirmation}/>
-                            </div>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    secondary
-                                    fullWidth
-                                    label={txt.submit}
-                                    onTouchTap={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.invalid}
-                                />
-                            </div>
+                    <div className="columns">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                fullWidth
+                                label={txt.cancel}
+                                disabled={this.props.submitting}
+                                onTouchTap={this._showConfirmation}/>
+                        </div>
+                        <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                secondary
+                                fullWidth
+                                label={txt.submit}
+                                onTouchTap={this.props.handleSubmit}
+                                disabled={this.props.submitting || this.props.invalid}
+                            />
                         </div>
                     </div>
                 </form>

@@ -3,8 +3,8 @@ export function claimAttachments(files) {
     return {
         attachments: files.map((item) => {
             return {
-                access_condition_id: item.access_condition_id,
-                file: item.file,
+                access_condition_id: 9, // TODO: update to real value, eg item.access_condition_id,
+                file: item.name,
                 date: item.date
             };
         })
@@ -38,10 +38,10 @@ export function recordFileAttachment(files, record) {
         record.fez_record_search_key_file_attachment_name.length : 0;
     const attachments = files.map((item, index) => {
         return {
-            rek_file_attachment_name: item.file,
+            rek_file_attachment_name: item.name,
             rek_file_attachment_name_order: initialCount + index + 1,
-            rek_file_attachment_name_date: item.date,
-            rek_file_attachment_name_access_condition_id: item.access_condition_id,
+            // rek_file_attachment_name_date: item.date,
+            // rek_file_attachment_name_access_condition_id: item.access_condition_id,
         };
     });
     if (record) {

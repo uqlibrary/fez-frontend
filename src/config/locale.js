@@ -312,8 +312,7 @@ export default {
                     buttonLabel: 'Ok'
                 },
                 hide: 'Not mine',
-                claim: 'Claim this publication',
-                hideAll: 'None of these publications are mine'
+                claim: 'Claim this publication'
             },
             hidePublicationConfirmation: {
                 confirmationTitle: 'Hide publication',
@@ -424,7 +423,7 @@ export default {
                 title: 'Files',
                 help: {
                     title: 'Files',
-                    text: '...',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.',
                     buttonLabel: 'OK'
                 }
             },

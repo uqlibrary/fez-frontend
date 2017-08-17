@@ -32,7 +32,6 @@ const handlers = {
     },
 
     [actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
-        console.log(action);
         return {
             ...state,
             loadingPublications: false,
