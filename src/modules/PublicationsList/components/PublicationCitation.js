@@ -2,8 +2,11 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-
-import {publicationTypes} from 'config';
+import IconMenu from 'material-ui/IconMenu';
+import MenuItem from 'material-ui/MenuItem';
+import IconButton from 'material-ui/IconButton';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import {publicationTypes, locale} from 'config';
 
 // citations for different publication types
 import CitationCounts from './citations/CitationCounts';
@@ -12,13 +15,19 @@ import JournalArticleCitation from './citations/JournalArticleCitation';
 /*
  * @props:
  *   publication {object} item to be displayed
- *   actions {array} of {label: string, actionHandler: function} which will be rendered as FlatButtons
+ *   customActions {array} of {label: string, actionHandler: function} which will be rendered as FlatButtons
+ *   showDefaultActions {bool} if set to true will display default actions for records with PID, false by default
  * */
 export default class PublicationCitation extends Component {
 
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        actions: PropTypes.array
+        showDefaultActions: PropTypes.bool,
+        customActions: PropTypes.array
+    };
+
+    static defaultProps = {
+        showDefaultActions: false
     };
 
     constructor(props) {
@@ -26,6 +35,25 @@ export default class PublicationCitation extends Component {
 
         // keep a list of all available citations
         this.citationComponents = {JournalArticleCitation};
+        // get default actions from locale
+        this.defaultActions = locale.components.publicationCitation.defaultActions;
+    }
+
+    componentDidMount() {
+        // TODO: fix this hack!
+        // catch scrolling event of scrolled container (which is not a window) to set position of autosuggest list when user scrolls
+        // another solution, close the box when user tries to scroll
+        const div = document.querySelector('div.layout-fill.align-stretch');
+        div.addEventListener('scroll', this.handleParentContainerScroll.bind(this));
+    }
+
+    componentWillUnmount() {
+        const div = document.querySelector('div.layout-fill.align-stretch');
+        div.removeEventListener('scroll', this.handleParentContainerScroll.bind(this));
+    }
+
+    handleParentContainerScroll() {
+        if (this.refs.actionsMenu) this.refs.actionsMenu.close();
     }
 
     _renderCitation = (publicationTypeId) => {
@@ -38,9 +66,30 @@ export default class PublicationCitation extends Component {
             <div>Citation display not available for {publicationTypeId}</div>;
     }
 
+    _handleDefaultActions = (event, menuItem) => {
+        switch(menuItem.key) {
+            case 'fullMetrics':
+                // open full metrics in a new tab
+                const win = window.open(`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`, '_blank');
+                win.focus();
+                break;
+            case 'fixRecord':
+                // TODO: set current record in store, redirect to fix screen
+                console.log('fix this record');
+                break;
+            case 'shareRecord':
+                // TODO: display share interface
+                console.log('share this record');
+                break;
+            default:
+                // do nothing
+                break;
+        }
+    }
+
     render() {
-        const actions = this.props.actions && this.props.actions.length > 0 ?
-            this.props.actions.map((action, index) => {
+        const actions = this.props.customActions && this.props.customActions.length > 0 ?
+            this.props.customActions.map((action, index) => {
                 return (
                     <div className="column is-narrow" key={index} >
                         {index === 0 ? (
@@ -61,21 +110,39 @@ export default class PublicationCitation extends Component {
                     </div>
                 );
             }) : null;
+
         return (
             <div className="publicationCitation">
-                <h3 className="title is-5 publicationTitle">{this.props.publication.rek_title}</h3>
+                <div className="columns">
+                    <div className="column is-gapless">
+                        <h3 className="title is-5 publicationTitle">{this.props.publication.rek_title}</h3>
+                        {
+                            this._renderCitation(this.props.publication.rek_display_type)
+                        }
+                        <CitationCounts publication={this.props.publication}/>
+                    </div>
+                    {
+                        this.props.showDefaultActions && this.props.publication.rek_pid &&
+                        <div className="column is-gapless is-1">
+                            <IconMenu
+                                ref="actionsMenu"
+                                onItemTouchTap={this._handleDefaultActions}
+                                iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                                anchorOrigin={{horizontal: 'left', vertical: 'top'}}
+                                targetOrigin={{horizontal: 'left', vertical: 'top'}}>
+                                {
+                                    this.defaultActions.map(item => { return (<MenuItem {...item} />); })
+                                }
+                            </IconMenu>
+                        </div>
+                    }
+                </div>
 
                 {
-                    this._renderCitation(this.props.publication.rek_display_type)
-                }
-
-                <CitationCounts publication={this.props.publication}/>
-
-                {
-                    this.props.actions && this.props.actions.length > 0 &&
+                    this.props.customActions && this.props.customActions.length > 0 &&
                     <div className="publicationActions columns is-gapless">
                         <div className="column is-hidden-mobile"/>
-                            {actions}
+                        {actions}
                     </div>
                 }
             </div>

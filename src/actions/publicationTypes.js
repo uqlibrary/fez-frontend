@@ -18,7 +18,7 @@ export function loadPublicationTypesList() {
         getPublicationTypesList().then(publicationTypes => {
             dispatch({
                 type: PUBLICATION_TYPES_LOADED,
-                payload: publicationTypes
+                payload: publicationTypes.data
             });
         }).catch(() => {
             dispatch({

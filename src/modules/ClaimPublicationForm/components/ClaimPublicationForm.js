@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert} from 'uqlibrary-react-toolbox';
-import {FileUploadField, AuthorLinking} from 'modules/SharedComponents';
+import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
 import {validation, locale} from 'config';
 
@@ -18,6 +17,13 @@ export default class ClaimPublicationForm extends Component {
 
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        console.log('componentDidMount');
+        console.log(this.props.actions);
+        // TODO: fix file upload clear state when opening a new form
+        this.props.actions.fileUploadActions.clearFileUpload();
     }
 
     componentWillReceiveProps(nextProps) {
@@ -58,17 +64,16 @@ export default class ClaimPublicationForm extends Component {
     };
 
     render() {
+        console.log(this.props);
         const txt = locale.components.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
 
         if (!author || !publication) {
-            return (
-                <StandardPage title={txt.title}>
-                    <Alert type="error_outline" title="Error" message="Publication is not selected. Please, select publication to claim" outsideLayout/>
-                </StandardPage>
-            );
+            this.props.history.go(-1);
+            return (<div />);
         }
+
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -90,7 +95,7 @@ export default class ClaimPublicationForm extends Component {
                     {
                         !author &&
                         <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
-                            <AuthorLinking disabled={this.props.submitting} dataSource={[]}/>
+                            {/* <AuthorLinking disabled={this.props.submitting} dataSource={[]}/> */}
                         </StandardCard>
                     }
 
@@ -137,25 +142,23 @@ export default class ClaimPublicationForm extends Component {
                         <Alert type="info" title="Success"
                                message={'Publication claim has been submitted successfully...'} outsideLayout/>
                     }
-                    <div className="layout-card">
-                        <div className="columns">
-                            <div className="column is-hidden-mobile"/>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    fullWidth
-                                    label={txt.cancel}
-                                    disabled={this.props.submitting}
-                                    onTouchTap={this._showConfirmation}/>
-                            </div>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    secondary
-                                    fullWidth
-                                    label={txt.submit}
-                                    onTouchTap={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.invalid}
-                                />
-                            </div>
+                    <div className="columns">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                fullWidth
+                                label={txt.cancel}
+                                disabled={this.props.submitting}
+                                onTouchTap={this._showConfirmation}/>
+                        </div>
+                        <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                secondary
+                                fullWidth
+                                label={txt.submit}
+                                onTouchTap={this.props.handleSubmit}
+                                disabled={this.props.submitting || this.props.invalid}
+                            />
                         </div>
                     </div>
                 </form>

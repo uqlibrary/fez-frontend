@@ -1,6 +1,8 @@
 import {post, get} from './generic';
 
 export const GET_POSSIBLE_PUBLICATIONS_API = 'publications/possible-unclaimed';
+export const GET_USER_PUBLICATIONS_API = 'publications/claimed';
+export const GET_USER_TRENDING_PUBLICATIONS_API = 'academic/[username]/trending_publications';
 export const GET_COUNT_POSSIBLE_PUBLICATIONS_API = 'publications/possible-counts';
 export const POST_HIDE_POSSIBLE_PUBLICATIONS_API = 'publications/hide-possible';
 export const POST_CLAIM_POSSIBLE_PUBLICATIONS_API = 'publications/claim-possible';
@@ -12,6 +14,25 @@ export const POST_CLAIM_POSSIBLE_PUBLICATIONS_API = 'publications/claim-possible
  */
 export function getPossibleUnclaimedPublications(userName) {
     return get(`${GET_POSSIBLE_PUBLICATIONS_API}/${userName}`);
+}
+
+/**
+ * Returns latest published publications (by publication date)
+ * @param {string} userName of user for whom to apply the action
+ * @param {count} number of items to be returned
+ * @returns {Promise}
+ */
+export function getLatestPublications(userName, count = 5) {
+    return get(`${GET_USER_PUBLICATIONS_API}/${userName}?per_page=${count}&sort=published_date&order_by=desc`);
+}
+
+/**
+ * Returns trending publications
+ * @param {string} userName of user for whom to apply the action
+ * @returns {Promise}
+ */
+export function getTrendingPublications(userName) {
+    return get(GET_USER_TRENDING_PUBLICATIONS_API.replace('[username]', userName));
 }
 
 /**

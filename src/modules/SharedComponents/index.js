@@ -1,8 +1,8 @@
 export {ContributorsEditorField} from './ContributorsEditor';
-export {AuthorLinking} from './AuthorLinking';
 export {PublicationSubtypeField} from './PublicationSubtype';
 
-// reducers
+// TODO: refactor
+export {AuthorLinking} from './AuthorLinking';
 export {authorLinkingReducer} from './AuthorLinking';
 
 

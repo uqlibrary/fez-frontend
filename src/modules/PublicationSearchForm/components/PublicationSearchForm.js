@@ -22,7 +22,7 @@ export default class PublicationSearchForm extends Component {
             <StandardCard title={this.props.locale.title} help={this.props.locale.help}>
                 <div>{this.props.locale.text}</div>
                 <form onSubmit={this.props.handleSubmit}>
-                    <div className="columns action-buttons">
+                    <div className="columns">
                         <div className="column">
                             <Field component={TextField}
                                    className="requiredField"

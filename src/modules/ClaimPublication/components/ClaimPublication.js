@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RaisedButton from 'material-ui/RaisedButton';
 
 // forms & custom components
 import {PublicationsList} from 'modules/PublicationsList';
@@ -54,14 +53,6 @@ export default class ClaimPublication extends React.Component {
         this.hideConfirmationBox.showConfirmation();
     };
 
-    _hideAllPublications = () => {
-        this.props.actions.hidePublications(this.props.publicationsList, this.props.author);
-    }
-
-    _confirmHideAllPublications = () => {
-        this.hideAllConfirmationBox.showConfirmation();
-    };
-
     _claimPublication = (item) => {
         this.props.history.push('/claim-publication-form');
         this.props.actions.setClaimPublication(item);
@@ -83,15 +74,9 @@ export default class ClaimPublication extends React.Component {
             <StandardPage title={txt.title}>
                 {
                     this.props.publicationsList.length > 0 &&
-                    <section>
-                        <ConfirmDialogBox onRef={ref => (this.hideAllConfirmationBox = ref)}
-                                          onAction={this._hideAllPublications}
-                                          locale={txt.hideAllPublicationsConfirmation} />
-
-                        <ConfirmDialogBox onRef={ref => (this.hideConfirmationBox = ref)}
-                                          onAction={this._hidePublication}
-                                          locale={txt.hidePublicationConfirmation} />
-                    </section>
+                    <ConfirmDialogBox onRef={ref => (this.hideConfirmationBox = ref)}
+                                      onAction={this._hidePublication}
+                                      locale={txt.hidePublicationConfirmation} />
                 }
                 {
                     (this.props.authorLoading || (this.props.author && (this.props.loadingPublications || !this.props.possibleCounts))) &&
@@ -100,38 +85,24 @@ export default class ClaimPublication extends React.Component {
                     </div>
                 }
                 {
-                    ((!this.props.authorLoading && !this.props.author) || (!this.props.loadingPublications && this.props.publicationsList.length === 0)) &&
+                    !this.props.authorLoading && ((!this.props.authorLoading && !this.props.author) || (!this.props.loadingPublications && this.props.publicationsList.length === 0)) &&
                     <StandardCard {...txt.noResultsFound}>
                         {txt.noResultsFound.text}
                     </StandardCard>
                 }
                 {
-                    !this.props.loadingPublications && this.props.possibleCounts && this.props.publicationsList.length > 0 &&
-                    <div>
-                        <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
-                            <div>
-                                {
-                                    txt.searchResults.text
-                                        .replace('[resultsCount]', this.props.publicationsList.length)
-                                        .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
-                                }
-                            </div>
-                            <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
-                        </StandardCard>
-                        <div className="layout-card">
-                            <div className="columns">
-                                <div className="column is-hidden-mobile" />
-                                <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
-                                    <RaisedButton
-                                        label={txt.searchResults.hideAll}
-                                        secondary
-                                        fullWidth
-                                        onTouchTap={this._confirmHideAllPublications}
-                                    />
-                                </div>
-                            </div>
+                    !this.props.loadingPublications && this.props.possibleCounts
+                    && this.props.publicationsList.length > 0 &&
+                    <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
+                        <div>
+                            {
+                                txt.searchResults.text
+                                    .replace('[resultsCount]', this.props.publicationsList.length)
+                                    .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
+                            }
                         </div>
-                    </div>
+                        <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
+                    </StandardCard>
                 }
             </StandardPage>
         );

@@ -33,7 +33,8 @@ export function createSearchPromise(source, queryString, dispatch) {
     return new Promise((resolve) => {
         dispatch({type: `${SEARCH_LOADING}@${source}`});
         getSearchExternal(source, queryString)
-            .then(data => {
+            .then(response => {
+                const data = response && response.hasOwnProperty('data') ? response.data : [];
                 dispatch({
                     type: `${SEARCH_COMPLETED}@${source}`,
                     payload: data
@@ -70,8 +71,8 @@ export function searchPublications(searchQuery) {
         });
 
         Promise.all(externalSearchPropmises)
-            .then((data) => {
-                let flattenedResults = [].concat.apply([], data);
+            .then((response) => {
+                let flattenedResults = [].concat.apply([], response);
                 flattenedResults = flattenedResults.slice(0, flattenedResults.length);
                 dispatch({
                     type: SEARCH_COMPLETED,

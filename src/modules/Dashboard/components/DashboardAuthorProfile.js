@@ -8,16 +8,12 @@ import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
 const DashboardProfile = ({authorDetails}) => {
-    const txt = locale.components.dashboard;
+    const txt =  locale.pages.dashboard.header;
     return (
         <div className="imageCover">
             {/* HELP */}
             <div className="is-pulled-right" >
-                <HelpIcon
-                    title={txt.help.title}
-                    text={txt.help.text}
-                    buttonLabel={txt.help.button}
-                />
+                <HelpIcon {...txt.help} />
             </div>
             {authorDetails && (
                 <div className="columns userDetails is-gapless">

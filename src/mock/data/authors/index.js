@@ -1,5 +1,6 @@
 /* eslint-disable */
-export const authorsSearch = [
+export const authorsSearch = {"total": 10,
+    "data": [
     {
         "aut_id": 61940,
         "aut_org_username": null,
@@ -318,7 +319,7 @@ export const authorsSearch = [
         "aut_rid_last_updated": "2016-01-08",
         "aut_publons_id": null,
         "aut_student_username": null
-    }];
+    }]};
 
 export const currentAuthor = {
     uqresearcher: {

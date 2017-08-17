@@ -56,3 +56,15 @@ button[type=button] {
     padding-bottom: 6px !important;
   }
 }
+
+// Styles to remove header and all padding for a StandardCard so the content will fill it
+.card-paddingless {
+  padding: 0px !important;
+  & .card-header {
+    padding: 0px !important;
+    display: none !important;
+  }
+  & div.body-1 {
+    padding: 0px !important;
+  }
+}

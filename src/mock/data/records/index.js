@@ -1,5 +1,7 @@
 /* eslint-disable */
-export const publicationTypeList = [
+export const publicationTypeList = {
+    "total": 23,
+    "data": [
     {"id": 202, "name": "Generic Document", "class": "Uqlibrary\\FezCore\\Types\\Generic"}, {
         "id": 263,
         "name": "Audio Document",
@@ -49,4 +51,4 @@ export const publicationTypeList = [
         "name": "Working Paper",
         "class": "Uqlibrary\\FezCore\\Types\\WorkingPaper"
     }
-];
+]};

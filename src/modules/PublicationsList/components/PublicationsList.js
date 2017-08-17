@@ -6,7 +6,8 @@ export default class PublicationsList extends Component {
 
     static propTypes = {
         publicationsList: PropTypes.array,
-        actions: PropTypes.array
+        customActions: PropTypes.array,
+        showDefaultActions: PropTypes.bool
     };
 
     constructor(props) {
@@ -15,7 +16,13 @@ export default class PublicationsList extends Component {
 
     render() {
         const publications = this.props.publicationsList.map((publication, index) => {
-            return <PublicationCitation key={index + 1} publication={publication} actions={this.props.actions} />;
+            return (
+                <PublicationCitation
+                    key={index + 1}
+                    publication={publication}
+                    customActions={this.props.customActions}
+                    showDefaultActions={this.props.showDefaultActions} />
+            );
         });
 
         return (

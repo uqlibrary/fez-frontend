@@ -10,9 +10,8 @@ import * as reducers from './reducers';
 const rootReducer = combineReducers({
     form: formReducer,
     helpDrawer: helpDrawerReducer,
-    fileUpload: fileUploadReducer,
     authorLinking: authorLinkingReducer,
-
+    fileUpload: fileUploadReducer,
     ...reducers
 });
 

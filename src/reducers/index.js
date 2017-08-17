@@ -4,5 +4,6 @@ export accountReducer from './account';
 export authorDetailsReducer from './authorDetails';
 export authorsReducer from './authors';
 export claimPublicationReducer from './claimPublication';
+export publicationsReducer from './publications';
 export publicationSubtypesReducer from './publicationSubtypes';
 export searchRecordsReducer from './searchRecords';

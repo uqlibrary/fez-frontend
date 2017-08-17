@@ -14,7 +14,7 @@ export function loadAcmlQuickTemplates() {
         getAcmlQuickTemplates().then(accessTypes => {
             dispatch({
                 type: ACML_QUICK_TEMPLATES_LOADED,
-                payload: accessTypes
+                payload: accessTypes.data
             });
         }).catch((error) => {
             dispatch({

@@ -3,7 +3,7 @@ export function claimAttachments(files) {
     return {
         attachments: files.map((item) => {
             return {
-                access_condition_id: item.access_condition_id,
+                access_condition_id: 9, // TODO: update to real value, eg item.access_condition_id,
                 file: item.name,
                 date: item.date
             };

@@ -92,7 +92,7 @@ export default class AddRecord extends React.Component {
             }
         ];
         return (
-          <div className="columns is-gapless is-multiline searchWrapper">
+          <div className="columns searchWrapper">
               {/* Mobile search dashboard (progress bar) */}
               <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">
                   <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources} mobile/>
@@ -107,7 +107,7 @@ export default class AddRecord extends React.Component {
                       this.props.publicationsList.length > 0 &&
                       <StandardCard {...txt.searchResults}>
                           <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length)}</div>
-                          <PublicationsList publicationsList={this.props.publicationsList} actions={actions}/>
+                          <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
                       </StandardCard>
                   }
 
@@ -120,7 +120,6 @@ export default class AddRecord extends React.Component {
 
                   {
                       !this.props.loadingSearch &&
-                      <div className="layout-card">
                           <div className="columns action-buttons">
                               <div className="column is-hidden-mobile"/>
                               <div className="column is-narrow-desktop">
@@ -141,7 +140,6 @@ export default class AddRecord extends React.Component {
                                   />
                               </div>
                           </div>
-                      </div>
                   }
               </div>
               {/* Desktop search dashboard */}
@@ -172,7 +170,7 @@ export default class AddRecord extends React.Component {
                       }
                   </Stepper>
               </div>
-              <div className="layout-fill">
+              <div>
                   {
                       this.state.stepperIndex === 0 &&
                       <PublicationSearchForm
