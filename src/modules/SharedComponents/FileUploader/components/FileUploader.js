@@ -6,7 +6,6 @@ import LinearProgress from 'material-ui/LinearProgress';
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
-import './FileUpload.scss';
 
 export class FileUploader extends PureComponent {
 
@@ -14,7 +13,8 @@ export class FileUploader extends PureComponent {
         onChange: PropTypes.func,
         locale: PropTypes.object,
         defaultConfig: PropTypes.object,
-        overallProgress: PropTypes.number
+        overallProgress: PropTypes.number,
+        requireFileAccess: PropTypes.bool
     };
 
     static defaultProps = {
@@ -38,7 +38,8 @@ export class FileUploader extends PureComponent {
             fileUploadLimit: 10,
             maxFileSize: 5,
             fileSizeUnit: 'G'
-        }
+        },
+        requireFileAccess: false
     };
 
     constructor(props) {
@@ -60,6 +61,17 @@ export class FileUploader extends PureComponent {
         });
     };
 
+    replaceFile = (file, index) => {
+        this.setState({
+            uploadedFiles: [
+                ...this.state.uploadedFiles.slice(0, index),
+                file,
+                ...this.state.uploadedFiles.slice(index + 1)
+            ],
+            clearErrors: true
+        });
+    };
+
     deleteAllFiles = () => {
         this.setState({ uploadedFiles: [], clearErrors: true });
     };
@@ -77,6 +89,7 @@ export class FileUploader extends PureComponent {
     render() {
         const { instructions, sizeUnitText } = this.props.locale;
         const { maxFileSize, fileSizeUnit, fileUploadLimit } = this.props.defaultConfig;
+        const { requireFileAccess } = this.props;
 
         const instructionsDisplay = instructions
             .replace('[fileUploadLimit]', fileUploadLimit)
@@ -84,7 +97,13 @@ export class FileUploader extends PureComponent {
             .replace('[fileSizeUnit]', sizeUnitText[fileSizeUnit] || 'B');
 
         const uploadedFilesRow = this.state.uploadedFiles.map((file, index) => {
-            return <FileUploadRow key={ index } index={ index } uploadedFile={ file } onDelete={ this.deleteFile } />;
+            return (<FileUploadRow
+                key={ file.name }
+                index={ index }
+                uploadedFile={ file }
+                onDelete={ this.deleteFile }
+                onAttributeChanged={ this.replaceFile }
+                requireFileAccess={ requireFileAccess } />);
         });
 
         return (
@@ -99,7 +118,7 @@ export class FileUploader extends PureComponent {
 
                 {
                      this.state.uploadedFiles.length > 0 && (
-                        <FileUploadRowHeader onDeleteAll={ this.deleteAllFiles } />
+                        <FileUploadRowHeader onDeleteAll={ this.deleteAllFiles } requireFileAccess={ requireFileAccess } />
                      )
                 }
 
@@ -120,7 +139,7 @@ export class FileUploader extends PureComponent {
 
 const mapStateToProps = (state) => {
     return {
-        overallProgress: state.get('fileUploadReducer').overall || 0
+        overallProgress: state.get('fileUpload').overall || 0
     };
 };
 
