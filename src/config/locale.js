@@ -85,7 +85,7 @@ export default {
             possiblePublicationsLure: {
                 title: 'Claim now!',
                 message: 'We have found [count] record(s) that could possibly be your work.',
-                type: 'warning',
+                type: 'error',
                 actionButtonLabel: 'Claim your publications now'
             },
             publicationsByYearChart: {
@@ -101,11 +101,17 @@ export default {
             },
             myTrendingPublications: {
                 title: 'My trending publications',
-                metrics: [
-                    { key: 'altmetric', title: 'Altmetric score'},
-                    { key: 'thomson', title: 'Web of Science citation count'},
-                    { key: 'scopus', title: 'Scopus citation count'},
-                ],
+                metrics: {
+                    altmetric: {
+                        title: 'Altmetric score'
+                    },
+                    thomson: {
+                        title: 'Web of Science citation count'
+                    },
+                    scopus: {
+                        title: 'Scopus citation count'
+                    }
+                },
                 help: {
                     title: 'About these metrics',
                     text: (

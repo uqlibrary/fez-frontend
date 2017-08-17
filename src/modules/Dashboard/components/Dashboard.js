@@ -36,7 +36,7 @@ class Dashboard extends React.Component {
 
         // author's trending publications
         loadingTrendingPublications: PropTypes.bool,
-        trendingPublicationsList: PropTypes.object,
+        trendingPublicationsList: PropTypes.array,
 
         // navigations, app actions
         actions: PropTypes.object.isRequired,
@@ -133,12 +133,14 @@ class Dashboard extends React.Component {
                 }
 
                 {
-                    !loading && !this.props.loadingTrendingPublications && !this.props.loadingLatestPublications &&
+                    !loading && !this.props.loadingTrendingPublications && !this.props.loadingLatestPublications
+                    && (this.props.latestPublicationsList.length > 0 || this.props.trendingPublicationsList.length > 0) &&
                     <StandardCard>
                         <Tabs>
                             <Tab label={txt.myPublications.title} value="myPublications">
                                 {
-                                    !loading && !this.props.loadingLatestPublications && this.props.latestPublicationsList &&
+                                    !loading && !this.props.loadingLatestPublications
+                                    && this.props.latestPublicationsList.length > 0 &&
                                     <div>
                                         <PublicationsList publicationsList={this.props.latestPublicationsList}
                                                           showDefaultActions/>
@@ -152,17 +154,18 @@ class Dashboard extends React.Component {
                             </Tab>
                             <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications">
                                 {
-                                    !loading && !this.props.loadingTrendingPublications && this.props.trendingPublicationsList &&
+                                    !loading && !this.props.loadingTrendingPublications
+                                    && this.props.trendingPublicationsList.length > 0 &&
                                     <div>
                                         {
-                                            txt.myTrendingPublications.metrics.map((metrics, index) => (
-                                                <div key={'metrics_' + index}>
-                                                    <h2>{metrics.title}</h2>
+                                            this.props.trendingPublicationsList.map((metric, metricIndex) => (
+                                                <div key={'metrics_' + metricIndex}>
+                                                    <h2>{txt.myTrendingPublications.metrics[metric.key].title}</h2>
                                                     {/* TODO: remove tempirary publication record render */}
                                                     {
-                                                        this.props.trendingPublicationsList[metrics.key].map((item, itemIndex) => (
-                                                            <div key={'trending_publication_' + itemIndex}>
-                                                                {item.title} {item.count} +{item.difference}
+                                                        metric.values.map((recordValue, recordIndex) => (
+                                                            <div key={'trending_publication_' + recordIndex}>
+                                                                {recordValue.title} {recordValue.count} +{recordValue.difference}
                                                             </div>
                                                         ))
                                                     }

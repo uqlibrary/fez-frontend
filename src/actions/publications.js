@@ -44,9 +44,16 @@ export function searchTrendingPublications(authorUsername) {
         dispatch({type: TRENDING_PUBLICATIONS_LOADING});
         // TODO: try some authors who are students - org username or student name to use?
         getTrendingPublications(authorUsername).then(response => {
+            // TODO: this response will change when this api endpoint will be moved to fez
             dispatch({
                 type: TRENDING_PUBLICATIONS_COMPLETED,
-                payload: response
+                payload: Object.keys(response)
+                    .filter(item => {
+                        return item !== 'author_details';
+                    })
+                    .map(item => {
+                        return {key: item, values: response[item]};
+                    })
             });
         }).catch(() => {
             dispatch({
