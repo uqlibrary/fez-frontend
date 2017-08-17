@@ -118,7 +118,6 @@ export default class ClaimPublication extends React.Component {
                             </div>
                             <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
                         </StandardCard>
-                        <div className="layout-card">
                             <div className="columns">
                                 <div className="column is-hidden-mobile" />
                                 <div className="column is-narrow-desktop is-12-mobile is-pulled-right">
@@ -131,7 +130,6 @@ export default class ClaimPublication extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
                 }
             </StandardPage>
         );
