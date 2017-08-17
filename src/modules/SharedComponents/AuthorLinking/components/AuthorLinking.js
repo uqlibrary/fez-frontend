@@ -64,7 +64,7 @@ export default class AuthorLinking extends React.Component {
 
 
         return (
-            <div className="layout-fill">
+            <div>
                 {!this.authorFound() && (
                 <Card className="layout-card">
                     <CardHeader className="card-header">

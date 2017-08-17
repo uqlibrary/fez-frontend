@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {AuthorsPublicationsPerYearChart, AuthorsPublicationTypesCountChart, Alert, InlineLoader, StandardCard, StandardPage} from 'uqlibrary-react-toolbox';
+import {
+    AuthorsPublicationsPerYearChart,
+    AuthorsPublicationTypesCountChart,
+    Alert,
+    InlineLoader,
+    StandardCard,
+    StandardPage
+} from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/PublicationsList';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -79,28 +86,26 @@ class Dashboard extends React.Component {
                 }
                 {
                     !loading && this.props.authorDetails &&
-                    <div className="layout-card">
-                        <div className="columns is-multiline is-gapless">
-                            <div className="column is-12 is-hidden-mobile">
-                                <DashboardAuthorProfile authorDetails={this.props.authorDetails}/>
-                            </div>
-                            {
-                                !this.props.hidePossiblyYourPublicationsLure
-                                && this.props.possiblyYourPublicationsCount
-                                && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
-                                <div className="notification-wrap column is-12">
-                                    <Alert
-                                        title={txt.possiblePublicationsLure.title}
-                                        message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
-                                        type={txt.possiblePublicationsLure.type}
-                                        actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
-                                        action={this._claimYourPublications}
-                                        allowDismiss
-                                        dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-                                </div>
-                            }
-
+                    <div className="columns is-multiline is-gapless">
+                        <div className="column is-12 is-hidden-mobile">
+                            <DashboardAuthorProfile authorDetails={this.props.authorDetails}/>
                         </div>
+                        {
+                            !this.props.hidePossiblyYourPublicationsLure
+                            && this.props.possiblyYourPublicationsCount
+                            && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
+                            <div className="notification-wrap column is-12">
+                                <Alert
+                                    title={txt.possiblePublicationsLure.title}
+                                    message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
+                                    type={txt.possiblePublicationsLure.type}
+                                    actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
+                                    action={this._claimYourPublications}
+                                    allowDismiss
+                                    dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                            </div>
+                        }
+
                     </div>
                 }
                 {
@@ -109,24 +114,29 @@ class Dashboard extends React.Component {
                         <AuthorsPublicationsPerYearChart
                             className="barChart"
                             {...this.props.publicationsByYear}
-                            yAxisTitle={txt.publicationsByYearChart.yAxisTitle} />
+                            yAxisTitle={txt.publicationsByYearChart.yAxisTitle}/>
                     </StandardCard>
                 }
                 {
                     !loading && this.props.publicationTypesCount &&
                     <div className="columns">
                         <div className="column is-gapless is-4">
-                            <StandardCard className="donutChart" title={txt.publicationTypesCountChart.title}>
+                            <StandardCard className="donutChart card-full-height"
+                                          title={txt.publicationTypesCountChart.title}>
                                 <AuthorsPublicationTypesCountChart
                                     className="donutChart"
-                                    series={[{name: txt.publicationTypesCountChart.title, data: this.props.publicationTypesCount}]} />
+                                    series={[{
+                                        name: txt.publicationTypesCountChart.title,
+                                        data: this.props.publicationTypesCount
+                                    }]}/>
                             </StandardCard>
                         </div>
 
-                        <div className="column is-9">
-                            <StandardCard title="eSpace publications linked from: WOS/SCOPUS">
-                                { this.props.loadingPublicationsStats && 'loading your stats...'}
-                                { this.props.publicationsStats && JSON.stringify(this.props.publicationsStats)}
+                        <div className="column">
+                            <StandardCard className="card-full-height card-paddingless"
+                                          title="eSpace publications linked from: WOS/SCOPUS">
+                                {this.props.loadingPublicationsStats && 'loading your stats...'}
+                                {this.props.publicationsStats && JSON.stringify(this.props.publicationsStats)}
                             </StandardCard>
                         </div>
                     </div>
@@ -135,19 +145,22 @@ class Dashboard extends React.Component {
                 {
                     !loading && !this.props.loadingTrendingPublications && !this.props.loadingLatestPublications
                     && (this.props.latestPublicationsList.length > 0 || this.props.trendingPublicationsList.length > 0) &&
-                    <StandardCard>
+                    <StandardCard className="card-paddingless">
                         <Tabs>
                             <Tab label={txt.myPublications.title} value="myPublications">
                                 {
                                     !loading && !this.props.loadingLatestPublications
                                     && this.props.latestPublicationsList.length > 0 &&
-                                    <div>
+                                    <div style={{padding: '12px 24px'}}>
                                         <PublicationsList publicationsList={this.props.latestPublicationsList}
                                                           showDefaultActions/>
-                                        <div className="is-pulled-right">
-                                            <RaisedButton secondary
-                                                          label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                                                          onTouchTap={this._viewYourResearch}/>
+                                        <div className="columns">
+                                            <div className="column is-hidden-mobile"/>
+                                            <div className="column is-narrow">
+                                                <RaisedButton secondary
+                                                              label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
+                                                              onTouchTap={this._viewYourResearch}/>
+                                            </div>
                                         </div>
                                     </div>
                                 }
@@ -156,7 +169,7 @@ class Dashboard extends React.Component {
                                 {
                                     !loading && !this.props.loadingTrendingPublications
                                     && this.props.trendingPublicationsList.length > 0 &&
-                                    <div>
+                                    <div style={{padding: '12px 24px 24px 24px'}}>
                                         {
                                             this.props.trendingPublicationsList.map((metric, metricIndex) => (
                                                 <div key={'metrics_' + metricIndex}>
@@ -165,7 +178,8 @@ class Dashboard extends React.Component {
                                                     {
                                                         metric.values.map((recordValue, recordIndex) => (
                                                             <div key={'trending_publication_' + recordIndex}>
-                                                                {recordValue.title} {recordValue.count} +{recordValue.difference}
+                                                                {recordValue.title} {recordValue.count}
+                                                                +{recordValue.difference}
                                                             </div>
                                                         ))
                                                     }

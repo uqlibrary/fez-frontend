@@ -5,6 +5,7 @@ exports[`ClaimPublication test renders empty list 1`] = `
   title="Claim possible publications"
 >
   <StandardCard
+    className=""
     help={
       Object {
         "buttonLabel": "Ok",
@@ -54,6 +55,7 @@ exports[`ClaimPublication test renders list of publications and counts 1`] = `
   </section>
   <div>
     <StandardCard
+      className=""
       help={
         Object {
           "buttonLabel": "Ok",
@@ -67,7 +69,7 @@ exports[`ClaimPublication test renders list of publications and counts 1`] = `
         5 out of 5 potential match(es) displayed. Select any item to claim it as your work.
       </div>
       <PublicationsList
-        actions={
+        customActions={
           Array [
             Object {
               "handleAction": [Function],
@@ -831,7 +833,7 @@ exports[`ClaimPublication test renders list of publications and counts 1`] = `
                 "rek_volume_number_pid": "UQ:492459",
               },
               "rek_altmetric_id": null,
-              "rek_altmetric_score": null,
+              "rek_altmetric_score": 100,
               "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Jung, Ji-Won\\" href=\\"/list/author/Jung%2C+Ji-Won/\\">Jung, Ji-Won</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Simpson, Fiona\\" href=\\"/list/author/Simpson%2C+Fiona/\\">Simpson, Fiona</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Frazer, Ian H.\\" href=\\"/list/author/Frazer%2C+Ian+H./\\">Frazer, Ian H.</a> and <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Wells, James W.\\" href=\\"/list/author/Wells%2C+James+W./\\">Wells, James W.</a> (<span class=\\"citation_date\\">2016</span>). <a class=\\"citation_title\\" title=\\"Click to view Conference Paper: Rapamycin, But Not Tacrolimus, Promotes Cd8 Memory T-Cell Differentiation and Function in the Skin\\" href=\\"/view/UQ:492459\\">Rapamycin, But Not Tacrolimus, Promotes Cd8 Memory T-Cell Differentiation and Function in the Skin</a>. In: <span class=\\"citation_proceedings_title\\">Wound Repair and Regeneration</span>. <i></i>, , (<span class=\\"citation_start_page\\">A19</span>-<span class=\\"citation_end_page\\">A19</span>). .",
               "rek_copyright": null,
               "rek_created_date": "2017-03-04T15:00:36Z",
@@ -848,7 +850,7 @@ exports[`ClaimPublication test renders list of publications and counts 1`] = `
               "rek_herdc_notes": null,
               "rek_object_type": 3,
               "rek_pid": "UQ:492459",
-              "rek_scopus_citation_count": null,
+              "rek_scopus_citation_count": 10,
               "rek_scopus_doc_type": null,
               "rek_security_inherited": null,
               "rek_status": 2,
@@ -1405,27 +1407,23 @@ exports[`ClaimPublication test renders list of publications and counts 1`] = `
       />
     </StandardCard>
     <div
-      className="layout-card"
+      className="columns"
     >
       <div
-        className="columns"
+        className="column is-hidden-mobile"
+      />
+      <div
+        className="column is-narrow-desktop is-12-mobile is-pulled-right"
       >
-        <div
-          className="column is-hidden-mobile"
+        <RaisedButton
+          disabled={false}
+          fullWidth={true}
+          label="None of these publications are mine"
+          labelPosition="after"
+          onTouchTap={[Function]}
+          primary={false}
+          secondary={true}
         />
-        <div
-          className="column is-narrow-desktop is-12-mobile is-pulled-right"
-        >
-          <RaisedButton
-            disabled={false}
-            fullWidth={true}
-            label="None of these publications are mine"
-            labelPosition="after"
-            onTouchTap={[Function]}
-            primary={false}
-            secondary={true}
-          />
-        </div>
       </div>
     </div>
   </div>
@@ -1443,19 +1441,6 @@ exports[`ClaimPublication test renders loading screen while loading author data 
       message="Searching for your publications..."
     />
   </div>
-  <StandardCard
-    help={
-      Object {
-        "buttonLabel": "Ok",
-        "text": "Why search didn't return any items....",
-        "title": "No matching records found",
-      }
-    }
-    text="No publications were automatically matched for you to claim."
-    title="No matching publications found"
-  >
-    No publications were automatically matched for you to claim.
-  </StandardCard>
 </StandardPage>
 `;
 
@@ -1485,6 +1470,7 @@ exports[`ClaimPublication test renders no results 1`] = `
     />
   </div>
   <StandardCard
+    className=""
     help={
       Object {
         "buttonLabel": "Ok",
