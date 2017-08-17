@@ -443,7 +443,7 @@ export default {
                 title: 'You are claiming to be an author for the following item:',
                 help: {
                     title: 'Claiming a publication',
-                    text: '...',
+                    text: 'Enter the text that will help people here',
                     buttonLabel: 'OK'
                 }
             },
@@ -457,7 +457,7 @@ export default {
                 }
             },
             comments: {
-                title: 'If necessary, please suggest changes or upload additional files below',
+                title: 'Please suggest changes and/or upload additional files below',
                 help: {
                     title: 'Additional information',
                     text: '...',
