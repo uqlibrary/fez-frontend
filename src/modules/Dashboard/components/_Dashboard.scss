@@ -1,5 +1,14 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
+.possiblePublicationLure {
+  margin: -1px 0 0 0 !important;
+  .alertWrapper {
+    margin: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
 @media all and (min-width: 768px) {
 
   .isLoading {
