@@ -16,7 +16,7 @@ export default class ContributorRowHeader extends Component {
 
     static defaultProps = {
         locale: {
-            authorAssignmentColumn: 'Select your name',
+            contributorAssignmentColumn: 'Select your name',
             nameColumn: 'Name as published',
             identifierColumn: 'UQ identifier',
             reorderColumn: 'Reorder records',
@@ -40,7 +40,7 @@ export default class ContributorRowHeader extends Component {
 
     render() {
         const {nameColumn, identifierColumn, reorderColumn,
-            deleteAll, deleteAllConfirmation, authorAssignmentColumn} = this.props.locale;
+            deleteAll, deleteAllConfirmation, contributorAssignmentColumn} = this.props.locale;
 
         return (
             <div className="columns is-gapless is-mobile contributorsHeader datalist datalist-header">
@@ -49,7 +49,9 @@ export default class ContributorRowHeader extends Component {
                                   locale={deleteAllConfirmation} />
                 {
                     this.props.showContributorAssignment &&
-                    <div className="column is-1-desktop is-1-tablet is-1-mobile authorAssignment datalist-title">{authorAssignmentColumn}</div>
+                    <div className="column is-1-desktop is-1-tablet is-1-mobile authorAssignment datalist-title">
+                        <label htmlFor="contributorAssignment">{contributorAssignmentColumn}</label>
+                    </div>
                 }
                 <div className="column name datalist-title">{nameColumn}</div>
                 {

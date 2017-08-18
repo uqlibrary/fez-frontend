@@ -6,11 +6,13 @@ import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import {Alert} from 'uqlibrary-react-toolbox';
 
+
 class ContributorsEditor extends Component {
 
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
+        className: PropTypes.string,
         disabled: PropTypes.bool,
         author: PropTypes.object,
         onChange: PropTypes.func,
@@ -119,7 +121,7 @@ class ContributorsEditor extends Component {
         );
 
         return (
-            <div>
+            <div className={this.props.className}>
                 <ContributorForm
                     onAdd={this.addContributor}
                     showIdentifierLookup={this.props.showIdentifierLookup}

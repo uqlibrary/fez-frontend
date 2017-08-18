@@ -82,6 +82,7 @@ export default class ContributorRow extends Component {
                     this.props.showContributorAssignment &&
                     <div className="column is-1-desktop is-1-tablet is-1-mobile contributorIdentifier datalist-text">
                        <Checkbox
+                           name="contributorAssignment"
                            onCheck={this._onContributorAssigned}
                            checkedIcon={<RadioButtonCheckedIcon />}
                            uncheckedIcon={<RadioButtonUncheckedIcon />}

@@ -29,6 +29,8 @@ export function createNewRecord(data) {
             ...transformers.recordAuthorsId(data.authors)
         };
 
+        console.log(data.authors);
+
         // delete extra form values from request object
         if (recordRequest.authors) delete recordRequest.authors;
         if (recordRequest.editors) delete recordRequest.editors;

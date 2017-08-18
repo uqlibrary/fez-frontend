@@ -58,6 +58,8 @@ export default class BookForm extends Component {
                         name="authors"
                         locale={{contributorSuffix: txt.authors.suffix}}
                         showContributorAssignment
+                        className="requiredField"
+                        validate={[validation.isValidContributor]}
                         disabled={this.props.submitting} />
                 </StandardCard>
 
