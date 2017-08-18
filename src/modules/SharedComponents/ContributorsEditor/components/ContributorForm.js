@@ -57,7 +57,7 @@ class ContributorForm extends Component {
 
     _addContributor = (event) => {
         // add contributor if user hits 'enter' key on input field
-        if(this.props.disabled || (event.key && (event.key !== 'Enter' || this.state.nameAsPublished.length === 0))) return;
+        if(this.props.disabled || (event && event.key && (event.key !== 'Enter' || this.state.nameAsPublished.length === 0))) return;
 
         // pass on the selected contributor
         this.props.onAdd({...this.state.contributor, ...{nameAsPublished: this.state.nameAsPublished}});
