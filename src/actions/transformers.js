@@ -31,7 +31,7 @@ export function recordRekLink(data) {
 }
 
 export function recordFileAttachment(files, record) {
-    if (!files || files.length === 0) return null;
+    if (!files || files.length === 0) return {};
 
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount = record && record.fez_record_search_key_file_attachment_name ?

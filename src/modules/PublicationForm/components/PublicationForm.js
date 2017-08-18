@@ -91,6 +91,7 @@ export default class PublicationForm extends Component {
                 {
                     this._getPublicationTypeForm(this.props.formValues.get('rek_display_type'))
                 }
+
                 {
                     this.props.formValues.get('rek_display_type') > 0 &&
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
@@ -99,41 +100,41 @@ export default class PublicationForm extends Component {
                 }
                 {
                     this.props.submitFailed && this.props.error &&
-                    <Alert type="error_outline" title="Error" message={this.props.error} />
+                    <Alert type="error_outline" {...txt.errorAlert} />
                 }
                 {
-                    this.props.dirty && this.props.invalid && !this.props.submitFailed &&
-                    <Alert type="warning" title="Validation" message={'Form cannot be submitted until all fields are valid...'} />
+                    !this.props.submitFailed && this.props.dirty && this.props.invalid &&
+                    <Alert type="warning" {...txt.validationAlert} />
                 }
                 {
                     this.props.submitting &&
-                    <Alert type="info_outline" title="Saving" message={'New publication is being saved...'} />
+                    <Alert type="info_outline" {...txt.progressAlert} />
                 }
                 {
                     this.props.submitSucceeded &&
-                    <Alert type="info" title="Success" message={'New publication has been saved...'} />
+                    <Alert type="info" {...txt.successAlert} />
                 }
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                fullWidth
-                                label={txt.cancel}
-                                disabled={this.props.submitting}
-                                onTouchTap={this._showConfirmation} />
-                        </div>
-                        {this.props.formValues.get('rek_display_type') > 0 &&
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                secondary
-                                fullWidth
-                                label={txt.submit}
-                                onTouchTap={this.props.handleSubmit}
-                                disabled={this.props.submitting || this.props.invalid}
-                            />
-                        </div>
-                        }
+                <div className="columns action-buttons">
+                    <div className="column is-hidden-mobile"/>
+                    <div className="column is-narrow-desktop">
+                        <RaisedButton
+                            fullWidth
+                            label={txt.cancel}
+                            disabled={this.props.submitting}
+                            onTouchTap={this._showConfirmation} />
                     </div>
+                    {this.props.formValues.get('rek_display_type') > 0 &&
+                    <div className="column is-narrow-desktop">
+                        <RaisedButton
+                            secondary
+                            fullWidth
+                            label={txt.submit}
+                            onTouchTap={this.props.handleSubmit}
+                            disabled={this.props.submitting || this.props.invalid}
+                        />
+                    </div>
+                    }
+                </div>
             </form>
         );
     }

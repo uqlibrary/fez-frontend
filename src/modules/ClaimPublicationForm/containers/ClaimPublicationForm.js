@@ -1,31 +1,14 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
+import {reduxForm, getFormValues, stopSubmit, SubmissionError} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
-import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 const FORM_NAME = 'ClaimPublicationForm';
 
 const onSubmit = (values, dispatch) => {
-    // TODO: will become a part of values
-    // const files = [
-    //     {
-    //         file: 'image.jpg',
-    //         access_condition_id: 1,
-    //         date: '2017-08-20'
-    //     },
-    //     {
-    //         file: 'image2.jpg',
-    //         access_condition_id: 2,
-    //         date: '2017-08-21'
-    //     }
-    // ];
-
-    // set default values for a new unapproved record
-    // TODO: date should be a part of redux-form data
     const data = {...values.toJS()};
     console.log(data);
     return dispatch(actions.claimPublication(data))
@@ -34,9 +17,9 @@ const onSubmit = (values, dispatch) => {
             // reported bug to redux-form:
             // reset form after success action was dispatched:
             // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-            setTimeout(()=>{
-                dispatch(reset(FORM_NAME));
-            }, 100);
+            // setTimeout(()=>{
+            //     dispatch(reset(FORM_NAME));
+            // }, 100);
         }).catch(error => {
             throw new SubmissionError({_error: error.message});
         });
@@ -59,14 +42,13 @@ const mapStateToProps = (state) => {
         initialValues: {
             publication: state.get('claimPublicationReducer').publicationToClaim,
             author: state.get('accountReducer').author
-        },
-        ...state.get('fileUpload')
+        }
     };
 };
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: { ...bindActionCreators(actions, dispatch), fileUploadActions }
+        actions: bindActionCreators(actions, dispatch)
     };
 }
 
