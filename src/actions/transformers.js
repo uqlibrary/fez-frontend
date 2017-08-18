@@ -74,15 +74,13 @@ export function recordAuthors(authors) {
     };
 }
 
-export function recordAuthorsId(authors, authorId) {
-    if (!authorId || !authors || authors.length === 0) return {};
-
+export function recordAuthorsId(authors) {
     return {
         fez_record_search_key_author_id: authors.map(
             (item, index) => (
                 item.selected ?
                 {
-                    rek_author_id: authorId,
+                    rek_author_id: item.authorId,
                     rek_author_id_order: index + 1
                 }
                 :

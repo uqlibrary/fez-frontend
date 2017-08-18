@@ -162,6 +162,7 @@ export function clearClaimPublication() {
  * @returns {action}
  */
 export function claimPublication(data) {
+    console.log(data);
     return dispatch => {
         dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
         if (data.publication.rek_pid) {

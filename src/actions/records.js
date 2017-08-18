@@ -16,6 +16,7 @@ import {fileUploadActions} from 'uqlibrary-react-toolbox';
  * @returns {action}
  */
 export function createNewRecord(data) {
+    console.log(data);
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
 
@@ -25,13 +26,16 @@ export function createNewRecord(data) {
             ...data,
             ...transformers.recordRekLink(data),
             ...transformers.recordAuthors(data.authors),
-            ...transformers.recordAuthorsId(data.authors, 1671)
+            ...transformers.recordAuthorsId(data.authors)
         };
+
+        console.log(recordRequest);
 
         // delete extra form values from request object
         if (recordRequest.authors) delete recordRequest.authors;
         if (recordRequest.editors) delete recordRequest.editors;
         if (recordRequest.files) delete recordRequest.files;
+        if (recordRequest.author) delete recordRequest.author;
 
         return postRecord(recordRequest)
             .then(response => {

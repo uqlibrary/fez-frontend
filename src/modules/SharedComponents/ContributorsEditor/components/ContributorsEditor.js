@@ -1,22 +1,25 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import {Alert} from 'uqlibrary-react-toolbox';
 
-export default class ContributorsEditor extends Component {
+class ContributorsEditor extends Component {
 
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
         disabled: PropTypes.bool,
+        author: PropTypes.object,
         onChange: PropTypes.func,
         locale: PropTypes.object
     };
 
     static defaultProps = {
         showIdentifierLookup: false,
+        showContributorAssignment: false,
         locale: {
             errorMessage: 'Unable to add an item with the same identifier.'
         }
@@ -27,10 +30,7 @@ export default class ContributorsEditor extends Component {
 
         this.state = {
             contributors: [],
-            errorMessage: '',
-            assignedContributor: {
-                index: -1
-            }
+            errorMessage: ''
         };
     }
 
@@ -88,7 +88,13 @@ export default class ContributorsEditor extends Component {
     }
 
     onContributorAssigned = (contributor, index) => {
-        const newContributors = this.state.contributors.map((item, itemIndex) => {return {...item, selected: index === itemIndex};});
+        const newContributors = this.state.contributors.map((item, itemIndex) => (
+            {
+                ...item,
+                selected: index === itemIndex,
+                authorId: index === itemIndex && this.props.author ? this.props.author.aut_id : null
+            })
+        );
         this.setState({
             contributors: newContributors
         });
@@ -138,3 +144,13 @@ export default class ContributorsEditor extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        author: state.get('accountReducer').author
+    };
+};
+
+export default connect(mapStateToProps)(ContributorsEditor);
+
+
