@@ -57,12 +57,14 @@ export default class BookForm extends Component {
                         component={ContributorsEditorField}
                         name="authors"
                         locale={{contributorSuffix: txt.authors.suffix}}
+                        showContributorAssignment
                         disabled={this.props.submitting} />
                 </StandardCard>
 
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
                     <Field
                         component={ContributorsEditorField}
+                        showContributorAssignment
                         name="editors"
                         locale={{contributorSuffix: txt.editors.suffix}}
                         disabled={this.props.submitting} />

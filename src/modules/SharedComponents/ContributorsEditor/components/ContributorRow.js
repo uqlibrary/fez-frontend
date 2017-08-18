@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
+import Checkbox from 'material-ui/Checkbox';
+import RadioButtonCheckedIcon from 'material-ui/svg-icons/toggle/radio-button-checked';
+import RadioButtonUncheckedIcon from 'material-ui/svg-icons/toggle/radio-button-unchecked';
+
+
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 export default class ContributorRow extends Component {
@@ -15,6 +20,8 @@ export default class ContributorRow extends Component {
         onMoveDown: PropTypes.func,
         onDelete: PropTypes.func,
         showIdentifierLookup: PropTypes.bool,
+        showContributorAssignment: PropTypes.bool,
+        onContributorAssigned: PropTypes.func,
         locale: PropTypes.object,
         contributorSuffix: PropTypes.string,
         disabled: PropTypes.bool
@@ -56,6 +63,10 @@ export default class ContributorRow extends Component {
         if (!this.props.disabled && this.props.onMoveDown) this.props.onMoveDown(this.props.contributor, this.props.index);
     }
 
+    _onContributorAssigned = () => {
+        if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
+    }
+
     render() {
         const {ordinalData, deleteRecordConfirmation} = this.props.locale;
         const contributorOrder = (this.props.index < ordinalData.length ?
@@ -67,16 +78,28 @@ export default class ContributorRow extends Component {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}
                     locale={deleteRecordConfirmation} />
+                {
+                    this.props.showContributorAssignment &&
+                    <div className="column is-1-desktop is-1-tablet is-1-mobile contributorIdentifier datalist-text">
+                       <Checkbox
+                           onCheck={this._onContributorAssigned}
+                           checkedIcon={<RadioButtonCheckedIcon />}
+                           uncheckedIcon={<RadioButtonUncheckedIcon />}
+                           checked={this.props.contributor.selected}
+                           value={this.props.index} />
+                    </div>
+                }
                 <div className="column datalist-text">
                     <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
                     <span className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
                 </div>
-                {this.props.showIdentifierLookup &&
-                <div className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
-                    <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
-                    <br/>
-                    <small>{this.props.contributor.aut_org_username}</small>
-                </div>
+                {
+                    this.props.showIdentifierLookup &&
+                    <div className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
+                        <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
+                        <br/>
+                        <small>{this.props.contributor.aut_org_username}</small>
+                    </div>
                 }
                 <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
                     {this.props.canMoveUp &&

@@ -12,7 +12,7 @@ export function claimAttachments(files) {
 }
 
 export function recordRekLink(data) {
-    if(!data.rek_link) return null;
+    if (!data.rek_link) return null;
 
     return {
         fez_record_search_key_link: [
@@ -58,4 +58,39 @@ export function recordFileAttachment(files, record) {
             ]
         };
     }
+}
+
+export function recordAuthors(authors) {
+    if (!authors || authors.length === 0) return {};
+
+    return {
+        fez_record_search_key_author: authors.map((item, index) => (
+            {
+                rek_author_id: null,
+                rek_author: item.nameAsPublished,
+                rek_author_order: index + 1
+            }
+        ))
+    };
+}
+
+export function recordAuthorsId(authors, authorId) {
+    if (!authorId || !authors || authors.length === 0) return {};
+
+    return {
+        fez_record_search_key_author_id: authors.map(
+            (item, index) => (
+                item.selected ?
+                {
+                    rek_author_id: authorId,
+                    rek_author_id_order: index + 1
+                }
+                :
+                {
+                    rek_author_id: null,
+                    rek_author_id_order: index + 1
+                }
+            )
+        )
+    };
 }

@@ -9,6 +9,7 @@ export default class ContributorsEditor extends Component {
 
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
+        showContributorAssignment: PropTypes.bool,
         disabled: PropTypes.bool,
         onChange: PropTypes.func,
         locale: PropTypes.object
@@ -26,7 +27,10 @@ export default class ContributorsEditor extends Component {
 
         this.state = {
             contributors: [],
-            errorMessage: ''
+            errorMessage: '',
+            assignedContributor: {
+                index: -1
+            }
         };
     }
 
@@ -83,6 +87,13 @@ export default class ContributorsEditor extends Component {
         this.setState({contributors: []});
     }
 
+    onContributorAssigned = (contributor, index) => {
+        const newContributors = this.state.contributors.map((item, itemIndex) => {return {...item, selected: index === itemIndex};});
+        this.setState({
+            contributors: newContributors
+        });
+    }
+
     render() {
         const renderContributorsRows = this.state.contributors.map((contributor, index) =>
             <ContributorRow
@@ -97,7 +108,8 @@ export default class ContributorsEditor extends Component {
                 showIdentifierLookup={this.props.showIdentifierLookup}
                 contributorSuffix={this.props.locale.contributorSuffix}
                 disabled={this.props.disabled}
-            />
+                showContributorAssignment={this.props.showContributorAssignment}
+                onContributorAssigned={this.onContributorAssigned} />
         );
 
         return (
@@ -105,21 +117,22 @@ export default class ContributorsEditor extends Component {
                 <ContributorForm
                     onAdd={this.addContributor}
                     showIdentifierLookup={this.props.showIdentifierLookup}
-                    disabled={this.props.disabled}
-                />
-                {this.state.errorMessage &&
+                    disabled={this.props.disabled} />
+                {
+                    this.state.errorMessage &&
                     <Alert
                         title="Error"
                         message={this.state.errorMessage}
-                        type="warning" />}
-
-                {this.state.contributors.length > 0 &&
+                        type="warning" />
+                }
+                {
+                    this.state.contributors.length > 0 &&
                     <ContributorRowHeader
                         onDeleteAll={this.deleteAllContributors}
                         showIdentifierLookup={this.props.showIdentifierLookup}
                         disabled={this.props.disabled}
-                    />}
-
+                        showContributorAssignment={this.props.showContributorAssignment} />
+                }
                 {renderContributorsRows}
             </div>
         );

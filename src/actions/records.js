@@ -1,11 +1,11 @@
 import {postRecord, patchRecord, putUploadFiles} from '../repositories';
-import {recordRekLink, recordFileAttachment} from './transformers';
+import * as transformers from './transformers';
 
 export const RECORD_RESET = 'RECORD_RESET';
 export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
 export const RECORD_PROCESSING = 'RECORD_PROCESSING';
-import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+import * as config from 'config/general';
 import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 /**
@@ -20,21 +20,32 @@ export function createNewRecord(data) {
         dispatch({type: RECORD_PROCESSING});
 
         // set default values, links
-        const recordRequest = {...data, ...NEW_RECORD_DEFAULT_VALUES, ...recordRekLink(data)};
+        const recordRequest = {
+            ...config.NEW_RECORD_DEFAULT_VALUES,
+            ...data,
+            ...transformers.recordRekLink(data),
+            ...transformers.recordAuthors(data.authors),
+            ...transformers.recordAuthorsId(data.authors, 1671)
+        };
+
+        // delete extra form values from request object
+        if (recordRequest.authors) delete recordRequest.authors;
+        if (recordRequest.editors) delete recordRequest.editors;
+        if (recordRequest.files) delete recordRequest.files;
 
         return postRecord(recordRequest)
             .then(response => {
                 // set a pid on a new record
                 data.rek_pid = response.data.rek_pid;
                 // process files
-                if (!data.files || data.files.length === 0) return response.data;
+                if (!data.files || data.files.length === 0) return response;
                 return putUploadFiles(response.data.rek_pid, data.files, dispatch);
             })
             .then(response => {
-                if (!data.files || data.files.length === 0) return response.data;
+                if (!data.files || data.files.length === 0) return response;
                 // process uploaded files into API format for a patch
                 const recordPatch = {
-                    ...recordFileAttachment(data.files)
+                    ...transformers.recordFileAttachment(data.files)
                 };
                 return patchRecord(data.rek_pid, recordPatch);
             })

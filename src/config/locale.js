@@ -439,11 +439,11 @@ export default {
             },
             errorAlert: {
                 title: 'Error',
-                message: 'Error has occurred during request and claim cannot be processed. Please, review the form and try again.'
+                message: 'Error has occurred during request and adding new publication cannot be processed. Please, review the form and try again.'
             },
             progressAlert: {
                 title: 'Saving',
-                message: 'Claim publication is being processed.'
+                message: 'Creating new publication is in progress.'
             },
             successAlert: {
                 title: 'Success',
