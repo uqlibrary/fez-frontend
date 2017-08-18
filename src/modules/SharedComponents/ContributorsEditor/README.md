@@ -11,6 +11,20 @@ data is passed to redux form values in the following format:
 ]
 ```
 
+if showIdentifierLookup is set to true, and user has looked up author from a list data is presented in the following format:
+```
+[{
+  ...author, // all author details from back end {aut_id, aut_title, aut_lname, etc...}
+  nameAsPublished: "A. Smith", 
+  selected: false, 
+  authorId: null
+}]
+```
+
+- user will not be able to link their author id to a listed author with not their identifier; 
+- if they pick their own identifier from autocomplete, it will link to them automatically and they won't be able to change that link (only delete author)
+- user will be able to link their id to any author name which doesn't have identifier
+
 to be parsed to request:
 
 ```

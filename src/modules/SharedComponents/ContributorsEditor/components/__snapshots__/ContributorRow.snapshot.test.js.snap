@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContributorRow renders  a row with index and contributor set 1`] = `
+<div
+  className="columns is-gapless is-mobile contributorsRow datalist datalist-row"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column datalist-text"
+  >
+    <span
+      className="contributorName"
+    >
+      A. Smith
+    </span>
+    <span
+      className="contributorSubtitle datalist-text-subtitle"
+    >
+      First  listed contributor
+    </span>
+  </div>
+  <div
+    className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+  />
+  <div
+    className="column is-narrow contributorDelete datalist-buttons"
+  >
+    <IconButton
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onTouchTap={[Function]}
+      tooltip="Remove this record"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons deleteIcon"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete
+      </FontIcon>
+    </IconButton>
+  </div>
+</div>
+`;

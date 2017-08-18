@@ -55,6 +55,7 @@ export default class BookForm extends Component {
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Field
                         component={ContributorsEditorField}
+                        showIdentifierLookup
                         name="authors"
                         locale={{contributorSuffix: txt.authors.suffix}}
                         showContributorAssignment
