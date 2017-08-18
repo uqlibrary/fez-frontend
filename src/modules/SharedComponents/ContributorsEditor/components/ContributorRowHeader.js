@@ -9,7 +9,8 @@ export default class ContributorRowHeader extends Component {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        disabled: PropTypes.bool
     };
 
     static defaultProps = {
@@ -46,13 +47,17 @@ export default class ContributorRowHeader extends Component {
 
                 <div className="column name datalist-title">{nameColumn}</div>
 
-            {this.props.showIdentifierLookup &&
+            {
+                this.props.showIdentifierLookup &&
                 <div className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title">{identifierColumn}</div>
             }
                 <div className="column is-narrow is-hidden-mobile order datalist-title">{reorderColumn}</div>
 
                 <div className="column is-narrow buttons datalist-buttons">
-                    <IconButton tooltip={deleteAll} onTouchTap={this._showConfirmation}>
+                    <IconButton
+                        tooltip={deleteAll}
+                        onTouchTap={this._showConfirmation}
+                        disabled={this.props.disabled}>
                         <FontIcon className="material-icons">delete_forever</FontIcon>
                     </IconButton>
                 </div>

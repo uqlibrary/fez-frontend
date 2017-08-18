@@ -16,7 +16,8 @@ export default class ContributorRow extends Component {
         onDelete: PropTypes.func,
         showIdentifierLookup: PropTypes.bool,
         locale: PropTypes.object,
-        contributorSuffix: PropTypes.string
+        contributorSuffix: PropTypes.string,
+        disabled: PropTypes.bool
     };
 
     static defaultProps = {
@@ -44,15 +45,15 @@ export default class ContributorRow extends Component {
     }
 
     _deleteRecord = () => {
-        if (this.props.onDelete) this.props.onDelete(this.props.contributor, this.props.index);
+        if (!this.props.disabled && this.props.onDelete) this.props.onDelete(this.props.contributor, this.props.index);
     }
 
     _onMoveUp = () => {
-        if (this.props.onMoveUp) this.props.onMoveUp(this.props.contributor, this.props.index);
+        if (!this.props.disabled && this.props.onMoveUp) this.props.onMoveUp(this.props.contributor, this.props.index);
     }
 
     _onMoveDown = () => {
-        if (this.props.onMoveDown) this.props.onMoveDown(this.props.contributor, this.props.index);
+        if (!this.props.disabled && this.props.onMoveDown) this.props.onMoveDown(this.props.contributor, this.props.index);
     }
 
     render() {
@@ -79,18 +80,29 @@ export default class ContributorRow extends Component {
                 }
                 <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
                     {this.props.canMoveUp &&
-                    <IconButton tooltip={this.props.locale.moveUpHint} onTouchTap={this._onMoveUp} className="reorderUp">
+                    <IconButton
+                        tooltip={this.props.locale.moveUpHint}
+                        onTouchTap={this._onMoveUp}
+                        className="reorderUp"
+                        disabled={this.props.disabled}>
                         <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
                     </IconButton>
                     }
                     {this.props.canMoveDown &&
-                    <IconButton tooltip={this.props.locale.moveDownHint} onTouchTap={this._onMoveDown} className="reorderDown">
+                    <IconButton
+                        tooltip={this.props.locale.moveDownHint}
+                        onTouchTap={this._onMoveDown}
+                        className="reorderDown"
+                        disabled={this.props.disabled}>
                         <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
                     </IconButton>
                     }
                 </div>
                 <div className="column is-narrow contributorDelete datalist-buttons">
-                    <IconButton tooltip={this.props.locale.deleteHint} onTouchTap={this._showConfirmation}>
+                    <IconButton
+                        tooltip={this.props.locale.deleteHint}
+                        onTouchTap={this._showConfirmation}
+                        disabled={this.props.disabled}>
                         <FontIcon className="material-icons deleteIcon">delete</FontIcon>
                     </IconButton>
                 </div>

@@ -9,6 +9,7 @@ export default class ContributorsEditor extends Component {
 
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
+        disabled: PropTypes.bool,
         onChange: PropTypes.func,
         locale: PropTypes.object
     };
@@ -95,6 +96,7 @@ export default class ContributorsEditor extends Component {
                 onDelete={this.deleteContributor}
                 showIdentifierLookup={this.props.showIdentifierLookup}
                 contributorSuffix={this.props.locale.contributorSuffix}
+                disabled={this.props.disabled}
             />
         );
 
@@ -103,10 +105,11 @@ export default class ContributorsEditor extends Component {
                 <ContributorForm
                     onAdd={this.addContributor}
                     showIdentifierLookup={this.props.showIdentifierLookup}
+                    disabled={this.props.disabled}
                 />
                 {this.state.errorMessage &&
                     <Alert
-                        title="Error!"
+                        title="Error"
                         message={this.state.errorMessage}
                         type="warning" />}
 
@@ -114,6 +117,7 @@ export default class ContributorsEditor extends Component {
                     <ContributorRowHeader
                         onDeleteAll={this.deleteAllContributors}
                         showIdentifierLookup={this.props.showIdentifierLookup}
+                        disabled={this.props.disabled}
                     />}
 
                 {renderContributorsRows}
