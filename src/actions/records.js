@@ -1,11 +1,12 @@
 import {postRecord, patchRecord, putUploadFiles} from '../repositories';
-import {recordRekLink, recordFileAttachment} from './transformers';
+import * as transformers from './transformers';
 
 export const RECORD_RESET = 'RECORD_RESET';
 export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
 export const RECORD_PROCESSING = 'RECORD_PROCESSING';
-import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+import * as config from 'config/general';
+import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -15,11 +16,28 @@ import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
  * @returns {action}
  */
 export function createNewRecord(data) {
+    console.log(data);
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
 
         // set default values, links
-        const recordRequest = {...data, ...NEW_RECORD_DEFAULT_VALUES, ...recordRekLink(data)};
+        const recordRequest = {
+            ...config.NEW_RECORD_DEFAULT_VALUES,
+            ...data,
+            ...transformers.recordRekLink(data),
+            ...transformers.recordAuthors(data.authors),
+            ...transformers.recordAuthorsId(data.authors),
+            ...transformers.recordContributors(data.editors),
+            ...transformers.recordContributorsId(data.editors)
+        };
+
+        console.log(recordRequest);
+
+        // delete extra form values from request object
+        if (recordRequest.authors) delete recordRequest.authors;
+        if (recordRequest.editors) delete recordRequest.editors;
+        if (recordRequest.files) delete recordRequest.files;
+        if (recordRequest.author) delete recordRequest.author;
 
         return postRecord(recordRequest)
             .then(response => {
@@ -33,7 +51,7 @@ export function createNewRecord(data) {
                 if (!data.files.queue || data.files.queue.length === 0) return response.data;
                 // process uploaded files into API format for a patch
                 const recordPatch = {
-                    ...recordFileAttachment(data.files.queue)
+                    ...transformers.recordFileAttachment(data.files.queue)
                 };
                 return patchRecord(data.rek_pid, recordPatch);
             })

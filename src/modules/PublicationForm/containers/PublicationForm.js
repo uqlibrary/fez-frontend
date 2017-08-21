@@ -8,8 +8,7 @@ const FORM_NAME = 'PublicationForm';
 
 const onSubmit = (values, dispatch) => {
     // set default values for a new unapproved record
-    return dispatch(
-        createNewRecord({...values.toJS()}))
+    return dispatch(createNewRecord({...values.toJS()}))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:

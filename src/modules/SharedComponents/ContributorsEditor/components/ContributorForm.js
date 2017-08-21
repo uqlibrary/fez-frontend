@@ -15,7 +15,8 @@ class ContributorForm extends Component {
         onAdd: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
         actions: PropTypes.object.isRequired,
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        disabled: PropTypes.bool
     };
 
     static defaultProps = {
@@ -56,7 +57,7 @@ class ContributorForm extends Component {
 
     _addContributor = (event) => {
         // add contributor if user hits 'enter' key on input field
-        if(event.key && (event.key !== 'Enter' || this.state.nameAsPublished.length === 0)) return;
+        if(this.props.disabled || (event && event.key && (event.key !== 'Enter' || this.state.nameAsPublished.length === 0))) return;
 
         // pass on the selected contributor
         this.props.onAdd({...this.state.contributor, ...{nameAsPublished: this.state.nameAsPublished}});
@@ -113,34 +114,36 @@ class ContributorForm extends Component {
                         value={this.state.nameAsPublished}
                         onChange={this._onNameChanged}
                         onKeyPress={this._addContributor}
-                    />
+                        disabled={this.props.disabled} />
                 </div>
-                {this.props.showIdentifierLookup &&
-                <div className="column contributorsLinking">
-                    <AutoComplete
-                        disabled={this.state.nameAsPublished.trim().length === 0}
-                        listStyle={{maxHeight: 200, overflow: 'auto'}}
-                        filter={() => true}
-                        ref="identifierField"
-                        floatingLabelText={this.props.locale.identifierLabel}
-                        hintText={this.props.locale.identifierLabel}
-                        dataSource={this.props.authorsList}
-                        dataSourceConfig={autoCompleteDataFormat}
-                        openOnFocus
-                        fullWidth
-                        animated={false}
-                        searchText={this.state.uqIdentifier}
-                        onUpdateInput={this._onUQIdentifierChanged}
-                        onNewRequest={this._onUQIdentifierSelected}
-                    />
-                </div>}
+                {
+                    this.props.showIdentifierLookup &&
+                    <div className="column contributorsLinking">
+                        <AutoComplete
+                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
+                            listStyle={{maxHeight: 200, overflow: 'auto'}}
+                            filter={() => true}
+                            ref="identifierField"
+                            floatingLabelText={this.props.locale.identifierLabel}
+                            hintText={this.props.locale.identifierLabel}
+                            dataSource={this.props.authorsList}
+                            dataSourceConfig={autoCompleteDataFormat}
+                            openOnFocus
+                            fullWidth
+                            animated={false}
+                            searchText={this.state.uqIdentifier}
+                            onUpdateInput={this._onUQIdentifierChanged}
+                            onNewRequest={this._onUQIdentifierSelected}
+                        />
+                    </div>
+                }
                 <div className="column is-narrow contributorsButton">
                     <RaisedButton
                         className="is-mui-spacing-button"
                         fullWidth
                         primary
                         label={this.props.locale.addButton}
-                        disabled={this.state.nameAsPublished.trim().length === 0}
+                        disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
                         onClick={this._addContributor} />
                 </div>
             </div>

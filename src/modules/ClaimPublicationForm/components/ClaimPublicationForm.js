@@ -96,12 +96,14 @@ export default class ClaimPublicationForm extends Component {
                         <Field
                             component={TextField}
                             disabled={this.props.submitting}
+                            className="requiredField"
                             name="comments"
                             type="text"
                             fullWidth
                             multiLine
                             rows={1}
-                            floatingLabelText={txt.comments.fieldLabels.comments} />
+                            floatingLabelText={txt.comments.fieldLabels.comments}
+                            validate={[validation.required]} />
 
                         <Field
                             component={TextField}
@@ -118,22 +120,19 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
                     {
                         this.props.submitFailed && this.props.error &&
-                        <Alert type="error_outline" title="Error" message={this.props.error} outsideLayout/>
+                        <Alert type="error_outline" {...txt.errorAlert} />
                     }
                     {
-                        this.props.dirty && this.props.invalid &&
-                        <Alert type="warning" title="Validation"
-                               message={'Form cannot be submitted until all fields are valid...'} outsideLayout/>
+                        !this.props.submitFailed && this.props.invalid &&
+                        <Alert {...txt.validationAlert} type="warning" />
                     }
                     {
                         this.props.submitting &&
-                        <Alert type="info_outline" title="Saving" message={'Claim publication is being processed...'}
-                               outsideLayout/>
+                        <Alert type="info_outline" {...txt.progressAlert} />
                     }
                     {
                         this.props.submitSucceeded &&
-                        <Alert type="info" title="Success"
-                               message={'Publication claim has been submitted successfully...'} outsideLayout/>
+                        <Alert type="info" {...txt.successAlert} />
                     }
                     <div className="columns">
                         <div className="column is-hidden-mobile"/>

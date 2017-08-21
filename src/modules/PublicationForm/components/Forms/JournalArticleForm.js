@@ -79,6 +79,7 @@ export default class JournalArticleForm extends Component {
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Field component={ContributorsEditorField}
+                           showContributorAssignment
                            name="authors"
                            locale={{contributorSuffix: txt.authors.suffix}}
                            disabled={this.props.submitting}

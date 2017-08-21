@@ -432,6 +432,22 @@ export default {
                 confirmationMessage: 'Are you sure you want to abandon workflow?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
+            },
+            validationAlert: {
+                title: 'Validation',
+                message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
+            },
+            errorAlert: {
+                title: 'Error',
+                message: 'Error has occurred during request and adding new publication cannot be processed. Please, review the form and try again.'
+            },
+            progressAlert: {
+                title: 'Saving',
+                message: 'Creating new publication is in progress.'
+            },
+            successAlert: {
+                title: 'Success',
+                message: 'New publication has been saved successfully.'
             }
         },
         claimPublicationForm: {
@@ -487,6 +503,22 @@ export default {
                 cancelButtonLabel: 'Claim more publications',
                 confirmButtonLabel: 'OK'
             },
+            validationAlert: {
+                title: 'Validation',
+                message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
+            },
+            errorAlert: {
+                title: 'Error',
+                message: 'Error has occurred during request and claim cannot be processed. Please, review the form and try again.'
+            },
+            progressAlert: {
+                title: 'Saving',
+                message: 'Claim publication is being processed.'
+            },
+            successAlert: {
+                title: 'Success',
+                message: 'Publication claim has been submitted successfully.'
+            }
         },
         publicationCitation: {
             defaultActions: [

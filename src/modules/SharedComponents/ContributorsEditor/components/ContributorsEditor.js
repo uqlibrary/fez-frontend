@@ -1,20 +1,27 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import {Alert} from 'uqlibrary-react-toolbox';
 
-export default class ContributorsEditor extends Component {
+
+class ContributorsEditor extends Component {
 
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
+        showContributorAssignment: PropTypes.bool,
+        className: PropTypes.string,
+        disabled: PropTypes.bool,
+        author: PropTypes.object,
         onChange: PropTypes.func,
         locale: PropTypes.object
     };
 
     static defaultProps = {
         showIdentifierLookup: false,
+        showContributorAssignment: false,
         locale: {
             errorMessage: 'Unable to add an item with the same identifier.'
         }
@@ -25,6 +32,7 @@ export default class ContributorsEditor extends Component {
 
         this.state = {
             contributors: [],
+            isCurrentAuthorSelected: false,
             errorMessage: ''
         };
     }
@@ -43,9 +51,17 @@ export default class ContributorsEditor extends Component {
                 errorMessage: this.props.locale.errorMessage
             });
         } else {
+            contributor.disabled = !!contributor.aut_id;
+
             this.setState({
                 contributors: [ ...this.state.contributors, contributor],
-                errorMessage: ''
+                errorMessage: '',
+                isCurrentAuthorSelected: this.state.isCurrentAuthorSelected || (this.props.author && contributor.aut_id === this.props.author.aut_id)
+            }, () => {
+                // try to automatically select contributor if they are a current author
+                if (this.props.author && contributor.aut_id === this.props.author.aut_id) {
+                    this.onContributorAssigned(contributor, this.state.contributors.length - 1);
+                }
             });
         }
     }
@@ -74,12 +90,29 @@ export default class ContributorsEditor extends Component {
 
     deleteContributor = (contributor, index) => {
         this.setState({
-            contributors: this.state.contributors.filter((_, i) => i !== index)
+            contributors: this.state.contributors.filter((_, i) => i !== index),
+            isCurrentAuthorSelected: this.state.isCurrentAuthorSelected && (this.props.author && contributor.aut_id !== this.props.author.aut_id)
         });
     }
 
     deleteAllContributors = () => {
-        this.setState({contributors: []});
+        this.setState({
+            contributors: [],
+            isCurrentAuthorSelected: false
+        });
+    }
+
+    onContributorAssigned = (contributor, index) => {
+        const newContributors = this.state.contributors.map((item, itemIndex) => (
+            {
+                ...item,
+                selected: (this.props.author && item.aut_id === this.props.author.aut_id) || index === itemIndex,
+                authorId: (index === itemIndex && this.props.author) ? this.props.author.aut_id : null
+            })
+        );
+        this.setState({
+            contributors: newContributors
+        });
     }
 
     render() {
@@ -95,29 +128,45 @@ export default class ContributorsEditor extends Component {
                 onDelete={this.deleteContributor}
                 showIdentifierLookup={this.props.showIdentifierLookup}
                 contributorSuffix={this.props.locale.contributorSuffix}
-            />
+                disabled={this.props.disabled}
+                showContributorAssignment={this.props.showContributorAssignment}
+                disabledContributorAssignment={this.state.isCurrentAuthorSelected}
+                onContributorAssigned={this.onContributorAssigned} />
         );
 
         return (
-            <div>
+            <div className={this.props.className}>
                 <ContributorForm
                     onAdd={this.addContributor}
                     showIdentifierLookup={this.props.showIdentifierLookup}
-                />
-                {this.state.errorMessage &&
+                    disabled={this.props.disabled} />
+                {
+                    this.state.errorMessage &&
                     <Alert
-                        title="Error!"
+                        title="Error"
                         message={this.state.errorMessage}
-                        type="warning" />}
-
-                {this.state.contributors.length > 0 &&
+                        type="warning" />
+                }
+                {
+                    this.state.contributors.length > 0 &&
                     <ContributorRowHeader
                         onDeleteAll={this.deleteAllContributors}
                         showIdentifierLookup={this.props.showIdentifierLookup}
-                    />}
-
+                        disabled={this.props.disabled}
+                        showContributorAssignment={this.props.showContributorAssignment} />
+                }
                 {renderContributorsRows}
             </div>
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        author: state.get('accountReducer').author
+    };
+};
+
+export default connect(mapStateToProps)(ContributorsEditor);
+
+

@@ -162,6 +162,7 @@ export function clearClaimPublication() {
  * @returns {action}
  */
 export function claimPublication(data) {
+    console.log(data);
     return dispatch => {
         dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
         if (data.publication.rek_pid) {
@@ -175,8 +176,11 @@ export function claimPublication(data) {
             console.log(claimRequest);
             return postClaimPossiblePublication(claimRequest)
                 .then(response => {
-                    if (data.files.queue.length === 0) return response;
-                    return putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
+                    if (!data.files.queue || data.files.queue.length === 0) {
+                        return response;
+                    } else {
+                        return putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
+                    }
                 })
                 .then(() => {
                     // patch the record with new data
@@ -197,6 +201,8 @@ export function claimPublication(data) {
                     return Promise.resolve(response);
                 })
                 .catch(error => {
+                    console.log(error);
+
                     dispatch({
                         type: CLAIM_PUBLICATION_CREATE_FAILED,
                         payload: error
