@@ -62,3 +62,6 @@ export const isValidPublicationTitle = value => {
     return isValid.test(value);
 };
 
+export const validFileUpload = value => {
+    return value && value.hasOwnProperty('isValid') && !value.isValid ? 'File upload is not in valid state' : undefined;
+};
