@@ -28,12 +28,12 @@ if showIdentifierLookup is set to true, and user has looked up author from a lis
 to be parsed to request:
 
 ```
-"fez_record_search_key_author": [
+"fez_record_search_key_[author|contributor]": [
     {"rek_author_id": null, "rek_author": "A. Smith", "rek_author_order": 1}, 
     {"rek_author_id": null, "rek_author": "J. Smith", "rek_author_order": 2}, 
     {"rek_author_id": null, "rek_author": "O. Smith", "rek_author_order": 3}
     ],
-"fez_record_search_key_author_id": [
+"fez_record_search_key_[author|contributor]_id": [
     {"rek_author_id": null, "rek_author_id_order": 1}, 
     {"rek_author_id": 10001, "rek_author_id_order": 2}, 
     {"rek_author_id": null, "rek_author_id_order": 3}

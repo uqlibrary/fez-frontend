@@ -85,6 +85,7 @@ export default class ContributorRow extends Component {
                        <Checkbox
                            name="contributorAssignment"
                            onCheck={this._onContributorAssigned}
+                           className="contributorAssignment"
                            checkedIcon={<RadioButtonCheckedIcon />}
                            uncheckedIcon={<RadioButtonUncheckedIcon />}
                            checked={this.props.contributor.selected}
@@ -126,6 +127,7 @@ export default class ContributorRow extends Component {
                 </div>
                 <div className="column is-narrow contributorDelete datalist-buttons">
                     <IconButton
+                        className="contributorDelete"
                         tooltip={this.props.locale.deleteHint}
                         onTouchTap={this._showConfirmation}
                         disabled={this.props.disabled}>
