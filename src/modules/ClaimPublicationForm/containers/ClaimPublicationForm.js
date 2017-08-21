@@ -5,7 +5,6 @@ import Immutable from 'immutable';
 import ClaimPublicationForm from '../components/ClaimPublicationForm';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
-import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 const FORM_NAME = 'ClaimPublicationForm';
 
@@ -66,7 +65,7 @@ const mapStateToProps = (state) => {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: { ...bindActionCreators(actions, dispatch), fileUploadActions }
+        actions: { ...bindActionCreators(actions, dispatch) }
     };
 }
 

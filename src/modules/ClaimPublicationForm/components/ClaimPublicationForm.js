@@ -19,13 +19,6 @@ export default class ClaimPublicationForm extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        console.log('componentDidMount');
-        console.log(this.props.actions);
-        // TODO: fix file upload clear state when opening a new form
-        this.props.actions.fileUploadActions.clearFileUpload();
-    }
-
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
@@ -121,7 +114,7 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <Field name="files" component={ FileUploadField } disabled={this.props.submitting} />
+                        <Field name="files" component={ FileUploadField } disabled={this.props.submitting} requireFileAccess validate={[validation.validFileUpload]} />
                     </StandardCard>
                     {
                         this.props.submitFailed && this.props.error &&
