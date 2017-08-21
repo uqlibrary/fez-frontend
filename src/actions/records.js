@@ -26,10 +26,12 @@ export function createNewRecord(data) {
             ...data,
             ...transformers.recordRekLink(data),
             ...transformers.recordAuthors(data.authors),
-            ...transformers.recordAuthorsId(data.authors)
+            ...transformers.recordAuthorsId(data.authors),
+            ...transformers.recordContributors(data.editors),
+            ...transformers.recordContributorsId(data.editors)
         };
 
-        console.log(data.authors);
+        console.log(recordRequest);
 
         // delete extra form values from request object
         if (recordRequest.authors) delete recordRequest.authors;

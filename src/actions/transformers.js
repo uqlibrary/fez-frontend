@@ -78,15 +78,36 @@ export function recordAuthorsId(authors) {
     return {
         fez_record_search_key_author_id: authors.map(
             (item, index) => (
-                item.selected ?
                 {
-                    rek_author_id: item.authorId,
+                    rek_author_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || null,
                     rek_author_id_order: index + 1
                 }
-                :
+            )
+        )
+    };
+}
+
+export function recordContributors(authors) {
+    if (!authors || authors.length === 0) return {};
+
+    return {
+        fez_record_search_key_contributor: authors.map((item, index) => (
+            {
+                rek_contributor_id: null,
+                rek_contributor: item.nameAsPublished,
+                rek_contributor_order: index + 1
+            }
+        ))
+    };
+}
+
+export function recordContributorsId(authors) {
+    return {
+        fez_record_search_key_contributor_id: authors.map(
+            (item, index) => (
                 {
-                    rek_author_id: null,
-                    rek_author_id_order: index + 1
+                    rek_contributor_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || null,
+                    rek_contributor_id_order: index + 1
                 }
             )
         )
