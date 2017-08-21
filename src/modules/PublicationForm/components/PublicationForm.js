@@ -6,7 +6,7 @@ import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 import {SelectField, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
-import {locale, publicationTypes} from 'config';
+import {locale, publicationTypes, validation} from 'config';
 
 import {BookForm, JournalArticleForm} from './Forms';
 
