@@ -32,6 +32,7 @@ class ContributorsEditor extends Component {
 
         this.state = {
             contributors: [],
+            isCurrentAuthorSelected: false,
             errorMessage: ''
         };
     }
@@ -50,9 +51,17 @@ class ContributorsEditor extends Component {
                 errorMessage: this.props.locale.errorMessage
             });
         } else {
+            contributor.disabled = !!contributor.aut_id;
+
             this.setState({
                 contributors: [ ...this.state.contributors, contributor],
-                errorMessage: ''
+                errorMessage: '',
+                isCurrentAuthorSelected: this.state.isCurrentAuthorSelected || (this.props.author && contributor.aut_id === this.props.author.aut_id)
+            }, () => {
+                // try to automatically select contributor if they are a current author
+                if (this.props.author && contributor.aut_id === this.props.author.aut_id) {
+                    this.onContributorAssigned(contributor, this.state.contributors.length - 1);
+                }
             });
         }
     }
@@ -81,20 +90,24 @@ class ContributorsEditor extends Component {
 
     deleteContributor = (contributor, index) => {
         this.setState({
-            contributors: this.state.contributors.filter((_, i) => i !== index)
+            contributors: this.state.contributors.filter((_, i) => i !== index),
+            isCurrentAuthorSelected: this.state.isCurrentAuthorSelected && (this.props.author && contributor.aut_id !== this.props.author.aut_id)
         });
     }
 
     deleteAllContributors = () => {
-        this.setState({contributors: []});
+        this.setState({
+            contributors: [],
+            isCurrentAuthorSelected: false
+        });
     }
 
     onContributorAssigned = (contributor, index) => {
         const newContributors = this.state.contributors.map((item, itemIndex) => (
             {
                 ...item,
-                selected: index === itemIndex,
-                authorId: index === itemIndex && this.props.author ? this.props.author.aut_id : null
+                selected: (this.props.author && item.aut_id === this.props.author.aut_id) || index === itemIndex,
+                authorId: (index === itemIndex && this.props.author) ? this.props.author.aut_id : null
             })
         );
         this.setState({
@@ -117,6 +130,7 @@ class ContributorsEditor extends Component {
                 contributorSuffix={this.props.locale.contributorSuffix}
                 disabled={this.props.disabled}
                 showContributorAssignment={this.props.showContributorAssignment}
+                disabledContributorAssignment={this.state.isCurrentAuthorSelected}
                 onContributorAssigned={this.onContributorAssigned} />
         );
 

@@ -21,6 +21,7 @@ export default class ContributorRow extends Component {
         onDelete: PropTypes.func,
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
+        disabledContributorAssignment: PropTypes.bool,
         onContributorAssigned: PropTypes.func,
         locale: PropTypes.object,
         contributorSuffix: PropTypes.string,
@@ -87,7 +88,8 @@ export default class ContributorRow extends Component {
                            checkedIcon={<RadioButtonCheckedIcon />}
                            uncheckedIcon={<RadioButtonUncheckedIcon />}
                            checked={this.props.contributor.selected}
-                           value={this.props.index} />
+                           disabled={this.props.disabled || this.props.disabledContributorAssignment || this.props.contributor.disabled}
+                       value={this.props.index} />
                     </div>
                 }
                 <div className="column datalist-text">
