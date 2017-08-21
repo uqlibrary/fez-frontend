@@ -6,7 +6,6 @@ export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
 export const RECORD_PROCESSING = 'RECORD_PROCESSING';
 import * as config from 'config/general';
-import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
