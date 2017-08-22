@@ -1,5 +1,7 @@
 import Immutable from 'immutable';
-import validationErrors from './locale';
+import {default as locale} from './locale';
+
+const {validationErrors} = locale;
 
 // TODO: move all validation error text to locale.validationErrors = { ... }
 
