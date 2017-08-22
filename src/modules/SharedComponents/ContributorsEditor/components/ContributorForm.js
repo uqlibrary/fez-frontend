@@ -6,9 +6,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as actions from 'actions';
+import * as actions from 'actions/authors';
 
-class ContributorForm extends Component {
+export class ContributorForm extends Component {
 
     static propTypes = {
         authorsList: PropTypes.array,
@@ -43,12 +43,12 @@ class ContributorForm extends Component {
         // I need to catch scrolling event of scrolled container (which is not a window) to set position of autosuggest list when user scrolls
         // another solution, close the box when user tries to scroll
         const div = document.querySelector('div.layout-fill.align-stretch');
-        div.addEventListener('scroll', this.handleParentContainerScroll.bind(this));
+        if (div) div.addEventListener('scroll', this.handleParentContainerScroll.bind(this));
     }
 
     componentWillUnmount() {
         const div = document.querySelector('div.layout-fill.align-stretch');
-        div.removeEventListener('scroll', this.handleParentContainerScroll.bind(this));
+        if (div) div.removeEventListener('scroll', this.handleParentContainerScroll.bind(this));
     }
 
     handleParentContainerScroll() {
@@ -70,7 +70,7 @@ class ContributorForm extends Component {
         });
 
         // move focus to name as published text field after item was added
-        this.refs.nameAsPublishedField.focus();
+        if (this.refs.nameAsPublishedField) this.refs.nameAsPublishedField.focus();
     }
 
     _onNameChanged = (event, newValue) => {
@@ -104,8 +104,8 @@ class ContributorForm extends Component {
         const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
 
         return (
-            <div className="columns contributors dataList">
-                <div className="column contributorsEntry">
+            <div className="columns">
+                <div className="column">
                     <TextField
                         fullWidth
                         ref="nameAsPublishedField"
@@ -118,7 +118,7 @@ class ContributorForm extends Component {
                 </div>
                 {
                     this.props.showIdentifierLookup &&
-                    <div className="column contributorsLinking">
+                    <div className="column">
                         <AutoComplete
                             disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
                             listStyle={{maxHeight: 200, overflow: 'auto'}}
@@ -137,7 +137,7 @@ class ContributorForm extends Component {
                         />
                     </div>
                 }
-                <div className="column is-narrow contributorsButton">
+                <div className="column is-narrow">
                     <RaisedButton
                         className="is-mui-spacing-button"
                         fullWidth
@@ -153,7 +153,7 @@ class ContributorForm extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        authorsList: state.get('authorsReducer').authorsList || []
+        authorsList: state.get('authorsReducer') ? state.get('authorsReducer').authorsList : []
     };
 };
 

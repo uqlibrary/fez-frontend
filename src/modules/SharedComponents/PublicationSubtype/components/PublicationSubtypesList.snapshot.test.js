@@ -7,6 +7,7 @@ import React from 'react';
 import { PublicationSubtypesList } from './PublicationSubtypesList';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 function setup(props, id) {
     return mount(<PublicationSubtypesList id={id} {...props} />, {
@@ -18,6 +19,10 @@ function setup(props, id) {
         }
     });
 }
+
+beforeAll(() => {
+    injectTapEventPlugin();
+});
 
 describe('PublicationSubtypesList renders correctly', () => {
     it('without subtypes list', () => {
