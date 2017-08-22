@@ -101,7 +101,7 @@ export default class PublicationForm extends Component {
                 }
                 {
                     this.props.submitFailed && this.props.error &&
-                    <Alert type="error_outline" {...txt.errorAlert} />
+                    <Alert type="error_outline" title={ txt.errorAlert.title } message={ this.props.error } />
                 }
                 {
                     !this.props.submitFailed && this.props.dirty && this.props.invalid &&
