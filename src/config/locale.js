@@ -647,7 +647,19 @@ export default {
         }
     },
     validationErrors: {
-        publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication'
+        publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
+        fileUpload: 'File upload is not in valid state',
+        required: 'This field is required',
+        email: 'Please enter a valid email address',
+        uniqueValue: 'This value has already been used',
+        url: 'Please enter a valid URL',
+        arrayRequired: 'You must select at least one item',
+        canNotBeCI: 'You must specify a lead UQ supervisor for a RHD project',
+        shortCode: 'The project short code must consist of 8 alpha numeric characters',
+        dateTimeDay: 'Invalid date',
+        dateTimeYear: 'Invalid year',
+        maxLength: 'Must be [max] characters or less',
+        minLength: 'Must be at least [min] characters'
     }
 };
 
