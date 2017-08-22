@@ -86,8 +86,10 @@ mock.onGet(/academic\/[a-z0-9]*\/hindex/).reply(200, mockData.hindexResponse);
 mock.onGet(/academic\/[a-z0-9]*\/publication-stats/).reply(200, mockData.publicationStats);
 
 // Allow the file upload calls to pass through to the S3 bucket directly
-mock.onGet(/file\/upload\/presigned/).passThrough();
-mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).passThrough();
+mock.onGet(/file\/upload\/presigned\/UQ:1111111\/aws*/).reply(200, 's3-ap-southeast-2.amazonaws.com');  // Success
+// mock.onGet(/file\/upload\/presigned\/UQ:1111111\/aws*/).reply(400, {});  // Failure
+mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200); // Success
+// mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(404, {}); // Failure
 
 // Mock claim publication results endpoint response
 mock.onGet(/publications\/possible-unclaimed\/[a-z0-9]/).reply(200, mockData.possibleUnclaimed);
@@ -107,6 +109,7 @@ mock.onPost(/publications\/claim-possible/).reply(200);
 mock.onGet('acml/quick-templates').reply(200, mockData.quickTemplates);
 
 // Let the create records endpoint go through to staging
-mock.onPost(/records/).reply(200, {rek_pid: 'UQ:1111111'});
-mock.onPatch(/records/).reply(200, {});
-
+mock.onPost(/records/).reply(200, {data: {rek_pid: 'UQ:1111111'}}); // Success
+// mock.onPost(/records/).reply(404, {}); // Failure
+mock.onPatch(/records/).reply(200, {}); // Success
+// mock.onPatch(/records/).reply(404, {}); // Failure

@@ -1,6 +1,6 @@
 import {postRecord, patchRecord, putUploadFiles} from '../repositories';
 import * as transformers from './transformers';
-
+import {locale} from 'config';
 export const RECORD_RESET = 'RECORD_RESET';
 export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
@@ -16,6 +16,7 @@ import * as config from 'config/general';
  */
 export function createNewRecord(data) {
     console.log(data);
+    const { errorAlert } = locale.components.publicationForm;
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
 
@@ -52,7 +53,9 @@ export function createNewRecord(data) {
                 const recordPatch = {
                     ...transformers.recordFileAttachment(data.files.queue)
                 };
-                return patchRecord(data.rek_pid, recordPatch);
+                return patchRecord(data.rek_pid, recordPatch).catch((error) => {
+                    return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));
+                });
             })
             .then(response => {
                 dispatch({
@@ -66,7 +69,7 @@ export function createNewRecord(data) {
                     type: RECORD_CREATE_FAILED,
                     payload: error
                 });
-                return Promise.reject(error);
+                return Promise.reject(new Error(`${errorAlert.createRecordMessage} (${error.message})`));
             });
     };
 }

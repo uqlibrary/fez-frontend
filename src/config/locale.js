@@ -439,7 +439,9 @@ export default {
             },
             errorAlert: {
                 title: 'Error',
-                message: 'Error has occurred during request and adding new publication cannot be processed. Please, review the form and try again.'
+                createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed. Please, review the form and try again.',
+                fileUploadMessage: 'Files failed to upload but record was saved, please contact eSpace admins',
+                patchFilesMessage: 'Record was created and files were uploaded but failed to link files to created record, please contact eSpace admins'
             },
             progressAlert: {
                 title: 'Saving',
