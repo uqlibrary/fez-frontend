@@ -14,6 +14,5 @@ function mapDispatchToProps(dispatch) {
         actions: bindActionCreators(actions, dispatch)
     };
 }
-
 const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
 export default AppContainer;

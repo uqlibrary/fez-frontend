@@ -7,7 +7,7 @@ import ContributorForm from './ContributorForm';
 import {Alert} from 'uqlibrary-react-toolbox';
 
 
-class ContributorsEditor extends Component {
+export class ContributorsEditor extends Component {
 
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
@@ -60,7 +60,7 @@ class ContributorsEditor extends Component {
             }, () => {
                 // try to automatically select contributor if they are a current author
                 if (this.props.author && contributor.aut_id === this.props.author.aut_id) {
-                    this.onContributorAssigned(contributor, this.state.contributors.length - 1);
+                    this.assignContributor(contributor, this.state.contributors.length - 1);
                 }
             });
         }
@@ -102,7 +102,7 @@ class ContributorsEditor extends Component {
         });
     }
 
-    onContributorAssigned = (contributor, index) => {
+    assignContributor = (contributor, index) => {
         const newContributors = this.state.contributors.map((item, itemIndex) => (
             {
                 ...item,
@@ -131,7 +131,7 @@ class ContributorsEditor extends Component {
                 disabled={this.props.disabled}
                 showContributorAssignment={this.props.showContributorAssignment}
                 disabledContributorAssignment={this.state.isCurrentAuthorSelected}
-                onContributorAssigned={this.onContributorAssigned} />
+                onContributorAssigned={this.assignContributor} />
         );
 
         return (
