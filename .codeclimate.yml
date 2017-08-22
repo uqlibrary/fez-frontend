@@ -1,0 +1,6 @@
+exclude_paths:
+- public/**/*
+- test/**/*
+- src/**/*.test.*
+- src/mock/**/*
+- "**/node_modules/**/*"
