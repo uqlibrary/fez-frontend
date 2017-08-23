@@ -25,10 +25,10 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
     showIdentifierLookup={true}
   >
     <div
-      className="columns contributors dataList"
+      className="columns"
     >
       <div
-        className="column contributorsEntry"
+        className="column"
       >
         <TextField
           disabled={false}
@@ -63,7 +63,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
           >
             <TextFieldLabel
               disabled={false}
-              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-57593"
+              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-14742"
               muiTheme={
                 Object {
                   "appBar": Object {
@@ -489,7 +489,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               }
             >
               <label
-                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-57593"
+                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-14742"
                 style={
                   Object {
                     "color": "rgba(0, 0, 0, 0.3)",
@@ -946,7 +946,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
             </TextFieldHint>
             <input
               disabled={false}
-              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-57593"
+              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-14742"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -1441,7 +1441,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
         </TextField>
       </div>
       <div
-        className="column contributorsLinking"
+        className="column"
       >
         <AutoComplete
           anchorOrigin={
@@ -1530,7 +1530,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               >
                 <TextFieldLabel
                   disabled={true}
-                  htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-17464"
+                  htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-58302"
                   muiTheme={
                     Object {
                       "appBar": Object {
@@ -1956,7 +1956,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                   }
                 >
                   <label
-                    htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-17464"
+                    htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-58302"
                     style={
                       Object {
                         "color": "rgba(0, 0, 0, 0.3)",
@@ -2414,7 +2414,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                 <input
                   autoComplete="off"
                   disabled={true}
-                  id="undefined-UQidentifierifavailable-UQidentifierifavailable-17464"
+                  id="undefined-UQidentifierifavailable-UQidentifierifavailable-58302"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -2955,7 +2955,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
         </AutoComplete>
       </div>
       <div
-        className="column is-narrow contributorsButton"
+        className="column is-narrow"
       >
         <RaisedButton
           className="is-mui-spacing-button"
@@ -3135,10 +3135,10 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
     showIdentifierLookup={false}
   >
     <div
-      className="columns contributors dataList"
+      className="columns"
     >
       <div
-        className="column contributorsEntry"
+        className="column"
       >
         <TextField
           disabled={false}
@@ -3173,7 +3173,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
           >
             <TextFieldLabel
               disabled={false}
-              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-49058"
+              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-40827"
               muiTheme={
                 Object {
                   "appBar": Object {
@@ -3599,7 +3599,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
               }
             >
               <label
-                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-49058"
+                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-40827"
                 style={
                   Object {
                     "color": "rgba(0, 0, 0, 0.3)",
@@ -4056,7 +4056,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
             </TextFieldHint>
             <input
               disabled={false}
-              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-49058"
+              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-40827"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -4551,7 +4551,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
         </TextField>
       </div>
       <div
-        className="column is-narrow contributorsButton"
+        className="column is-narrow"
       >
         <RaisedButton
           className="is-mui-spacing-button"

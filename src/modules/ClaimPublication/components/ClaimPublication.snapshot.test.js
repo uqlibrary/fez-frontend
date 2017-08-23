@@ -1,53 +1,128 @@
 jest.dontMock('./ClaimPublication');
 
 import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import ClaimPublication from './ClaimPublication';
 import * as mock from 'mock/data';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import PropTypes from 'prop-types';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import {Provider} from 'react-redux';
+import Immutable from 'immutable';
 
-function setup({
-        publicationsList,
-        loadingPublications,
-        author,
-        authorLoading,
-        possibleCounts
-    }) {
+beforeAll(() => {
+    injectTapEventPlugin();
+});
+
+const create = () => {
+    const initialState = Immutable.Map();
+
+    const store = {
+        getState: jest.fn(() => (initialState)),
+        dispatch: jest.fn(),
+        subscribe: jest.fn()
+    };
+    const next = jest.fn();
+    const invoke = (action) => thunk(store)(next)(action);
+    return {store, next, invoke}
+};
+
+function setup({publicationsList, loadingPublications, author,
+    authorLoading, possibleCounts, actions, history, isShallow = true}) {
     const props = {
         publicationsList: publicationsList || [],
         loadingPublications,
         author,
         authorLoading,
         possibleCounts,
-        actions: {},
-        history: {}
+        actions: actions || {},
+        history: history || { push : jest.fn()}
     };
-    return shallow(<ClaimPublication {...props} />);
+
+    if(isShallow) {
+        return shallow(
+            <Provider store={create().store}>
+                <ClaimPublication {...props} />
+            </Provider>);
+    }
+
+    return mount(
+        <Provider store={create().store}>
+            <ClaimPublication {...props} />
+        </Provider>, {
+        context: {
+            muiTheme: getMuiTheme()
+        },
+        childContextTypes: {
+            muiTheme: PropTypes.object.isRequired
+        }
+    });
 }
 
 describe('ClaimPublication test', () => {
     it('renders empty list', () => {
-        const wrapper = setup({});
+        const wrapper = setup({}).find('ClaimPublication').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders loading screen while loading author data', () => {
-        const wrapper = setup({ authorLoading: true });
+        const wrapper = setup({ authorLoading: true }).find('ClaimPublication').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders loading screen while loading publications ', () => {
-        const wrapper = setup({ author: {}, loadingPublications: true });
+        const wrapper = setup({ author: {}, loadingPublications: true }).find('ClaimPublication').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders no results', () => {
-        const wrapper = setup({ author: {} });
+        const wrapper = setup({ author: {} }).find('ClaimPublication').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders list of publications and counts', () => {
-        const wrapper = setup({ author: {}, possibleCounts: mock.possibleCounts.data, publicationsList: mock.possibleUnclaimed.data });
+        const wrapper = setup({ author: {}, possibleCounts: mock.possibleCounts.data, publicationsList: mock.possibleUnclaimed.data }).find('ClaimPublication').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('publication for claiming is selected', () => {
+        const actionFunction = jest.fn();
+        const wrapper = setup({ actions: { setClaimPublication: actionFunction}}).find('ClaimPublication').dive();
+        wrapper.instance()._claimPublication({pid: 11111});
+        expect(actionFunction).toHaveBeenCalled();
+    });
+
+    // TODO: how to set this.confirmBOx ?
+    // it('calls confirm publication to be hidden', () => {
+    //     const actionFunction = jest.fn();
+    //     const wrapper = setup({ isShallow: false, author: {}, actions: { searchPossiblyYourPublications: actionFunction} }).find('ClaimPublication');
+    //     expect(wrapper.state().publicationToHide).toBeFalsy();
+    //     wrapper.instance()._confirmHidePublication({pid: 1111});
+    //     expect(wrapper.state().publicationToHide).toBeTruthy();
+    // });
+
+    it('calls componentDidMount', () => {
+        const actionFunction = jest.fn();
+        const wrapper = setup({ isShallow: false, author: {aut_id: 1111}, actions: { searchPossiblyYourPublications: actionFunction} });
+        expect(actionFunction).toHaveBeenCalled();
+    });
+
+    // TODO: how to set props of sub-component?
+    // it('calls componentWillReceiveProps', () => {
+    //     const actionFunction = jest.fn();
+    //     const wrapper = setup({ isShallow: false, actions: { searchPossiblyYourPublications: actionFunction} });
+    //     wrapper.setProps({author: {aut_org_username: 'xyz'});
+    //     expect(actionFunction).toHaveBeenCalled();
+    // });
+
+    it('calls hide publication', () => {
+        const actionFunction = jest.fn();
+        const wrapper = setup({ author: {}, actions: { hidePublications: actionFunction}}).find('ClaimPublication').dive();
+        wrapper.setState({ publicationToHide: {pid: 1111} });
+        wrapper.instance()._hidePublication();
+        expect(actionFunction).toHaveBeenCalled();
+        expect(wrapper.state().publicationToHide).toBeFalsy();
     });
 });

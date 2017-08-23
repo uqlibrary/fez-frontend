@@ -52,10 +52,10 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
           showIdentifierLookup={false}
         >
           <div
-            className="columns contributors dataList"
+            className="columns"
           >
             <div
-              className="column contributorsEntry"
+              className="column"
             >
               <TextField
                 disabled={false}
@@ -90,7 +90,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                 >
                   <TextFieldLabel
                     disabled={false}
-                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-4583"
+                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-5501"
                     muiTheme={
                       Object {
                         "appBar": Object {
@@ -516,7 +516,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                     }
                   >
                     <label
-                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-4583"
+                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-5501"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -973,7 +973,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                   </TextFieldHint>
                   <input
                     disabled={false}
-                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-4583"
+                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-5501"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1468,7 +1468,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
               </TextField>
             </div>
             <div
-              className="column is-narrow contributorsButton"
+              className="column is-narrow"
             >
               <RaisedButton
                 className="is-mui-spacing-button"
@@ -1675,10 +1675,10 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
           showIdentifierLookup={true}
         >
           <div
-            className="columns contributors dataList"
+            className="columns"
           >
             <div
-              className="column contributorsEntry"
+              className="column"
             >
               <TextField
                 disabled={false}
@@ -1713,7 +1713,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                 >
                   <TextFieldLabel
                     disabled={false}
-                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-39050"
+                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26608"
                     muiTheme={
                       Object {
                         "appBar": Object {
@@ -2139,7 +2139,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     }
                   >
                     <label
-                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-39050"
+                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26608"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -2596,7 +2596,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                   </TextFieldHint>
                   <input
                     disabled={false}
-                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-39050"
+                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26608"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -3091,7 +3091,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
               </TextField>
             </div>
             <div
-              className="column contributorsLinking"
+              className="column"
             >
               <AutoComplete
                 anchorOrigin={
@@ -3180,7 +3180,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     >
                       <TextFieldLabel
                         disabled={true}
-                        htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-24535"
+                        htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-61058"
                         muiTheme={
                           Object {
                             "appBar": Object {
@@ -3606,7 +3606,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                         }
                       >
                         <label
-                          htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-24535"
+                          htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-61058"
                           style={
                             Object {
                               "color": "rgba(0, 0, 0, 0.3)",
@@ -4064,7 +4064,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                       <input
                         autoComplete="off"
                         disabled={true}
-                        id="undefined-UQidentifierifavailable-UQidentifierifavailable-24535"
+                        id="undefined-UQidentifierifavailable-UQidentifierifavailable-61058"
                         onBlur={[Function]}
                         onChange={[Function]}
                         onFocus={[Function]}
@@ -4605,7 +4605,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
               </AutoComplete>
             </div>
             <div
-              className="column is-narrow contributorsButton"
+              className="column is-narrow"
             >
               <RaisedButton
                 className="is-mui-spacing-button"
