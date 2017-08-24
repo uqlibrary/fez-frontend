@@ -17,6 +17,7 @@ export class PublicationSubtypesList extends Component {
         dataSourceConfig: PropTypes.object,
         vocabId: PropTypes.number,
         className: PropTypes.string,
+        disabled: PropTypes.bool,
         actions: PropTypes.object.isRequired
     };
 
@@ -81,10 +82,8 @@ export class PublicationSubtypesList extends Component {
                 value={ subtypesLoading ? null : this.state.selectedValue }
                 maxHeight={ 250 }
                 onChange={ this._onSubtypeSelected }
+                disabled={this.props.disabled}
                 floatingLabelText={ loadingIndicationText }>
-                <MenuItem
-                    primaryText={ loadingIndicationText }
-                    disabled/>
                 { renderSubTypeItems }
             </SelectField>
         );

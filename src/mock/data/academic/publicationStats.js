@@ -595,6 +595,52 @@ export const publicationStats = {
     }
 };
 
+export const publicationStatsEmpty = {
+    "took": 1,
+    "timed_out": false,
+    "_shards": {"total": 1, "successful": 1, "failed": 0},
+    "hits": {"total": 1, "max_score": 0, "hits": []},
+    "aggregations": {
+        "thomson_citation_count_i": {"count": 0, "min": null, "max": null, "avg": null, "sum": null},
+        "date_year_t": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [{
+                "key": "2014",
+                "doc_count": 1,
+                "thomson_citation_count_i": {"count": 0, "min": null, "max": null, "avg": null, "sum": null},
+                "scopus_citation_count_i": {"count": 0, "min": null, "max": null, "avg": null, "sum": null}
+            }]
+        },
+        "id": {"value": 1},
+        "scopus_citation_count_i": {"count": 0, "min": null, "max": null, "avg": null, "sum": null}
+    },
+    "response": {"docs": [], "numFound": 1},
+    "stats": {
+        "stats_fields": {
+            "thomson_citation_count_i": {
+                "count": 0,
+                "min": null,
+                "max": null,
+                "avg": null,
+                "sum": null,
+                "mean": 0,
+                "facets": {"date_year_t": {"2014": {"count": 1, "min": 0, "max": 0, "avg": 0, "sum": 0, "mean": 0}}}
+            },
+            "id": {"value": 1, "facets": {"date_year_t": {"2014": {"count": 1}}}, "count": 1},
+            "scopus_citation_count_i": {
+                "count": 0,
+                "min": null,
+                "max": null,
+                "avg": null,
+                "sum": null,
+                "mean": 0,
+                "facets": {"date_year_t": {"2014": {"count": 1, "min": 0, "max": 0, "avg": 0, "sum": 0, "mean": 0}}}
+            }
+        }
+    }
+};
+
 export const formattedData = {
     "thomson_citation_count_i": {
         "count": 301,
