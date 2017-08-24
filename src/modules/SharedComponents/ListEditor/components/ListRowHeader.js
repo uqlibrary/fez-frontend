@@ -15,11 +15,11 @@ export default class ListRowHeader extends Component {
     static defaultProps = {
         locale: {
             nameColumn: 'Name',
-            reorderColumn: 'Reorder records',
-            deleteAll: 'Remove all records',
+            reorderColumn: 'Reorder items',
+            deleteAll: 'Remove all items',
             deleteAllConfirmation: {
                 confirmationTitle: 'Delete all',
-                confirmationMessage: 'Are you sure you want to delete all records?',
+                confirmationMessage: 'Are you sure you want to delete all items?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             }
@@ -30,7 +30,7 @@ export default class ListRowHeader extends Component {
         super(props);
     }
 
-    _showConfirmation = () => {
+    showConfirmation = () => {
         this.confirmationBox.showConfirmation();
     }
 
@@ -38,7 +38,7 @@ export default class ListRowHeader extends Component {
         const {nameColumn, reorderColumn, deleteAll, deleteAllConfirmation} = this.props.locale;
 
         return (
-            <div className="columns is-gapless is-mobile contributorsHeader datalist datalist-header">
+            <div className="columns is-gapless is-mobile listHeader datalist datalist-header">
                 <ConfirmDialogBox onRef={ref => (this.confirmationBox = ref)}
                                   onAction={this.props.onDeleteAll}
                                   locale={deleteAllConfirmation} />
@@ -47,7 +47,7 @@ export default class ListRowHeader extends Component {
                 <div className="column is-narrow buttons datalist-buttons">
                     <IconButton
                         tooltip={deleteAll}
-                        onTouchTap={this._showConfirmation}
+                        onTouchTap={this.showConfirmation}
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons">delete_forever</FontIcon>
                     </IconButton>

@@ -63,7 +63,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
           >
             <TextFieldLabel
               disabled={false}
-              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-14742"
+              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-51114"
               muiTheme={
                 Object {
                   "appBar": Object {
@@ -489,7 +489,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               }
             >
               <label
-                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-14742"
+                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-51114"
                 style={
                   Object {
                     "color": "rgba(0, 0, 0, 0.3)",
@@ -946,7 +946,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
             </TextFieldHint>
             <input
               disabled={false}
-              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-14742"
+              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-51114"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -1530,7 +1530,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               >
                 <TextFieldLabel
                   disabled={true}
-                  htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-58302"
+                  htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-52440"
                   muiTheme={
                     Object {
                       "appBar": Object {
@@ -1956,7 +1956,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                   }
                 >
                   <label
-                    htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-58302"
+                    htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-52440"
                     style={
                       Object {
                         "color": "rgba(0, 0, 0, 0.3)",
@@ -2414,7 +2414,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                 <input
                   autoComplete="off"
                   disabled={true}
-                  id="undefined-UQidentifierifavailable-UQidentifierifavailable-58302"
+                  id="undefined-UQidentifierifavailable-UQidentifierifavailable-52440"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -3173,7 +3173,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
           >
             <TextFieldLabel
               disabled={false}
-              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-40827"
+              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-52211"
               muiTheme={
                 Object {
                   "appBar": Object {
@@ -3599,7 +3599,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
               }
             >
               <label
-                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-40827"
+                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-52211"
                 style={
                   Object {
                     "color": "rgba(0, 0, 0, 0.3)",
@@ -4056,7 +4056,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
             </TextFieldHint>
             <input
               disabled={false}
-              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-40827"
+              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-52211"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}

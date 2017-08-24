@@ -7,11 +7,13 @@ export default class ListForm extends Component {
 
     static propTypes = {
         onAdd: PropTypes.func.isRequired,
+        isValid: PropTypes.func,
         locale: PropTypes.object,
         disabled: PropTypes.bool
     };
 
     static defaultProps = {
+        isValid: () => { return ''; },
         locale: {
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name',
@@ -26,13 +28,13 @@ export default class ListForm extends Component {
         };
     }
 
-    handleParentContainerScroll() {
-        if (this.refs.identifierField) this.refs.identifierField.close();
-    }
-
-    _addItem = (event) => {
+    addItem = (event) => {
         // add item if user hits 'enter' key on input field
-        if(this.props.disabled || (event && event.key && (event.key !== 'Enter' || this.state.itemName.length === 0))) return;
+        if(this.props.disabled
+            || this.props.isValid(this.state.itemName) !== ''
+            || (event && event.key && (event.key !== 'Enter' || this.state.itemName.length === 0))) {
+            return;
+        }
 
         // pass on the selected item
         this.props.onAdd(this.state.itemName);
@@ -46,7 +48,7 @@ export default class ListForm extends Component {
         if (this.refs.itemName) this.refs.itemName.focus();
     }
 
-    _onNameChanged = (event, newValue) => {
+    onNameChanged = (event, newValue) => {
         this.setState({
             itemName: newValue
         });
@@ -62,8 +64,9 @@ export default class ListForm extends Component {
                         floatingLabelText={this.props.locale.inputFieldLabel}
                         hintText={this.props.locale.inputFieldHint}
                         value={this.state.itemName}
-                        onChange={this._onNameChanged}
-                        onKeyPress={this._addItem}
+                        onChange={this.onNameChanged}
+                        onKeyPress={this.addItem}
+                        errorText={this.props.isValid(this.state.itemName)}
                         disabled={this.props.disabled} />
                 </div>
                 <div className="column is-narrow">
@@ -72,8 +75,8 @@ export default class ListForm extends Component {
                         fullWidth
                         primary
                         label={this.props.locale.addButtonLabel}
-                        disabled={this.props.disabled || this.state.itemName.trim().length === 0}
-                        onClick={this._addItem} />
+                        disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
+                        onClick={this.addItem} />
                 </div>
             </div>
         );

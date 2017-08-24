@@ -20,6 +20,10 @@ if (user && !accounts[user]) {
     console.warn("API MOCK DATA: User name is not found, please use one of the usernames from mock data only...");
 }
 
+// Mock the authors endpoint
+// get authors search results
+mock.onGet(/fez-authors\/search\?query=*/).reply(200, mockData.authorsSearch);
+
 if (user === 'anon') {
     // Mock unauthorised response
     mock.onGet(/account\?[0-9]*/).reply(403, {});
@@ -69,10 +73,6 @@ mock.onGet(/vocabularies\/[0-9]/).reply((config) => {
     const vocabId = config.url.substring(config.url.indexOf('/')+1);
     return [200, mockData.publicationSubtypeList[vocabId]];
 });
-
-// Mock the authors endpoint
-// get authors search results
-mock.onGet(/authors\/search\?query=*/).reply(200, mockData.authorsSearch);
 
 // Error codes:
 // 404: author not found

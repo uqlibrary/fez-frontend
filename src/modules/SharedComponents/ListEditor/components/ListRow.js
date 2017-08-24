@@ -5,11 +5,11 @@ import IconButton from 'material-ui/IconButton';
 
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
-export default class ContributorRow extends Component {
+export default class ListRow extends Component {
 
     static propTypes = {
         index: PropTypes.number.isRequired,
-        item: PropTypes.object.isRequired,
+        item: PropTypes.string.isRequired,
         canMoveUp: PropTypes.bool,
         canMoveDown: PropTypes.bool,
         onMoveUp: PropTypes.func,
@@ -37,37 +37,37 @@ export default class ContributorRow extends Component {
         super(props);
     }
 
-    _showConfirmation = () => {
+    showConfirmation = () => {
         this.confirmationBox.showConfirmation();
     }
 
-    _deleteRecord = () => {
+    deleteRecord = () => {
         if (!this.props.disabled && this.props.onDelete) this.props.onDelete(this.props.item, this.props.index);
     }
 
-    _onMoveUp = () => {
+    onMoveUp = () => {
         if (!this.props.disabled && this.props.onMoveUp) this.props.onMoveUp(this.props.item, this.props.index);
     }
 
-    _onMoveDown = () => {
+    onMoveDown = () => {
         if (!this.props.disabled && this.props.onMoveDown) this.props.onMoveDown(this.props.item, this.props.index);
     }
 
     render() {
         return (
-            <div className="columns is-gapless is-mobile contributorsRow datalist datalist-row">
+            <div className="columns is-gapless is-mobile listRow datalist datalist-row">
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this._deleteRecord}
+                    onAction={this.deleteRecord}
                     locale={this.props.locale.deleteRecordConfirmation} />
                 <div className="column datalist-text">
-                    <span className="contributorName">{this.props.item}</span>
+                    {this.props.item}
                 </div>
-                <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
+                <div className="column is-narrow is-hidden-mobile listReorder datalist-buttons">
                     {this.props.canMoveUp &&
                     <IconButton
                         tooltip={this.props.locale.moveUpHint}
-                        onTouchTap={this._onMoveUp}
+                        onTouchTap={this.onMoveUp}
                         className="reorderUp"
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
@@ -76,18 +76,18 @@ export default class ContributorRow extends Component {
                     {this.props.canMoveDown &&
                     <IconButton
                         tooltip={this.props.locale.moveDownHint}
-                        onTouchTap={this._onMoveDown}
+                        onTouchTap={this.onMoveDown}
                         className="reorderDown"
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
                     </IconButton>
                     }
                 </div>
-                <div className="column is-narrow contributorDelete datalist-buttons">
+                <div className="column is-narrow listDelete datalist-buttons">
                     <IconButton
-                        className="contributorDelete"
+                        className="itemDelete"
                         tooltip={this.props.locale.deleteHint}
-                        onTouchTap={this._showConfirmation}
+                        onTouchTap={this.showConfirmation}
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons deleteIcon">delete</FontIcon>
                     </IconButton>

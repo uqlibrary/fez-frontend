@@ -45,7 +45,9 @@ button[type=button] {
 
 // Adds red asterix to required fields
 .requiredField label:after {
-  content: " *";
+  content: "*";
+  padding-right: 5px;
+  padding-left: 5px;
   color: $error-color;
 }
 

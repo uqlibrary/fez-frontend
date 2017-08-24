@@ -1,5 +1,4 @@
 import React from 'react';
-import FontIcon from 'material-ui/FontIcon';
 import { StandardCard } from 'uqlibrary-react-toolbox';
 
 export default {
@@ -367,7 +366,46 @@ export default {
                         text: 'some help',
                         buttonLabel: 'OK'
                     },
-                    suffix: ' listed author'
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
                 },
                 optional: {
                     title: 'Optional publication details',
@@ -407,7 +445,46 @@ export default {
                         text: 'some help',
                         buttonLabel: 'OK'
                     },
-                    suffix: ' listed author'
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
                 },
                 editors: {
                     title: 'Editors',
@@ -416,7 +493,46 @@ export default {
                         text: 'some help',
                         buttonLabel: 'OK'
                     },
-                    suffix: ' listed editor'
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Editor\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add editor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name (if applicable)',
+                                nameColumn: 'Editor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed editor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
                 }
             },
             fileUpload: {
@@ -526,126 +642,100 @@ export default {
                 // {key: 'fixRecord', primaryText: 'Fix record/upload a file'}, // TODO: implement fixRecord
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ]
-        }
-    },
-    sharedComponents: {
-        authors: {
-            title: 'Authors',
+        },
+        isbnForm: {
+            title: 'ISBN',
+            text: 'You can add up to five ISBN values',
             help: {
-                title: 'Authors',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
+                title: 'ISBN value',
+                text: 'Acceptable ISBN formats are....',
+                buttonLabel: 'OK'
             },
-            fields: {
-                authorName: 'authorName',
-                authorIdentifier: 'authorIdentifier',
-                authorNameLabel: 'Add an author (name as published)',
-                authorIdentifierLabel: 'UQ identifier',
-                autoCompleteFirstEntryLabel: 'Add author as entered:'
-            },
-            rows: {
-                moveRecordUp: 'Move record up the order',
-                moveRecordDown: 'Move record down the order',
-                removeRecord: 'Remove this author'
-            },
-            messages: {
-                authorIdentifierExists: 'Author identifier is already added',
-                authorNameMissing: 'Please enter an author\s name',
-                deleteAllAuthorsDialogContent: 'Are you sure you want to remove all these authors?',
-                deleteAuthorDialogContent: 'Are you sure you want to remove this author?',
-            },
-            buttons: {
-                addAuthorLabel: 'Add Author',
-                removeAllLabel: 'Remove all authors'
-            },
-            ordinalData: {
-                list: [
-                    'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Nineth', 'Tenth'
-                ],
-                default: 'Next',
-                suffix: 'listed author'
-            },
-            constants: {
-                autoCompleteEnterKey: -1,
-                autoCompleteFirstOption: 0,
-                enterKey: 'Enter',
-                firstRow: 0,
-                tabKey: 'Tab',
-                timeoutLimit: 300
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISBN value',
+                        inputFieldHint: 'Please type ISBN value',
+                        addButtonLabel: 'Add ISBN'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'ISBN',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
             }
         },
-        files: {
-            title: 'Files',
-            subTitle: 'You may add up to 10 files (max 5Gb each)',
+        issnForm: {
+            title: 'ISSN',
+            text: 'You can add up to five ISSN values',
             help: {
-                title: 'Files',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.'
+                title: 'ISSN value',
+                text: 'Acceptable ISSN formats are....',
+                buttonLabel: 'OK'
             },
-            limit: 10,
-            filenameLimit: 45,
-            formSectionPrefix: 'fileUploader',
-            messages: {
-                deleteAllFilesDialogContent: 'Are you sure you want to remove all these files from the upload queue?',
-                deleteFileDialogContent: 'Are you sure you want to remove this file from the upload queue?',
-                deleteAllFilesToolTip: 'Remove all files from the upload queue',
-                deleteFileToolTip: 'Remove this file from the upload queue',
-                maxFiles: 'Only [maxNumberOfFiles] files are allowed to be uploaded.',
-                invalidFormatFile: 'Invalid file name.',
-                invalidFormatFiles: '[numberOfRejectedFiles] have an invalid file name.',
-                invalidFileLength: 'Filename is too long',
-                invalidFileLengths: '[numberOfLongFiles] filenames are too long',
-                existingFile: 'File has already been added.',
-                existingFiles: '[numberOfExistingFiles] have already been added.',
-                cancelledUpload: 'File upload cancelled.',
-                noDate: 'No Date',
-                uploadError: {
-                    default: 'There seems to be a problem uploading file(s). Please, try again later.'
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'ISSN value',
+                        inputFieldHint: 'Please type ISSN value',
+                        addButtonLabel: 'Add ISSN'
+                    }
                 },
-                openAccessConfirmation: 'I understand that the Open Access file(s) above will be publicly available on the embargo release date. Closed Access file(s) will not be publicly available.'
-            },
-            fields: {
-                filenameRestrictions: (
-                  <div className="columns file-instructions">
-                      <div className="column">
-                          <h3>File upload restrictions</h3>
-                          <div>
-                              Please ensure your files:
-                              <ul>
-                                  <li>begin with a letter and are less than 45 characters long</li>
-                                  <li>contain only upper and lowercase alphanumeric characters, and underscores</li>
-                                  <li>have only a single period which precedes the file extension: “.pdf”</li>
-                                  <li>are uploaded individually and not inside a folder</li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div className="column upload-instructions">
-                          <FontIcon
-                            className="material-icons">cloud_upload</FontIcon>
-                          <p>Click here to select files, or drag files into this area to upload</p>
-                      </div>
-                  </div>
-                ),
-                fileAccess: 'fileAccess',
-                datepickerAccess: 'accessDate',
-                selectField: {
-                    openAccessValue: 'Open Access',
-                    closedAccessValue: 'Closed Access',
-                    initialValue: 'Select access conditions'
+                header: {
+                    locale: {
+                        nameColumn: 'ISSN',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
                 }
-            },
-            list: {
-                filenameLabel: 'Filename',
-                fileAccessLabel: 'Access conditions',
-                embargoDateLabel: 'Embargo release date'
-            },
-            constants: {
-                openAccessId: 9,
-                closedAccessId: 8,
-                completed: 100
             }
-        }
+        },
     },
     validationErrors: {
-        publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication'
+        publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
+        isbn: 'Invalid ISBN value',
+        issn: 'Invalid ISSN value'
     }
 };
 

@@ -56,7 +56,8 @@ export default class BookForm extends Component {
                     <Field
                         component={ContributorsEditorField}
                         name="authors"
-                        locale={{contributorSuffix: txt.authors.suffix}}
+                        showIdentifierLookup
+                        locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
                         validate={[validation.isValidContributor]}
@@ -68,24 +69,31 @@ export default class BookForm extends Component {
                         component={ContributorsEditorField}
                         showContributorAssignment
                         name="editors"
-                        locale={{contributorSuffix: txt.editors.suffix}}
+                        locale={txt.editors.field}
                         disabled={this.props.submitting} />
                 </StandardCard>
 
-                <StandardCard title="ISBN" help={txt.authors.help}>
+                <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
+                    <div>{locale.components.isbnForm.text}</div>
                     <Field
                         component={ListEditorField}
-                        name="isbn"
-                        className="requiredField"
-                        disabled={this.props.submitting} />
-                </StandardCard>
-
-                <StandardCard title="ISSN" help={txt.authors.help}>
-                    <Field
-                        component={ListEditorField}
-                        name="issn"
+                        name="fez_record_search_key_isbn"
+                        isValid={validation.isValidIsbn}
                         maxCount={5}
-                        className="requiredField"
+                        searchKey={{value: 'rek_isbn', order: 'rek_isbn_order'}}
+                        locale={locale.components.isbnForm.field}
+                        disabled={this.props.submitting} />
+                </StandardCard>
+
+                <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
+                    <div>{locale.components.issnForm.text}</div>
+                    <Field
+                        component={ListEditorField}
+                        isValid={validation.isValidIssn}
+                        name="fez_record_search_key_issn"
+                        maxCount={5}
+                        locale={locale.components.issnForm.field}
+                        searchKey={{value: 'rek_issn', order: 'rek_issn_order'}}
                         disabled={this.props.submitting} />
                 </StandardCard>
             </div>

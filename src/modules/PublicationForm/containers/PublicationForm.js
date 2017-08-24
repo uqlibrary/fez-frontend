@@ -7,6 +7,7 @@ import {createNewRecord} from 'actions';
 const FORM_NAME = 'PublicationForm';
 
 const onSubmit = (values, dispatch) => {
+    console.log(values.toJS());
     // set default values for a new unapproved record
     return dispatch(createNewRecord({...values.toJS()}))
         .then(() => {

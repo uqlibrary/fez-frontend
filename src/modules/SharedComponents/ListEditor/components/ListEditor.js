@@ -8,15 +8,20 @@ export default class ListsEditor extends Component {
 
     static propTypes = {
         className: PropTypes.string,
+        searchKey: PropTypes.object.isRequired,
         maxCount: PropTypes.number,
-        validation: PropTypes.func,
+        isValid: PropTypes.func,
         disabled: PropTypes.bool,
         onChange: PropTypes.func,
         locale: PropTypes.object
     };
 
     static defaultProps = {
-        maxCount: 0
+        maxCount: 0,
+        searchKey: {
+            value: 'rek_value',
+            order: 'rek_order'
+        }
     };
 
     constructor(props) {
@@ -29,10 +34,21 @@ export default class ListsEditor extends Component {
 
     componentWillUpdate(nextProps, nextState) {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
-        if (this.props.onChange) this.props.onChange(nextState.itemList);
+        if (this.props.onChange) {
+            this.props.onChange(this.transformOutput(nextState.itemList));
+        }
     }
 
-    addList = (item) => {
+    transformOutput = (items) => {
+        return items.map((item, index) => {
+            return {
+                [this.props.searchKey.value]: item,
+                [this.props.searchKey.order]: index + 1
+            };
+        });
+    }
+
+    addItem = (item) => {
         if (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) {
             this.setState({
                 itemList: [ ...this.state.itemList, item]
@@ -85,17 +101,21 @@ export default class ListsEditor extends Component {
                 onMoveUp={this.moveUpList}
                 onMoveDown={this.moveDownList}
                 onDelete={this.deleteItem}
+                {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 disabled={this.props.disabled} />
         );
 
         return (
             <div className={this.props.className}>
                 <ListForm
-                    onAdd={this.addList}
+                    onAdd={this.addItem}
+                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
+                    isValid={this.props.isValid}
                     disabled={this.props.disabled || (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)} />
                 {
                     this.state.itemList.length > 0 &&
                     <ListRowHeader
+                        {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                         onDeleteAll={this.deleteAllItems}
                         disabled={this.props.disabled} />
                 }

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListForm tests  rendering active form 1`] = `
+<div
+  className="columns"
+>
+  <div
+    className="column"
+  >
+    <TextField
+      disabled={false}
+      errorText=""
+      floatingLabelFixed={false}
+      floatingLabelText="Item name"
+      fullWidth={true}
+      hintText="Please type the item name"
+      multiLine={false}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      rows={1}
+      type="text"
+      underlineShow={true}
+      value=""
+    />
+  </div>
+  <div
+    className="column is-narrow"
+  >
+    <RaisedButton
+      className="is-mui-spacing-button"
+      disabled={true}
+      fullWidth={true}
+      label="Add"
+      labelPosition="after"
+      onClick={[Function]}
+      primary={true}
+      secondary={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`ListForm tests  rendering disabled form 1`] = `
+<div
+  className="columns"
+>
+  <div
+    className="column"
+  >
+    <TextField
+      disabled={true}
+      errorText=""
+      floatingLabelFixed={false}
+      floatingLabelText="Item name"
+      fullWidth={true}
+      hintText="Please type the item name"
+      multiLine={false}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      rows={1}
+      type="text"
+      underlineShow={true}
+      value=""
+    />
+  </div>
+  <div
+    className="column is-narrow"
+  >
+    <RaisedButton
+      className="is-mui-spacing-button"
+      disabled={true}
+      fullWidth={true}
+      label="Add"
+      labelPosition="after"
+      onClick={[Function]}
+      primary={true}
+      secondary={false}
+    />
+  </div>
+</div>
+`;

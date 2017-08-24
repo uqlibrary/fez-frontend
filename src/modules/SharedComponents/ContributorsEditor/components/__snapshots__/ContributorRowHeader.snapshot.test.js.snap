@@ -18,7 +18,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
     onRef={[Function]}
   />
   <div
-    className="column is-1-desktop is-1-tablet is-1-mobile authorAssignment datalist-title"
+    className="column is-1-desktop is-1-tablet is-2-mobile authorAssignment datalist-title"
   >
     <label
       htmlFor="contributorAssignment"

@@ -20,6 +20,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
     locale={
       Object {
         "errorMessage": "Unable to add an item with the same identifier.",
+        "errorTitle": "Error",
       }
     }
     showContributorAssignment={false}
@@ -90,7 +91,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                 >
                   <TextFieldLabel
                     disabled={false}
-                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-5501"
+                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-24627"
                     muiTheme={
                       Object {
                         "appBar": Object {
@@ -516,7 +517,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                     }
                   >
                     <label
-                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-5501"
+                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-24627"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -973,7 +974,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                   </TextFieldHint>
                   <input
                     disabled={false}
-                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-5501"
+                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-24627"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1645,6 +1646,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
     locale={
       Object {
         "errorMessage": "Unable to add an item with the same identifier.",
+        "errorTitle": "Error",
       }
     }
     showContributorAssignment={false}
@@ -1713,7 +1715,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                 >
                   <TextFieldLabel
                     disabled={false}
-                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26608"
+                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-19756"
                     muiTheme={
                       Object {
                         "appBar": Object {
@@ -2139,7 +2141,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     }
                   >
                     <label
-                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26608"
+                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-19756"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -2596,7 +2598,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                   </TextFieldHint>
                   <input
                     disabled={false}
-                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26608"
+                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-19756"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -3180,7 +3182,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     >
                       <TextFieldLabel
                         disabled={true}
-                        htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-61058"
+                        htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-49743"
                         muiTheme={
                           Object {
                             "appBar": Object {
@@ -3606,7 +3608,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                         }
                       >
                         <label
-                          htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-61058"
+                          htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-49743"
                           style={
                             Object {
                               "color": "rgba(0, 0, 0, 0.3)",
@@ -4064,7 +4066,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                       <input
                         autoComplete="off"
                         disabled={true}
-                        id="undefined-UQidentifierifavailable-UQidentifierifavailable-61058"
+                        id="undefined-UQidentifierifavailable-UQidentifierifavailable-49743"
                         onBlur={[Function]}
                         onChange={[Function]}
                         onFocus={[Function]}

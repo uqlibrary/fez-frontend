@@ -23,6 +23,7 @@ export class ContributorsEditor extends Component {
         showIdentifierLookup: false,
         showContributorAssignment: false,
         locale: {
+            errorTitle: 'Error',
             errorMessage: 'Unable to add an item with the same identifier.'
         }
     };
@@ -131,6 +132,7 @@ export class ContributorsEditor extends Component {
                 disabled={this.props.disabled}
                 showContributorAssignment={this.props.showContributorAssignment}
                 disabledContributorAssignment={this.state.isCurrentAuthorSelected}
+                {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 onContributorAssigned={this.assignContributor} />
         );
 
@@ -139,11 +141,12 @@ export class ContributorsEditor extends Component {
                 <ContributorForm
                     onAdd={this.addContributor}
                     showIdentifierLookup={this.props.showIdentifierLookup}
+                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                     disabled={this.props.disabled} />
                 {
                     this.state.errorMessage &&
                     <Alert
-                        title="Error"
+                        title={this.props.locale.errorTitle}
                         message={this.state.errorMessage}
                         type="warning" />
                 }
@@ -151,6 +154,7 @@ export class ContributorsEditor extends Component {
                     this.state.contributors.length > 0 &&
                     <ContributorRowHeader
                         onDeleteAll={this.deleteAllContributors}
+                        {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                         showIdentifierLookup={this.props.showIdentifierLookup}
                         disabled={this.props.disabled}
                         showContributorAssignment={this.props.showContributorAssignment} />
