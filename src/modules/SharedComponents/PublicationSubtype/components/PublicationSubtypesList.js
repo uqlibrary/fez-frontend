@@ -83,6 +83,7 @@ export class PublicationSubtypesList extends Component {
                 maxHeight={ 250 }
                 onChange={ this._onSubtypeSelected }
                 disabled={this.props.disabled}
+                dropDownMenuProps={{animated: false}}
                 floatingLabelText={ loadingIndicationText }>
                 { renderSubTypeItems }
             </SelectField>
