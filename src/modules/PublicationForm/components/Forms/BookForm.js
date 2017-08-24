@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Field} from 'redux-form/immutable';
 
 import {TextField, StandardCard} from 'uqlibrary-react-toolbox';
-import {ContributorsEditorField, PublicationSubtypeField} from 'modules/SharedComponents';
+import {ContributorsEditorField, ListEditorField, PublicationSubtypeField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
@@ -72,6 +72,22 @@ export default class BookForm extends Component {
                         disabled={this.props.submitting} />
                 </StandardCard>
 
+                <StandardCard title="ISBN" help={txt.authors.help}>
+                    <Field
+                        component={ListEditorField}
+                        name="isbn"
+                        className="requiredField"
+                        disabled={this.props.submitting} />
+                </StandardCard>
+
+                <StandardCard title="ISSN" help={txt.authors.help}>
+                    <Field
+                        component={ListEditorField}
+                        name="issn"
+                        maxCount={5}
+                        className="requiredField"
+                        disabled={this.props.submitting} />
+                </StandardCard>
             </div>
         );
     }
