@@ -43,7 +43,10 @@ export default class JournalArticleCitation extends Component {
                 </FontIcon>
 
                 <span className="citationAuthors">{authors} </span>
-                <span className="citationPublisher">({journalArticle.publisher}) </span>
+                {
+                    journalArticle.publisher &&
+                    <span className="citationPublisher">({journalArticle.publisher}) </span>
+                }
                 <span className="citationTitle">{journalArticle.title}. </span>
                 {
                     journalArticle.journalName &&
