@@ -92,7 +92,8 @@
     "test:e2e": "node nightwatch --test",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "updateSnapshot": "jest --updateSnapshot"
+    "updateSnapshot": "jest --updateSnapshot",
+    "eslint": "eslint 'src/**/*.js' --quiet"
   },
   "engines": {
     "npm": ">=3",

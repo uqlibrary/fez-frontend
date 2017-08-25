@@ -6,3 +6,6 @@ webpack.*.js
 conf
 gulp_tasks
 /yarn.lock
+*.test.js
+*.config.js
+**/mock/data/**/*.js
