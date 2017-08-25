@@ -95,8 +95,12 @@ export default class PublicationForm extends Component {
                 {
                     this.props.formValues.get('rek_display_type') > 0 &&
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <Field name="files" component={ FileUploadField } disabled={this.props.submitting} requireFileAccess
-                               validate={[validation.validFileUpload]} />
+                        <Field
+                            name="files"
+                            component={ FileUploadField }
+                            disabled={this.props.submitting}
+                            requireFileAccess
+                            validate={[validation.validFileUpload]} />
                     </StandardCard>
                 }
                 {
