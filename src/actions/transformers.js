@@ -40,8 +40,8 @@ export function recordFileAttachment(files, record) {
         return {
             rek_file_attachment_name: item.name,
             rek_file_attachment_name_order: initialCount + index + 1,
-            // rek_file_attachment_name_date: item.date,
-            // rek_file_attachment_name_access_condition_id: item.access_condition_id,
+            rek_file_attachment_embargo_date: item.date,
+            rek_file_attachment_access_condition: item.access_condition_id,
         };
     });
     if (record) {

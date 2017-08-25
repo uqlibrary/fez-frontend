@@ -167,15 +167,15 @@ export function claimPublication(data) {
                 pid: data.publication.rek_pid,
                 author_id: data.author.aut_id,
                 comments: data.comments,
-                ...claimAttachments(data.files)
+                ...claimAttachments(data.files.queue)
             };
             console.log(claimRequest);
             return postClaimPossiblePublication(claimRequest)
                 .then(response => {
-                    if (!data.files || data.files.length === 0) {
+                    if (!data.files.queue || data.files.queue.length === 0) {
                         return response;
                     } else {
-                        return putUploadFiles(data.publication.rek_pid, data.files, dispatch);
+                        return putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
                     }
                 })
                 .then(() => {
@@ -183,7 +183,7 @@ export function claimPublication(data) {
                     const recordPatchRequest = {
                         rek_pid: data.publication.rek_pid,
                         ...recordRekLink(data),
-                        ...recordFileAttachment(data.files, data.publication)
+                        ...recordFileAttachment(data.files.queue, data.publication)
                         // TODO: updated record's author_id and order ...recordAuthors(data.publication)
                     };
                     console.log(recordPatchRequest);
@@ -221,8 +221,8 @@ export function claimPublication(data) {
             return postRecord(recordRequest)
                 // .then(response => {
                 //     newPid = response.rek_pid;
-                //     if (data.files.length === 0) return response;
-                //     return putUploadFiles(data.rek_pid, data.files);
+            //     if (data.files.queue.length === 0) return response;
+            //     return putUploadFiles(data.rek_pid, data.files.queue);
                 // })
                 // .then(response => {
                 //     // TODO: build a request to match author to pid, should return order for current author or not found
@@ -234,7 +234,7 @@ export function claimPublication(data) {
                         pid: newPid,
                         author_id: data.author.aut_id,
                         comments: data.comments,
-                        ...claimAttachments(data.files)
+                        ...claimAttachments(data.files.queue)
                     };
                     console.log(claimRequest);
                     return postClaimPossiblePublication(claimRequest);
@@ -244,7 +244,7 @@ export function claimPublication(data) {
                     const recordPatchRequest = {
                         rek_pid: newPid,
                         ...recordRekLink(data),
-                        ...recordFileAttachment(data.files)
+                        ...recordFileAttachment(data.files.queue)
                         // TODO: updated record's author_id and order ...recordAuthors(data.publication)
                     };
                     console.log(recordPatchRequest);

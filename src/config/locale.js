@@ -556,7 +556,9 @@ export default {
             },
             errorAlert: {
                 title: 'Error',
-                message: 'Error has occurred during request and adding new publication cannot be processed. Please, review the form and try again.'
+                createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed. Please, review the form and try again.',
+                fileUploadMessage: 'Files failed to upload but record was saved, please contact eSpace admins',
+                patchFilesMessage: 'Record was created and files were uploaded but failed to link files to created record, please contact eSpace admins'
             },
             progressAlert: {
                 title: 'Saving',
@@ -736,7 +738,19 @@ export default {
     validationErrors: {
         publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
         isbn: 'Invalid ISBN value',
-        issn: 'Invalid ISSN value'
+        issn: 'Invalid ISSN value',
+        fileUpload: 'File upload is not in valid state',
+        required: 'This field is required',
+        email: 'Please enter a valid email address',
+        uniqueValue: 'This value has already been used',
+        url: 'Please enter a valid URL',
+        arrayRequired: 'You must select at least one item',
+        canNotBeCI: 'You must specify a lead UQ supervisor for a RHD project',
+        shortCode: 'The project short code must consist of 8 alpha numeric characters',
+        dateTimeDay: 'Invalid date',
+        dateTimeYear: 'Invalid year',
+        maxLength: 'Must be [max] characters or less',
+        minLength: 'Must be at least [min] characters'
     }
 };
 
