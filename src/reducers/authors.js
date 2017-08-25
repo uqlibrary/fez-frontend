@@ -20,6 +20,7 @@ const handlers = {
     }),
 
     [AUTHORS_LOADING]: () => ({
+        authorsList: [],
         authorsListLoading: true,
         authorsListLoadingError: false
     })
@@ -30,5 +31,6 @@ export default function authorsReducer(state = initialState, action) {
     if (!handler) {
         return state;
     }
+    console.log(action);
     return handler(state, action);
 }

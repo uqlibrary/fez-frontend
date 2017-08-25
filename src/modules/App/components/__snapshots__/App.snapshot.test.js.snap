@@ -57,6 +57,12 @@ exports[`App tests for user account and author status User is logged in but are 
             "secondaryText": "j.staff@example.uq.edu.au",
           },
           Object {
+            "linkTo": "/research",
+            "path": "/research",
+            "primaryText": "My research",
+            "render": [Function],
+          },
+          Object {
             "component": [Function],
             "linkTo": "/add-record",
             "path": "/add-record",
@@ -117,6 +123,12 @@ exports[`App tests for user account and author status User is logged in but are 
           path="/dashboard"
           primaryText="My dashboard"
           secondaryText="j.staff@example.uq.edu.au"
+        />
+        <Route
+          linkTo="/research"
+          path="/research"
+          primaryText="My research"
+          render={[Function]}
         />
         <Route
           component={[Function]}
@@ -333,6 +345,12 @@ exports[`App tests for user account and author status User logged in and is an a
             "secondaryText": "j.staff@example.uq.edu.au",
           },
           Object {
+            "linkTo": "/research",
+            "path": "/research",
+            "primaryText": "My research",
+            "render": [Function],
+          },
+          Object {
             "component": [Function],
             "linkTo": "/add-record",
             "path": "/add-record",
@@ -393,6 +411,12 @@ exports[`App tests for user account and author status User logged in and is an a
           path="/dashboard"
           primaryText="My dashboard"
           secondaryText="j.staff@example.uq.edu.au"
+        />
+        <Route
+          linkTo="/research"
+          path="/research"
+          primaryText="My research"
+          render={[Function]}
         />
         <Route
           component={[Function]}
@@ -494,6 +518,12 @@ exports[`App tests for user account and author status User logged in but is not 
             "secondaryText": "j.staff@example.uq.edu.au",
           },
           Object {
+            "linkTo": "/research",
+            "path": "/research",
+            "primaryText": "My research",
+            "render": [Function],
+          },
+          Object {
             "component": [Function],
             "linkTo": "/add-record",
             "path": "/add-record",
@@ -561,6 +591,12 @@ exports[`App tests for user account and author status User logged in but is not 
           path="/dashboard"
           primaryText="My dashboard"
           secondaryText="j.staff@example.uq.edu.au"
+        />
+        <Route
+          linkTo="/research"
+          path="/research"
+          primaryText="My research"
+          render={[Function]}
         />
         <Route
           component={[Function]}

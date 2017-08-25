@@ -24,17 +24,16 @@ export default class ContributorRow extends Component {
         disabledContributorAssignment: PropTypes.bool,
         onContributorAssigned: PropTypes.func,
         locale: PropTypes.object,
-        contributorSuffix: PropTypes.string,
         disabled: PropTypes.bool
     };
 
     static defaultProps = {
-        contributorSuffix: ' listed contributor',
         locale: {
+            suffix: ' listed contributor',
             moveUpHint: 'Move record up the order',
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
-            ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Nineth', 'Tenth'],
+            ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
                 confirmationMessage: 'Are you sure you want to delete this record?',
@@ -71,7 +70,7 @@ export default class ContributorRow extends Component {
     render() {
         const {ordinalData, deleteRecordConfirmation} = this.props.locale;
         const contributorOrder = (this.props.index < ordinalData.length ?
-            ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.contributorSuffix;
+            ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
 
         return (
             <div className="columns is-gapless is-mobile contributorsRow datalist datalist-row">
@@ -81,7 +80,7 @@ export default class ContributorRow extends Component {
                     locale={deleteRecordConfirmation} />
                 {
                     this.props.showContributorAssignment &&
-                    <div className="column is-1-desktop is-1-tablet is-1-mobile contributorIdentifier datalist-text">
+                    <div className="column is-1-desktop is-1-tablet is-2-mobile contributorIdentifier datalist-text">
                        <Checkbox
                            name="contributorAssignment"
                            onCheck={this._onContributorAssigned}

@@ -1,6 +1,7 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
-$graph-font-size: 12px !important;
+$graph-font-size: 14px !important;
+$chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $graph-color-5, $graph-background-color-pink;
 
 // Bar Chart styles
 .barChart {
@@ -14,10 +15,8 @@ $graph-font-size: 12px !important;
     width: 95%;
     margin: 0 auto;
 
-    $barchart-colors: $graph-color-3, $graph-color-1, $graph-color-2, $graph-color-4, $graph-color-5, $graph-background-color-pink;
-
-    @for $i from 1 through length($barchart-colors) {
-      $thisColor: nth($barchart-colors, $i);
+    @for $i from 1 through length($chart-colors) {
+      $thisColor: nth($chart-colors, $i);
       .highcharts-color-#{$i - 1} {
         fill: $thisColor !important;
         stroke: $thisColor !important;
@@ -400,6 +399,10 @@ $graph-font-size: 12px !important;
 
 // Donut chart styles
 .donutChart {
+  margin-bottom: -12px !important;
+  & .body-1 {
+    padding: 0 !important;
+  }
   h2 {
     color: $text-color-reverse;
   }
@@ -422,10 +425,8 @@ $graph-font-size: 12px !important;
       fill: transparent !important;
     }
 
-    $donutchart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $graph-color-5, $graph-background-color-blue;
-
-    @for $i from 1 through length($donutchart-colors) {
-      $thisColor: nth($donutchart-colors, $i);
+    @for $i from 1 through length($chart-colors) {
+      $thisColor: nth($chart-colors, $i);
 
       .highcharts-legend-item.highcharts-color-#{$i - 1} .highcharts-point,
       .highcharts-tooltip .highcharts-color-#{$i - 1},

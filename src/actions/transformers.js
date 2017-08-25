@@ -62,7 +62,6 @@ export function recordFileAttachment(files, record) {
 
 export function recordAuthors(authors) {
     if (!authors || authors.length === 0) return {};
-
     return {
         fez_record_search_key_author: authors.map((item, index) => (
             {
@@ -76,7 +75,6 @@ export function recordAuthors(authors) {
 
 export function recordAuthorsId(authors) {
     if (!authors || authors.length === 0) return {};
-
     return {
         fez_record_search_key_author_id: authors.map(
             (item, index) => (
@@ -105,7 +103,6 @@ export function recordContributors(authors) {
 
 export function recordContributorsId(authors) {
     if (!authors || authors.length === 0) return {};
-
     return {
         fez_record_search_key_contributor_id: authors.map(
             (item, index) => (

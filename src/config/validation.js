@@ -73,3 +73,60 @@ export const isValidContributor = value => {
 export const validFileUpload = value => {
     return value && value.hasOwnProperty('isValid') && !value.isValid ? validationErrors.fileUpload : undefined;
 };
+export const isValidIssn = subject => {
+    const regex = /^([ep]{0,1}ISSN |)[\d]{4}(\-|)[\d]{3}(\d|\S){1}$/;
+    if (subject.trim().length === 0 || regex.test(subject)) {
+        return '';
+    } else {
+        return locale.validationErrors.issn;
+    }
+};
+
+export const isValidIsbn = subject => {
+    // Checks for ISBN-10 or ISBN-13 format
+    // https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9781449327453/ch04s13.html
+    const regex = /^(?:ISBN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
+
+    if (subject.trim().length === 0 || regex.test(subject)) {
+        // // Remove non ISBN digits, then split into an array
+        // const chars = subject.replace(/[- ]|^ISBN(?:-1[03])?:?/g, '').split('');
+        // // Remove the final ISBN digit from `chars`, and assign it to `last`
+        // const last = chars.pop();
+        // let sum = 0;
+        // let check;
+        // let i;
+        //
+        // if (chars.length === 9) {
+        //     // Compute the ISBN-10 check digit
+        //     chars.reverse();
+        //     for (i = 0; i < chars.length; i++) {
+        //         sum += (i + 2) * parseInt(chars[i], 10);
+        //     }
+        //     check = 11 - (sum % 11);
+        //     if (check === 10) {
+        //         check = 'X';
+        //     } else if (check === 11) {
+        //         check = '0';
+        //     }
+        // } else {
+        //     // Compute the ISBN-13 check digit
+        //     for (i = 0; i < chars.length; i++) {
+        //         sum += (i % 2 * 2 + 1) * parseInt(chars[i], 10);
+        //     }
+        //     check = 10 - (sum % 10);
+        //     if (check === 10) {
+        //         check = '0';
+        //     }
+        // }
+        //
+        // if (subject.trim().length === 0 || check === last) {
+        //     return '';
+        // } else {
+        //     return 'Invalid ISBN check digit';
+        // }
+        return '';
+    } else {
+        return locale.validationErrors.isbn;
+    }
+};
+

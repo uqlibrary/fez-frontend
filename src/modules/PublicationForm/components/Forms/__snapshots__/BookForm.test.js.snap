@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookForm renders  component 1`] = `
+<div>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": "some help",
+        "title": "Book information",
+      }
+    }
+    title="Book information"
+  >
+    <div
+      className="columns"
+      style={
+        Object {
+          "marginTop": "-12px",
+        }
+      }
+    >
+      <div
+        className="column"
+      >
+        <Field
+          autoFocus={true}
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Book title"
+          fullWidth={true}
+          multiLine={true}
+          name="rek_title"
+          rows={1}
+          style={
+            Object {
+              "marginBottom": "-12px",
+            }
+          }
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          className="requiredField"
+          component={[Function]}
+          disabled={false}
+          locale={
+            Object {
+              "label": "Publication subtype",
+              "loading": "loading...",
+            }
+          }
+          name="rek_subtype"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+          vocabId={0}
+        />
+      </div>
+    </div>
+  </StandardCard>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": "some help",
+        "title": "Authors",
+      }
+    }
+    title="Authors"
+  >
+    <Field
+      className="requiredField"
+      component={[Function]}
+      disabled={false}
+      locale={
+        Object {
+          "contributorSuffix": " listed author",
+        }
+      }
+      name="authors"
+      showContributorAssignment={true}
+      validate={
+        Array [
+          [Function],
+        ]
+      }
+    />
+  </StandardCard>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": "some help",
+        "title": "Editors",
+      }
+    }
+    title="Editors"
+  >
+    <Field
+      component={[Function]}
+      disabled={false}
+      locale={
+        Object {
+          "contributorSuffix": " listed editor",
+        }
+      }
+      name="editors"
+      showContributorAssignment={true}
+    />
+  </StandardCard>
+</div>
+`;

@@ -71,7 +71,7 @@ export default class PublicationCitation extends Component {
             case 'fullMetrics':
                 // open full metrics in a new tab
                 const win = window.open(`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`, '_blank');
-                win.focus();
+                if (win) win.focus();
                 break;
             case 'fixRecord':
                 // TODO: set current record in store, redirect to fix screen
