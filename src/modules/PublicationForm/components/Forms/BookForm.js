@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Field} from 'redux-form/immutable';
 
-import {TextField, StandardCard} from 'uqlibrary-react-toolbox';
-import {ContributorsEditorField, ListEditorField, PublicationSubtypeField} from 'modules/SharedComponents';
+import {TextField, StandardCard, ListEditorField} from 'uqlibrary-react-toolbox';
+import {ContributorsEditorField, PublicationSubtypeField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
