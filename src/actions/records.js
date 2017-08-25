@@ -1,12 +1,11 @@
 import {postRecord, patchRecord, putUploadFiles} from '../repositories';
 import * as transformers from './transformers';
-
+import {locale} from 'config';
 export const RECORD_RESET = 'RECORD_RESET';
 export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
 export const RECORD_PROCESSING = 'RECORD_PROCESSING';
 import * as config from 'config/general';
-import {fileUploadActions} from 'uqlibrary-react-toolbox';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -17,6 +16,7 @@ import {fileUploadActions} from 'uqlibrary-react-toolbox';
  */
 export function createNewRecord(data) {
     console.log(data);
+    const { errorAlert } = locale.components.publicationForm;
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
 
@@ -44,23 +44,24 @@ export function createNewRecord(data) {
                 // set a pid on a new record
                 data.rek_pid = response.data.rek_pid;
                 // process files
-                if (!data.files || data.files.length === 0) return response;
-                return putUploadFiles(response.data.rek_pid, data.files, dispatch);
+                if (!data.files.queue || data.files.queue.length === 0) return response.data;
+                return putUploadFiles(response.data.rek_pid, data.files.queue, dispatch);
             })
             .then(response => {
-                if (!data.files || data.files.length === 0) return response;
+                if (!data.files.queue || data.files.queue.length === 0) return response.data;
                 // process uploaded files into API format for a patch
                 const recordPatch = {
-                    ...transformers.recordFileAttachment(data.files)
+                    ...transformers.recordFileAttachment(data.files.queue)
                 };
-                return patchRecord(data.rek_pid, recordPatch);
+                return patchRecord(data.rek_pid, recordPatch).catch((error) => {
+                    return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));
+                });
             })
             .then(response => {
                 dispatch({
                     type: RECORD_CREATED,
                     payload: response.data
                 });
-                dispatch(fileUploadActions.clearFileUpload());
                 return Promise.resolve(response.data);
             })
             .catch(error => {
@@ -68,7 +69,7 @@ export function createNewRecord(data) {
                     type: RECORD_CREATE_FAILED,
                     payload: error
                 });
-                return Promise.reject(error);
+                return Promise.reject(new Error(`${errorAlert.createRecordMessage} (${error.message})`));
             });
     };
 }

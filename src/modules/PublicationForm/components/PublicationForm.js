@@ -6,7 +6,7 @@ import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 import {SelectField, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
-import {locale, publicationTypes} from 'config';
+import {locale, publicationTypes, validation} from 'config';
 
 import {BookForm, JournalArticleForm} from './Forms';
 
@@ -95,12 +95,13 @@ export default class PublicationForm extends Component {
                 {
                     this.props.formValues.get('rek_display_type') > 0 &&
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <Field name="files" component={ FileUploadField } disabled={this.props.submitting} />
+                        <Field name="files" component={ FileUploadField } disabled={this.props.submitting} requireFileAccess
+                               validate={[validation.validFileUpload]} />
                     </StandardCard>
                 }
                 {
                     this.props.submitFailed && this.props.error &&
-                    <Alert type="error_outline" {...txt.errorAlert} />
+                    <Alert type="error_outline" title={ txt.errorAlert.title } message={ this.props.error } />
                 }
                 {
                     !this.props.submitFailed && this.props.dirty && this.props.invalid &&
