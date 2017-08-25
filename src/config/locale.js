@@ -1,5 +1,5 @@
 import React from 'react';
-import { StandardCard } from 'uqlibrary-react-toolbox';
+import {StandardCard} from 'uqlibrary-react-toolbox';
 
 export default {
     global: {
@@ -133,65 +133,66 @@ export default {
         about: {
             title: 'About UQ eSpace',
             children: (
-              <StandardCard>
-                  UQ eSpace is the single authoritative source for the research outputs and research data of the
-                  staff and students of the University of Queensland and is the archival home of UQ Research
-                  Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
-                  publications to the wider world and provides data for mandatory Government reporting
-                  requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
-                  systems, including Academic Portal and the DataHub. It operates as an institutional repository
-                  for open access publications, research datasets and other digitised materials created by staff
-                  of the University such as print materials, photographs, audio materials, videos, manuscripts and
-                  other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
-                  publication profile of researchers at UQ.
-                  <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
-                      requires UQ researchers to make publications arising from their research openly available via UQ
-                      eSpace. It has also implemented a Research Data Management policy that sets out the requirements
-                      for University of Queensland researchers to ensure that their research data are managed
-                      according to legal, statutory, ethical and funding body requirements.</p>
-                  <h3>General Enquiries</h3>
-                  <p>
-                      Tel: 07 334 69775 <br/>
-                      Email: espace@library.uq.edu.au <br/>
-                  </p>
-                  <h3>Staff contact</h3>
-                  <p>
-                      Andrew Heath <br/>
-                      Manager, UQ eSpace<br/>
-                      Tel: 07 334 69981<br/>
-                      Email: a.heath@library.uq.edu.au<br/>
-                  </p>
-                  <p>
-                      Mary-Anne Marrington<br/>
-                      Senior Librarian, UQ eSpace<br/>
-                      Tel: 07 334 69775<br/>
-                      Email: m.marrington@library.uq.edu.au<br/>
-                  </p>
-              </StandardCard>
+                <StandardCard>
+                    UQ eSpace is the single authoritative source for the research outputs and research data of the
+                    staff and students of the University of Queensland and is the archival home of UQ Research
+                    Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
+                    publications to the wider world and provides data for mandatory Government reporting
+                    requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
+                    systems, including Academic Portal and the DataHub. It operates as an institutional repository
+                    for open access publications, research datasets and other digitised materials created by staff
+                    of the University such as print materials, photographs, audio materials, videos, manuscripts and
+                    other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
+                    publication profile of researchers at UQ.
+                    <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
+                        requires UQ researchers to make publications arising from their research openly available via UQ
+                        eSpace. It has also implemented a Research Data Management policy that sets out the requirements
+                        for University of Queensland researchers to ensure that their research data are managed
+                        according to legal, statutory, ethical and funding body requirements.</p>
+                    <h3>General Enquiries</h3>
+                    <p>
+                        Tel: 07 334 69775 <br/>
+                        Email: espace@library.uq.edu.au <br/>
+                    </p>
+                    <h3>Staff contact</h3>
+                    <p>
+                        Andrew Heath <br/>
+                        Manager, UQ eSpace<br/>
+                        Tel: 07 334 69981<br/>
+                        Email: a.heath@library.uq.edu.au<br/>
+                    </p>
+                    <p>
+                        Mary-Anne Marrington<br/>
+                        Senior Librarian, UQ eSpace<br/>
+                        Tel: 07 334 69775<br/>
+                        Email: m.marrington@library.uq.edu.au<br/>
+                    </p>
+                </StandardCard>
             )
         },
         browse: {
             title: 'Browse eSpace',
-            text: ( <div>
-                  <p>Welcome to The University of Queensland's institutional digital repository</p>
-                  <p>
-                      <a href="https://auth.library.uq.edu.au/login">Please, login to continue.</a>
-                  </p>
-              </div>
+            text: (
+                <div>
+                    <p>Welcome to The University of Queensland's institutional digital repository</p>
+                    <p>
+                        <a href="https://auth.library.uq.edu.au/login">Please, login to continue.</a>
+                    </p>
+                </div>
             ),
             help: {
                 title: 'Browse eSpace help',
                 text: (
-                  <div>
-                      <h3>Browse</h3>
-                      <p>
-                          Latest articles....
-                      </p>
-                      <h3>Browse collections</h3>
-                      <p>
-                          Latest collections....
-                      </p>
-                  </div>
+                    <div>
+                        <h3>Browse</h3>
+                        <p>
+                            Latest articles....
+                        </p>
+                        <h3>Browse collections</h3>
+                        <p>
+                            Latest collections....
+                        </p>
+                    </div>
                 ),
                 buttonLabel: 'OK'
             }

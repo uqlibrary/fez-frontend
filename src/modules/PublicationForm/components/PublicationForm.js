@@ -11,7 +11,6 @@ import {locale, publicationTypes, validation} from 'config';
 import {BookForm, JournalArticleForm} from './Forms';
 
 export default class PublicationForm extends Component {
-
     static propTypes = {
         ...propTypes, // all redux-form props
         onFormSubmitSuccess: PropTypes.func.isRequired,
@@ -77,14 +76,15 @@ export default class PublicationForm extends Component {
                     locale={txt.cancelWorkflowConfirmation} />
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
-                    <Field component={SelectField}
-                           disabled={this.props.submitting}
-                           name="rek_display_type"
-                           fullWidth
-                           floatingLabelText={txt.publicationType.inputLabelText}
-                           floatingLabelFixed
-                           className="requiredField"
-                           hintText={txt.publicationType.inputLabelText}>
+                    <Field
+                        component={SelectField}
+                        disabled={this.props.submitting}
+                        name="rek_display_type"
+                        fullWidth
+                        floatingLabelText={txt.publicationType.inputLabelText}
+                        floatingLabelFixed
+                        className="requiredField"
+                        hintText={txt.publicationType.inputLabelText}>
                         {publicationTypeItems}
                     </Field>
                 </StandardCard>
@@ -95,8 +95,12 @@ export default class PublicationForm extends Component {
                 {
                     this.props.formValues.get('rek_display_type') > 0 &&
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                        <Field name="files" component={ FileUploadField } disabled={this.props.submitting} requireFileAccess
-                               validate={[validation.validFileUpload]} />
+                        <Field
+                            name="files"
+                            component={ FileUploadField }
+                            disabled={this.props.submitting}
+                            requireFileAccess
+                            validate={[validation.validFileUpload]} />
                     </StandardCard>
                 }
                 {

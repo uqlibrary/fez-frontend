@@ -7,7 +7,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {validation} from 'config';
 
 export default class PublicationSearchForm extends Component {
-
     static propTypes = {
         ...propTypes, // all redux-form props
         locale: PropTypes.object
@@ -24,15 +23,15 @@ export default class PublicationSearchForm extends Component {
                 <form onSubmit={this.props.handleSubmit}>
                     <div className="columns">
                         <div className="column">
-                            <Field component={TextField}
-                                   className="requiredField"
-                                   name="searchQuery"
-                                   fullWidth
-                                   floatingLabelText={this.props.locale.fieldLabels.search}
-                                   autoComplete="off"
-                                   autoFocus
-                                   validate={[validation.required]}
-                            />
+                            <Field
+                                component={TextField}
+                                className="requiredField"
+                                name="searchQuery"
+                                fullWidth
+                                floatingLabelText={this.props.locale.fieldLabels.search}
+                                autoComplete="off"
+                                autoFocus
+                                validate={[validation.required]}/>
                         </div>
                         <div className="column is-narrow">
                             <RaisedButton

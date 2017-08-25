@@ -19,7 +19,6 @@ import JournalArticleCitation from './citations/JournalArticleCitation';
  *   showDefaultActions {bool} if set to true will display default actions for records with PID, false by default
  * */
 export default class PublicationCitation extends Component {
-
     static propTypes = {
         publication: PropTypes.object.isRequired,
         showDefaultActions: PropTypes.bool,
@@ -67,7 +66,7 @@ export default class PublicationCitation extends Component {
     }
 
     _handleDefaultActions = (event, menuItem) => {
-        switch(menuItem.key) {
+        switch (menuItem.key) {
             case 'fullMetrics':
                 // open full metrics in a new tab
                 const win = window.open(`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`, '_blank');
@@ -91,22 +90,22 @@ export default class PublicationCitation extends Component {
         const actions = this.props.customActions && this.props.customActions.length > 0 ?
             this.props.customActions.map((action, index) => {
                 return (
-                    <div className="column is-narrow" key={index} >
+                    <div className="column is-narrow" key={index}>
                         {index === 0 ? (
-                        <RaisedButton
-                            secondary
-                            label={action.label}
-                            className={`publicationAction buttonOrder${index}`}
-                            onTouchTap={() => (action.handleAction(this.props.publication))}
-                        />
+                            <RaisedButton
+                                secondary
+                                label={action.label}
+                                className={`publicationAction buttonOrder${index}`}
+                                onTouchTap={() => (action.handleAction(this.props.publication))}
+                            />
                         ) : (
-                        <FlatButton
-                            secondary
-                            label={action.label}
-                            className={`publicationAction buttonOrder${index}`}
-                            onTouchTap={() => (action.handleAction(this.props.publication))}
-                        />
-                            )}
+                            <FlatButton
+                                secondary
+                                label={action.label}
+                                className={`publicationAction buttonOrder${index}`}
+                                onTouchTap={() => (action.handleAction(this.props.publication))}
+                            />
+                        )}
                     </div>
                 );
             }) : null;
@@ -127,11 +126,13 @@ export default class PublicationCitation extends Component {
                             <IconMenu
                                 ref="actionsMenu"
                                 onItemTouchTap={this._handleDefaultActions}
-                                iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                                iconButtonElement={<IconButton><MoreVertIcon/></IconButton>}
                                 anchorOrigin={{horizontal: 'left', vertical: 'top'}}
                                 targetOrigin={{horizontal: 'left', vertical: 'top'}}>
                                 {
-                                    this.defaultActions.map(item => { return (<MenuItem {...item} />); })
+                                    this.defaultActions.map(item => {
+                                        return (<MenuItem {...item} />);
+                                    })
                                 }
                             </IconMenu>
                         </div>

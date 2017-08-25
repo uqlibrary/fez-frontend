@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 
 export default class JournalArticleCitation extends Component {
-
     static propTypes = {
         publication: PropTypes.object.isRequired
     };

@@ -9,7 +9,6 @@ import {bindActionCreators} from 'redux';
 import * as actions from 'actions/authors';
 
 export class ContributorForm extends Component {
-
     static propTypes = {
         authorsList: PropTypes.array,
         onAdd: PropTypes.func.isRequired,

@@ -24,7 +24,6 @@ import {
 import {locale} from 'config';
 
 class Dashboard extends React.Component {
-
     static propTypes = {
         // account data
         account: PropTypes.object.isRequired,
@@ -129,8 +128,9 @@ class Dashboard extends React.Component {
                     !loading && this.props.publicationTypesCount &&
                     <div className="columns">
                         <div className="column is-gapless is-4">
-                            <StandardCard className="donutChart card-full-height"
-                                          title={txt.publicationTypesCountChart.title}>
+                            <StandardCard
+                                className="donutChart card-full-height"
+                                title={txt.publicationTypesCountChart.title}>
                                 <AuthorsPublicationTypesCountChart
                                     className="donutChart"
                                     series={[{
@@ -141,55 +141,69 @@ class Dashboard extends React.Component {
                         </div>
 
                         <div className="column">
-                            <StandardCard className="card-full-height card-paddingless"
-                                          title="eSpace publications linked from: WOS/SCOPUS">
-                                {this.props.publicationsStats && (
-                                <Table selectable={false} className="pubStatsTable">
-                                    <TableHeader displaySelectAll={false} adjustForCheckbox={false} className="pubStatsHeader">
-                                        <TableRow>
-                                            <TableHeaderColumn className="pubStatsHeaderTitle">eSpace publications linked from:</TableHeaderColumn>
-                                            <TableHeaderColumn className="pubStatsHeaderTitle">Web of Science</TableHeaderColumn>
-                                            <TableHeaderColumn className="pubStatsHeaderTitle">Scopus</TableHeaderColumn>
-                                        </TableRow>
-                                    </TableHeader>
-                                    <TableBody displayRowCheckbox={false}>
-                                        <TableRow>
-                                            <TableRowColumn className="pubStatsRowTitle">h-index score</TableRowColumn>
-                                            <TableRowColumn>{pubStats.thomson_citation_count_i.hindex}</TableRowColumn>
-                                            <TableRowColumn>{pubStats.scopus_citation_count_i.hindex}</TableRowColumn>
-                                        </TableRow>
+                            <StandardCard
+                                className="card-full-height card-paddingless"
+                                title="eSpace publications linked from: WOS/SCOPUS">
+                                {
+                                    this.props.publicationsStats &&
+                                    <Table selectable={false} className="pubStatsTable">
+                                        <TableHeader
+                                            displaySelectAll={false}
+                                            adjustForCheckbox={false}
+                                            className="pubStatsHeader">
+                                            <TableRow>
+                                                <TableHeaderColumn className="pubStatsHeaderTitle">eSpace publications
+                                                    linked from:</TableHeaderColumn>
+                                                <TableHeaderColumn className="pubStatsHeaderTitle">Web of
+                                                    Science</TableHeaderColumn>
+                                                <TableHeaderColumn
+                                                    className="pubStatsHeaderTitle">Scopus</TableHeaderColumn>
+                                            </TableRow>
+                                        </TableHeader>
+                                        <TableBody displayRowCheckbox={false}>
+                                            <TableRow>
+                                                <TableRowColumn className="pubStatsRowTitle">h-index
+                                                    score</TableRowColumn>
+                                                <TableRowColumn>{pubStats.thomson_citation_count_i.hindex}</TableRowColumn>
+                                                <TableRowColumn>{pubStats.scopus_citation_count_i.hindex}</TableRowColumn>
+                                            </TableRow>
 
-                                        <TableRow>
-                                            <TableRowColumn className="pubStatsRowTitle">Average citation count per publication</TableRowColumn>
-                                            <TableRowColumn>{pubStats.thomson_citation_count_i.avg.toFixed(1)}</TableRowColumn>
-                                            <TableRowColumn>{pubStats.scopus_citation_count_i.avg.toFixed(1)}</TableRowColumn>
-                                        </TableRow>
+                                            <TableRow>
+                                                <TableRowColumn className="pubStatsRowTitle">Average citation count per
+                                                    publication</TableRowColumn>
+                                                <TableRowColumn>{pubStats.thomson_citation_count_i.avg.toFixed(1)}</TableRowColumn>
+                                                <TableRowColumn>{pubStats.scopus_citation_count_i.avg.toFixed(1)}</TableRowColumn>
+                                            </TableRow>
 
-                                        <TableRow>
-                                            <TableRowColumn className="pubStatsRowTitle">Total citations</TableRowColumn>
-                                            <TableRowColumn>{pubStats.thomson_citation_count_i.sum}</TableRowColumn>
-                                            <TableRowColumn>{pubStats.scopus_citation_count_i.sum}</TableRowColumn>
-                                        </TableRow>
+                                            <TableRow>
+                                                <TableRowColumn className="pubStatsRowTitle">Total
+                                                    citations</TableRowColumn>
+                                                <TableRowColumn>{pubStats.thomson_citation_count_i.sum}</TableRowColumn>
+                                                <TableRowColumn>{pubStats.scopus_citation_count_i.sum}</TableRowColumn>
+                                            </TableRow>
 
-                                        <TableRow>
-                                            <TableRowColumn className="pubStatsRowTitle">Total publications</TableRowColumn>
-                                            <TableRowColumn>{pubStats.thomson_citation_count_i.count}</TableRowColumn>
-                                            <TableRowColumn>{pubStats.scopus_citation_count_i.count}</TableRowColumn>
-                                        </TableRow>
+                                            <TableRow>
+                                                <TableRowColumn className="pubStatsRowTitle">Total
+                                                    publications</TableRowColumn>
+                                                <TableRowColumn>{pubStats.thomson_citation_count_i.count}</TableRowColumn>
+                                                <TableRowColumn>{pubStats.scopus_citation_count_i.count}</TableRowColumn>
+                                            </TableRow>
 
-                                        <TableRow>
-                                            <TableRowColumn className="pubStatsRowTitle">Publication range</TableRowColumn>
-                                            <TableRowColumn>{pubStats.thomson_citation_count_i.years}</TableRowColumn>
-                                            <TableRowColumn>{pubStats.scopus_citation_count_i.years}</TableRowColumn>
-                                        </TableRow>
-                                    </TableBody>
-                                </Table>
-                                )}
-                                 {this.props.loadingPublicationsStats && (
-                                     <div className="isLoading is-centered">
-                                         <InlineLoader message="Loading your publication stats"/>
-                                     </div>
-                                 )}
+                                            <TableRow>
+                                                <TableRowColumn className="pubStatsRowTitle">Publication
+                                                    range</TableRowColumn>
+                                                <TableRowColumn>{pubStats.thomson_citation_count_i.years}</TableRowColumn>
+                                                <TableRowColumn>{pubStats.scopus_citation_count_i.years}</TableRowColumn>
+                                            </TableRow>
+                                        </TableBody>
+                                    </Table>
+                                }
+                                {
+                                    this.props.loadingPublicationsStats &&
+                                    <div className="isLoading is-centered">
+                                        <InlineLoader message="Loading your publication stats"/>
+                                    </div>
+                                }
                             </StandardCard>
                         </div>
                     </div>
@@ -206,14 +220,16 @@ class Dashboard extends React.Component {
                                     !loading && !this.props.loadingLatestPublications
                                     && this.props.latestPublicationsList.length > 0 &&
                                     <div style={{padding: '12px 24px'}}>
-                                        <PublicationsList publicationsList={this.props.latestPublicationsList}
-                                                          showDefaultActions/>
+                                        <PublicationsList
+                                            publicationsList={this.props.latestPublicationsList}
+                                            showDefaultActions/>
                                         <div className="columns">
                                             <div className="column is-hidden-mobile"/>
                                             <div className="column is-narrow">
-                                                <RaisedButton secondary
-                                                              label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
-                                                              onTouchTap={this._viewYourResearch}/>
+                                                <RaisedButton
+                                                    secondary
+                                                    label={`${txt.myPublications.viewAllButtonLabel} (${this.props.totalPublicationsCount})`}
+                                                    onTouchTap={this._viewYourResearch}/>
                                             </div>
                                         </div>
                                     </div>

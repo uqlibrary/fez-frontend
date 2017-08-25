@@ -6,13 +6,16 @@ const DashboardArticleCount = ({values}) => {
     const txt = locale.pages.dashboard.header.dashboardArticleCount;
     return (
         <div className="authorCounter is-centered">
-            {values.articleCount && values.articleFirstYear && values.articleLastYear && (
+            {
+                values.articleCount && values.articleFirstYear && values.articleLastYear &&
                 <div>
-                <div className="noOfArticles">{values.articleCount}</div>
-                <div className="articlesFrom">{txt.countTitle}</div>
-                <div className="dateRange">{values.articleFirstYear}<span>{txt.yearSeparator}</span>{values.articleLastYear}</div>
+                    <div className="noOfArticles">{values.articleCount}</div>
+                    <div className="articlesFrom">{txt.countTitle}</div>
+                    <div
+                        className="dateRange">{values.articleFirstYear}<span>{txt.yearSeparator}</span>{values.articleLastYear}
+                    </div>
                 </div>
-            )}
+            }
         </div>
     );
 };

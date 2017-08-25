@@ -8,19 +8,18 @@ const DashboardResearcherIds = ({values}) => {
     return (
         <div className="columns researcherIds is-gapless">
             {values && Object.keys(values).map((item, index) => (
-                    <div key={index} className={`${item} column is-narrow`}>
-                        <a
-                            href="https://app.library.uq.edu.au/#/id"
-                            target="_blank"
-                            aria-label={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)}>
-                            <Avatar
-                                className={values[item] ? (`${item.toLowerCase()} researchIdAvatar ok`) : (`${item.toLowerCase()} researchIdAvatar error`)}
-                                src={require(`../../../../src/images/${item.toLowerCase()}_icon.svg`)}
-                                title={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)}
-                                alt={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)} />
-                        </a>
-                    </div>
-                )
+                <div key={index} className={`${item} column is-narrow`}>
+                    <a
+                        href="https://app.library.uq.edu.au/#/id"
+                        target="_blank"
+                        aria-label={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)}>
+                        <Avatar
+                            className={values[item] ? (`${item.toLowerCase()} researchIdAvatar ok`) : (`${item.toLowerCase()} researchIdAvatar error`)}
+                            src={require(`../../../../src/images/${item.toLowerCase()}_icon.svg`)}
+                            title={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)}
+                            alt={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)}/>
+                    </a>
+                </div>)
             )}
 
             {values.orcid &&

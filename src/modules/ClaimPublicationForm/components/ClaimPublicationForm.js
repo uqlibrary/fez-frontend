@@ -8,7 +8,6 @@ import PublicationCitation from 'modules/PublicationsList/components/Publication
 import {validation, locale} from 'config';
 
 export default class ClaimPublicationForm extends Component {
-
     static propTypes = {
         ...propTypes, // all redux-form props
         history: PropTypes.object.isRequired,

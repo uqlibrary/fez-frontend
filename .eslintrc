@@ -11,24 +11,6 @@
     "sinon": true,
     "__DEV__": true
   },
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "forOf": true,
-    "generators": false,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": false,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "spread": true,
-    "superInFunctions": true,
-    "templateStrings": true,
-    "jsx": true
-  },
   "rules": {
     "no-var": 2,                     // http://eslint.org/docs/rules/no-var
     "prefer-const": 2,               // http://eslint.org/docs/rules/prefer-const
@@ -183,21 +165,16 @@
     // Accessibility
     "jsx-a11y/aria-props": 2,
     "jsx-a11y/heading-has-content": 2,
-    "jsx-a11y/label-has-for": 2,
+    "jsx-a11y/label-has-for": 1,
     "jsx-a11y/mouse-events-have-key-events": 2,
     "jsx-a11y/role-has-required-aria-props": 2,
     "jsx-a11y/role-supports-aria-props": 2,
     "jsx-a11y/html-has-lang" : 2,
     "jsx-a11y/click-events-have-key-events" : 2,
     "jsx-a11y/no-onchange" : 2,
-    "jsx-a11y/img-has-alt": [ 2, {
-      "components": [ "Image" ]
-    }],
-    "jsx-a11y/onclick-has-focus" : 2,
-    "jsx-a11y/href-no-hash": [ 2, {
-      "components": [ "Link" ],
-      "specialLink": [ "hrefLeft", "hrefRight" ]
-    }]
+    "jsx-a11y/img-has-alt": "off",
+    "jsx-a11y/onclick-has-focus" : "off",
+    "jsx-a11y/href-no-hash": "off"
   },
   "plugins": [
     "react",

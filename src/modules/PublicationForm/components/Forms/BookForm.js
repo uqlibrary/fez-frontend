@@ -7,7 +7,6 @@ import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
 export default class BookForm extends Component {
-
     static propTypes = {
         submitting: PropTypes.bool,
         vocabId: PropTypes.number
