@@ -197,7 +197,8 @@ class Dashboard extends React.Component {
 
                 {
                     !loading && !this.props.loadingTrendingPublications && !this.props.loadingLatestPublications
-                    && (this.props.latestPublicationsList.length > 0 || this.props.trendingPublicationsList.length > 0) &&
+                    && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
+                    (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
                     <StandardCard className="card-paddingless">
                         <Tabs>
                             <Tab label={txt.myPublications.title} value="myPublications">

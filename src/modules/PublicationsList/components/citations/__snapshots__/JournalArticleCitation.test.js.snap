@@ -1,0 +1,333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JournalArticleCitation renders  component with a mock espace record 1`] = `
+<div
+  className="citationContent citationJournalArticle"
+>
+  <FontIcon
+    className="material-icons citationIcon"
+    data-place="left"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    format_quote
+  </FontIcon>
+  <span
+    className="citationAuthors"
+  >
+    <span
+      className="citationAuthor"
+    >
+       
+      Overgaard, Nana H.
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Cruz, Jazmina L.
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Bridge, Jennifer A.
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Nel, Hendrik J.
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Frazer, Ian H.
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      La Gruta, Nicole L.
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Blumenthal, Antje
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Steptoe, Raymond J.
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Wells, James W.
+    </span>
+     
+  </span>
+  <span
+    className="citationPublisher"
+  >
+    (
+    Federation of American Societies for Experimental Biology
+    ) 
+  </span>
+  <span
+    className="citationTitle"
+  >
+    CD4+CD8β+ double-positive T cells in skin-draining lymph nodes respond to inflammatory signals from the skin
+    . 
+  </span>
+  <span
+    className="citationJournalName"
+  >
+     
+    Journal of Leukocyte Biology
+    , 
+  </span>
+  <span
+    className="citationDOI"
+  >
+    <span
+      className="citationLabel"
+    >
+       doi: 
+    </span>
+    <span
+      className="citationValue"
+    >
+       
+      10.1189/jlb.1AB0217-065R
+       
+    </span>
+  </span>
+</div>
+`;
+
+exports[`JournalArticleCitation renders  component with a mock external search record 1`] = `
+<div
+  className="citationContent citationJournalArticle"
+>
+  <FontIcon
+    className="material-icons citationIcon"
+    data-place="left"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    format_quote
+  </FontIcon>
+  <span
+    className="citationAuthors"
+  >
+    <span
+      className="citationAuthor"
+    >
+       
+      Cicero, Arrigo F G
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Fogacci, Federica
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Colletti, Alessandro
+    </span>
+     
+  </span>
+  <span
+    className="citationTitle"
+  >
+    Food and plant bioactives for reducing cardiometabolic disease risk: an evidence based approach.
+    . 
+  </span>
+  <span
+    className="citationJournalName"
+  >
+     
+    Food & function
+    , 
+  </span>
+  <span
+    className="citationVolumeNumber"
+  >
+     
+    8
+    : 
+  </span>
+  <span
+    className="citationIssueNumber"
+  >
+     
+    6
+    : 
+  </span>
+  <span
+    className="citationStartPage"
+  >
+     
+    2076
+     - 
+  </span>
+  <span
+    className="citationEndPage"
+  >
+     
+    2088
+    . 
+  </span>
+  <span
+    className="citationDOI"
+  >
+    <span
+      className="citationLabel"
+    >
+       doi: 
+    </span>
+    <span
+      className="citationValue"
+    >
+       
+      10.1039/c7fo00178a
+       
+    </span>
+  </span>
+</div>
+`;
+
+exports[`JournalArticleCitation renders  component with all items in the record 1`] = `
+<div
+  className="citationContent citationJournalArticle"
+>
+  <FontIcon
+    className="material-icons citationIcon"
+    data-place="left"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    format_quote
+  </FontIcon>
+  <span
+    className="citationAuthors"
+  >
+    <span
+      className="citationAuthor"
+    >
+       
+      Smith, A
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Smith, B
+    </span>
+    <span
+      className="citationAuthor"
+    >
+       
+      Smith, C
+    </span>
+     
+  </span>
+  <span
+    className="citationPublisher"
+  >
+    (
+    Test Publisher
+    ) 
+  </span>
+  <span
+    className="citationTitle"
+  >
+    Test journal article title
+    . 
+  </span>
+  <span
+    className="citationJournalName"
+  >
+     
+    Test journal name
+    , 
+  </span>
+  <span
+    className="citationVolumeNumber"
+  >
+     
+    v1
+    : 
+  </span>
+  <span
+    className="citationIssueNumber"
+  >
+     
+    issue 1
+    : 
+  </span>
+  <span
+    className="citationStartPage"
+  >
+     
+    1
+     - 
+  </span>
+  <span
+    className="citationEndPage"
+  >
+     
+    100
+    . 
+  </span>
+  <span
+    className="citationDOI"
+  >
+    <span
+      className="citationLabel"
+    >
+       doi: 
+    </span>
+    <span
+      className="citationValue"
+    >
+       
+      10.0000/xxx0000000
+       
+    </span>
+  </span>
+</div>
+`;
+
+exports[`JournalArticleCitation renders  component with empty publication 1`] = `
+<div
+  className="citationContent citationJournalArticle"
+>
+  <FontIcon
+    className="material-icons citationIcon"
+    data-place="left"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    format_quote
+  </FontIcon>
+  <span
+    className="citationAuthors"
+  >
+     
+  </span>
+  <span
+    className="citationTitle"
+  >
+    . 
+  </span>
+</div>
+`;

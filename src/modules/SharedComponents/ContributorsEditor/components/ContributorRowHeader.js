@@ -49,7 +49,7 @@ export default class ContributorRowHeader extends Component {
                                   locale={deleteAllConfirmation} />
                 {
                     this.props.showContributorAssignment &&
-                    <div className="column is-1-desktop is-1-tablet is-1-mobile authorAssignment datalist-title">
+                    <div className="column is-1-desktop is-1-tablet is-2-mobile authorAssignment datalist-title">
                         <label htmlFor="contributorAssignment">{contributorAssignmentColumn}</label>
                     </div>
                 }
