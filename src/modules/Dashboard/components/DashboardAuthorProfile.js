@@ -8,18 +8,19 @@ import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
 const DashboardProfile = ({authorDetails}) => {
-    const txt =  locale.pages.dashboard.header;
+    const txt = locale.pages.dashboard.header;
     return (
         <div className="imageCover">
             {/* HELP */}
-            <div className="is-pulled-right" >
+            <div className="is-pulled-right">
                 <HelpIcon {...txt.help} />
             </div>
-            {authorDetails && (
+            {
+                authorDetails &&
                 <div className="columns userDetails is-gapless">
-
                     {/* Profile avatar */}
-                    {authorDetails.image_exists === 1 && (
+                    {
+                        authorDetails.image_exists === 1 &&
                         <div className="column is-narrow authorAvatar">
                             <DashboardAuthorAvatar
                                 values={{
@@ -27,9 +28,9 @@ const DashboardProfile = ({authorDetails}) => {
                                     title: authorDetails.title,
                                     givenName: authorDetails.given_name,
                                     familyName: authorDetails.family_name,
-                                }} />
+                                }}/>
                         </div>
-                    )}
+                    }
                     {/* Author Details/Name/Orgs/ResearcherIDs */}
                     <div className="column authorDetails">
                         <DashboardAuthorDetails
@@ -62,7 +63,7 @@ const DashboardProfile = ({authorDetails}) => {
                             }}/>
                     </div>
                 </div>
-            )}
+            }
         </div>
     );
 };

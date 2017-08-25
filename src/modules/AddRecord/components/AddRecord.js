@@ -13,7 +13,6 @@ import {PublicationForm} from 'modules/PublicationForm';
 import {locale, validation} from 'config';
 
 export default class AddRecord extends React.Component {
-
     static propTypes = {
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
@@ -92,104 +91,107 @@ export default class AddRecord extends React.Component {
             }
         ];
         return (
-          <div className="columns searchWrapper">
-              {/* Mobile search dashboard (progress bar) */}
-              <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">
-                  <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources} mobile/>
-              </div>
-              {/* Search results */}
-              <div className="column is-9-desktop is-8-tablet is-12-mobile">
-                  {
-                      this.props.loadingSearch &&
-                      <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
-                  }
-                  {
-                      this.props.publicationsList.length > 0 &&
-                      <StandardCard {...txt.searchResults}>
-                          <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length)}</div>
-                          <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
-                      </StandardCard>
-                  }
+            <div className="columns searchWrapper">
+                {/* Mobile search dashboard (progress bar) */}
+                <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">
+                    <PublicationListLoadingProgress
+                        mobile
+                        loadingPublicationSources={this.props.loadingPublicationSources} />
+                </div>
+                {/* Search results */}
+                <div className="column is-9-desktop is-8-tablet is-12-mobile">
+                    {
+                        this.props.loadingSearch &&
+                        <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
+                    }
+                    {
+                        this.props.publicationsList.length > 0 &&
+                        <StandardCard {...txt.searchResults}>
+                            <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length)}</div>
+                            <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
+                        </StandardCard>
+                    }
 
-                  {
-                      !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
-                      <StandardCard {...txt.noResultsFound}>
-                          {txt.noResultsFound.text}
-                      </StandardCard>
-                  }
+                    {
+                        !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
+                        <StandardCard {...txt.noResultsFound}>
+                            {txt.noResultsFound.text}
+                        </StandardCard>
+                    }
 
-                  {
-                      !this.props.loadingSearch &&
-                          <div className="columns action-buttons">
-                              <div className="column is-hidden-mobile"/>
-                              <div className="column is-narrow-desktop">
-                                  <RaisedButton
+                    {
+                        !this.props.loadingSearch &&
+                        <div className="columns action-buttons">
+                            <div className="column is-hidden-mobile"/>
+                            <div className="column is-narrow-desktop">
+                                <RaisedButton
                                     fullWidth
                                     label={txt.cancel}
                                     onTouchTap={this._cancelWorkflow}
-                                  />
-                              </div>
-                              <div className="column is-narrow-desktop">
-                                  <RaisedButton
+                                />
+                            </div>
+                            <div className="column is-narrow-desktop">
+                                <RaisedButton
                                     label={txt.submit}
                                     secondary
                                     fullWidth
                                     autoFocus={this.props.publicationsList.length === 0}
                                     keyboardFocused={this.props.publicationsList.length === 0}
                                     onTouchTap={this._showNewRecordForm}
-                                  />
-                              </div>
-                          </div>
-                  }
-              </div>
-              {/* Desktop search dashboard */}
-              <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
-                  <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
-              </div>
-          </div>
+                                />
+                            </div>
+                        </div>
+                    }
+                </div>
+                {/* Desktop search dashboard */}
+                <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
+                    <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
+                </div>
+            </div>
         );
     }
 
     render() {
         const txt = locale.pages.addRecord;
         return (
-          <StandardPage title={txt.title}>
-              <ConfirmDialogBox onRef={ref => (this.confirmationBox = ref)}
-                                onAction={this._navigateToDashboard}
-                                locale={txt.confirmationDialog}/>
+            <StandardPage title={txt.title}>
+                <ConfirmDialogBox
+                    onRef={ref => (this.confirmationBox = ref)}
+                    onAction={this._navigateToDashboard}
+                    locale={txt.confirmationDialog}/>
 
-              <div className="Stepper">
-                  <Stepper activeStep={this.state.stepperIndex} style={{padding: '0', margin: '-10px auto'}}>
-                      {
-                          txt.stepper.map((step, index) => {
-                              return (<Step key={index}>
-                                  <StepLabel
-                                    style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{step.label}</StepLabel>
-                              </Step>);
-                          })
-                      }
-                  </Stepper>
-              </div>
-              <div>
-                  {
-                      this.state.stepperIndex === 0 &&
-                      <PublicationSearchForm
-                        locale={txt.step1}
-                        onSubmit={this._performSearch}/>
-                  }
-                  {
-                      this.state.stepperIndex === 1 &&
-                      this.renderSearchResultsStep() // TODO: should this be a separate component or it's ok like this?
-                  }
-                  {
-                      this.state.stepperIndex === 2 &&
-                      <PublicationForm
-                        onFormSubmitSuccess={this._recordSaved}
-                        onFormCancel={this._cancelWorkflow}
-                        initialValues={this.state.initialValues}/>
-                  }
-              </div>
-          </StandardPage>
+                <div className="Stepper">
+                    <Stepper activeStep={this.state.stepperIndex} style={{padding: '0', margin: '-10px auto'}}>
+                        {
+                            txt.stepper.map((step, index) => {
+                                return (<Step key={index}>
+                                    <StepLabel
+                                        style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{step.label}</StepLabel>
+                                </Step>);
+                            })
+                        }
+                    </Stepper>
+                </div>
+                <div>
+                    {
+                        this.state.stepperIndex === 0 &&
+                        <PublicationSearchForm
+                            locale={txt.step1}
+                            onSubmit={this._performSearch}/>
+                    }
+                    {
+                        this.state.stepperIndex === 1 &&
+                        this.renderSearchResultsStep() // TODO: should this be a separate component or it's ok like this?
+                    }
+                    {
+                        this.state.stepperIndex === 2 &&
+                        <PublicationForm
+                            onFormSubmitSuccess={this._recordSaved}
+                            onFormCancel={this._cancelWorkflow}
+                            initialValues={this.state.initialValues}/>
+                    }
+                </div>
+            </StandardPage>
         );
     }
 }

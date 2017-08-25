@@ -24,7 +24,6 @@ import {ClaimPublication} from 'modules/ClaimPublication';
 import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
 
 export default class App extends React.Component {
-
     static propTypes = {
         user: PropTypes.object,
         location: PropTypes.object, // react-router prop
@@ -63,8 +62,8 @@ export default class App extends React.Component {
     };
 
     render() {
-        const titleStyle = this.state.docked ? { paddingLeft: 320 } : {};
-        const container = this.state.docked ? { paddingLeft: 340 } : {};
+        const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
+        const container = this.state.docked ? {paddingLeft: 340} : {};
 
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
 
@@ -74,12 +73,12 @@ export default class App extends React.Component {
 
         const menuItems =
             isAuthorizedUser ?
-            [
-                ...researcherMenuItems(locale, this.props.user.account.mail, components),
-                ...defaultMenuItems(locale, components)
-            ]
-            :
-            defaultMenuItems(locale, components);
+                [
+                    ...researcherMenuItems(locale, this.props.user.account.mail, components),
+                    ...defaultMenuItems(locale, components)
+                ]
+                :
+                defaultMenuItems(locale, components);
 
         // TODO: check if isPublicPage === false && isAuthorizedUser === false and kick user out?
         const isPublicPage = defaultMenuItems(locale, components).filter((menuItem) => {
@@ -109,33 +108,34 @@ export default class App extends React.Component {
                             onLeftIconButtonTouchTap={this.toggleDrawer}
                             iconElementRight={
                                 <div style={{marginTop: '-10px'}}>
-                                    <AuthButton isAuthorizedUser={isAuthorizedUser}
-                                                loginUrl={AUTH_URL_LOGIN}
-                                                logoutUrl={AUTH_URL_LOGOUT}
-                                                signInTooltipText={locale.authentication.signInText}
-                                                signOutTooltipText={isAuthorizedUser ? (locale.authentication.signOutText + ' - ' + this.props.user.account.name) : ''}
-                                    />
+                                    <AuthButton
+                                        isAuthorizedUser={isAuthorizedUser}
+                                        loginUrl={AUTH_URL_LOGIN}
+                                        logoutUrl={AUTH_URL_LOGOUT}
+                                        signInTooltipText={locale.authentication.signInText}
+                                        signOutTooltipText={isAuthorizedUser ? (locale.authentication.signOutText + ' - ' + this.props.user.account.name) : ''} />
                                 </div>
                             }
                         />
 
-                        <MenuDrawer menuItems={menuItems}
-                                    drawerOpen={this.state.docked || this.state.menuDrawerOpen}
-                                    docked={this.state.docked}
-                                    logoImage={locale.global.logo}
-                                    logoText={locale.global.title}
-                                    toggleDrawer={this.toggleDrawer}/>
+                        <MenuDrawer
+                            menuItems={menuItems}
+                            drawerOpen={this.state.docked || this.state.menuDrawerOpen}
+                            docked={this.state.docked}
+                            logoImage={locale.global.logo}
+                            logoText={locale.global.title}
+                            toggleDrawer={this.toggleDrawer}/>
 
                         <div className="content-container" style={container}>
                             {
                                 // user is not logged in
                                 !this.props.user.accountLoading && !this.props.user.account &&
-                                <Alert {...locale.global.loginAlert} outsideLayout />
+                                <Alert {...locale.global.loginAlert} outsideLayout/>
                             }
                             {
                                 // user is logged in, but doesn't have eSpace author identifier
                                 !isPublicPage && !this.props.user.authorDetailsLoading && !this.props.user.authorDetails &&
-                                <Alert {...locale.global.notRegisteredAuthorAlert} outsideLayout />
+                                <Alert {...locale.global.notRegisteredAuthorAlert} outsideLayout/>
                             }
                             <Switch>
                                 {
@@ -146,15 +146,15 @@ export default class App extends React.Component {
                                     !isAuthorizedUser &&
                                     <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
                                 }
-                                    <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
+                                <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
                                 {
                                     menuItems.map((route, index) => (
-                                    <Route key={index} {...route} />
+                                        <Route key={index} {...route} />
                                     ))
                                 }
                             </Switch>
                         </div>
-                        <HelpDrawer />
+                        <HelpDrawer/>
                     </div>
                 }
             </div>

@@ -8,7 +8,6 @@ import {Alert} from 'uqlibrary-react-toolbox';
 
 
 export class ContributorsEditor extends Component {
-
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
@@ -117,7 +116,7 @@ export class ContributorsEditor extends Component {
     }
 
     render() {
-        const renderContributorsRows = this.state.contributors.map((contributor, index) =>
+        const renderContributorsRows = this.state.contributors.map((contributor, index) => (
             <ContributorRow
                 key={index}
                 index={index}
@@ -134,7 +133,7 @@ export class ContributorsEditor extends Component {
                 disabledContributorAssignment={this.state.isCurrentAuthorSelected}
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 onContributorAssigned={this.assignContributor} />
-        );
+        ));
 
         return (
             <div className={this.props.className}>

@@ -10,7 +10,6 @@ import RadioButtonUncheckedIcon from 'material-ui/svg-icons/toggle/radio-button-
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 export default class ContributorRow extends Component {
-
     static propTypes = {
         index: PropTypes.number.isRequired,
         contributor: PropTypes.object.isRequired,
@@ -81,15 +80,15 @@ export default class ContributorRow extends Component {
                 {
                     this.props.showContributorAssignment &&
                     <div className="column is-1-desktop is-1-tablet is-2-mobile contributorIdentifier datalist-text">
-                       <Checkbox
-                           name="contributorAssignment"
-                           onCheck={this._onContributorAssigned}
-                           className="contributorAssignment"
-                           checkedIcon={<RadioButtonCheckedIcon />}
-                           uncheckedIcon={<RadioButtonUncheckedIcon />}
-                           checked={this.props.contributor.selected}
-                           disabled={this.props.disabled || this.props.disabledContributorAssignment || this.props.contributor.disabled}
-                       value={this.props.index} />
+                        <Checkbox
+                            name="contributorAssignment"
+                            onCheck={this._onContributorAssigned}
+                            className="contributorAssignment"
+                            checkedIcon={<RadioButtonCheckedIcon/>}
+                            uncheckedIcon={<RadioButtonUncheckedIcon/>}
+                            checked={this.props.contributor.selected}
+                            disabled={this.props.disabled || this.props.disabledContributorAssignment || this.props.contributor.disabled}
+                            value={this.props.index}/>
                     </div>
                 }
                 <div className="column datalist-text">

@@ -8,7 +8,6 @@ const googleScholarIcon = require('images/google_scholar_icon.svg');
 const altmetricIcon = require('images/altmetric_icon.svg');
 
 export default class CitationCounts extends Component {
-
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
@@ -30,12 +29,13 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.thomson && counts.thomson > 0 &&
                     <span className="citationCount">
-                        <img src={thompsonIcon}
-                             alt="Thomson Routers"
-                             data-tip="Thomson Routers Web of Science citation count"
-                             title="Thomson Routers Web of Science citation count"
-                             data-place="bottom"
-                             className="citationCountIcon"
+                        <img
+                            src={thompsonIcon}
+                            alt="Thomson Routers"
+                            data-tip="Thomson Routers Web of Science citation count"
+                            title="Thomson Routers Web of Science citation count"
+                            data-place="bottom"
+                            className="citationCountIcon"
                         />
                         <span className="citationCountNumber">{counts.thomson}</span>
                     </span>
@@ -43,12 +43,13 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.scopus && counts.scopus > 0 &&
                     <span className="citationCount">
-                        <img src={scopusIcon}
-                             alt="Scopus"
-                             data-tip="Scopus citation count"
-                             title="Scopus citation count"
-                             data-for="claimTooltips"
-                             className="citationCountIcon"
+                        <img
+                            src={scopusIcon}
+                            alt="Scopus"
+                            data-tip="Scopus citation count"
+                            title="Scopus citation count"
+                            data-for="claimTooltips"
+                            className="citationCountIcon"
                         />
                         <span className="citationCountNumber">{counts.scopus}</span>
                     </span>
@@ -56,12 +57,13 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.google && counts.google > 0 &&
                     <span className="citationCount">
-                        <img src={googleScholarIcon}
-                             alt="Google Scholar"
-                             data-tip="Google Scholar citation count"
-                             title="Google Scholar citation count"
-                             data-for="claimTooltips"
-                             className="citationCountIcon"
+                        <img
+                            src={googleScholarIcon}
+                            alt="Google Scholar"
+                            data-tip="Google Scholar citation count"
+                            title="Google Scholar citation count"
+                            data-for="claimTooltips"
+                            className="citationCountIcon"
                         />
                         <span className="citationCountNumber">{counts.google}</span>
                     </span>
@@ -69,11 +71,12 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.altmetric && counts.altmetric > 0 &&
                     <span className="citationCount">
-                        <img src={altmetricIcon}
-                             alt="Altmetric" data-tip="Altmetric score"
-                             title="Altmetric score"
-                             data-for="claimTooltips"
-                             className="citationCountIcon"
+                        <img
+                            src={altmetricIcon}
+                            alt="Altmetric" data-tip="Altmetric score"
+                            title="Altmetric score"
+                            data-for="claimTooltips"
+                            className="citationCountIcon"
                         />
                         <span className="citationCountNumber">{counts.altmetric}</span>
                     </span>
@@ -81,11 +84,12 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.downloads && counts.downloads > 0 &&
                     <span className="citationCount">
-                        <FontIcon className="material-icons citationCountIcon"
-                                  data-tip="Downloads"
-                                  title="Downloads"
-                                  data-for="claimTooltips"
-                                  data-place="bottom"
+                        <FontIcon
+                            className="material-icons citationCountIcon"
+                            data-tip="Downloads"
+                            title="Downloads"
+                            data-for="claimTooltips"
+                            data-place="bottom"
                         >file_download</FontIcon>
                         <span className="citationCountNumber">{counts.downloads}</span>
                     </span>

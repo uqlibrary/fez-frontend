@@ -8,7 +8,6 @@ import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox} from 'uqlibr
 import {locale} from 'config';
 
 export default class ClaimPublication extends React.Component {
-
     static propTypes = {
         publicationsList: PropTypes.array,
         loadingPublications: PropTypes.bool,
@@ -74,9 +73,10 @@ export default class ClaimPublication extends React.Component {
             <StandardPage title={txt.title}>
                 {
                     this.props.publicationsList.length > 0 &&
-                    <ConfirmDialogBox onRef={ref => (this.hideConfirmationBox = ref)}
-                                      onAction={this._hidePublication}
-                                      locale={txt.hidePublicationConfirmation} />
+                    <ConfirmDialogBox
+                        onRef={ref => (this.hideConfirmationBox = ref)}
+                        onAction={this._hidePublication}
+                        locale={txt.hidePublicationConfirmation}/>
                 }
                 {
                     (this.props.authorLoading || (this.props.author && (this.props.loadingPublications || !this.props.possibleCounts))) &&

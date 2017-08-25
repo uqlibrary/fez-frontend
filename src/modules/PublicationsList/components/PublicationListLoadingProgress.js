@@ -9,7 +9,8 @@ const PublicationListLoadingProgress = ({loadingPublicationSources, mobile}) => 
 
     return (
         <div>
-            {!mobile && (
+            {
+                !mobile &&
                 <div className="searchDashboardDesktop">
                     <h3 className="title is-5">{txt.title}</h3>
                     <div className="body-2">
@@ -17,31 +18,36 @@ const PublicationListLoadingProgress = ({loadingPublicationSources, mobile}) => 
                             <div key={index} className="searchDashboardList">
                                 {item.title}
                                 <span className="is-pulled-right">
-                              {loadingPublicationSources && loadingPublicationSources[item.id] ? (
-                                  <div>
-                                      {loadingPublicationSources[`${item.id}Count`]} {txt.recordSuffix}
-                                  </div>
-                              ) : ( <CircularProgress
-                                  size={14}
-                                  thickness={2}
-                                  aria-label={`${item.title} ${txt.ariaCircularProgressLabelSuffix}`}
-                              /> )}
-                          </span>
+                                    {
+                                        loadingPublicationSources && loadingPublicationSources[item.id] ?
+                                            (
+                                                <div>{loadingPublicationSources[`${item.id}Count`]} {txt.recordSuffix}</div>
+                                            ) : (
+                                                <CircularProgress
+                                                    size={14}
+                                                    thickness={2}
+                                                    aria-label={`${item.title} ${txt.ariaCircularProgressLabelSuffix}`} />
+                                            )
+                                    }
+                                </span>
                             </div>
                         ))}
                     </div>
                 </div>
-            )}
-            {mobile && (
+            }
+            {
+                mobile &&
                 <div className="searchDashboardMobile">
-                    <LinearProgress className="searchDashboardBar" mode="determinate"
-                                    value={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
-                                    aria-valuenow={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
+                    <LinearProgress
+                        className="searchDashboardBar"
+                        mode="determinate"
+                        value={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
+                        aria-valuenow={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
+                        aria-valuemin="0"
+                        aria-valuemax="100"
                     />
                 </div>
-            )}
+            }
         </div>
     );
 };

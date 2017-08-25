@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import PublicationCitation from './PublicationCitation';
 
 export default class PublicationsList extends Component {
-
     static propTypes = {
         publicationsList: PropTypes.array,
         customActions: PropTypes.array,
