@@ -65,11 +65,6 @@ export const isValidPublicationTitle = value => {
     return isValid.test(value);
 };
 
-export const isValidContributor = value => {
-    // value should not be empty and author should be linked to author id
-    return !(value && value.filter(item => (item.selected)).length > 0);
-};
-
 export const validFileUpload = value => {
     return value && value.hasOwnProperty('isValid') && !value.isValid ? validationErrors.fileUpload : undefined;
 };

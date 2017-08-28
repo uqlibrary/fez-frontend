@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Field} from 'redux-form/immutable';
 
-import {TextField, StandardCard, ListEditorField} from 'uqlibrary-react-toolbox';
+import {TextField, StandardCard, ListEditorField, PartialDateField} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField, PublicationSubtypeField} from 'modules/SharedComponents';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
@@ -38,7 +38,7 @@ export default class BookForm extends Component {
                         </div>
                     </div>
                     <div className="columns">
-                        <div className="column">
+                        <div className="column is-half">
                             <Field
                                 component={PublicationSubtypeField}
                                 name="rek_subtype"
@@ -48,22 +48,56 @@ export default class BookForm extends Component {
                                 locale={{label: txt.information.fieldLabels.subtype, loading: locale.global.loading}}
                                 validate={[validation.required]} />
                         </div>
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                                type="text"
+                                className="requiredField"
+                                fullWidth
+                                floatingLabelText={txt.information.fieldLabels.publicationPlace}
+                                validate={[validation.required]} />
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column is-half">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_publisher.rek_publisher"
+                                type="text"
+                                className="requiredField"
+                                fullWidth
+                                floatingLabelText={txt.information.fieldLabels.publisher}
+                                validate={[validation.required]} />
+                        </div>
+                        <div className="column">
+                            <Field
+                                component={PartialDateField}
+                                disabled={this.props.submitting}
+                                name="rek_date"
+                                allowPartial
+                                className="requiredField"
+                                validate={[validation.required]}
+                            />
+                        </div>
                     </div>
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                    <div>{txt.authors.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         name="authors"
-                        showIdentifierLookup
                         locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
-                        validate={[validation.isValidContributor]}
                         disabled={this.props.submitting} />
                 </StandardCard>
 
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
+                    <div>{txt.editors.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment

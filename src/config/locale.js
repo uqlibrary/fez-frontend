@@ -462,7 +462,14 @@ export default {
                     },
                     fieldLabels: {
                         bookTitle: 'Book title',
-                        subtype: 'Publication subtype'
+                        subtype: 'Publication subtype',
+                        publicationPlace: 'Place of publication',
+                        publisher: 'Publisher',
+                        date: {
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
                     }
                 },
                 authors: {
@@ -472,6 +479,7 @@ export default {
                         text: 'some help',
                         buttonLabel: 'OK'
                     },
+                    description: 'Provide a list of authors for this publication and assign yourself as an author or an editor',
                     field: {
                         form: {
                             locale: {
@@ -515,6 +523,7 @@ export default {
                 },
                 editors: {
                     title: 'Editors',
+                    description: 'Provide a list of editors for this publication',
                     help: {
                         title: 'Editors',
                         text: 'some help',
@@ -560,7 +569,8 @@ export default {
                             }
                         }
                     }
-                }
+                },
+                validationError: 'Author or editor should be linked to the current user'
             },
             fileUpload: {
                 title: 'Files',

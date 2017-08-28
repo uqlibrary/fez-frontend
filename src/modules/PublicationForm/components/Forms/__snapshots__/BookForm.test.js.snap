@@ -51,7 +51,7 @@ exports[`BookForm renders  component 1`] = `
       className="columns"
     >
       <div
-        className="column"
+        className="column is-half"
       >
         <Field
           className="requiredField"
@@ -72,6 +72,62 @@ exports[`BookForm renders  component 1`] = `
           vocabId={0}
         />
       </div>
+      <div
+        className="column"
+      >
+        <Field
+          className="requiredField"
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Place of publication"
+          fullWidth={true}
+          name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column is-half"
+      >
+        <Field
+          className="requiredField"
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Publisher"
+          fullWidth={true}
+          name="fez_record_search_key_publisher.rek_publisher"
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+      <div
+        className="column"
+      >
+        <Field
+          allowPartial={true}
+          className="requiredField"
+          component={[Function]}
+          disabled={false}
+          name="rek_date"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
     </div>
   </StandardCard>
   <StandardCard
@@ -85,6 +141,9 @@ exports[`BookForm renders  component 1`] = `
     }
     title="Authors"
   >
+    <div>
+      Provide a list of authors for this publication and assign yourself as an author or an editor
+    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -144,12 +203,6 @@ exports[`BookForm renders  component 1`] = `
       }
       name="authors"
       showContributorAssignment={true}
-      showIdentifierLookup={true}
-      validate={
-        Array [
-          [Function],
-        ]
-      }
     />
   </StandardCard>
   <StandardCard
@@ -163,6 +216,9 @@ exports[`BookForm renders  component 1`] = `
     }
     title="Editors"
   >
+    <div>
+      Provide a list of editors for this publication
+    </div>
     <Field
       component={[Function]}
       disabled={false}
