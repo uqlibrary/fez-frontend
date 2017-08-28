@@ -1837,6 +1837,12 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
           focusState="none"
           insetChildren={false}
           primaryText="Full article metrics"
+          targetOrigin={
+            Object {
+              "horizontal": "left",
+              "vertical": "top",
+            }
+          }
         />
       </IconMenu>
     </div>

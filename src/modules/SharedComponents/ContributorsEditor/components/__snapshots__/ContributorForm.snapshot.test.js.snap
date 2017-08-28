@@ -63,7 +63,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
           >
             <TextFieldLabel
               disabled={false}
-              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-51114"
+              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-56539"
               muiTheme={
                 Object {
                   "appBar": Object {
@@ -168,6 +168,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                     "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                     "calendarYearBackgroundColor": "#ffffff",
                     "color": "#00bcd4",
+                    "headerColor": "#00bcd4",
                     "selectColor": "#0097a7",
                     "selectTextColor": "#ffffff",
                     "textColor": "#ffffff",
@@ -489,7 +490,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               }
             >
               <label
-                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-51114"
+                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-56539"
                 style={
                   Object {
                     "color": "rgba(0, 0, 0, 0.3)",
@@ -614,6 +615,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                     "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                     "calendarYearBackgroundColor": "#ffffff",
                     "color": "#00bcd4",
+                    "headerColor": "#00bcd4",
                     "selectColor": "#0097a7",
                     "selectTextColor": "#ffffff",
                     "textColor": "#ffffff",
@@ -946,13 +948,14 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
             </TextFieldHint>
             <input
               disabled={false}
-              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-51114"
+              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-56539"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               onKeyPress={[Function]}
               style={
                 Object {
+                  "WebkitOpacity": 1,
                   "WebkitTapHighlightColor": "rgba(0,0,0,0)",
                   "appearance": "textfield",
                   "backgroundColor": "rgba(0,0,0,0)",
@@ -1084,6 +1087,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                     "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                     "calendarYearBackgroundColor": "#ffffff",
                     "color": "#00bcd4",
+                    "headerColor": "#00bcd4",
                     "selectColor": "#0097a7",
                     "selectTextColor": "#ffffff",
                     "textColor": "#ffffff",
@@ -1400,9 +1404,11 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
             >
               <div>
                 <hr
+                  aria-hidden="true"
                   style={
                     Object {
-                      "borderBottom": "solid 1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomWidth": 1,
                       "borderColor": "#e0e0e0",
                       "borderLeft": "none",
                       "borderRight": "none",
@@ -1417,9 +1423,11 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                   }
                 />
                 <hr
+                  aria-hidden="true"
                   style={
                     Object {
-                      "borderBottom": "solid 2px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomWidth": 2,
                       "borderColor": "#00bcd4",
                       "borderLeft": "none",
                       "borderRight": "none",
@@ -1530,7 +1538,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               >
                 <TextFieldLabel
                   disabled={true}
-                  htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-52440"
+                  htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-717"
                   muiTheme={
                     Object {
                       "appBar": Object {
@@ -1635,6 +1643,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                         "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                         "calendarYearBackgroundColor": "#ffffff",
                         "color": "#00bcd4",
+                        "headerColor": "#00bcd4",
                         "selectColor": "#0097a7",
                         "selectTextColor": "#ffffff",
                         "textColor": "#ffffff",
@@ -1956,7 +1965,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                   }
                 >
                   <label
-                    htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-52440"
+                    htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-717"
                     style={
                       Object {
                         "color": "rgba(0, 0, 0, 0.3)",
@@ -2081,6 +2090,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                         "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                         "calendarYearBackgroundColor": "#ffffff",
                         "color": "#00bcd4",
+                        "headerColor": "#00bcd4",
                         "selectColor": "#0097a7",
                         "selectTextColor": "#ffffff",
                         "textColor": "#ffffff",
@@ -2414,7 +2424,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                 <input
                   autoComplete="off"
                   disabled={true}
-                  id="undefined-UQidentifierifavailable-UQidentifierifavailable-52440"
+                  id="undefined-UQidentifierifavailable-UQidentifierifavailable-717"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -2422,6 +2432,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                   open={false}
                   style={
                     Object {
+                      "WebkitOpacity": 1,
                       "WebkitTapHighlightColor": "rgba(0,0,0,0)",
                       "appearance": "textfield",
                       "backgroundColor": "rgba(0,0,0,0)",
@@ -2553,6 +2564,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                         "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                         "calendarYearBackgroundColor": "#ffffff",
                         "color": "#00bcd4",
+                        "headerColor": "#00bcd4",
                         "selectColor": "#0097a7",
                         "selectTextColor": "#ffffff",
                         "textColor": "#ffffff",
@@ -2869,9 +2881,11 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                 >
                   <div>
                     <hr
+                      aria-hidden="true"
                       style={
                         Object {
-                          "borderBottom": "dotted 2px",
+                          "borderBottomStyle": "dotted",
+                          "borderBottomWidth": 2,
                           "borderColor": "rgba(0, 0, 0, 0.3)",
                           "borderLeft": "none",
                           "borderRight": "none",
@@ -2886,9 +2900,11 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                       }
                     />
                     <hr
+                      aria-hidden="true"
                       style={
                         Object {
-                          "borderBottom": "solid 2px",
+                          "borderBottomStyle": "solid",
+                          "borderBottomWidth": 2,
                           "borderColor": "#00bcd4",
                           "borderLeft": "none",
                           "borderRight": "none",
@@ -2921,6 +2937,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               canAutoPosition={false}
               onRequestClose={[Function]}
               open={false}
+              scrollableContainer="window"
               style={Object {}}
               targetOrigin={
                 Object {
@@ -3173,7 +3190,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
           >
             <TextFieldLabel
               disabled={false}
-              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-52211"
+              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-9085"
               muiTheme={
                 Object {
                   "appBar": Object {
@@ -3278,6 +3295,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
                     "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                     "calendarYearBackgroundColor": "#ffffff",
                     "color": "#00bcd4",
+                    "headerColor": "#00bcd4",
                     "selectColor": "#0097a7",
                     "selectTextColor": "#ffffff",
                     "textColor": "#ffffff",
@@ -3599,7 +3617,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
               }
             >
               <label
-                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-52211"
+                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-9085"
                 style={
                   Object {
                     "color": "rgba(0, 0, 0, 0.3)",
@@ -3724,6 +3742,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
                     "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                     "calendarYearBackgroundColor": "#ffffff",
                     "color": "#00bcd4",
+                    "headerColor": "#00bcd4",
                     "selectColor": "#0097a7",
                     "selectTextColor": "#ffffff",
                     "textColor": "#ffffff",
@@ -4056,13 +4075,14 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
             </TextFieldHint>
             <input
               disabled={false}
-              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-52211"
+              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-9085"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               onKeyPress={[Function]}
               style={
                 Object {
+                  "WebkitOpacity": 1,
                   "WebkitTapHighlightColor": "rgba(0,0,0,0)",
                   "appearance": "textfield",
                   "backgroundColor": "rgba(0,0,0,0)",
@@ -4194,6 +4214,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
                     "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                     "calendarYearBackgroundColor": "#ffffff",
                     "color": "#00bcd4",
+                    "headerColor": "#00bcd4",
                     "selectColor": "#0097a7",
                     "selectTextColor": "#ffffff",
                     "textColor": "#ffffff",
@@ -4510,9 +4531,11 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
             >
               <div>
                 <hr
+                  aria-hidden="true"
                   style={
                     Object {
-                      "borderBottom": "solid 1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomWidth": 1,
                       "borderColor": "#e0e0e0",
                       "borderLeft": "none",
                       "borderRight": "none",
@@ -4527,9 +4550,11 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
                   }
                 />
                 <hr
+                  aria-hidden="true"
                   style={
                     Object {
-                      "borderBottom": "solid 2px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomWidth": 2,
                       "borderColor": "#00bcd4",
                       "borderLeft": "none",
                       "borderRight": "none",

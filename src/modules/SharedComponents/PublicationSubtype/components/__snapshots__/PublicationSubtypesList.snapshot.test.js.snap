@@ -138,6 +138,11 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
   <SelectField
     autoWidth={false}
     disabled={true}
+    dropDownMenuProps={
+      Object {
+        "animated": false,
+      }
+    }
     floatingLabelText="Publication subtype "
     fullWidth={true}
     id="selectedValue"
@@ -283,6 +288,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
                 "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                 "calendarYearBackgroundColor": "#ffffff",
                 "color": "#00bcd4",
+                "headerColor": "#00bcd4",
                 "selectColor": "#0097a7",
                 "selectTextColor": "#ffffff",
                 "textColor": "#ffffff",
@@ -631,7 +637,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
               "vertical": "top",
             }
           }
-          animated={true}
+          animated={false}
           autoWidth={false}
           disabled={true}
           iconButton={<NavigationArrowDropDown />}
@@ -656,6 +662,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
           openImmediately={false}
           style={
             Object {
+              "WebkitOpacity": 1,
               "WebkitTapHighlightColor": "rgba(0,0,0,0)",
               "backgroundColor": "rgba(0,0,0,0)",
               "border": "none",
@@ -685,6 +692,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
             onFocus={[Function]}
             style={
               Object {
+                "WebkitOpacity": 1,
                 "WebkitTapHighlightColor": "rgba(0,0,0,0)",
                 "backgroundColor": "rgba(0,0,0,0)",
                 "border": "none",
@@ -885,7 +893,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
                           style={
                             Object {
                               "color": "rgba(0, 0, 0, 0.3)",
-                              "cursor": "not-allowed",
+                              "cursor": "default",
                               "fill": "rgba(0, 0, 0, 0.3)",
                             }
                           }
@@ -896,7 +904,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
                             style={
                               Object {
                                 "color": "rgba(0, 0, 0, 0.3)",
-                                "cursor": "not-allowed",
+                                "cursor": "default",
                                 "fill": "rgba(0, 0, 0, 0.3)",
                               }
                             }
@@ -908,7 +916,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
                               style={
                                 Object {
                                   "color": "rgba(0, 0, 0, 0.3)",
-                                  "cursor": "not-allowed",
+                                  "cursor": "default",
                                   "display": "inline-block",
                                   "fill": "rgba(0, 0, 0, 0.3)",
                                   "height": 24,
@@ -963,12 +971,13 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
                   "vertical": "top",
                 }
               }
-              animated={true}
+              animated={false}
               animation={[Function]}
               autoCloseWhenOffScreen={true}
               canAutoPosition={true}
               onRequestClose={[Function]}
               open={false}
+              scrollableContainer="window"
               style={
                 Object {
                   "overflowY": "auto",
@@ -1116,6 +1125,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
                 "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                 "calendarYearBackgroundColor": "#ffffff",
                 "color": "#00bcd4",
+                "headerColor": "#00bcd4",
                 "selectColor": "#0097a7",
                 "selectTextColor": "#ffffff",
                 "textColor": "#ffffff",
@@ -1432,9 +1442,11 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
         >
           <div>
             <hr
+              aria-hidden="true"
               style={
                 Object {
-                  "borderBottom": "dotted 2px",
+                  "borderBottomStyle": "dotted",
+                  "borderBottomWidth": 2,
                   "borderColor": "rgba(0, 0, 0, 0.3)",
                   "borderLeft": "none",
                   "borderRight": "none",
@@ -1449,9 +1461,11 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
               }
             />
             <hr
+              aria-hidden="true"
               style={
                 Object {
-                  "borderBottom": "solid 2px",
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 2,
                   "borderColor": "#00bcd4",
                   "borderLeft": "none",
                   "borderRight": "none",
@@ -1612,6 +1626,11 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
   <SelectField
     autoWidth={false}
     disabled={false}
+    dropDownMenuProps={
+      Object {
+        "animated": false,
+      }
+    }
     floatingLabelText="Publication subtype "
     fullWidth={true}
     id="selectedValue"
@@ -1757,6 +1776,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
                 "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                 "calendarYearBackgroundColor": "#ffffff",
                 "color": "#00bcd4",
+                "headerColor": "#00bcd4",
                 "selectColor": "#0097a7",
                 "selectTextColor": "#ffffff",
                 "textColor": "#ffffff",
@@ -2105,7 +2125,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
               "vertical": "top",
             }
           }
-          animated={true}
+          animated={false}
           autoWidth={false}
           disabled={false}
           iconButton={<NavigationArrowDropDown />}
@@ -2130,6 +2150,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
           openImmediately={false}
           style={
             Object {
+              "WebkitOpacity": 1,
               "WebkitTapHighlightColor": "rgba(0,0,0,0)",
               "backgroundColor": "rgba(0,0,0,0)",
               "border": "none",
@@ -2159,6 +2180,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
             onFocus={[Function]}
             style={
               Object {
+                "WebkitOpacity": 1,
                 "WebkitTapHighlightColor": "rgba(0,0,0,0)",
                 "backgroundColor": "rgba(0,0,0,0)",
                 "border": "none",
@@ -2445,12 +2467,13 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
                   "vertical": "top",
                 }
               }
-              animated={true}
+              animated={false}
               animation={[Function]}
               autoCloseWhenOffScreen={true}
               canAutoPosition={true}
               onRequestClose={[Function]}
               open={false}
+              scrollableContainer="window"
               style={
                 Object {
                   "overflowY": "auto",
@@ -2598,6 +2621,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
                 "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                 "calendarYearBackgroundColor": "#ffffff",
                 "color": "#00bcd4",
+                "headerColor": "#00bcd4",
                 "selectColor": "#0097a7",
                 "selectTextColor": "#ffffff",
                 "textColor": "#ffffff",
@@ -2914,9 +2938,11 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
         >
           <div>
             <hr
+              aria-hidden="true"
               style={
                 Object {
-                  "borderBottom": "solid 1px",
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 1,
                   "borderColor": "#e0e0e0",
                   "borderLeft": "none",
                   "borderRight": "none",
@@ -2931,9 +2957,11 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
               }
             />
             <hr
+              aria-hidden="true"
               style={
                 Object {
-                  "borderBottom": "solid 2px",
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 2,
                   "borderColor": "#00bcd4",
                   "borderLeft": "none",
                   "borderRight": "none",
@@ -2983,6 +3011,11 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
   <SelectField
     autoWidth={false}
     disabled={false}
+    dropDownMenuProps={
+      Object {
+        "animated": false,
+      }
+    }
     floatingLabelText="Publication subtype "
     fullWidth={true}
     id="selectedValue"
@@ -3128,6 +3161,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
                 "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                 "calendarYearBackgroundColor": "#ffffff",
                 "color": "#00bcd4",
+                "headerColor": "#00bcd4",
                 "selectColor": "#0097a7",
                 "selectTextColor": "#ffffff",
                 "textColor": "#ffffff",
@@ -3476,7 +3510,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
               "vertical": "top",
             }
           }
-          animated={true}
+          animated={false}
           autoWidth={false}
           disabled={false}
           iconButton={<NavigationArrowDropDown />}
@@ -3501,6 +3535,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
           openImmediately={false}
           style={
             Object {
+              "WebkitOpacity": 1,
               "WebkitTapHighlightColor": "rgba(0,0,0,0)",
               "backgroundColor": "rgba(0,0,0,0)",
               "border": "none",
@@ -3530,6 +3565,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
             onFocus={[Function]}
             style={
               Object {
+                "WebkitOpacity": 1,
                 "WebkitTapHighlightColor": "rgba(0,0,0,0)",
                 "backgroundColor": "rgba(0,0,0,0)",
                 "border": "none",
@@ -3816,12 +3852,13 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
                   "vertical": "top",
                 }
               }
-              animated={true}
+              animated={false}
               animation={[Function]}
               autoCloseWhenOffScreen={true}
               canAutoPosition={true}
               onRequestClose={[Function]}
               open={false}
+              scrollableContainer="window"
               style={
                 Object {
                   "overflowY": "auto",
@@ -3969,6 +4006,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
                 "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                 "calendarYearBackgroundColor": "#ffffff",
                 "color": "#00bcd4",
+                "headerColor": "#00bcd4",
                 "selectColor": "#0097a7",
                 "selectTextColor": "#ffffff",
                 "textColor": "#ffffff",
@@ -4285,9 +4323,11 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
         >
           <div>
             <hr
+              aria-hidden="true"
               style={
                 Object {
-                  "borderBottom": "solid 1px",
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 1,
                   "borderColor": "#e0e0e0",
                   "borderLeft": "none",
                   "borderRight": "none",
@@ -4302,9 +4342,11 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
               }
             />
             <hr
+              aria-hidden="true"
               style={
                 Object {
-                  "borderBottom": "solid 2px",
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 2,
                   "borderColor": "#00bcd4",
                   "borderLeft": "none",
                   "borderRight": "none",

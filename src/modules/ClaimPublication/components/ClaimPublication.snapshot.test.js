@@ -29,11 +29,12 @@ const create = () => {
     return {store, next, invoke}
 };
 
-function setup({publicationsList, loadingPublications, author,
-    authorLoading, possibleCounts, actions, history, isShallow = true}) {
+function setup({possiblePublicationsList, loadingPossiblePublicationsList, loadingPossibleCounts, 
+   author, authorLoading, possibleCounts, actions, history, isShallow = true}) {
     const props = {
-        publicationsList: publicationsList || [],
-        loadingPublications,
+        possiblePublicationsList: possiblePublicationsList || [],
+        loadingPossiblePublicationsList,
+        loadingPossibleCounts,
         author,
         authorLoading,
         possibleCounts,
@@ -73,7 +74,7 @@ describe('ClaimPublication test', () => {
     });
 
     it('renders loading screen while loading publications ', () => {
-        const wrapper = setup({ author: {}, loadingPublications: true }).find('ClaimPublication').dive();
+        const wrapper = setup({ author: {}, loadingPossiblePublicationsList: true }).find('ClaimPublication').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -83,7 +84,7 @@ describe('ClaimPublication test', () => {
     });
 
     it('renders list of publications and counts', () => {
-        const wrapper = setup({ author: {}, possibleCounts: mock.possibleCounts.data, publicationsList: mock.possibleUnclaimed.data }).find('ClaimPublication').dive();
+        const wrapper = setup({ author: {}, possibleCounts: mock.possibleCounts.data, possiblePublicationsList: mock.possibleUnclaimed.data }).find('ClaimPublication').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

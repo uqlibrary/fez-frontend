@@ -49,6 +49,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Book"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={174}
       />
       <MenuItem
@@ -64,6 +70,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Book Chapter"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={177}
       />
       <MenuItem
@@ -79,6 +91,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Conference Paper"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={130}
       />
       <MenuItem
@@ -94,6 +112,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Journal Article"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={179}
       />
       <Divider
@@ -112,6 +136,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Generic Document"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={202}
       />
       <MenuItem
@@ -127,6 +157,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Audio Document"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={263}
       />
       <MenuItem
@@ -142,6 +178,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Book"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={174}
       />
       <MenuItem
@@ -157,6 +199,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Book Chapter"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={177}
       />
       <MenuItem
@@ -172,6 +220,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Conference Paper"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={130}
       />
       <MenuItem
@@ -187,6 +241,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Conference Proceedings"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={197}
       />
       <MenuItem
@@ -202,6 +262,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Creative Work"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={313}
       />
       <MenuItem
@@ -217,6 +283,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Data Collection"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={371}
       />
       <MenuItem
@@ -232,6 +304,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Department Technical Report"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={181}
       />
       <MenuItem
@@ -247,6 +325,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Design"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={316}
       />
       <MenuItem
@@ -262,6 +346,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Digilib Image"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={228}
       />
       <MenuItem
@@ -277,6 +367,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Image"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={238}
       />
       <MenuItem
@@ -292,6 +388,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Journal"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={294}
       />
       <MenuItem
@@ -307,6 +409,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Journal Article"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={179}
       />
       <MenuItem
@@ -322,6 +430,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Manuscript"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={374}
       />
       <MenuItem
@@ -337,6 +451,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Newspaper Article"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={191}
       />
       <MenuItem
@@ -352,6 +472,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Patent"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={185}
       />
       <MenuItem
@@ -367,6 +493,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Preprint"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={204}
       />
       <MenuItem
@@ -382,6 +514,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Research Report"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={275}
       />
       <MenuItem
@@ -397,6 +535,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Seminar Paper"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={189}
       />
       <MenuItem
@@ -412,6 +556,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Thesis"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={187}
       />
       <MenuItem
@@ -427,6 +577,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Video Document"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={310}
       />
       <MenuItem
@@ -442,6 +598,12 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         focusState="none"
         insetChildren={false}
         primaryText="Working Paper"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
         value={183}
       />
     </Field>

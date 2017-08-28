@@ -21,6 +21,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
     className="column is-1-desktop is-1-tablet is-2-mobile authorAssignment datalist-title"
   >
     <label
+      aria-hidden={true}
       htmlFor="contributorAssignment"
     >
       Select your name

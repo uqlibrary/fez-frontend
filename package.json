@@ -11,8 +11,8 @@
     "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-register": "^6.26.0",
@@ -80,7 +80,7 @@
     "redux-thunk": "^2.2.0",
     "scrollto-element": "^1.0.4",
     "timezones.json": "^1.3.1",
-    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#master"
+    "uqlibrary-react-toolbox": "^0.0.25"
   },
   "scripts": {
     "start": "webpack-dev-server",

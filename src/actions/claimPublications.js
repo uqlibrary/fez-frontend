@@ -45,8 +45,7 @@ export function countPossiblyYourPublications(authorUsername) {
             });
         }).catch(() => {
             dispatch({
-                type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                payload: 0
+                type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
             });
         });
     };

@@ -91,7 +91,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                 >
                   <TextFieldLabel
                     disabled={false}
-                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-24627"
+                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-25383"
                     muiTheme={
                       Object {
                         "appBar": Object {
@@ -196,6 +196,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                           "calendarYearBackgroundColor": "#ffffff",
                           "color": "#00bcd4",
+                          "headerColor": "#00bcd4",
                           "selectColor": "#0097a7",
                           "selectTextColor": "#ffffff",
                           "textColor": "#ffffff",
@@ -517,7 +518,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                     }
                   >
                     <label
-                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-24627"
+                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-25383"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -642,6 +643,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                           "calendarYearBackgroundColor": "#ffffff",
                           "color": "#00bcd4",
+                          "headerColor": "#00bcd4",
                           "selectColor": "#0097a7",
                           "selectTextColor": "#ffffff",
                           "textColor": "#ffffff",
@@ -974,13 +976,14 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                   </TextFieldHint>
                   <input
                     disabled={false}
-                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-24627"
+                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-25383"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onKeyPress={[Function]}
                     style={
                       Object {
+                        "WebkitOpacity": 1,
                         "WebkitTapHighlightColor": "rgba(0,0,0,0)",
                         "appearance": "textfield",
                         "backgroundColor": "rgba(0,0,0,0)",
@@ -1112,6 +1115,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                           "calendarYearBackgroundColor": "#ffffff",
                           "color": "#00bcd4",
+                          "headerColor": "#00bcd4",
                           "selectColor": "#0097a7",
                           "selectTextColor": "#ffffff",
                           "textColor": "#ffffff",
@@ -1428,9 +1432,11 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                   >
                     <div>
                       <hr
+                        aria-hidden="true"
                         style={
                           Object {
-                            "borderBottom": "solid 1px",
+                            "borderBottomStyle": "solid",
+                            "borderBottomWidth": 1,
                             "borderColor": "#e0e0e0",
                             "borderLeft": "none",
                             "borderRight": "none",
@@ -1445,9 +1451,11 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                         }
                       />
                       <hr
+                        aria-hidden="true"
                         style={
                           Object {
-                            "borderBottom": "solid 2px",
+                            "borderBottomStyle": "solid",
+                            "borderBottomWidth": 2,
                             "borderColor": "#00bcd4",
                             "borderLeft": "none",
                             "borderRight": "none",
@@ -1715,7 +1723,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                 >
                   <TextFieldLabel
                     disabled={false}
-                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-19756"
+                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26185"
                     muiTheme={
                       Object {
                         "appBar": Object {
@@ -1820,6 +1828,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                           "calendarYearBackgroundColor": "#ffffff",
                           "color": "#00bcd4",
+                          "headerColor": "#00bcd4",
                           "selectColor": "#0097a7",
                           "selectTextColor": "#ffffff",
                           "textColor": "#ffffff",
@@ -2141,7 +2150,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     }
                   >
                     <label
-                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-19756"
+                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26185"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -2266,6 +2275,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                           "calendarYearBackgroundColor": "#ffffff",
                           "color": "#00bcd4",
+                          "headerColor": "#00bcd4",
                           "selectColor": "#0097a7",
                           "selectTextColor": "#ffffff",
                           "textColor": "#ffffff",
@@ -2598,13 +2608,14 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                   </TextFieldHint>
                   <input
                     disabled={false}
-                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-19756"
+                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26185"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onKeyPress={[Function]}
                     style={
                       Object {
+                        "WebkitOpacity": 1,
                         "WebkitTapHighlightColor": "rgba(0,0,0,0)",
                         "appearance": "textfield",
                         "backgroundColor": "rgba(0,0,0,0)",
@@ -2736,6 +2747,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                           "calendarYearBackgroundColor": "#ffffff",
                           "color": "#00bcd4",
+                          "headerColor": "#00bcd4",
                           "selectColor": "#0097a7",
                           "selectTextColor": "#ffffff",
                           "textColor": "#ffffff",
@@ -3052,9 +3064,11 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                   >
                     <div>
                       <hr
+                        aria-hidden="true"
                         style={
                           Object {
-                            "borderBottom": "solid 1px",
+                            "borderBottomStyle": "solid",
+                            "borderBottomWidth": 1,
                             "borderColor": "#e0e0e0",
                             "borderLeft": "none",
                             "borderRight": "none",
@@ -3069,9 +3083,11 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                         }
                       />
                       <hr
+                        aria-hidden="true"
                         style={
                           Object {
-                            "borderBottom": "solid 2px",
+                            "borderBottomStyle": "solid",
+                            "borderBottomWidth": 2,
                             "borderColor": "#00bcd4",
                             "borderLeft": "none",
                             "borderRight": "none",
@@ -3182,7 +3198,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     >
                       <TextFieldLabel
                         disabled={true}
-                        htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-49743"
+                        htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-13754"
                         muiTheme={
                           Object {
                             "appBar": Object {
@@ -3287,6 +3303,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                               "calendarYearBackgroundColor": "#ffffff",
                               "color": "#00bcd4",
+                              "headerColor": "#00bcd4",
                               "selectColor": "#0097a7",
                               "selectTextColor": "#ffffff",
                               "textColor": "#ffffff",
@@ -3608,7 +3625,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                         }
                       >
                         <label
-                          htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-49743"
+                          htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-13754"
                           style={
                             Object {
                               "color": "rgba(0, 0, 0, 0.3)",
@@ -3733,6 +3750,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                               "calendarYearBackgroundColor": "#ffffff",
                               "color": "#00bcd4",
+                              "headerColor": "#00bcd4",
                               "selectColor": "#0097a7",
                               "selectTextColor": "#ffffff",
                               "textColor": "#ffffff",
@@ -4066,7 +4084,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                       <input
                         autoComplete="off"
                         disabled={true}
-                        id="undefined-UQidentifierifavailable-UQidentifierifavailable-49743"
+                        id="undefined-UQidentifierifavailable-UQidentifierifavailable-13754"
                         onBlur={[Function]}
                         onChange={[Function]}
                         onFocus={[Function]}
@@ -4074,6 +4092,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                         open={false}
                         style={
                           Object {
+                            "WebkitOpacity": 1,
                             "WebkitTapHighlightColor": "rgba(0,0,0,0)",
                             "appearance": "textfield",
                             "backgroundColor": "rgba(0,0,0,0)",
@@ -4205,6 +4224,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               "calendarTextColor": "rgba(0, 0, 0, 0.87)",
                               "calendarYearBackgroundColor": "#ffffff",
                               "color": "#00bcd4",
+                              "headerColor": "#00bcd4",
                               "selectColor": "#0097a7",
                               "selectTextColor": "#ffffff",
                               "textColor": "#ffffff",
@@ -4521,9 +4541,11 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                       >
                         <div>
                           <hr
+                            aria-hidden="true"
                             style={
                               Object {
-                                "borderBottom": "dotted 2px",
+                                "borderBottomStyle": "dotted",
+                                "borderBottomWidth": 2,
                                 "borderColor": "rgba(0, 0, 0, 0.3)",
                                 "borderLeft": "none",
                                 "borderRight": "none",
@@ -4538,9 +4560,11 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                             }
                           />
                           <hr
+                            aria-hidden="true"
                             style={
                               Object {
-                                "borderBottom": "solid 2px",
+                                "borderBottomStyle": "solid",
+                                "borderBottomWidth": 2,
                                 "borderColor": "#00bcd4",
                                 "borderLeft": "none",
                                 "borderRight": "none",
@@ -4573,6 +4597,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     canAutoPosition={false}
                     onRequestClose={[Function]}
                     open={false}
+                    scrollableContainer="window"
                     style={Object {}}
                     targetOrigin={
                       Object {

@@ -9,8 +9,9 @@ import {locale} from 'config';
 
 export default class ClaimPublication extends React.Component {
     static propTypes = {
-        publicationsList: PropTypes.array,
-        loadingPublications: PropTypes.bool,
+        possiblePublicationsList: PropTypes.array,
+        loadingPossiblePublicationsList: PropTypes.bool,
+        loadingPossibleCounts: PropTypes.bool,
         author: PropTypes.object,
         authorLoading: PropTypes.bool,
         possibleCounts: PropTypes.object,
@@ -69,39 +70,42 @@ export default class ClaimPublication extends React.Component {
                 handleAction: this._confirmHidePublication
             }
         ];
+
+        const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
+
+        console.log(this.props);
         return (
             <StandardPage title={txt.title}>
                 {
-                    this.props.publicationsList.length > 0 &&
+                    this.props.possiblePublicationsList.length > 0 &&
                     <ConfirmDialogBox
                         onRef={ref => (this.hideConfirmationBox = ref)}
                         onAction={this._hidePublication}
                         locale={txt.hidePublicationConfirmation}/>
                 }
                 {
-                    (this.props.authorLoading || (this.props.author && (this.props.loadingPublications || !this.props.possibleCounts))) &&
+                    loadingData &&
                     <div className="is-centered">
                         <InlineLoader message={txt.loadingMessage} />
                     </div>
                 }
                 {
-                    !this.props.authorLoading && ((!this.props.authorLoading && !this.props.author) || (!this.props.loadingPublications && this.props.publicationsList.length === 0)) &&
+                    !loadingData && (!this.props.loadingPossiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
                     <StandardCard {...txt.noResultsFound}>
                         {txt.noResultsFound.text}
                     </StandardCard>
                 }
                 {
-                    !this.props.loadingPublications && this.props.possibleCounts
-                    && this.props.publicationsList.length > 0 &&
+                    !loadingData && this.props.loadingPossiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
                     <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                         <div>
                             {
                                 txt.searchResults.text
-                                    .replace('[resultsCount]', this.props.publicationsList.length)
+                                    .replace('[resultsCount]', this.props.possiblePublicationsList.length)
                                     .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
                             }
                         </div>
-                        <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
+                        <PublicationsList possiblePublicationsList={this.props.possiblePublicationsList} customActions={actions}/>
                     </StandardCard>
                 }
             </StandardPage>
