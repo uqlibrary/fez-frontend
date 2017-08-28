@@ -34,7 +34,12 @@ export function createSearchPromise(source, queryString, dispatch) {
         dispatch({type: `${SEARCH_LOADING}@${source}`});
         getSearchExternal(source, queryString)
             .then(response => {
-                const data = response && response.hasOwnProperty('data') ? response.data : [];
+                const data = response && response.hasOwnProperty('data') ? response.data
+                    .map(item => {
+                        item.sources = [source];
+                        item.currentSource = source;
+                        return item;
+                    }) : [];
                 dispatch({
                     type: `${SEARCH_COMPLETED}@${source}`,
                     payload: data

@@ -15,6 +15,32 @@ export default {
             title: 'You are not registered in UQ eSpace as an author',
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
+        },
+        sources: {
+            wos: {
+                id: 'wos',
+                title: 'World of science',
+                priority: 0,
+                icon: '../../../images/wos_icon.svg'
+            },
+            scopus: {
+                id: 'scopus',
+                title: 'Scopus',
+                priority: 1,
+                icon: '../../../images/scopus_icon.svg'
+            },
+            pubmed: {
+                id: 'pubmed',
+                title: 'PubMed',
+                priority: 2,
+                icon: '../../../images/pubmed_icon.svg'
+            },
+            crossref: {
+                id: 'crossref',
+                title: 'Crossref',
+                priority: 3,
+                icon: '../../../images/crossref_icon.svg'
+            }
         }
     },
     authentication: {
@@ -640,6 +666,7 @@ export default {
             }
         },
         publicationCitation: {
+            publicationSourcesLabel: 'Found in: ',
             defaultActions: [
                 {key: 'fullMetrics', primaryText: 'Full article metrics'},
                 // {key: 'fixRecord', primaryText: 'Fix record/upload a file'}, // TODO: implement fixRecord
