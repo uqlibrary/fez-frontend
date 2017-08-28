@@ -1,10 +1,9 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Checkbox from 'material-ui/Checkbox';
 import AuthorItem from './AuthorItem';
 
-export class AuthorLinking extends React.Component {
+export default class AuthorLinking extends React.Component {
     static propTypes = {
         searchKey: PropTypes.object.isRequired,
         authorList: PropTypes.array,
@@ -23,52 +22,7 @@ export class AuthorLinking extends React.Component {
         locale: {
             confirmation: 'I confirm and understand that I am claiming this publication under the above name, and confirm this is me'
         },
-        authorList: [{
-            'rek_author_id': null,
-            'rek_author_pid': 'UQ:654776',
-            'rek_author': 'Overgaard, Nana H.',
-            'rek_author_order': 1
-        }, {
-            'rek_author_id': null,
-            'rek_author_pid': 'UQ:654776',
-            'rek_author': 'Cruz, Jazmina L.',
-            'rek_author_order': 2
-        }, {
-            'rek_author_id': null,
-            'rek_author_pid': 'UQ:654776',
-            'rek_author': 'Bridge, Jennifer A.',
-            'rek_author_order': 3
-        }, {
-            'rek_author_id': null,
-            'rek_author_pid': 'UQ:654776',
-            'rek_author': 'Nel, Hendrik J.',
-            'rek_author_order': 4
-        }, {
-            'rek_author_id': null,
-            'rek_author_pid': 'UQ:654776',
-            'rek_author': 'Frazer adsadsfadsfadsfdsa, Ian H.',
-            'rek_author_order': 5
-        }, {
-            'rek_author_id': null,
-            'rek_author_pid': 'UQ:654776',
-            'rek_author': 'La Gruta, Nicole L.',
-            'rek_author_order': 6
-        }, {
-            'rek_author_id': null,
-            'rek_author_pid': 'UQ:654776',
-            'rek_author': 'Blumenthal, Antje',
-            'rek_author_order': 7
-        }, {
-            'rek_author_id': null,
-            'rek_author_pid': 'UQ:654776',
-            'rek_author': 'Steptoe, Raymond J.',
-            'rek_author_order': 8
-        }, {
-            'rek_author_id': null,
-            'rek_author_pid': 'UQ:654776',
-            'rek_author': 'Wells, James W.',
-            'rek_author_order': 9
-        }],
+        authorList: [],
         linkedAuthorIdList: []
     };
 
@@ -216,7 +170,3 @@ export class AuthorLinking extends React.Component {
         );
     }
 }
-
-export default connect(state => ({
-    author: state.get('accountReducer').author
-}))(AuthorLinking);
