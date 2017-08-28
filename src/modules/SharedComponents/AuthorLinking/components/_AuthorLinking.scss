@@ -1,0 +1,24 @@
+.authorButton {
+  margin: 2px !important;
+  button {
+    text-align: left !important;
+    white-space: inherit !important;
+    height: unset !important;
+  }
+}
+
+.author-linking-checkbox {
+  position: relative;
+  width: 100%;
+}
+
+.author-link-order {
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+
+.author-link-order-text {
+  font-size: 11px;
+  margin-left: 45px;
+  color: rgba(51, 51, 51, 0.8);
+}
