@@ -129,7 +129,55 @@ exports[`JournalArticleForm renders  component 1`] = `
       disabled={false}
       locale={
         Object {
-          "contributorSuffix": " listed author",
+          "form": Object {
+            "locale": Object {
+              "addButton": "Add author",
+              "identifierLabel": "UQ identifier (if available)",
+              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedLabel": "Author's name as published",
+            },
+          },
+          "header": Object {
+            "locale": Object {
+              "contributorAssignmentColumn": "Select your name",
+              "deleteAll": "Remove all items",
+              "deleteAllConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete all items?",
+                "confirmationTitle": "Delete all",
+              },
+              "identifierColumn": "UQ identifier",
+              "nameColumn": "Author's name as published",
+              "reorderColumn": "Reorder items",
+            },
+          },
+          "row": Object {
+            "locale": Object {
+              "deleteHint": "Remove this item",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete this item?",
+                "confirmationTitle": "Delete item",
+              },
+              "moveDownHint": "Move item down the order",
+              "moveUpHint": "Move item up the order",
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed author",
+            },
+          },
         }
       }
       name="authors"

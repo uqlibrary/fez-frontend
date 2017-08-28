@@ -119,6 +119,17 @@ export default class PublicationCitation extends Component {
                             this._renderCitation(this.props.publication.rek_display_type)
                         }
                         <CitationCounts publication={this.props.publication}/>
+                        {
+                            this.props.publication.sources &&
+                            <span className="publicationSources">
+                                {locale.components.publicationCitation.publicationSourcesLabel}
+                                {
+                                    this.props.publication.sources.map((source, index) => (
+                                        <span key={index} className="publicationSource">{locale.global.sources[source].title}</span>
+                                    ))
+                                }
+                            </span>
+                        }
                     </div>
                     {
                         this.props.showDefaultActions && this.props.publication.rek_pid &&

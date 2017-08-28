@@ -1,9 +1,5 @@
-import {
-    SEARCH_LOADING,
-    SEARCH_COMPLETED,
-    SEARCH_FAILED,
-    SEARCH_SOURCE_COUNT
-} from 'actions';
+import {SEARCH_LOADING, SEARCH_COMPLETED, SEARCH_FAILED, SEARCH_SOURCE_COUNT} from 'actions';
+import {locale} from 'config';
 
 const initialSearchSources = {
     loadingPublicationSources: {
@@ -17,6 +13,65 @@ export const initialState = {
     loadingSearch: false,
     ...initialSearchSources
 };
+
+function deduplicateResults(publicationsList) {
+    // get a list of duplicates DOI
+    const doiList = publicationsList
+        .filter(item => {
+            return !!item.fez_record_search_key_doi;
+        })
+        .map(item => {
+            return item.fez_record_search_key_doi.rek_doi;
+        })
+        .reduce((duplicates, item) => {
+            if (duplicates.indexOf(item.toLowerCase()) < 0) {
+                duplicates.push(item.toLowerCase());
+            }
+            return duplicates;
+        }, []);
+    // get a list of duplicate doi records
+    const duplicates = publicationsList
+        .filter(item => {
+            return !!item.fez_record_search_key_doi && doiList.indexOf(item.fez_record_search_key_doi.rek_doi.toLowerCase()) >= 0;
+        });
+    // remove all duplicates from full list of results
+    const cleanedPublicationsList = publicationsList
+        .filter(item => {
+            return !item.fez_record_search_key_doi || doiList.indexOf(item.fez_record_search_key_doi.rek_doi.toLowerCase()) < 0;
+        });
+    // filter duplicate records based on source priority
+    const highPriorityItem = doiList
+        .map(doi => {
+            // get a record with most priority
+            return duplicates
+                .filter(item => {
+                    return !!item.fez_record_search_key_doi && doi === item.fez_record_search_key_doi.rek_doi.toLowerCase();
+                })
+                .reduce((list, item) => {
+                    if (list.length === 0) {
+                        list.push(item);
+                    } else {
+                        const currentItem = {...list[0]};
+                        const currentItemPriority = Math
+                            .min(...currentItem.sources
+                                .map(source => {
+                                    return locale.global.sources[source];
+                                }));
+                        const itemPrioritiy = locale.global.sources[item.sources[0]];
+                        if (itemPrioritiy < currentItemPriority) {
+                            currentItem.sources.push(item.sources[0]);
+                            item.sources = currentItem.sources;
+                            list[0] = item;
+                        } else {
+                            list[0].sources.push(item.sources[0]);
+                        }
+                    }
+                    return list;
+                }, [])[0];
+        });
+    // re-add de-duplicated items
+    return [...cleanedPublicationsList, ...highPriorityItem];
+}
 
 const handlers = {
 
@@ -48,7 +103,9 @@ const handlers = {
         return {
             ...state,
             loadingSearch: false,
-            publicationsList: action.payload
+            publicationsList: deduplicateResults(action.payload.map(item => {
+                return JSON.parse(JSON.stringify(item));
+            }))
         };
     },
 
@@ -98,7 +155,16 @@ const handlers = {
         return {
             ...state,
             loadingSearch: true,
-            publicationsList: [...state.publicationsList, ...action.payload],
+            publicationsList:
+                deduplicateResults(
+                    [
+                        ...state.publicationsList.map(item => {
+                            return JSON.parse(JSON.stringify(item));
+                        }),
+                        ...action.payload.map(item => {
+                            return JSON.parse(JSON.stringify(item));
+                        })
+                    ]),
             ...loadingPublicationSources
         };
     }

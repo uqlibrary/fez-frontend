@@ -7,6 +7,19 @@
   margin-bottom: 12px;
   padding: 6px 0;
 
+  .publicationSources {
+    font-size: 12px;
+
+    .publicationSource {
+      &:after {
+        content: ', ';
+      }
+      &:last-of-type:after {
+        content: '';
+      }
+    }
+  }
+
   &:first-child {
     padding-top: 18px;
     border-top: 1px solid rgba(0, 0, 0, 0.15);

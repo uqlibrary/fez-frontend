@@ -3,6 +3,7 @@ import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redu
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
+import {locale, general} from 'config';
 
 const FORM_NAME = 'PublicationForm';
 
@@ -24,9 +25,28 @@ const onSubmit = (values, dispatch) => {
         });
 };
 
-const validate = () => {
+const validate = (values) => {
     // reset global errors, eg form submit failure
     stopSubmit(FORM_NAME, null);
+    const data = values.toJS();
+    const errors = {};
+    switch(data.rek_display_type) {
+        case general.PUBLICATION_TYPE_BOOK:
+            // either author or editor should be selected and linked to a user
+            if (
+                (!data.authors && !data.editors) ||
+                (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
+                (data.authors && data.authors.filter(item => (item.selected)).length === 0 &&
+                    (!data.editors || (data.editors && data.editors.filter(item => (item.selected)).length === 0)))
+            ) {
+                errors.authors = locale.components.publicationForm.book.validationError;
+            }
+            break;
+        default:
+            break;
+    }
+
+    return errors;
 };
 
 let PublicationFormContainer = reduxForm({

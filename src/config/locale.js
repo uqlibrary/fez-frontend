@@ -15,6 +15,32 @@ export default {
             title: 'You are not registered in UQ eSpace as an author',
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
+        },
+        sources: {
+            wos: {
+                id: 'wos',
+                title: 'World of science',
+                priority: 0,
+                icon: '../../../images/wos_icon.svg'
+            },
+            scopus: {
+                id: 'scopus',
+                title: 'Scopus',
+                priority: 1,
+                icon: '../../../images/scopus_icon.svg'
+            },
+            pubmed: {
+                id: 'pubmed',
+                title: 'PubMed',
+                priority: 2,
+                icon: '../../../images/pubmed_icon.svg'
+            },
+            crossref: {
+                id: 'crossref',
+                title: 'Crossref',
+                priority: 3,
+                icon: '../../../images/crossref_icon.svg'
+            }
         }
     },
     authentication: {
@@ -436,7 +462,14 @@ export default {
                     },
                     fieldLabels: {
                         bookTitle: 'Book title',
-                        subtype: 'Publication subtype'
+                        subtype: 'Publication subtype',
+                        publicationPlace: 'Place of publication',
+                        publisher: 'Publisher',
+                        date: {
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
                     }
                 },
                 authors: {
@@ -446,6 +479,7 @@ export default {
                         text: 'some help',
                         buttonLabel: 'OK'
                     },
+                    description: 'Provide a list of authors for this publication and assign yourself as an author or an editor',
                     field: {
                         form: {
                             locale: {
@@ -489,6 +523,7 @@ export default {
                 },
                 editors: {
                     title: 'Editors',
+                    description: 'Provide a list of editors for this publication',
                     help: {
                         title: 'Editors',
                         text: 'some help',
@@ -534,7 +569,8 @@ export default {
                             }
                         }
                     }
-                }
+                },
+                validationError: 'Author or editor should be linked to the current user'
             },
             fileUpload: {
                 title: 'Files',
@@ -640,6 +676,7 @@ export default {
             }
         },
         publicationCitation: {
+            publicationSourcesLabel: 'Found in: ',
             defaultActions: [
                 {key: 'fullMetrics', primaryText: 'Full article metrics'},
                 // {key: 'fixRecord', primaryText: 'Fix record/upload a file'}, // TODO: implement fixRecord

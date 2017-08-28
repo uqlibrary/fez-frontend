@@ -215,10 +215,10 @@ class Dashboard extends React.Component {
                     (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
                     <StandardCard className="card-paddingless">
                         <Tabs>
-                            <Tab label={txt.myPublications.title} value="myPublications">
-                                {
-                                    !loading && !this.props.loadingLatestPublications
-                                    && this.props.latestPublicationsList.length > 0 &&
+                            {
+                                !loading && !this.props.loadingLatestPublications
+                                && this.props.latestPublicationsList.length > 0 &&
+                                <Tab label={txt.myPublications.title} value="myPublications">
                                     <div style={{padding: '12px 24px'}}>
                                         <PublicationsList
                                             publicationsList={this.props.latestPublicationsList}
@@ -233,12 +233,12 @@ class Dashboard extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                }
-                            </Tab>
-                            <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications">
-                                {
-                                    !loading && !this.props.loadingTrendingPublications
-                                    && this.props.trendingPublicationsList.length > 0 &&
+                                </Tab>
+                            }
+                            {
+                                !loading && !this.props.loadingTrendingPublications
+                                && this.props.trendingPublicationsList.length > 0 &&
+                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications">
                                     <div style={{padding: '12px 24px 24px 24px'}}>
                                         {
                                             this.props.trendingPublicationsList.map((metric, metricIndex) => (
@@ -259,8 +259,8 @@ class Dashboard extends React.Component {
                                             ))
                                         }
                                     </div>
-                                }
-                            </Tab>
+                                </Tab>
+                            }
                         </Tabs>
                     </StandardCard>
                 }

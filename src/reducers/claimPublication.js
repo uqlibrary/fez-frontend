@@ -3,8 +3,9 @@ import * as actions from 'actions/claimPublications';
 export const initialState = {
     publicationToClaim: null,
     possibleCounts: null,
-    publicationsList: [],
-    loadingPublications: true
+    possiblePublicationsList: [],
+    loadingPossiblePublicationsList: true,
+    loadingPossibleCounts: true
 };
 
 const handlers = {
@@ -12,8 +13,8 @@ const handlers = {
     [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
-            loadingPublications: true,
-            publicationsList: []
+            loadingPossiblePublicationsList: true,
+            possiblePublicationsList: []
         };
     },
 
@@ -34,25 +35,45 @@ const handlers = {
     [actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
         return {
             ...state,
-            loadingPublications: false,
-            publicationsList: action.payload
+            loadingPossiblePublicationsList: false,
+            possiblePublicationsList: action.payload
         };
     },
 
     [actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED]: (state) => {
         return {
             ...state,
-            loadingPublications: false,
-            publicationsList: []
+            loadingPossiblePublicationsList: false,
+            possiblePublicationsList: [],
+            loadingPossibleCounts: false,
+            possibleCounts: null
+        };
+    },
+
+    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => {
+        return {
+            ...state,
+            loadingPossibleCounts: true,
+            possibleCounts: null
         };
     },
 
     [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => {
         return {
             ...state,
+            loadingPossibleCounts: false,
             possibleCounts: action.payload
         };
+    },
+
+    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED]: (state) => {
+        return {
+            ...state,
+            loadingPossibleCounts: false,
+            possibleCounts: null
+        };
     }
+
 };
 
 export default function claimPublicationReducer(state = initialState, action) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {publicationYearsBig, publicationYearsSmall, publicationYearsTiny, publicationYearsZero} from './mock/data/academic/publicationYears';
+// import {publicationYearsBig, publicationYearsSmall, publicationYearsTiny, publicationYearsZero} from './mock/data/academic/publicationYears';
 
 describe('AuthorsPublicationsPerYearChart unit tests', () => {
     it.skip('it should return empty data', () => {
