@@ -70,7 +70,6 @@ export default class ClaimPublication extends React.Component {
                 handleAction: this._confirmHidePublication
             }
         ];
-
         const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
 
         return (
@@ -89,13 +88,13 @@ export default class ClaimPublication extends React.Component {
                     </div>
                 }
                 {
-                    !loadingData && (!this.props.loadingPossiblePublicationsList && this.props.possiblePublicationsList.length === 0) &&
+                    !loadingData && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
                     <StandardCard {...txt.noResultsFound}>
                         {txt.noResultsFound.text}
                     </StandardCard>
                 }
                 {
-                    !loadingData && (this.props.loadingPossiblePublicationsList || this.props.possiblePublicationsList.length > 0) &&
+                    !loadingData && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
                     <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                         <div>
                             {

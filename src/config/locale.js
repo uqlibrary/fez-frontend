@@ -224,7 +224,7 @@ export default {
             }
         },
         research: {
-            title: 'My reserach',
+            title: 'My research',
             text: ( <div><p>all your publications....</p></div>),
             help: {
                 title: 'My research help',

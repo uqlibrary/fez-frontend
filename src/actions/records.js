@@ -44,11 +44,11 @@ export function createNewRecord(data) {
                 // set a pid on a new record
                 data.rek_pid = response.data.rek_pid;
                 // process files
-                if (!data.files.queue || data.files.queue.length === 0) return response.data;
+                if (!data.files || !data.files.queue || data.files.queue.length === 0) return response.data;
                 return putUploadFiles(response.data.rek_pid, data.files.queue, dispatch);
             })
             .then(response => {
-                if (!data.files.queue || data.files.queue.length === 0) return response.data;
+                if (!data.files || !data.files.queue || data.files.queue.length === 0) return response.data;
                 // process uploaded files into API format for a patch
                 const recordPatch = {
                     ...transformers.recordFileAttachment(data.files.queue)
