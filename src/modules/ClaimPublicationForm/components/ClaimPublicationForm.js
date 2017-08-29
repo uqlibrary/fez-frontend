@@ -86,6 +86,7 @@ export default class ClaimPublicationForm extends Component {
 
                     {
                         <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
+                            <div>{txt.authorLinking.text}</div>
                             <Field
                                 name="authorLinking"
                                 component={AuthorLinkingField}
