@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationsList} from 'modules/PublicationsList';
-import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import {
+    InlineLoader,
+    StandardPage,
+    StandardCard,
+    ConfirmDialogBox,
+} from 'uqlibrary-react-toolbox';
+import FacetsFilter from '../../FacetsFilter/components/FacetsFilter';
 
 import {locale} from 'config';
 
@@ -16,36 +22,43 @@ export default class ClaimPublication extends React.Component {
         authorLoading: PropTypes.bool,
         possibleCounts: PropTypes.object,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+        facetsData: PropTypes.object,
+        loadingFacetsData: PropTypes.bool,
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            publicationToHide: null
+            publicationToHide: null,
         };
     }
 
     componentDidMount() {
         if (this.props.author) {
-            this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username);
+            this.props.actions.searchPossiblyYourPublications(
+                this.props.author.aut_org_username);
         }
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.author && (!this.props.author || nextProps.author.aut_org_username !== this.props.author.aut_org_username)) {
+        if (nextProps.author &&
+            (!this.props.author || nextProps.author.aut_org_username !==
+                this.props.author.aut_org_username)) {
             // wait until props are updated and current author is set to get their possible publications
-            this.props.actions.searchPossiblyYourPublications(nextProps.author.aut_org_username);
+            this.props.actions.searchPossiblyYourPublications(
+                nextProps.author.aut_org_username);
         }
     }
 
     _hidePublication = () => {
         if (this.state.publicationToHide) {
-            this.props.actions.hidePublications([this.state.publicationToHide], this.props.author);
+            this.props.actions.hidePublications([this.state.publicationToHide],
+                this.props.author);
             this.setState({publicationToHide: null});
         }
-    }
+    };
 
     _confirmHidePublication = (item) => {
         // temporary keep which publication to hide in the state
@@ -56,21 +69,23 @@ export default class ClaimPublication extends React.Component {
     _claimPublication = (item) => {
         this.props.history.push('/claim-publication-form');
         this.props.actions.setClaimPublication(item);
-    }
+    };
 
     render() {
         const txt = locale.pages.claimPublications;
         const actions = [
             {
                 label: txt.searchResults.claim,
-                handleAction: this._claimPublication
+                handleAction: this._claimPublication,
             },
             {
                 label: txt.searchResults.hide,
-                handleAction: this._confirmHidePublication
-            }
+                handleAction: this._confirmHidePublication,
+            },
         ];
-        const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
+        const loadingData = this.props.authorLoading ||
+            this.props.loadingPossiblePublicationsList ||
+            this.props.loadingPossibleCounts;
         return (
             <StandardPage title={txt.title}>
                 {
@@ -83,27 +98,42 @@ export default class ClaimPublication extends React.Component {
                 {
                     loadingData &&
                     <div className="is-centered">
-                        <InlineLoader message={txt.loadingMessage} />
+                        <InlineLoader message={txt.loadingMessage}/>
                     </div>
                 }
                 {
-                    !loadingData && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
+                    !loadingData && (!this.props.possiblePublicationsList ||
+                        this.props.possiblePublicationsList.length === 0) &&
                     <StandardCard {...txt.noResultsFound}>
                         {txt.noResultsFound.text}
                     </StandardCard>
                 }
                 {
-                    !loadingData && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
-                    <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
-                        <div>
-                            {
-                                txt.searchResults.text
-                                    .replace('[resultsCount]', this.props.possiblePublicationsList.length)
-                                    .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
+                    !loadingData && this.props.possiblePublicationsList &&
+                    this.props.possiblePublicationsList.length > 0 &&
+                    <div className="columns">
+                        <div className="column">
+                            <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
+                                <div>
+                                    {
+                                        txt.searchResults.text.replace(
+                                            '[resultsCount]',
+                                            this.props.possiblePublicationsList.length).
+                                            replace('[totalCount]',
+                                                this.props.possibleCounts.most_likely_match_count)
+                                    }
+                                </div>
+                                <PublicationsList
+                                    publicationsList={this.props.possiblePublicationsList}
+                                    customActions={actions}/>
+                            </StandardCard>
+                        </div>
+                        <div className="column is-3 is-hidden-mobile">
+                            {!this.props.loadingFacetsData &&
+                            <FacetsFilter facetsData={this.props.facetsData} loadingFacetsData={this.props.loadingFacetsData}/>
                             }
                         </div>
-                        <PublicationsList publicationsList={this.props.possiblePublicationsList} customActions={actions}/>
-                    </StandardCard>
+                    </div>
                 }
             </StandardPage>
         );

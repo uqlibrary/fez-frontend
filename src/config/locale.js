@@ -355,6 +355,18 @@ export default {
         }
     },
     components: {
+        facetsFilter: {
+            title: 'Refine results',
+            keywordHintText: 'Enter a keyword',
+            help: {
+                title: 'How to refine your results',
+                text: (
+                    <div>
+                        <h3>Keyword refining</h3><p>Some information here.</p><h3>Facet refining</h3><p>Some information here.</p>
+                    </div>),
+                buttonLabel: 'OK'
+            }
+        },
         publicationForm: {
             cancel: 'Abandon and search again',
             submit: 'Submit for approval',

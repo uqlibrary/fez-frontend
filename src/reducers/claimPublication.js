@@ -1,11 +1,15 @@
 import * as actions from 'actions/claimPublications';
+import {facetData} from '../modules/FacetsFilter/mock/facetsData';
+
 
 export const initialState = {
     publicationToClaim: null,
     possibleCounts: null,
     possiblePublicationsList: [],
     loadingPossiblePublicationsList: true,
-    loadingPossibleCounts: true
+    loadingPossibleCounts: true,
+    facetsData: {},
+    loadingFacetsData: true
 };
 
 const handlers = {
@@ -14,7 +18,9 @@ const handlers = {
         return {
             ...state,
             loadingPossiblePublicationsList: true,
-            possiblePublicationsList: []
+            possiblePublicationsList: [],
+            facetsData: {},
+            loadingFacetsData: true
         };
     },
 
@@ -36,7 +42,9 @@ const handlers = {
         return {
             ...state,
             loadingPossiblePublicationsList: false,
-            possiblePublicationsList: action.payload
+            possiblePublicationsList: action.payload,
+            facetsData: facetData,
+            loadingFacetsData: false
         };
     },
 
@@ -46,7 +54,9 @@ const handlers = {
             loadingPossiblePublicationsList: false,
             possiblePublicationsList: [],
             loadingPossibleCounts: false,
-            possibleCounts: null
+            possibleCounts: null,
+            facetsData: {},
+            loadingFacetsData: false
         };
     },
 
