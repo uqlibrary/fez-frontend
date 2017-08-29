@@ -57,7 +57,6 @@ export default class ClaimPublicationForm extends Component {
     };
 
     render() {
-        console.log(this.props);
         const txt = locale.components.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
@@ -86,14 +85,14 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     {
-                        !author &&
                         <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
                             <Field
+                                name="authorLinking"
                                 component={AuthorLinkingField}
                                 searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
                                 author={author}
-                                authorList={[]}
-                                linkedAuthorIdList={[]}
+                                authorList={publication.fez_record_search_key_author}
+                                linkedAuthorIdList={publication.fez_record_search_key_author_id}
                                 disabled={this.props.submitting}
                                 className="requiredField"
                                 validate={[validation.required, validation.isValidAuthorLink]}
