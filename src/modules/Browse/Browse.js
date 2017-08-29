@@ -9,7 +9,6 @@ export default function Browse({title, text, help}) {
         <StandardPage title={title}>
             <StandardCard title={title} help={help}>
                 {text}
-                <PublicationForm />
             </StandardCard>
         </StandardPage>
     );
