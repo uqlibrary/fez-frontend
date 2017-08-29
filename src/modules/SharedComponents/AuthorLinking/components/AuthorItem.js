@@ -25,6 +25,11 @@ export default class AuthorItem extends React.Component {
         }
     };
 
+    static labelStyle = {
+        float: 'left',
+        width: '70%'
+    };
+
     constructor(props) {
         super(props);
     }
@@ -51,9 +56,10 @@ export default class AuthorItem extends React.Component {
                         unlinked && !selected &&
                             <FlatButton
                                 label={author.rek_author}
+                                labelStyle={AuthorItem.labelStyle}
                                 onTouchTap={ this._onAuthorSelect }
                                 fullWidth
-                                icon={<RadioButtonUnchecked />}
+                                icon={<RadioButtonUnchecked className="author-link-status" />}
                                 disabled={this.props.disabled}
                             />
                     }
@@ -62,9 +68,10 @@ export default class AuthorItem extends React.Component {
                         !unlinked && !selected &&
                             <FlatButton
                                 label={author.rek_author}
+                                labelStyle={AuthorItem.labelStyle}
                                 disabled
                                 fullWidth
-                                icon={<Link />}
+                                icon={<Link className="author-link-status" />}
                             />
                     }
                     {
@@ -72,9 +79,10 @@ export default class AuthorItem extends React.Component {
                         selected &&
                             <FlatButton
                                 label={author.rek_author}
+                                labelStyle={AuthorItem.labelStyle}
                                 primary
                                 fullWidth
-                                icon={<RadioButtonChecked />}
+                                icon={<RadioButtonChecked className="author-link-status" />}
                                 disabled={this.props.disabled}
                             />
                     }
