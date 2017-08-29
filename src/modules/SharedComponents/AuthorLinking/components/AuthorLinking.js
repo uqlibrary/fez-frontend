@@ -37,7 +37,7 @@ export default class AuthorLinking extends React.Component {
     componentWillUpdate(nextProps, nextState) {
         if (this.props.onChange && this.state !== nextState) {
             const authorIds = this.prepareOutput(nextState);
-            this.props.onChange(this.transformOutput(authorIds));
+            this.props.onChange({authors: this.transformOutput(authorIds), valid: nextState.authorLinkingConfirmed});
         }
     }
 
