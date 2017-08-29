@@ -90,13 +90,13 @@ export default class ClaimPublication extends React.Component {
                     </div>
                 }
                 {
-                    !loadingData && (!this.props.loadingPossiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
+                    !loadingData && (!this.props.loadingPossiblePublicationsList && this.props.possiblePublicationsList.length === 0) &&
                     <StandardCard {...txt.noResultsFound}>
                         {txt.noResultsFound.text}
                     </StandardCard>
                 }
                 {
-                    !loadingData && this.props.loadingPossiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
+                    !loadingData && (this.props.loadingPossiblePublicationsList || this.props.possiblePublicationsList.length > 0) &&
                     <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                         <div>
                             {
