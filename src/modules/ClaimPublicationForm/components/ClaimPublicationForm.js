@@ -5,6 +5,7 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
+import {AuthorLinkingField} from '../../SharedComponents';
 import {validation, locale} from 'config';
 
 export default class ClaimPublicationForm extends Component {
@@ -87,7 +88,16 @@ export default class ClaimPublicationForm extends Component {
                     {
                         !author &&
                         <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
-                            {/* <AuthorLinking disabled={this.props.submitting} dataSource={[]}/> */}
+                            <Field
+                                component={AuthorLinkingField}
+                                searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
+                                author={author}
+                                authorList={[]}
+                                linkedAuthorIdList={[]}
+                                disabled={this.props.submitting}
+                                className="requiredField"
+                                validate={[validation.required, validation.isValidAuthorLink]}
+                            />
                         </StandardCard>
                     }
 
