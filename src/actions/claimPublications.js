@@ -43,7 +43,8 @@ export function countPossiblyYourPublications(authorUsername) {
                 type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                 payload: response.data
             });
-        }).catch(() => {
+        }).catch((error) => {
+            console.log(error);
             dispatch({
                 type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
             });

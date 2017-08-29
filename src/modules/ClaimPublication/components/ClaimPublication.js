@@ -70,10 +70,7 @@ export default class ClaimPublication extends React.Component {
                 handleAction: this._confirmHidePublication
             }
         ];
-
         const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
-
-        console.log(this.props);
         return (
             <StandardPage title={txt.title}>
                 {
@@ -90,13 +87,13 @@ export default class ClaimPublication extends React.Component {
                     </div>
                 }
                 {
-                    !loadingData && (!this.props.loadingPossiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
+                    !loadingData && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
                     <StandardCard {...txt.noResultsFound}>
                         {txt.noResultsFound.text}
                     </StandardCard>
                 }
                 {
-                    !loadingData && this.props.loadingPossiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
+                    !loadingData && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
                     <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                         <div>
                             {
@@ -105,7 +102,7 @@ export default class ClaimPublication extends React.Component {
                                     .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
                             }
                         </div>
-                        <PublicationsList possiblePublicationsList={this.props.possiblePublicationsList} customActions={actions}/>
+                        <PublicationsList publicationsList={this.props.possiblePublicationsList} customActions={actions}/>
                     </StandardCard>
                 }
             </StandardPage>
