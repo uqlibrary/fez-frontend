@@ -6,7 +6,7 @@ import {ContributorsEditorField, PublicationSubtypeField} from 'modules/SharedCo
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
-export default class BookForm extends Component {
+export default class BookChapterForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
         vocabId: PropTypes.number
@@ -17,7 +17,7 @@ export default class BookForm extends Component {
     }
 
     render() {
-        const txt = locale.components.publicationForm.book;
+        const txt = locale.components.publicationForm.bookChapter;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -28,6 +28,22 @@ export default class BookForm extends Component {
                                 autoFocus
                                 disabled={this.props.submitting}
                                 name="rek_title"
+                                className="requiredField"
+                                type="text"
+                                fullWidth
+                                multiLine
+                                rows={1}
+                                floatingLabelText={txt.information.fieldLabels.bookChapterTitle}
+                                validate={[validation.required]}
+                                style={{marginBottom: '-12px'}} />
+                        </div>
+                    </div>
+                    <div className="columns" style={{marginTop: '-12px'}}>
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_book_title.rek_book_title"
                                 className="requiredField"
                                 type="text"
                                 fullWidth
@@ -56,10 +72,10 @@ export default class BookForm extends Component {
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
-                                className="requiredField"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publisher}
-                                validate={[validation.required]} />
+                                className="requiredField"
+                                validate={[validation.required]}
+                                floatingLabelText={txt.information.fieldLabels.publisher} />
                         </div>
                     </div>
                     <div className="columns">
@@ -80,7 +96,8 @@ export default class BookForm extends Component {
                                 name="rek_date"
                                 allowPartial
                                 className="requiredField"
-                                validate={[validation.required]} />
+                                validate={[validation.required]}
+                            />
                         </div>
                     </div>
                 </StandardCard>
@@ -130,7 +147,41 @@ export default class BookForm extends Component {
                         disabled={this.props.submitting} />
                 </StandardCard>
 
-                <StandardCard title={txt.optional.title} help={txt.optional.help}>
+                <StandardCard title={txt.other.title} help={txt.other.help}>
+                    <div className="columns">
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                name="fez_record_search_key_edition.rek_edition"
+                                type="text"
+                                fullWidth
+                                disabled={this.props.submitting}
+                                floatingLabelText={txt.other.fieldLabels.edition}/>
+                        </div>
+
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                name="fez_record_search_key_start_page.rek_start_page"
+                                type="text"
+                                fullWidth
+                                disabled={this.props.submitting}
+                                className="requiredField"
+                                validate={[validation.required]}
+                                floatingLabelText={txt.other.fieldLabels.startPage}/>
+                        </div>
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                name="fez_record_search_key_end_page.rek_end_page"
+                                type="text"
+                                fullWidth
+                                disabled={this.props.submitting}
+                                className="requiredField"
+                                validate={[validation.required]}
+                                floatingLabelText={txt.other.fieldLabels.endPage}/>
+                        </div>
+                    </div>
                     <div className="columns">
                         <div className="column">
                             <Field
@@ -141,7 +192,7 @@ export default class BookForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.optional.fieldLabels.notes}/>
+                                floatingLabelText={txt.other.fieldLabels.notes}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -152,13 +203,12 @@ export default class BookForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.url}
+                                floatingLabelText={txt.other.fieldLabels.url}
                                 validate={[validation.url, validation.maxLength255]}
                             />
                         </div>
                     </div>
                 </StandardCard>
-
             </div>
         );
     }

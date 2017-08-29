@@ -45,9 +45,9 @@ describe('JournalArticleForm renders ', () => {
         expect(wrapper.find('Field').length).toEqual(12);
     });
 
-    it('component with 4 required input fields', () => {
+    it('component with 5 required input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field .requiredField').length).toEqual(4);
+        expect(wrapper.find('Field .requiredField').length).toEqual(5);
     });
 
     it('component with all fields disabled', () => {

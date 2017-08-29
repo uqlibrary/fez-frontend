@@ -13,6 +13,7 @@ export class ContributorForm extends Component {
         authorsList: PropTypes.array,
         onAdd: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
+        errorText: PropTypes.string,
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool
@@ -107,7 +108,9 @@ export class ContributorForm extends Component {
                 <div className="column">
                     <TextField
                         fullWidth
+                        errorText={this.props.errorText}
                         ref="nameAsPublishedField"
+                        id="nameAsPublishedField"
                         floatingLabelText={this.props.locale.nameAsPublishedLabel}
                         hintText={this.props.locale.nameAsPublishedHint}
                         value={this.state.nameAsPublished}
@@ -123,6 +126,7 @@ export class ContributorForm extends Component {
                             listStyle={{maxHeight: 200, overflow: 'auto'}}
                             filter={() => true}
                             ref="identifierField"
+                            id="identifierField"
                             floatingLabelText={this.props.locale.identifierLabel}
                             hintText={this.props.locale.identifierLabel}
                             dataSource={this.props.authorsList}

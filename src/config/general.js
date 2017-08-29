@@ -66,7 +66,8 @@ export const publicationTypes = (components) => [
         name: 'Book Chapter',
         class: 'Uqlibrary\\FezCore\\Types\\BookChapter',
         vocabId: 453588,
-        isFavourite: true
+        isFavourite: true,
+        formComponent: components ? components.BookChapterForm : null
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,

@@ -31,6 +31,18 @@ const validate = (values) => {
     const data = values.toJS();
     const errors = {};
     switch(data.rek_display_type) {
+        case general.PUBLICATION_TYPE_BOOK_CHAPTER:
+            // either author or editor should be selected and linked to a user
+            if (!data.authors || data.authors.length === 0 || data.authors.filter(item => (item.selected)).length === 0) {
+                errors.authors = locale.components.publicationForm.bookChapter.validationError;
+            }
+            break;
+        case general.PUBLICATION_TYPE_JOURNAL_ARTICLE:
+            // either author or editor should be selected and linked to a user
+            if (!data.authors || data.authors.length === 0 || data.authors.filter(item => (item.selected)).length === 0) {
+                errors.authors = locale.components.publicationForm.journalArticle.validationError;
+            }
+            break;
         case general.PUBLICATION_TYPE_BOOK:
             // either author or editor should be selected and linked to a user
             if (

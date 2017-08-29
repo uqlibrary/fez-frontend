@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BookForm renders  component 1`] = `
+exports[`BookChapterForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
@@ -8,10 +8,10 @@ exports[`BookForm renders  component 1`] = `
       Object {
         "buttonLabel": "OK",
         "text": "some help",
-        "title": "Book information",
+        "title": "Book chapter information",
       }
     }
-    title="Book information"
+    title="Book chapter information"
   >
     <div
       className="columns"
@@ -29,10 +29,44 @@ exports[`BookForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Book title"
+          floatingLabelText="Book chapter title"
           fullWidth={true}
           multiLine={true}
           name="rek_title"
+          rows={1}
+          style={
+            Object {
+              "marginBottom": "-12px",
+            }
+          }
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+      style={
+        Object {
+          "marginTop": "-12px",
+        }
+      }
+    >
+      <div
+        className="column"
+      >
+        <Field
+          className="requiredField"
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Book title"
+          fullWidth={true}
+          multiLine={true}
+          name="fez_record_search_key_book_title.rek_book_title"
           rows={1}
           style={
             Object {
@@ -402,11 +436,63 @@ exports[`BookForm renders  component 1`] = `
       Object {
         "buttonLabel": "OK",
         "text": "some help",
-        "title": "Optional publication details",
+        "title": "Other publication details",
       }
     }
-    title="Optional publication details"
+    title="Other publication details"
   >
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Edition"
+          fullWidth={true}
+          name="fez_record_search_key_edition.rek_edition"
+          type="text"
+        />
+      </div>
+      <div
+        className="column"
+      >
+        <Field
+          className="requiredField"
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Start page"
+          fullWidth={true}
+          name="fez_record_search_key_start_page.rek_start_page"
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+      <div
+        className="column"
+      >
+        <Field
+          className="requiredField"
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="End page"
+          fullWidth={true}
+          name="fez_record_search_key_end_page.rek_end_page"
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+    </div>
     <div
       className="columns"
     >

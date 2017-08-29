@@ -36,6 +36,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
           floatingLabelText="Name as published"
           fullWidth={true}
           hintText="Please type the name exactly as published"
+          id="nameAsPublishedField"
           multiLine={false}
           onChange={[Function]}
           onKeyPress={[Function]}
@@ -63,7 +64,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
           >
             <TextFieldLabel
               disabled={false}
-              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-56539"
+              htmlFor="nameAsPublishedField"
               muiTheme={
                 Object {
                   "appBar": Object {
@@ -490,7 +491,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               }
             >
               <label
-                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-56539"
+                htmlFor="nameAsPublishedField"
                 style={
                   Object {
                     "color": "rgba(0, 0, 0, 0.3)",
@@ -948,7 +949,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
             </TextFieldHint>
             <input
               disabled={false}
-              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-56539"
+              id="nameAsPublishedField"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -1472,6 +1473,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
           floatingLabelText="UQ identifier (if available)"
           fullWidth={true}
           hintText="UQ identifier (if available)"
+          id="identifierField"
           listStyle={
             Object {
               "maxHeight": 200,
@@ -1508,6 +1510,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               floatingLabelText="UQ identifier (if available)"
               fullWidth={true}
               hintText="UQ identifier (if available)"
+              id="identifierField"
               multiLine={false}
               onBlur={[Function]}
               onChange={[Function]}
@@ -1538,7 +1541,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
               >
                 <TextFieldLabel
                   disabled={true}
-                  htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-717"
+                  htmlFor="identifierField"
                   muiTheme={
                     Object {
                       "appBar": Object {
@@ -1965,7 +1968,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                   }
                 >
                   <label
-                    htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-717"
+                    htmlFor="identifierField"
                     style={
                       Object {
                         "color": "rgba(0, 0, 0, 0.3)",
@@ -2424,7 +2427,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                 <input
                   autoComplete="off"
                   disabled={true}
-                  id="undefined-UQidentifierifavailable-UQidentifierifavailable-717"
+                  id="identifierField"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -3163,6 +3166,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
           floatingLabelText="Name as published"
           fullWidth={true}
           hintText="Please type the name exactly as published"
+          id="nameAsPublishedField"
           multiLine={false}
           onChange={[Function]}
           onKeyPress={[Function]}
@@ -3190,7 +3194,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
           >
             <TextFieldLabel
               disabled={false}
-              htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-9085"
+              htmlFor="nameAsPublishedField"
               muiTheme={
                 Object {
                   "appBar": Object {
@@ -3617,7 +3621,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
               }
             >
               <label
-                htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-9085"
+                htmlFor="nameAsPublishedField"
                 style={
                   Object {
                     "color": "rgba(0, 0, 0, 0.3)",
@@ -4075,7 +4079,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
             </TextFieldHint>
             <input
               disabled={false}
-              id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-9085"
+              id="nameAsPublishedField"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}

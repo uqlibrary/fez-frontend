@@ -125,6 +125,7 @@ exports[`JournalArticleForm renders  component 1`] = `
     title="Authors"
   >
     <Field
+      className="requiredField"
       component={[Function]}
       disabled={false}
       locale={

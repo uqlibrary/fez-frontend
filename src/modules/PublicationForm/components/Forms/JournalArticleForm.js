@@ -85,6 +85,7 @@ export default class JournalArticleForm extends Component {
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
+                        className="requiredField"
                         name="authors"
                         locale={txt.authors.field}
                         disabled={this.props.submitting}
