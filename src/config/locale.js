@@ -355,6 +355,17 @@ export default {
         }
     },
     components: {
+        publicationStats: {
+            publicationStatsTitle1: 'eSpace publications indexed in:',
+            publicationStatsTitle2: 'World of science',
+            publicationStatsTitle2mobile: 'WOS',
+            publicationStatsTitle3: 'Scopus',
+            publicationStatsRowTitle1: 'h-index',
+            publicationStatsRowTitle2: 'Average citation count per publication',
+            publicationStatsRowTitle3: 'Total citations',
+            publicationStatsRowTitle4: 'Total publications',
+            publicationStatsRowTitle5: 'Publication range',
+        },
         publicationForm: {
             cancel: 'Abandon and search again',
             submit: 'Submit for approval',
