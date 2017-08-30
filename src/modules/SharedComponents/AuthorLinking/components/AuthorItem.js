@@ -17,8 +17,6 @@ export default class AuthorItem extends React.Component {
     };
 
     static defaultProps = {
-        unlinked: false,
-        selected: false,
         locale: {
             ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
             suffix: ' listed author'
@@ -65,7 +63,7 @@ export default class AuthorItem extends React.Component {
                     }
                     {
                         // disabled flat button for linked and not selected author
-                        !unlinked && !selected &&
+                        !unlinked &&
                             <FlatButton
                                 label={author.rek_author}
                                 labelStyle={AuthorItem.labelStyle}
