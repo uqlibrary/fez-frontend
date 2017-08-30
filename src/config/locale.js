@@ -731,6 +731,95 @@ export default {
                         url: 'Link (URL)'
                     }
                 },
+                validationError: 'Please, provide a list of authors of the publication and link an author name to the current user'
+            },
+            conferencePaper: {
+                information: {
+                    title: 'Conference paper information',
+                    help: {
+                        title: 'Conference paper information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        title: 'Title of paper',
+                        conferenceName: 'Conference name',
+                        conferenceLocation: 'Conference location',
+                        conferenceDates: 'Conference dates (eg 13-15 December 2011)',
+                        proceedingsTitle: 'Proceedings title',
+                        subtype: 'Publication subtype',
+                        publicationPlace: 'Place of publication',
+                        publisher: 'Publisher',
+                        date: {
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Provide a list of authors for this publication and assign yourself as an author',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other publication details',
+                    help: {
+                        title: 'Other publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        startPage: 'Start page',
+                        endPage: 'End page',
+                        notes: 'Notes (not publicly viewable)',
+                        url: 'Link (URL)'
+                    }
+                },
                 validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
             },
             fileUpload: {

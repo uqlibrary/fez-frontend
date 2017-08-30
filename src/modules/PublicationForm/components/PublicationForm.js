@@ -8,7 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {SelectField, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes, validation} from 'config';
 
-import {BookForm, BookChapterForm, JournalArticleForm} from './Forms';
+import {BookForm, BookChapterForm, ConferencePaperForm, JournalArticleForm} from './Forms';
 
 export default class PublicationForm extends Component {
     static propTypes = {
@@ -21,7 +21,7 @@ export default class PublicationForm extends Component {
         super(props);
 
         // keep a list of all available forms
-        this.formComponents = {BookForm, BookChapterForm, JournalArticleForm};
+        this.formComponents = {BookForm, BookChapterForm, ConferencePaperForm, JournalArticleForm};
         this.publicationTypes = publicationTypes(this.formComponents);
     }
 
