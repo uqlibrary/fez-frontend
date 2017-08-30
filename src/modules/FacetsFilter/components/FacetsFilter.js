@@ -12,9 +12,12 @@ class FacetsFilter extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
-        this.state.activeFacets = {};
-        this.state.activeCategories = {};
+
+        this.state = {
+            activeFacets: {},
+            activeCategories: {}
+        };
+
         this.handleActiveLinkClick = this.handleActiveLinkClick.bind(this);
         this.handleActiveCategoryClick = this.handleActiveCategoryClick.bind(this);
         this.handleClearAllClick = this.handleClearAllClick.bind(this);
@@ -102,13 +105,12 @@ class FacetsFilter extends React.Component {
         const aggregations = [];
         const facetsData = this.props.facetsData;
         if (!facetsData) return (<div />);
-        Object.keys(facetsData.aggregations).forEach(key => {
+        Object.keys(facetsData).forEach(key => {
             // Filter out the lookup_exact items
             if (key.indexOf('_lookup_exact') === -1) {
-                const o = facetsData.aggregations[key];
+                const o = facetsData[key];
                 // Assign a lookup key if it matches in the aggregationsMap, otherwise return just the key
-                const lookupItem = facetsData.aggregations[aggregationMap[key] ||
-                key];
+                const lookupItem = facetsData[aggregationMap[key] || key];
                 // Push the new data into a new object
                 aggregations.push({
                     aggregation: key,
