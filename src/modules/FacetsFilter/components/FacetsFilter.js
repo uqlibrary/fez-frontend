@@ -101,7 +101,7 @@ class FacetsFilter extends React.Component {
 
         const aggregations = [];
         const facetsData = this.props.facetsData;
-
+        if (!facetsData) return (<div />);
         Object.keys(facetsData.aggregations).forEach(key => {
             // Filter out the lookup_exact items
             if (key.indexOf('_lookup_exact') === -1) {

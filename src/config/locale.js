@@ -19,7 +19,7 @@ export default {
         sources: {
             wos: {
                 id: 'wos',
-                title: 'World of science',
+                title: 'Web of science',
                 priority: 0,
                 icon: '../../../images/wos_icon.svg'
             },
@@ -225,7 +225,7 @@ export default {
         },
         research: {
             title: 'My research',
-            text: ( <div><p>all your publications....</p></div>),
+            text: ( <div><p>all your dumb publications....</p></div>),
             help: {
                 title: 'My research help',
                 text: (
@@ -281,7 +281,7 @@ export default {
                         repositories: [
                             {
                                 id: 'wos',
-                                title: 'World of science',
+                                title: 'Web of science',
                                 icon: '../../../images/wos_icon.svg'
                             },
                             {
@@ -360,12 +360,20 @@ export default {
             keywordHintText: 'Enter a keyword',
             help: {
                 title: 'How to refine your results',
-                text: (
-                    <div>
-                        <h3>Keyword refining</h3><p>Some information here.</p><h3>Facet refining</h3><p>Some information here.</p>
-                    </div>),
+                text: '...',
                 buttonLabel: 'OK'
             }
+        },
+        publicationStats: {
+            publicationStatsTitle1: 'eSpace publications indexed in:',
+            publicationStatsTitle2: 'Web of science',
+            publicationStatsTitle2mobile: 'WOS',
+            publicationStatsTitle3: 'Scopus',
+            publicationStatsRowTitle1: 'h-index',
+            publicationStatsRowTitle2: 'Average citation count per publication',
+            publicationStatsRowTitle3: 'Total citations',
+            publicationStatsRowTitle4: 'Total publications',
+            publicationStatsRowTitle5: 'Publication range'
         },
         publicationForm: {
             cancel: 'Abandon and search again',
@@ -726,6 +734,95 @@ export default {
                     },
                     fieldLabels: {
                         edition: 'Edition',
+                        startPage: 'Start page',
+                        endPage: 'End page',
+                        notes: 'Notes (not publicly viewable)',
+                        url: 'Link (URL)'
+                    }
+                },
+                validationError: 'Please, provide a list of authors of the publication and link an author name to the current user'
+            },
+            conferencePaper: {
+                information: {
+                    title: 'Conference paper information',
+                    help: {
+                        title: 'Conference paper information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        title: 'Title of paper',
+                        conferenceName: 'Conference name',
+                        conferenceLocation: 'Conference location',
+                        conferenceDates: 'Conference dates (eg 13-15 December 2011)',
+                        proceedingsTitle: 'Proceedings title',
+                        subtype: 'Publication subtype',
+                        publicationPlace: 'Place of publication',
+                        publisher: 'Publisher',
+                        date: {
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Provide a list of authors for this publication and assign yourself as an author',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other publication details',
+                    help: {
+                        title: 'Other publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
                         startPage: 'Start page',
                         endPage: 'End page',
                         notes: 'Notes (not publicly viewable)',

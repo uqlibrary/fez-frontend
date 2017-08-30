@@ -11,16 +11,9 @@ import {
 } from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/PublicationsList';
+import {PublicationStats} from 'modules/SharedComponents';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import {
-    Table,
-    TableBody,
-    TableHeader,
-    TableHeaderColumn,
-    TableRow,
-    TableRowColumn,
-} from 'material-ui/Table';
 import {locale} from 'config';
 
 class Dashboard extends React.Component {
@@ -81,10 +74,42 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear && this.props.authorDetailsLoading;
-        const pubStats = this.props.publicationsStats;
+        const loading = this.props.loadingPublicationsByYear || this.props.authorDetailsLoading
+            || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
+            || this.props.loadingLatestPublications;
+        const barChart = !loading && this.props.publicationsByYear
+            ? (
+                <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
+                    <AuthorsPublicationsPerYearChart
+                        className="barChart"
+                        {...this.props.publicationsByYear}
+                        yAxisTitle={txt.publicationsByYearChart.yAxisTitle}/>
+                </StandardCard>
+            ) : null;
+        const donutChart = !loading && this.props.publicationTypesCount
+            ? (
+                <StandardCard
+                    className="donutChart"
+                    title={txt.publicationTypesCountChart.title}>
+                    <AuthorsPublicationTypesCountChart
+                        className="donutChart"
+                        series={[{
+                            name: txt.publicationTypesCountChart.title,
+                            data: this.props.publicationTypesCount
+                        }]}/>
+                </StandardCard>
+            ) : null;
+        const publicationStats = this.props.publicationsStats
+            && this.props.publicationsStats.thomson_citation_count_i && this.props.publicationsStats.thomson_citation_count_i.count
+            && this.props.publicationsStats.scopus_citation_count_i && this.props.publicationsStats.scopus_citation_count_i.count
+            ? (
+                <StandardCard className="card-paddingless">
+                    <PublicationStats publicationsStats={this.props.publicationsStats}/>
+                </StandardCard>
+            ) : null;
+
         return (
-            <StandardPage>
+            <StandardPage className="dashboard">
                 {
                     loading &&
                     <div className="isLoading is-centered">
@@ -95,13 +120,15 @@ class Dashboard extends React.Component {
                     !loading && this.props.authorDetails &&
                     <div className="columns is-multiline is-gapless">
                         <div className="column is-12 is-hidden-mobile">
-                            <DashboardAuthorProfile authorDetails={this.props.authorDetails}/>
+                            <div className="is-hidden-mobile">
+                                <DashboardAuthorProfile authorDetails={this.props.authorDetails}/>
+                            </div>
                         </div>
-                        {
-                            !this.props.hidePossiblyYourPublicationsLure
-                            && this.props.possiblyYourPublicationsCount
-                            && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
-                            <div className="column is-12 possiblePublicationLure">
+                        <div className="column is-12 possiblePublicationLure">
+                            {
+                                !this.props.hidePossiblyYourPublicationsLure
+                                && this.props.possiblyYourPublicationsCount
+                                && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
                                 <Alert
                                     title={txt.possiblePublicationsLure.title}
                                     message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
@@ -110,114 +137,54 @@ class Dashboard extends React.Component {
                                     action={this._claimYourPublications}
                                     allowDismiss
                                     dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-                            </div>
-                        }
-
+                            }
+                        </div>
                     </div>
                 }
+                {/* render charts/stats depending on availability of data */}
+                {/* render bar chart full width */}
                 {
-                    !loading && this.props.publicationsByYear &&
-                    <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
-                        <AuthorsPublicationsPerYearChart
-                            className="barChart"
-                            {...this.props.publicationsByYear}
-                            yAxisTitle={txt.publicationsByYearChart.yAxisTitle}/>
-                    </StandardCard>
+                    barChart && (publicationStats || (!donutChart && !publicationStats)) &&
+                    barChart
                 }
+                {/* render publication stats full width if donut chart not available */}
                 {
-                    !loading && this.props.publicationTypesCount &&
-                    <div className="columns">
-                        <div className="column is-gapless is-4">
-                            <StandardCard
-                                className="donutChart card-full-height"
-                                title={txt.publicationTypesCountChart.title}>
-                                <AuthorsPublicationTypesCountChart
-                                    className="donutChart"
-                                    series={[{
-                                        name: txt.publicationTypesCountChart.title,
-                                        data: this.props.publicationTypesCount
-                                    }]}/>
-                            </StandardCard>
-                        </div>
-
+                    publicationStats && !donutChart &&
+                    publicationStats
+                }
+                {/* render bar chart next to donut chart if publication stats not available */}
+                {
+                    barChart && donutChart && !publicationStats &&
+                    <div className="columns is-mobile">
                         <div className="column">
-                            <StandardCard
-                                className="card-full-height card-paddingless"
-                                title="eSpace publications linked from: WOS/SCOPUS">
-                                {
-                                    this.props.publicationsStats &&
-                                    <Table selectable={false} className="pubStatsTable">
-                                        <TableHeader
-                                            displaySelectAll={false}
-                                            adjustForCheckbox={false}
-                                            className="pubStatsHeader">
-                                            <TableRow>
-                                                <TableHeaderColumn className="pubStatsHeaderTitle">eSpace publications
-                                                    linked from:</TableHeaderColumn>
-                                                <TableHeaderColumn className="pubStatsHeaderTitle">Web of
-                                                    Science</TableHeaderColumn>
-                                                <TableHeaderColumn
-                                                    className="pubStatsHeaderTitle">Scopus</TableHeaderColumn>
-                                            </TableRow>
-                                        </TableHeader>
-                                        <TableBody displayRowCheckbox={false}>
-                                            <TableRow>
-                                                <TableRowColumn className="pubStatsRowTitle">h-index
-                                                    score</TableRowColumn>
-                                                <TableRowColumn>{pubStats.thomson_citation_count_i.hindex}</TableRowColumn>
-                                                <TableRowColumn>{pubStats.scopus_citation_count_i.hindex}</TableRowColumn>
-                                            </TableRow>
-
-                                            <TableRow>
-                                                <TableRowColumn className="pubStatsRowTitle">Average citation count per
-                                                    publication</TableRowColumn>
-                                                <TableRowColumn>{pubStats.thomson_citation_count_i.avg.toFixed(1)}</TableRowColumn>
-                                                <TableRowColumn>{pubStats.scopus_citation_count_i.avg.toFixed(1)}</TableRowColumn>
-                                            </TableRow>
-
-                                            <TableRow>
-                                                <TableRowColumn className="pubStatsRowTitle">Total
-                                                    citations</TableRowColumn>
-                                                <TableRowColumn>{pubStats.thomson_citation_count_i.sum}</TableRowColumn>
-                                                <TableRowColumn>{pubStats.scopus_citation_count_i.sum}</TableRowColumn>
-                                            </TableRow>
-
-                                            <TableRow>
-                                                <TableRowColumn className="pubStatsRowTitle">Total
-                                                    publications</TableRowColumn>
-                                                <TableRowColumn>{pubStats.thomson_citation_count_i.count}</TableRowColumn>
-                                                <TableRowColumn>{pubStats.scopus_citation_count_i.count}</TableRowColumn>
-                                            </TableRow>
-
-                                            <TableRow>
-                                                <TableRowColumn className="pubStatsRowTitle">Publication
-                                                    range</TableRowColumn>
-                                                <TableRowColumn>{pubStats.thomson_citation_count_i.years}</TableRowColumn>
-                                                <TableRowColumn>{pubStats.scopus_citation_count_i.years}</TableRowColumn>
-                                            </TableRow>
-                                        </TableBody>
-                                    </Table>
-                                }
-                                {
-                                    this.props.loadingPublicationsStats &&
-                                    <div className="isLoading is-centered">
-                                        <InlineLoader message="Loading your publication stats"/>
-                                    </div>
-                                }
-                            </StandardCard>
+                            {barChart}
+                        </div>
+                        <div className="column is-4 is-full-mobile">
+                            {donutChart}
+                        </div>
+                    </div>
+                }
+                {/* render donut chart chart next to publication stats if both available */}
+                {
+                    donutChart && publicationStats &&
+                    <div className="columns">
+                        <div className="column is-4">
+                            {donutChart}
+                        </div>
+                        <div className="column">
+                            {publicationStats}
                         </div>
                     </div>
                 }
 
                 {
-                    !loading && !this.props.loadingTrendingPublications && !this.props.loadingLatestPublications
+                    !loading
                     && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
                     (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
                     <StandardCard className="card-paddingless">
                         <Tabs>
                             {
-                                !loading && !this.props.loadingLatestPublications
-                                && this.props.latestPublicationsList.length > 0 &&
+                                this.props.latestPublicationsList.length > 0 &&
                                 <Tab label={txt.myPublications.title} value="myPublications">
                                     <div style={{padding: '12px 24px'}}>
                                         <PublicationsList
@@ -236,15 +203,14 @@ class Dashboard extends React.Component {
                                 </Tab>
                             }
                             {
-                                !loading && !this.props.loadingTrendingPublications
-                                && this.props.trendingPublicationsList.length > 0 &&
+                                this.props.trendingPublicationsList.length > 0 &&
                                 <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications">
                                     <div style={{padding: '12px 24px 24px 24px'}}>
                                         {
                                             this.props.trendingPublicationsList.map((metric, metricIndex) => (
                                                 <div key={'metrics_' + metricIndex}>
                                                     <h2>{txt.myTrendingPublications.metrics[metric.key].title}</h2>
-                                                    {/* TODO: remove tempirary publication record render */}
+                                                    {/* TODO: remove temporary publication record render */}
                                                     {
                                                         metric.values.map((recordValue, recordIndex) => (
                                                             <div key={'trending_publication_' + recordIndex}>

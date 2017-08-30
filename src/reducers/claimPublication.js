@@ -1,6 +1,4 @@
 import * as actions from 'actions/claimPublications';
-import {facetData} from '../modules/FacetsFilter/mock/facetsData';
-
 
 export const initialState = {
     publicationToClaim: null,
@@ -42,8 +40,14 @@ const handlers = {
         return {
             ...state,
             loadingPossiblePublicationsList: false,
-            possiblePublicationsList: action.payload,
-            facetsData: facetData,
+            possiblePublicationsList: action.payload
+        };
+    },
+
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED]: (state, action) => {
+        return {
+            ...state,
+            facetsData: action.payload,
             loadingFacetsData: false
         };
     },

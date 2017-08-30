@@ -79,13 +79,6 @@ exports[`App tests for user account and author status User is logged in but are 
             "path": "/234234234242",
           },
           Object {
-            "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
-            "path": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
-            "primaryText": "Masquerade as a user",
-            "secondaryText": "for testing purposes only",
-            "target": "_blank",
-          },
-          Object {
             "linkTo": "/browse",
             "path": "/browse",
             "primaryText": "Browse",
@@ -145,13 +138,6 @@ exports[`App tests for user account and author status User is logged in but are 
         <Route
           divider={true}
           path="/234234234242"
-        />
-        <Route
-          linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
-          path="https://www.library.uq.edu.au/mylibrary/#!masquerade"
-          primaryText="Masquerade as a user"
-          secondaryText="for testing purposes only"
-          target="_blank"
         />
         <Route
           linkTo="/browse"
@@ -367,13 +353,6 @@ exports[`App tests for user account and author status User logged in and is an a
             "path": "/234234234242",
           },
           Object {
-            "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
-            "path": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
-            "primaryText": "Masquerade as a user",
-            "secondaryText": "for testing purposes only",
-            "target": "_blank",
-          },
-          Object {
             "linkTo": "/browse",
             "path": "/browse",
             "primaryText": "Browse",
@@ -433,13 +412,6 @@ exports[`App tests for user account and author status User logged in and is an a
         <Route
           divider={true}
           path="/234234234242"
-        />
-        <Route
-          linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
-          path="https://www.library.uq.edu.au/mylibrary/#!masquerade"
-          primaryText="Masquerade as a user"
-          secondaryText="for testing purposes only"
-          target="_blank"
         />
         <Route
           linkTo="/browse"
@@ -540,13 +512,6 @@ exports[`App tests for user account and author status User logged in but is not 
             "path": "/234234234242",
           },
           Object {
-            "linkTo": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
-            "path": "https://www.library.uq.edu.au/mylibrary/#!masquerade",
-            "primaryText": "Masquerade as a user",
-            "secondaryText": "for testing purposes only",
-            "target": "_blank",
-          },
-          Object {
             "linkTo": "/browse",
             "path": "/browse",
             "primaryText": "Browse",
@@ -613,13 +578,6 @@ exports[`App tests for user account and author status User logged in but is not 
         <Route
           divider={true}
           path="/234234234242"
-        />
-        <Route
-          linkTo="https://www.library.uq.edu.au/mylibrary/#!masquerade"
-          path="https://www.library.uq.edu.au/mylibrary/#!masquerade"
-          primaryText="Masquerade as a user"
-          secondaryText="for testing purposes only"
-          target="_blank"
         />
         <Route
           linkTo="/browse"

@@ -12,6 +12,7 @@ import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 export const POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'POSSIBLY_YOUR_PUBLICATIONS_LOADING';
 export const POSSIBLY_YOUR_PUBLICATIONS_COMPLETED = 'POSSIBLY_YOUR_PUBLICATIONS_COMPLETED';
+export const POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED = 'POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED';
 export const POSSIBLY_YOUR_PUBLICATIONS_FAILED = 'POSSIBLY_YOUR_PUBLICATIONS_FAILED';
 
 export const COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING';
@@ -65,6 +66,10 @@ export function searchPossiblyYourPublications(authorUsername) {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                 payload: response.data
+            });
+            dispatch({
+                type: POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
+                payload: response.filters
             });
             dispatch(countPossiblyYourPublications(authorUsername));
         }).catch(() => {

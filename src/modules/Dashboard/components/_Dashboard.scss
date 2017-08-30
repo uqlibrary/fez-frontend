@@ -1,5 +1,10 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
+.dashboard .column .standard-card {
+  margin-bottom: 0px !important;
+  height: 100% !important;
+}
+
 .possiblePublicationLure {
   margin: -1px 0 0 0 !important;
   .alertWrapper {
@@ -22,7 +27,7 @@
     overflow: visible;
   }
 
-  //DashboardProfile
+  // DashboardProfile
   .userDetails {
     height: calc(100% - 48px);
     padding: 24px;
@@ -90,7 +95,8 @@
       }
     }
   }
-  //ArticleCount
+
+  // ArticleCount
   .authorCount {
     display: flex;
     justify-content: center;
@@ -119,70 +125,6 @@
           opacity: 0.75;
         }
       }
-    }
-  }
-  // Publication Stats WOS/Scopus
-  .pubStatsTable {
-    & thead tr th {
-      white-space: normal !important;
-      padding: 12px 12px 12px 24px !important;
-    }
-    & thead tr th:nth-child(2), & thead tr th:nth-child(3) {
-      text-align: center !important;
-      width: 30% !important;
-    }
-    & tbody tr td {
-      font-size: 16px !important;
-    }
-    & tbody tr td:nth-child(2), & tbody tr td:nth-child(3) {
-      text-align: center !important;
-      width: 30% !important;
-    }
-    .pubStatsHeader {
-      background-color: $accent-color;
-      & .pubStatsHeaderTitle {
-        color: $text-color-reverse !important;
-        font-size: 16px !important;
-        font-weight: bold !important;
-      }
-    }
-    .pubStatsRowTitle {
-      font-weight: bold !important;
-      white-space: normal !important;
-    }
-  }
-}
-
-@media all and (max-width: 768px) {
-
-  // Publication Stats WOS/Scopus
-  .pubStatsTable {
-    & thead tr th {
-      white-space: normal !important;
-      padding: 12px 12px 12px 24px !important;
-    }
-    & thead tr th:nth-child(2), & thead tr th:nth-child(3) {
-      text-align: center !important;
-      width: 30% !important;
-    }
-    & tbody tr td {
-      font-size: 14px !important;
-    }
-    & tbody tr td:nth-child(2), & tbody tr td:nth-child(3) {
-      text-align: center !important;
-      width: 30% !important;
-    }
-    .pubStatsHeader {
-      background-color: $accent-color;
-      & .pubStatsHeaderTitle {
-        color: $text-color-reverse !important;
-        font-size: 14px !important;
-        font-weight: bold !important;
-      }
-    }
-    .pubStatsRowTitle {
-      font-weight: bold !important;
-      white-space: normal !important;
     }
   }
 }
