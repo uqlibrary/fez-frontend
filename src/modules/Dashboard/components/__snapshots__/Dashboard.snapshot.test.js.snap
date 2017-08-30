@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard test doesn't render possibly your publications lure 1`] = `
-<StandardPage>
+<StandardPage
+  className="dashboard"
+>
   <div
     className="columns is-multiline is-gapless"
   >
@@ -63,10 +65,16 @@ exports[`Dashboard test doesn't render possibly your publications lure 1`] = `
 </StandardPage>
 `;
 
-exports[`Dashboard test renders alert for non-authors 1`] = `<StandardPage />`;
+exports[`Dashboard test renders alert for non-authors 1`] = `
+<StandardPage
+  className="dashboard"
+/>
+`;
 
 exports[`Dashboard test renders dashboard header only 1`] = `
-<StandardPage>
+<StandardPage
+  className="dashboard"
+>
   <div
     className="columns is-multiline is-gapless"
   >
@@ -129,7 +137,9 @@ exports[`Dashboard test renders dashboard header only 1`] = `
 `;
 
 exports[`Dashboard test renders possibly your publications lure 1`] = `
-<StandardPage>
+<StandardPage
+  className="dashboard"
+>
   <div
     className="columns is-multiline is-gapless"
   >
