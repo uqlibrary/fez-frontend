@@ -109,7 +109,7 @@ class Dashboard extends React.Component {
             ) : null;
 
         return (
-            <StandardPage>
+            <StandardPage className="dashboard">
                 {
                     loading &&
                     <div className="isLoading is-centered">

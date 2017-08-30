@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PublicationStats component should render empty component 1`] = `
+<div
+  className="publicationsStatsEmpty"
+/>
+`;
+
+exports[`PublicationStats component should render statistics with table and data 1`] = `
+<div
+  className="publicationsStatsEmpty"
+/>
+`;
