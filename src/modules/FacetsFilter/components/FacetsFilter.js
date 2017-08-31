@@ -63,7 +63,6 @@ class FacetsFilter extends React.Component {
 
         const activeCategories = {...this.state.activeCategories};
         const category = e.target.dataset.category;
-
         if (activeCategories[category] !== undefined) {
             if (activeCategories[category].includes('active')) {
                 delete activeCategories[category];
@@ -75,9 +74,6 @@ class FacetsFilter extends React.Component {
         }
         this.setState({
             activeCategories: activeCategories,
-        }, () => {
-            console.log('Current state of activeCategories: ' +
-                JSON.stringify(this.state.activeCategories));
         });
     }
 
@@ -94,35 +90,26 @@ class FacetsFilter extends React.Component {
     render() {
         const txt = locale.components.facetsFilter;
 
-        const aggregationMap = {
-            'ismemberof_mft': 'ismemberof_mt_lookup_exact',
-            'subject_mi': 'subject_mi_lookup_exact',
-            'display_type_i': 'display_type_i_lookup_exact',
-            'scopus_doc_type_t_ft': 'scopus_doc_type_t_lookup_exact',
-            'author_id_mi': 'author_id_mi_lookup_exact',
-        };
-
         const aggregations = [];
         const facetsData = this.props.facetsData;
-        if (!facetsData) return (<div />);
-        Object.keys(facetsData).forEach(key => {
-            // Filter out the lookup_exact items
-            if (key.indexOf('_lookup_exact') === -1) {
-                const o = facetsData[key];
-                // Assign a lookup key if it matches in the aggregationsMap, otherwise return just the key
-                const lookupItem = facetsData[aggregationMap[key] || key];
-                // Push the new data into a new object
-                aggregations.push({
-                    aggregation: key,
-                    display_name: o.display_name,
-                    doc_count: o.sum_other_doc_count,
-                    facets: o.buckets.map((bucket, index) => {
-                        bucket.display_name = lookupItem.buckets[index].key;
-                        return bucket;
-                    }),
-                });
-            }
+
+        // if (!facetsData) return (<div />); why?
+
+        Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 && facetsData[key].buckets.length !== 0).forEach(key => {
+            const o = facetsData[key];
+            // Assign a lookup key
+            const lookupItem = facetsData[`${key} (lookup)`] || o;
+            // Push the new data into a new object
+            aggregations.push({
+                aggregation: key,
+                display_name: o.display_name,
+                facets: o.buckets.map((bucket, index) => {
+                    bucket.display_name = lookupItem.buckets[index].key;
+                    return bucket;
+                }),
+            });
         });
+
         const sortedAggregations = aggregations.sort((a, b) => {
             return a.doc_count > b.doc_count ? -1 : 1;
         });
@@ -147,25 +134,21 @@ class FacetsFilter extends React.Component {
                         <div key={index}>
                             <div className="facetsCategory">
                                 <div className="facetsCategoryTitle"
-                                    data-category={item.display_name}
+                                    data-category={item.aggregation}
                                     tabIndex="0"
                                     onClick={this.handleActiveCategoryClick}
                                     onKeyPress={this.handleActiveCategoryClick}>
-                                    {item.display_name}
+                                    {item.aggregation}
                                 </div>
                                 <div
-                                    className={this.state.activeCategories[item.display_name] &&
-                                    this.state.activeCategories[item.display_name].includes(
-                                        'active')
+                                    className={this.state.activeCategories[item.aggregation]
                                         ? 'facetLinksList active'
                                         : 'facetLinksList'}>
                                     {item.facets.map((subitem, subindex) => (
                                         <div key={subindex}
-                                            tabIndex={this.state.activeCategories[item.display_name] &&
-                                             this.state.activeCategories[item.display_name].includes(
-                                                 'active') ? 0 : -1}
-                                            className={this.state.activeFacets[item.display_name] &&
-                                             this.state.activeFacets[item.display_name].includes('' +
+                                            tabIndex={this.state.activeCategories[item.aggregation] ? 0 : -1}
+                                            className={this.state.activeFacets[item.aggregation] &&
+                                             this.state.activeFacets[item.aggregation].includes('' +
                                                  subitem.key)
                                                 ? 'facetListItems active'
                                                 : 'facetListItems'}
@@ -173,10 +156,8 @@ class FacetsFilter extends React.Component {
                                             onClick={this.handleActiveLinkClick}
                                             onKeyPress={this.handleActiveLinkClick}
                                             data-facet={subitem.key}
-                                            data-category={item.display_name}
-                                        >
-                                            {subitem.display_name}
-                                            ({subitem.doc_count})
+                                            data-category={item.aggregation}>
+                                            {subitem.display_name} ({subitem.doc_count})
                                         </div>
                                     ))}
                                 </div>
@@ -192,8 +173,11 @@ class FacetsFilter extends React.Component {
                 </div>
                 {/* Just for testing purposes */}
                 {window.location.href.indexOf('localhost') >= 1 &&
-                <div style={{marginTop: 100}}>{JSON.stringify(
-                    this.state.activeFacets)}</div>
+                <div style={{marginTop: 100}}>
+                    Active Facets:<br />{JSON.stringify(this.state.activeFacets)}
+                    <br /><br />
+                    Active Categories:<br />{JSON.stringify(this.state.activeCategories)}
+                </div>
                 }
             </div>
         );

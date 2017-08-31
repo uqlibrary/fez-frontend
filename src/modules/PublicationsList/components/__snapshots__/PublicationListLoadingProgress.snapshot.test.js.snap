@@ -16,7 +16,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       <div
         className="searchDashboardList"
       >
-        World of science
+        Web of science
         <span
           className="is-pulled-right"
         >
@@ -90,12 +90,12 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       <div
         className="searchDashboardList"
       >
-        World of science
+        Web of science
         <span
           className="is-pulled-right"
         >
           <CircularProgress
-            aria-label="World of science loading"
+            aria-label="Web of science loading"
             max={100}
             min={0}
             mode="indeterminate"
@@ -180,7 +180,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       <div
         className="searchDashboardList"
       >
-        World of science
+        Web of science
         <span
           className="is-pulled-right"
         >
