@@ -70,7 +70,8 @@ export default class ClaimPublication extends React.Component {
                 handleAction: this._confirmHidePublication
             }
         ];
-        const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
+        const loadingData = this.props.authorLoading || (this.props.author && (this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts));
+        console.log(this.props);
         return (
             <StandardPage title={txt.title}>
                 {
