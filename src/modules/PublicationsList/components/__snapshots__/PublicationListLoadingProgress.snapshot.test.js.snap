@@ -5,11 +5,6 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
   <div
     className="searchDashboardDesktop"
   >
-    <h3
-      className="title is-5"
-    >
-      Repository search
-    </h3>
     <div
       className="body-2"
     >
@@ -79,11 +74,6 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
   <div
     className="searchDashboardDesktop"
   >
-    <h3
-      className="title is-5"
-    >
-      Repository search
-    </h3>
     <div
       className="body-2"
     >
@@ -169,11 +159,6 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
   <div
     className="searchDashboardDesktop"
   >
-    <h3
-      className="title is-5"
-    >
-      Repository search
-    </h3>
     <div
       className="body-2"
     >

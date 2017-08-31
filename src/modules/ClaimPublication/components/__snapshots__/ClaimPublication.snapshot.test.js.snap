@@ -20,13 +20,7 @@ exports[`ClaimPublication test renders empty list 1`] = `
   </StandardCard>
   <div
     className="columns"
-  >
-    <div
-      className="column is-3 is-hidden-mobile"
-    >
-      <FacetsFilter />
-    </div>
-  </div>
+  />
 </StandardPage>
 `;
 
@@ -1996,11 +1990,6 @@ exports[`ClaimPublication test renders list of publications and counts 1`] = `
         />
       </StandardCard>
     </div>
-    <div
-      className="column is-3 is-hidden-mobile"
-    >
-      <FacetsFilter />
-    </div>
   </div>
 </StandardPage>
 `;
@@ -2059,12 +2048,6 @@ exports[`ClaimPublication test renders no results 1`] = `
   </StandardCard>
   <div
     className="columns"
-  >
-    <div
-      className="column is-3 is-hidden-mobile"
-    >
-      <FacetsFilter />
-    </div>
-  </div>
+  />
 </StandardPage>
 `;
