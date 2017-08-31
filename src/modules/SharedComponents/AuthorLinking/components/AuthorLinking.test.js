@@ -101,4 +101,18 @@ describe('AuthorLinking', () => {
 
         expect(preparedOutput).toEqual([{ aut_id: 410, aut_id_order: 6}, { aut_id: 123, aut_id_order: 8 }]);
     });
+
+    it('should transform prepared output', () => {
+        const component = setup({ linkedAuthorIdList: [{ rek_author_id: 0, rek_author_id_order: 6 }, { rek_author_id: 123, rek_author_id_order: 8}]});
+        const preparedOutput = component.prepareOutput({
+            selectedAuthor: {
+                "rek_author_id": null,
+                "rek_author_pid": "UQ:654776",
+                "rek_author": "La Gruta, Nicole L.",
+                "rek_author_order": 6
+            }});
+
+        const transformedOutput = component.transformOutput(preparedOutput);
+        expect(transformedOutput).toEqual([{ rek_author_id: 410, rek_author_id_order: 6}, { rek_author_id: 123, rek_author_id_order: 8 }]);
+    });
 });
