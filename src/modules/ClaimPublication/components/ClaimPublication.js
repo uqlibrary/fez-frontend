@@ -71,7 +71,6 @@ export default class ClaimPublication extends React.Component {
             }
         ];
         const loadingData = this.props.authorLoading || (this.props.author && (this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts));
-        console.log(this.props);
         return (
             <StandardPage title={txt.title}>
                 {
