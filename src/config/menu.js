@@ -10,7 +10,7 @@ export const researcherMenuItems = (locale, email, components) => [
         linkTo: '/research',
         path: '/research',
         primaryText: locale.menu.myResearch.primaryText,
-        render: () => components.Research(locale.pages.research)
+        render: components.Research
     },
     {
         linkTo: '/add-record',

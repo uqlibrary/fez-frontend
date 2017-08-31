@@ -19,7 +19,7 @@ export default {
         sources: {
             wos: {
                 id: 'wos',
-                title: 'World of science',
+                title: 'Web of science',
                 priority: 0,
                 icon: '../../../images/wos_icon.svg'
             },
@@ -223,9 +223,8 @@ export default {
                 buttonLabel: 'OK'
             }
         },
-        research: {
+        myResearch: {
             title: 'My research',
-            text: ( <div><p>all your publications....</p></div>),
             help: {
                 title: 'My research help',
                 text: (
@@ -234,7 +233,25 @@ export default {
                     </div>
                 ),
                 buttonLabel: 'OK'
-            }
+            },
+            loadingMessage: 'Searching for your publications...',
+            noResultsFound: {
+                title: 'No publications found',
+                text: (
+                    <div>
+                        We were unable to find any results. Please, check if there are any possibly your publications
+                        via <a href="#claim-publications">claim possible publications</a> or <a href="#add-record">add a
+                        missing publication</a>
+                    </div>
+                ),
+            },
+            text: (
+                <div>
+                    <div>Your research...</div>
+                    <div>Please, check if there are any possibly your publications via <a href="#claim-publications">claim
+                        possible publications</a> or <a href="#add-record">add a missing publication</a></div>
+                </div>
+            ),
         },
         addRecord: {
             title: 'Add a missing record to eSpace',
@@ -281,7 +298,7 @@ export default {
                         repositories: [
                             {
                                 id: 'wos',
-                                title: 'World of science',
+                                title: 'Web of science',
                                 icon: '../../../images/wos_icon.svg'
                             },
                             {
@@ -357,7 +374,7 @@ export default {
     components: {
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',
-            publicationStatsTitle2: 'World of science',
+            publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
             publicationStatsRowTitle1: 'h-index',
