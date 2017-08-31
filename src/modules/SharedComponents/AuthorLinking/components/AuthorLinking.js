@@ -7,11 +7,9 @@ export default class AuthorLinking extends React.Component {
     static propTypes = {
         searchKey: PropTypes.object.isRequired,
         authorList: PropTypes.array,
+        linkedAuthorIdList: PropTypes.array,
         author: PropTypes.object,
         locale: PropTypes.object,
-        linkedAuthorIdList: PropTypes.array,
-        resetSelectedAuthor: PropTypes.func,
-        selectedAuthorId: PropTypes.number,
         className: PropTypes.string,
         onChange: PropTypes.func,
         disabled: PropTypes.bool
@@ -48,15 +46,28 @@ export default class AuthorLinking extends React.Component {
      * @returns {[*]}
      */
     prepareOutput = (nextState) => {
+        let selectedAuthorAdded = false;
+        let linkedAuthorList = [];
         const selectedAuthorId = { aut_id: this.props.author.aut_id, aut_id_order: nextState.selectedAuthor.rek_author_order };
 
-        return this.props.linkedAuthorIdList.length > 0 ? this.props.linkedAuthorIdList.map((authorId) => {
-            if (authorId.rek_author_id_order === nextState.selectedAuthor.rek_author_order) {
-                return selectedAuthorId;
-            } else {
-                return { aut_id: authorId.rek_author_id, aut_id_order: authorId.rek_author_id_order };
+        if (this.props.linkedAuthorIdList.length === 0) {
+            linkedAuthorList = [selectedAuthorId];
+        } else {
+            linkedAuthorList = this.props.linkedAuthorIdList.map((authorId) => {
+                if (authorId.rek_author_id_order === nextState.selectedAuthor.rek_author_order) {
+                    selectedAuthorAdded = true;
+                    return selectedAuthorId;
+                } else {
+                    return {aut_id: authorId.rek_author_id, aut_id_order: authorId.rek_author_id_order};
+                }
+            });
+
+            if (!selectedAuthorAdded) {
+                linkedAuthorList.push(selectedAuthorId);
             }
-        }) : [selectedAuthorId];
+        }
+
+        return linkedAuthorList.sort((a, b) => (a.aut_id_order - b.aut_id_order));
     };
 
     /**
@@ -76,10 +87,10 @@ export default class AuthorLinking extends React.Component {
      *
      * @returns {Array}
      */
-    getUnlinkedAuthors = () => {
+    getLinkedAuthors = () => {
         if (this.props.linkedAuthorIdList.length > 0) {
             return this.props.linkedAuthorIdList.filter((linkedAuthor) => {
-                return linkedAuthor.rek_author_id === 0;
+                return linkedAuthor.hasOwnProperty('rek_author_id') && linkedAuthor.rek_author_id > 0;
             });
         }
 
@@ -87,25 +98,14 @@ export default class AuthorLinking extends React.Component {
     };
 
     /**
-     * Check if given author found in unlinked authors by author order
+     * Check if author is already linked
      *
      * @param author
-     * @param unlinkedAuthors
+     * @param linkedAuthors
      * @returns {boolean}
      */
-    isAuthorFoundInUnlinkedAuthorIdList = (author, unlinkedAuthors) => {
-        return unlinkedAuthors.filter(unlinkedAuthor => unlinkedAuthor.rek_author_id_order === author.rek_author_order).length > 0;
-    };
-
-    /**
-     * Check if given author is unlinked
-     *
-     * @param author
-     * @param unlinkedAuthors
-     * @returns {boolean}
-     */
-    isAuthorUnlinked = (author, unlinkedAuthors) => {
-        return unlinkedAuthors.length === 0 || this.isAuthorFoundInUnlinkedAuthorIdList(author, unlinkedAuthors);
+    isAuthorLinked = (author, linkedAuthors) => {
+        return linkedAuthors.length > 0 && linkedAuthors.filter(linkedAuthor => linkedAuthor.rek_author_id_order === author.rek_author_order).length > 0;
     };
 
     /**
@@ -113,12 +113,12 @@ export default class AuthorLinking extends React.Component {
      */
     buildAuthorList = () => {
         const {authorList} = this.props;
-        const unlinkedAuthors = this.getUnlinkedAuthors();
+        const linkedAuthors = this.getLinkedAuthors();
 
         return authorList.map((author, index) => {
-            const unlinked = this.isAuthorUnlinked(author, unlinkedAuthors);
+            const linked = this.isAuthorLinked(author, linkedAuthors);
             const selected = this.state.selectedAuthor ? author.rek_author_order === this.state.selectedAuthor.rek_author_order : false;
-            return (<AuthorItem index={index} key={index} author={author} unlinked={unlinked} selected={selected} onAuthorSelect={ this._selectAuthor } disabled={ this.props.disabled } />);
+            return (<AuthorItem index={index} key={index} author={author} unlinked={!linked} selected={selected} onAuthorSelect={ this._selectAuthor } disabled={ this.props.disabled } />);
         });
     };
 
