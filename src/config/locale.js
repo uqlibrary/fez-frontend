@@ -351,18 +351,20 @@ export default {
                 confirmationMessage: 'Are you sure you want to hide all possibly your publications from this view?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
+            },
+            facetsfilter: {
+                title: 'Refine results',
+                help: {
+                    title: 'Refining your results',
+                    text: 'Help about ....',
+                    buttonLabel: 'Ok'
+                }
             }
         }
     },
     components: {
         facetsFilter: {
-            title: 'Refine results',
-            keywordHintText: 'Enter a keyword',
-            help: {
-                title: 'How to refine your results',
-                text: '...',
-                buttonLabel: 'OK'
-            }
+            resetButtonText: 'Reset'
         },
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',

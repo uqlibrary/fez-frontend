@@ -1,13 +1,11 @@
 import React from 'react';
-import {HelpIcon} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/RaisedButton';
 
 class FacetsFilter extends React.Component {
     static propTypes = {
-        facetsData: PropTypes.object,
-        loadingFacetsData: PropTypes.bool,
+        facetsData: PropTypes.object
     };
 
     constructor(props) {
@@ -26,7 +24,8 @@ class FacetsFilter extends React.Component {
     // This handles when you click on a facet
     handleActiveLinkClick(e) {
         e.preventDefault();
-
+        // If we clock with a mouse, and not keyboard, remove the :focus
+        if(e.type === 'click') { e.target.blur(); }
         const activeFacets = {...this.state.activeFacets};
         const facet = e.target.dataset.facet;
         const category = e.target.dataset.category;
@@ -40,7 +39,7 @@ class FacetsFilter extends React.Component {
                     delete activeFacets[category];
                 }
             } else {
-                activeFacets[category].push(facet);
+                activeFacets[category] = [facet];
             }
         } else {
             activeFacets[category] = [facet];
@@ -60,6 +59,8 @@ class FacetsFilter extends React.Component {
     // This just handles the accordion css style showing the facets list on a click
     handleActiveCategoryClick(e) {
         e.preventDefault();
+        // If we clock with a mouse, and not keyboard, remove the :focus
+        if(e.type === 'click') { e.target.blur(); }
 
         const activeCategories = {...this.state.activeCategories};
         const category = e.target.dataset.category;
@@ -93,13 +94,9 @@ class FacetsFilter extends React.Component {
         const aggregations = [];
         const facetsData = this.props.facetsData;
 
-        // if (!facetsData) return (<div />); why?
-
         Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 && facetsData[key].buckets.length !== 0).forEach(key => {
             const o = facetsData[key];
-            // Assign a lookup key
             const lookupItem = facetsData[`${key} (lookup)`] || o;
-            // Push the new data into a new object
             aggregations.push({
                 aggregation: key,
                 display_name: o.display_name,
@@ -110,34 +107,24 @@ class FacetsFilter extends React.Component {
             });
         });
 
-        const sortedAggregations = aggregations.sort((a, b) => {
-            return a.doc_count > b.doc_count ? -1 : 1;
-        });
+        // TODO: Do we sort the list?
+        // const sortedAggregations = aggregations.sort((a, b) => {
+        //     return a > b ? -1 : 1;
+        // });
 
         return (
             <div className="facetsFilter">
-                <div
-                    className="columns is-gapless is-marginless is-paddingless facetsTitle">
-                    <div className="column">
-                        <h3 className="title is-5">{txt.title}</h3>
-                    </div>
-                    <div className="column is-narrow is-helpicon">
-                        <HelpIcon
-                            title={txt.help.title}
-                            text={txt.help.text}
-                            buttonLabel={txt.help.button}
-                        />
-                    </div>
-                </div>
                 <div className="facetsList body-2">
-                    {sortedAggregations.map((item, index) => (
+                    {aggregations.map((item, index) => (
                         <div key={index}>
                             <div className="facetsCategory">
-                                <div className="facetsCategoryTitle"
-                                    data-category={item.aggregation}
-                                    tabIndex="0"
-                                    onClick={this.handleActiveCategoryClick}
-                                    onKeyPress={this.handleActiveCategoryClick}>
+                                <div className={this.state.activeCategories[item.aggregation] &&
+                                    this.state.activeCategories[item.aggregation].includes('active') ?
+                                    'facetsCategoryTitle active' : 'facetsCategoryTitle'}
+                                data-category={item.aggregation}
+                                tabIndex="0"
+                                onClick={this.handleActiveCategoryClick}
+                                onKeyPress={this.handleActiveCategoryClick}>
                                     {item.aggregation}
                                 </div>
                                 <div
@@ -147,12 +134,10 @@ class FacetsFilter extends React.Component {
                                     {item.facets.map((subitem, subindex) => (
                                         <div key={subindex}
                                             tabIndex={this.state.activeCategories[item.aggregation] ? 0 : -1}
-                                            className={this.state.activeFacets[item.aggregation] &&
-                                             this.state.activeFacets[item.aggregation].includes('' +
-                                                 subitem.key)
-                                                ? 'facetListItems active'
-                                                : 'facetListItems'}
-                                            id="test"
+                                            className={
+                                                !this.state.activeFacets[item.aggregation] && 'facetListItems' ||
+                                                this.state.activeFacets[item.aggregation] && !this.state.activeFacets[item.aggregation].includes('' + subitem.key) && 'facetListItems inactive' ||
+                                                this.state.activeFacets[item.aggregation] && this.state.activeFacets[item.aggregation].includes('' + subitem.key) && 'facetListItems active'}
                                             onClick={this.handleActiveLinkClick}
                                             onKeyPress={this.handleActiveLinkClick}
                                             data-facet={subitem.key}
@@ -164,21 +149,26 @@ class FacetsFilter extends React.Component {
                             </div>
                         </div>
                     ))}
-                    <div>
-                        <FlatButton
-                            className="is-pulled-right"
-                            label="Clear all"
-                            onClick={this.handleClearAllClick}/>
+                    <div className="columns">
+                        <div className="column is-hidden-mobile" />
+                        <div className="column is-narrow">
+                            <FlatButton
+                                fullWidth
+                                label={txt.resetButtonText}
+                                onClick={this.handleClearAllClick}/>
+                        </div>
                     </div>
+
+
                 </div>
                 {/* Just for testing purposes */}
-                {window.location.href.indexOf('localhost') >= 1 &&
-                <div style={{marginTop: 100}}>
-                    Active Facets:<br />{JSON.stringify(this.state.activeFacets)}
-                    <br /><br />
-                    Active Categories:<br />{JSON.stringify(this.state.activeCategories)}
-                </div>
-                }
+                {/* {window.location.href.indexOf('localhost') >= 1 &&*/}
+                {/* <div style={{marginTop: 100}}>*/}
+                {/* Active Facets:<br />{JSON.stringify(this.state.activeFacets)}*/}
+                {/* <br /><br />*/}
+                {/* Active Categories:<br />{JSON.stringify(this.state.activeCategories)}*/}
+                {/* </div>*/}
+                {/* }*/}
             </div>
         );
     }

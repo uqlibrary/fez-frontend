@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // forms & custom components
 import {PublicationsList} from 'modules/PublicationsList';
 import {FacetsFilter} from 'modules/FacetsFilter';
-import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 
 import {locale} from 'config';
 
@@ -120,11 +120,11 @@ export default class ClaimPublication extends React.Component {
                         </div>
                     }
                     {
-                        !loadingData && !this.props.loadingFacetsData &&
+                        !loadingData && this.props.facetsData &&
                         <div className="column is-3 is-hidden-mobile">
-                            <FacetsFilter
-                                facetsData={this.props.facetsData}
-                                loadingFacetsData={this.props.loadingFacetsData}/>
+                            <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
+                                <FacetsFilter facetsData={this.props.facetsData} />
+                            </StandardRighthandCard>
                         </div>
                     }
                 </div>

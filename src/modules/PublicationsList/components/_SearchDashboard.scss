@@ -5,16 +5,9 @@ div.searchWrapper.columns {
     margin: 0 auto;
 }
 .searchDashboardDesktop {
-  padding: 24px 24px 0 0;
   min-width: 140px;
   .searchDashboardList {
     margin: 6px 0;
-  }
-  h3.title {
-    color: $theme-color;
-    margin-bottom: 12px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
   }
 }
 
