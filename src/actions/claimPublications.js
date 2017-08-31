@@ -44,9 +44,9 @@ export function countPossiblyYourPublications(authorUsername) {
                 payload: response.data
             });
         }).catch((error) => {
-            console.log(error);
             dispatch({
-                type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
+                type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
+                payload: error
             });
         });
     };

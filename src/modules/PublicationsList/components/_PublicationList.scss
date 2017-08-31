@@ -1,94 +1,106 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
+
 .publicationsList {
+
   margin-top: 24px;
+
+  .publicationCitation {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    padding: 6px 0;
+
+    .publicationSources {
+      font-size: 12px;
+
+      .publicationSource {
+        &:after {
+          content: ', ';
+        }
+        &:last-of-type:after {
+          content: '';
+        }
+      }
+    }
+
+    &:first-child {
+      padding-top: 18px;
+      border-top: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .publicationTitle {
+      margin-bottom: 6px;
+    }
+
+    .citationContent {
+      font-size: 12px;
+      line-height: 16px;
+      color: rgba($text-color, 0.88);
+
+      .citationAuthors {
+        .citationAuthor {
+        }
+      }
+
+      .citationPublisher {
+      }
+
+      .citationTitle {
+      }
+
+      .citationJournalName {
+        font-style: italic;
+      }
+      .citationVolumeNumber {
+        font-style: italic;
+      }
+
+      .citationIssueNumber {
+      }
+
+      .citationStartPage {
+      }
+
+      .citationEndPage {
+      }
+
+      .citationDOI {
+      }
+
+      .citationIcon {
+        font-size: 12px !important;
+      }
+    }
+
+    .citationCounts {
+      .citationCount {
+        .citationCountIcon {
+          width: 1em;
+          height: 1em;
+          filter: grayscale(1);
+        }
+
+        .citationCountNumber {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .publicationActions {
+        margin-top: 12px;
+        text-align: right;
+      }
+    }
+  }
+
 }
-.publicationCitation {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 12px;
-  padding: 6px 0;
 
-  .publicationSources {
-    font-size: 12px;
+.publicationsListPaging {
 
-    .publicationSource {
-      &:after {
-        content: ', ';
-      }
-      &:last-of-type:after {
-        content: '';
-      }
-    }
+  .page.selectedPage {
+    background-color: $theme-color !important;
+    color: $text-color-reverse !important;
   }
 
-  &:first-child {
-    padding-top: 18px;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
-  }
-
-  .publicationTitle {
-    margin-bottom: 6px;
-  }
-
-  .citationContent {
-    font-size: 12px;
-    line-height: 16px;
-    color: rgba($text-color, 0.88);
-
-    .citationAuthors {
-      .citationAuthor {
-      }
-    }
-
-    .citationPublisher {
-    }
-
-    .citationTitle {
-    }
-
-    .citationJournalName {
-      font-style: italic;
-    }
-    .citationVolumeNumber {
-      font-style: italic;
-    }
-
-    .citationIssueNumber {
-    }
-
-    .citationStartPage {
-    }
-
-    .citationEndPage {
-    }
-
-    .citationDOI {
-    }
-
-    .citationIcon {
-      font-size: 12px !important;
-    }
-  }
-
-  .citationCounts {
-    .citationCount {
-      .citationCountIcon {
-        width: 1em;
-        height: 1em;
-        filter: grayscale(1);
-      }
-
-      .citationCountNumber {
-        margin: 0 10px;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .publicationActions {
-      margin-top: 12px;
-      text-align: right;
-    }
-  }
 }
-
 

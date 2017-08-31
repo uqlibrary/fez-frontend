@@ -1038,6 +1038,15 @@ export default {
                 }
             }
         },
+        paging: {
+            nextPage: 'Next page',
+            previousPage: 'Previous page',
+            maxPagesToShow: 5,
+            pageSize: 'Records per page'
+        },
+        sorting: {
+
+        }
     },
     validationErrors: {
         publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',

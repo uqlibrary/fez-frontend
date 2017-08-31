@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {StandardPage, StandardCard, InlineLoader} from 'uqlibrary-react-toolbox';
-import {PublicationsList} from 'modules/PublicationsList';
+import {PublicationsList, PublicationsListPaging, PublicationsListSorting} from 'modules/PublicationsList';
 import {locale} from 'config';
 
 export default class Research extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
         loadingPublicationsList: PropTypes.bool,
+        publicationsListPagingData: PropTypes.object,
         author: PropTypes.object,
         authorLoading: PropTypes.bool,
         history: PropTypes.object.isRequired,
@@ -46,7 +47,10 @@ export default class Research extends React.Component {
                         <div className="column is-9-desktop is-8-tablet is-12-mobile">
                             <StandardCard {...txt.searchResults}>
                                 <div>{txt.text}</div>
+                                <PublicationsListSorting sortingData={{}} />
+                                <PublicationsListPaging pagingData={this.props.publicationsListPagingData} />
                                 <PublicationsList publicationsList={this.props.publicationsList} showDefaultActions/>
+                                <PublicationsListPaging pagingData={this.props.publicationsListPagingData} />
                             </StandardCard>
                         </div>
                         <div className="column is-3-desktop is-4-tablet is-hidden-mobile">

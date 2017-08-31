@@ -7,6 +7,11 @@ export const LATEST_PUBLICATIONS_LOADING = 'LATEST_PUBLICATIONS_LOADING';
 export const LATEST_PUBLICATIONS_COMPLETED = 'LATEST_PUBLICATIONS_COMPLETED';
 export const LATEST_PUBLICATIONS_FAILED = 'LATEST_PUBLICATIONS_FAILED';
 
+export const AUTHOR_PUBLICATIONS_LOADING = 'AUTHOR_PUBLICATIONS_LOADING';
+export const AUTHOR_PUBLICATIONS_COMPLETED = 'AUTHOR_PUBLICATIONS_COMPLETED';
+export const AUTHOR_PUBLICATIONS_PAGING_COMPLETED = 'AUTHOR_PUBLICATIONS_PAGING_COMPLETED';
+export const AUTHOR_PUBLICATIONS_FAILED = 'AUTHOR_PUBLICATIONS_FAILED';
+
 export const TRENDING_PUBLICATIONS_LOADING = 'TRENDING_PUBLICATIONS_LOADING';
 export const TRENDING_PUBLICATIONS_COMPLETED = 'TRENDING_PUBLICATIONS_COMPLETED';
 export const TRENDING_PUBLICATIONS_FAILED = 'TRENDING_PUBLICATIONS_FAILED';
@@ -29,6 +34,28 @@ export function searchLatestPublications(authorUsername) {
             dispatch({
                 type: LATEST_PUBLICATIONS_FAILED,
                 payload: []
+            });
+        });
+    };
+}
+
+/**
+ * Get author's publications
+ * @param {string} author user name
+ * @returns {action}
+ */
+export function authorPublications(authorUsername, page, sorting) {
+    return dispatch => {
+        dispatch({type: AUTHOR_PUBLICATIONS_LOADING});
+        getLatestPublications(authorUsername, page, sorting).then(response => {
+            dispatch({
+                type: AUTHOR_PUBLICATIONS_COMPLETED,
+                payload: response
+            });
+        }).catch((error) => {
+            dispatch({
+                type: AUTHOR_PUBLICATIONS_FAILED,
+                payload: error
             });
         });
     };
