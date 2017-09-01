@@ -9,8 +9,8 @@ export default class Research extends React.Component {
         publicationsList: PropTypes.array,
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
-        author: PropTypes.object,
-        authorLoading: PropTypes.bool,
+        account: PropTypes.object,
+        accountLoading: PropTypes.bool,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object
     };
@@ -20,7 +20,17 @@ export default class Research extends React.Component {
     }
 
     componentDidMount() {
+        if (this.props.account && this.props.account.id) {
+            this.props.actions.searchAuthorPublications({userName: this.props.account.id});
+        }
+    }
 
+    pageSizeChanged = (pageSize) => {
+        this.props.actions.searchAuthorPublications({userName: this.props.account.id, pageSize: pageSize});
+    }
+
+    pageChanged = (page, pageSize) => {
+        this.props.actions.searchAuthorPublications({userName: this.props.account.id, page: page, pageSize: pageSize});
     }
 
     render() {
@@ -48,9 +58,15 @@ export default class Research extends React.Component {
                             <StandardCard {...txt.searchResults}>
                                 <div>{txt.text}</div>
                                 <PublicationsListSorting sortingData={{}} />
-                                <PublicationsListPaging pagingData={this.props.publicationsListPagingData} />
+                                <PublicationsListPaging
+                                    pagingData={this.props.publicationsListPagingData}
+                                    onPageSizeChanged={this.pageSizeChanged}
+                                    onPageChanged={this.pageChanged}/>
                                 <PublicationsList publicationsList={this.props.publicationsList} showDefaultActions/>
-                                <PublicationsListPaging pagingData={this.props.publicationsListPagingData} />
+                                <PublicationsListPaging
+                                    pagingData={this.props.publicationsListPagingData}
+                                    onPageSizeChanged={this.pageSizeChanged}
+                                    onPageChanged={this.pageChanged}/>
                             </StandardCard>
                         </div>
                         <div className="column is-3-desktop is-4-tablet is-hidden-mobile">

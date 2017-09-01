@@ -21,11 +21,11 @@ export const TRENDING_PUBLICATIONS_FAILED = 'TRENDING_PUBLICATIONS_FAILED';
  * @param {string} author user name
  * @returns {action}
  */
-export function searchLatestPublications(authorUsername) {
+export function searchLatestPublications(userName) {
     return dispatch => {
         dispatch({type: LATEST_PUBLICATIONS_LOADING});
         // TODO: try some authors who are students - org username or student name to use?
-        getLatestPublications(authorUsername).then(response => {
+        getLatestPublications({userName: userName, pageSize: 5}).then(response => {
             dispatch({
                 type: LATEST_PUBLICATIONS_COMPLETED,
                 payload: response
@@ -44,10 +44,10 @@ export function searchLatestPublications(authorUsername) {
  * @param {string} author user name
  * @returns {action}
  */
-export function authorPublications(authorUsername, page, sorting) {
+export function searchAuthorPublications({userName, page = 1, pageSize = 20}) {
     return dispatch => {
         dispatch({type: AUTHOR_PUBLICATIONS_LOADING});
-        getLatestPublications(authorUsername, page, sorting).then(response => {
+        getLatestPublications({userName: userName, page: page, pageSize: pageSize}).then(response => {
             dispatch({
                 type: AUTHOR_PUBLICATIONS_COMPLETED,
                 payload: response

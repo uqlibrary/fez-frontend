@@ -22,8 +22,8 @@ export function getPossibleUnclaimedPublications(userName) {
  * @param {count} number of items to be returned
  * @returns {Promise}
  */
-export function getLatestPublications(userName, count = 5) {
-    return get(`${GET_USER_PUBLICATIONS_API}/${userName}?per_page=${count}&sort=published_date&order_by=desc`);
+export function getLatestPublications({userName, page = 1, pageSize = 20}) {
+    return get(`${GET_USER_PUBLICATIONS_API}/${userName}?page=${page}&per_page=${pageSize}&sort=published_date&order_by=desc`);
 }
 
 /**

@@ -21,12 +21,12 @@ export default class PublicationsListPaging extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pageSize: 20
+            pageSize: this.props.pagingData ? this.props.pagingData.per_page : 20
         };
     }
 
     pageChanged = (newPage) => {
-        if (this.props.onPageChanged) this.props.onPageChanged(newPage);
+        if (this.props.onPageChanged) this.props.onPageChanged(newPage, this.state.pageSize);
     }
 
     pageSizeChanged = (event, index, value) => {
