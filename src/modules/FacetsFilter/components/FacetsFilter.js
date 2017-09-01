@@ -5,7 +5,8 @@ import FlatButton from 'material-ui/RaisedButton';
 
 class FacetsFilter extends React.Component {
     static propTypes = {
-        facetsData: PropTypes.object
+        facetsData: PropTypes.object,
+        facetsFunction: PropTypes.func
     };
 
     constructor(props) {
@@ -20,6 +21,8 @@ class FacetsFilter extends React.Component {
         this.handleActiveCategoryClick = this.handleActiveCategoryClick.bind(this);
         this.handleClearAllClick = this.handleClearAllClick.bind(this);
     }
+
+    // TODO: Add a lifecycle function to remove any activeFacets from the this.state when/if we receive new facetsData
 
     // This handles when you click on a facet
     handleActiveLinkClick(e) {
@@ -47,13 +50,10 @@ class FacetsFilter extends React.Component {
 
         this.setState({
             activeFacets: activeFacets,
-        }, () => {
-            console.log('Current state of activeFacets: ' +
-                JSON.stringify(this.state.activeFacets));
         });
 
-        // Below is example of dispatching the new data to the API to re-render
-        // this.props.actions.searchAuthors(newValue, (item) => { return !!item.aut_org_username; });
+        // TODO: Pass this.state.activeFacets to the parent function _facetsChanged
+        this.props.facetsFunction(activeFacets);
     }
 
     // This just handles the accordion css style showing the facets list on a click
@@ -90,11 +90,12 @@ class FacetsFilter extends React.Component {
 
     render() {
         const txt = locale.components.facetsFilter;
-
         const aggregations = [];
         const facetsData = this.props.facetsData;
+        // TODO: Add a prop to filter categories out completely selectively
 
-        Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 && facetsData[key].buckets.length !== 0).forEach(key => {
+        Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 &&
+            facetsData[key].buckets.length !== 0).forEach(key => {
             const o = facetsData[key];
             const lookupItem = facetsData[`${key} (lookup)`] || o;
             aggregations.push({
@@ -158,15 +159,11 @@ class FacetsFilter extends React.Component {
                                 onClick={this.handleClearAllClick}/>
                         </div>
                     </div>
-
-
                 </div>
                 {/* Just for testing purposes */}
                 {/* {window.location.href.indexOf('localhost') >= 1 &&*/}
                 {/* <div style={{marginTop: 100}}>*/}
-                {/* Active Facets:<br />{JSON.stringify(this.state.activeFacets)}*/}
-                {/* <br /><br />*/}
-                {/* Active Categories:<br />{JSON.stringify(this.state.activeCategories)}*/}
+                {/* Active Facets:{JSON.stringify(this.state.activeFacets)}*/}
                 {/* </div>*/}
                 {/* }*/}
             </div>

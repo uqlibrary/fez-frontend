@@ -17,6 +17,7 @@ export default class ClaimPublication extends React.Component {
         authorLoading: PropTypes.bool,
 
         facetsData: PropTypes.object,
+        activeFacets: PropTypes.object,
         loadingFacetsData: PropTypes.bool,
 
         possibleCounts: PropTypes.object,
@@ -32,14 +33,17 @@ export default class ClaimPublication extends React.Component {
         this.state = {
             publicationToHide: null
         };
+        this._facetsChanged = this._facetsChanged.bind(this);
     }
 
+    // Runs on first render
     componentDidMount() {
         if (this.props.author) {
             this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username);
         }
     }
 
+    // Runs anytime props change (or other random times)
     componentWillReceiveProps(nextProps) {
         if (nextProps.author && (!this.props.author || nextProps.author.aut_org_username !== this.props.author.aut_org_username)) {
             // wait until props are updated and current author is set to get their possible publications
@@ -63,6 +67,10 @@ export default class ClaimPublication extends React.Component {
     _claimPublication = (item) => {
         this.props.history.push('/claim-publication-form');
         this.props.actions.setClaimPublication(item);
+    }
+
+    _facetsChanged = (activeFacets) => {
+        console.log('Active Facets passed via function: ' + JSON.stringify(activeFacets));
     }
 
     render() {
@@ -123,7 +131,7 @@ export default class ClaimPublication extends React.Component {
                         !loadingData && this.props.facetsData &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
-                                <FacetsFilter facetsData={this.props.facetsData} />
+                                <FacetsFilter facetsData={this.props.facetsData} facetsFunction={this._facetsChanged} />
                             </StandardRighthandCard>
                         </div>
                     }
