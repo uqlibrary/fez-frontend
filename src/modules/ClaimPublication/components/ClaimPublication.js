@@ -70,7 +70,7 @@ export default class ClaimPublication extends React.Component {
     }
 
     _facetsChanged = (activeFacets) => {
-        console.log('Active Facets passed via function: ' + JSON.stringify(activeFacets));
+        console.log('Active Facets passed via function into ClaimPublications: ' + JSON.stringify(activeFacets));
     }
 
     render() {
@@ -131,7 +131,7 @@ export default class ClaimPublication extends React.Component {
                         !loadingData && this.props.facetsData &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
-                                <FacetsFilter facetsData={this.props.facetsData} facetsFunction={this._facetsChanged} />
+                                <FacetsFilter facetsData={this.props.facetsData} facetsFunction={this._facetsChanged} omitCategory="" />
                             </StandardRighthandCard>
                         </div>
                     }
