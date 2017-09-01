@@ -86,6 +86,7 @@ export default class ClaimPublication extends React.Component {
             }
         ];
         const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
+        const omitCategory = []; // List of facet categories to not show in the FacetsFilter
 
         console.log(this.props);
         return (
@@ -131,7 +132,9 @@ export default class ClaimPublication extends React.Component {
                         !loadingData && this.props.facetsData &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
-                                <FacetsFilter facetsData={this.props.facetsData} facetsFunction={this._facetsChanged} omitCategory="" />
+                                <FacetsFilter facetsData={this.props.facetsData}
+                                    facetsFunction={this._facetsChanged}
+                                    omitCategory={omitCategory} />
                             </StandardRighthandCard>
                         </div>
                     }
