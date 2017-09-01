@@ -36,14 +36,12 @@ export default class ClaimPublication extends React.Component {
         this._facetsChanged = this._facetsChanged.bind(this);
     }
 
-    // Runs on first render
     componentDidMount() {
         if (this.props.author) {
             this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username);
         }
     }
 
-    // Runs anytime props change (or other random times)
     componentWillReceiveProps(nextProps) {
         if (nextProps.author && (!this.props.author || nextProps.author.aut_org_username !== this.props.author.aut_org_username)) {
             // wait until props are updated and current author is set to get their possible publications

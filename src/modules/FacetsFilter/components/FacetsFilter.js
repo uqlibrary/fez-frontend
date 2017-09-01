@@ -133,7 +133,7 @@ class FacetsFilter extends React.Component {
                                 tabIndex="0"
                                 onClick={this.handleActiveCategoryClick}
                                 onKeyPress={this.handleActiveCategoryClick}>
-                                    {item.aggregation} <span style={{opacity: 0.5}}>({item.facets.length})</span>
+                                    {item.aggregation}
                                 </div>
                                 <div
                                     className={this.state.activeCategories[item.aggregation]
