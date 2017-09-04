@@ -73,7 +73,7 @@ export default class ClaimPublication extends React.Component {
     _facetsChanged = (activeFacets) => {
         // Translate the object from FacetsFilter into a query string to assign to facetsQueryString
         const queryString = Object.keys(activeFacets).map(key => {
-            return 'filters[' + encodeURIComponent(key) + ']=' + encodeURIComponent(activeFacets[key]);
+            return 'filters[' + key + ']=' + (activeFacets[key];
         }).join('&');
         const facetsQueryString = queryString !== '' ? '?' + queryString : '';
         this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, facetsQueryString);
@@ -134,16 +134,17 @@ export default class ClaimPublication extends React.Component {
                             </StandardCard>
                         </div>
                     }
-                    {/* {*/}
-                    {/* !loadingData && this.props.facetsData &&*/}
+                    {
+                        !loadingData && this.props.facetsData &&
                     <div className="column is-3 is-hidden-mobile">
                         <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
                             <FacetsFilter facetsData={this.props.facetsData}
                                 facetsFunction={this._facetsChanged}
+                                activeFacets={this.activeFacets}
                                 omitCategory={omitCategory} />
                         </StandardRighthandCard>
                     </div>
-                    {/*  } */}
+                    }
                 </div>
             </StandardPage>
         );

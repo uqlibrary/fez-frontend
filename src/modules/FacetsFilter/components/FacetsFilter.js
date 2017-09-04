@@ -7,11 +7,13 @@ class FacetsFilter extends React.Component {
     static propTypes = {
         facetsData: PropTypes.object,
         facetsFunction: PropTypes.func,
+        activeFacets: PropTypes.object,
         omitCategory: PropTypes.array
     };
 
     static defaultProps = {
         facetsData: {},
+        activeFacets: {},
         omitCategory: []
     };
 
