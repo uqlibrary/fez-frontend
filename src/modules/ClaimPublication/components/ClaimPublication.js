@@ -75,7 +75,7 @@ export default class ClaimPublication extends React.Component {
         }).join('&');
         const facetsQueryString = queryString !== '' ? '?' + queryString : '';
         // Call the action to reload the data with the facets added as a querystring
-        this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, facetsQueryString);
+        this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, facetsQueryString, activeFacets);
     };
 
     render() {

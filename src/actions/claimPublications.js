@@ -58,11 +58,11 @@ export function countPossiblyYourPublications(authorUsername) {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchPossiblyYourPublications(authorUsername, activeFacets) {
+export function searchPossiblyYourPublications(authorUsername, facetsQueryString, activeFacets) {
     return dispatch => {
         dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
         // TODO: try some authors who are students - org username or student name to use?
-        getPossibleUnclaimedPublications(authorUsername, activeFacets).then(response => {
+        getPossibleUnclaimedPublications(authorUsername, facetsQueryString).then(response => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                 payload: response.data,
