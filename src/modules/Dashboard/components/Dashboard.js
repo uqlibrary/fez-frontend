@@ -155,11 +155,11 @@ class Dashboard extends React.Component {
                 {/* render bar chart next to donut chart if publication stats not available */}
                 {
                     barChart && donutChart && !publicationStats &&
-                    <div className="columns is-mobile">
+                    <div className="columns">
                         <div className="column">
                             {barChart}
                         </div>
-                        <div className="column is-4 is-full-mobile">
+                        <div className="column is-4">
                             {donutChart}
                         </div>
                     </div>
