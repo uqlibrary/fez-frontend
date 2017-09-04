@@ -74,7 +74,7 @@ export default class ClaimPublication extends React.Component {
             return ('filters[facets][' + key + ']=' + activeFacets[key]);
         }).join('&');
         const facetsQueryString = queryString !== '' ? '?' + queryString : '';
-        // Call the action to reload the data with the facets added as a querystring
+        // Call the action to reload the data with the activeFacets added for the API query string
         this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, facetsQueryString, activeFacets);
     };
 
@@ -93,7 +93,7 @@ export default class ClaimPublication extends React.Component {
         const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
         const omitCategory = []; // List of facet categories to not show in the FacetsFilter
 
-        console.log('Active facets in ClaimPublications : ' + JSON.stringify(this.props.activeFacets));
+        console.log('Active facets in ClaimPublications component : ' + JSON.stringify(this.props.activeFacets));
         return (
             <StandardPage title={txt.title}>
                 {
@@ -106,7 +106,7 @@ export default class ClaimPublication extends React.Component {
                 {
                     loadingData &&
                     <div className="is-centered">
-                        <InlineLoader message={txt.loadingMessage} />
+                        <InlineLoader message={!this.props.activeFacets || this.props.activeFacets === {} ? txt.loadingMessage : txt.facetSearchMessage} /> {/* TODO: Just temp label for now */}
                     </div>
                 }
                 {

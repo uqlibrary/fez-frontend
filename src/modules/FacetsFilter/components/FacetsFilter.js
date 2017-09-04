@@ -135,7 +135,7 @@ class FacetsFilter extends React.Component {
                                         : 'facetLinksList'}>
                                     {item.facets.map((subitem, subindex) => (
                                         <div key={subindex}
-                                            tabIndex={activeFacets[item.aggregation] ? 0 : -1}
+                                            tabIndex={activeFacets[item.aggregation] || this.state.activeCategories[item.aggregation] ? 0 : -1}
                                             className={
                                                 !activeFacets[item.aggregation] && 'facetListItems' ||
                                                 activeFacets[item.aggregation] && !activeFacets[item.aggregation].includes(subitem.key) && 'facetListItems inactive' ||
