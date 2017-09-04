@@ -40,17 +40,13 @@ class FacetsFilter extends React.Component {
 
         if (activeFacets[category] !== undefined) {
             if (activeFacets[category].includes(facet)) {
-                activeFacets[category] = activeFacets[category].filter(item => {
-                    return item !== facet;
-                });
-                if (activeFacets[category].length === 0) {
-                    delete activeFacets[category];
-                }
+                delete activeFacets[category];
+                // }
             } else {
-                activeFacets[category] = [facet];
+                activeFacets[category] = facet;
             }
         } else {
-            activeFacets[category] = [facet];
+            activeFacets[category] = facet;
         }
 
         this.setState({

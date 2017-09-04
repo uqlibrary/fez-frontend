@@ -24,14 +24,17 @@ export default class ClaimPublication extends React.Component {
         loadingPossibleCounts: PropTypes.bool,
 
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+
+        facetsQueryString: PropTypes.string
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            publicationToHide: null
+            publicationToHide: null,
+            facetsQueryString: null
         };
         this._facetsChanged = this._facetsChanged.bind(this);
     }
@@ -68,8 +71,18 @@ export default class ClaimPublication extends React.Component {
     }
 
     _facetsChanged = (activeFacets) => {
-        console.log('Active Facets passed via function into ClaimPublications: ' + JSON.stringify(activeFacets));
-    }
+        // Translate the object into a query string
+        const test = JSON.stringify(activeFacets);
+        const test1 = test.replace(new RegExp('{"', ['g']), '?filters[facets][');
+        const test2 = test1.replace(new RegExp('":"', ['g']), ']=');
+        const test3 = test2.replace(new RegExp('","', ['g']), '&filters[facets][');
+        const facetsQueryString = test3.replace(new RegExp('"}', ['g']), '');
+        console.log('String to append to the API call: ' + facetsQueryString);
+        this.setState({facetsQueryString: facetsQueryString}, () => {
+            console.log('Current state : ' + JSON.stringify(this.state));
+            this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, this.state.facetsQueryString);
+        });
+    };
 
     render() {
         const txt = locale.pages.claimPublications;

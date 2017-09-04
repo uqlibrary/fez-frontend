@@ -7,7 +7,8 @@ export const initialState = {
     loadingPossiblePublicationsList: true,
     loadingPossibleCounts: true,
     facetsData: {},
-    loadingFacetsData: true
+    loadingFacetsData: true,
+    facetsQueryString: null
 };
 
 const handlers = {
