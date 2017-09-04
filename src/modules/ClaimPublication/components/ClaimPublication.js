@@ -71,17 +71,12 @@ export default class ClaimPublication extends React.Component {
     }
 
     _facetsChanged = (activeFacets) => {
-        // Translate the object into a query string
-        const test = JSON.stringify(activeFacets);
-        const test1 = test.replace(new RegExp('{"', ['g']), '?filters[facets][');
-        const test2 = test1.replace(new RegExp('":"', ['g']), ']=');
-        const test3 = test2.replace(new RegExp('","', ['g']), '&filters[facets][');
-        const facetsQueryString = test3.replace(new RegExp('"}', ['g']), '');
-        console.log('String to append to the API call: ' + facetsQueryString);
-        this.setState({facetsQueryString: facetsQueryString}, () => {
-            console.log('******* Current state : ' + JSON.stringify(this.state));
-            this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, this.state.facetsQueryString);
-        });
+        // Translate the object from FacetsFilter into a query string to assign to facetsQueryString
+        const queryString = Object.keys(activeFacets).map(key => {
+            return 'filters[' + encodeURIComponent(key) + ']=' + encodeURIComponent(activeFacets[key]);
+        }).join('&');
+        const facetsQueryString = queryString !== '' ? '?' + queryString : '';
+        this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, facetsQueryString);
     };
 
     render() {

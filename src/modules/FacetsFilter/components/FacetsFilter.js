@@ -164,11 +164,11 @@ class FacetsFilter extends React.Component {
                     </div>
                 </div>
                 {/* Just for testing purposes */}
-                {/* {window.location.href.indexOf('localhost') >= 1 &&*/}
-                {/* <div style={{marginTop: 100}}>*/}
-                {/* Active Facets:{JSON.stringify(this.state.activeFacets)}*/}
-                {/* </div>*/}
-                {/* }*/}
+                {window.location.href.indexOf('localhost') >= 1 &&
+                     <div style={{marginTop: 100}}>
+                     Active Facets:{JSON.stringify(this.state.activeFacets)}
+                     </div>
+                }
             </div>
         );
     }
