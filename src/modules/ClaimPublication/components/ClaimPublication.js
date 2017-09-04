@@ -79,7 +79,7 @@ export default class ClaimPublication extends React.Component {
         const facetsQueryString = test3.replace(new RegExp('"}', ['g']), '');
         console.log('String to append to the API call: ' + facetsQueryString);
         this.setState({facetsQueryString: facetsQueryString}, () => {
-            console.log('Current state : ' + JSON.stringify(this.state));
+            console.log('******* Current state : ' + JSON.stringify(this.state));
             this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, this.state.facetsQueryString);
         });
     };
