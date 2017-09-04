@@ -106,7 +106,7 @@ export default class ClaimPublication extends React.Component {
                 {
                     loadingData &&
                     <div className="is-centered">
-                        <InlineLoader message={!this.props.activeFacets || this.props.activeFacets === {} ? txt.loadingMessage : txt.facetSearchMessage} /> {/* TODO: Just temp label for now */}
+                        <InlineLoader message={!this.props.activeFacets ? txt.loadingMessage : txt.facetSearchMessage} />
                     </div>
                 }
                 {

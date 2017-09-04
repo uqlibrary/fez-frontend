@@ -320,7 +320,7 @@ export default {
         claimPublications: {
             title: 'Claim possible publications',
             loadingMessage: 'Searching for your publications...',
-            facetSearchMessage: 'Applying your search facets',
+            facetSearchMessage: 'Applying your search facets...',
             noResultsFound: {
                 title: 'No matching publications found',
                 text: 'No publications were automatically matched for you to claim.',

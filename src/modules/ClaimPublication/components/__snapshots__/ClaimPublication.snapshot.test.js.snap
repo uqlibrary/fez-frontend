@@ -2004,7 +2004,6 @@ exports[`ClaimPublication test renders loading screen while loading author data 
     <InlineLoader
       message="Searching for your publications..."
     />
-     
   </div>
   <div
     className="columns"
@@ -2022,7 +2021,6 @@ exports[`ClaimPublication test renders loading screen while loading publications
     <InlineLoader
       message="Searching for your publications..."
     />
-     
   </div>
   <div
     className="columns"
