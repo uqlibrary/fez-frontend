@@ -73,9 +73,10 @@ export default class ClaimPublication extends React.Component {
     _facetsChanged = (activeFacets) => {
         // Translate the object from FacetsFilter into a query string to assign to facetsQueryString
         const queryString = Object.keys(activeFacets).map(key => {
-            return 'filters[' + key + ']=' + (activeFacets[key];
+            return ('filters[' + key + ']=' + activeFacets[key]);
         }).join('&');
         const facetsQueryString = queryString !== '' ? '?' + queryString : '';
+        // Call the action to reload the data with the facets added as a querystring
         this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, facetsQueryString);
     };
 
