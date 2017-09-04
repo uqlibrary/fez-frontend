@@ -20,7 +20,6 @@ class FacetsFilter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeFacets: {},
             activeCategories: {}
         };
 
@@ -36,7 +35,7 @@ class FacetsFilter extends React.Component {
         e.preventDefault();
         // If we clock with a mouse, and not keyboard, remove the :focus
         if(e.type === 'click') { e.target.blur(); }
-        const activeFacets = {...this.state.activeFacets};
+        const activeFacets = {...this.props.activeFacets};
         const facet = e.target.dataset.facet;
         const category = e.target.dataset.category;
 
@@ -51,11 +50,7 @@ class FacetsFilter extends React.Component {
             activeFacets[category] = facet;
         }
 
-        this.setState({
-            activeFacets: activeFacets,
-        }, () => {
-            this.props.facetsFunction(this.state.activeFacets);
-        });
+        this.props.facetsFunction(activeFacets);
     }
 
     // This just handles the accordion css style showing the facets list on a click
@@ -96,6 +91,8 @@ class FacetsFilter extends React.Component {
         const txt = locale.components.facetsFilter;
         const aggregations = [];
         const facetsData = this.props.facetsData;
+        const activeFacets = this.props.activeFacets;
+        console.log('activeFacets BEFORE : ' + JSON.stringify(activeFacets));
         const omitCategory = this.props.omitCategory;
 
         Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 &&
@@ -124,8 +121,7 @@ class FacetsFilter extends React.Component {
                     {aggregations.map((item, index) => (
                         <div key={index}>
                             <div className="facetsCategory">
-                                <div className={this.state.activeCategories[item.aggregation] &&
-                                    this.state.activeCategories[item.aggregation].includes('active') ?
+                                <div className={activeFacets[item.aggregation] || this.state.activeCategories[item.aggregation] ?
                                     'facetsCategoryTitle active' : 'facetsCategoryTitle'}
                                 data-category={item.aggregation}
                                 tabIndex="0"
@@ -134,16 +130,16 @@ class FacetsFilter extends React.Component {
                                     {item.aggregation}
                                 </div>
                                 <div
-                                    className={this.state.activeCategories[item.aggregation]
+                                    className={activeFacets[item.aggregation] || this.state.activeCategories[item.aggregation]
                                         ? 'facetLinksList active'
                                         : 'facetLinksList'}>
                                     {item.facets.map((subitem, subindex) => (
                                         <div key={subindex}
-                                            tabIndex={this.state.activeCategories[item.aggregation] ? 0 : -1}
+                                            tabIndex={activeFacets[item.aggregation] ? 0 : -1}
                                             className={
-                                                !this.state.activeFacets[item.aggregation] && 'facetListItems' ||
-                                                this.state.activeFacets[item.aggregation] && !this.state.activeFacets[item.aggregation].includes('' + subitem.key) && 'facetListItems inactive' ||
-                                                this.state.activeFacets[item.aggregation] && this.state.activeFacets[item.aggregation].includes('' + subitem.key) && 'facetListItems active'}
+                                                !activeFacets[item.aggregation] && 'facetListItems' ||
+                                                activeFacets[item.aggregation] && !activeFacets[item.aggregation].includes(subitem.key) && 'facetListItems inactive' ||
+                                                activeFacets[item.aggregation] && activeFacets[item.aggregation].includes(subitem.key) && 'facetListItems active'}
                                             onClick={this.handleActiveLinkClick}
                                             onKeyPress={this.handleActiveLinkClick}
                                             data-facet={subitem.key}
@@ -168,7 +164,7 @@ class FacetsFilter extends React.Component {
                 {/* Just for testing purposes */}
                 {window.location.href.indexOf('localhost') >= 1 &&
                      <div style={{marginTop: 100}}>
-                     Active Facets:{JSON.stringify(this.state.activeFacets)}
+                     Active Facets:{JSON.stringify(this.props.activeFacets)}
                      </div>
                 }
             </div>
