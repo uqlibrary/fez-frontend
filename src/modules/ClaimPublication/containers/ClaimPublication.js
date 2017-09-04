@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
         ...state.get('claimPublicationReducer'),
         author: state.get('accountReducer').author,
         authorLoading: state.get('accountReducer').authorLoading,
-        facetsQueryString: state.get('accountReducer').facetsQueryString
+        activeFacets: state.get('claimPublicationReducer').activeFacets
     };
 };
 

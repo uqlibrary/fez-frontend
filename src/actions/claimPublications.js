@@ -58,14 +58,14 @@ export function countPossiblyYourPublications(authorUsername) {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchPossiblyYourPublications(authorUsername, facetsQueryString) {
+export function searchPossiblyYourPublications(authorUsername, activeFacets) {
     return dispatch => {
-        dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING});
+        dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
         // TODO: try some authors who are students - org username or student name to use?
-        getPossibleUnclaimedPublications(authorUsername, facetsQueryString).then(response => {
+        getPossibleUnclaimedPublications(authorUsername, activeFacets).then(response => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                payload: response.data
+                payload: response.data,
             });
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
@@ -87,7 +87,7 @@ export function searchPossiblyYourPublications(authorUsername, facetsQueryString
  * @param author {object} - user user name
  * @returns {action}
  */
-export function hidePublications(publicationsToHide, author, facetsQueryString) {
+export function hidePublications(publicationsToHide, author, activeFacets) {
     return dispatch => {
         if (!author) return;
 
@@ -108,7 +108,7 @@ export function hidePublications(publicationsToHide, author, facetsQueryString) 
                 });
 
                 // reload current possibly your publications/count after user hides records
-                dispatch(searchPossiblyYourPublications(author.aut_org_username, facetsQueryString));
+                dispatch(searchPossiblyYourPublications(author.aut_org_username, activeFacets));
             })
             .catch(() => {
                 dispatch({

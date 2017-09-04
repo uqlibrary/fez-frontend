@@ -8,18 +8,19 @@ export const initialState = {
     loadingPossibleCounts: true,
     facetsData: {},
     loadingFacetsData: true,
-    facetsQueryString: null
+    activeFacets: null
 };
 
 const handlers = {
 
-    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => {
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state, action) => {
         return {
             ...state,
             loadingPossiblePublicationsList: true,
             possiblePublicationsList: [],
             facetsData: {},
-            loadingFacetsData: true
+            loadingFacetsData: true,
+            activeFacets: action.payload
         };
     },
 
@@ -41,7 +42,7 @@ const handlers = {
         return {
             ...state,
             loadingPossiblePublicationsList: false,
-            possiblePublicationsList: action.payload
+            possiblePublicationsList: action.payload,
         };
     },
 

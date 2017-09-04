@@ -24,9 +24,7 @@ export default class ClaimPublication extends React.Component {
         loadingPossibleCounts: PropTypes.bool,
 
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired,
-
-        facetsQueryString: PropTypes.string
+        actions: PropTypes.object.isRequired
     };
 
     constructor(props) {
@@ -34,7 +32,7 @@ export default class ClaimPublication extends React.Component {
 
         this.state = {
             publicationToHide: null,
-            facetsQueryString: null
+            activeFacets: {}
         };
         this._facetsChanged = this._facetsChanged.bind(this);
     }
@@ -73,7 +71,7 @@ export default class ClaimPublication extends React.Component {
     _facetsChanged = (activeFacets) => {
         // Translate the object from FacetsFilter into a query string to assign to facetsQueryString
         const queryString = Object.keys(activeFacets).map(key => {
-            return ('filters[' + key + ']=' + activeFacets[key]);
+            return ('filters[facets][' + key + ']=' + activeFacets[key]);
         }).join('&');
         const facetsQueryString = queryString !== '' ? '?' + queryString : '';
         // Call the action to reload the data with the facets added as a querystring
