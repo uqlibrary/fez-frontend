@@ -33,7 +33,6 @@ class FacetsFilter extends React.Component {
     // This handles when you click on a facet
     handleActiveLinkClick(e) {
         e.preventDefault();
-        // If we clock with a mouse, and not keyboard, remove the :focus
         if(e.type === 'click') { e.target.blur(); }
         const activeFacets = {...this.props.activeFacets};
         const facet = e.target.dataset.facet;
@@ -95,6 +94,7 @@ class FacetsFilter extends React.Component {
         console.log('activeFacets BEFORE : ' + JSON.stringify(activeFacets));
         const omitCategory = this.props.omitCategory;
 
+        // TODO: Refactor this into a function so there's less clutter
         Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 &&
             omitCategory.indexOf(key) === -1 &&
             facetsData[key].buckets.length !== 0).forEach(key => {
@@ -114,6 +114,8 @@ class FacetsFilter extends React.Component {
         // const sortedAggregations = aggregations.sort((a, b) => {
         //     return a > b ? -1 : 1;
         // });
+
+        // TODO: Refactor #134-143 long consitional statements, convert to their own functions
 
         return (
             <div className="facetsFilter">
@@ -161,13 +163,6 @@ class FacetsFilter extends React.Component {
                         </div>
                     </div>
                 </div>
-                {/* Just for testing purposes */}
-                {/* {window.location.href.indexOf('localhost') >= 1 &&*/}
-                {/* <div style={{marginTop: 100}}>*/}
-                {/* Active Facets:{JSON.stringify(this.props.activeFacets)}*/}
-                {/* Active Categories:{JSON.stringify(this.state.activeCategories)}*/}
-                {/* </div>*/}
-                {/* }*/}
             </div>
         );
     }
