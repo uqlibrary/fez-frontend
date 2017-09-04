@@ -1,7 +1,7 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
 $graph-font-size: 14px !important;
-$chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $graph-color-5, $graph-background-color-pink;
+$chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $graph-color-5, $graph-background-color-1;
 
 // Bar Chart styles
 .barChart {
@@ -9,7 +9,7 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
     color: $text-color-reverse;
   }
 
-  background-color: $graph-background-color-blue !important;
+  background-color: $graph-background-color-2 !important;
 
   .authors-publications-per-year-chart {
     width: 95%;
@@ -304,7 +304,7 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
     .highcharts-legend {
     }
     .highcharts-legend-box {
-      fill: $graph-background-color-blue !important;
+      fill: $graph-background-color-2 !important;
       box-shadow: 10px 10px 10px red !important;
       stroke-width: 0;
     }
@@ -406,7 +406,7 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
     color: $text-color-reverse;
   }
 
-  background-color: $graph-background-color-pink !important;
+  background-color: $graph-background-color-1 !important;
 
   .highcharts-container {
     position: relative;
@@ -452,6 +452,7 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
     .highcharts-data-labels {
       & span {
         color: $text-color-reverse !important;
+        text-shadow: 1px 1px 2px rgba($text-color, 0.9);
         fill: $text-color-reverse !important;
         font-family: $font-family !important;
         font-size: $graph-font-size;
