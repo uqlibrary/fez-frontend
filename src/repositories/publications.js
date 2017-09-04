@@ -13,7 +13,11 @@ export const POST_CLAIM_POSSIBLE_PUBLICATIONS_API = 'publications/claim-possible
  * @returns {Promise}
  */
 export function getPossibleUnclaimedPublications(userName, facetsQueryString) {
-    return get(`${GET_POSSIBLE_PUBLICATIONS_API}/${userName}${facetsQueryString}`);
+    if(facetsQueryString) {
+        return get(`${GET_POSSIBLE_PUBLICATIONS_API}/${userName}${facetsQueryString}`);
+    }else{
+        return get(`${GET_POSSIBLE_PUBLICATIONS_API}/${userName}`);
+    }
 }
 
 /**
