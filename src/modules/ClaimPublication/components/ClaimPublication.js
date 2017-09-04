@@ -139,16 +139,16 @@ export default class ClaimPublication extends React.Component {
                             </StandardCard>
                         </div>
                     }
-                    {
-                        !loadingData && this.props.facetsData &&
-                        <div className="column is-3 is-hidden-mobile">
-                            <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
-                                <FacetsFilter facetsData={this.props.facetsData}
-                                    facetsFunction={this._facetsChanged}
-                                    omitCategory={omitCategory} />
-                            </StandardRighthandCard>
-                        </div>
-                    }
+                    {/* {*/}
+                    {/* !loadingData && this.props.facetsData &&*/}
+                    <div className="column is-3 is-hidden-mobile">
+                        <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
+                            <FacetsFilter facetsData={this.props.facetsData}
+                                facetsFunction={this._facetsChanged}
+                                omitCategory={omitCategory} />
+                        </StandardRighthandCard>
+                    </div>
+                    {/*  } */}
                 </div>
             </StandardPage>
         );
