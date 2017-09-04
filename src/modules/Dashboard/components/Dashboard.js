@@ -102,9 +102,6 @@ class Dashboard extends React.Component {
 
         const publicationStats = !loading && this.props.publicationsStats
             && (this.props.publicationsStats.thomson_citation_count_i.count > 0 || this.props.publicationsStats.scopus_citation_count_i.count > 0)
-            && (this.props.publicationsStats.thomson_citation_count_i.avg > 0 || this.props.publicationsStats.scopus_citation_count_i.avg > 0)
-            && (this.props.publicationsStats.thomson_citation_count_i.sum > 0 || this.props.publicationsStats.scopus_citation_count_i.sum > 0)
-            && (this.props.publicationsStats.thomson_citation_count_i.hindex > 0 || this.props.publicationsStats.scopus_citation_count_i.hindex > 0)
             ? (
                 <StandardCard className="card-paddingless">
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>

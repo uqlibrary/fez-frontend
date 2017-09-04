@@ -9,7 +9,8 @@ export default class PublicationStats extends Component {
     }
     render() {
         const txt = locale.components.publicationStats;
-        if (!this.props.publicationsStats) return (<div className="publicationsStatsEmpty"/>);
+        const pubStats = this.props.publicationsStats;
+        if (!pubStats) return (<div className="publicationsStatsEmpty"/>);
         return (
             <Table selectable={false} className="publicationsStatsTable">
                 <TableHeader displaySelectAll={false} adjustForCheckbox={false} className="publicationsStatsHeader">
@@ -28,36 +29,36 @@ export default class PublicationStats extends Component {
                     <TableRow>
                         <TableRowColumn
                             className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle4}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.thomson_citation_count_i.count}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.scopus_citation_count_i.count}</TableRowColumn>
+                        <TableRowColumn>{pubStats.thomson_citation_count_i.count}</TableRowColumn>
+                        <TableRowColumn>{pubStats.scopus_citation_count_i.count}</TableRowColumn>
                     </TableRow>
 
                     <TableRow>
                         <TableRowColumn
                             className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle5}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.thomson_citation_count_i.years}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.scopus_citation_count_i.years}</TableRowColumn>
+                        <TableRowColumn>{pubStats.thomson_citation_count_i.years}</TableRowColumn>
+                        <TableRowColumn>{pubStats.scopus_citation_count_i.years}</TableRowColumn>
                     </TableRow>
 
                     <TableRow>
                         <TableRowColumn
                             className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle1}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.thomson_citation_count_i.hindex}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.scopus_citation_count_i.hindex}</TableRowColumn>
+                        <TableRowColumn>{pubStats.thomson_citation_count_i.hindex === '' ? 'N/A' : pubStats.thomson_citation_count_i.hindex}</TableRowColumn>
+                        <TableRowColumn>{pubStats.scopus_citation_count_i.hindex === '' ? 'N/A' : pubStats.scopus_citation_count_i.hindex}</TableRowColumn>
                     </TableRow>
 
                     <TableRow>
                         <TableRowColumn
                             className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle2}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.thomson_citation_count_i.avg.toFixed(1)}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.scopus_citation_count_i.avg.toFixed(1)}</TableRowColumn>
+                        <TableRowColumn>{pubStats.thomson_citation_count_i.avg.toFixed(1)}</TableRowColumn>
+                        <TableRowColumn>{pubStats.scopus_citation_count_i.avg.toFixed(1)}</TableRowColumn>
                     </TableRow>
 
                     <TableRow>
                         <TableRowColumn
                             className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle3}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.thomson_citation_count_i.sum}</TableRowColumn>
-                        <TableRowColumn>{this.props.publicationsStats.scopus_citation_count_i.sum}</TableRowColumn>
+                        <TableRowColumn>{pubStats.thomson_citation_count_i.sum}</TableRowColumn>
+                        <TableRowColumn>{pubStats.scopus_citation_count_i.sum}</TableRowColumn>
                     </TableRow>
 
                 </TableBody>
