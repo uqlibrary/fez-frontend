@@ -8,16 +8,16 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     className="publons column is-narrow"
   >
     <a
-      aria-label="You are not linked to publons"
+      aria-label="You are not linked to Publons"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
       <Avatar
-        alt="You are not linked to publons"
+        alt="You are not linked to Publons"
         className="publons researchIdAvatar error"
         size={40}
         src=""
-        title="You are not linked to publons"
+        title="You are not linked to Publons"
       />
     </a>
   </div>
@@ -25,16 +25,16 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     className="researcher column is-narrow"
   >
     <a
-      aria-label="Your researcher Id is G-111-1111"
-      href="https://app.library.uq.edu.au/#/id"
+      aria-label="Your Researcher ID is G-111-1111"
+      href="http://www.researcherid.com/rid/G-111-1111"
       target="_blank"
     >
       <Avatar
-        alt="Your researcher Id is G-111-1111"
+        alt="Your Researcher ID is G-111-1111"
         className="researcher researchIdAvatar ok"
         size={40}
         src=""
-        title="Your researcher Id is G-111-1111"
+        title="Your Researcher ID is G-111-1111"
       />
     </a>
   </div>
@@ -42,16 +42,16 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     className="scopus column is-narrow"
   >
     <a
-      aria-label="You are not linked to scopus"
+      aria-label="You are not linked to Scopus"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
       <Avatar
-        alt="You are not linked to scopus"
+        alt="You are not linked to Scopus"
         className="scopus researchIdAvatar error"
         size={40}
         src=""
-        title="You are not linked to scopus"
+        title="You are not linked to Scopus"
       />
     </a>
   </div>
@@ -59,16 +59,16 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     className="google_scholar column is-narrow"
   >
     <a
-      aria-label="You are not linked to google_scholar"
+      aria-label="You are not linked to Google Scholar"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
       <Avatar
-        alt="You are not linked to google_scholar"
+        alt="You are not linked to Google Scholar"
         className="google_scholar researchIdAvatar error"
         size={40}
         src=""
-        title="You are not linked to google_scholar"
+        title="You are not linked to Google Scholar"
       />
     </a>
   </div>
@@ -76,16 +76,16 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     className="orcid column is-narrow"
   >
     <a
-      aria-label="Your orcid Id is 0000-0001-1111-1111"
-      href="https://app.library.uq.edu.au/#/id"
+      aria-label="Your ORCID ID is 0000-0001-1111-1111"
+      href="https://orcid.org/0000-0001-1111-1111"
       target="_blank"
     >
       <Avatar
-        alt="Your orcid Id is 0000-0001-1111-1111"
+        alt="Your ORCID ID is 0000-0001-1111-1111"
         className="orcid researchIdAvatar ok"
         size={40}
         src=""
-        title="Your orcid Id is 0000-0001-1111-1111"
+        title="Your ORCID ID is 0000-0001-1111-1111"
       />
     </a>
   </div>
@@ -114,16 +114,16 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs with wei
     className="anId column is-narrow"
   >
     <a
-      aria-label="Your anId Id is This is an edge case example"
-      href="https://app.library.uq.edu.au/#/id"
+      aria-label="Your undefined ID is This is an edge case example"
+      href="undefinedThis is an edge case example"
       target="_blank"
     >
       <Avatar
-        alt="Your anId Id is This is an edge case example"
+        alt="Your undefined ID is This is an edge case example"
         className="anid researchIdAvatar ok"
         size={40}
         src=""
-        title="Your anId Id is This is an edge case example"
+        title="Your undefined ID is This is an edge case example"
       />
     </a>
   </div>
