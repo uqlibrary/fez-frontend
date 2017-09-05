@@ -128,3 +128,8 @@
     }
   }
 }
+
+button.publicationTabs>div>div {
+    white-space: normal;
+    text-overflow: ellipsis;
+}

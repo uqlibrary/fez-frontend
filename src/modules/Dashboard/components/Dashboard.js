@@ -182,10 +182,10 @@ class Dashboard extends React.Component {
                     && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
                     (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
                     <StandardCard className="card-paddingless">
-                        <Tabs>
+                        <Tabs className="publicationTabs">
                             {
                                 this.props.latestPublicationsList.length > 0 &&
-                                <Tab label={txt.myPublications.title} value="myPublications">
+                                <Tab label={txt.myPublications.title} value="myPublications" className="publicationTabs">
                                     <div style={{padding: '12px 24px'}}>
                                         <PublicationsList
                                             publicationsList={this.props.latestPublicationsList}
@@ -204,8 +204,8 @@ class Dashboard extends React.Component {
                             }
                             {
                                 this.props.trendingPublicationsList.length > 0 &&
-                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications">
-                                    <div style={{padding: '12px 24px 24px 24px'}}>
+                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications" className="publicationTabs">
+                                    <div style={{padding: '12px 24px'}}>
                                         {
                                             this.props.trendingPublicationsList.map((metric, metricIndex) => (
                                                 <div key={'metrics_' + metricIndex}>
