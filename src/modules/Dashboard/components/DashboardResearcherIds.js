@@ -5,7 +5,6 @@ import {locale} from 'config';
 
 const DashboardResearcherIds = ({values}) => {
     const txt = locale.pages.dashboard.header.dashboardResearcherIds;
-    console.log('API RESPONSE : ' + JSON.stringify(values));
     return (
         <div className="columns researcherIds is-gapless">
 
