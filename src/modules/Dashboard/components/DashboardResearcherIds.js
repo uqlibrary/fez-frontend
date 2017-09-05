@@ -5,19 +5,22 @@ import {locale} from 'config';
 
 const DashboardResearcherIds = ({values}) => {
     const txt = locale.pages.dashboard.header.dashboardResearcherIds;
+    console.log('API RESPONSE : ' + JSON.stringify(values));
     return (
         <div className="columns researcherIds is-gapless">
+
             {values && Object.keys(values).map((item, index) => (
                 <div key={index} className={`${item} column is-narrow`}>
+                    {/* Hello : {txt.titles[item]} and  {txt.links[item]} */}
                     <a
-                        href="https://app.library.uq.edu.au/#/id"
+                        href={values[item] ? txt.linksPrefix[item] + values[item] : 'https://app.library.uq.edu.au/#/id'}
                         target="_blank"
-                        aria-label={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)}>
+                        aria-label={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}>
                         <Avatar
                             className={values[item] ? (`${item.toLowerCase()} researchIdAvatar ok`) : (`${item.toLowerCase()} researchIdAvatar error`)}
                             src={require(`../../../../src/images/${item.toLowerCase()}_icon.svg`)}
-                            title={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)}
-                            alt={values[item] ? txt.researcherIsLinked.replace('[resource]', item).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', item)}/>
+                            title={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
+                            alt={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}/>
                     </a>
                 </div>)
             )}
