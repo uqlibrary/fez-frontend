@@ -8,6 +8,9 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
   h2 {
     color: $text-color-reverse;
   }
+  & .body-1 {
+    padding: 24px 0 0 0 !important;
+  }
 
   background-color: $graph-background-color-2 !important;
 

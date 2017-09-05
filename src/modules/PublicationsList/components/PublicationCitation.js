@@ -112,8 +112,8 @@ export default class PublicationCitation extends Component {
 
         return (
             <div className="publicationCitation">
-                <div className="columns">
-                    <div className="column is-gapless">
+                <div className="columns is-gapless is-mobile">
+                    <div className="column">
                         <h3 className="title is-5 publicationTitle">{this.props.publication.rek_title}</h3>
                         {
                             this._renderCitation(this.props.publication.rek_display_type)
@@ -133,7 +133,7 @@ export default class PublicationCitation extends Component {
                     </div>
                     {
                         this.props.showDefaultActions && this.props.publication.rek_pid &&
-                        <div className="column is-gapless is-1">
+                        <div className="column is-narrow" style={{margin: '-12px -12px 0 12px'}}>
                             <IconMenu
                                 ref="actionsMenu"
                                 onItemTouchTap={this._handleDefaultActions}
