@@ -5,10 +5,10 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
   className="publicationCitation"
 >
   <div
-    className="columns"
+    className="columns is-gapless is-mobile"
   >
     <div
-      className="column is-gapless"
+      className="column"
     >
       <h3
         className="title is-5 publicationTitle"
@@ -928,10 +928,10 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
   className="publicationCitation"
 >
   <div
-    className="columns"
+    className="columns is-gapless is-mobile"
   >
     <div
-      className="column is-gapless"
+      className="column"
     >
       <h3
         className="title is-5 publicationTitle"
@@ -1784,7 +1784,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
       />
     </div>
     <div
-      className="column is-gapless is-1"
+      className="column is-narrow"
     >
       <IconMenu
         anchorOrigin={
@@ -1794,6 +1794,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
           }
         }
         animated={true}
+        className="actionMenu"
         iconButtonElement={
           <IconButton
             disableTouchRipple={false}
@@ -1855,10 +1856,10 @@ exports[`PublicationCitation renders  component with default item 1`] = `
   className="publicationCitation"
 >
   <div
-    className="columns"
+    className="columns is-gapless is-mobile"
   >
     <div
-      className="column is-gapless"
+      className="column"
     >
       <h3
         className="title is-5 publicationTitle"

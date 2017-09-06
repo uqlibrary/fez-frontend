@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import {StandardPage, StandardCard, StandardRighthandCard, InlineLoader, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 import PublicationListLoadingProgress from '../../PublicationsList/components/PublicationListLoadingProgress';
 
 // forms & custom components
@@ -99,7 +99,7 @@ export default class AddRecord extends React.Component {
                         loadingPublicationSources={this.props.loadingPublicationSources} />
                 </div>
                 {/* Search results */}
-                <div className="column is-9-desktop is-8-tablet is-12-mobile">
+                <div className="column">
                     {
                         this.props.loadingSearch &&
                         <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
@@ -145,7 +145,9 @@ export default class AddRecord extends React.Component {
                 </div>
                 {/* Desktop search dashboard */}
                 <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
-                    <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
+                    <StandardRighthandCard title={locale.pages.addRecord.step2.searchResults.searchDashboard.title}>
+                        <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
+                    </StandardRighthandCard>
                 </div>
             </div>
         );
