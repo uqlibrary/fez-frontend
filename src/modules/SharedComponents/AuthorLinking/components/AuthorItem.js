@@ -11,7 +11,7 @@ export default class AuthorItem extends React.Component {
         selected: PropTypes.bool,
         disabled: PropTypes.bool,
         author: PropTypes.object,
-        onAuthorSelect: PropTypes.func,
+        onAuthorSelected: PropTypes.func,
         locale: PropTypes.object,
         index: PropTypes.number
     };
@@ -37,53 +37,46 @@ export default class AuthorItem extends React.Component {
      *
      * @private
      */
-    _onAuthorSelect = () => {
-        this.props.onAuthorSelect(this.props.author);
+    _authorSelect = () => {
+        this.props.onAuthorSelected(this.props.author);
+    };
+
+    /**
+     * Get status icon for an author based on attributes
+     *
+     * @param unlinked
+     * @param selected
+     * @returns {XML}
+     */
+    getAuthorItemStatusIcon = (unlinked, selected) => {
+        if (unlinked && !selected) {
+            return <RadioButtonUnchecked className="author-link-status" />;
+        } else if (!unlinked) {
+            return <Link className="author-link-status" />;
+        } else {
+            return <RadioButtonChecked className="author-link-status" />;
+        }
     };
 
     render() {
         const { unlinked, author, selected } = this.props;
         const {ordinalData} = this.props.locale;
         const authorOrder = (this.props.index < ordinalData.length ? ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
+        const icon = this.getAuthorItemStatusIcon(unlinked, selected);
+        const disabled = this.props.disabled || !unlinked;
 
         return (
             <div className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile">
                 <div className="authorButton">
-                    {
-                        // Enabled flat button for unlinked and not selected author
-                        unlinked && !selected &&
-                            <FlatButton
-                                label={author.rek_author}
-                                labelStyle={AuthorItem.labelStyle}
-                                onTouchTap={ this._onAuthorSelect }
-                                fullWidth
-                                icon={<RadioButtonUnchecked className="author-link-status" />}
-                                disabled={this.props.disabled}
-                            />
-                    }
-                    {
-                        // disabled flat button for linked and not selected author
-                        !unlinked &&
-                            <FlatButton
-                                label={author.rek_author}
-                                labelStyle={AuthorItem.labelStyle}
-                                disabled
-                                fullWidth
-                                icon={<Link className="author-link-status" />}
-                            />
-                    }
-                    {
-                        // raised button for selected author
-                        selected &&
-                            <FlatButton
-                                label={author.rek_author}
-                                labelStyle={AuthorItem.labelStyle}
-                                primary
-                                fullWidth
-                                icon={<RadioButtonChecked className="author-link-status" />}
-                                disabled={this.props.disabled}
-                            />
-                    }
+                    <FlatButton
+                        label={author.rek_author}
+                        labelStyle={AuthorItem.labelStyle}
+                        onTouchTap={ (unlinked && !selected) ? this._authorSelect : undefined }
+                        fullWidth
+                        icon={icon}
+                        primary={selected}
+                        disabled={disabled}
+                    />
                     <div className="author-link-order">
                         <span className="author-link-order-text">{authorOrder}</span>
                     </div>

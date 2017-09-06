@@ -71,7 +71,17 @@ describe('AuthorLinking', () => {
     });
 
     it('should render author Bridge as linked and disabled', () => {
-        const wrapper = setup({ linkedAuthorIdList: [{ "rek_author_id": 123, "rek_author_id_order": 3 }]});
+        const wrapper = setup({ linkedAuthorIdList: [
+            { "rek_author_id": 0, "rek_author_id_order": 1 },
+            { "rek_author_id": 0, "rek_author_id_order": 2 },
+            { "rek_author_id": 123, "rek_author_id_order": 3 },
+            { "rek_author_id": 0, "rek_author_id_order": 4 },
+            { "rek_author_id": 0, "rek_author_id_order": 5 },
+            { "rek_author_id": 0, "rek_author_id_order": 6 },
+            { "rek_author_id": 0, "rek_author_id_order": 7 },
+            { "rek_author_id": 0, "rek_author_id_order": 8 },
+            { "rek_author_id": 0, "rek_author_id_order": 9 },
+        ]});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

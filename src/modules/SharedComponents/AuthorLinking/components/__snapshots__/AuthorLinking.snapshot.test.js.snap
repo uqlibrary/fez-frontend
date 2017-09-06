@@ -33,7 +33,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -65,7 +65,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -97,7 +97,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -129,7 +129,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -161,7 +161,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -193,7 +193,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -225,7 +225,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -257,7 +257,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -289,7 +289,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -330,7 +330,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -362,7 +362,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -394,7 +394,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -426,7 +426,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -458,7 +458,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -490,7 +490,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -522,7 +522,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -554,7 +554,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -586,7 +586,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -627,7 +627,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -659,7 +659,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -691,7 +691,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={false}
     />
@@ -723,7 +723,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -755,7 +755,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -787,7 +787,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -819,7 +819,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -851,7 +851,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />
@@ -883,7 +883,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           "suffix": " listed author",
         }
       }
-      onAuthorSelect={[Function]}
+      onAuthorSelected={[Function]}
       selected={false}
       unlinked={true}
     />

@@ -33,7 +33,7 @@ export default class AuthorLinking extends React.Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange && this.state !== nextState) {
+        if (this.props.onChange && nextState.selectedAuthor !== null) {
             const authorIds = this.prepareOutput(nextState);
             this.props.onChange({authors: this.transformOutput(authorIds), valid: nextState.authorLinkingConfirmed});
         }
@@ -83,42 +83,13 @@ export default class AuthorLinking extends React.Component {
     };
 
     /**
-     * Get unlinked authors if author IDs provided (i.e. author_id = 0)
-     *
-     * @returns {Array}
-     */
-    getLinkedAuthors = () => {
-        if (this.props.linkedAuthorIdList.length > 0) {
-            return this.props.linkedAuthorIdList.filter((linkedAuthor) => {
-                return linkedAuthor.hasOwnProperty('rek_author_id') && linkedAuthor.rek_author_id > 0;
-            });
-        }
-
-        return [];
-    };
-
-    /**
-     * Check if author is already linked
-     *
-     * @param author
-     * @param linkedAuthors
-     * @returns {boolean}
-     */
-    isAuthorLinked = (author, linkedAuthors) => {
-        return linkedAuthors.length > 0 && linkedAuthors.filter(linkedAuthor => linkedAuthor.rek_author_id_order === author.rek_author_order).length > 0;
-    };
-
-    /**
      * Build authors list
      */
-    buildAuthorList = () => {
-        const {authorList} = this.props;
-        const linkedAuthors = this.getLinkedAuthors();
-
+    buildAuthorList = (authorList) => {
         return authorList.map((author, index) => {
-            const linked = this.isAuthorLinked(author, linkedAuthors);
+            const linked = this.props.linkedAuthorIdList.length > 0 && this.props.linkedAuthorIdList[index].rek_author_id !== 0;
             const selected = this.state.selectedAuthor ? author.rek_author_order === this.state.selectedAuthor.rek_author_order : false;
-            return (<AuthorItem index={index} key={index} author={author} unlinked={!linked} selected={selected} onAuthorSelect={ this._selectAuthor } disabled={ this.props.disabled } />);
+            return (<AuthorItem index={index} key={index} author={author} unlinked={!linked} selected={selected} onAuthorSelected={ this._selectAuthor } disabled={ this.props.disabled } />);
         });
     };
 
@@ -129,7 +100,7 @@ export default class AuthorLinking extends React.Component {
      * @private
      */
     _selectAuthor = (author) => {
-        this.setState({ ...this.state, selectedAuthor: author, authorLinkingConfirmed: false });
+        this.setState({ selectedAuthor: author, authorLinkingConfirmed: false });
     };
 
     /**
@@ -144,7 +115,7 @@ export default class AuthorLinking extends React.Component {
     render() {
         const { confirmation } = this.props.locale;
         const { selectedAuthor, authorLinkingConfirmed } = this.state;
-        const authors = this.buildAuthorList();
+        const authors = this.buildAuthorList(this.props.authorList);
 
         return (
             <div>
