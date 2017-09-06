@@ -29,19 +29,15 @@ class FacetsFilter extends React.Component {
         const activeFacets = {...this.props.activeFacets};
 
         if (activeFacets[category] !== undefined) {
-            if (activeFacets[category].includes(facet)) {
+            if (activeFacets[category] === facet) {
                 delete activeFacets[category];
-            } else{
+            } else {
                 activeFacets[category] = facet;
             }
         } else {
             activeFacets[category] = facet;
         }
-        this.setState({
-            activeFacets: activeFacets
-        }, () => {
-            this.props.facetsFunction(this.state.activeFacets);
-        });
+        this.props.facetsFunction(activeFacets);
     };
 
     handleResetClick = () => {
@@ -56,9 +52,10 @@ class FacetsFilter extends React.Component {
         const activeFacets = this.props.activeFacets;
         return item.facets.map((subitem, subindex) => (
             <ListItem key={subindex}
+                className={activeFacets[item.aggregation] === subitem.key ? 'facetsLink active' : 'facetsLink'}
                 primaryText={`${subitem.display_name} (${subitem.doc_count})`}
                 onClick={this.handleFacetClick.bind(this, item.aggregation, subitem.key)}
-                rightIcon={activeFacets[item.aggregation] === subitem.key ? <NavigationClose /> : null }
+                rightIcon={activeFacets[item.aggregation] === subitem.key ? <NavigationClose/> : null}
             />
         ));
     };
@@ -93,20 +90,19 @@ class FacetsFilter extends React.Component {
 
         return (
             <div className="facetsFilter">
-                <div className="facetsList body-2">
-                    <List>
-                        {aggregations.map((item, index) => (
-                            <div key={index}>
-                                <ListItem primaryText={item.aggregation}
-                                    open={activeFacets[item.aggregation] && true}
-                                    primaryTogglesNestedList
-                                    key={index}
-                                    nestedItems={this.getNestedListItems(item, index)}
-                                />
-                            </div>
-                        ))}
-                    </List>
-                </div>
+                <List>
+                    {aggregations.map((item, index) => (
+                        <div key={index}>
+                            <ListItem primaryText={item.aggregation}
+                                open={activeFacets[item.aggregation] && true}
+                                className={!activeFacets[item.aggregation] ? 'facetsCategory' : 'facetsCategory active'}
+                                primaryTogglesNestedList
+                                key={index}
+                                nestedItems={this.getNestedListItems(item)}
+                            />
+                        </div>
+                    ))}
+                </List>
 
                 <div className="columns">
                     <div className="column is-hidden-mobile"/>

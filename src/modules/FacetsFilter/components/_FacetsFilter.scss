@@ -1,88 +1,18 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
-@import '~@material/animation/variables';
 
 .facetsFilter {
   padding: 0;
   min-width: 140px;
-  .facetLinksList {
-    margin-top: 0;
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: max-height 0.2s $mdc-animation-deceleration-curve-timing-function;
-    -moz-transition: max-height 0.2s $mdc-animation-deceleration-curve-timing-function;
-    -o-transition: max-height 0.2s $mdc-animation-deceleration-curve-timing-function;
-    transition: max-height 0.2s $mdc-animation-deceleration-curve-timing-function;
-    &.active {
-      border-bottom: 1px solid rgba($text-color, 0.075);
-      border-top: 1px solid rgba($text-color, 0.075);
-      margin-top: 6px;
-      max-height: 1000px;
-      -webkit-transition: max-height 0.2s $mdc-animation-acceleration-curve-timing-function;
-      -moz-transition: max-height 0.2s $mdc-animation-acceleration-curve-timing-function;
-      -o-transition: max-height 0.2s $mdc-animation-acceleration-curve-timing-function;
-      transition: max-height 0.2s $mdc-animation-acceleration-curve-timing-function;
-    }
-  }
-  h3.title {
-    color: $theme-color;
-  }
-  .facetsKeywordFilter {
-    margin-bottom: 0 !important;
-  }
-  .facetsCategoryTitle {
-    font-weight: bold !important;
-    margin-bottom: 6px;
-    padding-bottom: 6px;
-    background-image: url('data:image/svg+xml;utf-8,<svg fill="#666666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/><path d="M0-.75h24v24H0z" fill="none"/></svg>');
-    background-position: calc(100%) top;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    &.active {
-      color: $theme-color;
-      background-image: url('data:image/svg+xml;utf-8,<svg fill="#666666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-      background-position: calc(100%) top;
-      background-size: 20px;
-      background-repeat: no-repeat;
-    }
-  }
   .facetsCategory {
-    margin: 6px 0 !important;
-    font-weight: bold;
-    &:hover {
-      cursor: pointer;
+    font-weight: bold !important;
+    &.active {
+
     }
   }
-  .facetsList {
-    width: 100%;
-    margin: 6px 0 !important;
-    .facetListItems {
-      font-weight: normal !important;
-      margin: 12px 0 12px 6px;
-      padding: 2px 24px 2px 0px !important;
-        width: calc(100% - 32px);
-      background-image: url('data:image/svg+xml;utf-8,<svg fill="#333333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-      background-position: calc(100% + 48px) top;
-      background-size: 18px;
-      background-repeat: no-repeat;
-      -webkit-transition: all 0.2s $mdc-animation-standard-curve-timing-function;
-      -moz-transition: all 0.2s $mdc-animation-standard-curve-timing-function;
-      -o-transition: all 0.2s $mdc-animation-standard-curve-timing-function;
-      transition: all 0.2s $mdc-animation-standard-curve-timing-function;
-      &:hover {
-        cursor: pointer;
-      }
-      &.active {
-        padding: 2px 18px 2px 6px !important;
-        background-image: url('data:image/svg+xml;utf-8,<svg fill="#CCCCCC" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-        background-position: 100% top;
-        -webkit-transition: all 0.2s $mdc-animation-standard-curve-timing-function;
-        -moz-transition: all 0.2s $mdc-animation-standard-curve-timing-function;
-        -o-transition: all 0.2s $mdc-animation-standard-curve-timing-function;
-        transition: all 0.2s $mdc-animation-standard-curve-timing-function;
-      }
-      &.inactive {
-        opacity: 0.75;
-      }
+  .facetsLink {
+    &.active{
+      font-weight: bold !important;
+      color: $accent-color !important;
     }
   }
 }
