@@ -132,7 +132,7 @@ export default class App extends React.Component {
                                 !this.props.user.accountLoading && !this.props.user.account &&
                                 <div className="layout-fill">
                                     <div className="layout-card">
-                                        <Alert {...locale.global.loginAlert} outsideLayout/>
+                                        <Alert {...locale.global.loginAlert} />
                                     </div>
                                 </div>
                             }
@@ -141,7 +141,7 @@ export default class App extends React.Component {
                                 !isPublicPage && !this.props.user.authorDetailsLoading && !this.props.user.authorDetails &&
                                 <div className="layout-fill">
                                     <div className="layout-card">
-                                        <Alert {...locale.global.notRegisteredAuthorAlert} outsideLayout/>
+                                        <Alert {...locale.global.notRegisteredAuthorAlert} />
                                     </div>
                                 </div>
                             }

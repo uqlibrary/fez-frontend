@@ -133,8 +133,9 @@ export default class PublicationCitation extends Component {
                     </div>
                     {
                         this.props.showDefaultActions && this.props.publication.rek_pid &&
-                        <div className="column is-narrow" style={{margin: '-12px -12px 0 12px'}}>
+                        <div className="column is-narrow">
                             <IconMenu
+                                className="actionMenu"
                                 ref="actionsMenu"
                                 onItemTouchTap={this._handleDefaultActions}
                                 iconButtonElement={<IconButton><MoreVertIcon/></IconButton>}

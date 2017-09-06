@@ -105,7 +105,6 @@ export function getPublicationsStats(rawData) {
     const years = rawData.aggregations.date_year_t.buckets
         .map(item => { return item.key; })
         .sort((item1, item2) => { return item1 - item2; });
-    console.log('YEARS!!!! --->' + years);
     const formattedStats = {
         thomson_citation_count_i: {
             ...rawData.aggregations.thomson_citation_count_i,

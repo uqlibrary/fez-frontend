@@ -239,7 +239,7 @@ exports[`App tests for user account and author status User is not logged in and 
           <Alert
             allowDismiss={false}
             message="Please, login to UQ eSpace for full search results and more services."
-            outsideLayout={true}
+            outsideLayout={false}
             title="You are not logged in"
             type="info_outline"
           />
@@ -254,7 +254,7 @@ exports[`App tests for user account and author status User is not logged in and 
           <Alert
             allowDismiss={false}
             message="Please contact the UQ Manager to resolve this."
-            outsideLayout={true}
+            outsideLayout={false}
             title="You are not registered in UQ eSpace as an author"
             type="info_outline"
           />
@@ -558,7 +558,7 @@ exports[`App tests for user account and author status User logged in but is not 
           <Alert
             allowDismiss={false}
             message="Please contact the UQ Manager to resolve this."
-            outsideLayout={true}
+            outsideLayout={false}
             title="You are not registered in UQ eSpace as an author"
             type="info_outline"
           />

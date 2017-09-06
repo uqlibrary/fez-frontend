@@ -1785,11 +1785,6 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
     </div>
     <div
       className="column is-narrow"
-      style={
-        Object {
-          "margin": "-12px -12px 0 12px",
-        }
-      }
     >
       <IconMenu
         anchorOrigin={
@@ -1799,6 +1794,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
           }
         }
         animated={true}
+        className="actionMenu"
         iconButtonElement={
           <IconButton
             disableTouchRipple={false}

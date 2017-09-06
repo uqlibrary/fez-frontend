@@ -379,6 +379,7 @@ export default {
             publicationStatsRowTitle3: 'Total citations',
             publicationStatsRowTitle4: 'Total publications',
             publicationStatsRowTitle5: 'Publication range',
+            publicationStatsNA: 'N/A'
         },
         publicationForm: {
             cancel: 'Abandon and search again',
