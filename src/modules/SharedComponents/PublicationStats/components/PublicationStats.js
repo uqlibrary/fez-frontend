@@ -43,8 +43,8 @@ export default class PublicationStats extends Component {
                     <TableRow>
                         <TableRowColumn
                             className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle1}</TableRowColumn>
-                        <TableRowColumn>{(pubStats.thomson_citation_count_i.hindex === '' || pubStats.thomson_citation_count_i.hindex === 0 || pubStats.thomson_citation_count_i.hindex === '0') ? txt.publicationStatsNA : pubStats.thomson_citation_count_i.hindex}</TableRowColumn>
-                        <TableRowColumn>{(pubStats.scopus_citation_count_i.hindex === '' || pubStats.scopus_citation_count_i.hindex === 0 || pubStats.scopus_citation_count_i.hindex === '0') ? txt.publicationStatsNA : pubStats.scopus_citation_count_i.hindex}</TableRowColumn>
+                        <TableRowColumn>{(!pubStats.thomson_citation_count_i.hindex || pubStats.thomson_citation_count_i.hindex === '' || pubStats.thomson_citation_count_i.hindex.toFixed(0) === '0' || pubStats.thomson_citation_count_i.hindex === '0') ? txt.publicationStatsNA : pubStats.thomson_citation_count_i.hindex.toFixed(0)}</TableRowColumn>
+                        <TableRowColumn>{(!pubStats.scopus_citation_count_i.hindex || pubStats.scopus_citation_count_i.hindex === '' || pubStats.scopus_citation_count_i.hindex.toFixed(0) === '0' || pubStats.scopus_citation_count_i.hindex === '0') ? txt.publicationStatsNA : pubStats.scopus_citation_count_i.hindex.toFixed(0)}</TableRowColumn>
                     </TableRow>
 
                     <TableRow>
