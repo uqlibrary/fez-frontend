@@ -26,7 +26,8 @@ This project is using `yarn` for dependency management.  Make sure `yarn` is ins
 - `yarn start` - The website is now running on `http://localhost:3000/` on dev api (requires additional setup of uqlibrary/api project)
 - `yarn start:mock` - The website is now running on `http://localhost:3000/` on mock data
 - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
-- `yarn start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
+- `yarn start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
+- `yarn start:build:e2e` will run production build version on `http://localhost:9000` with mock data
 
 Mock data is provided for all pages and actions under `src/mock/`.
 
@@ -66,7 +67,11 @@ The project allows the user to "login" as any test user. Simply add `?user=<user
 in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.
 
 - anonymous user: http://localhost:3000/?user=anon#/
-- registered user: http://localhost:3000/?user=uqinewton#/
+- registered user: http://localhost:3000/?user=uqresearcher#/
+- staff/not author user: http://localhost:3000/?user=uqstaff#/
+- undegrad student user: http://localhost:3000/?user=s1111111#/
+- postgrad student user: http://localhost:3000/?user=s2222222#/
+- user with expired token: http://localhost:3000/?user=uqexpired#/
 
 ## Deployment
 Application deployment is 100% automated using Codeship, and is hosted in S3. All deployment data is stored within Codeship. 
