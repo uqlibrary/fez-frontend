@@ -30,6 +30,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
       className="requiredField"
     >
       <Connect(ContributorForm)
+        errorText=""
         onAdd={[Function]}
         showIdentifierLookup={false}
       >
@@ -41,6 +42,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
             }
           }
           authorsList={Array []}
+          errorText=""
           locale={
             Object {
               "addButton": "Add author",
@@ -60,10 +62,12 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
             >
               <TextField
                 disabled={false}
+                errorText=""
                 floatingLabelFixed={false}
                 floatingLabelText="Name as published"
                 fullWidth={true}
                 hintText="Please type the name exactly as published"
+                id="nameAsPublishedField"
                 multiLine={false}
                 onChange={[Function]}
                 onKeyPress={[Function]}
@@ -91,7 +95,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                 >
                   <TextFieldLabel
                     disabled={false}
-                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-25383"
+                    htmlFor="nameAsPublishedField"
                     muiTheme={
                       Object {
                         "appBar": Object {
@@ -518,7 +522,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                     }
                   >
                     <label
-                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-25383"
+                      htmlFor="nameAsPublishedField"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -976,7 +980,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                   </TextFieldHint>
                   <input
                     disabled={false}
-                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-25383"
+                    id="nameAsPublishedField"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1662,6 +1666,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
   >
     <div>
       <Connect(ContributorForm)
+        errorText=""
         onAdd={[Function]}
         showIdentifierLookup={true}
       >
@@ -1673,6 +1678,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
             }
           }
           authorsList={Array []}
+          errorText=""
           locale={
             Object {
               "addButton": "Add author",
@@ -1692,10 +1698,12 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
             >
               <TextField
                 disabled={false}
+                errorText=""
                 floatingLabelFixed={false}
                 floatingLabelText="Name as published"
                 fullWidth={true}
                 hintText="Please type the name exactly as published"
+                id="nameAsPublishedField"
                 multiLine={false}
                 onChange={[Function]}
                 onKeyPress={[Function]}
@@ -1723,7 +1731,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                 >
                   <TextFieldLabel
                     disabled={false}
-                    htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26185"
+                    htmlFor="nameAsPublishedField"
                     muiTheme={
                       Object {
                         "appBar": Object {
@@ -2150,7 +2158,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     }
                   >
                     <label
-                      htmlFor="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26185"
+                      htmlFor="nameAsPublishedField"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -2608,7 +2616,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                   </TextFieldHint>
                   <input
                     disabled={false}
-                    id="undefined-Pleasetypethenameexactlyaspublished-Nameaspublished-26185"
+                    id="nameAsPublishedField"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -3132,6 +3140,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                 floatingLabelText="UQ identifier (if available)"
                 fullWidth={true}
                 hintText="UQ identifier (if available)"
+                id="identifierField"
                 listStyle={
                   Object {
                     "maxHeight": 200,
@@ -3168,6 +3177,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     floatingLabelText="UQ identifier (if available)"
                     fullWidth={true}
                     hintText="UQ identifier (if available)"
+                    id="identifierField"
                     multiLine={false}
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -3198,7 +3208,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                     >
                       <TextFieldLabel
                         disabled={true}
-                        htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-13754"
+                        htmlFor="identifierField"
                         muiTheme={
                           Object {
                             "appBar": Object {
@@ -3625,7 +3635,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                         }
                       >
                         <label
-                          htmlFor="undefined-UQidentifierifavailable-UQidentifierifavailable-13754"
+                          htmlFor="identifierField"
                           style={
                             Object {
                               "color": "rgba(0, 0, 0, 0.3)",
@@ -4084,7 +4094,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                       <input
                         autoComplete="off"
                         disabled={true}
-                        id="undefined-UQidentifierifavailable-UQidentifierifavailable-13754"
+                        id="identifierField"
                         onBlur={[Function]}
                         onChange={[Function]}
                         onFocus={[Function]}

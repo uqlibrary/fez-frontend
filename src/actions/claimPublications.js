@@ -208,7 +208,7 @@ export function claimPublication(data) {
             // claim record from external source
             // what about required fields - are they set, eg subtype, publication year etc?
             const recordRequest = {
-                ...data.publication,
+                ...JSON.parse(JSON.stringify(data.publication)),
                 ...recordRekLink(data),
                 ...NEW_RECORD_DEFAULT_VALUES
             };

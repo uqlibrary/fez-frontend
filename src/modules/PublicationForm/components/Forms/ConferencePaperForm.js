@@ -6,7 +6,7 @@ import {ContributorsEditorField, PublicationSubtypeField} from 'modules/SharedCo
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
-export default class BookForm extends Component {
+export default class ConferencePaperForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
         vocabId: PropTypes.number
@@ -17,7 +17,7 @@ export default class BookForm extends Component {
     }
 
     render() {
-        const txt = locale.components.publicationForm.book;
+        const txt = locale.components.publicationForm.conferencePaper;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -33,7 +33,7 @@ export default class BookForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.bookTitle}
+                                floatingLabelText={txt.information.fieldLabels.title}
                                 validate={[validation.required]}
                                 style={{marginBottom: '-12px'}} />
                         </div>
@@ -43,12 +43,56 @@ export default class BookForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                                name="fez_record_search_key_conference_name.rek_conference_name"
                                 type="text"
                                 className="requiredField"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace}
+                                floatingLabelText={txt.information.fieldLabels.conferenceName}
                                 validate={[validation.required]} />
+                        </div>
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_conference_location.rek_conference_location"
+                                type="text"
+                                fullWidth
+                                className="requiredField"
+                                validate={[validation.required]}
+                                floatingLabelText={txt.information.fieldLabels.conferenceLocation} />
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column is-half">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_conference_dates.rek_conference_dates"
+                                type="text"
+                                fullWidth
+                                className="requiredField"
+                                validate={[validation.required]}
+                                floatingLabelText={txt.information.fieldLabels.conferenceDates} />
+                        </div>
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_proceedings_title.rek_proceedings_title"
+                                type="text"
+                                fullWidth
+                                floatingLabelText={txt.information.fieldLabels.proceedingsTitle} />
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column is-half">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                                type="text"
+                                fullWidth
+                                floatingLabelText={txt.information.fieldLabels.publicationPlace} />
                         </div>
                         <div className="column">
                             <Field
@@ -56,10 +100,8 @@ export default class BookForm extends Component {
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
-                                className="requiredField"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publisher}
-                                validate={[validation.required]} />
+                                floatingLabelText={txt.information.fieldLabels.publisher} />
                         </div>
                     </div>
                     <div className="columns">
@@ -80,7 +122,8 @@ export default class BookForm extends Component {
                                 name="rek_date"
                                 allowPartial
                                 className="requiredField"
-                                validate={[validation.required]} />
+                                validate={[validation.required]}
+                            />
                         </div>
                     </div>
                 </StandardCard>
@@ -93,16 +136,6 @@ export default class BookForm extends Component {
                         locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
-                        disabled={this.props.submitting} />
-                </StandardCard>
-
-                <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                    <div>{txt.editors.description}</div>
-                    <Field
-                        component={ContributorsEditorField}
-                        showContributorAssignment
-                        name="editors"
-                        locale={txt.editors.field}
                         disabled={this.props.submitting} />
                 </StandardCard>
 
@@ -130,7 +163,27 @@ export default class BookForm extends Component {
                         disabled={this.props.submitting} />
                 </StandardCard>
 
-                <StandardCard title={txt.optional.title} help={txt.optional.help}>
+                <StandardCard title={txt.other.title} help={txt.other.help}>
+                    <div className="columns">
+                        <div className="column is-half">
+                            <Field
+                                component={TextField}
+                                name="fez_record_search_key_start_page.rek_start_page"
+                                type="text"
+                                fullWidth
+                                disabled={this.props.submitting}
+                                floatingLabelText={txt.other.fieldLabels.startPage}/>
+                        </div>
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                name="fez_record_search_key_end_page.rek_end_page"
+                                type="text"
+                                fullWidth
+                                disabled={this.props.submitting}
+                                floatingLabelText={txt.other.fieldLabels.endPage}/>
+                        </div>
+                    </div>
                     <div className="columns">
                         <div className="column">
                             <Field
@@ -141,7 +194,7 @@ export default class BookForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.optional.fieldLabels.notes}/>
+                                floatingLabelText={txt.other.fieldLabels.notes}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -152,13 +205,12 @@ export default class BookForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.url}
+                                floatingLabelText={txt.other.fieldLabels.url}
                                 validate={[validation.url, validation.maxLength255]}
                             />
                         </div>
                     </div>
                 </StandardCard>
-
             </div>
         );
     }

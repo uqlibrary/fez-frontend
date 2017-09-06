@@ -23,7 +23,7 @@ export function createNewRecord(data) {
         // set default values, links
         const recordRequest = {
             ...config.NEW_RECORD_DEFAULT_VALUES,
-            ...data,
+            ...JSON.parse(JSON.stringify(data)),
             ...transformers.recordRekLink(data),
             ...transformers.recordAuthors(data.authors),
             ...transformers.recordAuthorsId(data.authors),
@@ -44,18 +44,24 @@ export function createNewRecord(data) {
                 // set a pid on a new record
                 data.rek_pid = response.data.rek_pid;
                 // process files
-                if (!data.files || !data.files.queue || data.files.queue.length === 0) return response.data;
-                return putUploadFiles(response.data.rek_pid, data.files.queue, dispatch);
+                if (!data.files || !data.files.queue || data.files.queue.length === 0) {
+                    return response;
+                } else {
+                    return putUploadFiles(response.data.rek_pid, data.files.queue, dispatch);
+                }
             })
             .then(response => {
-                if (!data.files || !data.files.queue || data.files.queue.length === 0) return response.data;
-                // process uploaded files into API format for a patch
-                const recordPatch = {
-                    ...transformers.recordFileAttachment(data.files.queue)
-                };
-                return patchRecord(data.rek_pid, recordPatch).catch((error) => {
-                    return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));
-                });
+                if (!data.files || !data.files.queue || data.files.queue.length === 0) {
+                    return response;
+                } else {
+                    // process uploaded files into API format for a patch
+                    const recordPatch = {
+                        ...transformers.recordFileAttachment(data.files.queue)
+                    };
+                    return patchRecord(data.rek_pid, recordPatch).catch((error) => {
+                        return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));
+                    });
+                }
             })
             .then(response => {
                 dispatch({

@@ -13,9 +13,10 @@ export class ContributorsEditor extends Component {
         showContributorAssignment: PropTypes.bool,
         className: PropTypes.string,
         disabled: PropTypes.bool,
+        meta: PropTypes.object,
         author: PropTypes.object,
         onChange: PropTypes.func,
-        locale: PropTypes.object
+        locale: PropTypes.object,
     };
 
     static defaultProps = {
@@ -137,11 +138,6 @@ export class ContributorsEditor extends Component {
 
         return (
             <div className={this.props.className}>
-                <ContributorForm
-                    onAdd={this.addContributor}
-                    showIdentifierLookup={this.props.showIdentifierLookup}
-                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
-                    disabled={this.props.disabled} />
                 {
                     this.state.errorMessage &&
                     <Alert
@@ -149,6 +145,12 @@ export class ContributorsEditor extends Component {
                         message={this.state.errorMessage}
                         type="warning" />
                 }
+                <ContributorForm
+                    errorText={this.props.meta && this.props.meta.dirty ? this.props.meta.error : ''}
+                    onAdd={this.addContributor}
+                    showIdentifierLookup={this.props.showIdentifierLookup}
+                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
+                    disabled={this.props.disabled} />
                 {
                     this.state.contributors.length > 0 &&
                     <ContributorRowHeader
