@@ -2,6 +2,9 @@ import React from 'react';
 import {locale} from 'config';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/RaisedButton';
+import {List, ListItem} from 'material-ui/List';
+import NavigationClose from 'material-ui/svg-icons/navigation/close';
+
 
 class FacetsFilter extends React.Component {
     static propTypes = {
@@ -19,80 +22,53 @@ class FacetsFilter extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            activeCategories: {}
-        };
-
-        this.handleActiveLinkClick = this.handleActiveLinkClick.bind(this);
-        this.handleActiveCategoryClick = this.handleActiveCategoryClick.bind(this);
-        this.handleClearAllClick = this.handleClearAllClick.bind(this);
+        this.handleResetClick = this.handleResetClick.bind(this);
     }
 
-    // TODO: Add a lifecycle function to compare any activeFacets from this.state when/if we receive new facetsData
-
-    // This handles when you click on a facet
-    handleActiveLinkClick(e) {
-        e.preventDefault();
-        if(e.type === 'click') { e.target.blur(); }
+    handleFacetClick = (category, facet) => {
         const activeFacets = {...this.props.activeFacets};
-        const facet = e.target.dataset.facet;
-        const category = e.target.dataset.category;
 
         if (activeFacets[category] !== undefined) {
             if (activeFacets[category].includes(facet)) {
                 delete activeFacets[category];
-                // }
-            } else {
+            } else{
                 activeFacets[category] = facet;
             }
         } else {
             activeFacets[category] = facet;
         }
-
-        this.props.facetsFunction(activeFacets);
-    }
-
-    // This just handles the accordion css style showing the facets list on a click
-    handleActiveCategoryClick(e) {
-        e.preventDefault();
-        // If we clock with a mouse, and not keyboard, remove the :focus
-        if(e.type === 'click') { e.target.blur(); }
-
-        const activeCategories = {...this.state.activeCategories};
-        const category = e.target.dataset.category;
-        if (activeCategories[category] !== undefined) {
-            if (activeCategories[category].includes('active')) {
-                delete activeCategories[category];
-            } else {
-                activeCategories[category] = ['active'];
-            }
-        } else {
-            activeCategories[category] = ['active'];
-        }
         this.setState({
-            activeCategories: activeCategories,
+            activeFacets: activeFacets
+        }, () => {
+            this.props.facetsFunction(this.state.activeFacets);
         });
-    }
+    };
 
-    // Click handler to clear all the active facets
-    handleClearAllClick(e) {
-        e.preventDefault();
-        // Clear the array!
+    handleResetClick = () => {
         this.setState({
-            activeFacets: {},
-            activeCategories: {},
+            activeFacets: {}
         }, () => {
             this.props.facetsFunction(this.state.activeFacets);
         });
     }
 
+    getNestedListItems = (item) => {
+        const activeFacets = this.props.activeFacets;
+        return item.facets.map((subitem, subindex) => (
+            <ListItem key={subindex}
+                primaryText={`${subitem.display_name} (${subitem.doc_count})`}
+                onClick={this.handleFacetClick.bind(this, item.aggregation, subitem.key)}
+                rightIcon={activeFacets[item.aggregation] === subitem.key ? <NavigationClose /> : null }
+            />
+        ));
+    };
+
     render() {
         const txt = locale.components.facetsFilter;
         const aggregations = [];
-        const facetsData = this.props.facetsData;
-        const activeFacets = this.props.activeFacets;
-        console.log('activeFacets BEFORE : ' + JSON.stringify(activeFacets));
-        const omitCategory = this.props.omitCategory;
+        const facetsData = this.props.facetsData; // Data from API, list of facets for current displayed publications
+        const activeFacets = this.props.activeFacets; // From store, facets that are active
+        const omitCategory = this.props.omitCategory; // prop of array category items to hide
 
         // TODO: Refactor this into a function so there's less clutter
         Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 &&
@@ -115,52 +91,30 @@ class FacetsFilter extends React.Component {
         //     return a > b ? -1 : 1;
         // });
 
-        // TODO: Refactor #134-143 long consitional statements, convert to their own functions
-
         return (
             <div className="facetsFilter">
                 <div className="facetsList body-2">
-                    {aggregations.map((item, index) => (
-                        <div key={index}>
-                            <div className="facetsCategory">
-                                <div className={activeFacets[item.aggregation] || this.state.activeCategories[item.aggregation] ?
-                                    'facetsCategoryTitle active' : 'facetsCategoryTitle'}
-                                data-category={item.aggregation}
-                                tabIndex="0"
-                                onClick={this.handleActiveCategoryClick}
-                                onKeyPress={this.handleActiveCategoryClick}>
-                                    {item.aggregation}
-                                </div>
-                                <div
-                                    className={activeFacets[item.aggregation] || this.state.activeCategories[item.aggregation]
-                                        ? 'facetLinksList active'
-                                        : 'facetLinksList'}>
-                                    {item.facets.map((subitem, subindex) => (
-                                        <div key={subindex}
-                                            tabIndex={activeFacets[item.aggregation] || this.state.activeCategories[item.aggregation] ? 0 : -1}
-                                            className={
-                                                !activeFacets[item.aggregation] && 'facetListItems' ||
-                                                activeFacets[item.aggregation] && !activeFacets[item.aggregation].includes(subitem.key) && 'facetListItems inactive' ||
-                                                activeFacets[item.aggregation] && activeFacets[item.aggregation].includes(subitem.key) && 'facetListItems active'}
-                                            onClick={this.handleActiveLinkClick}
-                                            onKeyPress={this.handleActiveLinkClick}
-                                            data-facet={subitem.key}
-                                            data-category={item.aggregation}>
-                                            {subitem.display_name} ({subitem.doc_count})
-                                        </div>
-                                    ))}
-                                </div>
+                    <List>
+                        {aggregations.map((item, index) => (
+                            <div key={index}>
+                                <ListItem primaryText={item.aggregation}
+                                    open={activeFacets[item.aggregation] && true}
+                                    primaryTogglesNestedList
+                                    key={index}
+                                    nestedItems={this.getNestedListItems(item, index)}
+                                />
                             </div>
-                        </div>
-                    ))}
-                    <div className="columns">
-                        <div className="column is-hidden-mobile" />
-                        <div className="column is-narrow">
-                            <FlatButton
-                                fullWidth
-                                label={txt.resetButtonText}
-                                onClick={this.handleClearAllClick}/>
-                        </div>
+                        ))}
+                    </List>
+                </div>
+
+                <div className="columns">
+                    <div className="column is-hidden-mobile"/>
+                    <div className="column is-narrow">
+                        <FlatButton
+                            fullWidth
+                            label={txt.resetButtonText}
+                            onClick={this.handleResetClick}/>
                     </div>
                 </div>
             </div>

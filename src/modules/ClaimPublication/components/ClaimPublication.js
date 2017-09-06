@@ -92,8 +92,6 @@ export default class ClaimPublication extends React.Component {
         ];
         const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
         const omitCategory = []; // List of facet categories to not show in the FacetsFilter
-
-        console.log('Active facets in ClaimPublications component : ' + JSON.stringify(this.props.activeFacets));
         return (
             <StandardPage title={txt.title}>
                 {
