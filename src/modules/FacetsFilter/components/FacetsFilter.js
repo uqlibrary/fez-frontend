@@ -55,12 +55,12 @@ class FacetsFilter extends React.Component {
                 className={activeFacets[item.aggregation] === subitem.key ? 'facetsLink active' : 'facetsLink'}
                 primaryText={`${subitem.display_name} (${subitem.doc_count})`}
                 onClick={this.handleFacetClick.bind(this, item.aggregation, subitem.key)}
-                rightIcon={activeFacets[item.aggregation] === subitem.key ? <NavigationClose/> : null}
+                leftIcon={activeFacets[item.aggregation] === subitem.key ? <NavigationClose/> : null}
             />
         ));
     };
 
-    translateRawData = (facetsData, aggregations, omitCategory) => {
+    transformRawData = (facetsData, aggregations, omitCategory) => {
         Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 &&
             omitCategory.indexOf(key) === -1 &&
             facetsData[key].buckets.length !== 0).forEach(key => {
@@ -84,7 +84,7 @@ class FacetsFilter extends React.Component {
         const activeFacets = this.props.activeFacets; // From store, facets that are active
         const omitCategory = this.props.omitCategory; // prop of array category items to hide
 
-        this.translateRawData(facetsData, aggregations, omitCategory);
+        this.transformRawData(facetsData, aggregations, omitCategory);
 
         return (
             <div className="facetsFilter">
