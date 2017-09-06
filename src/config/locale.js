@@ -19,7 +19,7 @@ export default {
         sources: {
             wos: {
                 id: 'wos',
-                title: 'World of science',
+                title: 'Web of science',
                 priority: 0,
                 icon: '../../../images/wos_icon.svg'
             },
@@ -295,7 +295,7 @@ export default {
                         repositories: [
                             {
                                 id: 'wos',
-                                title: 'World of science',
+                                title: 'Web of science',
                                 icon: '../../../images/wos_icon.svg'
                             },
                             {
@@ -371,7 +371,7 @@ export default {
     components: {
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',
-            publicationStatsTitle2: 'World of science',
+            publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
             publicationStatsRowTitle1: 'h-index',
