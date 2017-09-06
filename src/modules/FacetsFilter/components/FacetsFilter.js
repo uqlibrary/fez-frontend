@@ -60,14 +60,7 @@ class FacetsFilter extends React.Component {
         ));
     };
 
-    render() {
-        const txt = locale.components.facetsFilter;
-        const aggregations = [];
-        const facetsData = this.props.facetsData; // Data from API, list of facets for current displayed publications
-        const activeFacets = this.props.activeFacets; // From store, facets that are active
-        const omitCategory = this.props.omitCategory; // prop of array category items to hide
-
-        // TODO: Refactor this into a function so there's less clutter
+    translateRawData = (facetsData, aggregations, omitCategory) => {
         Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 &&
             omitCategory.indexOf(key) === -1 &&
             facetsData[key].buckets.length !== 0).forEach(key => {
@@ -82,11 +75,16 @@ class FacetsFilter extends React.Component {
                 }),
             });
         });
+    };
 
-        // TODO: Do we sort the list?
-        // const sortedAggregations = aggregations.sort((a, b) => {
-        //     return a > b ? -1 : 1;
-        // });
+    render() {
+        const txt = locale.components.facetsFilter;
+        const aggregations = [];
+        const facetsData = this.props.facetsData; // Data from API, list of facets for current displayed publications
+        const activeFacets = this.props.activeFacets; // From store, facets that are active
+        const omitCategory = this.props.omitCategory; // prop of array category items to hide
+
+        this.translateRawData(facetsData, aggregations, omitCategory);
 
         return (
             <div className="facetsFilter">
