@@ -7,7 +7,7 @@ import RadioButtonChecked from 'material-ui/svg-icons/toggle/radio-button-checke
 
 export default class AuthorItem extends React.Component {
     static propTypes = {
-        unlinked: PropTypes.bool,
+        linked: PropTypes.bool,
         selected: PropTypes.bool,
         disabled: PropTypes.bool,
         author: PropTypes.object,
@@ -23,11 +23,6 @@ export default class AuthorItem extends React.Component {
         }
     };
 
-    static labelStyle = {
-        float: 'left',
-        width: '70%'
-    };
-
     constructor(props) {
         super(props);
     }
@@ -37,41 +32,49 @@ export default class AuthorItem extends React.Component {
      *
      * @private
      */
-    _authorSelect = () => {
-        this.props.onAuthorSelected(this.props.author);
+    _selectAuthor = () => {
+        if (this.props.onAuthorSelected) this.props.onAuthorSelected(this.props.author);
     };
 
     /**
      * Get status icon for an author based on attributes
      *
-     * @param unlinked
+     * @param linked
      * @param selected
      * @returns {XML}
      */
-    getAuthorItemStatusIcon = (unlinked, selected) => {
-        if (unlinked && !selected) {
+    getAuthorItemStatusIcon = (linked, selected) => {
+        if (!linked && !selected) {
             return <RadioButtonUnchecked className="author-link-status" />;
-        } else if (!unlinked) {
+        } else if (linked) {
             return <Link className="author-link-status" />;
         } else {
             return <RadioButtonChecked className="author-link-status" />;
         }
     };
 
+    getAuthorName = (author) => {
+        return (
+            <span className="author-link-name">
+                {author.rek_author}
+            </span>
+        );
+    };
+
     render() {
-        const { unlinked, author, selected } = this.props;
-        const {ordinalData} = this.props.locale;
-        const authorOrder = (this.props.index < ordinalData.length ? ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
-        const icon = this.getAuthorItemStatusIcon(unlinked, selected);
-        const disabled = this.props.disabled || !unlinked;
+        const {linked, author, selected, index} = this.props;
+        const {ordinalData, suffix} = this.props.locale;
+        const authorOrder = (index < ordinalData.length ? ordinalData[index] : (index + 1)) + ' ' + suffix;
+        const icon = this.getAuthorItemStatusIcon(linked, selected);
+        const disabled = this.props.disabled || linked;
+        const authorName = this.getAuthorName(author);
 
         return (
             <div className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile">
                 <div className="authorButton">
                     <FlatButton
-                        label={author.rek_author}
-                        labelStyle={AuthorItem.labelStyle}
-                        onTouchTap={ (unlinked && !selected) ? this._authorSelect : undefined }
+                        label={authorName}
+                        onTouchTap={(!linked && !selected) ? this._selectAuthor : undefined}
                         fullWidth
                         icon={icon}
                         primary={selected}

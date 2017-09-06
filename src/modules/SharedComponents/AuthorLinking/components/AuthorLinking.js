@@ -10,7 +10,6 @@ export default class AuthorLinking extends React.Component {
         linkedAuthorIdList: PropTypes.array,
         author: PropTypes.object,
         locale: PropTypes.object,
-        className: PropTypes.string,
         onChange: PropTypes.func,
         disabled: PropTypes.bool
     };
@@ -33,7 +32,7 @@ export default class AuthorLinking extends React.Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange && nextState.selectedAuthor !== null) {
+        if (this.props.onChange !== null && nextState.selectedAuthor !== null) {
             const authorIds = this.prepareOutput(nextState);
             this.props.onChange({authors: this.transformOutput(authorIds), valid: nextState.authorLinkingConfirmed});
         }
@@ -42,32 +41,23 @@ export default class AuthorLinking extends React.Component {
     /**
      * Prepare output to be transformed
      *
-     * @param nextState
      * @returns {[*]}
      */
-    prepareOutput = (nextState) => {
-        let selectedAuthorAdded = false;
-        let linkedAuthorList = [];
-        const selectedAuthorId = { aut_id: this.props.author.aut_id, aut_id_order: nextState.selectedAuthor.rek_author_order };
+    prepareOutput = ({selectedAuthor}) => {
+        const {authorList, linkedAuthorIdList, author} = this.props;
+        const selectedAuthorId = {aut_id: author.aut_id, aut_id_order: selectedAuthor.rek_author_order};
 
-        if (this.props.linkedAuthorIdList.length === 0) {
-            linkedAuthorList = [selectedAuthorId];
-        } else {
-            linkedAuthorList = this.props.linkedAuthorIdList.map((authorId) => {
-                if (authorId.rek_author_id_order === nextState.selectedAuthor.rek_author_order) {
-                    selectedAuthorAdded = true;
-                    return selectedAuthorId;
-                } else {
-                    return {aut_id: authorId.rek_author_id, aut_id_order: authorId.rek_author_id_order};
-                }
+        if (linkedAuthorIdList.length === 0) {
+            return authorList.map((author, index) => {
+                const authorIdOrder = {aut_id: 0, aut_id_order: index + 1};
+                return selectedAuthorId.aut_id_order === (index + 1) ? selectedAuthorId : authorIdOrder;
             });
-
-            if (!selectedAuthorAdded) {
-                linkedAuthorList.push(selectedAuthorId);
-            }
+        } else {
+            return linkedAuthorIdList.map((authorId) => {
+                const authorIdOrder = {aut_id: authorId.rek_author_id, aut_id_order: authorId.rek_author_id_order};
+                return authorId.rek_author_id_order === selectedAuthor.rek_author_order ? selectedAuthorId : authorIdOrder;
+            });
         }
-
-        return linkedAuthorList.sort((a, b) => (a.aut_id_order - b.aut_id_order));
     };
 
     /**
@@ -85,11 +75,21 @@ export default class AuthorLinking extends React.Component {
     /**
      * Build authors list
      */
-    buildAuthorList = (authorList) => {
+    buildAuthorList = ({authorList, linkedAuthorIdList, disabled}, {selectedAuthor}) => {
         return authorList.map((author, index) => {
-            const linked = this.props.linkedAuthorIdList.length > 0 && this.props.linkedAuthorIdList[index].rek_author_id !== 0;
-            const selected = this.state.selectedAuthor ? author.rek_author_order === this.state.selectedAuthor.rek_author_order : false;
-            return (<AuthorItem index={index} key={index} author={author} unlinked={!linked} selected={selected} onAuthorSelected={ this._selectAuthor } disabled={ this.props.disabled } />);
+            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index].rek_author_id !== 0;
+            const selected = selectedAuthor && author.rek_author_order === selectedAuthor.rek_author_order;
+            return (
+                <AuthorItem
+                    index={index}
+                    key={index}
+                    author={author}
+                    linked={!linked}
+                    selected={selected}
+                    onAuthorSelected={this._selectAuthor}
+                    disabled={disabled}
+                />
+            );
         });
     };
 
@@ -100,7 +100,7 @@ export default class AuthorLinking extends React.Component {
      * @private
      */
     _selectAuthor = (author) => {
-        this.setState({ selectedAuthor: author, authorLinkingConfirmed: false });
+        this.setState({selectedAuthor: author, authorLinkingConfirmed: false});
     };
 
     /**
@@ -109,18 +109,18 @@ export default class AuthorLinking extends React.Component {
      * @private
      */
     _acceptAuthorLinkingTermsAndConditions = () => {
-        this.setState({ ...this.state, authorLinkingConfirmed: !this.state.authorLinkingConfirmed });
+        this.setState({authorLinkingConfirmed: !this.state.authorLinkingConfirmed});
     };
 
     render() {
-        const { confirmation } = this.props.locale;
-        const { selectedAuthor, authorLinkingConfirmed } = this.state;
-        const authors = this.buildAuthorList(this.props.authorList);
+        const {confirmation} = this.props.locale;
+        const {selectedAuthor, authorLinkingConfirmed} = this.state;
+        const authors = this.buildAuthorList({...this.props}, this.state);
 
         return (
             <div>
                 <div className="columns is-gapless is-multiline is-desktop is-mobile">
-                    { authors }
+                    {authors}
                 </div>
                 {
                     selectedAuthor !== null &&
@@ -128,9 +128,9 @@ export default class AuthorLinking extends React.Component {
                             <div className="column">
                                 <div className={!authorLinkingConfirmed ? 'author-linking-checkbox error-checkbox' : 'author-linking-checkbox'}>
                                     <Checkbox name="authorLinkingConfirmation"
-                                        label={ confirmation }
-                                        onCheck={ this._acceptAuthorLinkingTermsAndConditions }
-                                        checked={ authorLinkingConfirmed }
+                                        label={confirmation}
+                                        onCheck={this._acceptAuthorLinkingTermsAndConditions}
+                                        checked={authorLinkingConfirmed}
                                         disabled={this.props.disabled}
                                     />
                                 </div>

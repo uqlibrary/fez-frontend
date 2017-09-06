@@ -16,6 +16,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       }
       disabled={true}
       index={0}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -34,8 +35,7 @@ exports[`AuthorLinking should be disabled 1`] = `
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -48,6 +48,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       }
       disabled={true}
       index={1}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -66,8 +67,7 @@ exports[`AuthorLinking should be disabled 1`] = `
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -80,6 +80,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       }
       disabled={true}
       index={2}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -98,8 +99,7 @@ exports[`AuthorLinking should be disabled 1`] = `
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -112,6 +112,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       }
       disabled={true}
       index={3}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -130,8 +131,7 @@ exports[`AuthorLinking should be disabled 1`] = `
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -144,6 +144,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       }
       disabled={true}
       index={4}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -162,8 +163,7 @@ exports[`AuthorLinking should be disabled 1`] = `
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -176,6 +176,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       }
       disabled={true}
       index={5}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -194,8 +195,7 @@ exports[`AuthorLinking should be disabled 1`] = `
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -208,6 +208,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       }
       disabled={true}
       index={6}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -226,8 +227,7 @@ exports[`AuthorLinking should be disabled 1`] = `
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -240,6 +240,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       }
       disabled={true}
       index={7}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -258,8 +259,7 @@ exports[`AuthorLinking should be disabled 1`] = `
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -272,6 +272,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       }
       disabled={true}
       index={8}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -290,8 +291,7 @@ exports[`AuthorLinking should be disabled 1`] = `
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
   </div>
 </div>
@@ -313,6 +313,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       }
       disabled={false}
       index={0}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -331,8 +332,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -345,6 +345,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       }
       disabled={false}
       index={1}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -363,8 +364,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -377,6 +377,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       }
       disabled={false}
       index={2}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -395,8 +396,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -409,6 +409,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       }
       disabled={false}
       index={3}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -427,8 +428,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -441,6 +441,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       }
       disabled={false}
       index={4}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -459,8 +460,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -473,6 +473,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       }
       disabled={false}
       index={5}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -491,8 +492,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -505,6 +505,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       }
       disabled={false}
       index={6}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -523,8 +524,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -537,6 +537,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       }
       disabled={false}
       index={7}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -555,8 +556,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -569,6 +569,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       }
       disabled={false}
       index={8}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -587,8 +588,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
   </div>
 </div>
@@ -610,6 +610,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
       }
       disabled={false}
       index={0}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -628,8 +629,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -642,6 +642,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
       }
       disabled={false}
       index={1}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -660,8 +661,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -674,6 +674,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
       }
       disabled={false}
       index={2}
+      linked={false}
       locale={
         Object {
           "ordinalData": Array [
@@ -692,8 +693,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={false}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -706,6 +706,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
       }
       disabled={false}
       index={3}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -724,8 +725,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -738,6 +738,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
       }
       disabled={false}
       index={4}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -756,8 +757,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -770,6 +770,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
       }
       disabled={false}
       index={5}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -788,8 +789,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -802,6 +802,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
       }
       disabled={false}
       index={6}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -820,8 +821,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -834,6 +834,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
       }
       disabled={false}
       index={7}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -852,8 +853,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
     <AuthorItem
       author={
@@ -866,6 +866,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
       }
       disabled={false}
       index={8}
+      linked={true}
       locale={
         Object {
           "ordinalData": Array [
@@ -884,8 +885,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
         }
       }
       onAuthorSelected={[Function]}
-      selected={false}
-      unlinked={true}
+      selected={null}
     />
   </div>
 </div>

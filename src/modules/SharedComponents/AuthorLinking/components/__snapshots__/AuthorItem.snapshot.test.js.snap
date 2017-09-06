@@ -11,22 +11,24 @@ exports[`AuthorItem renders  should be disabled 1`] = `
       disabled={true}
       fullWidth={true}
       icon={
-        <ContentLink
+        <ToggleRadioButtonUnchecked
           className="author-link-status"
         />
       }
-      label="Test user"
-      labelPosition="after"
-      labelStyle={
-        Object {
-          "float": "left",
-          "width": "70%",
-        }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
       }
+      labelPosition="after"
+      labelStyle={Object {}}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
+      onTouchTap={[Function]}
       primary={false}
       secondary={false}
     />
@@ -51,25 +53,27 @@ exports[`AuthorItem renders  should be linked 1`] = `
     className="authorButton"
   >
     <FlatButton
-      disabled={true}
+      disabled={false}
       fullWidth={true}
       icon={
-        <ContentLink
+        <ToggleRadioButtonUnchecked
           className="author-link-status"
         />
       }
-      label="Test user"
-      labelPosition="after"
-      labelStyle={
-        Object {
-          "float": "left",
-          "width": "70%",
-        }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
       }
+      labelPosition="after"
+      labelStyle={Object {}}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onTouchStart={[Function]}
+      onTouchTap={[Function]}
       primary={false}
       secondary={false}
     />
@@ -101,14 +105,15 @@ exports[`AuthorItem renders  should be selected 1`] = `
           className="author-link-status"
         />
       }
-      label="Test user"
-      labelPosition="after"
-      labelStyle={
-        Object {
-          "float": "left",
-          "width": "70%",
-        }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
       }
+      labelPosition="after"
+      labelStyle={Object {}}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
@@ -144,14 +149,15 @@ exports[`AuthorItem renders  should be selected and disabled 1`] = `
           className="author-link-status"
         />
       }
-      label="Test user"
-      labelPosition="after"
-      labelStyle={
-        Object {
-          "float": "left",
-          "width": "70%",
-        }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
       }
+      labelPosition="after"
+      labelStyle={Object {}}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
@@ -187,14 +193,15 @@ exports[`AuthorItem renders  should be unlinked and disabled 1`] = `
           className="author-link-status"
         />
       }
-      label="Test user"
-      labelPosition="after"
-      labelStyle={
-        Object {
-          "float": "left",
-          "width": "70%",
-        }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
       }
+      labelPosition="after"
+      labelStyle={Object {}}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
@@ -231,14 +238,15 @@ exports[`AuthorItem renders  should be unselected and able to select author 1`] 
           className="author-link-status"
         />
       }
-      label="Test user"
-      labelPosition="after"
-      labelStyle={
-        Object {
-          "float": "left",
-          "width": "70%",
-        }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
       }
+      labelPosition="after"
+      labelStyle={Object {}}
       onKeyboardFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}

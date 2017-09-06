@@ -64,7 +64,17 @@ function setup({linkedAuthorIdList}){
 
 describe('AuthorLinking', () => {
     it('should prepare output correctly with linked author ids provided where logged in author order not included', () => {
-        const component = setup({ linkedAuthorIdList: [{ rek_author_id: 123, rek_author_id_order: 8}]});
+        const component = setup({ linkedAuthorIdList: [
+            {rek_author_id: 0, rek_author_id_order: 1},
+            {rek_author_id: 0, rek_author_id_order: 2},
+            {rek_author_id: 0, rek_author_id_order: 3},
+            {rek_author_id: 0, rek_author_id_order: 4},
+            {rek_author_id: 0, rek_author_id_order: 5},
+            {rek_author_id: 410, rek_author_id_order: 6},
+            {rek_author_id: 0, rek_author_id_order: 7},
+            {rek_author_id: 123, rek_author_id_order: 8},
+            {rek_author_id: 0, rek_author_id_order: 9}
+        ]});
         const preparedOutput = component.prepareOutput({
             selectedAuthor: {
                 "rek_author_id": null,
@@ -73,7 +83,17 @@ describe('AuthorLinking', () => {
                 "rek_author_order": 6
         }});
 
-        expect(preparedOutput).toEqual([{ aut_id: 410, aut_id_order: 6}, {aut_id: 123, aut_id_order: 8}]);
+        expect(preparedOutput).toEqual([
+            {aut_id: 0, aut_id_order: 1},
+            {aut_id: 0, aut_id_order: 2},
+            {aut_id: 0, aut_id_order: 3},
+            {aut_id: 0, aut_id_order: 4},
+            {aut_id: 0, aut_id_order: 5},
+            {aut_id: 410, aut_id_order: 6},
+            {aut_id: 0, aut_id_order: 7},
+            {aut_id: 123, aut_id_order: 8},
+            {aut_id: 0, aut_id_order: 9}
+        ]);
     });
 
     it('should prepare output correctly with empty linked author id list', () => {
@@ -86,11 +106,21 @@ describe('AuthorLinking', () => {
                 "rek_author_order": 6
             }});
 
-        expect(preparedOutput).toEqual([{ aut_id: 410, aut_id_order: 6}]);
+        expect(preparedOutput).toEqual([
+            {aut_id: 0, aut_id_order: 1},
+            {aut_id: 0, aut_id_order: 2},
+            {aut_id: 0, aut_id_order: 3},
+            {aut_id: 0, aut_id_order: 4},
+            {aut_id: 0, aut_id_order: 5},
+            {aut_id: 410, aut_id_order: 6},
+            {aut_id: 0, aut_id_order: 7},
+            {aut_id: 0, aut_id_order: 8},
+            {aut_id: 0, aut_id_order: 9}
+        ]);
     });
 
     it('should prepare output correctly with empty linked author id list', () => {
-        const component = setup({ linkedAuthorIdList: [{ rek_author_id: 0, rek_author_id_order: 6 }, { rek_author_id: 123, rek_author_id_order: 8}]});
+        const component = setup({ linkedAuthorIdList: []});
         const preparedOutput = component.prepareOutput({
             selectedAuthor: {
                 "rek_author_id": null,
@@ -99,7 +129,17 @@ describe('AuthorLinking', () => {
                 "rek_author_order": 6
             }});
 
-        expect(preparedOutput).toEqual([{ aut_id: 410, aut_id_order: 6}, { aut_id: 123, aut_id_order: 8 }]);
+        expect(preparedOutput).toEqual([
+            {aut_id: 0, aut_id_order: 1},
+            {aut_id: 0, aut_id_order: 2},
+            {aut_id: 0, aut_id_order: 3},
+            {aut_id: 0, aut_id_order: 4},
+            {aut_id: 0, aut_id_order: 5},
+            {aut_id: 410, aut_id_order: 6},
+            {aut_id: 0, aut_id_order: 7},
+            {aut_id: 0, aut_id_order: 8},
+            {aut_id: 0, aut_id_order: 9}
+        ]);
     });
 
     it('should transform prepared output', () => {
