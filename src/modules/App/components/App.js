@@ -130,12 +130,20 @@ export default class App extends React.Component {
                             {
                                 // user is not logged in
                                 !this.props.user.accountLoading && !this.props.user.account &&
-                                <Alert {...locale.global.loginAlert} outsideLayout/>
+                                <div className="layout-fill">
+                                    <div className="layout-card">
+                                        <Alert {...locale.global.loginAlert} />
+                                    </div>
+                                </div>
                             }
                             {
                                 // user is logged in, but doesn't have eSpace author identifier
                                 !isPublicPage && !this.props.user.authorDetailsLoading && !this.props.user.authorDetails &&
-                                <Alert {...locale.global.notRegisteredAuthorAlert} outsideLayout/>
+                                <div className="layout-fill">
+                                    <div className="layout-card">
+                                        <Alert {...locale.global.notRegisteredAuthorAlert} />
+                                    </div>
+                                </div>
                             }
                             <Switch>
                                 {

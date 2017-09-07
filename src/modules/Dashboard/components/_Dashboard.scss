@@ -37,10 +37,10 @@
     .authorDetails {
       margin-left: 24px;
       .accountTitleName {
-        font-weight: 100;
+        font-weight: normal;
       }
       .authorPositionOrg {
-        font-weight: 100;
+        font-weight: normal;
         font-size: 14px;
         line-height: 18px;
       }
@@ -88,7 +88,7 @@
         color: rgba($text-color-reverse, 0.8);
         font-size: 12px;
         line-height: 3;
-        margin: 0 0 0 -6px;
+        margin: 0;
         &:hover {
           color: rgba($text-color-reverse, 1);
         }
@@ -127,4 +127,9 @@
       }
     }
   }
+}
+
+button.publicationTabs>div>div {
+    white-space: normal;
+    text-overflow: ellipsis;
 }
