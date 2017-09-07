@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
 
 const thompsonIcon = require('images/thomson_icon.svg');
 const scopusIcon = require('images/scopus_icon.svg');
@@ -21,8 +20,7 @@ export default class CitationCounts extends Component {
             thomson: this.props.publication.rek_thomson_citation_count ? this.props.publication.rek_thomson_citation_count : null,
             scopus: this.props.publication.rek_scopus_citation_count ? this.props.publication.rek_scopus_citation_count : null,
             google: this.props.publication.rek_gs_citation_count ? this.props.publication.rek_gs_citation_count : null,
-            altmetric: this.props.publication.rek_altmetric_score ? this.props.publication.rek_altmetric_score : null,
-            downloads: this.props.publication.rek_file_downloads ? this.props.publication.rek_file_downloads : null
+            altmetric: this.props.publication.rek_altmetric_score ? this.props.publication.rek_altmetric_score : null
         };
         return (
             <div className="citationCounts">
@@ -79,19 +77,6 @@ export default class CitationCounts extends Component {
                             className="citationCountIcon"
                         />
                         <span className="citationCountNumber">{counts.altmetric}</span>
-                    </span>
-                }
-                {
-                    !!counts.downloads && counts.downloads > 0 &&
-                    <span className="citationCount">
-                        <FontIcon
-                            className="material-icons citationCountIcon"
-                            data-tip="Downloads"
-                            title="Downloads"
-                            data-for="claimTooltips"
-                            data-place="bottom"
-                        >file_download</FontIcon>
-                        <span className="citationCountNumber">{counts.downloads}</span>
                     </span>
                 }
             </div>
