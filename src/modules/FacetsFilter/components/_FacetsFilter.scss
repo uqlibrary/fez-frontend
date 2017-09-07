@@ -1,17 +1,41 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
 .facetsFilter {
-  padding: 0;
+  padding: 0 !important;
   min-width: 140px;
   .facetsCategory {
+    font-size: 14px !important;
+    line-height: 14px !important;
+    & > div > div {
+      padding: 8px 56px 8px 8px !important;
+      & > button {
+        margin-top: -12px !important;
+      }
+    }
     &.active {
       font-weight: bold !important;
+      padding: 8px 56px 8px 8px !important;
+      &>button {
+        margin-top: -12px !important;
+        display: none !important;
+      }
     }
   }
   .facetsLink {
-    &.active{
+    font-size: 14px !important;
+    line-height: 14px !important;
+    & > div > div {
+      padding: 8px !important;
+      & > svg {
+        margin-top: 3px !important;
+      }
+    }
+    &.active {
       font-weight: bold !important;
       color: $accent-color !important;
+      & > div > div {
+        padding: 8px 8px 8px 56px !important;
+      }
     }
   }
 }

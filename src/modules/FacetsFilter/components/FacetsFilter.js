@@ -93,6 +93,7 @@ class FacetsFilter extends React.Component {
                         <div key={index}>
                             <ListItem primaryText={item.aggregation}
                                 open={activeFacets[item.aggregation] && true}
+                                disabled={activeFacets[item.aggregation] && true}
                                 className={!activeFacets[item.aggregation] ? 'facetsCategory' : 'facetsCategory active'}
                                 primaryTogglesNestedList
                                 key={index}
@@ -101,10 +102,9 @@ class FacetsFilter extends React.Component {
                         </div>
                     ))}
                 </List>
-
                 <div className="columns">
                     <div className="column is-hidden-mobile"/>
-                    <div className="column is-narrow">
+                    <div className="column is-narrow-tablet">
                         <FlatButton
                             fullWidth
                             label={txt.resetButtonText}
