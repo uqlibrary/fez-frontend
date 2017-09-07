@@ -3,7 +3,7 @@ export function claimAttachments(files) {
     return {
         attachments: files.map((item) => {
             return {
-                access_condition_id: 9, // TODO: update to real value, eg item.access_condition_id,
+                access_condition_id: item.access_condition_id,
                 file: item.name,
                 date: item.date
             };
@@ -62,15 +62,15 @@ export function recordFileAttachment(files, record) {
     if (record) {
         return {
             fez_record_search_key_file_attachment_name: [
-                ...record.fez_record_search_key_file_attachment_name,
+                ...(record.fez_record_search_key_file_attachment_name || []),
                 ...attachmentNames
             ],
             fez_record_search_key_file_attachment_embargo_date: [
-                ...record.fez_record_search_key_file_attachment_embargo_date,
+                ...(record.fez_record_search_key_file_attachment_embargo_date || []),
                 ...attachmentEmbargoDates
             ],
             fez_record_search_key_file_attachment_access_condition: [
-                ...record.fez_record_search_key_file_attachment_access_condition,
+                ...(record.fez_record_search_key_file_attachment_access_condition || []),
                 ...attachmentAccessConditions
             ]
         };
