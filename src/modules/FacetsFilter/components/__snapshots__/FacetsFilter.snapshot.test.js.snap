@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Claim Publication FacetsFilter test :  Render an empty component 1`] = `
+exports[`Claim Publication FacetsFilter tests :  Render an empty component 1`] = `
 <div
   className="facetsFilter"
 >
@@ -28,7 +28,7 @@ exports[`Claim Publication FacetsFilter test :  Render an empty component 1`] = 
 </div>
 `;
 
-exports[`Claim Publication FacetsFilter test :  Render the facet list from mock data 1`] = `
+exports[`Claim Publication FacetsFilter tests :  Render the facet list from mock data 1`] = `
 <div
   className="facetsFilter"
 >
@@ -466,7 +466,7 @@ exports[`Claim Publication FacetsFilter test :  Render the facet list from mock 
 </div>
 `;
 
-exports[`Claim Publication FacetsFilter test :  Render the facet list from mock data, omitting the Display type category 1`] = `
+exports[`Claim Publication FacetsFilter tests :  Render the facet list from mock data, omitting the Display type category 1`] = `
 <div
   className="facetsFilter"
 >
@@ -855,7 +855,7 @@ exports[`Claim Publication FacetsFilter test :  Render the facet list from mock 
 </div>
 `;
 
-exports[`Claim Publication FacetsFilter test :  Render the facet list from mock data, with the Journal Article facet active in the Display type category 1`] = `
+exports[`Claim Publication FacetsFilter tests :  Render the facet list from mock data, with the Journal Article facet active in the Display type category 1`] = `
 <div
   className="facetsFilter"
 >

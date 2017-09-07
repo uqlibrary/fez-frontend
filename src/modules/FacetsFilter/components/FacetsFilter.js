@@ -61,6 +61,7 @@ class FacetsFilter extends React.Component {
     };
 
     transformRawData = (facetsData, aggregations, omitCategory) => {
+        console.log('DATA BEFORE TRANSFORM -------> ' + JSON.stringify(facetsData));
         Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 &&
             omitCategory.indexOf(key) === -1 &&
             facetsData[key].buckets.length !== 0).forEach(key => {
@@ -75,6 +76,7 @@ class FacetsFilter extends React.Component {
                 }),
             });
         });
+        console.log('DATA AFTER TRANSFORM -------> ' + JSON.stringify(aggregations));
     };
 
     render() {
@@ -83,7 +85,6 @@ class FacetsFilter extends React.Component {
         const facetsData = this.props.facetsData; // Data from API, list of facets for current displayed publications
         const activeFacets = this.props.activeFacets; // From store, facets that are active
         const omitCategory = this.props.omitCategory; // prop of array category items to hide
-
         this.transformRawData(facetsData, aggregations, omitCategory);
 
         return (
