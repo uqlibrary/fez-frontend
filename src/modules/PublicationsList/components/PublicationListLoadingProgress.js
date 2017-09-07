@@ -12,7 +12,6 @@ const PublicationListLoadingProgress = ({loadingPublicationSources, mobile}) => 
             {
                 !mobile &&
                 <div className="searchDashboardDesktop">
-                    <h3 className="title is-5">{txt.title}</h3>
                     <div className="body-2">
                         {txt.repositories.map((item, index) => (
                             <div key={index} className="searchDashboardList">

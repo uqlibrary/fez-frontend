@@ -100,11 +100,25 @@ export default {
                     ariaPrefix: 'Photograph of '
                 },
                 dashboardResearcherIds: {
-                    researcherIsLinked: 'Your [resource] Id is [id]',
+                    researcherIsLinked: 'Your [resource] ID is [id]',
                     researcherIsNotLinked: 'You are not linked to [resource]',
                     orcidUrlPrefix: 'http://orcid.org/',
                     orcidLinkPrefix: 'orcid.org/',
-                    orcidlinkLabel: 'Click to visit your ORCId profile'
+                    orcidlinkLabel: 'Click to visit your ORCId profile',
+                    titles: {
+                        publons: 'Publons',
+                        scopus: 'Scopus',
+                        researcher: 'Researcher',
+                        google_scholar: 'Google Scholar',
+                        orcid: 'ORCID'
+                    },
+                    linksPrefix: {
+                        publons: 'https://publons.com/author/',
+                        scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
+                        researcher: 'http://www.researcherid.com/rid/',
+                        google_scholar: 'https://scholar.google.com.au/citations?user=',
+                        orcid: 'https://orcid.org/'
+                    }
                 }
             },
             possiblePublicationsLure: {
@@ -382,6 +396,7 @@ export default {
             publicationStatsRowTitle3: 'Total citations',
             publicationStatsRowTitle4: 'Total publications',
             publicationStatsRowTitle5: 'Publication range',
+            publicationStatsNA: 'N/A'
         },
         publicationForm: {
             cancel: 'Abandon and search again',
