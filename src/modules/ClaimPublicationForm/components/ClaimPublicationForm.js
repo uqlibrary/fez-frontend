@@ -91,7 +91,7 @@ export default class ClaimPublicationForm extends Component {
                                 name="authorLinking"
                                 component={AuthorLinkingField}
                                 searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
-                                author={author}
+                                loggedInAuthor={author}
                                 authorList={publication.fez_record_search_key_author}
                                 linkedAuthorIdList={publication.fez_record_search_key_author_id}
                                 disabled={this.props.submitting}
