@@ -62,18 +62,3 @@ describe('Claim Publication FacetsFilter tests : ', () => {
         expect(testMethod).toHaveBeenCalled();
     });
 });
-
-
-// function setup2({values}) {
-//     return shallow(<FacetsFilter facetsData={values} />);
-// }
-// describe('Claim Publication FacetsFilter function tests : ', () => {
-//     // TODO: Test the transformRawData function
-//     it('Test the data we get out of the transformRawData function is as expected (possibleUnclaimed -> possibleUnclaimedAfterFacetsFilterTransform', () => {
-//         const wrapper = setup2(facetsDataMocked);
-//         wrapper.instance().transformRawData();
-//         // expect(wrapper.instance(aggregations)).toEqual(possibleUnclaimedAfterFacetsFilterTransform);
-//     });
-//
-//     // TODO: Test the getNestedListItems function
-// });

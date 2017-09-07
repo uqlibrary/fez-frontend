@@ -61,7 +61,6 @@ class FacetsFilter extends React.Component {
     };
 
     transformRawData = (facetsData, aggregations, omitCategory) => {
-        console.log('DATA BEFORE TRANSFORM -------> ' + JSON.stringify(facetsData));
         Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 &&
             omitCategory.indexOf(key) === -1 &&
             facetsData[key].buckets.length !== 0).forEach(key => {
@@ -76,7 +75,6 @@ class FacetsFilter extends React.Component {
                 }),
             });
         });
-        console.log('DATA AFTER TRANSFORM -------> ' + JSON.stringify(aggregations));
     };
 
     render() {
