@@ -55,7 +55,7 @@ const authorList = [{
 function setup({author, linkedAuthorIdList, disabled}){
     const props = {
         searchKey: {value: 'rek_author_id', order: 'rek_author_id_order'},
-        author: author || { aut_id: 410 },
+        loggedInAuthor: author || { aut_id: 410 },
         authorList: authorList,
         linkedAuthorIdList: linkedAuthorIdList || [],
         disabled: disabled || false

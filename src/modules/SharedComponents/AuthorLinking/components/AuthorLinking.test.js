@@ -48,23 +48,25 @@ describe('AuthorLinking', () => {
             {searchKey},
             {
                 selectedAuthor: {
+                    rek_author_id_id: null,
+                    rek_author_id_pid: 'UQ:111111',
                     rek_author_id: 410,
                     rek_author_id_order: 6
                 }
             },
-            component.transformAuthorIdList(linkedAuthorIdList)
+            linkedAuthorIdList
         );
 
         expect(preparedOutput).toEqual([
-            {rek_author_id: 0, rek_author_id_order: 1},
-            {rek_author_id: 0, rek_author_id_order: 2},
-            {rek_author_id: 0, rek_author_id_order: 3},
-            {rek_author_id: 0, rek_author_id_order: 4},
-            {rek_author_id: 0, rek_author_id_order: 5},
-            {rek_author_id: 410, rek_author_id_order: 6},
-            {rek_author_id: 0, rek_author_id_order: 7},
-            {rek_author_id: 123, rek_author_id_order: 8},
-            {rek_author_id: 0, rek_author_id_order: 9}
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 3},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 5},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 410, rek_author_id_order: 6},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 7},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 123, rek_author_id_order: 8},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 9}
         ]);
     });
 
@@ -74,23 +76,25 @@ describe('AuthorLinking', () => {
             {searchKey},
             {
                 selectedAuthor: {
+                    rek_author_id_id: null,
+                    rek_author_id_pid: 'UQ:111111',
                     rek_author_id: 410,
                     rek_author_id_order: 6
                 }
             },
-            component.transformAuthorList(authorList)
+            authorList.map((author) => component.transformToAuthorOrderId(0, author))
         );
 
         expect(preparedOutput).toEqual([
-            {rek_author_id: 0, rek_author_id_order: 1},
-            {rek_author_id: 0, rek_author_id_order: 2},
-            {rek_author_id: 0, rek_author_id_order: 3},
-            {rek_author_id: 0, rek_author_id_order: 4},
-            {rek_author_id: 0, rek_author_id_order: 5},
-            {rek_author_id: 410, rek_author_id_order: 6},
-            {rek_author_id: 0, rek_author_id_order: 7},
-            {rek_author_id: 0, rek_author_id_order: 8},
-            {rek_author_id: 0, rek_author_id_order: 9}
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 3},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 4},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 5},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 410, rek_author_id_order: 6},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 7},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 8},
+            {rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 9}
         ]);
     });
 });

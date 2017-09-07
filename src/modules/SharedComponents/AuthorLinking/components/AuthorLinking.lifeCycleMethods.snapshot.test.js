@@ -63,7 +63,7 @@ describe('AuthorLinking', () => {
         const onChange = jest.fn();
         const props = {
             searchKey: searchKey,
-            author: {aut_id: 111},
+            loggedInAuthor: {aut_id: 111},
             authorList: [
                 {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Overgaard, Nana H.", rek_author_order: 1},
                 {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Cruz, Jazmina L.", rek_author_order: 2}

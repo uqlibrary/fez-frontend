@@ -7,7 +7,7 @@ import AuthorItem from './AuthorItem';
 
 function setup({author, index}, boolProps, onAuthorSelected){
     const props = {
-        author: author || { rek_author: 'Test user' },
+        author: author || {rek_author: 'Test user'},
         index: index || 0,
         ...boolProps,
         onAuthorSelected: onAuthorSelected || undefined
