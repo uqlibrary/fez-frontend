@@ -44,12 +44,15 @@ export function recordFileAttachment(files, record) {
             rek_file_attachment_name_order: initialCount + index + 1
         };
     });
-    const attachmentEmbargoDates = files.map((item, index) => {
-        return {
-            rek_file_attachment_embargo_date: item.date,
-            rek_file_attachment_embargo_date_order: initialCount + index + 1
-        };
-    });
+    const attachmentEmbargoDates = files
+        .map((item, index) => {
+            if (!item.hasOwnProperty('date')) return null;
+            return {
+                rek_file_attachment_embargo_date: item.date,
+                rek_file_attachment_embargo_date_order: initialCount + index + 1
+            };
+        })
+        .filter((file) => (file !== null));
     const attachmentAccessConditions = files.map((item, index) => {
         return {
             rek_file_attachment_access_condition: item.access_condition_id,
