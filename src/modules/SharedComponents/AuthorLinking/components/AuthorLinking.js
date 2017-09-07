@@ -106,11 +106,9 @@ export default class AuthorLinking extends React.Component {
      * Build authors list
      */
     buildAuthorList = ({authorList, linkedAuthorIdList, disabled}, {selectedAuthor}) => {
-        const {value, order} = this.props.searchKey;
-
         return authorList.map((author, index) => {
-            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index][value] !== 0;
-            const selected = selectedAuthor && author.rek_author_order === selectedAuthor[order];
+            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index].rek_author_id !== 0;
+            const selected = selectedAuthor && author.rek_author_order === selectedAuthor.rek_author_id_order;
 
             return (
                 <AuthorItem
