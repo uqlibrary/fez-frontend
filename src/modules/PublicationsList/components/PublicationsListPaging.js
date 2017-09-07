@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'config';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
 import FlatButton from 'material-ui/FlatButton';
 
 export default class PublicationsListPaging extends Component {
     static propTypes = {
-        onPageSizeChanged: PropTypes.func,
         onPageChanged: PropTypes.func,
+        disabled: PropTypes.bool,
         pagingData: PropTypes.shape({
             from: PropTypes.number,
             to: PropTypes.number,
@@ -20,72 +18,75 @@ export default class PublicationsListPaging extends Component {
 
     constructor(props) {
         super(props);
+
+        // keep local copy of paging data not to render empty paging component when loading a new page or sorting
         this.state = {
-            pageSize: this.props.pagingData ? this.props.pagingData.per_page : 20
+            ...this.props.pagingData
         };
     }
 
-    pageChanged = (newPage) => {
-        if (this.props.onPageChanged) this.props.onPageChanged(newPage, this.state.pageSize);
+    componentWillReceiveProps(nextProps) {
+        if(!nextProps.disabled && JSON.stringify(nextProps.pagingData) !== JSON.stringify(this.state)) {
+            this.setState({ ...nextProps.pagingData });
+        }
     }
 
-    pageSizeChanged = (event, index, value) => {
-        this.setState({
-            pageSize: value
-        });
-
-        if (this.props.onPageSizeChanged) this.props.onPageSizeChanged(this.state.pageSize);
+    pageChanged = (newPage) => {
+        if (this.props.onPageChanged) this.props.onPageChanged(newPage);
     }
 
     render() {
         const txt = locale.components.paging;
-        const totalPages = Math.ceil(this.props.pagingData.total / this.props.pagingData.per_page);
-        const renderedPages = Array(Math.min(totalPages, txt.maxPagesToShow + 1)).fill()
+        const totalPages = Math.ceil(this.state.total / this.state.per_page);
+        const renderedPages = totalPages > 0 ? Array(totalPages).fill()
             .map((page, index) => {
-                const classNames = 'is-hidden-mobile page' + ((index + 1) === this.props.pagingData.current_page ? ' selectedPage' : '');
-                let pageText = (index + 1);
-                if ((index + 1) === txt.maxPagesToShow) pageText = '...';
-                if ((index + 1) > txt.maxPagesToShow) pageText = totalPages;
-
                 return (
-                    <FlatButton
-                        key={index}
-                        onTouchTap={() => {
-                            this.pageChanged(pageText);
-                        }}
-                        disabled={pageText === '...' || (index + 1) === this.props.pagingData.current_page}
-                        className={classNames}>{pageText}</FlatButton>
+                    <div key={index} className="column is-1 is-hidden-mobile">
+                        <FlatButton
+                            onTouchTap={() => {
+                                this.pageChanged(index + 1);
+                            }}
+                            disabled={this.props.disabled || (index + 1) === this.state.current_page}
+                            className={'page' + ((index + 1) === this.state.current_page ? ' selectedPage' : '')}
+                            label={index + 1}/>
+                    </div>
                 );
-            });
+            }) : (<span />);
 
         return (
-            <div className="publicationsListPaging">
+            <div className="publicationsListPaging columns is-gapless is-mobile">
+                <div className="column is-hidden-mobile">
+                    <FlatButton
+                        label={txt.pageOf.replace('[currentPage]', this.state.current_page).replace('[totalPages]', totalPages) + ' ' + txt.totalRecords.replace('[total]', this.state.total)} />
+                </div>
                 {
-                    this.props.pagingData.current_page > 1 &&
-                    <FlatButton className="pagingPrevious" onTouchTap={() => {
-                        this.pageChanged(this.props.pagingData.current_page - 1);
-                    }}>{txt.previousPage}</FlatButton>
+                    this.state.current_page > 1 &&
+                    <div className="column is-half-mobile">
+                        <FlatButton
+                            className="pagingPrevious"
+                            onTouchTap={() => {
+                                this.pageChanged(this.state.current_page - 1);
+                            }}
+                            disabled={this.props.disabled}
+                            label={txt.previousPage}/>
+                    </div>
                 }
-                {renderedPages}
                 {
-                    this.props.pagingData.current_page < totalPages &&
-                    <FlatButton className="pagingNext" onTouchTap={() => {
-                        this.pageChanged(this.props.pagingData.current_page + 1);
-                    }}>{txt.nextPage}</FlatButton>
+                    totalPages > 1 &&
+                    renderedPages
                 }
-                <SelectField
-                    id="pageSize"
-                    className="is-hidden-mobile"
-                    value={this.state.pageSize}
-                    maxHeight={250}
-                    dropDownMenuProps={{animated: false}}
-                    onChange={this.pageSizeChanged}
-                    floatingLabelText={txt.pageSize}>
-                    <MenuItem value={20} primaryText={20}/>
-                    <MenuItem value={50} primaryText={50}/>
-                    <MenuItem value={100} primaryText={100}/>
-                    <MenuItem value={1000} primaryText={1000}/>
-                </SelectField>
+                {
+                    this.state.current_page < totalPages &&
+                    <div className="column is-half-mobile">
+                        <FlatButton
+                            className="pagingNext"
+                            onTouchTap={() => {
+                                this.pageChanged(this.state.current_page + 1);
+                            }}
+                            disabled={this.props.disabled}
+                            label={txt.nextPage}/>
+                    </div>
+                }
             </div>
         );
     }

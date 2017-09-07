@@ -234,7 +234,14 @@ export default {
                 ),
                 buttonLabel: 'OK'
             },
+            text: (
+                <div>
+                    <div>Please, check if there are any possibly your publications via <a href="#claim-publications">claim
+                        possible publications</a> or <a href="#add-record">add a missing publication</a></div>
+                </div>
+            ),
             loadingMessage: 'Searching for your publications...',
+            loadingPagingMessage: 'Retrieving for your publications...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (
@@ -244,14 +251,7 @@ export default {
                         missing publication</a>
                     </div>
                 ),
-            },
-            text: (
-                <div>
-                    <div>Your research...</div>
-                    <div>Please, check if there are any possibly your publications via <a href="#claim-publications">claim
-                        possible publications</a> or <a href="#add-record">add a missing publication</a></div>
-                </div>
-            ),
+            }
         },
         addRecord: {
             title: 'Add a missing record to eSpace',
@@ -1042,10 +1042,29 @@ export default {
             nextPage: 'Next page',
             previousPage: 'Previous page',
             maxPagesToShow: 5,
-            pageSize: 'Records per page'
+            pageSize: 'Records per page',
+            pageOf: 'Page [currentPage] of [totalPages]',
+            totalRecords: '([total] records)'
         },
         sorting: {
-
+            pageSize: 'Records per page',
+            sortLabel: 'Sort results by',
+            sortDirectionLabel: 'Sort order',
+            sortBy: [
+                {value: 'published_date', label: 'Published date'},
+                {value: 'score', label: 'Search relevance'},
+                {value: 'title', label: 'Title'},
+                {value: 'created_date', label: 'Created date'},
+                {value: 'updated_date', label: 'Updated date'},
+                {value: 'altmetric_score', label: 'Altmetric score'},
+                {value: 'scopus_citation_count', label: 'Scopus citation count'},
+                {value: 'thomson_citation_count', label: 'Thompson citation count'},
+                {value: 'file_downloads', label: 'Downloads'}
+            ],
+            sortDirection: [
+                'Desc',
+                'Asc'
+            ]
         }
     },
     validationErrors: {

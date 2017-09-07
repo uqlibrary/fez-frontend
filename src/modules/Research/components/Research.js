@@ -17,6 +17,14 @@ export default class Research extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            allowResultsPaging: false,
+            page: 1,
+            pageSize: 20,
+            sortBy: locale.components.sorting.sortBy[0].value,
+            sortDirection: locale.components.sorting.sortDirection[0]
+        };
     }
 
     componentDidMount() {
@@ -25,55 +33,101 @@ export default class Research extends React.Component {
         }
     }
 
-    pageSizeChanged = (pageSize) => {
-        this.props.actions.searchAuthorPublications({userName: this.props.account.id, pageSize: pageSize});
+    componentWillReceiveProps(newProps) {
+        if (!this.state.allowResultsPaging && !newProps.loadingPublicationsList && newProps.publicationsList.length > 0) {
+            this.setState({ allowResultsPaging: true });
+        }
     }
 
-    pageChanged = (page, pageSize) => {
-        this.props.actions.searchAuthorPublications({userName: this.props.account.id, page: page, pageSize: pageSize});
+    componentWillUpdate(nextProps, nextState) {
+        if (this.state.sortBy !== nextState.sortBy
+            || this.state.sortDirection !== nextState.sortDirection
+            || this.state.pageSize !== nextState.pageSize
+            || this.state.page !== nextState.page) {
+            this.props.actions.searchAuthorPublications({
+                userName: this.props.account.id,
+                pageSize: nextState.pageSize,
+                page: nextState.page,
+                sortBy: nextState.sortBy,
+                sortDirection: nextState.sortDirection
+            });
+        }
+    }
+
+    pageSizeChanged = (pageSize) => {
+        this.setState({
+            pageSize: pageSize,
+            page: 1
+        });
+    }
+
+    pageChanged = (page) => {
+        this.setState({
+            page: page
+        });
+    }
+
+    sortByChanged = (sortBy, sortDirection) => {
+        this.setState({
+            sortBy: sortBy,
+            sortDirection: sortDirection
+        });
     }
 
     render() {
-        console.log(this.props);
         const txt = locale.pages.myResearch;
-        const loading = false; // this.props.authorLoading || (!this.props.author || this.props.loadingPublicationsList);
 
         return (
             <StandardPage title={txt.title}>
-                {
-                    loading &&
-                    <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
-                }
-                {
-                    !loading && (!this.props.publicationsList || this.props.publicationsList.length === 0) &&
-                    <StandardCard {...txt.noResultsFound}>
-                        {txt.noResultsFound.text}
-                    </StandardCard>
-                }
-
-                {
-                    !loading && this.props.publicationsList && this.props.publicationsList.length > 0 &&
-                    <div className="columns searchWrapper">
-                        <div className="column is-9-desktop is-8-tablet is-12-mobile">
-                            <StandardCard {...txt.searchResults}>
+                <div className="columns searchWrapper">
+                    {
+                        !this.state.allowResultsPaging && this.props.loadingPublicationsList &&
+                        <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
+                    }
+                    {
+                        !this.props.loadingPublicationsList && (!this.props.publicationsList || this.props.publicationsList.length === 0) &&
+                        <StandardCard {...txt.noResultsFound}>
+                            {txt.noResultsFound.text}
+                        </StandardCard>
+                    }
+                    {
+                        this.state.allowResultsPaging &&
+                        <div className="column is-9-desktop">
+                            <StandardCard {...txt}>
                                 <div>{txt.text}</div>
-                                <PublicationsListSorting sortingData={{}} />
-                                <PublicationsListPaging
+                                <PublicationsListSorting
                                     pagingData={this.props.publicationsListPagingData}
+                                    onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
-                                    onPageChanged={this.pageChanged}/>
-                                <PublicationsList publicationsList={this.props.publicationsList} showDefaultActions/>
+                                    disabled={this.props.loadingPublicationsList} />
                                 <PublicationsListPaging
+                                    loading={this.props.loadingPublicationsList}
                                     pagingData={this.props.publicationsListPagingData}
-                                    onPageSizeChanged={this.pageSizeChanged}
-                                    onPageChanged={this.pageChanged}/>
+                                    onPageChanged={this.pageChanged}
+                                    disabled={this.props.loadingPublicationsList} />
+                                {
+                                    this.props.loadingPublicationsList &&
+                                    <div className="is-centered"><InlineLoader message={txt.loadingPagingMessage}/></div>
+                                }
+                                {
+                                    !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
+                                    <PublicationsList publicationsList={this.props.publicationsList} showDefaultActions/>
+                                }
+                                <PublicationsListPaging
+                                    loading={this.props.loadingPublicationsList}
+                                    pagingData={this.props.publicationsListPagingData}
+                                    onPageChanged={this.pageChanged}
+                                    disabled={this.props.loadingPublicationsList} />
                             </StandardCard>
                         </div>
-                        <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
+                    }
+                    {
+                        this.state.allowResultsPaging &&
+                        <div className="column is-3-desktop is-hidden-mobile">
                             <div>Facets....</div>
                         </div>
-                    </div>
-                }
+                    }
+                </div>
             </StandardPage>
         );
     }

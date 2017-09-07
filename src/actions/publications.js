@@ -44,10 +44,10 @@ export function searchLatestPublications(userName) {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchAuthorPublications({userName, page = 1, pageSize = 20}) {
+export function searchAuthorPublications({userName, page = 1, pageSize = 20, sortBy, sortDirection}) {
     return dispatch => {
         dispatch({type: AUTHOR_PUBLICATIONS_LOADING});
-        getLatestPublications({userName: userName, page: page, pageSize: pageSize}).then(response => {
+        getLatestPublications({userName: userName, page: page, pageSize: pageSize, sortBy: sortBy, sortDirection: sortDirection}).then(response => {
             dispatch({
                 type: AUTHOR_PUBLICATIONS_COMPLETED,
                 payload: response
