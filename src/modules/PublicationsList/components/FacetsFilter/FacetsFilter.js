@@ -80,7 +80,7 @@ export default class FacetsFilter extends React.Component {
 
             // ignore facet if it has no data or is in exlude list
             if (key.indexOf('(lookup)') >= 0
-                || excludeFacetsList.indexOf(key) >= 0
+                || excludeFacetsList && excludeFacetsList.indexOf(key) >= 0
                 || (rawFacet.buckets && rawFacet.buckets.length === 0)) return;
 
             // construct facet object to display, if facet has a lookup - get display name from lookup

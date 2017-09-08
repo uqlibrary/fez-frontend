@@ -3,62 +3,89 @@ jest.dontMock('./FacetsFilter');
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import {possibleUnclaimedAfterFacetsFilterTransform, possibleUnclaimed, facetsDataMocked} from 'mock/data/publications/';
+import {possibleUnclaimed} from 'mock/data/publications';
 
 import FacetsFilter from './FacetsFilter';
 
-function setup(values) {
-    return shallow(<FacetsFilter {...values} />);
+function setup({facetsData = {}, onFacetsChanged = jest.fn(), activeFacets = {}, excludeFacetsList = [], disabled = false}) {
+    const props = {
+        facetsData,
+        onFacetsChanged,
+        activeFacets,
+        excludeFacetsList,
+        disabled
+    }
+
+    return shallow(<FacetsFilter {...props} />);
 }
 
-describe('Claim Publication FacetsFilter tests : ', () => {
-    it('Render the facet list from mock data', () => {
+describe('FacetsFilter renders ', () => {
+    it('empty component for empty data', () => {
+        const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('components for mock data', () => {
         const facetsData = possibleUnclaimed.filters.facets;
-        const omitCategory = [];
-        const activeFacets = {};
-        const values = {facetsData, omitCategory, activeFacets};
-        const wrapper = setup(values);
+        const wrapper = setup({facetsData});
         expect(toJson(wrapper)).toMatchSnapshot();
+
+        const categories = wrapper.find('.facetsCategory');
+        expect(categories.length).toEqual(6);
     });
 
-    it('Render the facet list from mock data, omitting the Display type category', () => {
+    it('components for mock data with excluded facets', () => {
         const facetsData = possibleUnclaimed.filters.facets;
-        const omitCategory = ['Display type'];
-        const activeFacets = {};
-        const values = {facetsData, omitCategory, activeFacets};
-        const wrapper = setup(values);
+        const wrapper = setup({facetsData, excludeFacetsList: ['Display type']});
         expect(toJson(wrapper)).toMatchSnapshot();
+        const categories = wrapper.find('.facetsCategory');
+        expect(categories.length).toEqual(5);
     });
 
-    it('Render the facet list from mock data, with the Journal Article facet active in the Display type category', () => {
+    it('components for mock data with disabled flag set', () => {
         const facetsData = possibleUnclaimed.filters.facets;
-        const omitCategory = [];
-        const activeFacets = {'Display type': 'Journal Article'};
-        const values = {facetsData, omitCategory, activeFacets};
-        const wrapper = setup(values);
+        const wrapper = setup({facetsData, disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
+
+        const categories = wrapper.find('.facetsCategory');
+        wrapper.find('.facetsCategory').forEach(item => {
+            expect(item.props().disabled).toEqual(true);
+        })
     });
 
-    it('Render an empty component', () => {
-        const facetsData = {};
-        const omitCategory = [];
-        const activeFacets = {'Display type': 'Journal Article'};
-        const values = {facetsData, omitCategory, activeFacets};
-        const wrapper = setup(values);
+    it('components for mock data with active facets set', () => {
+        const facetsData = possibleUnclaimed.filters.facets;
+        const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
         expect(toJson(wrapper)).toMatchSnapshot();
+        const category = wrapper.find('.facetsCategory.active');
+        expect(category.length).toEqual(1);
     });
 
-    it('Test handleResetClick method calls facetsFunction prop when we reset the activeFacets', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({facetsFunction: testMethod});
+
+    it('components for mock data deactivating a facet selection', () => {
+        const facetsData = possibleUnclaimed.filters.facets;
+        const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
+
+        wrapper.instance().handleFacetClick('Display type', 130);
+        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({'Display type': 130}));
+
+        wrapper.instance().handleFacetClick('Display type', 130);
+        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({}));
+    });
+
+    it('components for mock data activating a facet selection', () => {
+        const facetsData = possibleUnclaimed.filters.facets;
+        const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
+
+        wrapper.instance().handleFacetClick('Keywords', 'Biochemistry');
+        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({'Display type': 179, 'Keywords': 'Biochemistry'}));
+    });
+
+    it('components for mock data resetting a facet selection', () => {
+        const facetsData = possibleUnclaimed.filters.facets;
+        const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
+
         wrapper.instance().handleResetClick();
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('Test handleFacetClick method calls the facetsFunction prop when we click on a facet', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({facetsFunction: testMethod});
-        wrapper.instance().handleFacetClick();
-        expect(testMethod).toHaveBeenCalled();
+        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({}));
     });
 });

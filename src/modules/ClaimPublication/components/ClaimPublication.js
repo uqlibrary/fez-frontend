@@ -81,8 +81,6 @@ export default class ClaimPublication extends React.Component {
             }
         ];
 
-        console.log(this.props);
-
         return (
             <StandardPage title={txt.title}>
                 {
