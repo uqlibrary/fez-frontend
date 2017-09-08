@@ -114,7 +114,7 @@ export default class ClaimPublication extends React.Component {
                         message={!this.props.activeFacets ? txt.loadingMessage : txt.facetSearchMessage}/>
                 </div>
                 }
-                {!loadingData && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
+                {!loadingData && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0 || (!this.props.authorLoading && !this.props.author)) &&
                 <StandardCard {...txt.noResultsFound}>
                     {txt.noResultsFound.text}
                 </StandardCard>
