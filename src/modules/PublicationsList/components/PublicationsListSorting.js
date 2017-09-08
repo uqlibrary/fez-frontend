@@ -8,7 +8,13 @@ export default class PublicationsListSorting extends Component {
     static propTypes = {
         onPageSizeChanged: PropTypes.func,
         onSortByChanged: PropTypes.func,
-        pagingData: PropTypes.object,
+        pagingData: PropTypes.shape({
+            from: PropTypes.number,
+            to: PropTypes.number,
+            total: PropTypes.number,
+            per_page: PropTypes.number,
+            current_page: PropTypes.number
+        }),
         disabled: PropTypes.bool
     };
 
@@ -52,6 +58,7 @@ export default class PublicationsListSorting extends Component {
     }
 
     render() {
+        if (!this.props.pagingData || this.props.pagingData.total === 0) return (<span className="publicationsListSorting empty"/>);
         const txt = locale.components.sorting;
         return (
             <div className="publicationsListSorting columns is-mobile">
