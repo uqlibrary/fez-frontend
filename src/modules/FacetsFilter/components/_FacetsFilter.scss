@@ -1,0 +1,48 @@
+@import '~uqlibrary-react-toolbox/sass/variables';
+
+// Styles below are mainly to present the list in a "dense" style per Material spec
+.facetsFilter {
+  padding: 0 !important;
+  min-width: 140px;
+  .facetsCategory {
+    font-size: 14px !important;
+    line-height: 14px !important;
+    & > div > div {
+      padding: 8px 56px 8px 8px !important;
+      & > button {
+        margin-top: -8px !important;
+        & svg {
+          width: 18px !important;
+          height: 18px !important;
+        }
+      }
+    }
+    &.active {
+      font-weight: bold !important;
+      padding: 8px 56px 8px 8px !important;
+      &>button {
+        margin-top: -12px !important;
+        display: none !important;
+      }
+    }
+  }
+  .facetsLink {
+    font-size: 14px !important;
+    line-height: 14px !important;
+    & > div > div {
+      padding: 8px !important;
+      & > svg {
+        margin-top: 6px !important;
+        width: 18px !important;
+        height: 18px !important;
+      }
+    }
+    &.active {
+      font-weight: bold !important;
+      color: darken($accent-color, 5%) !important;
+      & > div > div {
+        padding: 8px 8px 8px 56px !important;
+      }
+    }
+  }
+}

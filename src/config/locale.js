@@ -351,6 +351,7 @@ export default {
         claimPublications: {
             title: 'Claim possible publications',
             loadingMessage: 'Searching for your publications...',
+            facetSearchMessage: 'Applying your search facets...',
             noResultsFound: {
                 title: 'No matching publications found',
                 text: 'No publications were automatically matched for you to claim.',
@@ -382,10 +383,21 @@ export default {
                 confirmationMessage: 'Are you sure you want to hide all possibly your publications from this view?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
+            },
+            facetsfilter: {
+                title: 'Refine results',
+                help: {
+                    title: 'Refining your results',
+                    text: 'Help about ....',
+                    buttonLabel: 'Ok'
+                }
             }
         }
     },
     components: {
+        facetsFilter: {
+            resetButtonText: 'Reset'
+        },
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',
             publicationStatsTitle2: 'Web of science',
