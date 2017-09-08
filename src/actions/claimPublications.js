@@ -69,7 +69,7 @@ export function searchPossiblyYourPublications(authorUsername, facetsQueryString
             });
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
-                payload: response.filters && response.filters.facets ? response.filters.facets : {}
+                payload: response.filters && response.filters.facets && response.filters.facets.length !== 0 ? response.filters.facets : {}
             });
             dispatch(countPossiblyYourPublications(authorUsername));
         }).catch(() => {
