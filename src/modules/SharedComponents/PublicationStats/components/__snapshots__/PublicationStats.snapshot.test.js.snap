@@ -733,8 +733,8 @@ exports[`PublicationStats component should render N/A for hindex because they eq
 `;
 
 exports[`PublicationStats component should render an empty component 1`] = `
-<div
-  className="publicationsStatsEmpty"
+<span
+  className="publicationsStats empty"
 />
 `;
 

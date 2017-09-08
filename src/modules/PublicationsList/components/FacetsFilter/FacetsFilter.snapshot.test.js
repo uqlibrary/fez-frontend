@@ -3,7 +3,7 @@ jest.dontMock('./FacetsFilter');
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import {possibleUnclaimedAfterFacetsFilterTransform, possibleUnclaimed, facetsDataMocked} from '../../../mock/data/publications/';
+import {possibleUnclaimedAfterFacetsFilterTransform, possibleUnclaimed, facetsDataMocked} from 'mock/data/publications/';
 
 import FacetsFilter from './FacetsFilter';
 

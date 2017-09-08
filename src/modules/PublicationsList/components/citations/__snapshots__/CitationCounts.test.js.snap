@@ -96,26 +96,6 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       1
     </span>
   </span>
-  <span
-    className="citationCount"
-  >
-    <FontIcon
-      className="material-icons citationCountIcon"
-      data-for="claimTooltips"
-      data-place="bottom"
-      data-tip="Downloads"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      title="Downloads"
-    >
-      file_download
-    </FontIcon>
-    <span
-      className="citationCountNumber"
-    >
-      1
-    </span>
-  </span>
 </div>
 `;
 

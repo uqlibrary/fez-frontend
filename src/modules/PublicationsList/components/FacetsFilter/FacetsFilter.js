@@ -5,8 +5,7 @@ import FlatButton from 'material-ui/RaisedButton';
 import {List, ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-
-class FacetsFilter extends React.Component {
+export default class FacetsFilter extends React.Component {
     static propTypes = {
         facetsData: PropTypes.object,
         facetsFunction: PropTypes.func,
@@ -22,7 +21,6 @@ class FacetsFilter extends React.Component {
 
     constructor(props) {
         super(props);
-        this.handleResetClick = this.handleResetClick.bind(this);
     }
 
     handleFacetClick = (category, facet) => {
@@ -114,5 +112,3 @@ class FacetsFilter extends React.Component {
         );
     }
 }
-
-export default FacetsFilter;

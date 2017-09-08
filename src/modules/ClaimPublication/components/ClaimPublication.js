@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationsList} from 'modules/PublicationsList';
-import {FacetsFilter} from 'modules/FacetsFilter';
+import {FacetsFilter} from 'modules/PublicationsList';
 import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 
 import {locale} from 'config';

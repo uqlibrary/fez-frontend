@@ -51,11 +51,10 @@ describe('CitationCounts renders ', () => {
             rek_thomson_citation_count: 1,
             rek_scopus_citation_count: 1,
             rek_gs_citation_count: 1,
-            rek_altmetric_score: 1,
-            rek_file_downloads: 1
+            rek_altmetric_score: 1
         };
         const wrapper = setup({publication});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.citationCount').length).toEqual(5);
+        expect(wrapper.find('.citationCount').length).toEqual(4);
     });
 });

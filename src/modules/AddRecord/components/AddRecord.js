@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
 import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
-import PublicationListLoadingProgress from '../../PublicationsList/components/PublicationListLoadingProgress';
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
 import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationForm} from 'modules/PublicationForm';
+import {PublicationListLoadingProgress} from 'modules/PublicationsList';
 
 import {locale, validation} from 'config';
 
