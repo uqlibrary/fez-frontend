@@ -70,3 +70,8 @@ button[type=button] {
     padding: 0px !important;
   }
 }
+
+// Bulma titles are too bold
+.title {
+  font-weight: 400 !important;
+}

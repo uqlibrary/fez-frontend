@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationsList} from 'modules/PublicationsList';
-import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import {FacetsFilter} from 'modules/FacetsFilter';
+import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 
 import {locale} from 'config';
 
@@ -11,10 +12,17 @@ export default class ClaimPublication extends React.Component {
     static propTypes = {
         possiblePublicationsList: PropTypes.array,
         loadingPossiblePublicationsList: PropTypes.bool,
-        loadingPossibleCounts: PropTypes.bool,
+
         author: PropTypes.object,
         authorLoading: PropTypes.bool,
+
+        facetsData: PropTypes.object,
+        activeFacets: PropTypes.object,
+        loadingFacetsData: PropTypes.bool,
+
         possibleCounts: PropTypes.object,
+        loadingPossibleCounts: PropTypes.bool,
+
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -23,8 +31,10 @@ export default class ClaimPublication extends React.Component {
         super(props);
 
         this.state = {
-            publicationToHide: null
+            publicationToHide: null,
+            activeFacets: {}
         };
+        this._facetsChanged = this._facetsChanged.bind(this);
     }
 
     componentDidMount() {
@@ -58,6 +68,15 @@ export default class ClaimPublication extends React.Component {
         this.props.actions.setClaimPublication(item);
     }
 
+    _facetsChanged = (activeFacets) => {
+        // Translate the object from FacetsFilter into a query string to assign to facetsQueryString
+        const queryString = Object.keys(activeFacets).map(key => {
+            return ('filters[facets][' + key + ']=' + activeFacets[key]);
+        }).join('&');
+        const facetsQueryString = queryString !== '' ? '?' + queryString : '';
+        this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, facetsQueryString, activeFacets);
+    };
+
     render() {
         const txt = locale.pages.claimPublications;
         const actions = [
@@ -70,7 +89,8 @@ export default class ClaimPublication extends React.Component {
                 handleAction: this._confirmHidePublication
             }
         ];
-        const loadingData = this.props.authorLoading || (this.props.author && (this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts));
+        const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
+        const omitCategory = []; // List of facet categories to not show in the FacetsFilter
         return (
             <StandardPage title={txt.title}>
                 {
@@ -83,7 +103,7 @@ export default class ClaimPublication extends React.Component {
                 {
                     loadingData &&
                     <div className="is-centered">
-                        <InlineLoader message={txt.loadingMessage} />
+                        <InlineLoader message={!this.props.activeFacets ? txt.loadingMessage : txt.facetSearchMessage} />
                     </div>
                 }
                 {
@@ -92,19 +112,36 @@ export default class ClaimPublication extends React.Component {
                         {txt.noResultsFound.text}
                     </StandardCard>
                 }
-                {
-                    !loadingData && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
-                    <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
-                        <div>
-                            {
-                                txt.searchResults.text
-                                    .replace('[resultsCount]', this.props.possiblePublicationsList.length)
-                                    .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
-                            }
+                <div className="columns">
+                    {
+                        !loadingData && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
+                        <div className="column">
+                            <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
+                                <div>
+                                    {
+                                        txt.searchResults.text
+                                            .replace('[resultsCount]', this.props.possiblePublicationsList.length)
+                                            .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
+                                    }
+                                </div>
+                                <PublicationsList
+                                    publicationsList={this.props.possiblePublicationsList}
+                                    customActions={actions} />
+                            </StandardCard>
                         </div>
-                        <PublicationsList publicationsList={this.props.possiblePublicationsList} customActions={actions}/>
-                    </StandardCard>
-                }
+                    }
+                    {
+                        !loadingData && this.props.facetsData &&
+                    <div className="column is-3 is-hidden-mobile">
+                        <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
+                            <FacetsFilter facetsData={this.props.facetsData}
+                                facetsFunction={this._facetsChanged}
+                                activeFacets={this.props.activeFacets}
+                                omitCategory={omitCategory} />
+                        </StandardRighthandCard>
+                    </div>
+                    }
+                </div>
             </StandardPage>
         );
     }

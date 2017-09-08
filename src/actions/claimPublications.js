@@ -12,6 +12,7 @@ import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 export const POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'POSSIBLY_YOUR_PUBLICATIONS_LOADING';
 export const POSSIBLY_YOUR_PUBLICATIONS_COMPLETED = 'POSSIBLY_YOUR_PUBLICATIONS_COMPLETED';
+export const POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED = 'POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED';
 export const POSSIBLY_YOUR_PUBLICATIONS_FAILED = 'POSSIBLY_YOUR_PUBLICATIONS_FAILED';
 
 export const COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING';
@@ -56,14 +57,18 @@ export function countPossiblyYourPublications(authorUsername) {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchPossiblyYourPublications(authorUsername) {
+export function searchPossiblyYourPublications(authorUsername, facetsQueryString, activeFacets) {
     return dispatch => {
-        dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING});
+        dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
         // TODO: try some authors who are students - org username or student name to use?
-        getPossibleUnclaimedPublications(authorUsername).then(response => {
+        getPossibleUnclaimedPublications(authorUsername, facetsQueryString).then(response => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                payload: response.data
+                payload: response.data,
+            });
+            dispatch({
+                type: POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
+                payload: response.filters && response.filters.facets ? response.filters.facets : {}
             });
             dispatch(countPossiblyYourPublications(authorUsername));
         }).catch(() => {
@@ -81,7 +86,7 @@ export function searchPossiblyYourPublications(authorUsername) {
  * @param author {object} - user user name
  * @returns {action}
  */
-export function hidePublications(publicationsToHide, author) {
+export function hidePublications(publicationsToHide, author, activeFacets) {
     return dispatch => {
         if (!author) return;
 
@@ -102,7 +107,7 @@ export function hidePublications(publicationsToHide, author) {
                 });
 
                 // reload current possibly your publications/count after user hides records
-                dispatch(searchPossiblyYourPublications(author.aut_org_username));
+                dispatch(searchPossiblyYourPublications(author.aut_org_username, activeFacets));
             })
             .catch(() => {
                 dispatch({
@@ -158,6 +163,11 @@ export function clearClaimPublication() {
  */
 export function claimPublication(data) {
     console.log(data);
+    let attachments = [];
+    if (data.files && data.files.queue && data.files.queue.length > 0) {
+        attachments = claimAttachments(data.files.queue);
+    }
+
     return dispatch => {
         dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
         if (data.publication.rek_pid) {
@@ -166,12 +176,12 @@ export function claimPublication(data) {
                 pid: data.publication.rek_pid,
                 author_id: data.author.aut_id,
                 comments: data.comments,
-                ...claimAttachments(data.files.queue)
+                ...attachments
             };
             console.log(claimRequest);
             return postClaimPossiblePublication(claimRequest)
                 .then(response => {
-                    if (!data.files.queue || data.files.queue.length === 0) {
+                    if (!data.files || !data.files.queue || data.files.queue.length === 0) {
                         return response;
                     } else {
                         return putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
@@ -233,7 +243,7 @@ export function claimPublication(data) {
                         pid: newPid,
                         author_id: data.author.aut_id,
                         comments: data.comments,
-                        ...claimAttachments(data.files.queue)
+                        ...attachments
                     };
                     console.log(claimRequest);
                     return postClaimPossiblePublication(claimRequest);
