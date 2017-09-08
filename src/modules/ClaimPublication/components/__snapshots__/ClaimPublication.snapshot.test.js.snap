@@ -1998,13 +1998,20 @@ exports[`ClaimPublication test renders loading screen while loading author data 
 <StandardPage
   title="Claim possible publications"
 >
-  <div
-    className="is-centered"
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "Ok",
+        "text": "Why search didn't return any items....",
+        "title": "No matching records found",
+      }
+    }
+    text="No publications were automatically matched for you to claim."
+    title="No matching publications found"
   >
-    <InlineLoader
-      message="Searching for your publications..."
-    />
-  </div>
+    No publications were automatically matched for you to claim.
+  </StandardCard>
   <div
     className="columns"
   />

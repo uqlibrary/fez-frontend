@@ -350,3 +350,9 @@ By applying the class _is-mui-spacing-button_ on the button element...
 NOTE: That this spacing issue doesn't happen when the input and button are in the same cell/.column
 
 
+Some custom helpers
+======
+
+####.card-paddingless
+
+Adding this class to <StandardCard className="card-paddingless" removes the header (title etc) and removes all padding inside the card so that you may spread content edge-to-edge within the card.

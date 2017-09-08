@@ -4,7 +4,13 @@ import PropTypes from 'prop-types';
 // forms & custom components
 import {PublicationsList} from 'modules/PublicationsList';
 import {FacetsFilter} from 'modules/FacetsFilter';
-import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
+import {
+    InlineLoader,
+    StandardPage,
+    StandardCard,
+    ConfirmDialogBox,
+    StandardRighthandCard
+} from 'uqlibrary-react-toolbox';
 
 import {locale} from 'config';
 
@@ -90,54 +96,52 @@ export default class ClaimPublication extends React.Component {
             }
         ];
         const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
-        const omitCategory = []; // List of facet categories to not show in the FacetsFilter
+        const omitCategory = [];
+        console.log('AUTHOR --- >' + JSON.stringify(this.props.author));
         return (
             <StandardPage title={txt.title}>
-                {
-                    this.props.possiblePublicationsList.length > 0 &&
-                    <ConfirmDialogBox
-                        onRef={ref => (this.hideConfirmationBox = ref)}
-                        onAction={this._hidePublication}
-                        locale={txt.hidePublicationConfirmation}/>
+
+
+                {this.props.possiblePublicationsList.length > 0 &&
+                <ConfirmDialogBox
+                    onRef={ref => (this.hideConfirmationBox = ref)}
+                    onAction={this._hidePublication}
+                    locale={txt.hidePublicationConfirmation}/>
                 }
-                {
-                    loadingData &&
-                    <div className="is-centered">
-                        <InlineLoader message={!this.props.activeFacets ? txt.loadingMessage : txt.facetSearchMessage} />
-                    </div>
+                {loadingData && this.props.author &&
+                <div className="is-centered">
+                    <InlineLoader
+                        message={!this.props.activeFacets ? txt.loadingMessage : txt.facetSearchMessage}/>
+                </div>
                 }
-                {
-                    !loadingData && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
-                    <StandardCard {...txt.noResultsFound}>
-                        {txt.noResultsFound.text}
-                    </StandardCard>
+                {!loadingData && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
+                <StandardCard {...txt.noResultsFound}>
+                    {txt.noResultsFound.text}
+                </StandardCard>
                 }
                 <div className="columns">
-                    {
-                        !loadingData && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
-                        <div className="column">
-                            <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
-                                <div>
-                                    {
-                                        txt.searchResults.text
-                                            .replace('[resultsCount]', this.props.possiblePublicationsList.length)
-                                            .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
-                                    }
-                                </div>
-                                <PublicationsList
-                                    publicationsList={this.props.possiblePublicationsList}
-                                    customActions={actions} />
-                            </StandardCard>
-                        </div>
+                    {!loadingData && this.props.author && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
+                    <div className="column">
+                        <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
+                            <div>
+                                {txt.searchResults.text
+                                    .replace('[resultsCount]', this.props.possiblePublicationsList.length)
+                                    .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
+                                }
+                            </div>
+                            <PublicationsList
+                                publicationsList={this.props.possiblePublicationsList}
+                                customActions={actions}/>
+                        </StandardCard>
+                    </div>
                     }
-                    {
-                        !loadingData && this.props.facetsData &&
+                    {!loadingData && this.props.author && this.props.facetsData && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
                     <div className="column is-3 is-hidden-mobile">
                         <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
                             <FacetsFilter facetsData={this.props.facetsData}
                                 facetsFunction={this._facetsChanged}
                                 activeFacets={this.props.activeFacets}
-                                omitCategory={omitCategory} />
+                                omitCategory={omitCategory}/>
                         </StandardRighthandCard>
                     </div>
                     }
