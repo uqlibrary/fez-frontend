@@ -97,7 +97,8 @@ export default class ClaimPublication extends React.Component {
                 }
                 <div className="columns">
                     {
-                        !this.props.loadingPossiblePublicationsList && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
+                        !this.props.loadingPossibleCounts && !this.props.loadingPossiblePublicationsList
+                        && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
                         <div className="column">
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
