@@ -76,14 +76,7 @@ export function recordAuthors(authors) {
 export function recordAuthorsId(authors) {
     if (!authors || authors.length === 0) return {};
     return {
-        fez_record_search_key_author_id: authors.map(
-            (item, index) => (
-                {
-                    rek_author_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || null,
-                    rek_author_id_order: index + 1
-                }
-            )
-        )
+        fez_record_search_key_author_id: authors
     };
 }
 
