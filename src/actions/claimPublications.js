@@ -164,6 +164,11 @@ export function clearClaimPublication() {
  */
 export function claimPublication(data) {
     console.log(data);
+    let attachments = [];
+    if (data.files && data.files.queue && data.files.queue.length > 0) {
+        attachments = claimAttachments(data.files.queue);
+    }
+
     return dispatch => {
         dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
         if (data.publication.rek_pid) {
@@ -172,12 +177,12 @@ export function claimPublication(data) {
                 pid: data.publication.rek_pid,
                 author_id: data.author.aut_id,
                 comments: data.comments,
-                ...claimAttachments(data.files.queue)
+                ...attachments
             };
             console.log(claimRequest);
             return postClaimPossiblePublication(claimRequest)
                 .then(response => {
-                    if (!data.files.queue || data.files.queue.length === 0) {
+                    if (!data.files || !data.files.queue || data.files.queue.length === 0) {
                         return response;
                     } else {
                         return putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
@@ -239,7 +244,7 @@ export function claimPublication(data) {
                         pid: newPid,
                         author_id: data.author.aut_id,
                         comments: data.comments,
-                        ...claimAttachments(data.files.queue)
+                        ...attachments
                     };
                     console.log(claimRequest);
                     return postClaimPossiblePublication(claimRequest);
