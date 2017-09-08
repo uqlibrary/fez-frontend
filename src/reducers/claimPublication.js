@@ -5,16 +5,22 @@ export const initialState = {
     possibleCounts: null,
     possiblePublicationsList: [],
     loadingPossiblePublicationsList: true,
-    loadingPossibleCounts: true
+    loadingPossibleCounts: true,
+    facetsData: {},
+    loadingFacetsData: true,
+    activeFacets: null
 };
 
 const handlers = {
 
-    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => {
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state, action) => {
         return {
             ...state,
             loadingPossiblePublicationsList: true,
-            possiblePublicationsList: []
+            possiblePublicationsList: [],
+            facetsData: {},
+            loadingFacetsData: true,
+            activeFacets: action.payload
         };
     },
 
@@ -36,7 +42,15 @@ const handlers = {
         return {
             ...state,
             loadingPossiblePublicationsList: false,
-            possiblePublicationsList: action.payload
+            possiblePublicationsList: action.payload,
+        };
+    },
+
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED]: (state, action) => {
+        return {
+            ...state,
+            facetsData: action.payload,
+            loadingFacetsData: false
         };
     },
 
@@ -46,7 +60,9 @@ const handlers = {
             loadingPossiblePublicationsList: false,
             possiblePublicationsList: [],
             loadingPossibleCounts: false,
-            possibleCounts: null
+            possibleCounts: null,
+            facetsData: {},
+            loadingFacetsData: false
         };
     },
 
@@ -81,5 +97,6 @@ export default function claimPublicationReducer(state = initialState, action) {
     if (!handler) {
         return state;
     }
+    console.log(action);
     return handler(state, action);
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardPage, StandardCard, StandardRighthandCard, InlineLoader, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 import PublicationListLoadingProgress from '../../PublicationsList/components/PublicationListLoadingProgress';
 
 // forms & custom components
@@ -145,7 +145,7 @@ export default class AddRecord extends React.Component {
                 </div>
                 {/* Desktop search dashboard */}
                 <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
-                    <StandardRighthandCard title={locale.pages.addRecord.step2.searchResults.searchDashboard.title}>
+                    <StandardRighthandCard title={txt.searchResults.searchDashboard.title}>
                         <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
                     </StandardRighthandCard>
                 </div>
