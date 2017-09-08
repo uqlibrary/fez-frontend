@@ -39,7 +39,6 @@ export default class PublicationsListSorting extends Component {
         });
     }
 
-
     orderDirectionsChanged = (event, index, value) => {
         this.setState({
             sortDirection: value

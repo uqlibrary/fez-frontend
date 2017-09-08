@@ -38,7 +38,8 @@ export default class PublicationsListPaging extends Component {
     render() {
         const txt = locale.components.paging;
         const totalPages = Math.ceil(this.state.total / this.state.per_page);
-        const renderedPages = totalPages > 0 ? Array(totalPages).fill()
+        if (totalPages === 0) return (<span className="publicationsListPaging empty" />);
+        const renderedPages = Array(totalPages).fill()
             .map((page, index) => {
                 return (
                     <div key={index} className="column is-1 is-hidden-mobile">
@@ -51,7 +52,7 @@ export default class PublicationsListPaging extends Component {
                             label={index + 1}/>
                     </div>
                 );
-            }) : (<span />);
+            });
 
         return (
             <div className="publicationsListPaging columns is-gapless is-mobile">
