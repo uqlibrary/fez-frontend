@@ -24,7 +24,7 @@ export default class PublicationsListSorting extends Component {
         this.state = {
             sortBy: locale.components.sorting.sortBy[0].value,
             sortDirection: locale.components.sorting.sortDirection[0],
-            pageSize: this.props.pagingData && this.props.pagingData.per_page ? this.props.pagingData.per_page : 20
+            pageSize: props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20
         };
     }
 

@@ -58,24 +58,24 @@ export function countPossiblyYourPublications(authorUsername) {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchPossiblyYourPublications(authorUsername, facetsQueryString, activeFacets) {
+export function searchPossiblyYourPublications(authorUsername, activeFacets) {
     return dispatch => {
         dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
         // TODO: try some authors who are students - org username or student name to use?
-        getPossibleUnclaimedPublications(authorUsername, facetsQueryString).then(response => {
+        getPossibleUnclaimedPublications(authorUsername, activeFacets).then(response => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                payload: response.data,
+                payload: response,
             });
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
                 payload: response.filters && response.filters.facets ? response.filters.facets : {}
             });
             dispatch(countPossiblyYourPublications(authorUsername));
-        }).catch(() => {
+        }).catch((error) => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                payload: []
+                payload: error
             });
         });
     };

@@ -265,6 +265,15 @@ export default {
                         missing publication</a>
                     </div>
                 ),
+            },
+            facetsFilter: {
+                title: 'Refine results',
+                help: {
+                    title: 'Refining your results',
+                    text: 'Help about ....',
+                    buttonLabel: 'Ok'
+                },
+                excludeFacetsList: ['Scopus document type', 'Subtype']
             }
         },
         addRecord: {
@@ -351,7 +360,7 @@ export default {
         claimPublications: {
             title: 'Claim possible publications',
             loadingMessage: 'Searching for your publications...',
-            facetSearchMessage: 'Applying your search facets...',
+            facetSearchMessage: 'Applying filters...',
             noResultsFound: {
                 title: 'No matching publications found',
                 text: 'No publications were automatically matched for you to claim.',
@@ -384,13 +393,14 @@ export default {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
-            facetsfilter: {
+            facetsFilter: {
                 title: 'Refine results',
                 help: {
                     title: 'Refining your results',
                     text: 'Help about ....',
                     buttonLabel: 'Ok'
-                }
+                },
+                excludeFacetsList: ['Scopus document type', 'Subtype']
             }
         }
     },

@@ -1698,7 +1698,40 @@ export const possibleUnclaimed = {
     }
 };
 
-export const possibleUnclaimedAfterFacetsFilterTransform = [{"aggregation":"Display type","facets":[{"key":179,"doc_count":2,"display_name":"Journal Article"}]},{"aggregation":"Keywords","facets":[{"key":"Applied Microbiology and Biotechnology","doc_count":1,"display_name":"Applied Microbiology and Biotechnology"},{"key":"Biochemistry","doc_count":1,"display_name":"Biochemistry"},{"key":"Bioengineering","doc_count":1,"display_name":"Bioengineering"},{"key":"Biomaterials","doc_count":1,"display_name":"Biomaterials"},{"key":"Biomedical Engineering","doc_count":1,"display_name":"Biomedical Engineering"}]},{"aggregation":"Year published","facets":[{"key":"2017","doc_count":2,"display_name":"2017"}]},{"aggregation":"Journal name","facets":[{"key":"Metallomics","doc_count":1,"display_name":"Metallomics"},{"key":"Nature biotechnology","doc_count":1,"display_name":"Nature biotechnology"}]},{"aggregation":"Collection","facets":[{"key":"UQ:639325","doc_count":2,"display_name":"Crossref Import"}]},{"aggregation":"Author","facets":[{"key":683,"doc_count":1,"display_name":"Schenk, Gerhard (Gary)"}]}];
+export const possibleUnclaimedAfterFacetsFilterTransform = [
+    {
+        "aggregation": "Display type",
+        "facets": [{"key": 179, "doc_count": 2, "display_name": "Journal Article"}]
+    }, {
+        "aggregation": "Keywords",
+        "facets": [{
+            "key": "Applied Microbiology and Biotechnology",
+            "doc_count": 1,
+            "display_name": "Applied Microbiology and Biotechnology"
+        }, {"key": "Biochemistry", "doc_count": 1, "display_name": "Biochemistry"}, {
+            "key": "Bioengineering",
+            "doc_count": 1,
+            "display_name": "Bioengineering"
+        }, {"key": "Biomaterials", "doc_count": 1, "display_name": "Biomaterials"}, {
+            "key": "Biomedical Engineering",
+            "doc_count": 1,
+            "display_name": "Biomedical Engineering"
+        }]
+    }, {
+        "aggregation": "Year published",
+        "facets": [{"key": "2017", "doc_count": 2, "display_name": "2017"}]
+    }, {
+        "aggregation": "Journal name",
+        "facets": [{
+            "key": "Metallomics",
+            "doc_count": 1,
+            "display_name": "Metallomics"
+        }, {"key": "Nature biotechnology", "doc_count": 1, "display_name": "Nature biotechnology"}]
+    }, {
+        "aggregation": "Collection",
+        "facets": [{"key": "UQ:639325", "doc_count": 2, "display_name": "Crossref Import"}]
+    }, {"aggregation": "Author", "facets": [{"key": 683, "doc_count": 1, "display_name": "Schenk, Gerhard (Gary)"}]}
+    ];
 
 export const facetsDataMocked = {
     "Scopus document type": {

@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StandardPage, StandardCard, InlineLoader} from 'uqlibrary-react-toolbox';
-import {PublicationsList, PublicationsListPaging, PublicationsListSorting} from 'modules/PublicationsList';
+import {StandardPage, StandardRighthandCard, StandardCard, InlineLoader} from 'uqlibrary-react-toolbox';
+import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/PublicationsList';
 import {locale} from 'config';
 
 export default class Research extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
+        publicationsListFacets: PropTypes.object,
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
+
         account: PropTypes.object,
         accountLoading: PropTypes.bool,
+
         history: PropTypes.object.isRequired,
         actions: PropTypes.object
     };
@@ -23,7 +26,8 @@ export default class Research extends React.Component {
             page: 1,
             pageSize: 20,
             sortBy: locale.components.sorting.sortBy[0].value,
-            sortDirection: locale.components.sorting.sortDirection[0]
+            sortDirection: locale.components.sorting.sortDirection[0],
+            activeFacets: {}
         };
     }
 
@@ -43,13 +47,15 @@ export default class Research extends React.Component {
         if (this.state.sortBy !== nextState.sortBy
             || this.state.sortDirection !== nextState.sortDirection
             || this.state.pageSize !== nextState.pageSize
-            || this.state.page !== nextState.page) {
+            || this.state.page !== nextState.page
+            || JSON.stringify(this.state.activeFacets) !== JSON.stringify(nextState.activeFacets)) {
             this.props.actions.searchAuthorPublications({
                 userName: this.props.account.id,
                 pageSize: nextState.pageSize,
                 page: nextState.page,
                 sortBy: nextState.sortBy,
-                sortDirection: nextState.sortDirection
+                sortDirection: nextState.sortDirection,
+                activeFacets: nextState.activeFacets
             });
         }
     }
@@ -74,25 +80,33 @@ export default class Research extends React.Component {
         });
     }
 
+    facetsChanged = (activeFacets) => {
+        this.setState({
+            activeFacets: {...activeFacets}
+        });
+    }
+
     render() {
         const txt = locale.pages.myResearch;
 
         return (
             <StandardPage title={txt.title}>
-                <div className="columns searchWrapper">
-                    {
-                        !this.state.allowResultsPaging && this.props.loadingPublicationsList &&
-                        <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
-                    }
+                {
+                    !this.state.allowResultsPaging && this.props.loadingPublicationsList &&
+                    <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
+                }
+                <div className="columns">
                     {
                         !this.props.loadingPublicationsList && (!this.props.publicationsList || this.props.publicationsList.length === 0) &&
-                        <StandardCard {...txt.noResultsFound}>
-                            {txt.noResultsFound.text}
-                        </StandardCard>
+                        <div className="column">
+                            <StandardCard {...txt.noResultsFound}>
+                                {txt.noResultsFound.text}
+                            </StandardCard>
+                        </div>
                     }
                     {
                         this.state.allowResultsPaging &&
-                        <div className="column is-9-desktop">
+                        <div className="column">
                             <StandardCard {...txt}>
                                 <div>{txt.text}</div>
                                 <PublicationsListSorting
@@ -122,9 +136,16 @@ export default class Research extends React.Component {
                         </div>
                     }
                     {
-                        this.state.allowResultsPaging &&
-                        <div className="column is-3-desktop is-hidden-mobile">
-                            <div>Facets....</div>
+                        this.state.allowResultsPaging && Object.keys(this.props.publicationsListFacets).length > 0 &&
+                        <div className="column is-3 is-hidden-mobile">
+                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                <FacetsFilter
+                                    facetsData={this.props.publicationsListFacets}
+                                    onFacetsChanged={this.facetsChanged}
+                                    activeFacets={this.state.activeFacets}
+                                    disabled={this.props.loadingPublicationsList}
+                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList} />
+                            </StandardRighthandCard>
                         </div>
                     }
                 </div>

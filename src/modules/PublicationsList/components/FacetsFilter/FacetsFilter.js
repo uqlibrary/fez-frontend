@@ -8,96 +8,119 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 export default class FacetsFilter extends React.Component {
     static propTypes = {
         facetsData: PropTypes.object,
-        facetsFunction: PropTypes.func,
+        onFacetsChanged: PropTypes.func,
         activeFacets: PropTypes.object,
-        omitCategory: PropTypes.array
+        excludeFacetsList: PropTypes.array,
+        disabled: PropTypes.bool
     };
 
     static defaultProps = {
-        facetsData: {},
-        activeFacets: {},
-        omitCategory: []
+        excludeFacetsList: []
     };
 
     constructor(props) {
         super(props);
+
+        // always keep props/state in sync
+        this.state = {
+            activeFacets: {...props.activeFacets}
+        };
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        if (JSON.stringify(nextState.activeFacets) !== JSON.stringify(this.state.activeFacets)
+            && this.props.onFacetsChanged) {
+            this.props.onFacetsChanged(nextState.activeFacets);
+        }
     }
 
     handleFacetClick = (category, facet) => {
-        const activeFacets = {...this.props.activeFacets};
+        const activeFacets = {...this.state.activeFacets};
 
-        if (activeFacets[category] !== undefined) {
-            if (activeFacets[category] === facet) {
-                delete activeFacets[category];
-            } else {
-                activeFacets[category] = facet;
-            }
+        if (activeFacets.hasOwnProperty(category) && activeFacets[category] === facet) {
+            delete activeFacets[category];
         } else {
             activeFacets[category] = facet;
         }
-        this.props.facetsFunction(activeFacets);
+
+        this.setState({
+            activeFacets: {...activeFacets}
+        });
     };
 
     handleResetClick = () => {
         this.setState({
             activeFacets: {}
-        }, () => {
-            this.props.facetsFunction(this.state.activeFacets);
         });
     }
 
-    getNestedListItems = (item) => {
-        const activeFacets = this.props.activeFacets;
-        return item.facets.map((subitem, subindex) => (
-            <ListItem key={subindex}
-                className={activeFacets[item.aggregation] === subitem.key ? 'facetsLink active' : 'facetsLink'}
-                primaryText={`${subitem.display_name} (${subitem.doc_count})`}
-                onClick={this.handleFacetClick.bind(this, item.aggregation, subitem.key)}
-                leftIcon={activeFacets[item.aggregation] === subitem.key ? <NavigationClose/> : null}
-            />
-        ));
+    getNestedListItems = (facetCategory) => {
+        const listItems = facetCategory.facets.map((item, index) => {
+            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.title)
+                && this.state.activeFacets[facetCategory.title] === item.key;
+            return (
+                <ListItem
+                    key={index}
+                    className={isActive ? 'facetsLink active' : 'facetsLink'}
+                    primaryText={`${item.title} (${item.count})`}
+                    onClick={() => (this.handleFacetClick(facetCategory.title, item.key))}
+                    disabled={this.props.disabled}
+                    leftIcon={isActive ? <NavigationClose/> : null}/>
+            );
+        });
+        return listItems;
     };
 
-    transformRawData = (facetsData, aggregations, omitCategory) => {
-        Object.keys(facetsData).filter(key => key.indexOf('(lookup)') === -1 &&
-            omitCategory.indexOf(key) === -1 &&
-            facetsData[key].buckets.length !== 0).forEach(key => {
-            const o = facetsData[key];
-            const lookupItem = facetsData[`${key} (lookup)`] || o;
-            aggregations.push({
-                aggregation: key,
-                display_name: o.display_name,
-                facets: o.buckets.map((bucket, index) => {
-                    bucket.display_name = lookupItem.buckets[index].key;
-                    return bucket;
-                }),
-            });
+    getFacetsToDisplay(rawFacets, excludeFacetsList) {
+        const facetsToDisplay = [];
+
+        Object.keys(rawFacets).forEach((key) => {
+            const rawFacet = rawFacets[key];
+            const rawFacetLookup = rawFacets[`${key} (lookup)`];
+
+            // ignore facet if it has no data or is in exlude list
+            if (key.indexOf('(lookup)') >= 0
+                || excludeFacetsList.indexOf(key) >= 0
+                || (rawFacet.buckets && rawFacet.buckets.length === 0)) return;
+
+            // construct facet object to display, if facet has a lookup - get display name from lookup
+            const facetToDisplay = {
+                title: key,
+                facets: rawFacet.buckets.map((item, index) => ({
+                    title: rawFacetLookup ? rawFacetLookup.buckets[index].key : item.key,
+                    key: item.key,
+                    count: item.doc_count
+                }))
+            };
+
+            facetsToDisplay.push(facetToDisplay);
         });
-    };
+
+        return facetsToDisplay;
+    }
 
     render() {
         const txt = locale.components.facetsFilter;
-        const aggregations = [];
-        const facetsData = this.props.facetsData; // Data from API, list of facets for current displayed publications
-        const activeFacets = this.props.activeFacets; // From store, facets that are active
-        const omitCategory = this.props.omitCategory; // prop of array category items to hide
-        this.transformRawData(facetsData, aggregations, omitCategory);
-
+        const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList);
+        if (facetsToDisplay.length === 0) return (<span className="facetsFilter empty" />);
         return (
             <div className="facetsFilter">
                 <List>
-                    {aggregations.map((item, index) => (
-                        <div key={index}>
-                            <ListItem primaryText={item.aggregation}
-                                open={activeFacets[item.aggregation] && true}
-                                disabled={activeFacets[item.aggregation] && true}
-                                className={!activeFacets[item.aggregation] ? 'facetsCategory' : 'facetsCategory active'}
-                                primaryTogglesNestedList
-                                key={index}
-                                nestedItems={this.getNestedListItems(item)}
-                            />
-                        </div>
-                    ))}
+                    {
+                        facetsToDisplay.map((item, index) => {
+                            const isActive = this.state.activeFacets.hasOwnProperty(item.title);
+                            return (
+                                <ListItem
+                                    primaryText={item.title}
+                                    open={this.state.activeFacets[item.title] && true}
+                                    disabled={this.props.disabled}
+                                    className={isActive ? 'facetsCategory active' : 'facetsCategory'}
+                                    primaryTogglesNestedList
+                                    key={index}
+                                    nestedItems={this.getNestedListItems(item)} />
+                            );
+                        })
+                    }
                 </List>
                 <div className="columns">
                     <div className="column is-hidden-mobile"/>

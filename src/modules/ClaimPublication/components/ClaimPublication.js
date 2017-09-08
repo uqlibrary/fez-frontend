@@ -12,13 +12,11 @@ export default class ClaimPublication extends React.Component {
     static propTypes = {
         possiblePublicationsList: PropTypes.array,
         loadingPossiblePublicationsList: PropTypes.bool,
+        possiblePublicationsFacets: PropTypes.object,
 
         author: PropTypes.object,
-        authorLoading: PropTypes.bool,
-
-        facetsData: PropTypes.object,
-        activeFacets: PropTypes.object,
-        loadingFacetsData: PropTypes.bool,
+        account: PropTypes.object,
+        accountLoading: PropTypes.bool,
 
         possibleCounts: PropTypes.object,
         loadingPossibleCounts: PropTypes.bool,
@@ -34,26 +32,20 @@ export default class ClaimPublication extends React.Component {
             publicationToHide: null,
             activeFacets: {}
         };
-        this._facetsChanged = this._facetsChanged.bind(this);
     }
 
     componentDidMount() {
-        if (this.props.author) {
-            this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username);
-        }
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.author && (!this.props.author || nextProps.author.aut_org_username !== this.props.author.aut_org_username)) {
-            // wait until props are updated and current author is set to get their possible publications
-            this.props.actions.searchPossiblyYourPublications(nextProps.author.aut_org_username);
+        if (this.props.account) {
+            this.props.actions.searchPossiblyYourPublications(this.props.account.id, this.state.activeFacets);
         }
     }
 
     _hidePublication = () => {
-        if (this.state.publicationToHide) {
-            this.props.actions.hidePublications([this.state.publicationToHide], this.props.author);
-            this.setState({publicationToHide: null});
+        if (this.state.publicationToHide && this.props.author !== null) {
+            this.props.actions.hidePublications([this.state.publicationToHide], this.props.author, this.state.activeFacets);
+            this.setState({
+                publicationToHide: null
+            });
         }
     }
 
@@ -69,12 +61,11 @@ export default class ClaimPublication extends React.Component {
     }
 
     _facetsChanged = (activeFacets) => {
-        // Translate the object from FacetsFilter into a query string to assign to facetsQueryString
-        const queryString = Object.keys(activeFacets).map(key => {
-            return ('filters[facets][' + key + ']=' + activeFacets[key]);
-        }).join('&');
-        const facetsQueryString = queryString !== '' ? '?' + queryString : '';
-        this.props.actions.searchPossiblyYourPublications(this.props.author.aut_org_username, facetsQueryString, activeFacets);
+        this.setState({
+            activeFacets: {...activeFacets}
+        });
+
+        this.props.actions.searchPossiblyYourPublications(this.props.account.id, activeFacets);
     };
 
     render() {
@@ -89,8 +80,9 @@ export default class ClaimPublication extends React.Component {
                 handleAction: this._confirmHidePublication
             }
         ];
-        const loadingData = this.props.authorLoading || this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts;
-        const omitCategory = []; // List of facet categories to not show in the FacetsFilter
+
+        console.log(this.props);
+
         return (
             <StandardPage title={txt.title}>
                 {
@@ -101,27 +93,30 @@ export default class ClaimPublication extends React.Component {
                         locale={txt.hidePublicationConfirmation}/>
                 }
                 {
-                    loadingData &&
+                    (this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts) &&
                     <div className="is-centered">
-                        <InlineLoader message={!this.props.activeFacets ? txt.loadingMessage : txt.facetSearchMessage} />
+                        <InlineLoader message={Object.keys(this.state.activeFacets).length === 0 ? txt.loadingMessage : txt.facetSearchMessage} />
                     </div>
-                }
-                {
-                    !loadingData && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
-                    <StandardCard {...txt.noResultsFound}>
-                        {txt.noResultsFound.text}
-                    </StandardCard>
                 }
                 <div className="columns">
                     {
-                        !loadingData && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
+                        !this.props.loadingPossiblePublicationsList && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.length === 0) &&
+                        <div className="column">
+                            <StandardCard {...txt.noResultsFound}>
+                                {txt.noResultsFound.text}
+                            </StandardCard>
+                        </div>
+                    }
+                    {
+                        !this.props.loadingPossibleCounts && !this.props.loadingPossiblePublicationsList
+                        && this.props.possiblePublicationsList && this.props.possiblePublicationsList.length > 0 &&
                         <div className="column">
                             <StandardCard title={txt.searchResults.title} help={txt.searchResults.help}>
                                 <div>
                                     {
                                         txt.searchResults.text
                                             .replace('[resultsCount]', this.props.possiblePublicationsList.length)
-                                            .replace('[totalCount]', this.props.possibleCounts.most_likely_match_count)
+                                            .replace('[totalCount]', this.props.possibleCounts ? this.props.possibleCounts.most_likely_match_count : '')
                                     }
                                 </div>
                                 <PublicationsList
@@ -131,15 +126,17 @@ export default class ClaimPublication extends React.Component {
                         </div>
                     }
                     {
-                        !loadingData && this.props.facetsData &&
-                    <div className="column is-3 is-hidden-mobile">
-                        <StandardRighthandCard title={txt.facetsfilter.title} help={txt.facetsfilter.help}>
-                            <FacetsFilter facetsData={this.props.facetsData}
-                                facetsFunction={this._facetsChanged}
-                                activeFacets={this.props.activeFacets}
-                                omitCategory={omitCategory} />
-                        </StandardRighthandCard>
-                    </div>
+                        !this.props.loadingPossibleCounts && !this.props.loadingPossiblePublicationsList
+                        && Object.keys(this.props.possiblePublicationsFacets).length > 0 &&
+                        <div className="column is-3 is-hidden-mobile">
+                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                <FacetsFilter
+                                    facetsData={this.props.possiblePublicationsFacets}
+                                    onFacetsChanged={this._facetsChanged}
+                                    activeFacets={this.state.activeFacets}
+                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList} />
+                            </StandardRighthandCard>
+                        </div>
                     }
                 </div>
             </StandardPage>

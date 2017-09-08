@@ -3,24 +3,22 @@ import * as actions from 'actions/claimPublications';
 export const initialState = {
     publicationToClaim: null,
     possibleCounts: null,
+    possiblePublicationsPagingData: {},
     possiblePublicationsList: [],
+    possiblePublicationsFacets: {},
     loadingPossiblePublicationsList: true,
     loadingPossibleCounts: true,
-    facetsData: {},
-    loadingFacetsData: true,
-    activeFacets: null
 };
 
 const handlers = {
 
-    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state, action) => {
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
             loadingPossiblePublicationsList: true,
             possiblePublicationsList: [],
-            facetsData: {},
-            loadingFacetsData: true,
-            activeFacets: action.payload
+            possiblePublicationsFacets: {},
+            possiblePublicationsPagingData: {}
         };
     },
 
@@ -42,15 +40,21 @@ const handlers = {
         return {
             ...state,
             loadingPossiblePublicationsList: false,
-            possiblePublicationsList: action.payload,
+            possiblePublicationsList: action.payload.data,
+            possiblePublicationsPagingData: {
+                total: action.payload.total,
+                current_page: action.payload.current_page,
+                from: action.payload.from,
+                to: action.payload.to,
+                per_page: action.payload.per_page
+            },
         };
     },
 
     [actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED]: (state, action) => {
         return {
             ...state,
-            facetsData: action.payload,
-            loadingFacetsData: false
+            possiblePublicationsFacets: action.payload
         };
     },
 
@@ -61,8 +65,7 @@ const handlers = {
             possiblePublicationsList: [],
             loadingPossibleCounts: false,
             possibleCounts: null,
-            facetsData: {},
-            loadingFacetsData: false
+            possiblePublicationsPagingData: {}
         };
     },
 
