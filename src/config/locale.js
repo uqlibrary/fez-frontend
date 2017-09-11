@@ -1076,10 +1076,8 @@ export default {
             }
         },
         paging: {
-            nextPage: 'Next page',
-            lastPage: 'Last page',
-            previousPage: 'Previous page',
-            firstPage: 'First page',
+            nextPage: 'Next',
+            previousPage: 'Previous',
             maxPagesToShow: 5,
             pageSize: 'Records per page',
             pageOf: 'Page [currentPage] of [totalPages]',

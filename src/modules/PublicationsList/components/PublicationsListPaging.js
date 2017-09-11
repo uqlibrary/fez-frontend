@@ -62,8 +62,8 @@ export default class PublicationsListPaging extends Component {
                     {this.state.current_page > 0 &&
                     <div className="column is-narrow">
                         <IconButton tooltip={txt.previousPage}
-                            tooltipPosition="top-center"
-                            className="pagingPrevious"
+                            tooltipPosition="top-left"
+                            className="iconPrevious"
                             onTouchTap={() => {
                                 this.pageChanged(this.state.current_page - 1);
                             }}
@@ -81,8 +81,8 @@ export default class PublicationsListPaging extends Component {
                     {this.state.current_page <= totalPages &&
                     <div className="column is-narrow">
                         <IconButton tooltip={txt.nextPage}
-                            tooltipPosition="top-center"
-                            className="pagingNext"
+                            tooltipPosition="top-right"
+                            className="iconNext"
                             onTouchTap={() => {
                                 this.pageChanged(this.state.current_page + 1);
                             }}
@@ -96,7 +96,21 @@ export default class PublicationsListPaging extends Component {
                 </div>
                 {totalPages > 1 &&
                 <div className="publicationsListPaging columns is-multiline is-gapless">
+                    <FlatButton
+                        className="pagingPrevious"
+                        onTouchTap={() => {
+                            this.pageChanged(this.state.current_page - 1);
+                        }}
+                        disabled={this.props.disabled || this.state.current_page === 1}
+                        label={txt.previousPage}/>
                     {renderedPages}
+                    <FlatButton
+                        className="pagingNext"
+                        onTouchTap={() => {
+                            this.pageChanged(this.state.current_page + 1);
+                        }}
+                        disabled={this.props.disabled || this.state.current_page === totalPages}
+                        label={txt.nextPage}/>
                 </div>
                 }
             </div>
