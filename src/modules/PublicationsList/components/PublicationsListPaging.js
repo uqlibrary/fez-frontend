@@ -78,7 +78,7 @@ export default class PublicationsListPaging extends Component {
                             className="pagingLabel"
                             label={txt.pageOf.replace('[currentPage]', this.state.current_page).replace('[totalPages]', totalPages) + ' ' + txt.totalRecords.replace('[total]', this.state.total)}/>
                     </div>
-                    {this.state.current_page < totalPages &&
+                    {this.state.current_page <= totalPages &&
                     <div className="column is-narrow">
                         <IconButton tooltip={txt.nextPage}
                             tooltipPosition="top-center"
