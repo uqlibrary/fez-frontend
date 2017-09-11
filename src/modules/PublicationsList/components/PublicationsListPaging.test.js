@@ -118,7 +118,7 @@ describe('PublicationsListPaging renders ', () => {
         expect(selectedPage.props().label).toBe(3);
 
         const nextPage = wrapper.find('.pagingNext');
-        expect(nextPage.length).toBe(0);
+        expect(nextPage.length).toBe(1);
 
         const previousPage = wrapper.find('.pagingPrevious');
         expect(previousPage.length).toBe(1);

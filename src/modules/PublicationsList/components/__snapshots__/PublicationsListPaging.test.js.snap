@@ -163,6 +163,22 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       />
     </div>
     <div
+      className="column is-narrow"
+    >
+      <IconButton
+        className="pagingNext"
+        disableTouchRipple={false}
+        disabled={true}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="Next page"
+        tooltipPosition="top-center"
+        touch={false}
+      >
+        <NavigationChevronRight />
+      </IconButton>
+    </div>
+    <div
       className="column"
     />
   </div>
