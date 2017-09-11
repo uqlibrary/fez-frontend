@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import {locale} from 'config';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
-import NavigationLastPage from 'material-ui/svg-icons/navigation/last-page';
-import NavigationFirstPage from 'material-ui/svg-icons/navigation/first-page';
 import NavigationChevronRight from 'material-ui/svg-icons/navigation/chevron-right';
 import NavigationChevronLeft from 'material-ui/svg-icons/navigation/chevron-left';
 
@@ -63,16 +61,6 @@ export default class PublicationsListPaging extends Component {
                     <div className="column"/>
                     {this.state.current_page > 0 &&
                     <div className="column is-narrow">
-                        <IconButton tooltip={txt.firstPage}
-                            tooltipPosition="top-center"
-                            className="pagingFirst"
-                            onTouchTap={() => {
-                                this.pageChanged(1);
-                            }}
-                            disabled={this.props.disabled || this.state.current_page === 1}
-                        >
-                            <NavigationFirstPage/>
-                        </IconButton>
                         <IconButton tooltip={txt.previousPage}
                             tooltipPosition="top-center"
                             className="pagingPrevious"
@@ -101,16 +89,6 @@ export default class PublicationsListPaging extends Component {
                             disabled={this.props.disabled || this.state.current_page === totalPages}
                         >
                             <NavigationChevronRight/>
-                        </IconButton>
-                        <IconButton tooltip={txt.lastPage}
-                            tooltipPosition="top-center"
-                            className="pagingLast"
-                            onTouchTap={() => {
-                                this.pageChanged(totalPages);
-                            }}
-                            disabled={this.props.disabled || this.state.current_page === totalPages}
-                        >
-                            <NavigationLastPage/>
                         </IconButton>
                     </div>
                     }
