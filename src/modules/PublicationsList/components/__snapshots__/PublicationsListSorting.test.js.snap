@@ -8,16 +8,16 @@ exports[`PublicationsListSorting renders  component with empty paging data 1`] =
 
 exports[`PublicationsListSorting renders  component with non-empty paging data 1`] = `
 <div
-  className="publicationsListSorting columns is-mobile"
+  className="publicationsListSorting columns is-gapless is-mobile is-multiline"
 >
   <div
-    className="column"
+    className="column is-12-mobile"
   >
     <SelectField
-      autoWidth={true}
+      autoWidth={false}
       disabled={false}
       floatingLabelText="Sort results by"
-      fullWidth={false}
+      fullWidth={true}
       id="sortBy"
       maxHeight={250}
       multiple={false}
@@ -216,14 +216,17 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
     </SelectField>
   </div>
   <div
+    className="column is-narrow is-spacer is-hidden-mobile"
+  />
+  <div
     className="column"
   >
     <SelectField
-      autoWidth={true}
+      autoWidth={false}
       disabled={false}
       floatingLabelText="Sort order"
-      fullWidth={false}
-      id="sortBy"
+      fullWidth={true}
+      id="sortOrder"
       maxHeight={250}
       multiple={false}
       onChange={[Function]}
@@ -274,13 +277,16 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
     </SelectField>
   </div>
   <div
+    className="column is-narrow is-spacer"
+  />
+  <div
     className="column"
   >
     <SelectField
-      autoWidth={true}
+      autoWidth={false}
       disabled={false}
       floatingLabelText="Records per page"
-      fullWidth={false}
+      fullWidth={true}
       id="pageSize"
       maxHeight={250}
       multiple={false}

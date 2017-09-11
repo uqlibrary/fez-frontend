@@ -1,0 +1,24 @@
+@import '~uqlibrary-react-toolbox/sass/variables';
+
+.publicationsListSorting {
+  margin-bottom: 0px !important;
+  .is-spacer {
+    width: 12px !important;
+  }
+  div#sortBy, div#sortOrder, div#pageSize {
+    margin-bottom: -14px !important;
+    & > div > div {
+      font-size: 12px !important;
+      white-space: nowrap !important;
+      text-overflow: ellipsis !important;
+      overflow: hidden !important;
+    }
+  }
+  label[for=sortBy], label[for=sortOrder], label[for=pageSize] {
+    top: 42px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+  }
+}

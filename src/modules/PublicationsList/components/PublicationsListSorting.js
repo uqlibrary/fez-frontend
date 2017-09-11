@@ -61,12 +61,12 @@ export default class PublicationsListSorting extends Component {
         if (!this.props.pagingData || this.props.pagingData.total === 0) return (<span className="publicationsListSorting empty"/>);
         const txt = locale.components.sorting;
         return (
-            <div className="publicationsListSorting columns is-mobile">
-                <div className="column">
+            <div className="publicationsListSorting columns is-gapless is-mobile is-multiline">
+                <div className="column is-12-mobile">
                     <SelectField
                         id="sortBy"
                         maxHeight={250}
-                        autoWidth
+                        fullWidth
                         onChange={this.sortByChanged}
                         value={this.state.sortBy}
                         disabled={this.props.disabled}
@@ -78,11 +78,12 @@ export default class PublicationsListSorting extends Component {
                         }
                     </SelectField>
                 </div>
+                <div className="column is-narrow is-spacer is-hidden-mobile" />
                 <div className="column">
                     <SelectField
-                        id="sortBy"
+                        id="sortOrder"
                         maxHeight={250}
-                        autoWidth
+                        fullWidth
                         onChange={this.orderDirectionsChanged}
                         value={this.state.sortDirection}
                         disabled={this.props.disabled}
@@ -94,16 +95,17 @@ export default class PublicationsListSorting extends Component {
                         }
                     </SelectField>
                 </div>
+                <div className="column is-narrow is-spacer" />
                 <div className="column">
                     <SelectField
                         id="pageSize"
                         value={this.state.pageSize}
                         maxHeight={250}
-                        autoWidth
+                        fullWidth
                         disabled={this.props.disabled}
                         onChange={this.pageSizeChanged}
                         floatingLabelText={txt.pageSize}>
-                        <MenuItem value={20} primaryText={20}/>
+                        <MenuItem value={20} primaryText={20} />
                         <MenuItem value={50} primaryText={50}/>
                         <MenuItem value={100} primaryText={100}/>
                         <MenuItem value={1000} primaryText={1000}/>
