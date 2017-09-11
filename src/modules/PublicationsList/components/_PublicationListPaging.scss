@@ -1,0 +1,31 @@
+@import '~uqlibrary-react-toolbox/sass/variables';
+
+.publicationsListPaging {
+  width: 98% !important;
+  margin: 0 auto !important;
+  display: flex;
+  justify-content: center;
+  button.page {
+    min-width: 26px !important;
+    height: 24px !important;
+    line-height: 24px !important;
+    align-self: center;
+    & > span, & > div > span {
+      padding: 0px 6px !important;
+      font-size: 12px !important;
+    }
+  }
+}
+.publicationsListControls {
+  margin-bottom: 0px !important;
+  button.pagingLabel {
+    margin: 6px 0 !important;
+    & > div > span {
+      font-size: 12px !important;
+    }
+  }
+}
+.publicationsListSorting{
+  margin-bottom: 0px !important;
+}
+
