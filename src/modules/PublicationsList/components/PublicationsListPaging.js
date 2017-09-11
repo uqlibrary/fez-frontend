@@ -59,7 +59,7 @@ export default class PublicationsListPaging extends Component {
             <div>
                 <div className="publicationsListControls columns is-gapless is-mobile">
                     <div className="column"/>
-                    {this.state.current_page > 0 &&
+                    {this.state.current_page > 1 &&
                     <div className="column is-narrow">
                         <IconButton tooltip={txt.previousPage}
                             tooltipPosition="top-left"
@@ -78,7 +78,7 @@ export default class PublicationsListPaging extends Component {
                             className="pagingLabel"
                             label={txt.pageOf.replace('[currentPage]', this.state.current_page).replace('[totalPages]', totalPages) + ' ' + txt.totalRecords.replace('[total]', this.state.total)}/>
                     </div>
-                    {this.state.current_page <= totalPages &&
+                    {this.state.current_page < totalPages &&
                     <div className="column is-narrow">
                         <IconButton tooltip={txt.nextPage}
                             tooltipPosition="top-right"
@@ -96,6 +96,7 @@ export default class PublicationsListPaging extends Component {
                 </div>
                 {totalPages > 1 &&
                 <div className="publicationsListPaging columns is-multiline is-gapless">
+                    {this.state.current_page > 1 &&
                     <FlatButton
                         className="pagingPrevious"
                         onTouchTap={() => {
@@ -103,7 +104,9 @@ export default class PublicationsListPaging extends Component {
                         }}
                         disabled={this.props.disabled || this.state.current_page === 1}
                         label={txt.previousPage}/>
+                    }
                     {renderedPages}
+                    {this.state.current_page < totalPages &&
                     <FlatButton
                         className="pagingNext"
                         onTouchTap={() => {
@@ -111,6 +114,7 @@ export default class PublicationsListPaging extends Component {
                         }}
                         disabled={this.props.disabled || this.state.current_page === totalPages}
                         label={txt.nextPage}/>
+                    }
                 </div>
                 }
             </div>
