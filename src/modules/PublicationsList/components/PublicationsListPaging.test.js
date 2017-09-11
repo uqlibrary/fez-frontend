@@ -71,7 +71,7 @@ describe('PublicationsListPaging renders ', () => {
         expect(nextPage.length).toBe(1);
 
         const previousPage = wrapper.find('.pagingPrevious');
-        expect(previousPage.length).toBe(0);
+        expect(previousPage.length).toBe(1);
     });
 
     it('component with non-empty paging data, second page', () => {

@@ -17,6 +17,34 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
     <div
       className="column is-narrow"
     >
+      <IconButton
+        className="pagingFirst"
+        disableTouchRipple={false}
+        disabled={true}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="First page"
+        tooltipPosition="top-center"
+        touch={false}
+      >
+        <NavigationFirstPage />
+      </IconButton>
+      <IconButton
+        className="pagingPrevious"
+        disableTouchRipple={false}
+        disabled={true}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="Previous page"
+        tooltipPosition="top-center"
+        touch={false}
+      >
+        <NavigationChevronLeft />
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow"
+    >
       <FlatButton
         className="pagingLabel"
         disabled={false}
@@ -42,10 +70,22 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         iconStyle={Object {}}
         onTouchTap={[Function]}
         tooltip="Next page"
-        tooltipPosition="bottom-center"
+        tooltipPosition="top-center"
         touch={false}
       >
         <NavigationChevronRight />
+      </IconButton>
+      <IconButton
+        className="pagingLast"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="Last page"
+        tooltipPosition="top-center"
+        touch={false}
+      >
+        <NavigationLastPage />
       </IconButton>
     </div>
     <div
@@ -116,13 +156,25 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       className="column is-narrow"
     >
       <IconButton
+        className="pagingFirst"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="First page"
+        tooltipPosition="top-center"
+        touch={false}
+      >
+        <NavigationFirstPage />
+      </IconButton>
+      <IconButton
         className="pagingPrevious"
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
         onTouchTap={[Function]}
         tooltip="Previous page"
-        tooltipPosition="bottom-center"
+        tooltipPosition="top-center"
         touch={false}
       >
         <NavigationChevronLeft />
@@ -214,13 +266,25 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       className="column is-narrow"
     >
       <IconButton
+        className="pagingFirst"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="First page"
+        tooltipPosition="top-center"
+        touch={false}
+      >
+        <NavigationFirstPage />
+      </IconButton>
+      <IconButton
         className="pagingPrevious"
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
         onTouchTap={[Function]}
         tooltip="Previous page"
-        tooltipPosition="bottom-center"
+        tooltipPosition="top-center"
         touch={false}
       >
         <NavigationChevronLeft />
@@ -254,10 +318,22 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         iconStyle={Object {}}
         onTouchTap={[Function]}
         tooltip="Next page"
-        tooltipPosition="bottom-center"
+        tooltipPosition="top-center"
         touch={false}
       >
         <NavigationChevronRight />
+      </IconButton>
+      <IconButton
+        className="pagingLast"
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="Last page"
+        tooltipPosition="top-center"
+        touch={false}
+      >
+        <NavigationLastPage />
       </IconButton>
     </div>
     <div
