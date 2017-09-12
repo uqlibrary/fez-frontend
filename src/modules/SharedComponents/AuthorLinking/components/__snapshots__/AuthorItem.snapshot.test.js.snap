@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorItem renders  should be disabled 1`] = `
+<div
+  className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile"
+>
+  <div
+    className="authorButton"
+  >
+    <FlatButton
+      disabled={true}
+      fullWidth={true}
+      icon={
+        <ToggleRadioButtonUnchecked
+          className="author-link-status"
+        />
+      }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
+      }
+      labelPosition="after"
+      labelStyle={Object {}}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={false}
+    />
+    <div
+      className="author-link-order"
+    >
+      <span
+        className="author-link-order-text"
+      >
+        First  listed author
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AuthorItem renders  should be linked 1`] = `
+<div
+  className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile"
+>
+  <div
+    className="authorButton"
+  >
+    <FlatButton
+      disabled={true}
+      fullWidth={true}
+      icon={
+        <ContentLink
+          className="author-link-status"
+        />
+      }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
+      }
+      labelPosition="after"
+      labelStyle={Object {}}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
+      primary={false}
+      secondary={false}
+    />
+    <div
+      className="author-link-order"
+    >
+      <span
+        className="author-link-order-text"
+      >
+        First  listed author
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AuthorItem renders  should be linked and disabled 1`] = `
+<div
+  className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile"
+>
+  <div
+    className="authorButton"
+  >
+    <FlatButton
+      disabled={true}
+      fullWidth={true}
+      icon={
+        <ToggleRadioButtonUnchecked
+          className="author-link-status"
+        />
+      }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
+      }
+      labelPosition="after"
+      labelStyle={Object {}}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={false}
+    />
+    <div
+      className="author-link-order"
+    >
+      <span
+        className="author-link-order-text"
+      >
+        First  listed author
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AuthorItem renders  should be selected 1`] = `
+<div
+  className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile"
+>
+  <div
+    className="authorButton"
+  >
+    <FlatButton
+      disabled={false}
+      fullWidth={true}
+      icon={
+        <ToggleRadioButtonChecked
+          className="author-link-status"
+        />
+      }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
+      }
+      labelPosition="after"
+      labelStyle={Object {}}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
+      primary={true}
+      secondary={false}
+    />
+    <div
+      className="author-link-order"
+    >
+      <span
+        className="author-link-order-text"
+      >
+        First  listed author
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AuthorItem renders  should be selected and disabled 1`] = `
+<div
+  className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile"
+>
+  <div
+    className="authorButton"
+  >
+    <FlatButton
+      disabled={true}
+      fullWidth={true}
+      icon={
+        <ToggleRadioButtonChecked
+          className="author-link-status"
+        />
+      }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
+      }
+      labelPosition="after"
+      labelStyle={Object {}}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
+      primary={true}
+      secondary={false}
+    />
+    <div
+      className="author-link-order"
+    >
+      <span
+        className="author-link-order-text"
+      >
+        First  listed author
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AuthorItem renders  should be unselected and able to select author 1`] = `
+<div
+  className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile"
+>
+  <div
+    className="authorButton"
+  >
+    <FlatButton
+      disabled={false}
+      fullWidth={true}
+      icon={
+        <ToggleRadioButtonUnchecked
+          className="author-link-status"
+        />
+      }
+      label={
+        <span
+          className="author-link-name"
+        >
+          Test user
+        </span>
+      }
+      labelPosition="after"
+      labelStyle={Object {}}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchStart={[Function]}
+      onTouchTap={[Function]}
+      primary={false}
+      secondary={false}
+    />
+    <div
+      className="author-link-order"
+    >
+      <span
+        className="author-link-order-text"
+      >
+        First  listed author
+      </span>
+    </div>
+  </div>
+</div>
+`;

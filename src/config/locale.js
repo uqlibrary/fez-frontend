@@ -1119,7 +1119,8 @@ export default {
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
-        minLength: 'Must be at least [min] characters'
+        minLength: 'Must be at least [min] characters',
+        authorLinking: 'One author must be selected and be confirmed'
     }
 };
 

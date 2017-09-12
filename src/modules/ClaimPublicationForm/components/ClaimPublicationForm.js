@@ -5,6 +5,7 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
+import {AuthorLinkingField} from '../../SharedComponents';
 import {validation, locale} from 'config';
 
 export default class ClaimPublicationForm extends Component {
@@ -84,9 +85,19 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     {
-                        !author &&
                         <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
-                            {/* <AuthorLinking disabled={this.props.submitting} dataSource={[]}/> */}
+                            <div>{txt.authorLinking.text}</div>
+                            <Field
+                                name="authorLinking"
+                                component={AuthorLinkingField}
+                                searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
+                                loggedInAuthor={author}
+                                authorList={publication.fez_record_search_key_author}
+                                linkedAuthorIdList={publication.fez_record_search_key_author_id}
+                                disabled={this.props.submitting}
+                                className="requiredField"
+                                validate={[validation.required, validation.isValidAuthorLink]}
+                            />
                         </StandardCard>
                     }
 
@@ -100,8 +111,7 @@ export default class ClaimPublicationForm extends Component {
                             fullWidth
                             multiLine
                             rows={1}
-                            floatingLabelText={txt.comments.fieldLabels.comments}
-                            validate={[validation.required]} />
+                            floatingLabelText={txt.comments.fieldLabels.comments} />
 
                         <Field
                             component={TextField}

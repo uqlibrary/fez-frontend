@@ -125,3 +125,6 @@ export const isValidIsbn = subject => {
     }
 };
 
+export const isValidAuthorLink = (link) => {
+    return link.valid ? '' : locale.validationErrors.authorLinking;
+};
