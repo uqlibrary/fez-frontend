@@ -62,14 +62,14 @@ export default class PublicationsListSorting extends Component {
         const txt = locale.components.sorting;
         return (
             <div className="publicationsListSorting columns is-gapless is-mobile is-multiline">
-                <div className="column is-12-mobile">
+                <div className="column is-7-mobile">
                     <SelectField
                         id="sortBy"
                         maxHeight={250}
                         fullWidth
                         onChange={this.sortByChanged}
                         value={this.state.sortBy}
-                        disabled={this.props.disabled}
+                        disabled={this.props.disabled}git ad
                         floatingLabelText={txt.sortLabel}>
                         {
                             txt.sortBy.map((item, index) => {
@@ -78,7 +78,7 @@ export default class PublicationsListSorting extends Component {
                         }
                     </SelectField>
                 </div>
-                <div className="column is-narrow is-spacer is-hidden-mobile" />
+                <div className="column is-narrow is-spacer" />
                 <div className="column">
                     <SelectField
                         id="sortOrder"
@@ -95,9 +95,10 @@ export default class PublicationsListSorting extends Component {
                         }
                     </SelectField>
                 </div>
-                <div className="column is-narrow is-spacer" />
-                <div className="column">
+                <div className="column is-narrow is-spacer is-hidden-mobile" />
+                <div className="column is-hidden-mobile">
                     <SelectField
+                        tooltip="Hello"
                         id="pageSize"
                         value={this.state.pageSize}
                         maxHeight={250}
