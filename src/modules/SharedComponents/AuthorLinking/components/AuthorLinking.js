@@ -145,18 +145,18 @@ export default class AuthorLinking extends React.Component {
                 </div>
                 {
                     selectedAuthor !== null &&
-                        <div className="columns is-gapless is-multiline is-desktop is-mobile">
-                            <div className="column">
-                                <div className={!authorLinkingConfirmed ? 'author-linking-checkbox error-checkbox' : 'author-linking-checkbox'}>
-                                    <Checkbox name="authorLinkingConfirmation"
-                                        label={confirmation}
-                                        onCheck={this._acceptAuthorLinkingTermsAndConditions}
-                                        checked={authorLinkingConfirmed}
-                                        disabled={this.props.disabled}
-                                    />
-                                </div>
+                    <div className="columns is-gapless is-multiline is-desktop is-mobile">
+                        <div className="column">
+                            <div className={!authorLinkingConfirmed ? 'author-linking-checkbox error-checkbox' : 'author-linking-checkbox'}>
+                                <Checkbox name="authorLinkingConfirmation"
+                                    label={confirmation}
+                                    onCheck={this._acceptAuthorLinkingTermsAndConditions}
+                                    checked={authorLinkingConfirmed}
+                                    disabled={this.props.disabled}
+                                />
                             </div>
                         </div>
+                    </div>
                 }
             </div>
         );

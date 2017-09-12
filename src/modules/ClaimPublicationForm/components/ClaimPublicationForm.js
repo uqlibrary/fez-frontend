@@ -85,8 +85,8 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     {
-                        <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
-                            <div>{txt.authorLinking.text}</div>
+                        <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help} className="requiredField">
+                            <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
                             <Field
                                 name="authorLinking"
                                 component={AuthorLinkingField}
@@ -105,7 +105,6 @@ export default class ClaimPublicationForm extends Component {
                         <Field
                             component={TextField}
                             disabled={this.props.submitting}
-                            className="requiredField"
                             name="comments"
                             type="text"
                             fullWidth
@@ -131,7 +130,7 @@ export default class ClaimPublicationForm extends Component {
                         <Alert type="error_outline" {...txt.errorAlert} />
                     }
                     {
-                        !this.props.submitFailed && this.props.invalid &&
+                        !this.props.submitFailed && this.props.dirty && this.props.invalid &&
                         <Alert {...txt.validationAlert} type="warning" />
                     }
                     {
