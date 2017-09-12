@@ -48,13 +48,15 @@ describe('CitationCounts renders ', () => {
 
     it('component with all metrics', () => {
         const publication = {
+            rek_pid: 'pid:111',
             rek_thomson_citation_count: 1,
             rek_scopus_citation_count: 1,
             rek_gs_citation_count: 1,
-            rek_altmetric_score: 1
+            rek_altmetric_score: 1,
+            fez_record_search_key_oa_status: []
         };
         const wrapper = setup({publication});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.citationCount').length).toEqual(4);
+        expect(wrapper.find('.citationCount').length).toEqual(6);
     });
 });

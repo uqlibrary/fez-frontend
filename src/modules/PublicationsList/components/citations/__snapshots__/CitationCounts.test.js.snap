@@ -2,42 +2,64 @@
 
 exports[`CitationCounts renders  component with a mock record metrics 1`] = `
 <div
-  className="citationCounts"
+  className="citationCounts columns is-multiline is-gapless"
 >
   <span
     className="citationCount"
   >
     <img
-      alt="Altmetric"
+      alt="Altmetric score is 1"
       className="citationCountIcon"
-      data-for="claimTooltips"
-      data-tip="Altmetric score"
       src=""
-      title="Altmetric score"
+      title="Altmetric score is 1"
     />
     <span
       className="citationCountNumber"
     >
       1
     </span>
+  </span>
+  <span
+    className="citationCount"
+  >
+    <img
+      alt="Open Access - free to read (embargo date might apply)"
+      className="citationCountIcon"
+      src=""
+      title="Open Access - free to read (embargo date might apply)"
+    />
+  </span>
+  <span
+    className="citationCount"
+  >
+    <a
+      className="citationCountLink"
+      href="https://scholar.google.com/scholar?q=intitle:\\"CD4+CD8%CE%B2+%20double-positive%20T%20cells%20in%20skin-draining%20lymph%20nodes%20respond%20to%20inflammatory%20signals%20from%20the%20skin\\""
+      target="_blank"
+    >
+      <img
+        alt="Citation counts in Google Scholar"
+        className="citationCountIcon"
+        src=""
+        title="Citation counts in Google Scholar"
+      />
+    </a>
   </span>
 </div>
 `;
 
 exports[`CitationCounts renders  component with all metrics 1`] = `
 <div
-  className="citationCounts"
+  className="citationCounts columns is-multiline is-gapless"
 >
   <span
     className="citationCount"
   >
     <img
-      alt="Thomson Routers"
+      alt="Web of Science citation count is 1"
       className="citationCountIcon"
-      data-place="bottom"
-      data-tip="Thomson Routers Web of Science citation count"
       src=""
-      title="Thomson Routers Web of Science citation count"
+      title="Web of Science citation count is 1"
     />
     <span
       className="citationCountNumber"
@@ -49,12 +71,10 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     className="citationCount"
   >
     <img
-      alt="Scopus"
+      alt="Scopus citation count is 1"
       className="citationCountIcon"
-      data-for="claimTooltips"
-      data-tip="Scopus citation count"
       src=""
-      title="Scopus citation count"
+      title="Scopus citation count is 1"
     />
     <span
       className="citationCountNumber"
@@ -66,12 +86,10 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     className="citationCount"
   >
     <img
-      alt="Google Scholar"
+      alt="Altmetric score is 1"
       className="citationCountIcon"
-      data-for="claimTooltips"
-      data-tip="Google Scholar citation count"
       src=""
-      title="Google Scholar citation count"
+      title="Altmetric score is 1"
     />
     <span
       className="citationCountNumber"
@@ -83,24 +101,55 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     className="citationCount"
   >
     <img
-      alt="Altmetric"
+      alt="Open Access - free to read (embargo date might apply)"
       className="citationCountIcon"
-      data-for="claimTooltips"
-      data-tip="Altmetric score"
       src=""
-      title="Altmetric score"
+      title="Open Access - free to read (embargo date might apply)"
     />
-    <span
-      className="citationCountNumber"
+  </span>
+  <span
+    className="citationCount"
+  >
+    <a
+      className="citationCountLink"
+      href="https://scholar.google.com/scholar?q=intitle:\\"undefined\\""
+      target="_blank"
     >
-      1
-    </span>
+      <img
+        alt="Citation counts in Google Scholar"
+        className="citationCountIcon"
+        src=""
+        title="Citation counts in Google Scholar"
+      />
+    </a>
+  </span>
+  <span
+    className="citationCount column is-full-mobile"
+  >
+    <a
+      className="citationCountLink"
+      href="https://app.library.uq.edu.au/#/authors/view/pid:111"
+      target="_blank"
+    >
+      <FontIcon
+        className="citationCountIcon material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        open_in_new
+      </FontIcon>
+      <span
+        className="citationCountNumber"
+      >
+        View full statistics
+      </span>
+    </a>
   </span>
 </div>
 `;
 
 exports[`CitationCounts renders  component with no metrics 1`] = `
 <div
-  className="citationCounts"
+  className="citationCounts columns is-multiline is-gapless"
 />
 `;

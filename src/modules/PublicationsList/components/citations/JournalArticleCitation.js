@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
+import AuthorsCitationView from './AuthorsCitationView';
 
 export default class JournalArticleCitation extends Component {
     static propTypes = {
@@ -12,15 +13,12 @@ export default class JournalArticleCitation extends Component {
     }
 
     render() {
-        // TODO: think! is that really necessary? why can't we just use search keys?
         const journalArticle = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
-            publisher: this.props.publication.fez_record_search_key_publisher ?
-                this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
+            year: (new Date(this.props.publication.rek_date)).getFullYear(),
             journalName: this.props.publication.fez_record_search_key_journal_name ?
                 this.props.publication.fez_record_search_key_journal_name.rek_journal_name : null,
-            authors: this.props.publication.fez_record_search_key_author,
             volumeNumber: this.props.publication.fez_record_search_key_volume_number ?
                 this.props.publication.fez_record_search_key_volume_number.rek_volume_number : null,
             issueNumber: this.props.publication.fez_record_search_key_issue_number ?
@@ -32,41 +30,49 @@ export default class JournalArticleCitation extends Component {
             doi: this.props.publication.fez_record_search_key_doi ?
                 this.props.publication.fez_record_search_key_doi.rek_doi : null
         };
-        const authors = journalArticle.authors ? journalArticle.authors.map((author, index) => {
-            return (<span className="citationAuthor" key={index}> {author.rek_author}</span>);
-        }) : null;
+
+        // eSpace citation view for Journal Article
+        // {6351} ({6386}) {10588}. <i>{11071}</i>, <i>{6379}</i> {6377||:} {6383}{6384|-}.{16514| doi:|}
+        // authors (year) title. <i>journal name</i>, <i>volume</i> {issue:} start page-end page. doi: DOI
         return (
             <div className="citationContent citationJournalArticle">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
 
-                <span className="citationAuthors">{authors} </span>
+                <AuthorsCitationView publication={this.props.publication} />
+
                 {
-                    journalArticle.publisher &&
-                    <span className="citationPublisher">({journalArticle.publisher}) </span>
+                    journalArticle.year &&
+                    <span className="citationPublisher">({journalArticle.year}) </span>
                 }
                 <span className="citationTitle">{journalArticle.title}. </span>
                 {
                     journalArticle.journalName &&
-                    <span className="citationJournalName"> {journalArticle.journalName}, </span>
+                    <span className="citationJournalName">{journalArticle.journalName}, </span>
                 }
                 {
                     journalArticle.volumeNumber &&
-                    <span className="citationVolumeNumber"> {journalArticle.volumeNumber}: </span>
+                    <span className="citationVolumeNumber">{journalArticle.volumeNumber} </span>
                 }
                 {
                     journalArticle.issueNumber &&
-                    <span className="citationIssueNumber"> {journalArticle.issueNumber}: </span>
+                    <span className="citationIssueNumber">{journalArticle.issueNumber}</span>
+                }
+                {
+                    (journalArticle.startPage || journalArticle.endPage) ? ': ' : ''
                 }
                 {
                     journalArticle.startPage &&
-                    <span className="citationStartPage"> {journalArticle.startPage} - </span>
+                    <span className="citationStartPage">
+                        {journalArticle.startPage}{journalArticle.endPage ? '-' : '' }
+                    </span>
                 }
                 {
                     journalArticle.endPage &&
-                    <span className="citationEndPage"> {journalArticle.endPage}. </span>
+                    <span className="citationEndPage">{journalArticle.endPage}</span>
                 }
+                .
                 {
                     journalArticle.doi &&
                     <span className="citationDOI">
