@@ -23,7 +23,7 @@ export default class CitationCounts extends Component {
         const txt = locale.components.publicationCitation.citationCounts;
 
         const counts = {
-            thomson: this.props.publication.rek_thomson_citation_count ? this.props.publication.rek_thomson_citation_count : null,
+            wos: this.props.publication.rek_thomson_citation_count ? this.props.publication.rek_thomson_citation_count : null,
             scopus: this.props.publication.rek_scopus_citation_count ? this.props.publication.rek_scopus_citation_count : null,
             google: this.props.publication.rek_gs_citation_count ? this.props.publication.rek_gs_citation_count : null,
             altmetric: this.props.publication.rek_altmetric_score ? this.props.publication.rek_altmetric_score : null
@@ -31,14 +31,14 @@ export default class CitationCounts extends Component {
         return (
             <div className="citationCounts columns is-multiline is-gapless">
                 {
-                    !!counts.thomson && counts.thomson > 0 &&
+                    !!counts.wos && counts.wos > 0 &&
                     <span className="citationCount">
                         <img
                             src={thompsonIcon}
-                            alt={txt.wosCountLabel.replace('[count]', counts.thomson)}
-                            title={txt.wosCountLabel.replace('[count]', counts.thomson)}
+                            alt={txt.wosCountLabel.replace('[count]', counts.wos)}
+                            title={txt.wosCountLabel.replace('[count]', counts.wos)}
                             className="citationCountIcon"/>
-                        <span className="citationCountNumber">{counts.thomson}</span>
+                        <span className="citationCountNumber">{counts.wos}</span>
                     </span>
                 }
                 {
@@ -88,7 +88,7 @@ export default class CitationCounts extends Component {
                     </span>
                 }
                 {
-                    !!this.props.publication.rek_pid &&
+                    !!this.props.publication.rek_pid && (counts.wos || counts.scopus) &&
                     <span className="citationCount column is-full-mobile">
                         <a className="citationCountLink" href={`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`} target="_blank">
                             <FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon>
