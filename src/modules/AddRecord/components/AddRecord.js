@@ -87,7 +87,8 @@ export default class AddRecord extends React.Component {
         const actions = [
             {
                 label: txt.claim,
-                handleAction: this._claimPublication
+                handleAction: this._claimPublication,
+                primary: true
             }
         ];
         return (

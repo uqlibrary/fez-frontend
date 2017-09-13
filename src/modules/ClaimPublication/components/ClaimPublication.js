@@ -72,7 +72,8 @@ export default class ClaimPublication extends React.Component {
         const actions = [
             {
                 label: txt.searchResults.claim,
-                handleAction: this._claimPublication
+                handleAction: this._claimPublication,
+                primary: true
             },
             {
                 label: txt.searchResults.hide,

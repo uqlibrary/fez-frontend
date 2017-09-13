@@ -1,7 +1,7 @@
 /* eslint-disable */
 export const possibleUnclaimed = {
     "total": 2,
-    "per_page": 20,
+    "per_page": 5,
     "current_page": 1,
     "from": 1,
     "to": 2,
@@ -1716,8 +1716,8 @@ export const possibleCounts = {
 
 export const claimedPublications = {
     "total": 335,
-    "per_page": 5,
-    "current_page": 1,
+    "per_page": 20,
+    "current_page": 2,
     "from": 1,
     "to": 5,
     "data": [
