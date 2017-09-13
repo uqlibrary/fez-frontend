@@ -34,23 +34,6 @@ export default class PublicationCitation extends Component {
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }
 
-    componentDidMount() {
-        // TODO: fix this hack!
-        // catch scrolling event of scrolled container (which is not a window) to set position of autosuggest list when user scrolls
-        // another solution, close the box when user tries to scroll
-        const div = document.querySelector('div.layout-fill.align-stretch');
-        div.addEventListener('scroll', this.handleParentContainerScroll.bind(this));
-    }
-
-    componentWillUnmount() {
-        const div = document.querySelector('div.layout-fill.align-stretch');
-        div.removeEventListener('scroll', this.handleParentContainerScroll.bind(this));
-    }
-
-    handleParentContainerScroll() {
-        if (this.refs.actionsMenu) this.refs.actionsMenu.close();
-    }
-
     _renderCitation = (publicationTypeId) => {
         const filteredPublicationType = publicationTypeId ?
             publicationTypes(this.citationComponents).filter((item) => {

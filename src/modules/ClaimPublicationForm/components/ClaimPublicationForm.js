@@ -141,7 +141,8 @@ export default class ClaimPublicationForm extends Component {
                         this.props.submitSucceeded &&
                         <Alert type="info" {...txt.successAlert} />
                     }
-                    <div className="columns">
+
+                    <div className="columns action-buttons">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop">
                             <RaisedButton
