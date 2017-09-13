@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const YearCitationView = ({publication}) => {
-    console.log(publication.rek_date);
     if (!publication.rek_date) return (<span className="citationYear empty" />);
 
     const year = !isNaN(new Date(publication.rek_date))
