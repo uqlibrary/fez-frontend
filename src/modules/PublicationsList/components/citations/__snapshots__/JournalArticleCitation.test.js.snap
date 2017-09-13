@@ -12,72 +12,850 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
   >
     format_quote
   </FontIcon>
-  <span
-    className="citationAuthors"
-  >
-    <span
-      className="citationAuthor"
-    >
-       
-      Overgaard, Nana H.
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Cruz, Jazmina L.
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Bridge, Jennifer A.
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Nel, Hendrik J.
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Frazer, Ian H.
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      La Gruta, Nicole L.
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Blumenthal, Antje
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Steptoe, Raymond J.
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Wells, James W.
-    </span>
-     
-  </span>
-  <span
-    className="citationPublisher"
-  >
-    (
-    Federation of American Societies for Experimental Biology
-    ) 
-  </span>
+  <AuthorsCitationView
+    publication={
+      Object {
+        "fez_record_search_key_access_conditions": null,
+        "fez_record_search_key_acknowledgements": null,
+        "fez_record_search_key_additional_notes": null,
+        "fez_record_search_key_advisory_statement": null,
+        "fez_record_search_key_alternate_genre": Array [],
+        "fez_record_search_key_alternative_title": Array [],
+        "fez_record_search_key_ands_collection_type": null,
+        "fez_record_search_key_architectural_features": Array [],
+        "fez_record_search_key_article_number": null,
+        "fez_record_search_key_assigned_group_id": Array [],
+        "fez_record_search_key_assigned_user_id": Array [],
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Overgaard, Nana H.",
+            "rek_author_id": null,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Cruz, Jazmina L.",
+            "rek_author_id": null,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Bridge, Jennifer A.",
+            "rek_author_id": null,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Nel, Hendrik J.",
+            "rek_author_id": null,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Frazer, Ian H.",
+            "rek_author_id": null,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "La Gruta, Nicole L.",
+            "rek_author_id": null,
+            "rek_author_order": 6,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Blumenthal, Antje",
+            "rek_author_id": null,
+            "rek_author_order": 7,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Steptoe, Raymond J.",
+            "rek_author_id": null,
+            "rek_author_order": 8,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Wells, James W.",
+            "rek_author_id": null,
+            "rek_author_order": 9,
+            "rek_author_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_author_affiliation_country": Array [],
+        "fez_record_search_key_author_affiliation_full_address": Array [],
+        "fez_record_search_key_author_affiliation_id": Array [],
+        "fez_record_search_key_author_affiliation_name": Array [],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 1419754,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 2009692,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 90030,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 90185,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 6,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 82335,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 7,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 2965,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 8,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 88933,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 9,
+            "rek_author_id_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_author_role": Array [],
+        "fez_record_search_key_book_title": null,
+        "fez_record_search_key_building_materials": Array [],
+        "fez_record_search_key_category": Array [],
+        "fez_record_search_key_chapter_number": null,
+        "fez_record_search_key_condition": Array [],
+        "fez_record_search_key_conference_dates": null,
+        "fez_record_search_key_conference_id": null,
+        "fez_record_search_key_conference_location": null,
+        "fez_record_search_key_conference_name": null,
+        "fez_record_search_key_construction_date": null,
+        "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_contributor": Array [],
+        "fez_record_search_key_contributor_id": Array [],
+        "fez_record_search_key_convener": null,
+        "fez_record_search_key_corresponding_country": Array [],
+        "fez_record_search_key_corresponding_email": Array [],
+        "fez_record_search_key_corresponding_name": Array [],
+        "fez_record_search_key_corresponding_organisation": Array [],
+        "fez_record_search_key_country_of_issue": null,
+        "fez_record_search_key_coverage_period": Array [],
+        "fez_record_search_key_creator_id": Array [],
+        "fez_record_search_key_creator_name": Array [],
+        "fez_record_search_key_data_volume": null,
+        "fez_record_search_key_datastream_policy": null,
+        "fez_record_search_key_date_available": null,
+        "fez_record_search_key_date_photo_taken": null,
+        "fez_record_search_key_date_recorded": null,
+        "fez_record_search_key_date_scanned": null,
+        "fez_record_search_key_doi": Object {
+          "rek_doi": "10.1189/jlb.1AB0217-065R",
+          "rek_doi_id": null,
+          "rek_doi_pid": "UQ:654776",
+        },
+        "fez_record_search_key_edition": null,
+        "fez_record_search_key_end_date": null,
+        "fez_record_search_key_end_page": null,
+        "fez_record_search_key_fields_of_research": Array [],
+        "fez_record_search_key_file_attachment_name": Array [
+          Object {
+            "rek_file_attachment_name": "FezACML_UQ_654776.xml",
+            "rek_file_attachment_name_id": null,
+            "rek_file_attachment_name_order": 1,
+            "rek_file_attachment_name_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_geographic_area": Array [],
+        "fez_record_search_key_grant_acronym": Array [],
+        "fez_record_search_key_grant_agency": Array [],
+        "fez_record_search_key_grant_agency_id": Array [],
+        "fez_record_search_key_grant_id": Array [],
+        "fez_record_search_key_grant_text": Array [],
+        "fez_record_search_key_herdc_code": Object {
+          "rek_herdc_code": 450009,
+          "rek_herdc_code_id": null,
+          "rek_herdc_code_pid": "UQ:654776",
+        },
+        "fez_record_search_key_herdc_status": Object {
+          "rek_herdc_status": 453220,
+          "rek_herdc_status_id": null,
+          "rek_herdc_status_pid": "UQ:654776",
+        },
+        "fez_record_search_key_identifier": Array [],
+        "fez_record_search_key_institutional_status": Object {
+          "rek_institutional_status": 453223,
+          "rek_institutional_status_id": null,
+          "rek_institutional_status_pid": "UQ:654776",
+        },
+        "fez_record_search_key_interior_features": Array [],
+        "fez_record_search_key_isbn": Array [],
+        "fez_record_search_key_isdatasetof": Array [],
+        "fez_record_search_key_isderivationof": Array [],
+        "fez_record_search_key_isi_loc": null,
+        "fez_record_search_key_ismemberof": Array [
+          Object {
+            "rek_ismemberof": "UQ:3931",
+            "rek_ismemberof_id": null,
+            "rek_ismemberof_order": 1,
+            "rek_ismemberof_pid": "UQ:654776",
+          },
+          Object {
+            "rek_ismemberof": "UQ:218311",
+            "rek_ismemberof_id": null,
+            "rek_ismemberof_order": 2,
+            "rek_ismemberof_pid": "UQ:654776",
+          },
+          Object {
+            "rek_ismemberof": "UQ:677356",
+            "rek_ismemberof_id": null,
+            "rek_ismemberof_order": 3,
+            "rek_ismemberof_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_issn": Array [
+          Object {
+            "rek_issn": "0741-5400",
+            "rek_issn_id": null,
+            "rek_issn_order": 1,
+            "rek_issn_pid": "UQ:654776",
+          },
+          Object {
+            "rek_issn": "1938-3673",
+            "rek_issn_id": null,
+            "rek_issn_order": 2,
+            "rek_issn_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_job_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Journal of Leukocyte Biology",
+          "rek_journal_name_id": null,
+          "rek_journal_name_pid": "UQ:654776",
+        },
+        "fez_record_search_key_keywords": Array [
+          Object {
+            "rek_keywords": "Mouse",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 1,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Spleen",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 2,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Blood",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 3,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Adjuvant",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 4,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Abundance ",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 5,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Aggregates",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 6,
+            "rek_keywords_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_language": Array [
+          Object {
+            "rek_language": "eng",
+            "rek_language_id": null,
+            "rek_language_order": 1,
+            "rek_language_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_language_of_book_title": Array [],
+        "fez_record_search_key_language_of_journal_name": Array [],
+        "fez_record_search_key_language_of_proceedings_title": Array [],
+        "fez_record_search_key_language_of_title": Array [],
+        "fez_record_search_key_length": null,
+        "fez_record_search_key_license": null,
+        "fez_record_search_key_link": Array [],
+        "fez_record_search_key_link_description": Array [],
+        "fez_record_search_key_location": Array [],
+        "fez_record_search_key_native_script_book_title": null,
+        "fez_record_search_key_native_script_conference_name": null,
+        "fez_record_search_key_native_script_journal_name": null,
+        "fez_record_search_key_native_script_proceedings_title": null,
+        "fez_record_search_key_native_script_title": null,
+        "fez_record_search_key_newspaper": null,
+        "fez_record_search_key_notes": null,
+        "fez_record_search_key_oa_embargo_days": null,
+        "fez_record_search_key_oa_notes": null,
+        "fez_record_search_key_oa_status": Object {
+          "rek_oa_status": 453692,
+          "rek_oa_status_id": null,
+          "rek_oa_status_pid": "UQ:654776",
+        },
+        "fez_record_search_key_org_name": null,
+        "fez_record_search_key_org_unit_name": null,
+        "fez_record_search_key_original_format": null,
+        "fez_record_search_key_parent_publication": null,
+        "fez_record_search_key_patent_number": null,
+        "fez_record_search_key_period": Array [],
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda, MD, United States",
+          "rek_place_of_publication_id": null,
+          "rek_place_of_publication_pid": "UQ:654776",
+        },
+        "fez_record_search_key_proceedings_title": null,
+        "fez_record_search_key_project_description": null,
+        "fez_record_search_key_project_id": null,
+        "fez_record_search_key_project_name": null,
+        "fez_record_search_key_project_start_date": null,
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "Federation of American Societies for Experimental Biology",
+          "rek_publisher_id": null,
+          "rek_publisher_pid": "UQ:654776",
+        },
+        "fez_record_search_key_pubmed_id": null,
+        "fez_record_search_key_refereed": Object {
+          "rek_refereed": 0,
+          "rek_refereed_id": null,
+          "rek_refereed_pid": "UQ:654776",
+        },
+        "fez_record_search_key_refereed_source": Object {
+          "rek_refereed_source": 453635,
+          "rek_refereed_source_id": null,
+          "rek_refereed_source_pid": "UQ:654776",
+        },
+        "fez_record_search_key_related_datasets": null,
+        "fez_record_search_key_related_publications": null,
+        "fez_record_search_key_report_number": null,
+        "fez_record_search_key_retracted": Object {
+          "rek_retracted": 0,
+          "rek_retracted_id": null,
+          "rek_retracted_pid": "UQ:654776",
+        },
+        "fez_record_search_key_rights": null,
+        "fez_record_search_key_roman_script_book_title": null,
+        "fez_record_search_key_roman_script_conference_name": null,
+        "fez_record_search_key_roman_script_journal_name": null,
+        "fez_record_search_key_roman_script_proceedings_title": null,
+        "fez_record_search_key_roman_script_title": null,
+        "fez_record_search_key_scale": null,
+        "fez_record_search_key_scopus_id": null,
+        "fez_record_search_key_section": null,
+        "fez_record_search_key_seo_code": Array [],
+        "fez_record_search_key_series": null,
+        "fez_record_search_key_software_required": Array [],
+        "fez_record_search_key_source": null,
+        "fez_record_search_key_start_date": null,
+        "fez_record_search_key_start_page": null,
+        "fez_record_search_key_structural_systems": Array [],
+        "fez_record_search_key_style": Array [],
+        "fez_record_search_key_subcategory": Array [],
+        "fez_record_search_key_subject": Array [],
+        "fez_record_search_key_supervisor": Array [],
+        "fez_record_search_key_supervisor_id": Array [],
+        "fez_record_search_key_surrounding_features": Array [],
+        "fez_record_search_key_time_period_end_date": null,
+        "fez_record_search_key_time_period_start_date": null,
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": Object {
+          "rek_total_pages": "9",
+          "rek_total_pages_id": null,
+          "rek_total_pages_pid": "UQ:654776",
+        },
+        "fez_record_search_key_transcript": null,
+        "fez_record_search_key_translated_book_title": null,
+        "fez_record_search_key_translated_conference_name": null,
+        "fez_record_search_key_translated_journal_name": null,
+        "fez_record_search_key_translated_newspaper": null,
+        "fez_record_search_key_translated_proceedings_title": null,
+        "fez_record_search_key_translated_title": null,
+        "fez_record_search_key_type_of_data": Array [],
+        "fez_record_search_key_volume_number": null,
+        "rek_altmetric_id": 21319894,
+        "rek_altmetric_score": 1,
+        "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Overgaard, Nana H.\\" href=\\"/list/author_id/1419754/\\">Overgaard, Nana H.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Cruz, Jazmina L.\\" href=\\"/list/author_id/2009692/\\">Cruz, Jazmina L.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Bridge, Jennifer A.\\" href=\\"/list/author_id/90030/\\">Bridge, Jennifer A.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Nel, Hendrik J.\\" href=\\"/list/author_id/90185/\\">Nel, Hendrik J.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Frazer, Ian H.\\" href=\\"/list/author_id/410/\\">Frazer, Ian H.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for La Gruta, Nicole L.\\" href=\\"/list/author/La+Gruta%2C+Nicole+L./\\">La Gruta, Nicole L.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Blumenthal, Antje\\" href=\\"/list/author_id/82335/\\">Blumenthal, Antje</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Steptoe, Raymond J.\\" href=\\"/list/author_id/2965/\\">Steptoe, Raymond J.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Wells, James W.\\" href=\\"/list/author_id/88933/\\">Wells, James W.</a> (<span class=\\"citation_date\\">2017</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: CD4+CD8&beta;+ double-positive T cells in skin-draining lymph nodes respond to inflammatory signals from the skin\\" href=\\"/view/UQ:654776\\">CD4+CD8β+ double-positive T cells in skin-draining lymph nodes respond to inflammatory signals from the skin</a>. <i><span class=\\"citation_journal_name\\">Journal of Leukocyte Biology</span></i>, <i></i>  . doi:<span class=\\"citation_doi\\">10.1189/jlb.1AB0217-065R</span>",
+        "rek_copyright": "on",
+        "rek_created_date": "2017-06-29T23:53:08Z",
+        "rek_date": "2017-06-21T00:00:00Z",
+        "rek_depositor": 14680,
+        "rek_depositor_affiliation": 1048,
+        "rek_description": null,
+        "rek_display_type": 179,
+        "rek_file_downloads": 0,
+        "rek_formatted_abstract": "CD4+CD8+ double-positive (DP), mature, peripheral T cells are readily detectable in a variety of species and tissues. Despite a common association with autoimmune and malignant skin disorders, however, little is understood about their role or function. Herein, we show that DP T cells are readily detectable in the blood, spleen, and peripheral lymph nodes of na&iuml;ve C57BL/6 mice. DP T cells were also present in J&alpha;18&minus;/&minus; and CD1d&minus;/&minus; mice, indicating that these cells are not NK-T cells. After skin administration of CASAC adjuvant, but not Quil A adjuvant, both total DP T cells and skin-infiltrating DP T cells increased in number. We explored the possibility that DP T cells could represent aggregates between CD4+ and CD8+ single-positive T cells and found strong evidence that a large proportion of apparent DP T cells were indeed aggregates. However, the existence of true CD4+CD8+ DP T cells was confirmed by Amnis ImageStream (Millipore Sigma, Billerica, MA, USA) imaging. Multiple rounds of FACS sorting separated true DP cells from aggregates and indicated that conventional analyses may lead to &sim;10-fold overestimation of DP T cell numbers. The high degree of aggregate contamination and overestimation of DP abundance using conventional analysis techniques may explain discrepancies reported in the literature for DP T cell origin, phenotype, and function.",
+        "rek_formatted_title": null,
+        "rek_genre": "Journal Article",
+        "rek_genre_type": null,
+        "rek_herdc_notes": null,
+        "rek_object_type": 3,
+        "rek_pid": "UQ:654776",
+        "rek_scopus_citation_count": null,
+        "rek_scopus_doc_type": null,
+        "rek_security_inherited": null,
+        "rek_status": 2,
+        "rek_subtype": "Article (original research)",
+        "rek_thomson_citation_count": null,
+        "rek_title": "CD4+CD8β+ double-positive T cells in skin-draining lymph nodes respond to inflammatory signals from the skin",
+        "rek_updated_date": "2017-08-01T07:07:38Z",
+        "rek_wok_doc_type": null,
+      }
+    }
+  />
+  <YearCitationView
+    publication={
+      Object {
+        "fez_record_search_key_access_conditions": null,
+        "fez_record_search_key_acknowledgements": null,
+        "fez_record_search_key_additional_notes": null,
+        "fez_record_search_key_advisory_statement": null,
+        "fez_record_search_key_alternate_genre": Array [],
+        "fez_record_search_key_alternative_title": Array [],
+        "fez_record_search_key_ands_collection_type": null,
+        "fez_record_search_key_architectural_features": Array [],
+        "fez_record_search_key_article_number": null,
+        "fez_record_search_key_assigned_group_id": Array [],
+        "fez_record_search_key_assigned_user_id": Array [],
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Overgaard, Nana H.",
+            "rek_author_id": null,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Cruz, Jazmina L.",
+            "rek_author_id": null,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Bridge, Jennifer A.",
+            "rek_author_id": null,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Nel, Hendrik J.",
+            "rek_author_id": null,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Frazer, Ian H.",
+            "rek_author_id": null,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "La Gruta, Nicole L.",
+            "rek_author_id": null,
+            "rek_author_order": 6,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Blumenthal, Antje",
+            "rek_author_id": null,
+            "rek_author_order": 7,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Steptoe, Raymond J.",
+            "rek_author_id": null,
+            "rek_author_order": 8,
+            "rek_author_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author": "Wells, James W.",
+            "rek_author_id": null,
+            "rek_author_order": 9,
+            "rek_author_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_author_affiliation_country": Array [],
+        "fez_record_search_key_author_affiliation_full_address": Array [],
+        "fez_record_search_key_author_affiliation_id": Array [],
+        "fez_record_search_key_author_affiliation_name": Array [],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 1419754,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 2009692,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 90030,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 90185,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 6,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 82335,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 7,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 2965,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 8,
+            "rek_author_id_pid": "UQ:654776",
+          },
+          Object {
+            "rek_author_id": 88933,
+            "rek_author_id_id": null,
+            "rek_author_id_order": 9,
+            "rek_author_id_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_author_role": Array [],
+        "fez_record_search_key_book_title": null,
+        "fez_record_search_key_building_materials": Array [],
+        "fez_record_search_key_category": Array [],
+        "fez_record_search_key_chapter_number": null,
+        "fez_record_search_key_condition": Array [],
+        "fez_record_search_key_conference_dates": null,
+        "fez_record_search_key_conference_id": null,
+        "fez_record_search_key_conference_location": null,
+        "fez_record_search_key_conference_name": null,
+        "fez_record_search_key_construction_date": null,
+        "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_contributor": Array [],
+        "fez_record_search_key_contributor_id": Array [],
+        "fez_record_search_key_convener": null,
+        "fez_record_search_key_corresponding_country": Array [],
+        "fez_record_search_key_corresponding_email": Array [],
+        "fez_record_search_key_corresponding_name": Array [],
+        "fez_record_search_key_corresponding_organisation": Array [],
+        "fez_record_search_key_country_of_issue": null,
+        "fez_record_search_key_coverage_period": Array [],
+        "fez_record_search_key_creator_id": Array [],
+        "fez_record_search_key_creator_name": Array [],
+        "fez_record_search_key_data_volume": null,
+        "fez_record_search_key_datastream_policy": null,
+        "fez_record_search_key_date_available": null,
+        "fez_record_search_key_date_photo_taken": null,
+        "fez_record_search_key_date_recorded": null,
+        "fez_record_search_key_date_scanned": null,
+        "fez_record_search_key_doi": Object {
+          "rek_doi": "10.1189/jlb.1AB0217-065R",
+          "rek_doi_id": null,
+          "rek_doi_pid": "UQ:654776",
+        },
+        "fez_record_search_key_edition": null,
+        "fez_record_search_key_end_date": null,
+        "fez_record_search_key_end_page": null,
+        "fez_record_search_key_fields_of_research": Array [],
+        "fez_record_search_key_file_attachment_name": Array [
+          Object {
+            "rek_file_attachment_name": "FezACML_UQ_654776.xml",
+            "rek_file_attachment_name_id": null,
+            "rek_file_attachment_name_order": 1,
+            "rek_file_attachment_name_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_geographic_area": Array [],
+        "fez_record_search_key_grant_acronym": Array [],
+        "fez_record_search_key_grant_agency": Array [],
+        "fez_record_search_key_grant_agency_id": Array [],
+        "fez_record_search_key_grant_id": Array [],
+        "fez_record_search_key_grant_text": Array [],
+        "fez_record_search_key_herdc_code": Object {
+          "rek_herdc_code": 450009,
+          "rek_herdc_code_id": null,
+          "rek_herdc_code_pid": "UQ:654776",
+        },
+        "fez_record_search_key_herdc_status": Object {
+          "rek_herdc_status": 453220,
+          "rek_herdc_status_id": null,
+          "rek_herdc_status_pid": "UQ:654776",
+        },
+        "fez_record_search_key_identifier": Array [],
+        "fez_record_search_key_institutional_status": Object {
+          "rek_institutional_status": 453223,
+          "rek_institutional_status_id": null,
+          "rek_institutional_status_pid": "UQ:654776",
+        },
+        "fez_record_search_key_interior_features": Array [],
+        "fez_record_search_key_isbn": Array [],
+        "fez_record_search_key_isdatasetof": Array [],
+        "fez_record_search_key_isderivationof": Array [],
+        "fez_record_search_key_isi_loc": null,
+        "fez_record_search_key_ismemberof": Array [
+          Object {
+            "rek_ismemberof": "UQ:3931",
+            "rek_ismemberof_id": null,
+            "rek_ismemberof_order": 1,
+            "rek_ismemberof_pid": "UQ:654776",
+          },
+          Object {
+            "rek_ismemberof": "UQ:218311",
+            "rek_ismemberof_id": null,
+            "rek_ismemberof_order": 2,
+            "rek_ismemberof_pid": "UQ:654776",
+          },
+          Object {
+            "rek_ismemberof": "UQ:677356",
+            "rek_ismemberof_id": null,
+            "rek_ismemberof_order": 3,
+            "rek_ismemberof_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_issn": Array [
+          Object {
+            "rek_issn": "0741-5400",
+            "rek_issn_id": null,
+            "rek_issn_order": 1,
+            "rek_issn_pid": "UQ:654776",
+          },
+          Object {
+            "rek_issn": "1938-3673",
+            "rek_issn_id": null,
+            "rek_issn_order": 2,
+            "rek_issn_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_job_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Journal of Leukocyte Biology",
+          "rek_journal_name_id": null,
+          "rek_journal_name_pid": "UQ:654776",
+        },
+        "fez_record_search_key_keywords": Array [
+          Object {
+            "rek_keywords": "Mouse",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 1,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Spleen",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 2,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Blood",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 3,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Adjuvant",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 4,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Abundance ",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 5,
+            "rek_keywords_pid": "UQ:654776",
+          },
+          Object {
+            "rek_keywords": "Aggregates",
+            "rek_keywords_id": null,
+            "rek_keywords_order": 6,
+            "rek_keywords_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_language": Array [
+          Object {
+            "rek_language": "eng",
+            "rek_language_id": null,
+            "rek_language_order": 1,
+            "rek_language_pid": "UQ:654776",
+          },
+        ],
+        "fez_record_search_key_language_of_book_title": Array [],
+        "fez_record_search_key_language_of_journal_name": Array [],
+        "fez_record_search_key_language_of_proceedings_title": Array [],
+        "fez_record_search_key_language_of_title": Array [],
+        "fez_record_search_key_length": null,
+        "fez_record_search_key_license": null,
+        "fez_record_search_key_link": Array [],
+        "fez_record_search_key_link_description": Array [],
+        "fez_record_search_key_location": Array [],
+        "fez_record_search_key_native_script_book_title": null,
+        "fez_record_search_key_native_script_conference_name": null,
+        "fez_record_search_key_native_script_journal_name": null,
+        "fez_record_search_key_native_script_proceedings_title": null,
+        "fez_record_search_key_native_script_title": null,
+        "fez_record_search_key_newspaper": null,
+        "fez_record_search_key_notes": null,
+        "fez_record_search_key_oa_embargo_days": null,
+        "fez_record_search_key_oa_notes": null,
+        "fez_record_search_key_oa_status": Object {
+          "rek_oa_status": 453692,
+          "rek_oa_status_id": null,
+          "rek_oa_status_pid": "UQ:654776",
+        },
+        "fez_record_search_key_org_name": null,
+        "fez_record_search_key_org_unit_name": null,
+        "fez_record_search_key_original_format": null,
+        "fez_record_search_key_parent_publication": null,
+        "fez_record_search_key_patent_number": null,
+        "fez_record_search_key_period": Array [],
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda, MD, United States",
+          "rek_place_of_publication_id": null,
+          "rek_place_of_publication_pid": "UQ:654776",
+        },
+        "fez_record_search_key_proceedings_title": null,
+        "fez_record_search_key_project_description": null,
+        "fez_record_search_key_project_id": null,
+        "fez_record_search_key_project_name": null,
+        "fez_record_search_key_project_start_date": null,
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "Federation of American Societies for Experimental Biology",
+          "rek_publisher_id": null,
+          "rek_publisher_pid": "UQ:654776",
+        },
+        "fez_record_search_key_pubmed_id": null,
+        "fez_record_search_key_refereed": Object {
+          "rek_refereed": 0,
+          "rek_refereed_id": null,
+          "rek_refereed_pid": "UQ:654776",
+        },
+        "fez_record_search_key_refereed_source": Object {
+          "rek_refereed_source": 453635,
+          "rek_refereed_source_id": null,
+          "rek_refereed_source_pid": "UQ:654776",
+        },
+        "fez_record_search_key_related_datasets": null,
+        "fez_record_search_key_related_publications": null,
+        "fez_record_search_key_report_number": null,
+        "fez_record_search_key_retracted": Object {
+          "rek_retracted": 0,
+          "rek_retracted_id": null,
+          "rek_retracted_pid": "UQ:654776",
+        },
+        "fez_record_search_key_rights": null,
+        "fez_record_search_key_roman_script_book_title": null,
+        "fez_record_search_key_roman_script_conference_name": null,
+        "fez_record_search_key_roman_script_journal_name": null,
+        "fez_record_search_key_roman_script_proceedings_title": null,
+        "fez_record_search_key_roman_script_title": null,
+        "fez_record_search_key_scale": null,
+        "fez_record_search_key_scopus_id": null,
+        "fez_record_search_key_section": null,
+        "fez_record_search_key_seo_code": Array [],
+        "fez_record_search_key_series": null,
+        "fez_record_search_key_software_required": Array [],
+        "fez_record_search_key_source": null,
+        "fez_record_search_key_start_date": null,
+        "fez_record_search_key_start_page": null,
+        "fez_record_search_key_structural_systems": Array [],
+        "fez_record_search_key_style": Array [],
+        "fez_record_search_key_subcategory": Array [],
+        "fez_record_search_key_subject": Array [],
+        "fez_record_search_key_supervisor": Array [],
+        "fez_record_search_key_supervisor_id": Array [],
+        "fez_record_search_key_surrounding_features": Array [],
+        "fez_record_search_key_time_period_end_date": null,
+        "fez_record_search_key_time_period_start_date": null,
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": Object {
+          "rek_total_pages": "9",
+          "rek_total_pages_id": null,
+          "rek_total_pages_pid": "UQ:654776",
+        },
+        "fez_record_search_key_transcript": null,
+        "fez_record_search_key_translated_book_title": null,
+        "fez_record_search_key_translated_conference_name": null,
+        "fez_record_search_key_translated_journal_name": null,
+        "fez_record_search_key_translated_newspaper": null,
+        "fez_record_search_key_translated_proceedings_title": null,
+        "fez_record_search_key_translated_title": null,
+        "fez_record_search_key_type_of_data": Array [],
+        "fez_record_search_key_volume_number": null,
+        "rek_altmetric_id": 21319894,
+        "rek_altmetric_score": 1,
+        "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Overgaard, Nana H.\\" href=\\"/list/author_id/1419754/\\">Overgaard, Nana H.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Cruz, Jazmina L.\\" href=\\"/list/author_id/2009692/\\">Cruz, Jazmina L.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Bridge, Jennifer A.\\" href=\\"/list/author_id/90030/\\">Bridge, Jennifer A.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Nel, Hendrik J.\\" href=\\"/list/author_id/90185/\\">Nel, Hendrik J.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Frazer, Ian H.\\" href=\\"/list/author_id/410/\\">Frazer, Ian H.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for La Gruta, Nicole L.\\" href=\\"/list/author/La+Gruta%2C+Nicole+L./\\">La Gruta, Nicole L.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Blumenthal, Antje\\" href=\\"/list/author_id/82335/\\">Blumenthal, Antje</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Steptoe, Raymond J.\\" href=\\"/list/author_id/2965/\\">Steptoe, Raymond J.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Wells, James W.\\" href=\\"/list/author_id/88933/\\">Wells, James W.</a> (<span class=\\"citation_date\\">2017</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: CD4+CD8&beta;+ double-positive T cells in skin-draining lymph nodes respond to inflammatory signals from the skin\\" href=\\"/view/UQ:654776\\">CD4+CD8β+ double-positive T cells in skin-draining lymph nodes respond to inflammatory signals from the skin</a>. <i><span class=\\"citation_journal_name\\">Journal of Leukocyte Biology</span></i>, <i></i>  . doi:<span class=\\"citation_doi\\">10.1189/jlb.1AB0217-065R</span>",
+        "rek_copyright": "on",
+        "rek_created_date": "2017-06-29T23:53:08Z",
+        "rek_date": "2017-06-21T00:00:00Z",
+        "rek_depositor": 14680,
+        "rek_depositor_affiliation": 1048,
+        "rek_description": null,
+        "rek_display_type": 179,
+        "rek_file_downloads": 0,
+        "rek_formatted_abstract": "CD4+CD8+ double-positive (DP), mature, peripheral T cells are readily detectable in a variety of species and tissues. Despite a common association with autoimmune and malignant skin disorders, however, little is understood about their role or function. Herein, we show that DP T cells are readily detectable in the blood, spleen, and peripheral lymph nodes of na&iuml;ve C57BL/6 mice. DP T cells were also present in J&alpha;18&minus;/&minus; and CD1d&minus;/&minus; mice, indicating that these cells are not NK-T cells. After skin administration of CASAC adjuvant, but not Quil A adjuvant, both total DP T cells and skin-infiltrating DP T cells increased in number. We explored the possibility that DP T cells could represent aggregates between CD4+ and CD8+ single-positive T cells and found strong evidence that a large proportion of apparent DP T cells were indeed aggregates. However, the existence of true CD4+CD8+ DP T cells was confirmed by Amnis ImageStream (Millipore Sigma, Billerica, MA, USA) imaging. Multiple rounds of FACS sorting separated true DP cells from aggregates and indicated that conventional analyses may lead to &sim;10-fold overestimation of DP T cell numbers. The high degree of aggregate contamination and overestimation of DP abundance using conventional analysis techniques may explain discrepancies reported in the literature for DP T cell origin, phenotype, and function.",
+        "rek_formatted_title": null,
+        "rek_genre": "Journal Article",
+        "rek_genre_type": null,
+        "rek_herdc_notes": null,
+        "rek_object_type": 3,
+        "rek_pid": "UQ:654776",
+        "rek_scopus_citation_count": null,
+        "rek_scopus_doc_type": null,
+        "rek_security_inherited": null,
+        "rek_status": 2,
+        "rek_subtype": "Article (original research)",
+        "rek_thomson_citation_count": null,
+        "rek_title": "CD4+CD8β+ double-positive T cells in skin-draining lymph nodes respond to inflammatory signals from the skin",
+        "rek_updated_date": "2017-08-01T07:07:38Z",
+        "rek_wok_doc_type": null,
+      }
+    }
+  />
   <span
     className="citationTitle"
   >
@@ -87,10 +865,10 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
   <span
     className="citationJournalName"
   >
-     
     Journal of Leukocyte Biology
     , 
   </span>
+  .
   <span
     className="citationDOI"
   >
@@ -122,29 +900,146 @@ exports[`JournalArticleCitation renders  component with a mock external search r
   >
     format_quote
   </FontIcon>
-  <span
-    className="citationAuthors"
-  >
-    <span
-      className="citationAuthor"
-    >
-       
-      Cicero, Arrigo F G
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Fogacci, Federica
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Colletti, Alessandro
-    </span>
-     
-  </span>
+  <AuthorsCitationView
+    publication={
+      Object {
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Cicero, Arrigo F G",
+            "rek_author_order": 1,
+          },
+          Object {
+            "rek_author": "Fogacci, Federica",
+            "rek_author_order": 2,
+          },
+          Object {
+            "rek_author": "Colletti, Alessandro",
+            "rek_author_order": 3,
+          },
+        ],
+        "fez_record_search_key_author_affiliation_full_address": Array [
+          Object {
+            "rek_author_affiliation_full_address": "Atherosclerosis and Metabolic Diseases Research Center, Medical & Surgical Sciences Dept., Alma Mater Studiorum - University of Bologna, Bologna, Italy. arrigo.cicero@unibo.it.",
+            "rek_author_affiliation_full_address_order": 1,
+          },
+        ],
+        "fez_record_search_key_doi": Object {
+          "rek_doi": "10.1039/c7fo00178a",
+        },
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "2088",
+        },
+        "fez_record_search_key_issn": Array [
+          Object {
+            "rek_issn": "2042-650X",
+            "rek_issn_order": 1,
+          },
+        ],
+        "fez_record_search_key_issue_number": Object {
+          "rek_issue_number": "6",
+        },
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Food & function",
+        },
+        "fez_record_search_key_language": Array [
+          Object {
+            "rek_language": false,
+            "rek_language_order": 1,
+          },
+        ],
+        "fez_record_search_key_oa_status": Object {
+          "rek_oa_status": "453698",
+        },
+        "fez_record_search_key_pubmed_id": Object {
+          "rek_pubmed_id": "28541356",
+        },
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "2076",
+        },
+        "fez_record_search_key_total_pages": Object {
+          "rek_total_pages": 13,
+        },
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "8",
+        },
+        "rek_date": "2017-06-21 00:00:00",
+        "rek_description": "Cardiovascular diseases (CVDs) are one of the major causes of mortality and disability in Western countries. Prevention is known to be the cornerstone to lessen the incidence of CVDs and also to reduce the economic burden of both the citizen and the healthcare system. \\"Interventional medicine\\" certainly puts lifestyle modification as the first therapeutic step, including a healthy diet and physical activity. Secondly, a large body of research individuated a number of food and plant bioactives, which are potentially efficacious in preventing and reducing some highly prevalent CV risk factors, such as hypercholesterolemia, hypertension, vascular inflammation and vascular compliance. Some lipid- and blood pressure-lowering bioactives were studied for their impact on human vascular health, particularly as regards endothelial function and arterial stiffness. Several nutraceuticals showed additive or synergistic properties in combination, sometimes (but not always) allowing a reduction of the administered dose of extracts and determining a \\"multi-factorial\\" final effect on many cardiovascular risk factors. Thus, this review focuses on available evidence regarding the effects of berberine, plant sterols, green tea extract, soy, curcumin, cocoa, pycnogenol, lycopene, olive oil, soluble fibers, garlic, resveratrol, beetroot, mineral salts and vitamins on the lipid profile, blood pressure, inflammatory and endothelial markers, and vascular compliance. Future clinical research studies will have to focus more on middle term modification of the instrumental markers of vascular aging than on short-term effects on indirect laboratory risk markers.",
+        "rek_display_type": 179,
+        "rek_genre": "Journal Article",
+        "rek_title": "Food and plant bioactives for reducing cardiometabolic disease risk: an evidence based approach.",
+      }
+    }
+  />
+  <YearCitationView
+    publication={
+      Object {
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Cicero, Arrigo F G",
+            "rek_author_order": 1,
+          },
+          Object {
+            "rek_author": "Fogacci, Federica",
+            "rek_author_order": 2,
+          },
+          Object {
+            "rek_author": "Colletti, Alessandro",
+            "rek_author_order": 3,
+          },
+        ],
+        "fez_record_search_key_author_affiliation_full_address": Array [
+          Object {
+            "rek_author_affiliation_full_address": "Atherosclerosis and Metabolic Diseases Research Center, Medical & Surgical Sciences Dept., Alma Mater Studiorum - University of Bologna, Bologna, Italy. arrigo.cicero@unibo.it.",
+            "rek_author_affiliation_full_address_order": 1,
+          },
+        ],
+        "fez_record_search_key_doi": Object {
+          "rek_doi": "10.1039/c7fo00178a",
+        },
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "2088",
+        },
+        "fez_record_search_key_issn": Array [
+          Object {
+            "rek_issn": "2042-650X",
+            "rek_issn_order": 1,
+          },
+        ],
+        "fez_record_search_key_issue_number": Object {
+          "rek_issue_number": "6",
+        },
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Food & function",
+        },
+        "fez_record_search_key_language": Array [
+          Object {
+            "rek_language": false,
+            "rek_language_order": 1,
+          },
+        ],
+        "fez_record_search_key_oa_status": Object {
+          "rek_oa_status": "453698",
+        },
+        "fez_record_search_key_pubmed_id": Object {
+          "rek_pubmed_id": "28541356",
+        },
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "2076",
+        },
+        "fez_record_search_key_total_pages": Object {
+          "rek_total_pages": 13,
+        },
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "8",
+        },
+        "rek_date": "2017-06-21 00:00:00",
+        "rek_description": "Cardiovascular diseases (CVDs) are one of the major causes of mortality and disability in Western countries. Prevention is known to be the cornerstone to lessen the incidence of CVDs and also to reduce the economic burden of both the citizen and the healthcare system. \\"Interventional medicine\\" certainly puts lifestyle modification as the first therapeutic step, including a healthy diet and physical activity. Secondly, a large body of research individuated a number of food and plant bioactives, which are potentially efficacious in preventing and reducing some highly prevalent CV risk factors, such as hypercholesterolemia, hypertension, vascular inflammation and vascular compliance. Some lipid- and blood pressure-lowering bioactives were studied for their impact on human vascular health, particularly as regards endothelial function and arterial stiffness. Several nutraceuticals showed additive or synergistic properties in combination, sometimes (but not always) allowing a reduction of the administered dose of extracts and determining a \\"multi-factorial\\" final effect on many cardiovascular risk factors. Thus, this review focuses on available evidence regarding the effects of berberine, plant sterols, green tea extract, soy, curcumin, cocoa, pycnogenol, lycopene, olive oil, soluble fibers, garlic, resveratrol, beetroot, mineral salts and vitamins on the lipid profile, blood pressure, inflammatory and endothelial markers, and vascular compliance. Future clinical research studies will have to focus more on middle term modification of the instrumental markers of vascular aging than on short-term effects on indirect laboratory risk markers.",
+        "rek_display_type": 179,
+        "rek_genre": "Journal Article",
+        "rek_title": "Food and plant bioactives for reducing cardiometabolic disease risk: an evidence based approach.",
+      }
+    }
+  />
   <span
     className="citationTitle"
   >
@@ -154,38 +1049,33 @@ exports[`JournalArticleCitation renders  component with a mock external search r
   <span
     className="citationJournalName"
   >
-     
     Food & function
     , 
   </span>
   <span
     className="citationVolumeNumber"
   >
-     
     8
-    : 
+     
   </span>
   <span
     className="citationIssueNumber"
   >
-     
     6
-    : 
   </span>
+  : 
   <span
     className="citationStartPage"
   >
-     
     2076
-     - 
+    -
   </span>
   <span
     className="citationEndPage"
   >
-     
     2088
-    . 
   </span>
+  .
   <span
     className="citationDOI"
   >
@@ -217,36 +1107,92 @@ exports[`JournalArticleCitation renders  component with all items in the record 
   >
     format_quote
   </FontIcon>
-  <span
-    className="citationAuthors"
-  >
-    <span
-      className="citationAuthor"
-    >
-       
-      Smith, A
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Smith, B
-    </span>
-    <span
-      className="citationAuthor"
-    >
-       
-      Smith, C
-    </span>
-     
-  </span>
-  <span
-    className="citationPublisher"
-  >
-    (
-    Test Publisher
-    ) 
-  </span>
+  <AuthorsCitationView
+    publication={
+      Object {
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Smith, A",
+            "rek_author_order": 1,
+          },
+          Object {
+            "rek_author": "Smith, B",
+            "rek_author_order": 2,
+          },
+          Object {
+            "rek_author": "Smith, C",
+            "rek_author_order": 3,
+          },
+        ],
+        "fez_record_search_key_doi": Object {
+          "rek_doi": "10.0000/xxx0000000",
+        },
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "100",
+        },
+        "fez_record_search_key_issue_number": Object {
+          "rek_issue_number": "issue 1",
+        },
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Test journal name",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "Test Publisher",
+        },
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "1",
+        },
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "v1",
+        },
+        "rek_pid": "UQ:1111",
+        "rek_title": "Test journal article title",
+      }
+    }
+  />
+  <YearCitationView
+    publication={
+      Object {
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Smith, A",
+            "rek_author_order": 1,
+          },
+          Object {
+            "rek_author": "Smith, B",
+            "rek_author_order": 2,
+          },
+          Object {
+            "rek_author": "Smith, C",
+            "rek_author_order": 3,
+          },
+        ],
+        "fez_record_search_key_doi": Object {
+          "rek_doi": "10.0000/xxx0000000",
+        },
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "100",
+        },
+        "fez_record_search_key_issue_number": Object {
+          "rek_issue_number": "issue 1",
+        },
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Test journal name",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "Test Publisher",
+        },
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "1",
+        },
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "v1",
+        },
+        "rek_pid": "UQ:1111",
+        "rek_title": "Test journal article title",
+      }
+    }
+  />
   <span
     className="citationTitle"
   >
@@ -256,38 +1202,33 @@ exports[`JournalArticleCitation renders  component with all items in the record 
   <span
     className="citationJournalName"
   >
-     
     Test journal name
     , 
   </span>
   <span
     className="citationVolumeNumber"
   >
-     
     v1
-    : 
+     
   </span>
   <span
     className="citationIssueNumber"
   >
-     
     issue 1
-    : 
   </span>
+  : 
   <span
     className="citationStartPage"
   >
-     
     1
-     - 
+    -
   </span>
   <span
     className="citationEndPage"
   >
-     
     100
-    . 
   </span>
+  .
   <span
     className="citationDOI"
   >
@@ -319,15 +1260,17 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
   >
     format_quote
   </FontIcon>
-  <span
-    className="citationAuthors"
-  >
-     
-  </span>
+  <AuthorsCitationView
+    publication={Object {}}
+  />
+  <YearCitationView
+    publication={Object {}}
+  />
   <span
     className="citationTitle"
   >
     . 
   </span>
+  .
 </div>
 `;

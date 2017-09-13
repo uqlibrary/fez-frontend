@@ -35,7 +35,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
         <div
           className="is-hidden-mobile"
         >
-          World of science
+          Web of science
         </div>
         <div
           className="is-hidden-tablet"
@@ -218,7 +218,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
         <div
           className="is-hidden-mobile"
         >
-          World of science
+          Web of science
         </div>
         <div
           className="is-hidden-tablet"
@@ -401,7 +401,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
         <div
           className="is-hidden-mobile"
         >
-          World of science
+          Web of science
         </div>
         <div
           className="is-hidden-tablet"
@@ -584,7 +584,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
         <div
           className="is-hidden-mobile"
         >
-          World of science
+          Web of science
         </div>
         <div
           className="is-hidden-tablet"
@@ -733,8 +733,8 @@ exports[`PublicationStats component should render N/A for hindex because they eq
 `;
 
 exports[`PublicationStats component should render an empty component 1`] = `
-<div
-  className="publicationsStatsEmpty"
+<span
+  className="publicationsStats empty"
 />
 `;
 
@@ -773,7 +773,7 @@ exports[`PublicationStats component should render statistics with table and data
         <div
           className="is-hidden-mobile"
         >
-          World of science
+          Web of science
         </div>
         <div
           className="is-hidden-tablet"

@@ -4,10 +4,6 @@ import Dashboard from '../components/Dashboard';
 import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
-// mock data for graphs
-import {possibleUnclaimed as possibleUnclaimedMockData} from '../../../mock/data/publications';
-
-
 const mapStateToProps = (state) => {
     return {
         account: state.get('accountReducer').account,
@@ -16,8 +12,7 @@ const mapStateToProps = (state) => {
         possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts,
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),
-        ...state.get('publicationsReducer'),
-        publicationsList: possibleUnclaimedMockData.data
+        ...state.get('publicationsReducer')
     };
 };
 

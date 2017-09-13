@@ -1,0 +1,892 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorLinking should be disabled 1`] = `
+<div>
+  <div
+    className="columns is-gapless is-multiline is-desktop is-mobile"
+  >
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Overgaard, Nana H.",
+          "rek_author_id": null,
+          "rek_author_order": 1,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={true}
+      index={0}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Cruz, Jazmina L.",
+          "rek_author_id": null,
+          "rek_author_order": 2,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={true}
+      index={1}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Bridge, Jennifer A.",
+          "rek_author_id": null,
+          "rek_author_order": 3,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={true}
+      index={2}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Nel, Hendrik J.",
+          "rek_author_id": null,
+          "rek_author_order": 4,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={true}
+      index={3}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Frazer, Ian H.",
+          "rek_author_id": null,
+          "rek_author_order": 5,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={true}
+      index={4}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "La Gruta, Nicole L.",
+          "rek_author_id": null,
+          "rek_author_order": 6,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={true}
+      index={5}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Blumenthal, Antje",
+          "rek_author_id": null,
+          "rek_author_order": 7,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={true}
+      index={6}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Steptoe, Raymond J.",
+          "rek_author_id": null,
+          "rek_author_order": 8,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={true}
+      index={7}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Wells, James W.",
+          "rek_author_id": null,
+          "rek_author_order": 9,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={true}
+      index={8}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`AuthorLinking should render all authors as unlinked and selectable 1`] = `
+<div>
+  <div
+    className="columns is-gapless is-multiline is-desktop is-mobile"
+  >
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Overgaard, Nana H.",
+          "rek_author_id": null,
+          "rek_author_order": 1,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={0}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Cruz, Jazmina L.",
+          "rek_author_id": null,
+          "rek_author_order": 2,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={1}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Bridge, Jennifer A.",
+          "rek_author_id": null,
+          "rek_author_order": 3,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={2}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Nel, Hendrik J.",
+          "rek_author_id": null,
+          "rek_author_order": 4,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={3}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Frazer, Ian H.",
+          "rek_author_id": null,
+          "rek_author_order": 5,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={4}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "La Gruta, Nicole L.",
+          "rek_author_id": null,
+          "rek_author_order": 6,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={5}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Blumenthal, Antje",
+          "rek_author_id": null,
+          "rek_author_order": 7,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={6}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Steptoe, Raymond J.",
+          "rek_author_id": null,
+          "rek_author_order": 8,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={7}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Wells, James W.",
+          "rek_author_id": null,
+          "rek_author_order": 9,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={8}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = `
+<div>
+  <div
+    className="columns is-gapless is-multiline is-desktop is-mobile"
+  >
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Overgaard, Nana H.",
+          "rek_author_id": null,
+          "rek_author_order": 1,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={0}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Cruz, Jazmina L.",
+          "rek_author_id": null,
+          "rek_author_order": 2,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={1}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Bridge, Jennifer A.",
+          "rek_author_id": null,
+          "rek_author_order": 3,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={2}
+      linked={true}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Nel, Hendrik J.",
+          "rek_author_id": null,
+          "rek_author_order": 4,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={3}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Frazer, Ian H.",
+          "rek_author_id": null,
+          "rek_author_order": 5,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={4}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "La Gruta, Nicole L.",
+          "rek_author_id": null,
+          "rek_author_order": 6,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={5}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Blumenthal, Antje",
+          "rek_author_id": null,
+          "rek_author_order": 7,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={6}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Steptoe, Raymond J.",
+          "rek_author_id": null,
+          "rek_author_order": 8,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={7}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+    <AuthorItem
+      author={
+        Object {
+          "rek_author": "Wells, James W.",
+          "rek_author_id": null,
+          "rek_author_order": 9,
+          "rek_author_pid": "UQ:654776",
+        }
+      }
+      disabled={false}
+      index={8}
+      linked={false}
+      locale={
+        Object {
+          "ordinalData": Array [
+            "First",
+            "Second",
+            "Third",
+            "Fourth",
+            "Fifth",
+            "Sixth",
+            "Seventh",
+            "Eighth",
+            "Ninth",
+            "Tenth",
+          ],
+          "suffix": " listed author",
+        }
+      }
+      onAuthorSelected={[Function]}
+      selected={null}
+    />
+  </div>
+</div>
+`;

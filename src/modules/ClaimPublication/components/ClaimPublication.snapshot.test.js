@@ -29,15 +29,19 @@ const create = () => {
     return {store, next, invoke}
 };
 
-function setup({possiblePublicationsList, loadingPossiblePublicationsList, loadingPossibleCounts, 
-   author, authorLoading, possibleCounts, actions, history, isShallow = true}) {
+function setup({possiblePublicationsList, loadingPossiblePublicationsList, loadingPossibleCounts,
+                   possiblePublicationsFacets,
+                   account, author, accountLoading, possibleCounts, actions, history, isShallow = true}) {
     const props = {
         possiblePublicationsList: possiblePublicationsList || [],
-        loadingPossiblePublicationsList,
-        loadingPossibleCounts,
-        author,
-        authorLoading,
-        possibleCounts,
+        possiblePublicationsFacets: possiblePublicationsFacets || {},
+        possibleCounts: possibleCounts || null,
+        loadingPossiblePublicationsList: loadingPossiblePublicationsList || false,
+        loadingPossibleCounts: loadingPossibleCounts || false,
+
+        account: account || {id: 12345},
+        author: author || {aut_id: 12344},
+        accountLoading: accountLoading || false,
         actions: actions || {},
         history: history || { push : jest.fn()}
     };

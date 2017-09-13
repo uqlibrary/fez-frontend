@@ -20,16 +20,13 @@ export const AUTHOR_DETAILS_LOADED = 'AUTHOR_DETAILS_LOADED';
 export function searchAuthors(query, filterBy) {
     return dispatch => {
         dispatch({type: AUTHORS_LOADING});
-        console.log(query);
 
         fetchAuthors(query).then((data) => {
-            console.log(data);
             dispatch({
                 type: AUTHORS_LOADED,
                 payload: filterBy ? data.filter(filterBy) : data
             });
         }).catch(error => {
-            console.log(error);
             dispatch({
                 type: AUTHORS_LOAD_FAILED,
                 payload: error

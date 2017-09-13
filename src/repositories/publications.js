@@ -12,8 +12,12 @@ export const POST_CLAIM_POSSIBLE_PUBLICATIONS_API = 'publications/claim-possible
  * @param {string} userName of user for whom to apply the action
  * @returns {Promise}
  */
-export function getPossibleUnclaimedPublications(userName) {
-    return get(`${GET_POSSIBLE_PUBLICATIONS_API}/${userName}`);
+export function getPossibleUnclaimedPublications(userName, activeFacets = {}) {
+    // translate selected facets to query string parameters
+    const queryString = Object.keys(activeFacets).map(key => {
+        return ('filters[facets][' + key + ']=' + activeFacets[key]);
+    }).join('&');
+    return get(`${GET_POSSIBLE_PUBLICATIONS_API}/${userName}?${queryString}`);
 }
 
 /**
@@ -22,8 +26,8 @@ export function getPossibleUnclaimedPublications(userName) {
  * @param {count} number of items to be returned
  * @returns {Promise}
  */
-export function getLatestPublications(userName, count = 5) {
-    return get(`${GET_USER_PUBLICATIONS_API}/${userName}?per_page=${count}&sort=published_date&order_by=desc`);
+export function getLatestPublications({userName, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc'}) {
+    return get(`${GET_USER_PUBLICATIONS_API}/${userName}?page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection}`);
 }
 
 /**

@@ -10,7 +10,7 @@ export default class PublicationStats extends Component {
     render() {
         const txt = locale.components.publicationStats;
         const pubStats = this.props.publicationsStats;
-        if (!pubStats) return (<div className="publicationsStatsEmpty"/>);
+        if (!pubStats) return (<span className="publicationsStats empty"/>);
         return (
             <Table selectable={false} className="publicationsStatsTable">
                 <TableHeader displaySelectAll={false} adjustForCheckbox={false} className="publicationsStatsHeader">

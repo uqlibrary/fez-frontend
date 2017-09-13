@@ -7,11 +7,12 @@ import {
     patchRecord, postRecord
 } from 'repositories';
 
-import {recordRekLink, recordFileAttachment, claimAttachments} from './transformers';
+import {recordRekLink, recordFileAttachment, recordAuthorsId, claimAttachments} from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 export const POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'POSSIBLY_YOUR_PUBLICATIONS_LOADING';
 export const POSSIBLY_YOUR_PUBLICATIONS_COMPLETED = 'POSSIBLY_YOUR_PUBLICATIONS_COMPLETED';
+export const POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED = 'POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED';
 export const POSSIBLY_YOUR_PUBLICATIONS_FAILED = 'POSSIBLY_YOUR_PUBLICATIONS_FAILED';
 
 export const COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING';
@@ -44,9 +45,9 @@ export function countPossiblyYourPublications(authorUsername) {
                 payload: response.data
             });
         }).catch((error) => {
-            console.log(error);
             dispatch({
-                type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
+                type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
+                payload: error
             });
         });
     };
@@ -57,20 +58,24 @@ export function countPossiblyYourPublications(authorUsername) {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchPossiblyYourPublications(authorUsername) {
+export function searchPossiblyYourPublications(authorUsername, activeFacets) {
     return dispatch => {
-        dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING});
+        dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
         // TODO: try some authors who are students - org username or student name to use?
-        getPossibleUnclaimedPublications(authorUsername).then(response => {
+        getPossibleUnclaimedPublications(authorUsername, activeFacets).then(response => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                payload: response.data
+                payload: response,
+            });
+            dispatch({
+                type: POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
+                payload: response.filters && response.filters.facets ? response.filters.facets : {}
             });
             dispatch(countPossiblyYourPublications(authorUsername));
-        }).catch(() => {
+        }).catch((error) => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                payload: []
+                payload: error
             });
         });
     };
@@ -82,7 +87,7 @@ export function searchPossiblyYourPublications(authorUsername) {
  * @param author {object} - user user name
  * @returns {action}
  */
-export function hidePublications(publicationsToHide, author) {
+export function hidePublications(publicationsToHide, author, activeFacets) {
     return dispatch => {
         if (!author) return;
 
@@ -103,7 +108,7 @@ export function hidePublications(publicationsToHide, author) {
                 });
 
                 // reload current possibly your publications/count after user hides records
-                dispatch(searchPossiblyYourPublications(author.aut_org_username));
+                dispatch(searchPossiblyYourPublications(author.aut_org_username, activeFacets));
             })
             .catch(() => {
                 dispatch({
@@ -188,8 +193,8 @@ export function claimPublication(data) {
                     const recordPatchRequest = {
                         rek_pid: data.publication.rek_pid,
                         ...recordRekLink(data),
-                        ...recordFileAttachment(data.files.queue, data.publication)
-                        // TODO: updated record's author_id and order ...recordAuthors(data.publication)
+                        ...recordFileAttachment(data.files.queue, data.publication),
+                        ...recordAuthorsId(data.authorLinking.authors)
                     };
                     console.log(recordPatchRequest);
                     return patchRecord(data.publication.rek_pid, recordPatchRequest);

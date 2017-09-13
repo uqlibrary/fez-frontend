@@ -15,7 +15,6 @@ import * as config from 'config/general';
  * @returns {action}
  */
 export function createNewRecord(data) {
-    console.log(data);
     const { errorAlert } = locale.components.publicationForm;
     return dispatch => {
         dispatch({type: RECORD_PROCESSING});
@@ -30,8 +29,6 @@ export function createNewRecord(data) {
             ...transformers.recordContributors(data.editors),
             ...transformers.recordContributorsId(data.editors)
         };
-
-        console.log(recordRequest);
 
         // delete extra form values from request object
         if (recordRequest.authors) delete recordRequest.authors;

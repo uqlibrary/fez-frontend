@@ -2,8 +2,12 @@
 
 @import '../modules/Dashboard/components/Dashboard';
 @import '../modules/AddRecord/components/AddRecord';
-@import '../modules/PublicationsList/components/PublicationList';
 @import '../modules/SharedComponents/ContributorsEditor/components/ContributorsEditor';
 @import '../modules/SharedComponents/PublicationStats/components/PublicationStats';
-@import '../modules/PublicationsList/components/SearchDashboard';
+@import '../modules/PublicationsList/components/PublicationList';
+@import '../modules/PublicationsList/components/PublicationListPaging';
+@import '../modules/PublicationsList/components/PublicationListSorting';
+@import '../modules/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress';
+@import '../modules/PublicationsList/components/FacetsFilter/FacetsFilter';
+@import '../modules/SharedComponents/AuthorLinking/components/AuthorLinking';
 

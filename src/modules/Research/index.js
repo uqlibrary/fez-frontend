@@ -1,1 +1,1 @@
-export { default as Research } from './Research';
+export { default as Research } from './containers/Research';
