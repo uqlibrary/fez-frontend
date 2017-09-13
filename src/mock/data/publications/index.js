@@ -1719,7 +1719,7 @@ export const claimedPublications = {
     "per_page": 20,
     "current_page": 2,
     "from": 1,
-    "to": 5,
+    "to": 6,
     "data": [
         {
         "rek_pid": "UQ:654776",
@@ -2443,7 +2443,8 @@ export const claimedPublications = {
             "rek_volume_number_pid": "UQ:573798",
             "rek_volume_number": "8"
         }
-    }, {
+    },
+        {
         "rek_pid": "UQ:659436",
         "rek_title": "Clinical development strategy for a candidate group A streptococcal vaccine",
         "rek_description": null,
@@ -2801,7 +2802,8 @@ export const claimedPublications = {
             "rek_volume_number_pid": "UQ:659436",
             "rek_volume_number": "35"
         }
-    }, {
+    },
+        {
         "rek_pid": "UQ:545229",
         "rek_title": "Sustained antibody responses 6 years following 1, 2, or 3 doses of quadrivalent Human Papillomavirus (HPV) vaccine in adolescent Fijian girls, and subsequent responses to a single dose of bivalent HPV vaccine: a prospective cohort study",
         "rek_description": null,
@@ -3268,7 +3270,8 @@ export const claimedPublications = {
             "rek_volume_number_pid": "UQ:545229",
             "rek_volume_number": "64"
         }
-    }, {
+    },
+        {
         "rek_pid": "UQ:472182",
         "rek_title": "DNA vaccine encoding HPV16 oncogenes E6 and E7 induces potent cell-mediated and humoral immunity which protects in tumor challenge and drives E7-expressing skin graft rejection",
         "rek_description": null,
@@ -3665,7 +3668,287 @@ export const claimedPublications = {
             "rek_volume_number_pid": "UQ:472182",
             "rek_volume_number": "40"
         }
-    }]
+    },
+        {
+            "rek_pid": "UQ:267770",
+            "rek_title_xsdmf_id": 10623,
+            "rek_title": "Crime prevention and reduction",
+            "rek_description_xsdmf_id": null,
+            "rek_description": null,
+            "rek_display_type_xsdmf_id": 3673,
+            "rek_display_type": 177,
+            "rek_status_xsdmf_id": 3680,
+            "rek_status": 2,
+            "rek_date_xsdmf_id": 6260,
+            "rek_date": "2012-01-01 00:00:00",
+            "rek_object_type_xsdmf_id": 3674,
+            "rek_object_type": 3,
+            "rek_depositor_xsdmf_id": 7578,
+            "rek_depositor": 5685,
+            "rek_created_date_xsdmf_id": 3677,
+            "rek_created_date": "2012-02-16 11:28:23",
+            "rek_updated_date_xsdmf_id": 3678,
+            "rek_updated_date": "2014-10-04 18:17:45",
+            "rek_file_downloads": 3,
+            "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Cherney, Adrian\" href=\"\/list\/author_id\/3468\/\">Cherney, Adrian<\/a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Sutton, Adam\" href=\"\/list\/author\/Sutton%2C+Adam\/\">Sutton, Adam<\/a> (<span class=\"citation_date\">2012<\/span>). <a class=\"citation_title\" title=\"Click to view Book Chapter: Crime prevention and reduction\" href=\"\/view\/UQ:267770\">Crime prevention and reduction<\/a>. In <span class=\"citation_contributor\"><span class=\"citation_contributor\">Marinella Marmo<\/span>, <span class=\"citation_contributor\">Willem de Lint<\/span> and <span class=\"citation_contributor\">Darren Palmer<\/span><\/span> (Ed.), <i><span class=\"citation_book_title\">Crime and justice: a guide to criminology<\/span><\/i> <span class=\"citation_edition\">4th<\/span> ed. (pp. <span class=\"citation_start_page\">527<\/span>-<span class=\"citation_end_page\">546<\/span>)  <span class=\"citation_place_of_publication\">Pyrmont, N.S.W., Australia<\/span>: <span class=\"citation_publisher\">Thomson Reuters<\/span>.",
+            "rek_genre_xsdmf_id": 7201,
+            "rek_genre": "Book Chapter",
+            "rek_genre_type_xsdmf_id": null,
+            "rek_genre_type": null,
+            "rek_formatted_title_xsdmf_id": null,
+            "rek_formatted_title": null,
+            "rek_formatted_abstract_xsdmf_id": null,
+            "rek_formatted_abstract": null,
+            "rek_depositor_affiliation_xsdmf_id": 11881,
+            "rek_depositor_affiliation": 851,
+            "rek_thomson_citation_count": null,
+            "rek_thomson_citation_count_xsdmf_id": null,
+            "rek_subtype_xsdmf_id": 12378,
+            "rek_subtype": "Chapter in textbook",
+            "rek_scopus_citation_count": null,
+            "rek_herdc_notes_xsdmf_id": 12417,
+            "rek_herdc_notes": "Published bylines:<br \/><b>Adrian Cherney, University of Queensland<\/b><br \/>Adam Sutton, formerly, University of Melbourne<br \/>Publisher on DEST Register.<br \/><br \/>src 110313: chapter originally published in 1st edition<br \/><br \/>28\/3\/13 Duplicate of UQ:268383 also non-HERDC; amended metadata typos<br \/><br \/>",
+            "rek_scopus_doc_type_xsdmf_id": null,
+            "rek_scopus_doc_type": null,
+            "rek_wok_doc_type_xsdmf_id": null,
+            "rek_wok_doc_type": null,
+            "rek_pubmed_doc_type_xsdmf_id": null,
+            "rek_pubmed_doc_type": null,
+            "rek_security_inherited": 1,
+            "rek_altmetric_score": null,
+            "rek_altmetric_score_xsdmf_id": null,
+            "rek_altmetric_id": null,
+            "rek_altmetric_id_xsdmf_id": null,
+            "rek_copyright_xsdmf_id": 3679,
+            "rek_copyright": "on",
+            "fez_record_search_key_article_number": null,
+            "fez_record_search_key_assigned_group_id": [],
+            "fez_record_search_key_assigned_user_id": [],
+            "fez_record_search_key_author": [{
+                "rek_author_id": 28951436,
+                "rek_author_pid": "UQ:267770",
+                "rek_author_xsdmf_id": 6230,
+                "rek_author": "Cherney, Adrian",
+                "rek_author_order": 1
+            }, {
+                "rek_author_id": 28951437,
+                "rek_author_pid": "UQ:267770",
+                "rek_author_xsdmf_id": 6230,
+                "rek_author": "Sutton, Adam",
+                "rek_author_order": 2
+            }],
+            "fez_record_search_key_author_affiliation_country": [],
+            "fez_record_search_key_author_affiliation_full_address": [],
+            "fez_record_search_key_author_affiliation_id": [],
+            "fez_record_search_key_author_affiliation_name": [],
+            "fez_record_search_key_author_id": [{
+                "rek_author_id_id": 28320424,
+                "rek_author_id_pid": "UQ:267770",
+                "rek_author_id_xsdmf_id": 6225,
+                "rek_author_id": 3468,
+                "rek_author_id_order": 1
+            }, {
+                "rek_author_id_id": 28320425,
+                "rek_author_id_pid": "UQ:267770",
+                "rek_author_id_xsdmf_id": 6225,
+                "rek_author_id": 0,
+                "rek_author_id_order": 2
+            }],
+            "fez_record_search_key_book_title": {
+                "rek_book_title_id": 290272,
+                "rek_book_title_pid": "UQ:267770",
+                "rek_book_title_xsdmf_id": 10630,
+                "rek_book_title": "Crime and justice: a guide to criminology"
+            },
+            "fez_record_search_key_chapter_number": {
+                "rek_chapter_number_id": 135471,
+                "rek_chapter_number_pid": "UQ:267770",
+                "rek_chapter_number_xsdmf_id": 9642,
+                "rek_chapter_number": "23"
+            },
+            "fez_record_search_key_contributor": [{
+                "rek_contributor_id": 3096664,
+                "rek_contributor_pid": "UQ:267770",
+                "rek_contributor_xsdmf_id": 6238,
+                "rek_contributor": "Darren Palmer",
+                "rek_contributor_order": 3
+            }, {
+                "rek_contributor_id": 3096662,
+                "rek_contributor_pid": "UQ:267770",
+                "rek_contributor_xsdmf_id": 6238,
+                "rek_contributor": "Marinella Marmo",
+                "rek_contributor_order": 1
+            }, {
+                "rek_contributor_id": 3096663,
+                "rek_contributor_pid": "UQ:267770",
+                "rek_contributor_xsdmf_id": 6238,
+                "rek_contributor": "Willem de Lint",
+                "rek_contributor_order": 2
+            }],
+            "fez_record_search_key_contributor_id": [{
+                "rek_contributor_id_id": 2308766,
+                "rek_contributor_id_pid": "UQ:267770",
+                "rek_contributor_id_xsdmf_id": 6233,
+                "rek_contributor_id": 0,
+                "rek_contributor_id_order": 1
+            }, {
+                "rek_contributor_id_id": 2308767,
+                "rek_contributor_id_pid": "UQ:267770",
+                "rek_contributor_id_xsdmf_id": 6233,
+                "rek_contributor_id": 0,
+                "rek_contributor_id_order": 2
+            }, {
+                "rek_contributor_id_id": 2308768,
+                "rek_contributor_id_pid": "UQ:267770",
+                "rek_contributor_id_xsdmf_id": 6233,
+                "rek_contributor_id": 0,
+                "rek_contributor_id_order": 3
+            }],
+            "fez_record_search_key_corresponding_country": [],
+            "fez_record_search_key_corresponding_email": [],
+            "fez_record_search_key_corresponding_name": [],
+            "fez_record_search_key_corresponding_organisation": [],
+            "fez_record_search_key_datastream_policy": null,
+            "fez_record_search_key_date_available": null,
+            "fez_record_search_key_doi": null,
+            "fez_record_search_key_edition": {
+                "rek_edition_id": 86582,
+                "rek_edition_pid": "UQ:267770",
+                "rek_edition_xsdmf_id": 6261,
+                "rek_edition": "4th"
+            },
+            "fez_record_search_key_end_page": {
+                "rek_end_page_id": 5515848,
+                "rek_end_page_pid": "UQ:267770",
+                "rek_end_page_xsdmf_id": 6266,
+                "rek_end_page": "546"
+            },
+            "fez_record_search_key_file_attachment_access_condition": [],
+            "fez_record_search_key_file_attachment_embargo_date": [],
+            "fez_record_search_key_file_attachment_name": [{
+                "rek_file_attachment_name_id": 3934592,
+                "rek_file_attachment_name_pid": "UQ:267770",
+                "rek_file_attachment_name_xsdmf_id": 6320,
+                "rek_file_attachment_name": "presmd_UQ267770_fulltext_other.xml",
+                "rek_file_attachment_name_order": 2
+            }, {
+                "rek_file_attachment_name_id": 3934591,
+                "rek_file_attachment_name_pid": "UQ:267770",
+                "rek_file_attachment_name_xsdmf_id": 6320,
+                "rek_file_attachment_name": "UQ267770_fulltext_other.pdf",
+                "rek_file_attachment_name_order": 1
+            }],
+            "fez_record_search_key_grant_acronym": [],
+            "fez_record_search_key_grant_agency": [],
+            "fez_record_search_key_grant_agency_id": [],
+            "fez_record_search_key_grant_id": [],
+            "fez_record_search_key_grant_text": [],
+            "fez_record_search_key_herdc_code": {
+                "rek_herdc_code_id": 4672821,
+                "rek_herdc_code_pid": "UQ:267770",
+                "rek_herdc_code_xsdmf_id": 12389,
+                "rek_herdc_code": 450008
+            },
+            "fez_record_search_key_herdc_status": {
+                "rek_herdc_status_id": 3583940,
+                "rek_herdc_status_pid": "UQ:267770",
+                "rek_herdc_status_xsdmf_id": 12405,
+                "rek_herdc_status": 453221
+            },
+            "fez_record_search_key_institutional_status": {
+                "rek_institutional_status_id": 3245140,
+                "rek_institutional_status_pid": "UQ:267770",
+                "rek_institutional_status_xsdmf_id": 12406,
+                "rek_institutional_status": 453223
+            },
+            "fez_record_search_key_isbn": [{
+                "rek_isbn_id": 1057208,
+                "rek_isbn_pid": "UQ:267770",
+                "rek_isbn_xsdmf_id": 10820,
+                "rek_isbn": "9780455228600",
+                "rek_isbn_order": 1
+            }],
+            "fez_record_search_key_isderivationof": [],
+            "fez_record_search_key_isi_loc": null,
+            "fez_record_search_key_ismemberof": [{
+                "rek_ismemberof_id": 11554697,
+                "rek_ismemberof_pid": "UQ:267770",
+                "rek_ismemberof_xsdmf_id": 149,
+                "rek_ismemberof": "UQ:237156",
+                "rek_ismemberof_order": 2
+            }, {
+                "rek_ismemberof_id": 11554696,
+                "rek_ismemberof_pid": "UQ:267770",
+                "rek_ismemberof_xsdmf_id": 149,
+                "rek_ismemberof": "UQ:3854",
+                "rek_ismemberof_order": 1
+            }],
+            "fez_record_search_key_issn": [],
+            "fez_record_search_key_keywords": [],
+            "fez_record_search_key_language": [{
+                "rek_language_id": 5242704,
+                "rek_language_pid": "UQ:267770",
+                "rek_language_xsdmf_id": 10620,
+                "rek_language": "eng",
+                "rek_language_order": 1
+            }],
+            "fez_record_search_key_language_of_book_title": [],
+            "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_link": [],
+            "fez_record_search_key_link_description": [],
+            "fez_record_search_key_native_script_book_title": null,
+            "fez_record_search_key_native_script_title": null,
+            "fez_record_search_key_notes": null,
+            "fez_record_search_key_oa_embargo_days": null,
+            "fez_record_search_key_oa_notes": null,
+            "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_place_of_publication": {
+                "rek_place_of_publication_id": 4183217,
+                "rek_place_of_publication_pid": "UQ:267770",
+                "rek_place_of_publication_xsdmf_id": 6258,
+                "rek_place_of_publication": "Pyrmont, N.S.W., Australia"
+            },
+            "fez_record_search_key_publisher": {
+                "rek_publisher_id": 4448186,
+                "rek_publisher_pid": "UQ:267770",
+                "rek_publisher_xsdmf_id": 6259,
+                "rek_publisher": "Thomson Reuters"
+            },
+            "fez_record_search_key_refereed": null,
+            "fez_record_search_key_refereed_source": {
+                "rek_refereed_source_id": 1200599,
+                "rek_refereed_source_pid": "UQ:267770",
+                "rek_refereed_source_xsdmf_id": 16623,
+                "rek_refereed_source": "453638"
+            },
+            "fez_record_search_key_roman_script_book_title": null,
+            "fez_record_search_key_roman_script_title": null,
+            "fez_record_search_key_scopus_id": null,
+            "fez_record_search_key_series": null,
+            "fez_record_search_key_start_page": {
+                "rek_start_page_id": 5586185,
+                "rek_start_page_pid": "UQ:267770",
+                "rek_start_page_xsdmf_id": 6265,
+                "rek_start_page": "527"
+            },
+            "fez_record_search_key_subject": [],
+            "fez_record_search_key_total_chapters": {
+                "rek_total_chapters_id": 189431,
+                "rek_total_chapters_pid": "UQ:267770",
+                "rek_total_chapters_xsdmf_id": 9644,
+                "rek_total_chapters": "29"
+            },
+            "fez_record_search_key_total_pages": {
+                "rek_total_pages_id": 5497705,
+                "rek_total_pages_pid": "UQ:267770",
+                "rek_total_pages_xsdmf_id": 9632,
+                "rek_total_pages": "20"
+            },
+            "fez_record_search_key_translated_book_title": null,
+            "fez_record_search_key_translated_title": null,
+            "fez_record_search_key_volume_number": null
+        }
+    ]
 };
 
 export const trendingPublications = {

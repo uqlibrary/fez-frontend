@@ -9,7 +9,7 @@ const YearCitationView = ({publication}) => {
         : new Date(publication.rek_date.replace(/-/g, '/'));
 
     if (!year || isNaN(year.getFullYear())) return (<span className="citationYear empty" />);
-    return (<span className="citationYear"> ({year.getFullYear()}) </span>);
+    return (<span className="citationYear">({year.getFullYear()})</span>);
 };
 
 YearCitationView.propTypes = {
