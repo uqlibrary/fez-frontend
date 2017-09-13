@@ -9,15 +9,18 @@ import {theme} from 'config';
 
 // Top level "pages"
 import {App} from 'modules/App';
+import {ScrollToTop} from './modules/SharedComponents';
 
 const Root = ({ history }) => {
     return (
         <ConnectedRouter history={history}>
-            <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
-                <Switch>
-                    <Route component={App} />
-                </Switch>
-            </MuiThemeProvider>
+            <ScrollToTop>
+                <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
+                    <Switch>
+                        <Route component={App} />
+                    </Switch>
+                </MuiThemeProvider>
+            </ScrollToTop>
         </ConnectedRouter>
     );
 };
