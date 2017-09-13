@@ -14,7 +14,8 @@ export const NEW_RECORD_DEFAULT_VALUES = {
     rek_status: 3,
     fez_record_search_key_ismemberof: [
         {rek_ismemberof: 'UQ:218198'}
-    ]
+    ],
+    rek_subtype: 'Critical review of research, literature review, critical commentary'
 };
 
 export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
