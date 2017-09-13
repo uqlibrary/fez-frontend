@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import AuthorsCitationView from './AuthorsCitationView';
+import YearCitationView from './YearCitationView';
 
 export default class JournalArticleCitation extends Component {
     static propTypes = {
@@ -16,7 +17,6 @@ export default class JournalArticleCitation extends Component {
         const journalArticle = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
-            year: (new Date(this.props.publication.rek_date)).getFullYear(),
             journalName: this.props.publication.fez_record_search_key_journal_name ?
                 this.props.publication.fez_record_search_key_journal_name.rek_journal_name : null,
             volumeNumber: this.props.publication.fez_record_search_key_volume_number ?
@@ -39,13 +39,8 @@ export default class JournalArticleCitation extends Component {
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
-
                 <AuthorsCitationView publication={this.props.publication} />
-
-                {
-                    journalArticle.year &&
-                    <span className="citationPublisher">({journalArticle.year}) </span>
-                }
+                <YearCitationView publication={this.props.publication} />
                 <span className="citationTitle">{journalArticle.title}. </span>
                 {
                     journalArticle.journalName &&

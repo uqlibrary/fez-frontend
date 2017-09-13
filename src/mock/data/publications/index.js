@@ -5,7 +5,8 @@ export const possibleUnclaimed = {
     "current_page": 1,
     "from": 1,
     "to": 2,
-    "data": [{
+    "data": [
+        {
         "rek_pid": "UQ:678742",
         "rek_title": "Characterization of a highly efficient antibiotic-degrading metallo-\u03b2-lactamase obtained from an uncultured member of a permafrost community",
         "rek_description": "Antibiotic resistance is a major global health problem, one that threatens to derail the benefits garnered from arguably the greatest success of modern medicine, the discovery of antibiotics. Among the most potent agents contributing to antibiotic resistance are metallo-\u03b2-lactamases (MBLs). The discovery of MBL-like enzymes in microorganisms that are not in contact with the human population is of particular concern as these proteins already have the in-built capacity to inactivate antibiotics, even though they may not need MBL activity for their survival. Here, we demonstrate that a microbiome from a remote and frozen environment in Alaska harbours at least one highly efficient MBL, LRA-8. LRA-8 is homologous to the B3 subgroup of MBLs and has a substrate profile and catalytic properties similar to well-known members of this enzyme family, which are expressed by major human pathogens. LRA-8 is predominantly a penicillinase, but is also active towards carbapenems, but not cephalosporins. Spectroscopic studies indicate that LRA-8 has an active site structure similar to that of other MBLs (in particular B3 subgroup representative AIM-1), and a combination of steady-state and pre-steady-state kinetic data demonstrate that the enzyme is likely to employ a metal ion-bridging hydroxide to initiate catalysis. The rate-limiting step is the decay of a chromophoric, tetrahedral intermediate, as is observed in various other MBLs. Thus, studying the properties of such \"pristine\" MBL-like proteins may provide insight into the structural plasticity of this family of enzymes that may facilitate functional promiscuity, while important insight into the evolution of MBLs may also be gained.",
@@ -518,7 +519,8 @@ export const possibleUnclaimed = {
             "rek_volume_number_pid": "UQ:678742",
             "rek_volume_number": "9"
         }
-    }, {
+    },
+        {
         "rek_pid": "UQ:678835",
         "rek_title": "Minimum information about a single amplified genome (MISAG) and a metagenome-assembled genome (MIMAG) of bacteria and archaea.",
         "rek_description": "We present two standards developed by the Genomic Standards Consortium (GSC) for reporting bacterial and archaeal genome sequences. Both are extensions of the Minimum Information about Any (x) Sequence (MIxS). The standards are the Minimum Information about a Single Amplified Genome (MISAG) and the Minimum Information about a Metagenome-Assembled Genome (MIMAG), including, but not limited to, assembly quality, and estimates of genome completeness and contamination. These standards can be used in combination with other GSC checklists, including the Minimum Information about a Genome Sequence (MIGS), Minimum Information about a Metagenomic Sequence (MIMS), and Minimum Information about a Marker Gene Sequence (MIMARKS). Community-wide adoption of MISAG and MIMAG will facilitate more robust comparative genomic analyses of bacterial and archaeal diversity.",
@@ -1626,7 +1628,8 @@ export const possibleUnclaimed = {
             "rek_volume_number_pid": "UQ:678835",
             "rek_volume_number": "35"
         }
-    }],
+    }
+    ],
     "filters": {
         "facets": {
             "Scopus document type": {
