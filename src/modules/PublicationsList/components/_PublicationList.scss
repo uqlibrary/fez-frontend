@@ -2,12 +2,9 @@
 
 .publicationsList {
   margin-top: 24px;
+}
 
-  .actionMenu {
-    margin: -12px -12px 0 12px;
-  }
-
-  .publicationCitation {
+.publicationCitation {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       margin-bottom: 12px;
       padding: 6px 0;
@@ -75,15 +72,27 @@
       }
 
       .citationCounts {
+        margin-top: 10px;
+
         .citationCount {
+          margin: 0 5px;
+
+          .citationCountLink {
+            color: $text-color;
+          }
+
           .citationCountIcon {
-            width: 1em;
-            height: 1em;
-            filter: grayscale(1);
+            width: 1.2em !important;
+            height: 1.2em !important;
+            //filter: grayscale(1);
+            color: $text-color !important;
+            font-size: 1.2em !important;
+            line-height: 1.2em !important;
           }
 
           .citationCountNumber {
-            margin: 0 10px;
+            margin-left: 5px;
+            font-weight: bold;
           }
         }
       }
@@ -95,7 +104,6 @@
         }
       }
     }
-}
 
 .publicationsListPaging {
 

@@ -20,26 +20,22 @@ export default {
             wos: {
                 id: 'wos',
                 title: 'Web of science',
-                priority: 0,
-                icon: '../../../images/wos_icon.svg'
+                priority: 0
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
-                priority: 1,
-                icon: '../../../images/scopus_icon.svg'
+                priority: 1
             },
             pubmed: {
                 id: 'pubmed',
                 title: 'PubMed',
-                priority: 2,
-                icon: '../../../images/pubmed_icon.svg'
+                priority: 2
             },
             crossref: {
                 id: 'crossref',
                 title: 'Crossref',
-                priority: 3,
-                icon: '../../../images/crossref_icon.svg'
+                priority: 3
             }
         }
     },
@@ -321,23 +317,19 @@ export default {
                         repositories: [
                             {
                                 id: 'wos',
-                                title: 'Web of science',
-                                icon: '../../../images/wos_icon.svg'
+                                title: 'Web of science'
                             },
                             {
                                 id: 'scopus',
-                                title: 'Scopus',
-                                icon: '../../../images/scopus_icon.svg'
+                                title: 'Scopus'
                             },
                             {
                                 id: 'pubmed',
-                                title: 'PubMed',
-                                icon: '../../../images/pubmed_icon.svg'
+                                title: 'PubMed'
                             },
                             {
                                 id: 'crossref',
-                                title: 'Crossref',
-                                icon: '../../../images/crossref_icon.svg'
+                                title: 'Crossref'
                             },
                         ]
                     }
@@ -981,9 +973,17 @@ export default {
         },
         publicationCitation: {
             publicationSourcesLabel: 'Found in: ',
+            citationCounts: {
+                wosCountLabel: 'Web of Science citation count is [count]',
+                scopusCountLabel: 'Scopus citation count is [count]',
+                googleCountLabel: 'Citation counts in Google Scholar',
+                altmetricCountLabel: 'Altmetric score is [count]',
+                openAccessLabel: 'Open Access - free to read (embargo date might apply)',
+                openAccessValues: ['DOI', 'Link (no DOI)', 'File (Publisher version)', 'File (Author Post-print)', 'Other'],
+                statsLabel: 'View full statistics'
+            },
             defaultActions: [
-                {key: 'fullMetrics', primaryText: 'Full article metrics'},
-                // {key: 'fixRecord', primaryText: 'Fix record/upload a file'}, // TODO: implement fixRecord
+                {key: 'fixRecord', label: 'Fix record', primary: false}, // TODO: implement fixRecord
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ]
         },
@@ -1119,7 +1119,8 @@ export default {
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
-        minLength: 'Must be at least [min] characters'
+        minLength: 'Must be at least [min] characters',
+        authorLinking: 'One author must be selected and be confirmed'
     }
 };
 

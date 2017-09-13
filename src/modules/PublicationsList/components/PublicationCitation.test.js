@@ -46,10 +46,6 @@ describe('PublicationCitation renders ', () => {
     it('component with default actions', () => {
         const wrapper = setup({showDefaultActions: true});
         expect(toJson(wrapper)).toMatchSnapshot();
-
-        global.open = jest.fn();
-        wrapper.instance()._handleDefaultActions({}, {key: 'fullMetrics'});
-        expect(global.open).toHaveBeenCalled();
     });
 
     it('component with custom actions', () => {

@@ -1,9 +1,9 @@
-jest.dontMock('./CitationCounts');
+jest.dontMock('./YearCitationView');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import CitationCounts from './CitationCounts';
+import YearCitationView from './YearCitationView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -18,10 +18,10 @@ function setup({publication, isShallow = true}) {
     };
 
     if(isShallow) {
-        return shallow(<CitationCounts {...props} />);
+        return shallow(<YearCitationView {...props} />);
     }
 
-    return mount(<CitationCounts {...props} />, {
+    return mount(<YearCitationView {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -35,28 +35,34 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('CitationCounts renders ', () => {
-    it('component with no metrics', () => {
+describe('YearCitationView renders ', () => {
+    it('component with no rek_date', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with a mock record metrics', () => {
-        const wrapper = setup({ publication: claimedPublications.data[0] });
+    it('component with rek_date not in TZ format', () => {
+        const testObject = {
+            'rek_date': '2010-08-01 00:00:00'
+        };
+        const wrapper = setup({ publication: testObject });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with all metrics', () => {
-        const publication = {
-            rek_pid: 'pid:111',
-            rek_thomson_citation_count: 1,
-            rek_scopus_citation_count: 1,
-            rek_gs_citation_count: 1,
-            rek_altmetric_score: 1,
-            fez_record_search_key_oa_status: []
+    it('component with rek_date in TZ format', () => {
+        const testObject = {
+            'rek_date': '2017-07-01T00:00:00Z'
         };
-        const wrapper = setup({publication});
+        const wrapper = setup({ publication: testObject });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.citationCount').length).toEqual(6);
     });
+
+    it('component with rek_date invalid date format', () => {
+        const testObject = {
+            'rek_date': 'BLA BLA BLA'
+        };
+        const wrapper = setup({ publication: testObject });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

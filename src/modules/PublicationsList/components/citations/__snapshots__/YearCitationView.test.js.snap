@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YearCitationView renders  component with no rek_date 1`] = `
+<span
+  className="citationYear empty"
+/>
+`;
+
+exports[`YearCitationView renders  component with rek_date in TZ format 1`] = `
+<span
+  className="citationYear"
+>
+   (
+  2017
+  ) 
+</span>
+`;
+
+exports[`YearCitationView renders  component with rek_date invalid date format 1`] = `
+<span
+  className="citationYear empty"
+/>
+`;
+
+exports[`YearCitationView renders  component with rek_date not in TZ format 1`] = `
+<span
+  className="citationYear"
+>
+   (
+  2010
+  ) 
+</span>
+`;

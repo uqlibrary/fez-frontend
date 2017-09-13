@@ -5,6 +5,7 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
+import {AuthorLinkingField} from '../../SharedComponents';
 import {validation, locale} from 'config';
 
 export default class ClaimPublicationForm extends Component {
@@ -84,9 +85,19 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     {
-                        !author &&
-                        <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help}>
-                            {/* <AuthorLinking disabled={this.props.submitting} dataSource={[]}/> */}
+                        <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help} className="requiredField">
+                            <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
+                            <Field
+                                name="authorLinking"
+                                component={AuthorLinkingField}
+                                searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
+                                loggedInAuthor={author}
+                                authorList={publication.fez_record_search_key_author}
+                                linkedAuthorIdList={publication.fez_record_search_key_author_id}
+                                disabled={this.props.submitting}
+                                className="requiredField"
+                                validate={[validation.required, validation.isValidAuthorLink]}
+                            />
                         </StandardCard>
                     }
 
@@ -94,14 +105,12 @@ export default class ClaimPublicationForm extends Component {
                         <Field
                             component={TextField}
                             disabled={this.props.submitting}
-                            className="requiredField"
                             name="comments"
                             type="text"
                             fullWidth
                             multiLine
                             rows={1}
-                            floatingLabelText={txt.comments.fieldLabels.comments}
-                            validate={[validation.required]} />
+                            floatingLabelText={txt.comments.fieldLabels.comments} />
 
                         <Field
                             component={TextField}
@@ -121,7 +130,7 @@ export default class ClaimPublicationForm extends Component {
                         <Alert type="error_outline" {...txt.errorAlert} />
                     }
                     {
-                        !this.props.submitFailed && this.props.invalid &&
+                        !this.props.submitFailed && this.props.dirty && this.props.invalid &&
                         <Alert {...txt.validationAlert} type="warning" />
                     }
                     {
@@ -132,7 +141,8 @@ export default class ClaimPublicationForm extends Component {
                         this.props.submitSucceeded &&
                         <Alert type="info" {...txt.successAlert} />
                     }
-                    <div className="columns">
+
+                    <div className="columns action-buttons">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop">
                             <RaisedButton

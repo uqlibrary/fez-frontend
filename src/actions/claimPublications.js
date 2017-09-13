@@ -7,7 +7,7 @@ import {
     patchRecord, postRecord
 } from 'repositories';
 
-import {recordRekLink, recordFileAttachment, claimAttachments} from './transformers';
+import {recordRekLink, recordFileAttachment, recordAuthorsId, claimAttachments} from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 export const POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'POSSIBLY_YOUR_PUBLICATIONS_LOADING';
@@ -193,8 +193,8 @@ export function claimPublication(data) {
                     const recordPatchRequest = {
                         rek_pid: data.publication.rek_pid,
                         ...recordRekLink(data),
-                        ...recordFileAttachment(data.files.queue, data.publication)
-                        // TODO: updated record's author_id and order ...recordAuthors(data.publication)
+                        ...recordFileAttachment(data.files.queue, data.publication),
+                        ...recordAuthorsId(data.authorLinking.authors)
                     };
                     console.log(recordPatchRequest);
                     return patchRecord(data.publication.rek_pid, recordPatchRequest);
