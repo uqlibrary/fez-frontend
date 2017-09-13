@@ -7,6 +7,7 @@ import {publicationTypes, locale} from 'config';
 // citations for different publication types
 import CitationCounts from './citations/CitationCounts';
 import JournalArticleCitation from './citations/JournalArticleCitation';
+import BookChapterCitation from './citations/BookChapterCitation';
 
 /*
  * @props:
@@ -29,7 +30,7 @@ export default class PublicationCitation extends Component {
         super(props);
 
         // keep a list of all available citations
-        this.citationComponents = {JournalArticleCitation};
+        this.citationComponents = {BookChapterCitation, JournalArticleCitation};
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }

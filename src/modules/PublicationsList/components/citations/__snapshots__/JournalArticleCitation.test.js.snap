@@ -433,6 +433,13 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         "rek_wok_doc_type": null,
       }
     }
+    searchKey={
+      Object {
+        "key": "fez_record_search_key_author",
+        "order": "rek_author_order",
+        "subkey": "rek_author",
+      }
+    }
   />
   <YearCitationView
     publication={
@@ -859,14 +866,16 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
   <span
     className="citationTitle"
   >
+     
     CD4+CD8β+ double-positive T cells in skin-draining lymph nodes respond to inflammatory signals from the skin
-    . 
+    .
   </span>
   <span
     className="citationJournalName"
   >
+     
     Journal of Leukocyte Biology
-    , 
+    ,
   </span>
   .
   <span
@@ -969,6 +978,13 @@ exports[`JournalArticleCitation renders  component with a mock external search r
         "rek_title": "Food and plant bioactives for reducing cardiometabolic disease risk: an evidence based approach.",
       }
     }
+    searchKey={
+      Object {
+        "key": "fez_record_search_key_author",
+        "order": "rek_author_order",
+        "subkey": "rek_author",
+      }
+    }
   />
   <YearCitationView
     publication={
@@ -1043,24 +1059,27 @@ exports[`JournalArticleCitation renders  component with a mock external search r
   <span
     className="citationTitle"
   >
+     
     Food and plant bioactives for reducing cardiometabolic disease risk: an evidence based approach.
-    . 
+    .
   </span>
   <span
     className="citationJournalName"
   >
+     
     Food & function
-    , 
+    ,
   </span>
   <span
     className="citationVolumeNumber"
   >
-    8
      
+    8
   </span>
   <span
     className="citationIssueNumber"
   >
+     
     6
   </span>
   : 
@@ -1149,6 +1168,13 @@ exports[`JournalArticleCitation renders  component with all items in the record 
         "rek_title": "Test journal article title",
       }
     }
+    searchKey={
+      Object {
+        "key": "fez_record_search_key_author",
+        "order": "rek_author_order",
+        "subkey": "rek_author",
+      }
+    }
   />
   <YearCitationView
     publication={
@@ -1196,24 +1222,27 @@ exports[`JournalArticleCitation renders  component with all items in the record 
   <span
     className="citationTitle"
   >
+     
     Test journal article title
-    . 
+    .
   </span>
   <span
     className="citationJournalName"
   >
+     
     Test journal name
-    , 
+    ,
   </span>
   <span
     className="citationVolumeNumber"
   >
-    v1
      
+    v1
   </span>
   <span
     className="citationIssueNumber"
   >
+     
     issue 1
   </span>
   : 
@@ -1262,6 +1291,13 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
   </FontIcon>
   <AuthorsCitationView
     publication={Object {}}
+    searchKey={
+      Object {
+        "key": "fez_record_search_key_author",
+        "order": "rek_author_order",
+        "subkey": "rek_author",
+      }
+    }
   />
   <YearCitationView
     publication={Object {}}
@@ -1269,7 +1305,8 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
   <span
     className="citationTitle"
   >
-    . 
+     
+    .
   </span>
   .
 </div>

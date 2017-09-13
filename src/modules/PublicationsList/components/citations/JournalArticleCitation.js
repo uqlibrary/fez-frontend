@@ -41,18 +41,18 @@ export default class JournalArticleCitation extends Component {
                 </FontIcon>
                 <AuthorsCitationView publication={this.props.publication} />
                 <YearCitationView publication={this.props.publication} />
-                <span className="citationTitle">{journalArticle.title}. </span>
+                <span className="citationTitle"> {journalArticle.title}.</span>
                 {
                     journalArticle.journalName &&
-                    <span className="citationJournalName">{journalArticle.journalName}, </span>
+                    <span className="citationJournalName"> {journalArticle.journalName},</span>
                 }
                 {
                     journalArticle.volumeNumber &&
-                    <span className="citationVolumeNumber">{journalArticle.volumeNumber} </span>
+                    <span className="citationVolumeNumber"> {journalArticle.volumeNumber}</span>
                 }
                 {
                     journalArticle.issueNumber &&
-                    <span className="citationIssueNumber">{journalArticle.issueNumber}</span>
+                    <span className="citationIssueNumber"> {journalArticle.issueNumber}</span>
                 }
                 {
                     (journalArticle.startPage || journalArticle.endPage) ? ': ' : ''

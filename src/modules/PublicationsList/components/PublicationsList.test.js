@@ -46,6 +46,6 @@ describe('PublicationsList renders ', () => {
     it('component with items', () => {
         const wrapper = setup({publicationsList: claimedPublications.data});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('PublicationCitation').length).toEqual(5);
+        expect(wrapper.find('PublicationCitation').length).toEqual(6);
     });
 });

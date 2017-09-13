@@ -136,7 +136,8 @@ export default class Research extends React.Component {
                         </div>
                     }
                     {
-                        this.state.allowResultsPaging && Object.keys(this.props.publicationsListFacets).length > 0 &&
+                        this.state.allowResultsPaging && this.props.publicationsListFacets
+                        && Object.keys(this.props.publicationsListFacets).length > 0 &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter

@@ -6,7 +6,8 @@ export const publicationTypeList = {
         "id": 263,
         "name": "Audio Document",
         "class": "Uqlibrary\\FezCore\\Types\\Audio"
-    }, {"id": 174, "name": "Book", "class": "Uqlibrary\\FezCore\\Types\\Book"}, {
+    }, {"id": 174, "name": "Book", "class": "Uqlibrary\\FezCore\\Types\\Book"},
+        {
         "id": 177,
         "name": "Book Chapter",
         "class": "Uqlibrary\\FezCore\\Types\\BookChapter"
