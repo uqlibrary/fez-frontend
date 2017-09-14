@@ -37,7 +37,8 @@ export default {
                 title: 'Crossref',
                 priority: 3
             }
-        }
+        },
+        embargoDateFormat: 'YYYY-MM-DD'
     },
     authentication: {
         signInText: 'Log in',

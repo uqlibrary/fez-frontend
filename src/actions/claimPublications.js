@@ -239,7 +239,7 @@ export function claimPublication(data) {
                 //     return matchAuthor(data.rek_pid, data.author);
                 // })
                 .then(response => {
-                    newPid = response.rek_pid;
+                    newPid = response.data.rek_pid;
                     const claimRequest = {
                         pid: newPid,
                         author_id: data.author.aut_id,
