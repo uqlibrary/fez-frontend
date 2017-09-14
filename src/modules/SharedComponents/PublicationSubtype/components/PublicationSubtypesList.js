@@ -66,28 +66,48 @@ export class PublicationSubtypesList extends Component {
     };
 
     render() {
-        const { locale, subtypesList, dataSourceConfig, subtypesLoading } = this.props;
+        const {locale, subtypesList, dataSourceConfig, subtypesLoading} = this.props;
         const renderSubTypeItems = subtypesList.map((item) => {
             const value = this.getValue(item, dataSourceConfig.value);
             const text = this.getValue(item, dataSourceConfig.text);
-            return <MenuItem value={ value } primaryText={ text } key={ value }/>;
+            return <MenuItem value={value} primaryText={text} key={value}/>;
         });
         const loadingIndicationText = `${locale.label} ${subtypesLoading ? locale.loading : ''}`;
         return (
-            <SelectField
-                id="selectedValue"
-                name="selectedValue"
-                style={{width: '100%'}}
-                autoWidth
-                className={ this.props.className }
-                value={ subtypesLoading ? null : this.state.selectedValue }
-                maxHeight={ 250 }
-                onChange={ this._onSubtypeSelected }
-                disabled={this.props.disabled}
-                dropDownMenuProps={{animated: false}}
-                floatingLabelText={ loadingIndicationText }>
-                { renderSubTypeItems }
-            </SelectField>
+            <div>
+                <div className="is-hidden-mobile">
+                    <SelectField
+                        id="selectedValue"
+                        name="selectedValue"
+                        style={{width: '100%'}}
+                        autoWidth
+                        className={this.props.className}
+                        value={subtypesLoading ? null : this.state.selectedValue}
+                        maxHeight={250}
+                        onChange={this._onSubtypeSelected}
+                        disabled={this.props.disabled}
+                        dropDownMenuProps={{animated: false}}
+                        floatingLabelText={loadingIndicationText}>
+                        {renderSubTypeItems}
+                    </SelectField>
+                </div>
+                <div className="is-hidden-tablet">
+                    <SelectField
+                        id="selectedValue"
+                        name="selectedValue"
+                        fullWidth
+                        menuItemStyle={{whiteSpace: 'normal', lineHeight: '18px', padding: '8px 0px'}}
+                        className={this.props.className}
+                        value={subtypesLoading ? null : this.state.selectedValue}
+                        maxHeight={250}
+                        onChange={this._onSubtypeSelected}
+                        disabled={this.props.disabled}
+                        dropDownMenuProps={{animated: false}}
+                        floatingLabelText={loadingIndicationText}>
+                        {renderSubTypeItems}
+                    </SelectField>
+                </div>
+            </div>
         );
     }
 }
