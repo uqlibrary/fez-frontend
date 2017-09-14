@@ -1,15 +1,16 @@
-jest.dontMock('./JournalArticleCitation');
+jest.dontMock('./BookChapterCitation');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import JournalArticleCitation from './JournalArticleCitation';
+import BookChapterCitation from './BookChapterCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 import {claimedPublications} from 'mock/data/publications';
-import {journalArticle} from 'mock/data/testing/records';
+import {bookChapter} from 'mock/data/testing/records';
+
 
 function setup({publication, isShallow = true}) {
     const props = {
@@ -17,10 +18,10 @@ function setup({publication, isShallow = true}) {
     };
 
     if(isShallow) {
-        return shallow(<JournalArticleCitation {...props} />);
+        return shallow(<BookChapterCitation {...props} />);
     }
 
-    return mount(<JournalArticleCitation {...props} />, {
+    return mount(<BookChapterCitation {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -34,14 +35,14 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('JournalArticleCitation renders ', () => {
+describe('BookChapterCitation renders ', () => {
     it('component with empty publication', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: journalArticle });
+        const wrapper = setup({ publication: bookChapter });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

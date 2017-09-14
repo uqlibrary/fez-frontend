@@ -8,15 +8,15 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
     className="citationCount"
   >
     <img
-      alt="Altmetric score is 1"
+      alt="Altmetric score is 49"
       className="citationCountIcon"
       src=""
-      title="Altmetric score is 1"
+      title="Altmetric score is 49"
     />
     <span
       className="citationCountNumber"
     >
-      1
+      49
     </span>
   </span>
   <span
@@ -34,7 +34,7 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
   >
     <a
       className="citationCountLink"
-      href="https://scholar.google.com/scholar?q=intitle:\\"CD4+CD8%CE%B2+%20double-positive%20T%20cells%20in%20skin-draining%20lymph%20nodes%20respond%20to%20inflammatory%20signals%20from%20the%20skin\\""
+      href="https://scholar.google.com/scholar?q=intitle:\\"TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells\\""
       target="_blank"
     >
       <img

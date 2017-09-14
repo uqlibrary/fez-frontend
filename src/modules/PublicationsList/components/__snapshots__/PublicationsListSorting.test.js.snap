@@ -291,7 +291,6 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
       maxHeight={250}
       multiple={false}
       onChange={[Function]}
-      tooltip="Hello"
       value={20}
     >
       <MenuItem
