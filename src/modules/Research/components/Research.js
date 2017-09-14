@@ -55,7 +55,7 @@ export default class Research extends React.Component {
                 page: nextState.page,
                 sortBy: nextState.sortBy,
                 sortDirection: nextState.sortDirection,
-                activeFacets: nextState.activeFacets
+                facets: nextState.activeFacets
             });
         }
     }

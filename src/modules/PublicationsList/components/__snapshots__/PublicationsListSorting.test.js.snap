@@ -14,12 +14,10 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
     className="column is-7-mobile"
   >
     <SelectField
-      ad={true}
       autoWidth={false}
       disabled={false}
       floatingLabelText="Sort results by"
       fullWidth={true}
-      git={true}
       id="sortBy"
       maxHeight={250}
       multiple={false}

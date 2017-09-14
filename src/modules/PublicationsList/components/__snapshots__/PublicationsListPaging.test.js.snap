@@ -2,7 +2,7 @@
 
 exports[`PublicationsListPaging renders  component with empty paging data 1`] = `
 <span
-  className="publicationsListPaging empty"
+  className="publicationsListControls empty"
 />
 `;
 
