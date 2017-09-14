@@ -32,16 +32,16 @@ export class PublicationSubtypesList extends Component {
         }
     };
 
+    static contextTypes = {
+        isMobile: React.PropTypes.bool
+    };
+
     constructor(props) {
         super(props);
         this.state = {
             selectedValue: null,
             windowWidth: window.innerWidth
         };
-    }
-
-    componentWillMount() {
-        window.addEventListener('resize', this.handleWindowSizeChange);
     }
 
     componentDidMount() {
@@ -56,10 +56,6 @@ export class PublicationSubtypesList extends Component {
         if (this.props.onChange && nextState.selectedValue !== this.state.selectedValue) this.props.onChange(nextState.selectedValue);
     }
 
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowSizeChange);
-    }
-
     _updateSelectedValue = (value) => {
         this.setState({
             selectedValue: value
@@ -68,10 +64,6 @@ export class PublicationSubtypesList extends Component {
 
     _onSubtypeSelected = (event, index, value) => {
         this._updateSelectedValue(value);
-    };
-
-    handleWindowSizeChange = () => {
-        this.setState({ windowWidth: window.innerWidth });
     };
 
     getValue = (item, path) => {
@@ -86,16 +78,14 @@ export class PublicationSubtypesList extends Component {
             return <MenuItem value={value} primaryText={text} key={value}/>;
         });
         const loadingIndicationText = `${locale.label} ${subtypesLoading ? locale.loading : ''}`;
-        const { windowWidth } = this.state;
-        const isMobile = windowWidth <= 768; // iPhone6+ landscape down...
         return (
             <SelectField
                 id="selectedValue"
                 name="selectedValue"
-                style={!isMobile ? {width: '100%'} : {}}
-                autoWidth={!isMobile}
-                fullWidth={isMobile}
-                menuItemStyle={isMobile ? {whiteSpace: 'normal', lineHeight: '18px', padding: '8px 0px'} : {}}
+                style={!this.context.isMobile ? {width: '100%'} : {}}
+                autoWidth={!this.context.isMobile}
+                fullWidth={this.context.isMobile}
+                menuItemStyle={this.context.isMobile ? {whiteSpace: 'normal', lineHeight: '18px', padding: '8px 0px'} : {}}
                 className={this.props.className}
                 value={subtypesLoading ? null : this.state.selectedValue}
                 maxHeight={250}

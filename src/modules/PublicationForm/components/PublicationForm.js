@@ -15,7 +15,11 @@ export default class PublicationForm extends Component {
         ...propTypes, // all redux-form props
         onFormSubmitSuccess: PropTypes.func.isRequired,
         onFormCancel: PropTypes.func.isRequired
-    }
+    };
+
+    static contextTypes = {
+        isMobile: React.PropTypes.bool
+    };
 
     constructor(props) {
         super(props);
@@ -80,8 +84,10 @@ export default class PublicationForm extends Component {
                         component={SelectField}
                         disabled={this.props.submitting}
                         name="rek_display_type"
-                        autoWidth
-                        style={{width: '100%'}}
+                        style={!this.context.isMobile ? {width: '100%'} : {}}
+                        autoWidth={!this.context.isMobile}
+                        fullWidth={this.context.isMobile}
+                        menuItemStyle={this.context.isMobile ? {whiteSpace: 'normal', lineHeight: '18px'} : {}}
                         floatingLabelText={txt.publicationType.inputLabelText}
                         floatingLabelFixed
                         className="requiredField"

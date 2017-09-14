@@ -30,13 +30,22 @@ export default class App extends React.Component {
         actions: PropTypes.object
     };
 
+    static childContextTypes = {
+        isMobile: React.PropTypes.bool
+    };
+
     constructor(props) {
         super(props);
         this.state = {
             menuDrawerOpen: false,
             docked: false,
-            mediaQuery: window.matchMedia('(min-width: 1600px)')
+            mediaQuery: window.matchMedia('(min-width: 1600px)'),
+            isMobile: window.matchMedia('(max-width: 768px)').matches
         };
+    }
+
+    getChildContext() {
+        return {isMobile: this.state.isMobile};
     }
 
     componentDidMount() {
