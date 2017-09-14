@@ -58,7 +58,6 @@ export function patch(apiUrl, data) {
  */
 export function get(apiUrl) {
     console.log(apiUrl);
-
     return new Promise((resolve, reject) => {
         api.get(encodeURI(apiUrl)).then(response => {
             resolve(response.data);

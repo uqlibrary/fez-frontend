@@ -41,7 +41,6 @@ export function searchLatestPublications(userName) {
  * @returns {action}
  */
 export function searchAuthorPublications({userName, page = 1, pageSize = 20, sortBy, sortDirection, facets}) {
-    console.log(facets);
     return dispatch => {
         dispatch({type: AUTHOR_PUBLICATIONS_LOADING});
         getPublications({userName: userName, page: page, pageSize: pageSize,
