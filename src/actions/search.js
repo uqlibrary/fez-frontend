@@ -1,4 +1,4 @@
-import {getSearchExternal} from 'repositories/search';
+import {getSearchInternal, getSearchExternal} from 'repositories/search';
 
 /**
  * Action types
@@ -18,6 +18,11 @@ export const SOURCE_SCOPUS = 'scopus';
 export const SOURCE_PUBMED = 'pubmed';
 
 /**
+ * Internal search source
+ */
+export const SOURCE_ESPACE = 'espace';
+
+/**
  * List of valid external sources
  *
  * @type {[*]}
@@ -29,10 +34,18 @@ export const externalSources = [
     SOURCE_WOS
 ];
 
+function getSearch(source, queryString) {
+    if (source === SOURCE_ESPACE) {
+        return getSearchInternal(queryString);
+    } else {
+        return getSearchExternal(source, queryString);
+    }
+}
+
 export function createSearchPromise(source, queryString, dispatch) {
     return new Promise((resolve) => {
         dispatch({type: `${SEARCH_LOADING}@${source}`});
-        getSearchExternal(source, queryString)
+        getSearch(source, queryString)
             .then(response => {
                 const data = response && response.hasOwnProperty('data') ? response.data
                     .map(item => {
@@ -66,8 +79,7 @@ export function searchPublications(searchQuery) {
     return dispatch => {
         dispatch({type: SEARCH_LOADING});
 
-        // TODO: implement internal search when available
-        // const internalSearchPropmise = ...
+        const internalSearchPropmise = createSearchPromise(SOURCE_ESPACE, searchQuery, dispatch);
         const externalSearchPropmises = externalSources.map(source => createSearchPromise(source, searchQuery, dispatch));
 
         dispatch({
@@ -75,7 +87,7 @@ export function searchPublications(searchQuery) {
             payload: externalSearchPropmises.length
         });
 
-        Promise.all(externalSearchPropmises)
+        Promise.all([internalSearchPropmise, ...externalSearchPropmises])
             .then((response) => {
                 let flattenedResults = [].concat.apply([], response);
                 flattenedResults = flattenedResults.slice(0, flattenedResults.length);
@@ -83,8 +95,7 @@ export function searchPublications(searchQuery) {
                     type: SEARCH_COMPLETED,
                     payload: flattenedResults
                 });
-            })
-            .catch(error => {
+            }, error => {
                 dispatch({
                     type: SEARCH_FAILED,
                     payload: error
