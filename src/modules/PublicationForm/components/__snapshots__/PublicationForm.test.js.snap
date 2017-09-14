@@ -27,14 +27,19 @@ exports[`PublicationForm renders  component initialised with just one field - pu
     title="Publication type"
   >
     <Field
+      autoWidth={true}
       className="requiredField"
       component={[Function]}
       disabled={false}
       floatingLabelFixed={true}
       floatingLabelText="Select publication type"
-      fullWidth={true}
       hintText="Select publication type"
       name="rek_display_type"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
     >
       <MenuItem
         anchorOrigin={

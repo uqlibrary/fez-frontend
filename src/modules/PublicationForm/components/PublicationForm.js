@@ -80,7 +80,8 @@ export default class PublicationForm extends Component {
                         component={SelectField}
                         disabled={this.props.submitting}
                         name="rek_display_type"
-                        fullWidth
+                        autoWidth
+                        style={{width: '100%'}}
                         floatingLabelText={txt.publicationType.inputLabelText}
                         floatingLabelFixed
                         className="requiredField"

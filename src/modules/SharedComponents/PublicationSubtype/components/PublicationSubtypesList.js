@@ -77,7 +77,8 @@ export class PublicationSubtypesList extends Component {
             <SelectField
                 id="selectedValue"
                 name="selectedValue"
-                fullWidth
+                style={{width: '100%'}}
+                autoWidth
                 className={ this.props.className }
                 value={ subtypesLoading ? null : this.state.selectedValue }
                 maxHeight={ 250 }

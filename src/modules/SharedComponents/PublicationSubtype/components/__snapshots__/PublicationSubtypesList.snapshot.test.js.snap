@@ -136,7 +136,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
   vocabId={453581}
 >
   <SelectField
-    autoWidth={false}
+    autoWidth={true}
     disabled={true}
     dropDownMenuProps={
       Object {
@@ -144,22 +144,32 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
       }
     }
     floatingLabelText="Publication subtype "
-    fullWidth={true}
+    fullWidth={false}
     id="selectedValue"
     maxHeight={250}
     multiple={false}
     name="selectedValue"
     onChange={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
     <TextField
       disabled={true}
       floatingLabelFixed={false}
       floatingLabelText="Publication subtype "
-      fullWidth={true}
+      fullWidth={false}
       id="selectedValue"
       multiLine={false}
       name="selectedValue"
       rows={1}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
       type="text"
       underlineShow={true}
     >
@@ -638,7 +648,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
             }
           }
           animated={false}
-          autoWidth={false}
+          autoWidth={true}
           disabled={true}
           iconButton={<NavigationArrowDropDown />}
           iconStyle={
@@ -1624,7 +1634,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
   vocabId={453581}
 >
   <SelectField
-    autoWidth={false}
+    autoWidth={true}
     disabled={false}
     dropDownMenuProps={
       Object {
@@ -1632,22 +1642,32 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
       }
     }
     floatingLabelText="Publication subtype "
-    fullWidth={true}
+    fullWidth={false}
     id="selectedValue"
     maxHeight={250}
     multiple={false}
     name="selectedValue"
     onChange={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
     <TextField
       disabled={false}
       floatingLabelFixed={false}
       floatingLabelText="Publication subtype "
-      fullWidth={true}
+      fullWidth={false}
       id="selectedValue"
       multiLine={false}
       name="selectedValue"
       rows={1}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
       type="text"
       underlineShow={true}
     >
@@ -2126,7 +2146,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
             }
           }
           animated={false}
-          autoWidth={false}
+          autoWidth={true}
           disabled={false}
           iconButton={<NavigationArrowDropDown />}
           iconStyle={
@@ -3009,7 +3029,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
   vocabId={453581}
 >
   <SelectField
-    autoWidth={false}
+    autoWidth={true}
     disabled={false}
     dropDownMenuProps={
       Object {
@@ -3017,22 +3037,32 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
       }
     }
     floatingLabelText="Publication subtype "
-    fullWidth={true}
+    fullWidth={false}
     id="selectedValue"
     maxHeight={250}
     multiple={false}
     name="selectedValue"
     onChange={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
   >
     <TextField
       disabled={false}
       floatingLabelFixed={false}
       floatingLabelText="Publication subtype "
-      fullWidth={true}
+      fullWidth={false}
       id="selectedValue"
       multiLine={false}
       name="selectedValue"
       rows={1}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
       type="text"
       underlineShow={true}
     >
@@ -3511,7 +3541,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
             }
           }
           animated={false}
-          autoWidth={false}
+          autoWidth={true}
           disabled={false}
           iconButton={<NavigationArrowDropDown />}
           iconStyle={
