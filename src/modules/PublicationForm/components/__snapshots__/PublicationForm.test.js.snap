@@ -34,6 +34,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
       floatingLabelFixed={true}
       floatingLabelText="Select publication type"
       hintText="Select publication type"
+      menuItemStyle={Object {}}
       name="rek_display_type"
       style={
         Object {
