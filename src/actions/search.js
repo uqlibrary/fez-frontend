@@ -95,8 +95,7 @@ export function searchPublications(searchQuery) {
                     type: SEARCH_COMPLETED,
                     payload: flattenedResults
                 });
-            })
-            .catch(error => {
+            }, error => {
                 dispatch({
                     type: SEARCH_FAILED,
                     payload: error

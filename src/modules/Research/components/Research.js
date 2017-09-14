@@ -49,13 +49,15 @@ export default class Research extends React.Component {
             || this.state.pageSize !== nextState.pageSize
             || this.state.page !== nextState.page
             || JSON.stringify(this.state.activeFacets) !== JSON.stringify(nextState.activeFacets)) {
+            const resetPage = JSON.stringify(this.state.activeFacets) !== JSON.stringify(nextState.activeFacets)
+                || this.state.pageSize !== nextState.pageSize;
             this.props.actions.searchAuthorPublications({
                 userName: this.props.account.id,
                 pageSize: nextState.pageSize,
-                page: nextState.page,
+                page: resetPage ? 1 : nextState.page,
                 sortBy: nextState.sortBy,
                 sortDirection: nextState.sortDirection,
-                activeFacets: nextState.activeFacets
+                facets: nextState.activeFacets
             });
         }
     }
