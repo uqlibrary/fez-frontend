@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
-import PublicationListLoadingProgress from '../../PublicationsList/components/PublicationListLoadingProgress';
+import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
 import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationForm} from 'modules/PublicationForm';
+import {PublicationListLoadingProgress} from 'modules/PublicationsList';
 
 import {locale, validation} from 'config';
 
@@ -87,7 +87,8 @@ export default class AddRecord extends React.Component {
         const actions = [
             {
                 label: txt.claim,
-                handleAction: this._claimPublication
+                handleAction: this._claimPublication,
+                primary: true
             }
         ];
         return (
@@ -99,7 +100,7 @@ export default class AddRecord extends React.Component {
                         loadingPublicationSources={this.props.loadingPublicationSources} />
                 </div>
                 {/* Search results */}
-                <div className="column is-9-desktop is-8-tablet is-12-mobile">
+                <div className="column">
                     {
                         this.props.loadingSearch &&
                         <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
@@ -145,7 +146,9 @@ export default class AddRecord extends React.Component {
                 </div>
                 {/* Desktop search dashboard */}
                 <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
-                    <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
+                    <StandardRighthandCard title={txt.searchResults.searchDashboard.title}>
+                        <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
+                    </StandardRighthandCard>
                 </div>
             </div>
         );

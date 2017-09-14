@@ -17,7 +17,7 @@ Cookies.set(SESSION_COOKIE_NAME, 'abc123');
 let user = queryString.parse(location.search || location.hash.substring(location.hash.indexOf('?'))).user;
 
 if (user && !mockData.accounts[user]) {
-    console.warn("API MOCK DATA: User name is not found, please use one of the usernames from mock data only...");
+    console.warn(`API MOCK DATA: User name (${user}) is not found, please use one of the usernames from mock data only...`);
 }
 
 // Mock the authors endpoint

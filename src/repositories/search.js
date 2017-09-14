@@ -21,7 +21,7 @@ export function getSearchInternal(queryString) {
  * @returns {Promise}
  */
 export function getSearchExternal(source, queryString) {
-    let searchType = `title=${queryString}&rek_display_type=179`;
+    let searchType = `title=${queryString}`;
     if (validation.isValidDOIValue(queryString)) {
         searchType = `doi=${queryString}`;
     } else if (validation.isValidPubMedValue(queryString)) {

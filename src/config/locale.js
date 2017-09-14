@@ -19,27 +19,23 @@ export default {
         sources: {
             wos: {
                 id: 'wos',
-                title: 'World of science',
-                priority: 0,
-                icon: '../../../images/wos_icon.svg'
+                title: 'Web of science',
+                priority: 0
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
-                priority: 1,
-                icon: '../../../images/scopus_icon.svg'
+                priority: 1
             },
             pubmed: {
                 id: 'pubmed',
                 title: 'PubMed',
-                priority: 2,
-                icon: '../../../images/pubmed_icon.svg'
+                priority: 2
             },
             crossref: {
                 id: 'crossref',
                 title: 'Crossref',
-                priority: 3,
-                icon: '../../../images/crossref_icon.svg'
+                priority: 3
             }
         }
     },
@@ -100,11 +96,25 @@ export default {
                     ariaPrefix: 'Photograph of '
                 },
                 dashboardResearcherIds: {
-                    researcherIsLinked: 'Your [resource] Id is [id]',
+                    researcherIsLinked: 'Your [resource] ID is [id]',
                     researcherIsNotLinked: 'You are not linked to [resource]',
                     orcidUrlPrefix: 'http://orcid.org/',
                     orcidLinkPrefix: 'orcid.org/',
-                    orcidlinkLabel: 'Click to visit your ORCId profile'
+                    orcidlinkLabel: 'Click to visit your ORCId profile',
+                    titles: {
+                        publons: 'Publons',
+                        scopus: 'Scopus',
+                        researcher: 'Researcher',
+                        google_scholar: 'Google Scholar',
+                        orcid: 'ORCID'
+                    },
+                    linksPrefix: {
+                        publons: 'https://publons.com/author/',
+                        scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
+                        researcher: 'http://www.researcherid.com/rid/',
+                        google_scholar: 'https://scholar.google.com.au/citations?user=',
+                        orcid: 'https://orcid.org/'
+                    }
                 }
             },
             possiblePublicationsLure: {
@@ -223,9 +233,8 @@ export default {
                 buttonLabel: 'OK'
             }
         },
-        research: {
+        myResearch: {
             title: 'My research',
-            text: ( <div><p>all your publications....</p></div>),
             help: {
                 title: 'My research help',
                 text: (
@@ -234,6 +243,33 @@ export default {
                     </div>
                 ),
                 buttonLabel: 'OK'
+            },
+            text: (
+                <div>
+                    <div>Please, check if there are any possibly your publications via <a href="#claim-publications">claim
+                        possible publications</a> or <a href="#add-record">add a missing publication</a></div>
+                </div>
+            ),
+            loadingMessage: 'Searching for your publications...',
+            loadingPagingMessage: 'Retrieving for your publications...',
+            noResultsFound: {
+                title: 'No publications found',
+                text: (
+                    <div>
+                        We were unable to find any results. Please, check if there are any possibly your publications
+                        via <a href="#claim-publications">claim possible publications</a> or <a href="#add-record">add a
+                        missing publication</a>
+                    </div>
+                ),
+            },
+            facetsFilter: {
+                title: 'Refine results',
+                help: {
+                    title: 'Refining your results',
+                    text: 'Help about ....',
+                    buttonLabel: 'Ok'
+                },
+                excludeFacetsList: ['Scopus document type', 'Subtype']
             }
         },
         addRecord: {
@@ -281,23 +317,19 @@ export default {
                         repositories: [
                             {
                                 id: 'wos',
-                                title: 'World of science',
-                                icon: '../../../images/wos_icon.svg'
+                                title: 'Web of science'
                             },
                             {
                                 id: 'scopus',
-                                title: 'Scopus',
-                                icon: '../../../images/scopus_icon.svg'
+                                title: 'Scopus'
                             },
                             {
                                 id: 'pubmed',
-                                title: 'PubMed',
-                                icon: '../../../images/pubmed_icon.svg'
+                                title: 'PubMed'
                             },
                             {
                                 id: 'crossref',
-                                title: 'Crossref',
-                                icon: '../../../images/crossref_icon.svg'
+                                title: 'Crossref'
                             },
                         ]
                     }
@@ -320,6 +352,7 @@ export default {
         claimPublications: {
             title: 'Claim possible publications',
             loadingMessage: 'Searching for your publications...',
+            facetSearchMessage: 'Applying filters...',
             noResultsFound: {
                 title: 'No matching publications found',
                 text: 'No publications were automatically matched for you to claim.',
@@ -351,13 +384,25 @@ export default {
                 confirmationMessage: 'Are you sure you want to hide all possibly your publications from this view?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
+            },
+            facetsFilter: {
+                title: 'Refine results',
+                help: {
+                    title: 'Refining your results',
+                    text: 'Help about ....',
+                    buttonLabel: 'Ok'
+                },
+                excludeFacetsList: ['Scopus document type', 'Subtype']
             }
         }
     },
     components: {
+        facetsFilter: {
+            resetButtonText: 'Reset'
+        },
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',
-            publicationStatsTitle2: 'World of science',
+            publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
             publicationStatsRowTitle1: 'h-index',
@@ -365,6 +410,7 @@ export default {
             publicationStatsRowTitle3: 'Total citations',
             publicationStatsRowTitle4: 'Total publications',
             publicationStatsRowTitle5: 'Publication range',
+            publicationStatsNA: 'N/A'
         },
         publicationForm: {
             cancel: 'Abandon and search again',
@@ -927,9 +973,17 @@ export default {
         },
         publicationCitation: {
             publicationSourcesLabel: 'Found in: ',
+            citationCounts: {
+                wosCountLabel: 'Web of Science citation count is [count]',
+                scopusCountLabel: 'Scopus citation count is [count]',
+                googleCountLabel: 'Citation counts in Google Scholar',
+                altmetricCountLabel: 'Altmetric score is [count]',
+                openAccessLabel: 'Open Access - free to read (embargo date might apply)',
+                openAccessValues: ['DOI', 'Link (no DOI)', 'File (Publisher version)', 'File (Author Post-print)', 'Other'],
+                statsLabel: 'View full statistics'
+            },
             defaultActions: [
-                {key: 'fullMetrics', primaryText: 'Full article metrics'},
-                // {key: 'fixRecord', primaryText: 'Fix record/upload a file'}, // TODO: implement fixRecord
+                {key: 'fixRecord', label: 'Fix record', primary: false}, // TODO: implement fixRecord
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ]
         },
@@ -1021,6 +1075,34 @@ export default {
                 }
             }
         },
+        paging: {
+            nextPage: 'Next',
+            previousPage: 'Previous',
+            maxPagesToShow: 5,
+            pageSize: 'Records per page',
+            pageOf: 'Page [currentPage] of [totalPages]',
+            totalRecords: '([total] records)'
+        },
+        sorting: {
+            pageSize: 'Records per page',
+            sortLabel: 'Sort results by',
+            sortDirectionLabel: 'Sort order',
+            sortBy: [
+                {value: 'published_date', label: 'Published date'},
+                {value: 'score', label: 'Search relevance'},
+                {value: 'title', label: 'Title'},
+                {value: 'created_date', label: 'Created date'},
+                {value: 'updated_date', label: 'Updated date'},
+                {value: 'altmetric_score', label: 'Altmetric score'},
+                {value: 'scopus_citation_count', label: 'Scopus citation count'},
+                {value: 'thomson_citation_count', label: 'Thompson citation count'},
+                {value: 'file_downloads', label: 'Downloads'}
+            ],
+            sortDirection: [
+                'Desc',
+                'Asc'
+            ]
+        }
     },
     validationErrors: {
         publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
@@ -1037,7 +1119,8 @@ export default {
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
-        minLength: 'Must be at least [min] characters'
+        minLength: 'Must be at least [min] characters',
+        authorLinking: 'One author must be selected and be confirmed'
     }
 };
 

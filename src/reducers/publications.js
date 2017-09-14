@@ -1,9 +1,15 @@
 import * as actions from 'actions/publications';
 
 export const initialState = {
+    publicationsList: [],
+    publicationsListPagingData: {},
+    publicationsListFacets: {},
+    loadingPublicationsList: true,
+
     latestPublicationsList: [],
-    totalPublicationsCount: null,
     loadingLatestPublications: true,
+    totalPublicationsCount: null,
+
     trendingPublicationsList: [],
     loadingTrendingPublications: true
 };
@@ -24,7 +30,16 @@ const handlers = {
             ...state,
             latestPublicationsList: action.payload.data,
             totalPublicationsCount: action.payload.total,
-            loadingLatestPublications: false
+            loadingLatestPublications: false,
+            publicationsList: action.payload.data,
+            publicationsListPagingData: {
+                total: action.payload.total,
+                current_page: action.payload.current_page,
+                from: action.payload.from,
+                to: action.payload.to,
+                per_page: action.payload.per_page
+            },
+            loadingPublicationsList: false
         };
     },
 
@@ -36,6 +51,43 @@ const handlers = {
             loadingLatestPublications: false
         };
     },
+
+    [actions.AUTHOR_PUBLICATIONS_LOADING]: (state) => {
+        return {
+            ...state,
+            publicationsList: [],
+            publicationsListPagingData: {},
+            loadingPublicationsList: true
+        };
+    },
+
+    [actions.AUTHOR_PUBLICATIONS_COMPLETED]: (state, action) => {
+        return {
+            ...state,
+            publicationsList: action.payload.data,
+            publicationsListPagingData: {
+                total: action.payload.total,
+                current_page: action.payload.current_page,
+                from: action.payload.from,
+                to: action.payload.to,
+                per_page: action.payload.per_page
+            },
+            publicationsListFacets: action.payload.hasOwnProperty('filters') && action.payload.filters.hasOwnProperty('facets')
+                && action.payload.filters.facets ? action.payload.filters.facets : {},
+            loadingPublicationsList: false
+        };
+    },
+
+    [actions.AUTHOR_PUBLICATIONS_FAILED]: (state) => {
+        return {
+            ...state,
+            publicationsList: [],
+            publicationsListPagingData: {},
+            publicationsListFacets: {},
+            loadingPublicationsList: false
+        };
+    },
+
     [actions.TRENDING_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,

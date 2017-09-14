@@ -3,9 +3,11 @@ import * as actions from 'actions/claimPublications';
 export const initialState = {
     publicationToClaim: null,
     possibleCounts: null,
+    possiblePublicationsPagingData: {},
     possiblePublicationsList: [],
+    possiblePublicationsFacets: {},
     loadingPossiblePublicationsList: true,
-    loadingPossibleCounts: true
+    loadingPossibleCounts: true,
 };
 
 const handlers = {
@@ -14,7 +16,9 @@ const handlers = {
         return {
             ...state,
             loadingPossiblePublicationsList: true,
-            possiblePublicationsList: []
+            possiblePublicationsList: [],
+            possiblePublicationsFacets: {},
+            possiblePublicationsPagingData: {}
         };
     },
 
@@ -36,7 +40,21 @@ const handlers = {
         return {
             ...state,
             loadingPossiblePublicationsList: false,
-            possiblePublicationsList: action.payload
+            possiblePublicationsList: action.payload.data,
+            possiblePublicationsPagingData: {
+                total: action.payload.total,
+                current_page: action.payload.current_page,
+                from: action.payload.from,
+                to: action.payload.to,
+                per_page: action.payload.per_page
+            },
+        };
+    },
+
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED]: (state, action) => {
+        return {
+            ...state,
+            possiblePublicationsFacets: action.payload
         };
     },
 
@@ -46,7 +64,8 @@ const handlers = {
             loadingPossiblePublicationsList: false,
             possiblePublicationsList: [],
             loadingPossibleCounts: false,
-            possibleCounts: null
+            possibleCounts: null,
+            possiblePublicationsPagingData: {}
         };
     },
 
@@ -81,5 +100,6 @@ export default function claimPublicationReducer(state = initialState, action) {
     if (!handler) {
         return state;
     }
+    console.log(action);
     return handler(state, action);
 }

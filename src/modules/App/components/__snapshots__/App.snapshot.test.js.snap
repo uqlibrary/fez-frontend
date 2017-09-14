@@ -230,20 +230,36 @@ exports[`App tests for user account and author status User is not logged in and 
       className="content-container"
       style={Object {}}
     >
-      <Alert
-        allowDismiss={false}
-        message="Please, login to UQ eSpace for full search results and more services."
-        outsideLayout={true}
-        title="You are not logged in"
-        type="info_outline"
-      />
-      <Alert
-        allowDismiss={false}
-        message="Please contact the UQ Manager to resolve this."
-        outsideLayout={true}
-        title="You are not registered in UQ eSpace as an author"
-        type="info_outline"
-      />
+      <div
+        className="layout-fill"
+      >
+        <div
+          className="layout-card"
+        >
+          <Alert
+            allowDismiss={false}
+            message="Please, login to UQ eSpace for full search results and more services."
+            outsideLayout={false}
+            title="You are not logged in"
+            type="info_outline"
+          />
+        </div>
+      </div>
+      <div
+        className="layout-fill"
+      >
+        <div
+          className="layout-card"
+        >
+          <Alert
+            allowDismiss={false}
+            message="Please contact the UQ Manager to resolve this."
+            outsideLayout={false}
+            title="You are not registered in UQ eSpace as an author"
+            type="info_outline"
+          />
+        </div>
+      </div>
       <Switch>
         <Route
           exact={true}
@@ -533,13 +549,21 @@ exports[`App tests for user account and author status User logged in but is not 
       className="content-container"
       style={Object {}}
     >
-      <Alert
-        allowDismiss={false}
-        message="Please contact the UQ Manager to resolve this."
-        outsideLayout={true}
-        title="You are not registered in UQ eSpace as an author"
-        type="info_outline"
-      />
+      <div
+        className="layout-fill"
+      >
+        <div
+          className="layout-card"
+        >
+          <Alert
+            allowDismiss={false}
+            message="Please contact the UQ Manager to resolve this."
+            outsideLayout={false}
+            title="You are not registered in UQ eSpace as an author"
+            type="info_outline"
+          />
+        </div>
+      </div>
       <Switch>
         <Route
           component={[Function]}
