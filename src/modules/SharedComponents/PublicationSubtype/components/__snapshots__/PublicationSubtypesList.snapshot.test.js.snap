@@ -147,7 +147,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
     fullWidth={false}
     id="selectedValue"
     maxHeight={250}
-    menuItemStyle={false}
+    menuItemStyle={Object {}}
     multiple={false}
     name="selectedValue"
     onChange={[Function]}
@@ -666,7 +666,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
             }
           }
           maxHeight={250}
-          menuItemStyle={false}
+          menuItemStyle={Object {}}
           multiple={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -1647,7 +1647,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
     fullWidth={false}
     id="selectedValue"
     maxHeight={250}
-    menuItemStyle={false}
+    menuItemStyle={Object {}}
     multiple={false}
     name="selectedValue"
     onChange={[Function]}
@@ -2166,7 +2166,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
             }
           }
           maxHeight={250}
-          menuItemStyle={false}
+          menuItemStyle={Object {}}
           multiple={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -3044,7 +3044,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
     fullWidth={false}
     id="selectedValue"
     maxHeight={250}
-    menuItemStyle={false}
+    menuItemStyle={Object {}}
     multiple={false}
     name="selectedValue"
     onChange={[Function]}
@@ -3563,7 +3563,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
             }
           }
           maxHeight={250}
-          menuItemStyle={false}
+          menuItemStyle={Object {}}
           multiple={false}
           onBlur={[Function]}
           onChange={[Function]}

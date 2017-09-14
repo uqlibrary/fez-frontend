@@ -92,10 +92,10 @@ export class PublicationSubtypesList extends Component {
             <SelectField
                 id="selectedValue"
                 name="selectedValue"
-                style={!isMobile && {width: '100%'}}
+                style={!isMobile ? {width: '100%'} : {}}
                 autoWidth={!isMobile}
                 fullWidth={isMobile}
-                menuItemStyle={isMobile && {whiteSpace: 'normal', lineHeight: '18px', padding: '8px 0px'}}
+                menuItemStyle={isMobile ? {whiteSpace: 'normal', lineHeight: '18px', padding: '8px 0px'} : {}}
                 className={this.props.className}
                 value={subtypesLoading ? null : this.state.selectedValue}
                 maxHeight={250}
