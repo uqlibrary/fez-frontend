@@ -52,7 +52,7 @@ export default class Research extends React.Component {
             this.props.actions.searchAuthorPublications({
                 userName: this.props.account.id,
                 pageSize: nextState.pageSize,
-                page:  nextState.page,
+                page: nextState.page,
                 sortBy: nextState.sortBy,
                 sortDirection: nextState.sortDirection,
                 facets: nextState.activeFacets
