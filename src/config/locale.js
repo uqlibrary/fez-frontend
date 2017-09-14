@@ -20,22 +20,26 @@ export default {
             wos: {
                 id: 'wos',
                 title: 'Web of science',
-                priority: 0
+                priority: 0,
+                link: 'http://apps.webofknowledge.com.ezproxy.library.uq.edu.au/InboundService.do?UT=WOS%3A[ID]&IsProductCode=Yes&mode=FullRecord&product=WOS&smartRedirect=yes&SrcApp=resolve1&Init=Yes&action=retrieve&SrcAuth=uqueensland&customersID=uqueensland'
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
-                priority: 1
+                priority: 1,
+                link: ''
             },
             pubmed: {
                 id: 'pubmed',
                 title: 'PubMed',
-                priority: 2
+                priority: 2,
+                link: ''
             },
             crossref: {
                 id: 'crossref',
                 title: 'Crossref',
-                priority: 3
+                priority: 3,
+                link: ''
             }
         }
     },

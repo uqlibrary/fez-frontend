@@ -98,7 +98,6 @@ export default class PublicationsListSorting extends Component {
                 <div className="column is-narrow is-spacer is-hidden-mobile" />
                 <div className="column is-hidden-mobile">
                     <SelectField
-                        tooltip="Hello"
                         id="pageSize"
                         value={this.state.pageSize}
                         maxHeight={250}
