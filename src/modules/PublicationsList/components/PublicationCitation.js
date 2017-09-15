@@ -63,6 +63,7 @@ export default class PublicationCitation extends Component {
     }
 
     render() {
+        console.log('THis is the individual citation data:\n\n' + JSON.stringify(this.props.publication));
         const actions = this.props.showDefaultActions ? this.defaultActions : this.props.customActions;
         const renderedActions = actions && actions.length > 0 ?
             actions.map((action, index) => {
@@ -72,6 +73,7 @@ export default class PublicationCitation extends Component {
                             action.primary ? (
                                 <RaisedButton
                                     secondary
+                                    fullWidth
                                     label={action.label}
                                     className={`publicationAction buttonOrder${index}`}
                                     onTouchTap={() => (
@@ -82,6 +84,7 @@ export default class PublicationCitation extends Component {
                             ) : (
                                 <FlatButton
                                     secondary
+                                    fullWidth
                                     label={action.label}
                                     className={`publicationAction buttonOrder${index}`}
                                     onTouchTap={() => (
