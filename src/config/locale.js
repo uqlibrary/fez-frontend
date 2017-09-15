@@ -23,17 +23,12 @@ export default {
                 title: 'eSpace',
                 priority: 0,
                 externalURL: 'https://espace.library.uq.edu.au/view/[ID]',
-                idLocation: '',
                 idKey: 'rek_pid'
             },
             wos: {
                 id: 'wos',
                 title: 'Web of science',
                 priority: 1,
-                // Below commented lines are for mock data only
-                // externalURL: 'https://doi.org/[ID]',
-                // idLocation: 'fez_record_search_key_doi',
-                // idKey: 'rek_doi'
                 externalURL: 'http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[ID]&SrcAuth=uqueensland',
                 idLocation: 'fez_record_search_key_isi_loc',
                 idKey: 'rek_isi_loc'
