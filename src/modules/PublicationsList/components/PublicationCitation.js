@@ -92,13 +92,12 @@ export default class PublicationCitation extends Component {
                     </div>
                 );
             }) : null;
+
         return (
             <div className="publicationCitation">
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
-                        <h3 className="title is-5 publicationTitle">
-                            {this.props.publication.rek_title}
-                        </h3>
+                        <h3 className="title is-5 publicationTitle">{this.props.publication.rek_title}</h3>
                         {
                             this._renderCitation(this.props.publication.rek_display_type)
                         }
@@ -109,12 +108,7 @@ export default class PublicationCitation extends Component {
                                 {locale.components.publicationCitation.publicationSourcesLabel}
                                 {
                                     this.props.publication.sources.map((source, index) => (
-                                        <a href={locale.global.sources[source].link.replace('[ID]', '')}
-                                            target="_blank"
-                                            key={index}
-                                            className="publicationSource">
-                                            {locale.global.sources[source].title}
-                                        </a>
+                                        <span key={index} className="publicationSource">{locale.global.sources[source].title}</span>
                                     ))
                                 }
                             </span>
