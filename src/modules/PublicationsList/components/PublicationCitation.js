@@ -63,7 +63,6 @@ export default class PublicationCitation extends Component {
     }
 
     render() {
-        console.log('THis is the individual citation data:\n\n' + JSON.stringify(this.props.publication));
         const actions = this.props.showDefaultActions ? this.defaultActions : this.props.customActions;
         const renderedActions = actions && actions.length > 0 ?
             actions.map((action, index) => {
@@ -116,9 +115,8 @@ export default class PublicationCitation extends Component {
                                         const extURL = this.props.publication[sourceLocale.idLocation] ? (
                                             locale.global.sources.ezproxyPrefix + sourceLocale.externalURL.replace('[ID]', this.props.publication[sourceLocale.idLocation][sourceLocale.idKey])
                                         ) : (
-                                            locale.global.sources.ezproxyPrefix + sourceLocale.externalURL.replace('[ID]', this.props.publication[sourceLocale.idKey])
+                                            sourceLocale.externalURL.replace('[ID]', this.props.publication[sourceLocale.idKey])
                                         );
-                                        console.log(extURL);
                                         return (
                                             <a href={extURL}
                                                 target="_blank"
