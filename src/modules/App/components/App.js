@@ -31,7 +31,8 @@ export default class App extends React.Component {
     };
 
     static childContextTypes = {
-        isMobile: React.PropTypes.bool
+        isMobile: PropTypes.bool,
+        selectFieldMobileOverrides: PropTypes.object
     };
 
     constructor(props) {
@@ -45,7 +46,15 @@ export default class App extends React.Component {
     }
 
     getChildContext() {
-        return {isMobile: this.state.isMobile};
+        return {
+            isMobile: this.state.isMobile,
+            selectFieldMobileOverrides: {
+                style: !this.state.isMobile ? {width: '100%'} : {},
+                autoWidth: !this.state.isMobile,
+                fullWidth: this.state.isMobile,
+                menuItemStyle: this.state.isMobile ? {whiteSpace: 'normal', lineHeight: '18px', paddingBottom: '8px'} : {},
+            }
+        };
     }
 
     componentDidMount() {

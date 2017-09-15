@@ -1,46 +1,51 @@
 ### Using react context and Material UI SelectField
 
-The standard SelectField in MUI v0.19.1 is not mobile device friendly for dropdown items which may render longer than the screen is wide. To get around this issue, we apply some props to the SelectField dependant on its device size.
+The standard SelectField in MUI 0.XX is not mobile device friendly. To get around this issue, we apply some props to the SelectField dependant on its device size.
+React context is used to store some global flags/variables:
 
-We use Reacts context to pass down the component tree if the device we're using to view the site is essentially a small mobile phone.
+```
 
-Do do this, in components/App.js we initialize react context with:
+  static childContextTypes = {
+    isMobile: PropTypes.bool,
+    selectFieldMobileOverrides: PropTypes.object
+  };
 
-    getChildContext() {
-            return {isMobile: this.state.isMobile};
-    }
+```
 
-And pass a bool through using a mediaQuery in the state:
+NOTE: This context is not getting updated on resize events, since it's only relevant to mobile devices.
 
-    isMobile: window.matchMedia('(max-width: 768px)').matches
-    
-This is used in the render() to pass values into the context.
+- isMobile - flag indicating if current screen size fits mobile
+- selectFieldMobileOverrides - object with props with styles for SelectField (to reduce code duplication)
 
-In the component, you read in the context using:
+To use context in the client component:
 
-    static contextTypes = {
-            isMobile: React.PropTypes.bool
-    };
-    
-And now this.context.isMobile is available to test against.
+1. Define context in the component:
 
-NOTE: This state does not update. It is set the first time it is run, and there is no listener to check if it has resized.
+```
 
-With the SelectField, in order to make it render correctly on mobile we add to the props:
+  static contextTypes = {
+    selectFieldMobileOverrides: PropTypes.object
+  };
 
-    <Field
-        component={SelectField}
-        disabled={this.props.submitting}
-        name="rek_display_type"
-        style={!this.context.isMobile ? {width: '100%'} : {}}
-        autoWidth={!this.context.isMobile}
-        fullWidth={this.context.isMobile}
-        menuItemStyle={this.context.isMobile ? {whiteSpace: 'normal', lineHeight: '18px'} : {}}
-        floatingLabelText={txt.publicationType.inputLabelText}
-        floatingLabelFixed
-        className="requiredField"
-        hintText={txt.publicationType.inputLabelText}>
-        {publicationTypeItems}
-    </Field>
-    
-The same applies when using the SelectField directly (ie not in a Field wrapper).
+```
+
+2. Apply props to component:
+
+```
+
+  <Field
+    component={SelectField}
+    name="someValue"
+    {...this.context.selectFieldMobileOverrides}
+    floatingLabelText="Select value">
+    {menuItems}
+  </Field>
+
+  <SelectField
+    name="someOtherValue"
+    {...this.context.selectFieldMobileOverrides}
+    floatingLabelText="Select value">
+    {menuItems}
+  </SelectField>
+
+```

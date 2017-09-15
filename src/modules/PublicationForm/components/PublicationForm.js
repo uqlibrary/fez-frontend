@@ -18,7 +18,7 @@ export default class PublicationForm extends Component {
     };
 
     static contextTypes = {
-        isMobile: React.PropTypes.bool
+        selectFieldMobileOverrides: PropTypes.object
     };
 
     constructor(props) {
@@ -84,10 +84,7 @@ export default class PublicationForm extends Component {
                         component={SelectField}
                         disabled={this.props.submitting}
                         name="rek_display_type"
-                        style={!this.context.isMobile ? {width: '100%'} : {}}
-                        autoWidth={!this.context.isMobile}
-                        fullWidth={this.context.isMobile}
-                        menuItemStyle={this.context.isMobile ? {whiteSpace: 'normal', lineHeight: '18px'} : {}}
+                        {...this.context.selectFieldMobileOverrides}
                         floatingLabelText={txt.publicationType.inputLabelText}
                         floatingLabelFixed
                         className="requiredField"

@@ -33,7 +33,7 @@ export class PublicationSubtypesList extends Component {
     };
 
     static contextTypes = {
-        isMobile: React.PropTypes.bool
+        selectFieldMobileOverrides: PropTypes.object
     };
 
     constructor(props) {
@@ -82,10 +82,7 @@ export class PublicationSubtypesList extends Component {
             <SelectField
                 id="selectedValue"
                 name="selectedValue"
-                style={!this.context.isMobile ? {width: '100%'} : {}}
-                autoWidth={!this.context.isMobile}
-                fullWidth={this.context.isMobile}
-                menuItemStyle={this.context.isMobile ? {whiteSpace: 'normal', lineHeight: '18px', padding: '8px 0px'} : {}}
+                {...this.context.selectFieldMobileOverrides}
                 className={this.props.className}
                 value={subtypesLoading ? null : this.state.selectedValue}
                 maxHeight={250}
