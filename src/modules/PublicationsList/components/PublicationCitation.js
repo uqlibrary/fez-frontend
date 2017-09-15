@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import {publicationTypes, locale} from 'config';
+import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 
 // citations for different publication types
 import CitationCounts from './citations/CitationCounts';
@@ -107,9 +108,19 @@ export default class PublicationCitation extends Component {
                             <span className="publicationSources">
                                 {locale.components.publicationCitation.publicationSourcesLabel}
                                 {
-                                    this.props.publication.sources.map((source, index) => (
-                                        <span key={index} className="publicationSource">{locale.global.sources[source].title}</span>
-                                    ))
+                                    this.props.publication.sources.map((source, index) => {
+                                        const sourceLocale = locale.global.sources[source];
+                                        const extURL = locale.global.sources.ezproxyPrefix + sourceLocale.externalURL
+                                            .replace('[ID]', this.props.publication[sourceLocale.idLocation][sourceLocale.idKey]);
+                                        return (
+                                            <a href={extURL}
+                                                target="_blank"
+                                                key={index}
+                                                className="publicationSource">
+                                                {sourceLocale.title}<ActionOpenInNew className="citationOpenURLicon" />
+                                            </a>
+                                        );
+                                    })
                                 }
                             </span>
                         }

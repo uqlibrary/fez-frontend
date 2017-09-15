@@ -11,6 +11,24 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       <div
         className="searchDashboardList"
       >
+        eSpace
+        <span
+          className="is-pulled-right"
+        >
+          <CircularProgress
+            aria-label="eSpace loading"
+            max={100}
+            min={0}
+            mode="indeterminate"
+            size={14}
+            thickness={2}
+            value={0}
+          />
+        </span>
+      </div>
+      <div
+        className="searchDashboardList"
+      >
         Web of science
         <span
           className="is-pulled-right"
@@ -77,6 +95,24 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     <div
       className="body-2"
     >
+      <div
+        className="searchDashboardList"
+      >
+        eSpace
+        <span
+          className="is-pulled-right"
+        >
+          <CircularProgress
+            aria-label="eSpace loading"
+            max={100}
+            min={0}
+            mode="indeterminate"
+            size={14}
+            thickness={2}
+            value={0}
+          />
+        </span>
+      </div>
       <div
         className="searchDashboardList"
       >
@@ -162,6 +198,24 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     <div
       className="body-2"
     >
+      <div
+        className="searchDashboardList"
+      >
+        eSpace
+        <span
+          className="is-pulled-right"
+        >
+          <CircularProgress
+            aria-label="eSpace loading"
+            max={100}
+            min={0}
+            mode="indeterminate"
+            size={14}
+            thickness={2}
+            value={0}
+          />
+        </span>
+      </div>
       <div
         className="searchDashboardList"
       >
