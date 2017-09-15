@@ -1,3 +1,7 @@
+import {locale} from 'config';
+
+const moment = require('moment');
+
 export function claimAttachments(files) {
     if (!files || files.length === 0) return null;
     return {
@@ -5,7 +9,7 @@ export function claimAttachments(files) {
             return {
                 access_condition_id: item.access_condition_id,
                 file: item.name,
-                date: item.date
+                date: moment(item.date).format(locale.global.embargoDateFormat)
             };
         })
     };
@@ -46,9 +50,10 @@ export function recordFileAttachment(files, record) {
     });
     const attachmentEmbargoDates = files
         .map((item, index) => {
+            console.log(item);
             if (!item.hasOwnProperty('date')) return null;
             return {
-                rek_file_attachment_embargo_date: item.date,
+                rek_file_attachment_embargo_date: moment(item.date).format(locale.global.embargoDateFormat),
                 rek_file_attachment_embargo_date_order: initialCount + index + 1
             };
         })

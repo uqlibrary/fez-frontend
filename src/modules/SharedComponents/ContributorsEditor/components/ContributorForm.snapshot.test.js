@@ -29,7 +29,7 @@ const create = () => {
     return {store, next, invoke}
 };
 
-function setup({authorsList, onAdd, showIdentifierLookup, actions, disabled, isMount}){
+function setup({authorsList, onAdd, showIdentifierLookup, actions, disabled, isShallow = true}){
 
     const props = {
         authorsList: authorsList || [], // : PropTypes.array,
@@ -40,7 +40,7 @@ function setup({authorsList, onAdd, showIdentifierLookup, actions, disabled, isM
         //locale, // : PropTypes.object,
     };
 
-    if (isMount) {
+    if (!isShallow) {
         return mount(
             <Provider store={create().store}>
                 <ContributorForm {...props} />
@@ -61,12 +61,12 @@ function setup({authorsList, onAdd, showIdentifierLookup, actions, disabled, isM
 
 describe('ContributorForm tests ', () => {
     it('rendering display name field only', () => {
-        const wrapper = setup({ isMount: true });
+        const wrapper = setup({ isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('rendering display name field and identifier field', () => {
-        const wrapper = setup({ showIdentifierLookup: true, isMount: true });
+        const wrapper = setup({ showIdentifierLookup: true, isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

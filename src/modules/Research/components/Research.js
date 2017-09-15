@@ -22,7 +22,7 @@ export default class Research extends React.Component {
         super(props);
 
         this.state = {
-            allowResultsPaging: false,
+            allowResultsPaging: !props.loadingPublicationsList && props.publicationsList.length > 0,
             page: 1,
             pageSize: 20,
             sortBy: locale.components.sorting.sortBy[0].value,
@@ -49,12 +49,10 @@ export default class Research extends React.Component {
             || this.state.pageSize !== nextState.pageSize
             || this.state.page !== nextState.page
             || JSON.stringify(this.state.activeFacets) !== JSON.stringify(nextState.activeFacets)) {
-            const resetPage = JSON.stringify(this.state.activeFacets) !== JSON.stringify(nextState.activeFacets)
-                || this.state.pageSize !== nextState.pageSize;
             this.props.actions.searchAuthorPublications({
                 userName: this.props.account.id,
                 pageSize: nextState.pageSize,
-                page: resetPage ? 1 : nextState.page,
+                page: nextState.page,
                 sortBy: nextState.sortBy,
                 sortDirection: nextState.sortDirection,
                 facets: nextState.activeFacets
@@ -84,7 +82,8 @@ export default class Research extends React.Component {
 
     facetsChanged = (activeFacets) => {
         this.setState({
-            activeFacets: {...activeFacets}
+            activeFacets: {...activeFacets},
+            page: 1
         });
     }
 
@@ -94,12 +93,12 @@ export default class Research extends React.Component {
         return (
             <StandardPage title={txt.title}>
                 {
-                    !this.state.allowResultsPaging && this.props.loadingPublicationsList &&
+                    (this.props.accountLoading || (!this.state.allowResultsPaging && this.props.loadingPublicationsList)) &&
                     <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                 }
                 <div className="columns">
                     {
-                        !this.props.loadingPublicationsList && (!this.props.publicationsList || this.props.publicationsList.length === 0) &&
+                        !this.props.accountLoading && !this.props.loadingPublicationsList && (!this.props.publicationsList || this.props.publicationsList.length === 0) &&
                         <div className="column">
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
@@ -107,7 +106,7 @@ export default class Research extends React.Component {
                         </div>
                     }
                     {
-                        this.state.allowResultsPaging &&
+                        !this.props.accountLoading && this.state.allowResultsPaging &&
                         <div className="column">
                             <StandardCard {...txt}>
                                 <div>{txt.text}</div>
@@ -138,7 +137,7 @@ export default class Research extends React.Component {
                         </div>
                     }
                     {
-                        this.state.allowResultsPaging && this.props.publicationsListFacets
+                        !this.props.accountLoading && this.state.allowResultsPaging && this.props.publicationsListFacets
                         && Object.keys(this.props.publicationsListFacets).length > 0 &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
