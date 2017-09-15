@@ -17,27 +17,33 @@ export default {
             type: 'info_outline'
         },
         sources: {
+            espace: {
+                id: 'espace',
+                title: 'eSpace',
+                priority: 0
+            },
             wos: {
                 id: 'wos',
                 title: 'Web of science',
-                priority: 0
+                priority: 1
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
-                priority: 1
+                priority: 2
             },
             pubmed: {
                 id: 'pubmed',
                 title: 'PubMed',
-                priority: 2
+                priority: 3
             },
             crossref: {
                 id: 'crossref',
                 title: 'Crossref',
-                priority: 3
+                priority: 4
             }
-        }
+        },
+        embargoDateFormat: 'YYYY-MM-DD'
     },
     authentication: {
         signInText: 'Log in',
@@ -315,6 +321,10 @@ export default {
                         recordSuffix: ' record(s)',
                         ariaCircularProgressLabelSuffix: 'loading',
                         repositories: [
+                            {
+                                id: 'espace',
+                                title: 'eSpace'
+                            },
                             {
                                 id: 'wos',
                                 title: 'Web of science'

@@ -69,7 +69,7 @@ export default class PublicationsListSorting extends Component {
                         fullWidth
                         onChange={this.sortByChanged}
                         value={this.state.sortBy}
-                        disabled={this.props.disabled}git ad
+                        disabled={this.props.disabled}
                         floatingLabelText={txt.sortLabel}>
                         {
                             txt.sortBy.map((item, index) => {

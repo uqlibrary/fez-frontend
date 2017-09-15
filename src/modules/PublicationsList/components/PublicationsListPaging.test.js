@@ -46,7 +46,7 @@ describe('PublicationsListPaging renders ', () => {
     it('component with empty paging data', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.publicationsListPaging.empty').length).toBe(1);
+        expect(wrapper.find('.publicationsListControls.empty').length).toBe(1);
     });
 
     it('component with non-empty paging data, first page', () => {

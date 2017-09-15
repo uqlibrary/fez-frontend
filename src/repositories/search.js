@@ -5,13 +5,30 @@ export const GET_SEARCH_INTERNAL_API = 'search/internal';
 export const GET_SEARCH_EXTERNAL_API = 'search/external';
 
 /**
+ * Get search type
+ * @param queryString
+ * @returns {string}
+ */
+function getSearchType(queryString) {
+    let searchType = `title=${queryString}`;
+    if (validation.isValidDOIValue(queryString)) {
+        searchType = `doi=${queryString}`;
+    } else if (validation.isValidPubMedValue(queryString)) {
+        searchType = `id=pmid:${queryString}`;
+    }
+
+    return searchType;
+}
+
+/**
  * Fetches publications from internal storage
  * @param queryString
+ * @param titleOnly
  * @returns {Promise}
  */
 export function getSearchInternal(queryString) {
-    // TODO: check api for internal search when it's ready which parameters to include in query string
-    return get(`${GET_SEARCH_INTERNAL_API}?${queryString}`);
+    const searchType = getSearchType(queryString);
+    return get(`${GET_SEARCH_INTERNAL_API}?${searchType}&per_page=5`);
 }
 
 /**
@@ -21,11 +38,6 @@ export function getSearchInternal(queryString) {
  * @returns {Promise}
  */
 export function getSearchExternal(source, queryString) {
-    let searchType = `title=${queryString}&rek_display_type=179`;
-    if (validation.isValidDOIValue(queryString)) {
-        searchType = `doi=${queryString}`;
-    } else if (validation.isValidPubMedValue(queryString)) {
-        searchType = `id=pmid:${queryString}`;
-    }
+    const searchType = getSearchType(queryString);
     return get(`${GET_SEARCH_EXTERNAL_API}?source=${source}&${searchType}`);
 }

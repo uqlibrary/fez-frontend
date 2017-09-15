@@ -41,11 +41,12 @@ export default class PublicationsListPaging extends Component {
     render() {
         const txt = locale.components.paging;
         const totalPages = Math.ceil(this.state.total / this.state.per_page);
-        if (totalPages === 0) return (<span className="publicationsListPaging empty"/>);
+        if (totalPages === 0) return (<span className="publicationsListControls empty"/>);
         const renderedPages = Array(totalPages).fill()
             .map((page, index) => {
                 return (
                     <FlatButton
+                        key={index}
                         onTouchTap={() => {
                             this.pageChanged(index + 1);
                         }}
@@ -59,68 +60,81 @@ export default class PublicationsListPaging extends Component {
             <div>
                 <div className="publicationsListControls columns is-gapless is-mobile">
                     <div className="column"/>
-                    {this.state.current_page > 0 &&
-                    <div className="column is-narrow">
-                        <IconButton tooltip={txt.previousPage}
-                            tooltipPosition="top-left"
-                            className="iconPrevious"
-                            onTouchTap={() => {
-                                this.pageChanged(this.state.current_page - 1);
-                            }}
-                            disabled={this.props.disabled || this.state.current_page === 1}
-                        >
-                            <NavigationChevronLeft/>
-                        </IconButton>
-                    </div>
+                    {
+                        this.state.current_page > 0 &&
+                        <div className="column is-narrow">
+                            <IconButton
+                                tooltip={txt.previousPage}
+                                tooltipPosition="top-left"
+                                className="iconPrevious"
+                                onTouchTap={() => {
+                                    this.pageChanged(this.state.current_page - 1);
+                                }}
+                                disabled={this.props.disabled || this.state.current_page === 1}>
+                                <NavigationChevronLeft/>
+                            </IconButton>
+                        </div>
                     }
                     <div className="column is-narrow is-hidden-tablet-only is-hidden-mobile">
                         <FlatButton
                             className="pagingLabel"
-                            label={txt.pageOf.replace('[currentPage]', this.state.current_page).replace('[totalPages]', totalPages) + ' ' + txt.totalRecords.replace('[total]', this.state.total)}/>
+                            label={
+                                txt.pageOf
+                                    .replace('[currentPage]', this.state.current_page)
+                                    .replace('[totalPages]', totalPages) + ' ' + txt.totalRecords.replace('[total]', this.state.total)
+                            }/>
                     </div>
                     <div className="column is-narrow is-hidden-desktop">
                         <FlatButton
                             className="pagingLabel"
-                            label={txt.pageOf.replace('[currentPage]', this.state.current_page).replace('[totalPages]', totalPages)}/>
+                            label={
+                                txt.pageOf
+                                    .replace('[currentPage]', this.state.current_page)
+                                    .replace('[totalPages]', totalPages)
+                            }/>
                     </div>
-                    {this.state.current_page <= totalPages &&
-                    <div className="column is-narrow">
-                        <IconButton tooltip={txt.nextPage}
-                            tooltipPosition="top-right"
-                            className="iconNext"
-                            onTouchTap={() => {
-                                this.pageChanged(this.state.current_page + 1);
-                            }}
-                            disabled={this.props.disabled || this.state.current_page === totalPages}
-                        >
-                            <NavigationChevronRight/>
-                        </IconButton>
-                    </div>
+                    {
+                        this.state.current_page <= totalPages &&
+                        <div className="column is-narrow">
+                            <IconButton
+                                tooltip={txt.nextPage}
+                                tooltipPosition="top-right"
+                                className="iconNext"
+                                onTouchTap={() => {
+                                    this.pageChanged(this.state.current_page + 1);
+                                }}
+                                disabled={this.props.disabled || this.state.current_page === totalPages}>
+                                <NavigationChevronRight/>
+                            </IconButton>
+                        </div>
                     }
                     <div className="column"/>
                 </div>
-                {totalPages > 1 &&
-                <div className="publicationsListPaging columns is-multiline is-gapless is-hidden-mobile is-hidden-tablet-only">
-                    {this.state.current_page >= 1 &&
-                    <FlatButton
-                        className="pagingPrevious"
-                        onTouchTap={() => {
-                            this.pageChanged(this.state.current_page - 1);
-                        }}
-                        disabled={this.props.disabled || this.state.current_page === 1}
-                        label={txt.previousPage}/>
-                    }
-                    {renderedPages}
-                    {this.state.current_page <= totalPages &&
-                    <FlatButton
-                        className="pagingNext"
-                        onTouchTap={() => {
-                            this.pageChanged(this.state.current_page + 1);
-                        }}
-                        disabled={this.props.disabled || this.state.current_page === totalPages}
-                        label={txt.nextPage}/>
-                    }
-                </div>
+                {
+                    totalPages > 1 &&
+                    <div className="publicationsListPaging columns is-multiline is-gapless is-hidden-mobile is-hidden-tablet-only">
+                        {
+                            this.state.current_page >= 1 &&
+                            <FlatButton
+                                className="pagingPrevious"
+                                onTouchTap={() => {
+                                    this.pageChanged(this.state.current_page - 1);
+                                }}
+                                disabled={this.props.disabled || this.state.current_page === 1}
+                                label={txt.previousPage}/>
+                        }
+                        {renderedPages}
+                        {
+                            this.state.current_page <= totalPages &&
+                            <FlatButton
+                                className="pagingNext"
+                                onTouchTap={() => {
+                                    this.pageChanged(this.state.current_page + 1);
+                                }}
+                                disabled={this.props.disabled || this.state.current_page === totalPages}
+                                label={txt.nextPage}/>
+                        }
+                    </div>
                 }
             </div>
         );

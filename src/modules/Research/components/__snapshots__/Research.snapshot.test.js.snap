@@ -1,0 +1,2468 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Research test renders list of publications 1`] = `
+<StandardPage
+  title="My research"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        facetsFilter={
+          Object {
+            "excludeFacetsList": Array [
+              "Scopus document type",
+              "Subtype",
+            ],
+            "help": Object {
+              "buttonLabel": "Ok",
+              "text": "Help about ....",
+              "title": "Refining your results",
+            },
+            "title": "Refine results",
+          }
+        }
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": <div>
+              your research help....
+          </div>,
+            "title": "My research help",
+          }
+        }
+        loadingMessage="Searching for your publications..."
+        loadingPagingMessage="Retrieving for your publications..."
+        noResultsFound={
+          Object {
+            "text": <div>
+              We were unable to find any results. Please, check if there are any possibly your publications via 
+              <a
+                  href="#claim-publications"
+              >
+                  claim possible publications
+              </a>
+               or 
+              <a
+                  href="#add-record"
+              >
+                  add a missing publication
+              </a>
+          </div>,
+            "title": "No publications found",
+          }
+        }
+        text={
+          <div>
+            <div>
+              Please, check if there are any possibly your publications via 
+              <a
+                href="#claim-publications"
+              >
+                claim possible publications
+              </a>
+               or 
+              <a
+                href="#add-record"
+              >
+                add a missing publication
+              </a>
+            </div>
+          </div>
+        }
+        title="My research"
+      >
+        <div>
+          <div>
+            <div>
+              Please, check if there are any possibly your publications via 
+              <a
+                href="#claim-publications"
+              >
+                claim possible publications
+              </a>
+               or 
+              <a
+                href="#add-record"
+              >
+                add a missing publication
+              </a>
+            </div>
+          </div>
+        </div>
+        <PublicationsListSorting
+          disabled={false}
+          onPageSizeChanged={[Function]}
+          onSortByChanged={[Function]}
+          pagingData={Object {}}
+        />
+        <PublicationsListPaging
+          disabled={false}
+          loading={false}
+          onPageChanged={[Function]}
+          pagingData={Object {}}
+        />
+        <PublicationsList
+          publicationsList={
+            Array [
+              Object {
+                "fez_record_search_key_access_conditions": null,
+                "fez_record_search_key_acknowledgements": null,
+                "fez_record_search_key_additional_notes": null,
+                "fez_record_search_key_advisory_statement": null,
+                "fez_record_search_key_alternate_genre": Array [],
+                "fez_record_search_key_alternative_title": Array [],
+                "fez_record_search_key_ands_collection_type": null,
+                "fez_record_search_key_architectural_features": Array [],
+                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_assigned_group_id": Array [],
+                "fez_record_search_key_assigned_user_id": Array [],
+                "fez_record_search_key_author": Array [
+                  Object {
+                    "rek_author": "Azimi, Iman",
+                    "rek_author_id": null,
+                    "rek_author_order": 1,
+                    "rek_author_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author": "Milevskiy, Michael J. G.",
+                    "rek_author_id": null,
+                    "rek_author_order": 2,
+                    "rek_author_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author": "Kaemmerer, Elke",
+                    "rek_author_id": null,
+                    "rek_author_order": 3,
+                    "rek_author_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author": "Turner, Dane",
+                    "rek_author_id": null,
+                    "rek_author_order": 4,
+                    "rek_author_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author": "Yapa, Kunsala T. D. S.",
+                    "rek_author_id": null,
+                    "rek_author_order": 5,
+                    "rek_author_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author": "Brown, Melissa A.",
+                    "rek_author_id": null,
+                    "rek_author_order": 6,
+                    "rek_author_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author": "Thompson, Erik W.",
+                    "rek_author_id": null,
+                    "rek_author_order": 7,
+                    "rek_author_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author": "Roberts-Thomson, Sarah J.",
+                    "rek_author_id": null,
+                    "rek_author_order": 8,
+                    "rek_author_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author": "Monteith, Gregory R.",
+                    "rek_author_id": null,
+                    "rek_author_order": 9,
+                    "rek_author_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_country": Array [
+                  Object {
+                    "rek_author_affiliation_country": "Australia|Australia|Australia",
+                    "rek_author_affiliation_country_id": null,
+                    "rek_author_affiliation_country_order": 1,
+                    "rek_author_affiliation_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": null,
+                    "rek_author_affiliation_country_order": 2,
+                    "rek_author_affiliation_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia|Australia|Australia",
+                    "rek_author_affiliation_country_id": null,
+                    "rek_author_affiliation_country_order": 3,
+                    "rek_author_affiliation_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": null,
+                    "rek_author_affiliation_country_order": 4,
+                    "rek_author_affiliation_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": null,
+                    "rek_author_affiliation_country_order": 5,
+                    "rek_author_affiliation_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": null,
+                    "rek_author_affiliation_country_order": 6,
+                    "rek_author_affiliation_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia|Australia|Australia|Australia",
+                    "rek_author_affiliation_country_id": null,
+                    "rek_author_affiliation_country_order": 7,
+                    "rek_author_affiliation_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia",
+                    "rek_author_affiliation_country_id": null,
+                    "rek_author_affiliation_country_order": 8,
+                    "rek_author_affiliation_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_country": "Australia|Australia|Australia",
+                    "rek_author_affiliation_country_id": null,
+                    "rek_author_affiliation_country_order": 9,
+                    "rek_author_affiliation_country_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_full_address": Array [
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia|Univ Queensland, Mater Res Inst, Brisbane, Qld 4101, Australia|Translat Res Inst, Brisbane, Qld 4102, Australia",
+                    "rek_author_affiliation_full_address_id": null,
+                    "rek_author_affiliation_full_address_order": 1,
+                    "rek_author_affiliation_full_address_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld 4072, Australia",
+                    "rek_author_affiliation_full_address_id": null,
+                    "rek_author_affiliation_full_address_order": 2,
+                    "rek_author_affiliation_full_address_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia|Univ Queensland, Mater Res Inst, Brisbane, Qld 4101, Australia|Translat Res Inst, Brisbane, Qld 4102, Australia",
+                    "rek_author_affiliation_full_address_id": null,
+                    "rek_author_affiliation_full_address_order": 3,
+                    "rek_author_affiliation_full_address_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia",
+                    "rek_author_affiliation_full_address_id": null,
+                    "rek_author_affiliation_full_address_order": 4,
+                    "rek_author_affiliation_full_address_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia",
+                    "rek_author_affiliation_full_address_id": null,
+                    "rek_author_affiliation_full_address_order": 5,
+                    "rek_author_affiliation_full_address_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld 4072, Australia",
+                    "rek_author_affiliation_full_address_id": null,
+                    "rek_author_affiliation_full_address_order": 6,
+                    "rek_author_affiliation_full_address_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Translat Res Inst, Brisbane, Qld 4102, Australia|Queensland Univ Technol, Inst Hlth & Biomed Innovat, Brisbane, Qld 4059, Australia|Queensland Univ Technol, Sch Biomed Sci, Brisbane, Qld 4059, Australia|Univ Melbourne, St Vincents Hosp, Dept Surg, Melbourne, Vic 3065, Australia",
+                    "rek_author_affiliation_full_address_id": null,
+                    "rek_author_affiliation_full_address_order": 7,
+                    "rek_author_affiliation_full_address_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia",
+                    "rek_author_affiliation_full_address_id": null,
+                    "rek_author_affiliation_full_address_order": 8,
+                    "rek_author_affiliation_full_address_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia|Univ Queensland, Mater Res Inst, Brisbane, Qld 4101, Australia|Translat Res Inst, Brisbane, Qld 4102, Australia",
+                    "rek_author_affiliation_full_address_id": null,
+                    "rek_author_affiliation_full_address_order": 9,
+                    "rek_author_affiliation_full_address_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_id": Array [
+                  Object {
+                    "rek_author_affiliation_id": "10.13039/501100000925",
+                    "rek_author_affiliation_id_id": null,
+                    "rek_author_affiliation_id_order": 1,
+                    "rek_author_affiliation_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_id": "10.13039/501100001168",
+                    "rek_author_affiliation_id_id": null,
+                    "rek_author_affiliation_id_order": 2,
+                    "rek_author_affiliation_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_id": "10.13039/501100001026",
+                    "rek_author_affiliation_id_id": null,
+                    "rek_author_affiliation_id_order": 3,
+                    "rek_author_affiliation_id_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_name": Array [
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland|University of Queensland|Translat Res Inst",
+                    "rek_author_affiliation_name_id": null,
+                    "rek_author_affiliation_name_order": 1,
+                    "rek_author_affiliation_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": null,
+                    "rek_author_affiliation_name_order": 2,
+                    "rek_author_affiliation_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland|University of Queensland|Translat Res Inst",
+                    "rek_author_affiliation_name_id": null,
+                    "rek_author_affiliation_name_order": 3,
+                    "rek_author_affiliation_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": null,
+                    "rek_author_affiliation_name_order": 4,
+                    "rek_author_affiliation_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": null,
+                    "rek_author_affiliation_name_order": 5,
+                    "rek_author_affiliation_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": null,
+                    "rek_author_affiliation_name_order": 6,
+                    "rek_author_affiliation_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "Translat Res Inst|Queensland University of Technology (QUT)|Queensland University of Technology (QUT)|University of Melbourne",
+                    "rek_author_affiliation_name_id": null,
+                    "rek_author_affiliation_name_order": 7,
+                    "rek_author_affiliation_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland",
+                    "rek_author_affiliation_name_id": null,
+                    "rek_author_affiliation_name_order": 8,
+                    "rek_author_affiliation_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_affiliation_name": "University of Queensland|University of Queensland|Translat Res Inst",
+                    "rek_author_affiliation_name_id": null,
+                    "rek_author_affiliation_name_order": 9,
+                    "rek_author_affiliation_name_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_author_id": Array [
+                  Object {
+                    "rek_author_id": 88893,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 1,
+                    "rek_author_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 2,
+                    "rek_author_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_id": 1706239,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 3,
+                    "rek_author_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_id": 97626,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 4,
+                    "rek_author_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_id": 95450,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 5,
+                    "rek_author_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_id": 1671,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 6,
+                    "rek_author_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 7,
+                    "rek_author_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_id": 973,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 8,
+                    "rek_author_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_author_id": 972,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 9,
+                    "rek_author_id_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_author_role": Array [],
+                "fez_record_search_key_book_title": null,
+                "fez_record_search_key_building_materials": Array [],
+                "fez_record_search_key_category": Array [],
+                "fez_record_search_key_chapter_number": null,
+                "fez_record_search_key_condition": Array [],
+                "fez_record_search_key_conference_dates": null,
+                "fez_record_search_key_conference_id": null,
+                "fez_record_search_key_conference_location": null,
+                "fez_record_search_key_conference_name": null,
+                "fez_record_search_key_construction_date": null,
+                "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_contributor": Array [],
+                "fez_record_search_key_contributor_id": Array [],
+                "fez_record_search_key_convener": null,
+                "fez_record_search_key_corresponding_country": Array [
+                  Object {
+                    "rek_corresponding_country": "Australia",
+                    "rek_corresponding_country_id": null,
+                    "rek_corresponding_country_order": 1,
+                    "rek_corresponding_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_country": "Australia",
+                    "rek_corresponding_country_id": null,
+                    "rek_corresponding_country_order": 2,
+                    "rek_corresponding_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_country": "Australia",
+                    "rek_corresponding_country_id": null,
+                    "rek_corresponding_country_order": 3,
+                    "rek_corresponding_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_country": "Australia",
+                    "rek_corresponding_country_id": null,
+                    "rek_corresponding_country_order": 4,
+                    "rek_corresponding_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_country": "Australia",
+                    "rek_corresponding_country_id": null,
+                    "rek_corresponding_country_order": 5,
+                    "rek_corresponding_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_country": "Australia",
+                    "rek_corresponding_country_id": null,
+                    "rek_corresponding_country_order": 6,
+                    "rek_corresponding_country_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_country": "Australia",
+                    "rek_corresponding_country_id": null,
+                    "rek_corresponding_country_order": 7,
+                    "rek_corresponding_country_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_corresponding_email": Array [
+                  Object {
+                    "rek_corresponding_email": "gregm@uq.edu.au",
+                    "rek_corresponding_email_id": null,
+                    "rek_corresponding_email_order": 1,
+                    "rek_corresponding_email_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_email": "gregm@uq.edu.au",
+                    "rek_corresponding_email_id": null,
+                    "rek_corresponding_email_order": 2,
+                    "rek_corresponding_email_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_email": "gregm@uq.edu.au",
+                    "rek_corresponding_email_id": null,
+                    "rek_corresponding_email_order": 3,
+                    "rek_corresponding_email_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_corresponding_name": Array [
+                  Object {
+                    "rek_corresponding_name": "Monteith, Gregory R.",
+                    "rek_corresponding_name_id": null,
+                    "rek_corresponding_name_order": 1,
+                    "rek_corresponding_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_name": "Monteith, Gregory R.",
+                    "rek_corresponding_name_id": null,
+                    "rek_corresponding_name_order": 2,
+                    "rek_corresponding_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_name": "Monteith, Gregory R.",
+                    "rek_corresponding_name_id": null,
+                    "rek_corresponding_name_order": 3,
+                    "rek_corresponding_name_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_corresponding_organisation": Array [
+                  Object {
+                    "rek_corresponding_organisation": "University of Queensland",
+                    "rek_corresponding_organisation_id": null,
+                    "rek_corresponding_organisation_order": 1,
+                    "rek_corresponding_organisation_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_organisation": "University of Queensland",
+                    "rek_corresponding_organisation_id": null,
+                    "rek_corresponding_organisation_order": 2,
+                    "rek_corresponding_organisation_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_organisation": "Translat Res Inst",
+                    "rek_corresponding_organisation_id": null,
+                    "rek_corresponding_organisation_order": 3,
+                    "rek_corresponding_organisation_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_organisation": "University of Queensland",
+                    "rek_corresponding_organisation_id": null,
+                    "rek_corresponding_organisation_order": 4,
+                    "rek_corresponding_organisation_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
+                    "rek_corresponding_organisation_id": null,
+                    "rek_corresponding_organisation_order": 5,
+                    "rek_corresponding_organisation_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
+                    "rek_corresponding_organisation_id": null,
+                    "rek_corresponding_organisation_order": 6,
+                    "rek_corresponding_organisation_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_corresponding_organisation": "University of Melbourne",
+                    "rek_corresponding_organisation_id": null,
+                    "rek_corresponding_organisation_order": 7,
+                    "rek_corresponding_organisation_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_country_of_issue": null,
+                "fez_record_search_key_coverage_period": Array [],
+                "fez_record_search_key_creator_id": Array [],
+                "fez_record_search_key_creator_name": Array [],
+                "fez_record_search_key_data_volume": null,
+                "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_date_available": Object {
+                  "rek_date_available": "2017-07-15T00:00:00Z",
+                  "rek_date_available_id": null,
+                  "rek_date_available_pid": "UQ:676287",
+                },
+                "fez_record_search_key_date_photo_taken": null,
+                "fez_record_search_key_date_recorded": null,
+                "fez_record_search_key_date_scanned": null,
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1242/jcs.196659",
+                  "rek_doi_id": null,
+                  "rek_doi_pid": "UQ:676287",
+                },
+                "fez_record_search_key_edition": null,
+                "fez_record_search_key_end_date": null,
+                "fez_record_search_key_end_page": Object {
+                  "rek_end_page": "2305",
+                  "rek_end_page_id": null,
+                  "rek_end_page_pid": "UQ:676287",
+                },
+                "fez_record_search_key_fields_of_research": Array [],
+                "fez_record_search_key_file_attachment_access_condition": Array [],
+                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_name": Array [
+                  Object {
+                    "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
+                    "rek_file_attachment_name_id": null,
+                    "rek_file_attachment_name_order": 1,
+                    "rek_file_attachment_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_file_attachment_name": "presmd_UQ676287_OA.xml",
+                    "rek_file_attachment_name_id": null,
+                    "rek_file_attachment_name_order": 2,
+                    "rek_file_attachment_name_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_file_attachment_name": "UQ676287_OA.pdf",
+                    "rek_file_attachment_name_id": null,
+                    "rek_file_attachment_name_order": 3,
+                    "rek_file_attachment_name_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_geographic_area": Array [],
+                "fez_record_search_key_grant_acronym": Array [],
+                "fez_record_search_key_grant_agency": Array [
+                  Object {
+                    "rek_grant_agency": "National Health and Medical Research Council",
+                    "rek_grant_agency_id": null,
+                    "rek_grant_agency_order": 1,
+                    "rek_grant_agency_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_grant_agency": "Cancer Council Queensland",
+                    "rek_grant_agency_id": null,
+                    "rek_grant_agency_order": 2,
+                    "rek_grant_agency_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_grant_agency": "National Breast Cancer Foundation",
+                    "rek_grant_agency_id": null,
+                    "rek_grant_agency_order": 3,
+                    "rek_grant_agency_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_grant_agency_id": Array [
+                  Object {
+                    "rek_grant_agency_id": "10.13039/501100000925",
+                    "rek_grant_agency_id_id": null,
+                    "rek_grant_agency_id_order": 1,
+                    "rek_grant_agency_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_grant_agency_id": "10.13039/501100001168",
+                    "rek_grant_agency_id_id": null,
+                    "rek_grant_agency_id_order": 2,
+                    "rek_grant_agency_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_grant_agency_id": "10.13039/501100001026",
+                    "rek_grant_agency_id_id": null,
+                    "rek_grant_agency_id_order": 3,
+                    "rek_grant_agency_id_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_grant_id": Array [
+                  Object {
+                    "rek_grant_id": "569645 | 1022263",
+                    "rek_grant_id_id": null,
+                    "rek_grant_id_order": 1,
+                    "rek_grant_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_grant_id": "1042819",
+                    "rek_grant_id_id": null,
+                    "rek_grant_id_order": 2,
+                    "rek_grant_id_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_grant_id": "CG-12-07 | CG-10-04",
+                    "rek_grant_id_id": null,
+                    "rek_grant_id_order": 3,
+                    "rek_grant_id_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_grant_text": Array [],
+                "fez_record_search_key_herdc_code": Object {
+                  "rek_herdc_code": 450009,
+                  "rek_herdc_code_id": null,
+                  "rek_herdc_code_pid": "UQ:676287",
+                },
+                "fez_record_search_key_herdc_status": Object {
+                  "rek_herdc_status": 453220,
+                  "rek_herdc_status_id": null,
+                  "rek_herdc_status_pid": "UQ:676287",
+                },
+                "fez_record_search_key_identifier": Array [],
+                "fez_record_search_key_institutional_status": Object {
+                  "rek_institutional_status": 453223,
+                  "rek_institutional_status_id": null,
+                  "rek_institutional_status_pid": "UQ:676287",
+                },
+                "fez_record_search_key_interior_features": Array [],
+                "fez_record_search_key_isbn": Array [],
+                "fez_record_search_key_isdatasetof": Array [],
+                "fez_record_search_key_isderivationof": Array [],
+                "fez_record_search_key_isi_loc": Object {
+                  "rek_isi_loc": "000405613400008",
+                  "rek_isi_loc_id": null,
+                  "rek_isi_loc_pid": "UQ:676287",
+                },
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:3833",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:13602",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 2,
+                    "rek_ismemberof_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:3825",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 3,
+                    "rek_ismemberof_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:218311",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 4,
+                    "rek_ismemberof_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:677356",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 5,
+                    "rek_ismemberof_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_issn": Array [
+                  Object {
+                    "rek_issn": "1477-9137",
+                    "rek_issn_id": null,
+                    "rek_issn_order": 1,
+                    "rek_issn_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_issn": "0021-9533",
+                    "rek_issn_id": null,
+                    "rek_issn_order": 2,
+                    "rek_issn_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_issue_number": Object {
+                  "rek_issue_number": "14",
+                  "rek_issue_number_id": null,
+                  "rek_issue_number_pid": "UQ:676287",
+                },
+                "fez_record_search_key_job_number": null,
+                "fez_record_search_key_journal_name": Object {
+                  "rek_journal_name": "Journal of Cell Science",
+                  "rek_journal_name_id": null,
+                  "rek_journal_name_pid": "UQ:676287",
+                },
+                "fez_record_search_key_keywords": Array [
+                  Object {
+                    "rek_keywords": "Akt",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 1,
+                    "rek_keywords_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_keywords": "Breast cancer",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 2,
+                    "rek_keywords_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_keywords": "Ca2+",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 3,
+                    "rek_keywords_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_keywords": "Hypoxia",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 4,
+                    "rek_keywords_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_keywords": "PTEN",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 5,
+                    "rek_keywords_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_keywords": "Signal transduction",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 6,
+                    "rek_keywords_pid": "UQ:676287",
+                  },
+                  Object {
+                    "rek_keywords": "TRPC1",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 7,
+                    "rek_keywords_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_language": Array [
+                  Object {
+                    "rek_language": "eng",
+                    "rek_language_id": null,
+                    "rek_language_order": 1,
+                    "rek_language_pid": "UQ:676287",
+                  },
+                ],
+                "fez_record_search_key_language_of_book_title": Array [],
+                "fez_record_search_key_language_of_journal_name": Array [],
+                "fez_record_search_key_language_of_proceedings_title": Array [],
+                "fez_record_search_key_language_of_title": Array [],
+                "fez_record_search_key_length": null,
+                "fez_record_search_key_license": null,
+                "fez_record_search_key_link": Array [],
+                "fez_record_search_key_link_description": Array [],
+                "fez_record_search_key_location": Array [],
+                "fez_record_search_key_native_script_book_title": null,
+                "fez_record_search_key_native_script_conference_name": null,
+                "fez_record_search_key_native_script_journal_name": null,
+                "fez_record_search_key_native_script_proceedings_title": null,
+                "fez_record_search_key_native_script_title": null,
+                "fez_record_search_key_newspaper": null,
+                "fez_record_search_key_notes": null,
+                "fez_record_search_key_oa_embargo_days": null,
+                "fez_record_search_key_oa_notes": null,
+                "fez_record_search_key_oa_status": Object {
+                  "rek_oa_status": 453695,
+                  "rek_oa_status_id": null,
+                  "rek_oa_status_pid": "UQ:676287",
+                },
+                "fez_record_search_key_org_name": null,
+                "fez_record_search_key_org_unit_name": null,
+                "fez_record_search_key_original_format": null,
+                "fez_record_search_key_parent_publication": null,
+                "fez_record_search_key_patent_number": null,
+                "fez_record_search_key_period": Array [],
+                "fez_record_search_key_place_of_publication": Object {
+                  "rek_place_of_publication": "Cambridge, United Kingdom",
+                  "rek_place_of_publication_id": null,
+                  "rek_place_of_publication_pid": "UQ:676287",
+                },
+                "fez_record_search_key_proceedings_title": null,
+                "fez_record_search_key_project_description": null,
+                "fez_record_search_key_project_id": null,
+                "fez_record_search_key_project_name": null,
+                "fez_record_search_key_project_start_date": null,
+                "fez_record_search_key_publisher": Object {
+                  "rek_publisher": "Company of Biologists",
+                  "rek_publisher_id": null,
+                  "rek_publisher_pid": "UQ:676287",
+                },
+                "fez_record_search_key_pubmed_id": Object {
+                  "rek_pubmed_id": "28559303",
+                  "rek_pubmed_id_id": null,
+                  "rek_pubmed_id_pid": "UQ:676287",
+                },
+                "fez_record_search_key_refereed": Object {
+                  "rek_refereed": 1,
+                  "rek_refereed_id": null,
+                  "rek_refereed_pid": "UQ:676287",
+                },
+                "fez_record_search_key_refereed_source": Object {
+                  "rek_refereed_source": 453635,
+                  "rek_refereed_source_id": null,
+                  "rek_refereed_source_pid": "UQ:676287",
+                },
+                "fez_record_search_key_related_datasets": null,
+                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_report_number": null,
+                "fez_record_search_key_retracted": Object {
+                  "rek_retracted": 0,
+                  "rek_retracted_id": null,
+                  "rek_retracted_pid": "UQ:676287",
+                },
+                "fez_record_search_key_rights": null,
+                "fez_record_search_key_roman_script_book_title": null,
+                "fez_record_search_key_roman_script_conference_name": null,
+                "fez_record_search_key_roman_script_journal_name": null,
+                "fez_record_search_key_roman_script_proceedings_title": null,
+                "fez_record_search_key_roman_script_title": null,
+                "fez_record_search_key_scale": null,
+                "fez_record_search_key_scopus_id": Object {
+                  "rek_scopus_id": "2-s2.0-85024119372",
+                  "rek_scopus_id_id": null,
+                  "rek_scopus_id_pid": "UQ:676287",
+                },
+                "fez_record_search_key_section": null,
+                "fez_record_search_key_seo_code": Array [],
+                "fez_record_search_key_series": null,
+                "fez_record_search_key_software_required": Array [],
+                "fez_record_search_key_source": null,
+                "fez_record_search_key_start_date": null,
+                "fez_record_search_key_start_page": Object {
+                  "rek_start_page": "2292",
+                  "rek_start_page_id": null,
+                  "rek_start_page_pid": "UQ:676287",
+                },
+                "fez_record_search_key_structural_systems": Array [],
+                "fez_record_search_key_style": Array [],
+                "fez_record_search_key_subcategory": Array [],
+                "fez_record_search_key_subject": Array [],
+                "fez_record_search_key_supervisor": Array [],
+                "fez_record_search_key_supervisor_id": Array [],
+                "fez_record_search_key_surrounding_features": Array [],
+                "fez_record_search_key_time_period_end_date": null,
+                "fez_record_search_key_time_period_start_date": null,
+                "fez_record_search_key_total_chapters": null,
+                "fez_record_search_key_total_pages": Object {
+                  "rek_total_pages": "14",
+                  "rek_total_pages_id": null,
+                  "rek_total_pages_pid": "UQ:676287",
+                },
+                "fez_record_search_key_transcript": null,
+                "fez_record_search_key_translated_book_title": null,
+                "fez_record_search_key_translated_conference_name": null,
+                "fez_record_search_key_translated_journal_name": null,
+                "fez_record_search_key_translated_newspaper": null,
+                "fez_record_search_key_translated_proceedings_title": null,
+                "fez_record_search_key_translated_title": null,
+                "fez_record_search_key_type_of_data": Array [],
+                "fez_record_search_key_volume_number": Object {
+                  "rek_volume_number": "130",
+                  "rek_volume_number_id": null,
+                  "rek_volume_number_pid": "UQ:676287",
+                },
+                "rek_altmetric_id": 20711411,
+                "rek_altmetric_score": 49,
+                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Azimi, Iman\\" href=\\"/list/author_id/88893/\\">Azimi, Iman</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Milevskiy, Michael J. G.\\" href=\\"/list/author/Milevskiy%2C+Michael+J.+G./\\">Milevskiy, Michael J. G.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Kaemmerer, Elke\\" href=\\"/list/author_id/1706239/\\">Kaemmerer, Elke</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Turner, Dane\\" href=\\"/list/author_id/97626/\\">Turner, Dane</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Yapa, Kunsala T. D. S.\\" href=\\"/list/author_id/95450/\\">Yapa, Kunsala T. D. S.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Brown, Melissa A.\\" href=\\"/list/author_id/1671/\\">Brown, Melissa A.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Thompson, Erik W.\\" href=\\"/list/author/Thompson%2C+Erik+W./\\">Thompson, Erik W.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Roberts-Thomson, Sarah J.\\" href=\\"/list/author_id/973/\\">Roberts-Thomson, Sarah J.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Monteith, Gregory R.\\" href=\\"/list/author_id/972/\\">Monteith, Gregory R.</a> (<span class=\\"citation_date\\">2017</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells\\" href=\\"/view/UQ:676287\\">TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells</a>. <i><span class=\\"citation_journal_name\\">Journal of Cell Science</span></i>, <i><span class=\\"citation_volume_number\\">130</span></i> <span class=\\"citation_issue_number\\">14</span>: <span class=\\"citation_start_page\\">2292</span>-<span class=\\"citation_end_page\\">2305</span>. doi:<span class=\\"citation_doi\\">10.1242/jcs.196659</span>",
+                "rek_copyright": "on",
+                "rek_created_date": "2017-07-29T15:00:44Z",
+                "rek_date": "2017-07-01T00:00:00Z",
+                "rek_depositor": 8524,
+                "rek_depositor_affiliation": 1247,
+                "rek_description": "Hypoxia is a feature of the tumour microenvironment that promotes invasiveness, resistance to chemotherapeutics and cell survival. Our studies identify the transient receptor potential canonical-1 (TRPC1) ion channel as a key component of responses to hypoxia in breast cancer cells. This regulation includes control of specific epithelial to mesenchymal transition (EMT) events and hypoxia-mediated activation of signalling pathways such as activation of the EGFR, STAT3 and the autophagy marker LC3B, through hypoxia-inducible factor-1α (HIF1α)-dependent and -independent mechanisms. TRPC1 regulated HIF1α levels in PTEN-deficient MDA-MB-468 and HCC1569 breast cancer cell lines. This regulation arises from effects on the constitutive translation of HIF1α under normoxic conditions via an Akt-dependent pathway. In further support of the role of TRPC1 in EMT, its expression is closely associated with EMT- and metastasisrelated genes in breast tumours, and is enhanced in basal B breast cancer cell lines. TRPC1 expression is also significantly prognostic for basal breast cancers, particularly those classified as lymph node positive. The defined roles of TRPC1 identified here could be therapeutically exploited for the control of oncogenic pathways in breast cancer cells.",
+                "rek_display_type": 179,
+                "rek_file_downloads": 0,
+                "rek_formatted_abstract": null,
+                "rek_formatted_title": null,
+                "rek_genre": "Journal Article",
+                "rek_genre_type": "Article (original research)",
+                "rek_herdc_notes": null,
+                "rek_object_type": 3,
+                "rek_pid": "UQ:676287",
+                "rek_pubmed_doc_type": null,
+                "rek_scopus_citation_count": 0,
+                "rek_scopus_doc_type": "ar",
+                "rek_security_inherited": null,
+                "rek_status": 2,
+                "rek_subtype": "Article (original research)",
+                "rek_thomson_citation_count": 0,
+                "rek_title": "TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells",
+                "rek_updated_date": "2017-08-20T04:04:37Z",
+                "rek_wok_doc_type": "@",
+              },
+              Object {
+                "fez_record_search_key_access_conditions": null,
+                "fez_record_search_key_acknowledgements": null,
+                "fez_record_search_key_additional_notes": null,
+                "fez_record_search_key_advisory_statement": null,
+                "fez_record_search_key_alternate_genre": Array [],
+                "fez_record_search_key_alternative_title": Array [],
+                "fez_record_search_key_ands_collection_type": null,
+                "fez_record_search_key_architectural_features": Array [],
+                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_assigned_group_id": Array [],
+                "fez_record_search_key_assigned_user_id": Array [],
+                "fez_record_search_key_author": Array [
+                  Object {
+                    "rek_author": "Milevskiy, Michael J. G.",
+                    "rek_author_id": null,
+                    "rek_author_order": 1,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Al-Ejeh, Fares",
+                    "rek_author_id": null,
+                    "rek_author_order": 2,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Saunus, Jodi M.",
+                    "rek_author_id": null,
+                    "rek_author_order": 3,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Northwood, Korinne S.",
+                    "rek_author_id": null,
+                    "rek_author_order": 4,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Bailey, Peter J.",
+                    "rek_author_id": null,
+                    "rek_author_order": 5,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Betts, Joshua A.",
+                    "rek_author_id": null,
+                    "rek_author_order": 6,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "McCart Reed, Amy E.",
+                    "rek_author_id": null,
+                    "rek_author_order": 7,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Nephew, Kenneth P.",
+                    "rek_author_id": null,
+                    "rek_author_order": 8,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Stone, Andrew",
+                    "rek_author_id": null,
+                    "rek_author_order": 9,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Gee, Julia M. W.",
+                    "rek_author_id": null,
+                    "rek_author_order": 10,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Dowhan, Dennis H.",
+                    "rek_author_id": null,
+                    "rek_author_order": 11,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Dray, Eloise",
+                    "rek_author_id": null,
+                    "rek_author_order": 12,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Shewan, Annette M.",
+                    "rek_author_id": null,
+                    "rek_author_order": 13,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "French, Juliet D.",
+                    "rek_author_id": null,
+                    "rek_author_order": 14,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Edwards, Stacey L.",
+                    "rek_author_id": null,
+                    "rek_author_order": 15,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Clark, Susan J.",
+                    "rek_author_id": null,
+                    "rek_author_order": 16,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Lakhani, Sunil R.",
+                    "rek_author_id": null,
+                    "rek_author_order": 17,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author": "Brown, Melissa A.",
+                    "rek_author_id": null,
+                    "rek_author_order": 18,
+                    "rek_author_pid": "UQ:396321",
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_country": Array [],
+                "fez_record_search_key_author_affiliation_full_address": Array [],
+                "fez_record_search_key_author_affiliation_id": Array [],
+                "fez_record_search_key_author_affiliation_name": Array [],
+                "fez_record_search_key_author_id": Array [
+                  Object {
+                    "rek_author_id": 85056,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 1,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 2,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 8065,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 3,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 94252,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 4,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 84824,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 5,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 91829,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 6,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 12312,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 7,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 8,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 9,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 10,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 11,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 91834,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 12,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 961,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 13,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 950,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 14,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 1721,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 15,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 0,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 16,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 3247,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 17,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_author_id": 1671,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 18,
+                    "rek_author_id_pid": "UQ:396321",
+                  },
+                ],
+                "fez_record_search_key_author_role": Array [],
+                "fez_record_search_key_book_title": null,
+                "fez_record_search_key_building_materials": Array [],
+                "fez_record_search_key_category": Array [],
+                "fez_record_search_key_chapter_number": null,
+                "fez_record_search_key_condition": Array [],
+                "fez_record_search_key_conference_dates": null,
+                "fez_record_search_key_conference_id": null,
+                "fez_record_search_key_conference_location": null,
+                "fez_record_search_key_conference_name": null,
+                "fez_record_search_key_construction_date": null,
+                "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_contributor": Array [],
+                "fez_record_search_key_contributor_id": Array [],
+                "fez_record_search_key_convener": null,
+                "fez_record_search_key_corresponding_country": Array [],
+                "fez_record_search_key_corresponding_email": Array [],
+                "fez_record_search_key_corresponding_name": Array [],
+                "fez_record_search_key_corresponding_organisation": Array [],
+                "fez_record_search_key_country_of_issue": null,
+                "fez_record_search_key_coverage_period": Array [],
+                "fez_record_search_key_creator_id": Array [],
+                "fez_record_search_key_creator_name": Array [],
+                "fez_record_search_key_data_volume": null,
+                "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_date_available": null,
+                "fez_record_search_key_date_photo_taken": null,
+                "fez_record_search_key_date_recorded": null,
+                "fez_record_search_key_date_scanned": null,
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1093/hmg/ddw177",
+                  "rek_doi_id": null,
+                  "rek_doi_pid": "UQ:396321",
+                },
+                "fez_record_search_key_edition": null,
+                "fez_record_search_key_end_date": null,
+                "fez_record_search_key_end_page": Object {
+                  "rek_end_page": "3283",
+                  "rek_end_page_id": null,
+                  "rek_end_page_pid": "UQ:396321",
+                },
+                "fez_record_search_key_fields_of_research": Array [],
+                "fez_record_search_key_file_attachment_access_condition": Array [],
+                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_name": Array [
+                  Object {
+                    "rek_file_attachment_name": "FezACML_UQ_396321.xml",
+                    "rek_file_attachment_name_id": null,
+                    "rek_file_attachment_name_order": 1,
+                    "rek_file_attachment_name_pid": "UQ:396321",
+                  },
+                ],
+                "fez_record_search_key_geographic_area": Array [],
+                "fez_record_search_key_grant_acronym": Array [],
+                "fez_record_search_key_grant_agency": Array [],
+                "fez_record_search_key_grant_agency_id": Array [],
+                "fez_record_search_key_grant_id": Array [],
+                "fez_record_search_key_grant_text": Array [],
+                "fez_record_search_key_herdc_code": Object {
+                  "rek_herdc_code": 450009,
+                  "rek_herdc_code_id": null,
+                  "rek_herdc_code_pid": "UQ:396321",
+                },
+                "fez_record_search_key_herdc_status": Object {
+                  "rek_herdc_status": 453220,
+                  "rek_herdc_status_id": null,
+                  "rek_herdc_status_pid": "UQ:396321",
+                },
+                "fez_record_search_key_identifier": Array [],
+                "fez_record_search_key_institutional_status": Object {
+                  "rek_institutional_status": 453223,
+                  "rek_institutional_status_id": null,
+                  "rek_institutional_status_pid": "UQ:396321",
+                },
+                "fez_record_search_key_interior_features": Array [],
+                "fez_record_search_key_isbn": Array [],
+                "fez_record_search_key_isdatasetof": Array [],
+                "fez_record_search_key_isderivationof": Array [],
+                "fez_record_search_key_isi_loc": Object {
+                  "rek_isi_loc": "000393077300011",
+                  "rek_isi_loc_id": null,
+                  "rek_isi_loc_pid": "UQ:396321",
+                },
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:3825",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:218311",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 2,
+                    "rek_ismemberof_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:171723",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 3,
+                    "rek_ismemberof_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:3858",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 4,
+                    "rek_ismemberof_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:3860",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 5,
+                    "rek_ismemberof_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:3831",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 6,
+                    "rek_ismemberof_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:273541",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 7,
+                    "rek_ismemberof_pid": "UQ:396321",
+                  },
+                ],
+                "fez_record_search_key_issn": Array [
+                  Object {
+                    "rek_issn": "1460-2083",
+                    "rek_issn_id": null,
+                    "rek_issn_order": 1,
+                    "rek_issn_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_issn": "0964-6906",
+                    "rek_issn_id": null,
+                    "rek_issn_order": 2,
+                    "rek_issn_pid": "UQ:396321",
+                  },
+                ],
+                "fez_record_search_key_issue_number": Object {
+                  "rek_issue_number": "15",
+                  "rek_issue_number_id": null,
+                  "rek_issue_number_pid": "UQ:396321",
+                },
+                "fez_record_search_key_job_number": null,
+                "fez_record_search_key_journal_name": Object {
+                  "rek_journal_name": "Human Molecular Genetics",
+                  "rek_journal_name_id": null,
+                  "rek_journal_name_pid": "UQ:396321",
+                },
+                "fez_record_search_key_keywords": Array [
+                  Object {
+                    "rek_keywords": "Breast cancer",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 1,
+                    "rek_keywords_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_keywords": "Endocrine therapy",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 2,
+                    "rek_keywords_pid": "UQ:396321",
+                  },
+                  Object {
+                    "rek_keywords": "HOTAIR",
+                    "rek_keywords_id": null,
+                    "rek_keywords_order": 3,
+                    "rek_keywords_pid": "UQ:396321",
+                  },
+                ],
+                "fez_record_search_key_language": Array [
+                  Object {
+                    "rek_language": "eng",
+                    "rek_language_id": null,
+                    "rek_language_order": 1,
+                    "rek_language_pid": "UQ:396321",
+                  },
+                ],
+                "fez_record_search_key_language_of_book_title": Array [],
+                "fez_record_search_key_language_of_journal_name": Array [],
+                "fez_record_search_key_language_of_proceedings_title": Array [],
+                "fez_record_search_key_language_of_title": Array [],
+                "fez_record_search_key_length": null,
+                "fez_record_search_key_license": null,
+                "fez_record_search_key_link": Array [],
+                "fez_record_search_key_link_description": Array [],
+                "fez_record_search_key_location": Array [],
+                "fez_record_search_key_native_script_book_title": null,
+                "fez_record_search_key_native_script_conference_name": null,
+                "fez_record_search_key_native_script_journal_name": null,
+                "fez_record_search_key_native_script_proceedings_title": null,
+                "fez_record_search_key_native_script_title": null,
+                "fez_record_search_key_newspaper": null,
+                "fez_record_search_key_notes": null,
+                "fez_record_search_key_oa_embargo_days": null,
+                "fez_record_search_key_oa_notes": null,
+                "fez_record_search_key_oa_status": Object {
+                  "rek_oa_status": 453693,
+                  "rek_oa_status_id": null,
+                  "rek_oa_status_pid": "UQ:396321",
+                },
+                "fez_record_search_key_org_name": null,
+                "fez_record_search_key_org_unit_name": null,
+                "fez_record_search_key_original_format": null,
+                "fez_record_search_key_parent_publication": null,
+                "fez_record_search_key_patent_number": null,
+                "fez_record_search_key_period": Array [],
+                "fez_record_search_key_place_of_publication": Object {
+                  "rek_place_of_publication": "Oxford, United Kingdom",
+                  "rek_place_of_publication_id": null,
+                  "rek_place_of_publication_pid": "UQ:396321",
+                },
+                "fez_record_search_key_proceedings_title": null,
+                "fez_record_search_key_project_description": null,
+                "fez_record_search_key_project_id": null,
+                "fez_record_search_key_project_name": null,
+                "fez_record_search_key_project_start_date": null,
+                "fez_record_search_key_publisher": Object {
+                  "rek_publisher": "Oxford University Press",
+                  "rek_publisher_id": null,
+                  "rek_publisher_pid": "UQ:396321",
+                },
+                "fez_record_search_key_pubmed_id": null,
+                "fez_record_search_key_refereed": Object {
+                  "rek_refereed": 0,
+                  "rek_refereed_id": null,
+                  "rek_refereed_pid": "UQ:396321",
+                },
+                "fez_record_search_key_refereed_source": Object {
+                  "rek_refereed_source": 453635,
+                  "rek_refereed_source_id": null,
+                  "rek_refereed_source_pid": "UQ:396321",
+                },
+                "fez_record_search_key_related_datasets": null,
+                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_report_number": null,
+                "fez_record_search_key_retracted": Object {
+                  "rek_retracted": 0,
+                  "rek_retracted_id": null,
+                  "rek_retracted_pid": "UQ:396321",
+                },
+                "fez_record_search_key_rights": null,
+                "fez_record_search_key_roman_script_book_title": null,
+                "fez_record_search_key_roman_script_conference_name": null,
+                "fez_record_search_key_roman_script_journal_name": null,
+                "fez_record_search_key_roman_script_proceedings_title": null,
+                "fez_record_search_key_roman_script_title": null,
+                "fez_record_search_key_scale": null,
+                "fez_record_search_key_scopus_id": Object {
+                  "rek_scopus_id": "2-s2.0-85014391875",
+                  "rek_scopus_id_id": null,
+                  "rek_scopus_id_pid": "UQ:396321",
+                },
+                "fez_record_search_key_section": null,
+                "fez_record_search_key_seo_code": Array [],
+                "fez_record_search_key_series": null,
+                "fez_record_search_key_software_required": Array [],
+                "fez_record_search_key_source": null,
+                "fez_record_search_key_start_date": null,
+                "fez_record_search_key_start_page": Object {
+                  "rek_start_page": "3269",
+                  "rek_start_page_id": null,
+                  "rek_start_page_pid": "UQ:396321",
+                },
+                "fez_record_search_key_structural_systems": Array [],
+                "fez_record_search_key_style": Array [],
+                "fez_record_search_key_subcategory": Array [],
+                "fez_record_search_key_subject": Array [],
+                "fez_record_search_key_supervisor": Array [],
+                "fez_record_search_key_supervisor_id": Array [],
+                "fez_record_search_key_surrounding_features": Array [],
+                "fez_record_search_key_time_period_end_date": null,
+                "fez_record_search_key_time_period_start_date": null,
+                "fez_record_search_key_total_chapters": null,
+                "fez_record_search_key_total_pages": Object {
+                  "rek_total_pages": "40",
+                  "rek_total_pages_id": null,
+                  "rek_total_pages_pid": "UQ:396321",
+                },
+                "fez_record_search_key_transcript": null,
+                "fez_record_search_key_translated_book_title": null,
+                "fez_record_search_key_translated_conference_name": null,
+                "fez_record_search_key_translated_journal_name": null,
+                "fez_record_search_key_translated_newspaper": null,
+                "fez_record_search_key_translated_proceedings_title": null,
+                "fez_record_search_key_translated_title": null,
+                "fez_record_search_key_type_of_data": Array [],
+                "fez_record_search_key_volume_number": Object {
+                  "rek_volume_number": "25",
+                  "rek_volume_number_id": null,
+                  "rek_volume_number_pid": "UQ:396321",
+                },
+                "rek_altmetric_id": 9271343,
+                "rek_altmetric_score": 2,
+                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Milevskiy, Michael J. G.\\" href=\\"/list/author_id/85056/\\">Milevskiy, Michael J. G.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Al-Ejeh, Fares\\" href=\\"/list/author/Al-Ejeh%2C+Fares/\\">Al-Ejeh, Fares</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Saunus, Jodi M.\\" href=\\"/list/author_id/8065/\\">Saunus, Jodi M.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Northwood, Korinne S.\\" href=\\"/list/author_id/94252/\\">Northwood, Korinne S.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Bailey, Peter J.\\" href=\\"/list/author_id/84824/\\">Bailey, Peter J.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Betts, Joshua A.\\" href=\\"/list/author_id/91829/\\">Betts, Joshua A.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for McCart Reed, Amy E.\\" href=\\"/list/author_id/12312/\\">McCart Reed, Amy E.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Nephew, Kenneth P.\\" href=\\"/list/author/Nephew%2C+Kenneth+P./\\">Nephew, Kenneth P.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Stone, Andrew\\" href=\\"/list/author/Stone%2C+Andrew/\\">Stone, Andrew</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Gee, Julia M. W.\\" href=\\"/list/author/Gee%2C+Julia+M.+W./\\">Gee, Julia M. W.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Dowhan, Dennis H.\\" href=\\"/list/author/Dowhan%2C+Dennis+H./\\">Dowhan, Dennis H.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Dray, Eloise\\" href=\\"/list/author_id/91834/\\">Dray, Eloise</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Shewan, Annette M.\\" href=\\"/list/author_id/961/\\">Shewan, Annette M.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for French, Juliet D.\\" href=\\"/list/author_id/950/\\">French, Juliet D.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Edwards, Stacey L.\\" href=\\"/list/author_id/1721/\\">Edwards, Stacey L.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Clark, Susan J.\\" href=\\"/list/author/Clark%2C+Susan+J./\\">Clark, Susan J.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Lakhani, Sunil R.\\" href=\\"/list/author_id/3247/\\">Lakhani, Sunil R.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Brown, Melissa A.\\" href=\\"/list/author_id/1671/\\">Brown, Melissa A.</a> (<span class=\\"citation_date\\">2016</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer\\" href=\\"/view/UQ:396321\\">Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer</a>. <i><span class=\\"citation_journal_name\\">Human Molecular Genetics</span></i>, <i><span class=\\"citation_volume_number\\">25</span></i> <span class=\\"citation_issue_number\\">15</span>: <span class=\\"citation_start_page\\">3269</span>-<span class=\\"citation_end_page\\">3283</span>. doi:<span class=\\"citation_doi\\">10.1093/hmg/ddw177</span>",
+                "rek_copyright": "on",
+                "rek_created_date": "2016-07-15T11:49:38Z",
+                "rek_date": "2016-07-04T00:00:00Z",
+                "rek_depositor": 5371,
+                "rek_depositor_affiliation": 881,
+                "rek_description": null,
+                "rek_display_type": 179,
+                "rek_file_downloads": 0,
+                "rek_formatted_abstract": null,
+                "rek_formatted_title": null,
+                "rek_genre": "Journal Article",
+                "rek_genre_type": null,
+                "rek_herdc_notes": null,
+                "rek_object_type": 3,
+                "rek_pid": "UQ:396321",
+                "rek_pubmed_doc_type": null,
+                "rek_scopus_citation_count": 2,
+                "rek_scopus_doc_type": "ar",
+                "rek_security_inherited": null,
+                "rek_status": 2,
+                "rek_subtype": "Article (original research)",
+                "rek_thomson_citation_count": 0,
+                "rek_title": "Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer",
+                "rek_updated_date": "2017-08-20T03:21:32Z",
+                "rek_wok_doc_type": "@",
+              },
+              Object {
+                "fez_record_search_key_access_conditions": null,
+                "fez_record_search_key_acknowledgements": null,
+                "fez_record_search_key_additional_notes": null,
+                "fez_record_search_key_advisory_statement": null,
+                "fez_record_search_key_alternate_genre": Array [],
+                "fez_record_search_key_alternative_title": Array [],
+                "fez_record_search_key_ands_collection_type": null,
+                "fez_record_search_key_architectural_features": Array [],
+                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_assigned_group_id": Array [],
+                "fez_record_search_key_assigned_user_id": Array [],
+                "fez_record_search_key_author": Array [
+                  Object {
+                    "rek_author": "Peters, Amelia A.",
+                    "rek_author_id": null,
+                    "rek_author_order": 1,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Milevskiy, Michael J. G.",
+                    "rek_author_id": null,
+                    "rek_author_order": 2,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Lee, WeiC.",
+                    "rek_author_id": null,
+                    "rek_author_order": 3,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Curry, Merril C.",
+                    "rek_author_id": null,
+                    "rek_author_order": 4,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Smart, Chanel E.",
+                    "rek_author_id": null,
+                    "rek_author_order": 5,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Saunus, Jodi M.",
+                    "rek_author_id": null,
+                    "rek_author_order": 6,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Reid, Lynne",
+                    "rek_author_id": null,
+                    "rek_author_order": 7,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "da Silva, Leonard",
+                    "rek_author_id": null,
+                    "rek_author_order": 8,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Marcial, Daneth L.",
+                    "rek_author_id": null,
+                    "rek_author_order": 9,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Dray, Eloise",
+                    "rek_author_id": null,
+                    "rek_author_order": 10,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Brown, Melissa A.",
+                    "rek_author_id": null,
+                    "rek_author_order": 11,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Lakhani, Sunil R.",
+                    "rek_author_id": null,
+                    "rek_author_order": 12,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Roberts-Thomson, Sarah J.",
+                    "rek_author_id": null,
+                    "rek_author_order": 13,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author": "Monteith, Gregory R.",
+                    "rek_author_id": null,
+                    "rek_author_order": 14,
+                    "rek_author_pid": "UQ:386763",
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_country": Array [],
+                "fez_record_search_key_author_affiliation_full_address": Array [],
+                "fez_record_search_key_author_affiliation_id": Array [],
+                "fez_record_search_key_author_affiliation_name": Array [],
+                "fez_record_search_key_author_id": Array [
+                  Object {
+                    "rek_author_id": 79700,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 1,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 85056,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 2,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 79190,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 3,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 78006,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 4,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 8248,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 5,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 8065,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 6,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 7893,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 7,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 3613,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 8,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 1206998,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 9,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 91834,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 10,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 1671,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 11,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 3247,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 12,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 973,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 13,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_author_id": 972,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 14,
+                    "rek_author_id_pid": "UQ:386763",
+                  },
+                ],
+                "fez_record_search_key_author_role": Array [],
+                "fez_record_search_key_book_title": null,
+                "fez_record_search_key_building_materials": Array [],
+                "fez_record_search_key_category": Array [],
+                "fez_record_search_key_chapter_number": null,
+                "fez_record_search_key_condition": Array [],
+                "fez_record_search_key_conference_dates": null,
+                "fez_record_search_key_conference_id": null,
+                "fez_record_search_key_conference_location": null,
+                "fez_record_search_key_conference_name": null,
+                "fez_record_search_key_construction_date": null,
+                "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_contributor": Array [],
+                "fez_record_search_key_contributor_id": Array [],
+                "fez_record_search_key_convener": null,
+                "fez_record_search_key_corresponding_country": Array [],
+                "fez_record_search_key_corresponding_email": Array [],
+                "fez_record_search_key_corresponding_name": Array [],
+                "fez_record_search_key_corresponding_organisation": Array [],
+                "fez_record_search_key_country_of_issue": null,
+                "fez_record_search_key_coverage_period": Array [],
+                "fez_record_search_key_creator_id": Array [],
+                "fez_record_search_key_creator_name": Array [],
+                "fez_record_search_key_data_volume": null,
+                "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_date_available": null,
+                "fez_record_search_key_date_photo_taken": null,
+                "fez_record_search_key_date_recorded": null,
+                "fez_record_search_key_date_scanned": null,
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1038/srep25505",
+                  "rek_doi_id": null,
+                  "rek_doi_pid": "UQ:386763",
+                },
+                "fez_record_search_key_edition": null,
+                "fez_record_search_key_end_date": null,
+                "fez_record_search_key_end_page": null,
+                "fez_record_search_key_fields_of_research": Array [],
+                "fez_record_search_key_file_attachment_access_condition": Array [],
+                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_name": Array [
+                  Object {
+                    "rek_file_attachment_name": "FezACML_UQ_386763.xml",
+                    "rek_file_attachment_name_id": null,
+                    "rek_file_attachment_name_order": 1,
+                    "rek_file_attachment_name_pid": "UQ:386763",
+                  },
+                ],
+                "fez_record_search_key_geographic_area": Array [],
+                "fez_record_search_key_grant_acronym": Array [],
+                "fez_record_search_key_grant_agency": Array [],
+                "fez_record_search_key_grant_agency_id": Array [],
+                "fez_record_search_key_grant_id": Array [],
+                "fez_record_search_key_grant_text": Array [],
+                "fez_record_search_key_herdc_code": Object {
+                  "rek_herdc_code": 450009,
+                  "rek_herdc_code_id": null,
+                  "rek_herdc_code_pid": "UQ:386763",
+                },
+                "fez_record_search_key_herdc_status": Object {
+                  "rek_herdc_status": 453220,
+                  "rek_herdc_status_id": null,
+                  "rek_herdc_status_pid": "UQ:386763",
+                },
+                "fez_record_search_key_identifier": Array [],
+                "fez_record_search_key_institutional_status": Object {
+                  "rek_institutional_status": 453223,
+                  "rek_institutional_status_id": null,
+                  "rek_institutional_status_pid": "UQ:386763",
+                },
+                "fez_record_search_key_interior_features": Array [],
+                "fez_record_search_key_isbn": Array [],
+                "fez_record_search_key_isdatasetof": Array [],
+                "fez_record_search_key_isderivationof": Array [],
+                "fez_record_search_key_isi_loc": Object {
+                  "rek_isi_loc": "000375545900001",
+                  "rek_isi_loc_id": null,
+                  "rek_isi_loc_pid": "UQ:386763",
+                },
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:3833",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:218311",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 2,
+                    "rek_ismemberof_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:3825",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 3,
+                    "rek_ismemberof_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:171723",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 4,
+                    "rek_ismemberof_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:3831",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 5,
+                    "rek_ismemberof_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:13602",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 6,
+                    "rek_ismemberof_pid": "UQ:386763",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:273541",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 7,
+                    "rek_ismemberof_pid": "UQ:386763",
+                  },
+                ],
+                "fez_record_search_key_issn": Array [
+                  Object {
+                    "rek_issn": "2045-2322",
+                    "rek_issn_id": null,
+                    "rek_issn_order": 1,
+                    "rek_issn_pid": "UQ:386763",
+                  },
+                ],
+                "fez_record_search_key_issue_number": null,
+                "fez_record_search_key_job_number": null,
+                "fez_record_search_key_journal_name": Object {
+                  "rek_journal_name": "Scientific Reports",
+                  "rek_journal_name_id": null,
+                  "rek_journal_name_pid": "UQ:386763",
+                },
+                "fez_record_search_key_keywords": Array [],
+                "fez_record_search_key_language": Array [
+                  Object {
+                    "rek_language": "eng",
+                    "rek_language_id": null,
+                    "rek_language_order": 1,
+                    "rek_language_pid": "UQ:386763",
+                  },
+                ],
+                "fez_record_search_key_language_of_book_title": Array [],
+                "fez_record_search_key_language_of_journal_name": Array [],
+                "fez_record_search_key_language_of_proceedings_title": Array [],
+                "fez_record_search_key_language_of_title": Array [],
+                "fez_record_search_key_length": null,
+                "fez_record_search_key_license": null,
+                "fez_record_search_key_link": Array [],
+                "fez_record_search_key_link_description": Array [],
+                "fez_record_search_key_location": Array [],
+                "fez_record_search_key_native_script_book_title": null,
+                "fez_record_search_key_native_script_conference_name": null,
+                "fez_record_search_key_native_script_journal_name": null,
+                "fez_record_search_key_native_script_proceedings_title": null,
+                "fez_record_search_key_native_script_title": null,
+                "fez_record_search_key_newspaper": null,
+                "fez_record_search_key_notes": null,
+                "fez_record_search_key_oa_embargo_days": null,
+                "fez_record_search_key_oa_notes": null,
+                "fez_record_search_key_oa_status": Object {
+                  "rek_oa_status": 453693,
+                  "rek_oa_status_id": null,
+                  "rek_oa_status_pid": "UQ:386763",
+                },
+                "fez_record_search_key_org_name": null,
+                "fez_record_search_key_org_unit_name": null,
+                "fez_record_search_key_original_format": null,
+                "fez_record_search_key_parent_publication": null,
+                "fez_record_search_key_patent_number": null,
+                "fez_record_search_key_period": Array [],
+                "fez_record_search_key_place_of_publication": Object {
+                  "rek_place_of_publication": "London, United Kingdom",
+                  "rek_place_of_publication_id": null,
+                  "rek_place_of_publication_pid": "UQ:386763",
+                },
+                "fez_record_search_key_proceedings_title": null,
+                "fez_record_search_key_project_description": null,
+                "fez_record_search_key_project_id": null,
+                "fez_record_search_key_project_name": null,
+                "fez_record_search_key_project_start_date": null,
+                "fez_record_search_key_publisher": Object {
+                  "rek_publisher": "Nature Publishing",
+                  "rek_publisher_id": null,
+                  "rek_publisher_pid": "UQ:386763",
+                },
+                "fez_record_search_key_pubmed_id": null,
+                "fez_record_search_key_refereed": Object {
+                  "rek_refereed": 0,
+                  "rek_refereed_id": null,
+                  "rek_refereed_pid": "UQ:386763",
+                },
+                "fez_record_search_key_refereed_source": Object {
+                  "rek_refereed_source": 453635,
+                  "rek_refereed_source_id": null,
+                  "rek_refereed_source_pid": "UQ:386763",
+                },
+                "fez_record_search_key_related_datasets": null,
+                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_report_number": null,
+                "fez_record_search_key_retracted": Object {
+                  "rek_retracted": 0,
+                  "rek_retracted_id": null,
+                  "rek_retracted_pid": "UQ:386763",
+                },
+                "fez_record_search_key_rights": null,
+                "fez_record_search_key_roman_script_book_title": null,
+                "fez_record_search_key_roman_script_conference_name": null,
+                "fez_record_search_key_roman_script_journal_name": null,
+                "fez_record_search_key_roman_script_proceedings_title": null,
+                "fez_record_search_key_roman_script_title": null,
+                "fez_record_search_key_scale": null,
+                "fez_record_search_key_scopus_id": Object {
+                  "rek_scopus_id": "2-s2.0-84966693466",
+                  "rek_scopus_id_id": null,
+                  "rek_scopus_id_pid": "UQ:386763",
+                },
+                "fez_record_search_key_section": null,
+                "fez_record_search_key_seo_code": Array [],
+                "fez_record_search_key_series": null,
+                "fez_record_search_key_software_required": Array [],
+                "fez_record_search_key_source": null,
+                "fez_record_search_key_start_date": null,
+                "fez_record_search_key_start_page": null,
+                "fez_record_search_key_structural_systems": Array [],
+                "fez_record_search_key_style": Array [],
+                "fez_record_search_key_subcategory": Array [],
+                "fez_record_search_key_subject": Array [],
+                "fez_record_search_key_supervisor": Array [],
+                "fez_record_search_key_supervisor_id": Array [],
+                "fez_record_search_key_surrounding_features": Array [],
+                "fez_record_search_key_time_period_end_date": null,
+                "fez_record_search_key_time_period_start_date": null,
+                "fez_record_search_key_total_chapters": null,
+                "fez_record_search_key_total_pages": Object {
+                  "rek_total_pages": "13",
+                  "rek_total_pages_id": null,
+                  "rek_total_pages_pid": "UQ:386763",
+                },
+                "fez_record_search_key_transcript": null,
+                "fez_record_search_key_translated_book_title": null,
+                "fez_record_search_key_translated_conference_name": null,
+                "fez_record_search_key_translated_journal_name": null,
+                "fez_record_search_key_translated_newspaper": null,
+                "fez_record_search_key_translated_proceedings_title": null,
+                "fez_record_search_key_translated_title": null,
+                "fez_record_search_key_type_of_data": Array [],
+                "fez_record_search_key_volume_number": Object {
+                  "rek_volume_number": "6",
+                  "rek_volume_number_id": null,
+                  "rek_volume_number_pid": "UQ:386763",
+                },
+                "rek_altmetric_id": 7262152,
+                "rek_altmetric_score": 2,
+                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Peters, Amelia A.\\" href=\\"/list/author_id/79700/\\">Peters, Amelia A.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Milevskiy, Michael J. G.\\" href=\\"/list/author_id/85056/\\">Milevskiy, Michael J. G.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Lee, WeiC.\\" href=\\"/list/author_id/79190/\\">Lee, WeiC.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Curry, Merril C.\\" href=\\"/list/author_id/78006/\\">Curry, Merril C.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Smart, Chanel E.\\" href=\\"/list/author_id/8248/\\">Smart, Chanel E.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Saunus, Jodi M.\\" href=\\"/list/author_id/8065/\\">Saunus, Jodi M.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Reid, Lynne\\" href=\\"/list/author_id/7893/\\">Reid, Lynne</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for da Silva, Leonard\\" href=\\"/list/author_id/3613/\\">da Silva, Leonard</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Marcial, Daneth L.\\" href=\\"/list/author_id/1206998/\\">Marcial, Daneth L.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Dray, Eloise\\" href=\\"/list/author_id/91834/\\">Dray, Eloise</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Brown, Melissa A.\\" href=\\"/list/author_id/1671/\\">Brown, Melissa A.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Lakhani, Sunil R.\\" href=\\"/list/author_id/3247/\\">Lakhani, Sunil R.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Roberts-Thomson, Sarah J.\\" href=\\"/list/author_id/973/\\">Roberts-Thomson, Sarah J.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Monteith, Gregory R.\\" href=\\"/list/author_id/972/\\">Monteith, Gregory R.</a> (<span class=\\"citation_date\\">2016</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: The calcium pump plasma membrane Ca(2+)-ATPase 2 (PMCA2) regulates breast cancer cell proliferation and sensitivity to doxorubicin\\" href=\\"/view/UQ:386763\\">The calcium pump plasma membrane Ca(2+)-ATPase 2 (PMCA2) regulates breast cancer cell proliferation and sensitivity to doxorubicin</a>. <i><span class=\\"citation_journal_name\\">Scientific Reports</span></i>, <i><span class=\\"citation_volume_number\\">6</span></i>  . doi:<span class=\\"citation_doi\\">10.1038/srep25505</span>",
+                "rek_copyright": "on",
+                "rek_created_date": "2016-05-13T09:35:46Z",
+                "rek_date": "2016-05-05T00:00:00Z",
+                "rek_depositor": 939,
+                "rek_depositor_affiliation": 845,
+                "rek_description": null,
+                "rek_display_type": 179,
+                "rek_file_downloads": 0,
+                "rek_formatted_abstract": null,
+                "rek_formatted_title": null,
+                "rek_genre": "Journal Article",
+                "rek_genre_type": null,
+                "rek_herdc_notes": null,
+                "rek_object_type": 3,
+                "rek_pid": "UQ:386763",
+                "rek_pubmed_doc_type": null,
+                "rek_scopus_citation_count": 3,
+                "rek_scopus_doc_type": "ar",
+                "rek_security_inherited": null,
+                "rek_status": 2,
+                "rek_subtype": "Article (original research)",
+                "rek_thomson_citation_count": 3,
+                "rek_title": "The calcium pump plasma membrane Ca(2+)-ATPase 2 (PMCA2) regulates breast cancer cell proliferation and sensitivity to doxorubicin",
+                "rek_updated_date": "2017-08-20T03:16:56Z",
+                "rek_wok_doc_type": "@",
+              },
+              Object {
+                "fez_record_search_key_access_conditions": null,
+                "fez_record_search_key_acknowledgements": null,
+                "fez_record_search_key_additional_notes": null,
+                "fez_record_search_key_advisory_statement": null,
+                "fez_record_search_key_alternate_genre": Array [],
+                "fez_record_search_key_alternative_title": Array [],
+                "fez_record_search_key_ands_collection_type": null,
+                "fez_record_search_key_architectural_features": Array [],
+                "fez_record_search_key_article_number": null,
+                "fez_record_search_key_assigned_group_id": Array [],
+                "fez_record_search_key_assigned_user_id": Array [],
+                "fez_record_search_key_author": Array [
+                  Object {
+                    "rek_author": "Wronski, A.",
+                    "rek_author_id": null,
+                    "rek_author_order": 1,
+                    "rek_author_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author": "Sandhu, G. K.",
+                    "rek_author_id": null,
+                    "rek_author_order": 2,
+                    "rek_author_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author": "Milevskiy, M. J.",
+                    "rek_author_id": null,
+                    "rek_author_order": 3,
+                    "rek_author_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author": "Brewster, B. L.",
+                    "rek_author_id": null,
+                    "rek_author_order": 4,
+                    "rek_author_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author": "Bridge, J. A.",
+                    "rek_author_id": null,
+                    "rek_author_order": 5,
+                    "rek_author_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author": "Shewan, A. M.",
+                    "rek_author_id": null,
+                    "rek_author_order": 6,
+                    "rek_author_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author": "Edwards, S. L.",
+                    "rek_author_id": null,
+                    "rek_author_order": 7,
+                    "rek_author_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author": "French, J. D.",
+                    "rek_author_id": null,
+                    "rek_author_order": 8,
+                    "rek_author_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author": "Brown, M. A.",
+                    "rek_author_id": null,
+                    "rek_author_order": 9,
+                    "rek_author_pid": "UQ:384236",
+                  },
+                ],
+                "fez_record_search_key_author_affiliation_country": Array [],
+                "fez_record_search_key_author_affiliation_full_address": Array [],
+                "fez_record_search_key_author_affiliation_id": Array [],
+                "fez_record_search_key_author_affiliation_name": Array [],
+                "fez_record_search_key_author_id": Array [
+                  Object {
+                    "rek_author_id": 8979,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 1,
+                    "rek_author_id_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author_id": 94306,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 2,
+                    "rek_author_id_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author_id": 85056,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 3,
+                    "rek_author_id_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author_id": 4869,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 4,
+                    "rek_author_id_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author_id": 90030,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 5,
+                    "rek_author_id_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author_id": 961,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 6,
+                    "rek_author_id_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author_id": 1721,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 7,
+                    "rek_author_id_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author_id": 950,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 8,
+                    "rek_author_id_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_author_id": 1671,
+                    "rek_author_id_id": null,
+                    "rek_author_id_order": 9,
+                    "rek_author_id_pid": "UQ:384236",
+                  },
+                ],
+                "fez_record_search_key_author_role": Array [],
+                "fez_record_search_key_book_title": null,
+                "fez_record_search_key_building_materials": Array [],
+                "fez_record_search_key_category": Array [],
+                "fez_record_search_key_chapter_number": null,
+                "fez_record_search_key_condition": Array [],
+                "fez_record_search_key_conference_dates": null,
+                "fez_record_search_key_conference_id": null,
+                "fez_record_search_key_conference_location": null,
+                "fez_record_search_key_conference_name": null,
+                "fez_record_search_key_construction_date": null,
+                "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_contributor": Array [],
+                "fez_record_search_key_contributor_id": Array [],
+                "fez_record_search_key_convener": null,
+                "fez_record_search_key_corresponding_country": Array [],
+                "fez_record_search_key_corresponding_email": Array [],
+                "fez_record_search_key_corresponding_name": Array [],
+                "fez_record_search_key_corresponding_organisation": Array [],
+                "fez_record_search_key_country_of_issue": null,
+                "fez_record_search_key_coverage_period": Array [],
+                "fez_record_search_key_creator_id": Array [],
+                "fez_record_search_key_creator_name": Array [],
+                "fez_record_search_key_data_volume": null,
+                "fez_record_search_key_datastream_policy": null,
+                "fez_record_search_key_date_available": null,
+                "fez_record_search_key_date_photo_taken": null,
+                "fez_record_search_key_date_recorded": null,
+                "fez_record_search_key_date_scanned": null,
+                "fez_record_search_key_doi": Object {
+                  "rek_doi": "10.1038/oncsis.2016.27",
+                  "rek_doi_id": null,
+                  "rek_doi_pid": "UQ:384236",
+                },
+                "fez_record_search_key_edition": null,
+                "fez_record_search_key_end_date": null,
+                "fez_record_search_key_end_page": Object {
+                  "rek_end_page": "e218.9",
+                  "rek_end_page_id": null,
+                  "rek_end_page_pid": "UQ:384236",
+                },
+                "fez_record_search_key_fields_of_research": Array [],
+                "fez_record_search_key_file_attachment_access_condition": Array [],
+                "fez_record_search_key_file_attachment_embargo_date": Array [],
+                "fez_record_search_key_file_attachment_name": Array [],
+                "fez_record_search_key_geographic_area": Array [],
+                "fez_record_search_key_grant_acronym": Array [],
+                "fez_record_search_key_grant_agency": Array [],
+                "fez_record_search_key_grant_agency_id": Array [],
+                "fez_record_search_key_grant_id": Array [],
+                "fez_record_search_key_grant_text": Array [],
+                "fez_record_search_key_herdc_code": Object {
+                  "rek_herdc_code": 450009,
+                  "rek_herdc_code_id": null,
+                  "rek_herdc_code_pid": "UQ:384236",
+                },
+                "fez_record_search_key_herdc_status": Object {
+                  "rek_herdc_status": 453220,
+                  "rek_herdc_status_id": null,
+                  "rek_herdc_status_pid": "UQ:384236",
+                },
+                "fez_record_search_key_identifier": Array [],
+                "fez_record_search_key_institutional_status": Object {
+                  "rek_institutional_status": 453223,
+                  "rek_institutional_status_id": null,
+                  "rek_institutional_status_pid": "UQ:384236",
+                },
+                "fez_record_search_key_interior_features": Array [],
+                "fez_record_search_key_isbn": Array [],
+                "fez_record_search_key_isdatasetof": Array [],
+                "fez_record_search_key_isderivationof": Array [],
+                "fez_record_search_key_isi_loc": Object {
+                  "rek_isi_loc": "000375278100007",
+                  "rek_isi_loc_id": null,
+                  "rek_isi_loc_pid": "UQ:384236",
+                },
+                "fez_record_search_key_ismemberof": Array [
+                  Object {
+                    "rek_ismemberof": "UQ:3825",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 1,
+                    "rek_ismemberof_pid": "UQ:384236",
+                  },
+                  Object {
+                    "rek_ismemberof": "UQ:218311",
+                    "rek_ismemberof_id": null,
+                    "rek_ismemberof_order": 2,
+                    "rek_ismemberof_pid": "UQ:384236",
+                  },
+                ],
+                "fez_record_search_key_issn": Array [
+                  Object {
+                    "rek_issn": "2157-9024",
+                    "rek_issn_id": null,
+                    "rek_issn_order": 1,
+                    "rek_issn_pid": "UQ:384236",
+                  },
+                ],
+                "fez_record_search_key_issue_number": null,
+                "fez_record_search_key_job_number": null,
+                "fez_record_search_key_journal_name": Object {
+                  "rek_journal_name": "Oncogenesis",
+                  "rek_journal_name_id": null,
+                  "rek_journal_name_pid": "UQ:384236",
+                },
+                "fez_record_search_key_keywords": Array [],
+                "fez_record_search_key_language": Array [
+                  Object {
+                    "rek_language": "eng",
+                    "rek_language_id": null,
+                    "rek_language_order": 1,
+                    "rek_language_pid": "UQ:384236",
+                  },
+                ],
+                "fez_record_search_key_language_of_book_title": Array [],
+                "fez_record_search_key_language_of_journal_name": Array [],
+                "fez_record_search_key_language_of_proceedings_title": Array [],
+                "fez_record_search_key_language_of_title": Array [],
+                "fez_record_search_key_length": null,
+                "fez_record_search_key_license": null,
+                "fez_record_search_key_link": Array [],
+                "fez_record_search_key_link_description": Array [],
+                "fez_record_search_key_location": Array [],
+                "fez_record_search_key_native_script_book_title": null,
+                "fez_record_search_key_native_script_conference_name": null,
+                "fez_record_search_key_native_script_journal_name": null,
+                "fez_record_search_key_native_script_proceedings_title": null,
+                "fez_record_search_key_native_script_title": null,
+                "fez_record_search_key_newspaper": null,
+                "fez_record_search_key_notes": null,
+                "fez_record_search_key_oa_embargo_days": null,
+                "fez_record_search_key_oa_notes": null,
+                "fez_record_search_key_oa_status": Object {
+                  "rek_oa_status": 453693,
+                  "rek_oa_status_id": null,
+                  "rek_oa_status_pid": "UQ:384236",
+                },
+                "fez_record_search_key_org_name": null,
+                "fez_record_search_key_org_unit_name": null,
+                "fez_record_search_key_original_format": null,
+                "fez_record_search_key_parent_publication": null,
+                "fez_record_search_key_patent_number": null,
+                "fez_record_search_key_period": Array [],
+                "fez_record_search_key_place_of_publication": Object {
+                  "rek_place_of_publication": "New York, NY, United States",
+                  "rek_place_of_publication_id": null,
+                  "rek_place_of_publication_pid": "UQ:384236",
+                },
+                "fez_record_search_key_proceedings_title": null,
+                "fez_record_search_key_project_description": null,
+                "fez_record_search_key_project_id": null,
+                "fez_record_search_key_project_name": null,
+                "fez_record_search_key_project_start_date": null,
+                "fez_record_search_key_publisher": Object {
+                  "rek_publisher": "Nature Publishing Group",
+                  "rek_publisher_id": null,
+                  "rek_publisher_pid": "UQ:384236",
+                },
+                "fez_record_search_key_pubmed_id": null,
+                "fez_record_search_key_refereed": null,
+                "fez_record_search_key_refereed_source": Object {
+                  "rek_refereed_source": 453635,
+                  "rek_refereed_source_id": null,
+                  "rek_refereed_source_pid": "UQ:384236",
+                },
+                "fez_record_search_key_related_datasets": null,
+                "fez_record_search_key_related_publications": null,
+                "fez_record_search_key_report_number": null,
+                "fez_record_search_key_retracted": null,
+                "fez_record_search_key_rights": null,
+                "fez_record_search_key_roman_script_book_title": null,
+                "fez_record_search_key_roman_script_conference_name": null,
+                "fez_record_search_key_roman_script_journal_name": null,
+                "fez_record_search_key_roman_script_proceedings_title": null,
+                "fez_record_search_key_roman_script_title": null,
+                "fez_record_search_key_scale": null,
+                "fez_record_search_key_scopus_id": Object {
+                  "rek_scopus_id": "2-s2.0-84962771937",
+                  "rek_scopus_id_id": null,
+                  "rek_scopus_id_pid": "UQ:384236",
+                },
+                "fez_record_search_key_section": null,
+                "fez_record_search_key_seo_code": Array [],
+                "fez_record_search_key_series": null,
+                "fez_record_search_key_software_required": Array [],
+                "fez_record_search_key_source": null,
+                "fez_record_search_key_start_date": null,
+                "fez_record_search_key_start_page": Object {
+                  "rek_start_page": "e218.1",
+                  "rek_start_page_id": null,
+                  "rek_start_page_pid": "UQ:384236",
+                },
+                "fez_record_search_key_structural_systems": Array [],
+                "fez_record_search_key_style": Array [],
+                "fez_record_search_key_subcategory": Array [],
+                "fez_record_search_key_subject": Array [],
+                "fez_record_search_key_supervisor": Array [],
+                "fez_record_search_key_supervisor_id": Array [],
+                "fez_record_search_key_surrounding_features": Array [],
+                "fez_record_search_key_time_period_end_date": null,
+                "fez_record_search_key_time_period_start_date": null,
+                "fez_record_search_key_total_chapters": null,
+                "fez_record_search_key_total_pages": Object {
+                  "rek_total_pages": "9",
+                  "rek_total_pages_id": null,
+                  "rek_total_pages_pid": "UQ:384236",
+                },
+                "fez_record_search_key_transcript": null,
+                "fez_record_search_key_translated_book_title": null,
+                "fez_record_search_key_translated_conference_name": null,
+                "fez_record_search_key_translated_journal_name": null,
+                "fez_record_search_key_translated_newspaper": null,
+                "fez_record_search_key_translated_proceedings_title": null,
+                "fez_record_search_key_translated_title": null,
+                "fez_record_search_key_type_of_data": Array [],
+                "fez_record_search_key_volume_number": Object {
+                  "rek_volume_number": "5",
+                  "rek_volume_number_id": null,
+                  "rek_volume_number_pid": "UQ:384236",
+                },
+                "rek_altmetric_id": 6482968,
+                "rek_altmetric_score": 2,
+                "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Wronski, A.\\" href=\\"/list/author_id/8979/\\">Wronski, A.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Sandhu, G. K.\\" href=\\"/list/author_id/94306/\\">Sandhu, G. K.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Milevskiy, M. J.\\" href=\\"/list/author_id/85056/\\">Milevskiy, M. J.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Brewster, B. L.\\" href=\\"/list/author_id/4869/\\">Brewster, B. L.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Bridge, J. A.\\" href=\\"/list/author_id/90030/\\">Bridge, J. A.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Shewan, A. M.\\" href=\\"/list/author_id/961/\\">Shewan, A. M.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Edwards, S. L.\\" href=\\"/list/author_id/1721/\\">Edwards, S. L.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for French, J. D.\\" href=\\"/list/author_id/950/\\">French, J. D.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Brown, M. A.\\" href=\\"/list/author_id/1671/\\">Brown, M. A.</a> (<span class=\\"citation_date\\">2016</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: MicroRNA-206 is differentially expressed in Brca1-deficient mice and regulates epithelial and stromal cell compartments of the mouse mammary gland\\" href=\\"/view/UQ:384236\\">MicroRNA-206 is differentially expressed in Brca1-deficient mice and regulates epithelial and stromal cell compartments of the mouse mammary gland</a>. <i><span class=\\"citation_journal_name\\">Oncogenesis</span></i>, <i><span class=\\"citation_volume_number\\">5</span></i>  <span class=\\"citation_start_page\\">e218.1</span>-<span class=\\"citation_end_page\\">e218.9</span>. doi:<span class=\\"citation_doi\\">10.1038/oncsis.2016.27</span>",
+                "rek_copyright": "on",
+                "rek_created_date": "2016-04-08T10:00:52Z",
+                "rek_date": "2016-04-04T00:00:00Z",
+                "rek_depositor": 5371,
+                "rek_depositor_affiliation": 881,
+                "rek_description": null,
+                "rek_display_type": 179,
+                "rek_file_downloads": 0,
+                "rek_formatted_abstract": null,
+                "rek_formatted_title": null,
+                "rek_genre": "Journal Article",
+                "rek_genre_type": null,
+                "rek_herdc_notes": null,
+                "rek_object_type": 3,
+                "rek_pid": "UQ:384236",
+                "rek_pubmed_doc_type": null,
+                "rek_scopus_citation_count": 0,
+                "rek_scopus_doc_type": "ar",
+                "rek_security_inherited": null,
+                "rek_status": 2,
+                "rek_subtype": "Article (original research)",
+                "rek_thomson_citation_count": 0,
+                "rek_title": "MicroRNA-206 is differentially expressed in Brca1-deficient mice and regulates epithelial and stromal cell compartments of the mouse mammary gland",
+                "rek_updated_date": "2017-08-20T03:14:06Z",
+                "rek_wok_doc_type": "@",
+              },
+            ]
+          }
+          showDefaultActions={true}
+        />
+        <PublicationsListPaging
+          disabled={false}
+          loading={false}
+          onPageChanged={[Function]}
+          pagingData={Object {}}
+        />
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;
+
+exports[`Research test renders loading screen while loading account data 1`] = `
+<StandardPage
+  title="My research"
+>
+  <div
+    className="is-centered"
+  >
+    <InlineLoader
+      message="Searching for your publications..."
+    />
+  </div>
+  <div
+    className="columns"
+  />
+</StandardPage>
+`;
+
+exports[`Research test renders loading screen while loading publications  1`] = `
+<StandardPage
+  title="My research"
+>
+  <div
+    className="is-centered"
+  >
+    <InlineLoader
+      message="Searching for your publications..."
+    />
+  </div>
+  <div
+    className="columns"
+  />
+</StandardPage>
+`;
+
+exports[`Research test renders no results 1`] = `
+<StandardPage
+  title="My research"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        text={
+          <div>
+            We were unable to find any results. Please, check if there are any possibly your publications via 
+            <a
+              href="#claim-publications"
+            >
+              claim possible publications
+            </a>
+             or 
+            <a
+              href="#add-record"
+            >
+              add a missing publication
+            </a>
+          </div>
+        }
+        title="No publications found"
+      >
+        <div>
+          We were unable to find any results. Please, check if there are any possibly your publications via 
+          <a
+            href="#claim-publications"
+          >
+            claim possible publications
+          </a>
+           or 
+          <a
+            href="#add-record"
+          >
+            add a missing publication
+          </a>
+        </div>
+      </StandardCard>
+    </div>
+  </div>
+</StandardPage>
+`;

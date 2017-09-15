@@ -1,7 +1,4 @@
-import {
-    getLatestPublications,
-    getTrendingPublications
-} from 'repositories';
+import {getPublications, getTrendingPublications} from 'repositories';
 
 export const LATEST_PUBLICATIONS_LOADING = 'LATEST_PUBLICATIONS_LOADING';
 export const LATEST_PUBLICATIONS_COMPLETED = 'LATEST_PUBLICATIONS_COMPLETED';
@@ -24,7 +21,7 @@ export function searchLatestPublications(userName) {
     return dispatch => {
         dispatch({type: LATEST_PUBLICATIONS_LOADING});
         // TODO: try some authors who are students - org username or student name to use?
-        getLatestPublications({userName: userName, pageSize: 5}).then(response => {
+        getPublications({userName: userName, pageSize: 5}).then(response => {
             dispatch({
                 type: LATEST_PUBLICATIONS_COMPLETED,
                 payload: response
@@ -43,20 +40,22 @@ export function searchLatestPublications(userName) {
  * @param {string} author user name
  * @returns {action}
  */
-export function searchAuthorPublications({userName, page = 1, pageSize = 20, sortBy, sortDirection}) {
+export function searchAuthorPublications({userName, page = 1, pageSize = 20, sortBy, sortDirection, facets}) {
     return dispatch => {
         dispatch({type: AUTHOR_PUBLICATIONS_LOADING});
-        getLatestPublications({userName: userName, page: page, pageSize: pageSize, sortBy: sortBy, sortDirection: sortDirection}).then(response => {
-            dispatch({
-                type: AUTHOR_PUBLICATIONS_COMPLETED,
-                payload: response
+        getPublications({userName: userName, page: page, pageSize: pageSize,
+            sortBy: sortBy, sortDirection: sortDirection, facets: facets})
+            .then(response => {
+                dispatch({
+                    type: AUTHOR_PUBLICATIONS_COMPLETED,
+                    payload: response
+                });
+            }).catch((error) => {
+                dispatch({
+                    type: AUTHOR_PUBLICATIONS_FAILED,
+                    payload: error
+                });
             });
-        }).catch((error) => {
-            dispatch({
-                type: AUTHOR_PUBLICATIONS_FAILED,
-                payload: error
-            });
-        });
     };
 }
 

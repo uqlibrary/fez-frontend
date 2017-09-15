@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const AuthorsCitationView = ({publication, searchKey}) => {
-    const authorsCount = publication[searchKey.key] ? publication[searchKey.key].length : 0;
+    const authorsCount = Array.isArray(publication[searchKey.key]) ? publication[searchKey.key].length : 0;
     if (authorsCount === 0) return (<span className="citationAuthors empty" />);
 
     return (
         <span className="citationAuthors">
             {
-                publication[searchKey.key]
+                Array.isArray(publication[searchKey.key]) && publication[searchKey.key]
                     .sort((author1, author2) => (
                         author1[searchKey.order] > author2[searchKey.order])
                     ).map((author, index) => (
