@@ -57,12 +57,12 @@ export default class BookChapterCitation extends Component {
                 {/* book title */}
                 {
                     bookChapter.bookTitle &&
-                    <span className="citationJournalName"> {bookChapter.bookTitle},</span>
+                    <span className="citationBookTitle"> {bookChapter.bookTitle},</span>
                 }
                 {/* book edition */}
                 {
                     bookChapter.edition &&
-                    <span className="citationJournalName"> {bookChapter.edition} ed.</span>
+                    <span className="citationBookTitle"> {bookChapter.edition} ed.</span>
                 }
                 {/* pages (pp. start page-end page) */}
                 {

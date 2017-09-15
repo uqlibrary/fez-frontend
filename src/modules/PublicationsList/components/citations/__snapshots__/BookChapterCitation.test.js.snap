@@ -1243,7 +1243,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
   />
    (Ed.),
   <span
-    className="citationJournalName"
+    className="citationBookTitle"
   >
      
     Non-coding RNA and the Reproductive System
