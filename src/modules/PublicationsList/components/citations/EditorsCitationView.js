@@ -6,11 +6,7 @@ const EditorsCitationView = ({publication, searchKey}) => {
     const authorsCount = Array.isArray(publication[searchKey.key]) ? publication[searchKey.key].length : 0;
     const authorsCitation = <AuthorsCitationView publication={publication} searchKey={searchKey} />;
 
-    if (authorsCount === 0) return authorsCitation;
-
-    return (
-        <span>Edited by {authorsCitation}</span>
-    );
+    return authorsCount === 0 ? authorsCitation : <span>Edited by {authorsCitation}</span>;
 };
 
 EditorsCitationView.propTypes = {
