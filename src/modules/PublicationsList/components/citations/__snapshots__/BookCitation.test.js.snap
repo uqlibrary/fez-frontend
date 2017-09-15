@@ -2,7 +2,7 @@
 
 exports[`BookCitation renders  component with a mock espace record 1`] = `
 <div
-  className="citationContent citationBookChapter"
+  className="citationContent citationBook"
 >
   <FontIcon
     className="material-icons citationIcon"
@@ -304,13 +304,13 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     }
   />
   <span
-    className="citationJournalName"
+    className="citationBookTitle"
   >
      
     Addictions
   </span>
   <span
-    className="citationJournalName"
+    className="citationBookTitle"
   >
     , 
     2nd
@@ -911,7 +911,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
 
 exports[`BookCitation renders  component with empty publication 1`] = `
 <div
-  className="citationContent citationBookChapter"
+  className="citationContent citationBook"
 >
   <FontIcon
     className="material-icons citationIcon"

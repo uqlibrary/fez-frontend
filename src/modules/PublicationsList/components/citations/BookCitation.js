@@ -36,7 +36,7 @@ export default class BookCitation extends Component {
         // {6034} ({6044}). <i>{10612}</i>. {6116||}, {6114}. {16522| doi:|}
         // Author (Year). Title|. Place of Publication|, Publisher|. doi: doi
         return (
-            <div className="citationContent citationBookChapter">
+            <div className="citationContent citationBook">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
@@ -46,12 +46,12 @@ export default class BookCitation extends Component {
                 {/* book title */}
                 {
                     book.title &&
-                    <span className="citationJournalName"> {book.title}</span>
+                    <span className="citationBookTitle"> {book.title}</span>
                 }
                 {/* book edition */}
                 {
                     book.edition &&
-                    <span className="citationJournalName">, {book.edition} ed. </span>
+                    <span className="citationBookTitle">, {book.edition} ed. </span>
                 }
                 {/* editors list */}
                 <EditorsCitationView publication={this.props.publication} />
