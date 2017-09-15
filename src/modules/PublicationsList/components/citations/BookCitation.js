@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import AuthorsCitationView from './AuthorsCitationView';
+import EditorsCitationView from './EditorsCitationView';
 import YearCitationView from './YearCitationView';
 
 export default class BookCitation extends Component {
@@ -28,8 +29,12 @@ export default class BookCitation extends Component {
         };
 
         // eSpace citation view for Book
-        // {6034} <i>{10612}</i>{12115| | ed}. {6042|Edited by |} {6113|(| ed.)} {6116||:} {6114}, {6044}.{16522| doi:|}
-        // Author <i>title</i> Edition ed. Edited by Editor Place of Publication: publisher. year. doi: DOI
+        // {6034} <i>{10612}</i>{12115|| ed}. {6042|Edited by |} {6113|(| ed.)} {6116||:} {6114}, {6044}.{16522| doi:|} - Legacy Fez
+        // Author <i>Title</i> Edition ed. Edited by Editor Place of Publication: Publisher, Publ. doi: DOI
+
+        // Citation Styles - Book: https://docs.google.com/document/d/1j0ol7sW39dDg3X3bSV6Tg0a2MEwGtDodwYmv9m0bcHQ/
+        // {6034} ({6044}). <i>{10612}</i>. {6116||}, {6114}. {16522| doi:|}
+        // Author (Year). Title|. Place of Publication|, Publisher|. doi: doi
         return (
             <div className="citationContent citationBookChapter">
                 <FontIcon className="material-icons citationIcon" data-place="left">
@@ -41,17 +46,15 @@ export default class BookCitation extends Component {
                 {/* book title */}
                 {
                     book.title &&
-                    <span className="citationJournalName"> {book.title}, </span>
+                    <span className="citationJournalName"> {book.title}</span>
                 }
                 {/* book edition */}
                 {
                     book.edition &&
-                    <span className="citationJournalName"> {book.edition} ed.</span>
+                    <span className="citationJournalName">, {book.edition} ed. </span>
                 }
                 {/* editors list */}
-                Edited by <AuthorsCitationView
-                    publication={this.props.publication}
-                    searchKey={{key: 'fez_record_search_key_contributor', subkey: 'rek_contributor', order: 'rek_contributor_order'}}/>,
+                <EditorsCitationView publication={this.props.publication} />
                 {/* place of publication */}
                 {
                     book.placeOfPublication &&
@@ -60,8 +63,8 @@ export default class BookCitation extends Component {
                 {/* publisher */}
                 {
                     book.publisher &&
-                    <span className="citationPublisher"> {book.publisher}</span>
-                }.
+                    <span className="citationPublisher"> {book.publisher}, </span>
+                }
                 {/* publication year */}
                 <YearCitationView publication={this.props.publication} />.
                 {/* doi */}
