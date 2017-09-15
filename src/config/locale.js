@@ -22,8 +22,9 @@ export default {
                 id: 'espace',
                 title: 'eSpace',
                 priority: 0,
-                externalURL: '',
-                idLocation: ''
+                externalURL: 'https://espace.library.uq.edu.au/view/[ID]',
+                idLocation: '',
+                idKey: 'rek_pid'
             },
             wos: {
                 id: 'wos',
