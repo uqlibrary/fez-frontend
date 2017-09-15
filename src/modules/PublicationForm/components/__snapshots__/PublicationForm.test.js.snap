@@ -32,7 +32,6 @@ exports[`PublicationForm renders  component initialised with just one field - pu
       disabled={false}
       floatingLabelFixed={true}
       floatingLabelText="Select publication type"
-      fullWidth={true}
       hintText="Select publication type"
       name="rek_display_type"
     >

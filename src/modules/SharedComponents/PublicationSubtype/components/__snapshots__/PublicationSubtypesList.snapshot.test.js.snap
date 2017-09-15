@@ -144,7 +144,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
       }
     }
     floatingLabelText="Publication subtype "
-    fullWidth={true}
+    fullWidth={false}
     id="selectedValue"
     maxHeight={250}
     multiple={false}
@@ -155,7 +155,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
       disabled={true}
       floatingLabelFixed={false}
       floatingLabelText="Publication subtype "
-      fullWidth={true}
+      fullWidth={false}
       id="selectedValue"
       multiLine={false}
       name="selectedValue"
@@ -177,7 +177,7 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
             "muiPrepared": true,
             "position": "relative",
             "transition": "height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-            "width": "100%",
+            "width": 256,
           }
         }
       >
@@ -1632,7 +1632,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
       }
     }
     floatingLabelText="Publication subtype "
-    fullWidth={true}
+    fullWidth={false}
     id="selectedValue"
     maxHeight={250}
     multiple={false}
@@ -1643,7 +1643,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
       disabled={false}
       floatingLabelFixed={false}
       floatingLabelText="Publication subtype "
-      fullWidth={true}
+      fullWidth={false}
       id="selectedValue"
       multiLine={false}
       name="selectedValue"
@@ -1665,7 +1665,7 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
             "muiPrepared": true,
             "position": "relative",
             "transition": "height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-            "width": "100%",
+            "width": 256,
           }
         }
       >
@@ -3017,7 +3017,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
       }
     }
     floatingLabelText="Publication subtype "
-    fullWidth={true}
+    fullWidth={false}
     id="selectedValue"
     maxHeight={250}
     multiple={false}
@@ -3028,7 +3028,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
       disabled={false}
       floatingLabelFixed={false}
       floatingLabelText="Publication subtype "
-      fullWidth={true}
+      fullWidth={false}
       id="selectedValue"
       multiLine={false}
       name="selectedValue"
@@ -3050,7 +3050,7 @@ exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
             "muiPrepared": true,
             "position": "relative",
             "transition": "height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-            "width": "100%",
+            "width": 256,
           }
         }
       >

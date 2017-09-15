@@ -32,10 +32,15 @@ export class PublicationSubtypesList extends Component {
         }
     };
 
+    static contextTypes = {
+        selectFieldMobileOverrides: PropTypes.object
+    };
+
     constructor(props) {
         super(props);
         this.state = {
-            selectedValue: null
+            selectedValue: null,
+            windowWidth: window.innerWidth
         };
     }
 
@@ -66,26 +71,26 @@ export class PublicationSubtypesList extends Component {
     };
 
     render() {
-        const { locale, subtypesList, dataSourceConfig, subtypesLoading } = this.props;
+        const {locale, subtypesList, dataSourceConfig, subtypesLoading} = this.props;
         const renderSubTypeItems = subtypesList.map((item) => {
             const value = this.getValue(item, dataSourceConfig.value);
             const text = this.getValue(item, dataSourceConfig.text);
-            return <MenuItem value={ value } primaryText={ text } key={ value }/>;
+            return <MenuItem value={value} primaryText={text} key={value}/>;
         });
         const loadingIndicationText = `${locale.label} ${subtypesLoading ? locale.loading : ''}`;
         return (
             <SelectField
                 id="selectedValue"
                 name="selectedValue"
-                fullWidth
-                className={ this.props.className }
-                value={ subtypesLoading ? null : this.state.selectedValue }
-                maxHeight={ 250 }
-                onChange={ this._onSubtypeSelected }
-                disabled={this.props.disabled}
+                {...this.context.selectFieldMobileOverrides}
+                className={this.props.className}
+                value={subtypesLoading ? null : this.state.selectedValue}
+                maxHeight={250}
+                onChange={this._onSubtypeSelected}
+                disabled={this.props.disabled || subtypesLoading}
                 dropDownMenuProps={{animated: false}}
-                floatingLabelText={ loadingIndicationText }>
-                { renderSubTypeItems }
+                floatingLabelText={loadingIndicationText}>
+                {renderSubTypeItems}
             </SelectField>
         );
     }
