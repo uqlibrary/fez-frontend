@@ -923,6 +923,15 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
+            alreadyClaimed: {
+                title: 'Publication has been claimed',
+                text: 'You have already claimed this publication.',
+                help: {
+                    title: 'Publication has been claimed',
+                    text: 'Enter the text that will help people here',
+                    buttonLabel: 'Ok'
+                }
+            },
             authorLinking: {
                 title: 'Author linking',
                 text: 'We were unable to automatically detect who you are from the list of authors on this publication. Please, select your name from the list below: ',
