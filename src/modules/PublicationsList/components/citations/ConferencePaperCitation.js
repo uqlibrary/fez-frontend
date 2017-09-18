@@ -4,6 +4,7 @@ import FontIcon from 'material-ui/FontIcon';
 import AuthorsCitationView from './AuthorsCitationView';
 import EditorsCitationView from './EditorsCitationView';
 import YearCitationView from './YearCitationView';
+import PageRangeCitationView from './PageRangeCitationView';
 
 export default class BookCitation extends Component {
     static propTypes = {
@@ -66,24 +67,8 @@ export default class BookCitation extends Component {
                     conferencePaper.location &&
                     <span className="citationConferencePaperLocation"> {conferencePaper.location},</span>
                 }
-
                 {/* pages (start page-end page) */}
-                {
-                    (conferencePaper.startPage || conferencePaper.endPage) ? ' (' : ''
-                }
-                {
-                    conferencePaper.startPage &&
-                    <span className="citationStartPage">
-                        {conferencePaper.startPage}{conferencePaper.endPage ? '-' : '' }
-                    </span>
-                }
-                {
-                    conferencePaper.endPage &&
-                    <span className="citationEndPage">{conferencePaper.endPage}</span>
-                }
-                {
-                    (conferencePaper.startPage || conferencePaper.endPage) ? ') ' : ''
-                }
+                <PageRangeCitationView publication={this.props.publication} prefix="(" suffix=")"/>
                 {/* conference dates */}
                 {
                     conferencePaper.dates &&
