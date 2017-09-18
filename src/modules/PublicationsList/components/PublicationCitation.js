@@ -118,7 +118,7 @@ export default class PublicationCitation extends Component {
                                                 target="_blank"
                                                 key={index}
                                                 className="publicationSource"
-                                                aria-label={locale.global.linkWillOpenInNewWindow}>
+                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION', sourceLocale.title)}>
                                                 {sourceLocale.title}<ActionOpenInNew className="citationOpenURLicon" />
                                             </a>
                                         );

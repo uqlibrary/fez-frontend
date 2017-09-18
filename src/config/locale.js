@@ -17,7 +17,7 @@ export default {
             type: 'info_outline'
         },
         ezproxyPrefix: 'http://ezproxy.library.uq.edu.au/login?url=',
-        linkWillOpenInNewWindow: 'This link will open in a new window.',
+        linkWillOpenInNewWindow: 'Link to [DESTINATION] will open in a new window.',
         sources: {
             espace: {
                 id: 'espace',
