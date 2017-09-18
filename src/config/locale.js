@@ -16,8 +16,8 @@ export default {
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
         },
+        ezproxyPrefix: 'http://ezproxy.library.uq.edu.au/login?url=',
         sources: {
-            ezproxyPrefix: 'http://ezproxy.library.uq.edu.au/login?url=',
             espace: {
                 id: 'espace',
                 title: 'eSpace',

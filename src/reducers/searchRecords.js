@@ -57,24 +57,31 @@ function deduplicateResults(publicationsList) {
                                 .map(source => {
                                     return locale.global.sources[source];
                                 }));
-                        const itemPriority = locale.global.sources[item.sources[0]];
-                        console.log('ItemPriority => ' + itemPriority);
-                        const extURL = item[itemPriority.idLocation] ? (
-                            // if the current item has a value for the idLocation that stores the idKey, then its not an eSpace record
-                            locale.global.sources.ezproxyPrefix + itemPriority.externalURL.replace('[ID]', item[itemPriority.idLocation][itemPriority.idKey])
+                        const itemPriority = locale.global.sources[item.sources[0]]; // wos
+
+                        const extURL = currentItem[itemPriority.idLocation] ? (
+                            locale.global.ezproxyPrefix + itemPriority.externalURL.replace('[ID]', currentItem[itemPriority.idLocation][itemPriority.idKey])
                         ) : (
-                            // eSpace doesn't have a search key location, its a primary key "rek_pid"
-                            itemPriority.externalURL.replace('[ID]', item[itemPriority.idKey])
+                            itemPriority.externalURL.replace('[ID]', currentItem[itemPriority.idKey])
                         );
-                        console.log('External URL for the current item => ' + extURL);
 
                         if (itemPriority < currentItemPriority) {
-                            currentItem.sources.push(item.sources[0], extURL);
+                            currentItem.sources.push(item.sources[0]);
+                            if(currentItem.sourcesExtUrl) {
+                                currentItem.sourcesExtUrl.push(extURL);
+                            }else{
+                                currentItem.sourcesExtUrl = [extURL];
+                            }
                             item.sources = currentItem.sources;
+                            item.sourcesExtUrl = currentItem.sourcesExtUrl;
                             list[0] = item;
                         } else {
-                            list[0].sources.push(item.sources[0], extURL);
-                            // Push external source URL here.
+                            list[0].sources.push(item.sources[0]);
+                            if(list[0].sourcesExtUrl) {
+                                list[0].sourcesExtUrl.push(extURL);
+                            }else{
+                                list[0].sourcesExtUrl = [extURL];
+                            }
                         }
                     }
                     return list;
