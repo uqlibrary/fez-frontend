@@ -52,16 +52,17 @@ export function createSearchPromise(source, queryString, dispatch) {
             .then(response => {
                 const data = response && response.hasOwnProperty('data') ? response.data
                     .map(item => {
-                        item.sources = [source];
-                        item.currentSource = source;
-                        const thisLocale = locale.global.sources[source];
-                        const extURL = item[thisLocale.idLocation] ? (
+                        const sourceLocale = locale.global.sources[source];
+                        const extURL = item[sourceLocale.idLocation] ? (
                             locale.global.ezproxyPrefix +
-                            thisLocale.externalURL.replace('[ID]', item[thisLocale.idLocation][thisLocale.idKey])
+                            sourceLocale.externalURL.replace('[ID]', item[sourceLocale.idLocation][sourceLocale.idKey])
                         ) : (
-                            thisLocale.externalURL.replace('[ID]', item[thisLocale.idKey])
+                            // No idLocation means its an eSpace record.
+                            sourceLocale.externalURL.replace('[ID]', item[sourceLocale.idKey])
                         );
                         item.sourcesExtUrl = [extURL];
+                        item.sources = [source];
+                        item.currentSource = source;
                         return item;
                     }) : [];
                 dispatch({

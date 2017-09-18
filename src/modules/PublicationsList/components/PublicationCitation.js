@@ -111,10 +111,9 @@ export default class PublicationCitation extends Component {
                                 {locale.components.publicationCitation.publicationSourcesLabel}
                                 {
                                     this.props.publication.sources.map((source, index) => {
-                                        console.log('This publications record ==> \n\n' + JSON.stringify(this.props.publication));
                                         const sourceLocale = locale.global.sources[source];
                                         return (
-                                            <a href="" // {this.props.publication.sources[source.extURL]}
+                                            <a href={sourceLocale.sourcesExtUrl} // {this.props.publication.sources[source.extURL]}
                                                 target="_blank"
                                                 key={index}
                                                 className="publicationSource">
