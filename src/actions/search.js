@@ -57,7 +57,6 @@ export function createSearchPromise(source, queryString, dispatch) {
                             locale.global.ezproxyPrefix +
                             sourceLocale.externalURL.replace('[ID]', item[sourceLocale.idLocation][sourceLocale.idKey])
                         ) : (
-                            // No idLocation means its an eSpace record.
                             sourceLocale.externalURL.replace('[ID]', item[sourceLocale.idKey])
                         );
                         item.sourcesExtUrl = [extURL];
