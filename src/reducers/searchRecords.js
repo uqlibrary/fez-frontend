@@ -51,33 +51,31 @@ function deduplicateResults(publicationsList) {
                     if (list.length === 0) {
                         list.push(item);
                     } else {
-                        const currentItem = {...list[0]};
+                        const currentItem = {...list[0]}; // the first item
                         const currentItemPriority = Math
                             .min(...currentItem.sources
                                 .map(source => {
                                     return locale.global.sources[source];
-                                }));
-                        const itemPriority = locale.global.sources[item.sources[0]];
+                                })); // returns the lowest valued priority source this record has
+                        const itemPriority = locale.global.sources[item.sources[0]]; // items current source priority
 
                         if (itemPriority < currentItemPriority) {
                             currentItem.sources.push(item.sources[0]);
-                            currentItem.sourcesExtUrl.push(item.sources[0]);
+                            currentItem.sourcesExtUrl.push(item.sourcesExtUrl[0]);
                             item.sources = currentItem.sources;
                             item.sourcesExtUrl = currentItem.sourcesExtUrl;
                             list[0] = item;
                         } else {
                             list[0].sources.push(item.sources[0]);
-                            list[0].sourcesExtUrl.push('url will go here');
+                            list[0].sourcesExtUrl.push(item.sourcesExtUrl[0]);
                         }
 
                         // const sourceLocale = locale.global.sources[source];
-                        // const extURL = source;
-                        // currentItem[sourceLocale.idLocation] ? (
+                        // const extURL = currentItem[sourceLocale.idLocation] ? (
                         //     locale.global.ezproxyPrefix + sourceLocale.externalURL.replace('[ID]', currentItem[sourceLocale.idLocation][sourceLocale.idKey])
                         // ) : (
                         //     sourceLocale.externalURL.replace('[ID]', currentItem[sourceLocale.idKey])
                         // );
-                        // });
                     }
                     return list;
                 }, [])[0];

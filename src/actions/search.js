@@ -50,7 +50,7 @@ export function createSearchPromise(source, queryString, dispatch) {
                 const data = response && response.hasOwnProperty('data') ? response.data
                     .map(item => {
                         item.sources = [source];
-                        item.sourcesExtUrl = [];
+                        item.sourcesExtUrl = ['test'];
                         item.currentSource = source;
                         return item;
                     }) : [];
