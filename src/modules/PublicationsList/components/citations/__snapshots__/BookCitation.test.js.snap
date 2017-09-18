@@ -304,13 +304,13 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     }
   />
   <span
-    className="citationBookTitle"
+    className="citationTitle"
   >
      
     Addictions
   </span>
   <span
-    className="citationBookTitle"
+    className="citationBookEdition"
   >
     , 
     2nd

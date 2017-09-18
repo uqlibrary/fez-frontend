@@ -46,12 +46,12 @@ export default class BookCitation extends Component {
                 {/* book title */}
                 {
                     book.title &&
-                    <span className="citationBookTitle"> {book.title}</span>
+                    <span className="citationTitle"> {book.title}</span>
                 }
                 {/* book edition */}
                 {
                     book.edition &&
-                    <span className="citationBookTitle">, {book.edition} ed. </span>
+                    <span className="citationBookEdition">, {book.edition} ed. </span>
                 }
                 {/* editors list */}
                 <EditorsCitationView publication={this.props.publication} />
