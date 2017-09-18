@@ -57,31 +57,24 @@ function deduplicateResults(publicationsList) {
                                 .map(source => {
                                     return locale.global.sources[source];
                                 }));
-                        const itemPriority = locale.global.sources[item.sources[0]]; // wos
+                        const itemPriority = locale.global.sources[item.sources[0]];
 
-                        const extURL = currentItem[itemPriority.idLocation] ? (
-                            locale.global.ezproxyPrefix + itemPriority.externalURL.replace('[ID]', currentItem[itemPriority.idLocation][itemPriority.idKey])
-                        ) : (
-                            itemPriority.externalURL.replace('[ID]', currentItem[itemPriority.idKey])
-                        );
+                        const extURL = 'Testing';
+                        // currentItem[itemPriority.idLocation] ? (
+                        //     locale.global.ezproxyPrefix + itemPriority.externalURL.replace('[ID]', currentItem[itemPriority.idLocation][itemPriority.idKey])
+                        // ) : (
+                        //     itemPriority.externalURL.replace('[ID]', currentItem[itemPriority.idKey])
+                        // );
 
                         if (itemPriority < currentItemPriority) {
                             currentItem.sources.push(item.sources[0]);
-                            if(currentItem.sourcesExtUrl) {
-                                currentItem.sourcesExtUrl.push(extURL);
-                            }else{
-                                currentItem.sourcesExtUrl = [extURL];
-                            }
+                            currentItem.sourcesExtUrl.push(extURL);
                             item.sources = currentItem.sources;
                             item.sourcesExtUrl = currentItem.sourcesExtUrl;
                             list[0] = item;
                         } else {
                             list[0].sources.push(item.sources[0]);
-                            if(list[0].sourcesExtUrl) {
-                                list[0].sourcesExtUrl.push(extURL);
-                            }else{
-                                list[0].sourcesExtUrl = [extURL];
-                            }
+                            list[0].sourcesExtUrl.push(extURL);
                         }
                     }
                     return list;
