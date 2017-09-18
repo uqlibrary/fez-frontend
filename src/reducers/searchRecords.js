@@ -59,6 +59,8 @@ function deduplicateResults(publicationsList) {
                                 })); // returns the lowest valued priority source this record has
                         const itemPriority = locale.global.sources[item.sources[0]]; // items current source priority
 
+                        // Translate the URL here...
+
                         if (itemPriority < currentItemPriority) {
                             currentItem.sources.push(item.sources[0]);
                             currentItem.sourcesExtUrl.push(item.sourcesExtUrl[0]);

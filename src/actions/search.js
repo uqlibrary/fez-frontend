@@ -1,4 +1,5 @@
 import {getSearchInternal, getSearchExternal} from 'repositories/search';
+import {locale} from 'config';
 
 /**
  * Action types
@@ -42,6 +43,8 @@ function getSearch(source, queryString) {
     }
 }
 
+// Create a function to translate the source value into a URL to add to the item.
+
 export function createSearchPromise(source, queryString, dispatch) {
     return new Promise((resolve) => {
         dispatch({type: `${SEARCH_LOADING}@${source}`});
@@ -50,8 +53,15 @@ export function createSearchPromise(source, queryString, dispatch) {
                 const data = response && response.hasOwnProperty('data') ? response.data
                     .map(item => {
                         item.sources = [source];
-                        item.sourcesExtUrl = ['test'];
                         item.currentSource = source;
+                        const thisLocale = locale.global.sources[source];
+                        const extURL = item[thisLocale.idLocation] ? (
+                            locale.global.ezproxyPrefix +
+                            thisLocale.externalURL.replace('[ID]', item[thisLocale.idLocation][thisLocale.idKey])
+                        ) : (
+                            thisLocale.externalURL.replace('[ID]', item[thisLocale.idKey])
+                        );
+                        item.sourcesExtUrl = [extURL];
                         return item;
                     }) : [];
                 dispatch({
