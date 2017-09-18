@@ -61,19 +61,23 @@ function deduplicateResults(publicationsList) {
 
                         if (itemPriority < currentItemPriority) {
                             currentItem.sources.push(item.sources[0]);
+                            currentItem.sourcesExtUrl.push(item.sources[0]);
                             item.sources = currentItem.sources;
+                            item.sourcesExtUrl = currentItem.sourcesExtUrl;
                             list[0] = item;
                         } else {
                             list[0].sources.push(item.sources[0]);
+                            list[0].sourcesExtUrl.push('url will go here');
                         }
 
-                        const sourceLocale = locale.global.sources[item.sources[0]];
-                        const extURL = currentItem[sourceLocale.idLocation] ? (
-                            locale.global.ezproxyPrefix + sourceLocale.externalURL.replace('[ID]', currentItem[sourceLocale.idLocation][sourceLocale.idKey])
-                        ) : (
-                            sourceLocale.externalURL.replace('[ID]', currentItem[sourceLocale.idKey])
-                        );
-                        list[0].sourcesExtUrl.push(extURL);
+                        // const sourceLocale = locale.global.sources[source];
+                        // const extURL = source;
+                        // currentItem[sourceLocale.idLocation] ? (
+                        //     locale.global.ezproxyPrefix + sourceLocale.externalURL.replace('[ID]', currentItem[sourceLocale.idLocation][sourceLocale.idKey])
+                        // ) : (
+                        //     sourceLocale.externalURL.replace('[ID]', currentItem[sourceLocale.idKey])
+                        // );
+                        // });
                     }
                     return list;
                 }, [])[0];
