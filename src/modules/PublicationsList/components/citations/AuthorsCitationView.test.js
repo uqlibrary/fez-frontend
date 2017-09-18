@@ -12,9 +12,11 @@ import {locale} from 'config';
 import {claimedPublications} from 'mock/data/publications';
 
 
-function setup({publication, isShallow = true}) {
+function setup({publication, prefix, suffix, isShallow = true}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
+        prefix: prefix,
+        suffix: suffix
     };
 
     if(isShallow) {
@@ -99,6 +101,33 @@ describe('AuthorsCitationView renders ', () => {
             ]
         };
         const wrapper = setup({ publication: testObject });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('component with three authors with prefix/suffix', () => {
+        const testObject = {
+            "fez_record_search_key_author": [
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Pedroso, Marcelo Monteiro",
+                    "rek_author_order": 1
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Smith, J",
+                    "rek_author_order": 2
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 3
+                }
+            ]
+        };
+        const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

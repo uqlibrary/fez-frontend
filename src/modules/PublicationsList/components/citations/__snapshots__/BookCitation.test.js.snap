@@ -13,6 +13,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     format_quote
   </FontIcon>
   <AuthorsCitationView
+    className="citationAuthors"
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -94,7 +95,23 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
-        "fez_record_search_key_contributor": Array [],
+        "fez_record_search_key_contributor": Array [
+          Object {
+            "rek_contributor": "Smith, A",
+            "rek_contributor_id": null,
+            "rek_contributor_order": 1,
+          },
+          Object {
+            "rek_contributor": "Smith, B",
+            "rek_contributor_id": null,
+            "rek_contributor_order": 3,
+          },
+          Object {
+            "rek_contributor": "Smith, C",
+            "rek_contributor_id": null,
+            "rek_contributor_order": 2,
+          },
+        ],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
         "fez_record_search_key_corresponding_country": Array [],
@@ -304,19 +321,20 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     }
   />
   <span
-    className="citationBookTitle"
+    className="citationTitle"
   >
      
     Addictions
   </span>
   <span
-    className="citationBookTitle"
+    className="citationBookEdition"
   >
     , 
     2nd
      ed. 
   </span>
   <EditorsCitationView
+    prefix=" Edited by "
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -398,7 +416,23 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
-        "fez_record_search_key_contributor": Array [],
+        "fez_record_search_key_contributor": Array [
+          Object {
+            "rek_contributor": "Smith, A",
+            "rek_contributor_id": null,
+            "rek_contributor_order": 1,
+          },
+          Object {
+            "rek_contributor": "Smith, B",
+            "rek_contributor_id": null,
+            "rek_contributor_order": 3,
+          },
+          Object {
+            "rek_contributor": "Smith, C",
+            "rek_contributor_id": null,
+            "rek_contributor_order": 2,
+          },
+        ],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
         "fez_record_search_key_corresponding_country": Array [],
@@ -599,13 +633,6 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         "rek_wok_doc_type": null,
       }
     }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_contributor",
-        "order": "rek_contributor_order",
-        "subkey": "rek_contributor",
-      }
-    }
   />
   <span
     className="citationPlaceOfPublication"
@@ -703,7 +730,23 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
-        "fez_record_search_key_contributor": Array [],
+        "fez_record_search_key_contributor": Array [
+          Object {
+            "rek_contributor": "Smith, A",
+            "rek_contributor_id": null,
+            "rek_contributor_order": 1,
+          },
+          Object {
+            "rek_contributor": "Smith, B",
+            "rek_contributor_id": null,
+            "rek_contributor_order": 3,
+          },
+          Object {
+            "rek_contributor": "Smith, C",
+            "rek_contributor_id": null,
+            "rek_contributor_order": 2,
+          },
+        ],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
         "fez_record_search_key_corresponding_country": Array [],
@@ -922,6 +965,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
     format_quote
   </FontIcon>
   <AuthorsCitationView
+    className="citationAuthors"
     publication={Object {}}
     searchKey={
       Object {
@@ -932,14 +976,8 @@ exports[`BookCitation renders  component with empty publication 1`] = `
     }
   />
   <EditorsCitationView
+    prefix=" Edited by "
     publication={Object {}}
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_contributor",
-        "order": "rek_contributor_order",
-        "subkey": "rek_contributor",
-      }
-    }
   />
   <YearCitationView
     publication={Object {}}

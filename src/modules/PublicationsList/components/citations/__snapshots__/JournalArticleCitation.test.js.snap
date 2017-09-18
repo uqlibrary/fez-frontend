@@ -13,6 +13,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
     format_quote
   </FontIcon>
   <AuthorsCitationView
+    className="citationAuthors"
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -1794,6 +1795,7 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
     format_quote
   </FontIcon>
   <AuthorsCitationView
+    className="citationAuthors"
     publication={Object {}}
     searchKey={
       Object {

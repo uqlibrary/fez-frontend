@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import AuthorsCitationView from './AuthorsCitationView';
+import EditorsCitationView from './EditorsCitationView';
 import YearCitationView from './YearCitationView';
 
 export default class BookChapterCitation extends Component {
@@ -50,10 +51,10 @@ export default class BookChapterCitation extends Component {
 
                 {/* chapter title */}
                 <span className="citationTitle"> {bookChapter.title}. </span>
+
                 {/* editors list */}
-                In <AuthorsCitationView
-                    publication={this.props.publication}
-                    searchKey={{key: 'fez_record_search_key_contributor', subkey: 'rek_contributor', order: 'rek_contributor_order'}}/> (Ed.),
+                <EditorsCitationView publication={this.props.publication} prefix="In " suffix=" (Ed.)," />
+
                 {/* book title */}
                 {
                     bookChapter.bookTitle &&
@@ -62,7 +63,7 @@ export default class BookChapterCitation extends Component {
                 {/* book edition */}
                 {
                     bookChapter.edition &&
-                    <span className="citationBookTitle"> {bookChapter.edition} ed.</span>
+                    <span className="citationBookEdition"> {bookChapter.edition} ed.</span>
                 }
                 {/* pages (pp. start page-end page) */}
                 {

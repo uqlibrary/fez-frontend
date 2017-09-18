@@ -1,4 +1,5 @@
 jest.dontMock('./EditorsCitationView');
+jest.dontMock('./AuthorsCitationView');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
