@@ -310,7 +310,7 @@ export default {
                 },
                 searchResults: {
                     title: 'Possible matches found',
-                    text: 'Top [noOfResults] potential match(es) displayed - claim a matching publication below, refine your search or create a new eSpace record.',
+                    text: 'Top [noOfResults] potential match(es) displayed for "[searchQuery]" - claim a matching publication below, refine your search or create a new eSpace record.',
                     help: {
                         title: 'Possible matches found',
                         text: 'Why search displays these items....',

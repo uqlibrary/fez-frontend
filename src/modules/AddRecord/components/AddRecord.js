@@ -75,6 +75,7 @@ export default class AddRecord extends React.Component {
 
         this.setState({
             initialValues: {
+                rawSearchQuery: values.get('searchQuery'),
                 // set initial value only if it's a title (not pubmed/DOI)
                 rek_title: (!validation.isValidDOIValue(values.get('searchQuery')) && !validation.isValidPubMedValue(values.get('searchQuery'))) ? values.get('searchQuery') : ''
             },
@@ -108,7 +109,7 @@ export default class AddRecord extends React.Component {
                     {
                         this.props.publicationsList.length > 0 &&
                         <StandardCard {...txt.searchResults}>
-                            <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length)}</div>
+                            <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.state.initialValues.rawSearchQuery)}</div>
                             <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
                         </StandardCard>
                     }
