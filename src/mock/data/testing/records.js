@@ -838,7 +838,23 @@ export const bookChapter = {
     "fez_record_search_key_conference_name": null,
     "fez_record_search_key_construction_date": null,
     "fez_record_search_key_contact_details_email": [],
-    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor": [
+        {
+        "rek_contributor_id": null,
+        "rek_contributor": "Smith, A",
+        "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": null,
+            "rek_contributor": "Smith, B",
+            "rek_contributor_order": 3
+        },
+        {
+            "rek_contributor_id": null,
+            "rek_contributor": "Smith, C",
+            "rek_contributor_order": 2
+        }
+    ],
     "fez_record_search_key_contributor_id": [],
     "fez_record_search_key_convener": null,
     "fez_record_search_key_corresponding_email": [],
@@ -1193,7 +1209,23 @@ export const book = {
     "fez_record_search_key_conference_name": null,
     "fez_record_search_key_construction_date": null,
     "fez_record_search_key_contact_details_email": [],
-    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": null,
+            "rek_contributor": "Smith, A",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": null,
+            "rek_contributor": "Smith, B",
+            "rek_contributor_order": 3
+        },
+        {
+            "rek_contributor_id": null,
+            "rek_contributor": "Smith, C",
+            "rek_contributor_order": 2
+        },
+    ],
     "fez_record_search_key_contributor_id": [],
     "fez_record_search_key_convener": null,
     "fez_record_search_key_corresponding_email": [],

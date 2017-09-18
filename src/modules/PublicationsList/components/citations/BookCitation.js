@@ -43,30 +43,37 @@ export default class BookCitation extends Component {
 
                 {/* authors list */}
                 <AuthorsCitationView publication={this.props.publication} />
+
                 {/* book title */}
                 {
                     book.title &&
                     <span className="citationTitle"> {book.title}</span>
                 }
+
                 {/* book edition */}
                 {
                     book.edition &&
                     <span className="citationBookEdition">, {book.edition} ed. </span>
                 }
+
                 {/* editors list */}
-                <EditorsCitationView publication={this.props.publication} />
+                <EditorsCitationView publication={this.props.publication} prefix=" Edited by " />
+
                 {/* place of publication */}
                 {
                     book.placeOfPublication &&
                     <span className="citationPlaceOfPublication"> {book.placeOfPublication}:</span>
                 }
+
                 {/* publisher */}
                 {
                     book.publisher &&
                     <span className="citationPublisher"> {book.publisher}, </span>
                 }
+
                 {/* publication year */}
                 <YearCitationView publication={this.props.publication} />.
+
                 {/* doi */}
                 {
                     book.doi &&
