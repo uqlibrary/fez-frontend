@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import AuthorsCitationView from './AuthorsCitationView';
+import EditorsCitationView from './EditorsCitationView';
 import YearCitationView from './YearCitationView';
 
 export default class BookCitation extends Component {
@@ -51,9 +52,10 @@ export default class BookCitation extends Component {
                 {/* conferencePaper title */}
                 {
                     conferencePaper.title &&
-                    <span className="citationConferencePaperTitle"> {conferencePaper.title}.</span>
+                    <span className="citationTitle"> {conferencePaper.title}.</span>
                 }
                 {/*  In: Editor, Proceedings title. */}
+                <EditorsCitationView publication={this.props.publication} />
                 {/* conferencePaper title */}
                 {
                     conferencePaper.name &&
@@ -62,7 +64,7 @@ export default class BookCitation extends Component {
                 {/* conferencePaper location */}
                 {
                     conferencePaper.location &&
-                    <span className="citationConferencePaperName"> {conferencePaper.location},</span>
+                    <span className="citationConferencePaperLocation"> {conferencePaper.location},</span>
                 }
 
                 {/* pages (start page-end page) */}
@@ -80,7 +82,7 @@ export default class BookCitation extends Component {
                     <span className="citationEndPage">{conferencePaper.endPage}</span>
                 }
                 {
-                    (conferencePaper.startPage || conferencePaper.endPage) ? '). ' : ''
+                    (conferencePaper.startPage || conferencePaper.endPage) ? ') ' : ''
                 }
                 {/* conference dates */}
                 {

@@ -1,4 +1,4 @@
-jest.dontMock('./BookChapterCitation');
+jest.dontMock('./ConferencePaperCitation');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
