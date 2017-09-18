@@ -59,23 +59,22 @@ function deduplicateResults(publicationsList) {
                                 }));
                         const itemPriority = locale.global.sources[item.sources[0]];
 
-                        const extURL = 'Testing';
-                        // currentItem[itemPriority.idLocation] ? (
-                        //     locale.global.ezproxyPrefix + itemPriority.externalURL.replace('[ID]', currentItem[itemPriority.idLocation][itemPriority.idKey])
-                        // ) : (
-                        //     itemPriority.externalURL.replace('[ID]', currentItem[itemPriority.idKey])
-                        // );
-
                         if (itemPriority < currentItemPriority) {
                             currentItem.sources.push(item.sources[0]);
-                            currentItem.sourcesExtUrl.push(extURL);
                             item.sources = currentItem.sources;
-                            item.sourcesExtUrl = currentItem.sourcesExtUrl;
                             list[0] = item;
                         } else {
                             list[0].sources.push(item.sources[0]);
-                            list[0].sourcesExtUrl.push(extURL);
                         }
+
+                        const sourceLocale = locale.global.sources[item.sources[0]];
+                        const extURL = currentItem[sourceLocale.idLocation] ? (
+                            locale.global.ezproxyPrefix + sourceLocale.externalURL.replace('[ID]', currentItem[sourceLocale.idLocation][sourceLocale.idKey])
+                        ) : (
+                            sourceLocale.externalURL.replace('[ID]', currentItem[sourceLocale.idKey])
+                        );
+                        list[0].sourcesExtUrl.push(extURL);
+
                     }
                     return list;
                 }, [])[0];
