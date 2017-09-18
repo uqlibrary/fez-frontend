@@ -76,7 +76,8 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\ConferencePaper',
         vocabId: 453596,
         isFavourite: true,
-        formComponent: components ? components.ConferencePaperForm : null
+        formComponent: components ? components.ConferencePaperForm : null,
+        citationComponent: components ? components.ConferencePaperCitation : null
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,

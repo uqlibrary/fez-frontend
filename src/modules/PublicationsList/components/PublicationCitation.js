@@ -9,6 +9,7 @@ import CitationCounts from './citations/CitationCounts';
 import JournalArticleCitation from './citations/JournalArticleCitation';
 import BookChapterCitation from './citations/BookChapterCitation';
 import BookCitation from './citations/BookCitation';
+import ConferencePaperCitation from './citations/ConferencePaperCitation';
 
 /*
  * @props:
@@ -31,7 +32,7 @@ export default class PublicationCitation extends Component {
         super(props);
 
         // keep a list of all available citations
-        this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation};
+        this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation};
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }
@@ -41,6 +42,7 @@ export default class PublicationCitation extends Component {
             publicationTypes(this.citationComponents).filter((item) => {
                 return item.id === publicationTypeId;
             }) : null;
+        console.log(filteredPublicationType);
         return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent ?
             React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication}) :
             <div>Citation display not available for {publicationTypeId}</div>;
