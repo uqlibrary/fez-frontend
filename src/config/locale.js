@@ -923,15 +923,6 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
-            alreadyClaimed: {
-                title: 'Publication has been claimed',
-                text: 'You have already claimed this publication.',
-                help: {
-                    title: 'Publication has been claimed',
-                    text: 'Enter the text that will help people here',
-                    buttonLabel: 'Ok'
-                }
-            },
             authorLinking: {
                 title: 'Author linking',
                 text: 'We were unable to automatically detect who you are from the list of authors on this publication. Please, select your name from the list below: ',
@@ -988,6 +979,10 @@ export default {
             successAlert: {
                 title: 'Success',
                 message: 'Publication claim has been submitted successfully.'
+            },
+            alreadyClaimedAlert: {
+                title: 'Error',
+                message: 'This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au'
             }
         },
         publicationCitation: {

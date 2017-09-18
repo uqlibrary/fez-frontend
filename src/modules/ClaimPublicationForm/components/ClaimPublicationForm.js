@@ -71,48 +71,39 @@ export default class ClaimPublicationForm extends Component {
 
         return (
             <StandardPage title={txt.title}>
-                {
-                    authorLinked &&
-                        <div className="column">
-                            <StandardCard {...txt.alreadyClaimed}>
-                                {txt.alreadyClaimed.text}
+                <form onKeyDown={this._handleKeyboardFormSubmit}>
+                    <ConfirmDialogBox
+                        onRef={ref => (this.cancelConfirmationBox = ref)}
+                        onAction={this._navigateToPreviousPage}
+                        locale={txt.cancelWorkflowConfirmation}/>
+
+                    <ConfirmDialogBox
+                        onRef={ref => (this.successConfirmationBox = ref)}
+                        onAction={this._navigateToDashboard}
+                        onCancelAction={this._navigateToPreviousPage}
+                        locale={txt.successWorkflowConfirmation}/>
+
+                    <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
+                        <PublicationCitation publication={publication}/>
+                    </StandardCard>
+
+                    {
+                        !authorLinked &&
+                        <div>
+                            <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help} className="requiredField">
+                                <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
+                                <Field
+                                    name="authorLinking"
+                                    component={AuthorLinkingField}
+                                    searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
+                                    loggedInAuthor={author}
+                                    authorList={publication.fez_record_search_key_author}
+                                    linkedAuthorIdList={publication.fez_record_search_key_author_id}
+                                    disabled={this.props.submitting}
+                                    className="requiredField"
+                                    validate={[validation.required, validation.isValidAuthorLink]}
+                                />
                             </StandardCard>
-                        </div>
-                }
-                {
-                    !authorLinked &&
-                        <form onKeyDown={this._handleKeyboardFormSubmit}>
-                            <ConfirmDialogBox
-                                onRef={ref => (this.cancelConfirmationBox = ref)}
-                                onAction={this._navigateToPreviousPage}
-                                locale={txt.cancelWorkflowConfirmation}/>
-
-                            <ConfirmDialogBox
-                                onRef={ref => (this.successConfirmationBox = ref)}
-                                onAction={this._navigateToDashboard}
-                                onCancelAction={this._navigateToPreviousPage}
-                                locale={txt.successWorkflowConfirmation}/>
-
-                            <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
-                                <PublicationCitation publication={publication}/>
-                            </StandardCard>
-
-                            {
-                                <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help} className="requiredField">
-                                    <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
-                                    <Field
-                                        name="authorLinking"
-                                        component={AuthorLinkingField}
-                                        searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
-                                        loggedInAuthor={author}
-                                        authorList={publication.fez_record_search_key_author}
-                                        linkedAuthorIdList={publication.fez_record_search_key_author_id}
-                                        disabled={this.props.submitting}
-                                        className="requiredField"
-                                        validate={[validation.required, validation.isValidAuthorLink]}
-                                    />
-                                </StandardCard>
-                            }
 
                             <StandardCard title={txt.comments.title} help={txt.comments.help}>
                                 <Field
@@ -123,7 +114,7 @@ export default class ClaimPublicationForm extends Component {
                                     fullWidth
                                     multiLine
                                     rows={1}
-                                    floatingLabelText={txt.comments.fieldLabels.comments} />
+                                    floatingLabelText={txt.comments.fieldLabels.comments}/>
 
                                 <Field
                                     component={TextField}
@@ -132,50 +123,64 @@ export default class ClaimPublicationForm extends Component {
                                     type="text"
                                     fullWidth
                                     floatingLabelText={txt.comments.fieldLabels.url}
-                                    validate={[validation.url, validation.maxLength255]} />
+                                    validate={[validation.url, validation.maxLength255]}/>
                             </StandardCard>
 
                             <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                                <Field name="files" component={ FileUploadField } disabled={this.props.submitting} requireFileAccess validate={[validation.validFileUpload]} />
+                                <Field
+                                    name="files"
+                                    component={ FileUploadField }
+                                    disabled={this.props.submitting}
+                                    requireFileAccess
+                                    validate={[validation.validFileUpload]}
+                                />
                             </StandardCard>
-                            {
-                                this.props.submitFailed && this.props.error &&
-                                <Alert type="error_outline" {...txt.errorAlert} />
-                            }
-                            {
-                                !this.props.submitFailed && this.props.dirty && this.props.invalid &&
-                                <Alert {...txt.validationAlert} type="warning" />
-                            }
-                            {
-                                this.props.submitting &&
-                                <Alert type="info_outline" {...txt.progressAlert} />
-                            }
-                            {
-                                this.props.submitSucceeded &&
-                                <Alert type="info" {...txt.successAlert} />
-                            }
+                        </div>
+                    }
+                    {
+                        this.props.submitFailed && this.props.error &&
+                        <Alert type="error_outline" {...txt.errorAlert} />
+                    }
+                    {
+                        !this.props.submitFailed && this.props.dirty && this.props.invalid &&
+                        <Alert {...txt.validationAlert} type="warning" />
+                    }
+                    {
+                        this.props.submitting &&
+                        <Alert type="info_outline" {...txt.progressAlert} />
+                    }
+                    {
+                        this.props.submitSucceeded &&
+                        <Alert type="info" {...txt.successAlert} />
+                    }
+                    {
+                        authorLinked &&
+                        <Alert type="error" {...txt.alreadyClaimedAlert} />
+                    }
 
-                            <div className="columns action-buttons">
-                                <div className="column is-hidden-mobile"/>
-                                <div className="column is-narrow-desktop">
-                                    <RaisedButton
-                                        fullWidth
-                                        label={txt.cancel}
-                                        disabled={this.props.submitting}
-                                        onTouchTap={this._showConfirmation}/>
-                                </div>
-                                <div className="column is-narrow-desktop">
-                                    <RaisedButton
-                                        secondary
-                                        fullWidth
-                                        label={txt.submit}
-                                        onTouchTap={this.props.handleSubmit}
-                                        disabled={this.props.submitting || this.props.invalid}
-                                    />
-                                </div>
+                    {
+                        !authorLinked &&
+                        <div className="columns action-buttons">
+                            <div className="column is-hidden-mobile"/>
+                            <div className="column is-narrow-desktop">
+                                <RaisedButton
+                                    fullWidth
+                                    label={txt.cancel}
+                                    disabled={this.props.submitting}
+                                    onTouchTap={this._showConfirmation}/>
                             </div>
-                        </form>
-                }
+                            <div className="column is-narrow-desktop">
+                                <RaisedButton
+                                    secondary
+                                    fullWidth
+                                    label={txt.submit}
+                                    onTouchTap={this.props.handleSubmit}
+                                    disabled={this.props.submitting || this.props.invalid}
+                                />
+                            </div>
+                        </div>
+                    }
+                </form>
             </StandardPage>
         );
     }
