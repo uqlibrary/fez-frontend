@@ -57,13 +57,24 @@ function deduplicateResults(publicationsList) {
                                 .map(source => {
                                     return locale.global.sources[source];
                                 }));
-                        const itemPrioritiy = locale.global.sources[item.sources[0]];
-                        if (itemPrioritiy < currentItemPriority) {
-                            currentItem.sources.push(item.sources[0]);
+                        const itemPriority = locale.global.sources[item.sources[0]];
+                        console.log('ItemPriority => ' + itemPriority);
+                        const extURL = item[itemPriority.idLocation] ? (
+                            // if the current item has a value for the idLocation that stores the idKey, then its not an eSpace record
+                            locale.global.sources.ezproxyPrefix + itemPriority.externalURL.replace('[ID]', item[itemPriority.idLocation][itemPriority.idKey])
+                        ) : (
+                            // eSpace doesn't have a search key location, its a primary key "rek_pid"
+                            itemPriority.externalURL.replace('[ID]', item[itemPriority.idKey])
+                        );
+                        console.log('External URL for the current item => ' + extURL);
+
+                        if (itemPriority < currentItemPriority) {
+                            currentItem.sources.push(item.sources[0], extURL);
                             item.sources = currentItem.sources;
                             list[0] = item;
                         } else {
-                            list[0].sources.push(item.sources[0]);
+                            list[0].sources.push(item.sources[0], extURL);
+                            // Push external source URL here.
                         }
                     }
                     return list;
