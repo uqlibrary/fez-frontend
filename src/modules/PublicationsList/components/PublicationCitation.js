@@ -42,7 +42,7 @@ export default class PublicationCitation extends Component {
             publicationTypes(this.citationComponents).filter((item) => {
                 return item.id === publicationTypeId;
             }) : null;
-        console.log(filteredPublicationType);
+
         return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent ?
             React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication}) :
             <div>Citation display not available for {publicationTypeId}</div>;

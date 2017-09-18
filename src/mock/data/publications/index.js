@@ -239,7 +239,7 @@ export const possibleUnclaimed = {
             "fez_record_search_key_author_id": [{
                 "rek_author_id_id": null,
                 "rek_author_id_pid": "UQ:678742",
-                "rek_author_id": 410,
+                "rek_author_id": 0,
                 "rek_author_id_order": 1
             }, {
                 "rek_author_id_id": null,
