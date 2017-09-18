@@ -74,7 +74,6 @@ function deduplicateResults(publicationsList) {
                             sourceLocale.externalURL.replace('[ID]', currentItem[sourceLocale.idKey])
                         );
                         list[0].sourcesExtUrl.push(extURL);
-
                     }
                     return list;
                 }, [])[0];
