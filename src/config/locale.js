@@ -16,31 +16,42 @@ export default {
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
         },
+        linkWillOpenInNewWindow: 'Link to [DESTINATION] will open in a new window.',
         sources: {
             espace: {
                 id: 'espace',
                 title: 'eSpace',
-                priority: 0
+                priority: 0,
+                externalUrl: 'https://espace.library.uq.edu.au/view/[ID]',
+                idKey: 'rek_pid'
             },
             wos: {
                 id: 'wos',
                 title: 'Web of science',
-                priority: 1
+                priority: 1,
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[ID]&SrcAuth=uqueensland',
+                idKey: 'fez_record_search_key_isi_loc.rek_isi_loc'
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
-                priority: 2
+                priority: 2,
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[ID]&origin=inward',
+                idKey: 'fez_record_search_key_scopus_id.rek_scopus_id'
             },
             pubmed: {
                 id: 'pubmed',
                 title: 'PubMed',
-                priority: 3
+                priority: 3,
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://www.ncbi.nlm.nih.gov/pubmed/[ID]',
+                idKey: 'fez_record_search_key_pubmed_id.rek_pubmed_id'
             },
             crossref: {
                 id: 'crossref',
                 title: 'Crossref',
-                priority: 4
+                priority: 4,
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[ID]',
+                idKey: 'fez_record_search_key_doi.rek_doi'
             }
         },
         embargoDateFormat: 'YYYY-MM-DD'

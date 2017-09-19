@@ -1,4 +1,5 @@
 import {getSearchInternal, getSearchExternal} from 'repositories/search';
+import {locale} from 'config';
 
 /**
  * Action types
@@ -42,6 +43,13 @@ function getSearch(source, queryString) {
     }
 }
 
+/**
+ * createSearchPromise - returns a promise for search in a specific source
+ * @param source
+ * @param queryString
+ * @param dispatch
+ * @returns {Promise}
+ */
 export function createSearchPromise(source, queryString, dispatch) {
     return new Promise((resolve) => {
         dispatch({type: `${SEARCH_LOADING}@${source}`});
@@ -49,7 +57,14 @@ export function createSearchPromise(source, queryString, dispatch) {
             .then(response => {
                 const data = response && response.hasOwnProperty('data') ? response.data
                     .map(item => {
-                        item.sources = [source];
+                        const sourceConfig = locale.global.sources[source];
+                        item.sources = [
+                            {
+                                source: source,
+                                id: sourceConfig.idKey
+                                    .split('.')
+                                    .reduce((objectValue, pathProperty) => objectValue[pathProperty], item)
+                            }];
                         item.currentSource = source;
                         return item;
                     }) : [];

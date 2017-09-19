@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import {publicationTypes, locale} from 'config';
+import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 
 // citations for different publication types
 import CitationCounts from './citations/CitationCounts';
@@ -66,30 +67,23 @@ export default class PublicationCitation extends Component {
         const actions = this.props.showDefaultActions ? this.defaultActions : this.props.customActions;
         const renderedActions = actions && actions.length > 0 ?
             actions.map((action, index) => {
+                const buttonProps = {
+                    secondary: true,
+                    fullWidth: true,
+                    label: action.label,
+                    className: `publicationAction buttonOrder${index}`,
+                    onTouchTap: () => (
+                        this.props.showDefaultActions
+                            ? this._handleDefaultActions(action.key)
+                            : action.handleAction(this.props.publication)
+                    )
+                };
                 return (
                     <div className="column is-narrow" key={index}>
                         {
-                            action.primary ? (
-                                <RaisedButton
-                                    secondary
-                                    label={action.label}
-                                    className={`publicationAction buttonOrder${index}`}
-                                    onTouchTap={() => (
-                                        this.props.showDefaultActions
-                                            ? this._handleDefaultActions(action.key)
-                                            : action.handleAction(this.props.publication)
-                                    )}/>
-                            ) : (
-                                <FlatButton
-                                    secondary
-                                    label={action.label}
-                                    className={`publicationAction buttonOrder${index}`}
-                                    onTouchTap={() => (
-                                        this.props.showDefaultActions
-                                            ? this._handleDefaultActions(action.key)
-                                            : action.handleAction(this.props.publication)
-                                    )}/>
-                            )}
+                            action.primary ?
+                                (<RaisedButton {...buttonProps}/>) : (<FlatButton {...buttonProps}/>)
+                        }
                     </div>
                 );
             }) : null;
@@ -108,9 +102,19 @@ export default class PublicationCitation extends Component {
                             <span className="publicationSources">
                                 {locale.components.publicationCitation.publicationSourcesLabel}
                                 {
-                                    this.props.publication.sources.map((source, index) => (
-                                        <span key={index} className="publicationSource">{locale.global.sources[source].title}</span>
-                                    ))
+                                    this.props.publication.sources.map((source, index) => {
+                                        const sourceConfig = locale.global.sources[source.source];
+                                        return (
+                                            <a href={sourceConfig.externalUrl.replace('[ID]', source.id)}
+                                                rel="noopener noreferrer"
+                                                target="_blank"
+                                                key={index}
+                                                className="publicationSource"
+                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', sourceConfig.title)}>
+                                                {sourceConfig.title}<ActionOpenInNew className="citationOpenUrlIcon" />
+                                            </a>
+                                        );
+                                    })
                                 }
                             </span>
                         }

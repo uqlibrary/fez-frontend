@@ -1733,7 +1733,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
       <FlatButton
         className="publicationAction buttonOrder0"
         disabled={false}
-        fullWidth={false}
+        fullWidth={true}
         label="Claim now"
         labelPosition="after"
         labelStyle={Object {}}
@@ -1752,7 +1752,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
       <FlatButton
         className="publicationAction buttonOrder1"
         disabled={false}
-        fullWidth={false}
+        fullWidth={true}
         label="Not mine"
         labelPosition="after"
         labelStyle={Object {}}
@@ -1771,7 +1771,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
       <FlatButton
         className="publicationAction buttonOrder2"
         disabled={false}
-        fullWidth={false}
+        fullWidth={true}
         label="View stats"
         labelPosition="after"
         labelStyle={Object {}}
@@ -3521,7 +3521,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
       <FlatButton
         className="publicationAction buttonOrder0"
         disabled={false}
-        fullWidth={false}
+        fullWidth={true}
         label="Fix record"
         labelPosition="after"
         labelStyle={Object {}}
