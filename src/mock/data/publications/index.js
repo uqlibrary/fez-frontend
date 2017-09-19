@@ -1649,6 +1649,583 @@ export const possibleUnclaimed = {
                 "rek_volume_number_pid": "UQ:678835",
                 "rek_volume_number": "35"
             }
+        },
+        {
+            "rek_pid": "UQ:670000",
+            "rek_title": "Solo author article",
+            "rek_description": "We present two standards developed by the Genomic Standards Consortium (GSC) for reporting bacterial and archaeal genome sequences. Both are extensions of the Minimum Information about Any (x) Sequence (MIxS). The standards are the Minimum Information about a Single Amplified Genome (MISAG) and the Minimum Information about a Metagenome-Assembled Genome (MIMAG), including, but not limited to, assembly quality, and estimates of genome completeness and contamination. These standards can be used in combination with other GSC checklists, including the Minimum Information about a Genome Sequence (MIGS), Minimum Information about a Metagenomic Sequence (MIMS), and Minimum Information about a Marker Gene Sequence (MIMARKS). Community-wide adoption of MISAG and MIMAG will facilitate more robust comparative genomic analyses of bacterial and archaeal diversity.",
+            "rek_display_type": 179,
+            "rek_status": 2,
+            "rek_date": "2017-08-08T00:00:00Z",
+            "rek_created_date": "2017-08-16T11:01:56Z",
+            "rek_updated_date": "2017-08-19T06:40:22Z",
+            "rek_object_type": 3,
+            "rek_depositor": null,
+            "rek_file_downloads": 0,
+            "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Bowers, Robert M\" href=\"\/list\/author\/Bowers%2C+Robert+M\/\">Bowers, Robert M<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Kyrpides, Nikos C\" href=\"\/list\/author\/Kyrpides%2C+Nikos+C\/\">Kyrpides, Nikos C<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Stepanauskas, Ramunas\" href=\"\/list\/author\/Stepanauskas%2C+Ramunas\/\">Stepanauskas, Ramunas<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Harmon-Smith, Miranda\" href=\"\/list\/author\/Harmon-Smith%2C+Miranda\/\">Harmon-Smith, Miranda<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Doud, Devin\" href=\"\/list\/author\/Doud%2C+Devin\/\">Doud, Devin<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Reddy, T B K\" href=\"\/list\/author\/Reddy%2C+T+B+K\/\">Reddy, T B K<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Schulz, Frederik\" href=\"\/list\/author\/Schulz%2C+Frederik\/\">Schulz, Frederik<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Jarett, Jessica\" href=\"\/list\/author\/Jarett%2C+Jessica\/\">Jarett, Jessica<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Rivers, Adam R\" href=\"\/list\/author\/Rivers%2C+Adam+R\/\">Rivers, Adam R<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Eloe-Fadrosh, Emiley A\" href=\"\/list\/author\/Eloe-Fadrosh%2C+Emiley+A\/\">Eloe-Fadrosh, Emiley A<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tringe, Susannah G\" href=\"\/list\/author\/Tringe%2C+Susannah+G\/\">Tringe, Susannah G<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Ivanova, Natalia N\" href=\"\/list\/author\/Ivanova%2C+Natalia+N\/\">Ivanova, Natalia N<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Copeland, Alex\" href=\"\/list\/author\/Copeland%2C+Alex\/\">Copeland, Alex<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Clum, Alicia\" href=\"\/list\/author\/Clum%2C+Alicia\/\">Clum, Alicia<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Becraft, Eric D\" href=\"\/list\/author\/Becraft%2C+Eric+D\/\">Becraft, Eric D<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Malmstrom, Rex R\" href=\"\/list\/author\/Malmstrom%2C+Rex+R\/\">Malmstrom, Rex R<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Birren, Bruce\" href=\"\/list\/author\/Birren%2C+Bruce\/\">Birren, Bruce<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Podar, Mircea\" href=\"\/list\/author\/Podar%2C+Mircea\/\">Podar, Mircea<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Bork, Peer\" href=\"\/list\/author\/Bork%2C+Peer\/\">Bork, Peer<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Weinstock, George M\" href=\"\/list\/author\/Weinstock%2C+George+M\/\">Weinstock, George M<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Garrity, George M\" href=\"\/list\/author\/Garrity%2C+George+M\/\">Garrity, George M<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Dodsworth, Jeremy A\" href=\"\/list\/author\/Dodsworth%2C+Jeremy+A\/\">Dodsworth, Jeremy A<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Yooseph, Shibu\" href=\"\/list\/author\/Yooseph%2C+Shibu\/\">Yooseph, Shibu<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Sutton, Granger\" href=\"\/list\/author\/Sutton%2C+Granger\/\">Sutton, Granger<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Gl\u00f6ckner, Frank O\" href=\"\/list\/author\/Gl%26ouml%3Bckner%2C+Frank+O\/\">Gl\u00f6ckner, Frank O<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Gilbert, Jack A\" href=\"\/list\/author\/Gilbert%2C+Jack+A\/\">Gilbert, Jack A<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Nelson, William C\" href=\"\/list\/author\/Nelson%2C+William+C\/\">Nelson, William C<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Hallam, Steven J\" href=\"\/list\/author\/Hallam%2C+Steven+J\/\">Hallam, Steven J<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Jungbluth, Sean P\" href=\"\/list\/author\/Jungbluth%2C+Sean+P\/\">Jungbluth, Sean P<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Ettema, Thijs J G\" href=\"\/list\/author\/Ettema%2C+Thijs+J+G\/\">Ettema, Thijs J G<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tighe, Scott\" href=\"\/list\/author\/Tighe%2C+Scott\/\">Tighe, Scott<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Konstantinidis, Konstantinos T\" href=\"\/list\/author\/Konstantinidis%2C+Konstantinos+T\/\">Konstantinidis, Konstantinos T<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Liu, Wen-Tso\" href=\"\/list\/author\/Liu%2C+Wen-Tso\/\">Liu, Wen-Tso<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Baker, Brett J\" href=\"\/list\/author\/Baker%2C+Brett+J\/\">Baker, Brett J<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Rattei, Thomas\" href=\"\/list\/author\/Rattei%2C+Thomas\/\">Rattei, Thomas<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Eisen, Jonathan A\" href=\"\/list\/author\/Eisen%2C+Jonathan+A\/\">Eisen, Jonathan A<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Hedlund, Brian\" href=\"\/list\/author\/Hedlund%2C+Brian\/\">Hedlund, Brian<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for McMahon, Katherine D\" href=\"\/list\/author\/McMahon%2C+Katherine+D\/\">McMahon, Katherine D<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Fierer, Noah\" href=\"\/list\/author\/Fierer%2C+Noah\/\">Fierer, Noah<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Knight, Rob\" href=\"\/list\/author\/Knight%2C+Rob\/\">Knight, Rob<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Finn, Rob\" href=\"\/list\/author\/Finn%2C+Rob\/\">Finn, Rob<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Cochrane, Guy\" href=\"\/list\/author\/Cochrane%2C+Guy\/\">Cochrane, Guy<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Karsch-Mizrachi, Ilene\" href=\"\/list\/author\/Karsch-Mizrachi%2C+Ilene\/\">Karsch-Mizrachi, Ilene<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Tyson, Gene W\" href=\"\/list\/author\/Tyson%2C+Gene+W\/\">Tyson, Gene W<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Rinke, Christian\" href=\"\/list\/author\/Rinke%2C+Christian\/\">Rinke, Christian<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for , \" href=\"\/list\/author\/%2C+\/\">, <\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Lapidus, Alla\" href=\"\/list\/author\/Lapidus%2C+Alla\/\">Lapidus, Alla<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Meyer, Folker\" href=\"\/list\/author\/Meyer%2C+Folker\/\">Meyer, Folker<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Yilmaz, Pelin\" href=\"\/list\/author\/Yilmaz%2C+Pelin\/\">Yilmaz, Pelin<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Parks, Donovan H\" href=\"\/list\/author\/Parks%2C+Donovan+H\/\">Parks, Donovan H<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Eren, A M\" href=\"\/list\/author\/Eren%2C+A+M\/\">Eren, A M<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Schriml, Lynn\" href=\"\/list\/author\/Schriml%2C+Lynn\/\">Schriml, Lynn<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Banfield, Jillian F\" href=\"\/list\/author\/Banfield%2C+Jillian+F\/\">Banfield, Jillian F<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Hugenholtz, Philip\" href=\"\/list\/author\/Hugenholtz%2C+Philip\/\">Hugenholtz, Philip<\/a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Woyke, Tanja\" href=\"\/list\/author\/Woyke%2C+Tanja\/\">Woyke, Tanja<\/a> (<span class=\"citation_date\">2017<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Minimum information about a single amplified genome (MISAG) and a metagenome-assembled genome (MIMAG) of bacteria and archaea.\" href=\"\/view\/UQ:678835\">Minimum information about a single amplified genome (MISAG) and a metagenome-assembled genome (MIMAG) of bacteria and archaea.<\/a>. <i><span class=\"citation_journal_name\">Nature biotechnology<\/span><\/i>, <i><span class=\"citation_volume_number\">35<\/span><\/i> <span class=\"citation_issue_number\">8<\/span>: <span class=\"citation_start_page\">725<\/span>-<span class=\"citation_end_page\">731<\/span>. doi:<span class=\"citation_doi\">10.1038\/nbt.3893<\/span>",
+            "rek_genre": "Journal Article",
+            "rek_genre_type": null,
+            "rek_formatted_title": null,
+            "rek_formatted_abstract": null,
+            "rek_depositor_affiliation": null,
+            "rek_thomson_citation_count": null,
+            "rek_subtype": null,
+            "rek_scopus_citation_count": null,
+            "rek_herdc_notes": null,
+            "rek_scopus_doc_type": null,
+            "rek_wok_doc_type": null,
+            "rek_pubmed_doc_type": null,
+            "rek_security_inherited": null,
+            "rek_copyright": null,
+            "rek_altmetric_score": null,
+            "rek_altmetric_id": null,
+            "fez_record_search_key_access_conditions": null,
+            "fez_record_search_key_acknowledgements": null,
+            "fez_record_search_key_additional_notes": null,
+            "fez_record_search_key_advisory_statement": null,
+            "fez_record_search_key_alternate_genre": [],
+            "fez_record_search_key_alternative_title": [],
+            "fez_record_search_key_ands_collection_type": null,
+            "fez_record_search_key_architectural_features": [],
+            "fez_record_search_key_article_number": null,
+            "fez_record_search_key_assigned_group_id": [],
+            "fez_record_search_key_assigned_user_id": [],
+            "fez_record_search_key_author": [{
+                "rek_author_id": null,
+                "rek_author_pid": "UQ:678835",
+                "rek_author": "Bowers, Robert M",
+                "rek_author_order": 1
+            }],
+            "fez_record_search_key_author_affiliation_id": [],
+            "fez_record_search_key_author_affiliation_country": [],
+            "fez_record_search_key_author_affiliation_full_address": [{
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 1,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 2,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 3,
+                "rek_author_affiliation_full_address": "Bigelow Laboratory for Ocean Sciences, East Boothbay, Maine, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 4,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 5,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 6,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 7,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 8,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 9,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 10,
+                "rek_author_affiliation_full_address": "United States Department of Agriculture, Agricultural Research Service, Genomics and Bioinformatics Research Unit, Gainesville, Florida, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 11,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 12,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 13,
+                "rek_author_affiliation_full_address": "School of Natural Sciences, University of California Merced, Merced, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 14,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 15,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 16,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 17,
+                "rek_author_affiliation_full_address": "Bigelow Laboratory for Ocean Sciences, East Boothbay, Maine, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 18,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 19,
+                "rek_author_affiliation_full_address": "Broad Institute, Cambridge, Massachusetts, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 20,
+                "rek_author_affiliation_full_address": "Biosciences Division, Oak Ridge National Laboratory, Oakridge Tennessee, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 21,
+                "rek_author_affiliation_full_address": "Structural and Computational Biology Unit, European Molecular Biology Laboratory, Heidelberg, Germany."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 22,
+                "rek_author_affiliation_full_address": "The Jackson Laboratory for Genomic Medicine, Farmington, Connecticut, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 23,
+                "rek_author_affiliation_full_address": "Department of Microbiology &Molecular Genetics, Biomedical Physical Sciences, Michigan State University, East Lansing, Michigan, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 24,
+                "rek_author_affiliation_full_address": "Department of Biology, California State University, San Bernardino, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 25,
+                "rek_author_affiliation_full_address": "J. Craig Venter Institute, San Diego, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 26,
+                "rek_author_affiliation_full_address": "J. Craig Venter Institute, Rockville, Maryland, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 27,
+                "rek_author_affiliation_full_address": "Microbial Genomics and Bioinformatics Research Group, Max Planck Institute for Marine Microbiology, Bremen, Germany."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 28,
+                "rek_author_affiliation_full_address": "Biosciences Division, Argonne National Laboratory, Argonne, Illinois, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 29,
+                "rek_author_affiliation_full_address": "Department of Surgery, University of Chicago, Chicago, Illinois, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 30,
+                "rek_author_affiliation_full_address": "Biological Sciences Division, Earth and Biological Sciences Directorate, Pacific Northwest National Laboratory, Richland, Washington, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 31,
+                "rek_author_affiliation_full_address": "Department of Microbiology &Immunology, University of British Columbia, Vancouver, British Columbia, Canada."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 32,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 33,
+                "rek_author_affiliation_full_address": "Center for Dark Energy Biosphere Investigation, University of Southern California, Los Angeles, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 34,
+                "rek_author_affiliation_full_address": "Department of Cell and Molecular Biology, Science for Life Laboratory, Uppsala University, Uppsala, Sweden."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 35,
+                "rek_author_affiliation_full_address": "Advanced Genomics Lab, University of Vermont Cancer Center, Burlington Vermont, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 36,
+                "rek_author_affiliation_full_address": "Georgia Institute of Technology, School of Civil and Environmental Engineering, Atlanta, Georgia, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 37,
+                "rek_author_affiliation_full_address": "Department of Civil and Environmental Engineering, University of Illinois at Urbana-Champaign, Urbana, Illinois, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 38,
+                "rek_author_affiliation_full_address": "Department of Marine Science, University of Texas-Austin, Marine Science Institute, Austin, Texas, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 39,
+                "rek_author_affiliation_full_address": "Department of Microbiology and Ecosystem Science, University of Vienna, Vienna, Austria."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 40,
+                "rek_author_affiliation_full_address": "Genome Center, University of California, Davis, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 41,
+                "rek_author_affiliation_full_address": "School of Life Sciences, University of Nevada Las Vegas, Las Vegas, Nevada, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 42,
+                "rek_author_affiliation_full_address": "Nevada Institute of Personalized Medicine, University of Nevada Las Vegas, Las Vegas, Nevada, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 43,
+                "rek_author_affiliation_full_address": "Department of Civil and Environmental Engineering, University of Wisconsin-Madison, Madison, Wisconsin, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 44,
+                "rek_author_affiliation_full_address": "Department of Bacteriology, University of Wisconsin-Madison, Madison, Wisconsin, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 45,
+                "rek_author_affiliation_full_address": "Cooperative Institute for Research in Environmental Sciences, University of Colorado, Boulder, Colorado, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 46,
+                "rek_author_affiliation_full_address": "Department of Ecology and Evolutionary Biology, University of Colorado, Boulder, Colorado, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 47,
+                "rek_author_affiliation_full_address": "Center for Microbiome Innovation, and Departments of Pediatrics and Computer Science &Engineering, University of California San Diego, La Jolla, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 48,
+                "rek_author_affiliation_full_address": "European Molecular Biology Laboratory, European Bioinformatics Institute (EMBL-EBI), Welcome Trust Genome Campus, Hinxton, Cambridge, UK."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 49,
+                "rek_author_affiliation_full_address": "European Molecular Biology Laboratory, European Bioinformatics Institute (EMBL-EBI), Welcome Trust Genome Campus, Hinxton, Cambridge, UK."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 50,
+                "rek_author_affiliation_full_address": "National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health, Bethesda, Maryland, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 51,
+                "rek_author_affiliation_full_address": "Australian Centre for Ecogenomics, School of Chemistry and Molecular Biosciences, The University of Queensland, Brisbane, Queensland, Australia."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 52,
+                "rek_author_affiliation_full_address": "Australian Centre for Ecogenomics, School of Chemistry and Molecular Biosciences, The University of Queensland, Brisbane, Queensland, Australia."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 53,
+                "rek_author_affiliation_full_address": "Centre for Algorithmic Biotechnology, ITBM, St. Petersburg State University, St. Petersburg, Russia."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 54,
+                "rek_author_affiliation_full_address": "Biosciences Division, Argonne National Laboratory, Argonne, Illinois, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 55,
+                "rek_author_affiliation_full_address": "Microbial Genomics and Bioinformatics Research Group, Max Planck Institute for Marine Microbiology, Bremen, Germany."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 56,
+                "rek_author_affiliation_full_address": "Australian Centre for Ecogenomics, School of Chemistry and Molecular Biosciences, The University of Queensland, Brisbane, Queensland, Australia."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 57,
+                "rek_author_affiliation_full_address": "Knapp Center for Biomedical Discovery, Chicago, Illinois, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 58,
+                "rek_author_affiliation_full_address": "National Cancer Institute, Frederick, Maryland, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 59,
+                "rek_author_affiliation_full_address": "Department of Earth and Planetary Science, University of California, Berkeley, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 60,
+                "rek_author_affiliation_full_address": "Australian Centre for Ecogenomics, School of Chemistry and Molecular Biosciences, The University of Queensland, Brisbane, Queensland, Australia."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 61,
+                "rek_author_affiliation_full_address": "Department of Energy Joint Genome Institute, Walnut Creek, California, USA."
+            }, {
+                "rek_author_affiliation_full_address_id": null,
+                "rek_author_affiliation_full_address_pid": "UQ:678835",
+                "rek_author_affiliation_full_address_order": 62,
+                "rek_author_affiliation_full_address": "School of Natural Sciences, University of California Merced, Merced, California, USA."
+            }],
+            "fez_record_search_key_author_affiliation_name": [],
+            "fez_record_search_key_author_id": [],
+            "fez_record_search_key_author_role": [],
+            "fez_record_search_key_book_title": null,
+            "fez_record_search_key_building_materials": [],
+            "fez_record_search_key_category": [],
+            "fez_record_search_key_chapter_number": null,
+            "fez_record_search_key_condition": [],
+            "fez_record_search_key_conference_dates": null,
+            "fez_record_search_key_conference_id": null,
+            "fez_record_search_key_conference_location": null,
+            "fez_record_search_key_conference_name": null,
+            "fez_record_search_key_construction_date": null,
+            "fez_record_search_key_contact_details_email": [],
+            "fez_record_search_key_contributor": [],
+            "fez_record_search_key_contributor_id": [],
+            "fez_record_search_key_convener": null,
+            "fez_record_search_key_corresponding_email": [],
+            "fez_record_search_key_corresponding_name": [],
+            "fez_record_search_key_corresponding_country": [],
+            "fez_record_search_key_corresponding_organisation": [],
+            "fez_record_search_key_country_of_issue": null,
+            "fez_record_search_key_coverage_period": [],
+            "fez_record_search_key_creator_id": [],
+            "fez_record_search_key_creator_name": [],
+            "fez_record_search_key_datastream_policy": null,
+            "fez_record_search_key_data_volume": null,
+            "fez_record_search_key_date_available": null,
+            "fez_record_search_key_date_photo_taken": null,
+            "fez_record_search_key_date_recorded": null,
+            "fez_record_search_key_date_scanned": null,
+            "fez_record_search_key_doi": {
+                "rek_doi_id": null,
+                "rek_doi_pid": "UQ:678835",
+                "rek_doi": "10.1038\/nbt.3893"
+            },
+            "fez_record_search_key_edition": null,
+            "fez_record_search_key_end_date": null,
+            "fez_record_search_key_end_page": {
+                "rek_end_page_id": null,
+                "rek_end_page_pid": "UQ:678835",
+                "rek_end_page": "731"
+            },
+            "fez_record_search_key_fields_of_research": [],
+            "fez_record_search_key_file_attachment_name": [],
+            "fez_record_search_key_geographic_area": [],
+            "fez_record_search_key_grant_acronym": [],
+            "fez_record_search_key_grant_agency": [],
+            "fez_record_search_key_grant_agency_id": [],
+            "fez_record_search_key_grant_id": [],
+            "fez_record_search_key_grant_text": [],
+            "fez_record_search_key_herdc_code": null,
+            "fez_record_search_key_herdc_status": null,
+            "fez_record_search_key_identifier": [],
+            "fez_record_search_key_institutional_status": null,
+            "fez_record_search_key_interior_features": [],
+            "fez_record_search_key_isbn": [],
+            "fez_record_search_key_isdatasetof": [],
+            "fez_record_search_key_isderivationof": [],
+            "fez_record_search_key_isi_loc": null,
+            "fez_record_search_key_ismemberof": [{
+                "rek_ismemberof_id": null,
+                "rek_ismemberof_pid": "UQ:678835",
+                "rek_ismemberof": "UQ:639325",
+                "rek_ismemberof_order": 1
+            }],
+            "fez_record_search_key_issn": [{
+                "rek_issn_id": null,
+                "rek_issn_pid": "UQ:678835",
+                "rek_issn": "1546-1696",
+                "rek_issn_order": 1
+            }],
+            "fez_record_search_key_issue_number": {
+                "rek_issue_number_id": null,
+                "rek_issue_number_pid": "UQ:678835",
+                "rek_issue_number": "8"
+            },
+            "fez_record_search_key_job_number": null,
+            "fez_record_search_key_journal_name": {
+                "rek_journal_name_id": null,
+                "rek_journal_name_pid": "UQ:678835",
+                "rek_journal_name": "Nature biotechnology"
+            },
+            "fez_record_search_key_keywords": [{
+                "rek_keywords_id": null,
+                "rek_keywords_pid": "UQ:678835",
+                "rek_keywords": "Biotechnology",
+                "rek_keywords_order": 1
+            }, {
+                "rek_keywords_id": null,
+                "rek_keywords_pid": "UQ:678835",
+                "rek_keywords": "Molecular Medicine",
+                "rek_keywords_order": 2
+            }, {
+                "rek_keywords_id": null,
+                "rek_keywords_pid": "UQ:678835",
+                "rek_keywords": "Applied Microbiology and Biotechnology",
+                "rek_keywords_order": 3
+            }, {
+                "rek_keywords_id": null,
+                "rek_keywords_pid": "UQ:678835",
+                "rek_keywords": "Bioengineering",
+                "rek_keywords_order": 4
+            }, {
+                "rek_keywords_id": null,
+                "rek_keywords_pid": "UQ:678835",
+                "rek_keywords": "Biomedical Engineering",
+                "rek_keywords_order": 5
+            }],
+            "fez_record_search_key_language": [{
+                "rek_language_id": null,
+                "rek_language_pid": "UQ:678835",
+                "rek_language": "0",
+                "rek_language_order": 1
+            }],
+            "fez_record_search_key_language_of_book_title": [],
+            "fez_record_search_key_language_of_journal_name": [],
+            "fez_record_search_key_language_of_proceedings_title": [],
+            "fez_record_search_key_language_of_title": [],
+            "fez_record_search_key_length": null,
+            "fez_record_search_key_license": null,
+            "fez_record_search_key_link": [],
+            "fez_record_search_key_link_description": [],
+            "fez_record_search_key_location": [],
+            "fez_record_search_key_native_script_book_title": null,
+            "fez_record_search_key_native_script_conference_name": null,
+            "fez_record_search_key_native_script_journal_name": null,
+            "fez_record_search_key_native_script_proceedings_title": null,
+            "fez_record_search_key_native_script_title": null,
+            "fez_record_search_key_newspaper": null,
+            "fez_record_search_key_notes": null,
+            "fez_record_search_key_oa_embargo_days": null,
+            "fez_record_search_key_oa_notes": null,
+            "fez_record_search_key_oa_status": {
+                "rek_oa_status_id": null,
+                "rek_oa_status_pid": "UQ:678835",
+                "rek_oa_status": 453698
+            },
+            "fez_record_search_key_org_name": null,
+            "fez_record_search_key_org_unit_name": null,
+            "fez_record_search_key_original_format": null,
+            "fez_record_search_key_parent_publication": null,
+            "fez_record_search_key_patent_number": null,
+            "fez_record_search_key_period": [],
+            "fez_record_search_key_place_of_publication": null,
+            "fez_record_search_key_proceedings_title": null,
+            "fez_record_search_key_project_description": null,
+            "fez_record_search_key_project_id": null,
+            "fez_record_search_key_project_name": null,
+            "fez_record_search_key_project_start_date": null,
+            "fez_record_search_key_publisher": {
+                "rek_publisher_id": null,
+                "rek_publisher_pid": "UQ:678835",
+                "rek_publisher": "Springer Nature"
+            },
+            "fez_record_search_key_pubmed_id": {
+                "rek_pubmed_id_id": null,
+                "rek_pubmed_id_pid": "UQ:678835",
+                "rek_pubmed_id": "28787424"
+            },
+            "fez_record_search_key_refereed": {
+                "rek_refereed_id": null,
+                "rek_refereed_pid": "UQ:678835",
+                "rek_refereed": 1
+            },
+            "fez_record_search_key_refereed_source": {
+                "rek_refereed_source_id": null,
+                "rek_refereed_source_pid": "UQ:678835",
+                "rek_refereed_source": 453635
+            },
+            "fez_record_search_key_related_datasets": null,
+            "fez_record_search_key_related_publications": null,
+            "fez_record_search_key_report_number": null,
+            "fez_record_search_key_retracted": null,
+            "fez_record_search_key_rights": null,
+            "fez_record_search_key_roman_script_book_title": null,
+            "fez_record_search_key_roman_script_conference_name": null,
+            "fez_record_search_key_roman_script_journal_name": null,
+            "fez_record_search_key_roman_script_proceedings_title": null,
+            "fez_record_search_key_roman_script_title": null,
+            "fez_record_search_key_scale": null,
+            "fez_record_search_key_scopus_id": null,
+            "fez_record_search_key_section": null,
+            "fez_record_search_key_seo_code": [],
+            "fez_record_search_key_series": null,
+            "fez_record_search_key_software_required": [],
+            "fez_record_search_key_source": null,
+            "fez_record_search_key_start_date": null,
+            "fez_record_search_key_start_page": {
+                "rek_start_page_id": null,
+                "rek_start_page_pid": "UQ:678835",
+                "rek_start_page": "725"
+            },
+            "fez_record_search_key_structural_systems": [],
+            "fez_record_search_key_style": [],
+            "fez_record_search_key_subcategory": [],
+            "fez_record_search_key_subject": [],
+            "fez_record_search_key_supervisor": [],
+            "fez_record_search_key_supervisor_id": [],
+            "fez_record_search_key_surrounding_features": [],
+            "fez_record_search_key_time_period_end_date": null,
+            "fez_record_search_key_time_period_start_date": null,
+            "fez_record_search_key_total_chapters": null,
+            "fez_record_search_key_total_pages": null,
+            "fez_record_search_key_transcript": null,
+            "fez_record_search_key_translated_book_title": null,
+            "fez_record_search_key_translated_conference_name": null,
+            "fez_record_search_key_translated_journal_name": null,
+            "fez_record_search_key_translated_newspaper": null,
+            "fez_record_search_key_translated_proceedings_title": null,
+            "fez_record_search_key_translated_title": null,
+            "fez_record_search_key_type_of_data": [],
+            "fez_record_search_key_volume_number": {
+                "rek_volume_number_id": null,
+                "rek_volume_number_pid": "UQ:678835",
+                "rek_volume_number": "35"
+            }
         }
     ],
     "filters": {

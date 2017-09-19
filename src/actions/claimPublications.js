@@ -169,6 +169,13 @@ export function claimPublication(data) {
         attachments = claimAttachments(data.files.queue);
     }
 
+    const soloAuthor = {
+        fez_record_search_key_author_id: {
+            rek_author_id: data.author.aut_id,
+            rek_author_id_order: 1
+        }
+    };
+
     return dispatch => {
         dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
         if (data.publication.rek_pid) {

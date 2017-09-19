@@ -8,7 +8,7 @@ import {SESSION_COOKIE_NAME} from 'config';
 import * as mockData from './data';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, { delayResponse: 2000 });
+const mock = new MockAdapter(api, { delayResponse: 10 });
 
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');

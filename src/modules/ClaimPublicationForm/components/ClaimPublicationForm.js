@@ -85,7 +85,11 @@ export default class ClaimPublicationForm extends Component {
                     </StandardCard>
 
                     {
-                        <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help} className="requiredField">
+                        publication.fez_record_search_key_author.length > 1 &&
+                        <StandardCard
+                            title={txt.authorLinking.title}
+                            help={txt.authorLinking.help}
+                            className="requiredField">
                             <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
                             <Field
                                 name="authorLinking"
