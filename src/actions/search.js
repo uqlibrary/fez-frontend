@@ -43,8 +43,13 @@ function getSearch(source, queryString) {
     }
 }
 
-// Create a function to translate the source value into a URL to add to the item.
-
+/**
+ * createSearchPromise - returns a promise for search in a specific source
+ * @param source
+ * @param queryString
+ * @param dispatch
+ * @returns {Promise}
+ */
 export function createSearchPromise(source, queryString, dispatch) {
     return new Promise((resolve) => {
         dispatch({type: `${SEARCH_LOADING}@${source}`});
