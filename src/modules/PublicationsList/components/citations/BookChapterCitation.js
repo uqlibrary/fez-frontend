@@ -4,6 +4,7 @@ import FontIcon from 'material-ui/FontIcon';
 import AuthorsCitationView from './AuthorsCitationView';
 import EditorsCitationView from './EditorsCitationView';
 import YearCitationView from './YearCitationView';
+import PageRangeCitationView from './PageRangeCitationView';
 
 export default class BookChapterCitation extends Component {
     static propTypes = {
@@ -22,10 +23,6 @@ export default class BookChapterCitation extends Component {
                 this.props.publication.fez_record_search_key_book_title.rek_book_title : null,
             edition: this.props.publication.fez_record_search_key_edition ?
                 this.props.publication.fez_record_search_key_edition.rek_edition : null,
-            startPage: this.props.publication.fez_record_search_key_start_page ?
-                this.props.publication.fez_record_search_key_start_page.rek_start_page : null,
-            endPage: this.props.publication.fez_record_search_key_end_page ?
-                this.props.publication.fez_record_search_key_end_page.rek_end_page : null,
             placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication ?
                 this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
             publisher: this.props.publication.fez_record_search_key_publisher ?
@@ -66,22 +63,7 @@ export default class BookChapterCitation extends Component {
                     <span className="citationBookEdition"> {bookChapter.edition} ed.</span>
                 }
                 {/* pages (pp. start page-end page) */}
-                {
-                    (bookChapter.startPage || bookChapter.endPage) ? ' (pp. ' : ''
-                }
-                {
-                    bookChapter.startPage &&
-                    <span className="citationStartPage">
-                        {bookChapter.startPage}{bookChapter.endPage ? '-' : '' }
-                    </span>
-                }
-                {
-                    bookChapter.endPage &&
-                    <span className="citationEndPage">{bookChapter.endPage}</span>
-                }
-                {
-                    (bookChapter.startPage || bookChapter.endPage) ? ') ' : ''
-                }
+                <PageRangeCitationView publication={this.props.publication} prefix=" (pp. " suffix=") " />
                 {/* place of publication */}
                 {
                     bookChapter.placeOfPublication &&

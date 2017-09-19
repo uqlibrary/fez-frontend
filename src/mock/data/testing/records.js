@@ -1397,5 +1397,565 @@ export const book = {
     "fez_record_search_key_type_of_data": [],
     "fez_record_search_key_volume_number": null
 };
+
+export const conferencePaper = {
+    "rek_pid":"UQ:347818",
+    "rek_title":"Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy",
+    "rek_description":null,
+    "rek_display_type":130,
+    "rek_status":2,
+    "rek_date":"2014-01-01T00:00:00Z",
+    "rek_created_date":"2014-12-21T00:47:30Z",
+    "rek_updated_date":"2016-08-31T01:42:24Z",
+    "rek_object_type":3,
+    "rek_depositor":8524,
+    "rek_file_downloads":0,
+    "rek_citation":"<a class=\"citation_author_name\" title=\"Browse by Author Name for Larance, Briony\" href=\"\/list\/author\/Larance%2C+Briony\/\">Larance, Briony<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Peacock, Amy\" href=\"\/list\/author\/Peacock%2C+Amy\/\">Peacock, Amy<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Campbell, Gabrielle\" href=\"\/list\/author\/Campbell%2C+Gabrielle\/\">Campbell, Gabrielle<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Freckleton, Sarah\" href=\"\/list\/author\/Freckleton%2C+Sarah\/\">Freckleton, Sarah<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Smith, Kimberley\" href=\"\/list\/author\/Smith%2C+Kimberley\/\">Smith, Kimberley<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Mattick, Richard\" href=\"\/list\/author\/Mattick%2C+Richard\/\">Mattick, Richard<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Bruno, Raimondo\" href=\"\/list\/author\/Bruno%2C+Raimondo\/\">Bruno, Raimondo<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Nielsen, Suzanne\" href=\"\/list\/author\/Nielsen%2C+Suzanne\/\">Nielsen, Suzanne<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Cohen, Milton\" href=\"\/list\/author\/Cohen%2C+Milton\/\">Cohen, Milton<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Lintzeris, Nicholas\" href=\"\/list\/author\/Lintzeris%2C+Nicholas\/\">Lintzeris, Nicholas<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Shand, Fiona\" href=\"\/list\/author\/Shand%2C+Fiona\/\">Shand, Fiona<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Hall, Wayne D.\" href=\"\/list\/author_id\/1968\/\">Hall, Wayne D.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Farrell, Michael\" href=\"\/list\/author\/Farrell%2C+Michael\/\">Farrell, Michael<\/a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Degenhardt, Louisa\" href=\"\/list\/author\/Degenhardt%2C+Louisa\/\">Degenhardt, Louisa<\/a> (<span class=\"citation_date\">2014<\/span>). <a class=\"citation_title\" title=\"Click to view Conference Paper: Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy\" href=\"\/view\/UQ:347818\">Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy<\/a>. In:  <i><span class=\"citation_conference_name\">Australasian Professional Society on Alcohol and other Drugs Conference 2014<\/span><\/i>, <span class=\"citation_conference_location\">Adelaide, South Australia, Australia<\/span>, (<span class=\"citation_start_page\">39<\/span>-<span class=\"citation_end_page\">40<\/span>). <span class=\"citation_conference_dates\">9-12 November, 2014<\/span>. doi:<span class=\"citation_doi\">10.1111\/dar.12222<\/span>",
+    "rek_genre":"Conference Paper",
+    "rek_genre_type":null,
+    "rek_formatted_title":null,
+    "rek_formatted_abstract":null,
+    "rek_depositor_affiliation":1247,
+    "rek_thomson_citation_count":0,
+    "rek_subtype":"Published abstract",
+    "rek_scopus_citation_count":null,
+    "rek_herdc_notes":null,
+    "rek_scopus_doc_type":null,
+    "rek_wok_doc_type":"MC",
+    "rek_pubmed_doc_type":null,
+    "rek_security_inherited":null,
+    "rek_copyright":"off",
+    "rek_altmetric_score":0,
+    "rek_altmetric_id":5589576,
+    "fez_record_search_key_access_conditions":null,
+    "fez_record_search_key_acknowledgements":null,
+    "fez_record_search_key_additional_notes":null,
+    "fez_record_search_key_advisory_statement":null,
+    "fez_record_search_key_alternate_genre":[
+
+    ],
+    "fez_record_search_key_alternative_title":[
+
+    ],
+    "fez_record_search_key_ands_collection_type":null,
+    "fez_record_search_key_architectural_features":[
+
+    ],
+    "fez_record_search_key_article_number":null,
+    "fez_record_search_key_assigned_group_id":[
+
+    ],
+    "fez_record_search_key_assigned_user_id":[
+
+    ],
+    "fez_record_search_key_author":[
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Larance, Briony",
+            "rek_author_order":1
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Peacock, Amy",
+            "rek_author_order":2
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Campbell, Gabrielle",
+            "rek_author_order":3
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Freckleton, Sarah",
+            "rek_author_order":4
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Smith, Kimberley",
+            "rek_author_order":5
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Mattick, Richard",
+            "rek_author_order":6
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Bruno, Raimondo",
+            "rek_author_order":7
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Nielsen, Suzanne",
+            "rek_author_order":8
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Cohen, Milton",
+            "rek_author_order":9
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Lintzeris, Nicholas",
+            "rek_author_order":10
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Shand, Fiona",
+            "rek_author_order":11
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Hall, Wayne D.",
+            "rek_author_order":12
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Farrell, Michael",
+            "rek_author_order":13
+        },
+        {
+            "rek_author_id":null,
+            "rek_author_pid":"UQ:347818",
+            "rek_author":"Degenhardt, Louisa",
+            "rek_author_order":14
+        }
+    ],
+    "fez_record_search_key_author_affiliation_id":[
+
+    ],
+    "fez_record_search_key_author_affiliation_country":[
+
+    ],
+    "fez_record_search_key_author_affiliation_full_address":[
+
+    ],
+    "fez_record_search_key_author_affiliation_name":[
+
+    ],
+    "fez_record_search_key_author_id":[
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":1
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":2
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":3
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":4
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":5
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":6
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":7
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":8
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":9
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":10
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":11
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":1968,
+            "rek_author_id_order":12
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":13
+        },
+        {
+            "rek_author_id_id":null,
+            "rek_author_id_pid":"UQ:347818",
+            "rek_author_id":0,
+            "rek_author_id_order":14
+        }
+    ],
+    "fez_record_search_key_author_role":[
+
+    ],
+    "fez_record_search_key_book_title":null,
+    "fez_record_search_key_building_materials":[
+
+    ],
+    "fez_record_search_key_category":[
+
+    ],
+    "fez_record_search_key_chapter_number":null,
+    "fez_record_search_key_condition":[
+
+    ],
+    "fez_record_search_key_conference_dates":{
+        "rek_conference_dates_id":null,
+        "rek_conference_dates_pid":"UQ:347818",
+        "rek_conference_dates":"9-12 November, 2014"
+    },
+    "fez_record_search_key_conference_id":null,
+    "fez_record_search_key_conference_location":{
+        "rek_conference_location_id":null,
+        "rek_conference_location_pid":"UQ:347818",
+        "rek_conference_location":"Adelaide, South Australia, Australia"
+    },
+    "fez_record_search_key_conference_name":{
+        "rek_conference_name_id":null,
+        "rek_conference_name_pid":"UQ:347818",
+        "rek_conference_name":"Australasian Professional Society on Alcohol and other Drugs Conference 2014"
+    },
+    "fez_record_search_key_construction_date":null,
+    "fez_record_search_key_contact_details_email":[
+
+    ],
+    "fez_record_search_key_contributor":[
+
+    ],
+    "fez_record_search_key_contributor_id":[
+
+    ],
+    "fez_record_search_key_convener":null,
+    "fez_record_search_key_corresponding_email":[
+
+    ],
+    "fez_record_search_key_corresponding_name":[
+
+    ],
+    "fez_record_search_key_corresponding_country":[
+
+    ],
+    "fez_record_search_key_corresponding_organisation":[
+
+    ],
+    "fez_record_search_key_country_of_issue":null,
+    "fez_record_search_key_coverage_period":[
+
+    ],
+    "fez_record_search_key_creator_id":[
+
+    ],
+    "fez_record_search_key_creator_name":[
+
+    ],
+    "fez_record_search_key_datastream_policy":null,
+    "fez_record_search_key_data_volume":null,
+    "fez_record_search_key_date_available":null,
+    "fez_record_search_key_date_photo_taken":null,
+    "fez_record_search_key_date_recorded":null,
+    "fez_record_search_key_date_scanned":null,
+    "fez_record_search_key_doi":{
+        "rek_doi_id":null,
+        "rek_doi_pid":"UQ:347818",
+        "rek_doi":"10.1111\/dar.12222"
+    },
+    "fez_record_search_key_edition":null,
+    "fez_record_search_key_end_date":null,
+    "fez_record_search_key_end_page":{
+        "rek_end_page_id":null,
+        "rek_end_page_pid":"UQ:347818",
+        "rek_end_page":"40"
+    },
+    "fez_record_search_key_fields_of_research":[
+
+    ],
+    "fez_record_search_key_file_attachment_access_condition":[
+
+    ],
+    "fez_record_search_key_file_attachment_embargo_date":[
+
+    ],
+    "fez_record_search_key_file_attachment_name":[
+
+    ],
+    "fez_record_search_key_geographic_area":[
+
+    ],
+    "fez_record_search_key_grant_acronym":[
+
+    ],
+    "fez_record_search_key_grant_agency":[
+
+    ],
+    "fez_record_search_key_grant_agency_id":[
+
+    ],
+    "fez_record_search_key_grant_id":[
+
+    ],
+    "fez_record_search_key_grant_text":[
+
+    ],
+    "fez_record_search_key_herdc_code":{
+        "rek_herdc_code_id":null,
+        "rek_herdc_code_pid":"UQ:347818",
+        "rek_herdc_code":450018
+    },
+    "fez_record_search_key_herdc_status":{
+        "rek_herdc_status_id":null,
+        "rek_herdc_status_pid":"UQ:347818",
+        "rek_herdc_status":453220
+    },
+    "fez_record_search_key_identifier":[
+
+    ],
+    "fez_record_search_key_institutional_status":{
+        "rek_institutional_status_id":null,
+        "rek_institutional_status_pid":"UQ:347818",
+        "rek_institutional_status":453223
+    },
+    "fez_record_search_key_interior_features":[
+
+    ],
+    "fez_record_search_key_isbn":[
+
+    ],
+    "fez_record_search_key_isdatasetof":[
+
+    ],
+    "fez_record_search_key_isderivationof":[
+
+    ],
+    "fez_record_search_key_isi_loc":{
+        "rek_isi_loc_id":null,
+        "rek_isi_loc_pid":"UQ:347818",
+        "rek_isi_loc":"000344914800113"
+    },
+    "fez_record_search_key_ismemberof":[
+        {
+            "rek_ismemberof_id":null,
+            "rek_ismemberof_pid":"UQ:347818",
+            "rek_ismemberof":"UQ:351431",
+            "rek_ismemberof_order":1
+        }
+    ],
+    "fez_record_search_key_issn":[
+        {
+            "rek_issn_id":null,
+            "rek_issn_pid":"UQ:347818",
+            "rek_issn":"0959-5236",
+            "rek_issn_order":1
+        },
+        {
+            "rek_issn_id":null,
+            "rek_issn_pid":"UQ:347818",
+            "rek_issn":"1465-3362",
+            "rek_issn_order":2
+        }
+    ],
+    "fez_record_search_key_issue_number":{
+        "rek_issue_number_id":null,
+        "rek_issue_number_pid":"UQ:347818",
+        "rek_issue_number":"S1"
+    },
+    "fez_record_search_key_job_number":null,
+    "fez_record_search_key_journal_name":{
+        "rek_journal_name_id":null,
+        "rek_journal_name_pid":"UQ:347818",
+        "rek_journal_name":"Drug and Alcohol Review"
+    },
+    "fez_record_search_key_keywords":[
+
+    ],
+    "fez_record_search_key_language":[
+        {
+            "rek_language_id":null,
+            "rek_language_pid":"UQ:347818",
+            "rek_language":"eng",
+            "rek_language_order":1
+        }
+    ],
+    "fez_record_search_key_language_of_book_title":[
+
+    ],
+    "fez_record_search_key_language_of_journal_name":[
+
+    ],
+    "fez_record_search_key_language_of_proceedings_title":[
+
+    ],
+    "fez_record_search_key_language_of_title":[
+
+    ],
+    "fez_record_search_key_length":null,
+    "fez_record_search_key_license":null,
+    "fez_record_search_key_link":[
+
+    ],
+    "fez_record_search_key_link_description":[
+
+    ],
+    "fez_record_search_key_location":[
+
+    ],
+    "fez_record_search_key_native_script_book_title":null,
+    "fez_record_search_key_native_script_conference_name":null,
+    "fez_record_search_key_native_script_journal_name":null,
+    "fez_record_search_key_native_script_proceedings_title":null,
+    "fez_record_search_key_native_script_title":null,
+    "fez_record_search_key_newspaper":null,
+    "fez_record_search_key_notes":null,
+    "fez_record_search_key_oa_embargo_days":null,
+    "fez_record_search_key_oa_notes":null,
+    "fez_record_search_key_oa_status":null,
+    "fez_record_search_key_org_name":null,
+    "fez_record_search_key_org_unit_name":null,
+    "fez_record_search_key_original_format":null,
+    "fez_record_search_key_parent_publication":null,
+    "fez_record_search_key_patent_number":null,
+    "fez_record_search_key_period":[
+
+    ],
+    "fez_record_search_key_place_of_publication":{
+        "rek_place_of_publication_id":null,
+        "rek_place_of_publication_pid":"UQ:347818",
+        "rek_place_of_publication":"Chichester, West Sussex, United Kingdom"
+    },
+    "fez_record_search_key_proceedings_title":null,
+    "fez_record_search_key_project_description":null,
+    "fez_record_search_key_project_id":null,
+    "fez_record_search_key_project_name":null,
+    "fez_record_search_key_project_start_date":null,
+    "fez_record_search_key_publisher":{
+        "rek_publisher_id":null,
+        "rek_publisher_pid":"UQ:347818",
+        "rek_publisher":"Wiley-Blackwell Publishing"
+    },
+    "fez_record_search_key_pubmed_id":null,
+    "fez_record_search_key_refereed":null,
+    "fez_record_search_key_refereed_source":{
+        "rek_refereed_source_id":null,
+        "rek_refereed_source_pid":"UQ:347818",
+        "rek_refereed_source":453635
+    },
+    "fez_record_search_key_related_datasets":null,
+    "fez_record_search_key_related_publications":null,
+    "fez_record_search_key_report_number":null,
+    "fez_record_search_key_retracted":null,
+    "fez_record_search_key_rights":null,
+    "fez_record_search_key_roman_script_book_title":null,
+    "fez_record_search_key_roman_script_conference_name":null,
+    "fez_record_search_key_roman_script_journal_name":null,
+    "fez_record_search_key_roman_script_proceedings_title":null,
+    "fez_record_search_key_roman_script_title":null,
+    "fez_record_search_key_scale":null,
+    "fez_record_search_key_scopus_id":null,
+    "fez_record_search_key_section":null,
+    "fez_record_search_key_seo_code":[
+
+    ],
+    "fez_record_search_key_series":null,
+    "fez_record_search_key_software_required":[
+
+    ],
+    "fez_record_search_key_source":null,
+    "fez_record_search_key_start_date":null,
+    "fez_record_search_key_start_page":{
+        "rek_start_page_id":null,
+        "rek_start_page_pid":"UQ:347818",
+        "rek_start_page":"39"
+    },
+    "fez_record_search_key_structural_systems":[
+
+    ],
+    "fez_record_search_key_style":[
+
+    ],
+    "fez_record_search_key_subcategory":[
+
+    ],
+    "fez_record_search_key_subject":[
+
+    ],
+    "fez_record_search_key_supervisor":[
+
+    ],
+    "fez_record_search_key_supervisor_id":[
+
+    ],
+    "fez_record_search_key_surrounding_features":[
+
+    ],
+    "fez_record_search_key_time_period_end_date":null,
+    "fez_record_search_key_time_period_start_date":null,
+    "fez_record_search_key_total_chapters":null,
+    "fez_record_search_key_total_pages":{
+        "rek_total_pages_id":null,
+        "rek_total_pages_pid":"UQ:347818",
+        "rek_total_pages":"2"
+    },
+    "fez_record_search_key_transcript":null,
+    "fez_record_search_key_translated_book_title":null,
+    "fez_record_search_key_translated_conference_name":null,
+    "fez_record_search_key_translated_journal_name":null,
+    "fez_record_search_key_translated_newspaper":null,
+    "fez_record_search_key_translated_proceedings_title":null,
+    "fez_record_search_key_translated_title":null,
+    "fez_record_search_key_type_of_data":[
+
+    ],
+    "fez_record_search_key_volume_number":{
+        "rek_volume_number_id":null,
+        "rek_volume_number_pid":"UQ:347818",
+        "rek_volume_number":"33"
+    }
+};
 // TODO: each publication type should have a sample from eSpace data for testing
 
