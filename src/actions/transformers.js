@@ -2,8 +2,8 @@ import {locale} from 'config';
 
 const moment = require('moment');
 
-export function claimAttachments(files) {
-    if (!files || files.length === 0) return null;
+const getClaimAttachments = (files) => {
+    if (!files || files.length === 0) return {};
     return {
         attachments: files.map((item) => {
             return {
@@ -13,7 +13,21 @@ export function claimAttachments(files) {
             };
         })
     };
-}
+};
+
+export const getClaimRequest = (data) => {
+    const claimRequest = {
+        pid: data.publication.rek_pid,
+        author_id: data.author.aut_id,
+        ...(data.files && data.files.queue ? getClaimAttachments(data.files.queue) : {})
+    };
+
+    if (data.comments) {
+        claimRequest.comments = data.comments;
+    }
+
+    return claimRequest;
+};
 
 export function recordRekLink(data) {
     if (!data.rek_link) return null;

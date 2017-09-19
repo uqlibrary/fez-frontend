@@ -7,7 +7,7 @@ import {
     patchRecord, postRecord
 } from 'repositories';
 
-import {recordRekLink, recordFileAttachment, recordAuthorsId, claimAttachments} from './transformers';
+import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 export const POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'POSSIBLY_YOUR_PUBLICATIONS_LOADING';
@@ -164,29 +164,15 @@ export function clearClaimPublication() {
  */
 export function claimPublication(data) {
     console.log(data);
-    let attachments = [];
-    if (data.files && data.files.queue && data.files.queue.length > 0) {
-        attachments = claimAttachments(data.files.queue);
-    }
-
-    const soloAuthor = {
-        fez_record_search_key_author_id: {
-            rek_author_id: data.author.aut_id,
-            rek_author_id_order: 1
-        }
-    };
 
     return dispatch => {
         dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
+
         if (data.publication.rek_pid) {
             // claim record from eSpace
-            const claimRequest = {
-                pid: data.publication.rek_pid,
-                author_id: data.author.aut_id,
-                comments: data.comments,
-                ...attachments
-            };
+            const claimRequest = transformers.getClaimRequest(data);
             console.log(claimRequest);
+
             return postClaimPossiblePublication(claimRequest)
                 .then(response => {
                     if (!data.files || !data.files.queue || data.files.queue.length === 0) {
@@ -197,11 +183,22 @@ export function claimPublication(data) {
                 })
                 .then(() => {
                     // patch the record with new data
+                    // auto-assign current author if there's only one author
+                    const soloAuthor = {
+                        fez_record_search_key_author_id: {
+                            rek_author_id: data.author.aut_id,
+                            rek_author_id_order: 1
+                        }
+                    };
+
+                    const recordAuthorsIds = data.publication.fez_record_search_key_author.length === 1 && !data.authorLinking
+                        ? soloAuthor : transformers.recordAuthorsId(data.authorLinking.authors);
+
                     const recordPatchRequest = {
                         rek_pid: data.publication.rek_pid,
-                        ...recordRekLink(data),
-                        ...recordFileAttachment(data.files.queue, data.publication),
-                        ...recordAuthorsId(data.authorLinking.authors)
+                        ...transformers.recordRekLink(data),
+                        ...transformers.recordFileAttachment(data.files ? data.files.queue : [], data.publication),
+                        ...recordAuthorsIds
                     };
                     console.log(recordPatchRequest);
                     return patchRecord(data.publication.rek_pid, recordPatchRequest);
@@ -227,7 +224,7 @@ export function claimPublication(data) {
             // what about required fields - are they set, eg subtype, publication year etc?
             const recordRequest = {
                 ...JSON.parse(JSON.stringify(data.publication)),
-                ...recordRekLink(data),
+                ...transformers.recordRekLink(data),
                 ...NEW_RECORD_DEFAULT_VALUES
             };
 
@@ -247,12 +244,8 @@ export function claimPublication(data) {
                 // })
                 .then(response => {
                     newPid = response.data.rek_pid;
-                    const claimRequest = {
-                        pid: newPid,
-                        author_id: data.author.aut_id,
-                        comments: data.comments,
-                        ...attachments
-                    };
+                    data.publication.rek_pid = response.data.rek_pid;
+                    const claimRequest = transformers.getClaimRequest(data);
                     console.log(claimRequest);
                     return postClaimPossiblePublication(claimRequest);
                 })
@@ -260,8 +253,8 @@ export function claimPublication(data) {
                     // patch the record with new data
                     const recordPatchRequest = {
                         rek_pid: newPid,
-                        ...recordRekLink(data),
-                        ...recordFileAttachment(data.files.queue)
+                        ...transformers.recordRekLink(data),
+                        ...transformers.recordFileAttachment(data.files.queue)
                         // TODO: updated record's author_id and order ...recordAuthors(data.publication)
                     };
                     console.log(recordPatchRequest);
@@ -284,6 +277,3 @@ export function claimPublication(data) {
         }
     };
 }
-
-// claim-possible format:
-// "{ "pid": "UQ:2", "comments": "test1", "claims": [ { "description_id": "12", "embargo_date": "11/11/2019", "file": "file1.pdf" }, { "description_id": "2", "embargo_date": "11/11/2019", "file": "file2.pdf" } ] }"
