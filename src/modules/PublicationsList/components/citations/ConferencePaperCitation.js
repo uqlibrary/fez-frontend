@@ -23,10 +23,6 @@ export default class BookCitation extends Component {
                 this.props.publication.fez_record_search_key_conference_name.rek_conference_name : null,
             location: this.props.publication.fez_record_search_key_conference_location ?
                 this.props.publication.fez_record_search_key_conference_location.rek_conference_location : null,
-            startPage: this.props.publication.fez_record_search_key_start_page ?
-                this.props.publication.fez_record_search_key_start_page.rek_start_page : null,
-            endPage: this.props.publication.fez_record_search_key_end_page ?
-                this.props.publication.fez_record_search_key_end_page.rek_end_page : null,
             dates: this.props.publication.fez_record_search_key_conference_dates ?
                 this.props.publication.fez_record_search_key_conference_dates.rek_conference_dates : null,
             doi: this.props.publication.fez_record_search_key_doi ?

@@ -24,10 +24,6 @@ export default class JournalArticleCitation extends Component {
                 this.props.publication.fez_record_search_key_volume_number.rek_volume_number : null,
             issueNumber: this.props.publication.fez_record_search_key_issue_number ?
                 this.props.publication.fez_record_search_key_issue_number.rek_issue_number : null,
-            startPage: this.props.publication.fez_record_search_key_start_page ?
-                this.props.publication.fez_record_search_key_start_page.rek_start_page : null,
-            endPage: this.props.publication.fez_record_search_key_end_page ?
-                this.props.publication.fez_record_search_key_end_page.rek_end_page : null,
             doi: this.props.publication.fez_record_search_key_doi ?
                 this.props.publication.fez_record_search_key_doi.rek_doi : null
         };

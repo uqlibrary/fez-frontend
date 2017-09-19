@@ -23,10 +23,6 @@ export default class BookChapterCitation extends Component {
                 this.props.publication.fez_record_search_key_book_title.rek_book_title : null,
             edition: this.props.publication.fez_record_search_key_edition ?
                 this.props.publication.fez_record_search_key_edition.rek_edition : null,
-            startPage: this.props.publication.fez_record_search_key_start_page ?
-                this.props.publication.fez_record_search_key_start_page.rek_start_page : null,
-            endPage: this.props.publication.fez_record_search_key_end_page ?
-                this.props.publication.fez_record_search_key_end_page.rek_end_page : null,
             placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication ?
                 this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
             publisher: this.props.publication.fez_record_search_key_publisher ?
