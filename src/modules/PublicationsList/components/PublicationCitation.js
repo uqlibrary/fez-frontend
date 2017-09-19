@@ -66,32 +66,23 @@ export default class PublicationCitation extends Component {
         const actions = this.props.showDefaultActions ? this.defaultActions : this.props.customActions;
         const renderedActions = actions && actions.length > 0 ?
             actions.map((action, index) => {
+                const buttonProps = {
+                    secondary: true,
+                    fullWidth: true,
+                    label: action.label,
+                    className: `publicationAction buttonOrder${index}`,
+                    onTouchTap: () => (
+                        this.props.showDefaultActions
+                            ? this._handleDefaultActions(action.key)
+                            : action.handleAction(this.props.publication)
+                    )
+                };
                 return (
                     <div className="column is-narrow" key={index}>
                         {
-                            action.primary ? (
-                                <RaisedButton
-                                    secondary
-                                    fullWidth
-                                    label={action.label}
-                                    className={`publicationAction buttonOrder${index}`}
-                                    onTouchTap={() => (
-                                        this.props.showDefaultActions
-                                            ? this._handleDefaultActions(action.key)
-                                            : action.handleAction(this.props.publication)
-                                    )}/>
-                            ) : (
-                                <FlatButton
-                                    secondary
-                                    fullWidth
-                                    label={action.label}
-                                    className={`publicationAction buttonOrder${index}`}
-                                    onTouchTap={() => (
-                                        this.props.showDefaultActions
-                                            ? this._handleDefaultActions(action.key)
-                                            : action.handleAction(this.props.publication)
-                                    )}/>
-                            )}
+                            action.primary ?
+                                (<RaisedButton {...buttonProps}/>) : (<FlatButton {...buttonProps}/>)
+                        }
                     </div>
                 );
             }) : null;
