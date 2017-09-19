@@ -49,7 +49,8 @@ module.exports = {
     devServer: {
         contentBase: resolve(__dirname, './dist/', URL_BASE_PATH),
         compress: true,
-        port: port
+        port: port,
+        host: '0.0.0.0'
     },
     plugins: [
         new FaviconsWebpackPlugin({

@@ -9,6 +9,7 @@ import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 import CitationCounts from './citations/CitationCounts';
 import JournalArticleCitation from './citations/JournalArticleCitation';
 import BookChapterCitation from './citations/BookChapterCitation';
+import BookCitation from './citations/BookCitation';
 
 /*
  * @props:
@@ -31,7 +32,7 @@ export default class PublicationCitation extends Component {
         super(props);
 
         // keep a list of all available citations
-        this.citationComponents = {BookChapterCitation, JournalArticleCitation};
+        this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation};
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }

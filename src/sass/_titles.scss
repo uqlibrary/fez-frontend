@@ -1,5 +1,10 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
+// Bulma titles are too bold
+.title {
+  font-weight: 400 !important;
+}
+
 //Desktop
 @media (min-width: 768px) {
   // Fix for page titles to sit in MUI space
@@ -13,16 +18,22 @@
   }
 }
 
-
 //Mobile
 @media (max-width: 768px) {
   // Fix for page titles to sit in MUI space
-  div.layout-fill h1.title {
+  h1.title.is-3 {
     max-width: 1200px;
     width: 90%;
-    margin: 24px auto !important;
+    margin: 24px auto 12px auto !important;
     padding: 0 !important;
     white-space: normal !important;
     color: $theme-color !important;
+    font-size: 24px !important;
+    line-height: 1em !important;
+  }
+  h2.title.is-4 {
+    font-size: 18px !important;
+    line-height: 1em !important;
+    margin-bottom: 12px !important;
   }
 }

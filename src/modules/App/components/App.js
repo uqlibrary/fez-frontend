@@ -30,12 +30,30 @@ export default class App extends React.Component {
         actions: PropTypes.object
     };
 
+    static childContextTypes = {
+        isMobile: PropTypes.bool,
+        selectFieldMobileOverrides: PropTypes.object
+    };
+
     constructor(props) {
         super(props);
         this.state = {
             menuDrawerOpen: false,
             docked: false,
-            mediaQuery: window.matchMedia('(min-width: 1600px)')
+            mediaQuery: window.matchMedia('(min-width: 1600px)'),
+            isMobile: window.matchMedia('(max-width: 768px)').matches
+        };
+    }
+
+    getChildContext() {
+        return {
+            isMobile: this.state.isMobile,
+            selectFieldMobileOverrides: {
+                style: !this.state.isMobile ? {width: '100%'} : {},
+                autoWidth: !this.state.isMobile,
+                fullWidth: this.state.isMobile,
+                menuItemStyle: this.state.isMobile ? {whiteSpace: 'normal', lineHeight: '18px', paddingBottom: '8px'} : {},
+            }
         };
     }
 

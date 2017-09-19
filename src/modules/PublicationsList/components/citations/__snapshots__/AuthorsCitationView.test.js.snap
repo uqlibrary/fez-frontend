@@ -2,7 +2,7 @@
 
 exports[`AuthorsCitationView renders  component with no authors 1`] = `
 <span
-  className="citationAuthors empty"
+  className="\${className} empty"
 />
 `;
 
@@ -41,6 +41,33 @@ exports[`AuthorsCitationView renders  component with three authors 1`] = `
     Andersen, J
      
   </span>
+</span>
+`;
+
+exports[`AuthorsCitationView renders  component with three authors with prefix/suffix 1`] = `
+<span
+  className="citationAuthors"
+>
+  Authored by: 
+  <span
+    className="citationAuthor"
+  >
+    Pedroso, Marcelo Monteiro
+    , 
+  </span>
+  <span
+    className="citationAuthor"
+  >
+    Smith, J
+     and 
+  </span>
+  <span
+    className="citationAuthor"
+  >
+    Andersen, J
+     
+  </span>
+   people.
 </span>
 `;
 

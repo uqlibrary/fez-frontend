@@ -15,7 +15,11 @@ export default class PublicationForm extends Component {
         ...propTypes, // all redux-form props
         onFormSubmitSuccess: PropTypes.func.isRequired,
         onFormCancel: PropTypes.func.isRequired
-    }
+    };
+
+    static contextTypes = {
+        selectFieldMobileOverrides: PropTypes.object
+    };
 
     constructor(props) {
         super(props);
@@ -80,7 +84,7 @@ export default class PublicationForm extends Component {
                         component={SelectField}
                         disabled={this.props.submitting}
                         name="rek_display_type"
-                        fullWidth
+                        {...this.context.selectFieldMobileOverrides}
                         floatingLabelText={txt.publicationType.inputLabelText}
                         floatingLabelFixed
                         className="requiredField"

@@ -10,7 +10,6 @@ const DashboardResearcherIds = ({values}) => {
 
             {values && Object.keys(values).map((item, index) => (
                 <div key={index} className={`${item} column is-narrow`}>
-                    {/* Hello : {txt.titles[item]} and  {txt.links[item]} */}
                     <a
                         href={values[item] ? txt.linksPrefix[item] + values[item] : 'https://app.library.uq.edu.au/#/id'}
                         target="_blank"
