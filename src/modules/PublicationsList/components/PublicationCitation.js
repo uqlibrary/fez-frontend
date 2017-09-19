@@ -111,15 +111,15 @@ export default class PublicationCitation extends Component {
                                 {locale.components.publicationCitation.publicationSourcesLabel}
                                 {
                                     this.props.publication.sources.map((source, index) => {
-                                        const sourceLocale = locale.global.sources[source];
+                                        const sourceConfig = locale.global.sources[source.source];
                                         return (
-                                            <a href={this.props.publication.sourcesExtUrl[index]} // {this.props.publication.sources[source.extURL]}
+                                            <a href={sourceConfig.externalUrl.replace('[ID]', source.id)}
                                                 rel="noopener noreferrer"
                                                 target="_blank"
                                                 key={index}
                                                 className="publicationSource"
-                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION', sourceLocale.title)}>
-                                                {sourceLocale.title}<ActionOpenInNew className="citationOpenURLicon" />
+                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', sourceConfig.title)}>
+                                                {sourceConfig.title}<ActionOpenInNew className="citationOpenUrlIcon" />
                                             </a>
                                         );
                                     })

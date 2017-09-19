@@ -52,15 +52,14 @@ export function createSearchPromise(source, queryString, dispatch) {
             .then(response => {
                 const data = response && response.hasOwnProperty('data') ? response.data
                     .map(item => {
-                        const sourceLocale = locale.global.sources[source];
-                        const extURL = item[sourceLocale.idLocation] ? (
-                            locale.global.ezproxyPrefix +
-                            sourceLocale.externalURL.replace('[ID]', item[sourceLocale.idLocation][sourceLocale.idKey])
-                        ) : (
-                            sourceLocale.externalURL.replace('[ID]', item[sourceLocale.idKey])
-                        );
-                        item.sourcesExtUrl = [extURL];
-                        item.sources = [source];
+                        const sourceConfig = locale.global.sources[source];
+                        item.sources = [
+                            {
+                                source: source,
+                                id: sourceConfig.idKey
+                                    .split('.')
+                                    .reduce((objectValue, pathProperty) => objectValue[pathProperty], item)
+                            }];
                         item.currentSource = source;
                         return item;
                     }) : [];
