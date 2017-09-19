@@ -17,6 +17,7 @@ PageCitationView.propTypes = {
     className: PropTypes.string.isRequired
 };
 
+PageCitationView.defaultProps = {
     className: 'citationPage'
 };
 
