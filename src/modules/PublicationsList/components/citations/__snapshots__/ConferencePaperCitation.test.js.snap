@@ -1387,11 +1387,11 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
   >
      
     Adelaide, South Australia, Australia
-    ,
+    , 
   </span>
   <PageRangeCitationView
     className="citationPageRange"
-    prefix=" ("
+    prefix="("
     publication={
       Object {
         "fez_record_search_key_access_conditions": null,
@@ -1853,7 +1853,9 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
     }
     suffix=")"
   />
-  <span>
+  <span
+    className="citationConferencePaperConferenceDates"
+  >
      
     9-12 November, 2014
     .
@@ -1909,7 +1911,7 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
   />
   <PageRangeCitationView
     className="citationPageRange"
-    prefix=" ("
+    prefix="("
     publication={Object {}}
     searchKey={
       Object {

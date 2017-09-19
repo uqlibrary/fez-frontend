@@ -6,7 +6,7 @@ import EditorsCitationView from './EditorsCitationView';
 import YearCitationView from './YearCitationView';
 import PageRangeCitationView from './PageRangeCitationView';
 
-export default class BookCitation extends Component {
+export default class ConferencePaperCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
@@ -29,13 +29,9 @@ export default class BookCitation extends Component {
                 this.props.publication.fez_record_search_key_doi.rek_doi : null
         };
 
-        // eSpace citation view for Book
+        // eSpace citation view for conference paper
         // {4191} ({4041}). {10605}. In: {4194||, }{9622||.} <i>{11061}</i>, {4172}, ({4189||}{4190|-|}). {4174}.{16516| doi:|} - Legacy Fez
         // Author (Year). Title of paper. In: Editor, Proceedings title. Conference name, Conference location, (Start page-End page). Conference dates. doi:DOI
-
-        // TODO: Citation Styles - Book: https://docs.google.com/document/d/1j0ol7sW39dDg3X3bSV6Tg0a2MEwGtDodwYmv9m0bcHQ/
-        // {4191} ({4041}). {10605}. {11061||}, {4172}, {????} {16522| doi:|}
-        // Author (Year of Conference). Title|. Conference Name|, Conference Location|, Publisher|  doi: doi
         return (
             <div className="citationContent citationConferencePaper">
                 <FontIcon className="material-icons citationIcon" data-place="left">
@@ -68,7 +64,7 @@ export default class BookCitation extends Component {
                 {/* conference dates */}
                 {
                     conferencePaper.dates &&
-                    <span> {conferencePaper.dates}.</span>
+                    <span className="citationConferencePaperConferenceDates"> {conferencePaper.dates}.</span>
                 }
                 {/* doi */}
                 {
