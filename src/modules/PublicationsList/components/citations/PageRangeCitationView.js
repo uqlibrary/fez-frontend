@@ -38,7 +38,9 @@ PageRangeCitationView.defaultProps = {
             subkey: 'rek_end_page'
         }
     },
-    className: 'citationPageRange'
+    className: 'citationPageRange',
+    prefix: '(',
+    suffix: ')'
 };
 
 export default PageRangeCitationView;

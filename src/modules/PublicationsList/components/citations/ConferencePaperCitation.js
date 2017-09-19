@@ -61,10 +61,10 @@ export default class BookCitation extends Component {
                 {/* conferencePaper location */}
                 {
                     conferencePaper.location &&
-                    <span className="citationConferencePaperLocation"> {conferencePaper.location},</span>
+                    <span className="citationConferencePaperLocation"> {conferencePaper.location}, </span>
                 }
                 {/* pages (start page-end page) */}
-                <PageRangeCitationView publication={this.props.publication} prefix=" (" suffix=")" />
+                <PageRangeCitationView publication={this.props.publication} />
                 {/* conference dates */}
                 {
                     conferencePaper.dates &&
