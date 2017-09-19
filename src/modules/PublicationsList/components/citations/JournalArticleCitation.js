@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import AuthorsCitationView from './AuthorsCitationView';
 import YearCitationView from './YearCitationView';
+import PageRangeCitationView from './PageRangeCitationView';
 
 export default class JournalArticleCitation extends Component {
     static propTypes = {
@@ -54,19 +55,7 @@ export default class JournalArticleCitation extends Component {
                     journalArticle.issueNumber &&
                     <span className="citationIssueNumber"> {journalArticle.issueNumber}</span>
                 }
-                {
-                    (journalArticle.startPage || journalArticle.endPage) ? ': ' : ''
-                }
-                {
-                    journalArticle.startPage &&
-                    <span className="citationStartPage">
-                        {journalArticle.startPage}{journalArticle.endPage ? '-' : '' }
-                    </span>
-                }
-                {
-                    journalArticle.endPage &&
-                    <span className="citationEndPage">{journalArticle.endPage}</span>
-                }
+                <PageRangeCitationView publication={this.props.publication} prefix=": " suffix="" />
                 .
                 {
                     journalArticle.doi &&
