@@ -42,10 +42,11 @@ export default class FacetsFilter extends React.Component {
         } else {
             activeFacets[category] = facet;
         }
-
-        this.setState({
-            activeFacets: {...activeFacets}
-        });
+        if (!this.props.disabled) {
+            this.setState({
+                activeFacets: {...activeFacets}
+            });
+        }
     };
 
     handleResetClick = () => {
@@ -106,7 +107,6 @@ export default class FacetsFilter extends React.Component {
         const txt = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList);
         if (facetsToDisplay.length === 0) return (<span className="facetsFilter empty" />);
-        const isDisabled = this.props.disabled;
         return (
             <div className="facetsFilter">
                 <List>
@@ -117,7 +117,7 @@ export default class FacetsFilter extends React.Component {
                                 <ListItem
                                     primaryText={item.title}
                                     open={this.state.activeFacets[item.title] && true}
-                                    disabled={isDisabled}
+                                    disabled={this.props.disabled}
                                     className={this.getClass('facetsCategory', isActive)}
                                     primaryTogglesNestedList
                                     key={index}
