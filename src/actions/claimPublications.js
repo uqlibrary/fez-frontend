@@ -165,8 +165,10 @@ export function clearClaimPublication() {
 export function claimPublication(data) {
     console.log(data);
     let attachments = [];
+    let fileAttachmentSearchKey = {};
     if (data.files && data.files.queue && data.files.queue.length > 0) {
         attachments = claimAttachments(data.files.queue);
+        fileAttachmentSearchKey = recordFileAttachment(data.files.queue, data.publication);
     }
 
     return dispatch => {
@@ -193,7 +195,7 @@ export function claimPublication(data) {
                     const recordPatchRequest = {
                         rek_pid: data.publication.rek_pid,
                         ...recordRekLink(data),
-                        ...recordFileAttachment(data.files.queue, data.publication),
+                        ...fileAttachmentSearchKey,
                         ...recordAuthorsId(data.authorLinking.authors)
                     };
                     console.log(recordPatchRequest);
@@ -254,7 +256,7 @@ export function claimPublication(data) {
                     const recordPatchRequest = {
                         rek_pid: newPid,
                         ...recordRekLink(data),
-                        ...recordFileAttachment(data.files.queue)
+                        ...fileAttachmentSearchKey,
                         // TODO: updated record's author_id and order ...recordAuthors(data.publication)
                     };
                     console.log(recordPatchRequest);
