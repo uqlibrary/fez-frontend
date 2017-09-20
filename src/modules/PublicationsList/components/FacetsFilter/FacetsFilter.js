@@ -23,7 +23,7 @@ export default class FacetsFilter extends React.Component {
 
         // always keep props/state in sync
         this.state = {
-            activeFacets: {...props.activeFacets}
+            activeFacets: {...props.activeFacets},
         };
     }
 
@@ -58,10 +58,20 @@ export default class FacetsFilter extends React.Component {
         const listItems = facetCategory.facets.map((item, index) => {
             const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.title)
                 && this.state.activeFacets[facetCategory.title] === item.key;
+            let thisClass = '';
+            if (isActive && this.props.disabled) {
+                thisClass = 'facetsLink active disabled';
+            } else if (!isActive && this.props.disabled) {
+                thisClass = 'facetsLink disabled';
+            } else if (!isActive && !this.props.disabled) {
+                thisClass = 'facetsLink';
+            } else if (isActive && !this.props.disabled) {
+                thisClass = 'facetsLink active';
+            }
             return (
                 <ListItem
                     key={index}
-                    className={isActive ? 'facetsLink active' : 'facetsLink'}
+                    className={thisClass}
                     primaryText={`${item.title} (${item.count})`}
                     onClick={() => (this.handleFacetClick(facetCategory.title, item.key))}
                     disabled={this.props.disabled}
@@ -105,16 +115,27 @@ export default class FacetsFilter extends React.Component {
         if (facetsToDisplay.length === 0) return (<span className="facetsFilter empty" />);
         return (
             <div className="facetsFilter">
+                {/* <FlatButton label="toggle" onClick={this.toggleDisable()} />*/}
                 <List>
                     {
                         facetsToDisplay.map((item, index) => {
                             const isActive = this.state.activeFacets.hasOwnProperty(item.title);
+                            let thisClass = '';
+                            if (isActive && this.props.disabled) {
+                                thisClass = 'facetsCategory active disabled';
+                            } else if (!isActive && this.props.disabled) {
+                                thisClass = 'facetsCategory disabled';
+                            } else if (!isActive && !this.props.disabled) {
+                                thisClass = 'facetsCategory';
+                            } else if (isActive && !this.props.disabled) {
+                                thisClass = 'facetsCategory active';
+                            }
                             return (
                                 <ListItem
                                     primaryText={item.title}
                                     open={this.state.activeFacets[item.title] && true}
                                     disabled={this.props.disabled}
-                                    className={isActive ? 'facetsCategory active' : 'facetsCategory'}
+                                    className={thisClass}
                                     primaryTogglesNestedList
                                     key={index}
                                     nestedItems={this.getNestedListItems(item)} />
