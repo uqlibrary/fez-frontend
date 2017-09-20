@@ -14,8 +14,61 @@
   }
 }
 
-@media all and (min-width: 768px) {
+// Fix for tab labels to wrap if too small.
+button.publicationTabs>div>div {
+  white-space: normal;
+  text-overflow: ellipsis;
+}
 
+@media all and (max-width: 768px) {
+  // My Trending Pubs
+  h2.title.trendingPubsSource {
+    color: $theme-color !important;
+    margin: 6px 0 0 0 !important;
+    font-size: 24px !important;
+  }
+  .trendingPubItem {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    .trendingPubsTitle{
+      font-size: 16px !important;
+      margin-bottom: 6px !important;
+    }
+    .trendingPubsCitation{
+      font-size: 11px;
+      line-height: 12px;
+    }
+    .trendingPubsLink{
+      margin-left: 12px;
+      & svg.trendingPubsIcon {
+        fill: $accent-color !important;
+      }
+    }
+    .trendingPubsCount {
+      & span.title {
+        font-size: 24px;
+      }
+      text-align: right;
+      margin-left: 6px !important;
+    }
+    .trendingPubsDifference {
+      & span.title {
+        font-size: 12px !important;
+      }
+      color: $secondary-color;
+    }
+    svg.trendingPubsIcon {
+      height: 16px !important;
+      width: 16px !important;
+      margin-bottom: -3px;
+      margin-right: 3px;
+    }
+  }
+
+}
+
+@media all and (min-width: 768px) {
   .isLoading {
     margin: 5% auto;
     opacity: 0.5;
@@ -97,6 +150,43 @@
     }
   }
 
+  // My Trending Pubs
+  h2.title.trendingPubsSource {
+    color: $theme-color !important;
+    margin: 12px 0 0 0 !important;
+  }
+  .trendingPubItem {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    .trendingPubsTitle{
+      margin-bottom: 6px !important;
+    }
+    .trendingPubsCitation{
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .trendingPubsLink{
+      margin-left: 12px;
+      & svg.trendingPubsIcon {
+        fill: $accent-color !important;
+      }
+    }
+    .trendingPubsCount {
+      text-align: right;
+      margin-left: 24px !important;
+    }
+    .trendingPubsDifference {
+      color: $secondary-color;
+    }
+    svg.trendingPubsIcon {
+      height: 16px !important;
+      width: 16px !important;
+      margin-bottom: -3px;
+      margin-right: 3px;
+    }
+  }
+
   // ArticleCount
   .authorCount {
     display: flex;
@@ -128,9 +218,4 @@
       }
     }
   }
-}
-
-button.publicationTabs>div>div {
-    white-space: normal;
-    text-overflow: ellipsis;
 }

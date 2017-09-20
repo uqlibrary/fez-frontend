@@ -7,13 +7,17 @@ import {
     Alert,
     InlineLoader,
     StandardCard,
-    StandardPage
+    StandardPage,
+    HelpIcon
 } from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
+// import EditorFormatQuote from 'material-ui/svg-icons/editor/format-quote';
+import SocialPerson from 'material-ui/svg-icons/social/person';
 import {locale} from 'config';
 
 class Dashboard extends React.Component {
@@ -101,7 +105,7 @@ class Dashboard extends React.Component {
             ) : null;
 
         const publicationStats = !loading && this.props.publicationsStats
-            && (this.props.publicationsStats.thomson_citation_count_i.count > 0 || this.props.publicationsStats.scopus_citation_count_i.count > 0)
+        && (this.props.publicationsStats.thomson_citation_count_i.count > 0 || this.props.publicationsStats.scopus_citation_count_i.count > 0)
             ? (
                 <StandardCard className="card-paddingless">
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
@@ -180,12 +184,13 @@ class Dashboard extends React.Component {
                 {
                     !loading
                     && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
-                    (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
+                        (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
                     <StandardCard className="card-paddingless">
                         <Tabs className="publicationTabs">
                             {
                                 this.props.latestPublicationsList.length > 0 &&
-                                <Tab label={txt.myPublications.title} value="myPublications" className="publicationTabs">
+                                <Tab label={txt.myPublications.title} value="myPublications"
+                                    className="publicationTabs">
                                     <div style={{padding: '12px 24px'}}>
                                         <PublicationsList
                                             publicationsList={this.props.latestPublicationsList}
@@ -204,18 +209,51 @@ class Dashboard extends React.Component {
                             }
                             {
                                 this.props.trendingPublicationsList.length > 0 &&
-                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications" className="publicationTabs">
+                                <Tab label={txt.myTrendingPublications.title} value="myTrendingPublications"
+                                    className="publicationTabs">
                                     <div style={{padding: '12px 24px'}}>
                                         {
                                             this.props.trendingPublicationsList.map((metric, metricIndex) => (
                                                 <div key={'metrics_' + metricIndex}>
-                                                    <h2>{txt.myTrendingPublications.metrics[metric.key].title}</h2>
+                                                    <div className="columns is-gapless is-mobile">
+                                                        <div className="column">
+                                                            <h2 className="title is-3 trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
+                                                        </div>
+                                                        <div className="column is-narrow is-hidden-mobile">
+                                                            <HelpIcon {...txt.myTrendingPublications.help} />
+                                                        </div>
+                                                    </div>
                                                     {/* TODO: remove temporary publication record render */}
                                                     {
                                                         metric.values.map((recordValue, recordIndex) => (
-                                                            <div key={'trending_publication_' + recordIndex}>
-                                                                {recordValue.title} {recordValue.count}
-                                                                +{recordValue.difference}
+                                                            <div key={'trending_publication_' + recordIndex}
+                                                                className="trendingPubItem">
+                                                                <div className="columns is-gapless is-mobile">
+                                                                    <div className="column">
+                                                                        <div className="title is-5 trendingPubsTitle">
+                                                                            {recordValue.title}
+                                                                        </div>
+                                                                        <div className="trendingPubsCitation">
+                                                                            <SocialPerson className="trendingPubsIcon" />
+                                                                            {recordValue.authors}
+                                                                            <a href={recordValue.citation_url}
+                                                                                className="trendingPubsLink"
+                                                                                target="_blank"
+                                                                                title={txt.myTrendingPublications.openNewWindowTitle.replace('[TITLE]', recordValue.title)}
+                                                                            >
+                                                                                {txt.myTrendingPublications.viewFullCitationLinkTitle}<ActionOpenInNew className="trendingPubsIcon" />
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="column is-narrow trendingPubsCount">
+                                                                        <span className="title is-1"
+                                                                            title={txt.myTrendingPublications.trendSharesThisMonth}>{recordValue.count}</span>
+                                                                    </div>
+                                                                    <div className="column is-narrow trendingPubsDifference">
+                                                                        <span className="title is-5"
+                                                                            title={txt.myTrendingPublications.trendDifferenceSharesThisMonth}>+{recordValue.difference}</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         ))
                                                     }
