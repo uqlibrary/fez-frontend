@@ -1,12 +1,4 @@
-import {
-    getPossibleUnclaimedPublications,
-    postHidePossiblePublications,
-    getCountPossibleUnclaimedPublications,
-    postClaimPossiblePublication,
-    putUploadFiles,
-    patchRecord, postRecord
-} from 'repositories';
-
+import * as repositories from 'repositories';
 import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
@@ -39,7 +31,7 @@ export const CLAIM_PUBLICATION_CREATE_FAILED = 'CLAIM_PUBLICATION_CREATE_FAILED'
 export function countPossiblyYourPublications(authorUsername) {
     return dispatch => {
         dispatch({type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
-        getCountPossibleUnclaimedPublications(authorUsername).then(response => {
+        repositories.getCountPossibleUnclaimedPublications(authorUsername).then(response => {
             dispatch({
                 type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                 payload: response.data
@@ -62,7 +54,7 @@ export function searchPossiblyYourPublications(authorUsername, activeFacets) {
     return dispatch => {
         dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
         // TODO: try some authors who are students - org username or student name to use?
-        getPossibleUnclaimedPublications(authorUsername, activeFacets).then(response => {
+        repositories.getPossibleUnclaimedPublications(authorUsername, activeFacets).then(response => {
             dispatch({
                 type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                 payload: response,
@@ -100,7 +92,7 @@ export function hidePublications(publicationsToHide, author, activeFacets) {
         if (author.aut_id) {
             data.author_id = author.aut_id;
         }
-        postHidePossiblePublications(data)
+        repositories.postHidePossiblePublications(data)
             .then(response => {
                 dispatch({
                     type: HIDE_PUBLICATIONS_COMPLETED,
@@ -168,112 +160,66 @@ export function claimPublication(data) {
     return dispatch => {
         dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
 
-        if (data.publication.rek_pid) {
-            // claim record from eSpace
-            const claimRequest = transformers.getClaimRequest(data);
-            console.log(claimRequest);
-
-            return postClaimPossiblePublication(claimRequest)
-                .then(response => {
-                    if (!data.files || !data.files.queue || data.files.queue.length === 0) {
-                        return response;
-                    } else {
-                        return putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
-                    }
-                })
-                .then(() => {
-                    // patch the record with new data
-                    // auto-assign current author if there's only one author
-                    const soloAuthor = {
-                        fez_record_search_key_author_id: {
-                            rek_author_id: data.author.aut_id,
-                            rek_author_id_order: 1
-                        }
-                    };
-
-                    const recordAuthorsIds = data.publication.fez_record_search_key_author.length === 1 && !data.authorLinking
-                        ? soloAuthor : transformers.recordAuthorsId(data.authorLinking.authors);
-
-                    const recordPatchRequest = {
-                        rek_pid: data.publication.rek_pid,
-                        ...transformers.recordRekLink(data),
-                        ...transformers.recordFileAttachment(data.files ? data.files.queue : [], data.publication),
-                        ...recordAuthorsIds
-                    };
-                    console.log(recordPatchRequest);
-                    return patchRecord(data.publication.rek_pid, recordPatchRequest);
-                })
-                .then(response => {
-                    dispatch({
-                        type: CLAIM_PUBLICATION_CREATE_COMPLETED,
-                        payload: response
-                    });
-                    return Promise.resolve(response);
-                })
-                .catch(error => {
-                    console.log(error);
-
-                    dispatch({
-                        type: CLAIM_PUBLICATION_CREATE_FAILED,
-                        payload: error
-                    });
-                    return Promise.reject(error);
-                });
-        } else {
-            // claim record from external source
-            // what about required fields - are they set, eg subtype, publication year etc?
-            const recordRequest = {
+        // claim record from external source
+        const createRecordRequest = data.publication.rek_pid ?
+            data.publication : {
                 ...JSON.parse(JSON.stringify(data.publication)),
-                ...transformers.recordRekLink(data),
                 ...NEW_RECORD_DEFAULT_VALUES
             };
 
-            console.log(recordRequest);
+        // claim record from eSpace
+        console.log(createRecordRequest);
 
-            let newPid;
+        return repositories.postRecord(createRecordRequest)
+            .then(response => {
+                data.publication.rek_pid = response.rek_pid;
+                const claimRequest = transformers.getClaimRequest(data);
+                return repositories.postClaimPossiblePublication(claimRequest);
+            })
+            .then(response => {
+                if (!data.files || !data.files.queue || data.files.queue.length === 0) {
+                    return response;
+                } else {
+                    return repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
+                }
+            })
+            .then(() => {
+                // patch the record with new data
+                // auto-assign current author if there's only one author
+                const soloAuthor = {
+                    fez_record_search_key_author_id: {
+                        rek_author_id: data.author.aut_id,
+                        rek_author_id_order: 1
+                    }
+                };
 
-            return postRecord(recordRequest)
-                // .then(response => {
-                //     newPid = response.rek_pid;
-            //     if (data.files.queue.length === 0) return response;
-            //     return putUploadFiles(data.rek_pid, data.files.queue);
-                // })
-                // .then(response => {
-                //     // TODO: build a request to match author to pid, should return order for current author or not found
-                //     return matchAuthor(data.rek_pid, data.author);
-                // })
-                .then(response => {
-                    newPid = response.data.rek_pid;
-                    data.publication.rek_pid = response.data.rek_pid;
-                    const claimRequest = transformers.getClaimRequest(data);
-                    console.log(claimRequest);
-                    return postClaimPossiblePublication(claimRequest);
-                })
-                .then(() => {
-                    // patch the record with new data
-                    const recordPatchRequest = {
-                        rek_pid: newPid,
-                        ...transformers.recordRekLink(data),
-                        ...transformers.recordFileAttachment(data.files.queue)
-                        // TODO: updated record's author_id and order ...recordAuthors(data.publication)
-                    };
-                    console.log(recordPatchRequest);
-                    return patchRecord(newPid, recordPatchRequest);
-                })
-                .then(response => {
-                    dispatch({
-                        type: CLAIM_PUBLICATION_CREATE_COMPLETED,
-                        payload: response
-                    });
-                    return Promise.resolve(response);
-                })
-                .catch(error => {
-                    dispatch({
-                        type: CLAIM_PUBLICATION_CREATE_FAILED,
-                        payload: error
-                    });
-                    return Promise.reject(error);
+                const getRecordAuthorsIdSearchKeys = data.publication.fez_record_search_key_author.length === 1 && !data.authorLinking
+                    ? soloAuthor : transformers.getRecordAuthorsIdSearchKey(data.authorLinking.authors);
+
+                const recordPatchRequest = {
+                    rek_pid: data.publication.rek_pid,
+                    ...transformers.getRecordLinkSearchKey(data),
+                    ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+                    ...getRecordAuthorsIdSearchKeys
+                };
+                console.log(recordPatchRequest);
+                return repositories.patchRecord(data.publication.rek_pid, recordPatchRequest);
+            })
+            .then(response => {
+                dispatch({
+                    type: CLAIM_PUBLICATION_CREATE_COMPLETED,
+                    payload: response
                 });
-        }
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                console.log(error);
+
+                dispatch({
+                    type: CLAIM_PUBLICATION_CREATE_FAILED,
+                    payload: error
+                });
+                return Promise.reject(error);
+            });
     };
 }

@@ -23,11 +23,11 @@ export function createNewRecord(data) {
         const recordRequest = {
             ...config.NEW_RECORD_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
-            ...transformers.recordRekLink(data),
-            ...transformers.recordAuthors(data.authors),
-            ...transformers.recordAuthorsId(data.authors),
-            ...transformers.recordContributors(data.editors),
-            ...transformers.recordContributorsId(data.editors)
+            ...transformers.getRecordLinkSearchKey(data),
+            ...transformers.getRecordAuthorsSearchKey(data.authors),
+            ...transformers.getRecordAuthorsIdSearchKey(data.authors),
+            ...transformers.getRecordContributorsSearchKey(data.editors),
+            ...transformers.getRecordContributorsIdSearchKey(data.editors)
         };
 
         // delete extra form values from request object
@@ -53,7 +53,7 @@ export function createNewRecord(data) {
                 } else {
                     // process uploaded files into API format for a patch
                     const recordPatch = {
-                        ...transformers.recordFileAttachment(data.files.queue)
+                        ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
                     };
                     return patchRecord(data.rek_pid, recordPatch).catch((error) => {
                         return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));

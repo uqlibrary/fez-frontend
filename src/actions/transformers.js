@@ -2,24 +2,30 @@ import {locale} from 'config';
 
 const moment = require('moment');
 
-const getClaimAttachments = (files) => {
+export const getClaimAttachmentsSearchKey = (files) => {
     if (!files || files.length === 0) return {};
-    return {
+    const request = {
         attachments: files.map((item) => {
-            return {
+            const request = {
                 access_condition_id: item.access_condition_id,
                 file: item.name,
-                date: moment(item.date).format(locale.global.embargoDateFormat)
             };
+
+            if (item.date) {
+                request.date = moment(item.date).format(locale.global.embargoDateFormat);
+            }
+
+            return request;
         })
     };
+    return request;
 };
 
 export const getClaimRequest = (data) => {
     const claimRequest = {
         pid: data.publication.rek_pid,
         author_id: data.author.aut_id,
-        ...(data.files && data.files.queue ? getClaimAttachments(data.files.queue) : {})
+        ...(data.files && data.files.queue ? getClaimAttachmentsSearchKey(data.files.queue) : {})
     };
 
     if (data.comments) {
@@ -29,7 +35,7 @@ export const getClaimRequest = (data) => {
     return claimRequest;
 };
 
-export function recordRekLink(data) {
+export const getRecordLinkSearchKey = (data) => {
     if (!data.rek_link) return null;
 
     return {
@@ -46,16 +52,14 @@ export function recordRekLink(data) {
             }
         ]
     };
-}
+};
 
-export function recordFileAttachment(files, record) {
+export const getRecordFileAttachmentSearchKey = (files, record) => {
     if (!files || files.length === 0) return {};
 
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount = record && record.fez_record_search_key_file_attachment_name ?
         record.fez_record_search_key_file_attachment_name.length : 0;
-
-    // TODO: Refactor - Implement below using searchKey if possible
     const attachmentNames = files.map((item, index) => {
         return {
             rek_file_attachment_name: item.name,
@@ -64,7 +68,6 @@ export function recordFileAttachment(files, record) {
     });
     const attachmentEmbargoDates = files
         .map((item, index) => {
-            console.log(item);
             if (!item.hasOwnProperty('date')) return null;
             return {
                 rek_file_attachment_embargo_date: moment(item.date).format(locale.global.embargoDateFormat),
@@ -106,9 +109,9 @@ export function recordFileAttachment(files, record) {
             ]
         };
     }
-}
+};
 
-export function recordAuthors(authors) {
+export const getRecordAuthorsSearchKey = (authors) => {
     if (!authors || authors.length === 0) return {};
     return {
         fez_record_search_key_author: authors.map((item, index) => (
@@ -119,16 +122,16 @@ export function recordAuthors(authors) {
             }
         ))
     };
-}
+};
 
-export function recordAuthorsId(authors) {
+export const getRecordAuthorsIdSearchKey = (authors) => {
     if (!authors || authors.length === 0) return {};
     return {
         fez_record_search_key_author_id: authors
     };
-}
+};
 
-export function recordContributors(authors) {
+export const getRecordContributorsSearchKey = (authors) => {
     if (!authors || authors.length === 0) return {};
 
     return {
@@ -140,9 +143,9 @@ export function recordContributors(authors) {
             }
         ))
     };
-}
+};
 
-export function recordContributorsId(authors) {
+export const getRecordContributorsIdSearchKey = (authors) => {
     if (!authors || authors.length === 0) return {};
     return {
         fez_record_search_key_contributor_id: authors.map(
@@ -154,4 +157,4 @@ export function recordContributorsId(authors) {
             )
         )
     };
-}
+};
