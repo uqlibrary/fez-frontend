@@ -433,7 +433,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
   <List>
     <ListItem
       autoGenerateNestedIndicator={true}
-      className="facetsCategory active"
+      className="facetsCategory active "
       containerElement="span"
       disableKeyboardFocus={false}
       disabled={false}
@@ -443,7 +443,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
         Array [
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink active"
+            className="facetsLink active "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={false}
@@ -859,7 +859,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
   <List>
     <ListItem
       autoGenerateNestedIndicator={true}
-      className="facetsCategory disabled"
+      className="facetsCategory disabled "
       containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
@@ -869,7 +869,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         Array [
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -906,7 +906,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
     />
     <ListItem
       autoGenerateNestedIndicator={true}
-      className="facetsCategory disabled"
+      className="facetsCategory disabled "
       containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
@@ -916,7 +916,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         Array [
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -939,7 +939,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         />,
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -962,7 +962,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         />,
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -985,7 +985,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         />,
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -1008,7 +1008,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         />,
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -1045,7 +1045,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
     />
     <ListItem
       autoGenerateNestedIndicator={true}
-      className="facetsCategory disabled"
+      className="facetsCategory disabled "
       containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
@@ -1055,7 +1055,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         Array [
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -1092,7 +1092,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
     />
     <ListItem
       autoGenerateNestedIndicator={true}
-      className="facetsCategory disabled"
+      className="facetsCategory disabled "
       containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
@@ -1102,7 +1102,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         Array [
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -1125,7 +1125,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         />,
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -1162,7 +1162,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
     />
     <ListItem
       autoGenerateNestedIndicator={true}
-      className="facetsCategory disabled"
+      className="facetsCategory disabled "
       containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
@@ -1172,7 +1172,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         Array [
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}
@@ -1209,7 +1209,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
     />
     <ListItem
       autoGenerateNestedIndicator={true}
-      className="facetsCategory disabled"
+      className="facetsCategory disabled "
       containerElement="span"
       disableKeyboardFocus={false}
       disabled={true}
@@ -1219,7 +1219,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         Array [
           <ListItem
             autoGenerateNestedIndicator={true}
-            className="facetsLink disabled"
+            className="facetsLink disabled "
             containerElement="span"
             disableKeyboardFocus={false}
             disabled={true}

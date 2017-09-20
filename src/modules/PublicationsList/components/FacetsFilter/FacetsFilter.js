@@ -56,22 +56,11 @@ export default class FacetsFilter extends React.Component {
 
     getNestedListItems = (facetCategory) => {
         const listItems = facetCategory.facets.map((item, index) => {
-            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.title)
-                && this.state.activeFacets[facetCategory.title] === item.key;
-            let thisClass = '';
-            if (isActive && this.props.disabled) {
-                thisClass = 'facetsLink active disabled';
-            } else if (!isActive && this.props.disabled) {
-                thisClass = 'facetsLink disabled';
-            } else if (!isActive && !this.props.disabled) {
-                thisClass = 'facetsLink';
-            } else if (isActive && !this.props.disabled) {
-                thisClass = 'facetsLink active';
-            }
+            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.title) && this.state.activeFacets[facetCategory.title] === item.key;
             return (
                 <ListItem
                     key={index}
-                    className={thisClass}
+                    className={this.getClass('facetsLink', isActive)}
                     primaryText={`${item.title} (${item.count})`}
                     onClick={() => (this.handleFacetClick(facetCategory.title, item.key))}
                     disabled={this.props.disabled}
@@ -79,6 +68,10 @@ export default class FacetsFilter extends React.Component {
             );
         });
         return listItems;
+    };
+
+    getClass = (type, active) => {
+        return type + (active ? ' active ' : '') + (this.props.disabled ? ' disabled ' : '');
     };
 
     getFacetsToDisplay(rawFacets, excludeFacetsList) {
@@ -113,29 +106,19 @@ export default class FacetsFilter extends React.Component {
         const txt = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList);
         if (facetsToDisplay.length === 0) return (<span className="facetsFilter empty" />);
+        const isDisabled = this.props.disabled;
         return (
             <div className="facetsFilter">
-                {/* <FlatButton label="toggle" onClick={this.toggleDisable()} />*/}
                 <List>
                     {
                         facetsToDisplay.map((item, index) => {
                             const isActive = this.state.activeFacets.hasOwnProperty(item.title);
-                            let thisClass = '';
-                            if (isActive && this.props.disabled) {
-                                thisClass = 'facetsCategory active disabled';
-                            } else if (!isActive && this.props.disabled) {
-                                thisClass = 'facetsCategory disabled';
-                            } else if (!isActive && !this.props.disabled) {
-                                thisClass = 'facetsCategory';
-                            } else if (isActive && !this.props.disabled) {
-                                thisClass = 'facetsCategory active';
-                            }
                             return (
                                 <ListItem
                                     primaryText={item.title}
                                     open={this.state.activeFacets[item.title] && true}
-                                    disabled={this.props.disabled}
-                                    className={thisClass}
+                                    disabled={isDisabled}
+                                    className={this.getClass('facetsCategory', isActive)}
                                     primaryTogglesNestedList
                                     key={index}
                                     nestedItems={this.getNestedListItems(item)} />
