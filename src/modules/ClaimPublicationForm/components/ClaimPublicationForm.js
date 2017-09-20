@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField, StandardPage, StandardCard, ConfirmDialogBox, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
+import {TextField, StandardPage, StandardCard, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
-import {AuthorLinkingField} from '../../SharedComponents';
+import {AuthorLinkingField, PublicationFormAlert} from '../../SharedComponents';
 import {validation, locale} from 'config';
 
 export default class ClaimPublicationForm extends Component {
@@ -137,26 +137,8 @@ export default class ClaimPublicationForm extends Component {
                             </StandardCard>
                         </div>
                     }
-                    {
-                        this.props.submitFailed && this.props.error &&
-                        <Alert type="error_outline" {...txt.errorAlert} />
-                    }
-                    {
-                        !this.props.submitFailed && this.props.dirty && this.props.invalid &&
-                        <Alert {...txt.validationAlert} type="warning" />
-                    }
-                    {
-                        this.props.submitting &&
-                        <Alert type="info_outline" {...txt.progressAlert} />
-                    }
-                    {
-                        this.props.submitSucceeded &&
-                        <Alert type="info" {...txt.successAlert} />
-                    }
-                    {
-                        authorLinked &&
-                        <Alert type="error" {...txt.alreadyClaimedAlert} />
-                    }
+
+                    <PublicationFormAlert status={this.props} authorLinked={authorLinked} />
 
                     {
                         !authorLinked &&
