@@ -425,4 +425,23 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
+    it('getRecordContributorsIdSearchKey returns request object', () => {
+        const input = [
+            { rek_contributor_id: null, rek_contributor_id_order: 1 },
+            { rek_contributor_id: 100, rek_contributor_id_order: 2 },
+            { rek_contributor_id: null, rek_contributor_id_order: 3 },
+            { rek_contributor_id: 1001, rek_contributor_id_order: 4 }
+        ];
+        const expected = {
+            fez_record_search_key_contributor_id: [
+                { rek_contributor_id: null, rek_contributor_id_order: 1 },
+                { rek_contributor_id: 100, rek_contributor_id_order: 2 },
+                { rek_contributor_id: null, rek_contributor_id_order: 3 },
+                { rek_contributor_id: 1001, rek_contributor_id_order: 4 },
+            ]
+        };
+        const result = transformers.getRecordContributorsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
 });

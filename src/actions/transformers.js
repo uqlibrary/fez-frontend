@@ -138,7 +138,6 @@ export const getRecordAuthorsSearchKey = (authors) => {
 * @returns {Object} formatted {fez_record_search_key_author_id} for record request
 */
 export const getRecordAuthorsIdSearchKey = (authors) => {
-    console.log(authors);
     if (!authors || authors.length === 0) return {};
     return {
         fez_record_search_key_author_id: authors.map(
@@ -173,7 +172,8 @@ export const getRecordContributorsSearchKey = (authors) => {
 };
 
 /* getRecordContributorsIdSearchKey - returns editors id object formatted for record request
-* @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+* @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
+* {rek_contributor_id: 100, rek_contributor_id_order: 1}
 * @returns {Object} formatted {fez_record_search_key_contributor_id} for record request
 */
 export const getRecordContributorsIdSearchKey = (authors) => {
@@ -181,10 +181,12 @@ export const getRecordContributorsIdSearchKey = (authors) => {
     return {
         fez_record_search_key_contributor_id: authors.map(
             (item, index) => (
-                {
-                    rek_contributor_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || null,
-                    rek_contributor_id_order: index + 1
-                }
+                item.hasOwnProperty('rek_contributor_id') && item.hasOwnProperty('rek_contributor_id_order')
+                    ? item
+                    : {
+                        rek_contributor_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || null,
+                        rek_contributor_id_order: index + 1
+                    }
             )
         )
     };
