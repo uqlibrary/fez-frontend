@@ -2046,10 +2046,29 @@ exports[`ClaimPublicationForm renders  only citation and error message 1`] = `
     <Alert
       allowDismiss={false}
       message="This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au"
-      outsideLayout={false}
       title="Error"
       type="error"
     />
+    <div
+      className="columns action-buttons"
+    >
+      <div
+        className="column is-hidden-mobile"
+      />
+      <div
+        className="column is-narrow-desktop"
+      >
+        <RaisedButton
+          disabled={false}
+          fullWidth={true}
+          label="Cancel this claim"
+          labelPosition="after"
+          onTouchTap={[Function]}
+          primary={false}
+          secondary={false}
+        />
+      </div>
+    </div>
   </form>
 </StandardPage>
 `;
