@@ -68,7 +68,7 @@ export default class ClaimPublicationForm extends Component {
         } else if (authorLinked) {
             return txt.alreadyClaimedAlert;
         } else {
-            return {};
+            return null;
         }
     };
 
@@ -84,6 +84,8 @@ export default class ClaimPublicationForm extends Component {
 
         const authorLinked = publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
+
+        const alert = this.alertMessage(txt, authorLinked);
 
         return (
             <StandardPage title={txt.title}>
@@ -154,7 +156,10 @@ export default class ClaimPublicationForm extends Component {
                         </div>
                     }
 
-                    <Alert {...this.alertMessage(txt, authorLinked)} />
+                    {
+                        alert &&
+                        <Alert {...alert} />
+                    }
 
                     <div className="columns action-buttons">
                         <div className="column is-hidden-mobile"/>
