@@ -56,14 +56,14 @@ export default class ClaimPublicationForm extends Component {
         }
     };
 
-    alertMessage = (txt, authorLinked = false) => {
-        if (this.props.submitFailed && this.props.error) {
+    getAlert = (props, txt, authorLinked = false) => {
+        if (props.submitFailed && props.error) {
             return txt.errorAlert;
-        } else if (!this.props.submitFailed && this.props.dirty && this.props.invalid) {
+        } else if (!props.submitFailed && props.dirty && props.invalid) {
             return txt.validationAlert;
-        } else if (this.props.submitting) {
+        } else if (props.submitting) {
             return txt.progressAlert;
-        } else if (this.props.submitSucceeded) {
+        } else if (props.submitSucceeded) {
             return txt.successAlert;
         } else if (authorLinked) {
             return txt.alreadyClaimedAlert;
@@ -85,7 +85,7 @@ export default class ClaimPublicationForm extends Component {
         const authorLinked = publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
-        const alert = this.alertMessage(txt, authorLinked);
+        const alert = this.getAlert(this.props, txt, authorLinked);
 
         return (
             <StandardPage title={txt.title}>
