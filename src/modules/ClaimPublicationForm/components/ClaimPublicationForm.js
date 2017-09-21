@@ -156,17 +156,17 @@ export default class ClaimPublicationForm extends Component {
 
                     <Alert {...this.alertMessage(txt, authorLinked)} />
 
-                    {
-                        !authorLinked &&
-                        <div className="columns action-buttons">
-                            <div className="column is-hidden-mobile"/>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    fullWidth
-                                    label={txt.cancel}
-                                    disabled={this.props.submitting}
-                                    onTouchTap={this._showConfirmation}/>
-                            </div>
+                    <div className="columns action-buttons">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                fullWidth
+                                label={txt.cancel}
+                                disabled={this.props.submitting}
+                                onTouchTap={this._showConfirmation}/>
+                        </div>
+                        {
+                            !authorLinked &&
                             <div className="column is-narrow-desktop">
                                 <RaisedButton
                                     secondary
@@ -176,8 +176,8 @@ export default class ClaimPublicationForm extends Component {
                                     disabled={this.props.submitting || this.props.invalid}
                                 />
                             </div>
-                        </div>
-                    }
+                        }
+                    </div>
                 </form>
             </StandardPage>
         );
