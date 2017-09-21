@@ -980,7 +980,7 @@ export default {
                 message: 'Claim publication is being processed.'
             },
             successAlert: {
-                type: 'info',
+                type: 'done',
                 title: 'Success',
                 message: 'Publication claim has been submitted successfully.'
             },
