@@ -976,20 +976,29 @@ export default {
                 confirmButtonLabel: 'OK'
             },
             validationAlert: {
+                type: 'warning',
                 title: 'Validation',
                 message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
             },
             errorAlert: {
+                type: 'error_outline',
                 title: 'Error',
                 message: 'Error has occurred during request and claim cannot be processed. Please, review the form and try again.'
             },
             progressAlert: {
+                type: 'info_outline',
                 title: 'Saving',
                 message: 'Claim publication is being processed.'
             },
             successAlert: {
+                type: 'done',
                 title: 'Success',
                 message: 'Publication claim has been submitted successfully.'
+            },
+            alreadyClaimedAlert: {
+                type: 'error',
+                title: 'Error',
+                message: 'This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au'
             }
         },
         publicationCitation: {
