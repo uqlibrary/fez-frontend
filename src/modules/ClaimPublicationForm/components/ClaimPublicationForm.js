@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField, StandardPage, StandardCard, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
+import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
-import {AuthorLinkingField, PublicationFormAlert} from '../../SharedComponents';
+import {AuthorLinkingField} from '../../SharedComponents';
 import {validation, locale} from 'config';
 
 export default class ClaimPublicationForm extends Component {
@@ -68,6 +68,22 @@ export default class ClaimPublicationForm extends Component {
 
         const authorLinked = publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
+
+        const alertMessage = () => {
+            if (this.props.submitFailed && this.props.error) {
+                return txt.errorAlert;
+            } else if (!this.props.submitFailed && this.props.dirty && this.props.invalid) {
+                return txt.validationAlert;
+            } else if (this.props.submitting) {
+                return txt.progressAlert;
+            } else if (this.props.submitSucceeded) {
+                return txt.successAlert;
+            } else if (authorLinked) {
+                return txt.alreadyClaimedAlert;
+            } else {
+                return {};
+            }
+        };
 
         return (
             <StandardPage title={txt.title}>
@@ -138,7 +154,7 @@ export default class ClaimPublicationForm extends Component {
                         </div>
                     }
 
-                    <PublicationFormAlert status={this.props} authorLinked={authorLinked} />
+                    <Alert {...alertMessage()} />
 
                     {
                         !authorLinked &&
