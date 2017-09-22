@@ -247,11 +247,11 @@ class Dashboard extends React.Component {
                                                                     </div>
                                                                     <div className="column is-narrow trendingPubsCount">
                                                                         <span className="title is-1"
-                                                                            title={txt.myTrendingPublications.trendSharesThisMonth}>{recordValue.count}</span>
+                                                                            title={txt.myTrendingPublications.trendSharesThisMonth}>{Math.round(recordValue.count)}</span>
                                                                     </div>
                                                                     <div className="column is-narrow trendingPubsDifference">
                                                                         <span className="title is-5"
-                                                                            title={txt.myTrendingPublications.trendDifferenceSharesThisMonth}>+{recordValue.difference}</span>
+                                                                            title={txt.myTrendingPublications.trendDifferenceSharesThisMonth}>+{Math.round(recordValue.difference)}</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
