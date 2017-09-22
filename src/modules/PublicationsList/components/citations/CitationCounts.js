@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 
-import {locale} from 'config';
+import {locale, general} from 'config';
+// import {openAccessLookup} from 'config';
 
 const thompsonIcon = require('images/thomson_icon.svg');
 const scopusIcon = require('images/scopus_icon.svg');
@@ -64,18 +65,6 @@ export default class CitationCounts extends Component {
                     </span>
                 }
                 {
-                    // TODO: get IDs/Lookups of open access to be displayed
-                    !!this.props.publication.rek_pid && !!this.props.publication.fez_record_search_key_oa_status &&
-                    // txt.openAccessValues.indexOf(this.props.publication.fez_record_search_key_oa_status.rek_oa_status) >= 0 &&
-                    <span className="citationCount">
-                        <img
-                            src={openAccessIcon}
-                            alt={txt.openAccessLabel}
-                            title={txt.openAccessLabel}
-                            className="citationCountIcon"/>
-                    </span>
-                }
-                {
                     !!this.props.publication.rek_pid &&
                     <span className="citationCount">
                         <a className="citationCountLink" href={`https://scholar.google.com/scholar?q=intitle:"${encodeURI(this.props.publication.rek_title)}"`} target="_blank">
@@ -83,18 +72,31 @@ export default class CitationCounts extends Component {
                                 src={googleScholarIcon}
                                 alt={txt.googleCountLabel}
                                 title={txt.googleCountLabel}
-                                className="citationCountIcon"/>
+                                className="citationCountIcon"/>{counts.google}
                         </a>
                     </span>
                 }
                 {
-                    !!this.props.publication.rek_pid && (counts.wos || counts.scopus) &&
-                    <span className="citationCount column is-full-mobile">
-                        <a className="citationCountLink" href={`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`} target="_blank">
-                            <FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon>
-                            <span className="citationCountNumber">{txt.statsLabel}</span>
-                        </a>
+                    !!this.props.publication.rek_pid && !!this.props.publication.fez_record_search_key_oa_status &&
+                    txt.openAccessValues.indexOf(general.openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status]) >= 0 &&
+                    <span className="citationCount">
+                        <img
+                            src={openAccessIcon}
+                            alt={general.openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status]}
+                            title={txt.openAccessLabel}
+                            className="citationCountIcon"/>
                     </span>
+                }
+                {
+                    !!this.props.publication.rek_pid && (counts.wos || counts.scopus) &&
+                    <div className="citationCount column">
+                        <a className="citationCountLink" href={`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`} target="_blank">
+                            <div className="columns is-mobile is-gapless">
+                                <div className="column is-narrow"><FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
+                                <div className="column is-narrow citationCountNumber">{txt.statsLabel}</div>
+                            </div>
+                        </a>
+                    </div>
                 }
             </div>
         );

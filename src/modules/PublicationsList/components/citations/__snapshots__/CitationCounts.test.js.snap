@@ -22,16 +22,6 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
   <span
     className="citationCount"
   >
-    <img
-      alt="Open Access - free to read (embargo date might apply)"
-      className="citationCountIcon"
-      src=""
-      title="Open Access - free to read (embargo date might apply)"
-    />
-  </span>
-  <span
-    className="citationCount"
-  >
     <a
       className="citationCountLink"
       href="https://scholar.google.com/scholar?q=intitle:\\"TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells\\""
@@ -44,6 +34,16 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
         title="Citation counts in Google Scholar"
       />
     </a>
+  </span>
+  <span
+    className="citationCount"
+  >
+    <img
+      alt="DOI"
+      className="citationCountIcon"
+      src=""
+      title="Open Access - free to read (embargo date might apply)"
+    />
   </span>
 </div>
 `;
@@ -100,16 +100,6 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
   <span
     className="citationCount"
   >
-    <img
-      alt="Open Access - free to read (embargo date might apply)"
-      className="citationCountIcon"
-      src=""
-      title="Open Access - free to read (embargo date might apply)"
-    />
-  </span>
-  <span
-    className="citationCount"
-  >
     <a
       className="citationCountLink"
       href="https://scholar.google.com/scholar?q=intitle:\\"undefined\\""
@@ -121,30 +111,49 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
         src=""
         title="Citation counts in Google Scholar"
       />
+      1
     </a>
   </span>
   <span
-    className="citationCount column is-full-mobile"
+    className="citationCount"
+  >
+    <img
+      alt="DOI"
+      className="citationCountIcon"
+      src=""
+      title="Open Access - free to read (embargo date might apply)"
+    />
+  </span>
+  <div
+    className="citationCount column"
   >
     <a
       className="citationCountLink"
       href="https://app.library.uq.edu.au/#/authors/view/pid:111"
       target="_blank"
     >
-      <FontIcon
-        className="citationCountIcon material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="columns is-mobile is-gapless"
       >
-        open_in_new
-      </FontIcon>
-      <span
-        className="citationCountNumber"
-      >
-        View full statistics
-      </span>
+        <div
+          className="column is-narrow"
+        >
+          <FontIcon
+            className="citationCountIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            open_in_new
+          </FontIcon>
+        </div>
+        <div
+          className="column is-narrow citationCountNumber"
+        >
+          View full statistics
+        </div>
+      </div>
     </a>
-  </span>
+  </div>
 </div>
 `;
 

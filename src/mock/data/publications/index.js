@@ -2370,7 +2370,7 @@ export const claimedPublications = {
         "fez_record_search_key_oa_status": {
             "rek_oa_status_id": null,
             "rek_oa_status_pid": "UQ:676287",
-            "rek_oa_status": 453695
+            "rek_oa_status": 453693
         },
         "fez_record_search_key_org_name": null,
         "fez_record_search_key_org_unit_name": null,

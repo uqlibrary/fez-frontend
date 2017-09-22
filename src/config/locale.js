@@ -1000,7 +1000,7 @@ export default {
                 googleCountLabel: 'Citation counts in Google Scholar',
                 altmetricCountLabel: 'Altmetric score is [count]',
                 openAccessLabel: 'Open Access - free to read (embargo date might apply)',
-                openAccessValues: ['DOI', 'Link (no DOI)', 'File (Publisher version)', 'File (Author Post-print)', 'Other'],
+                openAccessValues: ['DOI', 'Link (no DOI)', 'File (Publisher version)', 'File (Author post-print)', 'Other'],
                 statsLabel: 'View full statistics'
             },
             defaultActions: [
