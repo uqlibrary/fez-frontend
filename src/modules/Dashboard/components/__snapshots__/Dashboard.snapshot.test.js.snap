@@ -202,7 +202,6 @@ exports[`Dashboard test renders possibly your publications lure 1`] = `
         actionButtonLabel="Claim your publications now"
         allowDismiss={true}
         message="We have found 5 record(s) that could possibly be your work."
-        outsideLayout={false}
         title="Claim now!"
         type="warning"
       />
