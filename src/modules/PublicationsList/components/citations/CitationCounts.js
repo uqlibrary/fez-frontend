@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 
-import {locale, general} from 'config';
-// import {openAccessLookup} from 'config';
+import {locale} from 'config';
+import {openAccessIdLookup} from 'config/general';
 
 const thompsonIcon = require('images/thomson_icon.svg');
 const scopusIcon = require('images/scopus_icon.svg');
@@ -78,12 +78,12 @@ export default class CitationCounts extends Component {
                 }
                 {
                     !!this.props.publication.rek_pid && !!this.props.publication.fez_record_search_key_oa_status &&
-                    txt.openAccessValues.indexOf(general.openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status]) >= 0 &&
+                    !!openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status] &&
                     <span className="citationCount">
                         <img
                             src={openAccessIcon}
-                            alt={general.openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status]}
-                            title={txt.openAccessLabel}
+                            alt={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status])}
+                            title={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status])}
                             className="citationCountIcon"/>
                     </span>
                 }

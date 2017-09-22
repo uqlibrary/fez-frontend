@@ -2867,7 +2867,7 @@ export const claimedPublications = {
         "fez_record_search_key_oa_status": {
             "rek_oa_status_id": null,
             "rek_oa_status_pid": "UQ:396321",
-            "rek_oa_status": 453693
+            "rek_oa_status": 453694
         },
         "fez_record_search_key_org_name": null,
         "fez_record_search_key_org_unit_name": null,
@@ -3293,7 +3293,7 @@ export const claimedPublications = {
         "fez_record_search_key_oa_status": {
             "rek_oa_status_id": null,
             "rek_oa_status_pid": "UQ:386763",
-            "rek_oa_status": 453693
+            "rek_oa_status": 453695
         },
         "fez_record_search_key_org_name": null,
         "fez_record_search_key_org_unit_name": null,
@@ -3638,7 +3638,7 @@ export const claimedPublications = {
         "fez_record_search_key_oa_status": {
             "rek_oa_status_id": null,
             "rek_oa_status_pid": "UQ:384236",
-            "rek_oa_status": 453693
+            "rek_oa_status": 453696
         },
         "fez_record_search_key_org_name": null,
         "fez_record_search_key_org_unit_name": null,
