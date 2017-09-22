@@ -1,5 +1,3 @@
-jest.dontMock('./transformers');
-
 import React from 'react';
 import * as transformers from './transformers';
 
@@ -101,13 +99,13 @@ describe('Transformers tests ', () => {
             fez_record_search_key_link: [
                 {
                     rek_link: 'http://google.com',
-                    rek_link_order: 0
+                    rek_link_order: 1
                 }
             ],
             fez_record_search_key_link_description: [
                 {
                     rek_link_description: 'http://google.com',
-                    rek_link_description_order: 0
+                    rek_link_description_order: 1
                 }
             ]
         };

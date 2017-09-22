@@ -1,4 +1,4 @@
-import * as actions from 'actions/claimPublications';
+import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     publicationToClaim: null,

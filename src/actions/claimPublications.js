@@ -1,27 +1,7 @@
 import * as repositories from 'repositories';
 import * as transformers from './transformers';
+import * as actions from './actionTypes';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
-
-export const POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'POSSIBLY_YOUR_PUBLICATIONS_LOADING';
-export const POSSIBLY_YOUR_PUBLICATIONS_COMPLETED = 'POSSIBLY_YOUR_PUBLICATIONS_COMPLETED';
-export const POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED = 'POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED';
-export const POSSIBLY_YOUR_PUBLICATIONS_FAILED = 'POSSIBLY_YOUR_PUBLICATIONS_FAILED';
-
-export const COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING = 'COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING';
-export const COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED = 'COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED';
-export const COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED = 'COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED';
-
-export const HIDE_PUBLICATIONS_LOADING = 'HIDE_PUBLICATIONS_LOADING';
-export const HIDE_PUBLICATIONS_COMPLETED = 'HIDE_PUBLICATIONS_COMPLETED';
-export const HIDE_PUBLICATIONS_FAILED = 'HIDE_PUBLICATIONS_FAILED';
-
-export const PUBLICATION_TO_CLAIM_SET = 'PUBLICATION_TO_CLAIM_SET';
-export const PUBLICATION_TO_CLAIM_CLEAR = 'PUBLICATION_TO_CLAIM_CLEAR';
-
-
-export const CLAIM_PUBLICATION_CREATE_PROCESSING = 'CLAIM_PUBLICATION_CREATE_PROCESSING';
-export const CLAIM_PUBLICATION_CREATE_COMPLETED = 'CLAIM_PUBLICATION_CREATE_COMPLETED';
-export const CLAIM_PUBLICATION_CREATE_FAILED = 'CLAIM_PUBLICATION_CREATE_FAILED';
 
 /**
  * Get count of possibly your publications for an author
@@ -30,18 +10,22 @@ export const CLAIM_PUBLICATION_CREATE_FAILED = 'CLAIM_PUBLICATION_CREATE_FAILED'
  */
 export function countPossiblyYourPublications(authorUsername) {
     return dispatch => {
-        dispatch({type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
-        repositories.getCountPossibleUnclaimedPublications(authorUsername).then(response => {
-            dispatch({
-                type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                payload: response.data
-            });
-        }).catch((error) => {
-            dispatch({
-                type: COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                payload: error
-            });
-        });
+        dispatch({type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
+        repositories.getCountPossibleUnclaimedPublications(authorUsername)
+            .then(
+                response => {
+                    dispatch({
+                        type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+                        payload: response.data
+                    });
+                },
+                error => {
+                    dispatch({
+                        type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
+                        payload: error
+                    });
+                }
+            );
     };
 }
 
@@ -52,21 +36,21 @@ export function countPossiblyYourPublications(authorUsername) {
  */
 export function searchPossiblyYourPublications(authorUsername, activeFacets) {
     return dispatch => {
-        dispatch({type: POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
+        dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
         // TODO: try some authors who are students - org username or student name to use?
         repositories.getPossibleUnclaimedPublications(authorUsername, activeFacets).then(response => {
             dispatch({
-                type: POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+                type: actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                 payload: response,
             });
             dispatch({
-                type: POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
+                type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
                 payload: response.filters && response.filters.facets ? response.filters.facets : {}
             });
             dispatch(countPossiblyYourPublications(authorUsername));
         }).catch((error) => {
             dispatch({
-                type: POSSIBLY_YOUR_PUBLICATIONS_FAILED,
+                type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                 payload: error
             });
         });
@@ -83,7 +67,7 @@ export function hidePublications(publicationsToHide, author, activeFacets) {
     return dispatch => {
         if (!author) return;
 
-        dispatch({type: HIDE_PUBLICATIONS_LOADING});
+        dispatch({type: actions.HIDE_PUBLICATIONS_LOADING});
         // Transform data to api format:
         // { "author_id" : "3", "publications": [ { "pid": "UQ:662328" } ] }
         const data = {
@@ -95,7 +79,7 @@ export function hidePublications(publicationsToHide, author, activeFacets) {
         repositories.postHidePossiblePublications(data)
             .then(response => {
                 dispatch({
-                    type: HIDE_PUBLICATIONS_COMPLETED,
+                    type: actions.HIDE_PUBLICATIONS_COMPLETED,
                     payload: response
                 });
 
@@ -104,7 +88,7 @@ export function hidePublications(publicationsToHide, author, activeFacets) {
             })
             .catch(() => {
                 dispatch({
-                    type: HIDE_PUBLICATIONS_FAILED,
+                    type: actions.HIDE_PUBLICATIONS_FAILED,
                     payload: []
                 });
             });
@@ -119,7 +103,7 @@ export function hidePublications(publicationsToHide, author, activeFacets) {
 export function setClaimPublication(publication) {
     return dispatch => {
         dispatch({
-            type: PUBLICATION_TO_CLAIM_SET,
+            type: actions.PUBLICATION_TO_CLAIM_SET,
             payload: publication
         });
     };
@@ -132,7 +116,7 @@ export function setClaimPublication(publication) {
 export function clearClaimPublication() {
     return dispatch => {
         dispatch({
-            type: PUBLICATION_TO_CLAIM_CLEAR
+            type: actions.PUBLICATION_TO_CLAIM_CLEAR
         });
     };
 }
@@ -158,12 +142,12 @@ export function claimPublication(data) {
     console.log(data);
 
     return dispatch => {
-        dispatch({type: CLAIM_PUBLICATION_CREATE_PROCESSING});
+        dispatch({type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING});
 
         // claim record from external source
         const createRecordRequest = data.publication.rek_pid ?
             data.publication : {
-                ...JSON.parse(JSON.stringify(data.publication)),
+                ...data.publication,
                 ...NEW_RECORD_DEFAULT_VALUES
             };
 
@@ -172,7 +156,7 @@ export function claimPublication(data) {
 
         return repositories.postRecord(createRecordRequest)
             .then(response => {
-                data.publication.rek_pid = response.rek_pid;
+                data.publication.rek_pid = response.data.rek_pid;
                 const claimRequest = transformers.getClaimRequest(data);
                 return repositories.postClaimPossiblePublication(claimRequest);
             })
@@ -193,21 +177,22 @@ export function claimPublication(data) {
                     }
                 };
 
-                const getRecordAuthorsIdSearchKeys = data.publication.fez_record_search_key_author.length === 1 && !data.authorLinking
+                const recordAuthorsIdSearchKeys = data.publication.fez_record_search_key_author
+                    && data.publication.fez_record_search_key_author.length === 1 && !data.authorLinking
                     ? soloAuthor : transformers.getRecordAuthorsIdSearchKey(data.authorLinking.authors);
 
                 const recordPatchRequest = {
                     rek_pid: data.publication.rek_pid,
                     ...transformers.getRecordLinkSearchKey(data),
                     ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
-                    ...getRecordAuthorsIdSearchKeys
+                    ...recordAuthorsIdSearchKeys
                 };
                 console.log(recordPatchRequest);
                 return repositories.patchRecord(data.publication.rek_pid, recordPatchRequest);
             })
             .then(response => {
                 dispatch({
-                    type: CLAIM_PUBLICATION_CREATE_COMPLETED,
+                    type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
                     payload: response
                 });
                 return Promise.resolve(response);
@@ -216,7 +201,7 @@ export function claimPublication(data) {
                 console.log(error);
 
                 dispatch({
-                    type: CLAIM_PUBLICATION_CREATE_FAILED,
+                    type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
                     payload: error
                 });
                 return Promise.reject(error);

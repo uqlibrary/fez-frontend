@@ -50,7 +50,7 @@ export function getTrendingPublications(userName) {
  * @param {string} userName of user for whom to apply the action
  * @returns {Promise}
  */
-export function getCountPossibleUnclaimedPublications(userName) {
+export function getCountPossibleUnclaimedPublications({userName}) {
     return get(`${GET_COUNT_POSSIBLE_PUBLICATIONS_API}/${userName}`);
 }
 

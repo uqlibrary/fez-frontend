@@ -93,6 +93,7 @@ mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200); // Success
 
 // Mock claim publication results endpoint response
 mock.onGet(/publications\/possible-unclaimed\/[a-z0-9]/).reply(200, mockData.possibleUnclaimed);
+// mock.onGet(/(publications\/possible-counts)/).reply(500, 'ERROR');
 mock.onGet(/(publications\/possible-counts)/).reply(200, mockData.possibleCounts);
 mock.onGet(/(publications\/claimed)/).reply(200, mockData.claimedPublications);
 mock.onGet(/(academic\/[a-z0-9]*\/trending_publications)/).reply(200, mockData.trendingPublications);
