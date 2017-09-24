@@ -30,6 +30,13 @@ export default class AddRecord extends React.Component {
         };
     }
 
+    componentWillMount() {
+        const {history, publicationsList} = this.props;
+        if (history.length > 0 && history.action === 'POP' && publicationsList.length > 0) {
+            this.setState({stepperIndex: this.state.stepperIndex + 1});
+        }
+    }
+
     componentWillUnmount() {
         this._cancelWorkflow();
     }
