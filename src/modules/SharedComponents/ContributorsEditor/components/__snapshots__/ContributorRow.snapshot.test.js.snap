@@ -63,43 +63,43 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
           Array [
             <div
               className="columns dialog-actions ConfirmDialogBox-actions"
-          >
+            >
               <div
-                  className="column is-hidden-mobile"
+                className="column is-hidden-mobile"
               />
               <div
-                  className="column is-narrow"
+                className="column is-narrow"
               >
-                  <RaisedButton
-                      className="ConfirmDialogBox-actions-cancel"
-                      disabled={false}
-                      fullWidth={true}
-                      label="No"
-                      labelPosition="after"
-                      onTouchTap={[Function]}
-                      primary={false}
-                      secondary={false}
-                  />
+                <RaisedButton
+                  className="ConfirmDialogBox-actions-cancel"
+                  disabled={false}
+                  fullWidth={true}
+                  label="No"
+                  labelPosition="after"
+                  onTouchTap={[Function]}
+                  primary={false}
+                  secondary={false}
+                />
               </div>
               <div
-                  className="column is-narrow"
+                className="column is-narrow"
               >
-                  <RaisedButton
-                      className="ConfirmDialogBox-actions-confirm"
-                      disabled={false}
-                      fullWidth={true}
-                      keyboardFocused={true}
-                      label="Yes"
-                      labelPosition="after"
-                      onTouchTap={[Function]}
-                      primary={false}
-                      secondary={true}
-                  />
+                <RaisedButton
+                  className="ConfirmDialogBox-actions-confirm"
+                  disabled={false}
+                  fullWidth={true}
+                  keyboardFocused={true}
+                  label="Yes"
+                  labelPosition="after"
+                  onTouchTap={[Function]}
+                  primary={false}
+                  secondary={true}
+                />
               </div>
               <div
-                  className="is-clearfix"
+                className="is-clearfix"
               />
-          </div>,
+            </div>,
           ]
         }
         autoDetectWindowHeight={true}

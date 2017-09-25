@@ -31,7 +31,7 @@ exports[`Research test renders list of publications 1`] = `
             "buttonLabel": "OK",
             "text": <div>
               your research help....
-          </div>,
+            </div>,
             "title": "My research help",
           }
         }
@@ -42,17 +42,17 @@ exports[`Research test renders list of publications 1`] = `
             "text": <div>
               We were unable to find any results. Please, check if there are any possibly your publications via 
               <a
-                  href="#claim-publications"
+                href="#claim-publications"
               >
-                  claim possible publications
+                claim possible publications
               </a>
                or 
               <a
-                  href="#add-record"
+                href="#add-record"
               >
-                  add a missing publication
+                add a missing publication
               </a>
-          </div>,
+            </div>,
             "title": "No publications found",
           }
         }
