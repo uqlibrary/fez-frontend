@@ -15,32 +15,38 @@ export const initialState = {
 };
 
 function deduplicateResults(publicationsList) {
-    // get a list of duplicates DOI
-    const doiList = publicationsList
+    // get a list of DOI counts
+    const doiCountHash = publicationsList
         .filter(item => {
             return !!item.fez_record_search_key_doi;
         })
         .map(item => {
             return item.fez_record_search_key_doi.rek_doi;
         })
-        .reduce((duplicates, item) => {
-            if (duplicates.indexOf(item.toLowerCase()) < 0) {
-                duplicates.push(item.toLowerCase());
-            }
-            return duplicates;
+        .reduce((duplicatesCount, doi) => {
+            duplicatesCount[doi.toLowerCase()] = (duplicatesCount[doi.toLowerCase()] || 0) + 1;
+            return duplicatesCount;
         }, []);
-    // get a list of duplicate doi records
+
+    // get a list of duplicate doi records and dois
+    const doiDuplicatesList = [];
     const duplicates = publicationsList
         .filter(item => {
-            return !!item.fez_record_search_key_doi && doiList.indexOf(item.fez_record_search_key_doi.rek_doi.toLowerCase()) >= 0;
+            if (item.fez_record_search_key_doi && doiCountHash[item.fez_record_search_key_doi.rek_doi.toLowerCase()] > 1
+                && doiDuplicatesList.indexOf(item.fez_record_search_key_doi.rek_doi.toLowerCase()) === -1) {
+                doiDuplicatesList.push(item.fez_record_search_key_doi.rek_doi.toLowerCase());
+            }
+            return !!item.fez_record_search_key_doi && doiCountHash[item.fez_record_search_key_doi.rek_doi.toLowerCase()] > 1;
         });
+
     // remove all duplicates from full list of results
     const cleanedPublicationsList = publicationsList
         .filter(item => {
-            return !item.fez_record_search_key_doi || doiList.indexOf(item.fez_record_search_key_doi.rek_doi.toLowerCase()) < 0;
+            return !item.fez_record_search_key_doi || doiCountHash[item.fez_record_search_key_doi.rek_doi.toLowerCase()] === 1;
         });
+
     // filter duplicate records based on source priority
-    const highPriorityItem = doiList
+    const highPriorityItem = doiDuplicatesList
         .map(doi => {
             // get a record with most priority
             return duplicates
@@ -51,14 +57,15 @@ function deduplicateResults(publicationsList) {
                     if (list.length === 0) {
                         list.push(item);
                     } else {
-                        const currentItem = {...list[0]};
+                        const currentItem = {...list[0]}; // the first item
                         const currentItemPriority = Math
                             .min(...currentItem.sources
                                 .map(source => {
                                     return locale.global.sources[source];
-                                }));
-                        const itemPrioritiy = locale.global.sources[item.sources[0]];
-                        if (itemPrioritiy < currentItemPriority) {
+                                })); // returns the lowest valued priority source this record has
+                        const itemPriority = locale.global.sources[item.sources[0]]; // items current source priority
+
+                        if (itemPriority < currentItemPriority) {
                             currentItem.sources.push(item.sources[0]);
                             item.sources = currentItem.sources;
                             list[0] = item;
@@ -69,8 +76,9 @@ function deduplicateResults(publicationsList) {
                     return list;
                 }, [])[0];
         });
+
     // re-add de-duplicated items
-    return [...cleanedPublicationsList, ...highPriorityItem];
+    return [...highPriorityItem, ...cleanedPublicationsList];
 }
 
 const handlers = {

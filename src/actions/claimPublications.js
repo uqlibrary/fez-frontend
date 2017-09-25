@@ -178,7 +178,7 @@ export function claimPublication(data) {
                 };
 
                 const recordAuthorsIdSearchKeys = data.publication.fez_record_search_key_author
-                    && data.publication.fez_record_search_key_author.length === 1 && !data.authorLinking
+                && data.publication.fez_record_search_key_author.length === 1 && !data.authorLinking
                     ? soloAuthor : transformers.getRecordAuthorsIdSearchKey(data.authorLinking.authors);
 
                 const recordPatchRequest = {

@@ -23,7 +23,7 @@ export default class FacetsFilter extends React.Component {
 
         // always keep props/state in sync
         this.state = {
-            activeFacets: {...props.activeFacets}
+            activeFacets: {...props.activeFacets},
         };
     }
 
@@ -35,14 +35,15 @@ export default class FacetsFilter extends React.Component {
     }
 
     handleFacetClick = (category, facet) => {
+        if (this.props.disabled) {
+            return;
+        }
         const activeFacets = {...this.state.activeFacets};
-
         if (activeFacets.hasOwnProperty(category) && activeFacets[category] === facet) {
             delete activeFacets[category];
         } else {
             activeFacets[category] = facet;
         }
-
         this.setState({
             activeFacets: {...activeFacets}
         });
@@ -56,16 +57,15 @@ export default class FacetsFilter extends React.Component {
 
     getNestedListItems = (facetCategory) => {
         const listItems = facetCategory.facets.map((item, index) => {
-            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.title)
-                && this.state.activeFacets[facetCategory.title] === item.key;
+            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.title) && this.state.activeFacets[facetCategory.title] === item.key;
             return (
                 <ListItem
                     key={index}
-                    className={isActive ? 'facetsLink active' : 'facetsLink'}
+                    className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                     primaryText={`${item.title} (${item.count})`}
                     onClick={() => (this.handleFacetClick(facetCategory.title, item.key))}
                     disabled={this.props.disabled}
-                    leftIcon={isActive ? <NavigationClose/> : null}/>
+                    leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}/>
             );
         });
         return listItems;
@@ -114,7 +114,7 @@ export default class FacetsFilter extends React.Component {
                                     primaryText={item.title}
                                     open={this.state.activeFacets[item.title] && true}
                                     disabled={this.props.disabled}
-                                    className={isActive ? 'facetsCategory active' : 'facetsCategory'}
+                                    className={'facetsCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                                     primaryTogglesNestedList
                                     key={index}
                                     nestedItems={this.getNestedListItems(item)} />

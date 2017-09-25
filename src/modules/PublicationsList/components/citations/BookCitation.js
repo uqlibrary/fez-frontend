@@ -31,10 +31,6 @@ export default class BookCitation extends Component {
         // eSpace citation view for Book
         // {6034} <i>{10612}</i>{12115|| ed}. {6042|Edited by |} {6113|(| ed.)} {6116||:} {6114}, {6044}.{16522| doi:|} - Legacy Fez
         // Author <i>Title</i> Edition ed. Edited by Editor Place of Publication: Publisher, Publ. doi: DOI
-
-        // Citation Styles - Book: https://docs.google.com/document/d/1j0ol7sW39dDg3X3bSV6Tg0a2MEwGtDodwYmv9m0bcHQ/
-        // {6034} ({6044}). <i>{10612}</i>. {6116||}, {6114}. {16522| doi:|}
-        // Author (Year). Title|. Place of Publication|, Publisher|. doi: doi
         return (
             <div className="citationContent citationBook">
                 <FontIcon className="material-icons citationIcon" data-place="left">

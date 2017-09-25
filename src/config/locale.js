@@ -16,31 +16,42 @@ export default {
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
         },
+        linkWillOpenInNewWindow: 'Link to [DESTINATION] will open in a new window.',
         sources: {
             espace: {
                 id: 'espace',
                 title: 'eSpace',
-                priority: 0
+                priority: 0,
+                externalUrl: 'https://espace.library.uq.edu.au/view/[ID]',
+                idKey: 'rek_pid'
             },
             wos: {
                 id: 'wos',
                 title: 'Web of science',
-                priority: 1
+                priority: 1,
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[ID]&SrcAuth=uqueensland',
+                idKey: 'fez_record_search_key_isi_loc.rek_isi_loc'
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
-                priority: 2
+                priority: 2,
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[ID]&origin=inward',
+                idKey: 'fez_record_search_key_scopus_id.rek_scopus_id'
             },
             pubmed: {
                 id: 'pubmed',
                 title: 'PubMed',
-                priority: 3
+                priority: 3,
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://www.ncbi.nlm.nih.gov/pubmed/[ID]',
+                idKey: 'fez_record_search_key_pubmed_id.rek_pubmed_id'
             },
             crossref: {
                 id: 'crossref',
                 title: 'Crossref',
-                priority: 4
+                priority: 4,
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[ID]',
+                idKey: 'fez_record_search_key_doi.rek_doi'
             }
         },
         embargoDateFormat: 'YYYY-MM-DD'
@@ -310,7 +321,7 @@ export default {
                 },
                 searchResults: {
                     title: 'Possible matches found',
-                    text: 'Top [noOfResults] potential match(es) displayed - claim a matching publication below, refine your search or create a new eSpace record.',
+                    text: 'Top [noOfResults] potential match(es) displayed for "[searchQuery]" - claim a matching publication below, refine your search or create a new eSpace record.',
                     help: {
                         title: 'Possible matches found',
                         text: 'Why search displays these items....',
@@ -965,20 +976,29 @@ export default {
                 confirmButtonLabel: 'OK'
             },
             validationAlert: {
+                type: 'warning',
                 title: 'Validation',
                 message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
             },
             errorAlert: {
+                type: 'error_outline',
                 title: 'Error',
                 message: 'Error has occurred during request and claim cannot be processed. Please, review the form and try again.'
             },
             progressAlert: {
+                type: 'info_outline',
                 title: 'Saving',
                 message: 'Claim publication is being processed.'
             },
             successAlert: {
+                type: 'done',
                 title: 'Success',
                 message: 'Publication claim has been submitted successfully.'
+            },
+            alreadyClaimedAlert: {
+                type: 'error',
+                title: 'Error',
+                message: 'This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au'
             }
         },
         publicationCitation: {

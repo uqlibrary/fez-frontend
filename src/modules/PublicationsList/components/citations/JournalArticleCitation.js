@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import AuthorsCitationView from './AuthorsCitationView';
 import YearCitationView from './YearCitationView';
+import PageRangeCitationView from './PageRangeCitationView';
 
 export default class JournalArticleCitation extends Component {
     static propTypes = {
@@ -23,10 +24,6 @@ export default class JournalArticleCitation extends Component {
                 this.props.publication.fez_record_search_key_volume_number.rek_volume_number : null,
             issueNumber: this.props.publication.fez_record_search_key_issue_number ?
                 this.props.publication.fez_record_search_key_issue_number.rek_issue_number : null,
-            startPage: this.props.publication.fez_record_search_key_start_page ?
-                this.props.publication.fez_record_search_key_start_page.rek_start_page : null,
-            endPage: this.props.publication.fez_record_search_key_end_page ?
-                this.props.publication.fez_record_search_key_end_page.rek_end_page : null,
             doi: this.props.publication.fez_record_search_key_doi ?
                 this.props.publication.fez_record_search_key_doi.rek_doi : null
         };
@@ -54,19 +51,7 @@ export default class JournalArticleCitation extends Component {
                     journalArticle.issueNumber &&
                     <span className="citationIssueNumber"> {journalArticle.issueNumber}</span>
                 }
-                {
-                    (journalArticle.startPage || journalArticle.endPage) ? ': ' : ''
-                }
-                {
-                    journalArticle.startPage &&
-                    <span className="citationStartPage">
-                        {journalArticle.startPage}{journalArticle.endPage ? '-' : '' }
-                    </span>
-                }
-                {
-                    journalArticle.endPage &&
-                    <span className="citationEndPage">{journalArticle.endPage}</span>
-                }
+                <PageRangeCitationView publication={this.props.publication} prefix=": " suffix="" />
                 .
                 {
                     journalArticle.doi &&

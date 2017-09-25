@@ -5,105 +5,119 @@
 }
 
 .publicationCitation {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      margin-bottom: 12px;
-      padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  padding: 6px 0;
+  & > div.columns:nth-child(1) {
+    margin-bottom: 0px !important;
+  }
 
-      .publicationSources {
-        font-size: 12px;
+  .citationOpenUrlIcon {
+    width: 12px !important;
+    height: 12px !important;
+    fill: $accent-color !important;
+    margin: 0 4px;
+  }
 
-        .publicationSource {
-          &:after {
-            content: ', ';
-          }
-          &:last-of-type:after {
-            content: '';
-          }
-        }
+  .publicationActions {
+    margin: 12px 0 !important;
+  }
+
+  .publicationSources {
+    font-size: 12px;
+
+    .publicationSource {
+      &:after {
+        content: ', ';
       }
-
-      &:first-child {
-        padding-top: 18px;
-        border-top: 1px solid rgba(0, 0, 0, 0.15);
-      }
-
-      .publicationTitle {
-        margin-bottom: 6px;
-      }
-
-      .citationContent {
-        font-size: 12px;
-        line-height: 16px;
-        color: rgba($text-color, 0.88);
-
-        .citationAuthors {
-          .citationAuthor {
-          }
-        }
-
-        .citationPublisher {
-        }
-
-        .citationTitle {
-        }
-
-        .citationJournalName {
-          font-style: italic;
-        }
-        .citationVolumeNumber {
-          font-style: italic;
-        }
-
-        .citationIssueNumber {
-        }
-
-        .citationStartPage {
-        }
-
-        .citationEndPage {
-        }
-
-        .citationDOI {
-        }
-
-        .citationIcon {
-          font-size: 12px !important;
-        }
-      }
-
-      .citationCounts {
-        margin-top: 10px;
-
-        .citationCount {
-          margin: 0 5px;
-
-          .citationCountLink {
-            color: $text-color;
-          }
-
-          .citationCountIcon {
-            width: 1.2em !important;
-            height: 1.2em !important;
-            //filter: grayscale(1);
-            color: $text-color !important;
-            font-size: 1.2em !important;
-            line-height: 1.2em !important;
-          }
-
-          .citationCountNumber {
-            margin-left: 5px;
-            font-weight: bold;
-          }
-        }
-      }
-
-      @media (max-width: 768px) {
-        .publicationActions {
-          margin-top: 12px;
-          text-align: right;
-        }
+      &:last-of-type:after {
+        content: '';
       }
     }
+  }
+
+  &:first-child {
+    padding-top: 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .publicationTitle {
+    margin-bottom: 6px;
+  }
+
+  .citationContent {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba($text-color, 0.88);
+
+    .citationAuthors {
+      .citationAuthor {
+      }
+    }
+
+    .citationPublisher {
+    }
+
+    .citationTitle {
+    }
+
+    .citationJournalName {
+      font-style: italic;
+    }
+    .citationVolumeNumber {
+      font-style: italic;
+    }
+
+    .citationIssueNumber {
+    }
+
+    .citationStartPage {
+    }
+
+    .citationEndPage {
+    }
+
+    .citationDOI {
+    }
+
+    .citationIcon {
+      font-size: 12px !important;
+    }
+  }
+
+  .citationCounts {
+    margin-top: 10px;
+
+    .citationCount {
+      margin: 0 5px;
+
+      .citationCountLink {
+        color: $text-color;
+      }
+
+      .citationCountIcon {
+        width: 1.2em !important;
+        height: 1.2em !important;
+        //filter: grayscale(1);
+        color: $text-color !important;
+        font-size: 1.2em !important;
+        line-height: 1.2em !important;
+      }
+
+      .citationCountNumber {
+        margin-left: 5px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .publicationActions {
+      margin: 12px;
+      text-align: right;
+    }
+  }
+}
 
 .publicationsListPaging {
 
