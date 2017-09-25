@@ -141,14 +141,43 @@ export function clearClaimPublication() {
 export function claimPublication(data) {
     console.log(data);
 
+    const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
+    data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
+
+    // do not try to claim record if it's internal record and already assigned to the current author
+    if (data.publication.rek_pid && isAuthorLinked) {
+        return dispatch => {
+            dispatch({
+                type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
+                payload: 'Current author has already been assigned to this publication.'
+            });
+        };
+    }
+
     return dispatch => {
         dispatch({type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING});
+
+        let recordAuthorsIdSearchKeys = {};
+        if (data.publication.fez_record_search_key_author &&
+            data.publication.fez_record_search_key_author.length === 1) {
+            // auto-assign current author if there's only one author
+            recordAuthorsIdSearchKeys = {
+                fez_record_search_key_author_id: {
+                    rek_author_id: data.author.aut_id,
+                    rek_author_id_order: 1
+                }
+            };
+        } else if (data.authorLinking && data.authorLinking.authors) {
+            // author has assigned themselves on the form
+            recordAuthorsIdSearchKeys = transformers.getRecordAuthorsIdSearchKey(data.authorLinking.authors);
+        }
 
         // claim record from external source
         const createRecordRequest = data.publication.rek_pid ?
             data.publication : {
                 ...data.publication,
-                ...NEW_RECORD_DEFAULT_VALUES
+                ...NEW_RECORD_DEFAULT_VALUES,
+                ...recordAuthorsIdSearchKeys
             };
 
         // claim record from eSpace
@@ -168,19 +197,6 @@ export function claimPublication(data) {
                 }
             })
             .then(() => {
-                // patch the record with new data
-                // auto-assign current author if there's only one author
-                const soloAuthor = {
-                    fez_record_search_key_author_id: {
-                        rek_author_id: data.author.aut_id,
-                        rek_author_id_order: 1
-                    }
-                };
-
-                const recordAuthorsIdSearchKeys = data.publication.fez_record_search_key_author
-                && data.publication.fez_record_search_key_author.length === 1 && !data.authorLinking
-                    ? soloAuthor : transformers.getRecordAuthorsIdSearchKey(data.authorLinking.authors);
-
                 const recordPatchRequest = {
                     rek_pid: data.publication.rek_pid,
                     ...transformers.getRecordLinkSearchKey(data),
@@ -199,7 +215,6 @@ export function claimPublication(data) {
             })
             .catch(error => {
                 console.log(error);
-
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
                     payload: error

@@ -9,6 +9,7 @@ export const PATCH_RECORDS_API = 'records';
  * @returns {Promise}
  */
 export function postRecord(data) {
+    debugger;
     if (data.rek_pid) return Promise.resolve(data);
     return post(POST_RECORDS_API, data);
 }

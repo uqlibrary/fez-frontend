@@ -197,6 +197,81 @@ export const externalTitleSearchResultsList = {"total":5,"data": [
         "rek_genre": "Journal Article"
     },
     {
+        "rek_title": "External record, automatically linked to current author",
+        "fez_record_search_key_journal_name": {"rek_journal_name": "Current pharmaceutical design"},
+        "fez_record_search_key_doi": {"rek_doi": "10.2174\/1381612823666170317145851"},
+        "fez_record_search_key_isi_loc": {"rek_isi_loc": "test" },
+        "fez_record_search_key_issn": [{"rek_issn": "1873-4286", "rek_issn_order": 1}],
+        "fez_record_search_key_pubmed_id": {"rek_pubmed_id": "28317482"},
+        "rek_date": "2017-03-17 00:00:00",
+        "fez_record_search_key_language": [{"rek_language": false, "rek_language_order": 1}],
+        "fez_record_search_key_author": [
+            {
+                "rek_author": "Smith, J",
+                "rek_author_order": 1
+            },
+            {
+                "rek_author": "Smith, A",
+                "rek_author_order": 2
+            }
+        ],
+        fez_record_search_key_author_id: [
+            {
+                "rek_author_id": 410,
+                "rek_author_id_order": 1
+            },
+            {
+                "rek_author_id": 0,
+                "rek_author_id_order": 2
+            },
+        ],
+        "fez_record_search_key_author_affiliation_full_address": [{
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 1
+        }, {
+            "rek_author_affiliation_full_address": "CGH Medical Center, Sterling, IL, USA; School of Medicine, University of Illinois, Peoria, IL, USA; Johns Hopkins University School of Medicine, Baltimore, MD. United States.",
+            "rek_author_affiliation_full_address_order": 2
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 3
+        }, {
+            "rek_author_affiliation_full_address": "Department of Hypertension, Chair of Nephrology and Hypertension, Medical University of Lodz, Lodz. Poland.",
+            "rek_author_affiliation_full_address_order": 4
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 5
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 6
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 7
+        }, {
+            "rek_author_affiliation_full_address": "Biomedical Department of Internal Medicine and Medical Specialties, University of Palermo. Italy.",
+            "rek_author_affiliation_full_address_order": 8
+        }],
+        "rek_description": "Several risk factors such as abnormality of lipid metabolism (e.g. high levels of low-density lipoprotein cholesterol (LDL-C), elevated triglycerides and low levels of high-density lipoprotein cholesterol (HDL-C)) play a central role in the aetiology of cardiovascular disease (CVD). Nutraceutical combination together with a cholesterol-lowering action, when associated with suitable lifestyle, should furnish an alternative to pharmacotherapy in patients reporting statin-intolerance and in subjects at low cardiovascular risk. The present review is focused on nutraceuticals and their synergetic combinations demonstrating a beneficial effect in the management of dyslipidaemia. Several nutraceuticals have been shown to positively modulate lipid metabolism having different functions. Plant sterols and soluble fibres can, for example, decrease the intestinal assimilation of lipids and increase their elimination. Furthermore, berberine and soybean proteins improve the cholesterol uptake in the liver. Policosanols, monacolins and bergamot inhibit hydroxy-methyl-glutaryl coenzyme A reductase (HMGCoA reductase) enzyme action determining the cholesterol hepatic synthesis. Moreover, pomegranate can decrease LDL oxidation and positively affect subclinical atherosclerosis; red yeast rice and berberine play, instead, an important role on endothelial dysfunction and psyllium, plant sterols and bergamot have positive effects on LDL subclasses. To the best of our knowledge, there are no long-term large-scale studies on the anti-atherogenic effect of the nutraceuticals that are available on the market. Thus, further clinical studies should investigate in order to achieve long term tolerability and safety and to provide a better nutraceutical combination tailored to the patient needs.",
+        "fez_record_search_key_keywords": [{
+            "rek_keywords": "Cardiovascular risk.",
+            "rek_keywords_order": 1
+        }, {"rek_keywords": "Carotid", "rek_keywords_order": 2}, {
+            "rek_keywords": "Dyslipidaemia",
+            "rek_keywords_order": 3
+        }, {
+            "rek_keywords": "Endothelial dysfunction",
+            "rek_keywords_order": 4
+        }, {
+            "rek_keywords": "Low density lipoprotein cholesterol",
+            "rek_keywords_order": 5
+        }, {"rek_keywords": "Nutraceuticals", "rek_keywords_order": 6}, {
+            "rek_keywords": "intima media thickness",
+            "rek_keywords_order": 7
+        }],
+        "fez_record_search_key_oa_status": {"rek_oa_status": "453698"},
+        "rek_display_type": 179,
+        "rek_genre": "Journal Article"
+    },
+    {
         "rek_title": "Nutraceuticals as an Important Part of Combination Therapy in Dyslipidaemia.",
         "fez_record_search_key_journal_name": {"rek_journal_name": "Current pharmaceutical design"},
         "fez_record_search_key_doi": {"rek_doi": "10.2174\/1381612823666170317145851"},
