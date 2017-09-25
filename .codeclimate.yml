@@ -1,6 +1,9 @@
+JavaScript: true
+
 exclude_paths:
+- node_modules/**/*
 - public/**/*
 - test/**/*
-- src/**/*.test.*
-- src/mock/**/*
-- "**/node_modules/**/*"
+- dist/**/*
+- coverage/**/*
+- __mocks__/**/*
