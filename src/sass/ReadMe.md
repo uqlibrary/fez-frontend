@@ -356,3 +356,7 @@ Some custom helpers
 ####.card-paddingless
 
 Adding this class to <StandardCard className="card-paddingless" removes the header (title etc) and removes all padding inside the card so that you may spread content edge-to-edge within the card.
+
+####.input-long-hint
+
+Inputs which have long hintText supplied, by default wrap over the top of a floating label. This class fixes the wrapping to ellipsis the hint text for mobile only.

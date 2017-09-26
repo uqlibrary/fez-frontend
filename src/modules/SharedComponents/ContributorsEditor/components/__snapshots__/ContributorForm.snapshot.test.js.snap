@@ -31,6 +31,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
         className="column"
       >
         <TextField
+          className="input-long-hint"
           disabled={false}
           floatingLabelFixed={false}
           floatingLabelText="Name as published"
@@ -46,6 +47,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
           value=""
         >
           <div
+            className="input-long-hint"
             style={
               Object {
                 "backgroundColor": "transparent",
@@ -3161,6 +3163,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
         className="column"
       >
         <TextField
+          className="input-long-hint"
           disabled={false}
           floatingLabelFixed={false}
           floatingLabelText="Name as published"
@@ -3176,6 +3179,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
           value=""
         >
           <div
+            className="input-long-hint"
             style={
               Object {
                 "backgroundColor": "transparent",

@@ -116,7 +116,8 @@ export class ContributorForm extends Component {
                         value={this.state.nameAsPublished}
                         onChange={this._onNameChanged}
                         onKeyPress={this._addContributor}
-                        disabled={this.props.disabled} />
+                        disabled={this.props.disabled}
+                        className="input-long-hint"/>
                 </div>
                 {
                     this.props.showIdentifierLookup &&
