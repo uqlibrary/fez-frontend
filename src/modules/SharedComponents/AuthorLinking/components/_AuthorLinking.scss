@@ -40,7 +40,12 @@
   margin-top: 6px;
 }
 
-.author-linking-infinite-scroll {
+.author-link-infinite-scroll {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #f5f5f5;
   > div {
     width: 100% !important;
   }

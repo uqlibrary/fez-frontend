@@ -35,7 +35,7 @@ export default class AuthorLinking extends React.Component {
         this.state = {
             selectedAuthor: null,
             authorLinkingConfirmed: false,
-            authors: this.getAuthorList(props),
+            authors: [],
             renderAuthors: []
         };
 
@@ -68,7 +68,7 @@ export default class AuthorLinking extends React.Component {
     }
 
     _handleInfiniteScroll = () => {
-        this.buildAuthorList({...this.props}, this.state, this.state.authors.length, this.state.authors.length + 2);
+        this.buildAuthorList({...this.props}, this.state, this.state.authors.length, this.state.authors.length + 10);
     };
 
     buildAuthorList = (props, state, start, end) => {
@@ -80,8 +80,7 @@ export default class AuthorLinking extends React.Component {
             authors: [
                 ...this.state.authors,
                 ...authors
-            ],
-            renderAuthors: this.prepareAuthorsToRender()
+            ]
         });
     };
 
@@ -89,7 +88,9 @@ export default class AuthorLinking extends React.Component {
      * Build authors list
      */
     getAuthorList = ({authorList, linkedAuthorIdList, disabled} = {}, {selectedAuthor = {}} = {}, start = 0, end = 10) => {
-        return authorList.slice(start, end).map((author, index) => {
+        const eIndex = start === authorList.length && start || end;
+        const sIndex = start === authorList.length && (start - 10) || start;
+        return authorList.slice(sIndex, eIndex).map((author, index) => {
             const startIndex = start + index;
             const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[startIndex].rek_author_id !== 0;
             const selected = selectedAuthor && author.rek_author_order === selectedAuthor.rek_author_id_order;
@@ -170,8 +171,7 @@ export default class AuthorLinking extends React.Component {
         if (this.state.authors.length > itemsPerRow) {
             const j = this.state.authors.length;
             for (let i = 0; i < j; i += itemsPerRow) {
-                const row = <AuthorItemRow items={this.state.authors.slice(i, i + itemsPerRow)} />;
-                rows.push(row);
+                rows.push(<AuthorItemRow items={this.state.authors.slice(i, i + itemsPerRow)} />);
             }
         }
         return rows;
@@ -184,13 +184,13 @@ export default class AuthorLinking extends React.Component {
         return (
             <div className={this.props.className}>
                 <Infinite
-                    className="author-linking-infinite-scroll"
+                    className="author-link-infinite-scroll"
                     containerHeight={200}
                     elementHeight={73}
                     onInfiniteLoad={this._handleInfiniteScroll}
-                    infiniteLoadBeginEdgeOffset={30}
+                    infiniteLoadBeginEdgeOffset={50}
                 >
-                    {this.state.authors}
+                    {this.prepareAuthorsToRender()}
                 </Infinite>
                 {
                     selectedAuthor !== null &&

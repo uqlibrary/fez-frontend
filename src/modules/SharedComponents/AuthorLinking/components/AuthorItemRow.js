@@ -12,7 +12,7 @@ export default class AuthorItem extends React.Component {
 
     render() {
         return (
-            <div className="columns is-multiline is-gapless">
+            <div className="columns is-multiline is-gapless is-marginless">
                 {this.props.items}
             </div>
         );

@@ -70,7 +70,7 @@ export default class AuthorItem extends React.Component {
         const authorName = this.getAuthorName(author);
 
         return (
-            <div className="column is-one-quarter-desktop is-one-third-tablet is-full-mobile">
+            <div className="column is-one-third-desktop is-one-third-tablet is-full-mobile">
                 <div className="authorButton">
                     <FlatButton
                         label={authorName}
