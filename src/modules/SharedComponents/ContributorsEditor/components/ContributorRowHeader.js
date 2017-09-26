@@ -51,7 +51,7 @@ export default class ContributorRowHeader extends Component {
                     locale={deleteAllConfirmation}/>
                 {
                     this.props.showContributorAssignment &&
-                    <div className="column is-1-desktop is-1-tablet is-2-mobile authorAssignment datalist-title">
+                    <div className="column is-1-desktop is-1-tablet is-3-mobile authorAssignment datalist-title">
                         <label aria-hidden htmlFor="contributorAssignment">{contributorAssignmentColumn}</label>
                     </div>
                 }
@@ -71,7 +71,7 @@ export default class ContributorRowHeader extends Component {
                         <FontIcon className="material-icons">delete_forever</FontIcon>
                     </IconButton>
                 </div>
-                <div className="column is-narrow scrollbar-spacer" />
+                <div className="column is-narrow scrollbar-spacer is-hidden-mobile" />
             </div>
         );
     }

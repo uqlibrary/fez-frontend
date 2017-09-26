@@ -79,7 +79,7 @@ export default class ContributorRow extends Component {
                     locale={deleteRecordConfirmation} />
                 {
                     this.props.showContributorAssignment &&
-                    <div className="column is-1-desktop is-1-tablet is-2-mobile contributorIdentifier datalist-text">
+                    <div className="column is-1-desktop is-1-tablet is-3-mobile contributorIdentifier datalist-text">
                         <Checkbox
                             name="contributorAssignment"
                             onCheck={this._onContributorAssigned}
@@ -107,7 +107,6 @@ export default class ContributorRow extends Component {
                     {this.props.canMoveUp &&
                     <IconButton
                         tooltip={this.props.locale.moveUpHint}
-                        tooltipPosition="bottom-left"
                         onTouchTap={this._onMoveUp}
                         className="reorderUp"
                         disabled={this.props.disabled}>
@@ -117,7 +116,6 @@ export default class ContributorRow extends Component {
                     {this.props.canMoveDown &&
                     <IconButton
                         tooltip={this.props.locale.moveDownHint}
-                        tooltipPosition="bottom-left"
                         onTouchTap={this._onMoveDown}
                         className="reorderDown"
                         disabled={this.props.disabled}>
@@ -129,7 +127,6 @@ export default class ContributorRow extends Component {
                     <IconButton
                         className="contributorDelete"
                         tooltip={this.props.locale.deleteHint}
-                        tooltipPosition="bottom-left"
                         onTouchTap={this._showConfirmation}
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons deleteIcon">delete</FontIcon>
