@@ -35,7 +35,7 @@ export default class ClaimPublication extends React.Component {
 
     componentDidMount() {
         if (this.props.account) {
-            this.props.actions.searchPossiblyYourPublications(this.props.account.id, this.state.activeFacets);
+            this.props.actions.searchPossiblyYourPublications({activeFacets: this.state.activeFacets});
         }
     }
 
@@ -64,7 +64,7 @@ export default class ClaimPublication extends React.Component {
             activeFacets: {...activeFacets}
         });
 
-        this.props.actions.searchPossiblyYourPublications(this.props.account.id, activeFacets);
+        this.props.actions.searchPossiblyYourPublications({activeFacets: activeFacets});
     };
 
     render() {

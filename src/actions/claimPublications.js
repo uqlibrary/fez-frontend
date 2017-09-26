@@ -30,30 +30,30 @@ export function countPossiblyYourPublications(authorUsername) {
 }
 
 /**
- * Search publications from eSpace which are matched to author's username
- * @param {string} author user name
+ * Search publications from eSpace which are matched to currently logged in username
+ * @param {object} activeFacets - optional list of facets
  * @returns {action}
  */
-export function searchPossiblyYourPublications(authorUsername, activeFacets) {
+export function searchPossiblyYourPublications({activeFacets = {}}) {
     return dispatch => {
         dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
-        // TODO: try some authors who are students - org username or student name to use?
-        repositories.getPossibleUnclaimedPublications(authorUsername, activeFacets).then(response => {
-            dispatch({
-                type: actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                payload: response,
+        repositories.getPossibleUnclaimedPublications({activeFacets: activeFacets})
+            .then(response => {
+                dispatch({
+                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+                    payload: response,
+                });
+                dispatch({
+                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
+                    payload: response.filters && response.filters.facets ? response.filters.facets : {}
+                });
+            })
+            .catch((error) => {
+                dispatch({
+                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
+                    payload: error
+                });
             });
-            dispatch({
-                type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
-                payload: response.filters && response.filters.facets ? response.filters.facets : {}
-            });
-            dispatch(countPossiblyYourPublications(authorUsername));
-        }).catch((error) => {
-            dispatch({
-                type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                payload: error
-            });
-        });
     };
 }
 
@@ -84,7 +84,7 @@ export function hidePublications(publicationsToHide, author, activeFacets) {
                 });
 
                 // reload current possibly your publications/count after user hides records
-                dispatch(searchPossiblyYourPublications(author.aut_org_username, activeFacets));
+                dispatch(searchPossiblyYourPublications({activeFacets: activeFacets}));
             })
             .catch(() => {
                 dispatch({

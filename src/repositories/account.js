@@ -7,7 +7,7 @@ import * as routes from './routes';
  */
 export function getAccount() {
     const now = new Date().getTime();
-    return get(`${routes.GET_ACCOUNT_API}?${now}`)
+    return get(`${routes.ACCOUNT_API}?${now}`)
         .then(account => {
             if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
                 return Promise.resolve(account);

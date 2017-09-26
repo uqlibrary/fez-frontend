@@ -13,12 +13,12 @@ function getFacetsQueryString(facets) {
 }
 
 /**
- * Loads a list of possible unclaimed publications per user name
- * @param {string} userName of user for whom to apply the action
+ * Loads a list of possible unclaimed records for a current user
+ * @param {Object} activeFacets to filter possible records for current user
  * @returns {Promise}
  */
-export function getPossibleUnclaimedPublications(userName, activeFacets = {}) {
-    return get(`${routes.POSSIBLE_RECORDS_API}/${userName}?${getFacetsQueryString(activeFacets)}`);
+export function getPossibleUnclaimedPublications({activeFacets = {}}) {
+    return get(routes.POSSIBLE_RECORDS_API.replace('[facets]', getFacetsQueryString(activeFacets)));
 }
 
 /**
@@ -26,8 +26,13 @@ export function getPossibleUnclaimedPublications(userName, activeFacets = {}) {
  * @param {string} userName of user for whom to apply the action
  * @returns {Promise}
  */
-export function getPublications({userName, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}) {
-    return get(`${routes.CURRENT_USER_RECORDS_API}/${userName}?page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection}&${getFacetsQueryString(facets)}`);
+export function getPublications({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}) {
+    return get(routes.CURRENT_USER_RECORDS_API
+        .replace('[page]', page)
+        .replace('[per_page]', pageSize)
+        .replace('[sort]', sortBy)
+        .replace('[order_by]', sortDirection)
+        .repace('[facets]', getFacetsQueryString(facets)));
 }
 
 /**
@@ -36,7 +41,7 @@ export function getPublications({userName, page = 1, pageSize = 20, sortBy = 'pu
  * @returns {Promise}
  */
 export function getTrendingPublications(userName) {
-    return get(routes.GET_ACADEMIC_PUBLICATIONS_TRENDING.replace('[username]', userName));
+    return get(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API.replace('[userId]', userName));
 }
 
 /**

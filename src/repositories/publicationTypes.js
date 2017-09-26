@@ -16,5 +16,5 @@ export function getPublicationTypesList() {
  * @returns {Promise}
  */
 export function getPublicationSubtypesList(id) {
-    return get(`${routes.GET_VOCABULARIES_API}/${id}`);
+    return get(routes.VOCABULARIES_API .replace('[id]', id));
 }

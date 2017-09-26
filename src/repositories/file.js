@@ -12,29 +12,31 @@ import * as routes from './routes';
  */
 export function putUploadFile(pid, file, dispatch) {
     return new Promise((resolve, reject) => {
-        api.get(`${routes.GET_FILE_UPLOAD_API}/${pid}/${file.name}`).then(getPresignedResponse => {
-            const options = {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                },
-                onUploadProgress: event => {
-                    const completed = Math.floor((event.loaded * 100) / event.total);
-                    dispatch(fileUploadActions.notifyProgress(file.name, completed));
-                },
-                cancelToken: generateCancelToken().token
-            };
+        api.get(routes.FILE_UPLOAD_API.replace('[pid]', pid).replace('[fileName]', file.name))
+            .then(getPresignedResponse => {
+                const options = {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    },
+                    onUploadProgress: event => {
+                        const completed = Math.floor((event.loaded * 100) / event.total);
+                        dispatch(fileUploadActions.notifyProgress(file.name, completed));
+                    },
+                    cancelToken: generateCancelToken().token
+                };
 
-            api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
-                resolve(uploadResponse.data);
-            }).catch(uploadError => {
+                api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
+                    resolve(uploadResponse.data);
+                }).catch(uploadError => {
+                    dispatch(fileUploadActions.notifyUploadFailed(file.name));
+                    reject(uploadError);
+                });
+            })
+            .catch((error) => {
+                const {errorAlert} = locale.components.publicationForm;
                 dispatch(fileUploadActions.notifyUploadFailed(file.name));
-                reject(uploadError);
+                reject(new Error(`${errorAlert.fileUploadMessage} (${error.message})`));
             });
-        }).catch((error) => {
-            const { errorAlert } = locale.components.publicationForm;
-            dispatch(fileUploadActions.notifyUploadFailed(file.name));
-            reject(new Error(`${errorAlert.fileUploadMessage} (${error.message})`));
-        });
     });
 }
 
