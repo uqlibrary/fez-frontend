@@ -2,8 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Checkbox from 'material-ui/Checkbox';
 import AuthorItem from './AuthorItem';
+import AuthorItemRow from './AuthorItemRow';
+import Infinite from 'react-infinite';
 
 export default class AuthorLinking extends React.Component {
+    static contextTypes = {
+        isMobile: PropTypes.bool
+    };
+
     static propTypes = {
         searchKey: PropTypes.object.isRequired,
         authorList: PropTypes.array,
@@ -28,7 +34,8 @@ export default class AuthorLinking extends React.Component {
         super(props);
         this.state = {
             selectedAuthor: null,
-            authorLinkingConfirmed: false
+            authorLinkingConfirmed: false,
+            authors: this.getAuthorList(props),
         };
 
         /**
@@ -88,28 +95,6 @@ export default class AuthorLinking extends React.Component {
     };
 
     /**
-     * Build authors list
-     */
-    buildAuthorList = ({authorList, linkedAuthorIdList, disabled}, {selectedAuthor}) => {
-        return authorList.map((author, index) => {
-            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index].rek_author_id !== 0;
-            const selected = selectedAuthor && author.rek_author_order === selectedAuthor.rek_author_id_order;
-
-            return (
-                <AuthorItem
-                    index={index}
-                    key={index}
-                    author={author}
-                    linked={linked}
-                    selected={selected}
-                    onAuthorSelected={this._selectAuthor}
-                    disabled={disabled}
-                />
-            );
-        });
-    };
-
-    /**
      * Select and transform author to be linked
      *
      * @param author
@@ -120,7 +105,6 @@ export default class AuthorLinking extends React.Component {
 
         this.setState({
             selectedAuthor: selectedAuthor,
-            authorLinkingConfirmed: false
         });
     };
 
@@ -136,13 +120,9 @@ export default class AuthorLinking extends React.Component {
     render() {
         const {confirmation} = this.props.locale;
         const {selectedAuthor, authorLinkingConfirmed} = this.state;
-        const authors = this.buildAuthorList({...this.props}, this.state);
 
         return (
             <div className={this.props.className}>
-                <div className="columns is-gapless is-multiline is-desktop is-mobile">
-                    {authors}
-                </div>
                 {
                     selectedAuthor !== null &&
                     <div className="columns is-gapless is-multiline is-desktop is-mobile">
