@@ -8,7 +8,7 @@ import * as routes from './routes';
  * @returns {Promise}
  */
 export function getAuthorPublicationsByYear(userName) {
-    return get(routes.ACADEMIC_STATS_PUBLICATION_YEARS_API.replace('[userId]', userName));
+    return get(routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: userName}));
 }
 
 
@@ -19,7 +19,7 @@ export function getAuthorPublicationsByYear(userName) {
  * @returns {Promise}
  */
 export function getAuthorPublicationsHindex(userName) {
-    return get(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API.replace('[userId]', userName));
+    return get(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: userName}));
 }
 
 
@@ -30,5 +30,5 @@ export function getAuthorPublicationsHindex(userName) {
  * @returns {Promise}
  */
 export function getAuthorPublicationsStats(userName) {
-    return get(routes.ACADEMIC_STATS_PUBLICATION_STATS_API.replace('[userId]', userName));
+    return get(routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: userName}));
 }

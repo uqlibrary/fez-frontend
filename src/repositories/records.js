@@ -8,7 +8,7 @@ import * as routes from './routes';
  */
 export function postRecord(data) {
     if (data.rek_pid) return Promise.resolve(data);
-    return post(routes.RECORDS_API, data);
+    return post(routes.NEW_RECORD_API(), data);
 }
 
 /**
@@ -18,5 +18,5 @@ export function postRecord(data) {
  * @returns {Promise}
  */
 export function patchRecord(pid, data) {
-    return patch(`${routes.RECORDS_API}/${pid}`, data);
+    return patch(routes.EXISTING_RECORD_API({pid: pid}), data);
 }

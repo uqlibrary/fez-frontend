@@ -9,7 +9,7 @@ import * as routes from './routes';
  */
 export function fetchAuthors(searchValue) {
     return new Promise((resolve, reject) => {
-        const url = encodeURI(routes.AUTHORS_SEARCH_API.replace('[query]', searchValue));
+        const url = encodeURI(routes.AUTHORS_SEARCH_API({query: searchValue}));
         api.get(url).then(response => {
             resolve(
                 response.data.data.map((item) => {
@@ -29,13 +29,13 @@ export function fetchAuthors(searchValue) {
  * @returns {Promise}
  */
 export function fetchCurrentAuthor() {
-    return get(routes.CURRENT_AUTHOR_API);
+    return get(routes.CURRENT_AUTHOR_API());
 }
 
 /**
  * Fetches details for specified author
  * @returns {Promise}
  */
-export function fetchAuthorDetails(authorId) {
-    return get(routes.AUTHOR_DETAILS_API.replace('[userId]', authorId));
+export function fetchAuthorDetails(userName) {
+    return get(routes.AUTHOR_DETAILS_API({userId: userName}));
 }

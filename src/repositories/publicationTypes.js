@@ -6,7 +6,7 @@ import * as routes from './routes';
  * @returns {Promise}
  */
 export function getPublicationTypesList() {
-    return get(`${routes.GET_PUBLICATION_TYPES_API}`);
+    return get(routes.GET_PUBLICATION_TYPES_API());
 }
 
 /**
@@ -16,5 +16,5 @@ export function getPublicationTypesList() {
  * @returns {Promise}
  */
 export function getPublicationSubtypesList(id) {
-    return get(routes.VOCABULARIES_API .replace('[id]', id));
+    return get(routes.VOCABULARIES_API({id: id}));
 }

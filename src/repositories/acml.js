@@ -7,5 +7,5 @@ import * as routes from './routes';
  * @returns {Promise}
  */
 export function getAcmlQuickTemplates() {
-    return get(routes.GET_ACML_QUICK_TEMPLATES_API);
+    return get(routes.GET_ACML_QUICK_TEMPLATES_API());
 }
