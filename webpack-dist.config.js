@@ -25,7 +25,7 @@ let publicPath = '';
 let publicPathOffline = '/';
 let environment = 'staging';
 
-if (process.env.CI_BRANCH !== 'production') {
+if (process.env.CI_BRANCH !== 'production' && process.env.CI_BRANCH !== 'staging') {
     URL_BASE_PATH += 'espace/' + process.env.CI_BRANCH + '/';
     publicPathOffline += URL_BASE_PATH;
 } else {
