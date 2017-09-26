@@ -829,7 +829,7 @@ exports[`Research test renders list of publications 1`] = `
                 "fez_record_search_key_oa_embargo_days": null,
                 "fez_record_search_key_oa_notes": null,
                 "fez_record_search_key_oa_status": Object {
-                  "rek_oa_status": 453695,
+                  "rek_oa_status": 453693,
                   "rek_oa_status_id": null,
                   "rek_oa_status_pid": "UQ:676287",
                 },
@@ -1392,7 +1392,7 @@ exports[`Research test renders list of publications 1`] = `
                 "fez_record_search_key_oa_embargo_days": null,
                 "fez_record_search_key_oa_notes": null,
                 "fez_record_search_key_oa_status": Object {
-                  "rek_oa_status": 453693,
+                  "rek_oa_status": 453694,
                   "rek_oa_status_id": null,
                   "rek_oa_status_pid": "UQ:396321",
                 },
@@ -1870,7 +1870,7 @@ exports[`Research test renders list of publications 1`] = `
                 "fez_record_search_key_oa_embargo_days": null,
                 "fez_record_search_key_oa_notes": null,
                 "fez_record_search_key_oa_status": Object {
-                  "rek_oa_status": 453693,
+                  "rek_oa_status": 453695,
                   "rek_oa_status_id": null,
                   "rek_oa_status_pid": "UQ:386763",
                 },
@@ -2251,7 +2251,7 @@ exports[`Research test renders list of publications 1`] = `
                 "fez_record_search_key_oa_embargo_days": null,
                 "fez_record_search_key_oa_notes": null,
                 "fez_record_search_key_oa_status": Object {
-                  "rek_oa_status": 453693,
+                  "rek_oa_status": 453696,
                   "rek_oa_status_id": null,
                   "rek_oa_status_pid": "UQ:384236",
                 },

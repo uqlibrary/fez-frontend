@@ -1008,8 +1008,7 @@ export default {
                 scopusCountLabel: 'Scopus citation count is [count]',
                 googleCountLabel: 'Citation counts in Google Scholar',
                 altmetricCountLabel: 'Altmetric score is [count]',
-                openAccessLabel: 'Open Access - free to read (embargo date might apply)',
-                openAccessValues: ['DOI', 'Link (no DOI)', 'File (Publisher version)', 'File (Author Post-print)', 'Other'],
+                openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
                 statsLabel: 'View full statistics'
             },
             defaultActions: [

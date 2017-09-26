@@ -53,10 +53,28 @@ describe('CitationCounts renders ', () => {
             rek_scopus_citation_count: 1,
             rek_gs_citation_count: 1,
             rek_altmetric_score: 1,
-            fez_record_search_key_oa_status: []
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 453693
+            }
         };
         const wrapper = setup({publication});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.citationCount').length).toEqual(6);
+    });
+
+    it('component with non rendering oa status', () => {
+        const publication = {
+            rek_pid: 'pid:111',
+            rek_thomson_citation_count: 1,
+            rek_scopus_citation_count: 1,
+            rek_gs_citation_count: 1,
+            rek_altmetric_score: 1,
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 453698
+            }
+        };
+        const wrapper = setup({publication});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('.citationCount').length).toEqual(5);
     });
 });
