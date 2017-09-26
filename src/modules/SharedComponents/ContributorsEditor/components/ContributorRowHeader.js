@@ -71,6 +71,7 @@ export default class ContributorRowHeader extends Component {
                         <FontIcon className="material-icons">delete_forever</FontIcon>
                     </IconButton>
                 </div>
+                <div className="column is-narrow scrollbar-spacer" />
             </div>
         );
     }

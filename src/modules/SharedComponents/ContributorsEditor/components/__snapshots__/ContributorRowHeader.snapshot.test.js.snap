@@ -63,6 +63,9 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       </FontIcon>
     </IconButton>
   </div>
+  <div
+    className="column is-narrow scrollbar-spacer"
+  />
 </div>
 `;
 
@@ -114,6 +117,9 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       </FontIcon>
     </IconButton>
   </div>
+  <div
+    className="column is-narrow scrollbar-spacer"
+  />
 </div>
 `;
 
@@ -165,5 +171,8 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       </FontIcon>
     </IconButton>
   </div>
+  <div
+    className="column is-narrow scrollbar-spacer"
+  />
 </div>
 `;

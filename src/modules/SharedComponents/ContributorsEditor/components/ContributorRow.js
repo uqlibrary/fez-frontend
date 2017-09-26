@@ -107,6 +107,7 @@ export default class ContributorRow extends Component {
                     {this.props.canMoveUp &&
                     <IconButton
                         tooltip={this.props.locale.moveUpHint}
+                        tooltipPosition="bottom-left"
                         onTouchTap={this._onMoveUp}
                         className="reorderUp"
                         disabled={this.props.disabled}>
@@ -116,6 +117,7 @@ export default class ContributorRow extends Component {
                     {this.props.canMoveDown &&
                     <IconButton
                         tooltip={this.props.locale.moveDownHint}
+                        tooltipPosition="bottom-left"
                         onTouchTap={this._onMoveDown}
                         className="reorderDown"
                         disabled={this.props.disabled}>
@@ -127,6 +129,7 @@ export default class ContributorRow extends Component {
                     <IconButton
                         className="contributorDelete"
                         tooltip={this.props.locale.deleteHint}
+                        tooltipPosition="bottom-left"
                         onTouchTap={this._showConfirmation}
                         disabled={this.props.disabled}>
                         <FontIcon className="material-icons deleteIcon">delete</FontIcon>

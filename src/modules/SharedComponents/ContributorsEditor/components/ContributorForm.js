@@ -98,7 +98,7 @@ export class ContributorForm extends Component {
         if (newValue.trim().length > 1) {
             this.props.actions.searchAuthors(newValue, (item) => { return !!item.aut_org_username; });
         }
-    }
+    };
 
     render() {
         const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
