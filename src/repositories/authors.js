@@ -1,9 +1,6 @@
 import {api} from '../config';
 import {get} from './generic';
-
-export const GET_AUTHORS_SEARCH_API = 'fez-authors/search';
-export const GET_CURRENT_AUTHOR_API = 'fez-authors';
-export const GET_AUTHOR_DETAILS_API = 'authors/details';
+import * as routes from './routes';
 
 /**
  * Fetches a list of authors based on search query
@@ -12,7 +9,7 @@ export const GET_AUTHOR_DETAILS_API = 'authors/details';
  */
 export function fetchAuthors(searchValue) {
     return new Promise((resolve, reject) => {
-        const url = encodeURI(`${GET_AUTHORS_SEARCH_API}?query=${searchValue}`);
+        const url = encodeURI(`${routes.GET_AUTHORS_SEARCH_API}?query=${searchValue}`);
         api.get(url).then(response => {
             resolve(
                 response.data.data.map((item) => {
@@ -32,7 +29,7 @@ export function fetchAuthors(searchValue) {
  * @returns {Promise}
  */
 export function fetchCurrentAuthor() {
-    return get(GET_CURRENT_AUTHOR_API);
+    return get(routes.GET_CURRENT_AUTHOR_API);
 }
 
 /**
@@ -40,5 +37,5 @@ export function fetchCurrentAuthor() {
  * @returns {Promise}
  */
 export function fetchAuthorDetails(authorId) {
-    return get(`${GET_AUTHOR_DETAILS_API}/${authorId}`);
+    return get(`${routes.GET_AUTHOR_DETAILS_API}/${authorId}`);
 }

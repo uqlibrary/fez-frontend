@@ -1,8 +1,5 @@
 import {get} from './generic';
-
-const GET_ACADEMIC_PUBLICATION_YEARS = 'academic/[userId]/publication-years';
-const GET_ACADEMIC_PUBLICATION_HINDEX = 'academic/[userId]/hindex';
-const GET_ACADEMIC_PUBLICATION_STATS = 'academic/[userId]/publication-stats';
+import * as routes from './routes';
 
 /**
  * Fetches author stats
@@ -11,7 +8,7 @@ const GET_ACADEMIC_PUBLICATION_STATS = 'academic/[userId]/publication-stats';
  * @returns {Promise}
  */
 export function getAuthorPublicationsByYear(userName) {
-    return get(GET_ACADEMIC_PUBLICATION_YEARS.replace('[userId]', userName));
+    return get(routes.GET_ACADEMIC_PUBLICATION_YEARS.replace('[userId]', userName));
 }
 
 
@@ -22,7 +19,7 @@ export function getAuthorPublicationsByYear(userName) {
  * @returns {Promise}
  */
 export function getAuthorPublicationsHindex(userName) {
-    return get(GET_ACADEMIC_PUBLICATION_HINDEX.replace('[userId]', userName));
+    return get(routes.GET_ACADEMIC_PUBLICATION_HINDEX.replace('[userId]', userName));
 }
 
 
@@ -33,5 +30,5 @@ export function getAuthorPublicationsHindex(userName) {
  * @returns {Promise}
  */
 export function getAuthorPublicationsStats(userName) {
-    return get(GET_ACADEMIC_PUBLICATION_STATS.replace('[userId]', userName));
+    return get(routes.GET_ACADEMIC_PUBLICATION_STATS.replace('[userId]', userName));
 }

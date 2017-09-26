@@ -1,14 +1,12 @@
 import {get} from './generic';
-
-export const GET_PUBLICATION_TYPES_API = 'records/types';
-export const GET_PUBLICATION_SUBTYPES_API = 'vocabularies';
+import * as routes from './routes';
 
 /**
  * Fetches the publication Types
  * @returns {Promise}
  */
 export function getPublicationTypesList() {
-    return get(`${GET_PUBLICATION_TYPES_API}`);
+    return get(`${routes.GET_PUBLICATION_TYPES_API}`);
 }
 
 /**
@@ -18,5 +16,5 @@ export function getPublicationTypesList() {
  * @returns {Promise}
  */
 export function getPublicationSubtypesList(id) {
-    return get(`${GET_PUBLICATION_SUBTYPES_API}/${id}`);
+    return get(`${routes.GET_VOCABULARIES_API}/${id}`);
 }

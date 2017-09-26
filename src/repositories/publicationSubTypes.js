@@ -1,16 +1,10 @@
-import {api} from 'config';
+import {get} from './generic';
+import * as routes from './routes';
 
 /**
  * Fetches the publication sub types
  * @returns {Promise}
  */
 export function loadPublicationSubTypeData(id) {
-    return new Promise((resolve, reject) => {
-        api.get(`vocabularies/${id}`).then(response => {
-            resolve(response.data);
-        }).catch(e => {
-            reject(e);
-            throw e;
-        });
-    });
+    return get(`${routes.GET_VOCABULARIES_API}/${id}`);
 }

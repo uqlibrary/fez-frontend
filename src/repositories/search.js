@@ -1,8 +1,6 @@
 import {get} from './generic';
 import {validation} from 'config';
-
-export const GET_SEARCH_INTERNAL_API = 'search/internal';
-export const GET_SEARCH_EXTERNAL_API = 'search/external';
+import * as routes from './routes';
 
 /**
  * Get search type
@@ -28,7 +26,7 @@ function getSearchType(queryString) {
  */
 export function getSearchInternal(queryString) {
     const searchType = getSearchType(queryString);
-    return get(`${GET_SEARCH_INTERNAL_API}?${searchType}&per_page=5`);
+    return get(`${routes.SEARCH_INTERNAL_RECORDS_API}?${searchType}&per_page=5`);
 }
 
 /**
@@ -39,5 +37,5 @@ export function getSearchInternal(queryString) {
  */
 export function getSearchExternal(source, queryString) {
     const searchType = getSearchType(queryString);
-    return get(`${GET_SEARCH_EXTERNAL_API}?source=${source}&${searchType}`);
+    return get(`${routes.GET_SEARCH_EXTERNAL_API}?source=${source}&${searchType}`);
 }

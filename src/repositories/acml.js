@@ -1,6 +1,5 @@
 import {get} from './generic';
-
-export const GET_ACML_QUICK_TEMPLATES_API = 'acml/quick-templates';
+import * as routes from './routes';
 
 /**
  * Fetches the access control markup language templates
@@ -8,5 +7,5 @@ export const GET_ACML_QUICK_TEMPLATES_API = 'acml/quick-templates';
  * @returns {Promise}
  */
 export function getAcmlQuickTemplates() {
-    return get(GET_ACML_QUICK_TEMPLATES_API);
+    return get(routes.GET_ACML_QUICK_TEMPLATES_API);
 }

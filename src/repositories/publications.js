@@ -1,11 +1,5 @@
 import {post, get} from './generic';
-
-export const GET_POSSIBLE_PUBLICATIONS_API = 'publications/possible-unclaimed';
-export const GET_USER_PUBLICATIONS_API = 'publications/claimed';
-export const GET_USER_TRENDING_PUBLICATIONS_API = 'academic/[username]/trending_publications';
-export const GET_COUNT_POSSIBLE_PUBLICATIONS_API = 'publications/possible-counts';
-export const POST_HIDE_POSSIBLE_PUBLICATIONS_API = 'publications/hide-possible';
-export const POST_CLAIM_POSSIBLE_PUBLICATIONS_API = 'publications/claim-possible';
+import * as routes from './routes';
 
 /**
  * Translate selected facets to query string parameters
@@ -24,7 +18,7 @@ function getFacetsQueryString(facets) {
  * @returns {Promise}
  */
 export function getPossibleUnclaimedPublications(userName, activeFacets = {}) {
-    return get(`${GET_POSSIBLE_PUBLICATIONS_API}/${userName}?${getFacetsQueryString(activeFacets)}`);
+    return get(`${routes.POSSIBLE_RECORDS_API}/${userName}?${getFacetsQueryString(activeFacets)}`);
 }
 
 /**
@@ -33,7 +27,7 @@ export function getPossibleUnclaimedPublications(userName, activeFacets = {}) {
  * @returns {Promise}
  */
 export function getPublications({userName, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}) {
-    return get(`${GET_USER_PUBLICATIONS_API}/${userName}?page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection}&${getFacetsQueryString(facets)}`);
+    return get(`${routes.CURRENT_USER_RECORDS_API}/${userName}?page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection}&${getFacetsQueryString(facets)}`);
 }
 
 /**
@@ -42,7 +36,7 @@ export function getPublications({userName, page = 1, pageSize = 20, sortBy = 'pu
  * @returns {Promise}
  */
 export function getTrendingPublications(userName) {
-    return get(GET_USER_TRENDING_PUBLICATIONS_API.replace('[username]', userName));
+    return get(routes.GET_ACADEMIC_PUBLICATIONS_TRENDING.replace('[username]', userName));
 }
 
 /**
@@ -51,7 +45,7 @@ export function getTrendingPublications(userName) {
  * @returns {Promise}
  */
 export function getCountPossibleUnclaimedPublications({userName}) {
-    return get(`${GET_COUNT_POSSIBLE_PUBLICATIONS_API}/${userName}`);
+    return get(`${routes.GET_COUNT_POSSIBLE_PUBLICATIONS_API}/${userName}`);
 }
 
 /**
@@ -60,7 +54,7 @@ export function getCountPossibleUnclaimedPublications({userName}) {
  * @returns {Promise}
  */
 export function postHidePossiblePublications(data) {
-    return post(POST_HIDE_POSSIBLE_PUBLICATIONS_API, data);
+    return post(routes.HIDE_POSSIBLE_RECORD_API, data);
 }
 
 /**
@@ -69,5 +63,5 @@ export function postHidePossiblePublications(data) {
  * @returns {Promise}
  */
 export function postClaimPossiblePublication(data) {
-    return post(POST_CLAIM_POSSIBLE_PUBLICATIONS_API, data);
+    return post(routes.POST_CLAIM_POSSIBLE_PUBLICATIONS_API, data);
 }
