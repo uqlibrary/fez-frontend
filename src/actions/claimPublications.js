@@ -187,6 +187,7 @@ export function claimPublication(data) {
             .then(response => {
                 data.publication.rek_pid = response.data.rek_pid;
                 const claimRequest = transformers.getClaimRequest(data);
+                // TODO: will submin an issue with notes provided by user from the form
                 return repositories.postClaimPossiblePublication(claimRequest);
             })
             .then(response => {
