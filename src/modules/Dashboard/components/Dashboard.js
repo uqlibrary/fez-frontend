@@ -223,7 +223,6 @@ class Dashboard extends React.Component {
                                                             <HelpIcon {...txt.myTrendingPublications.help} />
                                                         </div>
                                                     </div>
-                                                    {/* TODO: remove temporary publication record render */}
                                                     {
                                                         metric.values.map((recordValue, recordIndex) => (
                                                             <div key={'trending_publication_' + recordIndex}
@@ -257,8 +256,6 @@ class Dashboard extends React.Component {
                                                             </div>
                                                         ))
                                                     }
-                                                    {/* TODO: when api returns full publication record - use publicationList to display items */}
-                                                    {/* <PublicationsList publicationsList={this.props.trendingPublicationsList[metrics.key]}/> */}
                                                 </div>
                                             ))
                                         }
