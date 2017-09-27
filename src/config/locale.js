@@ -164,6 +164,10 @@ export default {
                         title: 'Scopus citation count'
                     }
                 },
+                viewFullCitationLinkTitle: 'View full citation',
+                openNewWindowTitle: 'Link to [TITLE] will open in a new window',
+                trendSharesThisMonth: 'Number of shares in the past month',
+                trendDifferenceSharesThisMonth: 'Difference in shares since last month',
                 help: {
                     title: 'About these metrics',
                     text: (
