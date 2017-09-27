@@ -172,7 +172,7 @@ export default class App extends React.Component {
                                     !isAuthorizedUser &&
                                     <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
                                 }
-                                <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
+                                <Route path="/records/claim" component={ClaimPublicationForm}/>
                                 {
                                     menuItems.map((route, index) => (
                                         <Route key={index} {...route} />
