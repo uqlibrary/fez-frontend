@@ -20,6 +20,23 @@ const getStandardSearchParameters = ({page = 1, pageSize = 20, sortBy = 'publish
     `page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection}&${getFacetsQueryString(facets)}`
 );
 
+/**
+ * getSearchType - based on data provided returns query string attribute
+ * @param {string} pid/pubmed/string title to search
+ * @returns {string} query string attribute based on input
+ */
+const getSearchType = (searchQuery) => {
+    if (validation.isValidDOIValue(searchQuery)) {
+        return `doi=${searchQuery}`;
+    }
+
+    if (validation.isValidPubMedValue(searchQuery)) {
+        return `'id=pmid:${searchQuery}`;
+    }
+
+    return `title=${searchQuery}`;
+};
+
 export const ACCOUNT_API = () => (`account?${new Date().getTime()}`);
 export const AUTHORS_SEARCH_API = ({query}) => (`fez-authors/search?query=${query}`);
 export const CURRENT_AUTHOR_API = () => ('fez-authors');
@@ -47,16 +64,14 @@ export const EXISTING_RECORD_API = ({pid}) => (`records/${pid}`);
 export const POSSIBLE_RECORDS_API = ({facets = {}}) => (`records/search?rule=possible&${getFacetsQueryString(facets)}`);
 export const HIDE_POSSIBLE_RECORD_API = () => ('records/search?rule=possible'); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
 
-export const CURRENT_USER_RECORDS_API = (values) => (`records/search?rule=mine&${getStandardSearchParameters(values)}}`);
+export const CURRENT_USER_RECORDS_API = (values) => (`records/search?rule=mine&${getStandardSearchParameters(values)}`);
 export const SEARCH_INTERNAL_RECORDS_API = (values) => (
     // values = {searchQuery, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
-    `records/search?
-    ${(validation.isValidDOIValue(values.searchQuery) ? '&doi=' : validation.isValidDOIValue(values.searchQuery) ? '&id=pmid:' : '&title=')}${values.searchQuery}
-    &${getStandardSearchParameters(values)}`
+    `records/search?${getSearchType(values.searchQuery)}&${getStandardSearchParameters(values)}`
 );
 
 export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery}) => (
-    `external/records/search?source=${source}${(validation.isValidDOIValue(searchQuery) ? '&doi=' : validation.isValidDOIValue(searchQuery) ? '&id=pmid:' : '&title=')}${searchQuery}`
+    `external/records/search?source=${source}&${getSearchType(searchQuery)}`
 );
 
 // export const ISSUES_API = () => (`issues`);

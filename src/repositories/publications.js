@@ -33,8 +33,8 @@ export function getTrendingPublications(userName) {
  * @param {string} userName of user for whom to apply the action
  * @returns {Promise}
  */
-export function getCountPossibleUnclaimedPublications({userName}) {
-    return get(routes.GET_COUNT_POSSIBLE_PUBLICATIONS_API({userId: userName}));
+export function getCountPossibleUnclaimedPublications() {
+    return get(routes.POSSIBLE_RECORDS_API({}));
 }
 
 /**
