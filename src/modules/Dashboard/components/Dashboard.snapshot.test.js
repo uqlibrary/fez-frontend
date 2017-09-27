@@ -10,7 +10,7 @@ function setup(
     {
         account,
         authorDetails,
-        authorDetailsLoading,
+        loadingAuthorDetails,
         loadingPublicationsByYear,
         publicationsByYear,
         publicationTypesCount,
@@ -24,7 +24,7 @@ function setup(
     const props = {
         account: account || mock.accounts.uqresearcher,
         authorDetails: authorDetails,
-        authorDetailsLoading: authorDetailsLoading || false,
+        loadingAuthorDetails: loadingAuthorDetails || false,
         loadingPublicationsByYear: loadingPublicationsByYear || false,
         publicationsByYear: publicationsByYear,
         publicationTypesCount: publicationTypesCount,
@@ -53,15 +53,17 @@ describe('Dashboard test', () => {
     it('renders possibly your publications lure', () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails,
-            possiblyYourPublicationsCount: mock.possibleCounts.data});
+            possiblyYourPublicationsCount: 5
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('doesn\'t render possibly your publications lure', () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails,
-            possiblyYourPublicationsCount: mock.possibleCounts.data,
-            hidePossiblyYourPublicationsLure: true});
+            possiblyYourPublicationsCount: 5,
+            hidePossiblyYourPublicationsLure: true
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

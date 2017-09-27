@@ -156,7 +156,7 @@ export default class App extends React.Component {
                             }
                             {
                                 // user is logged in, but doesn't have eSpace author identifier
-                                !isPublicPage && !this.props.user.authorDetailsLoading && !this.props.user.authorDetails &&
+                                !isPublicPage && !this.props.user.loadingAuthorDetails && !this.props.user.authorDetails &&
                                 <div className="layout-fill">
                                     <div className="layout-card">
                                         <Alert {...locale.global.notRegisteredAuthorAlert} />

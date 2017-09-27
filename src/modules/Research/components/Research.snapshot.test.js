@@ -5,7 +5,7 @@ import {mount} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import Research from './Research';
-import * as mock from 'mock/data';
+import {myRecordsList} from 'mock/data';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -81,7 +81,7 @@ describe('Research test', () => {
     });
 
     it('renders list of publications', () => {
-        const wrapper = setup({ publicationsList: mock.claimedPublications.data }).find('Research').dive();
+        const wrapper = setup({ publicationsList: myRecordsList.data }).find('Research').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -114,7 +114,7 @@ describe('Research test', () => {
     it('componentWillReceiveProps is called', () => {
         const wrapper = setup({}).find('Research').dive();
         expect(wrapper.state().allowResultsPaging).toEqual(false);
-        wrapper.instance().componentWillReceiveProps({loadingPublicationsList: false, publicationsList: mock.claimedPublications.data});
+        wrapper.instance().componentWillReceiveProps({loadingPublicationsList: false, publicationsList: myRecordsList.data});
         expect(wrapper.state().allowResultsPaging).toEqual(true);
     });
 });

@@ -1,23 +1,23 @@
-import {AUTHOR_DETAILS_LOADING, AUTHOR_DETAILS_FAILED, AUTHOR_DETAILS_LOADED} from '../actions';
+import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    authorDetailsLoading: true,
+    loadingAuthorDetails: true,
     authorDetails: null
 };
 
 const handlers = {
-    [AUTHOR_DETAILS_LOADING]: () => ({
-        authorDetailsLoading: true,
+    [actions.AUTHOR_DETAILS_LOADING]: () => ({
+        loadingAuthorDetails: true,
         authorDetails: null
     }),
 
-    [AUTHOR_DETAILS_LOADED]: (state, action) => ({
-        authorDetailsLoading: false,
+    [actions.AUTHOR_DETAILS_LOADED]: (state, action) => ({
+        loadingAuthorDetails: false,
         authorDetails: action.payload
     }),
 
-    [AUTHOR_DETAILS_FAILED]: () => ({
-        authorDetailsLoading: false,
+    [actions.AUTHOR_DETAILS_FAILED]: () => ({
+        loadingAuthorDetails: false,
         authorDetails: null
     })
 };

@@ -31,14 +31,14 @@ const getSearchType = (searchQuery) => {
     }
 
     if (validation.isValidPubMedValue(searchQuery)) {
-        return `'id=pmid:${searchQuery}`;
+        return `id=pmid:${searchQuery}`;
     }
 
-    return `title=${searchQuery}`;
+    return `title=${encodeURI(searchQuery)}`;
 };
 
 export const ACCOUNT_API = () => (`account?${new Date().getTime()}`);
-export const AUTHORS_SEARCH_API = ({query}) => (`fez-authors/search?query=${query}`);
+export const AUTHORS_SEARCH_API = ({query}) => (`fez-authors/search?query=${encodeURI(query)}`);
 export const CURRENT_AUTHOR_API = () => ('fez-authors');
 export const AUTHOR_DETAILS_API = ({userId}) => (`authors/details/${userId}`);
 
@@ -74,4 +74,4 @@ export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery}) => (
     `external/records/search?source=${source}&${getSearchType(searchQuery)}`
 );
 
-// export const ISSUES_API = () => (`issues`);
+export const ISSUES_API = () => ('issues');

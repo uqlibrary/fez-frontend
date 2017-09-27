@@ -3,7 +3,7 @@ jest.dontMock('./DashboardAuthorAvatar');
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import {authorDetails} from '../../../mock/data/authors/';
+import {authorDetails} from 'mock/data';
 
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 

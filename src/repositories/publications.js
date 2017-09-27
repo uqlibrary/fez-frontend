@@ -29,15 +29,6 @@ export function getTrendingPublications(userName) {
 }
 
 /**
- * Loads a count of possible unclaimed publications per user name
- * @param {string} userName of user for whom to apply the action
- * @returns {Promise}
- */
-export function getCountPossibleUnclaimedPublications() {
-    return get(routes.POSSIBLE_RECORDS_API({}));
-}
-
-/**
  * Hide a list of PIDS for a user
  * @param {object} data to be posted, refer to backend API
  * @returns {Promise}

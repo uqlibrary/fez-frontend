@@ -17,7 +17,7 @@ export default class ClaimPublication extends React.Component {
         account: PropTypes.object,
         accountLoading: PropTypes.bool,
 
-        possibleCounts: PropTypes.object,
+        possibleCounts: PropTypes.number,
         loadingPossibleCounts: PropTypes.bool,
 
         history: PropTypes.object.isRequired,
@@ -115,7 +115,7 @@ export default class ClaimPublication extends React.Component {
                                     {
                                         txt.searchResults.text
                                             .replace('[resultsCount]', this.props.possiblePublicationsList.length)
-                                            .replace('[totalCount]', this.props.possibleCounts ? this.props.possibleCounts.most_likely_match_count : '')
+                                            .replace('[totalCount]', this.props.possibleCounts)
                                     }
                                 </div>
                                 <PublicationsList

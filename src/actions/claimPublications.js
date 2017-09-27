@@ -4,40 +4,16 @@ import * as actions from './actionTypes';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 
 /**
- * Get count of possibly your publications for an author
- * @param {string} author user name
- * @returns {action}
- */
-export function countPossiblyYourPublications(authorUsername) {
-    return dispatch => {
-        dispatch({type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
-        repositories.getCountPossibleUnclaimedPublications(authorUsername)
-            .then(
-                response => {
-                    dispatch({
-                        type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                        payload: response.data
-                    });
-                },
-                error => {
-                    dispatch({
-                        type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                        payload: error
-                    });
-                }
-            );
-    };
-}
-
-/**
  * Search publications from eSpace which are matched to currently logged in username
  * @param {object} activeFacets - optional list of facets
  * @returns {action}
  */
 export function searchPossiblyYourPublications({activeFacets = {}}) {
     return dispatch => {
+        dispatch({type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
         dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
-        repositories.getPossibleUnclaimedPublications({activeFacets: activeFacets})
+        repositories
+            .getPossibleUnclaimedPublications({facets: activeFacets})
             .then(response => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
@@ -47,14 +23,31 @@ export function searchPossiblyYourPublications({activeFacets = {}}) {
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
                     payload: response.filters && response.filters.facets ? response.filters.facets : {}
                 });
+                dispatch({
+                    type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+                    payload: response
+                });
             })
             .catch((error) => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                     payload: error
                 });
+                dispatch({
+                    type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
+                    payload: error
+                });
             });
     };
+}
+
+/**
+ * Get count of possibly your publications for an author
+ * @param {string} author user name
+ * @returns {action}
+ */
+export function countPossiblyYourPublications() {
+    return searchPossiblyYourPublications({});
 }
 
 /**
@@ -215,7 +208,6 @@ export function claimPublication(data) {
                 return Promise.resolve(response);
             })
             .catch(error => {
-                console.log(error);
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
                     payload: error

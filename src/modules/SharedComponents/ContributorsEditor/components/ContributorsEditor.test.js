@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import {Provider} from 'react-redux';
 import Immutable from 'immutable';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {authorsSearch} from 'mock/data/authors';
+import {authorsSearch} from 'mock/data';
 
 beforeAll(() => {
     injectTapEventPlugin();

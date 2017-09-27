@@ -21,7 +21,7 @@ class Dashboard extends React.Component {
         // account data
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
-        authorDetailsLoading: PropTypes.bool,
+        loadingAuthorDetails: PropTypes.bool,
 
         // graph data
         loadingPublicationsByYear: PropTypes.bool,
@@ -29,7 +29,7 @@ class Dashboard extends React.Component {
         publicationTypesCount: PropTypes.array,
 
         // lure data
-        possiblyYourPublicationsCount: PropTypes.object,
+        possiblyYourPublicationsCount: PropTypes.number,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
         // wos/scopus data
@@ -74,7 +74,7 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear || this.props.authorDetailsLoading
+        const loading = this.props.loadingPublicationsByYear || this.props.loadingAuthorDetails
             || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
             || this.props.loadingLatestPublications;
         const barChart = !loading && this.props.publicationsByYear
@@ -127,11 +127,10 @@ class Dashboard extends React.Component {
                         <div className="column is-12 possiblePublicationLure">
                             {
                                 !this.props.hidePossiblyYourPublicationsLure
-                                && this.props.possiblyYourPublicationsCount
-                                && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
+                                && this.props.possiblyYourPublicationsCount > 0 &&
                                 <Alert
                                     title={txt.possiblePublicationsLure.title}
-                                    message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
+                                    message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
                                     type={txt.possiblePublicationsLure.type}
                                     actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
                                     action={this._claimYourPublications}

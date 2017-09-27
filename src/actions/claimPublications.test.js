@@ -42,57 +42,6 @@ describe('Claim publication actions tests ', () => {
         expect(expectedActions).toContainEqual(expectedOutput);
     });
 
-    it('countPossiblyYourPublications successful call', async () => {
-        const input = 'authorId';
-        const response =  {
-            "data": {
-            "most_likely_match_count": 5,
-                "automatically_match_count": 0,
-                "new_match_count": 0
-            }
-        };
-
-        const expectedOutput = [
-            {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-            {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED, payload: response.data}
-            ];
-
-        repositories.getCountPossibleUnclaimedPublications = jest.fn((input) => {
-            return Promise.resolve(response);
-        });
-
-        const middlewares = [ thunk ];
-        const mockStore = configureStore(middlewares);
-        const store = mockStore({});
-
-        await store.dispatch(claim.countPossiblyYourPublications(input));
-        const expectedActions = store.getActions();
-        expect(expectedActions.length).toBe(2);
-        expect(expectedActions).toEqual(expectedOutput);
-    });
-
-    it('countPossiblyYourPublications failed call', async () => {
-        const input = 'authorId';
-
-        const expectedOutput = [
-            {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-            {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED, payload: 'Request failed'}
-        ];
-
-        repositories.getCountPossibleUnclaimedPublications = jest.fn((input) => {
-            return Promise.reject('Request failed');
-        });
-
-        const middlewares = [ thunk ];
-        const mockStore = configureStore(middlewares);
-        const store = mockStore({});
-
-        await store.dispatch(claim.countPossiblyYourPublications(input));
-        const expectedActions = store.getActions();
-        expect(expectedActions.length).toBe(2);
-        expect(expectedActions).toEqual(expectedOutput);
-    });
-
     it('claimPublication from internal repository', async () => {
         const input = {
             publication: {},

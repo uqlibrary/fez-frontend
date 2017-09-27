@@ -1,4 +1,4 @@
-import {AUTHORS_LOADING, AUTHORS_LOAD_FAILED, AUTHORS_LOADED} from '../actions';
+import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     authorsListLoading: false,
@@ -7,19 +7,19 @@ export const initialState = {
 };
 
 const handlers = {
-    [AUTHORS_LOAD_FAILED]: () => ({
+    [actions.AUTHORS_LOAD_FAILED]: () => ({
         authorsList: [],
         authorsListLoading: false,
         authorsListLoadingError: true
     }),
 
-    [AUTHORS_LOADED]: (state, action) => ({
+    [actions.AUTHORS_LOADED]: (state, action) => ({
         authorsList: action.payload,
         authorsListLoading: false,
         authorsListLoadingError: false
     }),
 
-    [AUTHORS_LOADING]: () => ({
+    [actions.AUTHORS_LOADING]: () => ({
         authorsList: [],
         authorsListLoading: true,
         authorsListLoadingError: false

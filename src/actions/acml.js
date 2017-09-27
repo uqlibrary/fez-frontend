@@ -1,8 +1,6 @@
-import {getAcmlQuickTemplates} from '../repositories';
-
-export const ACML_QUICK_TEMPLATES_LOADING = 'ACML_QUICK_TEMPLATES_LOADING';
-export const ACML_QUICK_TEMPLATES_LOADED = 'ACML_QUICK_TEMPLATES_LOADED';
-export const ACML_QUICK_TEMPLATES_FAILED = 'ACML_QUICK_TEMPLATES_FAILED';
+import * as actions from './actionTypes';
+import {get} from 'repositories/generic';
+import * as routes from 'repositories/routes';
 
 /**
  * Load a list of file access types from fez, eg open access, embargo, etc
@@ -10,17 +8,19 @@ export const ACML_QUICK_TEMPLATES_FAILED = 'ACML_QUICK_TEMPLATES_FAILED';
  */
 export function loadAcmlQuickTemplates() {
     return dispatch => {
-        dispatch({type: ACML_QUICK_TEMPLATES_LOADING});
-        getAcmlQuickTemplates().then(accessTypes => {
-            dispatch({
-                type: ACML_QUICK_TEMPLATES_LOADED,
-                payload: accessTypes.data
+        dispatch({type: actions.ACML_QUICK_TEMPLATES_LOADING});
+        get(routes.GET_ACML_QUICK_TEMPLATES_API())
+            .then(accessTypes => {
+                dispatch({
+                    type: actions.ACML_QUICK_TEMPLATES_LOADED,
+                    payload: accessTypes.data
+                });
+            })
+            .catch((error) => {
+                dispatch({
+                    type: actions.ACML_QUICK_TEMPLATES_FAILED,
+                    payload: error
+                });
             });
-        }).catch((error) => {
-            dispatch({
-                type: ACML_QUICK_TEMPLATES_FAILED,
-                payload: error
-            });
-        });
     };
 }
