@@ -7,8 +7,8 @@ export const researcherMenuItems = (locale, email, components) => [
         component: components.Dashboard
     },
     {
-        linkTo: '/research',
-        path: '/research',
+        linkTo: '/records/mine',
+        path: '/records/mine',
         primaryText: locale.menu.myResearch.primaryText,
         render: components.Research
     },
