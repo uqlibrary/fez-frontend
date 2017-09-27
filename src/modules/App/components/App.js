@@ -18,6 +18,7 @@ import {
 import {Dashboard} from 'modules/Dashboard';
 import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
+import {PublicationSearchRecord} from 'modules/AddRecord';
 import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 import {ClaimPublication} from 'modules/ClaimPublication';
@@ -86,7 +87,7 @@ export default class App extends React.Component {
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
 
         const components = {
-            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication
+            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication, PublicationSearchRecord
         };
 
         const menuItems =
