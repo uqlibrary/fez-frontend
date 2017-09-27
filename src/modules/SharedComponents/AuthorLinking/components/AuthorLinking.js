@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Checkbox from 'material-ui/Checkbox';
 import AuthorItem from './AuthorItem';
-import AuthorItemRow from './AuthorItemRow';
 import Infinite from 'react-infinite';
 
 export default class AuthorLinking extends React.Component {
@@ -35,12 +34,8 @@ export default class AuthorLinking extends React.Component {
         this.state = {
             selectedAuthor: null,
             authorLinkingConfirmed: false,
-            authors: [],
-            renderAuthors: []
+            authors: []
         };
-
-        this.start = 0;
-        this.end = 10;
 
         /**
          * Storage for transformed and cached author id list
@@ -48,6 +43,11 @@ export default class AuthorLinking extends React.Component {
          * @type {Array}
          */
         this.listToOutput = [];
+        this.authorsToRender = [];
+    }
+
+    componentWillMount() {
+        this.authorsToRender = this.getAuthorsToRender({...this.props}, this.state);
     }
 
     componentDidMount() {
@@ -64,41 +64,22 @@ export default class AuthorLinking extends React.Component {
     componentWillUpdate(nextProps, nextState) {
         if (this.props.onChange !== null && nextState.selectedAuthor !== null) {
             this.props.onChange({authors: this.prepareOutput(nextProps, nextState, this.listToOutput), valid: nextState.authorLinkingConfirmed});
+            this.authorsToRender = this.getAuthorsToRender({...nextProps}, nextState);
         }
     }
-
-    _handleInfiniteScroll = () => {
-        this.buildAuthorList({...this.props}, this.state, this.state.authors.length, this.state.authors.length + 10);
-    };
-
-    buildAuthorList = (props, state, start, end) => {
-        this.start = start;
-        this.end = end;
-
-        const authors = this.getAuthorList(props, state, start, end);
-        this.setState({
-            authors: [
-                ...this.state.authors,
-                ...authors
-            ]
-        });
-    };
 
     /**
      * Build authors list
      */
-    getAuthorList = ({authorList, linkedAuthorIdList, disabled} = {}, {selectedAuthor = {}} = {}, start = 0, end = 10) => {
-        const eIndex = start === authorList.length && start || end;
-        const sIndex = start === authorList.length && (start - 10) || start;
-        return authorList.slice(sIndex, eIndex).map((author, index) => {
-            const startIndex = start + index;
-            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[startIndex].rek_author_id !== 0;
+    getAuthorsToRender = ({authorList, linkedAuthorIdList, disabled} = {}, {selectedAuthor = {}} = {}) => {
+        const authors = authorList.map((author, index) => {
+            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index].rek_author_id !== 0;
             const selected = selectedAuthor && author.rek_author_order === selectedAuthor.rek_author_id_order;
 
             return (
                 <AuthorItem
-                    index={startIndex}
-                    key={startIndex}
+                    index={index}
+                    key={index}
                     author={author}
                     linked={linked}
                     selected={selected}
@@ -107,6 +88,24 @@ export default class AuthorLinking extends React.Component {
                 />
             );
         });
+
+
+        if (this.context.isMobile) {
+            return authors;
+        }
+
+        const rows = [];
+        const itemsPerRow = 3;
+        if (authors.length > 0) {
+            for (let i = 0; i < authors.length; i += itemsPerRow) {
+                rows.push(<div className="columns is-multiline is-gapless is-marginless" key={i}>
+                    {
+                        authors.slice(i, i + itemsPerRow)
+                    }
+                </div>);
+            }
+        }
+        return rows;
     };
 
     /**
@@ -151,8 +150,7 @@ export default class AuthorLinking extends React.Component {
 
         this.setState({
             selectedAuthor: selectedAuthor,
-            authorLinkingConfirmed: false,
-            authors: this.getAuthorList({...this.props}, {selectedAuthor}, 0, this.end)
+            authorLinkingConfirmed: false
         });
     };
 
@@ -165,33 +163,21 @@ export default class AuthorLinking extends React.Component {
         this.setState({authorLinkingConfirmed: !this.state.authorLinkingConfirmed});
     };
 
-    prepareAuthorsToRender = () => {
-        const rows = [];
-        const itemsPerRow = this.context.isMobile ? 1 : 3;
-        if (this.state.authors.length > itemsPerRow) {
-            const j = this.state.authors.length;
-            for (let i = 0; i < j; i += itemsPerRow) {
-                rows.push(<AuthorItemRow items={this.state.authors.slice(i, i + itemsPerRow)} />);
-            }
-        }
-        return rows;
-    };
-
     render() {
         const {confirmation} = this.props.locale;
         const {selectedAuthor, authorLinkingConfirmed} = this.state;
-
         return (
             <div className={this.props.className}>
-                <Infinite
-                    className="author-link-infinite-scroll"
-                    containerHeight={200}
-                    elementHeight={73}
-                    onInfiniteLoad={this._handleInfiniteScroll}
-                    infiniteLoadBeginEdgeOffset={50}
-                >
-                    {this.prepareAuthorsToRender()}
-                </Infinite>
+                <div className="author-link-list">
+                    <Infinite
+                        className="author-link-infinite-scroll"
+                        containerHeight={200}
+                        elementHeight={73}
+                        infiniteLoadBeginEdgeOffset={50}
+                    >
+                        {this.authorsToRender}
+                    </Infinite>
+                </div>
                 {
                     selectedAuthor !== null &&
                     <div className="columns is-gapless is-multiline is-desktop is-mobile">
