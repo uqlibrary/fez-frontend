@@ -33,8 +33,7 @@ export default class AuthorLinking extends React.Component {
         super(props);
         this.state = {
             selectedAuthor: null,
-            authorLinkingConfirmed: false,
-            authors: []
+            authorLinkingConfirmed: false
         };
 
         /**
@@ -43,6 +42,11 @@ export default class AuthorLinking extends React.Component {
          * @type {Array}
          */
         this.listToOutput = [];
+
+        /**
+         * List to render. List of <AuthorItem/>s/List of rows of multiple <AuthorItem/>s
+         * @type {Array}
+         */
         this.authorsToRender = [];
     }
 
