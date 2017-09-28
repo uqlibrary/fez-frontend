@@ -1,10 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as actions from 'actions';
-import {withRouter} from 'react-router-dom';
-
 import AddRecordStepper from './AddRecordStepper';
 import {StandardPage} from 'uqlibrary-react-toolbox';
 
@@ -13,7 +8,7 @@ import {PublicationSearchForm} from 'modules/PublicationSearchForm';
 
 import {locale} from 'config';
 
-export class PublicationSearchRecord extends React.Component {
+export default class PublicationSearchRecord extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
         actions: PropTypes.object,
@@ -50,12 +45,3 @@ export class PublicationSearchRecord extends React.Component {
         );
     }
 }
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        actions: bindActionCreators(actions, dispatch)
-    };
-};
-
-const PublicationSearchRecordContainer = connect(() => ({}), mapDispatchToProps)(PublicationSearchRecord);
-export default withRouter(PublicationSearchRecordContainer);
