@@ -25,7 +25,7 @@ let publicPath = '';
 let publicPathOffline = '/';
 let environment = 'staging';
 
-if (process.env.CI_BRANCH !== 'production') {
+if (process.env.CI_BRANCH !== 'production' && process.env.CI_BRANCH !== 'staging') {
     URL_BASE_PATH += 'espace/' + process.env.CI_BRANCH + '/';
     publicPathOffline += URL_BASE_PATH;
 } else {
@@ -158,8 +158,8 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
-                    'file-loader',
-                ],
+                    {loader: 'file-loader', options: { outputPath: 'images/a', publicPath: 'images/a' }}
+                ]
             }
         ]
     },
