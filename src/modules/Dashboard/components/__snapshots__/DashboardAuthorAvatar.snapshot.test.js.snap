@@ -5,7 +5,7 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
   className="authorAvatar"
 >
   <Avatar
-    aria-label="Photograph of  Professor J Researcher"
+    aria-label="Photograph of  Professor undefined undefined"
     backgroundColor="transparent"
     size={150}
     style={
@@ -14,7 +14,7 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
         "backgroundSize": "cover, cover",
       }
     }
-    title="Professor J Researcher"
+    title="Professor undefined undefined"
   />
 </div>
 `;
