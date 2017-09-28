@@ -23,6 +23,7 @@ import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 import {ClaimPublication} from 'modules/ClaimPublication';
 import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
+import {PublicationSearchResults} from 'modules/AddRecord';
 
 export default class App extends React.Component {
     static propTypes = {
@@ -174,6 +175,7 @@ export default class App extends React.Component {
                                     <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
                                 }
                                 <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
+                                <Route path="/records/add/results" component={PublicationSearchResults}/>
                                 {
                                     menuItems.map((route, index) => (
                                         <Route key={index} {...route} />
