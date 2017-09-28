@@ -64,9 +64,9 @@ mock
         .reply(200, mockData.internalTitleSearchList)
     .onGet(new RegExp(escapeRegExp(routes.GET_PUBLICATION_TYPES_API())))
         .reply(200, mockData.recordsTypeList)
-    .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API('.*')))).reply((config) => {
+    .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'})))).reply((config) => {
         const vocabId = config.url.substring(config.url.indexOf('/') + 1);
-        return [200, mockData.publicationSubtypeList[vocabId]];
+        return [200, mockData.vocabulariesList[vocabId]];
     })
     .onGet(new RegExp(escapeRegExp(routes.GET_ACML_QUICK_TEMPLATES_API())))
         .reply(200, mockData.quickTemplates)
