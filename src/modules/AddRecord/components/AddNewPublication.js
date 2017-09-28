@@ -28,14 +28,11 @@ export default class AddNewPublication extends React.Component {
     }
 
     _recordSaved = () => {
-        // reset stepper to publications search form
-        this.props.history.push('/records/add/find');
-
         // show record save successfully confirmation box
         this.confirmationBox.showConfirmation();
     };
 
-    _cancelWorkflow = () => {
+    _restartWorkflow = () => {
         this.props.history.push('/records/add/find');
     };
 
@@ -58,6 +55,7 @@ export default class AddNewPublication extends React.Component {
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._navigateToDashboard}
+                    onCancelAction={this._restartWorkflow}
                     locale={txt.confirmationDialog}/>
 
                 <AddRecordStepper activeStep={this.props.stepperIndex} txt={txt} />
@@ -65,7 +63,7 @@ export default class AddNewPublication extends React.Component {
                     {
                         <PublicationForm
                             onFormSubmitSuccess={this._recordSaved}
-                            onFormCancel={this._cancelWorkflow}
+                            onFormCancel={this._restartWorkflow}
                             initialValues={this.props.initialValues}/>
                     }
                 </div>
