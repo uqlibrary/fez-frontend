@@ -23,7 +23,8 @@ export class PublicationSearchResults extends React.Component {
         loadingPublicationSources: PropTypes.object,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object,
-        stepperIndex: PropTypes.number
+        stepperIndex: PropTypes.number,
+        initialValues: PropTypes.object
     };
 
     static defaultProps = {
@@ -32,14 +33,6 @@ export class PublicationSearchResults extends React.Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            initialValues: {}
-        };
-    }
-
-    componentWillUnmount() {
-        this._cancelWorkflow();
     }
 
     _showNewRecordForm = () => {
@@ -47,7 +40,7 @@ export class PublicationSearchResults extends React.Component {
     };
 
     _cancelWorkflow = () => {
-        this.props.history.push('records/add/find');
+        this.props.history.push('/records/add/find');
     };
 
     _claimPublication = (item) => {
@@ -88,7 +81,7 @@ export class PublicationSearchResults extends React.Component {
                     {
                         this.props.publicationsList.length > 0 &&
                         <StandardCard {...txt.searchResults}>
-                            <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.state.initialValues.rawSearchQuery)}</div>
+                            <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.props.initialValues.rawSearchQuery)}</div>
                             <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
                         </StandardCard>
                     }
