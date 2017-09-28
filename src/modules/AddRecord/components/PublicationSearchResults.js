@@ -10,13 +10,7 @@ import {PublicationListLoadingProgress} from 'modules/PublicationsList';
 
 import {locale} from 'config';
 
-
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as actions from 'actions';
-import {withRouter} from 'react-router-dom';
-
-export class PublicationSearchResults extends React.Component {
+export default class PublicationSearchResults extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
@@ -136,18 +130,3 @@ export class PublicationSearchResults extends React.Component {
         );
     }
 }
-
-const mapStateToProps = (state) => {
-    return {
-        ...state.get('searchRecordsReducer')
-    };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        actions: bindActionCreators(actions, dispatch)
-    };
-};
-
-const PublicationSearchResultsContainer = connect(mapStateToProps, mapDispatchToProps)(PublicationSearchResults);
-export default withRouter(PublicationSearchResultsContainer);

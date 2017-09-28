@@ -8,13 +8,7 @@ import {PublicationForm} from 'modules/PublicationForm';
 
 import {locale} from 'config';
 
-
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as actions from 'actions';
-import {withRouter} from 'react-router-dom';
-
-export class AddNewPublication extends React.Component {
+export default class AddNewPublication extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,
@@ -79,19 +73,3 @@ export class AddNewPublication extends React.Component {
         );
     }
 }
-
-
-const mapStateToProps = (state) => {
-    return {
-        ...state.get('searchRecordsReducer')
-    };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        actions: bindActionCreators(actions, dispatch)
-    };
-};
-
-const AddNewPublicationContainer = connect(mapStateToProps, mapDispatchToProps)(AddNewPublication);
-export default withRouter(AddNewPublicationContainer);
