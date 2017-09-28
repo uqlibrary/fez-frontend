@@ -80,6 +80,8 @@ mock
         .reply(200, {data: {}})
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API('.*'))))
         .reply(200, {data: {...mockData.record}})
+    .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
+        .reply(200, {data: {}})
     .onPost(new RegExp(escapeRegExp(routes.ISSUES_API())))
         .reply(200, {data: {}})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))
