@@ -5,7 +5,7 @@ import {mount} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import ClaimPublication from './ClaimPublication';
-import * as mock from 'mock/data';
+import {possibleUnclaimedList} from 'mock/data';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -35,7 +35,7 @@ function setup({possiblePublicationsList, loadingPossiblePublicationsList, loadi
     const props = {
         possiblePublicationsList: possiblePublicationsList || [],
         possiblePublicationsFacets: possiblePublicationsFacets || {},
-        possibleCounts: possibleCounts || null,
+        possibleCounts: possibleCounts || 0,
         loadingPossiblePublicationsList: loadingPossiblePublicationsList || false,
         loadingPossibleCounts: loadingPossibleCounts || false,
 
@@ -88,7 +88,7 @@ describe('ClaimPublication test', () => {
     });
 
     it('renders list of publications and counts', () => {
-        const wrapper = setup({ author: {}, possibleCounts: mock.possibleCounts.data, possiblePublicationsList: mock.possibleUnclaimed.data }).find('ClaimPublication').dive();
+        const wrapper = setup({ author: {}, possibleCounts: 5, possiblePublicationsList: possibleUnclaimedList.data }).find('ClaimPublication').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

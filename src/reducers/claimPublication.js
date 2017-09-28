@@ -1,8 +1,8 @@
-import * as actions from 'actions/claimPublications';
+import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     publicationToClaim: null,
-    possibleCounts: null,
+    possibleCounts: 0,
     possiblePublicationsPagingData: {},
     possiblePublicationsList: [],
     possiblePublicationsFacets: {},
@@ -64,7 +64,7 @@ const handlers = {
             loadingPossiblePublicationsList: false,
             possiblePublicationsList: [],
             loadingPossibleCounts: false,
-            possibleCounts: null,
+            possibleCounts: 0,
             possiblePublicationsPagingData: {}
         };
     },
@@ -73,7 +73,7 @@ const handlers = {
         return {
             ...state,
             loadingPossibleCounts: true,
-            possibleCounts: null
+            possibleCounts: 0
         };
     },
 
@@ -81,7 +81,7 @@ const handlers = {
         return {
             ...state,
             loadingPossibleCounts: false,
-            possibleCounts: action.payload
+            possibleCounts: action.payload.total
         };
     },
 
@@ -89,7 +89,7 @@ const handlers = {
         return {
             ...state,
             loadingPossibleCounts: false,
-            possibleCounts: null
+            possibleCounts: 0
         };
     }
 
@@ -100,6 +100,5 @@ export default function claimPublicationReducer(state = initialState, action) {
     if (!handler) {
         return state;
     }
-    console.log(action);
     return handler(state, action);
 }

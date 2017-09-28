@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const publicationSubtypeList = {
+export const vocabulariesList = {
     // book
     453581: {"total":6,"data": [
         {

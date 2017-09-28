@@ -5,8 +5,7 @@ import toJson from 'enzyme-to-json';
 import React from 'react';
 
 import App from './App';
-import {accounts} from '../../../mock/data/account';
-import {authorDetails} from '../../../mock/data/authors';
+import {accounts, authorDetails} from 'mock/data';
 
 function setup(values) {
     return shallow(<App {...values} />);
@@ -27,7 +26,7 @@ describe('App tests for user account and author status', () => {
         const values = {
             user: {
                 account: {...accounts.uqstaff},
-                authorDetailsLoading: false,
+                loadingAuthorDetails: false,
                 accountLoading: false,
                 authorDetails: {...authorDetails.uqresearcher}
             },
@@ -44,7 +43,7 @@ describe('App tests for user account and author status', () => {
         const values = {
             user: {
                 account: {...accounts.uqstaff},
-                authorDetailsLoading: false,
+                loadingAuthorDetails: false,
                 accountLoading: false,
                 authorDetails: null,
             },
@@ -61,7 +60,7 @@ describe('App tests for user account and author status', () => {
         const values = {
             user: {
                 account: null,
-                authorDetailsLoading: false,
+                loadingAuthorDetails: false,
                 accountLoading: false,
                 authorDetails: null,
             },
@@ -78,7 +77,7 @@ describe('App tests for user account and author status', () => {
         const values = {
             user: {
                 account: {...accounts.uqstaff},
-                authorDetailsLoading: true,
+                loadingAuthorDetails: true,
                 accountLoading: false,
                 authorDetails: null,
             },

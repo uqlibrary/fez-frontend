@@ -3,7 +3,7 @@ jest.dontMock('./PublicationStats');
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import {formattedData} from '../../../../mock/data/academic/publicationStats';
+import {formattedData} from 'mock/data/testing/publicationStats';
 import PublicationStats from './PublicationStats';
 
 function setup(publicationsStats) {

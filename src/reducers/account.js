@@ -1,4 +1,4 @@
-import * as actions from 'actions/account';
+import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     account: null,
@@ -6,7 +6,7 @@ export const initialState = {
     authorDetails: null,
     accountLoading: true,
     authorLoading: true,
-    authorDetailsLoading: true
+    loadingAuthorDetails: true
 };
 
 const handlers = {
@@ -50,19 +50,19 @@ const handlers = {
     [actions.ACCOUNT_AUTHOR_DETAILS_FAILED]: (state) => ({
         ...state,
         authorDetails: null,
-        authorDetailsLoading: false
+        loadingAuthorDetails: false
     }),
 
     [actions.ACCOUNT_AUTHOR_DETAILS_LOADED]: (state, action) => ({
         ...state,
         authorDetails: action.payload,
-        authorDetailsLoading: false
+        loadingAuthorDetails: false
     }),
 
     [actions.ACCOUNT_AUTHOR_DETAILS_LOADING]: (state) => ({
         ...state,
         authorDetails: null,
-        authorDetailsLoading: true
+        loadingAuthorDetails: true
     })
 };
 

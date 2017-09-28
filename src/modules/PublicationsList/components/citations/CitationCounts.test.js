@@ -7,10 +7,8 @@ import CitationCounts from './CitationCounts';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Immutable from 'immutable';
 import {locale} from 'config';
-import {claimedPublications} from 'mock/data/publications';
-
+import {myRecordsList} from 'mock/data';
 
 function setup({publication, isShallow = true}) {
     const props = {
@@ -42,7 +40,7 @@ describe('CitationCounts renders ', () => {
     });
 
     it('component with a mock record metrics', () => {
-        const wrapper = setup({ publication: claimedPublications.data[0] });
+        const wrapper = setup({ publication: myRecordsList.data[0] });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

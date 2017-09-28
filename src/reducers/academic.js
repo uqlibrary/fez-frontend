@@ -1,4 +1,4 @@
-import * as actions from 'actions/academic';
+import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     loadingPublicationsByYear: true,

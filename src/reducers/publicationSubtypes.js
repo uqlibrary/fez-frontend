@@ -1,4 +1,4 @@
-import {PUBLICATION_SUBTYPES_LOADING, PUBLICATION_SUBTYPES_LOAD_FAILED, PUBLICATION_SUBTYPES_LOADED} from '../actions';
+import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     subtypesLoading: false,
@@ -7,19 +7,19 @@ export const initialState = {
 };
 
 const handlers = {
-    [PUBLICATION_SUBTYPES_LOAD_FAILED]: () => ({
+    [actions.PUBLICATION_SUBTYPES_LOAD_FAILED]: () => ({
         subtypesList: [],
         subtypesLoading: false,
         subtypesLoadingError: true
     }),
 
-    [PUBLICATION_SUBTYPES_LOADED]: (state, action) => ({
+    [actions.PUBLICATION_SUBTYPES_LOADED]: (state, action) => ({
         subtypesList: action.payload,
         subtypesLoading: false,
         subtypesLoadingError: false
     }),
 
-    [PUBLICATION_SUBTYPES_LOADING]: () => ({
+    [actions.PUBLICATION_SUBTYPES_LOADING]: () => ({
         subtypesLoading: true,
         subtypesLoadingError: false
     })

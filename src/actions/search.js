@@ -1,45 +1,13 @@
-import {getSearchInternal, getSearchExternal} from 'repositories/search';
 import {locale} from 'config';
+import * as actions from './actionTypes';
+import {get} from 'repositories/generic';
+import * as routes from 'repositories/routes';
 
-/**
- * Action types
- * for specific source actions will create source@SEARCH_ACTION, eg SEARCH_LOADING@wos etc
- */
-export const SEARCH_LOADING = 'SEARCH_LOADING';
-export const SEARCH_COMPLETED = 'SEARCH_COMPLETED';
-export const SEARCH_FAILED = 'SEARCH_FAILED';
-export const SEARCH_SOURCE_COUNT = 'SEARCH_SOURCE_COUNT';
-
-/**
- * External search sources
- */
-export const SOURCE_WOS = 'wos';
-export const SOURCE_CROSSREF = 'crossref';
-export const SOURCE_SCOPUS = 'scopus';
-export const SOURCE_PUBMED = 'pubmed';
-
-/**
- * Internal search source
- */
-export const SOURCE_ESPACE = 'espace';
-
-/**
- * List of valid external sources
- *
- * @type {[*]}
- */
-export const externalSources = [
-    SOURCE_CROSSREF,
-    SOURCE_PUBMED,
-    SOURCE_SCOPUS,
-    SOURCE_WOS
-];
-
-function getSearch(source, queryString) {
-    if (source === SOURCE_ESPACE) {
-        return getSearchInternal(queryString);
+function getSearch(source, searchQuery) {
+    if (source === locale.global.sources.espace.id) {
+        return get(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: searchQuery, pageSize: 5}));
     } else {
-        return getSearchExternal(source, queryString);
+        return get(routes.SEARCH_EXTERNAL_RECORDS_API({source: source, searchQuery: searchQuery}));
     }
 }
 
@@ -52,7 +20,7 @@ function getSearch(source, queryString) {
  */
 export function createSearchPromise(source, queryString, dispatch) {
     return new Promise((resolve) => {
-        dispatch({type: `${SEARCH_LOADING}@${source}`});
+        dispatch({type: `${actions.SEARCH_LOADING}@${source}`});
         getSearch(source, queryString)
             .then(response => {
                 const data = response && response.hasOwnProperty('data') ? response.data
@@ -69,14 +37,14 @@ export function createSearchPromise(source, queryString, dispatch) {
                         return item;
                     }) : [];
                 dispatch({
-                    type: `${SEARCH_COMPLETED}@${source}`,
+                    type: `${actions.SEARCH_COMPLETED}@${source}`,
                     payload: data
                 });
                 resolve(data);
             })
             .catch((error) => {
                 dispatch({
-                    type: `${SEARCH_FAILED}@${source}`,
+                    type: `${actions.SEARCH_FAILED}@${source}`,
                     payload: error
                 });
                 // do not reject - not to prevent Promise.all throwing an error
@@ -92,29 +60,20 @@ export function createSearchPromise(source, queryString, dispatch) {
  */
 export function searchPublications(searchQuery) {
     return dispatch => {
-        dispatch({type: SEARCH_LOADING, payload: searchQuery});
+        dispatch({type: actions.SEARCH_LOADING, payload: searchQuery});
 
-        const internalSearchPropmise = createSearchPromise(SOURCE_ESPACE, searchQuery, dispatch);
-        const externalSearchPropmises = externalSources.map(source => createSearchPromise(source, searchQuery, dispatch));
+        const searchPromises = Object.keys(locale.global.sources)
+            .map(source => createSearchPromise(source, searchQuery, dispatch));
 
-        dispatch({
-            type: SEARCH_SOURCE_COUNT,
-            payload: externalSearchPropmises.length
-        });
+        dispatch({type: actions.SEARCH_SOURCE_COUNT, payload: searchPromises.length});
 
-        Promise.all([internalSearchPropmise, ...externalSearchPropmises])
+        Promise.all(searchPromises)
             .then((response) => {
                 let flattenedResults = [].concat.apply([], response);
                 flattenedResults = flattenedResults.slice(0, flattenedResults.length);
-                dispatch({
-                    type: SEARCH_COMPLETED,
-                    payload: flattenedResults
-                });
+                dispatch({type: actions.SEARCH_COMPLETED, payload: flattenedResults});
             }, error => {
-                dispatch({
-                    type: SEARCH_FAILED,
-                    payload: error
-                });
+                dispatch({type: actions.SEARCH_FAILED, payload: error});
             });
     };
 }
