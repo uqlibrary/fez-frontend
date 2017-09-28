@@ -70,6 +70,12 @@ exports[`App tests for user account and author status User is logged in but are 
           },
           Object {
             "component": [Function],
+            "linkTo": "/records/add/find",
+            "path": "/records/add/find",
+            "primaryText": "Add a missing record",
+          },
+          Object {
+            "component": [Function],
             "linkTo": "/claim-publications",
             "path": "/claim-publications",
             "primaryText": "Claim possible publications",
@@ -112,6 +118,14 @@ exports[`App tests for user account and author status User is logged in but are 
         />
         <Route
           component={[Function]}
+          path="/records/add/results"
+        />
+        <Route
+          component={[Function]}
+          path="/records/add/new"
+        />
+        <Route
+          component={[Function]}
           linkTo="/dashboard"
           path="/dashboard"
           primaryText="My dashboard"
@@ -127,6 +141,12 @@ exports[`App tests for user account and author status User is logged in but are 
           component={[Function]}
           linkTo="/add-record"
           path="/add-record"
+          primaryText="Add a missing record"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/records/add/find"
+          path="/records/add/find"
           primaryText="Add a missing record"
         />
         <Route
@@ -269,6 +289,14 @@ exports[`App tests for user account and author status User is not logged in and 
           path="/claim-publication-form"
         />
         <Route
+          component={[Function]}
+          path="/records/add/results"
+        />
+        <Route
+          component={[Function]}
+          path="/records/add/new"
+        />
+        <Route
           linkTo="/browse"
           path="/browse"
           primaryText="Browse"
@@ -358,6 +386,12 @@ exports[`App tests for user account and author status User logged in and is an a
           },
           Object {
             "component": [Function],
+            "linkTo": "/records/add/find",
+            "path": "/records/add/find",
+            "primaryText": "Add a missing record",
+          },
+          Object {
+            "component": [Function],
             "linkTo": "/claim-publications",
             "path": "/claim-publications",
             "primaryText": "Claim possible publications",
@@ -400,6 +434,14 @@ exports[`App tests for user account and author status User logged in and is an a
         />
         <Route
           component={[Function]}
+          path="/records/add/results"
+        />
+        <Route
+          component={[Function]}
+          path="/records/add/new"
+        />
+        <Route
+          component={[Function]}
           linkTo="/dashboard"
           path="/dashboard"
           primaryText="My dashboard"
@@ -415,6 +457,12 @@ exports[`App tests for user account and author status User logged in and is an a
           component={[Function]}
           linkTo="/add-record"
           path="/add-record"
+          primaryText="Add a missing record"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/records/add/find"
+          path="/records/add/find"
           primaryText="Add a missing record"
         />
         <Route
@@ -517,6 +565,12 @@ exports[`App tests for user account and author status User logged in but is not 
           },
           Object {
             "component": [Function],
+            "linkTo": "/records/add/find",
+            "path": "/records/add/find",
+            "primaryText": "Add a missing record",
+          },
+          Object {
+            "component": [Function],
             "linkTo": "/claim-publications",
             "path": "/claim-publications",
             "primaryText": "Claim possible publications",
@@ -573,6 +627,14 @@ exports[`App tests for user account and author status User logged in but is not 
         />
         <Route
           component={[Function]}
+          path="/records/add/results"
+        />
+        <Route
+          component={[Function]}
+          path="/records/add/new"
+        />
+        <Route
+          component={[Function]}
           linkTo="/dashboard"
           path="/dashboard"
           primaryText="My dashboard"
@@ -588,6 +650,12 @@ exports[`App tests for user account and author status User logged in but is not 
           component={[Function]}
           linkTo="/add-record"
           path="/add-record"
+          primaryText="Add a missing record"
+        />
+        <Route
+          component={[Function]}
+          linkTo="/records/add/find"
+          path="/records/add/find"
           primaryText="Add a missing record"
         />
         <Route
