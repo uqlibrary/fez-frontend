@@ -55,80 +55,16 @@ export class PublicationSearchResults extends React.Component {
         this.props.history.push('/dashboard');
     };
 
-    renderSearchResultsStep() {
-        const txt = locale.pages.addRecord.step2;
+    render() {
+        const txt = locale.pages.addRecord;
+        const searchResultsTxt = locale.pages.addRecord.step2;
         const actions = [
             {
-                label: txt.claim,
+                label: searchResultsTxt.claim,
                 handleAction: this._claimPublication,
                 primary: true
             }
         ];
-        return (
-            <div className="columns searchWrapper">
-                {/* Mobile search dashboard (progress bar) */}
-                <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">
-                    <PublicationListLoadingProgress
-                        mobile
-                        loadingPublicationSources={this.props.loadingPublicationSources} />
-                </div>
-                {/* Search results */}
-                <div className="column">
-                    {
-                        this.props.loadingSearch &&
-                        <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
-                    }
-                    {
-                        this.props.publicationsList.length > 0 &&
-                        <StandardCard {...txt.searchResults}>
-                            <div>{txt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.props.initialValues.rawSearchQuery)}</div>
-                            <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
-                        </StandardCard>
-                    }
-
-                    {
-                        !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
-                        <StandardCard {...txt.noResultsFound}>
-                            {txt.noResultsFound.text}
-                        </StandardCard>
-                    }
-
-                    {
-                        !this.props.loadingSearch &&
-                        <div className="columns action-buttons">
-                            <div className="column is-hidden-mobile"/>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    fullWidth
-                                    label={txt.cancel}
-                                    onTouchTap={this._cancelWorkflow}
-                                />
-                            </div>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    label={txt.submit}
-                                    secondary
-                                    fullWidth
-                                    autoFocus={this.props.publicationsList.length === 0}
-                                    keyboardFocused={this.props.publicationsList.length === 0}
-                                    onTouchTap={this._showNewRecordForm}
-                                />
-                            </div>
-                        </div>
-                    }
-                </div>
-                {/* Desktop search dashboard */}
-                <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
-                    <StandardRighthandCard title={txt.searchResults.searchDashboard.title}>
-                        <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
-                    </StandardRighthandCard>
-                </div>
-            </div>
-        );
-    }
-
-    render() {
-        const txt = locale.pages.addRecord;
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDialogBox
@@ -148,10 +84,64 @@ export class PublicationSearchResults extends React.Component {
                         }
                     </Stepper>
                 </div>
-                <div>
-                    {
-                        this.renderSearchResultsStep()
-                    }
+                <div className="columns searchWrapper">
+                    {/* Mobile search dashboard (progress bar) */}
+                    <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">
+                        <PublicationListLoadingProgress
+                            mobile
+                            loadingPublicationSources={this.props.loadingPublicationSources} />
+                    </div>
+                    {/* Search results */}
+                    <div className="column">
+                        {
+                            this.props.loadingSearch &&
+                            <div className="is-centered"><InlineLoader message={searchResultsTxt.loadingMessage}/></div>
+                        }
+                        {
+                            this.props.publicationsList.length > 0 &&
+                            <StandardCard {...searchResultsTxt.searchResults}>
+                                <div>{searchResultsTxt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.props.initialValues.rawSearchQuery)}</div>
+                                <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
+                            </StandardCard>
+                        }
+
+                        {
+                            !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
+                            <StandardCard {...searchResultsTxt.noResultsFound}>
+                                {searchResultsTxt.noResultsFound.text}
+                            </StandardCard>
+                        }
+
+                        {
+                            !this.props.loadingSearch &&
+                            <div className="columns action-buttons">
+                                <div className="column is-hidden-mobile"/>
+                                <div className="column is-narrow-desktop">
+                                    <RaisedButton
+                                        fullWidth
+                                        label={searchResultsTxt.cancel}
+                                        onTouchTap={this._cancelWorkflow}
+                                    />
+                                </div>
+                                <div className="column is-narrow-desktop">
+                                    <RaisedButton
+                                        label={searchResultsTxt.submit}
+                                        secondary
+                                        fullWidth
+                                        autoFocus={this.props.publicationsList.length === 0}
+                                        keyboardFocused={this.props.publicationsList.length === 0}
+                                        onTouchTap={this._showNewRecordForm}
+                                    />
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    {/* Desktop search dashboard */}
+                    <div className="column is-3-desktop is-4-tablet is-hidden-mobile">
+                        <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
+                            <PublicationListLoadingProgress loadingPublicationSources={this.props.loadingPublicationSources}/>
+                        </StandardRighthandCard>
+                    </div>
                 </div>
             </StandardPage>
         );
