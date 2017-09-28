@@ -8,33 +8,23 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
     className="citationCount"
   >
     <img
-      alt="Altmetric score is 49"
+      alt="Web of Science citation count is 19"
       className="citationCountIcon"
       src=""
-      title="Altmetric score is 49"
+      title="Web of Science citation count is 19"
     />
     <span
       className="citationCountNumber"
     >
-      49
+      19
     </span>
-  </span>
-  <span
-    className="citationCount"
-  >
-    <img
-      alt="Open Access - free to read (embargo date might apply)"
-      className="citationCountIcon"
-      src=""
-      title="Open Access - free to read (embargo date might apply)"
-    />
   </span>
   <span
     className="citationCount"
   >
     <a
       className="citationCountLink"
-      href="https://scholar.google.com/scholar?q=intitle:\\"TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells\\""
+      href="https://scholar.google.com/scholar?q=intitle:\\"Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice\\""
       target="_blank"
     >
       <img
@@ -45,6 +35,36 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       />
     </a>
   </span>
+  <div
+    className="citationCount column"
+  >
+    <a
+      className="citationCountLink"
+      href="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
+      target="_blank"
+    >
+      <div
+        className="columns is-mobile is-gapless"
+      >
+        <div
+          className="column is-narrow"
+        >
+          <FontIcon
+            className="citationCountIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            open_in_new
+          </FontIcon>
+        </div>
+        <div
+          className="column is-narrow citationCountNumber"
+        >
+          View full statistics
+        </div>
+      </div>
+    </a>
+  </div>
 </div>
 `;
 
@@ -100,12 +120,117 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
   <span
     className="citationCount"
   >
+    <a
+      className="citationCountLink"
+      href="https://scholar.google.com/scholar?q=intitle:\\"undefined\\""
+      target="_blank"
+    >
+      <img
+        alt="Citation counts in Google Scholar"
+        className="citationCountIcon"
+        src=""
+        title="Citation counts in Google Scholar"
+      />
+      1
+    </a>
+  </span>
+  <span
+    className="citationCount"
+  >
     <img
-      alt="Open Access - free to read (embargo date might apply)"
+      alt="Open Access - DOI - Free to read (embargo date might apply)"
       className="citationCountIcon"
       src=""
-      title="Open Access - free to read (embargo date might apply)"
+      title="Open Access - DOI - Free to read (embargo date might apply)"
     />
+  </span>
+  <div
+    className="citationCount column"
+  >
+    <a
+      className="citationCountLink"
+      href="https://app.library.uq.edu.au/#/authors/view/pid:111"
+      target="_blank"
+    >
+      <div
+        className="columns is-mobile is-gapless"
+      >
+        <div
+          className="column is-narrow"
+        >
+          <FontIcon
+            className="citationCountIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            open_in_new
+          </FontIcon>
+        </div>
+        <div
+          className="column is-narrow citationCountNumber"
+        >
+          View full statistics
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`CitationCounts renders  component with no metrics 1`] = `
+<div
+  className="citationCounts columns is-multiline is-gapless"
+/>
+`;
+
+exports[`CitationCounts renders  component with non rendering oa status 1`] = `
+<div
+  className="citationCounts columns is-multiline is-gapless"
+>
+  <span
+    className="citationCount"
+  >
+    <img
+      alt="Web of Science citation count is 1"
+      className="citationCountIcon"
+      src=""
+      title="Web of Science citation count is 1"
+    />
+    <span
+      className="citationCountNumber"
+    >
+      1
+    </span>
+  </span>
+  <span
+    className="citationCount"
+  >
+    <img
+      alt="Scopus citation count is 1"
+      className="citationCountIcon"
+      src=""
+      title="Scopus citation count is 1"
+    />
+    <span
+      className="citationCountNumber"
+    >
+      1
+    </span>
+  </span>
+  <span
+    className="citationCount"
+  >
+    <img
+      alt="Altmetric score is 1"
+      className="citationCountIcon"
+      src=""
+      title="Altmetric score is 1"
+    />
+    <span
+      className="citationCountNumber"
+    >
+      1
+    </span>
   </span>
   <span
     className="citationCount"
@@ -121,35 +246,38 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
         src=""
         title="Citation counts in Google Scholar"
       />
+      1
     </a>
   </span>
-  <span
-    className="citationCount column is-full-mobile"
+  <div
+    className="citationCount column"
   >
     <a
       className="citationCountLink"
       href="https://app.library.uq.edu.au/#/authors/view/pid:111"
       target="_blank"
     >
-      <FontIcon
-        className="citationCountIcon material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="columns is-mobile is-gapless"
       >
-        open_in_new
-      </FontIcon>
-      <span
-        className="citationCountNumber"
-      >
-        View full statistics
-      </span>
+        <div
+          className="column is-narrow"
+        >
+          <FontIcon
+            className="citationCountIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            open_in_new
+          </FontIcon>
+        </div>
+        <div
+          className="column is-narrow citationCountNumber"
+        >
+          View full statistics
+        </div>
+      </div>
     </a>
-  </span>
+  </div>
 </div>
-`;
-
-exports[`CitationCounts renders  component with no metrics 1`] = `
-<div
-  className="citationCounts columns is-multiline is-gapless"
-/>
 `;

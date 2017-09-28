@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 import {locale} from 'config';
-import {claimedPublications} from 'mock/data/publications';
+import {myRecordsList} from 'mock/data';
 
 
 function setup({publicationsList, customActions, showDefaultActions, isShallow = true}) {
@@ -44,8 +44,8 @@ describe('PublicationsList renders ', () => {
     });
 
     it('component with items', () => {
-        const wrapper = setup({publicationsList: claimedPublications.data});
+        const wrapper = setup({publicationsList: myRecordsList.data});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('PublicationCitation').length).toEqual(4);
+        expect(wrapper.find('PublicationCitation').length).toEqual(20);
     });
 });

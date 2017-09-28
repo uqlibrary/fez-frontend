@@ -16,8 +16,8 @@ const DashboardAuthorAvatar = ({values}) => {
                     backgroundSize: 'cover, cover'
                 }}
                 backgroundColor="transparent"
-                aria-label={`${txt.ariaPrefix} ${values.title} ${values.given_name} ${values.family_name}`}
-                title={values.title + ' ' + values.given_name + ' ' + values.family_name}/>
+                aria-label={`${txt.ariaPrefix} ${values.title} ${values.givenName} ${values.familyName}`}
+                title={values.title + ' ' + values.givenName + ' ' + values.familyName} />
         </div>
     );
 };

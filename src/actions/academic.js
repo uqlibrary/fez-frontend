@@ -1,16 +1,7 @@
 import * as transformer from './academicDataTransformers';
-
-import {getAuthorPublicationsByYear, getAuthorPublicationsHindex, getAuthorPublicationsStats} from '../repositories';
-
-export const ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING = 'ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING';
-export const ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED = 'ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED';
-export const ACADEMIC_PUBLICATIONS_COUNT_LOADED = 'ACADEMIC_PUBLICATIONS_COUNT_LOADED';
-export const ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED = 'ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED';
-
-export const ACADEMIC_PUBLICATIONS_STATS_LOADING = 'ACADEMIC_PUBLICATIONS_STATS_LOADING';
-export const ACADEMIC_PUBLICATIONS_STATS_LOADED = 'ACADEMIC_PUBLICATIONS_STATS_LOADED';
-export const ACADEMIC_PUBLICATIONS_STATS_FAILED = 'ACADEMIC_PUBLICATIONS_STATS_FAILED';
-
+import * as actions from './actionTypes';
+import {get} from 'repositories/generic';
+import * as routes from 'repositories/routes';
 
 /**
  * Returns the author's publications per year
@@ -19,31 +10,32 @@ export const ACADEMIC_PUBLICATIONS_STATS_FAILED = 'ACADEMIC_PUBLICATIONS_STATS_F
  */
 export function loadAuthorPublicationsByYear(userName) {
     return dispatch => {
-        dispatch({type: ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING});
+        dispatch({type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING});
+        get(routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: userName}))
+            .then(response => {
+                const data = response !== null && response.hasOwnProperty('facet_counts')
+                && response.facet_counts.hasOwnProperty('facet_pivot') ?
+                    response.facet_counts.facet_pivot['date_year_t,display_type_i_lookup_exact'] : [];
 
-        getAuthorPublicationsByYear(userName).then(response => {
-            const data = response !== null && response.hasOwnProperty('facet_counts')
-            && response.facet_counts.hasOwnProperty('facet_pivot') ?
-                response.facet_counts.facet_pivot['date_year_t,display_type_i_lookup_exact'] : [];
-
-            const topPublicationTypes = transformer.getPublicationsPerType(data, 4);
-            dispatch({
-                type: ACADEMIC_PUBLICATIONS_COUNT_LOADED,
-                payload: topPublicationTypes
+                const topPublicationTypes = transformer.getPublicationsPerType(data, 4);
+                dispatch({
+                    type: actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
+                    payload: topPublicationTypes
+                });
+                dispatch({
+                    type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
+                    payload: {
+                        series: transformer.getPublicationsPerYearSeries(data, topPublicationTypes),
+                        categories: transformer.getPublicationsPerYearCategories(data)
+                    }
+                });
+            })
+            .catch((error) => {
+                dispatch({
+                    type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED,
+                    payload: error
+                });
             });
-            dispatch({
-                type: ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED,
-                payload: {
-                    series: transformer.getPublicationsPerYearSeries(data, topPublicationTypes),
-                    categories: transformer.getPublicationsPerYearCategories(data)
-                }
-            });
-        }).catch((error) => {
-            dispatch({
-                type: ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED,
-                payload: error
-            });
-        });
     };
 }
 
@@ -54,12 +46,12 @@ export function loadAuthorPublicationsByYear(userName) {
  */
 export function loadAuthorPublicationsStats(userName) {
     return dispatch => {
-        dispatch({type: ACADEMIC_PUBLICATIONS_STATS_LOADING});
+        dispatch({type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING});
         let statsData = null;
-        getAuthorPublicationsStats(userName)
+        get(routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: userName}))
             .then(response => {
                 statsData = transformer.getPublicationsStats(response);
-                return getAuthorPublicationsHindex(userName);
+                return get(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: userName}));
             })
             .then(response => {
                 if (response && response.hindex_scopus && statsData && statsData.scopus_citation_count_i) {
@@ -69,19 +61,19 @@ export function loadAuthorPublicationsStats(userName) {
                     statsData.thomson_citation_count_i.hindex = response.hindex_incites;
                 }
                 dispatch({
-                    type: ACADEMIC_PUBLICATIONS_STATS_LOADED,
+                    type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED,
                     payload: statsData
                 });
             })
             .catch((error) => {
                 if (!statsData) {
                     dispatch({
-                        type: ACADEMIC_PUBLICATIONS_STATS_LOADED,
+                        type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED,
                         payload: statsData
                     });
                 } else {
                     dispatch({
-                        type: ACADEMIC_PUBLICATIONS_STATS_FAILED,
+                        type: actions.ACADEMIC_PUBLICATIONS_STATS_FAILED,
                         payload: error
                     });
                 }

@@ -175,3 +175,11 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper'
     }
 ];
+
+export const openAccessIdLookup = {
+    453693: 'DOI',
+    453694: 'Link (no DOI)',
+    453695: 'File (Publisher version)',
+    453696: 'File (Author post-print)',
+    453697: 'Other',
+};

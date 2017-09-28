@@ -5,7 +5,7 @@ import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import {Alert} from 'uqlibrary-react-toolbox';
-
+import Infinite from 'react-infinite';
 
 export class ContributorsEditor extends Component {
     static propTypes = {
@@ -40,7 +40,9 @@ export class ContributorsEditor extends Component {
 
     componentWillUpdate(nextProps, nextState) {
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
-        if (this.props.onChange) this.props.onChange(nextState.contributors);
+        if (this.props.onChange) {
+            this.props.onChange(nextState.contributors);
+        }
     }
 
     addContributor = (contributor) => {
@@ -114,7 +116,7 @@ export class ContributorsEditor extends Component {
         this.setState({
             contributors: newContributors
         });
-    }
+    };
 
     render() {
         const renderContributorsRows = this.state.contributors.map((contributor, index) => (
@@ -160,7 +162,15 @@ export class ContributorsEditor extends Component {
                         disabled={this.props.disabled}
                         showContributorAssignment={this.props.showContributorAssignment} />
                 }
-                {renderContributorsRows}
+                {
+                    this.state.contributors.length > 0 &&
+                    <Infinite containerHeight={195}
+                        elementHeight={65}
+                        threshold={130}
+                        className="authors-infinite">
+                        {renderContributorsRows}
+                    </Infinite>
+                }
             </div>
         );
     }

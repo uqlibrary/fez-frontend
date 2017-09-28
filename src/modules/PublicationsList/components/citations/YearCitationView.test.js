@@ -7,9 +7,7 @@ import YearCitationView from './YearCitationView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Immutable from 'immutable';
 import {locale} from 'config';
-import {claimedPublications} from 'mock/data/publications';
 
 
 function setup({publication, isShallow = true}) {

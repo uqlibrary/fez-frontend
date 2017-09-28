@@ -73,7 +73,6 @@ export default class FacetsFilter extends React.Component {
 
     getFacetsToDisplay(rawFacets, excludeFacetsList) {
         const facetsToDisplay = [];
-
         Object.keys(rawFacets).forEach((key) => {
             const rawFacet = rawFacets[key];
             const rawFacetLookup = rawFacets[`${key} (lookup)`];
@@ -86,11 +85,13 @@ export default class FacetsFilter extends React.Component {
             // construct facet object to display, if facet has a lookup - get display name from lookup
             const facetToDisplay = {
                 title: key,
-                facets: rawFacet.buckets.map((item, index) => ({
-                    title: rawFacetLookup ? rawFacetLookup.buckets[index].key : item.key,
-                    key: item.key,
-                    count: item.doc_count
-                }))
+                facets: rawFacet.buckets.map((item, index) => {
+                    return {
+                        title: rawFacetLookup && rawFacetLookup.buckets.length > index ? rawFacetLookup.buckets[index].key : item.key,
+                        key: item.key,
+                        count: item.doc_count
+                    };
+                })
             };
 
             facetsToDisplay.push(facetToDisplay);

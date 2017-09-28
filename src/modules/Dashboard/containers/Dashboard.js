@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
     return {
         account: state.get('accountReducer').account,
         authorDetails: state.get('accountReducer').authorDetails,
-        authorDetailsLoading: state.get('accountReducer').authorDetailsLoading,
+        loadingAuthorDetails: state.get('accountReducer').loadingAuthorDetails,
         possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts,
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),

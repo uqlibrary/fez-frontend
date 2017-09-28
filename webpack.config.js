@@ -101,7 +101,13 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
-                    'file-loader',
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'assets/',
+                            publicPath: 'assets/'
+                        }
+                    }
                 ],
             },
         ],

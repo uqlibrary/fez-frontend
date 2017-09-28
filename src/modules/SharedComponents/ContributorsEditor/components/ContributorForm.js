@@ -98,7 +98,7 @@ export class ContributorForm extends Component {
         if (newValue.trim().length > 1) {
             this.props.actions.searchAuthors(newValue, (item) => { return !!item.aut_org_username; });
         }
-    }
+    };
 
     render() {
         const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
@@ -116,7 +116,8 @@ export class ContributorForm extends Component {
                         value={this.state.nameAsPublished}
                         onChange={this._onNameChanged}
                         onKeyPress={this._addContributor}
-                        disabled={this.props.disabled} />
+                        disabled={this.props.disabled}
+                        className="input-long-hint"/>
                 </div>
                 {
                     this.props.showIdentifierLookup &&
