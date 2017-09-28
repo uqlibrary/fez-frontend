@@ -1,7 +1,5 @@
 import {post, patch} from './generic';
-
-export const POST_RECORDS_API = 'records';
-export const PATCH_RECORDS_API = 'records';
+import * as routes from './routes';
 
 /**
  * Posts a records item
@@ -9,7 +7,8 @@ export const PATCH_RECORDS_API = 'records';
  * @returns {Promise}
  */
 export function postRecord(data) {
-    return post(POST_RECORDS_API, data);
+    if (data.rek_pid) return Promise.resolve(data);
+    return post(routes.NEW_RECORD_API(), data);
 }
 
 /**
@@ -19,5 +18,5 @@ export function postRecord(data) {
  * @returns {Promise}
  */
 export function patchRecord(pid, data) {
-    return patch(`${PATCH_RECORDS_API}/${pid}`, data);
+    return patch(routes.EXISTING_RECORD_API({pid: pid}), data);
 }

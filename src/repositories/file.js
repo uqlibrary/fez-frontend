@@ -1,7 +1,7 @@
 import {api, generateCancelToken} from 'config';
 import {fileUploadActions} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
-export const GET_FILE_UPLOAD_API = 'file/upload/presigned';
+import * as routes from './routes';
 
 /**
  * Uploads a file directly into an S3 bucket via API
@@ -12,29 +12,31 @@ export const GET_FILE_UPLOAD_API = 'file/upload/presigned';
  */
 export function putUploadFile(pid, file, dispatch) {
     return new Promise((resolve, reject) => {
-        api.get(`${GET_FILE_UPLOAD_API}/${pid}/${file.name}`).then(getPresignedResponse => {
-            const options = {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                },
-                onUploadProgress: event => {
-                    const completed = Math.floor((event.loaded * 100) / event.total);
-                    dispatch(fileUploadActions.notifyProgress(file.name, completed));
-                },
-                cancelToken: generateCancelToken().token
-            };
+        api.get(routes.FILE_UPLOAD_API({pid: pid, fileName: file.name}))
+            .then(getPresignedResponse => {
+                const options = {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    },
+                    onUploadProgress: event => {
+                        const completed = Math.floor((event.loaded * 100) / event.total);
+                        dispatch(fileUploadActions.notifyProgress(file.name, completed));
+                    },
+                    cancelToken: generateCancelToken().token
+                };
 
-            api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
-                resolve(uploadResponse.data);
-            }).catch(uploadError => {
+                api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
+                    resolve(uploadResponse.data);
+                }).catch(uploadError => {
+                    dispatch(fileUploadActions.notifyUploadFailed(file.name));
+                    reject(uploadError);
+                });
+            })
+            .catch((error) => {
+                const {errorAlert} = locale.components.publicationForm;
                 dispatch(fileUploadActions.notifyUploadFailed(file.name));
-                reject(uploadError);
+                reject(new Error(`${errorAlert.fileUploadMessage} (${error.message})`));
             });
-        }).catch((error) => {
-            const { errorAlert } = locale.components.publicationForm;
-            dispatch(fileUploadActions.notifyUploadFailed(file.name));
-            reject(new Error(`${errorAlert.fileUploadMessage} (${error.message})`));
-        });
     });
 }
 

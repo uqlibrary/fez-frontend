@@ -7,10 +7,8 @@ import CitationCounts from './CitationCounts';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Immutable from 'immutable';
 import {locale} from 'config';
-import {claimedPublications} from 'mock/data/publications';
-
+import {myRecordsList} from 'mock/data';
 
 function setup({publication, isShallow = true}) {
     const props = {
@@ -42,7 +40,7 @@ describe('CitationCounts renders ', () => {
     });
 
     it('component with a mock record metrics', () => {
-        const wrapper = setup({ publication: claimedPublications.data[0] });
+        const wrapper = setup({ publication: myRecordsList.data[0] });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -53,10 +51,28 @@ describe('CitationCounts renders ', () => {
             rek_scopus_citation_count: 1,
             rek_gs_citation_count: 1,
             rek_altmetric_score: 1,
-            fez_record_search_key_oa_status: []
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 453693
+            }
         };
         const wrapper = setup({publication});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.citationCount').length).toEqual(6);
+    });
+
+    it('component with non rendering oa status', () => {
+        const publication = {
+            rek_pid: 'pid:111',
+            rek_thomson_citation_count: 1,
+            rek_scopus_citation_count: 1,
+            rek_gs_citation_count: 1,
+            rek_altmetric_score: 1,
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 453698
+            }
+        };
+        const wrapper = setup({publication});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('.citationCount').length).toEqual(5);
     });
 });

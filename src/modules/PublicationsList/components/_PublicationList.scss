@@ -91,21 +91,23 @@
     .citationCount {
       margin: 0 5px;
 
-      .citationCountLink {
+      .citationCountLink, a.citationCountLink {
         color: $text-color;
       }
 
       .citationCountIcon {
-        width: 1.2em !important;
-        height: 1.2em !important;
-        //filter: grayscale(1);
+        margin: 3px 3px -3px 0;
+        width: 16px !important;
+        height: 16px !important;
         color: $text-color !important;
         font-size: 1.2em !important;
         line-height: 1.2em !important;
+        &.material-icons {
+          margin: 1px 3px 0 0 !important;
+        }
       }
 
       .citationCountNumber {
-        margin-left: 5px;
         font-weight: bold;
       }
     }

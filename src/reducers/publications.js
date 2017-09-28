@@ -1,4 +1,4 @@
-import * as actions from 'actions/publications';
+import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     publicationsList: [],

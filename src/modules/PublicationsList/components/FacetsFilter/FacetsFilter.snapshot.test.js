@@ -3,7 +3,7 @@ jest.dontMock('./FacetsFilter');
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import {possibleUnclaimed} from 'mock/data/publications';
+import {possibleUnclaimedList} from 'mock/data';
 
 import FacetsFilter from './FacetsFilter';
 
@@ -26,7 +26,7 @@ describe('FacetsFilter renders ', () => {
     });
 
     it('components for mock data', () => {
-        const facetsData = possibleUnclaimed.filters.facets;
+        const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData});
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -35,7 +35,7 @@ describe('FacetsFilter renders ', () => {
     });
 
     it('components for mock data with excluded facets', () => {
-        const facetsData = possibleUnclaimed.filters.facets;
+        const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, excludeFacetsList: ['Display type']});
         expect(toJson(wrapper)).toMatchSnapshot();
         const categories = wrapper.find('.facetsCategory');
@@ -43,7 +43,7 @@ describe('FacetsFilter renders ', () => {
     });
 
     it('components for mock data with disabled flag set', () => {
-        const facetsData = possibleUnclaimed.filters.facets;
+        const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -54,7 +54,7 @@ describe('FacetsFilter renders ', () => {
     });
 
     it('components for mock data with active facets set', () => {
-        const facetsData = possibleUnclaimed.filters.facets;
+        const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
         expect(toJson(wrapper)).toMatchSnapshot();
         const category = wrapper.find('.facetsCategory.active');
@@ -63,7 +63,7 @@ describe('FacetsFilter renders ', () => {
 
 
     it('components for mock data deactivating a facet selection', () => {
-        const facetsData = possibleUnclaimed.filters.facets;
+        const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
 
         wrapper.instance().handleFacetClick('Display type', 130);
@@ -74,7 +74,7 @@ describe('FacetsFilter renders ', () => {
     });
 
     it('components for mock data activating a facet selection', () => {
-        const facetsData = possibleUnclaimed.filters.facets;
+        const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
 
         wrapper.instance().handleFacetClick('Keywords', 'Biochemistry');
@@ -82,7 +82,7 @@ describe('FacetsFilter renders ', () => {
     });
 
     it('components for mock data resetting a facet selection', () => {
-        const facetsData = possibleUnclaimed.filters.facets;
+        const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
 
         wrapper.instance().handleResetClick();

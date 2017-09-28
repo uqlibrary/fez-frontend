@@ -79,7 +79,7 @@ export default class ContributorRow extends Component {
                     locale={deleteRecordConfirmation} />
                 {
                     this.props.showContributorAssignment &&
-                    <div className="column is-1-desktop is-1-tablet is-2-mobile contributorIdentifier datalist-text">
+                    <div className="column is-1-desktop is-1-tablet is-3-mobile contributorIdentifier datalist-text">
                         <Checkbox
                             name="contributorAssignment"
                             onCheck={this._onContributorAssigned}

@@ -9,12 +9,12 @@ import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 import {locale} from 'config';
-import {claimedPublications} from 'mock/data/publications';
+import {myRecordsList} from 'mock/data';
 
 
 function setup({publication, customActions, showDefaultActions, isShallow = true}) {
     const props = {
-        publication: publication || claimedPublications.data[0], // : PropTypes.object.isRequired,
+        publication: publication || myRecordsList.data[0], // : PropTypes.object.isRequired,
         customActions: customActions || [], // : PropTypes.array,
         showDefaultActions: showDefaultActions || false // : PropTypes.bool
     };

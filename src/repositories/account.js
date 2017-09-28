@@ -1,14 +1,12 @@
 import {get} from './generic';
-
-export const GET_ACCOUNT_API = 'account';
+import * as routes from './routes';
 
 /**
  * Fetches the user's account
  * @returns {Promise}
  */
 export function getAccount() {
-    const now = new Date().getTime();
-    return get(`${GET_ACCOUNT_API}?${now}`)
+    return get(routes.ACCOUNT_API())
         .then(account => {
             if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
                 return Promise.resolve(account);

@@ -7,31 +7,38 @@
     "axios-mock-adapter": "^1.9.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^7.1.1",
-    "babel-jest": "^20.0.3",
+    "babel-eslint": "8.0.0",
+    "babel-jest": "21.0.2",
     "babel-loader": "^7.1.2",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-constant-elements": "6.23.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.8",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "6.26.0",
     "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "6.24.1",
     "babel-register": "^6.26.0",
+    "babel-runtime": "^6.26.0",
     "chalk": "^2.1.0",
-    "chromedriver": "^2.31.0",
+    "chromedriver": "^2.32.3",
     "cross-env": "^5.0.5",
-    "css-loader": "^0.28.5",
+    "css-loader": "^0.28.7",
     "enzyme": "^2.9.1",
-    "enzyme-to-json": "^1.5.0",
-    "eslint": "^4.5.0",
+    "enzyme-to-json": "^1.6.0",
+    "eslint": "^4.7.1",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "favicons-webpack-plugin": "^0.0.7",
-    "file-loader": "^0.11.2",
+    "file-loader": "^0.10.1 ",
     "html-webpack-plugin": "^2.30.1",
-    "jest": "^20.0.4",
-    "jsdom-global": "3.0.2",
+    "jest": "^21.1.0",
+    "jest-cli": "^21.2.1",
+    "jsdom": "^11.1.0",
+    "jsdom-global": "^3.0.2",
     "nightwatch": "^0.9.14",
     "node-sass": "^4.5.1",
     "offline-plugin": "^4.8.3",
@@ -39,48 +46,40 @@
     "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#0.0.2",
     "progress-bar-webpack-plugin": "^1.10.0",
     "react-addons-test-utils": "^15.6.0",
+    "react-tap-event-plugin": "^2.0.1",
     "react-test-renderer": "^15.6.1",
-    "redux-mock-store": "^1.2.3",
+    "redux-mock-store": "^1.3.0",
     "sass-loader": "^6.0.6",
-    "selenium-server": "^3.5.0",
-    "sinon": "^3.2.1",
+    "selenium-server": "^3.5.3",
+    "sinon": "^3.3.0",
     "style-loader": "^0.18.2",
-    "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
   },
   "dependencies": {
     "axios": "^0.16.2",
     "connected-react-router": "^4.2.3",
-    "diffract": "^0.3.2",
     "history": "^4.7.2",
     "immutable": "^3.8.1",
     "js-cookie": "^2.1.3",
     "material-ui": "^0.18.0",
-    "material-ui-chip-input": "^0.17.0",
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.11",
     "prop-types": "^15.5.8",
     "react": "^15.6.1",
-    "react-autosuggest": "^9.3.2",
     "react-dom": "^15.6.1",
-    "react-dropzone": "^4.1.0",
+    "react-dropzone": "^4.1.2",
     "react-hot-loader": "^3.0.0-beta.6",
+    "react-infinite": "^0.12.1",
     "react-json-tree": "^0.10.7",
-    "react-markdown": "^2.4.6",
-    "react-modal": "^2.2.4",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-tap-event-plugin": "^2.0.1",
-    "react-tooltip": "^3.3.0",
-    "react-transition-group": "^2.2.0",
     "redux": "^3.7.2",
-    "redux-form": "^7.0.3",
+    "redux-form": "^7.0.4",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "scrollto-element": "^1.0.4",
-    "timezones.json": "^1.3.1",
-    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#master"
+    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#update"
   },
   "scripts": {
     "start": "webpack-dev-server",
@@ -90,14 +89,71 @@
     "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au webpack-dev-server --config=./webpack-dist.config --disable-host-check",
     "start:build:e2e": "cross-env NODE_ENV=production URL=localhost USE_MOCK=true webpack-dev-server --config=./webpack-dist.config",
     "test:e2e": "node nightwatch --test",
-    "test": "jest",
+    "test": "NODE_ENV=test jest",
     "test:watch": "npm run test -- --watch",
-    "updateSnapshot": "jest --updateSnapshot",
+    "test:update": "npm test --updateSnapshot",
     "eslint": "eslint 'src/**/*.js' --quiet"
   },
   "engines": {
     "npm": ">=3",
-    "node": "^6.2.2"
+    "node": ">=6.2.2"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-0",
+      "stage-1"
+    ],
+    "env": {
+      "development": {
+        "presets": [
+          "env",
+          "react",
+          "stage-0",
+          "stage-1"
+        ]
+      },
+      "production": {
+        "presets": [
+          [
+            "env",
+            {
+              "es2015": {
+                "modules": false
+              },
+              "targets": {
+                "ie": 11,
+                "uglify": true
+              }
+            }
+          ]
+        ],
+        "plugins": [
+          "transform-react-constant-elements",
+          "transform-react-remove-prop-types",
+          "transform-class-properties"
+        ]
+      },
+      "test": {
+        "presets": [
+          "env",
+          "react",
+          "stage-0"
+        ],
+        "plugins": [
+          [
+            "transform-runtime",
+            {
+              "helpers": false,
+              "polyfill": false,
+              "regenerator": true,
+              "moduleName": "babel-runtime"
+            }
+          ]
+        ]
+      }
+    }
   },
   "jest": {
     "testMatch": [

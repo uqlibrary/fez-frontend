@@ -164,6 +164,10 @@ export default {
                         title: 'Scopus citation count'
                     }
                 },
+                viewFullCitationLinkTitle: 'View full citation',
+                openNewWindowTitle: 'Link to [TITLE] will open in a new window',
+                trendSharesThisMonth: 'Number of shares in the past month',
+                trendDifferenceSharesThisMonth: 'Difference in shares since last month',
                 help: {
                     title: 'About these metrics',
                     text: (
@@ -1008,8 +1012,7 @@ export default {
                 scopusCountLabel: 'Scopus citation count is [count]',
                 googleCountLabel: 'Citation counts in Google Scholar',
                 altmetricCountLabel: 'Altmetric score is [count]',
-                openAccessLabel: 'Open Access - free to read (embargo date might apply)',
-                openAccessValues: ['DOI', 'Link (no DOI)', 'File (Publisher version)', 'File (Author Post-print)', 'Other'],
+                openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
                 statsLabel: 'View full statistics'
             },
             defaultActions: [

@@ -6,7 +6,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-const OfflinePlugin = require('offline-plugin');
+// const OfflinePlugin = require('offline-plugin'); // turn off for staging while co-existing with legacy
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -117,16 +117,16 @@ module.exports = {
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's
         // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
-        new OfflinePlugin({
-            relativePaths: false,
-            publicPath: publicPathOffline,
-            caches: {
-              main: [':rest:'],
-            },
-            AppCache : {
-              directory: './'
-            }
-        }),
+        // new OfflinePlugin({
+        //     relativePaths: false,
+        //     publicPath: publicPathOffline,
+        //     caches: {
+        //       main: [':rest:'],
+        //     },
+        //     AppCache : {
+        //       directory: './'
+        //     }
+        // }),
         new InjectPreloader()
     ],
     module: {
@@ -158,8 +158,14 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
-                    'file-loader',
-                ],
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'assets/',
+                            publicPath: 'assets/'
+                        }
+                    }
+                ]
             }
         ]
     },
