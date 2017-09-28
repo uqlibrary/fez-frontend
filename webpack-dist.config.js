@@ -158,7 +158,18 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
-                    {loader: 'file-loader', options: { outputPath: 'assets', publicPath: 'assets' }}
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'assets/'
+                        }
+                        // options: {
+                        //     name: 'assets/[name].[ext]',
+                        //     publicPath: function (url) {
+                        //         return url.replace(/public/, '..')
+                        //     }
+                        // }
+                    }
                 ]
             }
         ]
