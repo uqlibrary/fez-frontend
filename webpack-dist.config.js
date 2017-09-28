@@ -161,14 +161,9 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'assets/'
+                            outputPath: 'assets/',
+                            publicPath: 'assets/'
                         }
-                        // options: {
-                        //     name: 'assets/[name].[ext]',
-                        //     publicPath: function (url) {
-                        //         return url.replace(/public/, '..')
-                        //     }
-                        // }
                     }
                 ]
             }

@@ -18,7 +18,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
     onRef={[Function]}
   />
   <div
-    className="column is-1-desktop is-1-tablet is-2-mobile authorAssignment datalist-title"
+    className="column is-1-desktop is-1-tablet is-3-mobile authorAssignment datalist-title"
   >
     <label
       aria-hidden={true}
@@ -63,6 +63,9 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       </FontIcon>
     </IconButton>
   </div>
+  <div
+    className="column is-narrow scrollbar-spacer is-hidden-mobile"
+  />
 </div>
 `;
 
@@ -114,6 +117,9 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       </FontIcon>
     </IconButton>
   </div>
+  <div
+    className="column is-narrow scrollbar-spacer is-hidden-mobile"
+  />
 </div>
 `;
 
@@ -165,5 +171,8 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       </FontIcon>
     </IconButton>
   </div>
+  <div
+    className="column is-narrow scrollbar-spacer is-hidden-mobile"
+  />
 </div>
 `;

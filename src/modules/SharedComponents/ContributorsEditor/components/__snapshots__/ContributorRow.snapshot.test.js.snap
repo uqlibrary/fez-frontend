@@ -403,7 +403,7 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
     onRef={[Function]}
   />
   <div
-    className="column is-1-desktop is-1-tablet is-2-mobile contributorIdentifier datalist-text"
+    className="column is-1-desktop is-1-tablet is-3-mobile contributorIdentifier datalist-text"
   >
     <Checkbox
       checkedIcon={<ToggleRadioButtonChecked />}
