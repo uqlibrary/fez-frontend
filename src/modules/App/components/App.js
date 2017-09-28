@@ -24,6 +24,7 @@ import {Browse} from 'modules/Browse';
 import {ClaimPublication} from 'modules/ClaimPublication';
 import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
 import {PublicationSearchResults} from 'modules/AddRecord';
+import {AddNewPublication} from 'modules/AddRecord';
 
 export default class App extends React.Component {
     static propTypes = {
@@ -176,6 +177,7 @@ export default class App extends React.Component {
                                 }
                                 <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
                                 <Route path="/records/add/results" component={PublicationSearchResults}/>
+                                <Route path="/records/add/new" component={AddNewPublication}/>
                                 {
                                     menuItems.map((route, index) => (
                                         <Route key={index} {...route} />
