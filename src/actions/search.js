@@ -92,7 +92,7 @@ export function createSearchPromise(source, queryString, dispatch) {
  */
 export function searchPublications(searchQuery) {
     return dispatch => {
-        dispatch({type: SEARCH_LOADING});
+        dispatch({type: SEARCH_LOADING, payload: searchQuery});
 
         const internalSearchPropmise = createSearchPromise(SOURCE_ESPACE, searchQuery, dispatch);
         const externalSearchPropmises = externalSources.map(source => createSearchPromise(source, searchQuery, dispatch));

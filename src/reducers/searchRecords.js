@@ -98,9 +98,10 @@ const handlers = {
         };
     },
 
-    [SEARCH_LOADING]: (state) => {
+    [SEARCH_LOADING]: (state, action) => {
         return {
             ...state,
+            rawSearchQuery: action.payload,
             loadingSearch: true,
             publicationsList: [],
             ...initialSearchSources

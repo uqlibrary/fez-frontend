@@ -38,7 +38,6 @@ export class PublicationSearchRecord extends React.Component {
 
         this.setState({
             initialValues: {
-                rawSearchQuery: values.get('searchQuery'),
                 // set initial value only if it's a title (not pubmed/DOI)
                 rek_title: (!validation.isValidDOIValue(values.get('searchQuery')) && !validation.isValidPubMedValue(values.get('searchQuery'))) ? values.get('searchQuery') : ''
             }
