@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import {StandardPage, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
+import AddRecordStepper from './AddRecordStepper';
 import {PublicationForm} from 'modules/PublicationForm';
 
 import {locale} from 'config';
@@ -66,18 +66,7 @@ export class AddNewPublication extends React.Component {
                     onAction={this._navigateToDashboard}
                     locale={txt.confirmationDialog}/>
 
-                <div className="Stepper">
-                    <Stepper activeStep={this.props.stepperIndex} style={{padding: '0', margin: '-10px auto'}}>
-                        {
-                            txt.stepper.map((step, index) => {
-                                return (<Step key={index}>
-                                    <StepLabel
-                                        style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{step.label}</StepLabel>
-                                </Step>);
-                            })
-                        }
-                    </Stepper>
-                </div>
+                <AddRecordStepper activeStep={this.props.stepperIndex} txt={txt} />
                 <div>
                     {
                         <PublicationForm

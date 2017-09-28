@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
 import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
+import AddRecordStepper from './AddRecordStepper';
 import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationListLoadingProgress} from 'modules/PublicationsList';
 
@@ -72,18 +72,7 @@ export class PublicationSearchResults extends React.Component {
                     onAction={this._navigateToDashboard}
                     locale={txt.confirmationDialog}/>
 
-                <div className="Stepper">
-                    <Stepper activeStep={this.props.stepperIndex} style={{padding: '0', margin: '-10px auto'}}>
-                        {
-                            txt.stepper.map((step, index) => {
-                                return (<Step key={index}>
-                                    <StepLabel
-                                        style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{step.label}</StepLabel>
-                                </Step>);
-                            })
-                        }
-                    </Stepper>
-                </div>
+                <AddRecordStepper activeStep={this.props.stepperIndex} txt={txt} />
                 <div className="columns searchWrapper">
                     {/* Mobile search dashboard (progress bar) */}
                     <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">

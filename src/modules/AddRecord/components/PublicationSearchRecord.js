@@ -5,7 +5,7 @@ import {bindActionCreators} from 'redux';
 import * as actions from 'actions';
 import {withRouter} from 'react-router-dom';
 
-import {Step, Stepper, StepLabel} from 'material-ui/Stepper';
+import AddRecordStepper from './AddRecordStepper';
 import {StandardPage} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
@@ -38,18 +38,7 @@ export class PublicationSearchRecord extends React.Component {
         const txt = locale.pages.addRecord;
         return (
             <StandardPage title={txt.title}>
-                <div className="Stepper">
-                    <Stepper activeStep={this.props.stepperIndex} style={{padding: '0', margin: '-10px auto'}}>
-                        {
-                            txt.stepper.map((step, index) => {
-                                return (<Step key={index}>
-                                    <StepLabel
-                                        style={{textOverflow: 'ellipsis', overflow: 'hidden'}}>{step.label}</StepLabel>
-                                </Step>);
-                            })
-                        }
-                    </Stepper>
-                </div>
+                <AddRecordStepper activeStep={this.props.stepperIndex} txt={txt} />
                 <div>
                     {
                         <PublicationSearchForm
