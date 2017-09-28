@@ -74,11 +74,11 @@ export class PublicationSearchRecord extends React.Component {
     }
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
     return {
         actions: bindActionCreators(actions, dispatch)
     };
-}
+};
 
 const PublicationSearchRecordContainer = connect(() => ({}), mapDispatchToProps)(PublicationSearchRecord);
 export default withRouter(PublicationSearchRecordContainer);
