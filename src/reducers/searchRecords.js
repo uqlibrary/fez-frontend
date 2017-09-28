@@ -1,5 +1,5 @@
 import {SEARCH_LOADING, SEARCH_COMPLETED, SEARCH_FAILED, SEARCH_SOURCE_COUNT} from 'actions';
-import {locale} from 'config';
+import {locale, validation} from 'config';
 
 const initialSearchSources = {
     loadingPublicationSources: {
@@ -99,9 +99,14 @@ const handlers = {
     },
 
     [SEARCH_LOADING]: (state, action) => {
+        const rawSearchQuery = action.payload;
         return {
             ...state,
-            rawSearchQuery: action.payload,
+            initialValues: {
+                rawSearchQuery: rawSearchQuery,
+                // set initial value only if it's a title (not pubmed/DOI)
+                rek_title: (!validation.isValidDOIValue(rawSearchQuery) && !validation.isValidPubMedValue(rawSearchQuery)) ? rawSearchQuery : ''
+            },
             loadingSearch: true,
             publicationsList: [],
             ...initialSearchSources

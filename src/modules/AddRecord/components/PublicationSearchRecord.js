@@ -11,7 +11,7 @@ import {StandardPage} from 'uqlibrary-react-toolbox';
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
 
-import {locale, validation} from 'config';
+import {locale} from 'config';
 
 export class PublicationSearchRecord extends React.Component {
     static propTypes = {
@@ -27,22 +27,10 @@ export class PublicationSearchRecord extends React.Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            initialValues: {}
-        };
     }
 
     _performSearch = (values) => {
         this.props.actions.searchPublications(values.get('searchQuery'));
-
-        this.setState({
-            initialValues: {
-                // set initial value only if it's a title (not pubmed/DOI)
-                rek_title: (!validation.isValidDOIValue(values.get('searchQuery')) && !validation.isValidPubMedValue(values.get('searchQuery'))) ? values.get('searchQuery') : ''
-            }
-        });
-
         this.props.history.push('/records/add/results');
     };
 
