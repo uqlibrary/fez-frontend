@@ -14,7 +14,7 @@ describe('Search record results', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should redirect to find on cancel workflow', () => {
+    it('should navigate to find on cancel workflow', () => {
         const cancelWorkflow = jest.fn();
         const history = {
             push: cancelWorkflow
@@ -25,20 +25,20 @@ describe('Search record results', () => {
         expect(cancelWorkflow).toBeCalled();
     });
 
-    it('should redirect to new publication form', () => {
-        const goToNewPublicationForm = jest.fn();
+    it('should navigate to new publication form', () => {
+        const navigateToNewPublicationForm = jest.fn();
         const history = {
-            push: goToNewPublicationForm
+            push: navigateToNewPublicationForm
         };
 
         const wrapper = setup({history: history});
         wrapper.instance()._showNewRecordForm();
 
-        expect(goToNewPublicationForm).toBeCalled();
+        expect(navigateToNewPublicationForm).toBeCalled();
     });
 
     it('should go to claim publication form with given record', () => {
-        const goToClaimPublication = jest.fn();
+        const navigateToClaimPublication = jest.fn();
         const setClaimPublication = jest.fn();
 
         const actions = {
@@ -46,13 +46,13 @@ describe('Search record results', () => {
         };
 
         const history = {
-            push: goToClaimPublication
+            push: navigateToClaimPublication
         };
 
         const wrapper = setup({history: history, actions: actions});
         wrapper.instance()._claimPublication();
 
         expect(setClaimPublication).toBeCalled();
-        expect(goToClaimPublication).toBeCalled();
+        expect(navigateToClaimPublication).toBeCalled();
     })
 });
