@@ -64,12 +64,6 @@ exports[`App tests for user account and author status User is logged in but are 
           },
           Object {
             "component": [Function],
-            "linkTo": "/add-record",
-            "path": "/add-record",
-            "primaryText": "Add a missing record",
-          },
-          Object {
-            "component": [Function],
             "linkTo": "/records/add/find",
             "path": "/records/add/find",
             "primaryText": "Add a missing record",
@@ -136,12 +130,6 @@ exports[`App tests for user account and author status User is logged in but are 
           path="/research"
           primaryText="My research"
           render={[Function]}
-        />
-        <Route
-          component={[Function]}
-          linkTo="/add-record"
-          path="/add-record"
-          primaryText="Add a missing record"
         />
         <Route
           component={[Function]}
@@ -366,12 +354,6 @@ exports[`App tests for user account and author status User logged in and is an a
           },
           Object {
             "component": [Function],
-            "linkTo": "/add-record",
-            "path": "/add-record",
-            "primaryText": "Add a missing record",
-          },
-          Object {
-            "component": [Function],
             "linkTo": "/records/add/find",
             "path": "/records/add/find",
             "primaryText": "Add a missing record",
@@ -438,12 +420,6 @@ exports[`App tests for user account and author status User logged in and is an a
           path="/research"
           primaryText="My research"
           render={[Function]}
-        />
-        <Route
-          component={[Function]}
-          linkTo="/add-record"
-          path="/add-record"
-          primaryText="Add a missing record"
         />
         <Route
           component={[Function]}
@@ -545,12 +521,6 @@ exports[`App tests for user account and author status User logged in but is not 
           },
           Object {
             "component": [Function],
-            "linkTo": "/add-record",
-            "path": "/add-record",
-            "primaryText": "Add a missing record",
-          },
-          Object {
-            "component": [Function],
             "linkTo": "/records/add/find",
             "path": "/records/add/find",
             "primaryText": "Add a missing record",
@@ -631,12 +601,6 @@ exports[`App tests for user account and author status User logged in but is not 
           path="/research"
           primaryText="My research"
           render={[Function]}
-        />
-        <Route
-          component={[Function]}
-          linkTo="/add-record"
-          path="/add-record"
-          primaryText="Add a missing record"
         />
         <Route
           component={[Function]}
