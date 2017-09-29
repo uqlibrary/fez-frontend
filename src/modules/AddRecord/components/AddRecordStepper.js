@@ -21,5 +21,5 @@ export default function AddRecordStepper({activeStep, steps}) {
 
 AddRecordStepper.propTypes = {
     activeStep: PropTypes.number,
-    steps: PropTypes.object
+    steps: PropTypes.array
 };
