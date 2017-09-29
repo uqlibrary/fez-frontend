@@ -37,7 +37,6 @@ export function loadCurrentAccount() {
 
             // load repository author details
             dispatch({type: actions.ACCOUNT_AUTHOR_DETAILS_LOADING});
-            console.log(currentAuthor);
             return fetchAuthorDetails(currentAuthor.aut_org_username);
         }).then(authorDetailsResponse => {
             dispatch({

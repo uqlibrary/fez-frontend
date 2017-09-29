@@ -6,8 +6,8 @@ import * as routes from './routes';
  * @param {Object} activeFacets to filter possible records for current user
  * @returns {Promise}
  */
-export function getPossibleUnclaimedPublications({activeFacets = {}}) {
-    return get(routes.POSSIBLE_RECORDS_API({facets: activeFacets}));
+export function getPossibleUnclaimedPublications({facets = {}}) {
+    return get(routes.POSSIBLE_RECORDS_API({facets: facets}));
 }
 
 /**
