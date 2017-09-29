@@ -44,13 +44,6 @@ export default class SearchPublicationResults extends React.Component {
         this.props.history.push('/claim-publication-form');
     };
 
-    _navigateToDashboard = () => {
-        // TODO: route should not be hardcoded, should come from config/menu
-        // TODO: should navigation be handled by top-level container only, eg pass on as props:
-        // TODO: this.props.navigateToDashboard() and this.props.navigateToClaimForm(item) <- fixes issue of linking item
-        this.props.history.push('/dashboard');
-    };
-
     render() {
         const txt = locale.pages.addRecord;
         const searchResultsTxt = locale.pages.addRecord.step2;
@@ -63,11 +56,6 @@ export default class SearchPublicationResults extends React.Component {
         ];
         return (
             <StandardPage title={txt.title}>
-                <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this._navigateToDashboard}
-                    locale={txt.confirmationDialog}/>
-
                 <AddRecordStepper activeStep={this.props.stepperIndex} steps={txt.stepper} />
                 <div className="columns searchWrapper">
                     {/* Mobile search dashboard (progress bar) */}
