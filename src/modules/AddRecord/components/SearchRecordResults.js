@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardPage, StandardCard, InlineLoader, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
+import {StandardPage, StandardCard, InlineLoader, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
 import AddRecordStepper from './AddRecordStepper';
