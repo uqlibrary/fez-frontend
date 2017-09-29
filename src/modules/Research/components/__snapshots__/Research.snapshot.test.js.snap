@@ -48,7 +48,7 @@ exports[`Research test renders list of publications 1`] = `
               </a>
                or 
               <a
-                href="#add-record"
+                href="#records/add/find"
               >
                 add a missing publication
               </a>
@@ -67,7 +67,7 @@ exports[`Research test renders list of publications 1`] = `
               </a>
                or 
               <a
-                href="#add-record"
+                href="#records/add/find"
               >
                 add a missing publication
               </a>
@@ -87,7 +87,7 @@ exports[`Research test renders list of publications 1`] = `
               </a>
                or 
               <a
-                href="#add-record"
+                href="#records/add/find"
               >
                 add a missing publication
               </a>
@@ -10454,7 +10454,7 @@ exports[`Research test renders no results 1`] = `
             </a>
              or 
             <a
-              href="#add-record"
+              href="#records/add/find"
             >
               add a missing publication
             </a>
@@ -10471,7 +10471,7 @@ exports[`Research test renders no results 1`] = `
           </a>
            or 
           <a
-            href="#add-record"
+            href="#records/add/find"
           >
             add a missing publication
           </a>
