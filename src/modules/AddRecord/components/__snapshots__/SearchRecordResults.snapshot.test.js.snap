@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search record results should render stepper and a publication list with 1`] = `
+<StandardPage
+  title="Add a missing record to eSpace"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "Add another missing record",
+        "confirmButtonLabel": "OK",
+        "confirmationMessage": "Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.",
+        "confirmationTitle": "Your record has been submitted",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <AddRecordStepper
+    activeStep={1}
+    steps={
+      Array [
+        Object {
+          "label": "Search for your publication",
+        },
+        Object {
+          "label": "Search results",
+        },
+        Object {
+          "label": "Add your publication",
+        },
+      ]
+    }
+  />
+  <div
+    className="columns searchWrapper"
+  >
+    <div
+      className="column is-hidden-desktop is-hidden-tablet mobileWrapper"
+    >
+      <PublicationListLoadingProgress
+        loadingPublicationSources={Object {}}
+        mobile={true}
+      />
+    </div>
+    <div
+      className="column"
+    >
+      <StandardCard
+        className=""
+        help={
+          Object {
+            "buttonLabel": "Ok",
+            "text": "Why search didn't return any items....",
+            "title": "No matching records found",
+          }
+        }
+        text="We were unable to match any results to your search criteria. Please, search again or create a new eSpace record."
+        title="No matching publications found"
+      >
+        We were unable to match any results to your search criteria. Please, search again or create a new eSpace record.
+      </StandardCard>
+      <div
+        className="columns action-buttons"
+      >
+        <div
+          className="column is-hidden-mobile"
+        />
+        <div
+          className="column is-narrow-desktop"
+        >
+          <RaisedButton
+            disabled={false}
+            fullWidth={true}
+            label="Abandon and search again"
+            labelPosition="after"
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={false}
+          />
+        </div>
+        <div
+          className="column is-narrow-desktop"
+        >
+          <RaisedButton
+            autoFocus={true}
+            disabled={false}
+            fullWidth={true}
+            keyboardFocused={true}
+            label="Create a new eSpace record"
+            labelPosition="after"
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={true}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-3-desktop is-4-tablet is-hidden-mobile"
+    >
+      <StandardRighthandCard
+        title="Repository search"
+      >
+        <PublicationListLoadingProgress
+          loadingPublicationSources={Object {}}
+        />
+      </StandardRighthandCard>
+    </div>
+  </div>
+</StandardPage>
+`;

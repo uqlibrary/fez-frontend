@@ -22,7 +22,9 @@ export default class SearchPublicationResults extends React.Component {
     };
 
     static defaultProps = {
-        stepperIndex: 1
+        stepperIndex: 1,
+        publicationsList: [],
+        loadingPublicationSources: {}
     };
 
     constructor(props) {
