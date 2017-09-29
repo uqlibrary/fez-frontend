@@ -1,5 +1,3 @@
-export {default as AddRecord} from './containers/AddRecord';
-
 import AddRecordStageContainer from './containers/AddRecordStageContainer';
 
 import {default as SearchPublicationStep} from './components/SearchPublication';
