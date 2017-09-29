@@ -36,6 +36,11 @@ exports[`Add new record should render stepper and a publication form 1`] = `
   />
   <div>
     <Connect(ReduxForm)
+      initialValues={
+        Object {
+          "rek_title": "",
+        }
+      }
       onFormCancel={[Function]}
       onFormSubmitSuccess={[Function]}
     />

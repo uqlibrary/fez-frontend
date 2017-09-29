@@ -1,5 +1,5 @@
 import * as actions from 'actions/actionTypes';
-import {locale, validation} from 'config';
+import {locale} from 'config';
 
 const initialSearchSources = {
     loadingPublicationSources: {
@@ -102,11 +102,7 @@ const handlers = {
         const rawSearchQuery = action.payload;
         return {
             ...state,
-            initialValues: {
-                rawSearchQuery: rawSearchQuery,
-                // set initial value only if it's a title (not pubmed/DOI)
-                rek_title: (!validation.isValidDOIValue(rawSearchQuery) && !validation.isValidPubMedValue(rawSearchQuery)) ? rawSearchQuery : ''
-            },
+            rawSearchQuery: rawSearchQuery,
             loadingSearch: true,
             publicationsList: [],
             ...initialSearchSources

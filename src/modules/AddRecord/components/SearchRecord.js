@@ -10,7 +10,6 @@ import {locale} from 'config';
 
 export default class SearchPublication extends React.Component {
     static propTypes = {
-        publicationsList: PropTypes.array,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired,
         stepperIndex: PropTypes.number

@@ -6,21 +6,19 @@ import {StandardPage, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 import AddRecordStepper from './AddRecordStepper';
 import {PublicationForm} from 'modules/PublicationForm';
 
-import {locale} from 'config';
+import {locale, validation} from 'config';
 
 export default class AddNewPublication extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
-        loadingSearch: PropTypes.bool,
-        loadingPublicationSources: PropTypes.object,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object,
         stepperIndex: PropTypes.number,
-        initialValues: PropTypes.object
+        rawSearchQuery: PropTypes.object
     };
 
     static defaultProps = {
-        stepperIndex: 2
+        stepperIndex: 2,
+        rawSearchQuery: ''
     };
 
     constructor(props) {
@@ -45,6 +43,13 @@ export default class AddNewPublication extends React.Component {
 
     render() {
         const txt = locale.pages.addRecord;
+        const {rawSearchQuery} = this.props;
+
+        // set initial value only if it's a title (not pubmed/DOI)
+        const initialValues = {
+            rek_title: (!validation.isValidDOIValue(rawSearchQuery) && !validation.isValidPubMedValue(rawSearchQuery)) ? rawSearchQuery : ''
+        };
+
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDialogBox
@@ -59,7 +64,7 @@ export default class AddNewPublication extends React.Component {
                         <PublicationForm
                             onFormSubmitSuccess={this._recordSaved}
                             onFormCancel={this._restartWorkflow}
-                            initialValues={this.props.initialValues}/>
+                            initialValues={initialValues}/>
                     }
                 </div>
             </StandardPage>

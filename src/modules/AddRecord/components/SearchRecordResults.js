@@ -18,7 +18,7 @@ export default class SearchPublicationResults extends React.Component {
         history: PropTypes.object.isRequired,
         actions: PropTypes.object,
         stepperIndex: PropTypes.number,
-        initialValues: PropTypes.object
+        rawSearchQuery: PropTypes.object
     };
 
     static defaultProps = {
@@ -73,7 +73,7 @@ export default class SearchPublicationResults extends React.Component {
                         {
                             this.props.publicationsList.length > 0 &&
                             <StandardCard {...searchResultsTxt.searchResults}>
-                                <div>{searchResultsTxt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.props.initialValues.rawSearchQuery)}</div>
+                                <div>{searchResultsTxt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.props.rawSearchQuery)}</div>
                                 <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
                             </StandardCard>
                         }
