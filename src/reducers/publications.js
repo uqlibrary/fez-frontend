@@ -31,15 +31,6 @@ const handlers = {
             latestPublicationsList: action.payload.data,
             totalPublicationsCount: action.payload.total,
             loadingLatestPublications: false,
-            publicationsList: action.payload.data,
-            publicationsListPagingData: {
-                total: action.payload.total,
-                current_page: action.payload.current_page,
-                from: action.payload.from,
-                to: action.payload.to,
-                per_page: action.payload.per_page
-            },
-            loadingPublicationsList: false
         };
     },
 

@@ -10,7 +10,10 @@ import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
  */
 export function searchPossiblyYourPublications({activeFacets = {}}) {
     return dispatch => {
-        dispatch({type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
+        if (Object.keys(activeFacets).length === 0) {
+            dispatch({type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
+        }
+
         dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
         repositories
             .getPossibleUnclaimedPublications({facets: activeFacets})
@@ -23,10 +26,13 @@ export function searchPossiblyYourPublications({activeFacets = {}}) {
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
                     payload: response.filters && response.filters.facets ? response.filters.facets : {}
                 });
-                dispatch({
-                    type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
-                    payload: response
-                });
+                if (Object.keys(activeFacets).length === 0) {
+                    // only update total count if there's no filtering
+                    dispatch({
+                        type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+                        payload: response
+                    });
+                }
             })
             .catch((error) => {
                 dispatch({
