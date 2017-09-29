@@ -18,12 +18,12 @@ import {
 import {Dashboard} from 'modules/Dashboard';
 import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
-import {PublicationSearchRecord} from 'modules/AddRecord';
+import {SearchPublication} from 'modules/AddRecord';
 import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 import {ClaimPublication} from 'modules/ClaimPublication';
 import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
-import {PublicationSearchResults} from 'modules/AddRecord';
+import {SearchPublicationResults} from 'modules/AddRecord';
 import {AddNewPublication} from 'modules/AddRecord';
 
 export default class App extends React.Component {
@@ -89,7 +89,7 @@ export default class App extends React.Component {
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
 
         const components = {
-            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication, PublicationSearchRecord
+            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication, SearchPublication
         };
 
         const menuItems =
@@ -176,7 +176,7 @@ export default class App extends React.Component {
                                     <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
                                 }
                                 <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
-                                <Route path="/records/add/results" component={PublicationSearchResults}/>
+                                <Route path="/records/add/results" component={SearchPublicationResults}/>
                                 <Route path="/records/add/new" component={AddNewPublication}/>
                                 {
                                     menuItems.map((route, index) => (

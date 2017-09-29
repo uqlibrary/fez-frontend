@@ -10,7 +10,7 @@ import {PublicationListLoadingProgress} from 'modules/PublicationsList';
 
 import {locale} from 'config';
 
-export default class PublicationSearchResults extends React.Component {
+export default class SearchPublicationResults extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
         loadingSearch: PropTypes.bool,

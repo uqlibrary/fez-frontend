@@ -8,7 +8,7 @@ import {PublicationSearchForm} from 'modules/PublicationSearchForm';
 
 import {locale} from 'config';
 
-export default class PublicationSearchRecord extends React.Component {
+export default class SearchPublication extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
         actions: PropTypes.object,
