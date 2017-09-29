@@ -1,9 +1,9 @@
 import AddRecordStageContainer from './containers/AddRecordStageContainer';
 
-import {default as SearchPublicationStep} from './components/SearchPublication';
-import {default as SearchPublicationResultsStep} from './components/SearchPublicationResults';
-import {default as AddNewPublicationStep} from './components/AddNewPublication';
+import {default as SearchRecordStep} from './components/SearchRecord';
+import {default as SearchRecordResultsStep} from './components/SearchRecordResults';
+import {default as AddNewRecordStep} from './components/AddNewRecord';
 
-export const SearchPublication = AddRecordStageContainer(SearchPublicationStep);
-export const SearchPublicationResults = AddRecordStageContainer(SearchPublicationResultsStep);
-export const AddNewPublication = AddRecordStageContainer(AddNewPublicationStep);
+export const SearchRecord = AddRecordStageContainer(SearchRecordStep);
+export const SearchRecordResults = AddRecordStageContainer(SearchRecordResultsStep);
+export const AddNewRecord = AddRecordStageContainer(AddNewRecordStep);
