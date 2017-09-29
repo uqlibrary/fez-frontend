@@ -58,7 +58,7 @@ export default class AddNewPublication extends React.Component {
                     onCancelAction={this._restartWorkflow}
                     locale={txt.confirmationDialog}/>
 
-                <AddRecordStepper activeStep={this.props.stepperIndex} txt={txt} />
+                <AddRecordStepper activeStep={this.props.stepperIndex} steps={txt.stepper} />
                 <div>
                     {
                         <PublicationForm

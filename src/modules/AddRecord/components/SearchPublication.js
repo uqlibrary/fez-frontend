@@ -33,7 +33,7 @@ export default class SearchPublication extends React.Component {
         const txt = locale.pages.addRecord;
         return (
             <StandardPage title={txt.title}>
-                <AddRecordStepper activeStep={this.props.stepperIndex} txt={txt} />
+                <AddRecordStepper activeStep={this.props.stepperIndex} steps={txt.stepper} />
                 <PublicationSearchForm locale={txt.step1} onSubmit={this._performSearch}/>
             </StandardPage>
         );

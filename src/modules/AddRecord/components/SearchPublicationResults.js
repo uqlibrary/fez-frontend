@@ -66,7 +66,7 @@ export default class SearchPublicationResults extends React.Component {
                     onAction={this._navigateToDashboard}
                     locale={txt.confirmationDialog}/>
 
-                <AddRecordStepper activeStep={this.props.stepperIndex} txt={txt} />
+                <AddRecordStepper activeStep={this.props.stepperIndex} steps={txt.stepper} />
                 <div className="columns searchWrapper">
                     {/* Mobile search dashboard (progress bar) */}
                     <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">
