@@ -106,7 +106,8 @@ export default class ClaimPublicationForm extends Component {
                                 onCancelAction={this._navigateToPreviousPage}
                                 locale={txt.successWorkflowConfirmation}/>
                             {
-                                publication.fez_record_search_key_author.length > 1 && !authorLinked &&
+                                publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
+                                && !authorLinked &&
                                 <StandardCard
                                     title={txt.authorLinking.title}
                                     help={txt.authorLinking.help}
