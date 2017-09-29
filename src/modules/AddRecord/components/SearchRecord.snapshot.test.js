@@ -17,13 +17,15 @@ describe('Search record', () => {
 
     it('should perform search and redirect to results page', () => {
         const searchPublications = jest.fn();
+        const goToResults = jest.fn();
         const history = {
-            push: (path) => (expect(path).toBe('/records/add/results'))
+            push: goToResults
         };
 
         const wrapper = setup({history: history, actions: {searchPublications: searchPublications}});
         wrapper.instance()._performSearch(Immutable.Map({searchQuery: 'bla'}));
 
         expect(searchPublications).toBeCalled();
+        expect(goToResults).toBeCalled();
     });
 });

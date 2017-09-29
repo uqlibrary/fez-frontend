@@ -36,11 +36,6 @@ export default class AddNewPublication extends React.Component {
         this.props.history.push('/records/add/find');
     };
 
-    _claimPublication = (item) => {
-        this.props.actions.setClaimPublication(item);
-        this.props.history.push('/claim-publication-form');
-    };
-
     _navigateToDashboard = () => {
         // TODO: route should not be hardcoded, should come from config/menu
         // TODO: should navigation be handled by top-level container only, eg pass on as props:
