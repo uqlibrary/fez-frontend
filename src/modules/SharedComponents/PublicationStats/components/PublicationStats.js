@@ -27,15 +27,17 @@ export default class PublicationStats extends Component {
                 </TableHeader>
                 <TableBody displayRowCheckbox={false}>
                     <TableRow>
-                        <TableRowColumn
-                            className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle4}</TableRowColumn>
+                        <TableRowColumn className="publicationsStatsRowTitle">
+                            {txt.publicationStatsRowTitle4}
+                        </TableRowColumn>
                         <TableRowColumn>{pubStats.thomson_citation_count_i.count}</TableRowColumn>
                         <TableRowColumn>{pubStats.scopus_citation_count_i.count}</TableRowColumn>
                     </TableRow>
 
                     <TableRow>
-                        <TableRowColumn
-                            className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle5}</TableRowColumn>
+                        <TableRowColumn className="publicationsStatsRowTitle">
+                            {txt.publicationStatsRowTitle5}
+                        </TableRowColumn>
                         <TableRowColumn>{pubStats.thomson_citation_count_i.years}</TableRowColumn>
                         <TableRowColumn>{pubStats.scopus_citation_count_i.years}</TableRowColumn>
                     </TableRow>
@@ -43,20 +45,35 @@ export default class PublicationStats extends Component {
                     <TableRow>
                         <TableRowColumn
                             className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle1}</TableRowColumn>
-                        <TableRowColumn>{(!pubStats.thomson_citation_count_i.hindex || pubStats.thomson_citation_count_i.hindex === '' || pubStats.thomson_citation_count_i.hindex.toFixed(0) === '0' || pubStats.thomson_citation_count_i.hindex === '0') ? txt.publicationStatsNA : pubStats.thomson_citation_count_i.hindex.toFixed(0)}</TableRowColumn>
-                        <TableRowColumn>{(!pubStats.scopus_citation_count_i.hindex || pubStats.scopus_citation_count_i.hindex === '' || pubStats.scopus_citation_count_i.hindex.toFixed(0) === '0' || pubStats.scopus_citation_count_i.hindex === '0') ? txt.publicationStatsNA : pubStats.scopus_citation_count_i.hindex.toFixed(0)}</TableRowColumn>
+                        <TableRowColumn>
+                            {
+                                !pubStats.thomson_citation_count_i.hindex || pubStats.thomson_citation_count_i.hindex === ''
+                                || pubStats.thomson_citation_count_i.hindex.toFixed(0) === '0' || pubStats.thomson_citation_count_i.hindex === '0'
+                                    ? txt.publicationStatsNA
+                                    : pubStats.thomson_citation_count_i.hindex.toFixed(0)
+                            }
+                        </TableRowColumn>
+                        <TableRowColumn>
+                            {
+                                !pubStats.scopus_citation_count_i.hindex || pubStats.scopus_citation_count_i.hindex === ''
+                                || pubStats.scopus_citation_count_i.hindex.toFixed(0) === '0' || pubStats.scopus_citation_count_i.hindex === '0'
+                                    ? txt.publicationStatsNA
+                                    : pubStats.scopus_citation_count_i.hindex.toFixed(0)
+                            }
+                        </TableRowColumn>
                     </TableRow>
 
                     <TableRow>
                         <TableRowColumn
                             className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle2}</TableRowColumn>
-                        <TableRowColumn>{pubStats.thomson_citation_count_i.avg.toFixed(1)}</TableRowColumn>
-                        <TableRowColumn>{pubStats.scopus_citation_count_i.avg.toFixed(1)}</TableRowColumn>
+                        <TableRowColumn>{pubStats.thomson_citation_count_i.avg && pubStats.thomson_citation_count_i.avg.toFixed(1)}</TableRowColumn>
+                        <TableRowColumn>{pubStats.scopus_citation_count_i.avg && pubStats.scopus_citation_count_i.avg.toFixed(1)}</TableRowColumn>
                     </TableRow>
 
                     <TableRow>
-                        <TableRowColumn
-                            className="publicationsStatsRowTitle">{txt.publicationStatsRowTitle3}</TableRowColumn>
+                        <TableRowColumn className="publicationsStatsRowTitle">
+                            {txt.publicationStatsRowTitle3}
+                        </TableRowColumn>
                         <TableRowColumn>{pubStats.thomson_citation_count_i.sum}</TableRowColumn>
                         <TableRowColumn>{pubStats.scopus_citation_count_i.sum}</TableRowColumn>
                     </TableRow>

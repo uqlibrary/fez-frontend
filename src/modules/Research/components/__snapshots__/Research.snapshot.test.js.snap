@@ -42,13 +42,13 @@ exports[`Research test renders list of publications 1`] = `
             "text": <div>
               We were unable to find any results. Please, check if there are any possibly your publications via 
               <a
-                href="#claim-publications"
+                href="/records/possible"
               >
                 claim possible publications
               </a>
                or 
               <a
-                href="#add-record"
+                href="/add-record"
               >
                 add a missing publication
               </a>
@@ -61,13 +61,13 @@ exports[`Research test renders list of publications 1`] = `
             <div>
               Please, check if there are any possibly your publications via 
               <a
-                href="#claim-publications"
+                href="/records/possible"
               >
                 claim possible publications
               </a>
                or 
               <a
-                href="#add-record"
+                href="/add-record"
               >
                 add a missing publication
               </a>
@@ -81,13 +81,13 @@ exports[`Research test renders list of publications 1`] = `
             <div>
               Please, check if there are any possibly your publications via 
               <a
-                href="#claim-publications"
+                href="/records/possible"
               >
                 claim possible publications
               </a>
                or 
               <a
-                href="#add-record"
+                href="/add-record"
               >
                 add a missing publication
               </a>
@@ -10448,13 +10448,13 @@ exports[`Research test renders no results 1`] = `
           <div>
             We were unable to find any results. Please, check if there are any possibly your publications via 
             <a
-              href="#claim-publications"
+              href="/records/possible"
             >
               claim possible publications
             </a>
              or 
             <a
-              href="#add-record"
+              href="/add-record"
             >
               add a missing publication
             </a>
@@ -10465,13 +10465,13 @@ exports[`Research test renders no results 1`] = `
         <div>
           We were unable to find any results. Please, check if there are any possibly your publications via 
           <a
-            href="#claim-publications"
+            href="/records/possible"
           >
             claim possible publications
           </a>
            or 
           <a
-            href="#add-record"
+            href="/add-record"
           >
             add a missing publication
           </a>

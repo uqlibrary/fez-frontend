@@ -35,13 +35,13 @@ export default class ClaimPublication extends React.Component {
 
     componentDidMount() {
         if (this.props.account) {
-            this.props.actions.searchPossiblyYourPublications({activeFacets: this.state.activeFacets});
+            this.props.actions.searchPossiblyYourPublications({facets: this.state.activeFacets});
         }
     }
 
     _hidePublication = () => {
         if (this.state.publicationToHide && this.props.author !== null) {
-            this.props.actions.hidePublications([this.state.publicationToHide], this.props.author, this.state.activeFacets);
+            this.props.actions.hideRecord({record: this.state.publicationToHide, facets: this.state.activeFacets});
             this.setState({
                 publicationToHide: null
             });
@@ -64,7 +64,7 @@ export default class ClaimPublication extends React.Component {
             activeFacets: {...activeFacets}
         });
 
-        this.props.actions.searchPossiblyYourPublications({activeFacets: activeFacets});
+        this.props.actions.searchPossiblyYourPublications({facets: activeFacets});
     };
 
     render() {

@@ -50,7 +50,7 @@ mock
         .reply(200, mockData.publicationStats)
     .onGet(new RegExp(escapeRegExp(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API({userId: user}))))
         .reply(200, mockData.trendingPublications)
-    .onGet(new RegExp(escapeRegExp(routes.AUTHORS_SEARCH_API('.*'))))
+    .onGet(new RegExp(escapeRegExp(routes.AUTHORS_SEARCH_API({query: '.*'}))))
         .reply(200, mockData.authorsSearch)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'wos', searchQuery: '.*'}))))
         .reply(200, mockData.externalTitleSearchResultsList)
@@ -64,25 +64,38 @@ mock
         .reply(200, mockData.internalTitleSearchList)
     .onGet(new RegExp(escapeRegExp(routes.GET_PUBLICATION_TYPES_API())))
         .reply(200, mockData.recordsTypeList)
-    .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API('.*')))).reply((config) => {
+    .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'})))).reply((config) => {
         const vocabId = config.url.substring(config.url.indexOf('/') + 1);
-        return [200, mockData.publicationSubtypeList[vocabId]];
+        return [200, mockData.vocabulariesList[vocabId]];
     })
     .onGet(new RegExp(escapeRegExp(routes.GET_ACML_QUICK_TEMPLATES_API())))
         .reply(200, mockData.quickTemplates)
     .onGet(new RegExp(escapeRegExp(routes.CURRENT_USER_RECORDS_API({...standardQueryString}))))
         .reply(200, mockData.myRecordsList)
     .onGet(new RegExp(escapeRegExp(routes.POSSIBLE_RECORDS_API({...standardQueryString}))))
-        .reply(200, mockData.possibleUnclaimedList)
+        // .reply(200, mockData.possibleUnclaimedList)
+        .reply((config) => {
+            console.log(config.url);
+            return [200, mockData.possibleUnclaimedList];
+        })
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}))))
         .reply(200, 's3-ap-southeast-2.amazonaws.com')
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
         .reply(200, {data: {}})
-    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API('.*'))))
+    .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
+        .reply((config) => {
+            console.log(config.url);
+            return [200, {data: {...mockData.record}}];
+        })
+        // .reply(200, {data: {...mockData.record}})
+    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}))))
         .reply(200, {data: {...mockData.record}})
-    .onPost(new RegExp(escapeRegExp(routes.ISSUES_API())))
-        .reply(200, {data: {}})
+    .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}))))
+        .reply(200, {data: ''})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))
         .reply(200, {data: {}})
     // .onAny().passThrough();
-    .onAny().reply(404, new Error('help'));
+    .onAny().reply((config) => {
+        console.log(config.url);
+        return [404, `MOCK URL NOT FOUND: ${config.url}`];
+    });

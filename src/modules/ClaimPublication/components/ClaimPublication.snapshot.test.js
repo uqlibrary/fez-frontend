@@ -124,7 +124,7 @@ describe('ClaimPublication test', () => {
 
     it('calls hide publication', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({ author: {}, actions: { hidePublications: actionFunction}}).find('ClaimPublication').dive();
+        const wrapper = setup({ author: {}, actions: { hideRecord: actionFunction}}).find('ClaimPublication').dive();
         wrapper.setState({ publicationToHide: {pid: 1111} });
         wrapper.instance()._hidePublication();
         expect(actionFunction).toHaveBeenCalled();

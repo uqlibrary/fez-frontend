@@ -1,11 +1,12 @@
-import {postRecord, patchRecord, putUploadFiles} from '../repositories';
+import {post, patch} from 'repositories/generic';
+import * as routes from 'repositories/routes';
+import {putUploadFiles} from '../repositories';
 import * as transformers from './transformers';
+import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+import * as actions from './actionTypes';
+
+// actions should not care about locale only true front end should care - remove and return only api errors - let FE deside what to do with those errors!
 import {locale} from 'config';
-export const RECORD_RESET = 'RECORD_RESET';
-export const RECORD_CREATED = 'RECORD_CREATED';
-export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
-export const RECORD_PROCESSING = 'RECORD_PROCESSING';
-import * as config from 'config/general';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -17,11 +18,11 @@ import * as config from 'config/general';
 export function createNewRecord(data) {
     const { errorAlert } = locale.components.publicationForm;
     return dispatch => {
-        dispatch({type: RECORD_PROCESSING});
+        dispatch({type: actions.RECORD_PROCESSING});
 
         // set default values, links
         const recordRequest = {
-            ...config.NEW_RECORD_DEFAULT_VALUES,
+            ...NEW_RECORD_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getRecordAuthorsSearchKey(data.authors),
@@ -36,7 +37,7 @@ export function createNewRecord(data) {
         if (recordRequest.files) delete recordRequest.files;
         if (recordRequest.author) delete recordRequest.author;
 
-        return postRecord(recordRequest)
+        return post(routes.NEW_RECORD_API(), recordRequest)
             .then(response => {
                 // set a pid on a new record
                 data.rek_pid = response.data.rek_pid;
@@ -55,32 +56,27 @@ export function createNewRecord(data) {
                     const recordPatch = {
                         ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
                     };
-                    return patchRecord(data.rek_pid, recordPatch).catch((error) => {
-                        return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));
-                    });
+
+                    return patch(routes.EXISTING_RECORD_API({pid: data.rek_pid}), recordPatch)
+                        .catch((error) => {
+                            return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));
+                        });
                 }
             })
             .then(response => {
                 dispatch({
-                    type: RECORD_CREATED,
+                    type: actions.RECORD_CREATED,
                     payload: response.data
                 });
                 return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
-                    type: RECORD_CREATE_FAILED,
+                    type: actions.RECORD_CREATE_FAILED,
                     payload: error
                 });
+
                 return Promise.reject(new Error(`${errorAlert.createRecordMessage} (${error.message})`));
             });
     };
-}
-
-/**
- * Reset record state
- * @returns {action}
- */
-export function resetRecordState() {
-    return dispatch => dispatch({type: RECORD_RESET});
 }

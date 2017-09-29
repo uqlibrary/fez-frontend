@@ -1,32 +1,38 @@
-import * as repositories from 'repositories';
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+
+import {get, post, patch} from 'repositories/generic';
+import * as routes from 'repositories/routes';
+import * as repositories from 'repositories';
+
 
 /**
  * Search publications from eSpace which are matched to currently logged in username
  * @param {object} activeFacets - optional list of facets
  * @returns {action}
  */
-export function searchPossiblyYourPublications({activeFacets = {}}) {
+export function searchPossiblyYourPublications({facets = {}}) {
     return dispatch => {
-        if (Object.keys(activeFacets).length === 0) {
+        if (Object.keys(facets).length === 0) {
             dispatch({type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
         }
 
-        dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
-        repositories
-            .getPossibleUnclaimedPublications({facets: activeFacets})
+        dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: facets});
+
+        get(routes.POSSIBLE_RECORDS_API({facets: facets}))
             .then(response => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
                     payload: response,
                 });
+
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
                     payload: response.filters && response.filters.facets ? response.filters.facets : {}
                 });
-                if (Object.keys(activeFacets).length === 0) {
+
+                if (Object.keys(facets).length === 0) {
                     // only update total count if there's no filtering
                     dispatch({
                         type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
@@ -39,6 +45,7 @@ export function searchPossiblyYourPublications({activeFacets = {}}) {
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                     payload: error
                 });
+
                 dispatch({
                     type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                     payload: error
@@ -62,20 +69,18 @@ export function countPossiblyYourPublications() {
  * @param author {object} - user user name
  * @returns {action}
  */
-export function hidePublications(publicationsToHide, author, activeFacets) {
+export function hideRecord({record, facets = {}}) {
     return dispatch => {
-        if (!author) return;
-
         dispatch({type: actions.HIDE_PUBLICATIONS_LOADING});
+
         // Transform data to api format:
-        // { "author_id" : "3", "publications": [ { "pid": "UQ:662328" } ] }
+        // POST records/search?rule=possible (with data: ['pid' => 'UQ:1', 'type' => 'H'])
         const data = {
-            publications: publicationsToHide.map((item) => { return {pid: item.rek_pid}; })
+            type: 'H',
+            pid: record.rek_pid
         };
-        if (author.aut_id) {
-            data.author_id = author.aut_id;
-        }
-        repositories.postHidePossiblePublications(data)
+
+        post(routes.HIDE_POSSIBLE_RECORD_API(), data)
             .then(response => {
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_COMPLETED,
@@ -83,7 +88,7 @@ export function hidePublications(publicationsToHide, author, activeFacets) {
                 });
 
                 // reload current possibly your publications/count after user hides records
-                dispatch(searchPossiblyYourPublications({activeFacets: activeFacets}));
+                dispatch(searchPossiblyYourPublications({facets: facets}));
             })
             .catch(() => {
                 dispatch({
@@ -120,7 +125,6 @@ export function clearClaimPublication() {
     };
 }
 
-
 /**
  * Save a publication claim record involves up to three steps:
  * If user claims a publications from eSpace:
@@ -133,7 +137,7 @@ export function clearClaimPublication() {
  *      (files/authors will be updated by create new publication record process)
  *
  * If error occurs on any stage failed action is displayed
- * @param {object} data to be posted, refer to backend API
+ * @param {object} data to be posted, refer to backend API data: {publication, author, files}
  * @param {array} files to be uploaded for this record
  * @returns {action}
  */
@@ -172,22 +176,36 @@ export function claimPublication(data) {
         }
 
         // claim record from external source
-        const createRecordRequest = data.publication.rek_pid ?
-            data.publication : {
-                ...data.publication,
-                ...NEW_RECORD_DEFAULT_VALUES,
-                ...recordAuthorsIdSearchKeys
-            };
+        const createRecordRequest = {
+            ...data.publication,
+            ...NEW_RECORD_DEFAULT_VALUES,
+            ...transformers.getRecordLinkSearchKey(data),
+            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+            // notes!
+            ...recordAuthorsIdSearchKeys
+        };
+        // patch record from eSpace
+        const patchRecordRequest = {
+            rek_pid: data.publication.rek_pid,
+            ...transformers.getRecordLinkSearchKey(data),
+            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+            ...recordAuthorsIdSearchKeys
+        };
 
-        // claim record from eSpace
-        console.log(createRecordRequest);
-
-        return repositories.postRecord(createRecordRequest)
-            .then(response => {
+        return Promise.all([data.publication.rek_pid
+            ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
+            : post(routes.NEW_RECORD_API(), createRecordRequest)])
+            .then(responseAll => {
+                const response = responseAll[0];
+                // if it's a claim of an existing eSpace record, send an issue request
+                if (data.publication.rek_pid) {
+                    // notes!
+                    const createIssueRequest = transformers.getClaimIssueRequest(data);
+                    // TODO: will submin an issue with notes provided by user from the form
+                    return post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest);
+                }
                 data.publication.rek_pid = response.data.rek_pid;
-                const claimRequest = transformers.getClaimRequest(data);
-                // TODO: will submin an issue with notes provided by user from the form
-                return repositories.postClaimPossiblePublication(claimRequest);
+                return response;
             })
             .then(response => {
                 if (!data.files || !data.files.queue || data.files.queue.length === 0) {
@@ -195,16 +213,6 @@ export function claimPublication(data) {
                 } else {
                     return repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
                 }
-            })
-            .then(() => {
-                const recordPatchRequest = {
-                    rek_pid: data.publication.rek_pid,
-                    ...transformers.getRecordLinkSearchKey(data),
-                    ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
-                    ...recordAuthorsIdSearchKeys
-                };
-                console.log(recordPatchRequest);
-                return repositories.patchRecord(data.publication.rek_pid, recordPatchRequest);
             })
             .then(response => {
                 dispatch({
@@ -214,6 +222,7 @@ export function claimPublication(data) {
                 return Promise.resolve(response);
             })
             .catch(error => {
+                console.log(error);
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
                     payload: error

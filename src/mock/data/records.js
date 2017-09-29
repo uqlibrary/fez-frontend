@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 export const externalDoiSearchResultList = {
     "total": 1,
     "data": [
