@@ -69,11 +69,11 @@ class Dashboard extends React.Component {
     }
 
     _claimYourPublications = () => {
-        this.props.history.push('/claim-publications');
+        this.props.history.push('/records/possible');
     };
 
     _viewYourResearch = () => {
-        this.props.history.push('/research');
+        this.props.history.push('/records/mine');
     };
 
     render() {
