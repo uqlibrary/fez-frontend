@@ -18,10 +18,13 @@ import {
 import {Dashboard} from 'modules/Dashboard';
 import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
+import {SearchRecord} from 'modules/AddRecord';
 import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 import {ClaimPublication} from 'modules/ClaimPublication';
 import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
+import {SearchRecordResults} from 'modules/AddRecord';
+import {AddNewRecord} from 'modules/AddRecord';
 
 export default class App extends React.Component {
     static propTypes = {
@@ -86,7 +89,7 @@ export default class App extends React.Component {
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
 
         const components = {
-            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication
+            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication, SearchRecord
         };
 
         const menuItems =
@@ -173,6 +176,8 @@ export default class App extends React.Component {
                                     <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
                                 }
                                 <Route path="/records/claim" component={ClaimPublicationForm}/>
+                                <Route path="/records/add/results" component={SearchRecordResults}/>
+                                <Route path="/records/add/new" component={AddNewRecord}/>
                                 {
                                     menuItems.map((route, index) => (
                                         <Route key={index} {...route} />

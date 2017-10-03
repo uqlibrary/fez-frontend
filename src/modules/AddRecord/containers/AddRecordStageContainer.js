@@ -1,5 +1,4 @@
 import {connect} from 'react-redux';
-import AddRecord from '../components/AddRecord';
 import {bindActionCreators} from 'redux';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
@@ -10,12 +9,13 @@ const mapStateToProps = (state) => {
     };
 };
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
     return {
         actions: bindActionCreators(actions, dispatch)
     };
-}
+};
 
-let AddRecordContainer = connect(mapStateToProps, mapDispatchToProps)(AddRecord);
-AddRecordContainer = withRouter(AddRecordContainer);
-export default AddRecordContainer;
+export default function AddRecordStageContainer(WrappedComponent) {
+    const ConnectedStage = connect(mapStateToProps, mapDispatchToProps)(WrappedComponent);
+    return withRouter(ConnectedStage);
+}

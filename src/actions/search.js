@@ -60,7 +60,7 @@ export function createSearchPromise(source, queryString, dispatch) {
  */
 export function searchPublications(searchQuery) {
     return dispatch => {
-        dispatch({type: actions.SEARCH_LOADING});
+        dispatch({type: actions.SEARCH_LOADING, payload: searchQuery});
 
         const searchPromises = Object.keys(locale.global.sources)
             .map(source => createSearchPromise(source, searchQuery, dispatch));

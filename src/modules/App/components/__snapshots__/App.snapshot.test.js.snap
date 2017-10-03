@@ -64,8 +64,8 @@ exports[`App tests for user account and author status User is logged in but are 
           },
           Object {
             "component": [Function],
-            "linkTo": "/add-record",
-            "path": "/add-record",
+            "linkTo": "/records/add/find",
+            "path": "/records/add/find",
             "primaryText": "Add a missing record",
           },
           Object {
@@ -112,6 +112,14 @@ exports[`App tests for user account and author status User is logged in but are 
         />
         <Route
           component={[Function]}
+          path="/records/add/results"
+        />
+        <Route
+          component={[Function]}
+          path="/records/add/new"
+        />
+        <Route
+          component={[Function]}
           linkTo="/dashboard"
           path="/dashboard"
           primaryText="My dashboard"
@@ -125,8 +133,8 @@ exports[`App tests for user account and author status User is logged in but are 
         />
         <Route
           component={[Function]}
-          linkTo="/add-record"
-          path="/add-record"
+          linkTo="/records/add/find"
+          path="/records/add/find"
           primaryText="Add a missing record"
         />
         <Route
@@ -255,6 +263,14 @@ exports[`App tests for user account and author status User is not logged in and 
           path="/records/claim"
         />
         <Route
+          component={[Function]}
+          path="/records/add/results"
+        />
+        <Route
+          component={[Function]}
+          path="/records/add/new"
+        />
+        <Route
           linkTo="/browse"
           path="/browse"
           primaryText="Browse"
@@ -338,8 +354,8 @@ exports[`App tests for user account and author status User logged in and is an a
           },
           Object {
             "component": [Function],
-            "linkTo": "/add-record",
-            "path": "/add-record",
+            "linkTo": "/records/add/find",
+            "path": "/records/add/find",
             "primaryText": "Add a missing record",
           },
           Object {
@@ -386,6 +402,14 @@ exports[`App tests for user account and author status User logged in and is an a
         />
         <Route
           component={[Function]}
+          path="/records/add/results"
+        />
+        <Route
+          component={[Function]}
+          path="/records/add/new"
+        />
+        <Route
+          component={[Function]}
           linkTo="/dashboard"
           path="/dashboard"
           primaryText="My dashboard"
@@ -399,8 +423,8 @@ exports[`App tests for user account and author status User logged in and is an a
         />
         <Route
           component={[Function]}
-          linkTo="/add-record"
-          path="/add-record"
+          linkTo="/records/add/find"
+          path="/records/add/find"
           primaryText="Add a missing record"
         />
         <Route
@@ -497,8 +521,8 @@ exports[`App tests for user account and author status User logged in but is not 
           },
           Object {
             "component": [Function],
-            "linkTo": "/add-record",
-            "path": "/add-record",
+            "linkTo": "/records/add/find",
+            "path": "/records/add/find",
             "primaryText": "Add a missing record",
           },
           Object {
@@ -559,6 +583,14 @@ exports[`App tests for user account and author status User logged in but is not 
         />
         <Route
           component={[Function]}
+          path="/records/add/results"
+        />
+        <Route
+          component={[Function]}
+          path="/records/add/new"
+        />
+        <Route
+          component={[Function]}
           linkTo="/dashboard"
           path="/dashboard"
           primaryText="My dashboard"
@@ -572,8 +604,8 @@ exports[`App tests for user account and author status User logged in but is not 
         />
         <Route
           component={[Function]}
-          linkTo="/add-record"
-          path="/add-record"
+          linkTo="/records/add/find"
+          path="/records/add/find"
           primaryText="Add a missing record"
         />
         <Route

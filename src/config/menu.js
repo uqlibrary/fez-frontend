@@ -13,10 +13,10 @@ export const researcherMenuItems = (locale, email, components) => [
         render: components.Research
     },
     {
-        linkTo: '/add-record',
-        path: '/add-record',
+        linkTo: '/records/add/find',
+        path: '/records/add/find',
         primaryText: locale.menu.addMissingRecord.primaryText,
-        component: components.AddRecord
+        component: components.SearchRecord
     },
     {
         linkTo: '/records/possible',

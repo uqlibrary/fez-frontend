@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add record stepper tests should render steps and activate step 2 1`] = `
+<div
+  className="Stepper"
+>
+  <Stepper
+    activeStep={1}
+    connector={<pure(StepConnector) />}
+    linear={true}
+    orientation="horizontal"
+    style={
+      Object {
+        "margin": "-10px auto",
+        "padding": "0",
+      }
+    }
+  >
+    <Step>
+      <StepLabel
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+          }
+        }
+      >
+        Step 1
+      </StepLabel>
+    </Step>
+    <Step>
+      <StepLabel
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+          }
+        }
+      >
+        Step 2
+      </StepLabel>
+    </Step>
+    <Step>
+      <StepLabel
+        style={
+          Object {
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+          }
+        }
+      >
+        Step 3
+      </StepLabel>
+    </Step>
+  </Stepper>
+</div>
+`;
