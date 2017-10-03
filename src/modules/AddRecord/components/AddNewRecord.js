@@ -6,7 +6,7 @@ import {StandardPage, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 import AddRecordStepper from './AddRecordStepper';
 import {PublicationForm} from 'modules/PublicationForm';
 
-import {locale, validation} from 'config';
+import {locale, validation, ROUTES} from 'config';
 
 export default class AddNewRecord extends React.Component {
     static propTypes = {
@@ -31,14 +31,13 @@ export default class AddNewRecord extends React.Component {
     };
 
     _restartWorkflow = () => {
-        this.props.history.push('/records/add/find');
+        this.props.history.push(ROUTES.records.find);
     };
 
     _navigateToDashboard = () => {
-        // TODO: route should not be hardcoded, should come from config/menu
         // TODO: should navigation be handled by top-level container only, eg pass on as props:
         // TODO: this.props.navigateToDashboard() and this.props.navigateToClaimForm(item) <- fixes issue of linking item
-        this.props.history.push('/dashboard');
+        this.props.history.push(ROUTES.dashboard);
     };
 
     render() {

@@ -6,7 +6,7 @@ import {StandardPage} from 'uqlibrary-react-toolbox';
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
 
-import {locale} from 'config';
+import {locale, ROUTES} from 'config';
 
 export default class SearchRecord extends React.Component {
     static propTypes = {
@@ -25,7 +25,7 @@ export default class SearchRecord extends React.Component {
 
     _performSearch = (values) => {
         this.props.actions.searchPublications(values.get('searchQuery'));
-        this.props.history.push('/records/add/results');
+        this.props.history.push(ROUTES.records.searchResults);
     };
 
     render() {

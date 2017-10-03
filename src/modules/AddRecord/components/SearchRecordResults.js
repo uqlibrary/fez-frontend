@@ -8,7 +8,7 @@ import AddRecordStepper from './AddRecordStepper';
 import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationListLoadingProgress} from 'modules/PublicationsList';
 
-import {locale} from 'config';
+import {locale, ROUTES} from 'config';
 
 export default class SearchRecordResults extends React.Component {
     static propTypes = {
@@ -32,16 +32,16 @@ export default class SearchRecordResults extends React.Component {
     }
 
     _showNewRecordForm = () => {
-        this.props.history.push('/records/add/new');
+        this.props.history.push(ROUTES.records.addNew);
     };
 
     _cancelWorkflow = () => {
-        this.props.history.push('/records/add/find');
+        this.props.history.push(ROUTES.records.find);
     };
 
     _claimPublication = (item) => {
         this.props.actions.setClaimPublication(item);
-        this.props.history.push('/records/claim');
+        this.props.history.push(ROUTES.records.claim);
     };
 
     render() {
