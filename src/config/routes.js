@@ -14,7 +14,8 @@ const about = '/about';
 const records = () => (action = '') => `/records${action}`;
 const add = () => (action = '') => `/add${action}`;
 
-const ROUTES = {
+export default {
+    index: '/',
     dashboard: dashboard,
     browse: browse,
     about: about,
@@ -27,5 +28,3 @@ const ROUTES = {
         addNew: records()(add()(addNew))
     }
 };
-
-export default ROUTES;
