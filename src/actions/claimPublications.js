@@ -165,10 +165,10 @@ export function claimPublication(data) {
             data.publication.fez_record_search_key_author.length === 1) {
             // auto-assign current author if there's only one author
             recordAuthorsIdSearchKeys = {
-                fez_record_search_key_author_id: {
+                fez_record_search_key_author_id: [{
                     rek_author_id: data.author.aut_id,
                     rek_author_id_order: 1
-                }
+                }]
             };
         } else if (data.authorLinking && data.authorLinking.authors) {
             // author has assigned themselves on the form
