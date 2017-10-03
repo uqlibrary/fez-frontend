@@ -59,6 +59,7 @@ export const FILE_UPLOAD_API = ({pid, fileName}) => (`file/upload/presigned/${pi
 // create/patch record apis
 export const NEW_RECORD_API = () => ('records');
 export const EXISTING_RECORD_API = ({pid}) => (`records/${pid}`);
+export const RECORDS_ISSUES_API = ({pid}) => (`records/${pid}/issues`);
 
 // search/list records apis
 export const POSSIBLE_RECORDS_API = ({facets = {}}) => (`records/search?rule=possible&${getFacetsQueryString(facets)}`);
@@ -74,4 +75,4 @@ export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery}) => (
     `external/records/search?source=${source}&${getSearchType(searchQuery)}`
 );
 
-export const ISSUES_API = () => ('issues');
+

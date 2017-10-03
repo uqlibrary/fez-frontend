@@ -1,7 +1,8 @@
 import * as transformer from './academicDataTransformers';
 import * as actions from './actionTypes';
-import {get} from 'repositories/generic';
-import * as routes from 'repositories/routes';
+import * as repositories from 'repositories';
+// import {get} from 'repositories/generic';
+// import * as repositories.routes from 'repositories/repositories.routes';
 
 /**
  * Returns the author's publications per year
@@ -11,7 +12,7 @@ import * as routes from 'repositories/routes';
 export function loadAuthorPublicationsByYear(userName) {
     return dispatch => {
         dispatch({type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING});
-        get(routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: userName}))
+        repositories.get(repositories.routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: userName}))
             .then(response => {
                 const data = response !== null && response.hasOwnProperty('facet_counts')
                 && response.facet_counts.hasOwnProperty('facet_pivot') ?
@@ -48,10 +49,10 @@ export function loadAuthorPublicationsStats(userName) {
     return dispatch => {
         dispatch({type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING});
         let statsData = null;
-        get(routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: userName}))
+        repositories.get(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: userName}))
             .then(response => {
                 statsData = transformer.getPublicationsStats(response);
-                return get(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: userName}));
+                return repositories.get(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: userName}));
             })
             .then(response => {
                 if (response && response.hindex_scopus && statsData && statsData.scopus_citation_count_i) {

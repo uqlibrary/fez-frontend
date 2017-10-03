@@ -1,5 +1,3 @@
-export * from './account';
-export * from './authors';
-export * from './file';
-export * from './publications';
-export * from './records';
+export {putUploadFiles} from './file';
+export * as routes from './routes';
+export {post, patch, get} from './generic';

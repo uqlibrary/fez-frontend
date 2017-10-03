@@ -267,8 +267,8 @@ export default {
             },
             text: (
                 <div>
-                    <div>Please, check if there are any possibly your publications via <a href="#claim-publications">claim
-                        possible publications</a> or <a href="#records/add/find">add a missing publication</a></div>
+                    <div>Please, check if there are any possibly your publications via <a href="/records/possible">claim
+                        possible publications</a> or <a href="/records/add/find">add a missing publication</a></div>
                 </div>
             ),
             loadingMessage: 'Searching for your publications...',
@@ -278,7 +278,7 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. Please, check if there are any possibly your publications
-                        via <a href="#claim-publications">claim possible publications</a> or <a href="#records/add/find">add a
+                        via <a href="/records/possible">claim possible publications</a> or <a href="/records/add/find">add a
                         missing publication</a>
                     </div>
                 ),

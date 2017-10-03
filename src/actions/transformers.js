@@ -2,38 +2,14 @@ import {locale} from 'config';
 
 const moment = require('moment');
 
-/* getClaimAttachmentsSearchKey - returns claim attachments object formatted for request object
-* @param {Object} list of files in format {name: {string}, access_condition_id: {number}, date: {string}}
-* @returns {Object} attachments formatted for claim request
-*/
-export const getClaimAttachmentsSearchKey = (files) => {
-    if (!files || files.length === 0) return {};
-    const request = {
-        attachments: files.map((item) => {
-            const request = {
-                access_condition_id: item.access_condition_id,
-                file: item.name,
-            };
-
-            if (item.date) {
-                request.date = moment(item.date).format(locale.global.embargoDateFormat);
-            }
-
-            return request;
-        })
-    };
-    return request;
-};
-
-/* getClaimRequest - returns claim request object
+/* getIssueRequest - returns claim request object
 * @param {Object} form data for claim request
 * @returns {Object} formatted for claim request
 */
-export const getClaimRequest = (data) => {
+export const getClaimIssueRequest = (data) => {
     const claimRequest = {
-        pid: data.publication.rek_pid,
-        author_id: data.author.aut_id,
-        ...(data.files && data.files.queue ? getClaimAttachmentsSearchKey(data.files.queue) : {})
+        issue: `Record ${data.publication.title} (${data.publication.rek_pid}) 
+        has been claimed by ${data.author.aut_display_name} (${data.author.aut_org_username}) ${data.comments}`
     };
 
     if (data.comments) {

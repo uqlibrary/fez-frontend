@@ -57,8 +57,8 @@ exports[`App tests for user account and author status User is logged in but are 
             "secondaryText": "j.staff@example.uq.edu.au",
           },
           Object {
-            "linkTo": "/research",
-            "path": "/research",
+            "linkTo": "/records/mine",
+            "path": "/records/mine",
             "primaryText": "My research",
             "render": [Function],
           },
@@ -70,8 +70,8 @@ exports[`App tests for user account and author status User is logged in but are 
           },
           Object {
             "component": [Function],
-            "linkTo": "/claim-publications",
-            "path": "/claim-publications",
+            "linkTo": "/records/possible",
+            "path": "/records/possible",
             "primaryText": "Claim possible publications",
           },
           Object {
@@ -126,8 +126,8 @@ exports[`App tests for user account and author status User is logged in but are 
           secondaryText="j.staff@example.uq.edu.au"
         />
         <Route
-          linkTo="/research"
-          path="/research"
+          linkTo="/records/mine"
+          path="/records/mine"
           primaryText="My research"
           render={[Function]}
         />
@@ -139,8 +139,8 @@ exports[`App tests for user account and author status User is logged in but are 
         />
         <Route
           component={[Function]}
-          linkTo="/claim-publications"
-          path="/claim-publications"
+          linkTo="/records/possible"
+          path="/records/possible"
           primaryText="Claim possible publications"
         />
         <Route
@@ -347,8 +347,8 @@ exports[`App tests for user account and author status User logged in and is an a
             "secondaryText": "j.staff@example.uq.edu.au",
           },
           Object {
-            "linkTo": "/research",
-            "path": "/research",
+            "linkTo": "/records/mine",
+            "path": "/records/mine",
             "primaryText": "My research",
             "render": [Function],
           },
@@ -360,8 +360,8 @@ exports[`App tests for user account and author status User logged in and is an a
           },
           Object {
             "component": [Function],
-            "linkTo": "/claim-publications",
-            "path": "/claim-publications",
+            "linkTo": "/records/possible",
+            "path": "/records/possible",
             "primaryText": "Claim possible publications",
           },
           Object {
@@ -416,8 +416,8 @@ exports[`App tests for user account and author status User logged in and is an a
           secondaryText="j.staff@example.uq.edu.au"
         />
         <Route
-          linkTo="/research"
-          path="/research"
+          linkTo="/records/mine"
+          path="/records/mine"
           primaryText="My research"
           render={[Function]}
         />
@@ -429,8 +429,8 @@ exports[`App tests for user account and author status User logged in and is an a
         />
         <Route
           component={[Function]}
-          linkTo="/claim-publications"
-          path="/claim-publications"
+          linkTo="/records/possible"
+          path="/records/possible"
           primaryText="Claim possible publications"
         />
         <Route
@@ -514,8 +514,8 @@ exports[`App tests for user account and author status User logged in but is not 
             "secondaryText": "j.staff@example.uq.edu.au",
           },
           Object {
-            "linkTo": "/research",
-            "path": "/research",
+            "linkTo": "/records/mine",
+            "path": "/records/mine",
             "primaryText": "My research",
             "render": [Function],
           },
@@ -527,8 +527,8 @@ exports[`App tests for user account and author status User logged in but is not 
           },
           Object {
             "component": [Function],
-            "linkTo": "/claim-publications",
-            "path": "/claim-publications",
+            "linkTo": "/records/possible",
+            "path": "/records/possible",
             "primaryText": "Claim possible publications",
           },
           Object {
@@ -597,8 +597,8 @@ exports[`App tests for user account and author status User logged in but is not 
           secondaryText="j.staff@example.uq.edu.au"
         />
         <Route
-          linkTo="/research"
-          path="/research"
+          linkTo="/records/mine"
+          path="/records/mine"
           primaryText="My research"
           render={[Function]}
         />
@@ -610,8 +610,8 @@ exports[`App tests for user account and author status User logged in but is not 
         />
         <Route
           component={[Function]}
-          linkTo="/claim-publications"
-          path="/claim-publications"
+          linkTo="/records/possible"
+          path="/records/possible"
           primaryText="Claim possible publications"
         />
         <Route

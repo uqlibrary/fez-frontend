@@ -50,7 +50,7 @@ mock
         .reply(200, mockData.publicationStats)
     .onGet(new RegExp(escapeRegExp(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API({userId: user}))))
         .reply(200, mockData.trendingPublications)
-    .onGet(new RegExp(escapeRegExp(routes.AUTHORS_SEARCH_API('.*'))))
+    .onGet(new RegExp(escapeRegExp(routes.AUTHORS_SEARCH_API({query: '.*'}))))
         .reply(200, mockData.authorsSearch)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'wos', searchQuery: '.*'}))))
         .reply(200, mockData.externalTitleSearchResultsList)
@@ -60,7 +60,7 @@ mock
         .reply(200, mockData.externalDoiSearchResultList)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'pubmed', searchQuery: '28131963'}))))
         .reply(200, mockData.externalPubMedSearchResultsList)
-    .onGet(new RegExp(escapeRegExp(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: '.*', pageSize: 5}))))
+    .onGet(new RegExp(escapeRegExp(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: '.*', pageSize: 5, sortBy: 'score'}))))
         .reply(200, mockData.internalTitleSearchList)
     .onGet(new RegExp(escapeRegExp(routes.GET_PUBLICATION_TYPES_API())))
         .reply(200, mockData.recordsTypeList)
@@ -78,13 +78,18 @@ mock
         .reply(200, 's3-ap-southeast-2.amazonaws.com')
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
         .reply(200, {data: {}})
-    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API('.*'))))
+    .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
+        .reply(200, {data: {...mockData.record}})
+    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}))))
         .reply(200, {data: {...mockData.record}})
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
         .reply(200, {data: {}})
-    .onPost(new RegExp(escapeRegExp(routes.ISSUES_API())))
-        .reply(200, {data: {}})
+    .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}))))
+        .reply(200, {data: ''})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))
         .reply(200, {data: {}})
     // .onAny().passThrough();
-    .onAny().reply(404, new Error('help'));
+    .onAny().reply((config) => {
+        console.log(config.url);
+        return [404, `MOCK URL NOT FOUND: ${config.url}`];
+    });

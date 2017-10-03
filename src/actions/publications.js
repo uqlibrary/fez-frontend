@@ -1,16 +1,16 @@
-import {getPublications, getTrendingPublications} from 'repositories';
 import * as actions from './actionTypes';
+import {get} from 'repositories/generic';
+import * as routes from 'repositories/routes';
 
 /**
  * Get latest publications
  * @param {string} author user name
  * @returns {action}
  */
-export function searchLatestPublications(userName) {
+export function searchLatestPublications() {
     return dispatch => {
         dispatch({type: actions.LATEST_PUBLICATIONS_LOADING});
-        // TODO: try some authors who are students - org username or student name to use?
-        getPublications({userName: userName, pageSize: 5})
+        get(routes.CURRENT_USER_RECORDS_API({pageSize: 5}))
             .then(response => {
                 dispatch({
                     type: actions.LATEST_PUBLICATIONS_COMPLETED,
@@ -34,10 +34,11 @@ export function searchLatestPublications(userName) {
 export function searchAuthorPublications({userName, page = 1, pageSize = 20, sortBy, sortDirection, facets}) {
     return dispatch => {
         dispatch({type: actions.AUTHOR_PUBLICATIONS_LOADING});
-        getPublications({
+
+        get(routes.CURRENT_USER_RECORDS_API({
             userName: userName, page: page, pageSize: pageSize,
             sortBy: sortBy, sortDirection: sortDirection, facets: facets
-        })
+        }))
             .then(response => {
                 dispatch({
                     type: actions.AUTHOR_PUBLICATIONS_COMPLETED,
@@ -58,11 +59,10 @@ export function searchAuthorPublications({userName, page = 1, pageSize = 20, sor
  * @param {string} author user name
  * @returns {action}
  */
-export function searchTrendingPublications(authorUsername) {
+export function searchTrendingPublications(userName) {
     return dispatch => {
         dispatch({type: actions.TRENDING_PUBLICATIONS_LOADING});
-        // TODO: try some authors who are students - org username or student name to use?
-        getTrendingPublications(authorUsername)
+        get(routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API({userId: userName}))
             .then(response => {
                 // TODO: this response will change when this api endpoint will be moved to fez
                 dispatch({
