@@ -6,7 +6,7 @@ import {StandardPage, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 import {Stepper} from 'modules/SharedComponents/Stepper';
 import {PublicationForm} from 'modules/PublicationForm';
 
-import {locale, validation, ROUTES} from 'config';
+import {locale, validation, PATHS} from 'config';
 
 export default class AddNewRecord extends React.Component {
     static propTypes = {
@@ -28,13 +28,13 @@ export default class AddNewRecord extends React.Component {
     };
 
     _restartWorkflow = () => {
-        this.props.history.push(ROUTES.records.find);
+        this.props.history.push(PATHS.records.find);
     };
 
     _navigateToDashboard = () => {
         // TODO: should navigation be handled by top-level container only, eg pass on as props:
         // TODO: this.props.navigateToDashboard() and this.props.navigateToClaimForm(item) <- fixes issue of linking item
-        this.props.history.push(ROUTES.dashboard);
+        this.props.history.push(PATHS.dashboard);
     };
 
     render() {

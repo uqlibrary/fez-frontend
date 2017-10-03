@@ -1,28 +1,28 @@
-import {ROUTES} from 'config';
+import {PATHS} from 'config';
 
 export const researcherMenuItems = (locale, email, components) => [
     {
-        linkTo: ROUTES.dashboard,
-        path: ROUTES.dashboard,
+        linkTo: PATHS.dashboard,
+        path: PATHS.dashboard,
         primaryText: locale.menu.myDashboard.primaryText,
         secondaryText: email,
         component: components.Dashboard
     },
     {
-        linkTo: ROUTES.records.mine,
-        path: ROUTES.records.mine,
+        linkTo: PATHS.records.mine,
+        path: PATHS.records.mine,
         primaryText: locale.menu.myResearch.primaryText,
         render: components.Research
     },
     {
-        linkTo: ROUTES.records.find,
-        path: ROUTES.records.find,
+        linkTo: PATHS.records.find,
+        path: PATHS.records.find,
         primaryText: locale.menu.addMissingRecord.primaryText,
         component: components.SearchRecord
     },
     {
-        linkTo: ROUTES.records.possible,
-        path: ROUTES.records.possible,
+        linkTo: PATHS.records.possible,
+        path: PATHS.records.possible,
         primaryText: locale.menu.claimPublication.primaryText,
         component: components.ClaimPublication
     },
@@ -34,8 +34,8 @@ export const researcherMenuItems = (locale, email, components) => [
 
 export const adminMenuItems = (locale, email, components) => [
     {
-        linkTo: ROUTES.dashboard,
-        path: ROUTES.dashboard,
+        linkTo: PATHS.dashboard,
+        path: PATHS.dashboard,
         primaryText: locale.menu.myDashboard.primaryText,
         secondaryText: email,
         component: components.Dashboard
@@ -59,10 +59,10 @@ export const adminMenuItems = (locale, email, components) => [
 
 export const defaultMenuItems = (locale, components) => [
     {
-        linkTo: ROUTES.browse,
+        linkTo: PATHS.browse,
         primaryText: locale.menu.browse.primaryText,
         secondaryText: locale.menu.browse.secondaryText,
-        path: ROUTES.browse,
+        path: PATHS.browse,
         render: () => components.Browse(locale.pages.browse)
     },
     // TODO: coming soon
@@ -79,8 +79,8 @@ export const defaultMenuItems = (locale, components) => [
     //     render: () => components.StaticPage({title: 'FAQs', text: 'public FAQs coming soon...'})
     // },
     {
-        linkTo: ROUTES.about,
-        path: ROUTES.about,
+        linkTo: PATHS.about,
+        path: PATHS.about,
         primaryText: locale.menu.about.primaryText,
         secondaryText: locale.menu.about.secondaryText,
         render: () => components.StandardPage(locale.pages.about)

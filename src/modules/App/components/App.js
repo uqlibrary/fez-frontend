@@ -12,7 +12,7 @@ import {
     researcherMenuItems,
     AUTH_URL_LOGIN,
     AUTH_URL_LOGOUT,
-    ROUTES
+    PATHS
 } from 'config';
 
 // Pages
@@ -174,9 +174,9 @@ export default class App extends React.Component {
                                     !isAuthorizedUser &&
                                     <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
                                 }
-                                <Route path={ROUTES.records.claim} component={ClaimPublicationForm}/>
-                                <Route path={ROUTES.records.searchResults} component={SearchRecordResults}/>
-                                <Route path={ROUTES.records.addNew} component={AddNewRecord}/>
+                                <Route path={PATHS.records.claim} component={ClaimPublicationForm}/>
+                                <Route path={PATHS.records.searchResults} component={SearchRecordResults}/>
+                                <Route path={PATHS.records.addNew} component={AddNewRecord}/>
                                 {
                                     menuItems.map((route, index) => (
                                         <Route key={index} {...route} />

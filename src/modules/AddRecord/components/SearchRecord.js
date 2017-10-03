@@ -6,7 +6,7 @@ import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Stepper} from 'modules/SharedComponents/Stepper';
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
 
-import {locale, ROUTES} from 'config';
+import {locale, PATHS} from 'config';
 
 export default class SearchRecord extends React.Component {
     static propTypes = {
@@ -20,7 +20,7 @@ export default class SearchRecord extends React.Component {
 
     _performSearch = (values) => {
         this.props.actions.searchPublications(values.get('searchQuery'));
-        this.props.history.push(ROUTES.records.searchResults);
+        this.props.history.push(PATHS.records.searchResults);
     };
 
     render() {
