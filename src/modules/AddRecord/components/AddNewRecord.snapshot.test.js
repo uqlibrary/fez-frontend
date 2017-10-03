@@ -15,7 +15,7 @@ describe('Add new record', () => {
     });
 
     it('should show confirmation box', () => {
-        const wrapper = setup({});
+        const wrapper = setup({history: {}});
         const showConfirmation = jest.fn();
         wrapper.instance().confirmationBox = {
             showConfirmation: showConfirmation
