@@ -8,7 +8,7 @@ import {PublicationForm} from 'modules/PublicationForm';
 
 import {locale, validation} from 'config';
 
-export default class AddNewPublication extends React.Component {
+export default class AddNewRecord extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
         history: PropTypes.object.isRequired,
