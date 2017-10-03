@@ -233,7 +233,7 @@ export default {
                 <div>
                     <p>Welcome to The University of Queensland's institutional digital repository</p>
                     <p>
-                        <a href="https://auth.library.uq.edu.au/login">Please, login to continue.</a>
+                        Public browse is coming soon...
                     </p>
                 </div>
             ),
