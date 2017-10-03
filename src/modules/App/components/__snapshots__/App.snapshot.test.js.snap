@@ -108,7 +108,7 @@ exports[`App tests for user account and author status User is logged in but are 
         />
         <Route
           component={[Function]}
-          path="/claim-publication-form"
+          path="/records/claim"
         />
         <Route
           component={[Function]}
@@ -260,7 +260,7 @@ exports[`App tests for user account and author status User is not logged in and 
         />
         <Route
           component={[Function]}
-          path="/claim-publication-form"
+          path="/records/claim"
         />
         <Route
           component={[Function]}
@@ -398,7 +398,7 @@ exports[`App tests for user account and author status User logged in and is an a
         />
         <Route
           component={[Function]}
-          path="/claim-publication-form"
+          path="/records/claim"
         />
         <Route
           component={[Function]}
@@ -579,7 +579,7 @@ exports[`App tests for user account and author status User logged in but is not 
         />
         <Route
           component={[Function]}
-          path="/claim-publication-form"
+          path="/records/claim"
         />
         <Route
           component={[Function]}

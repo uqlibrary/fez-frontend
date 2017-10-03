@@ -175,7 +175,7 @@ export default class App extends React.Component {
                                     !isAuthorizedUser &&
                                     <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
                                 }
-                                <Route path="/claim-publication-form" component={ClaimPublicationForm}/>
+                                <Route path="/records/claim" component={ClaimPublicationForm}/>
                                 <Route path="/records/add/results" component={SearchRecordResults}/>
                                 <Route path="/records/add/new" component={AddNewRecord}/>
                                 {
