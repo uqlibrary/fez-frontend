@@ -55,7 +55,7 @@ export default class ClaimPublication extends React.Component {
     };
 
     _claimPublication = (item) => {
-        this.props.history.push('/claim-publication-form');
+        this.props.history.push('/records/claim');
         this.props.actions.setClaimPublication(item);
     }
 
