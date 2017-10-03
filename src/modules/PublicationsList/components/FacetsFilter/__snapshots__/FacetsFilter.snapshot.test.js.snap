@@ -37,7 +37,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Journal Article (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -84,7 +84,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Applied Microbiology and Biotechnology (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -107,7 +107,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Biochemistry (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -130,7 +130,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Bioengineering (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -153,7 +153,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Biomaterials (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -176,7 +176,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Biomedical Engineering (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -223,7 +223,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="2017 (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -270,7 +270,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Metallomics (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -293,7 +293,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Nature biotechnology (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -340,7 +340,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Crossref Import (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -387,7 +387,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
             primaryText="Schenk, Gerhard (Gary) (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -450,9 +450,9 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             initiallyOpen={false}
             insetChildren={false}
             leftIcon={
-                <NavigationClose
-                    disabled={false}
-                />
+              <NavigationClose
+                disabled={false}
+              />
             }
             nestedItems={Array []}
             nestedLevel={0}
@@ -467,7 +467,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Journal Article (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -514,7 +514,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Applied Microbiology and Biotechnology (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -537,7 +537,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Biochemistry (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -560,7 +560,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Bioengineering (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -583,7 +583,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Biomaterials (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -606,7 +606,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Biomedical Engineering (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -653,7 +653,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="2017 (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -700,7 +700,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Metallomics (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -723,7 +723,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Nature biotechnology (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -770,7 +770,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Crossref Import (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -817,7 +817,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             primaryText="Schenk, Gerhard (Gary) (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -893,7 +893,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Journal Article (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -940,7 +940,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Applied Microbiology and Biotechnology (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink disabled"
@@ -963,7 +963,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Biochemistry (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink disabled"
@@ -986,7 +986,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Bioengineering (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink disabled"
@@ -1009,7 +1009,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Biomaterials (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink disabled"
@@ -1032,7 +1032,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Biomedical Engineering (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -1079,7 +1079,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="2017 (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -1126,7 +1126,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Metallomics (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink disabled"
@@ -1149,7 +1149,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Nature biotechnology (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -1196,7 +1196,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Crossref Import (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -1243,7 +1243,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
             primaryText="Schenk, Gerhard (Gary) (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -1319,7 +1319,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="Applied Microbiology and Biotechnology (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -1342,7 +1342,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="Biochemistry (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -1365,7 +1365,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="Bioengineering (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -1388,7 +1388,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="Biomaterials (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -1411,7 +1411,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="Biomedical Engineering (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -1458,7 +1458,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="2017 (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -1505,7 +1505,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="Metallomics (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
           <ListItem
             autoGenerateNestedIndicator={true}
             className="facetsLink "
@@ -1528,7 +1528,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="Nature biotechnology (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -1575,7 +1575,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="Crossref Import (2)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}
@@ -1622,7 +1622,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
             primaryText="Schenk, Gerhard (Gary) (1)"
             primaryTogglesNestedList={false}
             secondaryTextLines={1}
-        />,
+          />,
         ]
       }
       nestedLevel={0}

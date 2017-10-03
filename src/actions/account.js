@@ -1,20 +1,7 @@
-import {
-    getAccount,
-    fetchCurrentAuthor,
-    fetchAuthorDetails
-} from 'repositories';
+import * as actions from './actionTypes';
+import {get} from 'repositories/generic';
+import * as routes from 'repositories/routes';
 
-export const ACCOUNT_LOADING = 'ACCOUNT_LOADING';
-export const ACCOUNT_LOADED = 'ACCOUNT_LOADED';
-export const ACCOUNT_ANONYMOUS = 'ACCOUNT_ANONYMOUS';
-
-export const ACCOUNT_AUTHOR_LOADING = 'ACCOUNT_AUTHOR_LOADING';
-export const ACCOUNT_AUTHOR_FAILED = 'ACCOUNT_AUTHOR_FAILED';
-export const ACCOUNT_AUTHOR_LOADED = 'ACCOUNT_AUTHOR_LOADED';
-
-export const ACCOUNT_AUTHOR_DETAILS_LOADING = 'ACCOUNT_AUTHOR_DETAILS_LOADING';
-export const ACCOUNT_AUTHOR_DETAILS_FAILED = 'ACCOUNT_AUTHOR_DETAILS_FAILED';
-export const ACCOUNT_AUTHOR_DETAILS_LOADED = 'ACCOUNT_AUTHOR_DETAILS_LOADED';
 
 /**
  * Loads the user's account and author details into the application
@@ -22,46 +9,57 @@ export const ACCOUNT_AUTHOR_DETAILS_LOADED = 'ACCOUNT_AUTHOR_DETAILS_LOADED';
  */
 export function loadCurrentAccount() {
     return dispatch => {
-        dispatch({type: ACCOUNT_LOADING});
+        dispatch({type: actions.ACCOUNT_LOADING});
 
         let account = null;
         let currentAuthor = null;
 
         // load UQL account (based on token)
-        getAccount().then(accountResponse => {
-            account = accountResponse;
-            dispatch({
-                type: ACCOUNT_LOADED,
-                payload: accountResponse
-            });
+        get(routes.ACCOUNT_API())
+            .then(account => {
+                if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
+                    return Promise.resolve(account);
+                } else {
+                    return Promise.reject('Session expired. User is unauthorized.');
+                }
+            })
+            .then(accountResponse => {
+                account = accountResponse;
+                dispatch({
+                    type: actions.ACCOUNT_LOADED,
+                    payload: accountResponse
+                });
 
-            // load current author details (based on token)
-            dispatch({type: ACCOUNT_AUTHOR_LOADING});
-            return fetchCurrentAuthor();
-        }).then(currentAuthorResponse => {
-            // TODO: to be decommissioned when author/details will become a part of author api
-            currentAuthor = currentAuthorResponse;
-            dispatch({
-                type: ACCOUNT_AUTHOR_LOADED,
-                payload: currentAuthorResponse
-            });
+                // load current author details (based on token)
+                dispatch({type: actions.ACCOUNT_AUTHOR_LOADING});
+                return get(routes.CURRENT_AUTHOR_API());
+            })
+            .then(currentAuthorResponse => {
+                // TODO: to be decommissioned when author/details will become a part of author api
+                currentAuthor = currentAuthorResponse;
+                dispatch({
+                    type: actions.ACCOUNT_AUTHOR_LOADED,
+                    payload: currentAuthorResponse
+                });
 
-            // load repository author details
-            dispatch({type: ACCOUNT_AUTHOR_DETAILS_LOADING});
-            return fetchAuthorDetails(currentAuthor.aut_org_username);
-        }).then(authorDetailsResponse => {
-            dispatch({
-                type: ACCOUNT_AUTHOR_DETAILS_LOADED,
-                payload: authorDetailsResponse
+                // load repository author details
+                dispatch({type: actions.ACCOUNT_AUTHOR_DETAILS_LOADING});
+                return get(routes.AUTHOR_DETAILS_API({userId: currentAuthor.aut_org_username}));
+            })
+            .then(authorDetailsResponse => {
+                dispatch({
+                    type: actions.ACCOUNT_AUTHOR_DETAILS_LOADED,
+                    payload: authorDetailsResponse
+                });
+            })
+            .catch(() => {
+                if (!account) {
+                    dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                } else if (!currentAuthor) {
+                    dispatch({type: actions.ACCOUNT_AUTHOR_FAILED});
+                }
+                dispatch({type: actions.ACCOUNT_AUTHOR_DETAILS_FAILED});
             });
-        }).catch(() => {
-            if (!account) {
-                dispatch({type: ACCOUNT_ANONYMOUS});
-            } else if (!currentAuthor) {
-                dispatch({type: ACCOUNT_AUTHOR_FAILED});
-                dispatch({type: ACCOUNT_AUTHOR_DETAILS_FAILED});
-            }
-        });
     };
 }
 

@@ -18,10 +18,9 @@ form .column {
   padding-bottom: 0px !important;
 }
 
-
 // Bulma helper
-@media (max-width: 768px){
-  .is-hidden-mobile{
+@media (max-width: 768px) {
+  .is-hidden-mobile {
     display: none !important;
   }
 }
@@ -68,5 +67,16 @@ button[type=button] {
   }
   & div.body-1 {
     padding: 0px !important;
+  }
+}
+
+// Fixes text input where the hint text wraps, and sits over a floating label
+@media (max-width: 768px) {
+  .input-long-hint > div {
+    width: 100% !important;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

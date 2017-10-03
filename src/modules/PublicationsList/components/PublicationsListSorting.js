@@ -28,6 +28,12 @@ export default class PublicationsListSorting extends Component {
         };
     }
 
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.pagingData.per_page !== this.props.pagingData.per_page) {
+            this.state.setState(nextProps.pagingData.per_page);
+        }
+    }
+
     componentWillUpdate(nextProps, nextState) {
         if (nextState.pageSize !== this.state.pageSize && this.props.onPageSizeChanged) {
             this.props.onPageSizeChanged(nextState.pageSize);

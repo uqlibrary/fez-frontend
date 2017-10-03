@@ -40,7 +40,7 @@ export default class PublicationsListPaging extends Component {
 
     render() {
         const txt = locale.components.paging;
-        const totalPages = Math.ceil(this.state.total / this.state.per_page);
+        const totalPages = this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
         if (totalPages === 0) return (<span className="publicationsListControls empty"/>);
         const renderedPages = Array(totalPages).fill()
             .map((page, index) => {

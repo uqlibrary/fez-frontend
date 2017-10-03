@@ -17,7 +17,7 @@ export default class ClaimPublication extends React.Component {
         account: PropTypes.object,
         accountLoading: PropTypes.bool,
 
-        possibleCounts: PropTypes.object,
+        possibleCounts: PropTypes.number,
         loadingPossibleCounts: PropTypes.bool,
 
         history: PropTypes.object.isRequired,
@@ -35,13 +35,13 @@ export default class ClaimPublication extends React.Component {
 
     componentDidMount() {
         if (this.props.account) {
-            this.props.actions.searchPossiblyYourPublications(this.props.account.id, this.state.activeFacets);
+            this.props.actions.searchPossiblyYourPublications({facets: this.state.activeFacets});
         }
     }
 
     _hidePublication = () => {
         if (this.state.publicationToHide && this.props.author !== null) {
-            this.props.actions.hidePublications([this.state.publicationToHide], this.props.author, this.state.activeFacets);
+            this.props.actions.hideRecord({record: this.state.publicationToHide, facets: this.state.activeFacets});
             this.setState({
                 publicationToHide: null
             });
@@ -64,7 +64,7 @@ export default class ClaimPublication extends React.Component {
             activeFacets: {...activeFacets}
         });
 
-        this.props.actions.searchPossiblyYourPublications(this.props.account.id, activeFacets);
+        this.props.actions.searchPossiblyYourPublications({facets: activeFacets});
     };
 
     render() {
@@ -115,7 +115,7 @@ export default class ClaimPublication extends React.Component {
                                     {
                                         txt.searchResults.text
                                             .replace('[resultsCount]', this.props.possiblePublicationsList.length)
-                                            .replace('[totalCount]', this.props.possibleCounts ? this.props.possibleCounts.most_likely_match_count : '')
+                                            .replace('[totalCount]', this.props.possibleCounts)
                                     }
                                 </div>
                                 <PublicationsList

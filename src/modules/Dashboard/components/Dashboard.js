@@ -15,9 +15,7 @@ import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
-// import EditorFormatQuote from 'material-ui/svg-icons/editor/format-quote';
-import SocialPerson from 'material-ui/svg-icons/social/person';
+import FontIcon from 'material-ui/FontIcon';
 import {locale} from 'config';
 
 class Dashboard extends React.Component {
@@ -25,7 +23,7 @@ class Dashboard extends React.Component {
         // account data
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
-        authorDetailsLoading: PropTypes.bool,
+        loadingAuthorDetails: PropTypes.bool,
 
         // graph data
         loadingPublicationsByYear: PropTypes.bool,
@@ -33,7 +31,7 @@ class Dashboard extends React.Component {
         publicationTypesCount: PropTypes.array,
 
         // lure data
-        possiblyYourPublicationsCount: PropTypes.object,
+        possiblyYourPublicationsCount: PropTypes.number,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
         // wos/scopus data
@@ -78,7 +76,7 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear || this.props.authorDetailsLoading
+        const loading = this.props.loadingPublicationsByYear || this.props.loadingAuthorDetails
             || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
             || this.props.loadingLatestPublications;
         const barChart = !loading && this.props.publicationsByYear
@@ -131,11 +129,10 @@ class Dashboard extends React.Component {
                         <div className="column is-12 possiblePublicationLure">
                             {
                                 !this.props.hidePossiblyYourPublicationsLure
-                                && this.props.possiblyYourPublicationsCount
-                                && this.props.possiblyYourPublicationsCount.most_likely_match_count > 0 &&
+                                && this.props.possiblyYourPublicationsCount > 0 &&
                                 <Alert
                                     title={txt.possiblePublicationsLure.title}
-                                    message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount.most_likely_match_count)}
+                                    message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
                                     type={txt.possiblePublicationsLure.type}
                                     actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
                                     action={this._claimYourPublications}
@@ -217,7 +214,7 @@ class Dashboard extends React.Component {
                                                 <div key={'metrics_' + metricIndex}>
                                                     <div className="columns is-gapless is-mobile">
                                                         <div className="column">
-                                                            <h2 className="title is-3 trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
+                                                            <h2 className="title is-4 trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
                                                         </div>
                                                         <div className="column is-narrow is-hidden-mobile">
                                                             <HelpIcon {...txt.myTrendingPublications.help} />
@@ -225,31 +222,36 @@ class Dashboard extends React.Component {
                                                     </div>
                                                     {
                                                         metric.values.map((recordValue, recordIndex) => (
-                                                            <div key={'trending_publication_' + recordIndex}
-                                                                className="trendingPubItem">
+                                                            <div className="publicationCitation" key={`trendingPublication_${recordIndex}`}>
                                                                 <div className="columns is-gapless is-mobile">
                                                                     <div className="column">
-                                                                        <div className="title is-5 trendingPubsTitle">
-                                                                            {recordValue.title}
+                                                                        <div className="citationContent">
+                                                                            <h3 className="title is-5 publicationTitle">{recordValue.title}</h3>
+                                                                            <FontIcon className="material-icons citationIcon" data-place="left">
+                                                                                format_quote
+                                                                            </FontIcon>
+                                                                            {recordValue.authors} ({recordValue.rek_date.substring(0, 4)})
                                                                         </div>
-                                                                        <div className="trendingPubsCitation">
-                                                                            <SocialPerson className="trendingPubsIcon" />
-                                                                            {recordValue.authors}
-                                                                            <a href={recordValue.citation_url}
-                                                                                className="trendingPubsLink"
-                                                                                target="_blank"
-                                                                                title={txt.myTrendingPublications.openNewWindowTitle.replace('[TITLE]', recordValue.title)}
-                                                                            >
-                                                                                {txt.myTrendingPublications.viewFullCitationLinkTitle}<ActionOpenInNew className="trendingPubsIcon" />
-                                                                            </a>
+                                                                        <div className="citationCounts">
+                                                                            <div className="citationCount column" style={{margin: '0px', padding: '0px'}}>
+                                                                                <a href={recordValue.citation_url} className="citationCountLink" target="_blank" title={txt.myTrendingPublications.openNewWindowTitle.replace('[TITLE]', recordValue.title)}>
+                                                                                    <div className="columns is-mobile is-gapless">
+                                                                                        <div className="column is-narrow"><FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
+                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}</div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <div className="column is-narrow trendingPubsCount">
-                                                                        <span className="title is-1"
+                                                                        <span
+                                                                            className="title is-2"
                                                                             title={txt.myTrendingPublications.trendSharesThisMonth}>{Math.round(recordValue.count)}</span>
                                                                     </div>
-                                                                    <div className="column is-narrow trendingPubsDifference">
-                                                                        <span className="title is-5"
+                                                                    <div
+                                                                        className="column is-narrow trendingPubsDifference">
+                                                                        <span
+                                                                            className="title is-5"
                                                                             title={txt.myTrendingPublications.trendDifferenceSharesThisMonth}>+{Math.round(recordValue.difference)}</span>
                                                                     </div>
                                                                 </div>

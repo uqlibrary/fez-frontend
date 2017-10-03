@@ -1,4 +1,4 @@
-import {SEARCH_LOADING, SEARCH_COMPLETED, SEARCH_FAILED, SEARCH_SOURCE_COUNT} from 'actions';
+import * as actions from 'actions/actionTypes';
 import {locale} from 'config';
 
 const initialSearchSources = {
@@ -83,7 +83,7 @@ function deduplicateResults(publicationsList) {
 
 const handlers = {
 
-    [SEARCH_SOURCE_COUNT]: (state, action) => {
+    [actions.SEARCH_SOURCE_COUNT]: (state, action) => {
         // set search completed for a specific source
         const loadingPublicationSources = {
             loadingPublicationSources: {
@@ -98,7 +98,7 @@ const handlers = {
         };
     },
 
-    [SEARCH_LOADING]: (state) => {
+    [actions.SEARCH_LOADING]: (state) => {
         return {
             ...state,
             loadingSearch: true,
@@ -107,7 +107,7 @@ const handlers = {
         };
     },
 
-    [SEARCH_COMPLETED]: (state, action) => {
+    [actions.SEARCH_COMPLETED]: (state, action) => {
         return {
             ...state,
             loadingSearch: false,
@@ -117,7 +117,7 @@ const handlers = {
         };
     },
 
-    [SEARCH_FAILED]: (state) => {
+    [actions.SEARCH_FAILED]: (state) => {
         return {
             ...state,
             loadingSearch: false,
@@ -126,7 +126,7 @@ const handlers = {
         };
     },
 
-    [`${SEARCH_FAILED}@`]: (state, action) => {
+    [`${actions.SEARCH_FAILED}@`]: (state, action) => {
         // get search source, eg wos/pubmed/etc
         const source = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
 
@@ -146,7 +146,7 @@ const handlers = {
         };
     },
 
-    [`${SEARCH_COMPLETED}@`]: (state, action) => {
+    [`${actions.SEARCH_COMPLETED}@`]: (state, action) => {
         // get search source, eg wos/pubmed/etc
         const source = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
 
@@ -179,9 +179,8 @@ const handlers = {
 };
 
 export default function searchRecordsReducer(state = initialState, action) {
-    const handler = action.type.indexOf('SEARCH_COMPLETED@') < 0 && action.type.indexOf('SEARCH_FAILED@') < 0 ?
+    const handler = action.type.indexOf(`${actions.SEARCH_COMPLETED}@`) < 0 && action.type.indexOf(`${actions.SEARCH_FAILED}@`) < 0 ?
         handlers[action.type] : handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
-
     if (!handler) {
         return state;
     }

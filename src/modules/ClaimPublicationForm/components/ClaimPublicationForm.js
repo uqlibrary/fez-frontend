@@ -56,20 +56,21 @@ export default class ClaimPublicationForm extends Component {
         }
     };
 
-    getAlert = (props, txt, authorLinked = false) => {
-        if (props.submitFailed && props.error) {
-            return txt.errorAlert;
-        } else if (!props.submitFailed && props.dirty && props.invalid) {
-            return txt.validationAlert;
-        } else if (props.submitting) {
-            return txt.progressAlert;
-        } else if (props.submitSucceeded) {
-            return txt.successAlert;
+    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
+        submitSucceeded = false, txt, authorLinked = false}) => {
+        let alertProps = null;
+        if (submitFailed && error) {
+            alertProps = {...txt.errorAlert};
+        } else if (!submitFailed && dirty && invalid) {
+            alertProps = {...txt.validationAlert};
+        } else if (submitting) {
+            alertProps = {...txt.progressAlert};
+        } else if (submitSucceeded) {
+            alertProps = {...txt.successAlert};
         } else if (authorLinked) {
-            return txt.alreadyClaimedAlert;
-        } else {
-            return null;
+            alertProps = {...txt.alreadyClaimedAlert};
         }
+        return alertProps ? (<Alert {...alertProps} />) : null;
     };
 
     render() {
@@ -85,44 +86,46 @@ export default class ClaimPublicationForm extends Component {
         const authorLinked = publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
-        const alert = this.getAlert(this.props, txt, authorLinked);
-
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
-                    <ConfirmDialogBox
-                        onRef={ref => (this.cancelConfirmationBox = ref)}
-                        onAction={this._navigateToPreviousPage}
-                        locale={txt.cancelWorkflowConfirmation}/>
-
-                    <ConfirmDialogBox
-                        onRef={ref => (this.successConfirmationBox = ref)}
-                        onAction={this._navigateToDashboard}
-                        onCancelAction={this._navigateToPreviousPage}
-                        locale={txt.successWorkflowConfirmation}/>
-
                     <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
                         <PublicationCitation publication={publication}/>
                     </StandardCard>
-
                     {
-                        !authorLinked &&
+                        (!publication.rek_pid || !authorLinked) &&
                         <div>
-                            <StandardCard title={txt.authorLinking.title} help={txt.authorLinking.help} className="requiredField">
-                                <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
-                                <Field
-                                    name="authorLinking"
-                                    component={AuthorLinkingField}
-                                    searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
-                                    loggedInAuthor={author}
-                                    authorList={publication.fez_record_search_key_author}
-                                    linkedAuthorIdList={publication.fez_record_search_key_author_id}
-                                    disabled={this.props.submitting}
-                                    className="requiredField"
-                                    validate={[validation.required, validation.isValidAuthorLink]}
-                                />
-                            </StandardCard>
+                            <ConfirmDialogBox
+                                onRef={ref => (this.cancelConfirmationBox = ref)}
+                                onAction={this._navigateToPreviousPage}
+                                locale={txt.cancelWorkflowConfirmation}/>
 
+                            <ConfirmDialogBox
+                                onRef={ref => (this.successConfirmationBox = ref)}
+                                onAction={this._navigateToDashboard}
+                                onCancelAction={this._navigateToPreviousPage}
+                                locale={txt.successWorkflowConfirmation}/>
+                            {
+                                publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
+                                && !authorLinked &&
+                                <StandardCard
+                                    title={txt.authorLinking.title}
+                                    help={txt.authorLinking.help}
+                                    className="requiredField">
+                                    <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
+                                    <Field
+                                        name="authorLinking"
+                                        component={AuthorLinkingField}
+                                        searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
+                                        loggedInAuthor={author}
+                                        authorList={publication.fez_record_search_key_author}
+                                        linkedAuthorIdList={publication.fez_record_search_key_author_id}
+                                        disabled={this.props.submitting}
+                                        className="requiredField"
+                                        validate={[validation.required, validation.isValidAuthorLink]}
+                                    />
+                                </StandardCard>
+                            }
                             <StandardCard title={txt.comments.title} help={txt.comments.help}>
                                 <Field
                                     component={TextField}
@@ -157,8 +160,7 @@ export default class ClaimPublicationForm extends Component {
                     }
 
                     {
-                        alert &&
-                        <Alert {...alert} />
+                        this.getAlert({...this.props, txt: txt, authorLinked: publication.rek_pid && authorLinked})
                     }
 
                     <div className="columns action-buttons">
@@ -171,7 +173,7 @@ export default class ClaimPublicationForm extends Component {
                                 onTouchTap={this._showConfirmation}/>
                         </div>
                         {
-                            !authorLinked &&
+                            (!publication.rek_pid || !authorLinked) &&
                             <div className="column is-narrow-desktop">
                                 <RaisedButton
                                     secondary

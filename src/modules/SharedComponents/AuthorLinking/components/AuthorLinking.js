@@ -2,8 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Checkbox from 'material-ui/Checkbox';
 import AuthorItem from './AuthorItem';
+import Infinite from 'react-infinite';
 
 export default class AuthorLinking extends React.Component {
+    static contextTypes = {
+        isMobile: PropTypes.bool
+    };
+
     static propTypes = {
         searchKey: PropTypes.object.isRequired,
         authorList: PropTypes.array,
@@ -37,6 +42,16 @@ export default class AuthorLinking extends React.Component {
          * @type {Array}
          */
         this.listToOutput = [];
+
+        /**
+         * List to render. List of <AuthorItem/>s/List of rows of multiple <AuthorItem/>s
+         * @type {Array}
+         */
+        this.authorsToRender = [];
+    }
+
+    componentWillMount() {
+        this.authorsToRender = this.getAuthorsToRender({...this.props}, this.state);
     }
 
     componentDidMount() {
@@ -53,8 +68,49 @@ export default class AuthorLinking extends React.Component {
     componentWillUpdate(nextProps, nextState) {
         if (this.props.onChange !== null && nextState.selectedAuthor !== null) {
             this.props.onChange({authors: this.prepareOutput(nextProps, nextState, this.listToOutput), valid: nextState.authorLinkingConfirmed});
+            this.authorsToRender = this.getAuthorsToRender({...nextProps}, nextState);
         }
     }
+
+    /**
+     * Build authors list
+     */
+    getAuthorsToRender = ({authorList, linkedAuthorIdList, disabled} = {}, {selectedAuthor = {}} = {}) => {
+        const authors = authorList.map((author, index) => {
+            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index].rek_author_id !== 0;
+            const selected = selectedAuthor && author.rek_author_order === selectedAuthor.rek_author_id_order;
+
+            return (
+                <AuthorItem
+                    index={index}
+                    key={index}
+                    author={author}
+                    linked={linked}
+                    selected={selected}
+                    onAuthorSelected={this._selectAuthor}
+                    disabled={disabled}
+                />
+            );
+        });
+
+
+        if (this.context.isMobile) {
+            return authors;
+        }
+
+        const rows = [];
+        const itemsPerRow = 3;
+        if (authors.length > 0) {
+            for (let i = 0; i < authors.length; i += itemsPerRow) {
+                rows.push(<div className="columns is-multiline is-gapless is-marginless" key={i}>
+                    {
+                        authors.slice(i, i + itemsPerRow)
+                    }
+                </div>);
+            }
+        }
+        return rows;
+    };
 
     /**
      * Prepare output to be transformed
@@ -88,28 +144,6 @@ export default class AuthorLinking extends React.Component {
     };
 
     /**
-     * Build authors list
-     */
-    buildAuthorList = ({authorList, linkedAuthorIdList, disabled}, {selectedAuthor}) => {
-        return authorList.map((author, index) => {
-            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index].rek_author_id !== 0;
-            const selected = selectedAuthor && author.rek_author_order === selectedAuthor.rek_author_id_order;
-
-            return (
-                <AuthorItem
-                    index={index}
-                    key={index}
-                    author={author}
-                    linked={linked}
-                    selected={selected}
-                    onAuthorSelected={this._selectAuthor}
-                    disabled={disabled}
-                />
-            );
-        });
-    };
-
-    /**
      * Select and transform author to be linked
      *
      * @param author
@@ -136,12 +170,17 @@ export default class AuthorLinking extends React.Component {
     render() {
         const {confirmation} = this.props.locale;
         const {selectedAuthor, authorLinkingConfirmed} = this.state;
-        const authors = this.buildAuthorList({...this.props}, this.state);
-
         return (
             <div className={this.props.className}>
-                <div className="columns is-gapless is-multiline is-desktop is-mobile">
-                    {authors}
+                <div className="author-link-list">
+                    <Infinite
+                        className="author-link-infinite-scroll"
+                        containerHeight={200}
+                        elementHeight={73}
+                        infiniteLoadBeginEdgeOffset={50}
+                    >
+                        {this.authorsToRender}
+                    </Infinite>
                 </div>
                 {
                     selectedAuthor !== null &&

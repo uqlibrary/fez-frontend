@@ -1,12 +1,7 @@
-export {accounts} from './account';
-export {publicationSubtypeList} from './vocabularies';
-export {externalDoiSearchResultList, externalPubMedSearchResultsList, externalTitleSearchResultsList} from './search/external';
-export {publicationTypeList} from './records';
-export {possibleUnclaimed, emptyPossibleUnclaimed, possibleCounts, claimedPublications, trendingPublications} from './publications';
-export {authorsSearch, currentAuthor, authorDetails} from './authors';
+export {accounts, authorsSearch, currentAuthor, authorDetails} from './account';
+export {externalDoiSearchResultList, externalPubMedSearchResultsList, record, myRecordsList, possibleUnclaimedList,
+    externalTitleSearchResultsList, internalTitleSearchList, recordsTypeList, externalTitleScopusResultsList} from './records';
+export {vocabulariesList} from './vocabularies';
 export {quickTemplates} from './acml';
-export {hindexResponse} from './academic/hindex';
-export {publicationYearsZero, publicationYearsBig, publicationYearsSmall} from './academic/publicationYears';
-export {publicationStats, formattedData} from './academic/publicationStats';
-
-
+export {hindexResponse, publicationStats, trendingPublications, publicationYearsZero,
+    publicationYearsBig, publicationYearsSmall} from './academicStats';

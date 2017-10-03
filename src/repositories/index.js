@@ -1,9 +1,3 @@
-export * from './academic';
-export * from './account';
-export * from './acml';
-export * from './authors';
-export * from './file';
-export * from './publications';
-export * from './records';
-export * from './search';
-export * from './publicationTypes';
+export {putUploadFiles} from './file';
+export * as routes from './routes';
+export {post, patch, get} from './generic';
