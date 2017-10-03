@@ -39,7 +39,7 @@ export default class SearchRecordResults extends React.Component {
 
     _claimPublication = (item) => {
         this.props.actions.setClaimPublication(item);
-        this.props.history.push('/claim-publication-form');
+        this.props.history.push('/records/claim');
     };
 
     render() {
