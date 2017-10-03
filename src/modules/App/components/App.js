@@ -18,13 +18,11 @@ import {
 import {Dashboard} from 'modules/Dashboard';
 import {Research} from 'modules/Research';
 import {AddRecord} from 'modules/AddRecord';
-import {SearchRecord} from 'modules/AddRecord';
+import {SearchRecord, SearchRecordResults, AddNewRecord} from 'modules/AddRecord';
 import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Browse} from 'modules/Browse';
 import {ClaimPublication} from 'modules/ClaimPublication';
 import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
-import {SearchRecordResults} from 'modules/AddRecord';
-import {AddNewRecord} from 'modules/AddRecord';
 
 export default class App extends React.Component {
     static propTypes = {

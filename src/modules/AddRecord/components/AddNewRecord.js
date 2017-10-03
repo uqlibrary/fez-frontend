@@ -3,21 +3,18 @@ import PropTypes from 'prop-types';
 import {StandardPage, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
-import AddRecordStepper from './AddRecordStepper';
+import {Stepper} from 'modules/SharedComponents/Stepper';
 import {PublicationForm} from 'modules/PublicationForm';
 
 import {locale, validation} from 'config';
 
 export default class AddNewRecord extends React.Component {
     static propTypes = {
-        publicationsList: PropTypes.array,
         history: PropTypes.object.isRequired,
-        stepperIndex: PropTypes.number,
         rawSearchQuery: PropTypes.string
     };
 
     static defaultProps = {
-        stepperIndex: 2,
         rawSearchQuery: ''
     };
 
@@ -56,9 +53,9 @@ export default class AddNewRecord extends React.Component {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._navigateToDashboard}
                     onCancelAction={this._restartWorkflow}
-                    locale={txt.confirmationDialog}/>
+                    locale={txt.successWorkflowConfirmation}/>
 
-                <AddRecordStepper activeStep={this.props.stepperIndex} steps={txt.stepper} />
+                <Stepper activeStep={2} steps={txt.stepper} />
                 <div>
                     {
                         <PublicationForm

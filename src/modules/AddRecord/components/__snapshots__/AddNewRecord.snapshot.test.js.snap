@@ -18,7 +18,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
     onCancelAction={[Function]}
     onRef={[Function]}
   />
-  <AddRecordStepper
+  <CustomStepper
     activeStep={2}
     steps={
       Array [

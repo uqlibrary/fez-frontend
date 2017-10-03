@@ -4,7 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {StandardPage, StandardCard, InlineLoader, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
-import AddRecordStepper from './AddRecordStepper';
+import {Stepper} from 'modules/SharedComponents/Stepper';
 import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationListLoadingProgress} from 'modules/PublicationsList';
 
@@ -17,12 +17,10 @@ export default class SearchRecordResults extends React.Component {
         loadingPublicationSources: PropTypes.object,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object,
-        stepperIndex: PropTypes.number,
-        rawSearchQuery: PropTypes.object
+        rawSearchQuery: PropTypes.string
     };
 
     static defaultProps = {
-        stepperIndex: 1,
         publicationsList: [],
         loadingPublicationSources: {}
     };
@@ -56,7 +54,7 @@ export default class SearchRecordResults extends React.Component {
         ];
         return (
             <StandardPage title={txt.title}>
-                <AddRecordStepper activeStep={this.props.stepperIndex} steps={txt.stepper} />
+                <Stepper activeStep={1} steps={txt.stepper} />
                 <div className="columns searchWrapper">
                     {/* Mobile search dashboard (progress bar) */}
                     <div className="column is-hidden-desktop is-hidden-tablet mobileWrapper">

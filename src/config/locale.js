@@ -367,7 +367,7 @@ export default {
             step3: {
                 // all text values come from components.publicationForm
             },
-            confirmationDialog: {
+            successWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
                 confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
                 cancelButtonLabel: 'Add another missing record',

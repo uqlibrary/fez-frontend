@@ -4,7 +4,7 @@ exports[`Search record should render stepper and a publication search form 1`] =
 <StandardPage
   title="Add a missing record to eSpace"
 >
-  <AddRecordStepper
+  <CustomStepper
     activeStep={0}
     steps={
       Array [
