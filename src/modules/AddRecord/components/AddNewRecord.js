@@ -13,7 +13,7 @@ export default class AddNewRecord extends React.Component {
         publicationsList: PropTypes.array,
         history: PropTypes.object.isRequired,
         stepperIndex: PropTypes.number,
-        rawSearchQuery: PropTypes.object
+        rawSearchQuery: PropTypes.string
     };
 
     static defaultProps = {
