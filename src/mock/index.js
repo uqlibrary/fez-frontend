@@ -60,7 +60,7 @@ mock
         .reply(200, mockData.externalDoiSearchResultList)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'pubmed', searchQuery: '28131963'}))))
         .reply(200, mockData.externalPubMedSearchResultsList)
-    .onGet(new RegExp(escapeRegExp(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: '.*', pageSize: 5}))))
+    .onGet(new RegExp(escapeRegExp(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: '.*', pageSize: 5, sortBy: 'score'}))))
         .reply(200, mockData.internalTitleSearchList)
     .onGet(new RegExp(escapeRegExp(routes.GET_PUBLICATION_TYPES_API())))
         .reply(200, mockData.recordsTypeList)
@@ -73,23 +73,17 @@ mock
     .onGet(new RegExp(escapeRegExp(routes.CURRENT_USER_RECORDS_API({...standardQueryString}))))
         .reply(200, mockData.myRecordsList)
     .onGet(new RegExp(escapeRegExp(routes.POSSIBLE_RECORDS_API({...standardQueryString}))))
-        // .reply(200, mockData.possibleUnclaimedList)
-        .reply((config) => {
-            console.log(config.url);
-            return [200, mockData.possibleUnclaimedList];
-        })
+        .reply(200, mockData.possibleUnclaimedList)
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}))))
         .reply(200, 's3-ap-southeast-2.amazonaws.com')
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
         .reply(200, {data: {}})
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
-        .reply((config) => {
-            console.log(config.url);
-            return [200, {data: {...mockData.record}}];
-        })
-        // .reply(200, {data: {...mockData.record}})
+        .reply(200, {data: {...mockData.record}})
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}))))
         .reply(200, {data: {...mockData.record}})
+    .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
+        .reply(200, {data: {}})
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}))))
         .reply(200, {data: ''})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))

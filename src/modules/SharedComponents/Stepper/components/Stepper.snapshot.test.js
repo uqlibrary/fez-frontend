@@ -2,10 +2,10 @@ import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 
-import AddRecordStepper from './AddRecordStepper';
+import Stepper from './Stepper';
 
 function setup(values) {
-    return shallow(<AddRecordStepper {...values}/>);
+    return shallow(<Stepper {...values}/>);
 }
 
 describe('Add record stepper tests', () => {
