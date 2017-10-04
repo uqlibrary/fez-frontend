@@ -16,4 +16,4 @@ export {publicationTypes} from './general';
 export {default as locale} from './locale';
 export {defaultMenuItems, adminMenuItems, researcherMenuItems} from './menu';
 export {default as PATHS} from './paths';
-
+export {default as routes} from './routes';
