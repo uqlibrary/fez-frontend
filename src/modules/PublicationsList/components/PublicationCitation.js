@@ -143,7 +143,7 @@ export default class PublicationCitation extends Component {
                                             className="publicationSource"
                                             aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', locale.global.sources.altmetric.title)}
                                         >
-                                            {this.props.publication.rek_altmetric_score + ' citations'}
+                                            {this.props.publication.rek_altmetric_score + locale.global.sources.altmetric.citationTitle}
                                             <ActionOpenInNew className="citationOpenUrlIcon"/>
                                         </a>
                                     </span>

@@ -60,7 +60,7 @@ export default {
             altmetric: {
                 title: 'Altmetric',
                 externalCitationUrl: 'http://www.altmetric.com/details.php?citation_id=[ID]',
-                citationTitle: 'citations',
+                citationTitle: ' citations',
             }
         },
         embargoDateFormat: 'YYYY-MM-DD'
