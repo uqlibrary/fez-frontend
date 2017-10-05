@@ -9,6 +9,8 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
   >
     <a
       href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=undefined&SrcAuth=uqueensland"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Web of Science citation count is 19"
@@ -81,6 +83,8 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
   >
     <a
       href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=undefined&SrcAuth=uqueensland"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Web of Science citation count is 1"
@@ -100,6 +104,8 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
   >
     <a
       href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=undefined&src=s&sot=cite&sdt=a"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Scopus citation count is 1"
@@ -119,6 +125,8 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
   >
     <a
       href="http://www.altmetric.com/details.php?citation_id=undefined"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Altmetric score is 1"
@@ -208,6 +216,8 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
   >
     <a
       href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=undefined&SrcAuth=uqueensland"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Web of Science citation count is 1"
@@ -227,6 +237,8 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
   >
     <a
       href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=undefined&src=s&sot=cite&sdt=a"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Scopus citation count is 1"
@@ -246,6 +258,8 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
   >
     <a
       href="http://www.altmetric.com/details.php?citation_id=undefined"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <img
         alt="Altmetric score is 1"
