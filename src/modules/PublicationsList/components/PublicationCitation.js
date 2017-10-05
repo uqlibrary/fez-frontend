@@ -63,7 +63,25 @@ export default class PublicationCitation extends Component {
                 // do nothing
                 break;
         }
-    }
+    };
+
+    _idLocation = (citationSource) => {
+        let location = '';
+        if(citationSource === 'wos') {
+            if(this.props.publication.fez_record_search_key_isi_loc && this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc) {
+                location = this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc;
+            }
+        } else if (citationSource === 'scopus') {
+            if(this.props.publication.fez_record_search_key_scopus_id && this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id) {
+                location = this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id;
+            }
+        } else if (citationSource === 'altmetric') {
+            if(this.props.publication.rek_altmetric_id) {
+                location = this.props.publication.rek_altmetric_id;
+            }
+        }
+        return location;
+    };
 
     render() {
         const actions = this.props.showDefaultActions ? this.defaultActions : this.props.customActions;
@@ -131,28 +149,10 @@ export default class PublicationCitation extends Component {
                                     const countLocation = locale.global.citationSources[citationSource].countLocation;
                                     const citationTitle = locale.global.citationSources[citationSource].title;
                                     const citationURL = locale.global.citationSources[citationSource].externalCitationUrl;
-                                    const idLocation = (citationSource) => {
-                                        let location = '';
-                                        if(citationSource === 'wos') {
-                                            if(this.props.publication.rek_isi_loc) {
-                                                location = this.props.publication.rek_isi_loc;
-                                            }
-                                        } else if (citationSource === 'scopus') {
-                                            if(this.props.publication.fez_record_search_key_scopus_id && this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id) {
-                                                location = this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id;
-                                            }
-                                        } else if (citationSource === 'altmetric') {
-                                            if(this.props.publication.rek_altmetric_id) {
-                                                location = this.props.publication.rek_altmetric_id;
-                                            }
-                                        }
-                                        return location;
-                                    };
-
                                     return(
                                         this.props.publication[countLocation] >= 1 &&
                                         <span key={index}>
-                                            <a href={citationURL.replace('[ID]', idLocation(citationSource))}
+                                            <a href={citationURL.replace('[ID]', this._idLocation(citationSource))}
                                                 rel="noopener noreferrer"
                                                 target="_blank"
                                                 className="publicationSource"

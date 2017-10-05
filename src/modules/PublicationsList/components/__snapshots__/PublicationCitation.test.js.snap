@@ -1075,7 +1075,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
           <a
             aria-label="Link to undefined will open in a new window."
             className="publicationSource"
-            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=&SrcAuth=uqueensland"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -2230,7 +2230,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
           <a
             aria-label="Link to undefined will open in a new window."
             className="publicationSource"
-            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=&SrcAuth=uqueensland"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -3347,7 +3347,7 @@ exports[`PublicationCitation renders  component with default item 1`] = `
           <a
             aria-label="Link to undefined will open in a new window."
             className="publicationSource"
-            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=&SrcAuth=uqueensland"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
             rel="noopener noreferrer"
             target="_blank"
           >
