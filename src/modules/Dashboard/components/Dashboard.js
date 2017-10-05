@@ -16,7 +16,7 @@ import {PublicationStats} from 'modules/SharedComponents';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import FontIcon from 'material-ui/FontIcon';
-import {locale} from 'config';
+import {locale, PATHS} from 'config';
 
 class Dashboard extends React.Component {
     static propTypes = {
@@ -67,11 +67,11 @@ class Dashboard extends React.Component {
     }
 
     _claimYourPublications = () => {
-        this.props.history.push('/records/possible');
+        this.props.history.push(PATHS.records.possible);
     };
 
     _viewYourResearch = () => {
-        this.props.history.push('/records/mine');
+        this.props.history.push(PATHS.records.mine);
     };
 
     render() {

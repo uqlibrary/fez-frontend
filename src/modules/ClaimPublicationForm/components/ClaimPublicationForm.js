@@ -6,7 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import PublicationCitation from 'modules/PublicationsList/components/PublicationCitation';
 import {AuthorLinkingField} from '../../SharedComponents';
-import {validation, locale} from 'config';
+import {validation, locale, PATHS} from 'config';
 
 export default class ClaimPublicationForm extends Component {
     static propTypes = {
@@ -38,7 +38,7 @@ export default class ClaimPublicationForm extends Component {
         // TODO: route should not be hardcoded, should come from config/menu
         // TODO: should navigation be handled by top-level container only, eg pass on as props:
         // TODO: this.props.navigateToDashboard() and this.props.navigateToClaimForm(item) <- fixes issue of linking item
-        this.props.history.push('/dashboard');
+        this.props.history.push(PATHS.dashboard);
     };
 
     _showConfirmation = () => {
