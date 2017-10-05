@@ -269,7 +269,7 @@ export default {
             text: (
                 <div>
                     <div>Please, check if there are any possibly your publications via <a href={PATHS.records.possible}> claim
-                        possible publications</a> or <a href={PATHS.records.find}>add a missing publication</a></div>
+                        possible publications</a> or <a href={PATHS.records.add.find}>add a missing publication</a></div>
                 </div>
             ),
             loadingMessage: 'Searching for your publications...',
@@ -279,7 +279,7 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. Please, check if there are any possibly your publications
-                        via <a href={PATHS.records.possible}>claim possible publications</a> or <a href={PATHS.records.find}>add a
+                        via <a href={PATHS.records.possible}>claim possible publications</a> or <a href={PATHS.records.add.find}>add a
                         missing publication</a>
                     </div>
                 ),

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StandardPage, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
-import {Stepper} from 'modules/SharedComponents/Stepper';
 import {PublicationForm} from 'modules/PublicationForm';
 
 import {locale, validation, PATHS} from 'config';
@@ -28,12 +27,10 @@ export default class AddNewRecord extends React.Component {
     };
 
     _restartWorkflow = () => {
-        this.props.history.push(PATHS.records.find);
+        this.props.history.push(PATHS.records.add.find);
     };
 
     _navigateToDashboard = () => {
-        // TODO: should navigation be handled by top-level container only, eg pass on as props:
-        // TODO: this.props.navigateToDashboard() and this.props.navigateToClaimForm(item) <- fixes issue of linking item
         this.props.history.push(PATHS.dashboard);
     };
 
@@ -47,23 +44,19 @@ export default class AddNewRecord extends React.Component {
         };
 
         return (
-            <StandardPage title={txt.title}>
+            <div>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._navigateToDashboard}
                     onCancelAction={this._restartWorkflow}
-                    locale={txt.successWorkflowConfirmation}/>
-
-                <Stepper activeStep={2} steps={txt.stepper} />
-                <div>
-                    {
-                        <PublicationForm
-                            onFormSubmitSuccess={this._recordSaved}
-                            onFormCancel={this._restartWorkflow}
-                            initialValues={initialValues}/>
-                    }
-                </div>
-            </StandardPage>
+                    locale={txt.successWorkflowConfirmation}
+                />
+                <PublicationForm
+                    onFormSubmitSuccess={this._recordSaved}
+                    onFormCancel={this._restartWorkflow}
+                    initialValues={initialValues}
+                />
+            </div>
         );
     }
 }

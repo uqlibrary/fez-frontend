@@ -111,15 +111,7 @@ exports[`App tests for user account and author status User is logged in but are 
           render={[Function]}
         />
         <Route
-          path="/records/add/find"
-          render={[Function]}
-        />
-        <Route
           path="/records/possible"
-          render={[Function]}
-        />
-        <Route
-          path="/records/add/results"
           render={[Function]}
         />
         <Route
@@ -127,7 +119,7 @@ exports[`App tests for user account and author status User is logged in but are 
           render={[Function]}
         />
         <Route
-          path="/records/add/new"
+          path="/records/add"
           render={[Function]}
         />
       </Switch>
@@ -241,15 +233,7 @@ exports[`App tests for user account and author status User is not logged in and 
           render={[Function]}
         />
         <Route
-          path="/records/add/find"
-          render={[Function]}
-        />
-        <Route
           path="/records/possible"
-          render={[Function]}
-        />
-        <Route
-          path="/records/add/results"
           render={[Function]}
         />
         <Route
@@ -257,7 +241,7 @@ exports[`App tests for user account and author status User is not logged in and 
           render={[Function]}
         />
         <Route
-          path="/records/add/new"
+          path="/records/add"
           render={[Function]}
         />
       </Switch>
@@ -378,15 +362,7 @@ exports[`App tests for user account and author status User logged in and is an a
           render={[Function]}
         />
         <Route
-          path="/records/add/find"
-          render={[Function]}
-        />
-        <Route
           path="/records/possible"
-          render={[Function]}
-        />
-        <Route
-          path="/records/add/results"
           render={[Function]}
         />
         <Route
@@ -394,7 +370,7 @@ exports[`App tests for user account and author status User logged in and is an a
           render={[Function]}
         />
         <Route
-          path="/records/add/new"
+          path="/records/add"
           render={[Function]}
         />
       </Switch>
@@ -529,15 +505,7 @@ exports[`App tests for user account and author status User logged in but is not 
           render={[Function]}
         />
         <Route
-          path="/records/add/find"
-          render={[Function]}
-        />
-        <Route
           path="/records/possible"
-          render={[Function]}
-        />
-        <Route
-          path="/records/add/results"
           render={[Function]}
         />
         <Route
@@ -545,7 +513,7 @@ exports[`App tests for user account and author status User logged in but is not 
           render={[Function]}
         />
         <Route
-          path="/records/add/new"
+          path="/records/add"
           render={[Function]}
         />
       </Switch>

@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Add new record should render stepper and a publication form 1`] = `
-<StandardPage
-  title="Add a missing record to eSpace"
->
+<div>
   <ConfirmDialogBox
     hideCancelButton={false}
     locale={
@@ -18,32 +16,14 @@ exports[`Add new record should render stepper and a publication form 1`] = `
     onCancelAction={[Function]}
     onRef={[Function]}
   />
-  <CustomStepper
-    activeStep={2}
-    steps={
-      Array [
-        Object {
-          "label": "Search for your publication",
-        },
-        Object {
-          "label": "Search results",
-        },
-        Object {
-          "label": "Add your publication",
-        },
-      ]
-    }
-  />
-  <div>
-    <Connect(ReduxForm)
-      initialValues={
-        Object {
-          "rek_title": "",
-        }
+  <Connect(ReduxForm)
+    initialValues={
+      Object {
+        "rek_title": "",
       }
-      onFormCancel={[Function]}
-      onFormSubmitSuccess={[Function]}
-    />
-  </div>
-</StandardPage>
+    }
+    onFormCancel={[Function]}
+    onFormSubmitSuccess={[Function]}
+  />
+</div>
 `;

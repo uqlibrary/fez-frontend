@@ -23,8 +23,11 @@ export default {
         mine: records()(mine),
         possible: records()(possible),
         claim: records()(claim),
-        find: records()(add()(find)),
-        searchResults: records()(add()(results)),
-        addNew: records()(add()(addNew))
+        add: {
+            index: records()(add()()),
+            find: records()(add()(find)),
+            searchResults: records()(add()(results)),
+            addNew: records()(add()(addNew))
+        }
     }
 };

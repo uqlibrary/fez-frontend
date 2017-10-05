@@ -11,7 +11,7 @@ export const researcherMenuItems = (locale, email) => [
         primaryText: locale.menu.myResearch.primaryText
     },
     {
-        linkTo: PATHS.records.find,
+        linkTo: PATHS.records.add.find,
         primaryText: locale.menu.addMissingRecord.primaryText
     },
     {
