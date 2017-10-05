@@ -1,7 +1,7 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
 import Link from 'react-router';
-import {PATHS} from 'config';
+import {default as PATHS} from './paths';
 
 export default {
     global: {
