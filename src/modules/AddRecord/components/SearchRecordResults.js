@@ -52,6 +52,24 @@ export default class SearchRecordResults extends React.Component {
                 primary: true
             }
         ];
+
+        const unclaimablePublicationsList = this.props.publicationsList
+            .filter(item => {
+                if (!item.rek_pid || item.fez_record_search_key_author_id.length < item.fez_record_search_key_author.length) return -1;
+                return item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false) ? 1 : -1;
+            })
+            .map(item => (item.rek_pid));
+
+        console.log(unclaimablePublicationsList);
+
+        const unclaimable = [
+            {
+                label: searchResultsTxt.unclaimable,
+                disabled: true,
+                primary: false
+            }
+        ];
+
         return (
             <StandardPage title={txt.title}>
                 <Stepper activeStep={1} steps={txt.stepper} />
@@ -72,7 +90,12 @@ export default class SearchRecordResults extends React.Component {
                             this.props.publicationsList.length > 0 &&
                             <StandardCard {...searchResultsTxt.searchResults}>
                                 <div>{searchResultsTxt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.props.rawSearchQuery)}</div>
-                                <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
+                                <PublicationsList
+                                    publicationsList={this.props.publicationsList}
+                                    customActions={actions}
+                                    publicationsListSubset={unclaimablePublicationsList}
+                                    subsetCustomActions={unclaimable}
+                                />
                             </StandardCard>
                         }
 

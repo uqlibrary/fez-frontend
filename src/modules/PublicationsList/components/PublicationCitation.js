@@ -68,6 +68,7 @@ export default class PublicationCitation extends Component {
                 const buttonProps = {
                     secondary: true,
                     fullWidth: true,
+                    disabled: action.disabled,
                     label: action.label,
                     className: `publicationAction buttonOrder${index}`,
                     onTouchTap: () => (
