@@ -30,7 +30,7 @@ export default class PublicationsListSorting extends Component {
 
     componentWillReceiveProps(nextProps) {
         if(nextProps.pagingData.per_page !== this.props.pagingData.per_page) {
-            this.state.setState(nextProps.pagingData.per_page);
+            this.setState(nextProps.pagingData.per_page);
         }
     }
 
