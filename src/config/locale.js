@@ -1154,6 +1154,14 @@ export default {
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
         authorLinking: 'One author must be selected and be confirmed'
+    },
+    issues: {
+        claim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
+            `Record was claimed: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
+        unclaim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
+            `Record is not mine: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
+        fixRecord: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
+            `Fix request: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`
     }
 };
 

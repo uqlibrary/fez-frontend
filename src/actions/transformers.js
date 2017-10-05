@@ -2,22 +2,22 @@ import {locale} from 'config';
 
 const moment = require('moment');
 
-/* getIssueRequest - returns claim request object
-* @param {Object} form data for claim request
-* @returns {Object} formatted for claim request
-*/
-export const getClaimIssueRequest = (data) => {
-    const claimRequest = {
-        issue: `Record ${data.publication.title} (${data.publication.rek_pid}) 
-        has been claimed by ${data.author.aut_display_name} (${data.author.aut_org_username}) ${data.comments}`
-    };
+const pipe = (...functionsList) => values => functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
-    if (data.comments) {
-        claimRequest.comments = data.comments;
-    }
+const getIssueValues = (data) => ({
+    title: data.publication.title,
+    pid: data.publication.rek_pid,
+    userName: data.author.aut_display_name,
+    userId: data.author.aut_org_username,
+    comments: data.comments
+});
 
-    return claimRequest;
-};
+const getIssuesRequest = (text) => ({issue: text});
+
+export const getClaimIssueRequest = pipe(getIssueValues, locale.issues.claim, getIssuesRequest);
+export const getUnclaimIssueRequest = pipe(getIssueValues, locale.issues.unclaim, getIssuesRequest);
+export const getFixIssueRequest = pipe(getIssueValues, locale.issues.fixRecord, getIssuesRequest);
+
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
 * @param {Object} form data may contain link attribute  {rek_link: {string}}

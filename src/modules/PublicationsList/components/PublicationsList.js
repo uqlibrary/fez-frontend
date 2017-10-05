@@ -5,8 +5,13 @@ import PublicationCitation from './PublicationCitation';
 export default class PublicationsList extends Component {
     static propTypes = {
         publicationsList: PropTypes.array,
+        excludePublicationsList: PropTypes.array,
         customActions: PropTypes.array,
         showDefaultActions: PropTypes.bool
+    };
+
+    static defaultProps = {
+        excludePublicationsList: []
     };
 
     constructor(props) {
@@ -19,7 +24,8 @@ export default class PublicationsList extends Component {
                 <PublicationCitation
                     key={index + 1}
                     publication={publication}
-                    customActions={this.props.customActions}
+                    customActions={this.props.excludePublicationsList.indexOf(publication.rek_pid) === -1 ? this.props.customActions : []}
+                    className={this.props.excludePublicationsList.indexOf(publication.rek_pid) > -1 ? 'highlight' : ''}
                     showDefaultActions={this.props.showDefaultActions} />
             );
         });

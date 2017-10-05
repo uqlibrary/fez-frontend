@@ -12,21 +12,17 @@ import BookChapterCitation from './citations/BookChapterCitation';
 import BookCitation from './citations/BookCitation';
 import ConferencePaperCitation from './citations/ConferencePaperCitation';
 
-/*
- * @props:
- *   publication {object} item to be displayed
- *   customActions {array} of {label: string, actionHandler: function} which will be rendered as FlatButtons
- *   showDefaultActions {bool} if set to true will display default actions for records with PID, false by default
- * */
 export default class PublicationCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         showDefaultActions: PropTypes.bool,
-        customActions: PropTypes.array
+        customActions: PropTypes.array,
+        className: PropTypes.string
     };
 
     static defaultProps = {
-        showDefaultActions: false
+        showDefaultActions: false,
+        className: ''
     };
 
     constructor(props) {
@@ -91,7 +87,7 @@ export default class PublicationCitation extends Component {
             }) : null;
 
         return (
-            <div className="publicationCitation">
+            <div className={`publicationCitation ${this.props.className}`}>
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
                         <h3 className="title is-5 publicationTitle">{this.props.publication.rek_title}</h3>

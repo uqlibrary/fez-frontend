@@ -10,6 +10,7 @@ import {locale} from 'config';
 export default class ClaimPublication extends React.Component {
     static propTypes = {
         possiblePublicationsList: PropTypes.array,
+        publicationsClaimedInProgress: PropTypes.array,
         loadingPossiblePublicationsList: PropTypes.bool,
         possiblePublicationsFacets: PropTypes.object,
 
@@ -120,6 +121,7 @@ export default class ClaimPublication extends React.Component {
                                 </div>
                                 <PublicationsList
                                     publicationsList={this.props.possiblePublicationsList}
+                                    excludePublicationsList={this.props.publicationsClaimedInProgress}
                                     customActions={actions} />
                             </StandardCard>
                         </div>
