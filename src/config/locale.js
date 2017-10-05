@@ -1007,6 +1007,7 @@ export default {
         },
         publicationCitation: {
             eSpaceLegacyUrl: 'https://espace.library.uq.edu.au/view/[ID]',
+            linkAriaLabel: 'Open the full article ([TITLE]) in a new window',
             publicationSourcesLabel: 'Found in: ',
             citationCounts: {
                 wosCountLabel: 'Web of Science citation count is [count]',

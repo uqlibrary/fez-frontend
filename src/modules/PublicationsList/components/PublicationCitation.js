@@ -94,7 +94,9 @@ export default class PublicationCitation extends Component {
                             {!this.props.publication.rek_pid ? (this.props.publication.rek_title) : (
                                 <a href={locale.components.publicationCitation.eSpaceLegacyUrl.replace('[ID]', this.props.publication.rek_pid)}
                                     rel="noopener noreferrer"
-                                    target="_blank" >
+                                    target="_blank"
+                                    aria-label={locale.components.publicationCitation.linkAriaLabel.replace('[TITLE]', this.props.publication.rek_title)}
+                                >
                                     {this.props.publication.rek_title}<ActionOpenInNew className="titleOpenUrlIcon" />
                                 </a>
                             )}
