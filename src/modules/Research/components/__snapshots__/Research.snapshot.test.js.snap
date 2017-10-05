@@ -63,7 +63,7 @@ exports[`Research test renders list of publications 1`] = `
               <a
                 href="/records/possible"
               >
-                claim possible publications
+                 claim possible publications
               </a>
                or 
               <a
@@ -83,7 +83,7 @@ exports[`Research test renders list of publications 1`] = `
               <a
                 href="/records/possible"
               >
-                claim possible publications
+                 claim possible publications
               </a>
                or 
               <a

@@ -151,7 +151,7 @@ export default class App extends React.Component {
                                     </div>
                                 </div>
                             }
-                            {renderRoutes(this.props.route.routes)}
+                            {renderRoutes(this.props.route.routes(isAuthorizedUser))}
                         </div>
                         <HelpDrawer/>
                     </div>

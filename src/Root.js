@@ -5,7 +5,8 @@ import {renderRoutes} from 'react-router-config';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import {theme, routes} from 'config';
+import {theme} from 'config';
+import {default as routes} from 'config/routes';
 import {ScrollToTop} from './modules/SharedComponents';
 
 const Root = ({history}) => {

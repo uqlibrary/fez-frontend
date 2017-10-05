@@ -17,23 +17,18 @@ import {locale, PATHS} from 'config';
 const routedComponent = (RoutedComponent) => (route) => (<RoutedComponent {...route.route}/>);
 const routeKey = (path) => (path.replace('/', '').replace(/\//g, '-'));
 
-/*
-const indexRoute = (isAuthorised) => {
-    return [
-        {
-            path: PATHS.index,
-            exact: true,
-            component: isAuthorised ? Dashboard : routedComponent(Browse),
-            ...(isAuthorised ? {} : locale.pages.browse)
-        }
-    ];
-};
-*/
+const indexRoute = (isAuthorised) => ({
+    path: PATHS.index,
+    exact: true,
+    component: isAuthorised ? Dashboard : routedComponent(Browse),
+    ...(isAuthorised ? {} : locale.pages.browse)
+});
 
 export default [
     {
         component: App,
-        routes: [
+        routes: (isAuthorised) => ([
+            {...indexRoute(isAuthorised)},
             {
                 path: PATHS.browse,
                 component: routedComponent(Browse),
@@ -81,6 +76,6 @@ export default [
                 component: AddNewRecord,
                 key: routeKey(PATHS.records.addNew),
             }
-        ]
+        ])
     }
 ];

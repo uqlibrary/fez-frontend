@@ -6,6 +6,7 @@ import React from 'react';
 
 import App from './App';
 import {accounts, authorDetails} from 'mock/data';
+import {default as routes} from 'config/routes';
 
 function setup(values) {
     return shallow(<App {...values} />);
@@ -33,6 +34,9 @@ describe('App tests for user account and author status', () => {
             location: {
                 hash: '#/dashboard',
                 pathname: '/',
+            },
+            route: {
+                routes: routes[0].routes
             }
         };
         const wrapper = setup(values);
@@ -50,6 +54,9 @@ describe('App tests for user account and author status', () => {
             location: {
                 hash: '#/dashboard',
                 pathname: '/',
+            },
+            route: {
+                routes: routes[0].routes
             }
         };
         const wrapper = setup(values);
@@ -67,6 +74,9 @@ describe('App tests for user account and author status', () => {
             location: {
                 hash: '#/dashboard',
                 pathname: '/',
+            },
+            route: {
+                routes: routes[0].routes
             }
         };
         const wrapper = setup(values);
@@ -84,6 +94,9 @@ describe('App tests for user account and author status', () => {
             location: {
                 hash: '#/dashboard',
                 pathname: '/',
+            },
+            route: {
+                routes: routes[0].routes
             }
         };
         const wrapper = setup(values);
