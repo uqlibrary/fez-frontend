@@ -35,7 +35,9 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.wos && counts.wos > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.wos.externalCitationUrl.replace('[ID]', this.props.citationId('wos'))} >
+                        <a href={locale.global.citationSources.wos.externalCitationUrl.replace('[ID]', this.props.citationId('wos'))}
+                            rel="noopener noreferrer"
+                            target="_blank">
                             <img
                                 src={thompsonIcon}
                                 alt={txt.wosCountLabel.replace('[count]', counts.wos)}
@@ -48,7 +50,9 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.scopus && counts.scopus > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.scopus.externalCitationUrl.replace('[ID]', this.props.citationId('scopus'))} >
+                        <a href={locale.global.citationSources.scopus.externalCitationUrl.replace('[ID]', this.props.citationId('scopus'))}
+                            rel="noopener noreferrer"
+                            target="_blank">
                             <img
                                 src={scopusIcon}
                                 alt={txt.scopusCountLabel.replace('[count]', counts.scopus)}
@@ -61,7 +65,9 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.altmetric && counts.altmetric > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.altmetric.externalCitationUrl.replace('[ID]', this.props.citationId('altmetric'))} >
+                        <a href={locale.global.citationSources.altmetric.externalCitationUrl.replace('[ID]', this.props.citationId('altmetric'))}
+                            rel="noopener noreferrer"
+                            target="_blank">
                             <img
                                 src={altmetricIcon}
                                 alt={txt.altmetricCountLabel.replace('[count]', counts.altmetric)}
