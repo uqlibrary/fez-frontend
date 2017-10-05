@@ -89,8 +89,6 @@ export default class PublicationCitation extends Component {
                     </div>
                 );
             }) : null;
-        console.log('THIS IS A PUBLICATION RECORD ---- \n\n' + JSON.stringify(this.props.publication));
-
         return (
             <div className="publicationCitation">
                 <div className="columns is-gapless is-mobile">
