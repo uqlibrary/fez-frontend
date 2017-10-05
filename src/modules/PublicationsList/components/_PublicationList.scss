@@ -18,11 +18,12 @@
     margin-bottom: 0px !important;
   }
 
-  .citationOpenUrlIcon {
+  .citationOpenUrlIcon, .titleOpenUrlIcon {
     width: 12px !important;
     height: 12px !important;
     fill: $accent-color !important;
-    margin: 0 4px;
+    margin: 0 2px;
+    vertical-align: top;
   }
 
   .publicationActions {
