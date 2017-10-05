@@ -1,30 +1,22 @@
 import {PATHS} from 'config';
 
-export const researcherMenuItems = (locale, email, components) => [
+export const researcherMenuItems = (locale, email) => [
     {
         linkTo: PATHS.dashboard,
-        path: PATHS.dashboard,
         primaryText: locale.menu.myDashboard.primaryText,
-        secondaryText: email,
-        component: components.Dashboard
+        secondaryText: email
     },
     {
         linkTo: PATHS.records.mine,
-        path: PATHS.records.mine,
-        primaryText: locale.menu.myResearch.primaryText,
-        render: components.Research
+        primaryText: locale.menu.myResearch.primaryText
     },
     {
         linkTo: PATHS.records.find,
-        path: PATHS.records.find,
-        primaryText: locale.menu.addMissingRecord.primaryText,
-        component: components.SearchRecord
+        primaryText: locale.menu.addMissingRecord.primaryText
     },
     {
         linkTo: PATHS.records.possible,
-        path: PATHS.records.possible,
-        primaryText: locale.menu.claimPublication.primaryText,
-        component: components.ClaimPublication
+        primaryText: locale.menu.claimPublication.primaryText
     },
     {
         divider: true,
@@ -32,13 +24,11 @@ export const researcherMenuItems = (locale, email, components) => [
     }
 ];
 
-export const adminMenuItems = (locale, email, components) => [
+export const adminMenuItems = (locale, email) => [
     {
         linkTo: PATHS.dashboard,
-        path: PATHS.dashboard,
         primaryText: locale.menu.myDashboard.primaryText,
-        secondaryText: email,
-        component: components.Dashboard
+        secondaryText: email
     },
     {
         linkTo: '/',
@@ -57,13 +47,11 @@ export const adminMenuItems = (locale, email, components) => [
     }
 ];
 
-export const defaultMenuItems = (locale, components) => [
+export const defaultMenuItems = (locale) => [
     {
         linkTo: PATHS.browse,
         primaryText: locale.menu.browse.primaryText,
-        secondaryText: locale.menu.browse.secondaryText,
-        path: PATHS.browse,
-        render: () => components.Browse(locale.pages.browse)
+        secondaryText: locale.menu.browse.secondaryText
     },
     // TODO: coming soon
     // {
@@ -80,9 +68,7 @@ export const defaultMenuItems = (locale, components) => [
     // },
     {
         linkTo: PATHS.about,
-        path: PATHS.about,
         primaryText: locale.menu.about.primaryText,
-        secondaryText: locale.menu.about.secondaryText,
-        render: () => components.StandardPage(locale.pages.about)
+        secondaryText: locale.menu.about.secondaryText
     }
 ];

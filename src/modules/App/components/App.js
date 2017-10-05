@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Route, Switch} from 'react-router';
+import {renderRoutes} from 'react-router-config';
 import AppBar from 'material-ui/AppBar';
 
 import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
@@ -11,25 +11,15 @@ import {
     defaultMenuItems,
     researcherMenuItems,
     AUTH_URL_LOGIN,
-    AUTH_URL_LOGOUT,
-    PATHS
+    AUTH_URL_LOGOUT
 } from 'config';
-
-// Pages
-import {Dashboard} from 'modules/Dashboard';
-import {Research} from 'modules/Research';
-import {AddRecord} from 'modules/AddRecord';
-import {SearchRecord, SearchRecordResults, AddNewRecord} from 'modules/AddRecord';
-import {StandardPage} from 'uqlibrary-react-toolbox';
-import {Browse} from 'modules/Browse';
-import {ClaimPublication} from 'modules/ClaimPublication';
-import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
 
 export default class App extends React.Component {
     static propTypes = {
         user: PropTypes.object,
         location: PropTypes.object, // react-router prop
-        actions: PropTypes.object
+        actions: PropTypes.object,
+        route: PropTypes.object     // react-router-config prop
     };
 
     static childContextTypes = {
@@ -87,22 +77,18 @@ export default class App extends React.Component {
 
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
 
-        const components = {
-            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication, SearchRecord
-        };
-
         const menuItems =
             isAuthorizedUser ?
                 [
-                    ...researcherMenuItems(locale, this.props.user.account.mail, components),
-                    ...defaultMenuItems(locale, components)
+                    ...researcherMenuItems(locale, this.props.user.account.mail),
+                    ...defaultMenuItems(locale)
                 ]
                 :
-                defaultMenuItems(locale, components);
+                defaultMenuItems(locale);
 
         // TODO: check if isPublicPage === false && isAuthorizedUser === false and kick user out?
-        const isPublicPage = defaultMenuItems(locale, components).filter((menuItem) => {
-            return menuItem.path === this.props.location.pathname;
+        const isPublicPage = defaultMenuItems(locale).filter((menuItem) => {
+            return menuItem.linkTo === this.props.location.pathname;
         }).length > 0;
 
         return (
@@ -165,24 +151,7 @@ export default class App extends React.Component {
                                     </div>
                                 </div>
                             }
-                            <Switch>
-                                {
-                                    isAuthorizedUser &&
-                                    <Route path="/" exact component={Dashboard}/>
-                                }
-                                {
-                                    !isAuthorizedUser &&
-                                    <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
-                                }
-                                <Route path={PATHS.records.claim} component={ClaimPublicationForm}/>
-                                <Route path={PATHS.records.searchResults} component={SearchRecordResults}/>
-                                <Route path={PATHS.records.addNew} component={AddNewRecord}/>
-                                {
-                                    menuItems.map((route, index) => (
-                                        <Route key={index} {...route} />
-                                    ))
-                                }
-                            </Switch>
+                            {renderRoutes(this.props.route.routes)}
                         </div>
                         <HelpDrawer/>
                     </div>
