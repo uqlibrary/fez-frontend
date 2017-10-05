@@ -89,6 +89,7 @@ export default class PublicationCitation extends Component {
                     </div>
                 );
             }) : null;
+        console.log('THIS IS A PUBLICATION RECORD ---- \n\n' + JSON.stringify(this.props.publication));
 
         return (
             <div className="publicationCitation">
@@ -107,14 +108,46 @@ export default class PublicationCitation extends Component {
                                     this.props.publication.sources.map((source, index) => {
                                         const sourceConfig = locale.global.sources[source.source];
                                         return (
-                                            <a href={sourceConfig.externalUrl.replace('[ID]', source.id)}
-                                                rel="noopener noreferrer"
-                                                target="_blank"
-                                                key={index}
-                                                className="publicationSource"
-                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', sourceConfig.title)}>
-                                                {sourceConfig.title}<ActionOpenInNew className="citationOpenUrlIcon" />
-                                            </a>
+                                            <span key={index}>
+                                                {/* Article link */}
+                                                {sourceConfig.title}&nbsp;:&nbsp;
+                                                <a href={sourceConfig.externalUrl.replace('[ID]', source.id)}
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                    className="publicationSource"
+                                                    aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', sourceConfig.title)}>
+                                                    {locale.global.articleTitle}<ActionOpenInNew className="citationOpenUrlIcon" />
+                                                </a>
+                                                {/* WOS/Scopus citation link */}
+                                                {
+                                                    (sourceConfig.title === 'Web of science' && this.props.publication.rek_thomson_citation_count > 0) ||
+                                                    (sourceConfig.title === 'Scopus' && this.props.publication.rek_scopus_citation_count > 0) &&
+                                                    <a href={sourceConfig.externalCitationUrl.replace('[ID]', source.id)}
+                                                        rel="noopener noreferrer"
+                                                        target="_blank"
+                                                        className="publicationSource"
+                                                        aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', sourceConfig.title)}>
+                                                        {locale.global.citationTitle}<ActionOpenInNew
+                                                            className="citationOpenUrlIcon"/>
+                                                    </a>
+                                                }
+                                                {/* Altmetric citation link */}
+                                                {
+                                                    this.props.publication.rek_altmetric_id && this.props.publication.rek_altmetric_score > 0 &&
+                                                        <span>
+                                                            {locale.global.sources.altmetric.title}&nbsp;:&nbsp;
+                                                            <a href={locale.global.sources.altmetric.externalCitationUrl.replace('[ID]', this.props.publication.rek_altmetric_id)}
+                                                                rel="noopener noreferrer"
+                                                                target="_blank"
+                                                                className="publicationSource"
+                                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', locale.global.sources.altmetric.title)}
+                                                            >
+                                                                {this.props.publication.rek_altmetric_score + ' citations'}
+                                                                <ActionOpenInNew className="citationOpenUrlIcon"/>
+                                                            </a>
+                                                        </span>
+                                                }
+                                            </span>
                                         );
                                     })
                                 }

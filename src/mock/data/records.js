@@ -1255,7 +1255,7 @@ export const externalTitleScopusResultsList = {
                     "rek_author_affiliation_country_order":3
                 }
             ],
-            "rek_scopus_citation_count":"0",
+            "rek_scopus_citation_count":"10",
             "fez_record_search_key_corresponding_name":[
                 {
                     "rek_corresponding_name":"Tulu T.W.",
@@ -1441,7 +1441,7 @@ export const internalTitleSearchList = {
         "rek_formatted_abstract": "They enter<br \/><br \/>in curves and stoops<br \/><br \/>limping and tapping<br \/><br \/>a file of bare arms<br \/><br \/>creased faces uplifted<br \/><br \/>red eyelids pouting<br \/><br \/>eyes curtained in cataract.<br \/>",
         "rek_depositor_affiliation_xsdmf_id": 11881,
         "rek_depositor_affiliation": 898,
-        "rek_thomson_citation_count": null,
+        "rek_thomson_citation_count": 12,
         "rek_thomson_citation_count_xsdmf_id": null,
         "rek_subtype_xsdmf_id": 12379,
         "rek_subtype": "Article (original research)",
@@ -1455,9 +1455,9 @@ export const internalTitleSearchList = {
         "rek_pubmed_doc_type_xsdmf_id": null,
         "rek_pubmed_doc_type": null,
         "rek_security_inherited": 1,
-        "rek_altmetric_score": 0,
+        "rek_altmetric_score": 10,
         "rek_altmetric_score_xsdmf_id": null,
-        "rek_altmetric_id": 0,
+        "rek_altmetric_id": 10,
         "rek_altmetric_id_xsdmf_id": null,
         "rek_copyright_xsdmf_id": 3679,
         "rek_copyright": "on",
