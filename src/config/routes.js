@@ -23,8 +23,19 @@ import {
  * @param RoutedComponent
  */
 const routedComponent = (RoutedComponent) => (route) => (<RoutedComponent {...route.route}/>);
+
+/**
+ * Generate key for each route page from path
+ * @param path
+ */
 const routeKey = (path) => (path.replace('/', '').replace(/\//g, '-'));
 
+/**
+ * Get basic route
+ * @param path
+ * @param component
+ * @param extraProps
+ */
 const route = (path, component, extraProps = {}) => ({
     path: path,
     component: component,
@@ -32,11 +43,21 @@ const route = (path, component, extraProps = {}) => ({
     ...extraProps
 });
 
+/**
+ * Get exact route
+ * @param path
+ * @param component
+ * @param exactProps
+ */
 const exactRoute = (path, component, exactProps = {}) => ({
     ...route(path, component, exactProps),
     exact: true
 });
 
+/**
+ * Index route
+ * @param isAuthorised
+ */
 const indexRoute = (isAuthorised) => (exactRoute(
     PATHS.index,
     (isAuthorised ? Dashboard : routedComponent(Browse)),
