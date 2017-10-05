@@ -17,8 +17,8 @@ export default {
             type: 'info_outline'
         },
         linkWillOpenInNewWindow: 'Link to [DESTINATION] will open in a new window.',
-        articleTitle: 'article',
-        citationTitle: 'citation',
+        articleTitle: 'Article',
+        citationTitle: 'Citation',
         sources: {
             espace: {
                 id: 'espace',
