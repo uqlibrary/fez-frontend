@@ -10,9 +10,29 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 import {myRecordsList} from 'mock/data';
 
-function setup({publication, isShallow = true}) {
+function _citationId(citationSource) {
+    let location = '';
+    if(citationSource === 'wos') {
+        if(this.props.publication.fez_record_search_key_isi_loc && this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc) {
+            location = this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc;
+        }
+    } else if (citationSource === 'scopus') {
+        if(this.props.publication.fez_record_search_key_scopus_id && this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id) {
+            location = this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id;
+        }
+    } else if (citationSource === 'altmetric') {
+        if(this.props.publication.rek_altmetric_id) {
+            location = this.props.publication.rek_altmetric_id;
+        }
+    }
+    return location;
+}
+
+function setup({publication, citationId=jest.fn(), isShallow = true}) {
+
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
+        citationId: citationId
     };
 
     if(isShallow) {

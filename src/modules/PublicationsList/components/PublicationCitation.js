@@ -36,6 +36,7 @@ export default class PublicationCitation extends Component {
         this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation};
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
+        this._citationId = this._citationId.bind(this);
     }
 
     _renderCitation = (publicationTypeId) => {
@@ -65,7 +66,7 @@ export default class PublicationCitation extends Component {
         }
     };
 
-    _idLocation = (citationSource) => {
+    _citationId = (citationSource) => {
         let location = '';
         if(citationSource === 'wos') {
             if(this.props.publication.fez_record_search_key_isi_loc && this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc) {
@@ -115,7 +116,7 @@ export default class PublicationCitation extends Component {
                         {
                             this._renderCitation(this.props.publication.rek_display_type)
                         }
-                        <CitationCounts publication={this.props.publication}/>
+                        <CitationCounts publication={this.props.publication} citationId={this._citationId} />
                         {
                             this.props.publication.sources &&
                             <span className="publicationSources">
@@ -139,7 +140,7 @@ export default class PublicationCitation extends Component {
                                 }
                             </span>
                         }
-                        <span className="publicationSources">
+                        <span className="citationSources">
                             {(this.props.publication.rek_thomson_citation_count >= 1 ||
                                     this.props.publication.rek_scopus_citation_count >= 1 ||
                                     this.props.publication.rek_altmetric_score >= 1 ) &&
@@ -152,7 +153,7 @@ export default class PublicationCitation extends Component {
                                     return(
                                         this.props.publication[countLocation] >= 1 &&
                                         <span key={index}>
-                                            <a href={citationURL.replace('[ID]', this._idLocation(citationSource))}
+                                            <a href={citationURL.replace('[ID]', this._citationId(citationSource))}
                                                 rel="noopener noreferrer"
                                                 target="_blank"
                                                 className="publicationSource"

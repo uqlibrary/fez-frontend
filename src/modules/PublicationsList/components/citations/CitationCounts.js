@@ -13,7 +13,8 @@ const openAccessIcon = require('images/oa_icon.svg');
 
 export default class CitationCounts extends Component {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
+        citationId: PropTypes.func
     };
 
     constructor(props) {
@@ -30,38 +31,44 @@ export default class CitationCounts extends Component {
             altmetric: this.props.publication.rek_altmetric_score ? this.props.publication.rek_altmetric_score : null
         };
         return (
-            <div className="citationCounts columns is-multiline is-gapless">
+            <div className="citationCounts columns is-multiline is-gapless is-marginless">
                 {
                     !!counts.wos && counts.wos > 0 &&
                     <span className="citationCount">
-                        <img
-                            src={thompsonIcon}
-                            alt={txt.wosCountLabel.replace('[count]', counts.wos)}
-                            title={txt.wosCountLabel.replace('[count]', counts.wos)}
-                            className="citationCountIcon"/>
-                        <span className="citationCountNumber">{counts.wos}</span>
+                        <a href={locale.global.citationSources.wos.externalCitationUrl.replace('[ID]', this.props.citationId('wos'))} >
+                            <img
+                                src={thompsonIcon}
+                                alt={txt.wosCountLabel.replace('[count]', counts.wos)}
+                                title={txt.wosCountLabel.replace('[count]', counts.wos)}
+                                className="citationCountIcon"/>
+                            <span className="citationCountNumber">{counts.wos}</span>
+                        </a>
                     </span>
                 }
                 {
                     !!counts.scopus && counts.scopus > 0 &&
                     <span className="citationCount">
-                        <img
-                            src={scopusIcon}
-                            alt={txt.scopusCountLabel.replace('[count]', counts.scopus)}
-                            title={txt.scopusCountLabel.replace('[count]', counts.scopus)}
-                            className="citationCountIcon"/>
-                        <span className="citationCountNumber">{counts.scopus}</span>
+                        <a href={locale.global.citationSources.scopus.externalCitationUrl.replace('[ID]', this.props.citationId('scopus'))} >
+                            <img
+                                src={scopusIcon}
+                                alt={txt.scopusCountLabel.replace('[count]', counts.scopus)}
+                                title={txt.scopusCountLabel.replace('[count]', counts.scopus)}
+                                className="citationCountIcon"/>
+                            <span className="citationCountNumber">{counts.scopus}</span>
+                        </a>
                     </span>
                 }
                 {
                     !!counts.altmetric && counts.altmetric > 0 &&
                     <span className="citationCount">
-                        <img
-                            src={altmetricIcon}
-                            alt={txt.altmetricCountLabel.replace('[count]', counts.altmetric)}
-                            title={txt.altmetricCountLabel.replace('[count]', counts.altmetric)}
-                            className="citationCountIcon"/>
-                        <span className="citationCountNumber">{counts.altmetric}</span>
+                        <a href={locale.global.citationSources.altmetric.externalCitationUrl.replace('[ID]', this.props.citationId('altmetric'))} >
+                            <img
+                                src={altmetricIcon}
+                                alt={txt.altmetricCountLabel.replace('[count]', counts.altmetric)}
+                                title={txt.altmetricCountLabel.replace('[count]', counts.altmetric)}
+                                className="citationCountIcon"/>
+                            <span className="citationCountNumber">{counts.altmetric}</span>
+                        </a>
                     </span>
                 }
                 {
