@@ -1006,6 +1006,7 @@ export default {
             }
         },
         publicationCitation: {
+            eSpaceLegacyUrl: 'https://espace.library.uq.edu.au/view/[ID]',
             publicationSourcesLabel: 'Found in: ',
             citationCounts: {
                 wosCountLabel: 'Web of Science citation count is [count]',

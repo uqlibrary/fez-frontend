@@ -92,10 +92,9 @@ export default class PublicationCitation extends Component {
                     <div className="column">
                         <h3 className="title is-5 publicationTitle">
                             {!this.props.publication.rek_pid ? (this.props.publication.rek_title) : (
-                                <a href={'https://espace.library.uq.edu.au/view/' + this.props.publication.rek_pid}
+                                <a href={locale.components.publicationCitation.eSpaceLegacyUrl.replace('[ID]', this.props.publication.rek_pid)}
                                     rel="noopener noreferrer"
-                                    target="_blank"
-                                >
+                                    target="_blank" >
                                     {this.props.publication.rek_title}<ActionOpenInNew className="titleOpenUrlIcon" />
                                 </a>
                             )}
