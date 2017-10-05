@@ -107,6 +107,7 @@ exports[`Research test renders list of publications 1`] = `
           pagingData={Object {}}
         />
         <PublicationsList
+          excludePublicationsList={Array []}
           publicationsList={
             Array [
               Object {

@@ -82,9 +82,10 @@ export function hideRecord({record, facets = {}}) {
 
         post(routes.HIDE_POSSIBLE_RECORD_API(), data)
             .then(response => {
+                console.log(response);
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_COMPLETED,
-                    payload: response
+                    payload: {pid: record.rek_pid}
                 });
 
                 // reload current possibly your publications/count after user hides records
@@ -142,8 +143,6 @@ export function clearClaimPublication() {
  * @returns {action}
  */
 export function claimPublication(data) {
-    console.log(data);
-
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
     data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
 
@@ -181,7 +180,7 @@ export function claimPublication(data) {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
-            // notes!
+            ...{fez_record_search_key_notes: {rek_notes: data.comments}},
             ...recordAuthorsIdSearchKeys
         };
         // patch record from eSpace
@@ -217,12 +216,11 @@ export function claimPublication(data) {
             .then(response => {
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
-                    payload: response
+                    payload: {pid: data.publication.rek_pid}
                 });
                 return Promise.resolve(response);
             })
             .catch(error => {
-                console.log(error);
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
                     payload: error

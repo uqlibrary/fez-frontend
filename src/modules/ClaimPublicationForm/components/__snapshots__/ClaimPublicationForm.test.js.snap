@@ -19,6 +19,7 @@ exports[`Component ClaimPublicationForm  should render claim form if publication
       title="You are claiming to be an author for the following item:"
     >
       <PublicationCitation
+        className=""
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -924,6 +925,7 @@ exports[`Component ClaimPublicationForm  should render claim form, author linkin
       title="You are claiming to be an author for the following item:"
     >
       <PublicationCitation
+        className=""
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -1814,6 +1816,7 @@ exports[`Component ClaimPublicationForm  should render claim publication form 1`
       title="You are claiming to be an author for the following item:"
     >
       <PublicationCitation
+        className=""
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -2962,6 +2965,7 @@ exports[`Component ClaimPublicationForm  should render publication citation, err
       title="You are claiming to be an author for the following item:"
     >
       <PublicationCitation
+        className=""
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,

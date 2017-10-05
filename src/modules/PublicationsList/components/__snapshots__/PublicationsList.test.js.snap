@@ -5,6 +5,7 @@ exports[`PublicationsList renders  component with items 1`] = `
   className="publicationsList"
 >
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -533,6 +534,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -930,6 +932,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -1618,6 +1621,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -2231,6 +2235,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -2811,6 +2816,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -3405,6 +3411,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -3918,6 +3925,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -4480,6 +4488,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -5019,6 +5028,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -5570,6 +5580,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -6075,6 +6086,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -6997,6 +7009,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -7549,6 +7562,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -7961,6 +7975,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -8317,6 +8332,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -8659,6 +8675,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -9043,6 +9060,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -9476,6 +9494,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {
@@ -9958,6 +9977,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     showDefaultActions={false}
   />
   <PublicationCitation
+    className=""
     customActions={Array []}
     publication={
       Object {

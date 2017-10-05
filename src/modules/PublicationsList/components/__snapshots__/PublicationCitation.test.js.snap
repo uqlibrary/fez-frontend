@@ -2,7 +2,7 @@
 
 exports[`PublicationCitation renders  component with custom actions 1`] = `
 <div
-  className="publicationCitation"
+  className="publicationCitation "
 >
   <div
     className="columns is-gapless is-mobile"
@@ -1138,7 +1138,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
 
 exports[`PublicationCitation renders  component with default actions 1`] = `
 <div
-  className="publicationCitation"
+  className="publicationCitation "
 >
   <div
     className="columns is-gapless is-mobile"
@@ -2236,7 +2236,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
 
 exports[`PublicationCitation renders  component with default item 1`] = `
 <div
-  className="publicationCitation"
+  className="publicationCitation "
 >
   <div
     className="columns is-gapless is-mobile"
