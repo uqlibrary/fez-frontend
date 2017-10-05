@@ -17,8 +17,24 @@ export default {
             type: 'info_outline'
         },
         linkWillOpenInNewWindow: 'Link to [DESTINATION] will open in a new window.',
-        articleTitle: 'Article',
         citationTitle: 'Citation',
+        citationSources: {
+            wos: {
+                countLocation: 'rek_thomson_citation_count',
+                title: 'Web of science',
+                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=[ID]&SrcAuth=uqueensland',
+            },
+            scopus: {
+                countLocation: 'rek_scopus_citation_count',
+                title: 'Scopus',
+                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=[ID]&src=s&sot=cite&sdt=a',
+            },
+            altmetric: {
+                countLocation: 'rek_altmetric_score',
+                title: 'Altmetric',
+                externalCitationUrl: 'http://www.altmetric.com/details.php?citation_id=[ID]',
+            },
+        },
         sources: {
             espace: {
                 id: 'espace',
@@ -32,7 +48,6 @@ export default {
                 title: 'Web of science',
                 priority: 1,
                 externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[ID]&SrcAuth=uqueensland',
-                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=[ID]&SrcAuth=uqueensland',
                 idKey: 'fez_record_search_key_isi_loc.rek_isi_loc'
             },
             scopus: {
@@ -40,7 +55,6 @@ export default {
                 title: 'Scopus',
                 priority: 2,
                 externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[ID]&origin=inward',
-                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=[ID]&src=s&sot=cite&sdt=a',
                 idKey: 'fez_record_search_key_scopus_id.rek_scopus_id'
             },
             pubmed: {
@@ -57,11 +71,6 @@ export default {
                 externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[ID]',
                 idKey: 'fez_record_search_key_doi.rek_doi'
             },
-            altmetric: {
-                title: 'Altmetric',
-                externalCitationUrl: 'http://www.altmetric.com/details.php?citation_id=[ID]',
-                citationTitle: ' citations',
-            }
         },
         embargoDateFormat: 'YYYY-MM-DD'
     },
@@ -1015,7 +1024,8 @@ export default {
             }
         },
         publicationCitation: {
-            publicationSourcesLabel: 'Found in: ',
+            publicationSourcesLabel: 'Publication found in: ',
+            publicationCitationLabel: 'Publication cited in: ',
             citationCounts: {
                 wosCountLabel: 'Web of Science citation count is [count]',
                 scopusCountLabel: 'Scopus citation count is [count]',

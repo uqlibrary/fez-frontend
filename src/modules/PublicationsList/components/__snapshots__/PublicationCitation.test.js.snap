@@ -1067,6 +1067,25 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
           }
         }
       />
+      <span
+        className="publicationSources"
+      >
+        Publication cited in: 
+        <span>
+          <a
+            aria-label="Link to undefined will open in a new window."
+            className="publicationSource"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=&SrcAuth=uqueensland"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Web of science (19) 
+            <ActionOpenInNew
+              className="citationOpenUrlIcon"
+            />
+          </a>
+        </span>
+      </span>
     </div>
   </div>
   <div
@@ -2203,6 +2222,25 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
           }
         }
       />
+      <span
+        className="publicationSources"
+      >
+        Publication cited in: 
+        <span>
+          <a
+            aria-label="Link to undefined will open in a new window."
+            className="publicationSource"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=&SrcAuth=uqueensland"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Web of science (19) 
+            <ActionOpenInNew
+              className="citationOpenUrlIcon"
+            />
+          </a>
+        </span>
+      </span>
     </div>
   </div>
   <div
@@ -3301,6 +3339,25 @@ exports[`PublicationCitation renders  component with default item 1`] = `
           }
         }
       />
+      <span
+        className="publicationSources"
+      >
+        Publication cited in: 
+        <span>
+          <a
+            aria-label="Link to undefined will open in a new window."
+            className="publicationSource"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=&SrcAuth=uqueensland"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Web of science (19) 
+            <ActionOpenInNew
+              className="citationOpenUrlIcon"
+            />
+          </a>
+        </span>
+      </span>
     </div>
   </div>
   <div

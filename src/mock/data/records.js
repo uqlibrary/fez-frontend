@@ -1430,6 +1430,7 @@ export const internalTitleSearchList = {
         "rek_updated_date_xsdmf_id": 3678,
         "rek_updated_date": "2017-09-22T13:28:50Z",
         "rek_file_downloads": 0,
+        "rek_isi_loc": 12345678,
         "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Parker, Malcolm\" href=\"\/list\/author_id\/710\/\">Parker, Malcolm<\/a> (<span class=\"citation_date\">2014<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Vaccination day\" href=\"\/view\/UQ:342708\">Vaccination day<\/a>. <i><span class=\"citation_journal_name\">Journal of Bioethical Inquiry<\/span><\/i>, <i><span class=\"citation_volume_number\">11<\/span><\/i> <span class=\"citation_issue_number\">2<\/span>: <span class=\"citation_start_page\">161<\/span>-<span class=\"citation_end_page\">161<\/span>. doi:<span class=\"citation_doi\">10.1007\/s11673-014-9531-6<\/span>",
         "rek_genre_xsdmf_id": 7207,
         "rek_genre": "Journal Article",
@@ -1455,9 +1456,9 @@ export const internalTitleSearchList = {
         "rek_pubmed_doc_type_xsdmf_id": null,
         "rek_pubmed_doc_type": null,
         "rek_security_inherited": 1,
-        "rek_altmetric_score": 10,
+        "rek_altmetric_score": 333,
         "rek_altmetric_score_xsdmf_id": null,
-        "rek_altmetric_id": 10,
+        "rek_altmetric_id": 123456,
         "rek_altmetric_id_xsdmf_id": null,
         "rek_copyright_xsdmf_id": 3679,
         "rek_copyright": "on",
@@ -1560,6 +1561,12 @@ export const internalTitleSearchList = {
             "rek_herdc_status_xsdmf_id": null,
             "rek_herdc_status": 453221
         },
+        "fez_record_search_key_isi_loc": {
+            "rek_isi_loc_id": 3963801,
+            "rek_isi_loc_pid":"UQ:219533",
+            "rek_isi_loc_xsdmf_id":null,
+            "rek_isi_loc":"A1990EC45400046"
+        },
         "fez_record_search_key_identifier": [],
         "fez_record_search_key_institutional_status": {
             "rek_institutional_status_id": 3203829,
@@ -1571,7 +1578,6 @@ export const internalTitleSearchList = {
         "fez_record_search_key_isbn": [],
         "fez_record_search_key_isdatasetof": [],
         "fez_record_search_key_isderivationof": [],
-        "fez_record_search_key_isi_loc": null,
         "fez_record_search_key_ismemberof": [{
             "rek_ismemberof_id": 11450932,
             "rek_ismemberof_pid": "UQ:342708",

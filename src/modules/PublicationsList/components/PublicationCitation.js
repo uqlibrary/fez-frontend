@@ -107,47 +107,66 @@ export default class PublicationCitation extends Component {
                                         const sourceConfig = locale.global.sources[source.source];
                                         return (
                                             <span key={index}>
-                                                {sourceConfig.title}&nbsp;:&nbsp;
                                                 <a href={sourceConfig.externalUrl.replace('[ID]', source.id)}
                                                     rel="noopener noreferrer"
                                                     target="_blank"
                                                     className="publicationSource"
                                                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', sourceConfig.title)}>
-                                                    {locale.global.articleTitle}<ActionOpenInNew className="citationOpenUrlIcon" />
+                                                    {sourceConfig.title}<ActionOpenInNew
+                                                        className="citationOpenUrlIcon"/>
                                                 </a>
-                                                {
-                                                    (sourceConfig.title === 'Web of science' && this.props.publication.rek_thomson_citation_count > 0) ||
-                                                    (sourceConfig.title === 'Scopus' && this.props.publication.rek_scopus_citation_count > 0) &&
-                                                    <a href={sourceConfig.externalCitationUrl.replace('[ID]', source.id)}
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                        className="publicationSource"
-                                                        aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', sourceConfig.title)}>
-                                                        {locale.global.citationTitle}<ActionOpenInNew
-                                                            className="citationOpenUrlIcon"/>
-                                                    </a>
-                                                }
                                             </span>
                                         );
                                     })
                                 }
-                                {
-                                    this.props.publication.rek_altmetric_id && this.props.publication.rek_altmetric_score > 0 &&
-                                    <span>
-                                        {locale.global.sources.altmetric.title}&nbsp;:&nbsp;
-                                        <a href={locale.global.sources.altmetric.externalCitationUrl.replace('[ID]', this.props.publication.rek_altmetric_id)}
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                            className="publicationSource"
-                                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', locale.global.sources.altmetric.title)}
-                                        >
-                                            {this.props.publication.rek_altmetric_score + locale.global.sources.altmetric.citationTitle}
-                                            <ActionOpenInNew className="citationOpenUrlIcon"/>
-                                        </a>
-                                    </span>
-                                }
                             </span>
                         }
+                        <span className="publicationSources">
+                            {(this.props.publication.rek_thomson_citation_count >= 1 ||
+                                    this.props.publication.rek_scopus_citation_count >= 1 ||
+                                    this.props.publication.rek_altmetric_score >= 1 ) &&
+                                locale.components.publicationCitation.publicationCitationLabel}
+                            {
+                                Object.keys(locale.global.citationSources).map((citationSource, index) => {
+                                    const countLocation = locale.global.citationSources[citationSource].countLocation;
+                                    const citationTitle = locale.global.citationSources[citationSource].title;
+                                    const citationURL = locale.global.citationSources[citationSource].externalCitationUrl;
+                                    const idLocation = (citationSource) => {
+                                        let location = '';
+                                        if(citationSource === 'wos') {
+                                            if(this.props.publication.rek_isi_loc) {
+                                                location = this.props.publication.rek_isi_loc;
+                                            }
+                                        } else if (citationSource === 'scopus') {
+                                            if(this.props.publication.fez_record_search_key_scopus_id && this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id) {
+                                                location = this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id;
+                                            }
+                                        } else if (citationSource === 'altmetric') {
+                                            if(this.props.publication.rek_altmetric_id) {
+                                                location = this.props.publication.rek_altmetric_id;
+                                            }
+                                        }
+                                        return location;
+                                    };
+
+                                    return(
+                                        this.props.publication[countLocation] >= 1 &&
+                                        <span key={index}>
+                                            <a href={citationURL.replace('[ID]', idLocation(citationSource))}
+                                                rel="noopener noreferrer"
+                                                target="_blank"
+                                                className="publicationSource"
+                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', citationSource.title)}
+                                            >
+                                                {citationTitle + ' (' + this.props.publication[countLocation] + ') '}
+                                                <ActionOpenInNew className="citationOpenUrlIcon" />
+                                            </a>
+
+                                        </span>
+                                    );
+                                })
+                            }
+                        </span>
                     </div>
                 </div>
                 <div className="publicationActions columns is-gapless">
