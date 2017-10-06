@@ -1,7 +1,6 @@
 import React from 'react';
 import {ConnectedRouter} from 'connected-react-router/immutable';
 import PropTypes from 'prop-types';
-import {BrowserRouter} from 'react-router-dom';
 import {renderRoutes} from 'react-router-config';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -15,9 +14,7 @@ const Root = ({history}) => {
         <ConnectedRouter history={history}>
             <ScrollToTop>
                 <MuiThemeProvider muiTheme={getMuiTheme(theme)}>
-                    <BrowserRouter>
-                        {renderRoutes(routes)}
-                    </BrowserRouter>
+                    {renderRoutes(routes)}
                 </MuiThemeProvider>
             </ScrollToTop>
         </ConnectedRouter>
