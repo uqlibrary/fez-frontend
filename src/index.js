@@ -1,7 +1,7 @@
 // External
 import {AppContainer} from 'react-hot-loader';
 import {applyMiddleware, compose, createStore} from 'redux';
-import {createBrowserHistory, createHashHistory} from 'history';
+import {createBrowserHistory} from 'history';
 import {routerMiddleware, connectRouter} from 'connected-react-router/immutable';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
@@ -23,7 +23,7 @@ let history;
 if (process.env.NODE_ENV === 'production') {
     history = createBrowserHistory();
 } else {
-    history = createHashHistory();
+    history = createBrowserHistory();
 }
 
 const initialState = Immutable.Map();
