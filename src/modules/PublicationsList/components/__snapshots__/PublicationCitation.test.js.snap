@@ -14,10 +14,10 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
         className="title is-5 publicationTitle"
       >
         <a
-          aria-label="Open the full article (Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice) in a new window"
           href="https://espace.library.uq.edu.au/view/UQ:36649"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice will open in a new window."
         >
           Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice
           <ActionOpenInNew
@@ -1160,10 +1160,10 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
         className="title is-5 publicationTitle"
       >
         <a
-          aria-label="Open the full article (Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice) in a new window"
           href="https://espace.library.uq.edu.au/view/UQ:36649"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice will open in a new window."
         >
           Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice
           <ActionOpenInNew
@@ -2268,10 +2268,10 @@ exports[`PublicationCitation renders  component with default item 1`] = `
         className="title is-5 publicationTitle"
       >
         <a
-          aria-label="Open the full article (Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice) in a new window"
           href="https://espace.library.uq.edu.au/view/UQ:36649"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice will open in a new window."
         >
           Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice
           <ActionOpenInNew

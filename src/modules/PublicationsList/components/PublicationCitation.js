@@ -92,10 +92,10 @@ export default class PublicationCitation extends Component {
                     <div className="column">
                         <h3 className="title is-5 publicationTitle">
                             {!this.props.publication.rek_pid ? (this.props.publication.rek_title) : (
-                                <a href={locale.components.publicationCitation.eSpaceLegacyUrl.replace('[ID]', this.props.publication.rek_pid)}
+                                <a href={locale.components.publicationCitation.recordUrl.replace('[id]', this.props.publication.rek_pid)}
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    aria-label={locale.components.publicationCitation.linkAriaLabel.replace('[TITLE]', this.props.publication.rek_title)}
+                                    title={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
                                 >
                                     {this.props.publication.rek_title}<ActionOpenInNew className="titleOpenUrlIcon" />
                                 </a>
@@ -113,12 +113,12 @@ export default class PublicationCitation extends Component {
                                     this.props.publication.sources.map((source, index) => {
                                         const sourceConfig = locale.global.sources[source.source];
                                         return (
-                                            <a href={sourceConfig.externalUrl.replace('[ID]', source.id)}
+                                            <a href={sourceConfig.externalUrl.replace('[id]', source.id)}
                                                 rel="noopener noreferrer"
                                                 target="_blank"
                                                 key={index}
                                                 className="publicationSource"
-                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', sourceConfig.title)}>
+                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
                                                 {sourceConfig.title}<ActionOpenInNew className="citationOpenUrlIcon" />
                                             </a>
                                         );
