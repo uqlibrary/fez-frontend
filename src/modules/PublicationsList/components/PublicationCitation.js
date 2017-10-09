@@ -93,7 +93,17 @@ export default class PublicationCitation extends Component {
             <div className="publicationCitation">
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
-                        <h3 className="title is-5 publicationTitle">{this.props.publication.rek_title}</h3>
+                        <h3 className="title is-5 publicationTitle">
+                            {!this.props.publication.rek_pid ? (this.props.publication.rek_title) : (
+                                <a href={locale.global.sources.espace.externalUrl.replace('[id]', this.props.publication.rek_pid)}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
+                                >
+                                    {this.props.publication.rek_title}<ActionOpenInNew className="titleOpenUrlIcon" />
+                                </a>
+                            )}
+                        </h3>
                         {
                             this._renderCitation(this.props.publication.rek_display_type)
                         }

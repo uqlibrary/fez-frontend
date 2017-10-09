@@ -16,25 +16,7 @@ export default {
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
         },
-        linkWillOpenInNewWindow: 'Link to [destination] will open in a new window.',
-        citationTitle: 'Citation',
-        citationSources: {
-            wos: {
-                countLocation: 'rek_thomson_citation_count',
-                title: 'Web of science',
-                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
-            },
-            scopus: {
-                countLocation: 'rek_scopus_citation_count',
-                title: 'Scopus',
-                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
-            },
-            altmetric: {
-                countLocation: 'rek_altmetric_score',
-                title: 'Altmetric',
-                externalCitationUrl: 'http://www.altmetric.com/details.php?citation_id=[id]',
-            },
-        },
+        linkWillOpenInNewWindow: 'Link to "[destination]" will open in a new window.',
         sources: {
             espace: {
                 id: 'espace',
@@ -46,6 +28,7 @@ export default {
             wos: {
                 id: 'wos',
                 title: 'Web of science',
+                source: ' (Web of science)',
                 priority: 1,
                 externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
                 idKey: 'fez_record_search_key_isi_loc.rek_isi_loc'
@@ -53,6 +36,7 @@ export default {
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
+                source: ' (Scopus)',
                 priority: 2,
                 externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
                 idKey: 'fez_record_search_key_scopus_id.rek_scopus_id'
@@ -1031,7 +1015,15 @@ export default {
                 googleCountLabel: 'Citation counts in Google Scholar',
                 altmetricCountLabel: 'Altmetric score is [count]',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
-                statsLabel: 'View full statistics'
+                statsLabel: 'View full statistics',
+                altmetric: {
+                    externalUrl: 'http://www.altmetric.com/details.php?citation_id=[id]',
+                    source: ' (Altmetric)',
+                },
+                google: {
+                    externalUrl: 'https://scholar.google.com/scholar?q=intitle:[id]',
+                    source: ' (Google scholar)',
+                },
             },
             defaultActions: [
                 {key: 'fixRecord', label: 'Fix record', primary: false}, // TODO: implement fixRecord

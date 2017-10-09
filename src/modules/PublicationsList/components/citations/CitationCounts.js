@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import FontIcon from 'material-ui/FontIcon';
+import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 
 import {locale} from 'config';
 import {openAccessIdLookup} from 'config/general';
@@ -34,9 +34,11 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.wos && counts.wos > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.wos.externalCitationUrl.replace('[id]', this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc)}
+                        <a href={locale.global.sources.wos.externalUrl.replace('[id]', this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc)}
                             rel="noopener noreferrer"
-                            target="_blank">
+                            target="_blank"
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + locale.global.sources.wos.source)}
+                        >
                             <img
                                 src={thompsonIcon}
                                 alt={txt.wosCountLabel.replace('[count]', counts.wos)}
@@ -49,9 +51,11 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.scopus && counts.scopus > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.scopus.externalCitationUrl.replace('[id]', this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id)}
+                        <a href={locale.global.sources.scopus.externalUrl.replace('[id]', this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id)}
                             rel="noopener noreferrer"
-                            target="_blank">
+                            target="_blank"
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + locale.global.sources.scopus.source)}
+                        >
                             <img
                                 src={scopusIcon}
                                 alt={txt.scopusCountLabel.replace('[count]', counts.scopus)}
@@ -64,9 +68,11 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.altmetric && counts.altmetric > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.altmetric.externalCitationUrl.replace('[id]', this.props.publication.rek_altmetric_id)}
+                        <a href={locale.components.publicationCitation.citationCounts.altmetric.externalUrl.replace('[id]', this.props.publication.rek_altmetric_id)}
                             rel="noopener noreferrer"
-                            target="_blank">
+                            target="_blank"
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + locale.components.publicationCitation.citationCounts.altmetric.source)}
+                        >
                             <img
                                 src={altmetricIcon}
                                 alt={txt.altmetricCountLabel.replace('[count]', counts.altmetric)}
@@ -79,7 +85,11 @@ export default class CitationCounts extends Component {
                 {
                     !!this.props.publication.rek_pid &&
                     <span className="citationCount">
-                        <a className="citationCountLink" href={`https://scholar.google.com/scholar?q=intitle:"${encodeURI(this.props.publication.rek_title)}"`} target="_blank">
+                        <a className="citationCountLink"
+                            href={locale.components.publicationCitation.citationCounts.google.externalUrl + encodeURI(this.props.publication.rek_title)}
+                            target="_blank"
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + locale.components.publicationCitation.citationCounts.google.source)}
+                        >
                             <img
                                 src={googleScholarIcon}
                                 alt={txt.googleCountLabel}
@@ -104,8 +114,10 @@ export default class CitationCounts extends Component {
                     <div className="citationCount column">
                         <a className="citationCountLink" href={`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`} target="_blank">
                             <div className="columns is-mobile is-gapless">
-                                <div className="column is-narrow"><FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
-                                <div className="column is-narrow citationCountNumber">{txt.statsLabel}</div>
+                                <div className="column is-narrow citationCountNumber">
+                                    {txt.statsLabel}
+                                    <ActionOpenInNew className="citationOpenUrlIcon" />
+                                </div>
                             </div>
                         </a>
                     </div>
