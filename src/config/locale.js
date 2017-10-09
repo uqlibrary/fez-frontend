@@ -28,7 +28,6 @@ export default {
             wos: {
                 id: 'wos',
                 title: 'Web of science',
-                source: ' (Web of science)',
                 priority: 1,
                 externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
                 idKey: 'fez_record_search_key_isi_loc.rek_isi_loc'
@@ -36,7 +35,6 @@ export default {
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
-                source: ' (Scopus)',
                 priority: 2,
                 externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
                 idKey: 'fez_record_search_key_scopus_id.rek_scopus_id'
@@ -1018,11 +1016,11 @@ export default {
                 statsLabel: 'View full statistics',
                 altmetric: {
                     externalUrl: 'http://www.altmetric.com/details.php?citation_id=[id]',
-                    source: ' (Altmetric)',
+                    title: 'Altmetric',
                 },
                 google: {
                     externalUrl: 'https://scholar.google.com/scholar?q=intitle:[id]',
-                    source: ' (Google scholar)',
+                    title: 'Google scholar',
                 },
             },
             defaultActions: [

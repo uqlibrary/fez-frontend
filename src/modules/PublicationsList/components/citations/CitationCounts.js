@@ -37,7 +37,7 @@ export default class CitationCounts extends Component {
                         <a href={locale.global.sources.wos.externalUrl.replace('[id]', this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc)}
                             rel="noopener noreferrer"
                             target="_blank"
-                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + locale.global.sources.wos.source)}
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + locale.global.sources.wos.title + ')')}
                         >
                             <img
                                 src={thompsonIcon}
@@ -54,7 +54,7 @@ export default class CitationCounts extends Component {
                         <a href={locale.global.sources.scopus.externalUrl.replace('[id]', this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id)}
                             rel="noopener noreferrer"
                             target="_blank"
-                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + locale.global.sources.scopus.source)}
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + locale.global.sources.scopus.title + ')')}
                         >
                             <img
                                 src={scopusIcon}
@@ -71,7 +71,7 @@ export default class CitationCounts extends Component {
                         <a href={txt.altmetric.externalUrl.replace('[id]', this.props.publication.rek_altmetric_id)}
                             rel="noopener noreferrer"
                             target="_blank"
-                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + txt.altmetric.source)}
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + txt.altmetric.title + ')')}
                         >
                             <img
                                 src={altmetricIcon}
@@ -88,7 +88,7 @@ export default class CitationCounts extends Component {
                         <a className="citationCountLink"
                             href={txt.google.externalUrl + encodeURI(this.props.publication.rek_title)}
                             target="_blank"
-                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + txt.google.source)}
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + txt.google.title + ')')}
                         >
                             <img
                                 src={googleScholarIcon}
