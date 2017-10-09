@@ -23,12 +23,16 @@ export default class SearchRecord extends React.Component {
         this.props.history.push('/records/add/results');
     };
 
+    _handleSkipSearch = () => {
+        this.props.history.push('/records/add/new');
+    };
+
     render() {
         const txt = locale.pages.addRecord;
         return (
             <StandardPage title={txt.title}>
                 <Stepper activeStep={0} steps={txt.stepper} />
-                <PublicationSearchForm locale={txt.step1} onSubmit={this._performSearch}/>
+                <PublicationSearchForm locale={txt.step1} onSubmit={this._performSearch} onSkipSearch={this._handleSkipSearch}/>
             </StandardPage>
         );
     }

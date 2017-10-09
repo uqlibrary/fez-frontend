@@ -107,7 +107,6 @@ exports[`Research test renders list of publications 1`] = `
           pagingData={Object {}}
         />
         <PublicationsList
-          excludePublicationsList={Array []}
           publicationsList={
             Array [
               Object {
@@ -10385,7 +10384,9 @@ exports[`Research test renders list of publications 1`] = `
               },
             ]
           }
+          publicationsListSubset={Array []}
           showDefaultActions={true}
+          subsetCustomActions={Array []}
         />
         <PublicationsListPaging
           disabled={false}

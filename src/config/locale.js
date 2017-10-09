@@ -311,7 +311,8 @@ export default {
                 fieldLabels: {
                     search: 'Enter DOI, Pubmed Id or Title'
                 },
-                submit: 'Search'
+                submit: 'Search',
+                skip: 'Skip search'
             },
             step2: {
                 noResultsFound: {

@@ -55,12 +55,11 @@ export default class SearchRecordResults extends React.Component {
 
         const unclaimablePublicationsList = this.props.publicationsList
             .filter(item => {
-                if (!item.rek_pid || item.fez_record_search_key_author_id.length < item.fez_record_search_key_author.length) return -1;
-                return item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false) ? 1 : -1;
+                if (!item.rek_pid) return false;
+                if (item.fez_record_search_key_author_id.length !== item.fez_record_search_key_author.length) return false;
+                return item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false) ? false : true;
             })
             .map(item => (item.rek_pid));
-
-        console.log(unclaimablePublicationsList);
 
         const unclaimable = [
             {
