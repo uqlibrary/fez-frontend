@@ -95,7 +95,7 @@ export default class PublicationCitation extends Component {
                                 <a href={locale.components.publicationCitation.recordUrl.replace('[id]', this.props.publication.rek_pid)}
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    title={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
+                                    aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
                                 >
                                     {this.props.publication.rek_title}<ActionOpenInNew className="titleOpenUrlIcon" />
                                 </a>
