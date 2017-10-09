@@ -1005,7 +1005,6 @@ export default {
             }
         },
         publicationCitation: {
-            recordUrl: 'https://espace.library.uq.edu.au/view/[id]',
             publicationSourcesLabel: 'Found in: ',
             citationCounts: {
                 wosCountLabel: 'Web of Science citation count is [count]',
