@@ -1024,8 +1024,7 @@ export default {
             }
         },
         publicationCitation: {
-            publicationSourcesLabel: 'Publication found in: ',
-            publicationCitationLabel: 'Publication cited in: ',
+            publicationSourcesLabel: 'Found in: ',
             citationCounts: {
                 wosCountLabel: 'Web of Science citation count is [count]',
                 scopusCountLabel: 'Scopus citation count is [count]',

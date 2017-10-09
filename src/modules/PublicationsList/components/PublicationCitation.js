@@ -140,36 +140,6 @@ export default class PublicationCitation extends Component {
                                 }
                             </span>
                         }
-                        <span className="citationSources">
-                            {(this.props.publication.rek_thomson_citation_count >= 1 ||
-                                    this.props.publication.rek_scopus_citation_count >= 1 ||
-                                    this.props.publication.rek_altmetric_score >= 1 ) && (
-                                    <span>
-                                        {locale.components.publicationCitation.publicationCitationLabel}
-                                        {
-                                            Object.keys(locale.global.citationSources).map((citationSource, index) => {
-                                                const countLocation = locale.global.citationSources[citationSource].countLocation;
-                                                const citationTitle = locale.global.citationSources[citationSource].title;
-                                                const citationURL = locale.global.citationSources[citationSource].externalCitationUrl;
-                                                return(
-                                                    this.props.publication[countLocation] >= 1 &&
-                                                    <span key={index}>
-                                                        <a href={citationURL.replace('[ID]', this._citationId(citationSource))}
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                            className="publicationSource"
-                                                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', citationSource.title)}
-                                                        >
-                                                            {citationTitle + ' (' + this.props.publication[countLocation] + ') '}
-                                                            <ActionOpenInNew className="citationOpenUrlIcon" />
-                                                        </a>
-                                                    </span>
-                                                );
-                                            })
-                                        }
-                                    </span>
-                                )}
-                        </span>
                     </div>
                 </div>
                 <div className="publicationActions columns is-gapless">
