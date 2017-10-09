@@ -68,10 +68,10 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.altmetric && counts.altmetric > 0 &&
                     <span className="citationCount">
-                        <a href={locale.components.publicationCitation.citationCounts.altmetric.externalUrl.replace('[id]', this.props.publication.rek_altmetric_id)}
+                        <a href={txt.altmetric.externalUrl.replace('[id]', this.props.publication.rek_altmetric_id)}
                             rel="noopener noreferrer"
                             target="_blank"
-                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + locale.components.publicationCitation.citationCounts.altmetric.source)}
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + txt.altmetric.source)}
                         >
                             <img
                                 src={altmetricIcon}
@@ -86,9 +86,9 @@ export default class CitationCounts extends Component {
                     !!this.props.publication.rek_pid &&
                     <span className="citationCount">
                         <a className="citationCountLink"
-                            href={locale.components.publicationCitation.citationCounts.google.externalUrl + encodeURI(this.props.publication.rek_title)}
+                            href={txt.google.externalUrl + encodeURI(this.props.publication.rek_title)}
                             target="_blank"
-                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + locale.components.publicationCitation.citationCounts.google.source)}
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + txt.google.source)}
                         >
                             <img
                                 src={googleScholarIcon}
