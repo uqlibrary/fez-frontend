@@ -126,11 +126,11 @@ export default class PublicationCitation extends Component {
                                         const sourceConfig = locale.global.sources[source.source];
                                         return (
                                             <span key={index}>
-                                                <a href={sourceConfig.externalUrl.replace('[ID]', source.id)}
+                                                <a href={sourceConfig.externalUrl.replace('[id]', source.id)}
                                                     rel="noopener noreferrer"
                                                     target="_blank"
                                                     className="publicationSource"
-                                                    aria-label={locale.global.linkWillOpenInNewWindow.replace('[DESTINATION]', sourceConfig.title)}>
+                                                    aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
                                                     {sourceConfig.title}<ActionOpenInNew
                                                         className="citationOpenUrlIcon"/>
                                                 </a>

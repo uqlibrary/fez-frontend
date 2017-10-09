@@ -35,7 +35,7 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.wos && counts.wos > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.wos.externalCitationUrl.replace('[ID]', this.props.citationId('wos'))}
+                        <a href={locale.global.citationSources.wos.externalCitationUrl.replace('[id]', this.props.citationId('wos'))}
                             rel="noopener noreferrer"
                             target="_blank">
                             <img
@@ -50,7 +50,7 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.scopus && counts.scopus > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.scopus.externalCitationUrl.replace('[ID]', this.props.citationId('scopus'))}
+                        <a href={locale.global.citationSources.scopus.externalCitationUrl.replace('[id]', this.props.citationId('scopus'))}
                             rel="noopener noreferrer"
                             target="_blank">
                             <img
@@ -65,7 +65,7 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.altmetric && counts.altmetric > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.altmetric.externalCitationUrl.replace('[ID]', this.props.citationId('altmetric'))}
+                        <a href={locale.global.citationSources.altmetric.externalCitationUrl.replace('[id]', this.props.citationId('altmetric'))}
                             rel="noopener noreferrer"
                             target="_blank">
                             <img

@@ -16,23 +16,23 @@ export default {
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
         },
-        linkWillOpenInNewWindow: 'Link to [DESTINATION] will open in a new window.',
+        linkWillOpenInNewWindow: 'Link to [destination] will open in a new window.',
         citationTitle: 'Citation',
         citationSources: {
             wos: {
                 countLocation: 'rek_thomson_citation_count',
                 title: 'Web of science',
-                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&KeyUT=[ID]&SrcAuth=uqueensland',
+                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
             },
             scopus: {
                 countLocation: 'rek_scopus_citation_count',
                 title: 'Scopus',
-                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=[ID]&src=s&sot=cite&sdt=a',
+                externalCitationUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
             },
             altmetric: {
                 countLocation: 'rek_altmetric_score',
                 title: 'Altmetric',
-                externalCitationUrl: 'http://www.altmetric.com/details.php?citation_id=[ID]',
+                externalCitationUrl: 'http://www.altmetric.com/details.php?citation_id=[id]',
             },
         },
         sources: {
@@ -40,35 +40,35 @@ export default {
                 id: 'espace',
                 title: 'eSpace',
                 priority: 0,
-                externalUrl: 'https://espace.library.uq.edu.au/view/[ID]',
+                externalUrl: 'https://espace.library.uq.edu.au/view/[id]',
                 idKey: 'rek_pid'
             },
             wos: {
                 id: 'wos',
                 title: 'Web of science',
                 priority: 1,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[ID]&SrcAuth=uqueensland',
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
                 idKey: 'fez_record_search_key_isi_loc.rek_isi_loc'
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
                 priority: 2,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[ID]&origin=inward',
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
                 idKey: 'fez_record_search_key_scopus_id.rek_scopus_id'
             },
             pubmed: {
                 id: 'pubmed',
                 title: 'PubMed',
                 priority: 3,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://www.ncbi.nlm.nih.gov/pubmed/[ID]',
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://www.ncbi.nlm.nih.gov/pubmed/[id]',
                 idKey: 'fez_record_search_key_pubmed_id.rek_pubmed_id'
             },
             crossref: {
                 id: 'crossref',
                 title: 'Crossref',
                 priority: 4,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[ID]',
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[id]',
                 idKey: 'fez_record_search_key_doi.rek_doi'
             },
         },
@@ -183,7 +183,7 @@ export default {
                     }
                 },
                 viewFullCitationLinkTitle: 'View full citation',
-                openNewWindowTitle: 'Link to [TITLE] will open in a new window',
+                openNewWindowTitle: 'Link to [title] will open in a new window',
                 trendSharesThisMonth: 'Number of shares in the past month',
                 trendDifferenceSharesThisMonth: 'Difference in shares since last month',
                 help: {
