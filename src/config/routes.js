@@ -1,5 +1,6 @@
 import React from 'react';
-import {locale, PATHS} from 'config';
+import {locale, paths} from 'config';
+import Immutable from 'immutable';
 
 /**
  * Pages
@@ -59,31 +60,45 @@ const exactRoute = (path, component, exactProps = {}) => ({
  * @param isAuthorised
  */
 const indexRoute = (isAuthorised) => (exactRoute(
-    PATHS.index,
+    paths.index,
     (isAuthorised ? Dashboard : routedComponent(Browse)),
     (isAuthorised ? {} : locale.pages.browse)
 ));
 
+const defaultRoutes = () => ([
+    route(paths.browse, routedComponent(Browse), locale.pages.browse),
+    route(paths.about, routedComponent(StandardPage), locale.pages.about)
+]);
+
+const researcherRoutes = () => ([
+    route(paths.dashboard, Dashboard),
+    route(paths.records.mine, Research),
+    route(paths.records.possible, ClaimPublication),
+    route(paths.records.claim, ClaimPublicationForm),
+    {
+        path: paths.records.add.index,
+        component: AddRecordPage,
+        routes: [
+            route(paths.records.add.find, SearchRecord),
+            route(paths.records.add.searchResults, SearchRecordResults),
+            route(paths.records.add.addNew, AddNewRecord)
+        ]
+    }
+]);
+
+/*
+const adminRoutes = () => ([
+    route(paths.dashboard, Dashboard)
+]);
+*/
+
 export default [
     {
         component: App,
-        routes: (isAuthorised) => ([
+        routes: (isAuthorised) => (Immutable.Set([
             indexRoute(isAuthorised),
-            route(PATHS.browse, routedComponent(Browse), locale.pages.browse),
-            route(PATHS.about, routedComponent(StandardPage), locale.pages.about),
-            route(PATHS.dashboard, Dashboard),
-            route(PATHS.records.mine, Research),
-            route(PATHS.records.possible, ClaimPublication),
-            route(PATHS.records.claim, ClaimPublicationForm),
-            {
-                path: PATHS.records.add.index,
-                component: AddRecordPage,
-                routes: [
-                    route(PATHS.records.add.find, SearchRecord),
-                    route(PATHS.records.add.searchResults, SearchRecordResults),
-                    route(PATHS.records.add.addNew, AddNewRecord)
-                ]
-            }
-        ])
+            ...(isAuthorised ? researcherRoutes() : []),
+            ...defaultRoutes()
+        ]).toArray())
     }
 ];

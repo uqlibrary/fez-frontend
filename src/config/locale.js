@@ -1,6 +1,6 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
-import {default as PATHS} from './paths';
+import {default as paths} from './paths';
 
 export default {
     global: {
@@ -268,8 +268,8 @@ export default {
             },
             text: (
                 <div>
-                    <div>Please, check if there are any possibly your publications via <a href={PATHS.records.possible}> claim
-                        possible publications</a> or <a href={PATHS.records.add.find}>add a missing publication</a></div>
+                    <div>Please, check if there are any possibly your publications via <a href={paths.records.possible}> claim
+                        possible publications</a> or <a href={paths.records.add.find}>add a missing publication</a></div>
                 </div>
             ),
             loadingMessage: 'Searching for your publications...',
@@ -279,7 +279,7 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. Please, check if there are any possibly your publications
-                        via <a href={PATHS.records.possible}>claim possible publications</a> or <a href={PATHS.records.add.find}>add a
+                        via <a href={paths.records.possible}>claim possible publications</a> or <a href={paths.records.add.find}>add a
                         missing publication</a>
                     </div>
                 ),

@@ -5,7 +5,7 @@ import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 // forms & custom components
 import {PublicationForm} from 'modules/PublicationForm';
 
-import {locale, validation, PATHS} from 'config';
+import {locale, validation, paths} from 'config';
 
 export default class AddNewRecord extends React.Component {
     static propTypes = {
@@ -27,11 +27,11 @@ export default class AddNewRecord extends React.Component {
     };
 
     _restartWorkflow = () => {
-        this.props.history.push(PATHS.records.add.find);
+        this.props.history.push(paths.records.add.find);
     };
 
     _navigateToDashboard = () => {
-        this.props.history.push(PATHS.dashboard);
+        this.props.history.push(paths.dashboard);
     };
 
     render() {

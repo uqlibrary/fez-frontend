@@ -1,21 +1,21 @@
-import {PATHS} from 'config';
+import {paths} from 'config';
 
 export const researcherMenuItems = (locale, email) => [
     {
-        linkTo: PATHS.dashboard,
+        linkTo: paths.dashboard,
         primaryText: locale.menu.myDashboard.primaryText,
         secondaryText: email
     },
     {
-        linkTo: PATHS.records.mine,
+        linkTo: paths.records.mine,
         primaryText: locale.menu.myResearch.primaryText
     },
     {
-        linkTo: PATHS.records.add.find,
+        linkTo: paths.records.add.find,
         primaryText: locale.menu.addMissingRecord.primaryText
     },
     {
-        linkTo: PATHS.records.possible,
+        linkTo: paths.records.possible,
         primaryText: locale.menu.claimPublication.primaryText
     },
     {
@@ -26,7 +26,7 @@ export const researcherMenuItems = (locale, email) => [
 
 export const adminMenuItems = (locale, email) => [
     {
-        linkTo: PATHS.dashboard,
+        linkTo: paths.dashboard,
         primaryText: locale.menu.myDashboard.primaryText,
         secondaryText: email
     },
@@ -49,7 +49,7 @@ export const adminMenuItems = (locale, email) => [
 
 export const defaultMenuItems = (locale) => [
     {
-        linkTo: PATHS.browse,
+        linkTo: paths.browse,
         primaryText: locale.menu.browse.primaryText,
         secondaryText: locale.menu.browse.secondaryText
     },
@@ -67,7 +67,7 @@ export const defaultMenuItems = (locale) => [
     //     render: () => components.StaticPage({title: 'FAQs', text: 'public FAQs coming soon...'})
     // },
     {
-        linkTo: PATHS.about,
+        linkTo: paths.about,
         primaryText: locale.menu.about.primaryText,
         secondaryText: locale.menu.about.secondaryText
     }

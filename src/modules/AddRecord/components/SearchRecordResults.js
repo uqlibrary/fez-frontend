@@ -7,7 +7,7 @@ import {StandardCard, InlineLoader, StandardRighthandCard} from 'uqlibrary-react
 import {PublicationsList} from 'modules/PublicationsList';
 import {PublicationListLoadingProgress} from 'modules/PublicationsList';
 
-import {locale, PATHS} from 'config';
+import {locale, paths} from 'config';
 
 export default class SearchRecordResults extends React.Component {
     static propTypes = {
@@ -29,16 +29,16 @@ export default class SearchRecordResults extends React.Component {
     }
 
     _showNewRecordForm = () => {
-        this.props.history.push(PATHS.records.add.addNew);
+        this.props.history.push(paths.records.add.addNew);
     };
 
     _cancelWorkflow = () => {
-        this.props.history.push(PATHS.records.add.find);
+        this.props.history.push(paths.records.add.find);
     };
 
     _claimPublication = (item) => {
         this.props.actions.setClaimPublication(item);
-        this.props.history.push(PATHS.records.claim);
+        this.props.history.push(paths.records.claim);
     };
 
     render() {
