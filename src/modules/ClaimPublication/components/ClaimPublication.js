@@ -10,6 +10,7 @@ import {locale} from 'config';
 export default class ClaimPublication extends React.Component {
     static propTypes = {
         possiblePublicationsList: PropTypes.array,
+        publicationsClaimedInProgress: PropTypes.array,
         loadingPossiblePublicationsList: PropTypes.bool,
         possiblePublicationsFacets: PropTypes.object,
 
@@ -69,6 +70,15 @@ export default class ClaimPublication extends React.Component {
 
     render() {
         const txt = locale.pages.claimPublications;
+
+        const inProgress = [
+            {
+                label: txt.searchResults.inProgress,
+                disabled: true,
+                primary: false
+            }
+        ];
+
         const actions = [
             {
                 label: txt.searchResults.claim,
@@ -120,6 +130,8 @@ export default class ClaimPublication extends React.Component {
                                 </div>
                                 <PublicationsList
                                     publicationsList={this.props.possiblePublicationsList}
+                                    publicationsListSubset={this.props.publicationsClaimedInProgress}
+                                    subsetCustomActions={inProgress}
                                     customActions={actions} />
                             </StandardCard>
                         </div>

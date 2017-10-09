@@ -311,7 +311,8 @@ export default {
                 fieldLabels: {
                     search: 'Enter DOI, Pubmed Id or Title'
                 },
-                submit: 'Search'
+                submit: 'Search',
+                skip: 'Skip search'
             },
             step2: {
                 noResultsFound: {
@@ -362,7 +363,8 @@ export default {
                 loadingMessage: 'Searching for publications...',
                 cancel: 'Abandon and search again',
                 submit: 'Create a new eSpace record',
-                claim: 'Claim this publication'
+                claim: 'Claim this publication',
+                unclaimable: 'All authors have been assigned'
             },
             step3: {
                 // all text values come from components.publicationForm
@@ -396,7 +398,8 @@ export default {
                     buttonLabel: 'Ok'
                 },
                 hide: 'Not mine',
-                claim: 'Claim this publication'
+                claim: 'Claim this publication',
+                inProgress: 'In progress'
             },
             hidePublicationConfirmation: {
                 confirmationTitle: 'Hide publication',
@@ -1162,6 +1165,14 @@ export default {
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
         authorLinking: 'One author must be selected and be confirmed'
+    },
+    issues: {
+        claim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
+            `Record was claimed: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
+        unclaim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
+            `Record is not mine: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
+        fixRecord: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
+            `Fix request: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`
     }
 };
 

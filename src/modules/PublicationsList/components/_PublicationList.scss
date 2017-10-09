@@ -5,9 +5,10 @@
 }
 
 .publicationCitation {
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 12px;
-  padding: 6px 0;
+  padding: 6px;
   & > div.columns:nth-child(1) {
     margin-bottom: 0px !important;
   }

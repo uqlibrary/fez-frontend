@@ -2647,6 +2647,16 @@ exports[`ClaimPublication test renders list of publications and counts 1`] = `
               },
             ]
           }
+          publicationsListSubset={Array []}
+          subsetCustomActions={
+            Array [
+              Object {
+                "disabled": true,
+                "label": "In progress",
+                "primary": false,
+              },
+            ]
+          }
         />
       </StandardCard>
     </div>
