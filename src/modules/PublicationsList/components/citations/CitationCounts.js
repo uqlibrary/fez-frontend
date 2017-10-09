@@ -14,7 +14,6 @@ const openAccessIcon = require('images/oa_icon.svg');
 export default class CitationCounts extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        citationId: PropTypes.func
     };
 
     constructor(props) {
@@ -35,7 +34,7 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.wos && counts.wos > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.wos.externalCitationUrl.replace('[id]', this.props.citationId('wos'))}
+                        <a href={locale.global.citationSources.wos.externalCitationUrl.replace('[id]', this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc)}
                             rel="noopener noreferrer"
                             target="_blank">
                             <img
@@ -50,7 +49,7 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.scopus && counts.scopus > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.scopus.externalCitationUrl.replace('[id]', this.props.citationId('scopus'))}
+                        <a href={locale.global.citationSources.scopus.externalCitationUrl.replace('[id]', this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id)}
                             rel="noopener noreferrer"
                             target="_blank">
                             <img
@@ -65,7 +64,7 @@ export default class CitationCounts extends Component {
                 {
                     !!counts.altmetric && counts.altmetric > 0 &&
                     <span className="citationCount">
-                        <a href={locale.global.citationSources.altmetric.externalCitationUrl.replace('[id]', this.props.citationId('altmetric'))}
+                        <a href={locale.global.citationSources.altmetric.externalCitationUrl.replace('[id]', this.props.publication.rek_altmetric_id)}
                             rel="noopener noreferrer"
                             target="_blank">
                             <img

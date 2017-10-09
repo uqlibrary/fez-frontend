@@ -542,7 +542,6 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
         }
       />
       <CitationCounts
-        citationId={[Function]}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -1679,7 +1678,6 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
         }
       />
       <CitationCounts
-        citationId={[Function]}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -2778,7 +2776,6 @@ exports[`PublicationCitation renders  component with default item 1`] = `
         }
       />
       <CitationCounts
-        citationId={[Function]}
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,

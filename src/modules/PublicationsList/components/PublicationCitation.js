@@ -36,7 +36,6 @@ export default class PublicationCitation extends Component {
         this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation};
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
-        this._citationId = this._citationId.bind(this);
     }
 
     _renderCitation = (publicationTypeId) => {
@@ -64,24 +63,6 @@ export default class PublicationCitation extends Component {
                 // do nothing
                 break;
         }
-    };
-
-    _citationId = (citationSource) => {
-        let location = '';
-        if(citationSource === 'wos') {
-            if(this.props.publication.fez_record_search_key_isi_loc && this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc) {
-                location = this.props.publication.fez_record_search_key_isi_loc.rek_isi_loc;
-            }
-        } else if (citationSource === 'scopus') {
-            if(this.props.publication.fez_record_search_key_scopus_id && this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id) {
-                location = this.props.publication.fez_record_search_key_scopus_id.rek_scopus_id;
-            }
-        } else if (citationSource === 'altmetric') {
-            if(this.props.publication.rek_altmetric_id) {
-                location = this.props.publication.rek_altmetric_id;
-            }
-        }
-        return location;
     };
 
     render() {
@@ -116,7 +97,7 @@ export default class PublicationCitation extends Component {
                         {
                             this._renderCitation(this.props.publication.rek_display_type)
                         }
-                        <CitationCounts publication={this.props.publication} citationId={this._citationId} />
+                        <CitationCounts publication={this.props.publication} />
                         {
                             this.props.publication.sources &&
                             <span className="publicationSources">

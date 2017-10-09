@@ -8,7 +8,7 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
     className="citationCount"
   >
     <a
-      href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=undefined&SrcAuth=uqueensland"
+      href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -82,7 +82,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     className="citationCount"
   >
     <a
-      href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=undefined&SrcAuth=uqueensland"
+      href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -103,7 +103,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     className="citationCount"
   >
     <a
-      href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=undefined&origin=inward"
+      href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -124,7 +124,7 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     className="citationCount"
   >
     <a
-      href="http://www.altmetric.com/details.php?citation_id=undefined"
+      href="http://www.altmetric.com/details.php?citation_id=12345"
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -215,7 +215,7 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
     className="citationCount"
   >
     <a
-      href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=undefined&SrcAuth=uqueensland"
+      href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -236,7 +236,7 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
     className="citationCount"
   >
     <a
-      href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=undefined&origin=inward"
+      href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -257,7 +257,7 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
     className="citationCount"
   >
     <a
-      href="http://www.altmetric.com/details.php?citation_id=undefined"
+      href="http://www.altmetric.com/details.php?citation_id=12345"
       rel="noopener noreferrer"
       target="_blank"
     >
