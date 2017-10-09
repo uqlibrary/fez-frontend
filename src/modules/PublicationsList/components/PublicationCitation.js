@@ -59,7 +59,7 @@ export default class PublicationCitation extends Component {
                 // do nothing
                 break;
         }
-    }
+    };
 
     render() {
         const actions = this.props.showDefaultActions ? this.defaultActions : this.props.customActions;
@@ -68,6 +68,7 @@ export default class PublicationCitation extends Component {
                 const buttonProps = {
                     secondary: true,
                     fullWidth: true,
+                    disabled: action.disabled,
                     label: action.label,
                     className: `publicationAction buttonOrder${index}`,
                     onTouchTap: () => (
@@ -85,7 +86,6 @@ export default class PublicationCitation extends Component {
                     </div>
                 );
             }) : null;
-
         return (
             <div className={`publicationCitation ${this.props.className}`}>
                 <div className="columns is-gapless is-mobile">
@@ -104,7 +104,7 @@ export default class PublicationCitation extends Component {
                         {
                             this._renderCitation(this.props.publication.rek_display_type)
                         }
-                        <CitationCounts publication={this.props.publication}/>
+                        <CitationCounts publication={this.props.publication} />
                         {
                             this.props.publication.sources &&
                             <span className="publicationSources">
@@ -113,13 +113,14 @@ export default class PublicationCitation extends Component {
                                     this.props.publication.sources.map((source, index) => {
                                         const sourceConfig = locale.global.sources[source.source];
                                         return (
-                                            <a href={sourceConfig.externalUrl.replace('[id]', source.id)}
+                                            <a
+                                                href={sourceConfig.externalUrl.replace('[id]', source.id)}
+                                                key={'source_' + index}
                                                 rel="noopener noreferrer"
                                                 target="_blank"
-                                                key={index}
                                                 className="publicationSource"
                                                 aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
-                                                {sourceConfig.title}<ActionOpenInNew className="citationOpenUrlIcon" />
+                                                {sourceConfig.title}<ActionOpenInNew className="citationOpenUrlIcon"/>
                                             </a>
                                         );
                                     })

@@ -5,13 +5,15 @@ import PublicationCitation from './PublicationCitation';
 export default class PublicationsList extends Component {
     static propTypes = {
         publicationsList: PropTypes.array,
-        excludePublicationsList: PropTypes.array,
+        publicationsListSubset: PropTypes.array,
+        subsetCustomActions: PropTypes.array,
         customActions: PropTypes.array,
         showDefaultActions: PropTypes.bool
     };
 
     static defaultProps = {
-        excludePublicationsList: []
+        publicationsListSubset: [],
+        subsetCustomActions: []
     };
 
     constructor(props) {
@@ -24,8 +26,7 @@ export default class PublicationsList extends Component {
                 <PublicationCitation
                     key={index + 1}
                     publication={publication}
-                    customActions={this.props.excludePublicationsList.indexOf(publication.rek_pid) === -1 ? this.props.customActions : []}
-                    className={this.props.excludePublicationsList.indexOf(publication.rek_pid) > -1 ? 'highlight' : ''}
+                    customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
                     showDefaultActions={this.props.showDefaultActions} />
             );
         });

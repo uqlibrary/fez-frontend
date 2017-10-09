@@ -52,7 +52,7 @@ export default {
                 priority: 4,
                 externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[id]',
                 idKey: 'fez_record_search_key_doi.rek_doi'
-            }
+            },
         },
         embargoDateFormat: 'YYYY-MM-DD'
     },
@@ -310,7 +310,8 @@ export default {
                 fieldLabels: {
                     search: 'Enter DOI, Pubmed Id or Title'
                 },
-                submit: 'Search'
+                submit: 'Search',
+                skip: 'Skip search'
             },
             step2: {
                 noResultsFound: {
@@ -361,7 +362,8 @@ export default {
                 loadingMessage: 'Searching for publications...',
                 cancel: 'Abandon and search again',
                 submit: 'Create a new eSpace record',
-                claim: 'Claim this publication'
+                claim: 'Claim this publication',
+                unclaimable: 'All authors have been assigned'
             },
             step3: {
                 // all text values come from components.publicationForm
@@ -395,7 +397,8 @@ export default {
                     buttonLabel: 'Ok'
                 },
                 hide: 'Not mine',
-                claim: 'Claim this publication'
+                claim: 'Claim this publication',
+                inProgress: 'In progress'
             },
             hidePublicationConfirmation: {
                 confirmationTitle: 'Hide publication',
@@ -1012,7 +1015,15 @@ export default {
                 googleCountLabel: 'Citation counts in Google Scholar',
                 altmetricCountLabel: 'Altmetric score is [count]',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
-                statsLabel: 'View full statistics'
+                statsLabel: 'View full statistics',
+                altmetric: {
+                    externalUrl: 'http://www.altmetric.com/details.php?citation_id=[id]',
+                    title: 'Altmetric',
+                },
+                google: {
+                    externalUrl: 'https://scholar.google.com/scholar?q=intitle:[id]',
+                    title: 'Google scholar',
+                },
             },
             defaultActions: [
                 {key: 'fixRecord', label: 'Fix record', primary: false}, // TODO: implement fixRecord

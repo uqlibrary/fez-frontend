@@ -11,6 +11,7 @@ import {locale} from 'config';
 import {myRecordsList} from 'mock/data';
 
 function setup({publication, isShallow = true}) {
+
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
     };
@@ -53,7 +54,14 @@ describe('CitationCounts renders ', () => {
             rek_altmetric_score: 1,
             fez_record_search_key_oa_status: {
                 rek_oa_status: 453693
-            }
+            },
+            fez_record_search_key_isi_loc: {
+                rek_isi_loc: 12345,
+            },
+            fez_record_search_key_scopus_id: {
+                rek_scopus_id: 12345,
+            },
+            rek_altmetric_id: 12345,
         };
         const wrapper = setup({publication});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -69,7 +77,14 @@ describe('CitationCounts renders ', () => {
             rek_altmetric_score: 1,
             fez_record_search_key_oa_status: {
                 rek_oa_status: 453698
-            }
+            },
+            fez_record_search_key_isi_loc: {
+                rek_isi_loc: 12345,
+            },
+            fez_record_search_key_scopus_id: {
+                rek_scopus_id: 12345,
+            },
+            rek_altmetric_id: 12345,
         };
         const wrapper = setup({publication});
         expect(toJson(wrapper)).toMatchSnapshot();

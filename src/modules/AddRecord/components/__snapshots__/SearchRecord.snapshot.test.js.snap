@@ -31,11 +31,13 @@ exports[`Search record should render stepper and a publication search form 1`] =
           "text": "Help about search....",
           "title": "Search for your publication",
         },
+        "skip": "Skip search",
         "submit": "Search",
         "text": "Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.",
         "title": "Search for your publication",
       }
     }
+    onSkipSearch={[Function]}
     onSubmit={[Function]}
   />
 </StandardPage>

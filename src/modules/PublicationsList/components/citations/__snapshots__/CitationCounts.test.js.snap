@@ -2,29 +2,37 @@
 
 exports[`CitationCounts renders  component with a mock record metrics 1`] = `
 <div
-  className="citationCounts columns is-multiline is-gapless"
+  className="citationCounts columns is-multiline is-gapless is-marginless"
 >
   <span
     className="citationCount"
   >
-    <img
-      alt="Web of Science citation count is 19"
-      className="citationCountIcon"
-      src=""
-      title="Web of Science citation count is 19"
-    />
-    <span
-      className="citationCountNumber"
+    <a
+      aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
+      href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      19
-    </span>
+      <img
+        alt="Web of Science citation count is 19"
+        className="citationCountIcon"
+        src=""
+        title="Web of Science citation count is 19"
+      />
+      <span
+        className="citationCountNumber"
+      >
+        19
+      </span>
+    </a>
   </span>
   <span
     className="citationCount"
   >
     <a
+      aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
       className="citationCountLink"
-      href="https://scholar.google.com/scholar?q=intitle:\\"Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice\\""
+      href="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
       target="_blank"
     >
       <img
@@ -47,20 +55,12 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
         className="columns is-mobile is-gapless"
       >
         <div
-          className="column is-narrow"
-        >
-          <FontIcon
-            className="citationCountIcon material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            open_in_new
-          </FontIcon>
-        </div>
-        <div
           className="column is-narrow citationCountNumber"
         >
           View full statistics
+          <ActionOpenInNew
+            className="citationOpenUrlIcon"
+          />
         </div>
       </div>
     </a>
@@ -70,59 +70,81 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
 
 exports[`CitationCounts renders  component with all metrics 1`] = `
 <div
-  className="citationCounts columns is-multiline is-gapless"
+  className="citationCounts columns is-multiline is-gapless is-marginless"
 >
   <span
     className="citationCount"
   >
-    <img
-      alt="Web of Science citation count is 1"
-      className="citationCountIcon"
-      src=""
-      title="Web of Science citation count is 1"
-    />
-    <span
-      className="citationCountNumber"
+    <a
+      aria-label="Link to undefined (Web of science) will open in a new window."
+      href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      1
-    </span>
-  </span>
-  <span
-    className="citationCount"
-  >
-    <img
-      alt="Scopus citation count is 1"
-      className="citationCountIcon"
-      src=""
-      title="Scopus citation count is 1"
-    />
-    <span
-      className="citationCountNumber"
-    >
-      1
-    </span>
-  </span>
-  <span
-    className="citationCount"
-  >
-    <img
-      alt="Altmetric score is 1"
-      className="citationCountIcon"
-      src=""
-      title="Altmetric score is 1"
-    />
-    <span
-      className="citationCountNumber"
-    >
-      1
-    </span>
+      <img
+        alt="Web of Science citation count is 1"
+        className="citationCountIcon"
+        src=""
+        title="Web of Science citation count is 1"
+      />
+      <span
+        className="citationCountNumber"
+      >
+        1
+      </span>
+    </a>
   </span>
   <span
     className="citationCount"
   >
     <a
+      aria-label="Link to undefined (Scopus) will open in a new window."
+      href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Scopus citation count is 1"
+        className="citationCountIcon"
+        src=""
+        title="Scopus citation count is 1"
+      />
+      <span
+        className="citationCountNumber"
+      >
+        1
+      </span>
+    </a>
+  </span>
+  <span
+    className="citationCount"
+  >
+    <a
+      aria-label="Link to undefined (Altmetric) will open in a new window."
+      href="http://www.altmetric.com/details.php?citation_id=12345"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Altmetric score is 1"
+        className="citationCountIcon"
+        src=""
+        title="Altmetric score is 1"
+      />
+      <span
+        className="citationCountNumber"
+      >
+        1
+      </span>
+    </a>
+  </span>
+  <span
+    className="citationCount"
+  >
+    <a
+      aria-label="Link to undefined (Google scholar) will open in a new window."
       className="citationCountLink"
-      href="https://scholar.google.com/scholar?q=intitle:\\"undefined\\""
+      href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
       target="_blank"
     >
       <img
@@ -156,20 +178,12 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
         className="columns is-mobile is-gapless"
       >
         <div
-          className="column is-narrow"
-        >
-          <FontIcon
-            className="citationCountIcon material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            open_in_new
-          </FontIcon>
-        </div>
-        <div
           className="column is-narrow citationCountNumber"
         >
           View full statistics
+          <ActionOpenInNew
+            className="citationOpenUrlIcon"
+          />
         </div>
       </div>
     </a>
@@ -179,65 +193,87 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
 
 exports[`CitationCounts renders  component with no metrics 1`] = `
 <div
-  className="citationCounts columns is-multiline is-gapless"
+  className="citationCounts columns is-multiline is-gapless is-marginless"
 />
 `;
 
 exports[`CitationCounts renders  component with non rendering oa status 1`] = `
 <div
-  className="citationCounts columns is-multiline is-gapless"
+  className="citationCounts columns is-multiline is-gapless is-marginless"
 >
   <span
     className="citationCount"
   >
-    <img
-      alt="Web of Science citation count is 1"
-      className="citationCountIcon"
-      src=""
-      title="Web of Science citation count is 1"
-    />
-    <span
-      className="citationCountNumber"
+    <a
+      aria-label="Link to undefined (Web of science) will open in a new window."
+      href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      1
-    </span>
-  </span>
-  <span
-    className="citationCount"
-  >
-    <img
-      alt="Scopus citation count is 1"
-      className="citationCountIcon"
-      src=""
-      title="Scopus citation count is 1"
-    />
-    <span
-      className="citationCountNumber"
-    >
-      1
-    </span>
-  </span>
-  <span
-    className="citationCount"
-  >
-    <img
-      alt="Altmetric score is 1"
-      className="citationCountIcon"
-      src=""
-      title="Altmetric score is 1"
-    />
-    <span
-      className="citationCountNumber"
-    >
-      1
-    </span>
+      <img
+        alt="Web of Science citation count is 1"
+        className="citationCountIcon"
+        src=""
+        title="Web of Science citation count is 1"
+      />
+      <span
+        className="citationCountNumber"
+      >
+        1
+      </span>
+    </a>
   </span>
   <span
     className="citationCount"
   >
     <a
+      aria-label="Link to undefined (Scopus) will open in a new window."
+      href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Scopus citation count is 1"
+        className="citationCountIcon"
+        src=""
+        title="Scopus citation count is 1"
+      />
+      <span
+        className="citationCountNumber"
+      >
+        1
+      </span>
+    </a>
+  </span>
+  <span
+    className="citationCount"
+  >
+    <a
+      aria-label="Link to undefined (Altmetric) will open in a new window."
+      href="http://www.altmetric.com/details.php?citation_id=12345"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Altmetric score is 1"
+        className="citationCountIcon"
+        src=""
+        title="Altmetric score is 1"
+      />
+      <span
+        className="citationCountNumber"
+      >
+        1
+      </span>
+    </a>
+  </span>
+  <span
+    className="citationCount"
+  >
+    <a
+      aria-label="Link to undefined (Google scholar) will open in a new window."
       className="citationCountLink"
-      href="https://scholar.google.com/scholar?q=intitle:\\"undefined\\""
+      href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
       target="_blank"
     >
       <img
@@ -261,20 +297,12 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
         className="columns is-mobile is-gapless"
       >
         <div
-          className="column is-narrow"
-        >
-          <FontIcon
-            className="citationCountIcon material-icons"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            open_in_new
-          </FontIcon>
-        </div>
-        <div
           className="column is-narrow citationCountNumber"
         >
           View full statistics
+          <ActionOpenInNew
+            className="citationOpenUrlIcon"
+          />
         </div>
       </div>
     </a>
