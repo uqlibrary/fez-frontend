@@ -5,6 +5,91 @@ exports[`Dashboard test doesn't render possibly your publications lure 1`] = `
   className="dashboard"
 >
   <div
+    className="breakpoints"
+  >
+    <div
+      className="mobile"
+    >
+      Mobile
+    </div>
+    <div
+      className="tablet"
+    >
+      Tablet
+    </div>
+    <div
+      className="desktop"
+    >
+      Desktop
+    </div>
+  </div>
+  <br />
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="error_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="help_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="done"
+  />
+  <div
     className="columns is-multiline is-gapless"
   >
     <div
@@ -68,13 +153,184 @@ exports[`Dashboard test doesn't render possibly your publications lure 1`] = `
 exports[`Dashboard test renders alert for non-authors 1`] = `
 <StandardPage
   className="dashboard"
-/>
+>
+  <div
+    className="breakpoints"
+  >
+    <div
+      className="mobile"
+    >
+      Mobile
+    </div>
+    <div
+      className="tablet"
+    >
+      Tablet
+    </div>
+    <div
+      className="desktop"
+    >
+      Desktop
+    </div>
+  </div>
+  <br />
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="error_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="help_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="done"
+  />
+</StandardPage>
 `;
 
 exports[`Dashboard test renders dashboard header only 1`] = `
 <StandardPage
   className="dashboard"
 >
+  <div
+    className="breakpoints"
+  >
+    <div
+      className="mobile"
+    >
+      Mobile
+    </div>
+    <div
+      className="tablet"
+    >
+      Tablet
+    </div>
+    <div
+      className="desktop"
+    >
+      Desktop
+    </div>
+  </div>
+  <br />
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="error_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="help_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="done"
+  />
   <div
     className="columns is-multiline is-gapless"
   >
@@ -140,6 +396,91 @@ exports[`Dashboard test renders possibly your publications lure 1`] = `
 <StandardPage
   className="dashboard"
 >
+  <div
+    className="breakpoints"
+  >
+    <div
+      className="mobile"
+    >
+      Mobile
+    </div>
+    <div
+      className="tablet"
+    >
+      Tablet
+    </div>
+    <div
+      className="desktop"
+    >
+      Desktop
+    </div>
+  </div>
+  <br />
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="error_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="help_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="Test"
+    allowDismiss={true}
+    message="Message"
+    title="Title"
+    type="done"
+  />
   <div
     className="columns is-multiline is-gapless"
   >

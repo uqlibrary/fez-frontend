@@ -5,217 +5,203 @@
   height: 100% !important;
 }
 
+// Claim pub lure
 .possiblePublicationLure {
   margin: -1px 0 0 0 !important;
   .alertWrapper {
     margin: 0 !important;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
   }
 }
 
-// Fix for tab labels to wrap if too small.
-button.publicationTabs>div>div {
-  white-space: normal;
-  text-overflow: ellipsis;
+// Loader
+.isLoading {
+  margin: 5% auto;
+  opacity: 0.5;
 }
 
-@media all and (max-width: 768px) {
-  // My Trending Pubs
-  h2.title.trendingPubsSource {
-    color: $theme-color !important;
-    margin: 6px 0 0 0 !important;
-    font-size: 24px !important;
-  }
-  .trendingPubItem {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    .trendingPubsTitle{
-      font-size: 16px !important;
-      margin-bottom: 6px !important;
-    }
-    .trendingPubsCitation{
-      font-size: 11px;
-      line-height: 12px;
-    }
-    .trendingPubsLink{
-      margin-left: 12px;
-      & svg.trendingPubsIcon {
-        fill: $accent-color !important;
-      }
-    }
-    .trendingPubsCount {
-      & span.title {
-        font-size: 24px;
-      }
-      text-align: right;
-      margin-left: 6px !important;
-    }
-    .trendingPubsDifference {
-      & span.title {
-        font-size: 12px !important;
-      }
-      color: $secondary-color;
-    }
-    svg.trendingPubsIcon {
-      height: 16px !important;
-      width: 16px !important;
-      margin-bottom: -3px;
-      margin-right: 3px;
-    }
-  }
-
+// DashboardProfile
+.imageCover {
+  background-image: url('../../public/images/dashboard_cover.jpg');
+  background-size: cover;
+  background-position: center 25%;
+  overflow: visible;
 }
 
-@media all and (min-width: 768px) {
-  .isLoading {
-    margin: 5% auto;
-    opacity: 0.5;
-  }
-  .imageCover {
-    background-image: url('../../public/images/dashboard_cover.jpg');
-    background-size: cover;
-    background-position: center 25%;
-    overflow: visible;
-  }
-
-  // DashboardProfile
-  .userDetails {
-    height: calc(100% - 48px);
-    padding: 24px;
-    .title {
+.userDetails {
+  height: calc(100% - 48px);
+  padding: 24px;
+  .authorDetails {
+    margin-left: 24px;
+    color: $text-color-reverse;
+    font-weight: $text-weight-light;
+    .authorTitleName {
+      font-size: $title-medium;
       margin-bottom: 6px;
     }
-    .authorDetails {
-      margin-left: 24px;
-      .accountTitleName {
-        font-weight: normal;
-      }
-      .authorPositionOrg {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
-      }
-      .authorPositions {
-        min-height: 40px;
-      }
+    .authorPositionOrg {
+      font-weight: $text-weight-medium;
+      font-size: $text-body-normal;
+      line-height: $text-line-height-normal;
     }
-    //Avatar
-    .authorAvatar{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &div.authorAvatar{
-        margin: auto 0;
-      }
-    }
-    // Researcher Id's
-    .researcherIds {
-      margin: 24px 0 -12px 24px !important;
-      height: 60px !important;
-      .researchIdAvatar {
-        margin-right: 12px;
-        box-shadow: 0 0 15px rgba(black, 0.3);
-        background-color: transparent !important;
-        &:hover {
-          cursor: pointer;
-        }
-        &.ok {
-        }
-        &.error {
-          -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-          opacity: 0.75;
-        }
-      }
-      .orcid { // orcid required to be more prominent
-        margin-top: -3px;
-        zoom: 1.2;
-        -moz-transform: scale(1.2);
-        // Firefox doesnt consider the zoom into the margin
-        @-moz-document url-prefix() {
-          margin: 0 12px 0 0;
-        }
-      }
-      a.orcidLink {
-        color: rgba($text-color-reverse, 0.8);
-        font-size: 12px;
-        line-height: 3;
-        margin: 0;
-        &:hover {
-          color: rgba($text-color-reverse, 1);
-        }
-      }
+    .authorPositions {
+      min-height: 40px;
     }
   }
-
-  // My Trending Pubs
-  h2.title.trendingPubsSource {
-    color: $theme-color !important;
-    margin: 12px 0 0 0 !important;
-  }
-  .trendingPubItem {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    .trendingPubsTitle{
-      margin-bottom: 6px !important;
-    }
-    .trendingPubsCitation{
-      font-size: 12px;
-      line-height: 16px;
-    }
-    .trendingPubsLink{
-      margin-left: 12px;
-      & svg.trendingPubsIcon {
-        fill: $accent-color !important;
-      }
-    }
-    .trendingPubsCount {
-      text-align: right;
-      margin-left: 24px !important;
-    }
-    .trendingPubsDifference {
-      color: $secondary-color;
-    }
-    svg.trendingPubsIcon {
-      height: 16px !important;
-      width: 16px !important;
-      margin-bottom: -3px;
-      margin-right: 3px;
-    }
-  }
-
-  // ArticleCount
-  .authorCount {
+  //Avatar
+  .authorAvatar {
     display: flex;
     justify-content: center;
     align-items: center;
-    .authorCounter {
-      color: $text-color-reverse;
-      margin: auto -24px auto 0;
-      height: auto;
-      .noOfArticles {
-        font-size: 110px;
-        line-height: 80px;
-        font-weight: 100;
+    &div.authorAvatar {
+      margin: auto 0;
+    }
+  }
+  // Researcher Id's
+  .researcherIds {
+    margin: 24px 0 -12px 24px !important;
+    height: 60px !important;
+    .researchIdAvatar {
+      margin-right: 12px;
+      box-shadow: 0 0 15px rgba(black, 0.3);
+      background-color: transparent !important;
+      &:hover {
+        cursor: pointer;
       }
-      .articlesFrom {
-        font-size: 16px;
-        line-height: 26px;
+      &.error {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
         opacity: 0.75;
-        font-weight: 100;
       }
-      .dateRange {
-        font-size: 30px;
-        line-height: 30px;
-        font-weight: 100;
-        & span {
-          font-size: 24px;
-          opacity: 0.75;
-        }
+    }
+    .orcid { // orcid required to be more prominent
+      margin-top: -3px;
+      zoom: 1.2;
+      -moz-transform: scale(1.2);
+      // Firefox doesnt consider the zoom into the margin
+      @-moz-document url-prefix() {
+        margin: 0 12px 0 0;
       }
+    }
+    a.orcidLink {
+      color: rgba($text-color-reverse, 0.8);
+      font-size: $text-body-small;
+      line-height: 3;
+      margin: 0;
+      &:hover {
+        color: rgba($text-color-reverse, 1);
+      }
+    }
+  }
+}
+
+// ArticleCount
+.authorCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .authorCounter {
+    color: $text-color-reverse;
+    margin: auto -24px auto 0;
+    height: auto;
+    .noOfArticles {
+      font-size: 110px;
+      line-height: 80px;
+      font-weight: $text-weight-light;
+    }
+    .articlesFrom {
+      font-size: 16px;
+      line-height: 26px;
+      opacity: 0.75;
+      font-weight: $text-weight-light;
+    }
+    .dateRange {
+      font-size: 30px;
+      line-height: 30px;
+      font-weight: $text-weight-light;
+      & span {
+        font-size: 24px;
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+// My Trending Pubs
+h2.trendingPubsSource {
+  color: $theme-color !important;
+  font-size: $title-medium;
+  font-weight: $text-weight-medium;
+  margin: 12px 0 0 0 !important;
+}
+.publicationCitation {
+  border-bottom: 1px solid rgba($text-color, 0.15);
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+
+  h3.publicationTitle {
+    margin: 0 0 6px 0 !important;
+    font-size: $title-small !important;
+    line-height: 24px;
+    font-weight: $text-weight-medium !important;
+  }
+  .trendingPubsCitation {
+    font-size: $text-body-small;
+    line-height: $text-line-height-small;
+  }
+  a.citationCountLink {
+    color: $accent-color !important;
+    font-size: $text-body-small !important;
+    font-weight: $text-weight-light !important;
+    .citationCountIcon.material-icons {
+      width: 12px;
+      height: 12px;
+      vertical-align: top;
+      color: $accent-color !important;
+    }
+  }
+  .trendingPubsCount {
+    text-align: right;
+    margin-left: 24px !important;
+    font-size: $title-large;
+  }
+  .trendingPubsDifference {
+    color: $secondary-color;
+    font-size: $title-small;
+    vertical-align: top;
+  }
+}
+
+// Mobile overrides
+@include mobile {
+  // Fix for tab labels to wrap if too small.
+  button.publicationTabs > div > div {
+    white-space: normal;
+    text-overflow: ellipsis;
+  }
+
+  h2.trendingPubsSource {
+    font-size: $title-xsmall;
+    font-weight: $text-weight-medium;
+    margin: 6px 0 0 0 !important;
+  }
+
+  .publicationCitation {
+    padding: 0 0 12px 0 !important;
+
+    // My Trending Pubs
+    h3.publicationTitle {
+      margin: 0 !important;
+      font-size: $title-xxsmall !important;
+      font-weight: $text-weight-medium !important;
+      line-height: $text-line-height-normal !important;
+      margin-bottom: 6px !important;
+    }
+    .trendingPubsCount {
+      margin-left: 6px !important;
+      font-size: $title-medium;
+    }
+    .trendingPubsDifference {
+      font-size: $title-xxsmall;
     }
   }
 }

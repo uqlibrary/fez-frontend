@@ -92,8 +92,8 @@ export default class CitationCounts extends Component {
                     <div className="citationCount column">
                         <a className="citationCountLink" href={`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`} target="_blank">
                             <div className="columns is-mobile is-gapless">
-                                <div className="column is-narrow"><FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
                                 <div className="column is-narrow citationCountNumber">{txt.statsLabel}</div>
+                                <div className="column is-narrow"><FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
                             </div>
                         </a>
                     </div>

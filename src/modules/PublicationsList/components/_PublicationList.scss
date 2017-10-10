@@ -87,7 +87,7 @@
     }
 
     .citationIcon {
-      font-size: 12px !important;
+      font-size: $text-body-small !important;
     }
   }
 
@@ -106,20 +106,20 @@
         width: 16px !important;
         height: 16px !important;
         color: $text-color !important;
-        font-size: 1.2em !important;
-        line-height: 1.2em !important;
         &.material-icons {
           margin: 1px 3px 0 0 !important;
+          font-size: $text-body-small !important;
+          line-height: 12px !important;
         }
       }
 
       .citationCountNumber {
-        font-weight: bold;
+        font-weight: $text-weight-bold;
       }
     }
   }
 
-  @media (max-width: 768px) {
+@include mobile {
     .publicationActions {
       margin: 12px;
       text-align: right;
@@ -128,7 +128,6 @@
 }
 
 .publicationsListPaging {
-
   .page.selectedPage {
     background-color: $theme-color !important;
     color: $text-color-reverse !important;

@@ -1,7 +1,7 @@
 // Common styles for list data for ContributorsEditor and FileUpload
 
 //Desktop
-@media (min-width: 768px) {
+@include tablet {
   .datalist {
     //Buttons
     .datalist-buttons, .datalist-buttons .material-icons {
@@ -17,8 +17,8 @@
 
       .datalist-title {
         color: rgba($text-color, 0.66);
-        font-size: 12px;
-        line-height: 14px;
+        font-size: $text-body-small;
+        line-height: $text-line-height-small;
         padding-top: 16px !important;
       }
     }
@@ -32,8 +32,8 @@
         display: block;
         & .datalist-text-subtitle {
           display: block;
-          font-weight: normal;
-          font-size: 11px;
+          font-weight: $text-weight-medium;
+          font-size: $text-body-small;
           margin-top: -4px;
           color: rgba($text-color, 0.8);
         }
@@ -43,7 +43,7 @@
 }
 
 //Mobile
-@media (max-width: 768px) {
+@include mobile {
   .datalist {
     //Buttons
     .datalist-buttons, .datalist-buttons .material-icons {

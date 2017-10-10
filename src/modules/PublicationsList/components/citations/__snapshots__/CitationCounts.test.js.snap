@@ -47,6 +47,11 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
         className="columns is-mobile is-gapless"
       >
         <div
+          className="column is-narrow citationCountNumber"
+        >
+          View full statistics
+        </div>
+        <div
           className="column is-narrow"
         >
           <FontIcon
@@ -56,11 +61,6 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
           >
             open_in_new
           </FontIcon>
-        </div>
-        <div
-          className="column is-narrow citationCountNumber"
-        >
-          View full statistics
         </div>
       </div>
     </a>
@@ -156,6 +156,11 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
         className="columns is-mobile is-gapless"
       >
         <div
+          className="column is-narrow citationCountNumber"
+        >
+          View full statistics
+        </div>
+        <div
           className="column is-narrow"
         >
           <FontIcon
@@ -165,11 +170,6 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
           >
             open_in_new
           </FontIcon>
-        </div>
-        <div
-          className="column is-narrow citationCountNumber"
-        >
-          View full statistics
         </div>
       </div>
     </a>
@@ -261,6 +261,11 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
         className="columns is-mobile is-gapless"
       >
         <div
+          className="column is-narrow citationCountNumber"
+        >
+          View full statistics
+        </div>
+        <div
           className="column is-narrow"
         >
           <FontIcon
@@ -270,11 +275,6 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
           >
             open_in_new
           </FontIcon>
-        </div>
-        <div
-          className="column is-narrow citationCountNumber"
-        >
-          View full statistics
         </div>
       </div>
     </a>

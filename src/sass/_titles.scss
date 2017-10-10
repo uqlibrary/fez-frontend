@@ -1,39 +1,67 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
-// Bulma titles are too bold
-.title {
-  font-weight: 400 !important;
+.AppBar h1 {
+  font-weight: $text-weight-medium !important;
 }
+.pageTitle {
+  font-family: $font-family;
+  font-weight: $text-weight-medium;
+  max-width: 1200px;
+  width: 90%;
+  margin: 24px auto;
+  padding: 0;
+  white-space: normal;
+  color: $theme-color;
 
-//Desktop
-@media (min-width: 768px) {
-  // Fix for page titles to sit in MUI space
-  div.layout-fill h1.title {
-    max-width: 1200px;
-    width: 90%;
-    margin: 24px auto !important;
-    padding: 0 !important;
-    white-space: normal !important;
-    color: $theme-color !important;
+  @include desktop {
+    font-size: $title-large;
+  }
+  @include tablet-only {
+    font-size: $title-medium;
+  }
+  @include mobile {
+    font-size: $title-small;
+  }
+}
+.cardTitle {
+  font-family: $font-family;
+  font-weight: $text-weight-medium;
+  white-space: normal;
+  color: $text-color;
+  margin: 0 !important;
+
+  @include desktop {
+    font-size: $title-medium;
+  }
+  @include tablet-only {
+    font-size: $title-small;
+  }
+  @include mobile {
+    font-size: $title-xsmall;
   }
 }
 
-//Mobile
-@media (max-width: 768px) {
-  // Fix for page titles to sit in MUI space
-  h1.title.is-3 {
-    max-width: 1200px;
-    width: 90%;
-    margin: 24px auto 12px auto !important;
-    padding: 0 !important;
-    white-space: normal !important;
-    color: $theme-color !important;
-    font-size: 24px !important;
-    line-height: 1em !important;
+
+.breakpoints {
+  padding: 20px;
+  @include mobile {
+    background-color: red;
+    color: white;
+    .tablet, .desktop {
+      display: none;
+    }
   }
-  h2.title.is-4 {
-    font-size: 18px !important;
-    line-height: 1em !important;
-    margin-bottom: 12px !important;
+  @include tablet-only {
+    background-color: green;
+    color: #FFF;
+    .mobile, .desktop {
+      display: none;
+    }
+  }
+  @include desktop {
+    background-color: yellow;
+    .mobile, .tablet {
+      display: none;
+    }
   }
 }
