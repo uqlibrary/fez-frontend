@@ -1,31 +1,34 @@
-const path = (...fns) => (url = '') => fns.reduceRight((part, f) =>  f() + part, url);
+const  buildPath = (...fns) => (url = '') => fns.reduceRight((part, f) =>  f() + part, url);
 
 const dashboard = () => '/dashboard';
-const mine = () => '/mine';
+const records = () => '/records';
+
+const add = () => '/add';
 const find = () => '/find';
 const results = () => '/results';
-const addNew = () => '/new';
-const claim = () => '/claim';
+const create = () => '/new';
+
+const mine = () => '/mine';
 const possible = () => '/possible';
+const claim = () => '/claim';
+
 const browse = () => '/browse';
 const about = () => '/about';
-const records = () => '/records';
-const add = () => '/add';
 
 export default {
     index: '/',
-    dashboard: path(dashboard)(),
-    browse: path(browse)(),
-    about: path(about)(),
+    dashboard: buildPath(dashboard)(),
+    browse: buildPath(browse)(),
+    about: buildPath(about)(),
     records: {
-        mine: path(records, mine)(),
-        possible: path(records, possible)(),
-        claim: path(records, claim)(),
+        mine: buildPath(records, mine)(),
+        possible: buildPath(records, possible)(),
+        claim: buildPath(records, claim)(),
         add: {
-            index: path(records, add)(),
-            find: path(records, add, find)(),
-            searchResults: path(records, add, results)(),
-            addNew: path(records, add, addNew)()
+            index: buildPath(records, add)(),
+            find: buildPath(records, add, find)(),
+            searchResults: buildPath(records, add, results)(),
+            new: buildPath(records, add, create)()
         }
     }
 };

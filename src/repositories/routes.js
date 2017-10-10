@@ -13,11 +13,11 @@ const getFacetsQueryString = (facets) => {
 
 /**
  * Translate parameters into standard search string
- * @param {object} {page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
+ * @param {object} {page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}
  * @returns {string}
  */
-const getStandardSearchParameters = ({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}) => (
-    `page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection}&${getFacetsQueryString(facets)}`
+const getStandardSearchParameters = ({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => (
+    `page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection}&${getFacetsQueryString(facets)}${withUnknownAuthors >= 0 ? `&with_unknown_authors=${withUnknownAuthors}` : ''}`
 );
 
 /**

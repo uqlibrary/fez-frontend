@@ -17,7 +17,7 @@ import {
     SearchRecord,
     SearchRecordResults,
     AddNewRecord
-} from '../modules';
+} from 'modules';
 
 /**
  * Used for static components
@@ -81,7 +81,7 @@ const researcherRoutes = () => ([
         routes: [
             route(paths.records.add.find, SearchRecord),
             route(paths.records.add.searchResults, SearchRecordResults),
-            route(paths.records.add.addNew, AddNewRecord)
+            route(paths.records.add.new, AddNewRecord)
         ]
     }
 ]);

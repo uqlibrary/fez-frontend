@@ -72,6 +72,8 @@ export default class App extends React.Component {
     };
 
     render() {
+        console.log(this.props);
+
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
 

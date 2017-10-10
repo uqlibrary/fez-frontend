@@ -29,7 +29,7 @@ export default class SearchRecordResults extends React.Component {
     }
 
     _showNewRecordForm = () => {
-        this.props.history.push(paths.records.add.addNew);
+        this.props.history.push(paths.records.add.new);
     };
 
     _cancelWorkflow = () => {
@@ -50,6 +50,23 @@ export default class SearchRecordResults extends React.Component {
                 primary: true
             }
         ];
+
+        const unclaimablePublicationsList = this.props.publicationsList
+            .filter(item => {
+                if (!item.rek_pid) return false;
+                if (item.fez_record_search_key_author_id.length !== item.fez_record_search_key_author.length) return false;
+                return item.fez_record_search_key_author_id.reduce((total, item)=>(total || item.rek_author_id === 0), false) ? false : true;
+            })
+            .map(item => (item.rek_pid));
+
+        const unclaimable = [
+            {
+                label: searchResultsTxt.unclaimable,
+                disabled: true,
+                primary: false
+            }
+        ];
+
         return (
             <div className="columns searchWrapper">
                 {/* Mobile search dashboard (progress bar) */}
@@ -68,10 +85,13 @@ export default class SearchRecordResults extends React.Component {
                         this.props.publicationsList.length > 0 &&
                         <StandardCard {...searchResultsTxt.searchResults}>
                             <div>{searchResultsTxt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.props.rawSearchQuery)}</div>
-                            <PublicationsList publicationsList={this.props.publicationsList} customActions={actions}/>
+                            <PublicationsList
+                                publicationsList={this.props.publicationsList}
+                                customActions={actions}
+                                publicationsListSubset={unclaimablePublicationsList}
+                                subsetCustomActions={unclaimable} />
                         </StandardCard>
                     }
-
                     {
                         !this.props.loadingSearch && this.props.publicationsList.length === 0 &&
                         <StandardCard {...searchResultsTxt.noResultsFound}>

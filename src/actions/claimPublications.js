@@ -80,23 +80,31 @@ export function hideRecord({record, facets = {}}) {
             pid: record.rek_pid
         };
 
-        post(routes.HIDE_POSSIBLE_RECORD_API(), data)
-            .then(response => {
-                console.log(response);
-                dispatch({
-                    type: actions.HIDE_PUBLICATIONS_COMPLETED,
-                    payload: {pid: record.rek_pid}
-                });
+        dispatch({
+            type: actions.HIDE_PUBLICATIONS_COMPLETED,
+            payload: {pid: record.rek_pid}
+        });
 
-                // reload current possibly your publications/count after user hides records
-                dispatch(searchPossiblyYourPublications({facets: facets}));
-            })
-            .catch(() => {
-                dispatch({
-                    type: actions.HIDE_PUBLICATIONS_FAILED,
-                    payload: []
-                });
-            });
+        console.log(data);
+        console.log(facets);
+
+        // post(routes.HIDE_POSSIBLE_RECORD_API(), data)
+        //     .then(response => {
+        //         console.log(response);
+        //         dispatch({
+        //             type: actions.HIDE_PUBLICATIONS_COMPLETED,
+        //             payload: {pid: record.rek_pid}
+        //         });
+        //
+        //         // reload current possibly your publications/count after user hides records
+        //         dispatch(searchPossiblyYourPublications({facets: facets}));
+        //     })
+        //     .catch(() => {
+        //         dispatch({
+        //             type: actions.HIDE_PUBLICATIONS_FAILED,
+        //             payload: []
+        //         });
+        //     });
     };
 }
 

@@ -9,7 +9,7 @@ function setup(values) {
 }
 
 describe('Search record results', () => {
-    it('should render stepper and a publication list with', () => {
+    it('should render stepper and no results', () => {
         const wrapper = setup({history: {}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });

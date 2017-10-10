@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
-
 import {locale, paths} from 'config';
 
 export default class SearchRecord extends React.Component {
@@ -21,10 +20,14 @@ export default class SearchRecord extends React.Component {
         this.props.history.push(paths.records.add.searchResults);
     };
 
+    _handleSkipSearch = () => {
+        this.props.history.push(paths.records.add.new);
+    };
+
     render() {
         const txt = locale.pages.addRecord;
         return (
-            <PublicationSearchForm locale={txt.step1} onSubmit={this._performSearch}/>
+            <PublicationSearchForm locale={txt.step1} onSubmit={this._performSearch} onSkipSearch={this._handleSkipSearch}/>
         );
     }
 }

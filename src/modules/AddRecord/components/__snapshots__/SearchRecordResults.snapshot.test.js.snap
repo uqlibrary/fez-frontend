@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 exports[`Search record results should render stepper and a publication list with 1`] = `
 <div
   className="columns searchWrapper"
+=======
+exports[`Search record results should render stepper and no results 1`] = `
+<StandardPage
+  title="Add a missing record to eSpace"
+>>>>>>> master
 >
   <div
     className="column is-hidden-desktop is-hidden-tablet mobileWrapper"
