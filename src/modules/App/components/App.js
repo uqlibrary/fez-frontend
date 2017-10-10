@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Route, Switch} from 'react-router';
 
-import {renderRoutes} from 'react-router-config';
+import * as routes from 'config/paths';
+import {locale, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
+
+// application components
 import AppBar from 'material-ui/AppBar';
-
-import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
-
-import {
-    locale,
-    defaultMenuItems,
-    researcherMenuItems,
-    AUTH_URL_LOGIN,
-    AUTH_URL_LOGOUT
-} from 'config';
+import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, StandardPage, Alert} from 'uqlibrary-react-toolbox';
+import {Browse, Dashboard, Research, ClaimPublication, ClaimPublicationForm} from 'modules';
 
 export default class App extends React.Component {
     static propTypes = {
@@ -72,26 +68,16 @@ export default class App extends React.Component {
     };
 
     render() {
-        console.log(this.props);
-
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
 
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
 
-        const menuItems =
-            isAuthorizedUser ?
-                [
-                    ...researcherMenuItems(locale, this.props.user.account.mail),
-                    ...defaultMenuItems(locale)
-                ]
-                :
-                defaultMenuItems(locale);
+        const menuItems = routes.getMenuItems(this.props.user.account);
 
         // TODO: check if isPublicPage === false && isAuthorizedUser === false and kick user out?
-        const isPublicPage = defaultMenuItems(locale).filter((menuItem) => {
-            return menuItem.linkTo === this.props.location.pathname;
-        }).length > 0;
+        const isPublicPage = menuItems.filter((menuItem) => (menuItem.public)).length > 0;
+        const components = {Browse, StandardPage, Dashboard, Research, ClaimPublication, ClaimPublicationForm};
 
         return (
             <div className="layout-fill">
@@ -153,7 +139,15 @@ export default class App extends React.Component {
                                     </div>
                                 </div>
                             }
-                            {renderRoutes(this.props.route.routes(isAuthorizedUser))}
+
+                            <Switch>
+                                {
+                                    routes.getRoutesConfig(components, this.props.user.account).map((route, index) => (
+                                        <Route key={`route_${index}`} {...route}/>
+                                    ))
+                                }
+                            </Switch>
+
                         </div>
                         <HelpDrawer/>
                     </div>

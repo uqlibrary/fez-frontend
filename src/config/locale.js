@@ -1,7 +1,15 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
-import {default as paths} from './paths';
+// import {paths} from './paths';
 
+const paths = {
+    records: {
+        possible: '',
+        add: {
+            find: ''
+        },
+    }
+};
 export default {
     global: {
         title: 'UQ eSpace',
@@ -227,6 +235,21 @@ export default {
                 </StandardCard>
             )
         },
+        notFound: {
+            title: 'Page not found',
+            children: (
+                <StandardCard>
+                    <p>The requested page could not be found.</p>
+                    <p>Sorry about that, but here's what you can do next:
+                        <ul>
+                            <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.</li>
+                            <li>Start again at the home page.</li>
+                            <li>If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.</li>
+                        </ul>
+                    </p>
+                </StandardCard>
+            )
+        },
         browse: {
             title: 'Browse eSpace',
             text: (
@@ -253,6 +276,23 @@ export default {
                 ),
                 buttonLabel: 'OK'
             }
+        },
+        authenticationRequired: {
+            title: 'Authentication required',
+            children: (
+                <StandardCard>
+                    <p>The requested page is available to authenticated users only.</p>
+                    <p>Please, login to continue</p>
+                </StandardCard>
+            )
+        },
+        permissionDenied: {
+            title: 'Permissions denied',
+            children: (
+                <StandardCard>
+                    <p>The requested page available to authorised users only.</p>
+                </StandardCard>
+            )
         },
         myResearch: {
             title: 'My research',
