@@ -1,84 +1,50 @@
 // Common styles for list data for ContributorsEditor and FileUpload
 
-//Desktop
-@include tablet {
-  .datalist {
-    //Buttons
-    .datalist-buttons, .datalist-buttons .material-icons {
-      color: rgba($text-color, 0.3) !important;
-      &:hover {
-        color: rgba($text-color, 0.9) !important;
-      }
+.datalist {
+  //Buttons
+  .datalist-buttons, .datalist-buttons .material-icons {
+    color: rgba($text-color, 0.3) !important;
+    &:hover {
+      color: rgba($text-color, 0.9) !important;
     }
-    // Header
-    &.datalist-header {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-      margin: 24px 0 12px 0 !important;
+  }
+  // Header
+  &.datalist-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 24px 0 12px 0 !important;
 
-      .datalist-title {
-        color: rgba($text-color, 0.66);
-        font-size: $text-body-small;
-        line-height: $text-line-height-small;
-        padding-top: 16px !important;
-      }
+    .datalist-title {
+      color: rgba($text-color, 0.66);
+      font-size: $text-body-small;
+      line-height: $text-line-height-small;
+      padding-top: 16px !important;
     }
-    //Row
-    &.datalist-row {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      margin-bottom: 12px !important;
+  }
+  //Row
+  &.datalist-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 12px !important;
 
-      .datalist-text {
-        font-weight: normal;
+    .datalist-text {
+      font-weight: normal;
+      display: block;
+      & .datalist-text-subtitle {
         display: block;
-        & .datalist-text-subtitle {
-          display: block;
-          font-weight: $text-weight-normal;
-          font-size: $text-body-small;
-          margin-top: -4px;
-          color: rgba($text-color, 0.8);
-        }
+        font-weight: $text-weight-normal;
+        font-size: $text-body-small;
+        margin-top: -4px;
+        color: rgba($text-color, 0.8);
       }
     }
   }
 }
 
-//Mobile
 @include mobile {
   .datalist {
-    //Buttons
-    .datalist-buttons, .datalist-buttons .material-icons {
-      color: rgba($text-color, 0.3) !important;
-      &:hover {
-        color: rgba($text-color, 0.9) !important;
-      }
-    }
     // Header
     &.datalist-header {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-      margin: 24px 0 12px 0 !important;
-
-      .datalist-title {
-        color: rgba($text-color, 0.66);
-        font-size: 12px;
-        padding-top: 16px !important;
-        line-height: 14px !important;
-      }
-    }
-    //Row
-    &.datalist-row {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      margin-bottom: 12px !important;
-
-      .datalist-text {
-        font-weight: normal;
-        display: block;
-        & .datalist-text-subtitle {
-          font-weight: normal;
-          display: block;
-          font-size: 11px;
-          margin-top: -4px;
-          color: rgba($text-color, 0.8);
-        }
+      .datalist-buttons button {
+        margin: 0 16px 0 0 !important;
       }
     }
   }
