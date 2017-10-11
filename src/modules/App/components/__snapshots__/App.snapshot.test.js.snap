@@ -71,13 +71,29 @@ exports[`App tests for user account and author status User is logged in but are 
             "path": "/234234234242",
           },
           Object {
+            "linkTo": "/admin/masquerade",
+            "primaryText": "Masquerade",
+            "secondaryText": "as another user",
+          },
+          Object {
+            "linkTo": "/admin/permissions",
+            "primaryText": "Permissions",
+            "secondaryText": "manage permissions",
+          },
+          Object {
+            "divider": true,
+            "path": "/234234234242",
+          },
+          Object {
             "linkTo": "/browse",
             "primaryText": "Browse",
+            "public": true,
             "secondaryText": "UQ's digital repository",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
+            "public": true,
             "secondaryText": undefined,
           },
         ]
@@ -90,28 +106,7 @@ exports[`App tests for user account and author status User is logged in but are 
     >
       <Switch>
         <Route
-          exact={true}
-          path="/"
-          render={[Function]}
-        />
-        <Route
-          path="/dashboard"
-          render={[Function]}
-        />
-        <Route
-          path="/records/mine"
-          render={[Function]}
-        />
-        <Route
-          path="/records/possible"
-          render={[Function]}
-        />
-        <Route
-          path="/records/claim"
-          render={[Function]}
-        />
-        <Route
-          path="/records/add"
+          path="/about"
           render={[Function]}
         />
         <Route
@@ -119,7 +114,108 @@ exports[`App tests for user account and author status User is logged in but are 
           render={[Function]}
         />
         <Route
-          path="/about"
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/admin/masquerade"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/admin/permissions"
+          render={[Function]}
+        />
+        <Route
           render={[Function]}
         />
       </Switch>
@@ -181,11 +277,13 @@ exports[`App tests for user account and author status User is not logged in and 
           Object {
             "linkTo": "/browse",
             "primaryText": "Browse",
+            "public": true,
             "secondaryText": "UQ's digital repository",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
+            "public": true,
             "secondaryText": undefined,
           },
         ]
@@ -212,8 +310,7 @@ exports[`App tests for user account and author status User is not logged in and 
       </div>
       <Switch>
         <Route
-          exact={true}
-          path="/"
+          path="/about"
           render={[Function]}
         />
         <Route
@@ -221,7 +318,11 @@ exports[`App tests for user account and author status User is not logged in and 
           render={[Function]}
         />
         <Route
-          path="/about"
+          exact={true}
+          path="/"
+          render={[Function]}
+        />
+        <Route
           render={[Function]}
         />
       </Switch>
@@ -302,13 +403,29 @@ exports[`App tests for user account and author status User logged in and is an a
             "path": "/234234234242",
           },
           Object {
+            "linkTo": "/admin/masquerade",
+            "primaryText": "Masquerade",
+            "secondaryText": "as another user",
+          },
+          Object {
+            "linkTo": "/admin/permissions",
+            "primaryText": "Permissions",
+            "secondaryText": "manage permissions",
+          },
+          Object {
+            "divider": true,
+            "path": "/234234234242",
+          },
+          Object {
             "linkTo": "/browse",
             "primaryText": "Browse",
+            "public": true,
             "secondaryText": "UQ's digital repository",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
+            "public": true,
             "secondaryText": undefined,
           },
         ]
@@ -321,28 +438,7 @@ exports[`App tests for user account and author status User logged in and is an a
     >
       <Switch>
         <Route
-          exact={true}
-          path="/"
-          render={[Function]}
-        />
-        <Route
-          path="/dashboard"
-          render={[Function]}
-        />
-        <Route
-          path="/records/mine"
-          render={[Function]}
-        />
-        <Route
-          path="/records/possible"
-          render={[Function]}
-        />
-        <Route
-          path="/records/claim"
-          render={[Function]}
-        />
-        <Route
-          path="/records/add"
+          path="/about"
           render={[Function]}
         />
         <Route
@@ -350,7 +446,108 @@ exports[`App tests for user account and author status User logged in and is an a
           render={[Function]}
         />
         <Route
-          path="/about"
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/admin/masquerade"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/admin/permissions"
+          render={[Function]}
+        />
+        <Route
           render={[Function]}
         />
       </Switch>
@@ -431,13 +628,29 @@ exports[`App tests for user account and author status User logged in but is not 
             "path": "/234234234242",
           },
           Object {
+            "linkTo": "/admin/masquerade",
+            "primaryText": "Masquerade",
+            "secondaryText": "as another user",
+          },
+          Object {
+            "linkTo": "/admin/permissions",
+            "primaryText": "Permissions",
+            "secondaryText": "manage permissions",
+          },
+          Object {
+            "divider": true,
+            "path": "/234234234242",
+          },
+          Object {
             "linkTo": "/browse",
             "primaryText": "Browse",
+            "public": true,
             "secondaryText": "UQ's digital repository",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
+            "public": true,
             "secondaryText": undefined,
           },
         ]
@@ -448,44 +661,9 @@ exports[`App tests for user account and author status User logged in but is not 
       className="content-container"
       style={Object {}}
     >
-      <div
-        className="layout-fill"
-      >
-        <div
-          className="layout-card"
-        >
-          <Alert
-            allowDismiss={false}
-            message="Please contact the UQ Manager to resolve this."
-            title="You are not registered in UQ eSpace as an author"
-            type="info_outline"
-          />
-        </div>
-      </div>
       <Switch>
         <Route
-          exact={true}
-          path="/"
-          render={[Function]}
-        />
-        <Route
-          path="/dashboard"
-          render={[Function]}
-        />
-        <Route
-          path="/records/mine"
-          render={[Function]}
-        />
-        <Route
-          path="/records/possible"
-          render={[Function]}
-        />
-        <Route
-          path="/records/claim"
-          render={[Function]}
-        />
-        <Route
-          path="/records/add"
+          path="/about"
           render={[Function]}
         />
         <Route
@@ -493,7 +671,108 @@ exports[`App tests for user account and author status User logged in but is not 
           render={[Function]}
         />
         <Route
-          path="/about"
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/admin/masquerade"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/admin/permissions"
+          render={[Function]}
+        />
+        <Route
           render={[Function]}
         />
       </Switch>

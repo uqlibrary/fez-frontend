@@ -1,8 +1,5 @@
 import {locale} from 'config';
 
-import * as modules from 'modules';
-import {StandardPage} from 'uqlibrary-react-toolbox';
-
 export const pathConfig =  {
     index: '/',
     dashboard: '/dashboard',
@@ -30,8 +27,7 @@ export const roles = {
     admin: 'admin'
 };
 
-export const getRoutesConfig = (account) => {
-    const components = {...modules, StandardPage};
+export const getRoutesConfig = (components, account) => {
     return [
         {
             path: pathConfig.about,
