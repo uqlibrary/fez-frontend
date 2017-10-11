@@ -7,3 +7,4 @@ export claimPublicationReducer from './claimPublication';
 export publicationsReducer from './publications';
 export publicationSubtypesReducer from './publicationSubtypes';
 export searchRecordsReducer from './searchRecords';
+export orgUnitsReducer from './orgUnits';
