@@ -2,20 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 
-import * as routes from 'config/paths';
-import {locale, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
+import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 
 // application components
 import AppBar from 'material-ui/AppBar';
-import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, StandardPage, Alert} from 'uqlibrary-react-toolbox';
-import {Browse, Dashboard, Research, ClaimPublication, ClaimPublicationForm} from 'modules';
+import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
 
 export default class App extends React.Component {
     static propTypes = {
         user: PropTypes.object,
-        location: PropTypes.object, // react-router prop
         actions: PropTypes.object,
-        route: PropTypes.object     // react-router-config prop
     };
 
     static childContextTypes = {
@@ -70,15 +66,9 @@ export default class App extends React.Component {
     render() {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
-
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
-
-        const menuItems = routes.getMenuItems(this.props.user.account);
-
-        // TODO: check if isPublicPage === false && isAuthorizedUser === false and kick user out?
+        const menuItems = routes.getMenuConfig(this.props.user.account);
         const isPublicPage = menuItems.filter((menuItem) => (menuItem.public)).length > 0;
-        const components = {Browse, StandardPage, Dashboard, Research, ClaimPublication, ClaimPublicationForm};
-
         return (
             <div className="layout-fill">
                 {
@@ -142,8 +132,8 @@ export default class App extends React.Component {
 
                             <Switch>
                                 {
-                                    routes.getRoutesConfig(components, this.props.user.account).map((route, index) => (
-                                        <Route key={`route_${index}`} {...route}/>
+                                    routes.getRoutesConfig(this.props.user.account).map((route, index) => (
+                                        <Route key={`route_${index}`} {...route} />
                                     ))
                                 }
                             </Switch>

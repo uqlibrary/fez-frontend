@@ -14,4 +14,4 @@ export * as validation from './validation';
 export * as general from './general';
 export {publicationTypes} from './general';
 export {default as locale} from './locale';
-export * as paths from './paths';
+export * as routes from './routes';

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {PublicationsList, FacetsFilter} from 'modules/PublicationsList';
 import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 
-import {locale, paths} from 'config';
+import {locale, routes} from 'config';
 
 export default class ClaimPublication extends React.Component {
     static propTypes = {
@@ -56,7 +56,7 @@ export default class ClaimPublication extends React.Component {
     };
 
     _claimPublication = (item) => {
-        this.props.history.push(paths.records.claim);
+        this.props.history.push(routes.pathConfig.records.claim);
         this.props.actions.setClaimPublication(item);
     }
 

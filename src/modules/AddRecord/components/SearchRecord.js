@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationSearchForm} from 'modules/PublicationSearchForm';
-import {locale, paths} from 'config';
+import {locale, routes} from 'config';
 
 export default class SearchRecord extends React.Component {
     static propTypes = {
@@ -17,11 +17,11 @@ export default class SearchRecord extends React.Component {
 
     _performSearch = (values) => {
         this.props.actions.searchPublications(values.get('searchQuery'));
-        this.props.history.push(paths.records.add.searchResults);
+        this.props.history.push(routes.pathConfig.records.add.results);
     };
 
     _handleSkipSearch = () => {
-        this.props.history.push(paths.records.add.new);
+        this.props.history.push(routes.pathConfig.records.add.new);
     };
 
     render() {

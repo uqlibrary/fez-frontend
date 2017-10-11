@@ -1,18 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {renderRoutes} from 'react-router-config';
-import {StandardPage} from 'uqlibrary-react-toolbox';
 
 // forms & custom components
+import {StandardPage} from 'uqlibrary-react-toolbox';
 import {Stepper} from 'modules/SharedComponents/Stepper';
-
-import {locale} from 'config';
+import {locale, routes} from 'config';
 
 export default class AddRecord extends React.Component {
     static propTypes = {
+        addRecordStep: PropTypes.func,
         actions: PropTypes.object,
-        route: PropTypes.object,    // react-router-config prop
-        history: PropTypes.object.isRequired,
         location: PropTypes.object
     };
 
@@ -20,16 +17,19 @@ export default class AddRecord extends React.Component {
         super(props);
     }
 
-    getStepperIndex = () => {
-        return this.props.route.routes.findIndex((route) => (route.path === this.props.location.pathname));
+    getStepperIndex = (location) => {
+        const locationTokens = location.split('/').filter(Boolean);
+        if (locationTokens.length !== 3) return 0;
+        const configTokens = routes.pathConfig[locationTokens[0]][locationTokens[1]];
+        return Object.keys(configTokens).indexOf(locationTokens[2]);
     };
 
     render() {
         const txt = locale.pages.addRecord;
         return (
             <StandardPage title={txt.title}>
-                <Stepper activeStep={this.getStepperIndex()} steps={txt.stepper} />
-                {renderRoutes(this.props.route.routes, {...this.props})}
+                <Stepper activeStep={this.getStepperIndex(this.props.location.pathname)} steps={txt.stepper} />
+                <this.props.addRecordStep {...this.props} />
             </StandardPage>
         );
     }

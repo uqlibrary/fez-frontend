@@ -1,7 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search record should render stepper and a publication search form 1`] = `
-<<<<<<< HEAD
 <Connect(ReduxForm)
   locale={
     Object {
@@ -11,55 +10,15 @@ exports[`Search record should render stepper and a publication search form 1`] =
       "help": Object {
         "buttonLabel": "Ok",
         "text": "Help about search....",
-=======
-<StandardPage
-  title="Add a missing record to eSpace"
->
-  <CustomStepper
-    activeStep={0}
-    steps={
-      Array [
-        Object {
-          "label": "Search for your publication",
-        },
-        Object {
-          "label": "Search results",
-        },
-        Object {
-          "label": "Add your publication",
-        },
-      ]
-    }
-  />
-  <Connect(ReduxForm)
-    locale={
-      Object {
-        "fieldLabels": Object {
-          "search": "Enter DOI, Pubmed Id or Title",
-        },
-        "help": Object {
-          "buttonLabel": "Ok",
-          "text": "Help about search....",
-          "title": "Search for your publication",
-        },
-        "skip": "Skip search",
-        "submit": "Search",
-        "text": "Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.",
->>>>>>> master
         "title": "Search for your publication",
       },
+      "skip": "Skip search",
       "submit": "Search",
       "text": "Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.",
       "title": "Search for your publication",
     }
-<<<<<<< HEAD
   }
+  onSkipSearch={[Function]}
   onSubmit={[Function]}
 />
-=======
-    onSkipSearch={[Function]}
-    onSubmit={[Function]}
-  />
-</StandardPage>
->>>>>>> master
 `;

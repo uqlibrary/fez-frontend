@@ -1,15 +1,6 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
-// import {paths} from './paths';
 
-const paths = {
-    records: {
-        possible: '',
-        add: {
-            find: ''
-        },
-    }
-};
 export default {
     global: {
         title: 'UQ eSpace',
@@ -307,8 +298,8 @@ export default {
             },
             text: (
                 <div>
-                    <div>Please, check if there are any possibly your publications via <a href={paths.records.possible}> claim
-                        possible publications</a> or <a href={paths.records.add.find}>add a missing publication</a></div>
+                    <div>Please, check if there are any possibly your publications via <a href="/records/possible"> claim
+                        possible publications</a> or <a href="/records/add/find">add a missing publication</a></div>
                 </div>
             ),
             loadingMessage: 'Searching for your publications...',
@@ -318,7 +309,7 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. Please, check if there are any possibly your publications
-                        via <a href={paths.records.possible}>claim possible publications</a> or <a href={paths.records.add.find}>add a
+                        via <a href="/records/possible">claim possible publications</a> or <a href="/records/add/find">add a
                         missing publication</a>
                     </div>
                 ),
