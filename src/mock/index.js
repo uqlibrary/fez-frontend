@@ -88,6 +88,8 @@ mock
         .reply(200, {data: ''})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))
         .reply(200, {data: {}})
+    .onGet(new RegExp(escapeRegExp(routes.ORG_UNITS_LIST_API())))
+        .reply(200, mockData.orgUnitsList)
     // .onAny().passThrough();
     .onAny().reply((config) => {
         console.log(config.url);
