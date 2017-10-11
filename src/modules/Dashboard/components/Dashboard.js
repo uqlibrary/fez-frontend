@@ -112,21 +112,19 @@ class Dashboard extends React.Component {
 
         return (
             <StandardPage className="dashboard">
-                <div className="breakpoints">
-                    <div className="mobile">Mobile</div>
-                    <div className="tablet">Tablet</div>
-                    <div className="desktop">Desktop</div>
-                </div><br /><br/>
-
-                <Alert title="Title" message="Message" type="warning" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-                <Alert title="Title" message="Message" type="error" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-                <Alert title="Title" message="Message" type="error_outline" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-                <Alert title="Title" message="Message" type="info" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-                <Alert title="Title" message="Message" type="info_outline" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-                <Alert title="Title" message="Message" type="help" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-                <Alert title="Title" message="Message" type="help_outline" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-                <Alert title="Title" message="Message" type="done" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
-
+                {/* <div className="breakpoints">*/}
+                {/* <div className="mobile">Mobile</div>*/}
+                {/* <div className="tablet">Tablet</div>*/}
+                {/* <div className="desktop">Desktop</div>*/}
+                {/* </div><br /><br/>*/}
+                {/* <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="warning" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>*/}
+                {/* <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="error" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>*/}
+                {/* <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="error_outline" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>*/}
+                {/* <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="info" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>*/}
+                {/* <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="info_outline" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>*/}
+                {/* <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="help" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>*/}
+                {/* <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="help_outline" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>*/}
+                {/* <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="done" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>*/}
                 {
                     loading &&
                     <div className="isLoading is-centered">

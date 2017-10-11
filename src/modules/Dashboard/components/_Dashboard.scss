@@ -39,7 +39,7 @@
       margin-bottom: 6px;
     }
     .authorPositionOrg {
-      font-weight: $text-weight-medium;
+      font-weight: $text-weight-normal;
       font-size: $text-body-normal;
       line-height: $text-line-height-normal;
     }
@@ -130,7 +130,7 @@
 h2.trendingPubsSource {
   color: $theme-color !important;
   font-size: $title-medium;
-  font-weight: $text-weight-medium;
+  font-weight: $text-weight-normal;
   margin: 12px 0 0 0 !important;
 }
 .publicationCitation {
@@ -142,7 +142,7 @@ h2.trendingPubsSource {
     margin: 0 0 6px 0 !important;
     font-size: $title-small !important;
     line-height: 24px;
-    font-weight: $text-weight-medium !important;
+    font-weight: $text-weight-normal !important;
   }
   .trendingPubsCitation {
     font-size: $text-body-small;
@@ -181,7 +181,7 @@ h2.trendingPubsSource {
 
   h2.trendingPubsSource {
     font-size: $title-xsmall;
-    font-weight: $text-weight-medium;
+    font-weight: $text-weight-normal;
     margin: 6px 0 0 0 !important;
   }
 
@@ -192,7 +192,7 @@ h2.trendingPubsSource {
     h3.publicationTitle {
       margin: 0 !important;
       font-size: $title-xxsmall !important;
-      font-weight: $text-weight-medium !important;
+      font-weight: $text-weight-normal !important;
       line-height: $text-line-height-normal !important;
       margin-bottom: 6px !important;
     }

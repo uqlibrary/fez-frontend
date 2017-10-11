@@ -1,11 +1,11 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
 .AppBar h1 {
-  font-weight: $text-weight-medium !important;
+  font-weight: $text-weight-normal !important;
 }
 .pageTitle {
   font-family: $font-family;
-  font-weight: $text-weight-medium;
+  font-weight: $text-weight-normal;
   max-width: 1200px;
   width: 90%;
   margin: 24px auto;
@@ -25,7 +25,7 @@
 }
 .cardTitle {
   font-family: $font-family;
-  font-weight: $text-weight-medium;
+  font-weight: $text-weight-normal;
   white-space: normal;
   color: $text-color;
   margin: 0 !important;

@@ -30,6 +30,10 @@ input::-ms-clear {
   display: none;
 }
 
+.action-buttons {
+  margin-top: 0px !important;
+}
+
 // Bring a button down to meet the baseline of an input on the same row
 @include tablet {
   .is-mui-spacing-button {
