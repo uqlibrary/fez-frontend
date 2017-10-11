@@ -75,4 +75,4 @@ export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery}) => (
     `external/records/search?source=${source}&${getSearchType(searchQuery)}`
 );
 
-
+export const ORG_UNITS_LIST_API = () => ('orgs/list');
