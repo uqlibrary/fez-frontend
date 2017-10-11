@@ -1,4 +1,4 @@
-@import '~uqlibrary-react-toolbox/sass/variables';
+@import './variables';
 
 .AppBar h1 {
   font-weight: $text-weight-normal !important;
@@ -41,6 +41,23 @@
   }
 }
 
+.body-1 { font-size: $text-body-normal; font-weight: $text-weight-normal; line-height: $text-line-height-normal;}
+.body-2 { font-size: $text-body-normal; font-weight: $text-weight-bold; }
+.caption { font-size: $text-body-xsmall; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  font-weight: $text-weight-normal;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .breakpoints {
   padding: 20px;

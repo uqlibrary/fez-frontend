@@ -1,4 +1,4 @@
-@import '~uqlibrary-react-toolbox/sass/variables';
+@import './variables';
 
 // An MUI override to make form labels WCAG AA compliant
 label {
@@ -28,6 +28,17 @@ form .column {
 // remove the X clear button in microsoft edge
 input::-ms-clear {
   display: none;
+}
+
+// Cards should always fill their available space.
+.card-full-height {
+  height: 100% !important;
+}
+
+// Centering helper
+.is-centered {
+  text-align: center;
+  align-content: center;
 }
 
 .action-buttons {

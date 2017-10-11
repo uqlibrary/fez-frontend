@@ -190,11 +190,10 @@ h2.trendingPubsSource {
 
     // My Trending Pubs
     h3.publicationTitle {
-      margin: 0 !important;
-      font-size: $title-xxsmall !important;
+      font-size: $title-xsmall !important;
       font-weight: $text-weight-normal !important;
-      line-height: $text-line-height-normal !important;
-      margin-bottom: 6px !important;
+      line-height: $text-line-height-large !important;
+      margin: 12px 0 6px 0 !important;
     }
     .trendingPubsCount {
       margin-left: 6px !important;

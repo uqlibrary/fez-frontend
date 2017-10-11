@@ -11,7 +11,7 @@
     line-height: 24px !important;
     & > div > span, & > span {
       padding: 0px 6px !important;
-      font-size: 12px !important;
+      font-size: $text-body-small !important;
     }
   }
 }

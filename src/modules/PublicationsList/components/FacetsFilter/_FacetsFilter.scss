@@ -8,7 +8,7 @@
   //active
   .facetsCategory {
     font-size: $text-body-normal !important;
-    line-height: $text-line-height-normal !important;
+    line-height: $text-line-height-small !important;
     &.disabled { opacity: 0.5; }
     & > div > div, &.disabled {
       padding: 8px 56px 8px 8px !important;
@@ -27,7 +27,8 @@
 
   .facetsLink {
     font-size: $text-body-normal !important;
-    line-height: $text-line-height-normal !important;
+    line-height: $text-line-height-small !important;
+    font-weight: $text-weight-normal !important;
     &.disabled { opacity: 0.5; }
     & > div > div, &.disabled {
       padding: 8px !important;

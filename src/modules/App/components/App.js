@@ -42,7 +42,7 @@ export default class App extends React.Component {
             menuDrawerOpen: false,
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1600px)'),
-            isMobile: window.matchMedia('(max-width: 768px)').matches
+            isMobile: window.matchMedia('(max-width: 720px)').matches
         };
     }
 
