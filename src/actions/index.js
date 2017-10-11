@@ -7,3 +7,4 @@ export * from './search';
 export * from './publications';
 export * from './claimPublications';
 export * from './publicationTypes';
+export * from './orgUnits';
