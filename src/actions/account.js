@@ -36,10 +36,10 @@ export function loadCurrentAccount() {
             })
             .then(currentAuthorResponse => {
                 // TODO: to be decommissioned when author/details will become a part of author api
-                currentAuthor = currentAuthorResponse;
+                currentAuthor = currentAuthorResponse.data;
                 dispatch({
                     type: actions.ACCOUNT_AUTHOR_LOADED,
-                    payload: currentAuthorResponse
+                    payload: currentAuthor
                 });
 
                 // load repository author details
