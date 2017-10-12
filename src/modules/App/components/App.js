@@ -13,6 +13,7 @@ export default class App extends React.Component {
     static propTypes = {
         user: PropTypes.object,
         actions: PropTypes.object,
+        location: PropTypes.object
     };
 
     static childContextTypes = {
@@ -68,13 +69,12 @@ export default class App extends React.Component {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
 
-        const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
-
+        const components = {StandardPage, ...modules};
         const menuItems = routes.getMenuConfig(this.props.user.account);
 
-        // TODO: check if isPublicPage === false && isAuthorizedUser === false and kick user out?
-        const isPublicPage = menuItems.filter((menuItem) => (menuItem.public)).length > 0;
-        const components = {StandardPage, ...modules};
+        const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
+        const isPublicPage = menuItems.filter((menuItem) =>
+            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
 
         return (
             <div className="layout-fill">

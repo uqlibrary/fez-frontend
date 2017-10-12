@@ -661,6 +661,20 @@ exports[`App tests for user account and author status User logged in but is not 
       className="content-container"
       style={Object {}}
     >
+      <div
+        className="layout-fill"
+      >
+        <div
+          className="layout-card"
+        >
+          <Alert
+            allowDismiss={false}
+            message="Please contact the UQ Manager to resolve this."
+            title="You are not registered in UQ eSpace as an author"
+            type="info_outline"
+          />
+        </div>
+      </div>
       <Switch>
         <Route
           path="/about"

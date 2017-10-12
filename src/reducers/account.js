@@ -71,5 +71,7 @@ export default function accountReducer(state = initialState, action) {
     if (!handler) {
         return state;
     }
+    console.log(action.type);
+    console.log(action.payload);
     return handler(state, action);
 }
