@@ -63,4 +63,11 @@ export function loadCurrentAccount() {
     };
 }
 
+export function logout() {
+    console.log('logout!!!');
+    return dispatch => {
+        dispatch({type: actions.ACCOUNT_ANONYMOUS});
+    };
+}
+
 

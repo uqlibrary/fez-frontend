@@ -17,6 +17,7 @@ export function loadPublicationTypesList() {
                 });
             })
             .catch((error) => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.PUBLICATION_TYPES_LOAD_FAILED,
                     payload: error
@@ -42,6 +43,7 @@ export function loadPublicationSubtypesList(id) {
                 });
             })
             .catch((error) => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.PUBLICATION_SUBTYPES_LOAD_FAILED,
                     payload: error

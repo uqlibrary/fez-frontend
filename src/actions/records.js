@@ -71,6 +71,7 @@ export function createNewRecord(data) {
                 return Promise.resolve(response.data);
             })
             .catch(error => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.RECORD_CREATE_FAILED,
                     payload: error
