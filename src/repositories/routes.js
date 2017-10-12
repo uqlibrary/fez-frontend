@@ -27,11 +27,11 @@ const getStandardSearchParameters = ({page = 1, pageSize = 20, sortBy = 'publish
  */
 const getSearchType = (searchQuery) => {
     if (validation.isValidDOIValue(searchQuery)) {
-        return `doi=${searchQuery}`;
+        return `doi=${searchQuery.trim()}`;
     }
 
     if (validation.isValidPubMedValue(searchQuery)) {
-        return `id=pmid:${searchQuery}`;
+        return `id=pmid:${searchQuery.trim()}`;
     }
 
     return `title=${encodeURI(searchQuery)}`;

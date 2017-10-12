@@ -58,37 +58,37 @@ export const getRoutesConfig = (components, account) => {
             },
             {
                 path: pathConfig.records.mine,
-                component: components.Research,
+                component: components.MyRecords,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.possible,
-                component: components.ClaimPublication,
+                component: components.PossiblyMyRecords,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.claim,
-                component: components.ClaimPublicationForm,
+                component: components.ClaimRecord,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.add.find,
-                render: (props) => components.AddRecordPage({...props, addRecordStep: components.SearchRecord}),
+                render: (props) => components.AddMissingRecord({...props, addRecordStep: components.FindRecords}),
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.add.results,
-                render: (props) => components.AddRecordPage({...props, addRecordStep: components.SearchRecordResults}),
+                render: (props) => components.AddMissingRecord({...props, addRecordStep: components.RecordsSearchResults}),
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.add.new,
-                render: (props) => components.AddRecordPage({...props, addRecordStep: components.AddNewRecord}),
+                render: (props) => components.AddMissingRecord({...props, addRecordStep: components.NewRecord}),
                 access: [roles.researcher, roles.admin],
                 exact: true
             },

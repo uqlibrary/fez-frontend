@@ -11,8 +11,8 @@ import {
     HelpIcon
 } from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
-import {PublicationsList} from 'modules/PublicationsList';
-import {PublicationStats} from 'modules/SharedComponents';
+import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
+import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import FontIcon from 'material-ui/FontIcon';

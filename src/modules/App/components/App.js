@@ -6,8 +6,8 @@ import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 
 // application components
 import AppBar from 'material-ui/AppBar';
-import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, StandardPage, Alert} from 'uqlibrary-react-toolbox';
-import * as modules from 'modules';
+import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
+import * as pages from './pages';
 
 export default class App extends React.Component {
     static propTypes = {
@@ -68,8 +68,6 @@ export default class App extends React.Component {
     render() {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
-
-        const components = {StandardPage, ...modules};
         const menuItems = routes.getMenuConfig(this.props.user.account);
 
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
@@ -139,7 +137,7 @@ export default class App extends React.Component {
 
                             <Switch>
                                 {
-                                    routes.getRoutesConfig(components, this.props.user.account).map((route, index) => (
+                                    routes.getRoutesConfig(pages, this.props.user.account).map((route, index) => (
                                         <Route key={`route_${index}`} {...route} />
                                     ))
                                 }
