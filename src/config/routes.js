@@ -96,7 +96,7 @@ export const getRoutesConfig = (components, account) => {
         ...(account && account.canMasquerade ? [
             {
                 path: pathConfig.admin.masquerade,
-                render: () => components.StandardPage({title: 'Masquerade as...'}),
+                component: components.Masquerade,
                 exact: true,
                 access: [roles.admin]
             },

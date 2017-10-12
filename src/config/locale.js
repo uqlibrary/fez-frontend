@@ -453,6 +453,25 @@ export default {
                 },
                 excludeFacetsList: ['Scopus document type', 'Subtype']
             }
+        },
+        masquerade: {
+            title: 'Masquerade',
+            help: {
+                title: 'Masquerade',
+                text: (
+                    <div>
+                        Masquerade as another user...
+                    </div>
+                ),
+                buttonLabel: 'OK'
+            },
+            description: (<div>
+                <strong>WARNING!!</strong> Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
+            </div>),
+            labels: {
+                submit: 'Masquerade',
+                hint: 'Username or student username'
+            }
         }
     },
     components: {

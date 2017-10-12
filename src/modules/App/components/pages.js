@@ -5,3 +5,4 @@ export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'mo
 export {PossiblyMyRecords} from 'modules/PossiblyMyRecords';
 export {ClaimRecord} from 'modules/ClaimRecord';
 export {StandardPage} from 'uqlibrary-react-toolbox';
+export {Masquerade} from 'modules/Masquerade';
