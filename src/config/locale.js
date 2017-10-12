@@ -1189,8 +1189,7 @@ export default {
                 {value: 'updated_date', label: 'Updated date'},
                 {value: 'altmetric_score', label: 'Altmetric score'},
                 {value: 'scopus_citation_count', label: 'Scopus citation count'},
-                {value: 'thomson_citation_count', label: 'Thompson citation count'},
-                {value: 'file_downloads', label: 'Downloads'}
+                {value: 'thomson_citation_count', label: 'Thompson citation count'}
             ],
             sortDirection: [
                 'Desc',
