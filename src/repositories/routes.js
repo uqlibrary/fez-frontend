@@ -12,6 +12,30 @@ const getFacetsQueryString = (facets) => {
 };
 
 /**
+ * prepareTextSearchQuery - escape/remove ElasticSearch special characters
+ * @param {string} query string
+ * @returns {string}
+ */
+export const prepareTextSearchQuery = (searchQuery) => {
+    const escapeConfig = [
+        {
+            find: /([\!\*\+\-\=\&\|\(\)\[\]\{\}\^\~\?\:\\/"])/g,
+            replaceWith: '\\$1'
+        },
+        {
+            find: /([\<\>])/g,
+            replaceWith: ''
+        },
+        {
+            find: /\s/g,
+            replaceWith: '+'
+        }
+    ];
+    return escapeConfig.reduce((query, config) =>
+        (query.replace(config.find, config.replaceWith)), searchQuery.trim());
+};
+
+/**
  * Translate parameters into standard search string
  * @param {object} {page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}
  * @returns {string}
@@ -34,7 +58,7 @@ const getSearchType = (searchQuery) => {
         return `id=pmid:${searchQuery.trim()}`;
     }
 
-    return `title=${encodeURI(searchQuery)}`;
+    return `title=${encodeURI(prepareTextSearchQuery(searchQuery))}`;
 };
 
 export const ACCOUNT_API = () => (`account?${new Date().getTime()}`);
