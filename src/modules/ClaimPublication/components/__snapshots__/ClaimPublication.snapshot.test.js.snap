@@ -80,7 +80,6 @@ exports[`ClaimPublication test renders list of publications and counts 1`] = `
               },
             ]
           }
-          excludePublicationsList={Array []}
           publicationsList={
             Array [
               Object {
@@ -2645,6 +2644,16 @@ exports[`ClaimPublication test renders list of publications and counts 1`] = `
                 "rek_title": "Solo author article",
                 "rek_updated_date": "2017-08-19T06:40:22Z",
                 "rek_wok_doc_type": null,
+              },
+            ]
+          }
+          publicationsListSubset={Array []}
+          subsetCustomActions={
+            Array [
+              Object {
+                "disabled": true,
+                "label": "In progress",
+                "primary": false,
               },
             ]
           }

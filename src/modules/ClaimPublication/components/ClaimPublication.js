@@ -70,6 +70,15 @@ export default class ClaimPublication extends React.Component {
 
     render() {
         const txt = locale.pages.claimPublications;
+
+        const inProgress = [
+            {
+                label: txt.searchResults.inProgress,
+                disabled: true,
+                primary: false
+            }
+        ];
+
         const actions = [
             {
                 label: txt.searchResults.claim,
@@ -121,7 +130,8 @@ export default class ClaimPublication extends React.Component {
                                 </div>
                                 <PublicationsList
                                     publicationsList={this.props.possiblePublicationsList}
-                                    excludePublicationsList={this.props.publicationsClaimedInProgress}
+                                    publicationsListSubset={this.props.publicationsClaimedInProgress}
+                                    subsetCustomActions={inProgress}
                                     customActions={actions} />
                             </StandardCard>
                         </div>

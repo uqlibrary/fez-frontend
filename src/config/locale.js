@@ -16,43 +16,43 @@ export default {
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
         },
-        linkWillOpenInNewWindow: 'Link to [DESTINATION] will open in a new window.',
+        linkWillOpenInNewWindow: 'Link to [destination] will open in a new window.',
         sources: {
             espace: {
                 id: 'espace',
                 title: 'eSpace',
                 priority: 0,
-                externalUrl: 'https://espace.library.uq.edu.au/view/[ID]',
+                externalUrl: 'https://espace.library.uq.edu.au/view/[id]',
                 idKey: 'rek_pid'
             },
             wos: {
                 id: 'wos',
                 title: 'Web of science',
                 priority: 1,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[ID]&SrcAuth=uqueensland',
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
                 idKey: 'fez_record_search_key_isi_loc.rek_isi_loc'
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
                 priority: 2,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[ID]&origin=inward',
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
                 idKey: 'fez_record_search_key_scopus_id.rek_scopus_id'
             },
             pubmed: {
                 id: 'pubmed',
                 title: 'PubMed',
                 priority: 3,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://www.ncbi.nlm.nih.gov/pubmed/[ID]',
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://www.ncbi.nlm.nih.gov/pubmed/[id]',
                 idKey: 'fez_record_search_key_pubmed_id.rek_pubmed_id'
             },
             crossref: {
                 id: 'crossref',
                 title: 'Crossref',
                 priority: 4,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[ID]',
+                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[id]',
                 idKey: 'fez_record_search_key_doi.rek_doi'
-            }
+            },
         },
         embargoDateFormat: 'YYYY-MM-DD'
     },
@@ -165,7 +165,6 @@ export default {
                     }
                 },
                 viewFullCitationLinkTitle: 'View full citation',
-                openNewWindowTitle: 'Link to [TITLE] will open in a new window',
                 trendSharesThisMonth: 'Number of shares in the past month',
                 trendDifferenceSharesThisMonth: 'Difference in shares since last month',
                 help: {
@@ -311,7 +310,8 @@ export default {
                 fieldLabels: {
                     search: 'Enter DOI, Pubmed Id or Title'
                 },
-                submit: 'Search'
+                submit: 'Search',
+                skip: 'Skip search'
             },
             step2: {
                 noResultsFound: {
@@ -362,7 +362,8 @@ export default {
                 loadingMessage: 'Searching for publications...',
                 cancel: 'Abandon and search again',
                 submit: 'Create a new eSpace record',
-                claim: 'Claim this publication'
+                claim: 'Claim this publication',
+                unclaimable: 'All authors have been assigned'
             },
             step3: {
                 // all text values come from components.publicationForm
@@ -396,7 +397,8 @@ export default {
                     buttonLabel: 'Ok'
                 },
                 hide: 'Not mine',
-                claim: 'Claim this publication'
+                claim: 'Claim this publication',
+                inProgress: 'In progress'
             },
             hidePublicationConfirmation: {
                 confirmationTitle: 'Hide publication',
@@ -1013,7 +1015,15 @@ export default {
                 googleCountLabel: 'Citation counts in Google Scholar',
                 altmetricCountLabel: 'Altmetric score is [count]',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
-                statsLabel: 'View full statistics'
+                statsLabel: 'View full statistics',
+                altmetric: {
+                    externalUrl: 'http://www.altmetric.com/details.php?citation_id=[id]',
+                    title: 'Altmetric',
+                },
+                google: {
+                    externalUrl: 'https://scholar.google.com/scholar?q=intitle:[id]',
+                    title: 'Google scholar',
+                },
             },
             defaultActions: [
                 {key: 'fixRecord', label: 'Fix record', primary: false}, // TODO: implement fixRecord

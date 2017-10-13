@@ -6,11 +6,6 @@
 
 .publicationCitation {
 
-  &.highlight {
-    background-color: lighten($warning-color, 49%);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 12px;
   padding: 6px;
@@ -18,18 +13,11 @@
     margin-bottom: 0px !important;
   }
 
-  .citationOpenUrlIcon {
-    width: 12px !important;
-    height: 12px !important;
-    fill: $accent-color !important;
-    margin: 0 4px;
-  }
-
   .publicationActions {
     margin: 12px 0 !important;
   }
 
-  .publicationSources {
+  .publicationSources, .citationSources {
     font-size: 12px;
 
     .publicationSource {
@@ -55,6 +43,7 @@
     font-size: 12px;
     line-height: 16px;
     color: rgba($text-color, 0.88);
+    margin-bottom: 12px;
 
     .citationJournalName {
       font-style: italic;
@@ -68,15 +57,19 @@
     }
   }
 
+  .citationOpenUrlIcon, .titleOpenUrlIcon {
+    width: 12px !important;
+    height: 12px !important;
+    fill: $accent-color !important;
+    margin: 0 2px;
+    vertical-align: top;
+  }
+
   .citationCounts {
     margin-top: 10px;
 
     .citationCount {
       margin: 0 5px;
-
-      .citationCountLink, a.citationCountLink {
-        color: $text-color;
-      }
 
       .citationCountIcon {
         margin: 3px 3px -3px 0;

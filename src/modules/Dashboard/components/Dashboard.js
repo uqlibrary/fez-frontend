@@ -243,7 +243,12 @@ class Dashboard extends React.Component {
                                                                         </div>
                                                                         <div className="citationCounts">
                                                                             <div className="citationCount column" style={{margin: '0px', padding: '0px'}}>
-                                                                                <a href={recordValue.citation_url} className="citationCountLink" target="_blank" title={txt.myTrendingPublications.openNewWindowTitle.replace('[TITLE]', recordValue.title)}>
+                                                                                <a
+                                                                                    href={recordValue.citation_url}
+                                                                                    className="citationCountLink"
+                                                                                    target="_blank"
+                                                                                    rel="noopener noreferrer"
+                                                                                    title={locale.global.linkWillOpenInNewWindow.replace('[destination]', recordValue.title)}>
                                                                                     <div className="columns is-mobile is-gapless">
                                                                                         <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}<FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
                                                                                     </div>

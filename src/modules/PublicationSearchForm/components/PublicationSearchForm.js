@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {TextField, StandardCard} from 'uqlibrary-react-toolbox';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 import {validation} from 'config';
 
 export default class PublicationSearchForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
+        onSkipSearch: PropTypes.func,
         locale: PropTypes.object
     };
 
@@ -43,6 +45,17 @@ export default class PublicationSearchForm extends Component {
                                 disabled={this.props.invalid}
                             />
                         </div>
+                        {
+                            this.props.onSkipSearch &&
+                            <div className="column is-narrow">
+                                <FlatButton
+                                    className="is-mui-spacing-button"
+                                    label={this.props.locale.skip}
+                                    fullWidth
+                                    onTouchTap={this.props.onSkipSearch}
+                                />
+                            </div>
+                        }
                     </div>
                 </form>
             </StandardCard>
