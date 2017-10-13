@@ -3286,7 +3286,7 @@ export const record = {
         "rek_author_id_id": 28080611,
         "rek_author_id_pid": "UQ:342708",
         "rek_author_id_xsdmf_id": null,
-        "rek_author_id": 710,
+        "rek_author_id": 410,
         "rek_author_id_order": 1
     }],
     "fez_record_search_key_author_role": [],

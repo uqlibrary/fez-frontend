@@ -1,8 +1,34 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
-import {patch} from 'repositories/generic';
+import {get, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 // import * as repositories from 'repositories';
+
+/**
+ * Load publication
+ * @param {object}
+ * @returns {action}
+ */
+export function loadRecordToFix(pid) {
+    return dispatch => {
+        dispatch({type: actions.FIX_RECORD_LOADING});
+
+        get(routes.EXISTING_RECORD_API({pid: pid}))
+            .then(response => {
+                dispatch({
+                    type: actions.FIX_RECORD_LOADED,
+                    payload: response.data
+                });
+            })
+            .catch((error) => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                dispatch({
+                    type: actions.FIX_RECORD_LOAD_FAILED,
+                    payload: error
+                });
+            });
+    };
+}
 
 /**
  * Set record to be fixed/unclaimedd

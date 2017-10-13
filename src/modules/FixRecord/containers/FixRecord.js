@@ -41,6 +41,7 @@ let FixRecordContainer = reduxForm({
 const mapStateToProps = (state) => {
     return {
         ...state.get('fixRecordReducer'),
+        ...state.get('accountReducer'),
         authorLoading: state.get('accountReducer').authorLoading,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {

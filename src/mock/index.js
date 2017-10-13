@@ -82,6 +82,8 @@ mock
         .reply(200, {data: {...mockData.record}})
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}))))
         .reply(200, {data: {...mockData.record}})
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}))))
+        .reply(200, {data: {...mockData.record}})
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
         .reply(200, {data: {}})
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}))))

@@ -35,6 +35,8 @@ export function loadCurrentAccount() {
                 return get(routes.CURRENT_AUTHOR_API());
             })
             .then(currentAuthorResponse => {
+                console.log('currentAuthorResponse: ');
+                console.log(currentAuthorResponse);
                 // TODO: to be decommissioned when author/details will become a part of author api
                 currentAuthor = currentAuthorResponse.data;
                 dispatch({
@@ -52,10 +54,11 @@ export function loadCurrentAccount() {
                     payload: authorDetailsResponse
                 });
             })
-            .catch(() => {
+            .catch((error) => {
                 if (!account) {
                     dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 } else if (!currentAuthor) {
+                    console.log(error);
                     dispatch({type: actions.ACCOUNT_AUTHOR_FAILED});
                 }
                 dispatch({type: actions.ACCOUNT_AUTHOR_DETAILS_FAILED});

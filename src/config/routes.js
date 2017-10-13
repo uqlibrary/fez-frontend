@@ -17,8 +17,7 @@ export const pathConfig =  {
         }
     },
     admin: {
-        masquerade: '/admin/masquerade',
-        permissions: '/admin/permissions'
+        masquerade: '/admin/masquerade'
     }
 };
 
@@ -104,12 +103,6 @@ export const getRoutesConfig = (components, account) => {
             {
                 path: pathConfig.admin.masquerade,
                 component: components.Masquerade,
-                exact: true,
-                access: [roles.admin]
-            },
-            {
-                path: pathConfig.admin.permissions,
-                render: () => components.StandardPage({title: 'Permissions administration'}),
                 exact: true,
                 access: [roles.admin]
             }
