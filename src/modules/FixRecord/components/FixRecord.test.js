@@ -45,7 +45,6 @@ describe('Component FixRecord ', () => {
         const wrapper = setup({authorLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
     // it('should render publication citation, error message if publication has PID and it was claimed by current author already', () => {
     //     const testArticle = {
     //         ...journalArticle,
