@@ -9,6 +9,7 @@ export const pathConfig =  {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
+        fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
             results: '/records/add/results',
@@ -71,6 +72,12 @@ export const getRoutesConfig = (components, account) => {
             {
                 path: pathConfig.records.claim,
                 component: components.ClaimRecord,
+                access: [roles.researcher, roles.admin],
+                exact: true
+            },
+            {
+                path: pathConfig.records.fix(':pid'),
+                component: components.FixRecord,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {StandardPage, StandardRighthandCard, StandardCard, InlineLoader} from 'uqlibrary-react-toolbox';
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
-import {locale} from 'config';
+import {locale, routes} from 'config';
 
 export default class MyRecords extends React.Component {
     static propTypes = {
@@ -87,8 +87,20 @@ export default class MyRecords extends React.Component {
         });
     }
 
+    fixRecord = (item) => {
+        this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));
+        this.props.actions.setFixRecord(item);
+    }
+
     render() {
         const txt = locale.pages.myResearch;
+
+        const actions = [
+            {
+                label: 'Fix',
+                handleAction: this.fixRecord
+            }
+        ];
 
         return (
             <StandardPage title={txt.title}>
@@ -126,7 +138,9 @@ export default class MyRecords extends React.Component {
                                 }
                                 {
                                     !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
-                                    <PublicationsList publicationsList={this.props.publicationsList} showDefaultActions/>
+                                    <PublicationsList
+                                        publicationsList={this.props.publicationsList}
+                                        customActions={actions} />
                                 }
                                 <PublicationsListPaging
                                     loading={this.props.loadingPublicationsList}

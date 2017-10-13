@@ -107,6 +107,14 @@ exports[`MyRecords test renders list of publications 1`] = `
           pagingData={Object {}}
         />
         <PublicationsList
+          customActions={
+            Array [
+              Object {
+                "handleAction": [Function],
+                "label": "Fix",
+              },
+            ]
+          }
           publicationsList={
             Array [
               Object {
@@ -164,7 +172,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                 "fez_record_search_key_author_affiliation_name": Array [],
                 "fez_record_search_key_author_id": Array [
                   Object {
-                    "rek_author_id": 0,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28609418,
                     "rek_author_id_order": 1,
                     "rek_author_id_pid": "UQ:36649",
@@ -178,7 +186,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": null,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28609420,
                     "rek_author_id_order": 3,
                     "rek_author_id_pid": "UQ:36649",
@@ -693,7 +701,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 6346,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 29384219,
                     "rek_author_id_order": 2,
                     "rek_author_id_pid": "UQ:41878",
@@ -714,7 +722,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 6346,
                   },
                   Object {
-                    "rek_author_id": 450,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 29384222,
                     "rek_author_id_order": 5,
                     "rek_author_id_pid": "UQ:41878",
@@ -1147,7 +1155,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                 "fez_record_search_key_author_affiliation_name": Array [],
                 "fez_record_search_key_author_id": Array [
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28594993,
                     "rek_author_id_order": 1,
                     "rek_author_id_pid": "UQ:61717",
@@ -1245,7 +1253,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": null,
                   },
                   Object {
-                    "rek_author_id": 68155,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28595007,
                     "rek_author_id_order": 15,
                     "rek_author_id_pid": "UQ:61717",
@@ -1773,7 +1781,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                 "fez_record_search_key_author_affiliation_name": Array [],
                 "fez_record_search_key_author_id": Array [
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28594725,
                     "rek_author_id_order": 1,
                     "rek_author_id_pid": "UQ:61867",
@@ -1815,7 +1823,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": null,
                   },
                   Object {
-                    "rek_author_id": 47706,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28594731,
                     "rek_author_id_order": 7,
                     "rek_author_id_pid": "UQ:61867",
@@ -2394,7 +2402,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": null,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28581258,
                     "rek_author_id_order": 5,
                     "rek_author_id_pid": "UQ:70915",
@@ -2961,7 +2969,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": null,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28581240,
                     "rek_author_id_order": 4,
                     "rek_author_id_pid": "UQ:70928",
@@ -3521,7 +3529,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": null,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 27957386,
                     "rek_author_id_order": 2,
                     "rek_author_id_pid": "UQ:75564",
@@ -4042,7 +4050,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 6346,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 27962275,
                     "rek_author_id_order": 2,
                     "rek_author_id_pid": "UQ:75658",
@@ -4612,7 +4620,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": null,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28572649,
                     "rek_author_id_order": 4,
                     "rek_author_id_pid": "UQ:75944",
@@ -5222,7 +5230,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 6346,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28166451,
                     "rek_author_id_order": 9,
                     "rek_author_id_pid": "UQ:76648",
@@ -5725,7 +5733,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 6346,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28027104,
                     "rek_author_id_order": 7,
                     "rek_author_id_pid": "UQ:76649",
@@ -6423,7 +6431,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": null,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28570998,
                     "rek_author_id_order": 6,
                     "rek_author_id_pid": "UQ:76653",
@@ -7112,7 +7120,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": null,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28564399,
                     "rek_author_id_order": 5,
                     "rek_author_id_pid": "UQ:79872",
@@ -7714,7 +7722,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 3951,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28486292,
                     "rek_author_id_order": 9,
                     "rek_author_id_pid": "UQ:102282",
@@ -8064,7 +8072,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 3951,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28486280,
                     "rek_author_id_order": 5,
                     "rek_author_id_pid": "UQ:102284",
@@ -8400,7 +8408,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 3951,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28486250,
                     "rek_author_id_order": 4,
                     "rek_author_id_pid": "UQ:102291",
@@ -8736,7 +8744,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                 "fez_record_search_key_author_affiliation_name": Array [],
                 "fez_record_search_key_author_id": Array [
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28486240,
                     "rek_author_id_order": 1,
                     "rek_author_id_pid": "UQ:102292",
@@ -9198,7 +9206,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 3951,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28486239,
                     "rek_author_id_order": 10,
                     "rek_author_id_pid": "UQ:102293",
@@ -9590,7 +9598,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                 "fez_record_search_key_author_affiliation_name": Array [],
                 "fez_record_search_key_author_id": Array [
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28486216,
                     "rek_author_id_order": 1,
                     "rek_author_id_pid": "UQ:102294",
@@ -10087,7 +10095,7 @@ exports[`MyRecords test renders list of publications 1`] = `
                     "rek_author_id_xsdmf_id": 3951,
                   },
                   Object {
-                    "rek_author_id": 1671,
+                    "rek_author_id": 410,
                     "rek_author_id_id": 28486207,
                     "rek_author_id_order": 7,
                     "rek_author_id_pid": "UQ:102296",
@@ -10385,7 +10393,6 @@ exports[`MyRecords test renders list of publications 1`] = `
             ]
           }
           publicationsListSubset={Array []}
-          showDefaultActions={true}
           subsetCustomActions={Array []}
         />
         <PublicationsListPaging

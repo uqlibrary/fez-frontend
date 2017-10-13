@@ -140,6 +140,27 @@ export const getRecordAuthorsIdSearchKey = (authors) => {
     };
 };
 
+/* unclaimRecordAuthorsIdSearchKey - returns authors id object formatted for record request
+* @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
+* {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
+* @returns {Object} formatted {fez_record_search_key_author_id} for record request
+*/
+export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
+    if (!authors || authors.length === 0) return {fez_record_search_key_author_id: []};
+    return {
+        fez_record_search_key_author_id: authors.map(
+            (item, index) => (
+                item.hasOwnProperty('rek_author_id') && item.hasOwnProperty('rek_author_id_order') && item.rek_author_id !== authorId
+                    ? item
+                    : {
+                        rek_author_id: 0,
+                        rek_author_id_order: index + 1
+                    }
+            )
+        )
+    };
+};
+
 /* getRecordContributorsSearchKey - returns editors object formatted for record request
 * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
 * @returns {Object} formatted {fez_record_search_key_contributor} for record request

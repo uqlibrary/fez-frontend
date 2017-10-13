@@ -169,6 +169,17 @@ exports[`App tests for user account and author status User is logged in but are 
               "admin",
             ]
           }
+          component={[Function]}
+          exact={true}
+          path="/records/:pid/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
           exact={true}
           path="/records/add/find"
           render={[Function]}
@@ -501,6 +512,17 @@ exports[`App tests for user account and author status User logged in and is an a
               "admin",
             ]
           }
+          component={[Function]}
+          exact={true}
+          path="/records/:pid/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
           exact={true}
           path="/records/add/find"
           render={[Function]}
@@ -732,6 +754,17 @@ exports[`App tests for user account and author status User logged in but is not 
           component={[Function]}
           exact={true}
           path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/:pid/fix"
         />
         <Route
           access={

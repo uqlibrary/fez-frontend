@@ -3678,7 +3678,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28609418,
                     "rek_author_id_pid":"UQ:36649",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":0,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -3692,7 +3692,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28609420,
                     "rek_author_id_pid":"UQ:36649",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":3
                 },
                 {
@@ -4315,7 +4315,7 @@ export const myRecordsList = {
                     "rek_author_id_id":29384219,
                     "rek_author_id_pid":"UQ:41878",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":2
                 },
                 {
@@ -4336,7 +4336,7 @@ export const myRecordsList = {
                     "rek_author_id_id":29384222,
                     "rek_author_id_pid":"UQ:41878",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":450,
+                    "rek_author_id":410,
                     "rek_author_id_order":5
                 }
             ],
@@ -4881,7 +4881,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28594993,
                     "rek_author_id_pid":"UQ:61717",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -4979,7 +4979,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28595007,
                     "rek_author_id_pid":"UQ:61717",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":68155,
+                    "rek_author_id":410,
                     "rek_author_id_order":15
                 }
             ],
@@ -5617,7 +5617,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28594725,
                     "rek_author_id_pid":"UQ:61867",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -5659,7 +5659,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28594731,
                     "rek_author_id_pid":"UQ:61867",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":47706,
+                    "rek_author_id":410,
                     "rek_author_id_order":7
                 }
             ],
@@ -6344,7 +6344,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28581258,
                     "rek_author_id_pid":"UQ:70915",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":5
                 }
             ],
@@ -7017,7 +7017,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28581240,
                     "rek_author_id_pid":"UQ:70928",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":4
                 },
                 {
@@ -7683,7 +7683,7 @@ export const myRecordsList = {
                     "rek_author_id_id":27957386,
                     "rek_author_id_pid":"UQ:75564",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":2
                 },
                 {
@@ -8314,7 +8314,7 @@ export const myRecordsList = {
                     "rek_author_id_id":27962275,
                     "rek_author_id_pid":"UQ:75658",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":2
                 },
                 {
@@ -8988,7 +8988,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28572649,
                     "rek_author_id_pid":"UQ:75944",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":4
                 },
                 {
@@ -9702,7 +9702,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28166451,
                     "rek_author_id_pid":"UQ:76648",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":9
                 },
                 {
@@ -10317,7 +10317,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28027104,
                     "rek_author_id_pid":"UQ:76649",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":7
                 }
             ],
@@ -11121,7 +11121,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28570998,
                     "rek_author_id_pid":"UQ:76653",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":6
                 },
                 {
@@ -11908,7 +11908,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28564399,
                     "rek_author_id_pid":"UQ:79872",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":5
                 }
             ],
@@ -12616,7 +12616,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486292,
                     "rek_author_id_pid":"UQ:102282",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":9
                 }
             ],
@@ -13080,7 +13080,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486280,
                     "rek_author_id_pid":"UQ:102284",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":5
                 }
             ],
@@ -13530,7 +13530,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486250,
                     "rek_author_id_pid":"UQ:102291",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":4
                 }
             ],
@@ -13980,7 +13980,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486240,
                     "rek_author_id_pid":"UQ:102292",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -14556,7 +14556,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486239,
                     "rek_author_id_pid":"UQ:102293",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":10
                 }
             ],
@@ -15062,7 +15062,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486216,
                     "rek_author_id_pid":"UQ:102294",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -15673,7 +15673,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486207,
                     "rek_author_id_pid":"UQ:102296",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":7
                 },
                 {
