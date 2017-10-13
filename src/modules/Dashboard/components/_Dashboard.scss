@@ -170,9 +170,24 @@ h2.trendingPubsSource {
     vertical-align: top;
   }
 }
+// Fix for Dashboard alerts so they dont space down because of layout-fill and layout-card
+.dashAlert {
+  &.layout-fill, .layout-card{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
 
 // Mobile
 @include mobile {
+
+  .possiblePublicationLure {
+    margin: -16px 0 0 0 !important;
+    .alertWrapper {
+      margin: 0 !important;
+    }
+  }
+
   // Fix for tab labels to wrap if too small.
   button.publicationTabs > div > div {
     white-space: normal;
