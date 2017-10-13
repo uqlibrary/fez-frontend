@@ -903,6 +903,22 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
+            orgUnits: {
+                title: 'School, Department or Centre',
+                help: {
+                    title: 'School, Department or Centre',
+                    text: 'some help',
+                    buttonLabel: 'OK'
+                },
+                field: {
+                    form: {
+                        locale: {
+                            orgUnitAsPublishedLabel: 'School, Department or Centre as published',
+                            orgUnitAsPublishedHint: 'Please type organisation unit'
+                        }
+                    },
+                }
+            },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Abandon workflow',
                 confirmationMessage: 'Are you sure you want to abandon workflow?',

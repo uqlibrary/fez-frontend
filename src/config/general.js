@@ -98,7 +98,8 @@ export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         name: 'Department Technical Report',
-        class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport'
+        class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
+        vocabId: 453703
     },
     {
         id: PUBLICATION_TYPE_DESIGN,
@@ -172,7 +173,8 @@ export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_WORKING_PAPER,
         name: 'Working Paper',
-        class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper'
+        class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
+        vocabId: 453703
     }
 ];
 

@@ -7,15 +7,15 @@ import * as routes from 'repositories/routes';
  * Returns the org units list
  * @returns {action}
  */
-export function listOrgUnits() {
+export function loadOrgUnits(id) {
     return dispatch => {
         dispatch({type: actions.ORG_UNITS_LOADING});
 
-        get(routes.ORG_UNITS_LIST_API())
+        get(routes.VOCABULARIES_API({id: id}))
             .then((response) => {
                 dispatch({
                     type: actions.ORG_UNITS_LOADED,
-                    payload: response.data.data
+                    payload: response.data
                 });
             })
             .catch(error => {

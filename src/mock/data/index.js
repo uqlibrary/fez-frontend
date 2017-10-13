@@ -5,4 +5,3 @@ export {vocabulariesList} from './vocabularies';
 export {quickTemplates} from './acml';
 export {hindexResponse, publicationStats, trendingPublications, publicationYearsZero,
     publicationYearsBig, publicationYearsSmall} from './academicStats';
-export {orgUnitsList} from './orgUnits';
