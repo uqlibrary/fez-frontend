@@ -143,7 +143,9 @@ export default class App extends React.Component {
                             docked={this.state.docked}
                             logoImage={locale.global.logo}
                             logoText={locale.global.title}
-                            toggleDrawer={this.toggleDrawer}/>
+                            toggleDrawer={this.toggleDrawer}
+                            isMobile={this.state.isMobile}
+                        />
 
                         <div className="content-container" style={container}>
                             {

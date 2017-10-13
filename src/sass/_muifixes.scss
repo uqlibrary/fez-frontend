@@ -95,3 +95,30 @@ button[type=button] {
     white-space: nowrap;
   }
 }
+
+// Repositions the help icon
+.is-helpicon {
+  margin: -10px 5px 0 0 !important;
+  &:hover {
+    z-index: 999;
+  }
+}
+
+// Some styling over-rides on the app bar.
+.AppBar {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  h1 {
+    height: 75px !important;
+    line-height: 75px !important;
+  }
+  button {
+    line-height: 75px;
+  }
+}
+
+// Class to space elements against scroll bars
+.scrollbar-spacer{
+  width: 17px !important;
+}

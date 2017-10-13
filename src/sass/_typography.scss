@@ -42,7 +42,7 @@
 }
 
 .body-1 { font-size: $text-body-normal; font-weight: $text-weight-normal; line-height: $text-line-height-normal;}
-.body-2 { font-size: $text-body-normal; font-weight: $text-weight-bold; }
+.body-2 { font-size: $text-body-normal; font-weight: $text-weight-bold; line-height: $text-line-height-normal;}
 .caption { font-size: $text-body-xsmall; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,29 +56,5 @@ a {
 
   &:hover {
     text-decoration: underline;
-  }
-}
-
-.breakpoints {
-  padding: 20px;
-  @include mobile {
-    background-color: red;
-    color: white;
-    .tablet, .desktop {
-      display: none;
-    }
-  }
-  @include tablet-only {
-    background-color: green;
-    color: #FFF;
-    .mobile, .desktop {
-      display: none;
-    }
-  }
-  @include desktop {
-    background-color: yellow;
-    .mobile, .tablet {
-      display: none;
-    }
   }
 }

@@ -111,6 +111,16 @@ class Dashboard extends React.Component {
             ) : null;
         return (
             <StandardPage className="dashboard">
+
+                <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="warning" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="error" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="error_outline" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="info" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="info_outline" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="help" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="help_outline" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                <Alert title="Title" message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi e vitae aliquet aliquet." type="done" actionButtonLabel="Test" action={this._claimYourPublications} allowDismiss dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+
                 {
                     loading &&
                     <div className="isLoading is-centered">

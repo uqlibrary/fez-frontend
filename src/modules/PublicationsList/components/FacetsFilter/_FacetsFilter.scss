@@ -1,11 +1,9 @@
 @import '~uqlibrary-react-toolbox/sass/variables';
 
-// Styles below are mainly to present the list in a "dense" style per Material spec
 .facetsFilter {
   padding: 0 !important;
   min-width: 140px;
 
-  //active
   .facetsCategory {
     font-size: $text-body-normal !important;
     line-height: $text-line-height-small !important;
