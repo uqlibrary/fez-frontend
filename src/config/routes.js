@@ -154,11 +154,6 @@ export const getMenuConfig = (account) => [
             secondaryText: 'as another user'
         },
         {
-            linkTo: pathConfig.admin.permissions,
-            primaryText: 'Permissions',
-            secondaryText: 'manage permissions'
-        },
-        {
             divider: true,
             path: '/234234234242'
         }
