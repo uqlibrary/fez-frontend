@@ -11,7 +11,6 @@ export class OrgUnitForm extends Component {
         onChange: PropTypes.func,
         orgUnitsList: PropTypes.array,
         orgUnitAsPublished: PropTypes.any,
-        errorText: PropTypes.string,
         vocabId: PropTypes.number,
         dataSourceConfig: PropTypes.object,
         actions: PropTypes.object.isRequired,
