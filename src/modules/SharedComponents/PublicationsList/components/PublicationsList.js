@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import PublicationCitation from './PublicationCitation';
+import PublicationCitation from '../containers/PublicationCitation';
 
 export default class PublicationsList extends Component {
     static propTypes = {
