@@ -96,7 +96,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 410,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -622,7 +622,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 410,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -1242,7 +1242,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 410,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -1768,7 +1768,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 410,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -2350,7 +2350,7 @@ exports[`PublicationCitation renders  component with default item 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 410,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -2876,7 +2876,7 @@ exports[`PublicationCitation renders  component with default item 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 410,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
