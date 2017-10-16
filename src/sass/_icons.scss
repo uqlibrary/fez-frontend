@@ -1,0 +1,55 @@
+.fez-icon {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: inline-block;
+  margin-right: 3px;
+  vertical-align: text-top;
+  overflow: hidden;
+
+  &.scopus::before {
+    content: url(../../src/images/scopus_icon.svg);
+  }
+  &.pubmed::before {
+    content: url(../../src/images/pubmed_icon.svg);
+  }
+  &.wos::before {
+    content: url(../../src/images/thomson_icon.svg);
+  }
+  &.orcid::before {
+    content: url(../../src/images/orcid_icon.svg);
+  }
+  &.publons::before {
+    content: url(../../src/images/publons_icon.svg);
+  }
+  &.altmetric::before {
+    content: url(../../src/images/altmetric_icon.svg);
+  }
+  &.openAccess::before {
+    content: url(../../src/images/oa_icon.svg);
+  }
+  &.google::before {
+    content: url(../../src/images/google_scholar_icon.svg);
+  }
+
+  &.xsmall {
+    width: 6px;
+    height: 6px;
+  }
+  &.small {
+    width: 12px;
+    height: 12px;
+  }
+  &.medium {
+    width: 14px;
+    height: 14px;
+  }
+  &.large {
+    width: 16px;
+    height: 16px;
+  }
+  &.xlarge {
+    width: 18px;
+    height: 18px;
+  }
+}
