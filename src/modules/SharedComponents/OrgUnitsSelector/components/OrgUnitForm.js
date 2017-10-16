@@ -77,23 +77,19 @@ export class OrgUnitForm extends Component {
         const orgUnitsDataSource = orgUnitsList.map((item) => this.getValue(item, dataSourceConfig.text));
 
         return (
-            <div className="columns">
-                <div className="column">
-                    <AutoComplete
-                        disabled={disabled}
-                        listStyle={{maxHeight: 200, overflow: 'auto'}}
-                        filter={AutoComplete.fuzzyFilter}
-                        id="orgUnitAsPublishedField"
-                        floatingLabelText={locale.orgUnitAsPublishedLabel}
-                        hintText={locale.orgUnitAsPublishedHint}
-                        dataSource={orgUnitsDataSource}
-                        fullWidth
-                        onUpdateInput={this._onOrgUnitUpdated}
-                        onNewRequest={this._onOrgUnitSelected}
-                        className={className}
-                    />
-                </div>
-            </div>
+            <AutoComplete
+                disabled={disabled}
+                listStyle={{maxHeight: 200, overflow: 'auto'}}
+                filter={AutoComplete.fuzzyFilter}
+                id="orgUnitAsPublishedField"
+                floatingLabelText={locale.orgUnitAsPublishedLabel}
+                hintText={locale.orgUnitAsPublishedHint}
+                dataSource={orgUnitsDataSource}
+                fullWidth
+                onUpdateInput={this._onOrgUnitUpdated}
+                onNewRequest={this._onOrgUnitSelected}
+                className={className}
+            />
         );
     }
 }
