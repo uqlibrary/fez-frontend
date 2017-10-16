@@ -41,6 +41,8 @@ export function searchPossiblyYourPublications({facets = {}}) {
                 }
             })
             .catch((error) => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                     payload: error
@@ -80,31 +82,23 @@ export function hideRecord({record, facets = {}}) {
             pid: record.rek_pid
         };
 
-        dispatch({
-            type: actions.HIDE_PUBLICATIONS_COMPLETED,
-            payload: {pid: record.rek_pid}
-        });
+        post(routes.HIDE_POSSIBLE_RECORD_API(), data)
+            .then(() => {
+                dispatch({
+                    type: actions.HIDE_PUBLICATIONS_COMPLETED,
+                    payload: {pid: record.rek_pid}
+                });
 
-        console.log(data);
-        console.log(facets);
-
-        // post(routes.HIDE_POSSIBLE_RECORD_API(), data)
-        //     .then(response => {
-        //         console.log(response);
-        //         dispatch({
-        //             type: actions.HIDE_PUBLICATIONS_COMPLETED,
-        //             payload: {pid: record.rek_pid}
-        //         });
-        //
-        //         // reload current possibly your publications/count after user hides records
-        //         dispatch(searchPossiblyYourPublications({facets: facets}));
-        //     })
-        //     .catch(() => {
-        //         dispatch({
-        //             type: actions.HIDE_PUBLICATIONS_FAILED,
-        //             payload: []
-        //         });
-        //     });
+                // reload current possibly your publications/count after user hides records
+                dispatch(searchPossiblyYourPublications({facets: facets}));
+            })
+            .catch((error) => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                dispatch({
+                    type: actions.HIDE_PUBLICATIONS_FAILED,
+                    payload: []
+                });
+            });
     };
 }
 

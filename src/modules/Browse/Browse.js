@@ -1,5 +1,5 @@
 import React from 'react';
-import {PropTypes} from 'prop-types';
+import PropTypes from 'prop-types';
 import {StandardPage, StandardCard} from 'uqlibrary-react-toolbox';
 
 export default function Browse({title, text, help}) {
@@ -14,7 +14,7 @@ export default function Browse({title, text, help}) {
 
 Browse.propTypes = {
     title: PropTypes.string,
-    text: PropTypes.string,
+    text: PropTypes.object,
     help: PropTypes.shape({
         title: PropTypes.string,
         text: PropTypes.any,

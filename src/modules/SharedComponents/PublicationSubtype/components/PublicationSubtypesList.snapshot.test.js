@@ -50,7 +50,7 @@ describe('PublicationSubtypesList renders ', () => {
                     'cvr_child_cvo_id': 453582,
                     'controlled_vocab': {
                         'cvo_id': 453582,
-                        'cvo_title': 'Research book (original research)',
+                        'cvo_title': 'MyRecords book (original research)',
                         'cvo_desc': '',
                         'cvo_image_filename': null,
                         'cvo_external_id': null,
@@ -170,7 +170,7 @@ describe('PublicationSubtypesList renders ', () => {
                     'cvr_child_cvo_id': 453582,
                     'controlled_vocab': {
                         'cvo_id': 453582,
-                        'cvo_title': 'Research book (original research)',
+                        'cvo_title': 'MyRecords book (original research)',
                         'cvo_desc': '',
                         'cvo_image_filename': null,
                         'cvo_external_id': null,

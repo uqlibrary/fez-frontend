@@ -32,6 +32,7 @@ export function loadAuthorPublicationsByYear(userName) {
                 });
             })
             .catch((error) => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED,
                     payload: error
@@ -67,6 +68,7 @@ export function loadAuthorPublicationsStats(userName) {
                 });
             })
             .catch((error) => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 if (!statsData) {
                     dispatch({
                         type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED,

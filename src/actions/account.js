@@ -36,10 +36,10 @@ export function loadCurrentAccount() {
             })
             .then(currentAuthorResponse => {
                 // TODO: to be decommissioned when author/details will become a part of author api
-                currentAuthor = currentAuthorResponse;
+                currentAuthor = currentAuthorResponse.data;
                 dispatch({
                     type: actions.ACCOUNT_AUTHOR_LOADED,
-                    payload: currentAuthorResponse
+                    payload: currentAuthor
                 });
 
                 // load repository author details
@@ -60,6 +60,13 @@ export function loadCurrentAccount() {
                 }
                 dispatch({type: actions.ACCOUNT_AUTHOR_DETAILS_FAILED});
             });
+    };
+}
+
+export function logout() {
+    console.log('logout!!!');
+    return dispatch => {
+        dispatch({type: actions.ACCOUNT_ANONYMOUS});
     };
 }
 

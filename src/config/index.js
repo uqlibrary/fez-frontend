@@ -14,5 +14,4 @@ export * as validation from './validation';
 export * as general from './general';
 export {publicationTypes} from './general';
 export {default as locale} from './locale';
-export {defaultMenuItems, adminMenuItems, researcherMenuItems} from './menu';
-
+export * as routes from './routes';

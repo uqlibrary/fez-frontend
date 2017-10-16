@@ -11,12 +11,12 @@ import {
     HelpIcon
 } from 'uqlibrary-react-toolbox';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
-import {PublicationsList} from 'modules/PublicationsList';
-import {PublicationStats} from 'modules/SharedComponents';
+import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
+import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import FontIcon from 'material-ui/FontIcon';
-import {locale} from 'config';
+import {locale, routes} from 'config';
 
 class Dashboard extends React.Component {
     static propTypes = {
@@ -67,11 +67,11 @@ class Dashboard extends React.Component {
     }
 
     _claimYourPublications = () => {
-        this.props.history.push('/records/possible');
+        this.props.history.push(routes.pathConfig.records.possible);
     };
 
     _viewYourResearch = () => {
-        this.props.history.push('/records/mine');
+        this.props.history.push(routes.pathConfig.records.mine);
     };
 
     render() {

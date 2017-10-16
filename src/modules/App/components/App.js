@@ -1,34 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import {Route, Switch} from 'react-router';
+
+import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
+
+// application components
 import AppBar from 'material-ui/AppBar';
-
 import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
-
-import {
-    locale,
-    defaultMenuItems,
-    researcherMenuItems,
-    AUTH_URL_LOGIN,
-    AUTH_URL_LOGOUT
-} from 'config';
-
-// Pages
-import {Dashboard} from 'modules/Dashboard';
-import {Research} from 'modules/Research';
-import {AddRecord} from 'modules/AddRecord';
-import {SearchRecord, SearchRecordResults, AddNewRecord} from 'modules/AddRecord';
-import {StandardPage} from 'uqlibrary-react-toolbox';
-import {Browse} from 'modules/Browse';
-import {ClaimPublication} from 'modules/ClaimPublication';
-import {ClaimPublicationForm} from 'modules/ClaimPublicationForm';
+import * as pages from './pages';
 
 export default class App extends React.Component {
     static propTypes = {
         user: PropTypes.object,
-        location: PropTypes.object, // react-router prop
-        actions: PropTypes.object
+        actions: PropTypes.object,
+        location: PropTypes.object
     };
 
     static childContextTypes = {
@@ -83,26 +68,11 @@ export default class App extends React.Component {
     render() {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
+        const menuItems = routes.getMenuConfig(this.props.user.account);
 
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
-
-        const components = {
-            Browse, StandardPage, Dashboard, Research, AddRecord, ClaimPublication, SearchRecord
-        };
-
-        const menuItems =
-            isAuthorizedUser ?
-                [
-                    ...researcherMenuItems(locale, this.props.user.account.mail, components),
-                    ...defaultMenuItems(locale, components)
-                ]
-                :
-                defaultMenuItems(locale, components);
-
-        // TODO: check if isPublicPage === false && isAuthorizedUser === false and kick user out?
-        const isPublicPage = defaultMenuItems(locale, components).filter((menuItem) => {
-            return menuItem.path === this.props.location.pathname;
-        }).length > 0;
+        const isPublicPage = menuItems.filter((menuItem) =>
+            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
 
         return (
             <div className="layout-fill">
@@ -164,24 +134,15 @@ export default class App extends React.Component {
                                     </div>
                                 </div>
                             }
+
                             <Switch>
                                 {
-                                    isAuthorizedUser &&
-                                    <Route path="/" exact component={Dashboard}/>
-                                }
-                                {
-                                    !isAuthorizedUser &&
-                                    <Route path="/" exact render={() => (Browse(locale.pages.browse))}/>
-                                }
-                                <Route path="/records/claim" component={ClaimPublicationForm}/>
-                                <Route path="/records/add/results" component={SearchRecordResults}/>
-                                <Route path="/records/add/new" component={AddNewRecord}/>
-                                {
-                                    menuItems.map((route, index) => (
-                                        <Route key={index} {...route} />
+                                    routes.getRoutesConfig(pages, this.props.user.account).map((route, index) => (
+                                        <Route key={`route_${index}`} {...route} />
                                     ))
                                 }
                             </Switch>
+
                         </div>
                         <HelpDrawer/>
                     </div>

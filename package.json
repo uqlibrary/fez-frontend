@@ -74,9 +74,10 @@
     "react-json-tree": "^0.10.7",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
+    "react-router-config": "^1.0.0-beta.4",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-form": "^7.0.4",
+    "redux-form": "7.0.4",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#update"

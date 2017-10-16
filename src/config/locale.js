@@ -226,6 +226,21 @@ export default {
                 </StandardCard>
             )
         },
+        notFound: {
+            title: 'Page not found',
+            children: (
+                <StandardCard>
+                    <p>The requested page could not be found.</p>
+                    <p>Sorry about that, but here's what you can do next:
+                        <ul>
+                            <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.</li>
+                            <li>Start again at the home page.</li>
+                            <li>If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.</li>
+                        </ul>
+                    </p>
+                </StandardCard>
+            )
+        },
         browse: {
             title: 'Browse eSpace',
             text: (
@@ -253,6 +268,23 @@ export default {
                 buttonLabel: 'OK'
             }
         },
+        authenticationRequired: {
+            title: 'Authentication required',
+            children: (
+                <StandardCard>
+                    <p>The requested page is available to authenticated users only.</p>
+                    <p>Please, login to continue</p>
+                </StandardCard>
+            )
+        },
+        permissionDenied: {
+            title: 'Permissions denied',
+            children: (
+                <StandardCard>
+                    <p>The requested page available to authorised users only.</p>
+                </StandardCard>
+            )
+        },
         myResearch: {
             title: 'My research',
             help: {
@@ -266,7 +298,7 @@ export default {
             },
             text: (
                 <div>
-                    <div>Please, check if there are any possibly your publications via <a href="/records/possible">claim
+                    <div>Please, check if there are any possibly your publications via <a href="/records/possible"> claim
                         possible publications</a> or <a href="/records/add/find">add a missing publication</a></div>
                 </div>
             ),
@@ -420,6 +452,25 @@ export default {
                     buttonLabel: 'Ok'
                 },
                 excludeFacetsList: ['Scopus document type', 'Subtype']
+            }
+        },
+        masquerade: {
+            title: 'Masquerade',
+            help: {
+                title: 'Masquerade',
+                text: (
+                    <div>
+                        Masquerade as another user...
+                    </div>
+                ),
+                buttonLabel: 'OK'
+            },
+            description: (<div>
+                <strong>WARNING!!</strong> Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
+            </div>),
+            labels: {
+                submit: 'Masquerade',
+                hint: 'Username or student username'
             }
         }
     },
@@ -1154,8 +1205,7 @@ export default {
                 {value: 'updated_date', label: 'Updated date'},
                 {value: 'altmetric_score', label: 'Altmetric score'},
                 {value: 'scopus_citation_count', label: 'Scopus citation count'},
-                {value: 'thomson_citation_count', label: 'Thompson citation count'},
-                {value: 'file_downloads', label: 'Downloads'}
+                {value: 'thomson_citation_count', label: 'Thompson citation count'}
             ],
             sortDirection: [
                 'Desc',
