@@ -18,8 +18,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       }
       title="You are claiming to be an author for the following item:"
     >
-      <PublicationCitation
-        className=""
+      <withRouter(Connect(PublicationCitation))
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -782,7 +781,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             "rek_wok_doc_type": "@",
           }
         }
-        showDefaultActions={false}
       />
     </StandardCard>
     <div>
@@ -924,8 +922,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       }
       title="You are claiming to be an author for the following item:"
     >
-      <PublicationCitation
-        className=""
+      <withRouter(Connect(PublicationCitation))
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -1673,7 +1670,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "rek_wok_doc_type": "@",
           }
         }
-        showDefaultActions={false}
       />
     </StandardCard>
     <div>
@@ -2962,8 +2958,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
       }
       title="You are claiming to be an author for the following item:"
     >
-      <PublicationCitation
-        className=""
+      <withRouter(Connect(PublicationCitation))
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -3726,7 +3721,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
             "rek_wok_doc_type": "@",
           }
         }
-        showDefaultActions={false}
       />
     </StandardCard>
     <Alert
