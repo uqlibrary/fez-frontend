@@ -5,7 +5,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   className="columns researcherIds is-gapless"
 >
   <div
-    className="column is-narrow"
+    className="column is-narrow researchIdAvatar error"
   >
     <a
       aria-label="You are not linked to Publons"
@@ -21,7 +21,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     </a>
   </div>
   <div
-    className="column is-narrow"
+    className="column is-narrow researchIdAvatar ok"
   >
     <a
       aria-label="Your Researcher ID is G-111-1111"
@@ -37,7 +37,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     </a>
   </div>
   <div
-    className="column is-narrow"
+    className="column is-narrow researchIdAvatar error"
   >
     <a
       aria-label="You are not linked to Scopus"
@@ -53,7 +53,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     </a>
   </div>
   <div
-    className="column is-narrow"
+    className="column is-narrow researchIdAvatar error"
   >
     <a
       aria-label="You are not linked to Google Scholar"
@@ -69,7 +69,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     </a>
   </div>
   <div
-    className="column is-narrow"
+    className="column is-narrow researchIdAvatar ok"
   >
     <a
       aria-label="Your ORCID ID is 0000-0001-1111-1111"
@@ -107,7 +107,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs with wei
   className="columns researcherIds is-gapless"
 >
   <div
-    className="column is-narrow"
+    className="column is-narrow researchIdAvatar ok"
   >
     <a
       aria-label="Your undefined ID is This is an edge case example"

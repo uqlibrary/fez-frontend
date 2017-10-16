@@ -1,7 +1,7 @@
 .fez-icon {
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+  border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
   display: inline-block;
   vertical-align: text-top;
   overflow: hidden;
@@ -52,7 +52,7 @@
     height: 18px;
   }
   &.dashboard {
-    margin-right: 6px;
+    margin-right: 12px;
     width: 32px;
     height: 32px;
   }

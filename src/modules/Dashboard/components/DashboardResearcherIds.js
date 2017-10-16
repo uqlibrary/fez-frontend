@@ -9,7 +9,7 @@ const DashboardResearcherIds = ({values}) => {
         <div className="columns researcherIds is-gapless">
 
             {values && Object.keys(values).map((item, index) => (
-                <div key={index} className="column is-narrow">
+                <div key={index} className={'column is-narrow researchIdAvatar ' +  (values[item] ? 'ok' : 'error')}>
                     <a href={values[item] ? txt.linksPrefix[item] + values[item] : 'https://app.library.uq.edu.au/#/id'}
                         target="_blank"
                         aria-label={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}>
