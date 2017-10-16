@@ -12,6 +12,7 @@ const FORM_NAME = 'FixRecord';
 
 const onSubmit = (values, dispatch) => {
     const data = {...values.toJS()};
+    console.log(data);
     return dispatch(actions.unclaimRecord(data))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
