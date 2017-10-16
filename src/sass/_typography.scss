@@ -28,7 +28,7 @@
   font-weight: $text-weight-normal;
   white-space: normal;
   color: $text-color;
-  margin: 0 !important;
+  margin: 0;
 
   @include desktop {
     font-size: $title-medium;
