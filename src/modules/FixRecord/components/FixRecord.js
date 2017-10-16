@@ -4,19 +4,22 @@ import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 
 import RaisedButton from 'material-ui/RaisedButton';
-import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
-import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
+import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {validation, locale, routes} from 'config';
 
 export default class FixRecord extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
+
         recordToFix: PropTypes.object,
         recordToFixLoading: PropTypes.bool,
+
+        author: PropTypes.object,
         authorLoading: PropTypes.bool,
+
         history: PropTypes.object.isRequired,
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
@@ -35,12 +38,12 @@ export default class FixRecord extends Component {
     }
 
     componentDidMount() {
-        if (!this.props.recordToFixLoading && !this.props.initialValues.get('publication')) {
+        if (!this.props.recordToFixLoading && !this.props.recordToFix) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
-        // if (!this.props.authorLoading && !this.props.initialValues.get('author')) {
-        //     this.props.actions.loadCurrentAccount();
-        // }
+        if (!this.props.authorLoading && !this.props.author) {
+            this.props.actions.loadCurrentAccount();
+        }
     }
 
     componentWillReceiveProps(nextProps) {
@@ -50,7 +53,7 @@ export default class FixRecord extends Component {
     }
 
     componentWillUnmount() {
-        // clear previously selected publication for a fix
+        // clear previously selected recordToFix for a fix
         this.props.actions.clearFixRecord();
     }
 
@@ -70,7 +73,7 @@ export default class FixRecord extends Component {
         }
     };
 
-    _actionSelected = (event, index, value) => {
+    _actionSelected = (event, value) => {
         this.setState({
             selectedRecordAction: value
         });
@@ -100,46 +103,47 @@ export default class FixRecord extends Component {
 
     render() {
         const txt = locale.pages.fixRecord;
-        const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
-        const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
-        const isAuthorLinked = author && publication && publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
-            publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
-
-        console.log('render');
-        console.log(this.props);
+        const {recordToFix, author} = this.props;
+        const isAuthorLinked = author && recordToFix && recordToFix.fez_record_search_key_author_id && recordToFix.fez_record_search_key_author_id.length > 0 &&
+            recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
         if (!this.props.authorLoading && !isAuthorLinked) {
-            // if either author or publication data is missing, abandon form
+            // if either author or recordToFix data is missing, abandon form
             // this.props.history.go(-1);
             return <div/>;
         }
 
+        const fixOptions = txt.actionsOptions.map((item, index) => (
+            <MenuItem
+                value={item.action}
+                primaryText={item.title}
+                key={`fix_record_action_${index}`} />
+        ));
+
         return (
             <StandardPage title={txt.title}>
                 {
-                    this.props.authorLoading &&
-                    <div> Loading details...</div>
+                    (this.props.authorLoading || this.props.recordToFixLoading) &&
+                    <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
                 }
 
                 {
-                    publication &&
+                    recordToFix &&
                     <form onKeyDown={this._handleKeyboardFormSubmit}>
                         <StandardCard title={txt.subTitle} help={txt.help}>
-                            <PublicationCitation publication={publication}/>
-                            <SelectField
-                                id="fixAction"
-                                fullWidth
+                            <PublicationCitation publication={recordToFix}/>
+
+                            <Field
+                                component={SelectField}
+                                disabled={this.props.submitting}
+                                name="fixAction"
                                 {...this.context.selectFieldMobileOverrides}
-                                value={this.state.selectedRecordAction}
-                                maxHeight={250}
+                                floatingLabelText={txt.fieldLabels.action}
+                                validate={[validation.required]}
                                 onChange={this._actionSelected}
-                                floatingLabelText={txt.fieldLabels.action}>
-                                {txt.actionsOptions.map((item, index) => (
-                                    <MenuItem
-                                        value={item.action} primaryText={item.title}
-                                        key={`fix_record_action_${index}`}/>
-                                ))}
-                            </SelectField>
+                                className="requiredField">
+                                {fixOptions}
+                            </Field>
                         </StandardCard>
                         {
                             this.state.selectedRecordAction === 'fix' &&

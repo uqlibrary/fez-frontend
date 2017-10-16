@@ -150,8 +150,8 @@ export const getMenuConfig = (account) => [
     ...(account && account.canMasquerade ? [
         {
             linkTo: pathConfig.admin.masquerade,
-            primaryText: 'Masquerade',
-            secondaryText: 'as another user'
+            primaryText: locale.menu.masquerade.primaryText,
+            secondaryText: locale.menu.masquerade.secondaryText
         },
         {
             divider: true,

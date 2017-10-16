@@ -86,6 +86,10 @@ export default {
             primaryText: 'Browse',
             secondaryText: 'UQ\'s digital repository'
         },
+        masquerade: {
+            primaryText: 'Masquerade',
+            secondaryText: 'as another user'
+        },
         search: {
             primaryText: 'Search'
         },
@@ -455,6 +459,7 @@ export default {
             }
         },
         fixRecord: {
+            loadingMessage: 'Loading record...',
             title: 'Request a change/deposit a file',
             subTitle: 'Record to be amended',
             fieldLabels: {

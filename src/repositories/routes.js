@@ -33,7 +33,6 @@ export const prepareTextSearchQuery = (searchQuery) => {
     ];
     const value = escapeConfig.reduce((query, config) =>
         (query.replace(config.find, config.replaceWith)), searchQuery.trim());
-    console.log(value);
     return value;
 };
 
