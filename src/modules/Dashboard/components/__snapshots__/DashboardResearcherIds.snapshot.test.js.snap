@@ -5,93 +5,89 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   className="columns researcherIds is-gapless"
 >
   <div
-    className="publons column is-narrow"
+    className="column is-narrow"
   >
     <a
       aria-label="You are not linked to Publons"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
-      <Avatar
-        alt="You are not linked to Publons"
-        className="publons researchIdAvatar error"
-        size={40}
-        src=""
+      <div
+        className="fez-icon publons dashboard"
         title="You are not linked to Publons"
-      />
+      >
+        publons
+      </div>
     </a>
   </div>
   <div
-    className="researcher column is-narrow"
+    className="column is-narrow"
   >
     <a
       aria-label="Your Researcher ID is G-111-1111"
       href="http://www.researcherid.com/rid/G-111-1111"
       target="_blank"
     >
-      <Avatar
-        alt="Your Researcher ID is G-111-1111"
-        className="researcher researchIdAvatar ok"
-        size={40}
-        src=""
+      <div
+        className="fez-icon researcher dashboard"
         title="Your Researcher ID is G-111-1111"
-      />
+      >
+        researcher
+      </div>
     </a>
   </div>
   <div
-    className="scopus column is-narrow"
+    className="column is-narrow"
   >
     <a
       aria-label="You are not linked to Scopus"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
-      <Avatar
-        alt="You are not linked to Scopus"
-        className="scopus researchIdAvatar error"
-        size={40}
-        src=""
+      <div
+        className="fez-icon scopus dashboard"
         title="You are not linked to Scopus"
-      />
+      >
+        scopus
+      </div>
     </a>
   </div>
   <div
-    className="google_scholar column is-narrow"
+    className="column is-narrow"
   >
     <a
       aria-label="You are not linked to Google Scholar"
       href="https://app.library.uq.edu.au/#/id"
       target="_blank"
     >
-      <Avatar
-        alt="You are not linked to Google Scholar"
-        className="google_scholar researchIdAvatar error"
-        size={40}
-        src=""
+      <div
+        className="fez-icon google_scholar dashboard"
         title="You are not linked to Google Scholar"
-      />
+      >
+        google_scholar
+      </div>
     </a>
   </div>
   <div
-    className="orcid column is-narrow"
+    className="column is-narrow"
   >
     <a
       aria-label="Your ORCID ID is 0000-0001-1111-1111"
       href="https://orcid.org/0000-0001-1111-1111"
       target="_blank"
     >
-      <Avatar
-        alt="Your ORCID ID is 0000-0001-1111-1111"
-        className="orcid researchIdAvatar ok"
-        size={40}
-        src=""
+      <div
+        className="fez-icon orcid dashboard"
         title="Your ORCID ID is 0000-0001-1111-1111"
-      />
+      >
+        orcid
+      </div>
     </a>
   </div>
   <div
     className="column is-narrow"
   >
+     
     <a
       aria-label="Click to visit your ORCId profile"
       className="orcidLink"
@@ -111,20 +107,19 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs with wei
   className="columns researcherIds is-gapless"
 >
   <div
-    className="anId column is-narrow"
+    className="column is-narrow"
   >
     <a
       aria-label="Your undefined ID is This is an edge case example"
       href="undefinedThis is an edge case example"
       target="_blank"
     >
-      <Avatar
-        alt="Your undefined ID is This is an edge case example"
-        className="anid researchIdAvatar ok"
-        size={40}
-        src=""
+      <div
+        className="fez-icon anId dashboard"
         title="Your undefined ID is This is an edge case example"
-      />
+      >
+        anId
+      </div>
     </a>
   </div>
 </div>

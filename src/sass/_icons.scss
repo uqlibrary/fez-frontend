@@ -3,7 +3,6 @@
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   display: inline-block;
-  margin-right: 3px;
   vertical-align: text-top;
   overflow: hidden;
 
@@ -13,7 +12,7 @@
   &.pubmed::before {
     content: url(../../src/images/pubmed_icon.svg);
   }
-  &.wos::before {
+  &.wos::before, &.researcher::before {
     content: url(../../src/images/thomson_icon.svg);
   }
   &.orcid::before {
@@ -28,7 +27,7 @@
   &.openAccess::before {
     content: url(../../src/images/oa_icon.svg);
   }
-  &.google::before {
+  &.google::before, &.google_scholar::before {
     content: url(../../src/images/google_scholar_icon.svg);
   }
 
@@ -51,5 +50,10 @@
   &.xlarge {
     width: 18px;
     height: 18px;
+  }
+  &.dashboard {
+    margin-right: 6px;
+    width: 32px;
+    height: 32px;
   }
 }

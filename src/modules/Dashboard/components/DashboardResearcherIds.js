@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from 'material-ui/Avatar';
+// import Avatar from 'material-ui/Avatar';
 import PropTypes from 'prop-types';
 import {locale} from 'config';
 
@@ -9,22 +9,19 @@ const DashboardResearcherIds = ({values}) => {
         <div className="columns researcherIds is-gapless">
 
             {values && Object.keys(values).map((item, index) => (
-                <div key={index} className={`${item} column is-narrow`}>
-                    <a
-                        href={values[item] ? txt.linksPrefix[item] + values[item] : 'https://app.library.uq.edu.au/#/id'}
+                <div key={index} className="column is-narrow">
+                    <a href={values[item] ? txt.linksPrefix[item] + values[item] : 'https://app.library.uq.edu.au/#/id'}
                         target="_blank"
                         aria-label={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}>
-                        <Avatar
-                            className={values[item] ? (`${item.toLowerCase()} researchIdAvatar ok`) : (`${item.toLowerCase()} researchIdAvatar error`)}
-                            src={require(`../../../../src/images/${item.toLowerCase()}_icon.svg`)}
-                            title={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
-                            alt={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}/>
+                        <div title={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
+                            className={'fez-icon ' + item + ' dashboard'}>{item}</div>
                     </a>
                 </div>)
             )}
 
             {values.orcid &&
             <div className="column is-narrow">
+                &nbsp;
                 <a
                     className="orcidLink"
                     href={txt.orcidUrlPrefix + values.orcid}
