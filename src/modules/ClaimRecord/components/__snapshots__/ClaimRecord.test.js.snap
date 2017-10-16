@@ -1815,8 +1815,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       }
       title="You are claiming to be an author for the following item:"
     >
-      <PublicationCitation
-        className=""
+      <withRouter(Connect(PublicationCitation))
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -2667,7 +2666,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             "rek_wok_doc_type": "@",
           }
         }
-        showDefaultActions={false}
       />
     </StandardCard>
     <div>

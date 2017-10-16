@@ -107,14 +107,6 @@ exports[`MyRecords test renders list of publications 1`] = `
           pagingData={Object {}}
         />
         <PublicationsList
-          customActions={
-            Array [
-              Object {
-                "handleAction": [Function],
-                "label": "Fix",
-              },
-            ]
-          }
           publicationsList={
             Array [
               Object {
@@ -10393,6 +10385,7 @@ exports[`MyRecords test renders list of publications 1`] = `
             ]
           }
           publicationsListSubset={Array []}
+          showDefaultActions={true}
           subsetCustomActions={Array []}
         />
         <PublicationsListPaging

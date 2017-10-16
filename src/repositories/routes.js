@@ -31,8 +31,10 @@ export const prepareTextSearchQuery = (searchQuery) => {
             replaceWith: '+'
         }
     ];
-    return escapeConfig.reduce((query, config) =>
+    const value = escapeConfig.reduce((query, config) =>
         (query.replace(config.find, config.replaceWith)), searchQuery.trim());
+    console.log(value);
+    return value;
 };
 
 /**
@@ -58,11 +60,11 @@ const getSearchType = (searchQuery) => {
         return `id=pmid:${searchQuery.trim()}`;
     }
 
-    return `title=${encodeURI(prepareTextSearchQuery(searchQuery))}`;
+    return `title=${prepareTextSearchQuery(searchQuery)}`;
 };
 
 export const ACCOUNT_API = () => (`account?${new Date().getTime()}`);
-export const AUTHORS_SEARCH_API = ({query}) => (`fez-authors/search?query=${encodeURI(query)}`);
+export const AUTHORS_SEARCH_API = ({query}) => (`fez-authors/search?query=${query}`);
 export const CURRENT_AUTHOR_API = () => ('fez-authors');
 export const AUTHOR_DETAILS_API = ({userId}) => (`authors/details/${userId}`);
 

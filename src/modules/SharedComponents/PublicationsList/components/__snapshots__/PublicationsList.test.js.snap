@@ -4,8 +4,7 @@ exports[`PublicationsList renders  component with items 1`] = `
 <div
   className="publicationsList"
 >
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -533,8 +532,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -931,8 +929,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -1620,8 +1617,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -2234,8 +2230,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -2815,8 +2810,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -3410,8 +3404,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -3924,8 +3917,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -4487,8 +4479,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -5027,8 +5018,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -5579,8 +5569,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -6085,8 +6074,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -7008,8 +6996,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -7561,8 +7548,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -7974,8 +7960,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -8331,8 +8316,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -8674,8 +8658,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -9059,8 +9042,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -9493,8 +9475,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {
@@ -9976,8 +9957,7 @@ exports[`PublicationsList renders  component with items 1`] = `
     }
     showDefaultActions={false}
   />
-  <PublicationCitation
-    className=""
+  <withRouter(Connect(PublicationCitation))
     customActions={Array []}
     publication={
       Object {

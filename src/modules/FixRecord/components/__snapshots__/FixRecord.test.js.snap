@@ -14,8 +14,7 @@ exports[`Component FixRecord  should render loader 1`] = `
       className=""
       title="Record to be amended"
     >
-      <PublicationCitation
-        className=""
+      <withRouter(Connect(PublicationCitation))
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -866,7 +865,6 @@ exports[`Component FixRecord  should render loader 1`] = `
             "rek_wok_doc_type": "@",
           }
         }
-        showDefaultActions={false}
       />
       <SelectField
         autoWidth={false}
