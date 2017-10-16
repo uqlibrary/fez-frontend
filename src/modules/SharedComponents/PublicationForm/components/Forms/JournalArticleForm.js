@@ -11,7 +11,7 @@ import {validation, locale} from 'config';
 export default class JournalArticleForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        vocabId: PropTypes.number
+        subtypeVocabId: PropTypes.number
     };
 
     constructor(props) {
@@ -73,7 +73,7 @@ export default class JournalArticleForm extends Component {
                                 component={PublicationSubtypeField}
                                 name="rek_subtype"
                                 disabled={this.props.submitting}
-                                vocabId={this.props.vocabId}
+                                vocabId={this.props.subtypeVocabId}
                                 className="requiredField"
                                 locale={{label: txt.information.fieldLabels.subtype, loading: locale.global.loading}}
                                 validate={[validation.required]}

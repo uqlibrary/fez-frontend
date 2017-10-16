@@ -56,7 +56,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_BOOK,
         name: 'Book',
         class: 'Uqlibrary\\FezCore\\Types\\Book',
-        vocabId: 453581,
+        subtypeVocabId: 453581,
         isFavourite: true,
         formComponent: components ? components.BookForm : null,
         citationComponent: components ? components.BookCitation : null
@@ -65,7 +65,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
         name: 'Book Chapter',
         class: 'Uqlibrary\\FezCore\\Types\\BookChapter',
-        vocabId: 453588,
+        subtypeVocabId: 453588,
         isFavourite: true,
         formComponent: components ? components.BookChapterForm : null,
         citationComponent: components ? components.BookChapterCitation : null
@@ -74,7 +74,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
         name: 'Conference Paper',
         class: 'Uqlibrary\\FezCore\\Types\\ConferencePaper',
-        vocabId: 453596,
+        subtypeVocabId: 453596,
         isFavourite: true,
         formComponent: components ? components.ConferencePaperForm : null,
         citationComponent: components ? components.ConferencePaperCitation : null
@@ -88,7 +88,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_CREATIVE_WORK,
         name: 'Creative Work',
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
-        vocabId: 453594
+        subtypeVocabId: 453594
     },
     {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
@@ -98,8 +98,7 @@ export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         name: 'Department Technical Report',
-        class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
-        vocabId: 453703
+        class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport'
     },
     {
         id: PUBLICATION_TYPE_DESIGN,
@@ -125,7 +124,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_JOURNAL_ARTICLE,
         name: 'Journal Article',
         class: 'Uqlibrary\\FezCore\\Types\\JournalArticle',
-        vocabId: 453573,
+        subtypeVocabId: 453573,
         isFavourite: true,
         formComponent: components ? components.JournalArticleForm : null,
         citationComponent: components ? components.JournalArticleCitation : null
@@ -173,8 +172,7 @@ export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_WORKING_PAPER,
         name: 'Working Paper',
-        class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
-        vocabId: 453703
+        class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper'
     }
 ];
 
@@ -185,3 +183,6 @@ export const openAccessIdLookup = {
     453696: 'File (Author post-print)',
     453697: 'Other',
 };
+
+export const OrgUnitsVocabId = 453703;
+

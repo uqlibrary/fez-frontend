@@ -50,7 +50,7 @@ export default class PublicationForm extends Component {
             React.createElement(
                 filteredPublicationType[0].formComponent,
                 {
-                    vocabId: filteredPublicationType[0].vocabId,
+                    subtypeVocabId: filteredPublicationType[0].subtypeVocabId,
                     submitting: this.props.submitting
                 })
             :
