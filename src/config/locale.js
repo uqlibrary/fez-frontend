@@ -619,6 +619,7 @@ export default {
                         articleTitle: 'Title',
                         journalTitle: 'Journal name',
                         date: {
+                            title: 'Journal published date',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'

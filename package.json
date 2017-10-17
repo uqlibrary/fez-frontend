@@ -80,7 +80,7 @@
     "redux-form": "7.0.4",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#master"
+    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#feature-date-labels"
   },
   "scripts": {
     "start": "webpack-dev-server",
@@ -93,7 +93,8 @@
     "test": "NODE_ENV=test jest",
     "test:watch": "npm run test -- --watch",
     "test:update": "npm test --updateSnapshot",
-    "eslint": "eslint 'src/**/*.js' --quiet"
+    "eslint": "eslint 'src/**/*.js' --quiet",
+    "reloadDeps": "rm -rf node_modules/ && npm cache clear --force && npm install && find node_modules/ -type f -name .babelrc | grep -v packager | xargs rm -rf"
   },
   "engines": {
     "npm": ">=3",
