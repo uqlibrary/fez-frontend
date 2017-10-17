@@ -57,8 +57,8 @@ export default class FixRecord extends Component {
         this.props.actions.clearFixRecord();
     }
 
-    _navigateToPreviousPage = () => {
-        this.props.history.go(-1);
+    _navigateToMyResearch = () => {
+        this.props.history.push(routes.pathConfig.records.mine);
     }
 
     _navigateToDashboard = () => {
@@ -67,7 +67,7 @@ export default class FixRecord extends Component {
 
     _showConfirmation = () => {
         if (this.props.pristine || !this.cancelConfirmationBox) {
-            this._navigateToPreviousPage();
+            this._navigateToMyResearch();
         } else {
             this.cancelConfirmationBox.showConfirmation();
         }
@@ -150,12 +150,12 @@ export default class FixRecord extends Component {
                             <div>
                                 <ConfirmDialogBox
                                     onRef={ref => (this.cancelConfirmationBox = ref)}
-                                    onAction={this._navigateToPreviousPage}
+                                    onAction={this._navigateToMyResearch}
                                     locale={txt.fix.cancelWorkflowConfirmation}/>
                                 <ConfirmDialogBox
                                     onRef={ref => (this.successConfirmationBox = ref)}
-                                    onAction={this._navigateToDashboard}
-                                    onCancelAction={this._navigateToPreviousPage}
+                                    onAction={this._navigateToMyResearch}
+                                    onCancelAction={this._navigateToDashboard}
                                     locale={txt.fix.successWorkflowConfirmation}/>
                                 <StandardCard title={txt.fix.comments.title} help={txt.fix.comments.help}>
                                     <Field
@@ -198,7 +198,7 @@ export default class FixRecord extends Component {
                                 {txt.unclaim.description}
                                 <ConfirmDialogBox
                                     onRef={ref => (this.successConfirmationBox = ref)}
-                                    onAction={this._navigateToPreviousPage}
+                                    onAction={this._navigateToMyResearch}
                                     onCancelAction={this._navigateToDashboard}
                                     locale={txt.unclaim.successWorkflowConfirmation}/>
                             </StandardCard>
