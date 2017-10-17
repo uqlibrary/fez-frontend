@@ -20,7 +20,7 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
             publicationTypesCount.push([publicationType, publicationTypesCountObject[publicationType]]);
         })
         .sort((item1, item2) => {
-            return item1[1] < item2[1];
+            return item1[1] - item2[1];
         });
 
     if (!keepPublicationTypes || publicationTypesCount.length <= keepPublicationTypes) {

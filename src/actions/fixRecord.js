@@ -93,31 +93,32 @@ export function fixRecord(data) {
     return dispatch => {
         dispatch({type: actions.FIX_RECORD_PROCESSING});
 
-        // patch record from eSpace
-        const patchRecordRequest = {
-            rek_pid: data.publication.rek_pid,
-            ...transformers.getRecordLinkSearchKey(data),
-            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
-        };
+        const requests = [];
+        // if user added files - upload files
+        if (data.files && data.files.queue && data.files.queue.length > 0) {
+            requests.push(repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch));
+        }
+        // if user updated links/added files - update record
+        if (data.files && data.files.queue && data.files.queue.length > 0 || data.rek_link) {
+            const patchRecordRequest = {
+                rek_pid: data.publication.rek_pid,
+                ...transformers.getRecordLinkSearchKey(data),
+                ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
+            };
+            requests.push(patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest));
+        }
 
-        return patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
-            .then(() => {
-                const createIssueRequest = transformers.getFixIssueRequest(data);
-                return post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest);
-            })
-            .then(response => {
-                if (!data.files || !data.files.queue || data.files.queue.length === 0) {
-                    return response;
-                } else {
-                    return repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
-                }
-            })
-            .then(response => {
+        // set issue notification
+        const createIssueRequest = transformers.getFixIssueRequest(data);
+        requests.push(post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest));
+
+        return Promise.all(requests)
+            .then((responses) => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
                     payload: {pid: data.publication.rek_pid}
                 });
-                return Promise.resolve(response);
+                return Promise.resolve(responses);
             })
             .catch(error => {
                 dispatch({

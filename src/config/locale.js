@@ -22,7 +22,7 @@ export default {
                 id: 'espace',
                 title: 'eSpace',
                 priority: 0,
-                externalUrl: 'https://espace.library.uq.edu.au/view/[id]',
+                externalUrl: 'https://fez-staging.library.uq.edu.au/view/[id]',
                 idKey: 'rek_pid'
             },
             wos: {
@@ -85,6 +85,10 @@ export default {
         browse: {
             primaryText: 'Browse',
             secondaryText: 'UQ\'s digital repository'
+        },
+        masquerade: {
+            primaryText: 'Masquerade',
+            secondaryText: 'as another user'
         },
         search: {
             primaryText: 'Search'
@@ -455,6 +459,7 @@ export default {
             }
         },
         fixRecord: {
+            loadingMessage: 'Loading record...',
             title: 'Request a change/deposit a file',
             subTitle: 'Record to be amended',
             fieldLabels: {

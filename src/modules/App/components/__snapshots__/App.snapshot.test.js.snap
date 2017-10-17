@@ -76,11 +76,6 @@ exports[`App tests for user account and author status User is logged in but are 
             "secondaryText": "as another user",
           },
           Object {
-            "linkTo": "/admin/permissions",
-            "primaryText": "Permissions",
-            "secondaryText": "manage permissions",
-          },
-          Object {
             "divider": true,
             "path": "/234234234242",
           },
@@ -215,16 +210,6 @@ exports[`App tests for user account and author status User is logged in but are 
           component={[Function]}
           exact={true}
           path="/admin/masquerade"
-        />
-        <Route
-          access={
-            Array [
-              "admin",
-            ]
-          }
-          exact={true}
-          path="/admin/permissions"
-          render={[Function]}
         />
         <Route
           render={[Function]}
@@ -419,11 +404,6 @@ exports[`App tests for user account and author status User logged in and is an a
             "secondaryText": "as another user",
           },
           Object {
-            "linkTo": "/admin/permissions",
-            "primaryText": "Permissions",
-            "secondaryText": "manage permissions",
-          },
-          Object {
             "divider": true,
             "path": "/234234234242",
           },
@@ -560,16 +540,6 @@ exports[`App tests for user account and author status User logged in and is an a
           path="/admin/masquerade"
         />
         <Route
-          access={
-            Array [
-              "admin",
-            ]
-          }
-          exact={true}
-          path="/admin/permissions"
-          render={[Function]}
-        />
-        <Route
           render={[Function]}
         />
       </Switch>
@@ -653,11 +623,6 @@ exports[`App tests for user account and author status User logged in but is not 
             "linkTo": "/admin/masquerade",
             "primaryText": "Masquerade",
             "secondaryText": "as another user",
-          },
-          Object {
-            "linkTo": "/admin/permissions",
-            "primaryText": "Permissions",
-            "secondaryText": "manage permissions",
           },
           Object {
             "divider": true,
@@ -808,16 +773,6 @@ exports[`App tests for user account and author status User logged in but is not 
           component={[Function]}
           exact={true}
           path="/admin/masquerade"
-        />
-        <Route
-          access={
-            Array [
-              "admin",
-            ]
-          }
-          exact={true}
-          path="/admin/permissions"
-          render={[Function]}
         />
         <Route
           render={[Function]}

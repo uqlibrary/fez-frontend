@@ -12,7 +12,9 @@ import * as routes from './routes';
  */
 export function putUploadFile(pid, file, dispatch) {
     return new Promise((resolve, reject) => {
-        api.get(routes.FILE_UPLOAD_API({pid: pid, fileName: file.name}))
+        const fileUploadUrl = routes.FILE_UPLOAD_API({pid: pid, fileName: file.name});
+        console.log('GET: ' + fileUploadUrl);
+        api.get(fileUploadUrl)
             .then(getPresignedResponse => {
                 const options = {
                     headers: {
@@ -25,6 +27,7 @@ export function putUploadFile(pid, file, dispatch) {
                     cancelToken: generateCancelToken().token
                 };
 
+                console.log('PUT: ' + getPresignedResponse.data + ': ' + file.name);
                 api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
                     resolve(uploadResponse.data);
                 }).catch(uploadError => {

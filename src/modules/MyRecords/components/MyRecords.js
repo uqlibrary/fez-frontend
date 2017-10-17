@@ -95,13 +95,6 @@ export default class MyRecords extends React.Component {
     render() {
         const txt = locale.pages.myResearch;
 
-        const actions = [
-            {
-                label: 'Fix',
-                handleAction: this.fixRecord
-            }
-        ];
-
         return (
             <StandardPage title={txt.title}>
                 {
@@ -140,7 +133,7 @@ export default class MyRecords extends React.Component {
                                     !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                     <PublicationsList
                                         publicationsList={this.props.publicationsList}
-                                        customActions={actions} />
+                                        showDefaultActions />
                                 }
                                 <PublicationsListPaging
                                     loading={this.props.loadingPublicationsList}

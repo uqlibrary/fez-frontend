@@ -35,8 +35,6 @@ export function loadCurrentAccount() {
                 return get(routes.CURRENT_AUTHOR_API());
             })
             .then(currentAuthorResponse => {
-                console.log('currentAuthorResponse: ');
-                console.log(currentAuthorResponse);
                 // TODO: to be decommissioned when author/details will become a part of author api
                 currentAuthor = currentAuthorResponse.data;
                 dispatch({

@@ -11,12 +11,18 @@ export default class Masquerade extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: ''
+            userName: '',
+            loading: false
         };
     }
 
     _masqueradeAs = (event) => {
         if(event && event.key && (event.key !== 'Enter' || this.state.userName.length === 0)) return;
+
+        this.setState = {
+            loading: true
+        };
+
         const url = `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(window.location.href)}`;
         window.location.href = url;
     };
@@ -32,29 +38,28 @@ export default class Masquerade extends Component {
 
         return (
             <StandardPage title={txt.title}>
-                <form onKeyDown={this._handleKeyboardFormSubmit}>
-                    <StandardCard title={txt.title} help={txt.help}>
-                        <div>{txt.description}</div>
-                        <TextField
+                <StandardCard title={txt.title} help={txt.help}>
+                    <div>{txt.description}</div>
+                    <TextField
+                        fullWidth
+                        id="userName"
+                        floatingLabelText={txt.labels.hint}
+                        hintText={txt.labels.hint}
+                        value={this.state.userName}
+                        onChange={this._usernameChanged}
+                        onKeyPress={this._masqueradeAs} />
+                </StandardCard>
+                <div className="columns action-buttons">
+                    <div className="column is-hidden-mobile"/>
+                    <div className="column is-narrow-desktop">
+                        <RaisedButton
                             fullWidth
-                            id="userName"
-                            floatingLabelText={txt.labels.hint}
-                            hintText={txt.labels.hint}
-                            value={this.state.userName}
-                            onChange={this._usernameChanged}
-                            onKeyPress={this._masqueradeAs} />
-                    </StandardCard>
-                    <div className="columns action-buttons">
-                        <div className="column is-hidden-mobile"/>
-                        <div className="column is-narrow-desktop">
-                            <RaisedButton
-                                fullWidth
-                                secondary
-                                label={txt.labels.submit}
-                                onTouchTap={this._masqueradeAs}/>
-                        </div>
+                            secondary
+                            label={txt.labels.submit}
+                            disabled={this.state.loading}
+                            onTouchTap={this._masqueradeAs}/>
                     </div>
-                </form>
+                </div>
             </StandardPage>
         );
     }
