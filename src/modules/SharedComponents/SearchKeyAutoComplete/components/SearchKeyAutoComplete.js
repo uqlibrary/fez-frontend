@@ -44,10 +44,10 @@ export class SearchKeyAutoComplete extends Component {
         });
     };
 
-    _onSearchKeyChanged = (searchText) => {
+    _onSearchKeyChanged = (searchText, dataSource, params) => {
         this.updateSearchKeyValue(searchText);
 
-        if (searchText.trim().length > 1) {
+        if (searchText.trim().length > 1 && params.source === 'change') {
             this.props.actions.searchKeyLookUp(searchText, this.props.searchKey);
         }
     };
