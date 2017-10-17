@@ -1,22 +1,17 @@
-// Vendor
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+// Frontend specific variables override toolbox defaults if defined
+@import "./variables";
 
-// Import the main toobox styles
+// Import the main toolbox styles
 @import '~uqlibrary-react-toolbox/sass/index';
-
-// Import toobox components styles
-@import '~uqlibrary-react-toolbox/sass/components';
-
 // Import the fez-frontend modules styles
 @import './components';
-// Import specific style for the AppBar
-@import './appbar';
-// Import a style for the helpicon placement
-@import './helpicon';
-// Import styles to override MUI defaults for UX
+// Various fixes and hacks to make MUI work
 @import './muifixes';
-// Fixes for bulma title styles
-@import './titles';
+// Typography
+@import './typography';
+
+// Data list styles for Contributor editor and FileUploader
+@import './datalist';
 // Charts styles from toolbox
 @import "./charts";
 // SVG Icons

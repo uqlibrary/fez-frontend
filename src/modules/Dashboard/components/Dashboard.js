@@ -109,7 +109,6 @@ class Dashboard extends React.Component {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
-
         return (
             <StandardPage className="dashboard">
                 {
@@ -214,7 +213,7 @@ class Dashboard extends React.Component {
                                                 <div key={'metrics_' + metricIndex}>
                                                     <div className="columns is-gapless is-mobile">
                                                         <div className="column">
-                                                            <h2 className="title is-4 trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
+                                                            <h2 className="trendingPubsSource">{txt.myTrendingPublications.metrics[metric.key].title}</h2>
                                                         </div>
                                                         <div className="column is-narrow is-hidden-mobile">
                                                             <HelpIcon {...txt.myTrendingPublications.help} />
@@ -226,7 +225,7 @@ class Dashboard extends React.Component {
                                                                 <div className="columns is-gapless is-mobile">
                                                                     <div className="column">
                                                                         <div className="citationContent">
-                                                                            <h3 className="title is-5 publicationTitle">{recordValue.title}</h3>
+                                                                            <h3 className="publicationTitle">{recordValue.title}</h3>
                                                                             <FontIcon className="material-icons citationIcon" data-place="left">
                                                                                 format_quote
                                                                             </FontIcon>
@@ -241,22 +240,21 @@ class Dashboard extends React.Component {
                                                                                     rel="noopener noreferrer"
                                                                                     title={locale.global.linkWillOpenInNewWindow.replace('[destination]', recordValue.title)}>
                                                                                     <div className="columns is-mobile is-gapless">
-                                                                                        <div className="column is-narrow"><FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
-                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}</div>
+                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}<FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
                                                                                     </div>
                                                                                 </a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="column is-narrow trendingPubsCount">
+                                                                    <div className="column is-narrow">
                                                                         <span
-                                                                            className="title is-2"
+                                                                            className="trendingPubsCount"
                                                                             title={txt.myTrendingPublications.trendSharesThisMonth}>{Math.round(recordValue.count)}</span>
                                                                     </div>
                                                                     <div
-                                                                        className="column is-narrow trendingPubsDifference">
+                                                                        className="column is-narrow">
                                                                         <span
-                                                                            className="title is-5"
+                                                                            className="trendingPubsDifference"
                                                                             title={txt.myTrendingPublications.trendDifferenceSharesThisMonth}>+{Math.round(recordValue.difference)}</span>
                                                                     </div>
                                                                 </div>

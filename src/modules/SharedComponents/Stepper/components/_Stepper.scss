@@ -17,12 +17,10 @@
 }
 
 // Stepper - responsive css to hide the text on mobile, and just leave the steps
-@media (max-width: 768px) {
-
+@include mobile {
   .Stepper {
     width: calc(100% - 32px) !important;
     margin: 0 auto 12px auto !important;
-
     & div span span {
       padding: 0 4px 0 0 !important;
       z-index: 10;

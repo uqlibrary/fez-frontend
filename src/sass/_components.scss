@@ -1,8 +1,6 @@
 // Importing module styles
-
 @import '../modules/Dashboard/components/Dashboard';
 @import '../modules/SharedComponents/Stepper/components/Stepper';
-@import '../modules/SharedComponents/ContributorsEditor/components/ContributorsEditor';
 @import '../modules/SharedComponents/PublicationStats/components/PublicationStats';
 @import '../modules/SharedComponents/PublicationsList/components/PublicationList';
 @import '../modules/SharedComponents/PublicationsList/components/PublicationListPaging';
@@ -10,4 +8,3 @@
 @import '../modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress';
 @import '../modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetsFilter';
 @import '../modules/SharedComponents/AuthorLinking/components/AuthorLinking';
-
