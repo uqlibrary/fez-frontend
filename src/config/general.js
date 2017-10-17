@@ -183,7 +183,3 @@ export const openAccessIdLookup = {
     453696: 'File (Author post-print)',
     453697: 'Other',
 };
-
-export const searchKeys = {
-    series: 'series'
-};

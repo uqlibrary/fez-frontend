@@ -1085,7 +1085,8 @@ export default {
                 message: 'New publication has been saved successfully.'
             },
             searchKey: {
-                [searchKeys.series]: {
+                series: {
+                    key: 'series',
                     title: 'Series',
                     help: 'Some help about series',
                     description: 'You can either select from suggestions or add your own value',

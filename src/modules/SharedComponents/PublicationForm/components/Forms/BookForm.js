@@ -4,6 +4,7 @@ import {Field} from 'redux-form/immutable';
 import {TextField, StandardCard, ListEditorField, PartialDateField} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
+import {SeriesSearchKeyAutoCompleteField} from 'modules/SharedComponents/SearchKeyFields';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
@@ -19,6 +20,7 @@ export default class BookForm extends Component {
 
     render() {
         const txt = locale.components.publicationForm.book;
+        const {series} = locale.components.publicationForm.searchKey;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -107,6 +109,14 @@ export default class BookForm extends Component {
                         disabled={this.props.submitting} />
                 </StandardCard>
 
+                <StandardCard title={series.title} help={series.help}>
+                    <div>{series.description}</div>
+                    <Field
+                        name="fez_record_search_key_series"
+                        component={SeriesSearchKeyAutoCompleteField}
+                        disabled={this.props.submitting}
+                    />
+                </StandardCard>
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                     <div>{locale.components.isbnForm.text}</div>
                     <Field
