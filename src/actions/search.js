@@ -5,9 +5,9 @@ import * as routes from 'repositories/routes';
 
 function getSearch(source, searchQuery) {
     if (source === locale.global.sources.espace.id) {
-        return get(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: searchQuery.replace(/\s/g, '+'), pageSize: 5, sortBy: 'score'}));
+        return get(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: searchQuery, pageSize: 5, sortBy: 'score'}));
     } else {
-        return get(routes.SEARCH_EXTERNAL_RECORDS_API({source: source, searchQuery: searchQuery.replace(/\s/g, '+')}));
+        return get(routes.SEARCH_EXTERNAL_RECORDS_API({source: source, searchQuery: searchQuery}));
     }
 }
 

@@ -1,4 +1,4 @@
-@import '~uqlibrary-react-toolbox/sass/variables';
+@import '../../../../../sass/variables';
 
 div.searchWrapper.columns {
     max-width: 1280px !important;
@@ -8,6 +8,7 @@ div.searchWrapper.columns {
   min-width: 140px;
   .searchDashboardList {
     margin: 6px 0;
+    font-weight: $text-weight-normal;
   }
 }
 

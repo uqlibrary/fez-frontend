@@ -8,21 +8,18 @@ export const initialState = {
 
 const handlers = {
     [actions.ORG_UNITS_LOAD_FAILED]: () => ({
-        orgUnitsList: [],
-        orgUnitsListLoading: false,
+        ...initialState,
         orgUnitsListLoadingError: true
     }),
 
     [actions.ORG_UNITS_LOADED]: (state, action) => ({
-        orgUnitsList: action.payload,
-        orgUnitsListLoading: false,
-        orgUnitsListLoadingError: false
+        ...initialState,
+        orgUnitsList: action.payload
     }),
 
     [actions.ORG_UNITS_LOADING]: () => ({
-        orgUnitsList: [],
-        orgUnitsListLoading: true,
-        orgUnitsListLoadingError: false
+        ...initialState,
+        orgUnitsListLoading: true
     })
 };
 

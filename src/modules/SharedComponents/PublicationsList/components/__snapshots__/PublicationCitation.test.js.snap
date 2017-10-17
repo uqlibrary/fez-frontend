@@ -11,11 +11,11 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
       className="column"
     >
       <h3
-        className="title is-5 publicationTitle"
+        className="publicationTitle"
       >
         <a
           aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice will open in a new window."
-          href="https://espace.library.uq.edu.au/view/UQ:36649"
+          href="https://fez-staging.library.uq.edu.au/view/UQ:36649"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -82,7 +82,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
             "fez_record_search_key_author_affiliation_name": Array [],
             "fez_record_search_key_author_id": Array [
               Object {
-                "rek_author_id": 0,
+                "rek_author_id": 410,
                 "rek_author_id_id": 28609418,
                 "rek_author_id_order": 1,
                 "rek_author_id_pid": "UQ:36649",
@@ -96,7 +96,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 1671,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -608,7 +608,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
             "fez_record_search_key_author_affiliation_name": Array [],
             "fez_record_search_key_author_id": Array [
               Object {
-                "rek_author_id": 0,
+                "rek_author_id": 410,
                 "rek_author_id_id": 28609418,
                 "rek_author_id_order": 1,
                 "rek_author_id_pid": "UQ:36649",
@@ -622,7 +622,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 1671,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -1157,11 +1157,11 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
       className="column"
     >
       <h3
-        className="title is-5 publicationTitle"
+        className="publicationTitle"
       >
         <a
           aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice will open in a new window."
-          href="https://espace.library.uq.edu.au/view/UQ:36649"
+          href="https://fez-staging.library.uq.edu.au/view/UQ:36649"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -1228,7 +1228,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
             "fez_record_search_key_author_affiliation_name": Array [],
             "fez_record_search_key_author_id": Array [
               Object {
-                "rek_author_id": 0,
+                "rek_author_id": 410,
                 "rek_author_id_id": 28609418,
                 "rek_author_id_order": 1,
                 "rek_author_id_pid": "UQ:36649",
@@ -1242,7 +1242,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 1671,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -1754,7 +1754,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
             "fez_record_search_key_author_affiliation_name": Array [],
             "fez_record_search_key_author_id": Array [
               Object {
-                "rek_author_id": 0,
+                "rek_author_id": 410,
                 "rek_author_id_id": 28609418,
                 "rek_author_id_order": 1,
                 "rek_author_id_pid": "UQ:36649",
@@ -1768,7 +1768,7 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 1671,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -2265,11 +2265,11 @@ exports[`PublicationCitation renders  component with default item 1`] = `
       className="column"
     >
       <h3
-        className="title is-5 publicationTitle"
+        className="publicationTitle"
       >
         <a
           aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice will open in a new window."
-          href="https://espace.library.uq.edu.au/view/UQ:36649"
+          href="https://fez-staging.library.uq.edu.au/view/UQ:36649"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -2336,7 +2336,7 @@ exports[`PublicationCitation renders  component with default item 1`] = `
             "fez_record_search_key_author_affiliation_name": Array [],
             "fez_record_search_key_author_id": Array [
               Object {
-                "rek_author_id": 0,
+                "rek_author_id": 410,
                 "rek_author_id_id": 28609418,
                 "rek_author_id_order": 1,
                 "rek_author_id_pid": "UQ:36649",
@@ -2350,7 +2350,7 @@ exports[`PublicationCitation renders  component with default item 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 1671,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",
@@ -2862,7 +2862,7 @@ exports[`PublicationCitation renders  component with default item 1`] = `
             "fez_record_search_key_author_affiliation_name": Array [],
             "fez_record_search_key_author_id": Array [
               Object {
-                "rek_author_id": 0,
+                "rek_author_id": 410,
                 "rek_author_id_id": 28609418,
                 "rek_author_id_order": 1,
                 "rek_author_id_pid": "UQ:36649",
@@ -2876,7 +2876,7 @@ exports[`PublicationCitation renders  component with default item 1`] = `
                 "rek_author_id_xsdmf_id": null,
               },
               Object {
-                "rek_author_id": 1671,
+                "rek_author_id": 4100,
                 "rek_author_id_id": 28609420,
                 "rek_author_id_order": 3,
                 "rek_author_id_pid": "UQ:36649",

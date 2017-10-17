@@ -52,10 +52,11 @@ export function loadCurrentAccount() {
                     payload: authorDetailsResponse
                 });
             })
-            .catch(() => {
+            .catch((error) => {
                 if (!account) {
                     dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 } else if (!currentAuthor) {
+                    console.log(error);
                     dispatch({type: actions.ACCOUNT_AUTHOR_FAILED});
                 }
                 dispatch({type: actions.ACCOUNT_AUTHOR_DETAILS_FAILED});

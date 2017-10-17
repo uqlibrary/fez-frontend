@@ -30,17 +30,25 @@ export default class ClaimRecord extends Component {
         this.props.actions.clearClaimPublication();
     }
 
-    _navigateToPreviousPage = () => {
-        this.props.history.go(-1);
+    _navigateToMyResearch = () => {
+        this.props.history.push(routes.pathConfig.records.mine);
     }
 
-    _navigateToDashboard = () => {
-        this.props.history.push(routes.pathConfig.dashboard);
-    };
+    _navigateToAddRecord = () => {
+        this.props.history.push(routes.pathConfig.records.add.find);
+    }
+
+    _navigateToPossibleMyResearch = () => {
+        this.props.history.push(routes.pathConfig.records.possible);
+    }
 
     _showConfirmation = () => {
         if (this.props.pristine) {
-            this._navigateToPreviousPage();
+            if (!!this.props.initialValues.get('publication').get('sources')) {
+                this._navigateToAddRecord();
+            } else {
+                this._navigateToPossibleMyResearch();
+            }
         } else {
             this.cancelConfirmationBox.showConfirmation();
         }
@@ -83,6 +91,7 @@ export default class ClaimRecord extends Component {
         const authorLinked = publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
+        const fromAddRecord = !!publication.sources;
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -94,14 +103,18 @@ export default class ClaimRecord extends Component {
                         <div>
                             <ConfirmDialogBox
                                 onRef={ref => (this.cancelConfirmationBox = ref)}
-                                onAction={this._navigateToPreviousPage}
+                                onAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
                                 locale={txt.cancelWorkflowConfirmation}/>
 
                             <ConfirmDialogBox
                                 onRef={ref => (this.successConfirmationBox = ref)}
-                                onAction={this._navigateToDashboard}
-                                onCancelAction={this._navigateToPreviousPage}
-                                locale={txt.successWorkflowConfirmation}/>
+                                onAction={this._navigateToMyResearch}
+                                onCancelAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
+                                locale={{
+                                    ...txt.successWorkflowConfirmation,
+                                    cancelButtonLabel: fromAddRecord
+                                        ? txt.successWorkflowConfirmation.addRecordButtonLabel
+                                        : txt.successWorkflowConfirmation.cancelButtonLabel}} />
                             {
                                 publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
                                 && !authorLinked &&

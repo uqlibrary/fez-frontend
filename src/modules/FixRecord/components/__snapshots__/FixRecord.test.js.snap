@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component FixRecord  should render loader 1`] = `
+<StandardPage
+  title="Request a change/deposit a file"
+>
+  <div
+    className="is-centered"
+  >
+    <InlineLoader
+      message="Loading record..."
+    />
+  </div>
+</StandardPage>
+`;

@@ -5,14 +5,14 @@ const DashboardAuthorDetails = ({values}) => {
     return (
         <div className="authorDetails">
             {/* Title and name */}
-            <div className="authorTitleName title is-3 color-reverse">
+            <div className="authorTitleName">
                 {values.title}&nbsp;{values.givenName}&nbsp;{values.familyName}
             </div>
             {/* Author Name/Positions/OrgUnits */}
             <div className="is-paddingless is-marginless is-narrow">
                 {
                     values.positions && values.positions.length > 0 && values.positions.map((item, index) => (
-                        <div key={index} className="authorPositionOrg color-reverse">
+                        <div key={index} className="authorPositionOrg">
                             <strong>{item}</strong>
                             {
                                 values.orgUnits && values.orgUnits.length > 0 && values.orgUnits[index] &&

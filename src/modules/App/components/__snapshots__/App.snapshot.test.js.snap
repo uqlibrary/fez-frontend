@@ -45,6 +45,7 @@ exports[`App tests for user account and author status User is logged in but are 
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      isMobile={false}
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -74,11 +75,6 @@ exports[`App tests for user account and author status User is logged in but are 
             "linkTo": "/admin/masquerade",
             "primaryText": "Masquerade",
             "secondaryText": "as another user",
-          },
-          Object {
-            "linkTo": "/admin/permissions",
-            "primaryText": "Permissions",
-            "secondaryText": "manage permissions",
           },
           Object {
             "divider": true,
@@ -169,6 +165,17 @@ exports[`App tests for user account and author status User is logged in but are 
               "admin",
             ]
           }
+          component={[Function]}
+          exact={true}
+          path="/records/:pid/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
           exact={true}
           path="/records/add/find"
           render={[Function]}
@@ -204,16 +211,6 @@ exports[`App tests for user account and author status User is logged in but are 
           component={[Function]}
           exact={true}
           path="/admin/masquerade"
-        />
-        <Route
-          access={
-            Array [
-              "admin",
-            ]
-          }
-          exact={true}
-          path="/admin/permissions"
-          render={[Function]}
         />
         <Route
           render={[Function]}
@@ -270,6 +267,7 @@ exports[`App tests for user account and author status User is not logged in and 
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      isMobile={false}
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -295,7 +293,7 @@ exports[`App tests for user account and author status User is not logged in and 
       style={Object {}}
     >
       <div
-        className="layout-fill"
+        className="layout-fill dashAlert"
       >
         <div
           className="layout-card"
@@ -377,6 +375,7 @@ exports[`App tests for user account and author status User logged in and is an a
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      isMobile={false}
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -406,11 +405,6 @@ exports[`App tests for user account and author status User logged in and is an a
             "linkTo": "/admin/masquerade",
             "primaryText": "Masquerade",
             "secondaryText": "as another user",
-          },
-          Object {
-            "linkTo": "/admin/permissions",
-            "primaryText": "Permissions",
-            "secondaryText": "manage permissions",
           },
           Object {
             "divider": true,
@@ -501,6 +495,17 @@ exports[`App tests for user account and author status User logged in and is an a
               "admin",
             ]
           }
+          component={[Function]}
+          exact={true}
+          path="/records/:pid/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
           exact={true}
           path="/records/add/find"
           render={[Function]}
@@ -536,16 +541,6 @@ exports[`App tests for user account and author status User logged in and is an a
           component={[Function]}
           exact={true}
           path="/admin/masquerade"
-        />
-        <Route
-          access={
-            Array [
-              "admin",
-            ]
-          }
-          exact={true}
-          path="/admin/permissions"
-          render={[Function]}
         />
         <Route
           render={[Function]}
@@ -602,6 +597,7 @@ exports[`App tests for user account and author status User logged in but is not 
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      isMobile={false}
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -633,11 +629,6 @@ exports[`App tests for user account and author status User logged in but is not 
             "secondaryText": "as another user",
           },
           Object {
-            "linkTo": "/admin/permissions",
-            "primaryText": "Permissions",
-            "secondaryText": "manage permissions",
-          },
-          Object {
             "divider": true,
             "path": "/234234234242",
           },
@@ -662,7 +653,7 @@ exports[`App tests for user account and author status User logged in but is not 
       style={Object {}}
     >
       <div
-        className="layout-fill"
+        className="layout-fill dashAlert"
       >
         <div
           className="layout-card"
@@ -740,6 +731,17 @@ exports[`App tests for user account and author status User logged in but is not 
               "admin",
             ]
           }
+          component={[Function]}
+          exact={true}
+          path="/records/:pid/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
           exact={true}
           path="/records/add/find"
           render={[Function]}
@@ -775,16 +777,6 @@ exports[`App tests for user account and author status User logged in but is not 
           component={[Function]}
           exact={true}
           path="/admin/masquerade"
-        />
-        <Route
-          access={
-            Array [
-              "admin",
-            ]
-          }
-          exact={true}
-          path="/admin/permissions"
-          render={[Function]}
         />
         <Route
           render={[Function]}

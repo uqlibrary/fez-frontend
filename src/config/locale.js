@@ -22,7 +22,7 @@ export default {
                 id: 'espace',
                 title: 'eSpace',
                 priority: 0,
-                externalUrl: 'https://espace.library.uq.edu.au/view/[id]',
+                externalUrl: 'https://fez-staging.library.uq.edu.au/view/[id]',
                 idKey: 'rek_pid'
             },
             wos: {
@@ -85,6 +85,10 @@ export default {
         browse: {
             primaryText: 'Browse',
             secondaryText: 'UQ\'s digital repository'
+        },
+        masquerade: {
+            primaryText: 'Masquerade',
+            secondaryText: 'as another user'
         },
         search: {
             primaryText: 'Search'
@@ -404,7 +408,7 @@ export default {
                 confirmationTitle: 'Your record has been submitted',
                 confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
                 cancelButtonLabel: 'Add another missing record',
-                confirmButtonLabel: 'OK'
+                confirmButtonLabel: 'Go to my research'
             }
         },
         claimPublications: {
@@ -452,6 +456,107 @@ export default {
                     buttonLabel: 'Ok'
                 },
                 excludeFacetsList: ['Scopus document type', 'Subtype']
+            }
+        },
+        fixRecord: {
+            loadingMessage: 'Loading record...',
+            title: 'Request a change/deposit a file',
+            subTitle: 'Record to be amended',
+            fieldLabels: {
+                action: 'Select an action'
+            },
+            actionsOptions: [
+                {
+                    action: 'fix',
+                    title: 'I am the author of this record - I would like to make a correction, or upload files'
+                },
+                {
+                    action: 'unclaim',
+                    title: 'I am not the author of this record - I would like this record removed from my profile'
+                }
+            ],
+            cancel: 'Cancel',
+            submit: 'Submit',
+            unclaim: {
+                title: 'Remove this record from my profile',
+                description: (<div>
+                    Some explanation about what this means etc, lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at neque eros. In et ligula quam.
+                    Etiam porttitor gravida tortor, eget ultrices duidolor sit amet, consectetur adipiscing elit. Morbi at neque eros. In et ligula quam. Etiam porttitor gravida tortor,
+                    eget ultrices dui onsectetur adipiscing elit. Morbi at neque eros. In et ligula quam. Etiam porttitor gravida tortor, eget ultrices dui scelerisque a.
+                </div>),
+                help: {
+                    title: 'Unclaim a record',
+                    text: 'Enter the text that will help people here',
+                    buttonLabel: 'OK'
+                },
+                successWorkflowConfirmation: {
+                    confirmationTitle: 'Unclaim a record',
+                    confirmationMessage: 'You have unclaimed record successfully',
+                    cancelButtonLabel: 'Go to my dashboard',
+                    confirmButtonLabel: 'Go to my research'
+                },
+                alert: {
+                    type: 'warning',
+                    title: 'WARNING',
+                    message: 'You are about to remove this publication from your eSpace profile.'
+                }
+            },
+            fix: {
+                comments: {
+                    title: 'Suggest a correction',
+                    help: {
+                        title: 'Request a change',
+                        text: '...',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        comments: 'Describe the problem with this record, eg record is a duplicate, or suggested changes',
+                        url: 'Link (URL)'
+                    }
+                },
+                fileUpload: {
+                    title: 'Upload files',
+                    description: (<div>
+                        Upload an Open Access file, HERDC evidence or an NTRO Research Statement
+                    </div>),
+                    help: {
+                        title: 'Upload files',
+                        text: '...',
+                        buttonLabel: 'OK'
+                    }
+                },
+                cancelWorkflowConfirmation: {
+                    confirmationTitle: 'Cancel request',
+                    confirmationMessage: 'Are you sure you want to cancel this request?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes'
+                },
+                successWorkflowConfirmation: {
+                    confirmationTitle: 'Your request has been submitted',
+                    confirmationMessage: 'Your request will be referred to a UQ eSpace staff member for review/action.',
+                    cancelButtonLabel: 'Go to my dashboard',
+                    confirmButtonLabel: 'Go to my research'
+                },
+                validationAlert: {
+                    type: 'warning',
+                    title: 'Validation',
+                    message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
+                },
+                errorAlert: {
+                    type: 'error_outline',
+                    title: 'Error',
+                    message: 'Error has occurred during request and request cannot be processed. Please, review the form and try again.'
+                },
+                progressAlert: {
+                    type: 'info_outline',
+                    title: 'Saving',
+                    message: 'Request is being processed.'
+                },
+                successAlert: {
+                    type: 'done',
+                    title: 'Success',
+                    message: 'Fix record request has been submitted successfully.'
+                }
             }
         },
         masquerade: {
@@ -1046,7 +1151,8 @@ export default {
                 confirmationTitle: 'Claim has been submitted',
                 confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.',
                 cancelButtonLabel: 'Claim more publications',
-                confirmButtonLabel: 'OK'
+                addRecordButtonLabel: 'Add another missing record',
+                confirmButtonLabel: 'Go to my research'
             },
             validationAlert: {
                 type: 'warning',

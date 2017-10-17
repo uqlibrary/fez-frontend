@@ -6,17 +6,18 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions';
 
-export class OrgUnitForm extends Component {
+export class VocabAutoSuggestField extends Component {
     static propTypes = {
         onChange: PropTypes.func,
         orgUnitsList: PropTypes.array,
-        orgUnitAsPublished: PropTypes.any,
+        orgUnitsListLoading: PropTypes.bool,
+        selectedValue: PropTypes.any,
         vocabId: PropTypes.number,
         dataSourceConfig: PropTypes.object,
-        actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        className: PropTypes.string
+        className: PropTypes.string,
+        actions: PropTypes.object.isRequired,
     };
 
     static defaultProps = {
@@ -24,8 +25,8 @@ export class OrgUnitForm extends Component {
             text: 'controlled_vocab.cvo_title'
         },
         locale: {
-            orgUnitAsPublishedLabel: 'School, department or centre as published',
-            orgUnitAsPublishedHint: 'Please type organisation unit'
+            fieldLabel: 'Enter text',
+            fieldHint: 'Please type text'
         }
     };
 
@@ -33,38 +34,34 @@ export class OrgUnitForm extends Component {
         super(props);
 
         this.state = {
-            orgUnitAsPublished: null
+            selectedValue: null
         };
     }
 
     componentDidMount() {
         this.props.actions.loadOrgUnits(this.props.vocabId);
 
-        if (this.props.orgUnitAsPublished !== null) {
-            this.updateOrgUnitValue(this.props.orgUnitAsPublished);
+        if (this.props.selectedValue !== null) {
+            this.updateSelectedValue(this.props.selectedValue);
         }
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange && nextState.orgUnitAsPublished !== this.state.orgUnitAsPublished) this.props.onChange(nextState.orgUnitAsPublished);
+        if (this.props.onChange && nextState.selectedValue !== this.state.selectedValue) this.props.onChange(nextState.selectedValue);
     }
 
-    updateOrgUnitValue = (value) => {
+    updateSelectedValue = (value) => {
         this.setState({
-            orgUnitAsPublished: value
+            selectedValue: value
         });
     };
 
-    _onOrgUnitUpdated = (searchText) => {
-        this.updateOrgUnitValue(searchText);
+    textUpdated = (searchText) => {
+        this.updateSelectedValue(searchText);
     };
 
-    _onOrgUnitSelected = (chosenRequest, index) => {
-        if (index === -1) {
-            this.updateOrgUnitValue(chosenRequest);
-        } else {
-            this.updateOrgUnitValue(chosenRequest);
-        }
+    valueSelected = (value) => {
+        this.updateSelectedValue(value);
     };
 
     getValue = (item, path) => {
@@ -74,20 +71,20 @@ export class OrgUnitForm extends Component {
     render() {
         const {disabled, locale, className, orgUnitsList, dataSourceConfig} = this.props;
 
-        const orgUnitsDataSource = orgUnitsList.map((item) => this.getValue(item, dataSourceConfig.text));
+        const vocabDataSource = orgUnitsList.map((item) => this.getValue(item, dataSourceConfig.text));
 
         return (
             <AutoComplete
                 disabled={disabled}
                 listStyle={{maxHeight: 200, overflow: 'auto'}}
                 filter={AutoComplete.fuzzyFilter}
-                id="orgUnitAsPublishedField"
-                floatingLabelText={locale.orgUnitAsPublishedLabel}
-                hintText={locale.orgUnitAsPublishedHint}
-                dataSource={orgUnitsDataSource}
+                id="textField"
+                floatingLabelText={locale.fieldLabel}
+                hintText={locale.fieldHint}
+                dataSource={vocabDataSource}
                 fullWidth
-                onUpdateInput={this._onOrgUnitUpdated}
-                onNewRequest={this._onOrgUnitSelected}
+                onUpdateInput={this.textUpdated}
+                onNewRequest={this.valueSelected}
                 className={className}
             />
         );
@@ -96,7 +93,7 @@ export class OrgUnitForm extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        orgUnitsList: state.get('orgUnitsReducer') ? state.get('orgUnitsReducer').orgUnitsList : []
+        ...state.get('orgUnitsReducer')
     };
 };
 
@@ -106,4 +103,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(OrgUnitForm);
+export default connect(mapStateToProps, mapDispatchToProps)(VocabAutoSuggestField);
