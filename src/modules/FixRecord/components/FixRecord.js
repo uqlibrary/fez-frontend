@@ -108,8 +108,8 @@ export default class FixRecord extends Component {
             recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
         if (!this.props.authorLoading && !isAuthorLinked) {
-            // if either author or recordToFix data is missing, abandon form
-            // this.props.history.go(-1);
+            // if either author or publication data is missing, abandon form
+            this.props.history.go(-1);
             return <div/>;
         }
 

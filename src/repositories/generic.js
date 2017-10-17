@@ -25,8 +25,10 @@ function processError(error, resolve, reject) {
  */
 export function post(apiUrl, data) {
     console.log('POST: ' + apiUrl);
+    console.log(data);
     return new Promise((resolve, reject) => {
         api.post(encodeURI(apiUrl), data).then(response => {
+            console.log(response.data);
             resolve(response.data);
         }).catch(error => {
             reject(error);
@@ -42,8 +44,10 @@ export function post(apiUrl, data) {
  */
 export function patch(apiUrl, data) {
     console.log('PATCH: ' + apiUrl);
+    console.log(data);
     return new Promise((resolve, reject) => {
         api.patch(encodeURI(apiUrl), data).then(response => {
+            console.log(response.data);
             resolve(response.data);
         }).catch(error => {
             reject(error);
@@ -60,6 +64,7 @@ export function get(apiUrl) {
     console.log('GET: ' + apiUrl);
     return new Promise((resolve, reject) => {
         api.get(encodeURI(apiUrl)).then(response => {
+            console.log(response.data);
             resolve(response.data);
         }).catch(error => {
             processError(error, resolve, reject);

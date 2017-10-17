@@ -5,7 +5,7 @@ const moment = require('moment');
 const pipe = (...functionsList) => values => functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
 const getIssueValues = (data) => ({
-    title: data.publication.title,
+    title: data.publication.rek_title,
     pid: data.publication.rek_pid,
     userName: data.author.aut_display_name,
     userId: data.author.aut_org_username,

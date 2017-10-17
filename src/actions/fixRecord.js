@@ -1,8 +1,8 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
-import {get, patch} from 'repositories/generic';
+import {get, patch, post} from 'repositories/generic';
 import * as routes from 'repositories/routes';
-// import * as repositories from 'repositories';
+import * as repositories from 'repositories';
 
 /**
  * Load publication
@@ -56,13 +56,77 @@ export function clearFixRecord() {
     };
 }
 
-// TODO: fix record implementation
+/**
+ * Fix record request: patch record, send issue to espace admins:
+ *      update record with uploaded files, url
+ *      send issue message to notify espace team
+ *      upload files,
+ * If error occurs on any stage failed action is displayed
+ * @param {object} data to be posted, refer to backend API data: {publication, author, files}
+ * @returns {action}
+ */
 export function fixRecord(data) {
-    console.log('fixing record...');
-    console.log(data);
+    if (!data.publication || !data.author) {
+        return dispatch => {
+            dispatch({
+                type: actions.FIX_RECORD_FAILED,
+                payload: 'Incomplete data for requests'
+            });
+
+            return Promise.reject({message: 'Incomplete data for requests'});
+        };
+    }
+
+    const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
+        data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
+
+    if (!isAuthorLinked) {
+        return dispatch => {
+            dispatch({
+                type: actions.FIX_RECORD_FAILED,
+                payload: 'Current author is not linked to this record'
+            });
+            return Promise.reject({message: 'Current author is not linked to this record'});
+        };
+    }
+
     return dispatch => {
         dispatch({type: actions.FIX_RECORD_PROCESSING});
-        return Promise.resolve('DONE!');
+
+        const requests = [];
+        // if user added files - upload files
+        if (data.files && data.files.queue && data.files.queue.length > 0) {
+            requests.push(repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch));
+        }
+        // if user updated links/added files - update record
+        if (data.files && data.files.queue && data.files.queue.length > 0 || data.rek_link) {
+            const patchRecordRequest = {
+                rek_pid: data.publication.rek_pid,
+                ...transformers.getRecordLinkSearchKey(data),
+                ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
+            };
+            requests.push(patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest));
+        }
+
+        // set issue notification
+        const createIssueRequest = transformers.getFixIssueRequest(data);
+        requests.push(post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest));
+
+        return Promise.all(requests)
+            .then((responses) => {
+                dispatch({
+                    type: actions.FIX_RECORD_SUCCESS,
+                    payload: {pid: data.publication.rek_pid}
+                });
+                return Promise.resolve(responses);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.FIX_RECORD_FAILED,
+                    payload: error
+                });
+                return Promise.reject(error);
+            });
     };
 }
 

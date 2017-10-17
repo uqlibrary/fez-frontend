@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
+import {reduxForm, getFormValues, stopSubmit, SubmissionError} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import FixRecord from '../components/FixRecord';
 import {withRouter} from 'react-router-dom';
@@ -14,15 +14,17 @@ const onSubmit = (values, dispatch, props) => {
         publication: {...props.recordToFix},
         author: {...props.author}
     };
-    return dispatch(data.fixAction === 'unclaim' ? actions.unclaimRecord(data) : actions.fixRecord(data))
+    return dispatch(data.fixAction === 'unclaim'
+        ? actions.unclaimRecord(data)
+        : actions.fixRecord(data))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
             // reset form after success action was dispatched:
             // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-            setTimeout(()=>{
-                dispatch(reset(FORM_NAME));
-            }, 100);
+            // setTimeout(()=>{
+            //     dispatch(reset(FORM_NAME));
+            // }, 100);
         }).catch(error => {
             console.log(error);
             throw new SubmissionError({_error: error.message});
