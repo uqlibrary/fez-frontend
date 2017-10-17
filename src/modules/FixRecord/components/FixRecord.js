@@ -110,7 +110,7 @@ export default class FixRecord extends Component {
 
         if (!this.props.authorLoading && !isAuthorLinked) {
             // if either author or publication data is missing, abandon form
-            // this.props.history.go(-1);
+            this.props.history.go(-1);
             return <div/>;
         }
 
