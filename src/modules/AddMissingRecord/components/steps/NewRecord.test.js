@@ -37,16 +37,16 @@ describe('Add new record', () => {
         expect(navigateToRecordSearch).toBeCalled();
     });
 
-    it('should navigate to dashboard', () => {
-        const navigateToDashboard = jest.fn();
+    it('should navigate to my research', () => {
+        const navigateToMyResearch = jest.fn();
         const history = {
-            push: navigateToDashboard
+            push: navigateToMyResearch
         };
 
         const wrapper = setup({history: history});
-        wrapper.instance()._navigateToDashboard();
+        wrapper.instance()._navigateToMyResearch();
 
-        expect(navigateToDashboard).toBeCalled();
+        expect(navigateToMyResearch).toBeCalled();
     });
 
     it('should restart workflow', () => {

@@ -29,9 +29,9 @@ export default class NewRecord extends React.Component {
         this.props.history.push(routes.pathConfig.records.add.find);
     };
 
-    _navigateToDashboard = () => {
-        this.props.history.push(routes.pathConfig.dashboard);
-    };
+    _navigateToMyResearch = () => {
+        this.props.history.push(routes.pathConfig.records.mine);
+    }
 
     render() {
         const txt = locale.pages.addRecord;
@@ -46,7 +46,7 @@ export default class NewRecord extends React.Component {
             <div>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this._navigateToDashboard}
+                    onAction={this._navigateToMyResearch}
                     onCancelAction={this._restartWorkflow}
                     locale={txt.successWorkflowConfirmation}
                 />
