@@ -15,3 +15,4 @@ export * as general from './general';
 export {publicationTypes} from './general';
 export {default as locale} from './locale';
 export * as routes from './routes';
+export {searchKeys} from './general';

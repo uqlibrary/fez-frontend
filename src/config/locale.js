@@ -1,5 +1,6 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
+import {searchKeys} from './general';
 
 export default {
     global: {
@@ -1082,6 +1083,17 @@ export default {
             successAlert: {
                 title: 'Success',
                 message: 'New publication has been saved successfully.'
+            },
+            searchKey: {
+                [searchKeys.series]: {
+                    title: 'Series',
+                    help: 'Some help about series',
+                    description: 'You can either select from suggestions or add your own value',
+                    field: {
+                        searchKeyAsPublishedLabel: 'Book series',
+                        searchKeyAsPublishedHint: 'Please enter book series'
+                    }
+                }
             }
         },
         claimPublicationForm: {
