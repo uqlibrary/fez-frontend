@@ -22,7 +22,7 @@ export default {
                 id: 'espace',
                 title: 'eSpace',
                 priority: 0,
-                externalUrl: 'https://espace.library.uq.edu.au/view/[id]',
+                externalUrl: 'https://fez-staging.library.uq.edu.au/view/[id]',
                 idKey: 'rek_pid'
             },
             wos: {
