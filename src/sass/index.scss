@@ -1,15 +1,13 @@
-// Frontend specific variables override toolbox defaults if defined
-@import "./variables";
-
 // Import the main toolbox styles
 @import '~uqlibrary-react-toolbox/sass/index';
+// Frontend specific variables override toolbox defaults if defined
+@import "./variables";
 // Import the fez-frontend modules styles
 @import './components';
 // Various fixes and hacks to make MUI work
 @import './muifixes';
 // Typography
 @import './typography';
-
 // Data list styles for Contributor editor and FileUploader
 @import './datalist';
 // Charts styles from toolbox
