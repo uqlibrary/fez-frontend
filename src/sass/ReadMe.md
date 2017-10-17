@@ -3,7 +3,7 @@ SASS Styling for fez-frontend
 
 __Table of Contents__
 * Material Design
-* Card Layoutgit
+* Card Layout
 * Content Grid
     * The Grid
     * Sizes

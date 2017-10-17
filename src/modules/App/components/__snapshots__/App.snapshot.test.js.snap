@@ -45,6 +45,7 @@ exports[`App tests for user account and author status User is logged in but are 
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      isMobile={false}
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -266,6 +267,7 @@ exports[`App tests for user account and author status User is not logged in and 
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      isMobile={false}
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -291,7 +293,7 @@ exports[`App tests for user account and author status User is not logged in and 
       style={Object {}}
     >
       <div
-        className="layout-fill"
+        className="layout-fill dashAlert"
       >
         <div
           className="layout-card"
@@ -373,6 +375,7 @@ exports[`App tests for user account and author status User logged in and is an a
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      isMobile={false}
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -594,6 +597,7 @@ exports[`App tests for user account and author status User logged in but is not 
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      isMobile={false}
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -649,7 +653,7 @@ exports[`App tests for user account and author status User logged in but is not 
       style={Object {}}
     >
       <div
-        className="layout-fill"
+        className="layout-fill dashAlert"
       >
         <div
           className="layout-card"

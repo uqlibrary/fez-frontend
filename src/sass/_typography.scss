@@ -1,0 +1,60 @@
+@import './variables';
+
+.AppBar h1 {
+  font-weight: $text-weight-normal !important;
+}
+.pageTitle {
+  font-family: $font-family;
+  font-weight: $text-weight-normal;
+  max-width: 1200px;
+  width: 90%;
+  margin: 24px auto;
+  padding: 0;
+  white-space: normal;
+  color: $theme-color;
+
+  @include desktop {
+    font-size: $title-large;
+  }
+  @include tablet-only {
+    font-size: $title-medium;
+  }
+  @include mobile {
+    font-size: $title-small;
+  }
+}
+.cardTitle {
+  font-family: $font-family;
+  font-weight: $text-weight-normal;
+  white-space: normal;
+  color: $text-color;
+  margin: 0;
+
+  @include desktop {
+    font-size: $title-medium;
+  }
+  @include tablet-only {
+    font-size: $title-small;
+  }
+  @include mobile {
+    font-size: $title-xsmall;
+  }
+}
+
+.body-1 { font-size: $text-body-normal; font-weight: $text-weight-normal; line-height: $text-line-height-normal;}
+.body-2 { font-size: $text-body-normal; font-weight: $text-weight-bold; line-height: $text-line-height-normal;}
+.caption { font-size: $text-body-xsmall; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  font-weight: $text-weight-normal;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
