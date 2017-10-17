@@ -8,3 +8,4 @@ export fixRecordReducer from './fixRecord';
 export publicationsReducer from './publications';
 export publicationSubtypesReducer from './publicationSubtypes';
 export searchRecordsReducer from './searchRecords';
+export searchKeysReducer from './searchKeys';
