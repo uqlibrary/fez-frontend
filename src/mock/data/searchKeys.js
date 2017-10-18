@@ -1,7 +1,5 @@
-import {searchKeys} from 'config/general';
-
 export const searchKeyList = {
-    [searchKeys.series]: [
+    series: [
         'Fryer Library University of Queensland Photograph Collection, UQFL466',
         ' Advances in Intelligent and Soft Computing',
         ' Routledge Studies in Language and Intercultural Communication',
