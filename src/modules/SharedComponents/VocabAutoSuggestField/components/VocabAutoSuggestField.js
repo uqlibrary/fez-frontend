@@ -46,6 +46,12 @@ export class VocabAutoSuggestField extends Component {
         if (this.props.selectedValue !== null) {
             this.updateSelectedValue(this.props.selectedValue);
         }
+
+        // TODO: fix this hack!
+        // I need to catch scrolling event of scrolled container (which is not a window) to set position of autosuggest list when user scrolls
+        // another solution, close the box when user tries to scroll
+        const div = document.querySelector('div.layout-fill.align-stretch');
+        if (div) div.addEventListener('scroll', this.handleParentContainerScroll());
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -53,6 +59,15 @@ export class VocabAutoSuggestField extends Component {
             this.props.onChange(nextState.selectedValue);
         }
     }
+
+    componentWillUnmount() {
+        const div = document.querySelector('div.layout-fill.align-stretch');
+        if (div) div.removeEventListener('scroll', this.handleParentContainerScroll());
+    }
+
+    handleParentContainerScroll = () => {
+        if (this.refs.textField) this.refs.textField.close();
+    };
 
     updateSelectedValue = (value) => {
         this.setState({
@@ -81,6 +96,7 @@ export class VocabAutoSuggestField extends Component {
                 disabled={disabled}
                 listStyle={{maxHeight: 200, overflow: 'auto'}}
                 filter={AutoComplete.fuzzyFilter}
+                ref="textField"
                 id="textField"
                 floatingLabelText={this.props.locale.fieldLabel}
                 hintText={this.props.locale.fieldHint}
