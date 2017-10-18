@@ -1,25 +1,25 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    orgUnitsListLoading: false,
-    orgUnitsListLoadingError: false,
-    orgUnitsList: []
+    itemsListLoading: false,
+    itemsListLoadingError: false,
+    itemsList: []
 };
 
 const handlers = {
     [actions.ORG_UNITS_LOAD_FAILED]: () => ({
         ...initialState,
-        orgUnitsListLoadingError: true
+        itemsListLoadingError: true
     }),
 
     [actions.ORG_UNITS_LOADED]: (state, action) => ({
         ...initialState,
-        orgUnitsList: action.payload
+        itemsList: action.payload
     }),
 
     [actions.ORG_UNITS_LOADING]: () => ({
         ...initialState,
-        orgUnitsListLoading: true
+        itemsListLoading: true
     })
 };
 

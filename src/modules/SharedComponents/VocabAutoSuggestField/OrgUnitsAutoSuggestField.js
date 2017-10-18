@@ -7,10 +7,10 @@ export default function OrgUnitsAutoSuggestField(fieldProps) {
         <VocabAutoSuggestField
             vocabId={OrgUnitsVocabId}
             onChange={fieldProps.input.onChange}
-            locale ={
-                fieldLabel: 'School, department or centre as published',
+            locale ={{
+                fieldLabel: 'School, department or centre',
                 fieldHint: 'Start typing organisation unit name'
-            }
+            }}
             {...fieldProps} />
     );
 }

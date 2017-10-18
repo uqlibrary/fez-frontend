@@ -1,2 +1,2 @@
-export {default as OrgUnitsSelectorField} from './OrgUnitsSelectorField';
+export {default as OrgUnitsAutoSuggestField} from './OrgUnitsAutoSuggestField';
 
