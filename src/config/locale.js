@@ -708,7 +708,7 @@ export default {
                         publicationPlace: 'Place of publication',
                         publisher: 'Publisher',
                         date: {
-                            title: 'Publication date',
+                            title: 'Date published',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'
@@ -843,7 +843,7 @@ export default {
                         publicationPlace: 'Place of publication',
                         publisher: 'Publisher',
                         date: {
-                            title: 'Publication date',
+                            title: 'Date published',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'

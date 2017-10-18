@@ -125,7 +125,7 @@ button[type=button] {
 
 // A solution for a floating title look-alike for a combination of inputs (ie. partial dates)
 .dateTitle{
-  margin: 26px 0 -8px 0;
+  margin: 28px 0 -6px 0;
   font-size: $text-body-small;
   color: #888888; // $secondary-color;
   &.required::after {
