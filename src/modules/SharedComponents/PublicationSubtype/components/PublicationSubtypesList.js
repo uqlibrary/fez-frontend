@@ -45,7 +45,9 @@ export class PublicationSubtypesList extends Component {
     }
 
     componentDidMount() {
-        this.props.actions.loadPublicationSubtypesList(this.props.vocabId);
+        if (this.props.subtypesList.length === 0) {
+            this.props.actions.loadPublicationSubtypesList(this.props.vocabId);
+        }
 
         if (this.props.selectedValue !== null) {
             this._updateSelectedValue(this.props.selectedValue);
@@ -96,10 +98,11 @@ export class PublicationSubtypesList extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+    const controlledVocab = state.get('controlledVocabulariesReducer')[ownProps.vocabId];
     return {
-        subtypesList: state.get('publicationSubtypesReducer').subtypesList || [],
-        subtypesLoading: state.get('publicationSubtypesReducer').subtypesLoading || false
+        subtypesList: controlledVocab && controlledVocab.controlledVocabList ? controlledVocab.controlledVocabList : [],
+        subtypesLoading: controlledVocab ? controlledVocab.controlledVocabLoading : false
     };
 };
 

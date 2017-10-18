@@ -33,19 +33,19 @@ export function loadPublicationTypesList() {
 export function loadPublicationSubtypesList(id) {
     return dispatch => {
         dispatch({
-            type: actions.PUBLICATION_SUBTYPES_LOADING
+            type: `${actions.VOCABULARIES_LOADING}@${id}`
         });
         get(routes.VOCABULARIES_API({id: id}))
             .then(result => {
                 dispatch({
-                    type: actions.PUBLICATION_SUBTYPES_LOADED,
+                    type: `${actions.VOCABULARIES_LOADED}@${id}`,
                     payload: result.data
                 });
             })
             .catch((error) => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
-                    type: actions.PUBLICATION_SUBTYPES_LOAD_FAILED,
+                    type: `${actions.VOCABULARIES_LOAD_FAILED}@${id}`,
                     payload: error
                 });
             });

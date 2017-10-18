@@ -9,3 +9,4 @@ export publicationsReducer from './publications';
 export publicationSubtypesReducer from './publicationSubtypes';
 export searchRecordsReducer from './searchRecords';
 export searchKeysReducer from './searchKeys';
+export controlledVocabulariesReducer from './controlledVocabularies';
