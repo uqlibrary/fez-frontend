@@ -29,7 +29,6 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
   >
     <a
       aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
-      className="citationCountLink"
       href="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
       target="_blank"
       title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
@@ -43,7 +42,6 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
     className="citationCount column"
   >
     <a
-      className="citationCountLink"
       href="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
       target="_blank"
     >
@@ -133,7 +131,6 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
   >
     <a
       aria-label="Link to undefined (Google scholar) will open in a new window."
-      className="citationCountLink"
       href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
       target="_blank"
       title="Link to undefined (Google scholar) will open in a new window."
@@ -156,7 +153,6 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     className="citationCount column"
   >
     <a
-      className="citationCountLink"
       href="https://app.library.uq.edu.au/#/authors/view/pid:111"
       target="_blank"
     >
@@ -252,7 +248,6 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
   >
     <a
       aria-label="Link to undefined (Google scholar) will open in a new window."
-      className="citationCountLink"
       href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
       target="_blank"
       title="Link to undefined (Google scholar) will open in a new window."
@@ -267,7 +262,6 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
     className="citationCount column"
   >
     <a
-      className="citationCountLink"
       href="https://app.library.uq.edu.au/#/authors/view/pid:111"
       target="_blank"
     >

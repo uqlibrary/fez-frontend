@@ -131,12 +131,12 @@ export function clearClaimPublication() {
 /**
  * Save a publication claim record involves up to three steps:
  * If user claims a publications from eSpace:
- *      create a claim record,
+ *      create a claim issue,
  *      upload files,
  *      update record with uploaded files and author details
  * If user claims an publication from external sources:
  *      create a publication record (same as AddRecord process),
- *      create a claim record
+ *      create a claim issue
  *      (files/authors will be updated by create new publication record process)
  *
  * If error occurs on any stage failed action is displayed
@@ -176,6 +176,45 @@ export function claimPublication(data) {
             recordAuthorsIdSearchKeys = transformers.getRecordAuthorsIdSearchKey(data.authorLinking.authors);
         }
 
+        // claim existing record request
+        if(data.publication.rek_pid) {
+            const requests = [];
+
+            // update record with author id/link/files
+            const patchRecordRequest = {
+                rek_pid: data.publication.rek_pid,
+                ...transformers.getRecordLinkSearchKey(data),
+                ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+                ...recordAuthorsIdSearchKeys
+            };
+            requests.push(patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest));
+
+            // if user added files - upload files
+            if (data.files && data.files.queue && data.files.queue.length > 0) {
+                requests.push(repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch));
+            }
+
+            // create issue notification
+            const createIssueRequest = transformers.getClaimIssueRequest(data);
+            requests.push(post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest));
+
+            return Promise.all(requests)
+                .then((responses) => {
+                    dispatch({
+                        type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
+                        payload: {pid: data.publication.rek_pid}
+                    });
+                    return Promise.resolve(responses);
+                })
+                .catch(error => {
+                    dispatch({
+                        type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
+                        payload: error
+                    });
+                    return Promise.reject(error);
+                });
+        }
+
         // claim record from external source
         const createRecordRequest = {
             ...data.publication,
@@ -185,35 +224,14 @@ export function claimPublication(data) {
             ...{fez_record_search_key_notes: {rek_notes: data.comments}},
             ...recordAuthorsIdSearchKeys
         };
-        // patch record from eSpace
-        const patchRecordRequest = {
-            rek_pid: data.publication.rek_pid,
-            ...transformers.getRecordLinkSearchKey(data),
-            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
-            ...recordAuthorsIdSearchKeys
-        };
-
-        return Promise.all([data.publication.rek_pid
-            ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
-            : post(routes.NEW_RECORD_API(), createRecordRequest)])
-            .then(responseAll => {
-                const response = responseAll[0];
-                // if it's a claim of an existing eSpace record, send an issue request
-                if (data.publication.rek_pid) {
-                    // notes!
-                    const createIssueRequest = transformers.getClaimIssueRequest(data);
-                    // TODO: will submin an issue with notes provided by user from the form
-                    return post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest);
-                }
-                data.publication.rek_pid = response.data.rek_pid;
-                return response;
-            })
+        return post(routes.NEW_RECORD_API(), createRecordRequest)
             .then(response => {
-                if (!data.files || !data.files.queue || data.files.queue.length === 0) {
-                    return response;
-                } else {
+                data.publication.rek_pid = response.data.rek_pid;
+                // upload files
+                if (data.files && data.files.queue && data.files.queue.length > 0) {
                     return repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch);
                 }
+                return response;
             })
             .then(response => {
                 dispatch({

@@ -70,8 +70,7 @@ export default class CitationCounts extends Component {
                 {
                     !!this.props.publication.rek_pid &&
                     <span className="citationCount">
-                        <a className="citationCountLink"
-                            href={txt.google.externalUrl + encodeURI(this.props.publication.rek_title)}
+                        <a href={txt.google.externalUrl + encodeURI(this.props.publication.rek_title)}
                             target="_blank"
                             aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + txt.google.title + ')')}
                             title={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + txt.google.title + ')')}
@@ -91,7 +90,7 @@ export default class CitationCounts extends Component {
                 {
                     !!this.props.publication.rek_pid && (counts.wos || counts.scopus) &&
                     <div className="citationCount column">
-                        <a className="citationCountLink" href={`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`} target="_blank">
+                        <a href={`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`} target="_blank">
                             <div className="columns is-mobile is-gapless">
                                 <div className="column is-narrow citationCountNumber">
                                     {txt.statsLabel}

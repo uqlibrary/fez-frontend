@@ -408,7 +408,7 @@ export default {
                 confirmationTitle: 'Your record has been submitted',
                 confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
                 cancelButtonLabel: 'Add another missing record',
-                confirmButtonLabel: 'OK'
+                confirmButtonLabel: 'Go to my research'
             }
         },
         claimPublications: {
@@ -493,7 +493,7 @@ export default {
                     confirmationTitle: 'Unclaim a record',
                     confirmationMessage: 'You have unclaimed record successfully',
                     cancelButtonLabel: 'Go to my dashboard',
-                    confirmButtonLabel: 'OK'
+                    confirmButtonLabel: 'Go to my research'
                 },
                 alert: {
                     type: 'warning',
@@ -535,7 +535,7 @@ export default {
                     confirmationTitle: 'Your request has been submitted',
                     confirmationMessage: 'Your request will be referred to a UQ eSpace staff member for review/action.',
                     cancelButtonLabel: 'Go to my dashboard',
-                    confirmButtonLabel: 'OK'
+                    confirmButtonLabel: 'Go to my research'
                 },
                 validationAlert: {
                     type: 'warning',
@@ -1147,7 +1147,8 @@ export default {
                 confirmationTitle: 'Claim has been submitted',
                 confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.',
                 cancelButtonLabel: 'Claim more publications',
-                confirmButtonLabel: 'OK'
+                addRecordButtonLabel: 'Add another missing record',
+                confirmButtonLabel: 'Go to my research'
             },
             validationAlert: {
                 type: 'warning',
