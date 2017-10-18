@@ -1,11 +1,11 @@
 import React from 'react';
 import {locale} from 'config';
-import SearchKeyAutoComplete from '../../SearchKeyAutoComplete/components/SearchKeyAutoComplete';
+import SearchKeyAutoSuggest from './components/SearchKeyAutoSuggest';
 
-export default function SeriesSearchKeyAutoCompleteField(fieldProps) {
+export default function SeriesAutoSuggestField(fieldProps) {
     const {series} = locale.components.publicationForm.searchKey;
     return(
-        <SearchKeyAutoComplete
+        <SearchKeyAutoSuggest
             {...fieldProps}
             searchKey={series.key}
             locale={series.field}

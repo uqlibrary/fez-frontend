@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions';
 
-export class SearchKeyAutoComplete extends Component {
+export class SearchKeyAutoSuggest extends Component {
     static propTypes = {
         onChange: PropTypes.func,
         searchKeySuggestions: PropTypes.array,
@@ -95,4 +95,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchKeyAutoComplete);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchKeyAutoSuggest);

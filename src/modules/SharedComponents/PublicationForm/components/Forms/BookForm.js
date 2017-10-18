@@ -4,7 +4,7 @@ import {Field} from 'redux-form/immutable';
 import {TextField, StandardCard, ListEditorField, PartialDateField} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {SeriesSearchKeyAutoCompleteField} from 'modules/SharedComponents/SearchKeyFields';
+import {SeriesAutoSuggestField} from 'modules/SharedComponents/SearchKeyAutoSuggest';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
@@ -113,7 +113,7 @@ export default class BookForm extends Component {
                     <div>{series.description}</div>
                     <Field
                         name="fez_record_search_key_series"
-                        component={SeriesSearchKeyAutoCompleteField}
+                        component={SeriesAutoSuggestField}
                         disabled={this.props.submitting}
                     />
                 </StandardCard>

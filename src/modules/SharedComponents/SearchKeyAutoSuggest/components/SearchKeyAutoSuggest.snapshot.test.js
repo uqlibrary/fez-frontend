@@ -1,10 +1,10 @@
-jest.dontMock('./SearchKeyAutoComplete');
+jest.dontMock('./SearchKeyAutoSuggest');
 
 import { mount } from 'enzyme';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import {SearchKeyAutoComplete} from './SearchKeyAutoComplete';
+import {SearchKeyAutoSuggest} from './SearchKeyAutoSuggest';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import {Provider} from 'react-redux';
@@ -36,7 +36,7 @@ function setup({searchKeySuggestions, onChange, actions, disabled, isShallow = t
     if (!isShallow) {
         return mount(
             <Provider store={create().store}>
-                <SearchKeyAutoComplete {...props} />
+                <SearchKeyAutoSuggest {...props} />
             </Provider>, {
                 context: {
                     muiTheme: getMuiTheme()
@@ -47,13 +47,13 @@ function setup({searchKeySuggestions, onChange, actions, disabled, isShallow = t
             });
     }
 
-    return shallow(<Provider store={create().store}><SearchKeyAutoComplete {...props} /></Provider>);
+    return shallow(<Provider store={create().store}><SearchKeyAutoSuggest {...props} /></Provider>);
 }
 
 beforeAll(() => {
     injectTapEventPlugin();
 });
-describe('SearchKeyAutoComplete tests ', () => {
+describe('SearchKeyAutoSuggest tests ', () => {
     it('renders textfield correctly with autocomplete', () => {
         const wrapper = setup({isShallow: false});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -61,19 +61,19 @@ describe('SearchKeyAutoComplete tests ', () => {
 
     it('loads search key suggestions on search text changed ', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({actions: {searchKeyLookUp: testFunction}}).find('SearchKeyAutoComplete').dive();
+        const wrapper = setup({actions: {searchKeyLookUp: testFunction}}).find('SearchKeyAutoSuggest').dive();
         wrapper.instance()._onSearchKeyChanged('australia', [], {source: 'change'});
         expect(testFunction).toBeCalled();
     });
 
     it('selects and sets search key value ', () => {
-        const wrapper = setup({}).find('SearchKeyAutoComplete').dive();
+        const wrapper = setup({}).find('SearchKeyAutoSuggest').dive();
         wrapper.instance()._onSearchKeySelected('Some input text for search key', 0);
         expect(wrapper.state().searchKeyAsPublished).toBe('Some input text for search key');
     });
 
     it('sets entered search key value ', () => {
-        const wrapper = setup({}).find('SearchKeyAutoComplete').dive();
+        const wrapper = setup({}).find('SearchKeyAutoSuggest').dive();
         wrapper.instance()._onSearchKeySelected('New input text entered', -1);
         expect(wrapper.state().searchKeyAsPublished).toBe('New input text entered');
     });
