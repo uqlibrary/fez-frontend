@@ -1,6 +1,5 @@
 import React from 'react';
-import orgUnitsReducer from './OrgUnits';
-import Immutable from 'immutable';
+import orgUnitsReducer from './orgUnits';
 import * as actions from 'actions/actionTypes';
 
 const initialState = {
