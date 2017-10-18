@@ -80,6 +80,7 @@ exports[`OrgUnitsAutoSuggestField component should render with custom vocab id s
             "fieldLabel": "School, department or centre",
           }
         }
+        maxResults={7}
         onChange={[Function]}
         vocabId={453703}
       >
@@ -114,6 +115,7 @@ exports[`OrgUnitsAutoSuggestField component should render with custom vocab id s
               "overflow": "auto",
             }
           }
+          maxSearchResults={7}
           menuCloseDelay={300}
           onNewRequest={[Function]}
           onUpdateInput={[Function]}

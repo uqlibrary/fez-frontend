@@ -20,6 +20,7 @@ exports[`VocabAutoSuggestField component should render 1`] = `
       "fieldLabel": "Enter text",
     }
   }
+  maxResults={7}
   onChange={[Function]}
 />
 `;
@@ -53,6 +54,7 @@ exports[`VocabAutoSuggestField component should render autosuggest field and cal
         "fieldLabel": "Enter text",
       }
     }
+    maxResults={7}
     onChange={[Function]}
   >
     <AutoComplete
@@ -63,7 +65,11 @@ exports[`VocabAutoSuggestField component should render autosuggest field and cal
         }
       }
       animated={true}
-      dataSource={Array []}
+      dataSource={
+        Array [
+          "loading...",
+        ]
+      }
       dataSourceConfig={
         Object {
           "text": "text",
@@ -83,6 +89,7 @@ exports[`VocabAutoSuggestField component should render autosuggest field and cal
           "overflow": "auto",
         }
       }
+      maxSearchResults={7}
       menuCloseDelay={300}
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
@@ -1609,6 +1616,7 @@ exports[`VocabAutoSuggestField component should render with className set 1`] = 
         "fieldLabel": "Enter text",
       }
     }
+    maxResults={7}
     onChange={[Function]}
   >
     <AutoComplete
@@ -1620,7 +1628,11 @@ exports[`VocabAutoSuggestField component should render with className set 1`] = 
       }
       animated={true}
       className="requiredField"
-      dataSource={Array []}
+      dataSource={
+        Array [
+          "loading...",
+        ]
+      }
       dataSourceConfig={
         Object {
           "text": "text",
@@ -1640,6 +1652,7 @@ exports[`VocabAutoSuggestField component should render with className set 1`] = 
           "overflow": "auto",
         }
       }
+      maxSearchResults={7}
       menuCloseDelay={300}
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
@@ -3167,6 +3180,7 @@ exports[`VocabAutoSuggestField component should render with disabled flag set to
         "fieldLabel": "Enter text",
       }
     }
+    maxResults={7}
     onChange={[Function]}
   >
     <AutoComplete
@@ -3177,7 +3191,11 @@ exports[`VocabAutoSuggestField component should render with disabled flag set to
         }
       }
       animated={true}
-      dataSource={Array []}
+      dataSource={
+        Array [
+          "loading...",
+        ]
+      }
       dataSourceConfig={
         Object {
           "text": "text",
@@ -3197,6 +3215,7 @@ exports[`VocabAutoSuggestField component should render with disabled flag set to
           "overflow": "auto",
         }
       }
+      maxSearchResults={7}
       menuCloseDelay={300}
       onNewRequest={[Function]}
       onUpdateInput={[Function]}

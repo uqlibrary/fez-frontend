@@ -18,10 +18,12 @@ export class VocabAutoSuggestField extends Component {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         className: PropTypes.string,
+        maxResults: PropTypes.number,
         actions: PropTypes.object.isRequired
     };
 
     static defaultProps = {
+        maxResults: 7,
         dataSourceConfig: {
             text: 'controlled_vocab.cvo_title'
         },
@@ -35,7 +37,8 @@ export class VocabAutoSuggestField extends Component {
         super(props);
 
         this.state = {
-            selectedValue: null
+            selectedValue: null,
+            transformedItemsList: [locale.global.loading]
         };
     }
 
@@ -52,6 +55,14 @@ export class VocabAutoSuggestField extends Component {
         // another solution, close the box when user tries to scroll
         const div = document.querySelector('div.layout-fill.align-stretch');
         if (div) div.addEventListener('scroll', this.handleParentContainerScroll());
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.itemsList && this.props.itemsList.length !== nextProps.itemsList.length) {
+            this.setState({
+                transformedItemsList: nextProps.itemsList.map((item) => this.getValue(item, this.props.dataSourceConfig.text))
+            });
+        }
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -88,23 +99,21 @@ export class VocabAutoSuggestField extends Component {
     };
 
     render() {
-        const {disabled, className, itemsList, dataSourceConfig} = this.props;
-        const vocabDataSource = this.props.itemsListLoading || !itemsList ? [locale.global.loading] : itemsList.map((item) => this.getValue(item, dataSourceConfig.text));
-
         return (
             <AutoComplete
-                disabled={disabled}
+                disabled={this.props.disabled}
                 listStyle={{maxHeight: 200, overflow: 'auto'}}
-                filter={AutoComplete.fuzzyFilter}
+                filter={AutoComplete.caseInsensitiveFilter}
                 ref="textField"
                 id="textField"
+                maxSearchResults={this.props.maxResults}
                 floatingLabelText={this.props.locale.fieldLabel}
                 hintText={this.props.locale.fieldHint}
-                dataSource={vocabDataSource}
+                dataSource={this.state.transformedItemsList}
                 fullWidth
                 onUpdateInput={this.textUpdated}
                 onNewRequest={this.valueSelected}
-                className={className}
+                className={this.props.className}
             />
         );
     }

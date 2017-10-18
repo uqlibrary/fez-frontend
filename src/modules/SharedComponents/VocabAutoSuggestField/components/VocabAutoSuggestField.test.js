@@ -99,6 +99,47 @@ describe('VocabAutoSuggestField component', () => {
         expect(wrapper.state().selectedValue).toEqual(testValue);
     });
 
+    it('should transform vocab list to auto suggest list', () => {
+        const wrapper = setup({}).find('VocabAutoSuggestField').dive();
+        const testList = [{
+            "cvr_id": 5072,
+            "cvr_parent_cvo_id": 453703,
+            "cvr_child_cvo_id": 453957,
+            "controlled_vocab": {
+                "cvo_id": 453957,
+                "cvo_title": "Office of Pro-Vice-Chancellor (Res Infrastructure)",
+                "cvo_desc": null,
+                "cvo_image_filename": null,
+                "cvo_external_id": null,
+                "cvo_hide": 0,
+                "cvo_order": null,
+                "cvo_lat": null,
+                "cvo_long": null,
+                "cvo_policy": null,
+                "controlled_vocab_children": []
+            }
+        }, {
+            "cvr_id": 5073,
+            "cvr_parent_cvo_id": 453703,
+            "cvr_child_cvo_id": 453958,
+            "controlled_vocab": {
+                "cvo_id": 453958,
+                "cvo_title": "School of ",
+                "cvo_desc": null,
+                "cvo_image_filename": null,
+                "cvo_external_id": null,
+                "cvo_hide": 0,
+                "cvo_order": null,
+                "cvo_lat": null,
+                "cvo_long": null,
+                "cvo_policy": null,
+                "controlled_vocab_children": []
+            }}];
+        const expectedList = ["Office of Pro-Vice-Chancellor (Res Infrastructure)", "School of "]
+        wrapper.instance().componentWillReceiveProps({itemsList: testList});
+        expect(wrapper.state().transformedItemsList).toEqual(expectedList);
+    });
+
     it('should evaluate getValue() as per data source config', () => {
         const testItem = {
             "cvr_id": 4706,
