@@ -282,6 +282,20 @@ exports[`BookForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
+    help="Some help about series"
+    title="Series"
+  >
+    <div>
+      You can either select from suggestions or add your own value
+    </div>
+    <Field
+      component={[Function]}
+      disabled={false}
+      name="fez_record_search_key_series"
+    />
+  </StandardCard>
+  <StandardCard
+    className=""
     title="ISBN"
   >
     <div>

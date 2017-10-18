@@ -40,9 +40,9 @@ describe('BookForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 11 input fields', () => {
+    it('component with 12 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(11);
+        expect(wrapper.find('Field').length).toEqual(12);
     });
 
     it('component with 6 required input fields', () => {
