@@ -55,25 +55,25 @@ beforeAll(() => {
 });
 describe('SearchKeyAutoComplete tests ', () => {
     it('renders textfield correctly with autocomplete', () => {
-        const wrapper = setup({isShallow: false, searchKey: 'series'});
+        const wrapper = setup({isShallow: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('loads search key suggestions on search text changed ', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({searchKey: 'series', actions: {searchKeyLookUp: testFunction}}).find('SearchKeyAutoComplete').dive();
+        const wrapper = setup({actions: {searchKeyLookUp: testFunction}}).find('SearchKeyAutoComplete').dive();
         wrapper.instance()._onSearchKeyChanged('australia', [], {source: 'change'});
         expect(testFunction).toBeCalled();
     });
 
     it('selects and sets search key value ', () => {
-        const wrapper = setup({searchKey: 'series'}).find('SearchKeyAutoComplete').dive();
+        const wrapper = setup({}).find('SearchKeyAutoComplete').dive();
         wrapper.instance()._onSearchKeySelected('Some input text for search key', 0);
         expect(wrapper.state().searchKeyAsPublished).toBe('Some input text for search key');
     });
 
     it('sets entered search key value ', () => {
-        const wrapper = setup({searchKey: 'series'}).find('SearchKeyAutoComplete').dive();
+        const wrapper = setup({}).find('SearchKeyAutoComplete').dive();
         wrapper.instance()._onSearchKeySelected('New input text entered', -1);
         expect(wrapper.state().searchKeyAsPublished).toBe('New input text entered');
     });
