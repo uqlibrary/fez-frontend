@@ -1,6 +1,5 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
-import {searchKeys} from './general';
 
 export default {
     global: {
