@@ -64,12 +64,8 @@ export class SearchKeyAutoSuggest extends Component {
         this.bounce = setTimeout(this.lookupSearchKey, this.props.debounceDelay, searchText, params);
     };
 
-    _onSearchKeySelected = (chosenRequest, index) => {
-        if (index === -1) {
-            this.updateSearchKeyValue(chosenRequest);
-        } else {
-            this.updateSearchKeyValue(chosenRequest);
-        }
+    _onSearchKeySelected = (chosenRequest) => {
+        this.updateSearchKeyValue(chosenRequest);
     };
 
     render() {
