@@ -357,7 +357,7 @@ describe('Transformers tests ', () => {
     it('getClaimIssueRequest returns issues request', () => {
         const input = {publication: {}, author: {}};
 
-        input.publication.title = 'Test title';
+        input.publication.rek_title = 'Test title';
         input.publication.rek_pid = 'UQ:1111';
         input.author.aut_display_name = 'J. Smith';
         input.author.aut_org_username = 'uqjsmith';

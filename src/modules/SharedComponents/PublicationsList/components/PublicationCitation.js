@@ -6,6 +6,7 @@ import {publicationTypes, locale} from 'config';
 import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 
 // citations for different publication types
+import {routes} from 'config';
 import CitationCounts from './citations/CitationCounts';
 import JournalArticleCitation from './citations/JournalArticleCitation';
 import BookChapterCitation from './citations/BookChapterCitation';
@@ -17,7 +18,9 @@ export default class PublicationCitation extends Component {
         publication: PropTypes.object.isRequired,
         showDefaultActions: PropTypes.bool,
         customActions: PropTypes.array,
-        className: PropTypes.string
+        className: PropTypes.string,
+        history: PropTypes.object.isRequired,
+        actions: PropTypes.object.isRequired
     };
 
     static defaultProps = {
@@ -48,8 +51,8 @@ export default class PublicationCitation extends Component {
     _handleDefaultActions = (action) => {
         switch (action) {
             case 'fixRecord':
-                // TODO: set current record in store, redirect to fix screen
-                console.log('fix this record');
+                this.props.history.push(routes.pathConfig.records.fix(this.props.publication.rek_pid));
+                this.props.actions.setFixRecord(this.props.publication);
                 break;
             case 'shareRecord':
                 // TODO: display share interface
@@ -90,7 +93,7 @@ export default class PublicationCitation extends Component {
             <div className={`publicationCitation ${this.props.className}`}>
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
-                        <h3 className="title is-5 publicationTitle">
+                        <h3 className="publicationTitle">
                             {!this.props.publication.rek_pid ? (this.props.publication.rek_title) : (
                                 <a href={locale.global.sources.espace.externalUrl.replace('[id]', this.props.publication.rek_pid)}
                                     rel="noopener noreferrer"

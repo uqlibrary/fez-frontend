@@ -1,70 +1,51 @@
-@import '~uqlibrary-react-toolbox/sass/variables';
+@import '../../../../sass/variables';
 
-// Publication Stats WOS/Scopus
-@media (min-width: 768px) {
-  .publicationsStatsTable {
-    & thead tr th {
-      white-space: normal !important;
-      padding: 12px 12px 12px 24px !important;
+.publicationsStatsTable {
+  & thead tr th {
+    white-space: normal !important;
+    padding: 12px 12px 12px 24px ;
+  }
+  & thead tr th:nth-child(2), & thead tr th:nth-child(3), & tbody tr td:nth-child(2), & tbody tr td:nth-child(3) {
+    text-align: center !important;
+    width: 25%;
+  }
+  & tbody tr td {
+    font-size: $text-body-large !important;
+  }
+  .publicationsStatsHeader {
+    background-color: $accent-color;
+    & .publicationsStatsHeaderTitle {
+      color: $text-color-reverse !important;
+      font-size: $text-body-large !important;
+      font-weight: $text-weight-bold;
     }
-    & thead tr th:nth-child(2), & thead tr th:nth-child(3) {
-      text-align: center !important;
-      width: 25% !important;
-    }
-    & tbody tr td {
-      font-size: 16px !important;
-    }
-    & tbody tr td:nth-child(2), & tbody tr td:nth-child(3) {
-      text-align: center !important;
-      width: 25% !important;
-    }
-    .publicationsStatsHeader {
-      background-color: $accent-color;
-      & .publicationsStatsHeaderTitle {
-        color: $text-color-reverse !important;
-        font-size: 16px !important;
-        font-weight: bold !important;
-      }
-    }
-    .publicationsStatsRowTitle {
-      font-weight: bold !important;
-      white-space: normal !important;
-    }
+  }
+  .publicationsStatsRowTitle {
+    font-weight: $text-weight-bold !important;
+    white-space: normal !important;
   }
 }
 
-@media (max-width: 768px) {
+@include mobile {
   .publicationsStatsTable {
     overflow: hidden;
     & thead tr th {
-      white-space: normal !important;
       padding: 6px 0 6px 12px !important;
     }
     & thead tr th:nth-child(2), & thead tr th:nth-child(3) {
-      text-align: center !important;
-      width: 33% !important;
+      width: 33%;
     }
     & tbody tr td {
-      font-size: 16px !important;
       padding: 6px 0 6px 12px !important;
     }
     & tbody tr td:nth-child(2), & tbody tr td:nth-child(3) {
-      text-align: center !important;
       width: 33% !important;
       white-space: normal !important;
     }
     .publicationsStatsHeader {
-      background-color: $accent-color;
       & .publicationsStatsHeaderTitle {
-        color: $text-color-reverse !important;
-        font-size: 16px !important;
-        font-weight: bold !important;
         text-overflow: ellipsis;
       }
-    }
-    .publicationsStatsRowTitle {
-      font-weight: bold !important;
-      white-space: normal !important;
     }
   }
 }

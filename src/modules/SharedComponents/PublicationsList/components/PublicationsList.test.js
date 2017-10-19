@@ -46,6 +46,6 @@ describe('PublicationsList renders ', () => {
     it('component with items', () => {
         const wrapper = setup({publicationsList: myRecordsList.data});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('PublicationCitation').length).toEqual(20);
+        expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(20);
     });
 });

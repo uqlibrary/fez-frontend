@@ -9,6 +9,7 @@ export const pathConfig =  {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
+        fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
             results: '/records/add/results',
@@ -16,8 +17,7 @@ export const pathConfig =  {
         }
     },
     admin: {
-        masquerade: '/admin/masquerade',
-        permissions: '/admin/permissions'
+        masquerade: '/admin/masquerade'
     }
 };
 
@@ -75,6 +75,12 @@ export const getRoutesConfig = (components, account) => {
                 exact: true
             },
             {
+                path: pathConfig.records.fix(':pid'),
+                component: components.FixRecord,
+                access: [roles.researcher, roles.admin],
+                exact: true
+            },
+            {
                 path: pathConfig.records.add.find,
                 render: (props) => components.AddMissingRecord({...props, addRecordStep: components.FindRecords}),
                 access: [roles.researcher, roles.admin],
@@ -97,12 +103,6 @@ export const getRoutesConfig = (components, account) => {
             {
                 path: pathConfig.admin.masquerade,
                 component: components.Masquerade,
-                exact: true,
-                access: [roles.admin]
-            },
-            {
-                path: pathConfig.admin.permissions,
-                render: () => components.StandardPage({title: 'Permissions administration'}),
                 exact: true,
                 access: [roles.admin]
             }
@@ -150,13 +150,8 @@ export const getMenuConfig = (account) => [
     ...(account && account.canMasquerade ? [
         {
             linkTo: pathConfig.admin.masquerade,
-            primaryText: 'Masquerade',
-            secondaryText: 'as another user'
-        },
-        {
-            linkTo: pathConfig.admin.permissions,
-            primaryText: 'Permissions',
-            secondaryText: 'manage permissions'
+            primaryText: locale.menu.masquerade.primaryText,
+            secondaryText: locale.menu.masquerade.secondaryText
         },
         {
             divider: true,

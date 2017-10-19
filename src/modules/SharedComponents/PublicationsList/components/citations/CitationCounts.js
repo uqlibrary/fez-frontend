@@ -5,12 +5,6 @@ import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 import {locale} from 'config';
 import {openAccessIdLookup} from 'config/general';
 
-const thompsonIcon = require('images/thomson_icon.svg');
-const scopusIcon = require('images/scopus_icon.svg');
-const googleScholarIcon = require('images/google_scholar_icon.svg');
-const altmetricIcon = require('images/altmetric_icon.svg');
-const openAccessIcon = require('images/oa_icon.svg');
-
 export default class CitationCounts extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
@@ -38,12 +32,9 @@ export default class CitationCounts extends Component {
                             rel="noopener noreferrer"
                             target="_blank"
                             aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + locale.global.sources.wos.title + ')')}
+                            title={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + locale.global.sources.wos.title + ')')}
                         >
-                            <img
-                                src={thompsonIcon}
-                                alt={txt.wosCountLabel.replace('[count]', counts.wos)}
-                                title={txt.wosCountLabel.replace('[count]', counts.wos)}
-                                className="citationCountIcon"/>
+                            <div className="fez-icon wos large" />
                             <span className="citationCountNumber">{counts.wos}</span>
                         </a>
                     </span>
@@ -55,12 +46,9 @@ export default class CitationCounts extends Component {
                             rel="noopener noreferrer"
                             target="_blank"
                             aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + locale.global.sources.scopus.title + ')')}
+                            title={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + locale.global.sources.scopus.title + ')')}
                         >
-                            <img
-                                src={scopusIcon}
-                                alt={txt.scopusCountLabel.replace('[count]', counts.scopus)}
-                                title={txt.scopusCountLabel.replace('[count]', counts.scopus)}
-                                className="citationCountIcon"/>
+                            <div className="fez-icon scopus large"/>
                             <span className="citationCountNumber">{counts.scopus}</span>
                         </a>
                     </span>
@@ -72,12 +60,9 @@ export default class CitationCounts extends Component {
                             rel="noopener noreferrer"
                             target="_blank"
                             aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + txt.altmetric.title + ')')}
+                            title={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + txt.altmetric.title + ')')}
                         >
-                            <img
-                                src={altmetricIcon}
-                                alt={txt.altmetricCountLabel.replace('[count]', counts.altmetric)}
-                                title={txt.altmetricCountLabel.replace('[count]', counts.altmetric)}
-                                className="citationCountIcon"/>
+                            <div className="fez-icon altmetric large"/>
                             <span className="citationCountNumber">{counts.altmetric}</span>
                         </a>
                     </span>
@@ -85,16 +70,12 @@ export default class CitationCounts extends Component {
                 {
                     !!this.props.publication.rek_pid &&
                     <span className="citationCount">
-                        <a className="citationCountLink"
-                            href={txt.google.externalUrl + encodeURI(this.props.publication.rek_title)}
+                        <a href={txt.google.externalUrl + encodeURI(this.props.publication.rek_title)}
                             target="_blank"
                             aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + txt.google.title + ')')}
+                            title={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title + ' (' + txt.google.title + ')')}
                         >
-                            <img
-                                src={googleScholarIcon}
-                                alt={txt.googleCountLabel}
-                                title={txt.googleCountLabel}
-                                className="citationCountIcon"/>{counts.google}
+                            <div className="fez-icon google large"/>{counts.google}
                         </a>
                     </span>
                 }
@@ -102,17 +83,14 @@ export default class CitationCounts extends Component {
                     !!this.props.publication.rek_pid && !!this.props.publication.fez_record_search_key_oa_status &&
                     !!openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status] &&
                     <span className="citationCount">
-                        <img
-                            src={openAccessIcon}
-                            alt={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status])}
-                            title={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status])}
-                            className="citationCountIcon"/>
+                        <div title={txt.openAccessLabel.replace('[oa_status]', openAccessIdLookup[this.props.publication.fez_record_search_key_oa_status.rek_oa_status])}
+                            className="fez-icon openAccess large"/>
                     </span>
                 }
                 {
                     !!this.props.publication.rek_pid && (counts.wos || counts.scopus) &&
                     <div className="citationCount column">
-                        <a className="citationCountLink" href={`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`} target="_blank">
+                        <a href={`https://app.library.uq.edu.au/#/authors/view/${this.props.publication.rek_pid}`} target="_blank">
                             <div className="columns is-mobile is-gapless">
                                 <div className="column is-narrow citationCountNumber">
                                     {txt.statsLabel}

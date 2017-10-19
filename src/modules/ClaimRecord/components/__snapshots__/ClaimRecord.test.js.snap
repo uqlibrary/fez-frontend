@@ -18,8 +18,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       }
       title="You are claiming to be an author for the following item:"
     >
-      <PublicationCitation
-        className=""
+      <withRouter(Connect(PublicationCitation))
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -782,7 +781,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             "rek_wok_doc_type": "@",
           }
         }
-        showDefaultActions={false}
       />
     </StandardCard>
     <div>
@@ -803,8 +801,9 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         hideCancelButton={false}
         locale={
           Object {
+            "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
-            "confirmButtonLabel": "OK",
+            "confirmButtonLabel": "Go to my research",
             "confirmationMessage": "Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.",
             "confirmationTitle": "Claim has been submitted",
           }
@@ -924,8 +923,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       }
       title="You are claiming to be an author for the following item:"
     >
-      <PublicationCitation
-        className=""
+      <withRouter(Connect(PublicationCitation))
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -1673,7 +1671,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "rek_wok_doc_type": "@",
           }
         }
-        showDefaultActions={false}
       />
     </StandardCard>
     <div>
@@ -1694,8 +1691,9 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         hideCancelButton={false}
         locale={
           Object {
+            "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
-            "confirmButtonLabel": "OK",
+            "confirmButtonLabel": "Go to my research",
             "confirmationMessage": "Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.",
             "confirmationTitle": "Claim has been submitted",
           }
@@ -1815,8 +1813,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       }
       title="You are claiming to be an author for the following item:"
     >
-      <PublicationCitation
-        className=""
+      <withRouter(Connect(PublicationCitation))
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -2667,7 +2664,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             "rek_wok_doc_type": "@",
           }
         }
-        showDefaultActions={false}
       />
     </StandardCard>
     <div>
@@ -2688,8 +2684,9 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         hideCancelButton={false}
         locale={
           Object {
+            "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
-            "confirmButtonLabel": "OK",
+            "confirmButtonLabel": "Go to my research",
             "confirmationMessage": "Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.",
             "confirmationTitle": "Claim has been submitted",
           }
@@ -2964,8 +2961,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
       }
       title="You are claiming to be an author for the following item:"
     >
-      <PublicationCitation
-        className=""
+      <withRouter(Connect(PublicationCitation))
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -3728,7 +3724,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
             "rek_wok_doc_type": "@",
           }
         }
-        showDefaultActions={false}
       />
     </StandardCard>
     <Alert

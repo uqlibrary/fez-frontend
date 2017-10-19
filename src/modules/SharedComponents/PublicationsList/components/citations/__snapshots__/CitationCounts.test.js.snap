@@ -12,12 +12,10 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
       rel="noopener noreferrer"
       target="_blank"
+      title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
     >
-      <img
-        alt="Web of Science citation count is 19"
-        className="citationCountIcon"
-        src=""
-        title="Web of Science citation count is 19"
+      <div
+        className="fez-icon wos large"
       />
       <span
         className="citationCountNumber"
@@ -31,15 +29,12 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
   >
     <a
       aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
-      className="citationCountLink"
       href="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
       target="_blank"
+      title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
     >
-      <img
-        alt="Citation counts in Google Scholar"
-        className="citationCountIcon"
-        src=""
-        title="Citation counts in Google Scholar"
+      <div
+        className="fez-icon google large"
       />
     </a>
   </span>
@@ -47,7 +42,6 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
     className="citationCount column"
   >
     <a
-      className="citationCountLink"
       href="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
       target="_blank"
     >
@@ -80,12 +74,10 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
       rel="noopener noreferrer"
       target="_blank"
+      title="Link to undefined (Web of science) will open in a new window."
     >
-      <img
-        alt="Web of Science citation count is 1"
-        className="citationCountIcon"
-        src=""
-        title="Web of Science citation count is 1"
+      <div
+        className="fez-icon wos large"
       />
       <span
         className="citationCountNumber"
@@ -102,12 +94,10 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
       rel="noopener noreferrer"
       target="_blank"
+      title="Link to undefined (Scopus) will open in a new window."
     >
-      <img
-        alt="Scopus citation count is 1"
-        className="citationCountIcon"
-        src=""
-        title="Scopus citation count is 1"
+      <div
+        className="fez-icon scopus large"
       />
       <span
         className="citationCountNumber"
@@ -124,12 +114,10 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
       href="http://www.altmetric.com/details.php?citation_id=12345"
       rel="noopener noreferrer"
       target="_blank"
+      title="Link to undefined (Altmetric) will open in a new window."
     >
-      <img
-        alt="Altmetric score is 1"
-        className="citationCountIcon"
-        src=""
-        title="Altmetric score is 1"
+      <div
+        className="fez-icon altmetric large"
       />
       <span
         className="citationCountNumber"
@@ -143,15 +131,12 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
   >
     <a
       aria-label="Link to undefined (Google scholar) will open in a new window."
-      className="citationCountLink"
       href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
       target="_blank"
+      title="Link to undefined (Google scholar) will open in a new window."
     >
-      <img
-        alt="Citation counts in Google Scholar"
-        className="citationCountIcon"
-        src=""
-        title="Citation counts in Google Scholar"
+      <div
+        className="fez-icon google large"
       />
       1
     </a>
@@ -159,10 +144,8 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
   <span
     className="citationCount"
   >
-    <img
-      alt="Open Access - DOI - Free to read (embargo date might apply)"
-      className="citationCountIcon"
-      src=""
+    <div
+      className="fez-icon openAccess large"
       title="Open Access - DOI - Free to read (embargo date might apply)"
     />
   </span>
@@ -170,7 +153,6 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     className="citationCount column"
   >
     <a
-      className="citationCountLink"
       href="https://app.library.uq.edu.au/#/authors/view/pid:111"
       target="_blank"
     >
@@ -209,12 +191,10 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
       href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
       rel="noopener noreferrer"
       target="_blank"
+      title="Link to undefined (Web of science) will open in a new window."
     >
-      <img
-        alt="Web of Science citation count is 1"
-        className="citationCountIcon"
-        src=""
-        title="Web of Science citation count is 1"
+      <div
+        className="fez-icon wos large"
       />
       <span
         className="citationCountNumber"
@@ -231,12 +211,10 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
       href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
       rel="noopener noreferrer"
       target="_blank"
+      title="Link to undefined (Scopus) will open in a new window."
     >
-      <img
-        alt="Scopus citation count is 1"
-        className="citationCountIcon"
-        src=""
-        title="Scopus citation count is 1"
+      <div
+        className="fez-icon scopus large"
       />
       <span
         className="citationCountNumber"
@@ -253,12 +231,10 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
       href="http://www.altmetric.com/details.php?citation_id=12345"
       rel="noopener noreferrer"
       target="_blank"
+      title="Link to undefined (Altmetric) will open in a new window."
     >
-      <img
-        alt="Altmetric score is 1"
-        className="citationCountIcon"
-        src=""
-        title="Altmetric score is 1"
+      <div
+        className="fez-icon altmetric large"
       />
       <span
         className="citationCountNumber"
@@ -272,15 +248,12 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
   >
     <a
       aria-label="Link to undefined (Google scholar) will open in a new window."
-      className="citationCountLink"
       href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
       target="_blank"
+      title="Link to undefined (Google scholar) will open in a new window."
     >
-      <img
-        alt="Citation counts in Google Scholar"
-        className="citationCountIcon"
-        src=""
-        title="Citation counts in Google Scholar"
+      <div
+        className="fez-icon google large"
       />
       1
     </a>
@@ -289,7 +262,6 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
     className="citationCount column"
   >
     <a
-      className="citationCountLink"
       href="https://app.library.uq.edu.au/#/authors/view/pid:111"
       target="_blank"
     >

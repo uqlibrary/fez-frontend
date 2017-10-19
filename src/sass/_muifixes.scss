@@ -1,4 +1,4 @@
-@import '~uqlibrary-react-toolbox/sass/variables';
+@import './variables';
 
 // An MUI override to make form labels WCAG AA compliant
 label {
@@ -19,7 +19,7 @@ form .column {
 }
 
 // Bulma helper
-@media (max-width: 768px) {
+@include mobile {
   .is-hidden-mobile {
     display: none !important;
   }
@@ -30,8 +30,23 @@ input::-ms-clear {
   display: none;
 }
 
+// Cards should always fill their available space.
+.card-full-height {
+  height: 100% !important;
+}
+
+// Centering helper
+.is-centered {
+  text-align: center;
+  align-content: center;
+}
+
+.action-buttons {
+  margin-top: 0px !important;
+}
+
 // Bring a button down to meet the baseline of an input on the same row
-@media (min-width: 768px) {
+@include tablet {
   .is-mui-spacing-button {
     margin-top: 30px !important;
   }
@@ -51,7 +66,7 @@ button[type=button] {
 }
 
 // To negate the spacing fix for column inside a form
-@media (max-width: 768px) {
+@include mobile {
   div.columns.action-buttons > .column {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
@@ -71,7 +86,7 @@ button[type=button] {
 }
 
 // Fixes text input where the hint text wraps, and sits over a floating label
-@media (max-width: 768px) {
+@include mobile {
   .input-long-hint > div {
     width: 100% !important;
     overflow: hidden;
@@ -79,4 +94,31 @@ button[type=button] {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+}
+
+// Repositions the help icon
+.is-helpicon {
+  margin: -10px 5px 0 0 !important;
+  &:hover {
+    z-index: 999;
+  }
+}
+
+// Some styling over-rides on the app bar.
+.AppBar {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  h1 {
+    height: 75px !important;
+    line-height: 75px !important;
+  }
+  button {
+    line-height: 75px;
+  }
+}
+
+// Class to space elements against scroll bars
+.scrollbar-spacer{
+  width: 17px !important;
 }

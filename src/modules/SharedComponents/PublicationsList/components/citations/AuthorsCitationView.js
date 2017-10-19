@@ -11,7 +11,7 @@ const AuthorsCitationView = ({publication, searchKey, className, prefix, suffix}
             {
                 Array.isArray(publication[searchKey.key]) && publication[searchKey.key]
                     .sort((author1, author2) => (
-                        author1[searchKey.order] > author2[searchKey.order])
+                        author1[searchKey.order] - author2[searchKey.order])
                     ).map((author, index) => (
                         <span className="citationAuthor" key={index}>
                             {author[searchKey.subkey]}

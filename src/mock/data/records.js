@@ -3208,10 +3208,397 @@ export const recordsTypeList = {
         }
     ]};
 
+// export const record = {
+//     "rek_pid": "UQ:342708",
+//     "rek_title_xsdmf_id": 10588,
+//     "rek_title": "Vaccination day",
+//     "rek_description_xsdmf_id": null,
+//     "rek_description": null,
+//     "rek_display_type_xsdmf_id": 3673,
+//     "rek_display_type": 179,
+//     "rek_status_xsdmf_id": 3680,
+//     "rek_status": 2,
+//     "rek_date_xsdmf_id": 6386,
+//     "rek_date": "2014-06-01T00:00:00Z",
+//     "rek_object_type_xsdmf_id": 3674,
+//     "rek_object_type": 3,
+//     "rek_depositor_xsdmf_id": 7578,
+//     "rek_depositor": 8524,
+//     "rek_created_date_xsdmf_id": 3677,
+//     "rek_created_date": "2014-10-21T01:43:26Z",
+//     "rek_updated_date_xsdmf_id": 3678,
+//     "rek_updated_date": "2017-09-22T13:28:50Z",
+//     "rek_file_downloads": 0,
+//     "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Parker, Malcolm\" href=\"\/list\/author_id\/710\/\">Parker, Malcolm<\/a> (<span class=\"citation_date\">2014<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Vaccination day\" href=\"\/view\/UQ:342708\">Vaccination day<\/a>. <i><span class=\"citation_journal_name\">Journal of Bioethical Inquiry<\/span><\/i>, <i><span class=\"citation_volume_number\">11<\/span><\/i> <span class=\"citation_issue_number\">2<\/span>: <span class=\"citation_start_page\">161<\/span>-<span class=\"citation_end_page\">161<\/span>. doi:<span class=\"citation_doi\">10.1007\/s11673-014-9531-6<\/span>",
+//     "rek_genre_xsdmf_id": 7207,
+//     "rek_genre": "Journal Article",
+//     "rek_genre_type_xsdmf_id": null,
+//     "rek_genre_type": null,
+//     "rek_formatted_title_xsdmf_id": null,
+//     "rek_formatted_title": null,
+//     "rek_formatted_abstract_xsdmf_id": 11442,
+//     "rek_formatted_abstract": "They enter<br \/><br \/>in curves and stoops<br \/><br \/>limping and tapping<br \/><br \/>a file of bare arms<br \/><br \/>creased faces uplifted<br \/><br \/>red eyelids pouting<br \/><br \/>eyes curtained in cataract.<br \/>",
+//     "rek_depositor_affiliation_xsdmf_id": 11881,
+//     "rek_depositor_affiliation": 898,
+//     "rek_thomson_citation_count": null,
+//     "rek_thomson_citation_count_xsdmf_id": null,
+//     "rek_subtype_xsdmf_id": 12379,
+//     "rek_subtype": "Article (original research)",
+//     "rek_scopus_citation_count": 0,
+//     "rek_herdc_notes_xsdmf_id": null,
+//     "rek_herdc_notes": null,
+//     "rek_scopus_doc_type_xsdmf_id": 12550,
+//     "rek_scopus_doc_type": "ar",
+//     "rek_wok_doc_type_xsdmf_id": null,
+//     "rek_wok_doc_type": null,
+//     "rek_pubmed_doc_type_xsdmf_id": null,
+//     "rek_pubmed_doc_type": null,
+//     "rek_security_inherited": 1,
+//     "rek_altmetric_score": 0,
+//     "rek_altmetric_score_xsdmf_id": null,
+//     "rek_altmetric_id": 0,
+//     "rek_altmetric_id_xsdmf_id": null,
+//     "rek_copyright_xsdmf_id": 3679,
+//     "rek_copyright": "on",
+//     "fez_record_search_key_access_conditions": null,
+//     "fez_record_search_key_acknowledgements": null,
+//     "fez_record_search_key_additional_notes": null,
+//     "fez_record_search_key_advisory_statement": null,
+//     "fez_record_search_key_alternate_genre": [],
+//     "fez_record_search_key_alternative_title": [],
+//     "fez_record_search_key_ands_collection_type": null,
+//     "fez_record_search_key_architectural_features": [],
+//     "fez_record_search_key_article_number": null,
+//     "fez_record_search_key_assigned_group_id": [],
+//     "fez_record_search_key_assigned_user_id": [],
+//     "fez_record_search_key_author": [
+//         {
+//             "rek_author_id": 28704357,
+//             "rek_author_pid": "UQ:342708",
+//             "rek_author_xsdmf_id": null,
+//             "rek_author": "Parker, Malcolm",
+//             "rek_author_order": 1
+//         },
+//         {
+//             "rek_author_id": 28704357,
+//             "rek_author_pid": "UQ:342708",
+//             "rek_author_xsdmf_id": null,
+//             "rek_author": "Parker2, Malcolm",
+//             "rek_author_order": 2
+//         },
+//         {
+//             "rek_author_id": 28704357,
+//             "rek_author_pid": "UQ:342708",
+//             "rek_author_xsdmf_id": null,
+//             "rek_author": "Parker3, Malcolm",
+//             "rek_author_order": 3
+//         },
+//         {
+//             "rek_author_id": 28704357,
+//             "rek_author_pid": "UQ:342708",
+//             "rek_author_xsdmf_id": null,
+//             "rek_author": "Parker4, Malcolm",
+//             "rek_author_order": 4
+//         },
+//         {
+//             "rek_author_id": 28704357,
+//             "rek_author_pid": "UQ:342708",
+//             "rek_author_xsdmf_id": null,
+//             "rek_author": "Parker5, Malcolm",
+//             "rek_author_order": 5
+//         },
+//         {
+//             "rek_author_id": 28704357,
+//             "rek_author_pid": "UQ:342708",
+//             "rek_author_xsdmf_id": null,
+//             "rek_author": "Parker6, Malcolm",
+//             "rek_author_order": 6
+//         },
+//         {
+//             "rek_author_id": 28704357,
+//             "rek_author_pid": "UQ:342708",
+//             "rek_author_xsdmf_id": null,
+//             "rek_author": "Parker7, Malcolm",
+//             "rek_author_order": 7
+//         },
+//         {
+//             "rek_author_id": 28704357,
+//             "rek_author_pid": "UQ:342708",
+//             "rek_author_xsdmf_id": null,
+//             "rek_author": "Parker8, Malcolm",
+//             "rek_author_order": 8
+//         }
+//     ],
+//     "fez_record_search_key_author_affiliation_id": [],
+//     "fez_record_search_key_author_affiliation_country": [],
+//     "fez_record_search_key_author_affiliation_full_address": [],
+//     "fez_record_search_key_author_affiliation_name": [],
+//     "fez_record_search_key_author_id": [{
+//         "rek_author_id_id": 28080611,
+//         "rek_author_id_pid": "UQ:342708",
+//         "rek_author_id_xsdmf_id": null,
+//         "rek_author_id": 410,
+//         "rek_author_id_order": 1
+//     }],
+//     "fez_record_search_key_author_role": [],
+//     "fez_record_search_key_book_title": null,
+//     "fez_record_search_key_building_materials": [],
+//     "fez_record_search_key_category": [],
+//     "fez_record_search_key_chapter_number": null,
+//     "fez_record_search_key_condition": [],
+//     "fez_record_search_key_conference_dates": null,
+//     "fez_record_search_key_conference_id": null,
+//     "fez_record_search_key_conference_location": null,
+//     "fez_record_search_key_conference_name": null,
+//     "fez_record_search_key_construction_date": null,
+//     "fez_record_search_key_contact_details_email": [],
+//     "fez_record_search_key_contributor": [],
+//     "fez_record_search_key_contributor_id": [],
+//     "fez_record_search_key_convener": null,
+//     "fez_record_search_key_corresponding_email": [],
+//     "fez_record_search_key_corresponding_name": [],
+//     "fez_record_search_key_corresponding_country": [],
+//     "fez_record_search_key_corresponding_organisation": [],
+//     "fez_record_search_key_country_of_issue": null,
+//     "fez_record_search_key_coverage_period": [],
+//     "fez_record_search_key_creator_id": [],
+//     "fez_record_search_key_creator_name": [],
+//     "fez_record_search_key_datastream_policy": null,
+//     "fez_record_search_key_data_volume": null,
+//     "fez_record_search_key_date_available": {
+//         "rek_date_available_id": 903643,
+//         "rek_date_available_pid": "UQ:342708",
+//         "rek_date_available_xsdmf_id": null,
+//         "rek_date_available": "2014-01-01T00:00:00Z"
+//     },
+//     "fez_record_search_key_date_photo_taken": null,
+//     "fez_record_search_key_date_recorded": null,
+//     "fez_record_search_key_date_scanned": null,
+//     "fez_record_search_key_doi": {
+//         "rek_doi_id": 1500597,
+//         "rek_doi_pid": "UQ:342708",
+//         "rek_doi_xsdmf_id": null,
+//         "rek_doi": "10.1007\/s11673-014-9531-6"
+//     },
+//     "fez_record_search_key_edition": null,
+//     "fez_record_search_key_end_date": null,
+//     "fez_record_search_key_end_page": {
+//         "rek_end_page_id": 5474340,
+//         "rek_end_page_pid": "UQ:342708",
+//         "rek_end_page_xsdmf_id": null,
+//         "rek_end_page": "161"
+//     },
+//     "fez_record_search_key_fields_of_research": [],
+//     "fez_record_search_key_file_attachment_access_condition": [],
+//     "fez_record_search_key_file_attachment_embargo_date": [],
+//     "fez_record_search_key_file_attachment_name": [],
+//     "fez_record_search_key_geographic_area": [],
+//     "fez_record_search_key_grant_acronym": [],
+//     "fez_record_search_key_grant_agency": [],
+//     "fez_record_search_key_grant_agency_id": [],
+//     "fez_record_search_key_grant_id": [],
+//     "fez_record_search_key_grant_text": [],
+//     "fez_record_search_key_herdc_code": {
+//         "rek_herdc_code_id": 4626366,
+//         "rek_herdc_code_pid": "UQ:342708",
+//         "rek_herdc_code_xsdmf_id": null,
+//         "rek_herdc_code": 450013
+//     },
+//     "fez_record_search_key_herdc_status": {
+//         "rek_herdc_status_id": 3541497,
+//         "rek_herdc_status_pid": "UQ:342708",
+//         "rek_herdc_status_xsdmf_id": null,
+//         "rek_herdc_status": 453221
+//     },
+//     "fez_record_search_key_identifier": [],
+//     "fez_record_search_key_institutional_status": {
+//         "rek_institutional_status_id": 3203829,
+//         "rek_institutional_status_pid": "UQ:342708",
+//         "rek_institutional_status_xsdmf_id": null,
+//         "rek_institutional_status": 453223
+//     },
+//     "fez_record_search_key_interior_features": [],
+//     "fez_record_search_key_isbn": [],
+//     "fez_record_search_key_isdatasetof": [],
+//     "fez_record_search_key_isderivationof": [],
+//     "fez_record_search_key_isi_loc": null,
+//     "fez_record_search_key_ismemberof": [{
+//         "rek_ismemberof_id": 11450932,
+//         "rek_ismemberof_pid": "UQ:342708",
+//         "rek_ismemberof_xsdmf_id": null,
+//         "rek_ismemberof": "UQ:237156",
+//         "rek_ismemberof_order": 2
+//     }, {
+//         "rek_ismemberof_id": 11450931,
+//         "rek_ismemberof_pid": "UQ:342708",
+//         "rek_ismemberof_xsdmf_id": null,
+//         "rek_ismemberof": "UQ:3831",
+//         "rek_ismemberof_order": 1
+//     }],
+//     "fez_record_search_key_issn": [{
+//         "rek_issn_id": 5052689,
+//         "rek_issn_pid": "UQ:342708",
+//         "rek_issn_xsdmf_id": null,
+//         "rek_issn": "1176-7529",
+//         "rek_issn_order": 1
+//     }, {
+//         "rek_issn_id": 5052690,
+//         "rek_issn_pid": "UQ:342708",
+//         "rek_issn_xsdmf_id": null,
+//         "rek_issn": "1872-4353",
+//         "rek_issn_order": 2
+//     }],
+//     "fez_record_search_key_issue_number": {
+//         "rek_issue_number_id": 4377491,
+//         "rek_issue_number_pid": "UQ:342708",
+//         "rek_issue_number_xsdmf_id": null,
+//         "rek_issue_number": "2"
+//     },
+//     "fez_record_search_key_job_number": null,
+//     "fez_record_search_key_journal_name": {
+//         "rek_journal_name_id": 5023697,
+//         "rek_journal_name_pid": "UQ:342708",
+//         "rek_journal_name_xsdmf_id": null,
+//         "rek_journal_name": "Journal of Bioethical Inquiry"
+//     },
+//     "fez_record_search_key_keywords": [],
+//     "fez_record_search_key_language": [{
+//         "rek_language_id": 5190088,
+//         "rek_language_pid": "UQ:342708",
+//         "rek_language_xsdmf_id": null,
+//         "rek_language": "eng",
+//         "rek_language_order": 1
+//     }],
+//     "fez_record_search_key_language_of_book_title": [],
+//     "fez_record_search_key_language_of_journal_name": [],
+//     "fez_record_search_key_language_of_proceedings_title": [],
+//     "fez_record_search_key_language_of_title": [],
+//     "fez_record_search_key_length": null,
+//     "fez_record_search_key_license": null,
+//     "fez_record_search_key_link": [],
+//     "fez_record_search_key_link_description": [],
+//     "fez_record_search_key_location": [],
+//     "fez_record_search_key_native_script_book_title": null,
+//     "fez_record_search_key_native_script_conference_name": null,
+//     "fez_record_search_key_native_script_journal_name": null,
+//     "fez_record_search_key_native_script_proceedings_title": null,
+//     "fez_record_search_key_native_script_title": null,
+//     "fez_record_search_key_newspaper": null,
+//     "fez_record_search_key_notes": null,
+//     "fez_record_search_key_oa_embargo_days": null,
+//     "fez_record_search_key_oa_notes": {
+//         "rek_oa_notes_id": 126321,
+//         "rek_oa_notes_pid": "UQ:342708",
+//         "rek_oa_notes_xsdmf_id": null,
+//         "rek_oa_notes": "Post print permissible - 12 months embargo."
+//     },
+//     "fez_record_search_key_oa_status": {
+//         "rek_oa_status_id": 430110,
+//         "rek_oa_status_pid": "UQ:342708",
+//         "rek_oa_status_xsdmf_id": null,
+//         "rek_oa_status": 453698
+//     },
+//     "fez_record_search_key_org_name": null,
+//     "fez_record_search_key_org_unit_name": null,
+//     "fez_record_search_key_original_format": null,
+//     "fez_record_search_key_parent_publication": null,
+//     "fez_record_search_key_patent_number": null,
+//     "fez_record_search_key_period": [],
+//     "fez_record_search_key_place_of_publication": {
+//         "rek_place_of_publication_id": 4140342,
+//         "rek_place_of_publication_pid": "UQ:342708",
+//         "rek_place_of_publication_xsdmf_id": null,
+//         "rek_place_of_publication": "Dordrecht, Netherlands"
+//     },
+//     "fez_record_search_key_proceedings_title": null,
+//     "fez_record_search_key_project_description": null,
+//     "fez_record_search_key_project_id": null,
+//     "fez_record_search_key_project_name": null,
+//     "fez_record_search_key_project_start_date": null,
+//     "fez_record_search_key_publisher": {
+//         "rek_publisher_id": 4402326,
+//         "rek_publisher_pid": "UQ:342708",
+//         "rek_publisher_xsdmf_id": null,
+//         "rek_publisher": "Springer Netherlands"
+//     },
+//     "fez_record_search_key_pubmed_id": null,
+//     "fez_record_search_key_refereed": {
+//         "rek_refereed_id": 2662560,
+//         "rek_refereed_pid": "UQ:342708",
+//         "rek_refereed_xsdmf_id": null,
+//         "rek_refereed": 1
+//     },
+//     "fez_record_search_key_refereed_source": {
+//         "rek_refereed_source_id": 1146191,
+//         "rek_refereed_source_pid": "UQ:342708",
+//         "rek_refereed_source_xsdmf_id": null,
+//         "rek_refereed_source": "453635"
+//     },
+//     "fez_record_search_key_related_datasets": null,
+//     "fez_record_search_key_related_publications": null,
+//     "fez_record_search_key_report_number": null,
+//     "fez_record_search_key_retracted": null,
+//     "fez_record_search_key_rights": null,
+//     "fez_record_search_key_roman_script_book_title": null,
+//     "fez_record_search_key_roman_script_conference_name": null,
+//     "fez_record_search_key_roman_script_journal_name": null,
+//     "fez_record_search_key_roman_script_proceedings_title": null,
+//     "fez_record_search_key_roman_script_title": null,
+//     "fez_record_search_key_scale": null,
+//     "fez_record_search_key_scopus_id": {
+//         "rek_scopus_id_id": 2379790,
+//         "rek_scopus_id_pid": "UQ:342708",
+//         "rek_scopus_id_xsdmf_id": null,
+//         "rek_scopus_id": "2-s2.0-84957442577"
+//     },
+//     "fez_record_search_key_section": null,
+//     "fez_record_search_key_seo_code": [],
+//     "fez_record_search_key_series": null,
+//     "fez_record_search_key_software_required": [],
+//     "fez_record_search_key_source": null,
+//     "fez_record_search_key_start_date": null,
+//     "fez_record_search_key_start_page": {
+//         "rek_start_page_id": 5544476,
+//         "rek_start_page_pid": "UQ:342708",
+//         "rek_start_page_xsdmf_id": null,
+//         "rek_start_page": "161"
+//     },
+//     "fez_record_search_key_structural_systems": [],
+//     "fez_record_search_key_style": [],
+//     "fez_record_search_key_subcategory": [],
+//     "fez_record_search_key_subject": [],
+//     "fez_record_search_key_supervisor": [],
+//     "fez_record_search_key_supervisor_id": [],
+//     "fez_record_search_key_surrounding_features": [],
+//     "fez_record_search_key_time_period_end_date": null,
+//     "fez_record_search_key_time_period_start_date": null,
+//     "fez_record_search_key_total_chapters": null,
+//     "fez_record_search_key_total_pages": {
+//         "rek_total_pages_id": 5449442,
+//         "rek_total_pages_pid": "UQ:342708",
+//         "rek_total_pages_xsdmf_id": null,
+//         "rek_total_pages": "1"
+//     },
+//     "fez_record_search_key_transcript": null,
+//     "fez_record_search_key_translated_book_title": null,
+//     "fez_record_search_key_translated_conference_name": null,
+//     "fez_record_search_key_translated_journal_name": null,
+//     "fez_record_search_key_translated_newspaper": null,
+//     "fez_record_search_key_translated_proceedings_title": null,
+//     "fez_record_search_key_translated_title": null,
+//     "fez_record_search_key_type_of_data": [],
+//     "fez_record_search_key_volume_number": {
+//         "rek_volume_number_id": 5081474,
+//         "rek_volume_number_pid": "UQ:342708",
+//         "rek_volume_number_xsdmf_id": null,
+//         "rek_volume_number": "11"
+//     }
+// };
+
 export const record = {
-    "rek_pid": "UQ:342708",
+    "rek_pid": "UQ:396321",
     "rek_title_xsdmf_id": 10588,
-    "rek_title": "Vaccination day",
+    "rek_title": "Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer",
     "rek_description_xsdmf_id": null,
     "rek_description": null,
     "rek_display_type_xsdmf_id": 3673,
@@ -3219,328 +3606,500 @@ export const record = {
     "rek_status_xsdmf_id": 3680,
     "rek_status": 2,
     "rek_date_xsdmf_id": 6386,
-    "rek_date": "2014-06-01T00:00:00Z",
+    "rek_date": "2016-07-04T00:00:00Z",
     "rek_object_type_xsdmf_id": 3674,
     "rek_object_type": 3,
     "rek_depositor_xsdmf_id": 7578,
-    "rek_depositor": 8524,
+    "rek_depositor": 5371,
     "rek_created_date_xsdmf_id": 3677,
-    "rek_created_date": "2014-10-21T01:43:26Z",
+    "rek_created_date": "2016-07-15T11:49:38Z",
     "rek_updated_date_xsdmf_id": 3678,
-    "rek_updated_date": "2017-09-22T13:28:50Z",
+    "rek_updated_date": "2017-10-01T04:24:51Z",
     "rek_file_downloads": 0,
-    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Parker, Malcolm\" href=\"\/list\/author_id\/710\/\">Parker, Malcolm<\/a> (<span class=\"citation_date\">2014<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Vaccination day\" href=\"\/view\/UQ:342708\">Vaccination day<\/a>. <i><span class=\"citation_journal_name\">Journal of Bioethical Inquiry<\/span><\/i>, <i><span class=\"citation_volume_number\">11<\/span><\/i> <span class=\"citation_issue_number\">2<\/span>: <span class=\"citation_start_page\">161<\/span>-<span class=\"citation_end_page\">161<\/span>. doi:<span class=\"citation_doi\">10.1007\/s11673-014-9531-6<\/span>",
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Milevskiy, Michael J. G.\" href=\"\/list\/author_id\/85056\/\">Milevskiy, Michael J. G.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Al-Ejeh, Fares\" href=\"\/list\/author\/Al-Ejeh%2C+Fares\/\">Al-Ejeh, Fares<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Saunus, Jodi M.\" href=\"\/list\/author_id\/8065\/\">Saunus, Jodi M.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Northwood, Korinne S.\" href=\"\/list\/author_id\/94252\/\">Northwood, Korinne S.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Bailey, Peter J.\" href=\"\/list\/author_id\/84824\/\">Bailey, Peter J.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Betts, Joshua A.\" href=\"\/list\/author_id\/91829\/\">Betts, Joshua A.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for McCart Reed, Amy E.\" href=\"\/list\/author_id\/12312\/\">McCart Reed, Amy E.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Nephew, Kenneth P.\" href=\"\/list\/author\/Nephew%2C+Kenneth+P.\/\">Nephew, Kenneth P.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Stone, Andrew\" href=\"\/list\/author\/Stone%2C+Andrew\/\">Stone, Andrew<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Gee, Julia M. W.\" href=\"\/list\/author\/Gee%2C+Julia+M.+W.\/\">Gee, Julia M. W.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Dowhan, Dennis H.\" href=\"\/list\/author\/Dowhan%2C+Dennis+H.\/\">Dowhan, Dennis H.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Dray, Eloise\" href=\"\/list\/author_id\/91834\/\">Dray, Eloise<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Shewan, Annette M.\" href=\"\/list\/author_id\/961\/\">Shewan, Annette M.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for French, Juliet D.\" href=\"\/list\/author_id\/950\/\">French, Juliet D.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Edwards, Stacey L.\" href=\"\/list\/author_id\/1721\/\">Edwards, Stacey L.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Clark, Susan J.\" href=\"\/list\/author\/Clark%2C+Susan+J.\/\">Clark, Susan J.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Lakhani, Sunil R.\" href=\"\/list\/author_id\/3247\/\">Lakhani, Sunil R.<\/a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Brown, Melissa A.\" href=\"\/list\/author_id\/1671\/\">Brown, Melissa A.<\/a> (<span class=\"citation_date\">2016<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer\" href=\"\/view\/UQ:396321\">Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer<\/a>. <i><span class=\"citation_journal_name\">Human Molecular Genetics<\/span><\/i>, <i><span class=\"citation_volume_number\">25<\/span><\/i> <span class=\"citation_issue_number\">15<\/span>: <span class=\"citation_start_page\">3269<\/span>-<span class=\"citation_end_page\">3283<\/span>. doi:<span class=\"citation_doi\">10.1093\/hmg\/ddw177<\/span>",
     "rek_genre_xsdmf_id": 7207,
     "rek_genre": "Journal Article",
     "rek_genre_type_xsdmf_id": null,
     "rek_genre_type": null,
-    "rek_formatted_title_xsdmf_id": null,
-    "rek_formatted_title": null,
+    "rek_formatted_title_xsdmf_id": 11438,
+    "rek_formatted_title": "Long-range regulators of the lncRNA <em>HOTAIR<\/em> enhance its prognostic potential in breast cancer",
     "rek_formatted_abstract_xsdmf_id": 11442,
-    "rek_formatted_abstract": "They enter<br \/><br \/>in curves and stoops<br \/><br \/>limping and tapping<br \/><br \/>a file of bare arms<br \/><br \/>creased faces uplifted<br \/><br \/>red eyelids pouting<br \/><br \/>eyes curtained in cataract.<br \/>",
+    "rek_formatted_abstract": "Predicting response to endocrine therapy and survival in estrogen receptor positive breast cancer is a significant clinical challenge and novel prognostic biomarkers are needed. Long-range regulators of gene expression are emerging as promising biomarkers and therapeutic targets for human diseases, so we have explored the potential of distal enhancer elements of non-coding RNAs in the prognostication of breast cancer survival. <em>HOTAIR<\/em> is a long non-coding RNA that is overexpressed, promotes metastasis and is predictive of decreased survival. Here we describe a long-range transcriptional enhancer of the <em>HOTAIR<\/em> gene that binds several hormone receptors and associated transcription factors, interacts with the <em>HOTAIR<\/em> promoter and augments transcription. This enhancer is dependent on Forkhead-Box transcription factors and functionally interacts with a novel alternate <em>HOTAIR<\/em> promoter. <em>HOTAIR<\/em> expression is negatively regulated by estrogen, positively regulated by FOXA1 and FOXM1, and is inversely correlated with estrogen receptor and directly correlated with <em>FOXM1<\/em> in breast tumors. The combination of <em>HOTAIR<\/em> and <em>FOXM1 <\/em>enables greater discrimination of endocrine therapy responders and non-responders in patients with estrogen receptor positive breast cancer. Consistent with this, <em>HOTAIR<\/em> expression is increased in cell-line models of endocrine resistance. Analysis of breast cancer gene expression data indicates that <em>HOTAIR<\/em> is co-expressed with <em>FOXA1<\/em> and <em>FOXM1<\/em> in HER2-enriched tumors, and these factors enhance the prognostic power of <em>HOTAIR<\/em> in aggressive HER2+ breast tumors. Our study elucidates the transcriptional regulation of <em>HOTAIR<\/em>, identifies <em>HOTAIR<\/em> and its regulators as novel biomarkers of patient response to endocrine therapy and corroborates the importance of transcriptional enhancers in cancer.",
     "rek_depositor_affiliation_xsdmf_id": 11881,
-    "rek_depositor_affiliation": 898,
-    "rek_thomson_citation_count": null,
+    "rek_depositor_affiliation": 881,
+    "rek_thomson_citation_count": 3,
     "rek_thomson_citation_count_xsdmf_id": null,
     "rek_subtype_xsdmf_id": 12379,
     "rek_subtype": "Article (original research)",
-    "rek_scopus_citation_count": 0,
+    "rek_scopus_citation_count": 3,
     "rek_herdc_notes_xsdmf_id": null,
     "rek_herdc_notes": null,
     "rek_scopus_doc_type_xsdmf_id": 12550,
     "rek_scopus_doc_type": "ar",
-    "rek_wok_doc_type_xsdmf_id": null,
-    "rek_wok_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": 12551,
+    "rek_wok_doc_type": "@",
     "rek_pubmed_doc_type_xsdmf_id": null,
     "rek_pubmed_doc_type": null,
     "rek_security_inherited": 1,
-    "rek_altmetric_score": 0,
+    "rek_altmetric_score": 2,
     "rek_altmetric_score_xsdmf_id": null,
-    "rek_altmetric_id": 0,
+    "rek_altmetric_id": 9271343,
     "rek_altmetric_id_xsdmf_id": null,
     "rek_copyright_xsdmf_id": 3679,
     "rek_copyright": "on",
-    "fez_record_search_key_access_conditions": null,
-    "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
-    "fez_record_search_key_advisory_statement": null,
-    "fez_record_search_key_alternate_genre": [],
-    "fez_record_search_key_alternative_title": [],
-    "fez_record_search_key_ands_collection_type": null,
-    "fez_record_search_key_architectural_features": [],
     "fez_record_search_key_article_number": null,
     "fez_record_search_key_assigned_group_id": [],
     "fez_record_search_key_assigned_user_id": [],
     "fez_record_search_key_author": [{
-        "rek_author_id": 28704357,
-        "rek_author_pid": "UQ:342708",
-        "rek_author_xsdmf_id": null,
-        "rek_author": "Parker, Malcolm",
+        "rek_author_id": 28593829,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Milevskiy, Michael J. G.",
         "rek_author_order": 1
+    }, {
+        "rek_author_id": 28593830,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Al-Ejeh, Fares",
+        "rek_author_order": 2
+    }, {
+        "rek_author_id": 28593831,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Saunus, Jodi M.",
+        "rek_author_order": 3
+    }, {
+        "rek_author_id": 28593832,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Northwood, Korinne S.",
+        "rek_author_order": 4
+    }, {
+        "rek_author_id": 28593833,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Bailey, Peter J.",
+        "rek_author_order": 5
+    }, {
+        "rek_author_id": 28593834,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Betts, Joshua A.",
+        "rek_author_order": 6
+    }, {
+        "rek_author_id": 28593835,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "McCart Reed, Amy E.",
+        "rek_author_order": 7
+    }, {
+        "rek_author_id": 28593836,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Nephew, Kenneth P.",
+        "rek_author_order": 8
+    }, {
+        "rek_author_id": 28593837,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Stone, Andrew",
+        "rek_author_order": 9
+    }, {
+        "rek_author_id": 28593838,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Gee, Julia M. W.",
+        "rek_author_order": 10
+    }, {
+        "rek_author_id": 28593839,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Dowhan, Dennis H.",
+        "rek_author_order": 11
+    }, {
+        "rek_author_id": 28593840,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Dray, Eloise",
+        "rek_author_order": 12
+    }, {
+        "rek_author_id": 28593841,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Shewan, Annette M.",
+        "rek_author_order": 13
+    }, {
+        "rek_author_id": 28593842,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "French, Juliet D.",
+        "rek_author_order": 14
+    }, {
+        "rek_author_id": 28593843,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Edwards, Stacey L.",
+        "rek_author_order": 15
+    }, {
+        "rek_author_id": 28593844,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Clark, Susan J.",
+        "rek_author_order": 16
+    }, {
+        "rek_author_id": 28593845,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Lakhani, Sunil R.",
+        "rek_author_order": 17
+    }, {
+        "rek_author_id": 28593846,
+        "rek_author_pid": "UQ:396321",
+        "rek_author_xsdmf_id": 6351,
+        "rek_author": "Brown, Melissa A.",
+        "rek_author_order": 18
     }],
-    "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_country": [],
     "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_name": [],
     "fez_record_search_key_author_id": [{
-        "rek_author_id_id": 28080611,
-        "rek_author_id_pid": "UQ:342708",
-        "rek_author_id_xsdmf_id": null,
-        "rek_author_id": 710,
+        "rek_author_id_id": 27973928,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 85056,
         "rek_author_id_order": 1
+    }, {
+        "rek_author_id_id": 27973929,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 0,
+        "rek_author_id_order": 2
+    }, {
+        "rek_author_id_id": 27973930,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 8065,
+        "rek_author_id_order": 3
+    }, {
+        "rek_author_id_id": 27973931,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 94252,
+        "rek_author_id_order": 4
+    }, {
+        "rek_author_id_id": 27973932,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 84824,
+        "rek_author_id_order": 5
+    }, {
+        "rek_author_id_id": 27973933,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 91829,
+        "rek_author_id_order": 6
+    }, {
+        "rek_author_id_id": 27973934,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 12312,
+        "rek_author_id_order": 7
+    }, {
+        "rek_author_id_id": 27973935,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 0,
+        "rek_author_id_order": 8
+    }, {
+        "rek_author_id_id": 27973936,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 0,
+        "rek_author_id_order": 9
+    }, {
+        "rek_author_id_id": 27973937,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 0,
+        "rek_author_id_order": 10
+    }, {
+        "rek_author_id_id": 27973938,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 0,
+        "rek_author_id_order": 11
+    }, {
+        "rek_author_id_id": 27973939,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 91834,
+        "rek_author_id_order": 12
+    }, {
+        "rek_author_id_id": 27973940,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 961,
+        "rek_author_id_order": 13
+    }, {
+        "rek_author_id_id": 27973941,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 950,
+        "rek_author_id_order": 14
+    }, {
+        "rek_author_id_id": 27973942,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 1721,
+        "rek_author_id_order": 15
+    }, {
+        "rek_author_id_id": 27973943,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 0,
+        "rek_author_id_order": 16
+    }, {
+        "rek_author_id_id": 27973944,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 3247,
+        "rek_author_id_order": 17
+    }, {
+        "rek_author_id_id": 27973945,
+        "rek_author_id_pid": "UQ:396321",
+        "rek_author_id_xsdmf_id": 6346,
+        "rek_author_id": 410,
+        "rek_author_id_order": 18
     }],
-    "fez_record_search_key_author_role": [],
-    "fez_record_search_key_book_title": null,
-    "fez_record_search_key_building_materials": [],
-    "fez_record_search_key_category": [],
-    "fez_record_search_key_chapter_number": null,
-    "fez_record_search_key_condition": [],
-    "fez_record_search_key_conference_dates": null,
-    "fez_record_search_key_conference_id": null,
-    "fez_record_search_key_conference_location": null,
-    "fez_record_search_key_conference_name": null,
-    "fez_record_search_key_construction_date": null,
-    "fez_record_search_key_contact_details_email": [],
     "fez_record_search_key_contributor": [],
     "fez_record_search_key_contributor_id": [],
-    "fez_record_search_key_convener": null,
+    "fez_record_search_key_corresponding_country": [],
     "fez_record_search_key_corresponding_email": [],
     "fez_record_search_key_corresponding_name": [],
-    "fez_record_search_key_corresponding_country": [],
     "fez_record_search_key_corresponding_organisation": [],
-    "fez_record_search_key_country_of_issue": null,
-    "fez_record_search_key_coverage_period": [],
-    "fez_record_search_key_creator_id": [],
-    "fez_record_search_key_creator_name": [],
     "fez_record_search_key_datastream_policy": null,
-    "fez_record_search_key_data_volume": null,
-    "fez_record_search_key_date_available": {
-        "rek_date_available_id": 903643,
-        "rek_date_available_pid": "UQ:342708",
-        "rek_date_available_xsdmf_id": null,
-        "rek_date_available": "2014-01-01T00:00:00Z"
-    },
-    "fez_record_search_key_date_photo_taken": null,
-    "fez_record_search_key_date_recorded": null,
-    "fez_record_search_key_date_scanned": null,
+    "fez_record_search_key_date_available": null,
     "fez_record_search_key_doi": {
-        "rek_doi_id": 1500597,
-        "rek_doi_pid": "UQ:342708",
-        "rek_doi_xsdmf_id": null,
-        "rek_doi": "10.1007\/s11673-014-9531-6"
+        "rek_doi_id": 1482945,
+        "rek_doi_pid": "UQ:396321",
+        "rek_doi_xsdmf_id": 16514,
+        "rek_doi": "10.1093\/hmg\/ddw177"
     },
-    "fez_record_search_key_edition": null,
-    "fez_record_search_key_end_date": null,
     "fez_record_search_key_end_page": {
-        "rek_end_page_id": 5474340,
-        "rek_end_page_pid": "UQ:342708",
-        "rek_end_page_xsdmf_id": null,
-        "rek_end_page": "161"
+        "rek_end_page_id": 5719659,
+        "rek_end_page_pid": "UQ:396321",
+        "rek_end_page_xsdmf_id": 6384,
+        "rek_end_page": "3283"
     },
-    "fez_record_search_key_fields_of_research": [],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
-    "fez_record_search_key_file_attachment_name": [],
-    "fez_record_search_key_geographic_area": [],
+    "fez_record_search_key_file_attachment_name": [{
+        "rek_file_attachment_name_id": 4215529,
+        "rek_file_attachment_name_pid": "UQ:396321",
+        "rek_file_attachment_name_xsdmf_id": 6437,
+        "rek_file_attachment_name": "FezACML_UQ_396321.xml",
+        "rek_file_attachment_name_order": 1
+    }],
     "fez_record_search_key_grant_acronym": [],
     "fez_record_search_key_grant_agency": [],
     "fez_record_search_key_grant_agency_id": [],
     "fez_record_search_key_grant_id": [],
     "fez_record_search_key_grant_text": [],
     "fez_record_search_key_herdc_code": {
-        "rek_herdc_code_id": 4626366,
-        "rek_herdc_code_pid": "UQ:342708",
-        "rek_herdc_code_xsdmf_id": null,
-        "rek_herdc_code": 450013
+        "rek_herdc_code_id": 4602013,
+        "rek_herdc_code_pid": "UQ:396321",
+        "rek_herdc_code_xsdmf_id": 12386,
+        "rek_herdc_code": 450009
     },
     "fez_record_search_key_herdc_status": {
-        "rek_herdc_status_id": 3541497,
-        "rek_herdc_status_pid": "UQ:342708",
-        "rek_herdc_status_xsdmf_id": null,
-        "rek_herdc_status": 453221
+        "rek_herdc_status_id": 3519027,
+        "rek_herdc_status_pid": "UQ:396321",
+        "rek_herdc_status_xsdmf_id": 12405,
+        "rek_herdc_status": 453220
     },
-    "fez_record_search_key_identifier": [],
     "fez_record_search_key_institutional_status": {
-        "rek_institutional_status_id": 3203829,
-        "rek_institutional_status_pid": "UQ:342708",
-        "rek_institutional_status_xsdmf_id": null,
+        "rek_institutional_status_id": 3181405,
+        "rek_institutional_status_pid": "UQ:396321",
+        "rek_institutional_status_xsdmf_id": 12406,
         "rek_institutional_status": 453223
     },
-    "fez_record_search_key_interior_features": [],
     "fez_record_search_key_isbn": [],
-    "fez_record_search_key_isdatasetof": [],
     "fez_record_search_key_isderivationof": [],
-    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_isi_loc": {
+        "rek_isi_loc_id": 4019614,
+        "rek_isi_loc_pid": "UQ:396321",
+        "rek_isi_loc_xsdmf_id": 10797,
+        "rek_isi_loc": "000393077300011"
+    },
     "fez_record_search_key_ismemberof": [{
-        "rek_ismemberof_id": 11450932,
-        "rek_ismemberof_pid": "UQ:342708",
-        "rek_ismemberof_xsdmf_id": null,
-        "rek_ismemberof": "UQ:237156",
+        "rek_ismemberof_id": 12091805,
+        "rek_ismemberof_pid": "UQ:396321",
+        "rek_ismemberof_xsdmf_id": 149,
+        "rek_ismemberof": "UQ:3825",
+        "rek_ismemberof_order": 1
+    }, {
+        "rek_ismemberof_id": 12091806,
+        "rek_ismemberof_pid": "UQ:396321",
+        "rek_ismemberof_xsdmf_id": 149,
+        "rek_ismemberof": "UQ:218311",
         "rek_ismemberof_order": 2
     }, {
-        "rek_ismemberof_id": 11450931,
-        "rek_ismemberof_pid": "UQ:342708",
-        "rek_ismemberof_xsdmf_id": null,
+        "rek_ismemberof_id": 12091807,
+        "rek_ismemberof_pid": "UQ:396321",
+        "rek_ismemberof_xsdmf_id": 149,
+        "rek_ismemberof": "UQ:171723",
+        "rek_ismemberof_order": 3
+    }, {
+        "rek_ismemberof_id": 12091808,
+        "rek_ismemberof_pid": "UQ:396321",
+        "rek_ismemberof_xsdmf_id": 149,
+        "rek_ismemberof": "UQ:3858",
+        "rek_ismemberof_order": 4
+    }, {
+        "rek_ismemberof_id": 12091809,
+        "rek_ismemberof_pid": "UQ:396321",
+        "rek_ismemberof_xsdmf_id": 149,
+        "rek_ismemberof": "UQ:3860",
+        "rek_ismemberof_order": 5
+    }, {
+        "rek_ismemberof_id": 12091810,
+        "rek_ismemberof_pid": "UQ:396321",
+        "rek_ismemberof_xsdmf_id": 149,
         "rek_ismemberof": "UQ:3831",
-        "rek_ismemberof_order": 1
+        "rek_ismemberof_order": 6
+    }, {
+        "rek_ismemberof_id": 12091811,
+        "rek_ismemberof_pid": "UQ:396321",
+        "rek_ismemberof_xsdmf_id": 149,
+        "rek_ismemberof": "UQ:273541",
+        "rek_ismemberof_order": 7
     }],
     "fez_record_search_key_issn": [{
-        "rek_issn_id": 5052689,
-        "rek_issn_pid": "UQ:342708",
-        "rek_issn_xsdmf_id": null,
-        "rek_issn": "1176-7529",
+        "rek_issn_id": 5023871,
+        "rek_issn_pid": "UQ:396321",
+        "rek_issn_xsdmf_id": 10796,
+        "rek_issn": "1460-2083",
         "rek_issn_order": 1
     }, {
-        "rek_issn_id": 5052690,
-        "rek_issn_pid": "UQ:342708",
-        "rek_issn_xsdmf_id": null,
-        "rek_issn": "1872-4353",
+        "rek_issn_id": 5023872,
+        "rek_issn_pid": "UQ:396321",
+        "rek_issn_xsdmf_id": 10796,
+        "rek_issn": "0964-6906",
         "rek_issn_order": 2
     }],
     "fez_record_search_key_issue_number": {
-        "rek_issue_number_id": 4377491,
-        "rek_issue_number_pid": "UQ:342708",
-        "rek_issue_number_xsdmf_id": null,
-        "rek_issue_number": "2"
+        "rek_issue_number_id": 4565410,
+        "rek_issue_number_pid": "UQ:396321",
+        "rek_issue_number_xsdmf_id": 6377,
+        "rek_issue_number": "15"
     },
-    "fez_record_search_key_job_number": null,
     "fez_record_search_key_journal_name": {
-        "rek_journal_name_id": 5023697,
-        "rek_journal_name_pid": "UQ:342708",
-        "rek_journal_name_xsdmf_id": null,
-        "rek_journal_name": "Journal of Bioethical Inquiry"
+        "rek_journal_name_id": 5003159,
+        "rek_journal_name_pid": "UQ:396321",
+        "rek_journal_name_xsdmf_id": 11071,
+        "rek_journal_name": "Human Molecular Genetics"
     },
-    "fez_record_search_key_keywords": [],
+    "fez_record_search_key_keywords": [{
+        "rek_keywords_id": 28948243,
+        "rek_keywords_pid": "UQ:396321",
+        "rek_keywords_xsdmf_id": 7956,
+        "rek_keywords": "Breast cancer",
+        "rek_keywords_order": 1
+    }, {
+        "rek_keywords_id": 28948244,
+        "rek_keywords_pid": "UQ:396321",
+        "rek_keywords_xsdmf_id": 7956,
+        "rek_keywords": "Endocrine therapy",
+        "rek_keywords_order": 2
+    }, {
+        "rek_keywords_id": 28948245,
+        "rek_keywords_pid": "UQ:396321",
+        "rek_keywords_xsdmf_id": 7956,
+        "rek_keywords": "HOTAIR",
+        "rek_keywords_order": 3
+    }],
     "fez_record_search_key_language": [{
-        "rek_language_id": 5190088,
-        "rek_language_pid": "UQ:342708",
-        "rek_language_xsdmf_id": null,
+        "rek_language_id": 5170669,
+        "rek_language_pid": "UQ:396321",
+        "rek_language_xsdmf_id": 10570,
         "rek_language": "eng",
         "rek_language_order": 1
     }],
-    "fez_record_search_key_language_of_book_title": [],
     "fez_record_search_key_language_of_journal_name": [],
-    "fez_record_search_key_language_of_proceedings_title": [],
     "fez_record_search_key_language_of_title": [],
-    "fez_record_search_key_length": null,
-    "fez_record_search_key_license": null,
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
-    "fez_record_search_key_location": [],
-    "fez_record_search_key_native_script_book_title": null,
-    "fez_record_search_key_native_script_conference_name": null,
     "fez_record_search_key_native_script_journal_name": null,
-    "fez_record_search_key_native_script_proceedings_title": null,
     "fez_record_search_key_native_script_title": null,
-    "fez_record_search_key_newspaper": null,
     "fez_record_search_key_notes": null,
     "fez_record_search_key_oa_embargo_days": null,
-    "fez_record_search_key_oa_notes": {
-        "rek_oa_notes_id": 126321,
-        "rek_oa_notes_pid": "UQ:342708",
-        "rek_oa_notes_xsdmf_id": null,
-        "rek_oa_notes": "Post print permissible - 12 months embargo."
-    },
+    "fez_record_search_key_oa_notes": null,
     "fez_record_search_key_oa_status": {
-        "rek_oa_status_id": 430110,
-        "rek_oa_status_pid": "UQ:342708",
-        "rek_oa_status_xsdmf_id": null,
-        "rek_oa_status": 453698
+        "rek_oa_status_id": 281706,
+        "rek_oa_status_pid": "UQ:396321",
+        "rek_oa_status_xsdmf_id": 16607,
+        "rek_oa_status": 453693
     },
-    "fez_record_search_key_org_name": null,
-    "fez_record_search_key_org_unit_name": null,
-    "fez_record_search_key_original_format": null,
-    "fez_record_search_key_parent_publication": null,
-    "fez_record_search_key_patent_number": null,
-    "fez_record_search_key_period": [],
     "fez_record_search_key_place_of_publication": {
-        "rek_place_of_publication_id": 4140342,
-        "rek_place_of_publication_pid": "UQ:342708",
-        "rek_place_of_publication_xsdmf_id": null,
-        "rek_place_of_publication": "Dordrecht, Netherlands"
+        "rek_place_of_publication_id": 4125279,
+        "rek_place_of_publication_pid": "UQ:396321",
+        "rek_place_of_publication_xsdmf_id": 9625,
+        "rek_place_of_publication": "Oxford, United Kingdom"
     },
-    "fez_record_search_key_proceedings_title": null,
-    "fez_record_search_key_project_description": null,
-    "fez_record_search_key_project_id": null,
-    "fez_record_search_key_project_name": null,
-    "fez_record_search_key_project_start_date": null,
     "fez_record_search_key_publisher": {
-        "rek_publisher_id": 4402326,
-        "rek_publisher_pid": "UQ:342708",
-        "rek_publisher_xsdmf_id": null,
-        "rek_publisher": "Springer Netherlands"
+        "rek_publisher_id": 4385966,
+        "rek_publisher_pid": "UQ:396321",
+        "rek_publisher_xsdmf_id": 9626,
+        "rek_publisher": "Oxford University Press"
     },
     "fez_record_search_key_pubmed_id": null,
     "fez_record_search_key_refereed": {
-        "rek_refereed_id": 2662560,
-        "rek_refereed_pid": "UQ:342708",
-        "rek_refereed_xsdmf_id": null,
-        "rek_refereed": 1
+        "rek_refereed_id": 2587133,
+        "rek_refereed_pid": "UQ:396321",
+        "rek_refereed_xsdmf_id": 7940,
+        "rek_refereed": 0
     },
     "fez_record_search_key_refereed_source": {
-        "rek_refereed_source_id": 1146191,
-        "rek_refereed_source_pid": "UQ:342708",
-        "rek_refereed_source_xsdmf_id": null,
+        "rek_refereed_source_id": 1120390,
+        "rek_refereed_source_pid": "UQ:396321",
+        "rek_refereed_source_xsdmf_id": 16623,
         "rek_refereed_source": "453635"
     },
-    "fez_record_search_key_related_datasets": null,
-    "fez_record_search_key_related_publications": null,
-    "fez_record_search_key_report_number": null,
-    "fez_record_search_key_retracted": null,
-    "fez_record_search_key_rights": null,
-    "fez_record_search_key_roman_script_book_title": null,
-    "fez_record_search_key_roman_script_conference_name": null,
+    "fez_record_search_key_retracted": {
+        "rek_retracted_id": 6567,
+        "rek_retracted_pid": "UQ:396321",
+        "rek_retracted_xsdmf_id": 16603,
+        "rek_retracted": 0
+    },
     "fez_record_search_key_roman_script_journal_name": null,
-    "fez_record_search_key_roman_script_proceedings_title": null,
     "fez_record_search_key_roman_script_title": null,
-    "fez_record_search_key_scale": null,
     "fez_record_search_key_scopus_id": {
-        "rek_scopus_id_id": 2379790,
-        "rek_scopus_id_pid": "UQ:342708",
-        "rek_scopus_id_xsdmf_id": null,
-        "rek_scopus_id": "2-s2.0-84957442577"
+        "rek_scopus_id_id": 2535441,
+        "rek_scopus_id_pid": "UQ:396321",
+        "rek_scopus_id_xsdmf_id": 12330,
+        "rek_scopus_id": "2-s2.0-85014391875"
     },
-    "fez_record_search_key_section": null,
-    "fez_record_search_key_seo_code": [],
-    "fez_record_search_key_series": null,
-    "fez_record_search_key_software_required": [],
-    "fez_record_search_key_source": null,
-    "fez_record_search_key_start_date": null,
     "fez_record_search_key_start_page": {
-        "rek_start_page_id": 5544476,
-        "rek_start_page_pid": "UQ:342708",
-        "rek_start_page_xsdmf_id": null,
-        "rek_start_page": "161"
+        "rek_start_page_id": 5792965,
+        "rek_start_page_pid": "UQ:396321",
+        "rek_start_page_xsdmf_id": 6383,
+        "rek_start_page": "3269"
     },
-    "fez_record_search_key_structural_systems": [],
-    "fez_record_search_key_style": [],
-    "fez_record_search_key_subcategory": [],
     "fez_record_search_key_subject": [],
-    "fez_record_search_key_supervisor": [],
-    "fez_record_search_key_supervisor_id": [],
-    "fez_record_search_key_surrounding_features": [],
-    "fez_record_search_key_time_period_end_date": null,
-    "fez_record_search_key_time_period_start_date": null,
-    "fez_record_search_key_total_chapters": null,
     "fez_record_search_key_total_pages": {
-        "rek_total_pages_id": 5449442,
-        "rek_total_pages_pid": "UQ:342708",
-        "rek_total_pages_xsdmf_id": null,
-        "rek_total_pages": "1"
+        "rek_total_pages_id": 5425771,
+        "rek_total_pages_pid": "UQ:396321",
+        "rek_total_pages_xsdmf_id": 9623,
+        "rek_total_pages": "40"
     },
-    "fez_record_search_key_transcript": null,
-    "fez_record_search_key_translated_book_title": null,
-    "fez_record_search_key_translated_conference_name": null,
     "fez_record_search_key_translated_journal_name": null,
-    "fez_record_search_key_translated_newspaper": null,
-    "fez_record_search_key_translated_proceedings_title": null,
     "fez_record_search_key_translated_title": null,
-    "fez_record_search_key_type_of_data": [],
     "fez_record_search_key_volume_number": {
-        "rek_volume_number_id": 5081474,
-        "rek_volume_number_pid": "UQ:342708",
-        "rek_volume_number_xsdmf_id": null,
-        "rek_volume_number": "11"
+        "rek_volume_number_id": 5305777,
+        "rek_volume_number_pid": "UQ:396321",
+        "rek_volume_number_xsdmf_id": 6379,
+        "rek_volume_number": "25"
     }
 };
 
@@ -3678,7 +4237,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28609418,
                     "rek_author_id_pid":"UQ:36649",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":0,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -3692,7 +4251,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28609420,
                     "rek_author_id_pid":"UQ:36649",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":4100,
                     "rek_author_id_order":3
                 },
                 {
@@ -4315,7 +4874,7 @@ export const myRecordsList = {
                     "rek_author_id_id":29384219,
                     "rek_author_id_pid":"UQ:41878",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":2
                 },
                 {
@@ -4336,7 +4895,7 @@ export const myRecordsList = {
                     "rek_author_id_id":29384222,
                     "rek_author_id_pid":"UQ:41878",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":450,
+                    "rek_author_id":4100,
                     "rek_author_id_order":5
                 }
             ],
@@ -4881,7 +5440,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28594993,
                     "rek_author_id_pid":"UQ:61717",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -4979,7 +5538,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28595007,
                     "rek_author_id_pid":"UQ:61717",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":68155,
+                    "rek_author_id":410,
                     "rek_author_id_order":15
                 }
             ],
@@ -5617,7 +6176,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28594725,
                     "rek_author_id_pid":"UQ:61867",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -5659,7 +6218,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28594731,
                     "rek_author_id_pid":"UQ:61867",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":47706,
+                    "rek_author_id":410,
                     "rek_author_id_order":7
                 }
             ],
@@ -6344,7 +6903,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28581258,
                     "rek_author_id_pid":"UQ:70915",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":5
                 }
             ],
@@ -7017,7 +7576,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28581240,
                     "rek_author_id_pid":"UQ:70928",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":4
                 },
                 {
@@ -7683,7 +8242,7 @@ export const myRecordsList = {
                     "rek_author_id_id":27957386,
                     "rek_author_id_pid":"UQ:75564",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":2
                 },
                 {
@@ -8314,7 +8873,7 @@ export const myRecordsList = {
                     "rek_author_id_id":27962275,
                     "rek_author_id_pid":"UQ:75658",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":2
                 },
                 {
@@ -8988,7 +9547,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28572649,
                     "rek_author_id_pid":"UQ:75944",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":4
                 },
                 {
@@ -9702,7 +10261,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28166451,
                     "rek_author_id_pid":"UQ:76648",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":9
                 },
                 {
@@ -10317,7 +10876,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28027104,
                     "rek_author_id_pid":"UQ:76649",
                     "rek_author_id_xsdmf_id":6346,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":7
                 }
             ],
@@ -11121,7 +11680,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28570998,
                     "rek_author_id_pid":"UQ:76653",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":6
                 },
                 {
@@ -11908,7 +12467,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28564399,
                     "rek_author_id_pid":"UQ:79872",
                     "rek_author_id_xsdmf_id":null,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":5
                 }
             ],
@@ -12616,7 +13175,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486292,
                     "rek_author_id_pid":"UQ:102282",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":9
                 }
             ],
@@ -13080,7 +13639,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486280,
                     "rek_author_id_pid":"UQ:102284",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":5
                 }
             ],
@@ -13530,7 +14089,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486250,
                     "rek_author_id_pid":"UQ:102291",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":4
                 }
             ],
@@ -13980,7 +14539,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486240,
                     "rek_author_id_pid":"UQ:102292",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -14556,7 +15115,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486239,
                     "rek_author_id_pid":"UQ:102293",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":10
                 }
             ],
@@ -15062,7 +15621,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486216,
                     "rek_author_id_pid":"UQ:102294",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":1
                 },
                 {
@@ -15673,7 +16232,7 @@ export const myRecordsList = {
                     "rek_author_id_id":28486207,
                     "rek_author_id_pid":"UQ:102296",
                     "rek_author_id_xsdmf_id":3951,
-                    "rek_author_id":1671,
+                    "rek_author_id":410,
                     "rek_author_id_order":7
                 },
                 {

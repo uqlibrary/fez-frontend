@@ -27,7 +27,7 @@ export default class App extends React.Component {
             menuDrawerOpen: false,
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1600px)'),
-            isMobile: window.matchMedia('(max-width: 768px)').matches
+            isMobile: window.matchMedia('(max-width: 720px)').matches
         };
     }
 
@@ -113,13 +113,15 @@ export default class App extends React.Component {
                             docked={this.state.docked}
                             logoImage={locale.global.logo}
                             logoText={locale.global.title}
-                            toggleDrawer={this.toggleDrawer}/>
+                            toggleDrawer={this.toggleDrawer}
+                            isMobile={this.state.isMobile}
+                        />
 
                         <div className="content-container" style={container}>
                             {
                                 // user is not logged in
                                 !this.props.user.accountLoading && !this.props.user.account &&
-                                <div className="layout-fill">
+                                <div className="layout-fill dashAlert">
                                     <div className="layout-card">
                                         <Alert {...locale.global.loginAlert} />
                                     </div>
@@ -128,7 +130,7 @@ export default class App extends React.Component {
                             {
                                 // user is logged in, but doesn't have eSpace author identifier
                                 !isPublicPage && this.props.user.account && !this.props.user.loadingAuthorDetails && !this.props.user.authorDetails &&
-                                <div className="layout-fill">
+                                <div className="layout-fill dashAlert">
                                     <div className="layout-card">
                                         <Alert {...locale.global.notRegisteredAuthorAlert} />
                                     </div>

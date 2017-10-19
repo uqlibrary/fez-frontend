@@ -7,7 +7,7 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, { delayResponse: 10 });
+const mock = new MockAdapter(api, { delayResponse: 200 });
 const escapeRegExp = (input) => (input.replace(/[\-\[\]\/\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
 const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 // set session cookie in mock mode
@@ -81,6 +81,8 @@ mock
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
         .reply(200, {data: {...mockData.record}})
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}))))
+        .reply(200, {data: {...mockData.record}})
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}))))
         .reply(200, {data: {...mockData.record}})
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
         .reply(200, {data: {}})

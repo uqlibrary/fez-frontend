@@ -31,8 +31,9 @@ export const prepareTextSearchQuery = (searchQuery) => {
             replaceWith: '+'
         }
     ];
-    return escapeConfig.reduce((query, config) =>
+    const value = escapeConfig.reduce((query, config) =>
         (query.replace(config.find, config.replaceWith)), searchQuery.trim());
+    return value;
 };
 
 /**
@@ -98,5 +99,3 @@ export const SEARCH_INTERNAL_RECORDS_API = (values) => (
 export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery}) => (
     `external/records/search?source=${source}&${getSearchType(searchQuery)}`
 );
-
-
