@@ -88,7 +88,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
         name: 'Conference Proceedings',
         class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
-        isAddNewAllowed: true
+        isAddNewAllowed: false  // @todo enable once done (https://libnet.library.uq.edu.au/pages/viewpage.action?spaceKey=LIB&title=eSpace+Specification+Documents)
     },
     {
         id: PUBLICATION_TYPE_CREATIVE_WORK,
@@ -183,7 +183,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_THESIS,
         name: 'Thesis',
         class: 'Uqlibrary\\FezCore\\Types\\Thesis',
-        isAddNewAllowed: true
+        isAddNewAllowed: false // @todo enable once done (https://libnet.library.uq.edu.au/pages/viewpage.action?spaceKey=LIB&title=eSpace+Specification+Documents)
     },
     {
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
