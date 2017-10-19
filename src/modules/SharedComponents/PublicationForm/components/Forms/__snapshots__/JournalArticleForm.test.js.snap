@@ -15,11 +15,6 @@ exports[`JournalArticleForm renders  component 1`] = `
   >
     <div
       className="columns"
-      style={
-        Object {
-          "marginTop": "-12px",
-        }
-      }
     >
       <div
         className="column"
@@ -31,14 +26,7 @@ exports[`JournalArticleForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Title"
           fullWidth={true}
-          multiLine={true}
           name="rek_title"
-          rows={1}
-          style={
-            Object {
-              "marginBottom": "-12px",
-            }
-          }
           type="text"
           validate={
             Array [
@@ -74,9 +62,11 @@ exports[`JournalArticleForm renders  component 1`] = `
       >
         <Field
           allowPartial={true}
-          className="requiredField"
+          className="requiredHintField"
           component={[Function]}
           disabled={false}
+          floatingTitle="Journal published date"
+          floatingTitleRequired={true}
           name="rek_date"
           validate={
             Array [

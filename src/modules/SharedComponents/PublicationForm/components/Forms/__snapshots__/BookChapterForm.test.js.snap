@@ -152,9 +152,11 @@ exports[`BookChapterForm renders  component 1`] = `
       >
         <Field
           allowPartial={true}
-          className="requiredField"
+          className="requiredHintField"
           component={[Function]}
           disabled={false}
+          floatingTitle="Date published"
+          floatingTitleRequired={true}
           name="rek_date"
           validate={
             Array [

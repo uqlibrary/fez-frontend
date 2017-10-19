@@ -80,8 +80,11 @@ export default class BookForm extends Component {
                                 disabled={this.props.submitting}
                                 name="rek_date"
                                 allowPartial
-                                className="requiredField"
-                                validate={[validation.required]} />
+                                className="requiredHintField"
+                                validate={[validation.required]}
+                                floatingTitle={txt.information.fieldLabels.date.title}
+                                floatingTitleRequired
+                            />
                         </div>
                     </div>
                 </StandardCard>

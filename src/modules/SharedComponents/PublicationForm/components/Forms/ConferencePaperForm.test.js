@@ -47,7 +47,8 @@ describe('ConferencePaperForm renders ', () => {
 
     it('component with 7 required input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field .requiredField').length).toEqual(7);
+        expect(wrapper.find('Field .requiredField').length).toEqual(6);
+        expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
     });
 
     it('component with all fields disabled', () => {
