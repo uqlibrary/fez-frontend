@@ -15,7 +15,8 @@ export class SearchKeyAutoSuggest extends Component {
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        className: PropTypes.string
+        className: PropTypes.string,
+        debounceDelay: PropTypes.number
     };
 
     static defaultProps = {
@@ -23,7 +24,8 @@ export class SearchKeyAutoSuggest extends Component {
         locale: {
             searchKeyAsPublishedLabel: 'Search key',
             searchKeyAsPublishedHint: 'Please type search key value'
-        }
+        },
+        debounceDelay: 150
     };
 
     constructor(props) {
@@ -32,6 +34,8 @@ export class SearchKeyAutoSuggest extends Component {
         this.state = {
             searchKeyAsPublished: null
         };
+
+        this.bounce = null;
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -44,12 +48,20 @@ export class SearchKeyAutoSuggest extends Component {
         });
     };
 
-    _onSearchKeyChanged = (searchText, dataSource, params) => {
-        this.updateSearchKeyValue(searchText);
-
+    lookupSearchKey = (searchText, params) => {
         if (searchText.trim().length > 1 && params.source === 'change') {
             this.props.actions.searchKeyLookUp(searchText, this.props.searchKey);
         }
+    };
+
+    _onSearchKeyChanged = (searchText, dataSource, params) => {
+        this.updateSearchKeyValue(searchText);
+
+        if (this.bounce) {
+            clearTimeout(this.bounce);
+        }
+
+        this.bounce = setTimeout(this.lookupSearchKey, this.props.debounceDelay, searchText, params);
     };
 
     _onSearchKeySelected = (chosenRequest, index) => {

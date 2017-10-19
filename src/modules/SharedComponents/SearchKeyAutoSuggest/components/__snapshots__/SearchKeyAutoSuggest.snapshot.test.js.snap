@@ -12,6 +12,7 @@ exports[`SearchKeyAutoSuggest tests  renders textfield correctly with autocomple
 >
   <SearchKeyAutoSuggest
     actions={Object {}}
+    debounceDelay={150}
     locale={
       Object {
         "searchKeyAsPublishedHint": "Please type search key value",

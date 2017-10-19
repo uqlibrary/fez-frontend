@@ -64,6 +64,7 @@ exports[`SeriesAutoSuggestField component should render with custom vocab id set
             "unclaimRecord": [Function],
           }
         }
+        debounceDelay={150}
         input={
           Object {
             "onChange": [Function],

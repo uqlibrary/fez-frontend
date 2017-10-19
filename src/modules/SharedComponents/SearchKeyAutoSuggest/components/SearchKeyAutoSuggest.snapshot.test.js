@@ -60,9 +60,11 @@ describe('SearchKeyAutoSuggest tests ', () => {
     });
 
     it('loads search key suggestions on search text changed ', () => {
+        jest.useFakeTimers();
         const testFunction = jest.fn();
         const wrapper = setup({actions: {searchKeyLookUp: testFunction}}).find('SearchKeyAutoSuggest').dive();
         wrapper.instance()._onSearchKeyChanged('australia', [], {source: 'change'});
+        jest.runTimersToTime(250);
         expect(testFunction).toBeCalled();
     });
 
