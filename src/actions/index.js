@@ -8,3 +8,4 @@ export * from './publications';
 export * from './claimPublications';
 export * from './fixRecord';
 export * from './publicationTypes';
+export * from './orgUnits';

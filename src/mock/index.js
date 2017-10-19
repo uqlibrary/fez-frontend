@@ -7,7 +7,7 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, { delayResponse: 150 });
+const mock = new MockAdapter(api, { delayResponse: 200 });
 const escapeRegExp = (input) => (input.replace(/[\-\[\]\/\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
 const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 // set session cookie in mock mode

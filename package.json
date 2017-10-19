@@ -92,7 +92,7 @@
     "test:e2e": "node nightwatch --test",
     "test": "NODE_ENV=test jest",
     "test:watch": "npm run test -- --watch",
-    "test:update": "npm test --updateSnapshot",
+    "test:update": "npm run test -- --updateSnapshot",
     "eslint": "eslint 'src/**/*.js' --quiet"
   },
   "engines": {

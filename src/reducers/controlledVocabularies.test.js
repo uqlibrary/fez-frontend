@@ -53,8 +53,8 @@ describe('Controlled vocabularies reducer', () => {
         expect(state[123456].controlledVocabLoadingError).toBeFalsy();
     });
 
-    it('should return empty state if type does not exist', () => {
-        const state = controlledVocabulariesReducer({}, {type: 'CONTROLLED_VOCABULARIES_LOADED@123456'});
-        expect(state).toEqual({});
-    });
+    // it('should return unmodiifed state if action doesn\'t have a handler', () => {
+        // const state = controlledVocabulariesReducer({abc: 'abc'}, {type: 'someotheraction'});
+        // expect(state).toEqual({abc: 'abc'});
+    // });
 });

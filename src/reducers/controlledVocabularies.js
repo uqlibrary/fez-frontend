@@ -1,41 +1,39 @@
 import * as actions from 'actions/actionTypes';
 
-const controlledVocab = (value) => (value.substring(value.indexOf('@') + 1, value.length));
-
 const handlers = {
-    [`${actions.VOCABULARIES_LOAD_FAILED}@`]: (state, action) => {
-        return {
+    [`${actions.VOCABULARIES_LOAD_FAILED}@`]: (state, action) => (
+        {
             ...state,
-            [controlledVocab(action.type)]: {
+            [actions.getActionSuffix(action.type)]: {
                 controlledVocabList: [],
                 controlledVocabLoading: false,
                 controlledVocabLoadingError: true
             }
-        };
-    },
-    [`${actions.VOCABULARIES_LOADED}@`]: (state, action) => {
-        return {
+        }
+    ),
+    [`${actions.VOCABULARIES_LOADED}@`]: (state, action) => (
+        {
             ...state,
-            [controlledVocab(action.type)]: {
+            [actions.getActionSuffix(action.type)]: {
                 controlledVocabList: action.payload,
                 controlledVocabLoading: false,
                 controlledVocabLoadingError: false
             }
-        };
-    },
-    [`${actions.VOCABULARIES_LOADING}@`]: (state, action) => {
-        return {
+        }
+    ),
+    [`${actions.VOCABULARIES_LOADING}@`]: (state, action) => (
+        {
             ...state,
-            [controlledVocab(action.type)]: {
+            [actions.getActionSuffix(action.type)]: {
                 controlledVocabLoading: true,
                 controlledVocabLoadingError: false
             }
-        };
-    }
+        }
+    )
 };
 
 export default function controlledVocabulariesReducer(state = {}, action) {
-    const handler = handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
+    const handler = handlers[actions.getAction(action.type)];
 
     if (!handler) {
         return state;

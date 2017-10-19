@@ -1,3 +1,6 @@
+export const getActionSuffix = (action) => (action.substring(action.indexOf('@') + 1, action.length));
+export const getAction = (action) => (action.substring(0, action.indexOf('@') + 1));
+
 // Academic stats
 export const ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING = 'ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING';
 export const ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED = 'ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED';
@@ -92,6 +95,11 @@ export const RECORD_RESET = 'RECORD_RESET';
 export const RECORD_CREATED = 'RECORD_CREATED';
 export const RECORD_CREATE_FAILED = 'RECORD_CREATE_FAILED';
 export const RECORD_PROCESSING = 'RECORD_PROCESSING';
+
+// Org units
+export const ORG_UNITS_LOADING = 'ORG_UNITS_LOADING';
+export const ORG_UNITS_LOADED = 'ORG_UNITS_LOADED';
+export const ORG_UNITS_LOAD_FAILED = 'ORG_UNITS_LOAD_FAILED';
 
 // Fix records
 export const FIX_RECORD_SET = 'FIX_RECORD_SET';
