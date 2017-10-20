@@ -64,7 +64,7 @@ export default class PublicationForm extends Component {
             })),
             ...[<Divider key="div_0"/>],
             ...this.publicationTypes.filter((item) => {
-                return item.isAddNewAllowed;
+                return item.hasFormComponent;
             }).map((item, index) => {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })

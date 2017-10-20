@@ -46,13 +46,13 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
         name: 'Generic Document',
         class: 'Uqlibrary\\FezCore\\Types\\Generic',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_BOOK,
@@ -62,7 +62,7 @@ export const publicationTypes = (components) => [
         isFavourite: true,
         formComponent: components ? components.BookForm : null,
         citationComponent: components ? components.BookCitation : null,
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
@@ -72,7 +72,7 @@ export const publicationTypes = (components) => [
         isFavourite: true,
         formComponent: components ? components.BookChapterForm : null,
         citationComponent: components ? components.BookChapterCitation : null,
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
@@ -82,56 +82,56 @@ export const publicationTypes = (components) => [
         isFavourite: true,
         formComponent: components ? components.ConferencePaperForm : null,
         citationComponent: components ? components.ConferencePaperCitation : null,
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
         name: 'Conference Proceedings',
         class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_CREATIVE_WORK,
         name: 'Creative Work',
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
         vocabId: 453594,
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
         name: 'Data Collection',
         class: 'Uqlibrary\\FezCore\\Types\\DataCollection',
-        isAddNewAllowed: false
+        hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         name: 'Department Technical Report',
         class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DESIGN,
         name: 'Design',
         class: 'Uqlibrary\\FezCore\\Types\\Design',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
         name: 'Digilib Image',
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
-        isAddNewAllowed: false
+        hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_IMAGE,
         name: 'Image',
         class: 'Uqlibrary\\FezCore\\Types\\Image',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_JOURNAL,
         name: 'Journal',
         class: 'Uqlibrary\\FezCore\\Types\\Journal',
-        isAddNewAllowed: false
+        hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_JOURNAL_ARTICLE,
@@ -141,62 +141,62 @@ export const publicationTypes = (components) => [
         isFavourite: true,
         formComponent: components ? components.JournalArticleForm : null,
         citationComponent: components ? components.JournalArticleCitation : null,
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_MANUSCRIPT,
         name: 'Manuscript',
         class: 'Uqlibrary\\FezCore\\Types\\Manuscript',
-        isAddNewAllowed: false
+        hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
         name: 'Newspaper Article',
         class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_PATENT,
         name: 'Patent',
         class: 'Uqlibrary\\FezCore\\Types\\Patent',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_PREPRINT,
         name: 'Preprint',
         class: 'Uqlibrary\\FezCore\\Types\\Preprint',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_RESEARCH_REPORT,
         name: 'Research Report',
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
         name: 'Seminar Paper',
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_THESIS,
         name: 'Thesis',
         class: 'Uqlibrary\\FezCore\\Types\\Thesis',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
         name: 'Video Document',
         class: 'Uqlibrary\\FezCore\\Types\\Video',
-        isAddNewAllowed: true
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_WORKING_PAPER,
         name: 'Working Paper',
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
         formComponent: components ? components.WorkingPaperForm : null,
-        isAddNewAllowed: true
+        hasFormComponent: true
     }
 ];
 
