@@ -1059,22 +1059,6 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
-            orgUnits: {
-                title: 'School, Department or Centre',
-                help: {
-                    title: 'School, Department or Centre',
-                    text: 'some help',
-                    buttonLabel: 'OK'
-                },
-                field: {
-                    form: {
-                        locale: {
-                            orgUnitAsPublishedLabel: 'School, Department or Centre as published',
-                            orgUnitAsPublishedHint: 'Please type organisation unit'
-                        }
-                    },
-                }
-            },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Abandon workflow',
                 confirmationMessage: 'Are you sure you want to abandon workflow?',
@@ -1098,18 +1082,6 @@ export default {
             successAlert: {
                 title: 'Success',
                 message: 'New publication has been saved successfully.'
-            },
-            searchKey: {
-                series: {
-                    key: 'series',
-                    title: 'Series',
-                    help: 'Some help about series',
-                    description: 'You can either select from suggestions or add your own value',
-                    field: {
-                        searchKeyAsPublishedLabel: 'Book series',
-                        searchKeyAsPublishedHint: 'Please enter book series'
-                    }
-                }
             }
         },
         claimPublicationForm: {

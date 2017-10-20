@@ -79,7 +79,13 @@ export function searchPublications(searchQuery) {
     };
 }
 
-export function searchKeyLookUp(searchQuery, searchKey) {
+/**
+ * Get a list of valus based on search key and value, eg for autosuggest controls
+ * @param string - search key, eg 'series'
+ * @param string - search query, eg 'conference'
+ * @returns {action}
+ */
+export function loadSearchKeyList(searchKey, searchQuery) {
     return dispatch => {
         dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`, payload: searchKey});
 

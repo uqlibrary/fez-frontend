@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
 import {StandardCard} from 'uqlibrary-react-toolbox';
-import OrgUnitsField from 'modules/SharedComponents/AutoSuggestField/OrgUnitsField';
+import {OrgUnitsField, SeriesField} from 'modules/SharedComponents/AutoSuggestField';
 
 export default class WorkingPaperForm extends Component {
     static propTypes = {
@@ -21,6 +21,12 @@ export default class WorkingPaperForm extends Component {
                     <Field
                         component={OrgUnitsField}
                         name="testField"
+                        disabled={this.props.submitting}
+
+                    />
+                    <Field
+                        component={SeriesField}
+                        name="testField2"
                         disabled={this.props.submitting}
 
                     />

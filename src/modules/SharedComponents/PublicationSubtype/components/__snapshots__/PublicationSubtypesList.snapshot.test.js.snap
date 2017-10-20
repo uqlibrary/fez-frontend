@@ -2,136 +2,24 @@
 
 exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
 <PublicationSubtypesList
-  actions={
-    Object {
-      "loadPublicationSubtypesList": [Function],
-    }
-  }
-  dataSourceConfig={
-    Object {
-      "text": "controlled_vocab.cvo_title",
-      "value": "controlled_vocab.cvo_title",
-    }
-  }
   disabled={true}
   id="pubSubTypes2"
+  itemsList={
+    Array [
+      "MyRecords book (original research)",
+      "Textbook",
+      "Edited book",
+      "Reference work, encyclopaedia, manual or handbook",
+      "Creative work",
+      "Other",
+    ]
+  }
+  loadPublicationSubtypesList={[Function]}
   locale={
     Object {
       "label": "Publication subtype",
       "loading": "loading...",
     }
-  }
-  subtypesList={
-    Array [
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453582,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 2,
-          "cvo_policy": null,
-          "cvo_title": "MyRecords book (original research)",
-        },
-        "cvr_child_cvo_id": 453582,
-        "cvr_id": 4706,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453583,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 4,
-          "cvo_policy": null,
-          "cvo_title": "Textbook",
-        },
-        "cvr_child_cvo_id": 453583,
-        "cvr_id": 4707,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453584,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 6,
-          "cvo_policy": null,
-          "cvo_title": "Edited book",
-        },
-        "cvr_child_cvo_id": 453584,
-        "cvr_id": 4708,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453585,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 8,
-          "cvo_policy": null,
-          "cvo_title": "Reference work, encyclopaedia, manual or handbook",
-        },
-        "cvr_child_cvo_id": 453585,
-        "cvr_id": 4709,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453586,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 10,
-          "cvo_policy": null,
-          "cvo_title": "Creative work",
-        },
-        "cvr_child_cvo_id": 453586,
-        "cvr_id": 4710,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453587,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 12,
-          "cvo_policy": null,
-          "cvo_title": "Other",
-        },
-        "cvr_child_cvo_id": 453587,
-        "cvr_id": 4711,
-        "cvr_parent_cvo_id": 453581,
-      },
-    ]
   }
   vocabId={453581}
 >
@@ -1491,135 +1379,23 @@ exports[`PublicationSubtypesList renders  with disabled flag set to true 1`] = `
 
 exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
 <PublicationSubtypesList
-  actions={
-    Object {
-      "loadPublicationSubtypesList": [Function],
-    }
-  }
-  dataSourceConfig={
-    Object {
-      "text": "controlled_vocab.cvo_title",
-      "value": "controlled_vocab.cvo_title",
-    }
-  }
   id="pubSubTypes2"
+  itemsList={
+    Array [
+      "MyRecords book (original research)",
+      "Textbook",
+      "Edited book",
+      "Reference work, encyclopaedia, manual or handbook",
+      "Creative work",
+      "Other",
+    ]
+  }
+  loadPublicationSubtypesList={[Function]}
   locale={
     Object {
       "label": "Publication subtype",
       "loading": "loading...",
     }
-  }
-  subtypesList={
-    Array [
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453582,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 2,
-          "cvo_policy": null,
-          "cvo_title": "MyRecords book (original research)",
-        },
-        "cvr_child_cvo_id": 453582,
-        "cvr_id": 4706,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453583,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 4,
-          "cvo_policy": null,
-          "cvo_title": "Textbook",
-        },
-        "cvr_child_cvo_id": 453583,
-        "cvr_id": 4707,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453584,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 6,
-          "cvo_policy": null,
-          "cvo_title": "Edited book",
-        },
-        "cvr_child_cvo_id": 453584,
-        "cvr_id": 4708,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453585,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 8,
-          "cvo_policy": null,
-          "cvo_title": "Reference work, encyclopaedia, manual or handbook",
-        },
-        "cvr_child_cvo_id": 453585,
-        "cvr_id": 4709,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453586,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 10,
-          "cvo_policy": null,
-          "cvo_title": "Creative work",
-        },
-        "cvr_child_cvo_id": 453586,
-        "cvr_id": 4710,
-        "cvr_parent_cvo_id": 453581,
-      },
-      Object {
-        "controlled_vocab": Object {
-          "controlled_vocab_children": Array [],
-          "cvo_desc": "",
-          "cvo_external_id": null,
-          "cvo_hide": 0,
-          "cvo_id": 453587,
-          "cvo_image_filename": null,
-          "cvo_lat": null,
-          "cvo_long": null,
-          "cvo_order": 12,
-          "cvo_policy": null,
-          "cvo_title": "Other",
-        },
-        "cvr_child_cvo_id": 453587,
-        "cvr_id": 4711,
-        "cvr_parent_cvo_id": 453581,
-      },
-    ]
   }
   vocabId={453581}
 >
@@ -2987,25 +2763,15 @@ exports[`PublicationSubtypesList renders  with subtypes list 1`] = `
 
 exports[`PublicationSubtypesList renders  without subtypes list 1`] = `
 <PublicationSubtypesList
-  actions={
-    Object {
-      "loadPublicationSubtypesList": [Function],
-    }
-  }
-  dataSourceConfig={
-    Object {
-      "text": "controlled_vocab.cvo_title",
-      "value": "controlled_vocab.cvo_title",
-    }
-  }
   id="pubSubTypes1"
+  itemsList={Array []}
+  loadPublicationSubtypesList={[Function]}
   locale={
     Object {
       "label": "Publication subtype",
       "loading": "loading...",
     }
   }
-  subtypesList={Array []}
   vocabId={453581}
 >
   <SelectField

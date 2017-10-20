@@ -2,18 +2,12 @@
 
 exports[`AutoSuggestField component should render 1`] = `
 <AutoSuggestField
-  actions={
-    Object {
-      "loadOrgUnits": [Function],
-    }
-  }
-  dataSourceConfig={
-    Object {
-      "text": "controlled_vocab.cvo_title",
-    }
-  }
+  async={false}
+  debounceDelay={150}
   disabled={false}
   itemsList={Array []}
+  itemsListLoading={false}
+  loadSuggestions={[Function]}
   locale={
     Object {
       "fieldHint": "Please type text",
@@ -36,18 +30,12 @@ exports[`AutoSuggestField component should render autosuggest field and call act
   }
 >
   <AutoSuggestField
-    actions={
-      Object {
-        "loadOrgUnits": [Function],
-      }
-    }
-    dataSourceConfig={
-      Object {
-        "text": "controlled_vocab.cvo_title",
-      }
-    }
+    async={false}
+    debounceDelay={150}
     disabled={false}
     itemsList={Array []}
+    itemsListLoading={false}
+    loadSuggestions={[Function]}
     locale={
       Object {
         "fieldHint": "Please type text",
@@ -65,11 +53,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
         }
       }
       animated={true}
-      dataSource={
-        Array [
-          "loading...",
-        ]
-      }
+      dataSource={Array []}
       dataSourceConfig={
         Object {
           "text": "text",
@@ -1597,19 +1581,13 @@ exports[`AutoSuggestField component should render with className set 1`] = `
   }
 >
   <AutoSuggestField
-    actions={
-      Object {
-        "loadOrgUnits": [Function],
-      }
-    }
+    async={false}
     className="requiredField"
-    dataSourceConfig={
-      Object {
-        "text": "controlled_vocab.cvo_title",
-      }
-    }
+    debounceDelay={150}
     disabled={false}
     itemsList={Array []}
+    itemsListLoading={false}
+    loadSuggestions={[Function]}
     locale={
       Object {
         "fieldHint": "Please type text",
@@ -1628,11 +1606,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
       }
       animated={true}
       className="requiredField"
-      dataSource={
-        Array [
-          "loading...",
-        ]
-      }
+      dataSource={Array []}
       dataSourceConfig={
         Object {
           "text": "text",
@@ -3162,18 +3136,12 @@ exports[`AutoSuggestField component should render with disabled flag set to true
   }
 >
   <AutoSuggestField
-    actions={
-      Object {
-        "loadOrgUnits": [Function],
-      }
-    }
-    dataSourceConfig={
-      Object {
-        "text": "controlled_vocab.cvo_title",
-      }
-    }
+    async={false}
+    debounceDelay={150}
     disabled={true}
     itemsList={Array []}
+    itemsListLoading={false}
+    loadSuggestions={[Function]}
     locale={
       Object {
         "fieldHint": "Please type text",
@@ -3191,11 +3159,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
         }
       }
       animated={true}
-      dataSource={
-        Array [
-          "loading...",
-        ]
-      }
+      dataSource={Array []}
       dataSourceConfig={
         Object {
           "text": "text",

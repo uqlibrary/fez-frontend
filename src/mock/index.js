@@ -54,10 +54,10 @@ mock
         .reply(200, mockData.authorsSearch)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_KEY_LOOKUP_API({searchQuery: '.*', searchKey: '.*'}))))
         .reply((config) => {
-        const start = 'records/search?rule=lookup&search_key='.length;
-        const searchKey = config.url.substring(start, config.url.indexOf('&lookup_value='));
-        return [200, {data: mockData.searchKeyList[searchKey]}];
-    })
+            const searchKey = config.url.match('[?&]search_key=([^&]+)')[1];
+            const searchQuery = config.url.match('[?&]lookup_value=([^&]+)')[1];
+            return [200, {data: mockData.searchKeyList[searchKey].filter(item => (item.toLowerCase().indexOf(searchQuery) >= 0))}];
+        })
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'wos', searchQuery: '.*'}))))
         .reply(200, mockData.externalTitleSearchResultsList)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'scopus', searchQuery: '.*'}))))

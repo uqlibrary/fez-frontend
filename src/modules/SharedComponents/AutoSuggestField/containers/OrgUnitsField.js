@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import AutoSuggestField from './components/AutoSuggestField';
+import {AutoSuggestField} from '../components/AutoSuggestField';
 import {OrgUnitsVocabId} from 'config/general';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
-class OrgUnitsAutoSuggestField extends Component {
+export class OrgUnitsAutoSuggestField extends Component {
     static propTypes = {
         input: PropTypes.object
     };
@@ -17,7 +17,6 @@ class OrgUnitsAutoSuggestField extends Component {
     render() {
         return (
             <AutoSuggestField
-                category={OrgUnitsVocabId}
                 onChange={this.props.input.onChange}
                 locale={{
                     fieldLabel: 'School, department or centre',
@@ -28,15 +27,17 @@ class OrgUnitsAutoSuggestField extends Component {
     }
 }
 
-const mapStateToProps = (state) => (
-    {
-        itemsList: state.get('orgUnitsReducer').itemsList
-    }
-);
+const mapStateToProps = (state) => {
+    return {
+        category: OrgUnitsVocabId,
+        itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[OrgUnitsVocabId]
+            ? state.get('controlledVocabulariesReducer')[OrgUnitsVocabId].itemsList : []
+    };
+};
 
 const mapDispatchToProps = (dispatch) => (
     {
-        loadSuggestions: (category) => dispatch(actions.loadOrgUnits(category))
+        loadSuggestions: (category) => dispatch(actions.loadVocabulariesList(category))
     }
 );
 

@@ -1,13 +1,18 @@
 import * as actions from 'actions/actionTypes';
 
+const initState = {
+    itemsList: [],
+    itemsLoading: false,
+    itemsLoadingError: false
+};
+
 const handlers = {
     [`${actions.VOCABULARIES_LOAD_FAILED}@`]: (state, action) => (
         {
             ...state,
             [actions.getActionSuffix(action.type)]: {
-                controlledVocabList: [],
-                controlledVocabLoading: false,
-                controlledVocabLoadingError: true
+                ...initState,
+                itemsLoadingError: true
             }
         }
     ),
@@ -15,9 +20,8 @@ const handlers = {
         {
             ...state,
             [actions.getActionSuffix(action.type)]: {
-                controlledVocabList: action.payload,
-                controlledVocabLoading: false,
-                controlledVocabLoadingError: false
+                ...initState,
+                itemsList: action.payload.map(item => (item.controlled_vocab.cvo_title))
             }
         }
     ),
@@ -25,8 +29,8 @@ const handlers = {
         {
             ...state,
             [actions.getActionSuffix(action.type)]: {
-                controlledVocabLoading: true,
-                controlledVocabLoadingError: false
+                ...initState,
+                itemsLoading: true
             }
         }
     )
@@ -34,7 +38,6 @@ const handlers = {
 
 export default function controlledVocabulariesReducer(state = {}, action) {
     const handler = handlers[actions.getAction(action.type)];
-
     if (!handler) {
         return state;
     }
