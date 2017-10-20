@@ -45,12 +45,14 @@ export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
         name: 'Generic Document',
-        class: 'Uqlibrary\\FezCore\\Types\\Generic'
+        class: 'Uqlibrary\\FezCore\\Types\\Generic',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
-        class: 'Uqlibrary\\FezCore\\Types\\Audio'
+        class: 'Uqlibrary\\FezCore\\Types\\Audio',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_BOOK,
@@ -59,7 +61,8 @@ export const publicationTypes = (components) => [
         subtypeVocabId: 453581,
         isFavourite: true,
         formComponent: components ? components.BookForm : null,
-        citationComponent: components ? components.BookCitation : null
+        citationComponent: components ? components.BookCitation : null,
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
@@ -68,7 +71,8 @@ export const publicationTypes = (components) => [
         subtypeVocabId: 453588,
         isFavourite: true,
         formComponent: components ? components.BookChapterForm : null,
-        citationComponent: components ? components.BookChapterCitation : null
+        citationComponent: components ? components.BookChapterCitation : null,
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
@@ -77,48 +81,57 @@ export const publicationTypes = (components) => [
         subtypeVocabId: 453596,
         isFavourite: true,
         formComponent: components ? components.ConferencePaperForm : null,
-        citationComponent: components ? components.ConferencePaperCitation : null
+        citationComponent: components ? components.ConferencePaperCitation : null,
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
         name: 'Conference Proceedings',
-        class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings'
+        class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_CREATIVE_WORK,
         name: 'Creative Work',
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
-        subtypeVocabId: 453594
+        vocabId: 453594,
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
         name: 'Data Collection',
-        class: 'Uqlibrary\\FezCore\\Types\\DataCollection'
+        class: 'Uqlibrary\\FezCore\\Types\\DataCollection',
+        hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         name: 'Department Technical Report',
-        class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport'
+        class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DESIGN,
         name: 'Design',
-        class: 'Uqlibrary\\FezCore\\Types\\Design'
+        class: 'Uqlibrary\\FezCore\\Types\\Design',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
         name: 'Digilib Image',
-        class: 'Uqlibrary\\FezCore\\Types\\DigilibImage'
+        class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
+        hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_IMAGE,
         name: 'Image',
-        class: 'Uqlibrary\\FezCore\\Types\\Image'
+        class: 'Uqlibrary\\FezCore\\Types\\Image',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_JOURNAL,
         name: 'Journal',
-        class: 'Uqlibrary\\FezCore\\Types\\Journal'
+        class: 'Uqlibrary\\FezCore\\Types\\Journal',
+        hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_JOURNAL_ARTICLE,
@@ -127,53 +140,63 @@ export const publicationTypes = (components) => [
         subtypeVocabId: 453573,
         isFavourite: true,
         formComponent: components ? components.JournalArticleForm : null,
-        citationComponent: components ? components.JournalArticleCitation : null
+        citationComponent: components ? components.JournalArticleCitation : null,
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_MANUSCRIPT,
         name: 'Manuscript',
-        class: 'Uqlibrary\\FezCore\\Types\\Manuscript'
+        class: 'Uqlibrary\\FezCore\\Types\\Manuscript',
+        hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
         name: 'Newspaper Article',
-        class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle'
+        class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_PATENT,
         name: 'Patent',
-        class: 'Uqlibrary\\FezCore\\Types\\Patent'
+        class: 'Uqlibrary\\FezCore\\Types\\Patent',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_PREPRINT,
         name: 'Preprint',
-        class: 'Uqlibrary\\FezCore\\Types\\Preprint'
+        class: 'Uqlibrary\\FezCore\\Types\\Preprint',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_RESEARCH_REPORT,
         name: 'Research Report',
-        class: 'Uqlibrary\\FezCore\\Types\\ResearchReport'
+        class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
         name: 'Seminar Paper',
-        class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper'
+        class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_THESIS,
         name: 'Thesis',
-        class: 'Uqlibrary\\FezCore\\Types\\Thesis'
+        class: 'Uqlibrary\\FezCore\\Types\\Thesis',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
         name: 'Video Document',
-        class: 'Uqlibrary\\FezCore\\Types\\Video'
+        class: 'Uqlibrary\\FezCore\\Types\\Video',
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_WORKING_PAPER,
         name: 'Working Paper',
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
-        formComponent: components ? components.WorkingPaperForm : null
+        formComponent: components ? components.WorkingPaperForm : null,
+        hasFormComponent: true
     }
 ];
 

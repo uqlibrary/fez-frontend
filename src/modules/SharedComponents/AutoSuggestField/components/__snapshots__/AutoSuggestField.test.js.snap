@@ -1,19 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VocabAutoSuggestField component should render 1`] = `
-<VocabAutoSuggestField
-  actions={
-    Object {
-      "loadOrgUnits": [Function],
-    }
-  }
-  dataSourceConfig={
-    Object {
-      "text": "controlled_vocab.cvo_title",
-    }
-  }
+exports[`AutoSuggestField component should render 1`] = `
+<AutoSuggestField
+  async={false}
+  debounceDelay={150}
   disabled={false}
   itemsList={Array []}
+  itemsListLoading={false}
+  loadSuggestions={[Function]}
   locale={
     Object {
       "fieldHint": "Please type text",
@@ -25,7 +19,7 @@ exports[`VocabAutoSuggestField component should render 1`] = `
 />
 `;
 
-exports[`VocabAutoSuggestField component should render autosuggest field and call action creator 1`] = `
+exports[`AutoSuggestField component should render autosuggest field and call action creator 1`] = `
 <Provider
   store={
     Object {
@@ -35,19 +29,13 @@ exports[`VocabAutoSuggestField component should render autosuggest field and cal
     }
   }
 >
-  <VocabAutoSuggestField
-    actions={
-      Object {
-        "loadOrgUnits": [Function],
-      }
-    }
-    dataSourceConfig={
-      Object {
-        "text": "controlled_vocab.cvo_title",
-      }
-    }
+  <AutoSuggestField
+    async={false}
+    debounceDelay={150}
     disabled={false}
     itemsList={Array []}
+    itemsListLoading={false}
+    loadSuggestions={[Function]}
     locale={
       Object {
         "fieldHint": "Please type text",
@@ -65,11 +53,7 @@ exports[`VocabAutoSuggestField component should render autosuggest field and cal
         }
       }
       animated={true}
-      dataSource={
-        Array [
-          "loading...",
-        ]
-      }
+      dataSource={Array []}
       dataSourceConfig={
         Object {
           "text": "text",
@@ -86,12 +70,11 @@ exports[`VocabAutoSuggestField component should render autosuggest field and cal
       listStyle={
         Object {
           "maxHeight": 200,
-          "overflowX": "hidden",
+          "overflow": "auto",
         }
       }
       maxSearchResults={7}
       menuCloseDelay={300}
-      menuProps={Object {}}
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}
@@ -1583,11 +1566,11 @@ exports[`VocabAutoSuggestField component should render autosuggest field and cal
         </Popover>
       </div>
     </AutoComplete>
-  </VocabAutoSuggestField>
+  </AutoSuggestField>
 </Provider>
 `;
 
-exports[`VocabAutoSuggestField component should render with className set 1`] = `
+exports[`AutoSuggestField component should render with className set 1`] = `
 <Provider
   store={
     Object {
@@ -1597,20 +1580,14 @@ exports[`VocabAutoSuggestField component should render with className set 1`] = 
     }
   }
 >
-  <VocabAutoSuggestField
-    actions={
-      Object {
-        "loadOrgUnits": [Function],
-      }
-    }
+  <AutoSuggestField
+    async={false}
     className="requiredField"
-    dataSourceConfig={
-      Object {
-        "text": "controlled_vocab.cvo_title",
-      }
-    }
+    debounceDelay={150}
     disabled={false}
     itemsList={Array []}
+    itemsListLoading={false}
+    loadSuggestions={[Function]}
     locale={
       Object {
         "fieldHint": "Please type text",
@@ -1629,11 +1606,7 @@ exports[`VocabAutoSuggestField component should render with className set 1`] = 
       }
       animated={true}
       className="requiredField"
-      dataSource={
-        Array [
-          "loading...",
-        ]
-      }
+      dataSource={Array []}
       dataSourceConfig={
         Object {
           "text": "text",
@@ -1650,12 +1623,11 @@ exports[`VocabAutoSuggestField component should render with className set 1`] = 
       listStyle={
         Object {
           "maxHeight": 200,
-          "overflowX": "hidden",
+          "overflow": "auto",
         }
       }
       maxSearchResults={7}
       menuCloseDelay={300}
-      menuProps={Object {}}
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}
@@ -3149,11 +3121,11 @@ exports[`VocabAutoSuggestField component should render with className set 1`] = 
         </Popover>
       </div>
     </AutoComplete>
-  </VocabAutoSuggestField>
+  </AutoSuggestField>
 </Provider>
 `;
 
-exports[`VocabAutoSuggestField component should render with disabled flag set to true 1`] = `
+exports[`AutoSuggestField component should render with disabled flag set to true 1`] = `
 <Provider
   store={
     Object {
@@ -3163,19 +3135,13 @@ exports[`VocabAutoSuggestField component should render with disabled flag set to
     }
   }
 >
-  <VocabAutoSuggestField
-    actions={
-      Object {
-        "loadOrgUnits": [Function],
-      }
-    }
-    dataSourceConfig={
-      Object {
-        "text": "controlled_vocab.cvo_title",
-      }
-    }
+  <AutoSuggestField
+    async={false}
+    debounceDelay={150}
     disabled={true}
     itemsList={Array []}
+    itemsListLoading={false}
+    loadSuggestions={[Function]}
     locale={
       Object {
         "fieldHint": "Please type text",
@@ -3193,11 +3159,7 @@ exports[`VocabAutoSuggestField component should render with disabled flag set to
         }
       }
       animated={true}
-      dataSource={
-        Array [
-          "loading...",
-        ]
-      }
+      dataSource={Array []}
       dataSourceConfig={
         Object {
           "text": "text",
@@ -3214,12 +3176,11 @@ exports[`VocabAutoSuggestField component should render with disabled flag set to
       listStyle={
         Object {
           "maxHeight": 200,
-          "overflowX": "hidden",
+          "overflow": "auto",
         }
       }
       maxSearchResults={7}
       menuCloseDelay={300}
-      menuProps={Object {}}
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}
@@ -4711,6 +4672,6 @@ exports[`VocabAutoSuggestField component should render with disabled flag set to
         </Popover>
       </div>
     </AutoComplete>
-  </VocabAutoSuggestField>
+  </AutoSuggestField>
 </Provider>
 `;

@@ -1,3 +1,6 @@
+export const getActionSuffix = (action) => (action.substring(action.indexOf('@') + 1, action.length));
+export const getAction = (action) => (action.substring(0, action.indexOf('@') + 1));
+
 // Academic stats
 export const ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING = 'ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING';
 export const ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED = 'ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED';
@@ -110,4 +113,13 @@ export const FIX_RECORD_SUCCESS = 'FIX_RECORD_SUCCESS';
 export const FIX_RECORD_UNCLAIM_SUCCESS = 'FIX_RECORD_UNCLAIM_SUCCESS';
 export const FIX_RECORD_FAILED = 'FIX_RECORD_FAILED';
 
+// Search keys
+export const SEARCH_KEY_LOOKUP_LOADING = 'SEARCH_KEY_LOOKUP_LOADING';
+export const SEARCH_KEY_LOOKUP_LOADED = 'SEARCH_KEY_LOOKUP_LOADED';
+export const SEARCH_KEY_LOOKUP_FAILED = 'SEARCH_KEY_LOOKUP_FAILED';
+
+// Controlled vocabularies
+export const VOCABULARIES_LOADING = 'VOCABULARIES_LOADING';
+export const VOCABULARIES_LOADED = 'VOCABULARIES_LOADED';
+export const VOCABULARIES_LOAD_FAILED = 'VOCABULARIES_LOAD_FAILED';
 // TODO: other actions...
