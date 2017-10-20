@@ -110,10 +110,10 @@ export default class GenericForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_additional_notes.rek_additional_notes"
+                                name="fez_record_search_key_notes.rek_notes"
                                 type="text"
                                 fullWidth
-                                rows={3}
+                                rows={1}
                                 multiLine
                                 floatingLabelText={txt.optional.fieldLabels.notes.title}
                                 hintText={txt.optional.fieldLabels.notes.hint}

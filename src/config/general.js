@@ -46,7 +46,8 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
         name: 'Generic Document',
         class: 'Uqlibrary\\FezCore\\Types\\Generic',
-        formComponent: components ? components.GenericForm : null
+        formComponent: components ? components.GenericForm : null,
+        citationComponent: components ? components.GenericCitation : null
     },
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,

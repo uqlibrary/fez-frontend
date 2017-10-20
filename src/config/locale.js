@@ -689,7 +689,7 @@ export default {
                     },
                     fieldLabels: {
                         notes: {
-                            title: 'Additional notes',
+                            title: 'Notes (not publicly viewable)',
                             hint: 'Please add any additional information'
                         },
                         link: {
