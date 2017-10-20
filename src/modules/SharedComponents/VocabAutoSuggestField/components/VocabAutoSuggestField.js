@@ -33,6 +33,10 @@ export class VocabAutoSuggestField extends Component {
         }
     };
 
+    static contextTypes = {
+        isMobile: PropTypes.bool
+    };
+
     constructor(props) {
         super(props);
 
@@ -102,7 +106,8 @@ export class VocabAutoSuggestField extends Component {
         return (
             <AutoComplete
                 disabled={this.props.disabled}
-                listStyle={{maxHeight: 200, overflow: 'auto'}}
+                listStyle={{maxHeight: 200, overflowX: 'hidden'}}
+                menuProps={this.context.isMobile ? {menuItemStyle: {whiteSpace: 'normal', height: 'auto', lineHeight: 1, paddingTop: 12}} : {} }
                 filter={AutoComplete.caseInsensitiveFilter}
                 ref="textField"
                 id="textField"

@@ -86,11 +86,12 @@ exports[`VocabAutoSuggestField component should render autosuggest field and cal
       listStyle={
         Object {
           "maxHeight": 200,
-          "overflow": "auto",
+          "overflowX": "hidden",
         }
       }
       maxSearchResults={7}
       menuCloseDelay={300}
+      menuProps={Object {}}
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}
@@ -1649,11 +1650,12 @@ exports[`VocabAutoSuggestField component should render with className set 1`] = 
       listStyle={
         Object {
           "maxHeight": 200,
-          "overflow": "auto",
+          "overflowX": "hidden",
         }
       }
       maxSearchResults={7}
       menuCloseDelay={300}
+      menuProps={Object {}}
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}
@@ -3212,11 +3214,12 @@ exports[`VocabAutoSuggestField component should render with disabled flag set to
       listStyle={
         Object {
           "maxHeight": 200,
-          "overflow": "auto",
+          "overflowX": "hidden",
         }
       }
       maxSearchResults={7}
       menuCloseDelay={300}
+      menuProps={Object {}}
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}

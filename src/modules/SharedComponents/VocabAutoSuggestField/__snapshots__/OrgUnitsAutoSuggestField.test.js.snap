@@ -112,11 +112,12 @@ exports[`OrgUnitsAutoSuggestField component should render with custom vocab id s
           listStyle={
             Object {
               "maxHeight": 200,
-              "overflow": "auto",
+              "overflowX": "hidden",
             }
           }
           maxSearchResults={7}
           menuCloseDelay={300}
+          menuProps={Object {}}
           onNewRequest={[Function]}
           onUpdateInput={[Function]}
           open={false}
