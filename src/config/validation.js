@@ -39,6 +39,7 @@ export const dateTimeYear = value => !value || value.length === 0 || isNaN(value
 
 // TODO: fix validation, make it generic etc....
 export const isValidDOIValue = value => {
+    const trimmedValue = value.trim();
     // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
     const doiRegex1 = /^10.\d{4,9}\/[-._;()/:A-Z0-9]+$/i;
     const doiRegex2 = /^10.1002\/[^\s]+$/i;
@@ -46,23 +47,23 @@ export const isValidDOIValue = value => {
     const doiRegex4 = /^10.1021\/\w\w\d+$/i;
     const doiRegex5 = /^10.1207\/[\w\d]+\&\d+_\d+$/i;
     // TODO: update with regex groups/or matching
-    return (!doiRegex1.test(value) && !doiRegex2.test(value) && !doiRegex3.test(value) && !doiRegex4.test(value) && !doiRegex5.test(value)) ? false : true;
+    return (!doiRegex1.test(trimmedValue) && !doiRegex2.test(trimmedValue) && !doiRegex3.test(trimmedValue) && !doiRegex4.test(trimmedValue) && !doiRegex5.test(trimmedValue)) ? false : true;
 };
 
 export const isValidPubMedValue = value => {
     // pubmed id is all digits, min 3 digits
     const isValid = /^[\d]{3,}$/;
-    return isValid.test(value);
+    return isValid.test(value.trim());
 };
 
 export const isValidPartialDOIValue = value => {
     const isValid = /^10\..*/;
-    return isValid.test(value);
+    return isValid.test(value.trim());
 };
 
 export const isValidPublicationTitle = value => {
     const isValid = /.{10,255}$/i;
-    return isValid.test(value);
+    return isValid.test(value.trim());
 };
 
 export const validFileUpload = value => {
