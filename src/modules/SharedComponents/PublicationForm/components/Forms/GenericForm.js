@@ -46,7 +46,7 @@ export default class GenericForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                                name="fez_record_search_key_place_of_publication"
                                 type="text"
                                 fullWidth
                                 floatingLabelText={txt.information.fieldLabels.placeOfPublication}
@@ -58,7 +58,7 @@ export default class GenericForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_publisher.rek_publisher"
+                                name="fez_record_search_key_publisher"
                                 type="text"
                                 fullWidth
                                 floatingLabelText={txt.information.fieldLabels.publisher}
