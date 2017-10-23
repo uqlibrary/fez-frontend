@@ -99,3 +99,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (values) => (
 export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery}) => (
     `external/records/search?source=${source}&${getSearchType(searchQuery)}`
 );
+
+export const SEARCH_KEY_LOOKUP_API = ({searchKey, searchQuery}) => (
+    `records/search?rule=lookup&search_key=${searchKey}&lookup_value=${prepareTextSearchQuery(searchQuery)}`
+);

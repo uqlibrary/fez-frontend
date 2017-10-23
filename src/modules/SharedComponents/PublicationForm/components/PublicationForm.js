@@ -63,7 +63,9 @@ export default class PublicationForm extends Component {
                 return <MenuItem value={item.id} primaryText={item.name} key={'fav_' + index} disabled={!item.formComponent}/>;
             })),
             ...[<Divider key="div_0"/>],
-            ...this.publicationTypes.map((item, index) => {
+            ...this.publicationTypes.filter((item) => {
+                return item.hasFormComponent;
+            }).map((item, index) => {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })
         ];

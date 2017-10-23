@@ -281,27 +281,6 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         disabled={true}
         focusState="none"
         insetChildren={false}
-        primaryText="Data Collection"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={371}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={true}
-        focusState="none"
-        insetChildren={false}
         primaryText="Department Technical Report"
         targetOrigin={
           Object {
@@ -344,27 +323,6 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         disabled={true}
         focusState="none"
         insetChildren={false}
-        primaryText="Digilib Image"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={228}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={true}
-        focusState="none"
-        insetChildren={false}
         primaryText="Image"
         targetOrigin={
           Object {
@@ -373,27 +331,6 @@ exports[`PublicationForm renders  component initialised with just one field - pu
           }
         }
         value={238}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={true}
-        focusState="none"
-        insetChildren={false}
-        primaryText="Journal"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={294}
       />
       <MenuItem
         anchorOrigin={
@@ -415,27 +352,6 @@ exports[`PublicationForm renders  component initialised with just one field - pu
           }
         }
         value={179}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={true}
-        focusState="none"
-        insetChildren={false}
-        primaryText="Manuscript"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={374}
       />
       <MenuItem
         anchorOrigin={
