@@ -39,7 +39,7 @@ describe('ResearchReportForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it.skip('component with 12 input fields (After discussion about Series title field, update this test case)', () => {
+    it('component with 12 input fields', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field').length).toEqual(12);
     });

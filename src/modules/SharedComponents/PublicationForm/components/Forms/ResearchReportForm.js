@@ -3,6 +3,7 @@ import {Field} from 'redux-form/immutable';
 
 import {TextField, StandardCard, ListEditorField, PartialDateField} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+import {SeriesField} from 'modules/SharedComponents/AutoSuggestField';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
@@ -75,16 +76,6 @@ export default class ResearchReportForm extends Component {
                     </div>
                 </StandardCard>
 
-                {
-                    /**
-                     *  @TODO discuss with Janna/Andrew
-                     *  Series Title
-                     *   - Is it the same Series field with auto suggest as in Working Paper and Department Technical Paper?
-                     *      - Yes - Use the same SeriesField component
-                     *      - No - No further information in LibNet except (Short Desc/Help: Enter title of series and Mandatory: N)
-                     */
-                }
-
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <div>{txt.authors.description}</div>
                     <Field
@@ -129,11 +120,21 @@ export default class ResearchReportForm extends Component {
                         disabled={this.props.submitting}
                         fullWidth
                         className="requiredField"
-                        floatingLabelText={txt.information.fieldLabels.totalPages}
-                        rows={1}/>
+                        floatingLabelText={txt.information.fieldLabels.totalPages}/>
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
+                    <div className="columns">
+                        <div className="column">
+                            <Field
+                                component={SeriesField}
+                                name="fez_record_search_key_series.rek_series"
+                                type="text"
+                                disabled={this.props.submitting}
+                                fullWidth
+                                floatingLabelText={txt.optional.fieldLabels.seriesTitle}/>
+                        </div>
+                    </div>
                     <div className="columns">
                         <div className="column">
                             <Field

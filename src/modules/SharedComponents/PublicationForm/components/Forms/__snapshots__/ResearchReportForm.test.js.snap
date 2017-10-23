@@ -321,7 +321,6 @@ exports[`ResearchReportForm renders  component 1`] = `
       floatingLabelText="Total pages"
       fullWidth={true}
       name="fez_record_search_key_total_pages.rek_total_pages"
-      rows={1}
       type="number"
     />
   </StandardCard>
@@ -336,6 +335,22 @@ exports[`ResearchReportForm renders  component 1`] = `
     }
     title="Optional publication details"
   >
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Series title"
+          fullWidth={true}
+          name="fez_record_search_key_series.rek_series"
+          type="text"
+        />
+      </div>
+    </div>
     <div
       className="columns"
     >
