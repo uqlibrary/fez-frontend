@@ -58,5 +58,19 @@ describe('Validation method', () => {
     });
 
 
+    it('it should validate doi correctly', () => {
+        expect(validation.isValidDOIValue(' 10.1007/978-3-319-60492-3_52 ')).toBeTruthy();
+        expect(validation.isValidDOIValue(' 10.1007/something ')).toBeTruthy();
+    });
+
+    it('it should validate pubmed id correctly', () => {
+        expect(validation.isValidPubMedValue(' 2342523452 ')).toBeTruthy();
+    });
+
+    it('it should validate publication title correctly', () => {
+        expect(validation.isValidPublicationTitle(' global    ')).toBeFalsy();
+        expect(validation.isValidPublicationTitle(' global war ')).toBeTruthy();
+    });
+    
 });
 
