@@ -10,6 +10,13 @@ export class OrgUnitsAutoSuggestField extends Component {
         input: PropTypes.object
     };
 
+    static defaultProps = {
+        locale: {
+            fieldLabel: 'School, department or centre',
+            fieldHint: 'Start typing organisation unit name'
+        }
+    };
+
     constructor(props) {
         super(props);
     }
@@ -18,10 +25,6 @@ export class OrgUnitsAutoSuggestField extends Component {
         return (
             <AutoSuggestField
                 onChange={this.props.input.onChange}
-                locale={{
-                    fieldLabel: 'School, department or centre',
-                    fieldHint: 'Start typing organisation unit name'
-                }}
                 {...this.props} />
         );
     }
