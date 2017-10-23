@@ -4,6 +4,7 @@ import * as rules from './validation';
 describe('Validation rules ', () => {
     it('it should validate doi correctly', () => {
         expect(rules.isValidDOIValue(' 10.1007/978-3-319-60492-3_52 ')).toBeTruthy();
+        expect(rules.isValidDOIValue(' 10.1007/something ')).toBeTruthy();
     });
 
     it('it should validate pubmed id correctly', () => {
