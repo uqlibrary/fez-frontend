@@ -110,7 +110,7 @@ export default class GenericForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_notes.rek_notes"
+                                name="fez_record_search_key_additional_notes.rek_notes"
                                 type="text"
                                 fullWidth
                                 rows={1}
