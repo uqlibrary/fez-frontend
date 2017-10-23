@@ -5,7 +5,7 @@ import {validation} from 'config';
  * @param {object} selected facets
  * @returns {string}
  */
-const getFacetsQueryString = (facets) => {
+export const getFacetsQueryString = (facets) => {
     return Object.keys(facets).map(key => {
         return ('filters[facets][' + key + ']=' + facets[key]);
     }).join('&');
@@ -41,7 +41,7 @@ export const prepareTextSearchQuery = (searchQuery) => {
  * @param {object} {page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}
  * @returns {string}
  */
-const getStandardSearchParameters = ({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => (
+export const getStandardSearchParameters = ({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => (
     `page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection}&${getFacetsQueryString(facets)}${withUnknownAuthors >= 0 ? `&with_unknown_authors=${withUnknownAuthors}` : ''}`
 );
 
@@ -50,7 +50,7 @@ const getStandardSearchParameters = ({page = 1, pageSize = 20, sortBy = 'publish
  * @param {string} pid/pubmed/string title to search
  * @returns {string} query string attribute based on input
  */
-const getSearchType = (searchQuery) => {
+export const getSearchType = (searchQuery) => {
     if (validation.isValidDOIValue(searchQuery)) {
         return `doi=${searchQuery.trim()}`;
     }
@@ -91,6 +91,7 @@ export const POSSIBLE_RECORDS_API = ({facets = {}}) => (`records/search?rule=pos
 export const HIDE_POSSIBLE_RECORD_API = () => ('records/search?rule=possible'); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
 
 export const CURRENT_USER_RECORDS_API = (values) => (`records/search?rule=mine&${getStandardSearchParameters(values)}`);
+
 export const SEARCH_INTERNAL_RECORDS_API = (values) => (
     // values = {searchQuery, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
     `records/search?${getSearchType(values.searchQuery)}&${getStandardSearchParameters(values)}`
