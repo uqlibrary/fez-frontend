@@ -46,8 +46,7 @@ export default class ResearchReportForm extends Component {
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace}
-                                validate={[validation.required]} />
+                                floatingLabelText={txt.information.fieldLabels.publicationPlace} />
                         </div>
                         <div className="column">
                             <Field
@@ -56,8 +55,7 @@ export default class ResearchReportForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publisher}
-                                validate={[validation.required]} />
+                                floatingLabelText={txt.information.fieldLabels.publisher} />
                         </div>
                     </div>
                     <div className="columns">
@@ -120,7 +118,8 @@ export default class ResearchReportForm extends Component {
                         disabled={this.props.submitting}
                         fullWidth
                         className="requiredField"
-                        floatingLabelText={txt.information.fieldLabels.totalPages}/>
+                        floatingLabelText={txt.information.fieldLabels.totalPages}
+                        validate={[validation.required]} />
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>

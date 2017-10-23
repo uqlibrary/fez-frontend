@@ -61,11 +61,6 @@ exports[`ResearchReportForm renders  component 1`] = `
           fullWidth={true}
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
         />
       </div>
       <div
@@ -78,11 +73,6 @@ exports[`ResearchReportForm renders  component 1`] = `
           fullWidth={true}
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
         />
       </div>
     </div>
@@ -322,6 +312,11 @@ exports[`ResearchReportForm renders  component 1`] = `
       fullWidth={true}
       name="fez_record_search_key_total_pages.rek_total_pages"
       type="number"
+      validate={
+        Array [
+          [Function],
+        ]
+      }
     />
   </StandardCard>
   <StandardCard
