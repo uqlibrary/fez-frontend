@@ -37,6 +37,17 @@ export default class FixRecord extends Component {
         };
     }
 
+    componentWillMount() {
+        const {recordToFix, author} = this.props;
+        const isAuthorLinked = author && recordToFix && recordToFix.fez_record_search_key_author_id && recordToFix.fez_record_search_key_author_id.length > 0 &&
+            recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
+
+        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !isAuthorLinked) {
+            // if either author or publication data is missing, abandon form
+            this.props.history.go(-1);
+        }
+    }
+
     componentDidMount() {
         if (!this.props.recordToFixLoading && !this.props.recordToFix) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
@@ -101,17 +112,27 @@ export default class FixRecord extends Component {
         return alertProps ? (<Alert {...alertProps} />) : null;
     };
 
+    _setSuccessConfirmation = (ref) => {
+        this.successConfirmationBox = ref;
+    };
+
+    _setCancelConfirmation = (ref) => {
+        this.cancelConfirmationBox = ref;
+    };
+
     render() {
         const txt = locale.pages.fixRecord;
-        const {recordToFix, author} = this.props;
-        const isAuthorLinked = author && recordToFix && recordToFix.fez_record_search_key_author_id && recordToFix.fez_record_search_key_author_id.length > 0 &&
-            recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
-        if (!this.props.authorLoading && !isAuthorLinked) {
-            // if either author or publication data is missing, abandon form
-            this.props.history.go(-1);
-            return <div/>;
+        if(this.props.authorLoading || this.props.recordToFixLoading) {
+            return (
+                <div className="is-centered">
+                    <InlineLoader message={txt.loadingMessage}/>
+                </div>
+            );
         }
+
+        const {recordToFix, author} = this.props;
+        if (!recordToFix || !author) return (<div />);
 
         const fixOptions = txt.actionsOptions.map((item, index) => (
             <MenuItem
@@ -122,115 +143,107 @@ export default class FixRecord extends Component {
 
         return (
             <StandardPage title={txt.title}>
-                {
-                    (this.props.authorLoading || this.props.recordToFixLoading) &&
-                    <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
-                }
+                <form onKeyDown={this._handleKeyboardFormSubmit}>
+                    <StandardCard title={txt.subTitle} help={txt.help}>
+                        <PublicationCitation publication={recordToFix}/>
 
-                {
-                    recordToFix &&
-                    <form onKeyDown={this._handleKeyboardFormSubmit}>
-                        <StandardCard title={txt.subTitle} help={txt.help}>
-                            <PublicationCitation publication={recordToFix}/>
-
-                            <Field
-                                component={SelectField}
-                                disabled={this.props.submitting}
-                                name="fixAction"
-                                {...this.context.selectFieldMobileOverrides}
-                                floatingLabelText={txt.fieldLabels.action}
-                                validate={[validation.required]}
-                                onChange={this._actionSelected}
-                                className="requiredField">
-                                {fixOptions}
-                            </Field>
-                        </StandardCard>
-                        {
-                            this.state.selectedRecordAction === 'fix' &&
-                            <div>
-                                <ConfirmDialogBox
-                                    onRef={ref => (this.cancelConfirmationBox = ref)}
-                                    onAction={this._navigateToMyResearch}
-                                    locale={txt.fix.cancelWorkflowConfirmation}/>
-                                <ConfirmDialogBox
-                                    onRef={ref => (this.successConfirmationBox = ref)}
-                                    onAction={this._navigateToMyResearch}
-                                    onCancelAction={this._navigateToDashboard}
-                                    locale={txt.fix.successWorkflowConfirmation}/>
-                                <StandardCard title={txt.fix.comments.title} help={txt.fix.comments.help}>
-                                    <Field
-                                        component={TextField}
-                                        className="requiredField"
-                                        disabled={this.props.submitting}
-                                        name="comments"
-                                        type="text"
-                                        fullWidth
-                                        multiLine
-                                        rows={1}
-                                        floatingLabelText={txt.fix.comments.fieldLabels.comments}
-                                        validate={[validation.required]}/>
-                                    <Field
-                                        component={TextField}
-                                        disabled={this.props.submitting}
-                                        name="rek_link"
-                                        type="text"
-                                        fullWidth
-                                        floatingLabelText={txt.fix.comments.fieldLabels.url}
-                                        validate={[validation.url, validation.maxLength255]}/>
-                                </StandardCard>
-                                <StandardCard title={txt.fix.fileUpload.title} help={txt.fix.fileUpload.help}>
-                                    {txt.fix.fileUpload.description}
-                                    <Field
-                                        name="files"
-                                        component={FileUploadField}
-                                        disabled={this.props.submitting}
-                                        requireFileAccess
-                                        validate={[validation.validFileUpload]}
-                                    />
-                                </StandardCard>
-                            </div>
-                        }
-
-                        {
-                            this.state.selectedRecordAction === 'unclaim' &&
-                            <StandardCard title={txt.unclaim.title} help={txt.unclaim.help}>
-                                <Alert {...txt.unclaim.alert}/>
-                                {txt.unclaim.description}
-                                <ConfirmDialogBox
-                                    onRef={ref => (this.successConfirmationBox = ref)}
-                                    onAction={this._navigateToMyResearch}
-                                    onCancelAction={this._navigateToDashboard}
-                                    locale={txt.unclaim.successWorkflowConfirmation}/>
+                        <Field
+                            component={SelectField}
+                            disabled={this.props.submitting}
+                            name="fixAction"
+                            {...this.context.selectFieldMobileOverrides}
+                            floatingLabelText={txt.fieldLabels.action}
+                            validate={[validation.required]}
+                            onChange={this._actionSelected}
+                            className="requiredField">
+                            {fixOptions}
+                        </Field>
+                    </StandardCard>
+                    {
+                        this.state.selectedRecordAction === 'fix' &&
+                        <div>
+                            <ConfirmDialogBox
+                                onRef={this._setCancelConfirmation}
+                                onAction={this._navigateToMyResearch}
+                                locale={txt.fix.cancelWorkflowConfirmation}/>
+                            <ConfirmDialogBox
+                                onRef={this._setSuccessConfirmation}
+                                onAction={this._navigateToMyResearch}
+                                onCancelAction={this._navigateToDashboard}
+                                locale={txt.fix.successWorkflowConfirmation}/>
+                            <StandardCard title={txt.fix.comments.title} help={txt.fix.comments.help}>
+                                <Field
+                                    component={TextField}
+                                    className="requiredField"
+                                    disabled={this.props.submitting}
+                                    name="comments"
+                                    type="text"
+                                    fullWidth
+                                    multiLine
+                                    rows={1}
+                                    floatingLabelText={txt.fix.comments.fieldLabels.comments}
+                                    validate={[validation.required]}/>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="rek_link"
+                                    type="text"
+                                    fullWidth
+                                    floatingLabelText={txt.fix.comments.fieldLabels.url}
+                                    validate={[validation.url, validation.maxLength255]}/>
                             </StandardCard>
-                        }
+                            <StandardCard title={txt.fix.fileUpload.title} help={txt.fix.fileUpload.help}>
+                                {txt.fix.fileUpload.description}
+                                <Field
+                                    name="files"
+                                    component={FileUploadField}
+                                    disabled={this.props.submitting}
+                                    requireFileAccess
+                                    validate={[validation.validFileUpload]}
+                                />
+                            </StandardCard>
+                        </div>
+                    }
 
+                    {
+                        this.state.selectedRecordAction === 'unclaim' &&
+                        <StandardCard title={txt.unclaim.title} help={txt.unclaim.help}>
+                            <Alert {...txt.unclaim.alert}/>
+                            {txt.unclaim.description}
+                            <ConfirmDialogBox
+                                onRef={this._setSuccessConfirmation}
+                                onAction={this._navigateToMyResearch}
+                                onCancelAction={this._navigateToDashboard}
+                                locale={txt.unclaim.successWorkflowConfirmation}/>
+                        </StandardCard>
+                    }
+
+                    {
+                        this.getAlert({...this.props, alertLocale: txt.fix})
+                    }
+
+                    <div className="columns action-buttons">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                fullWidth
+                                label={txt.cancel}
+                                disabled={this.props.submitting}
+                                onTouchTap={this._showConfirmation}/>
+                        </div>
                         {
-                            this.getAlert({...this.props, alertLocale: txt.fix})
-                        }
-
-                        <div className="columns action-buttons">
-                            <div className="column is-hidden-mobile"/>
+                            this.state.selectedRecordAction &&
                             <div className="column is-narrow-desktop">
                                 <RaisedButton
+                                    secondary
                                     fullWidth
-                                    label={txt.cancel}
-                                    disabled={this.props.submitting}
-                                    onTouchTap={this._showConfirmation}/>
+                                    label={txt.submit}
+                                    onTouchTap={this.props.handleSubmit}
+                                    disabled={this.props.submitting || this.props.invalid}/>
                             </div>
-                            {
-                                this.state.selectedRecordAction &&
-                                <div className="column is-narrow-desktop">
-                                    <RaisedButton
-                                        secondary
-                                        fullWidth
-                                        label={txt.submit}
-                                        onTouchTap={this.props.handleSubmit}
-                                        disabled={this.props.submitting || this.props.invalid}/>
-                                </div>
-                            }
-                        </div>
-                    </form>
-                }
+                        }
+                    </div>
+                </form>
             </StandardPage>
         );
     }

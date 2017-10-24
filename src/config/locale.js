@@ -1409,11 +1409,7 @@ export default {
         fileUpload: 'File upload is not in valid state',
         required: 'This field is required',
         email: 'Please enter a valid email address',
-        uniqueValue: 'This value has already been used',
         url: 'Please enter a valid URL',
-        arrayRequired: 'You must select at least one item',
-        canNotBeCI: 'You must specify a lead UQ supervisor for a RHD project',
-        shortCode: 'The project short code must consist of 8 alpha numeric characters',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
@@ -1421,12 +1417,8 @@ export default {
         authorLinking: 'One author must be selected and be confirmed'
     },
     issues: {
-        claim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Record was claimed: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
-        unclaim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Record is not mine: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
-        fixRecord: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Fix request: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`
+        fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
+            `Record: https://fez-staging.library.uq.edu.au/view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
     }
 };
 

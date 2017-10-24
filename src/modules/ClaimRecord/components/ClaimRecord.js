@@ -19,6 +19,15 @@ export default class ClaimRecord extends Component {
         super(props);
     }
 
+    componentWillMount() {
+        const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
+        const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
+
+        if (!author || !publication) {
+            this.props.history.go(-1);
+        }
+    }
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
@@ -78,19 +87,25 @@ export default class ClaimRecord extends Component {
         return alertProps ? (<Alert {...alertProps} />) : null;
     };
 
+    _setSuccessConfirmation = (ref) => {
+        this.successConfirmationBox = ref;
+    };
+
+    _setCancelConfirmation = (ref) => {
+        this.cancelConfirmationBox = ref;
+    };
+
     render() {
         const txt = locale.components.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
-
         if (!author || !publication) {
-            this.props.history.go(-1);
             return (<div />);
         }
-
-        const authorLinked = publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
+        const authorLinked = publication && author && publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
+        console.log(publication);
         const fromAddRecord = !!publication.sources;
         return (
             <StandardPage title={txt.title}>
@@ -102,12 +117,12 @@ export default class ClaimRecord extends Component {
                         (!publication.rek_pid || !authorLinked) &&
                         <div>
                             <ConfirmDialogBox
-                                onRef={ref => (this.cancelConfirmationBox = ref)}
+                                onRef={this._setCancelConfirmation}
                                 onAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
                                 locale={txt.cancelWorkflowConfirmation}/>
 
                             <ConfirmDialogBox
-                                onRef={ref => (this.successConfirmationBox = ref)}
+                                onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
                                 locale={{

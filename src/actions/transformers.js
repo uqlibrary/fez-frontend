@@ -5,7 +5,6 @@ const moment = require('moment');
 const pipe = (...functionsList) => values => functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
 const getIssueValues = (data) => ({
-    title: data.publication.rek_title,
     pid: data.publication.rek_pid,
     userName: data.author.aut_display_name,
     userId: data.author.aut_org_username,
@@ -13,16 +12,6 @@ const getIssueValues = (data) => ({
 });
 
 const getIssuesRequest = (text) => ({issue: text});
-
-/* getClaimIssueRequest - returns claim issue request object
-* @returns {Object} issue request
-*/
-export const getClaimIssueRequest = pipe(getIssueValues, locale.issues.claim, getIssuesRequest);
-
-/* getUnclaimIssueRequest - returns unclaim issue request object
-* @returns {Object} issue request
-*/
-export const getUnclaimIssueRequest = pipe(getIssueValues, locale.issues.unclaim, getIssuesRequest);
 
 /* getFixIssueRequest - returns fix record issue request object
 * @returns {Object} issue request
@@ -42,12 +31,6 @@ export const getRecordLinkSearchKey = (data) => {
             {
                 rek_link: data.rek_link,
                 rek_link_order: 1
-            }
-        ],
-        fez_record_search_key_link_description: [
-            {
-                rek_link_description: data.rek_link,
-                rek_link_description_order: 1
             }
         ]
     };

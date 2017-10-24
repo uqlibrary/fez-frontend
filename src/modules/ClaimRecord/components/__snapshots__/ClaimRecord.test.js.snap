@@ -896,6 +896,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
+          onTouchTap={[Function]}
           primary={false}
           secondary={true}
         />
@@ -1786,6 +1787,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
+          onTouchTap={[Function]}
           primary={false}
           secondary={true}
         />
@@ -2934,6 +2936,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           fullWidth={true}
           label="Claim this publication"
           labelPosition="after"
+          onTouchTap={[Function]}
           primary={false}
           secondary={true}
         />
