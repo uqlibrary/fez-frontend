@@ -7,7 +7,7 @@ import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation, locale} from 'config';
 
-export default class GenericForm extends Component {
+export default class GenericDocumentForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
         subtypeVocabId: PropTypes.number

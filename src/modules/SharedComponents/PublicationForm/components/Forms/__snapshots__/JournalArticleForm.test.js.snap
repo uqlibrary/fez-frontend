@@ -29,6 +29,7 @@ exports[`JournalArticleForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
+          floatingLabelText="Title of document"
           fullWidth={true}
           multiLine={true}
           name="rek_title"

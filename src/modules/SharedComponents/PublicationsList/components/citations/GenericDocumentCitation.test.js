@@ -1,9 +1,9 @@
-jest.dontMock('./GenericCitation');
+jest.dontMock('./GenericDocumentCitation');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import GenericCitation from './GenericCitation';
+import GenericDocumentCitation from './GenericDocumentCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -16,10 +16,10 @@ function setup({publication, isShallow = true}) {
     };
 
     if(isShallow) {
-        return shallow(<GenericCitation {...props} />);
+        return shallow(<GenericDocumentCitation {...props} />);
     }
 
-    return mount(<GenericCitation {...props} />, {
+    return mount(<GenericDocumentCitation {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -33,7 +33,7 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('GenericCitation renders ', () => {
+describe('GenericDocumentCitation renders ', () => {
     it('component with empty publication', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();

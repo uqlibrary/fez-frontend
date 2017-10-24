@@ -1,9 +1,9 @@
-jest.dontMock('./GenericForm');
+jest.dontMock('./GenericDocumentForm');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import GenericForm from './GenericForm';
+import GenericDocumentForm from './GenericDocumentForm';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -16,10 +16,10 @@ function setup({submitting, subtypeVocabId, isShallow = true}){
     };
 
     if(isShallow) {
-        return shallow(<GenericForm {...props} />);
+        return shallow(<GenericDocumentForm {...props} />);
     }
 
-    return mount(<GenericForm {...props} />, {
+    return mount(<GenericDocumentForm {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -34,18 +34,18 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('GenericForm renders ', () => {
+describe('GenericDocumentForm renders ', () => {
     it('component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 12 input fields', () => {
+    it('component with 8 input fields', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field').length).toEqual(8);
     });
 
-    it('component with 5 required input fields', () => {
+    it('component with 3 required input fields', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field .requiredField').length).toEqual(2);
         expect(wrapper.find('Field .requiredHintField').length).toEqual(1);

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GenericCitation renders  component with a mock espace record 1`] = `
+exports[`GenericDocumentCitation renders  component with a mock espace record 1`] = `
 <div
-  className="citationContent citationJournalArticle"
+  className="citationContent citationGenericDocument"
 >
   <FontIcon
     className="material-icons citationIcon"
@@ -360,7 +360,7 @@ exports[`GenericCitation renders  component with a mock espace record 1`] = `
       }
     }
   />
-   (
+   
   <YearCitationView
     publication={
       Object {
@@ -701,7 +701,7 @@ exports[`GenericCitation renders  component with a mock espace record 1`] = `
       }
     }
   />
-  ).
+  .
   <span
     className="citationTitle"
   >
@@ -711,9 +711,9 @@ exports[`GenericCitation renders  component with a mock espace record 1`] = `
 </div>
 `;
 
-exports[`GenericCitation renders  component with empty publication 1`] = `
+exports[`GenericDocumentCitation renders  component with empty publication 1`] = `
 <div
-  className="citationContent citationJournalArticle"
+  className="citationContent citationGenericDocument"
 >
   <FontIcon
     className="material-icons citationIcon"
@@ -734,10 +734,10 @@ exports[`GenericCitation renders  component with empty publication 1`] = `
       }
     }
   />
-   (
+   
   <YearCitationView
     publication={Object {}}
   />
-  ).
+  .
 </div>
 `;

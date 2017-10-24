@@ -709,7 +709,7 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        documentTitle: 'Title of document',
+                        articleTitle: 'Title of document',
                         journalTitle: 'Journal name',
                         date: {
                             title: 'Publication date',

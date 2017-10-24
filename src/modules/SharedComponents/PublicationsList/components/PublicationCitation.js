@@ -12,6 +12,7 @@ import JournalArticleCitation from './citations/JournalArticleCitation';
 import BookChapterCitation from './citations/BookChapterCitation';
 import BookCitation from './citations/BookCitation';
 import ConferencePaperCitation from './citations/ConferencePaperCitation';
+import GenericDocumentCitation from './citations/GenericDocumentCitation';
 
 export default class PublicationCitation extends Component {
     static propTypes = {
@@ -32,7 +33,7 @@ export default class PublicationCitation extends Component {
         super(props);
 
         // keep a list of all available citations
-        this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation};
+        this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation, GenericDocumentCitation};
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }
