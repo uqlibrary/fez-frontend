@@ -105,6 +105,7 @@ export default class ClaimRecord extends Component {
         const authorLinked = publication && author && publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
+        console.log(publication);
         const fromAddRecord = !!publication.sources;
         return (
             <StandardPage title={txt.title}>

@@ -8,13 +8,13 @@ const initialSearchSources = {
     }
 };
 
-export const initialState = {
+const initialState = {
     publicationsList: [],
     loadingSearch: false,
     ...initialSearchSources
 };
 
-function deduplicateResults(publicationsList) {
+export const deduplicateResults = (publicationsList) => {
     // get a list of DOI counts
     const doiCountHash = publicationsList
         .filter(item => {
@@ -78,8 +78,10 @@ function deduplicateResults(publicationsList) {
         });
 
     // re-add de-duplicated items
-    return [...highPriorityItem, ...cleanedPublicationsList];
-}
+    return [...highPriorityItem, ...cleanedPublicationsList]
+        .sort((item1, item2) =>
+            (locale.global.sources[item1.currentSource].priority - locale.global.sources[item2.currentSource].priority));
+};
 
 const handlers = {
 
@@ -130,7 +132,7 @@ const handlers = {
 
     [`${actions.SEARCH_FAILED}@`]: (state, action) => {
         // get search source, eg wos/pubmed/etc
-        const source = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
+        const source = actions.getActionSuffix(action.type);
 
         // set search completed for a specific source
         const loadingPublicationSources = {
@@ -149,8 +151,7 @@ const handlers = {
     },
 
     [`${actions.SEARCH_COMPLETED}@`]: (state, action) => {
-        // get search source, eg wos/pubmed/etc
-        const source = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
+        const source = actions.getActionSuffix(action.type);
 
         // set search completed for a specific source
         const loadingPublicationSources = {
@@ -181,8 +182,7 @@ const handlers = {
 };
 
 export default function searchRecordsReducer(state = initialState, action) {
-    const handler = action.type.indexOf(`${actions.SEARCH_COMPLETED}@`) < 0 && action.type.indexOf(`${actions.SEARCH_FAILED}@`) < 0 ?
-        handlers[action.type] : handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
+    const handler = handlers[action.getAction(action.type)];
     if (!handler) {
         return state;
     }
