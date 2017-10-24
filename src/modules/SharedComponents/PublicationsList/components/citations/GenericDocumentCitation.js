@@ -19,10 +19,6 @@ export default class GenericDocumentCitation extends Component {
             publisher: this.props.publication.fez_record_search_key_publisher ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
             title: this.props.publication.rek_title,
         };
-        console.log('id          : ' + genericDocument.id);
-        console.log('title       : ' + genericDocument.title);
-        console.log('contributor : ' + genericDocument.contributor);
-        console.log('publisher   : ' + genericDocument.publisher);
 
         // eSpace citation view for Generic article
         // {7630}{7660| (|)}. {7623}. {7638|Edited by |. }{7658||.}
