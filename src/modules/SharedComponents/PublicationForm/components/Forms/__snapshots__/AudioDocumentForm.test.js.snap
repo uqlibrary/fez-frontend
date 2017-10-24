@@ -47,7 +47,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Place of publication"
           fullWidth={true}
-          name="fez_record_search_key_place_of_publication"
+          name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
         />
       </div>
@@ -63,7 +63,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Publisher"
           fullWidth={true}
-          name="fez_record_search_key_publisher"
+          name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />
       </div>
