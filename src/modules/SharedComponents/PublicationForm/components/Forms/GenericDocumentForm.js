@@ -46,7 +46,7 @@ export default class GenericDocumentForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_place_of_publication"
+                                name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
                                 floatingLabelText={txt.information.fieldLabels.placeOfPublication}
@@ -110,7 +110,7 @@ export default class GenericDocumentForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_additional_notes.rek_notes"
+                                name="fez_record_search_key_notes.rek_notes"
                                 type="text"
                                 fullWidth
                                 rows={1}
@@ -125,7 +125,7 @@ export default class GenericDocumentForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_link.rek_link"
+                                name="rek_link"
                                 type="text"
                                 fullWidth
                                 floatingLabelText={txt.optional.fieldLabels.link.title}
