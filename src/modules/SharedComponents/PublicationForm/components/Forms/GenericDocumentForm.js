@@ -58,7 +58,7 @@ export default class GenericDocumentForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_publisher"
+                                name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
                                 floatingLabelText={txt.information.fieldLabels.publisher}

@@ -65,7 +65,7 @@ exports[`GenericDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Publisher"
           fullWidth={true}
-          name="fez_record_search_key_publisher"
+          name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />
       </div>
