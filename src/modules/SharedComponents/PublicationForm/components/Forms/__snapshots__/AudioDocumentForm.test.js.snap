@@ -305,10 +305,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link"
           fullWidth={true}
-          hintText="Enter URL for this work."
-          name="fez_record_search_key_link.rek_link"
+          name="rek_link"
           type="text"
           validate={
             Array [

@@ -137,12 +137,11 @@ export default class AudioDocumentForm extends Component {
                         <div className="column">
                             <Field
                                 component={TextField}
-                                disabled={this.props.submitting}
-                                name="fez_record_search_key_link.rek_link"
+                                name="rek_link"
                                 type="text"
+                                disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.link.title}
-                                hintText={txt.optional.fieldLabels.link.hint}
+                                floatingLabelText={txt.optional.fieldLabels.url}
                                 validate={[validation.url, validation.maxLength255]}
                             />
                         </div>
