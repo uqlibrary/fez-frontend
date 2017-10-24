@@ -115,20 +115,8 @@ export const externalTitleSearchResultsList = {
                 }],
                 "rek_description": "Cardiovascular diseases (CVDs) are one of the major causes of mortality and disability in Western countries. Prevention is known to be the cornerstone to lessen the incidence of CVDs and also to reduce the economic burden of both the citizen and the healthcare system. \"Interventional medicine\" certainly puts lifestyle modification as the first therapeutic step, including a healthy diet and physical activity. Secondly, a large body of research individuated a number of food and plant bioactives, which are potentially efficacious in preventing and reducing some highly prevalent CV risk factors, such as hypercholesterolemia, hypertension, vascular inflammation and vascular compliance. Some lipid- and blood pressure-lowering bioactives were studied for their impact on human vascular health, particularly as regards endothelial function and arterial stiffness. Several nutraceuticals showed additive or synergistic properties in combination, sometimes (but not always) allowing a reduction of the administered dose of extracts and determining a \"multi-factorial\" final effect on many cardiovascular risk factors. Thus, this review focuses on available evidence regarding the effects of berberine, plant sterols, green tea extract, soy, curcumin, cocoa, pycnogenol, lycopene, olive oil, soluble fibers, garlic, resveratrol, beetroot, mineral salts and vitamins on the lipid profile, blood pressure, inflammatory and endothelial markers, and vascular compliance. Future clinical research studies will have to focus more on middle term modification of the instrumental markers of vascular aging than on short-term effects on indirect laboratory risk markers.",
                 "fez_record_search_key_oa_status": {"rek_oa_status": "453698"},
-                "rek_display_type": 263,
-                "rek_genre": "Audio Document",
-                "fez_record_search_key_series": {
-                    "rek_series_id": 196898,
-                    "rek_series_pid": "UQ:124179",
-                    "rek_series_xsdmf_id": 9616,
-                    "rek_series": "Poets on Record, no. 14"
-                },
-                "fez_record_search_key_publisher": {
-                    "rek_publisher_id": 4459179,
-                    "rek_publisher_pid": "UQ:124179",
-                    "rek_publisher_xsdmf_id": 9540,
-                    "rek_publisher": "University of Queensland Press"
-                },
+                "rek_display_type": 179,
+                "rek_genre": "Journal Article"
             },
             {
                 "rek_title": "Effect of diets rich in either saturated fat or n-6 polyunsaturated fatty acids and supplemented with long-chain n-3 polyunsaturated fatty acids on plasma lipoprotein profiles.",

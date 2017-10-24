@@ -1079,6 +1079,7 @@ export default {
                 },
                 creator: {
                     title: 'Creators',
+                    description: 'Provide a list of creators for this publication',
                     help: {
                         title: 'Creators',
                         text: 'This is the author or creator of the work, e.g. interviewer, program co-ordinator or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.',
@@ -1127,6 +1128,7 @@ export default {
                 },
                 contributor: {
                     title: 'Contributors',
+                    description: 'Provide a list of editors for this publication',
                     help: {
                         title: 'Contributors',
                         text: 'This is the contributor, and may be different to the creator, e.g. interviewee or performer (if not self-produced). Please enter contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',

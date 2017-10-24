@@ -91,6 +91,7 @@ export default class AudioDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.creator.title} help={txt.creator.help}>
+                    <div>{txt.creator.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
@@ -102,10 +103,10 @@ export default class AudioDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.contributor.title} help={txt.contributor.help}>
+                    <div>{txt.contributor.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
-                        className="requiredField"
                         name="editors"
                         locale={txt.contributor.field}
                         disabled={this.props.submitting}

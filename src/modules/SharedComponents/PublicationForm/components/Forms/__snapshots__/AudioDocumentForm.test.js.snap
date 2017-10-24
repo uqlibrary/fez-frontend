@@ -116,6 +116,9 @@ exports[`AudioDocumentForm renders  component 1`] = `
     }
     title="Creators"
   >
+    <div>
+      Provide a list of creators for this publication
+    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -188,8 +191,10 @@ exports[`AudioDocumentForm renders  component 1`] = `
     }
     title="Contributors"
   >
+    <div>
+      Provide a list of editors for this publication
+    </div>
     <Field
-      className="requiredField"
       component={[Function]}
       disabled={false}
       locale={

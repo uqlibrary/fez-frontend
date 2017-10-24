@@ -1959,37 +1959,37 @@ export const conferencePaper = {
 };
 
 export const audioDocument = {
-    "rek_pid": "UQ:124179",
+    "rek_pid": "UQ:372785",
     "rek_title_xsdmf_id": 9543,
-    "rek_title": "David Campbell reads from his own work",
-    "rek_description_xsdmf_id": 11497,
-    "rek_description": "Contents: -- Night Sowing -- Hear the Bird of Day -- The Red Cock -- Windy Gap -- Windy Nights -- We Took the Storms to Bed -- Mothers and Daughters -- The Boongary -- Let Each Ripen -- Delivering Lambs -- On the Birth of a Son -- Murder of a Ganger -- Sanctuary -- Hotel Marine.",
+    "rek_title": "Oral history interview with [Harold William Thiele by John Cole, 7 Sep 1981]",
+    "rek_description_xsdmf_id": null,
+    "rek_description": null,
     "rek_display_type_xsdmf_id": 3673,
     "rek_display_type": 263,
     "rek_status_xsdmf_id": 3680,
     "rek_status": 2,
-    "rek_date_xsdmf_id": 9531,
-    "rek_date": "1975-01-01T00:00:00Z",
+    "rek_date_xsdmf_id": null,
+    "rek_date": "2017-10-24T16:17:08Z",
     "rek_object_type_xsdmf_id": 3674,
     "rek_object_type": 3,
     "rek_depositor_xsdmf_id": 7578,
-    "rek_depositor": 116,
+    "rek_depositor": 3946,
     "rek_created_date_xsdmf_id": 3677,
-    "rek_created_date": "2008-02-06T15:09:14Z",
+    "rek_created_date": "2015-11-05T10:22:47Z",
     "rek_updated_date_xsdmf_id": 3678,
-    "rek_updated_date": "2015-04-23T01:19:22Z",
-    "rek_file_downloads": 3,
-    "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Campbell, David\" href=\"/list/author/Campbell%2C+David/\">Campbell, David</a> (<span class=\"citation_date\">1975</span>) <a class=\"citation_title\" title=\"Click to view Audio Document: David Campbell reads from his own work\" href=\"/view/UQ:124179\">David Campbell reads from his own work</a>.  :<span class=\"citation_publisher\">University of Queensland Press</span>. <span class=\"citation_series\">Poets on Record, no. 14</span>.",
+    "rek_updated_date": "2015-11-17T23:02:12Z",
+    "rek_file_downloads": 0,
+    "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for University of Queensland\" href=\"/list/author/University+of+Queensland/\">University of Queensland</a>  <a class=\"citation_title\" title=\"Click to view Audio Document: Oral history interview with [Harold William Thiele by John Cole, 7 Sep 1981]\" href=\"/view/UQ:372785\">Oral history interview with [Harold William Thiele by John Cole, 7 Sep 1981]</a>.  <span class=\"citation_series\">Oral history interviews collected by Dr. J.R. Cole for 75th anniversary history project sound recording</span>.",
     "rek_genre_xsdmf_id": 9532,
-    "rek_genre": "sound recording; mono; 14 mins.",
+    "rek_genre": "audio/wav",
     "rek_genre_type_xsdmf_id": null,
     "rek_genre_type": null,
     "rek_formatted_title_xsdmf_id": null,
     "rek_formatted_title": null,
-    "rek_formatted_abstract_xsdmf_id": null,
-    "rek_formatted_abstract": null,
-    "rek_depositor_affiliation_xsdmf_id": null,
-    "rek_depositor_affiliation": null,
+    "rek_formatted_abstract_xsdmf_id": 11498,
+    "rek_formatted_abstract": "The oral history interviews were conducted in preparation for the 1985 publication <em>A place of light &amp; learning : the University of Queensland's first seventy-five years</em> by Malcolm Thomis, to commemorate the 75th anniversary of the foundation of the University of Queensland. <br /><br />Some three dozen tape recordings were made of interviews with former staff and students of the University. The interviews were conducted by John Cole, Nancy Bonnin and others from 1979 to 1983. <br /><br />Between 1999 and 2001, the University of Queensland Library converted the tape recordings into MP3 format. In 2015 the Library combined tracks with the same interviewees and converted the MP3 to WAV format. <br /><br />Reference: Thomis, Malcolm I. (1985). <em>A place of light &amp; learning : the University of Queensland's first seventy-five years</em>. University of Queensland Press, St. Lucia, Qld.",
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 1164,
     "rek_thomson_citation_count": null,
     "rek_thomson_citation_count_xsdmf_id": null,
     "rek_subtype_xsdmf_id": null,
@@ -2009,19 +2009,27 @@ export const audioDocument = {
     "rek_altmetric_id": null,
     "rek_altmetric_id_xsdmf_id": null,
     "rek_copyright_xsdmf_id": 3679,
-    "rek_copyright": "off",
+    "rek_copyright": "on",
     "fez_record_search_key_acknowledgements": null,
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_article_number": null,
     "fez_record_search_key_assigned_group_id": [],
-    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_assigned_user_id": [
+        {
+            "rek_assigned_user_id_id": 906347,
+            "rek_assigned_user_id_pid": "UQ:372785",
+            "rek_assigned_user_id_xsdmf_id": 9501,
+            "rek_assigned_user_id": 3946,
+            "rek_assigned_user_id_order": 1
+        }
+    ],
     "fez_record_search_key_author": [
         {
-            "rek_author_id": 28993113,
-            "rek_author_pid": "UQ:124179",
+            "rek_author_id": 28736207,
+            "rek_author_pid": "UQ:372785",
             "rek_author_xsdmf_id": 9514,
-            "rek_author": "Campbell, David",
+            "rek_author": "University of Queensland",
             "rek_author_order": 1
         }
     ],
@@ -2030,94 +2038,99 @@ export const audioDocument = {
     "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_name": [],
     "fez_record_search_key_author_id": [],
-    "fez_record_search_key_contributor": [],
-    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3077552,
+            "rek_contributor_pid": "UQ:372785",
+            "rek_contributor_xsdmf_id": 9522,
+            "rek_contributor": "Thiele, H. W. (Harold William), d. 1996",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3077553,
+            "rek_contributor_pid": "UQ:372785",
+            "rek_contributor_xsdmf_id": 9522,
+            "rek_contributor": "Cole, John R.",
+            "rek_contributor_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2294794,
+            "rek_contributor_id_pid": "UQ:372785",
+            "rek_contributor_id_xsdmf_id": 9517,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2294795,
+            "rek_contributor_id_pid": "UQ:372785",
+            "rek_contributor_id_xsdmf_id": 9517,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 2
+        }
+    ],
     "fez_record_search_key_corresponding_country": [],
     "fez_record_search_key_corresponding_email": [],
     "fez_record_search_key_corresponding_name": [],
     "fez_record_search_key_corresponding_organisation": [],
     "fez_record_search_key_datastream_policy": null,
-    "fez_record_search_key_date_available": null,
-    "fez_record_search_key_date_recorded": null,
+    "fez_record_search_key_date_available": {
+        "rek_date_available_id": 905939,
+        "rek_date_available_pid": "UQ:372785",
+        "rek_date_available_xsdmf_id": 10712,
+        "rek_date_available": "2015-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_date_recorded": {
+        "rek_date_recorded_id": 21397,
+        "rek_date_recorded_pid": "UQ:372785",
+        "rek_date_recorded_xsdmf_id": 16638,
+        "rek_date_recorded": "1981-09-07T00:00:00Z"
+    },
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [
         {
-            "rek_file_attachment_name_id": 3965247,
-            "rek_file_attachment_name_pid": "UQ:124179",
+            "rek_file_attachment_name_id": 3826928,
+            "rek_file_attachment_name_pid": "UQ:372785",
             "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "Campbell.jpg",
+            "rek_file_attachment_name": "Oral_history_interviews_ThieleW.wav",
             "rek_file_attachment_name_order": 1
         },
         {
-            "rek_file_attachment_name_id": 3965248,
-            "rek_file_attachment_name_pid": "UQ:124179",
+            "rek_file_attachment_name_id": 3826929,
+            "rek_file_attachment_name_pid": "UQ:372785",
             "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "por14_DC_side1.wav",
+            "rek_file_attachment_name": "Oral_history_interviews_thiele_bill.mp3",
             "rek_file_attachment_name_order": 2
         },
         {
-            "rek_file_attachment_name_id": 3965249,
-            "rek_file_attachment_name_pid": "UQ:124179",
+            "rek_file_attachment_name_id": 3826930,
+            "rek_file_attachment_name_pid": "UQ:372785",
             "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "por14_DC_side2.wav",
+            "rek_file_attachment_name": "presmd_Oral_history_interviews_ThieleW.xml",
             "rek_file_attachment_name_order": 3
         },
         {
-            "rek_file_attachment_name_id": 3965250,
-            "rek_file_attachment_name_pid": "UQ:124179",
+            "rek_file_attachment_name_id": 3826931,
+            "rek_file_attachment_name_pid": "UQ:372785",
             "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "presmd_Campbell.xml",
+            "rek_file_attachment_name": "presmd_Oral_history_interviews_thiele_bill.xml",
             "rek_file_attachment_name_order": 4
         },
         {
-            "rek_file_attachment_name_id": 3965251,
-            "rek_file_attachment_name_pid": "UQ:124179",
+            "rek_file_attachment_name_id": 3826932,
+            "rek_file_attachment_name_pid": "UQ:372785",
             "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "presmd_por14_DC_side1.xml",
+            "rek_file_attachment_name": "stream_Oral_history_interviews_ThieleW.flv",
             "rek_file_attachment_name_order": 5
         },
         {
-            "rek_file_attachment_name_id": 3965252,
-            "rek_file_attachment_name_pid": "UQ:124179",
+            "rek_file_attachment_name_id": 3826933,
+            "rek_file_attachment_name_pid": "UQ:372785",
             "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "presmd_por14_DC_side2.xml",
+            "rek_file_attachment_name": "stream_Oral_history_interviews_thiele_bill.flv",
             "rek_file_attachment_name_order": 6
-        },
-        {
-            "rek_file_attachment_name_id": 3965253,
-            "rek_file_attachment_name_pid": "UQ:124179",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "preview_Campbell.jpg",
-            "rek_file_attachment_name_order": 7
-        },
-        {
-            "rek_file_attachment_name_id": 3965254,
-            "rek_file_attachment_name_pid": "UQ:124179",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "stream_por14_DC_side1.flv",
-            "rek_file_attachment_name_order": 8
-        },
-        {
-            "rek_file_attachment_name_id": 3965255,
-            "rek_file_attachment_name_pid": "UQ:124179",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "stream_por14_DC_side2.flv",
-            "rek_file_attachment_name_order": 9
-        },
-        {
-            "rek_file_attachment_name_id": 3965256,
-            "rek_file_attachment_name_pid": "UQ:124179",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "thumbnail_Campbell.jpg",
-            "rek_file_attachment_name_order": 10
-        },
-        {
-            "rek_file_attachment_name_id": 3965257,
-            "rek_file_attachment_name_pid": "UQ:124179",
-            "rek_file_attachment_name_xsdmf_id": 9593,
-            "rek_file_attachment_name": "web_Campbell.jpg",
-            "rek_file_attachment_name_order": 11
         }
     ],
     "fez_record_search_key_geographic_area": [],
@@ -2132,110 +2145,103 @@ export const audioDocument = {
     "fez_record_search_key_isi_loc": null,
     "fez_record_search_key_ismemberof": [
         {
-            "rek_ismemberof_id": 11580313,
-            "rek_ismemberof_pid": "UQ:124179",
+            "rek_ismemberof_id": 11462538,
+            "rek_ismemberof_pid": "UQ:372785",
             "rek_ismemberof_xsdmf_id": 149,
-            "rek_ismemberof": "UQ:124163",
+            "rek_ismemberof": "UQ:209864",
             "rek_ismemberof_order": 1
         }
     ],
     "fez_record_search_key_issn": [],
     "fez_record_search_key_keywords": [
         {
-            "rek_keywords_id": 29256026,
-            "rek_keywords_pid": "UQ:124179",
+            "rek_keywords_id": 29050186,
+            "rek_keywords_pid": "UQ:372785",
             "rek_keywords_xsdmf_id": 9527,
-            "rek_keywords": "Australian poets",
+            "rek_keywords": "University of Queensland -- History",
             "rek_keywords_order": 1
         },
         {
-            "rek_keywords_id": 29256027,
-            "rek_keywords_pid": "UQ:124179",
+            "rek_keywords_id": 29050187,
+            "rek_keywords_pid": "UQ:372785",
             "rek_keywords_xsdmf_id": 9527,
-            "rek_keywords": "Australian poetry",
+            "rek_keywords": "Cole, John R.",
             "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29050188,
+            "rek_keywords_pid": "UQ:372785",
+            "rek_keywords_xsdmf_id": 9527,
+            "rek_keywords": "Thiele, H. W. (Harold William), d. 1996",
+            "rek_keywords_order": 3
         }
     ],
     "fez_record_search_key_language": [
         {
-            "rek_language_id": 5254022,
-            "rek_language_pid": "UQ:124179",
+            "rek_language_id": 5196141,
+            "rek_language_pid": "UQ:372785",
             "rek_language_xsdmf_id": 9541,
             "rek_language": "eng",
             "rek_language_order": 1
         }
     ],
-    "fez_record_search_key_length": null,
+    "fez_record_search_key_length": {
+        "rek_length_id": 22805,
+        "rek_length_pid": "UQ:372785",
+        "rek_length_xsdmf_id": 16956,
+        "rek_length": "50 min., 06 sec."
+    },
     "fez_record_search_key_license": null,
-    "fez_record_search_key_link": [
-        {
-            "rek_link_id": 3197000,
-            "rek_link_pid": "UQ:124179",
-            "rek_link_xsdmf_id": 9605,
-            "rek_link": "http://espace.library.uq.edu.au/collection/UQ:124163",
-            "rek_link_order": 1
-        }
-    ],
-    "fez_record_search_key_link_description": [
-        {
-            "rek_link_description_id": 3196969,
-            "rek_link_description_pid": "UQ:124179",
-            "rek_link_description_xsdmf_id": 9604,
-            "rek_link_description": "Poets on Record Collection",
-            "rek_link_description_order": 1
-        }
-    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
     "fez_record_search_key_location": [],
     "fez_record_search_key_notes": {
-        "rek_notes_id": 1119958,
-        "rek_notes_pid": "UQ:124179",
+        "rek_notes_id": 1102725,
+        "rek_notes_pid": "UQ:372785",
         "rek_notes_xsdmf_id": 12411,
-        "rek_notes": "The fourteenth of a series of recordings of Australian poets reading their own works. The series includes readings by Rodney Hall, Rosemary Dobson, James McAuley, R. D. Fitzgerald, Bruce Dawe, Douglas Stewart, A. D. Hope, Judith Wright, Chris Wallace-Crabbe, Randolph Stow, Peter Porter, Francis Webb and David Campbell. This audio material is presented as streaming media only."
+        "rek_notes": "In 1958 Dr Harold William Thiele became the first full-time counsellor at the University of Queensland.<br><br>Interview starts mid-way through a conversation."
     },
-    "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 295702,
+        "rek_oa_status_pid": "UQ:372785",
+        "rek_oa_status_xsdmf_id": 16970,
+        "rek_oa_status": 453697
+    },
     "fez_record_search_key_original_format": {
-        "rek_original_format_id": 13249,
-        "rek_original_format_pid": "UQ:124179",
+        "rek_original_format_id": 9268,
+        "rek_original_format_pid": "UQ:372785",
         "rek_original_format_xsdmf_id": 9535,
-        "rek_original_format": ".wav"
+        "rek_original_format": "On 1 of 3 sound discs (61 min.); 4 1/4 in."
     },
     "fez_record_search_key_place_of_publication": null,
-    "fez_record_search_key_publisher": {
-        "rek_publisher_id": 4459179,
-        "rek_publisher_pid": "UQ:124179",
-        "rek_publisher_xsdmf_id": 9540,
-        "rek_publisher": "University of Queensland Press"
-    },
+    "fez_record_search_key_publisher": null,
     "fez_record_search_key_refereed": null,
     "fez_record_search_key_refereed_source": {
-        "rek_refereed_source_id": 1212586,
-        "rek_refereed_source_pid": "UQ:124179",
+        "rek_refereed_source_id": 1152474,
+        "rek_refereed_source_pid": "UQ:372785",
         "rek_refereed_source_xsdmf_id": 16623,
         "rek_refereed_source": "453638"
     },
-    "fez_record_search_key_rights": null,
+    "fez_record_search_key_rights": {
+        "rek_rights_id": 110589,
+        "rek_rights_pid": "UQ:372785",
+        "rek_rights_xsdmf_id": 16635,
+        "rek_rights": "Please contact the Fryer Library, The University of Queensland Library to inquire about this work"
+    },
     "fez_record_search_key_scopus_id": null,
     "fez_record_search_key_series": {
-        "rek_series_id": 196898,
-        "rek_series_pid": "UQ:124179",
+        "rek_series_id": 189865,
+        "rek_series_pid": "UQ:372785",
         "rek_series_xsdmf_id": 9616,
-        "rek_series": "Poets on Record, no. 14"
+        "rek_series": "Oral history interviews collected by Dr. J.R. Cole for 75th anniversary history project sound recording"
     },
     "fez_record_search_key_source": {
-        "rek_source_id": 62962,
-        "rek_source_pid": "UQ:124179",
+        "rek_source_id": 58943,
+        "rek_source_pid": "UQ:372785",
         "rek_source_xsdmf_id": 9539,
-        "rek_source": "The University of Queensland Press"
+        "rek_source": "Oral history interviews collected by Dr. J.R. Cole for 75th anniversary history project sound recording, Volume 3, track 37a, 37b"
     },
-    "fez_record_search_key_subject": [
-        {
-            "rek_subject_id": 9126293,
-            "rek_subject_pid": "UQ:124179",
-            "rek_subject_xsdmf_id": 9526,
-            "rek_subject": 420202,
-            "rek_subject_order": 1
-        }
-    ],
+    "fez_record_search_key_subject": [],
     "fez_record_search_key_transcript": null,
     "fez_record_search_key_translated_title": null
 };
