@@ -223,6 +223,12 @@ exports[`GenericDocumentForm renders  component 1`] = `
           hintText="http://"
           name="rek_link"
           type="text"
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
         />
       </div>
     </div>

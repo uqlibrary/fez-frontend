@@ -130,6 +130,7 @@ export default class GenericDocumentForm extends Component {
                                 fullWidth
                                 floatingLabelText={txt.optional.fieldLabels.link.title}
                                 hintText={txt.optional.fieldLabels.link.hint}
+                                validate={[validation.url, validation.maxLength255]}
                             />
                         </div>
                     </div>
