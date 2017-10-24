@@ -20,6 +20,7 @@ ratings:
   - src/reducers/**
   - src/repositories/**
 exclude_paths:
+- src/**/*.test.js
 - node_modules/**/*
 - public/**/*
 - test/**/*

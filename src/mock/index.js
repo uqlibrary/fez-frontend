@@ -59,14 +59,7 @@ mock
             return [200, {data: mockData.searchKeyList[searchKey].filter(item => (item.toLowerCase().indexOf(searchQuery) >= 0))}];
         })
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: '.*', pageSize: 5, sortBy: 'score', sortDirection: 'desc'}))))
-        .reply((config) => {
-            return new Promise((resolve, reject) => {
-                setTimeout(()=>{
-                    return resolve([200, mockData.internalTitleSearchList]);
-                }, 1500);
-            });
-        })
-        // .reply(200, mockData.internalTitleSearchList)
+        .reply(200, mockData.internalTitleSearchList)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'wos', searchQuery: '.*'}))))
         .reply(200, mockData.externalTitleSearchResultsList)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'scopus', searchQuery: '.*'}))))

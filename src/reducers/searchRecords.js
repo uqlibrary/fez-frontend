@@ -182,7 +182,7 @@ const handlers = {
 };
 
 export default function searchRecordsReducer(state = initialState, action) {
-    const handler = handlers[action.getAction(action.type)];
+    const handler = handlers[actions.getAction(action.type)];
     if (!handler) {
         return state;
     }
