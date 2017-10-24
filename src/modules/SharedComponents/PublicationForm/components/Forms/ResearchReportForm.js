@@ -138,7 +138,7 @@ export default class ResearchReportForm extends Component {
                         <div className="column">
                             <Field
                                 component={TextField}
-                                name="rek_formatted_abstract"
+                                name="rek_description"
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth

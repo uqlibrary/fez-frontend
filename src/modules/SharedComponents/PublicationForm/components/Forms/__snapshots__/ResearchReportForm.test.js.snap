@@ -358,7 +358,7 @@ exports[`ResearchReportForm renders  component 1`] = `
           floatingLabelText="Abstract"
           fullWidth={true}
           multiLine={true}
-          name="rek_formatted_abstract"
+          name="rek_description"
           rows={1}
           type="text"
         />
