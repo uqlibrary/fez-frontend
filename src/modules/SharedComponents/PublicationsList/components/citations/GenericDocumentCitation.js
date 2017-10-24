@@ -4,7 +4,7 @@ import FontIcon from 'material-ui/FontIcon';
 import AuthorsCitationView from './AuthorsCitationView';
 import YearCitationView from './YearCitationView';
 
-export default class GenericCitation extends Component {
+export default class GenericDocumentCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
