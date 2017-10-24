@@ -19,6 +19,15 @@ export default class ClaimRecord extends Component {
         super(props);
     }
 
+    componentWillMount() {
+        const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
+        const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
+
+        if (!author || !publication) {
+            this.props.history.go(-1);
+        }
+    }
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
@@ -90,13 +99,10 @@ export default class ClaimRecord extends Component {
         const txt = locale.components.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
-
         if (!author || !publication) {
-            this.props.history.go(-1);
             return (<div />);
         }
-
-        const authorLinked = publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
+        const authorLinked = publication && author && publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
         const fromAddRecord = !!publication.sources;

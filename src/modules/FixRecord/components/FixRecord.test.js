@@ -7,7 +7,22 @@ import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 import {mockRecordToFix} from 'mock/data/testing/records';
-import { Route, Link, MemoryRouter } from 'react-router-dom'
+import {MemoryRouter } from 'react-router-dom'
+import {Provider} from 'react-redux';
+
+
+const create = () => {
+    const initialState = Immutable.Map();
+
+    const store = {
+        getState: jest.fn(() => (initialState)),
+        dispatch: jest.fn(),
+        subscribe: jest.fn()
+    };
+    const next = jest.fn();
+    const invoke = (action) => thunk(store)(next)(action);
+    return {store, next, invoke}
+};
 
 function setup({recordToFix = mockRecordToFix, recordToFixLoading, authorLoading, handleSubmit, match,
                    initialValues, actions, author = {aut_id: 410}, history = {go: jest.fn()}, isShallow = true}){
@@ -33,15 +48,17 @@ function setup({recordToFix = mockRecordToFix, recordToFixLoading, authorLoading
         return shallow(<FixRecord {...props} />);
     }
 
-    return mount(<FixRecord {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return mount(
+        <Provider store={create().store}>
+            <MemoryRouter><FixRecord {...props} /></MemoryRouter>
+        </Provider>, {
+            context: {
+                muiTheme: getMuiTheme()
+            },
+            childContextTypes: {
+                muiTheme: PropTypes.object.isRequired
+            }
+        });
 }
 
 beforeAll(() => {

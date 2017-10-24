@@ -37,6 +37,17 @@ export default class FixRecord extends Component {
         };
     }
 
+    componentWillMount() {
+        const {recordToFix, author} = this.props;
+        const isAuthorLinked = author && recordToFix && recordToFix.fez_record_search_key_author_id && recordToFix.fez_record_search_key_author_id.length > 0 &&
+            recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
+
+        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !isAuthorLinked) {
+            // if either author or publication data is missing, abandon form
+            this.props.history.go(-1);
+        }
+    }
+
     componentDidMount() {
         if (!this.props.recordToFixLoading && !this.props.recordToFix) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
@@ -121,14 +132,7 @@ export default class FixRecord extends Component {
         }
 
         const {recordToFix, author} = this.props;
-        const isAuthorLinked = author && recordToFix && recordToFix.fez_record_search_key_author_id && recordToFix.fez_record_search_key_author_id.length > 0 &&
-            recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
-
-        if (!isAuthorLinked) {
-            // if either author or publication data is missing, abandon form
-            this.props.history.go(-1);
-            return <div/>;
-        }
+        if (!recordToFix || !author) return (<div />);
 
         const fixOptions = txt.actionsOptions.map((item, index) => (
             <MenuItem
