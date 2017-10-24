@@ -46,7 +46,9 @@ export default class AudioDocumentForm extends Component {
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
+                                className="requiredField"
                                 floatingLabelText={txt.information.fieldLabels.placeOfPublication}
+                                validate={[validation.required]}
                             />
                         </div>
                     </div>
@@ -58,7 +60,9 @@ export default class AudioDocumentForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
+                                className="requiredField"
                                 floatingLabelText={txt.information.fieldLabels.publisher}
+                                validate={[validation.required]}
                             />
                         </div>
                         <div className="column">
