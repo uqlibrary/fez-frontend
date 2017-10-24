@@ -13,12 +13,6 @@ describe('Transformers tests ', () => {
                     rek_link: 'http://google.com',
                     rek_link_order: 1
                 }
-            ],
-            fez_record_search_key_link_description: [
-                {
-                    rek_link_description: 'http://google.com',
-                    rek_link_description_order: 1
-                }
             ]
         };
         const result = transformers.getRecordLinkSearchKey(data);

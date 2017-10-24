@@ -32,12 +32,6 @@ export const getRecordLinkSearchKey = (data) => {
                 rek_link: data.rek_link,
                 rek_link_order: 1
             }
-        ],
-        fez_record_search_key_link_description: [
-            {
-                rek_link_description: data.rek_link,
-                rek_link_description_order: 1
-            }
         ]
     };
 };
