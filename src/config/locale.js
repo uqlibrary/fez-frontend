@@ -1322,9 +1322,8 @@ export default {
         authorLinking: 'One author must be selected and be confirmed'
     },
     issues: {
-        fixRecord: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Record: https://fez-staging.library.uq.edu.au/view/${pid} \n
-            User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
+        fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
+            `Record: https://fez-staging.library.uq.edu.au/view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
     }
 };
 
