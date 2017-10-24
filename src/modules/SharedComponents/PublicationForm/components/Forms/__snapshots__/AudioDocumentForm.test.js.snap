@@ -204,7 +204,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
     title="Contributors"
   >
     <div>
-      Provide a list of editors for this publication
+      Provide a list of contributors for this publication
     </div>
     <Field
       component={[Function]}
@@ -230,7 +230,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "confirmationTitle": "Delete all",
               },
               "identifierColumn": "UQ identifier",
-              "nameColumn": "Author's name as published",
+              "nameColumn": "Contributor's name as published",
               "reorderColumn": "Reorder items",
             },
           },
@@ -257,7 +257,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed contributor",
             },
           },
         }
@@ -290,7 +290,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
           fullWidth={true}
           hintText="Please add any additional information here."
           multiLine={true}
-          name="fez_record_search_key_additional_notes.rek_notes"
+          name="fez_record_search_key_notes.rek_notes"
           rows={1}
           type="text"
         />

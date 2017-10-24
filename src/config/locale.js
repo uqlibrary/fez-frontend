@@ -1128,7 +1128,7 @@ export default {
                 },
                 contributor: {
                     title: 'Contributors',
-                    description: 'Provide a list of editors for this publication',
+                    description: 'Provide a list of contributors for this publication',
                     help: {
                         title: 'Contributors',
                         text: 'This is the contributor, and may be different to the creator, e.g. interviewee or performer (if not self-produced). Please enter contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
@@ -1146,7 +1146,7 @@ export default {
                         header: {
                             locale: {
                                 contributorAssignmentColumn: 'Select your name',
-                                nameColumn: 'Author\'s name as published',
+                                nameColumn: 'Contributor\'s name as published',
                                 identifierColumn: 'UQ identifier',
                                 reorderColumn: 'Reorder items',
                                 deleteAll: 'Remove all items',
@@ -1160,7 +1160,7 @@ export default {
                         },
                         row: {
                             locale: {
-                                suffix: ' listed author',
+                                suffix: ' listed contributor',
                                 moveUpHint: 'Move item up the order',
                                 moveDownHint: 'Move item down the order',
                                 deleteHint: 'Remove this item',
