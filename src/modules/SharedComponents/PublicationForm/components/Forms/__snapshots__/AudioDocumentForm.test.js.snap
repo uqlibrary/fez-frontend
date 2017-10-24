@@ -245,7 +245,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
           },
         }
       }
-      name="contributors"
+      name="editors"
       showContributorAssignment={true}
     />
   </StandardCard>

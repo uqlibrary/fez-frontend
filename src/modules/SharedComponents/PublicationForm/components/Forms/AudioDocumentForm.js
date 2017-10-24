@@ -106,7 +106,7 @@ export default class AudioDocumentForm extends Component {
                         component={ContributorsEditorField}
                         showContributorAssignment
                         className="requiredField"
-                        name="contributors"
+                        name="editors"
                         locale={txt.contributor.field}
                         disabled={this.props.submitting}
                     />
