@@ -21,10 +21,6 @@ export default class WorkingPaperForm extends Component {
                     <Field
                         component={OrgUnitsField}
                         name="testField"
-                        locale={{
-                            fieldLabel: 'School, department or centre 222',
-                            fieldHint: 'Start typing organisation unit name2222'
-                        }}
                         disabled={this.props.submitting}
 
                     />

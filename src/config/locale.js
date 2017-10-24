@@ -1322,12 +1322,9 @@ export default {
         authorLinking: 'One author must be selected and be confirmed'
     },
     issues: {
-        claim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Record was claimed: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
-        unclaim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Record is not mine: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
         fixRecord: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Fix request: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`
+            `Record: https://fez-staging.library.uq.edu.au/view/${pid} \n
+            User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
     }
 };
 

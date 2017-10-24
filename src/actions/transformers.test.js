@@ -354,19 +354,4 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('getClaimIssueRequest returns issues request', () => {
-        const input = {publication: {}, author: {}};
-
-        input.publication.rek_title = 'Test title';
-        input.publication.rek_pid = 'UQ:1111';
-        input.author.aut_display_name = 'J. Smith';
-        input.author.aut_org_username = 'uqjsmith';
-        input.comments = 'Some comments...';
-
-
-        const expected = { issue: 'Record was claimed: "Test title" (UQ:1111) by J. Smith (uqjsmith): Some comments...' };
-        const result = transformers.getClaimIssueRequest(input);
-        expect(result).toEqual(expected);
-    });
-
 });

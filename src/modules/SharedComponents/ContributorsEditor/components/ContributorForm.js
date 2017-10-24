@@ -38,23 +38,6 @@ export class ContributorForm extends Component {
         };
     }
 
-    componentDidMount() {
-        // TODO: fix this hack! it makes me wannacry! UGLY HACK!
-        // I need to catch scrolling event of scrolled container (which is not a window) to set position of autosuggest list when user scrolls
-        // another solution, close the box when user tries to scroll
-        const div = document.querySelector('div.layout-fill.align-stretch');
-        if (div) div.addEventListener('scroll', this.handleParentContainerScroll.bind(this));
-    }
-
-    componentWillUnmount() {
-        const div = document.querySelector('div.layout-fill.align-stretch');
-        if (div) div.removeEventListener('scroll', this.handleParentContainerScroll.bind(this));
-    }
-
-    handleParentContainerScroll() {
-        if (this.refs.identifierField) this.refs.identifierField.close();
-    }
-
     _addContributor = (event) => {
         // add contributor if user hits 'enter' key on input field
         if(this.props.disabled || (event && event.key && (event.key !== 'Enter' || this.state.nameAsPublished.length === 0))) return;

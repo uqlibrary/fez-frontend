@@ -194,10 +194,6 @@ export function claimPublication(data) {
                 requests.push(repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch));
             }
 
-            // create issue notification
-            const createIssueRequest = transformers.getClaimIssueRequest(data);
-            requests.push(post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest));
-
             return Promise.all(requests)
                 .then((responses) => {
                     dispatch({

@@ -14,16 +14,6 @@ const getIssueValues = (data) => ({
 
 const getIssuesRequest = (text) => ({issue: text});
 
-/* getClaimIssueRequest - returns claim issue request object
-* @returns {Object} issue request
-*/
-export const getClaimIssueRequest = pipe(getIssueValues, locale.issues.claim, getIssuesRequest);
-
-/* getUnclaimIssueRequest - returns unclaim issue request object
-* @returns {Object} issue request
-*/
-export const getUnclaimIssueRequest = pipe(getIssueValues, locale.issues.unclaim, getIssuesRequest);
-
 /* getFixIssueRequest - returns fix record issue request object
 * @returns {Object} issue request
 */
