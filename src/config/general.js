@@ -173,6 +173,7 @@ export const publicationTypes = (components) => [
         name: 'Research Report',
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
         formComponent: components ? components.ResearchReportForm : null,
+        citationComponent: components ? components.ResearchReportCitation : null,
         hasFormComponent: true
     },
     {
