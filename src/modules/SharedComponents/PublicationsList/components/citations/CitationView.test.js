@@ -13,8 +13,8 @@ import {researchReport} from 'mock/data/testing/records';
 
 function setup({prefix, suffix, citationClass, citation, isShallow = true}) {
     const props = {
-        prefix: prefix || '', // : PropTypes.string,
-        suffix: suffix || '', // : PropTypes.string,
+        prefix: prefix || ' ', // : PropTypes.string,
+        suffix: suffix || '.', // : PropTypes.string,
         citationClass: citationClass || '', // : PropTypes.string,
     };
 
