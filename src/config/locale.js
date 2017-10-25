@@ -1055,6 +1055,90 @@ export default {
                 },
                 validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
             },
+            Patent: {
+                information: {
+                    title: 'Patent information',
+                    help: {
+                        title: 'Patent information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        title: 'Title of patent',
+                        patentNumber: 'Patent Number',
+                        countryOfOrigin: 'Country of Origin',
+                        date: {
+                            title: 'Date patent issued',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        patentOwner: 'Patent owner'
+                    }
+                },
+                authors: {
+                    title: 'Creators',
+                    help: {
+                        title: 'Creators',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Provide a list of creators for this patent and assign yourself as an creator',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Creator\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add creator'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Creator\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed creator',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other patent details',
+                    help: {
+                        title: 'Other patent details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: 'Please add any additional information here',
+                        url: 'Enter URL for this patent'
+                    }
+                },
+                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
+            },
             fileUpload: {
                 title: 'Files',
                 help: {

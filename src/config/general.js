@@ -159,6 +159,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_PATENT,
         name: 'Patent',
         class: 'Uqlibrary\\FezCore\\Types\\Patent',
+        formComponent: components ? components.PatentForm : null,
         hasFormComponent: true
     },
     {
