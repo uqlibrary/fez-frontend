@@ -6,7 +6,7 @@ export default class CitationView extends React.Component {
         prefix: PropTypes.string,
         suffix: PropTypes.string,
         citationClass: PropTypes.string.isRequired,
-        children: PropTypes.any
+        children: PropTypes.string
     };
 
     static defaultProps = {
@@ -23,7 +23,7 @@ export default class CitationView extends React.Component {
         const {prefix, children, suffix, citationClass} = this.props;
         return (
             <span className={citationClass}>
-                {prefix}{children}{suffix}
+                {prefix}{children}{children && suffix === '.' && suffix === children.slice(-1) ? '' : suffix}
             </span>
         );
     }

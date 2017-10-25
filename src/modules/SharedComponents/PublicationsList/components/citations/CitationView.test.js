@@ -46,4 +46,9 @@ describe('CitationView renders ', () => {
         const wrapper = setup({prefix: ' ', suffix: ':', citationClass: 'citationClassName', citation: 'Some text', isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('component with correct suffix', () => {
+        const wrapper = setup({prefix: ' ', suffix: '.', citationClass: 'citationClassName', citation: 'Some text.', isShallow: false });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
