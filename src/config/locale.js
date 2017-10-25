@@ -1064,9 +1064,18 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        researchReportTitle: 'Research report title',
-                        publicationPlace: 'Place of publication',
-                        publisher: 'Publisher',
+                        documentTitle: {
+                            title: 'Title',
+                            hint: 'Title of report'
+                        },
+                        publicationPlace: {
+                            title: 'Place of publication',
+                            hint: 'Please enter the place of publication'
+                        },
+                        publisher: {
+                            title: 'Publisher',
+                            hint: 'Please enter the name of the publisher'
+                        },
                         date: {
                             title: 'Date published',
                             day: 'Day',
@@ -1075,7 +1084,7 @@ export default {
                         },
                         totalPages: {
                             title: 'Total pages',
-                            hint: 'Please type number value of total pages'
+                            hint: 'Enter total number of pages in the publication'
                         }
                     }
                 },
@@ -1086,7 +1095,7 @@ export default {
                         text: 'some help',
                         buttonLabel: 'OK'
                     },
-                    description: 'Provide a list of authors for this publication and assign yourself as an author',
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
                     field: {
                         form: {
                             locale: {
@@ -1136,10 +1145,18 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        abstract: 'Abstract',
-                        notes: 'Notes (not publicly viewable)',
-                        url: 'Link (URL)',
-                        seriesTitle: 'Series title'
+                        abstract: {
+                            title: 'Abstract',
+                            hint: 'Please provide an abstract or summary of the work'
+                        },
+                        notes: {
+                            title: 'Notes (not publicly viewable)',
+                            hint: 'Please add any additional information here'
+                        },
+                        url: {
+                            title: 'Link',
+                            hint: 'Enter URL for this publication'
+                        }
                     }
                 },
                 validationError: 'Please, provide a list of authors of the publication and link one author to the current user'

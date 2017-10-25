@@ -37,9 +37,11 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.researchReportTitle}
+                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
+                                hintText={txt.information.fieldLabels.documentTitle.hint}
                                 validate={[validation.required]}
-                                style={{marginBottom: '-12px'}} />
+                                style={{marginBottom: '-12px'}}
+                            />
                         </div>
                     </div>
                     <div className="columns">
@@ -50,7 +52,9 @@ export default class ResearchReportForm extends Component {
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace} />
+                                floatingLabelText={txt.information.fieldLabels.publicationPlace.title}
+                                hintText={txt.information.fieldLabels.publicationPlace.hint}
+                            />
                         </div>
                         <div className="column">
                             <Field
@@ -59,7 +63,9 @@ export default class ResearchReportForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publisher} />
+                                floatingLabelText={txt.information.fieldLabels.publisher.title}
+                                hintText={txt.information.fieldLabels.publisher.hint}
+                            />
                         </div>
                     </div>
                     <div className="columns">
@@ -74,7 +80,8 @@ export default class ResearchReportForm extends Component {
                                 floatingLabelText={txt.information.fieldLabels.totalPages.title}
                                 hintText={txt.information.fieldLabels.totalPages.hint}
                                 normalize={this.normalizeTotalPages}
-                                validate={[validation.required]} />
+                                validate={[validation.required]}
+                            />
                         </div>
                         <div className="column">
                             <Field
@@ -94,10 +101,8 @@ export default class ResearchReportForm extends Component {
                             <Field
                                 component={SeriesField}
                                 name="fez_record_search_key_series.rek_series"
-                                type="text"
                                 disabled={this.props.submitting}
-                                fullWidth
-                                floatingTitle={txt.other.fieldLabels.seriesTitle}/>
+                            />
                         </div>
                     </div>
                 </StandardCard>
@@ -110,7 +115,8 @@ export default class ResearchReportForm extends Component {
                         locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
-                        disabled={this.props.submitting} />
+                        disabled={this.props.submitting}
+                    />
                 </StandardCard>
 
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
@@ -122,7 +128,8 @@ export default class ResearchReportForm extends Component {
                         maxCount={5}
                         searchKey={{value: 'rek_isbn', order: 'rek_isbn_order'}}
                         locale={locale.components.isbnForm.field}
-                        disabled={this.props.submitting} />
+                        disabled={this.props.submitting}
+                    />
                 </StandardCard>
 
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
@@ -134,7 +141,8 @@ export default class ResearchReportForm extends Component {
                         maxCount={5}
                         locale={locale.components.issnForm.field}
                         searchKey={{value: 'rek_issn', order: 'rek_issn_order'}}
-                        disabled={this.props.submitting} />
+                        disabled={this.props.submitting}
+                    />
                 </StandardCard>
 
                 <StandardCard title={txt.other.title} help={txt.other.help}>
@@ -148,7 +156,9 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.other.fieldLabels.abstract}/>
+                                floatingLabelText={txt.other.fieldLabels.abstract.title}
+                                hintText={txt.other.fieldLabels.abstract.hint}
+                            />
                         </div>
                     </div>
                     <div className="columns">
@@ -161,7 +171,9 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.other.fieldLabels.notes}/>
+                                floatingLabelText={txt.other.fieldLabels.notes.title}
+                                hintText={txt.other.fieldLabels.notes.hint}
+                            />
                         </div>
                     </div>
                     <div className="columns">
@@ -172,7 +184,8 @@ export default class ResearchReportForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.other.fieldLabels.url}
+                                floatingLabelText={txt.other.fieldLabels.url.title}
+                                hintText={txt.other.fieldLabels.url.hint}
                                 validate={[validation.url, validation.maxLength255]}
                             />
                         </div>
