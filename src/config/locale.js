@@ -1060,7 +1060,12 @@ export default {
                     title: 'Audio document information',
                     help: {
                         title: 'Audio document information',
-                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.',
+                        text: (
+                            <div>
+                                <p><b>Place of publication:</b> Please enter the geographical location for the publisher or producer of the work, i.e. city, country</p>
+                                <p><b>Publication date:</b> Please enter the date recorded on the work, where available. For online recordings or broadcasts, enter the date first publicly presented or released. </p>
+                            </div>
+                        ),
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
