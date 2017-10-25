@@ -1132,7 +1132,8 @@ export default {
                         text: 'Some help',
                         buttonLabel: 'OK'
                     },
-                    description: 'Enter total number of pages in the publication'
+                    description: 'Enter total number of pages in the publication',
+                    inputFieldHint: 'Please type number value of total pages'
                 },
                 optional: {
                     title: 'Optional publication details',

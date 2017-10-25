@@ -16,6 +16,10 @@ export default class ResearchReportForm extends Component {
         super(props);
     }
 
+    normalizeTotalPages = (value) => {
+        return value.replace(/[^\d]/g, '');
+    };
+
     render() {
         const txt = locale.components.publicationForm.researchReport;
         return (
@@ -114,11 +118,13 @@ export default class ResearchReportForm extends Component {
                     <Field
                         component={TextField}
                         name="fez_record_search_key_total_pages.rek_total_pages"
-                        type="number"
+                        type="text"
                         disabled={this.props.submitting}
                         fullWidth
                         className="requiredField"
                         floatingLabelText={txt.information.fieldLabels.totalPages}
+                        hintText={txt.totalPages.inputFieldHint}
+                        normalize={this.normalizeTotalPages}
                         validate={[validation.required]} />
                 </StandardCard>
 

@@ -56,4 +56,12 @@ describe('ResearchReportForm renders ', () => {
             expect(field.props().disabled).toEqual(true);
         })
     });
+
+    it('should normalize total pages field', () => {
+        const wrapper = setup({});
+        expect(wrapper.instance().normalizeTotalPages('Four')).toBe('');
+        expect(wrapper.instance().normalizeTotalPages('12Three')).toBe('12');
+        expect(wrapper.instance().normalizeTotalPages('  01Three')).toBe('01');
+        expect(wrapper.instance().normalizeTotalPages('124')).toBe('124');
+    })
 });

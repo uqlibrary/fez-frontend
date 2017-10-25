@@ -310,8 +310,10 @@ exports[`ResearchReportForm renders  component 1`] = `
       disabled={false}
       floatingLabelText="Total pages"
       fullWidth={true}
+      hintText="Please type number value of total pages"
       name="fez_record_search_key_total_pages.rek_total_pages"
-      type="number"
+      normalize={[Function]}
+      type="text"
       validate={
         Array [
           [Function],
