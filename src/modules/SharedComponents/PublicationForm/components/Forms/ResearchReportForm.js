@@ -63,6 +63,19 @@ export default class ResearchReportForm extends Component {
                         </div>
                     </div>
                     <div className="columns">
+                        <div className="column is-half">
+                            <Field
+                                component={TextField}
+                                name="fez_record_search_key_total_pages.rek_total_pages"
+                                type="text"
+                                disabled={this.props.submitting}
+                                fullWidth
+                                className="requiredField"
+                                floatingLabelText={txt.information.fieldLabels.totalPages.title}
+                                hintText={txt.information.fieldLabels.totalPages.hint}
+                                normalize={this.normalizeTotalPages}
+                                validate={[validation.required]} />
+                        </div>
                         <div className="column">
                             <Field
                                 component={PartialDateField}
@@ -74,6 +87,17 @@ export default class ResearchReportForm extends Component {
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
                             />
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column">
+                            <Field
+                                component={SeriesField}
+                                name="fez_record_search_key_series.rek_series"
+                                type="text"
+                                disabled={this.props.submitting}
+                                fullWidth
+                                floatingTitle={txt.other.fieldLabels.seriesTitle}/>
                         </div>
                     </div>
                 </StandardCard>
@@ -113,33 +137,7 @@ export default class ResearchReportForm extends Component {
                         disabled={this.props.submitting} />
                 </StandardCard>
 
-                <StandardCard title={txt.totalPages.title} help={txt.totalPages.help}>
-                    <div>{txt.totalPages.description}</div>
-                    <Field
-                        component={TextField}
-                        name="fez_record_search_key_total_pages.rek_total_pages"
-                        type="text"
-                        disabled={this.props.submitting}
-                        fullWidth
-                        className="requiredField"
-                        floatingLabelText={txt.information.fieldLabels.totalPages}
-                        hintText={txt.totalPages.inputFieldHint}
-                        normalize={this.normalizeTotalPages}
-                        validate={[validation.required]} />
-                </StandardCard>
-
                 <StandardCard title={txt.other.title} help={txt.other.help}>
-                    <div className="columns">
-                        <div className="column">
-                            <Field
-                                component={SeriesField}
-                                name="fez_record_search_key_series.rek_series"
-                                type="text"
-                                disabled={this.props.submitting}
-                                fullWidth
-                                floatingLabelText={txt.other.fieldLabels.seriesTitle}/>
-                        </div>
-                    </div>
                     <div className="columns">
                         <div className="column">
                             <Field

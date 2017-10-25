@@ -80,6 +80,26 @@ exports[`ResearchReportForm renders  component 1`] = `
       className="columns"
     >
       <div
+        className="column is-half"
+      >
+        <Field
+          className="requiredField"
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Total pages"
+          fullWidth={true}
+          hintText="Please type number value of total pages"
+          name="fez_record_search_key_total_pages.rek_total_pages"
+          normalize={[Function]}
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+      <div
         className="column"
       >
         <Field
@@ -95,6 +115,22 @@ exports[`ResearchReportForm renders  component 1`] = `
               [Function],
             ]
           }
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingTitle="Series title"
+          fullWidth={true}
+          name="fez_record_search_key_series.rek_series"
+          type="text"
         />
       </div>
     </div>
@@ -295,59 +331,12 @@ exports[`ResearchReportForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Some help",
-        "title": "Total Pages",
-      }
-    }
-    title="Total pages"
-  >
-    <div>
-      Enter total number of pages in the publication
-    </div>
-    <Field
-      className="requiredField"
-      component={[Function]}
-      disabled={false}
-      floatingLabelText="Total pages"
-      fullWidth={true}
-      hintText="Please type number value of total pages"
-      name="fez_record_search_key_total_pages.rek_total_pages"
-      normalize={[Function]}
-      type="text"
-      validate={
-        Array [
-          [Function],
-        ]
-      }
-    />
-  </StandardCard>
-  <StandardCard
-    className=""
-    help={
-      Object {
-        "buttonLabel": "OK",
         "text": "some help",
         "title": "Other publication details",
       }
     }
     title="Other publication details"
   >
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Series title"
-          fullWidth={true}
-          name="fez_record_search_key_series.rek_series"
-          type="text"
-        />
-      </div>
-    </div>
     <div
       className="columns"
     >

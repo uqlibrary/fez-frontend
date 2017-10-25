@@ -1073,7 +1073,10 @@ export default {
                             month: 'Month',
                             year: 'Year'
                         },
-                        totalPages: 'Total pages'
+                        totalPages: {
+                            title: 'Total pages',
+                            hint: 'Please type number value of total pages'
+                        }
                     }
                 },
                 authors: {
@@ -1124,16 +1127,6 @@ export default {
                             }
                         }
                     }
-                },
-                totalPages: {
-                    title: 'Total pages',
-                    help: {
-                        title: 'Total Pages',
-                        text: 'Some help',
-                        buttonLabel: 'OK'
-                    },
-                    description: 'Enter total number of pages in the publication',
-                    inputFieldHint: 'Please type number value of total pages'
                 },
                 other: {
                     title: 'Other publication details',
