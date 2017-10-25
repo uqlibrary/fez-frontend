@@ -13,18 +13,19 @@ export default class GenericDocumentCitation extends Component {
         super(props);
     }
 
-    render() {
-        // Check if the title exists and if so, just check its last char for a full stop or not.
-        const titleData = this.props.publication ? this.props.publication.rek_title : null;
-        const title = titleData && (titleData.substr(titleData.length - 1) === '.' ? titleData : titleData + '.');
-        // Check if there is a publisher, and if so check that the last char is a full stop, or not.
-        const publisherData = this.props.publication.fez_record_search_key_publisher ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null;
-        const publisher = publisherData && (publisherData.substr(publisherData.length - 1) === '.' ? publisherData : publisherData + '.');
+    _checkFullStop = (key) => {
+        if(key) {
+            return key.substr(key.length - 1) === '.' ? key : key + '.';
+        } else{
+            return null;
+        }
+    };
 
+    render() {
         const genericDocument = {
             id: this.props.publication.rek_pid,
-            publisher: publisher,
-            title: title
+            publisher: this._checkFullStop(this.props.publication.fez_record_search_key_publisher ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null),
+            title: this._checkFullStop(this.props.publication ? this.props.publication.rek_title : null)
         };
 
         // eSpace citation view for Generic article
