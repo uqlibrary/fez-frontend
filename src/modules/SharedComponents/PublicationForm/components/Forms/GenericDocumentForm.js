@@ -50,7 +50,7 @@ export default class GenericDocumentForm extends Component {
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.placeOfPublication}
+                                floatingLabelText={txt.information.fieldLabels.publicationPlace}
                             />
                         </div>
                     </div>

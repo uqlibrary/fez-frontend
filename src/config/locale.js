@@ -620,7 +620,7 @@ export default {
                             title: 'Title',
                             hint: 'Title of document'
                         },
-                        placeOfPublication: 'Place of publication',
+                        publicationPlace: 'Place of publication',
                         publisher: 'Publisher',
                         abstract: {
                             title: 'Abstract',
