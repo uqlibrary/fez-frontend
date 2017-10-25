@@ -89,6 +89,12 @@ export const externalTitleSearchResultsList = {
     "data":
         [
             {
+                "fez_record_search_key_publisher": {
+                    "rek_publisher_id": 4470847,
+                    "rek_publisher_pid": "UQ:165934",
+                    "rek_publisher_xsdmf_id": 10096,
+                    "rek_publisher": "Canadian Coaching Association."
+                },
                 "rek_title": "Food and plant bioactives for reducing cardiometabolic disease risk: an evidence based approach.",
                 "fez_record_search_key_journal_name": {"rek_journal_name": "Food & function"},
                 "fez_record_search_key_doi": {"rek_doi": "10.1039\/c7fo00178a"},
@@ -115,7 +121,7 @@ export const externalTitleSearchResultsList = {
                 }],
                 "rek_description": "Cardiovascular diseases (CVDs) are one of the major causes of mortality and disability in Western countries. Prevention is known to be the cornerstone to lessen the incidence of CVDs and also to reduce the economic burden of both the citizen and the healthcare system. \"Interventional medicine\" certainly puts lifestyle modification as the first therapeutic step, including a healthy diet and physical activity. Secondly, a large body of research individuated a number of food and plant bioactives, which are potentially efficacious in preventing and reducing some highly prevalent CV risk factors, such as hypercholesterolemia, hypertension, vascular inflammation and vascular compliance. Some lipid- and blood pressure-lowering bioactives were studied for their impact on human vascular health, particularly as regards endothelial function and arterial stiffness. Several nutraceuticals showed additive or synergistic properties in combination, sometimes (but not always) allowing a reduction of the administered dose of extracts and determining a \"multi-factorial\" final effect on many cardiovascular risk factors. Thus, this review focuses on available evidence regarding the effects of berberine, plant sterols, green tea extract, soy, curcumin, cocoa, pycnogenol, lycopene, olive oil, soluble fibers, garlic, resveratrol, beetroot, mineral salts and vitamins on the lipid profile, blood pressure, inflammatory and endothelial markers, and vascular compliance. Future clinical research studies will have to focus more on middle term modification of the instrumental markers of vascular aging than on short-term effects on indirect laboratory risk markers.",
                 "fez_record_search_key_oa_status": {"rek_oa_status": "453698"},
-                "rek_display_type": 179,
+                "rek_display_type": 202,
                 "rek_genre": "Journal Article"
             },
             {
