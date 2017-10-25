@@ -31,7 +31,8 @@ const validate = (values) => {
     const errors = {};
     if (data.rek_display_type === general.PUBLICATION_TYPE_BOOK_CHAPTER
         || data.rek_display_type === general.PUBLICATION_TYPE_JOURNAL_ARTICLE
-        || data.rek_display_type === general.PUBLICATION_TYPE_CONFERENCE_PAPER) {
+        || data.rek_display_type === general.PUBLICATION_TYPE_CONFERENCE_PAPER
+        || data.rek_display_type === general.PUBLICATION_TYPE_RESEARCH_REPORT) {
         // author should be selected and linked to the current user
         if (!data.authors || data.authors.length === 0 || data.authors.filter(item => (item.selected)).length === 0) {
             errors.authors = locale.components.publicationForm.bookChapter.validationError;

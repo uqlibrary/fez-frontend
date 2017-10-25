@@ -1142,7 +1142,7 @@ export default {
                         seriesTitle: 'Series title'
                     }
                 },
-                validationError: 'Please, provide a list of authors and/or editors of the publication and link one author or editor to the current user'
+                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
             },
             fileUpload: {
                 title: 'Files',
