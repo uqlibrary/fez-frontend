@@ -36,3 +36,15 @@ exports[`CitationView renders  component with empty span 1`] = `
   className=""
 />
 `;
+
+exports[`CitationView renders  component with no prefix or suffix 1`] = `
+<CitationView
+  citationClass="citationClassName"
+  prefix=" "
+  suffix="."
+>
+  <span
+    className="citationClassName"
+  />
+</CitationView>
+`;

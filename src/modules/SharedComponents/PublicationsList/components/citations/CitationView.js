@@ -23,7 +23,9 @@ export default class CitationView extends React.Component {
         const {prefix, children, suffix, citationClass} = this.props;
         return (
             <span className={citationClass}>
-                {prefix}{children}{children && suffix === '.' && suffix === children.slice(-1) ? '' : suffix}
+                {children && (prefix ? prefix : '')}
+                {children}
+                {children && (suffix === children.slice(-1) ? '' : suffix)}
             </span>
         );
     }
