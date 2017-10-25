@@ -34,7 +34,8 @@ export default class GenericDocumentForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.title}
+                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
+                                hintText={txt.information.fieldLabels.documentTitle.hint}
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
@@ -88,12 +89,14 @@ export default class GenericDocumentForm extends Component {
                                 rows={3}
                                 multiLine
                                 floatingLabelText={txt.information.fieldLabels.abstract.title}
+                                hintText={txt.information.fieldLabels.abstract.hint}
                             />
                         </div>
                     </div>
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                    <p>{txt.authors.description}</p>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment

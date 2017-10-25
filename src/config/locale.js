@@ -616,7 +616,10 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        title: 'Title of the document',
+                        documentTitle: {
+                            title: 'Title',
+                            hint: 'Title of document'
+                        },
                         placeOfPublication: 'Place of publication',
                         publisher: 'Publisher',
                         abstract: {
@@ -633,6 +636,7 @@ export default {
                 },
                 authors: {
                     title: 'Authors',
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
                     help: {
                         title: 'Adding contributors',
                         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.',
@@ -694,7 +698,7 @@ export default {
                         },
                         link: {
                             title: 'Link',
-                            hint: 'http://'
+                            hint: 'Enter URL for this publication'
                         }
                     }
 

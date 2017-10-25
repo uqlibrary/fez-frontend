@@ -24,8 +24,9 @@ exports[`GenericDocumentForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title of the document"
+          floatingLabelText="Title"
           fullWidth={true}
+          hintText="Title of document"
           multiLine={true}
           name="rek_title"
           rows={1}
@@ -99,6 +100,7 @@ exports[`GenericDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Abstract"
           fullWidth={true}
+          hintText="Add a full article abstract here."
           multiLine={true}
           name="rek_formatted_abstract"
           rows={3}
@@ -118,6 +120,9 @@ exports[`GenericDocumentForm renders  component 1`] = `
     }
     title="Authors"
   >
+    <p>
+      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
+    </p>
     <Field
       className="requiredField"
       component={[Function]}
@@ -220,7 +225,7 @@ exports[`GenericDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Link"
           fullWidth={true}
-          hintText="http://"
+          hintText="Enter URL for this publication"
           name="rek_link"
           type="text"
           validate={
