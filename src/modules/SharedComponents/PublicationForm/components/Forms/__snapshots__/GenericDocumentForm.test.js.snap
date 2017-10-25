@@ -120,9 +120,9 @@ exports[`GenericDocumentForm renders  component 1`] = `
     }
     title="Authors"
   >
-    <p>
+    <div>
       Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
-    </p>
+    </div>
     <Field
       className="requiredField"
       component={[Function]}

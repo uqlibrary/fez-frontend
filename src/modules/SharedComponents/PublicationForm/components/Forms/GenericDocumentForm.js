@@ -96,7 +96,7 @@ export default class GenericDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <p>{txt.authors.description}</p>
+                    <div>{txt.authors.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
@@ -138,7 +138,6 @@ export default class GenericDocumentForm extends Component {
                         </div>
                     </div>
                 </StandardCard>
-
             </div>
         );
     }
