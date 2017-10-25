@@ -327,10 +327,10 @@ exports[`ResearchReportForm renders  component 1`] = `
       Object {
         "buttonLabel": "OK",
         "text": "some help",
-        "title": "Optional publication details",
+        "title": "Other publication details",
       }
     }
-    title="Optional publication details"
+    title="Other publication details"
   >
     <div
       className="columns"

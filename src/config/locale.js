@@ -1135,10 +1135,10 @@ export default {
                     description: 'Enter total number of pages in the publication',
                     inputFieldHint: 'Please type number value of total pages'
                 },
-                optional: {
-                    title: 'Optional publication details',
+                other: {
+                    title: 'Other publication details',
                     help: {
-                        title: 'Optional publication details',
+                        title: 'Other publication details',
                         text: 'some help',
                         buttonLabel: 'OK'
                     },

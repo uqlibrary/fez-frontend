@@ -128,7 +128,7 @@ export default class ResearchReportForm extends Component {
                         validate={[validation.required]} />
                 </StandardCard>
 
-                <StandardCard title={txt.optional.title} help={txt.optional.help}>
+                <StandardCard title={txt.other.title} help={txt.other.help}>
                     <div className="columns">
                         <div className="column">
                             <Field
@@ -137,7 +137,7 @@ export default class ResearchReportForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.seriesTitle}/>
+                                floatingLabelText={txt.other.fieldLabels.seriesTitle}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -150,7 +150,7 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.optional.fieldLabels.abstract}/>
+                                floatingLabelText={txt.other.fieldLabels.abstract}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -163,7 +163,7 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.optional.fieldLabels.notes}/>
+                                floatingLabelText={txt.other.fieldLabels.notes}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -174,7 +174,7 @@ export default class ResearchReportForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.url}
+                                floatingLabelText={txt.other.fieldLabels.url}
                                 validate={[validation.url, validation.maxLength255]}
                             />
                         </div>
