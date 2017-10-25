@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import EditorsCitationView from './EditorsCitationView';
 import AuthorsCitationView from './AuthorsCitationView';
 import YearCitationView from './YearCitationView';
 
@@ -15,32 +14,31 @@ export default class GenericDocumentCitation extends Component {
     }
 
     render() {
+        // Check if the title exists and if so, just check its last char for a full stop or not.
+        const title = this.props.publication.rek_title && (this.props.publication.rek_title.substr(this.props.publication.rek_title.length - 1) === '.' ? this.props.publication.rek_title : this.props.publication.rek_title + '.');
+        // Check if there is a publisher, and if so check that the last char is a full stop, or not.
+        const publisher = this.props.publication.fez_record_search_key_publisher && (this.props.publication.fez_record_search_key_publisher.rek_publisher.substr(this.props.publication.fez_record_search_key_publisher.rek_publisher.length - 1) === '.' ? this.props.publication.fez_record_search_key_publisher.rek_publisher : this.props.publication.fez_record_search_key_publisher.rek_publisher + '.');
+
         const genericDocument = {
             id: this.props.publication.rek_pid,
-            publisher: this.props.publication.fez_record_search_key_publisher ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
-            title: this.props.publication.rek_title,
+            publisher: publisher,
+            title: title
         };
 
         // eSpace citation view for Generic article
-        // {7630}{7660| (|)}. {7623}. {7638|Edited by |. }{7658||.}
-        // Author (Date). Title. Edited by <span class="citation_contributor">Editor</span>. <span class="citation_publisher">Publisher</span>.
+        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Publisher| |.}
 
         return (
             <div className="citationContent citationGenericDocument">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
-                <AuthorsCitationView publication={this.props.publication} /> <YearCitationView publication={this.props.publication} />
-                <span className="citationTitle"> {genericDocument.title}.</span>
-                <EditorsCitationView
-                    className="citationContributors"
-                    prefix=" Edited by "
-                    suffix="."
-                    publication={this.props.publication}
-                />
+                <AuthorsCitationView publication={this.props.publication}/>
+                <YearCitationView publication={this.props.publication}/>.
+                <span className="citationTitle"><i> {genericDocument.title}</i></span>
                 {
                     genericDocument.publisher &&
-                    <span className="citationPublisher"> {genericDocument.publisher}.</span>
+                    <span className="citationPublisher"> {genericDocument.publisher}</span>
                 }
             </div>
         );
