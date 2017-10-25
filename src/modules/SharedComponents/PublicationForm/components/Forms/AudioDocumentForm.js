@@ -141,7 +141,8 @@ export default class AudioDocumentForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.url}
+                                floatingLabelText={txt.optional.fieldLabels.url.title}
+                                hintText={txt.optional.fieldLabels.url.hint}
                                 validate={[validation.url, validation.maxLength255]}
                             />
                         </div>

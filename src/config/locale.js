@@ -1187,7 +1187,7 @@ export default {
                             title: 'Notes (not publicly viewable)',
                             hint: 'Please add any additional information here.',
                         },
-                        link: {
+                        url: {
                             title: 'Link',
                             hint: 'Enter URL for this work.',
                         }
