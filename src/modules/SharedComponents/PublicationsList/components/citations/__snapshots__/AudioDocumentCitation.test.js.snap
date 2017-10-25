@@ -2,7 +2,7 @@
 
 exports[`AudioDocumentCitation renders  component with a mock espace record 1`] = `
 <div
-  className="citationContent citationaudioDocument"
+  className="citationContent citationAudioDocument"
 >
   <FontIcon
     className="material-icons citationIcon"
@@ -607,22 +607,20 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
     className="citationTitle"
   >
      
-    Oral history interview with [Harold William Thiele by John Cole, 7 Sep 1981]
-    .
+    Oral history interview with [Harold William Thiele by John Cole, 7 Sep 1981].
   </span>
   <span
     className="citationSeries"
   >
      
-    Oral history interviews collected by Dr. J.R. Cole for 75th anniversary history project sound recording
-    .
+    Oral history interviews collected by Dr. J.R. Cole for 75th anniversary history project sound recording.
   </span>
 </div>
 `;
 
 exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
 <div
-  className="citationContent citationaudioDocument"
+  className="citationContent citationAudioDocument"
 >
   <FontIcon
     className="material-icons citationIcon"

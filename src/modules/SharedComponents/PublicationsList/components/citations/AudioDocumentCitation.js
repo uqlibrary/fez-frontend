@@ -13,13 +13,21 @@ export default class audioDocumentCitation extends Component {
         super(props);
     }
 
+    _checkFullStop = (key) => {
+        if(key) {
+            return key.substr(key.length - 1) === '.' ? key : key + '.';
+        } else {
+            return null;
+        }
+    };
+
     render() {
         const audioDocument = {
             id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            publishedDate: this.props.publication.rek_date, // null,
-            publisher: this.props.publication.fez_record_search_key_publisher ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
-            series: this.props.publication.fez_record_search_key_series ? this.props.publication.fez_record_search_key_series.rek_series : null,
+            title: this._checkFullStop(this.props.publication ? this.props.publication.rek_title : null),
+            publishedDate: this.props.publication.rek_date,
+            publisher: this._checkFullStop(this.props.publication.fez_record_search_key_publisher ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null),
+            series: this._checkFullStop(this.props.publication.fez_record_search_key_series ? this.props.publication.fez_record_search_key_series.rek_series : null),
             doi: this.props.publication.fez_record_search_key_doi ? this.props.publication.fez_record_search_key_doi.rek_doi : null
         };
 
@@ -29,7 +37,7 @@ export default class audioDocumentCitation extends Component {
         // {Creator}{Publication Year| (|).}{Title| |.}{Publisher| |.}{Series| |.}{doi| doi:|}
 
         return (
-            <div className="citationContent citationaudioDocument">
+            <div className="citationContent citationAudioDocument">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
@@ -38,15 +46,15 @@ export default class audioDocumentCitation extends Component {
                 <YearCitationView publication={this.props.publication} />.
                 {
                     audioDocument.title &&
-                    <span className="citationTitle"> {audioDocument.title}.</span>
+                    <span className="citationTitle"> {audioDocument.title}</span>
                 }
                 {
                     audioDocument.publisher &&
-                    <span className="citationPublisher"> {audioDocument.publisher}.</span>
+                    <span className="citationPublisher"> {audioDocument.publisher}</span>
                 }
                 {
                     audioDocument.series &&
-                    <span className="citationSeries"> {audioDocument.series}.</span>
+                    <span className="citationSeries"> {audioDocument.series}</span>
                 }
                 {
                     audioDocument.doi &&

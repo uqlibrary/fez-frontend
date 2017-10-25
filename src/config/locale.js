@@ -1098,7 +1098,7 @@ export default {
                     description: 'Provide a list of creators for this publication',
                     help: {
                         title: 'Creators',
-                        text: 'This is the author or creator of the work, e.g. interviewer, program co-ordinator or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.',
+                        text: 'This is the creator or creator of the work, e.g. interviewer, program co-ordinator or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.',
                         buttonLabel: 'OK'
                     },
                     field: {
@@ -1113,7 +1113,7 @@ export default {
                         header: {
                             locale: {
                                 contributorAssignmentColumn: 'Select your name',
-                                nameColumn: 'Author\'s name as published',
+                                nameColumn: 'creator\'s name as published',
                                 identifierColumn: 'UQ identifier',
                                 reorderColumn: 'Reorder items',
                                 deleteAll: 'Remove all items',
@@ -1127,7 +1127,7 @@ export default {
                         },
                         row: {
                             locale: {
-                                suffix: ' listed author',
+                                suffix: ' listed creator',
                                 moveUpHint: 'Move item up the order',
                                 moveDownHint: 'Move item down the order',
                                 deleteHint: 'Remove this item',
@@ -1139,7 +1139,7 @@ export default {
                                     confirmButtonLabel: 'Yes'
                                 }
                             }
-                        }
+                        },
                     }
                 },
                 contributor: {
@@ -1209,6 +1209,7 @@ export default {
                         }
                     }
                 },
+                validationError: 'Please, provide a list of creators and/or contributors of the publication and link one author or editor to the current user'
             },
             fileUpload: {
                 title: 'Files',

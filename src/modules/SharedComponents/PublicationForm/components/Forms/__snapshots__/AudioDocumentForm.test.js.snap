@@ -139,7 +139,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "This is the author or creator of the work, e.g. interviewer, program co-ordinator or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.",
+        "text": "This is the creator or creator of the work, e.g. interviewer, program co-ordinator or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.",
         "title": "Creators",
       }
     }
@@ -173,7 +173,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "confirmationTitle": "Delete all",
               },
               "identifierColumn": "UQ identifier",
-              "nameColumn": "Author's name as published",
+              "nameColumn": "creator's name as published",
               "reorderColumn": "Reorder items",
             },
           },
@@ -200,7 +200,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed creator",
             },
           },
         }
