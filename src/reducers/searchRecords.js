@@ -182,9 +182,7 @@ const handlers = {
 };
 
 export default function searchRecordsReducer(state = initialState, action) {
-    const handler = action.type.indexOf('SEARCH_COMPLETED@') < 0 && action.type.indexOf('SEARCH_FAILED@') < 0 ?
-        handlers[action.type] : handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
-    // handlers[actions.getAction(action.type)];
+    const handler = action.type.indexOf('@') >= 0 ? handlers[actions.getAction(action.type)] : handlers[action.type];
     if (!handler) {
         return state;
     }
