@@ -61,8 +61,38 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
-        "fez_record_search_key_contributor": Array [],
-        "fez_record_search_key_contributor_id": Array [],
+        "fez_record_search_key_contributor": Array [
+          Object {
+            "rek_contributor": "Dion Weatherley",
+            "rek_contributor_id": 3118551,
+            "rek_contributor_order": 1,
+            "rek_contributor_pid": "UQ:187819",
+            "rek_contributor_xsdmf_id": 7638,
+          },
+          Object {
+            "rek_contributor": "V. E. Boros",
+            "rek_contributor_id": 3118552,
+            "rek_contributor_order": 2,
+            "rek_contributor_pid": "UQ:187819",
+            "rek_contributor_xsdmf_id": 7638,
+          },
+        ],
+        "fez_record_search_key_contributor_id": Array [
+          Object {
+            "rek_contributor_id": 0,
+            "rek_contributor_id_id": 2325833,
+            "rek_contributor_id_order": 1,
+            "rek_contributor_id_pid": "UQ:187819",
+            "rek_contributor_id_xsdmf_id": 7633,
+          },
+          Object {
+            "rek_contributor_id": 0,
+            "rek_contributor_id_id": 2325834,
+            "rek_contributor_id_order": 2,
+            "rek_contributor_id_pid": "UQ:187819",
+            "rek_contributor_id_xsdmf_id": 7633,
+          },
+        ],
         "fez_record_search_key_convener": null,
         "fez_record_search_key_corresponding_country": Array [],
         "fez_record_search_key_corresponding_email": Array [],
@@ -409,8 +439,38 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
-        "fez_record_search_key_contributor": Array [],
-        "fez_record_search_key_contributor_id": Array [],
+        "fez_record_search_key_contributor": Array [
+          Object {
+            "rek_contributor": "Dion Weatherley",
+            "rek_contributor_id": 3118551,
+            "rek_contributor_order": 1,
+            "rek_contributor_pid": "UQ:187819",
+            "rek_contributor_xsdmf_id": 7638,
+          },
+          Object {
+            "rek_contributor": "V. E. Boros",
+            "rek_contributor_id": 3118552,
+            "rek_contributor_order": 2,
+            "rek_contributor_pid": "UQ:187819",
+            "rek_contributor_xsdmf_id": 7638,
+          },
+        ],
+        "fez_record_search_key_contributor_id": Array [
+          Object {
+            "rek_contributor_id": 0,
+            "rek_contributor_id_id": 2325833,
+            "rek_contributor_id_order": 1,
+            "rek_contributor_id_pid": "UQ:187819",
+            "rek_contributor_id_xsdmf_id": 7633,
+          },
+          Object {
+            "rek_contributor_id": 0,
+            "rek_contributor_id_id": 2325834,
+            "rek_contributor_id_order": 2,
+            "rek_contributor_id_pid": "UQ:187819",
+            "rek_contributor_id_xsdmf_id": 7633,
+          },
+        ],
         "fez_record_search_key_convener": null,
         "fez_record_search_key_corresponding_country": Array [],
         "fez_record_search_key_corresponding_email": Array [],
@@ -708,7 +768,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
     Numerical solution of partial differential equations
     .
   </span>
-  <AuthorsCitationView
+  <EditorsCitationView
     className="citationContributors"
     prefix=" Edited by "
     publication={
@@ -758,8 +818,38 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
-        "fez_record_search_key_contributor": Array [],
-        "fez_record_search_key_contributor_id": Array [],
+        "fez_record_search_key_contributor": Array [
+          Object {
+            "rek_contributor": "Dion Weatherley",
+            "rek_contributor_id": 3118551,
+            "rek_contributor_order": 1,
+            "rek_contributor_pid": "UQ:187819",
+            "rek_contributor_xsdmf_id": 7638,
+          },
+          Object {
+            "rek_contributor": "V. E. Boros",
+            "rek_contributor_id": 3118552,
+            "rek_contributor_order": 2,
+            "rek_contributor_pid": "UQ:187819",
+            "rek_contributor_xsdmf_id": 7638,
+          },
+        ],
+        "fez_record_search_key_contributor_id": Array [
+          Object {
+            "rek_contributor_id": 0,
+            "rek_contributor_id_id": 2325833,
+            "rek_contributor_id_order": 1,
+            "rek_contributor_id_pid": "UQ:187819",
+            "rek_contributor_id_xsdmf_id": 7633,
+          },
+          Object {
+            "rek_contributor_id": 0,
+            "rek_contributor_id_id": 2325834,
+            "rek_contributor_id_order": 2,
+            "rek_contributor_id_pid": "UQ:187819",
+            "rek_contributor_id_xsdmf_id": 7633,
+          },
+        ],
         "fez_record_search_key_convener": null,
         "fez_record_search_key_corresponding_country": Array [],
         "fez_record_search_key_corresponding_email": Array [],
@@ -1049,13 +1139,6 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
         "rek_wok_doc_type_xsdmf_id": null,
       }
     }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_contributor",
-        "order": "rek_contributor_order",
-        "subkey": "rek_contributor",
-      }
-    }
     suffix="."
   />
 </div>
@@ -1094,17 +1177,10 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
      
     .
   </span>
-  <AuthorsCitationView
+  <EditorsCitationView
     className="citationContributors"
     prefix=" Edited by "
     publication={Object {}}
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_contributor",
-        "order": "rek_contributor_order",
-        "subkey": "rek_contributor",
-      }
-    }
     suffix="."
   />
 </div>

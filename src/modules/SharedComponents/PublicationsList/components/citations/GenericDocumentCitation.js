@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
+import EditorsCitationView from './EditorsCitationView';
 import AuthorsCitationView from './AuthorsCitationView';
 import YearCitationView from './YearCitationView';
 
@@ -31,12 +32,11 @@ export default class GenericDocumentCitation extends Component {
                 </FontIcon>
                 <AuthorsCitationView publication={this.props.publication} /> <YearCitationView publication={this.props.publication} />
                 <span className="citationTitle"> {genericDocument.title}.</span>
-                <AuthorsCitationView
+                <EditorsCitationView
                     className="citationContributors"
                     prefix=" Edited by "
                     suffix="."
                     publication={this.props.publication}
-                    searchKey={{key: 'fez_record_search_key_contributor', order: 'rek_contributor_order', subkey: 'rek_contributor'}}
                 />
                 {
                     genericDocument.publisher &&

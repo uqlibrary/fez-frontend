@@ -1940,8 +1940,38 @@ export const generic = {
     "fez_record_search_key_conference_name": null,
     "fez_record_search_key_construction_date": null,
     "fez_record_search_key_contact_details_email": [],
-    "fez_record_search_key_contributor": [],
-    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3118551,
+            "rek_contributor_pid": "UQ:187819",
+            "rek_contributor_xsdmf_id": 7638,
+            "rek_contributor": "Dion Weatherley",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3118552,
+            "rek_contributor_pid": "UQ:187819",
+            "rek_contributor_xsdmf_id": 7638,
+            "rek_contributor": "V. E. Boros",
+            "rek_contributor_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2325833,
+            "rek_contributor_id_pid": "UQ:187819",
+            "rek_contributor_id_xsdmf_id": 7633,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2325834,
+            "rek_contributor_id_pid": "UQ:187819",
+            "rek_contributor_id_xsdmf_id": 7633,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 2
+        }
+    ],
     "fez_record_search_key_convener": null,
     "fez_record_search_key_corresponding_email": [],
     "fez_record_search_key_corresponding_name": [],
