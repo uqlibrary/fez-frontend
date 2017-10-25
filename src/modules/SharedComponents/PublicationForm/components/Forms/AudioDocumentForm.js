@@ -48,8 +48,8 @@ export default class AudioDocumentForm extends Component {
                                 type="text"
                                 fullWidth
                                 className="requiredField"
-                                floatingLabelText={txt.information.fieldLabels.placeOfPublication.title}
-                                hintText={txt.information.fieldLabels.placeOfPublication.hint}
+                                floatingLabelText={txt.information.fieldLabels.publicationPlace.title}
+                                hintText={txt.information.fieldLabels.publicationPlace.hint}
                                 validate={[validation.required]}
                             />
                         </div>

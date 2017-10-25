@@ -1073,7 +1073,7 @@ export default {
                             title: 'Title',
                             hint: 'Title of work'
                         },
-                        placeOfPublication: {
+                        publicationPlace: {
                             title: 'Place of publication',
                             hint: 'City, Country'
                         },
