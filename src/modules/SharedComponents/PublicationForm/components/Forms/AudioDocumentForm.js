@@ -62,7 +62,7 @@ export default class AudioDocumentForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
-                                className="requiredField"
+                                className="requiredField input-long-hint"
                                 floatingLabelText={txt.information.fieldLabels.publisher.title}
                                 hintText={txt.information.fieldLabels.publisher.hint}
                                 validate={[validation.required]}

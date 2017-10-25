@@ -80,7 +80,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
-          className="requiredField"
+          className="requiredField input-long-hint"
           component={[Function]}
           disabled={false}
           floatingLabelText="Publisher"
