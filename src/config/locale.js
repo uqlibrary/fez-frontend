@@ -1064,17 +1064,28 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        documentTitle: 'Title',
-                        placeOfPublication: 'Place of publication',
-                        publisher: 'Publisher',
-                        abstract: 'Abstract',
+                        documentTitle: {
+                            title: 'Title',
+                            hint: 'Title of work'
+                        },
+                        placeOfPublication: {
+                            title: 'Place of publication',
+                            hint: 'City, Country'
+                        },
+                        publisher: {
+                            title: 'Publisher',
+                            hint: 'Please enter the name of the publisher or producer of the work.'
+                        },
+                        abstract: {
+                            title: 'Abstract',
+                            hint: 'Please provide an abstract or summary of the work.'
+                        },
                         date: {
                             title: 'Publication date',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'
                         },
-                        subtype: 'Publication subtype'
                     }
                 },
                 creator: {

@@ -32,7 +32,8 @@ export default class AudioDocumentForm extends Component {
                                 name="rek_title"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.documentTitle}
+                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
+                                hintText={txt.information.fieldLabels.documentTitle.hint}
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
@@ -47,7 +48,8 @@ export default class AudioDocumentForm extends Component {
                                 type="text"
                                 fullWidth
                                 className="requiredField"
-                                floatingLabelText={txt.information.fieldLabels.placeOfPublication}
+                                floatingLabelText={txt.information.fieldLabels.placeOfPublication.title}
+                                hintText={txt.information.fieldLabels.placeOfPublication.hint}
                                 validate={[validation.required]}
                             />
                         </div>
@@ -61,7 +63,8 @@ export default class AudioDocumentForm extends Component {
                                 type="text"
                                 fullWidth
                                 className="requiredField"
-                                floatingLabelText={txt.information.fieldLabels.publisher}
+                                floatingLabelText={txt.information.fieldLabels.publisher.title}
+                                hintText={txt.information.fieldLabels.publisher.hint}
                                 validate={[validation.required]}
                             />
                         </div>
@@ -88,7 +91,8 @@ export default class AudioDocumentForm extends Component {
                                 fullWidth
                                 rows={3}
                                 multiLine
-                                floatingLabelText={txt.information.fieldLabels.abstract}
+                                floatingLabelText={txt.information.fieldLabels.abstract.title}
+                                hintText={txt.information.fieldLabels.abstract.hint}
                             />
                         </div>
                     </div>
