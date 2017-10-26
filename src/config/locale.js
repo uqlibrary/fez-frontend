@@ -1133,7 +1133,6 @@ export default {
                         url: 'Enter URL for this patent'
                     }
                 },
-                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
             },
             fileUpload: {
                 title: 'Files',
