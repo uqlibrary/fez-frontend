@@ -8,10 +8,10 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, subtypeVocabId, isShallow = true}){
+function setup({submitting, isShallow = true}){
 
     const props = {
-        submitting: submitting || false, // : PropTypes.bool,
+        submitting: submitting || false,
     };
 
     if(isShallow) {

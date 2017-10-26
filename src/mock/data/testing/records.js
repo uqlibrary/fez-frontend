@@ -2670,6 +2670,289 @@ export const audio = {
     ],
     "fez_record_search_key_volume_number":null
 };
+
+export const preprint = {
+    "rek_pid": "UQ:10457",
+    "rek_title_xsdmf_id": 7910,
+    "rek_title": "Heavy Tails, Importance Sampling and Cross-Entropy",
+    "rek_description_xsdmf_id": 7938,
+    "rek_description": "We consider the problem of estimating P (Y1+ ... +Yn > x) by importance sampling when the Yi are i.i.d. and heavy-tailed. The idea is to exploit the cross-entropy method as a tool for choosing good parameters in the importance sampling distribution; in doing so, we use the asymptotic description that given P(Y1+ ... +Yn > x,) n-1 of the Yi have distribution F and one the conditional distribution of Y given Y > x. We show in some parametric examples (Pareto and Weibull) how this leads to precise answers, which as demonstrated numerically, are close to being variance minimal within the parametric class under consideration. Related problems for M/G/1 and GI/G/1 queues are also discussed.",
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 204,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 7936,
+    "rek_date": "2004-01-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 645,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2004-06-02T00:00:00Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2015-07-31T04:42:42Z",
+    "rek_file_downloads": 478,
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Asmussen, S.\" href=\"/list/author_id/64816/\">Asmussen, S.</a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Kroese, D. P.\" href=\"/list/author_id/1661/\">Kroese, D. P.</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Rubinstein, R. Y.\" href=\"/list/author_id/47162/\">Rubinstein, R. Y.</a> (<span class=\"citation_date\">2004</span>) <a class=\"citation_title\" title=\"Click to view Preprint: Heavy Tails, Importance Sampling and Cross-Entropy\" href=\"/view/UQ:10457\">Heavy Tails, Importance Sampling and Cross-Entropy</a>.",
+    "rek_genre_xsdmf_id": 7937,
+    "rek_genre": "Preprint",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": null,
+    "rek_depositor_affiliation": null,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "off",
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 28895661,
+            "rek_author_pid": "UQ:10457",
+            "rek_author_xsdmf_id": 7917,
+            "rek_author": "Asmussen, S.",
+            "rek_author_order": 1
+        },
+        {
+            "rek_author_id": 28895662,
+            "rek_author_pid": "UQ:10457",
+            "rek_author_xsdmf_id": 7917,
+            "rek_author": "Kroese, D. P.",
+            "rek_author_order": 2
+        },
+        {
+            "rek_author_id": 28895663,
+            "rek_author_pid": "UQ:10457",
+            "rek_author_xsdmf_id": 7917,
+            "rek_author": "Rubinstein, R. Y.",
+            "rek_author_order": 3
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 28265509,
+            "rek_author_id_pid": "UQ:10457",
+            "rek_author_id_xsdmf_id": 7912,
+            "rek_author_id": 64816,
+            "rek_author_id_order": 1
+        },
+        {
+            "rek_author_id_id": 28265510,
+            "rek_author_id_pid": "UQ:10457",
+            "rek_author_id_xsdmf_id": 7912,
+            "rek_author_id": 1661,
+            "rek_author_id_order": 2
+        },
+        {
+            "rek_author_id_id": 28265511,
+            "rek_author_id_pid": "UQ:10457",
+            "rek_author_id_xsdmf_id": 7912,
+            "rek_author_id": 47162,
+            "rek_author_id_order": 3
+        }
+    ],
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 3897213,
+            "rek_file_attachment_name_pid": "UQ:10457",
+            "rek_file_attachment_name_xsdmf_id": 7886,
+            "rek_file_attachment_name": "akrfinal.ps",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 3897214,
+            "rek_file_attachment_name_pid": "UQ:10457",
+            "rek_file_attachment_name_xsdmf_id": 7886,
+            "rek_file_attachment_name": "dpk_akrfinal.pdf",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 3897215,
+            "rek_file_attachment_name_pid": "UQ:10457",
+            "rek_file_attachment_name_xsdmf_id": 7886,
+            "rek_file_attachment_name": "presmd_akrfinal.xml",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 3897216,
+            "rek_file_attachment_name_pid": "UQ:10457",
+            "rek_file_attachment_name_xsdmf_id": 7886,
+            "rek_file_attachment_name": "presmd_dpk_akrfinal.xml",
+            "rek_file_attachment_name_order": 4
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_herdc_code": null,
+    "fez_record_search_key_herdc_status": null,
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11524590,
+            "rek_ismemberof_pid": "UQ:10457",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3806",
+            "rek_ismemberof_order": 1
+        }
+    ],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 29179597,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "Algorithmic complexity",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 29179598,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "cross-entropy",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29179599,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "GI/G/1 queue",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 29179600,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "importance sampling",
+            "rek_keywords_order": 4
+        },
+        {
+            "rek_keywords_id": 29179601,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "maximum likelihood",
+            "rek_keywords_order": 5
+        },
+        {
+            "rek_keywords_id": 29179602,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "Pareto distribution",
+            "rek_keywords_order": 6
+        },
+        {
+            "rek_keywords_id": 29179603,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "Pollaczek-Khintchine formula",
+            "rek_keywords_order": 7
+        },
+        {
+            "rek_keywords_id": 29179604,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "random walk",
+            "rek_keywords_order": 8
+        },
+        {
+            "rek_keywords_id": 29179605,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "rare event",
+            "rek_keywords_order": 9
+        },
+        {
+            "rek_keywords_id": 29179606,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "subexponential distribution",
+            "rek_keywords_order": 10
+        },
+        {
+            "rek_keywords_id": 29179607,
+            "rek_keywords_pid": "UQ:10457",
+            "rek_keywords_xsdmf_id": 7964,
+            "rek_keywords": "Weibull distribution",
+            "rek_keywords_order": 11
+        }
+    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_notes": null,
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 324248,
+        "rek_oa_status_pid": "UQ:10457",
+        "rek_oa_status_xsdmf_id": 16967,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_publisher": null,
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1186621,
+        "rek_refereed_source_pid": "UQ:10457",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9102059,
+            "rek_subject_pid": "UQ:10457",
+            "rek_subject_xsdmf_id": 7929,
+            "rek_subject": 280210,
+            "rek_subject_order": 1
+        },
+        {
+            "rek_subject_id": 9102060,
+            "rek_subject_pid": "UQ:10457",
+            "rek_subject_xsdmf_id": 7929,
+            "rek_subject": 230203,
+            "rek_subject_order": 2
+        },
+        {
+            "rek_subject_id": 9102061,
+            "rek_subject_pid": "UQ:10457",
+            "rek_subject_xsdmf_id": 7929,
+            "rek_subject": 230117,
+            "rek_subject_order": 3
+        }
+    ]
+}
+
 export const mockRecordToFix = {
     "rek_pid":"UQ:41878",
     "rek_title_xsdmf_id":10588,

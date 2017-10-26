@@ -1267,7 +1267,7 @@ export default {
                             hint: 'Title of document'
                         },
                         date: {
-                            title: 'Publication date',
+                            title: 'Date',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'
