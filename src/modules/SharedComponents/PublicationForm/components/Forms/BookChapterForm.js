@@ -113,6 +113,7 @@ export default class BookChapterForm extends Component {
                         locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
+                        validate={[validation.authorRequired]}
                         disabled={this.props.submitting} />
                 </StandardCard>
 

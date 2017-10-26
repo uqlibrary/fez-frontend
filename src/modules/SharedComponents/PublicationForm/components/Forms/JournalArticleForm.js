@@ -89,7 +89,7 @@ export default class JournalArticleForm extends Component {
                         name="authors"
                         locale={txt.authors.field}
                         disabled={this.props.submitting}
-                    />
+                        validate={[validation.authorRequired]} />
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
