@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JournalArticleForm renders  component 1`] = `
+exports[`GenericDocumentForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Journal article information",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.",
+        "title": "General document information",
       }
     }
-    title="Journal article information"
+    title="Generic document information"
   >
     <div
       className="columns"
@@ -24,9 +24,12 @@ exports[`JournalArticleForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title of document"
+          floatingLabelText="Title"
           fullWidth={true}
+          hintText="Title of document"
+          multiLine={true}
           name="rek_title"
+          rows={1}
           type="text"
           validate={
             Array [
@@ -40,21 +43,31 @@ exports[`JournalArticleForm renders  component 1`] = `
       className="columns"
     >
       <div
-        className="column is-half"
+        className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Journal name"
+          floatingLabelText="Place of publication"
           fullWidth={true}
-          name="fez_record_search_key_journal_name.rek_journal_name"
+          name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Publisher"
+          fullWidth={true}
+          name="fez_record_search_key_publisher.rek_publisher"
+          type="text"
         />
       </div>
       <div
@@ -83,22 +96,15 @@ exports[`JournalArticleForm renders  component 1`] = `
         className="column"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          locale={
-            Object {
-              "label": "Publication subtype",
-              "loading": "loading...",
-            }
-          }
-          name="rek_subtype"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
-          vocabId={0}
+          floatingLabelText="Abstract"
+          fullWidth={true}
+          hintText="Add a full article abstract here."
+          multiLine={true}
+          name="rek_description"
+          rows={3}
+          type="text"
         />
       </div>
     </div>
@@ -108,12 +114,15 @@ exports[`JournalArticleForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Authors",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.",
+        "title": "Adding contributors",
       }
     }
     title="Authors"
   >
+    <div>
+      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
+    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -185,80 +194,12 @@ exports[`JournalArticleForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Optional publication details",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.",
+        "title": "Optional Information",
       }
     }
-    title="Optional publication details"
+    title="Optional information"
   >
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Volume"
-          fullWidth={true}
-          name="fez_record_search_key_volume_number.rek_volume_number"
-          type="text"
-        />
-      </div>
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Issue"
-          fullWidth={true}
-          name="fez_record_search_key_issue_number.rek_issue_number"
-          type="text"
-        />
-      </div>
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Start page"
-          fullWidth={true}
-          name="fez_record_search_key_start_page.rek_start_page"
-          type="text"
-        />
-      </div>
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="End page"
-          fullWidth={true}
-          name="fez_record_search_key_end_page.rek_end_page"
-          type="text"
-        />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Article number"
-          fullWidth={true}
-          name="fez_record_search_key_article_number.rek_article_number"
-          type="text"
-        />
-      </div>
-    </div>
     <div
       className="columns"
     >
@@ -270,6 +211,7 @@ exports[`JournalArticleForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
+          hintText="Please add any additional information"
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}
@@ -286,8 +228,9 @@ exports[`JournalArticleForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link (URL)"
+          floatingLabelText="Link"
           fullWidth={true}
+          hintText="Enter URL for this publication"
           name="rek_link"
           type="text"
           validate={

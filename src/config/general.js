@@ -46,6 +46,8 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
         name: 'Generic Document',
         class: 'Uqlibrary\\FezCore\\Types\\Generic',
+        formComponent: components ? components.GenericDocumentForm : null,
+        citationComponent: components ? components.GenericDocumentCitation : null,
         hasFormComponent: true
     },
     {
@@ -173,6 +175,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_RESEARCH_REPORT,
         name: 'Research Report',
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
+        formComponent: components ? components.ResearchReportForm : null,
         hasFormComponent: true
     },
     {

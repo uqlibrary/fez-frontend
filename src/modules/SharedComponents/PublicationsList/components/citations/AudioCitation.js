@@ -26,7 +26,8 @@ export default class AudioCitation extends Component {
         };
 
         // eSpace citation view for Audio
-        // {Creator}{Publication Year| (|).} {Title| |.}{Publisher| |.}{Series| |.}{doi| doi:|}
+        // {Creator}{Publication Year| (|).} <i>{Title| |.}</i> {Publisher| |.}{Series| |.} {doi| doi:|}
+
         return (
             <div className="citationContent citationAudio">
                 <FontIcon className="material-icons citationIcon" data-place="left">

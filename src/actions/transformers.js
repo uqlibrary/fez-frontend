@@ -20,6 +20,7 @@ export const getFixIssueRequest = pipe(getIssueValues, locale.issues.fixRecord, 
 
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
+* NOTE: link description is required to save link
 * @param {Object} form data may contain link attribute  {rek_link: {string}}
 * @returns {Object} formatted {fez_record_search_key_link*} for record request
 */
@@ -31,6 +32,12 @@ export const getRecordLinkSearchKey = (data) => {
             {
                 rek_link: data.rek_link,
                 rek_link_order: 1
+            }
+        ],
+        fez_record_search_key_link_description: [
+            {
+                rek_link_description: data.rek_link,
+                rek_link_description_order: 1
             }
         ]
     };
