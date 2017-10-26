@@ -59,7 +59,7 @@ exports[`PatentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Patent Number"
           fullWidth={true}
-          name="fez_record_search_key_conference_name.rek_patent_number"
+          name="fez_record_search_key_patent_number.rek_patent_number"
           type="text"
         />
       </div>
