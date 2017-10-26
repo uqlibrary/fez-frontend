@@ -168,6 +168,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_PREPRINT,
         name: 'Preprint',
         class: 'Uqlibrary\\FezCore\\Types\\Preprint',
+        formComponent: components ? components.PreprintForm : null,
         hasFormComponent: true
     },
     {
