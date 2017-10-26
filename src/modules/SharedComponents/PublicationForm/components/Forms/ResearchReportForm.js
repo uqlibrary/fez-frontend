@@ -16,7 +16,7 @@ export default class ResearchReportForm extends Component {
         super(props);
     }
 
-    normalizeTotalPages = (value) => {
+    getNumbersOnly = (value) => {
         return value.replace(/[^\d]/g, '');
     };
 
@@ -79,7 +79,7 @@ export default class ResearchReportForm extends Component {
                                 className="requiredField"
                                 floatingLabelText={txt.information.fieldLabels.totalPages.title}
                                 hintText={txt.information.fieldLabels.totalPages.hint}
-                                normalize={this.normalizeTotalPages}
+                                normalize={this.getNumbersOnly}
                                 validate={[validation.required]}
                             />
                         </div>
@@ -115,8 +115,8 @@ export default class ResearchReportForm extends Component {
                         locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
-                        disabled={this.props.submitting}
-                    />
+                        validate={[validation.authorRequired]}
+                        disabled={this.props.submitting} />
                 </StandardCard>
 
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>

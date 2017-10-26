@@ -691,8 +691,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
+                }
             },
             book: {
                 information: {
@@ -825,8 +824,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors and/or editors of the publication and link one author or editor to the current user'
+                }
             },
             bookChapter: {
                 information: {
@@ -962,8 +960,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors of the publication and link an author name to the current user'
+                }
             },
             conferencePaper: {
                 information: {
@@ -1052,8 +1049,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
+                }
             },
             researchReport: {
                 information: {
@@ -1158,8 +1154,7 @@ export default {
                             hint: 'Enter URL for this publication'
                         }
                     }
-                },
-                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
+                }
             },
             fileUpload: {
                 title: 'Files',
@@ -1293,7 +1288,7 @@ export default {
                 },
             },
             defaultActions: [
-                {key: 'fixRecord', label: 'Fix record', primary: false}, // TODO: implement fixRecord
+                {key: 'fixRecord', label: 'Fix record', primary: false},
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ]
         },
@@ -1425,7 +1420,9 @@ export default {
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
-        authorLinking: 'One author must be selected and be confirmed'
+        authorLinking: 'One author must be selected and be confirmed',
+        authorRequired: 'Please, provide a list of authors/creators of the publication and link an author name to the current user',
+        authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user'
     },
     issues: {
         fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
