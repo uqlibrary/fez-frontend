@@ -96,8 +96,10 @@ export default class BookChapterForm extends Component {
                                 disabled={this.props.submitting}
                                 name="rek_date"
                                 allowPartial
-                                className="requiredField"
+                                className="requiredHintField"
                                 validate={[validation.required]}
+                                floatingTitle={txt.information.fieldLabels.date.title}
+                                floatingTitleRequired
                             />
                         </div>
                     </div>
@@ -111,6 +113,7 @@ export default class BookChapterForm extends Component {
                         locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
+                        validate={[validation.authorRequired]}
                         disabled={this.props.submitting} />
                 </StandardCard>
 

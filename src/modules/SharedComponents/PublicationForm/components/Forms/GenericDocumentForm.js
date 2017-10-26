@@ -83,7 +83,7 @@ export default class GenericDocumentForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="rek_formatted_abstract"
+                                name="rek_description"
                                 type="text"
                                 fullWidth
                                 rows={3}
@@ -103,8 +103,8 @@ export default class GenericDocumentForm extends Component {
                         className="requiredField"
                         name="authors"
                         locale={txt.authors.field}
-                        disabled={this.props.submitting}
-                    />
+                        validate={[validation.authorRequired]}
+                        disabled={this.props.submitting} />
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>

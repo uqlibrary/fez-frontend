@@ -74,6 +74,20 @@ describe('PublicationForm renders ', () => {
         expect(hasFilesComponent).toEqual(true);
     });
 
+    it('component with GenericDocument', () => {
+        const wrapper = setup({ initialValues: { rek_display_type: 202 } });
+
+        expect(wrapper.find('GenericDocumentForm').length).toEqual(1);
+        expect(wrapper.find('RaisedButton').length).toEqual(2);
+
+        let hasFilesComponent = false;
+        wrapper.find('Field').forEach(field => {
+            hasFilesComponent = hasFilesComponent || field.props().name === 'files';
+        });
+
+        expect(hasFilesComponent).toEqual(true);
+    });
+
 
     it('component with all fields disabled', () => {
         const wrapper = setup({submitting: true});

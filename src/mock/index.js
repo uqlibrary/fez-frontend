@@ -8,7 +8,7 @@ import * as mockData from './data';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
-const escapeRegExp = (input) => (input.replace(/[\-\[\]\/\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
+const escapeRegExp = (input) => (input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
 const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
@@ -52,6 +52,14 @@ mock
         .reply(200, mockData.trendingPublications)
     .onGet(new RegExp(escapeRegExp(routes.AUTHORS_SEARCH_API({query: '.*'}))))
         .reply(200, mockData.authorsSearch)
+    .onGet(new RegExp(escapeRegExp(routes.SEARCH_KEY_LOOKUP_API({searchQuery: '.*', searchKey: '.*'}))))
+        .reply((config) => {
+            const searchKey = config.url.match('[?&]search_key=([^&]+)')[1];
+            const searchQuery = config.url.match('[?&]lookup_value=([^&]+)')[1];
+            return [200, {data: mockData.searchKeyList[searchKey].filter(item => (item.toLowerCase().indexOf(searchQuery) >= 0))}];
+        })
+    .onGet(new RegExp(escapeRegExp(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: '.*', pageSize: 5, sortBy: 'score', sortDirection: 'desc'}))))
+        .reply(200, mockData.internalTitleSearchList)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'wos', searchQuery: '.*'}))))
         .reply(200, mockData.externalTitleSearchResultsList)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'scopus', searchQuery: '.*'}))))
@@ -60,8 +68,6 @@ mock
         .reply(200, mockData.externalDoiSearchResultList)
     .onGet(new RegExp(escapeRegExp(routes.SEARCH_EXTERNAL_RECORDS_API({source: 'pubmed', searchQuery: '28131963'}))))
         .reply(200, mockData.externalPubMedSearchResultsList)
-    .onGet(new RegExp(escapeRegExp(routes.SEARCH_INTERNAL_RECORDS_API({searchQuery: '.*', pageSize: 5, sortBy: 'score', withUnknownAuthors: 1}))))
-        .reply(200, mockData.internalTitleSearchList)
     .onGet(new RegExp(escapeRegExp(routes.GET_PUBLICATION_TYPES_API())))
         .reply(200, mockData.recordsTypeList)
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'})))).reply((config) => {
@@ -92,6 +98,7 @@ mock
         .reply(200, {data: {}})
     // .onAny().passThrough();
     .onAny().reply((config) => {
+        console.log('url not found...');
         console.log(config.url);
         return [404, `MOCK URL NOT FOUND: ${config.url}`];
     });

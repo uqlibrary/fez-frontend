@@ -25,7 +25,7 @@ export default class JournalArticleForm extends Component {
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
-                    <div className="columns" style={{marginTop: '-12px'}}>
+                    <div className="columns">
                         <div className="column">
                             <Field
                                 component={TextField}
@@ -34,12 +34,9 @@ export default class JournalArticleForm extends Component {
                                 name="rek_title"
                                 type="text"
                                 fullWidth
-                                multiLine
-                                rows={1}
                                 floatingLabelText={txt.information.fieldLabels.articleTitle}
                                 className="requiredField"
                                 validate={[validation.required]}
-                                style={{marginBottom: '-12px'}}
                             />
                         </div>
                     </div>
@@ -92,7 +89,7 @@ export default class JournalArticleForm extends Component {
                         name="authors"
                         locale={txt.authors.field}
                         disabled={this.props.submitting}
-                    />
+                        validate={[validation.authorRequired]} />
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>

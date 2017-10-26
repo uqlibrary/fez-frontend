@@ -78,3 +78,22 @@ export function searchPublications(searchQuery) {
             });
     };
 }
+
+/**
+ * Get a list of valus based on search key and value, eg for autosuggest controls
+ * @param string - search key, eg 'series'
+ * @param string - search query, eg 'conference'
+ * @returns {action}
+ */
+export function loadSearchKeyList(searchKey, searchQuery) {
+    return dispatch => {
+        dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`, payload: searchKey});
+
+        return get(routes.SEARCH_KEY_LOOKUP_API({searchQuery: searchQuery, searchKey: searchKey}))
+            .then((response) => {
+                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
+            }, (error) => {
+                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`, payload: error});
+            });
+    };
+}

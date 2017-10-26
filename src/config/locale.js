@@ -788,8 +788,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
+                }
             },
             book: {
                 information: {
@@ -805,6 +804,7 @@ export default {
                         publicationPlace: 'Place of publication',
                         publisher: 'Publisher',
                         date: {
+                            title: 'Date published',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'
@@ -921,8 +921,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors and/or editors of the publication and link one author or editor to the current user'
+                }
             },
             bookChapter: {
                 information: {
@@ -939,6 +938,7 @@ export default {
                         publicationPlace: 'Place of publication',
                         publisher: 'Publisher',
                         date: {
+                            title: 'Date published',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'
@@ -1057,8 +1057,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors of the publication and link an author name to the current user'
+                }
             },
             conferencePaper: {
                 information: {
@@ -1078,6 +1077,7 @@ export default {
                         publicationPlace: 'Place of publication',
                         publisher: 'Publisher',
                         date: {
+                            title: 'Publication date',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'
@@ -1146,8 +1146,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
+                }
             },
             fileUpload: {
                 title: 'Files',
@@ -1155,22 +1154,6 @@ export default {
                     title: 'Files',
                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet ac risus et blandit. Vivamus varius ornare metus vitae sagittis. Donec erat urna, interdum vitae faucibus a, tempus eu orci. Aenean venenatis lacus eu sapien dignissim, non rhoncus dolor facilisis. Donec finibus tristique nunc nec facilisis. Pellentesque luctus libero faucibus ex mattis, vitae commodo nunc vehicula. Nam nec porttitor sapien. Sed rutrum, mauris id luctus eleifend, eros lectus auctor nibh, a eleifend est est eu nunc.',
                     buttonLabel: 'OK'
-                }
-            },
-            orgUnits: {
-                title: 'School, Department or Centre',
-                help: {
-                    title: 'School, Department or Centre',
-                    text: 'some help',
-                    buttonLabel: 'OK'
-                },
-                field: {
-                    form: {
-                        locale: {
-                            orgUnitAsPublishedLabel: 'School, Department or Centre as published',
-                            orgUnitAsPublishedHint: 'Please type organisation unit'
-                        }
-                    },
                 }
             },
             cancelWorkflowConfirmation: {
@@ -1297,7 +1280,7 @@ export default {
                 },
             },
             defaultActions: [
-                {key: 'fixRecord', label: 'Fix record', primary: false}, // TODO: implement fixRecord
+                {key: 'fixRecord', label: 'Fix record', primary: false},
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ]
         },
@@ -1424,24 +1407,18 @@ export default {
         fileUpload: 'File upload is not in valid state',
         required: 'This field is required',
         email: 'Please enter a valid email address',
-        uniqueValue: 'This value has already been used',
         url: 'Please enter a valid URL',
-        arrayRequired: 'You must select at least one item',
-        canNotBeCI: 'You must specify a lead UQ supervisor for a RHD project',
-        shortCode: 'The project short code must consist of 8 alpha numeric characters',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
-        authorLinking: 'One author must be selected and be confirmed'
+        authorLinking: 'One author must be selected and be confirmed',
+        authorRequired: 'Please, provide a list of authors/creators of the publication and link an author name to the current user',
+        authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user'
     },
     issues: {
-        claim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Record was claimed: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
-        unclaim: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Record is not mine: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`,
-        fixRecord: ({title = '', pid = '', userName = '', userId = '', comments = ''}) =>
-            `Fix request: "${title}" (${pid}) by ${userName} (${userId}): ${comments}`
+        fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
+            `Record: https://fez-staging.library.uq.edu.au/view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
     }
 };
 

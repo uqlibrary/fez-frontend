@@ -8,13 +8,22 @@ import {locale, routes} from 'config';
 
 export default class AddMissingRecord extends React.Component {
     static propTypes = {
+        rawSearchQuery: PropTypes.string,
         addRecordStep: PropTypes.func,
         actions: PropTypes.object,
-        location: PropTypes.object
+        history: PropTypes.object,
+        location: PropTypes.object,
+        match: PropTypes.object
     };
 
     constructor(props) {
         super(props);
+    }
+
+    componentWillMount() {
+        if (!this.props.rawSearchQuery && this.props.match.path === routes.pathConfig.records.add.results) {
+            this.props.history.replace(routes.pathConfig.records.add.find);
+        }
     }
 
     getStepperIndex = (location) => {
@@ -26,6 +35,7 @@ export default class AddMissingRecord extends React.Component {
 
     render() {
         const txt = locale.pages.addRecord;
+
         return (
             <StandardPage title={txt.title}>
                 <Stepper activeStep={this.getStepperIndex(this.props.location.pathname)} steps={txt.stepper} />

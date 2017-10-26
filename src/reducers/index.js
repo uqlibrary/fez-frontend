@@ -6,6 +6,6 @@ export authorsReducer from './authors';
 export claimPublicationReducer from './claimPublication';
 export fixRecordReducer from './fixRecord';
 export publicationsReducer from './publications';
-export publicationSubtypesReducer from './publicationSubtypes';
 export searchRecordsReducer from './searchRecords';
-export orgUnitsReducer from './orgUnits';
+export searchKeysReducer from './searchKeys';
+export controlledVocabulariesReducer from './controlledVocabularies';
