@@ -43,7 +43,7 @@ export default class PatentForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_conference_name.rek_patent_number"
+                                name="fez_record_search_key_patent_number.rek_patent_number"
                                 type="text"
                                 fullWidth
                                 floatingLabelText={txt.information.fieldLabels.patentNumber}/>
