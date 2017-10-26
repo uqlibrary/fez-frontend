@@ -1051,6 +1051,107 @@ export default {
                     }
                 }
             },
+            seminarPaper: {
+                information: {
+                    title: 'Seminar paper information',
+                    help: {
+                        title: 'Seminar paper information',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            title: 'Title',
+                            hint: 'Title of paper',
+                        },
+                        orgUnit: {
+                            title: 'School, department or centre',
+                            hint: ''
+                        },
+                        institution: {
+                            title: 'Institution',
+                            hint: ''
+                        },
+                        series: {
+                            title: 'Series',
+                            hint: 'Enter seminar series'
+                        },
+                        seminarDate: {
+                            title: 'Seminar date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors help',
+                        text: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information help',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            title: 'Additional notes',
+                            hint: 'Please add any additional information here',
+                        },
+                        url: {
+                            title: 'Link',
+                            hint: 'Enter a valid URL for this publication'
+                        }
+                    }
+                },
+            },
             fileUpload: {
                 title: 'Files',
                 help: {
