@@ -383,7 +383,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Patent"

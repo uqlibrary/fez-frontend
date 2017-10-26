@@ -10,7 +10,7 @@ export default class PatentForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
         vocabId: PropTypes.number
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -46,8 +46,7 @@ export default class PatentForm extends Component {
                                 name="fez_record_search_key_conference_name.rek_patent_number"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.patentNumber}
-                                validate={[validation.required]} />
+                                floatingLabelText={txt.information.fieldLabels.patentNumber}/>
                         </div>
                         <div className="column">
                             <Field
@@ -88,11 +87,12 @@ export default class PatentForm extends Component {
                     <div>{txt.authors.description}</div>
                     <Field
                         component={ContributorsEditorField}
-                        name="authors"
-                        locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
-                        disabled={this.props.submitting} />
+                        name="authors"
+                        locale={txt.authors.field}
+                        disabled={this.props.submitting}
+                        validate={[validation.authorRequired]} />
                 </StandardCard>
 
                 <StandardCard title={txt.other.title} help={txt.other.help}>
