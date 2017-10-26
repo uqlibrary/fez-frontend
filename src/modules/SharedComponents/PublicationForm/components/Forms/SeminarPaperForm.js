@@ -134,14 +134,6 @@ export default class SeminarPaperForm extends Component {
                                 hintText={txt.optional.fieldLabels.url.hint}
                                 validate={[validation.url, validation.maxLength255]}
                             />
-                            <Field
-                                component={TextField}
-                                name="fez_record_search_key_link_description[0].rek_link_description"
-                                type="text"
-                                disabled={this.props.submitting}
-                                fullWidth
-                                floatingLabelText="testing"
-                            />
                         </div>
                     </div>
                 </StandardCard>

@@ -235,14 +235,6 @@ exports[`SeminarPaperForm renders  component 1`] = `
             ]
           }
         />
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="testing"
-          fullWidth={true}
-          name="fez_record_search_key_link_description[0].rek_link_description"
-          type="text"
-        />
       </div>
     </div>
   </StandardCard>

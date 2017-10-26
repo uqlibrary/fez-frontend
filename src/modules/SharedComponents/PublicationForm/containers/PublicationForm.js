@@ -8,6 +8,11 @@ import {locale, general} from 'config';
 const FORM_NAME = 'PublicationForm';
 
 const onSubmit = (values, dispatch) => {
+    // Add a NA for link description for Seminar Paper to make link valid for API to enter it
+    if(values.rek_display_type === 189 && values.fez_record_search_key_link[0].rek_link) {
+        values.fez_record_search_key_link_description[0].rek_link_description = 'NA';
+    }
+
     // set default values for a new unapproved record
     return dispatch(createNewRecord({...values.toJS()}))
         .then(() => {
