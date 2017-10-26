@@ -37,8 +37,7 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
-                                hintText={txt.information.fieldLabels.documentTitle.hint}
+                                {...txt.information.fieldLabels.documentTitle}
                                 validate={[validation.required]}
                                 style={{marginBottom: '-12px'}}
                             />
@@ -52,8 +51,7 @@ export default class ResearchReportForm extends Component {
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace.title}
-                                hintText={txt.information.fieldLabels.publicationPlace.hint}
+                                {...txt.information.fieldLabels.publicationPlace}
                             />
                         </div>
                         <div className="column">
@@ -63,8 +61,7 @@ export default class ResearchReportForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publisher.title}
-                                hintText={txt.information.fieldLabels.publisher.hint}
+                                {...txt.information.fieldLabels.publisher}
                             />
                         </div>
                     </div>
@@ -77,8 +74,7 @@ export default class ResearchReportForm extends Component {
                                 disabled={this.props.submitting}
                                 fullWidth
                                 className="requiredField"
-                                floatingLabelText={txt.information.fieldLabels.totalPages.title}
-                                hintText={txt.information.fieldLabels.totalPages.hint}
+                                {...txt.information.fieldLabels.totalPages}
                                 normalize={this.getNumbersOnly}
                                 validate={[validation.required]}
                             />
@@ -156,8 +152,7 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.other.fieldLabels.abstract.title}
-                                hintText={txt.other.fieldLabels.abstract.hint}
+                                {...txt.other.fieldLabels.abstract}
                             />
                         </div>
                     </div>
@@ -171,8 +166,7 @@ export default class ResearchReportForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.other.fieldLabels.notes.title}
-                                hintText={txt.other.fieldLabels.notes.hint}
+                                {...txt.other.fieldLabels.notes}
                             />
                         </div>
                     </div>
@@ -184,8 +178,7 @@ export default class ResearchReportForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.other.fieldLabels.url.title}
-                                hintText={txt.other.fieldLabels.url.hint}
+                                {...txt.other.fieldLabels.url}
                                 validate={[validation.url, validation.maxLength255]}
                             />
                         </div>

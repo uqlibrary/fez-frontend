@@ -1158,16 +1158,16 @@ export default {
                     },
                     fieldLabels: {
                         documentTitle: {
-                            title: 'Title',
-                            hint: 'Title of report'
+                            floatingLabelText: 'Title',
+                            hintText: 'Please, type title of research report'
                         },
                         publicationPlace: {
-                            title: 'Place of publication',
-                            hint: 'Please enter the place of publication'
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'Please, type the place of publication'
                         },
                         publisher: {
-                            title: 'Publisher',
-                            hint: 'Please enter the name of the publisher'
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please, type the name of the publisher'
                         },
                         date: {
                             title: 'Date published',
@@ -1176,8 +1176,8 @@ export default {
                             year: 'Year'
                         },
                         totalPages: {
-                            title: 'Total pages',
-                            hint: 'Enter total number of pages in the publication'
+                            floatingLabelText: 'Total pages',
+                            hintText: 'Please, type total number of pages in the publication'
                         }
                     }
                 },
@@ -1193,7 +1193,7 @@ export default {
                         form: {
                             locale: {
                                 nameAsPublishedLabel: 'Author\'s name as published',
-                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                nameAsPublishedHint: 'Please, type the name exactly as published',
                                 identifierLabel: 'UQ identifier (if available)',
                                 addButton: 'Add author'
                             }
@@ -1239,16 +1239,16 @@ export default {
                     },
                     fieldLabels: {
                         abstract: {
-                            title: 'Abstract',
-                            hint: 'Please provide an abstract or summary of the work'
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please, provide an abstract or summary of the work'
                         },
                         notes: {
-                            title: 'Notes (not publicly viewable)',
-                            hint: 'Please add any additional information here'
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please, add any additional information here'
                         },
                         url: {
-                            title: 'Link',
-                            hint: 'Enter URL for this publication'
+                            floatingLabelText: 'Link',
+                            hintText: 'Please, type URL for this publication'
                         }
                     }
                 }
@@ -1308,7 +1308,7 @@ export default {
                 }
             },
             comments: {
-                title: 'Please suggest changes and/or upload additional files below',
+                title: 'Please, suggest changes and/or upload additional files below',
                 help: {
                     title: 'Additional information',
                     text: '...',
@@ -1401,7 +1401,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISBN value',
-                        inputFieldHint: 'Please type ISBN value',
+                        inputFieldHint: 'Please, type ISBN value',
                         addButtonLabel: 'Add ISBN'
                     }
                 },
@@ -1445,7 +1445,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISSN value',
-                        inputFieldHint: 'Please type ISSN value',
+                        inputFieldHint: 'Please, type ISSN value',
                         addButtonLabel: 'Add ISSN'
                     }
                 },
@@ -1506,18 +1506,18 @@ export default {
         }
     },
     validationErrors: {
-        publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
-        isbn: 'Invalid ISBN value',
-        issn: 'Invalid ISSN value',
+        publicationSearch: 'Please, type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
+        isbn: 'ISBN value is not valid',
+        issn: 'ISSN value is not valid',
         fileUpload: 'File upload is not in valid state',
         required: 'This field is required',
-        email: 'Please enter a valid email address',
-        url: 'Please enter a valid URL',
+        email: 'Email address is not valid',
+        url: 'URL is not valid',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
-        authorLinking: 'One author must be selected and be confirmed',
+        authorLinking: 'Please, select and confirm an author',
         authorRequired: 'Please, provide a list of authors/creators of the publication and link an author name to the current user',
         authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user'
     },
