@@ -1,6 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PageRangeCitationView renders  component with a mock espace record 1`] = `
+exports[`PageRangeCitationView test  endPage only 1`] = `
+<span
+  className="citationPageRange"
+>
+  (
+  -
+  <PageCitationView
+    className="citationEndPage"
+    publication={
+      Object {
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": 11,
+        },
+      }
+    }
+    searchKey={
+      Object {
+        "key": "fez_record_search_key_end_page",
+        "subkey": "rek_end_page",
+      }
+    }
+  />
+  )
+</span>
+`;
+
+exports[`PageRangeCitationView test  should render component with a mock espace record 1`] = `
 <span
   className="citationPageRange"
 >
@@ -922,39 +948,13 @@ exports[`PageRangeCitationView renders  component with a mock espace record 1`] 
 </span>
 `;
 
-exports[`PageRangeCitationView renders  endPage only 1`] = `
-<span
-  className="citationPageRange"
->
-  (
-  -
-  <PageCitationView
-    className="citationEndPage"
-    publication={
-      Object {
-        "fez_record_search_key_end_page": Object {
-          "rek_end_page": 11,
-        },
-      }
-    }
-    searchKey={
-      Object {
-        "key": "fez_record_search_key_end_page",
-        "subkey": "rek_end_page",
-      }
-    }
-  />
-  )
-</span>
-`;
-
-exports[`PageRangeCitationView renders  nothing if search key not found 1`] = `
+exports[`PageRangeCitationView test  should render nothing if search key not found 1`] = `
 <span
   className="citationPageRange"
 />
 `;
 
-exports[`PageRangeCitationView renders  startPage only 1`] = `
+exports[`PageRangeCitationView test  startPage only 1`] = `
 <span
   className="citationPageRange"
 >

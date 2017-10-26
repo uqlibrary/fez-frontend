@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import AuthorsCitationView from './AuthorsCitationView';
-import EditorsCitationView from './EditorsCitationView';
-import YearCitationView from './YearCitationView';
+import * as Partials from './partials';
 
 export default class BookCitation extends Component {
     static propTypes = {
@@ -15,11 +13,14 @@ export default class BookCitation extends Component {
     }
 
     render() {
-        const book = {
+        const record = {
             id: this.props.publication.rek_pid,
+            isEditedBook: this.props.publication.rek_subtype === 'Edited book',
             title: this.props.publication.rek_title,
             edition: this.props.publication.fez_record_search_key_edition ?
                 this.props.publication.fez_record_search_key_edition.rek_edition : null,
+            series: this.props.publication.fez_record_search_key_series ?
+                this.props.publication.fez_record_search_key_series.rek_series : null,
             placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication ?
                 this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
             publisher: this.props.publication.fez_record_search_key_publisher ?
@@ -29,55 +30,53 @@ export default class BookCitation extends Component {
         };
 
         // eSpace citation view for Book
-        // {6034} <i>{10612}</i>{12115|| ed}. {6042|Edited by |} {6113|(| ed.)} {6116||:} {6114}, {6044}.{16522| doi:|} - Legacy Fez
-        // Author <i>Title</i> Edition ed. Edited by Editor Place of Publication: Publisher, Publ. doi: DOI
+        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Edition| | ed.}{Place of Publication| |:} {Publisher| |.} {doi| doi:|}
+        // Edited Book (subtype: Edited Book)
+        // {Editor|| ed.}{Publication Year| (|).}<i>{Title| |.}</i>{Edition| | ed.}{Series Title| |,}{Place of Publication| |:}{Publisher| |.}
+        // {doi| doi:|}
+
         return (
             <div className="citationContent citationBook">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
 
-                {/* authors list */}
-                <AuthorsCitationView publication={this.props.publication} />
-
-                {/* book title */}
+                {/* {Author} */}
                 {
-                    book.title &&
-                    <span className="citationTitle"> {book.title}</span>
+                    !record.isEditedBook &&
+                    <Partials.AuthorsCitationView publication={this.props.publication}/>
                 }
 
-                {/* book edition */}
+                {/* {Editor|| ed.} */}
                 {
-                    book.edition &&
-                    <span className="citationBookEdition">, {book.edition} ed. </span>
+                    record.isEditedBook &&
+                    <Partials.EditorsCitationView publication={this.props.publication} prefix="" suffix=" ed." />
                 }
 
-                {/* editors list */}
-                <EditorsCitationView publication={this.props.publication} prefix=" Edited by " />
+                {/* {Publication Year| (|).} */}
+                <Partials.YearCitationView date={this.props.publication.rek_date} />
 
-                {/* place of publication */}
+                {/* <i>{Title| |.}</i> */}
+                <Partials.CitationView className="citationTitle" value={record.title} />
+
+                {/* {Edition| | ed.} */}
+                <Partials.CitationView className="citationEdition" value={record.edition} suffix=" ed." />
+
+                {/* {Series Title| |,} */}
                 {
-                    book.placeOfPublication &&
-                    <span className="citationPlaceOfPublication"> {book.placeOfPublication}:</span>
+                    record.isEditedBook &&
+                    <Partials.CitationView className="citationSeries" value={record.series} suffix=","/>
                 }
 
-                {/* publisher */}
-                {
-                    book.publisher &&
-                    <span className="citationPublisher"> {book.publisher}, </span>
-                }
+                {/* {Place of Publication| |:} */}
+                <Partials.CitationView className="citationPlaceOfPublication" value={record.placeOfPublication} suffix=":" />
 
-                {/* publication year */}
-                <YearCitationView publication={this.props.publication} />.
+                {/* {Publisher| |.} */}
+                <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
-                {/* doi */}
-                {
-                    book.doi &&
-                    <span className="citationDOI">
-                        <span className="citationLabel"> doi: </span>
-                        <span className="citationValue"> {book.doi} </span>
-                    </span>
-                }
+                {/* {doi| doi:|} */}
+                <Partials.DoiCitationView doi={record.doi} />
+
             </div>
         );
     }

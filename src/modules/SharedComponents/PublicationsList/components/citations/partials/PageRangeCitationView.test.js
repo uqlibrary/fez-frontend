@@ -34,13 +34,13 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('PageRangeCitationView renders ', () => {
-    it('nothing if search key not found', () => {
+describe('PageRangeCitationView test ', () => {
+    it('should render nothing if search key not found', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with a mock espace record', () => {
+    it('should render component with a mock espace record', () => {
         const wrapper = setup({publication: conferencePaper});
         expect(toJson(wrapper)).toMatchSnapshot();
     });

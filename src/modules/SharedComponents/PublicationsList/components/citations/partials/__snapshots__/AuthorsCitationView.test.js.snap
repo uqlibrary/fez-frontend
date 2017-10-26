@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AuthorsCitationView renders  component with no authors 1`] = `
+exports[`AuthorsCitationView test  should render component with no authors 1`] = `
 <span
   className="\${className} empty"
 />
 `;
 
-exports[`AuthorsCitationView renders  component with one author 1`] = `
+exports[`AuthorsCitationView test  should render component with one author 1`] = `
 <span
   className="citationAuthors"
 >
@@ -19,7 +19,7 @@ exports[`AuthorsCitationView renders  component with one author 1`] = `
 </span>
 `;
 
-exports[`AuthorsCitationView renders  component with three authors 1`] = `
+exports[`AuthorsCitationView test  should render component with three authors 1`] = `
 <span
   className="citationAuthors"
 >
@@ -44,7 +44,7 @@ exports[`AuthorsCitationView renders  component with three authors 1`] = `
 </span>
 `;
 
-exports[`AuthorsCitationView renders  component with three authors with prefix/suffix 1`] = `
+exports[`AuthorsCitationView test  should render component with three authors with prefix/suffix 1`] = `
 <span
   className="citationAuthors"
 >
@@ -71,7 +71,7 @@ exports[`AuthorsCitationView renders  component with three authors with prefix/s
 </span>
 `;
 
-exports[`AuthorsCitationView renders  component with two authors 1`] = `
+exports[`AuthorsCitationView test  should render component with two authors 1`] = `
 <span
   className="citationAuthors"
 >

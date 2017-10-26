@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageCitationView test  nothing if search key not found 1`] = `null`;
+
+exports[`PageCitationView test  should render component with a mock espace record 1`] = `
+<span
+  className="citationPage"
+>
+  39
+</span>
+`;

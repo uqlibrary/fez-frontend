@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const AuthorsCitationView = ({publication, searchKey, className, prefix, suffix}) => {
     const authorsCount = Array.isArray(publication[searchKey.key]) ? publication[searchKey.key].length : 0;
-    if (authorsCount === 0) return (<span className="${className} empty" />);
+    if (authorsCount === 0) return (<span className={`${className || ''} empty`} />);
 
     return (
-        <span className={className}>
+        <span className={className || ''}>
             {prefix}
             {
                 Array.isArray(publication[searchKey.key]) && publication[searchKey.key]

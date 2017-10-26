@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import AuthorsCitationView from './AuthorsCitationView';
-import EditorsCitationView from './EditorsCitationView';
-import YearCitationView from './YearCitationView';
-import PageRangeCitationView from './PageRangeCitationView';
+import * as Partials from './partials';
 
 export default class ConferencePaperCitation extends Component {
     static propTypes = {
@@ -16,7 +13,7 @@ export default class ConferencePaperCitation extends Component {
     }
 
     render() {
-        const conferencePaper = {
+        const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             name: this.props.publication.fez_record_search_key_conference_name ?
@@ -30,8 +27,7 @@ export default class ConferencePaperCitation extends Component {
         };
 
         // eSpace citation view for conference paper
-        // {4191} ({4041}). {10605}. In: {4194||, }{9622||.} <i>{11061}</i>, {4172}, ({4189||}{4190|-|}). {4174}.{16516| doi:|} - Legacy Fez
-        // Author (Year). Title of paper. In: Editor, Proceedings title. Conference name, Conference location, (Start page-End page). Conference dates. doi:DOI
+        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Conference Name| |,}{Conference Location| |,}{Conference Date| |.}{Place of Publication| |:}{Publisher| |.} {doi| doi:||}
         return (
             <div className="citationContent citationConferencePaper">
                 <FontIcon className="material-icons citationIcon" data-place="left">
@@ -39,39 +35,39 @@ export default class ConferencePaperCitation extends Component {
                 </FontIcon>
 
                 {/* authors list */}
-                <AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView publication={this.props.publication} />
                 {/* publication year */}
-                <YearCitationView publication={this.props.publication} />.
+                <Partials.YearCitationView publication={this.props.publication} />.
                 {/* conferencePaper title */}
                 {
-                    conferencePaper.title &&
-                    <span className="citationTitle"> {conferencePaper.title}.</span>
+                    record.title &&
+                    <span className="citationTitle"> {record.title}.</span>
                 }
                 {/*  In: Editor, Proceedings title. */}
-                <EditorsCitationView publication={this.props.publication} />
+                <Partials.EditorsCitationView publication={this.props.publication} />
                 {/* conferencePaper title */}
                 {
-                    conferencePaper.name &&
-                    <span className="citationConferencePaperName"> {conferencePaper.name},</span>
+                    record.name &&
+                    <span className="citationConferencePaperName"> {record.name},</span>
                 }
                 {/* conferencePaper location */}
                 {
-                    conferencePaper.location &&
-                    <span className="citationConferencePaperLocation"> {conferencePaper.location}, </span>
+                    record.location &&
+                    <span className="citationConferencePaperLocation"> {record.location}, </span>
                 }
                 {/* pages (start page-end page) */}
-                <PageRangeCitationView publication={this.props.publication} />
+                <Partials.PageRangeCitationView publication={this.props.publication} />
                 {/* conference dates */}
                 {
-                    conferencePaper.dates &&
-                    <span className="citationConferencePaperConferenceDates"> {conferencePaper.dates}.</span>
+                    record.dates &&
+                    <span className="citationConferencePaperConferenceDates"> {record.dates}.</span>
                 }
                 {/* doi */}
                 {
-                    conferencePaper.doi &&
+                    record.doi &&
                     <span className="citationDOI">
                         <span className="citationLabel"> doi: </span>
-                        <span className="citationValue"> {conferencePaper.doi} </span>
+                        <span className="citationValue"> {record.doi} </span>
                     </span>
                 }
             </div>

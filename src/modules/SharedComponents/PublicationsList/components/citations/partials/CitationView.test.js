@@ -11,18 +11,19 @@ import {locale} from 'config';
 import {researchReport} from 'mock/data/testing/records';
 
 
-function setup({prefix, suffix, citationClass, citation, isShallow = true}) {
+function setup({prefix, suffix, className, value, isShallow = true}) {
     const props = {
         prefix: prefix || ' ', // : PropTypes.string,
         suffix: suffix || '.', // : PropTypes.string,
-        citationClass: citationClass || '', // : PropTypes.string,
+        value: value,
+        className: className || '', // : PropTypes.string,
     };
 
     if(isShallow) {
-        return shallow(<CitationView {...props}>{citation}</CitationView>);
+        return shallow(<CitationView {...props}/>);
     }
 
-    return mount(<CitationView {...props}>{citation}</CitationView>, {
+    return mount(<CitationView {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -36,24 +37,24 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('CitationView renders ', () => {
-    it('component with empty span', () => {
+describe('CitationView test ', () => {
+    it('should render component with empty span', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with correct props', () => {
-        const wrapper = setup({prefix: ' ', suffix: ':', citationClass: 'citationClassName', citation: 'Some text', isShallow: false });
+    it('should render component with correct props', () => {
+        const wrapper = setup({prefix: ' ', suffix: ':', className: 'citationClassName', value: 'Some text', isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with correct suffix', () => {
-        const wrapper = setup({prefix: ' ', suffix: '.', citationClass: 'citationClassName', citation: 'Some text.', isShallow: false });
+    it('should render component with correct suffix', () => {
+        const wrapper = setup({prefix: ' ', suffix: '.', className: 'citationClassName', value: 'Some text.', isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with no prefix or suffix', () => {
-        const wrapper = setup({prefix: ' ', suffix: '.', citationClass: 'citationClassName', isShallow: false });
+    it('should render component with no prefix or suffix', () => {
+        const wrapper = setup({prefix: ' ', suffix: '.', className: 'citationClassName', isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     })
 });

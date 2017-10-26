@@ -36,8 +36,8 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('PageCitationView renders ', () => {
-    it('component with a mock espace record', () => {
+describe('PageCitationView test ', () => {
+    it('should render component with a mock espace record', () => {
         const wrapper = setup({
             publication: conferencePaper,
             searchKey: {

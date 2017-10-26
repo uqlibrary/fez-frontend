@@ -39,8 +39,8 @@ PageRangeCitationView.defaultProps = {
         }
     },
     className: 'citationPageRange',
-    prefix: '(',
-    suffix: ')'
+    prefix: '',
+    suffix: '.'
 };
 
 export default PageRangeCitationView;

@@ -2291,7 +2291,6 @@ describe('Search reducer', () => {
             }];
 
         const result = reducer.deduplicateResults([...espaceList, ...scopusList, ...wosList]);
-        result.map((item, index) => { console.log(index + ' ' + item.currentSource + ' ' + item.sources.map((item => item.source)) + ' ' + (item.fez_record_search_key_doi ? item.fez_record_search_key_doi.rek_doi : ''))});
 
         expect(result.length).toEqual(8);
 

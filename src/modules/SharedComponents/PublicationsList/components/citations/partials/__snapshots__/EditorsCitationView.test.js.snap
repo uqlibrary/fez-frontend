@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EditorsCitationView renders  component with no contributors 1`] = `
+exports[`EditorsCitationView test  should render component with no contributors 1`] = `
 <AuthorsCitationView
   className="citationEditors"
   publication={Object {}}
@@ -14,7 +14,7 @@ exports[`EditorsCitationView renders  component with no contributors 1`] = `
 />
 `;
 
-exports[`EditorsCitationView renders  component with one contributor 1`] = `
+exports[`EditorsCitationView test  should render component with one contributor 1`] = `
 <AuthorsCitationView
   className="citationEditors"
   publication={
@@ -39,7 +39,7 @@ exports[`EditorsCitationView renders  component with one contributor 1`] = `
 />
 `;
 
-exports[`EditorsCitationView renders  component with three contributors 1`] = `
+exports[`EditorsCitationView test  should render component with three contributors 1`] = `
 <AuthorsCitationView
   className="citationEditors"
   publication={
@@ -76,7 +76,7 @@ exports[`EditorsCitationView renders  component with three contributors 1`] = `
 />
 `;
 
-exports[`EditorsCitationView renders  component with two contributors 1`] = `
+exports[`EditorsCitationView test  should render component with two contributors 1`] = `
 <AuthorsCitationView
   className="citationEditors"
   publication={

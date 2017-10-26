@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import AuthorsCitationView from './AuthorsCitationView';
-import YearCitationView from './YearCitationView';
-import CitationView from './CitationView';
+import * as Partials from './partials';
 
 export default class ResearchReportCitation extends Component {
     static propTypes = {
@@ -37,40 +35,25 @@ export default class ResearchReportCitation extends Component {
                 </FontIcon>
 
                 {/* authors list */}
-                <AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView publication={this.props.publication} />
 
                 {/* publication year */}
-                <YearCitationView publication={this.props.publication} />.
+                <Partials.YearCitationView publication={this.props.publication} />.
 
                 {/* research report title */}
-                <CitationView citationClass="citationTitle">{researchReport.title}</CitationView>
+                <Partials.CitationView citationClass="citationTitle">{researchReport.title}</Partials.CitationView>
 
                 {/* series */}
-                {
-                    researchReport.series &&
-                    <CitationView citationClass="citationSeries">{researchReport.series}</CitationView>
-                }
+                <Partials.CitationView citationClass="citationSeries">{researchReport.series}</Partials.CitationView>
 
                 {/* place of publication */}
-                {
-                    researchReport.placeOfPublication &&
-                    <CitationView citationClass="citationPlaceOfPublication" suffix=":">{researchReport.placeOfPublication}</CitationView>
-                }
+                <Partials.CitationView citationClass="citationPlaceOfPublication" suffix=":">{researchReport.placeOfPublication}</Partials.CitationView>
 
                 {/* publisher */}
-                {
-                    researchReport.publisher &&
-                    <CitationView citationClass="citationPublisher">{researchReport.publisher}</CitationView>
-                }
+                <Partials.CitationView citationClass="citationPublisher">{researchReport.publisher}</Partials.CitationView>
 
                 {/* doi */}
-                {
-                    researchReport.doi &&
-                    <span className="citationDOI">
-                        <CitationView citationClass="citationLabel" suffix=":">doi</CitationView>
-                        <CitationView citationClass="citationValue" suffix="">{researchReport.doi}</CitationView>
-                    </span>
-                }
+                <Partials.DoiCitationView>{researchReport.doi}</Partials.DoiCitationView>
             </div>
         );
     }

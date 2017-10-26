@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YearCitationView test  should render component with date in TZ format 1`] = `
+<span
+  className="citationYear"
+>
+  (
+  2017
+  ).
+</span>
+`;
+
+exports[`YearCitationView test  should render component with date invalid date format 1`] = `
+<span
+  className="citationYear empty"
+/>
+`;
+
+exports[`YearCitationView test  should render component with date not in TZ format 1`] = `
+<span
+  className="citationYear"
+>
+  (
+  2010
+  ).
+</span>
+`;
+
+exports[`YearCitationView test  should render component with no date 1`] = `
+<span
+  className="citationYear empty"
+/>
+`;

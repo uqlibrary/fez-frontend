@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import AuthorsCitationView from './AuthorsCitationView';
-import YearCitationView from './YearCitationView';
-import PageRangeCitationView from './PageRangeCitationView';
+import * as Partials from './partials';
 
 export default class JournalArticleCitation extends Component {
     static propTypes = {
@@ -36,8 +34,11 @@ export default class JournalArticleCitation extends Component {
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
-                <AuthorsCitationView publication={this.props.publication} />
-                <YearCitationView publication={this.props.publication} />
+
+                <Partials.AuthorsCitationView publication={this.props.publication} />
+
+                <Partials.YearCitationView publication={this.props.publication} />
+
                 <span className="citationTitle"> {journalArticle.title}.</span>
                 {
                     journalArticle.journalName &&
@@ -51,7 +52,7 @@ export default class JournalArticleCitation extends Component {
                     journalArticle.issueNumber &&
                     <span className="citationIssueNumber"> {journalArticle.issueNumber}</span>
                 }
-                <PageRangeCitationView publication={this.props.publication} prefix=": " suffix="" />
+                <Partials.PageRangeCitationView publication={this.props.publication} prefix=": " suffix="" />
                 .
                 {
                     journalArticle.doi &&
