@@ -1148,6 +1148,111 @@ export default {
                     }
                 }
             },
+            researchReport: {
+                information: {
+                    title: 'Research report information',
+                    help: {
+                        title: 'Research report information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            title: 'Title',
+                            hint: 'Title of report'
+                        },
+                        publicationPlace: {
+                            title: 'Place of publication',
+                            hint: 'Please enter the place of publication'
+                        },
+                        publisher: {
+                            title: 'Publisher',
+                            hint: 'Please enter the name of the publisher'
+                        },
+                        date: {
+                            title: 'Date published',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        totalPages: {
+                            title: 'Total pages',
+                            hint: 'Enter total number of pages in the publication'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other publication details',
+                    help: {
+                        title: 'Other publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        abstract: {
+                            title: 'Abstract',
+                            hint: 'Please provide an abstract or summary of the work'
+                        },
+                        notes: {
+                            title: 'Notes (not publicly viewable)',
+                            hint: 'Please add any additional information here'
+                        },
+                        url: {
+                            title: 'Link',
+                            hint: 'Enter URL for this publication'
+                        }
+                    }
+                }
+            },
             fileUpload: {
                 title: 'Files',
                 help: {

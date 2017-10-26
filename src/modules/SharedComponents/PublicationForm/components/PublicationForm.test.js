@@ -38,15 +38,15 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('PublicationForm renders ', () => {
-    it('component initialised with just one field - publication type', () => {
+describe('PublicationForm test', () => {
+    it('should render component initialised with just one field - publication type', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(1);
         expect(wrapper.find('RaisedButton').length).toEqual(1);
     });
 
-    it('component with JournalArticleForm', () => {
+    it('should render component with JournalArticleForm', () => {
         const wrapper = setup({ initialValues: { rek_display_type: 179 } });
 
         expect(wrapper.find('JournalArticleForm').length).toEqual(1);
@@ -60,7 +60,7 @@ describe('PublicationForm renders ', () => {
         expect(hasFilesComponent).toEqual(true);
     });
 
-    it('component with BookForm', () => {
+    it('should render component with BookForm', () => {
         const wrapper = setup({ initialValues: { rek_display_type: 174 } });
 
         expect(wrapper.find('BookForm').length).toEqual(1);
@@ -74,9 +74,8 @@ describe('PublicationForm renders ', () => {
         expect(hasFilesComponent).toEqual(true);
     });
 
-    it('component with GenericDocument', () => {
+    it('should render component with GenericDocument', () => {
         const wrapper = setup({ initialValues: { rek_display_type: 202 } });
-
         expect(wrapper.find('GenericDocumentForm').length).toEqual(1);
         expect(wrapper.find('RaisedButton').length).toEqual(2);
 
@@ -87,23 +86,36 @@ describe('PublicationForm renders ', () => {
 
         expect(hasFilesComponent).toEqual(true);
     });
+    
+    it('should render component with ResearchReportForm', () => {
+        const wrapper = setup({ initialValues: { rek_display_type: 275 } });
 
+        expect(wrapper.find('ResearchReportForm').length).toEqual(1);
+        expect(wrapper.find('RaisedButton').length).toEqual(2);
 
-    it('component with all fields disabled', () => {
+        let hasFilesComponent = false;
+        wrapper.find('Field').forEach(field => {
+            hasFilesComponent = hasFilesComponent || field.props().name === 'files';
+        });
+
+        expect(hasFilesComponent).toEqual(true);
+    });
+
+    it('should render component with all fields disabled', () => {
         const wrapper = setup({submitting: true});
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
         })
     });
 
-    it('component calls onFormCancel method', () => {
+    it('should render component calls onFormCancel method', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onFormCancel: testMethod, pristine: true});
         wrapper.instance()._showConfirmation();
         expect(testMethod).toHaveBeenCalled();
     });
 
-    it('component calls onFormSubmitSuccess method', () => {
+    it('should render component calls onFormSubmitSuccess method', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onFormSubmitSuccess: testMethod});
         wrapper.setProps({ submitSucceeded: true });
