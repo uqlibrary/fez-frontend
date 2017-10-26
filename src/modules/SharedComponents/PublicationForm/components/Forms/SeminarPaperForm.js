@@ -75,7 +75,6 @@ export default class SeminarPaperForm extends Component {
                                 fullWidth
                                 floatingLabelText={txt.information.fieldLabels.series.title}
                                 hintText={txt.information.fieldLabels.series.hint}
-                                className="input-long-hint"
                             />
                         </div>
                         <div className="column">

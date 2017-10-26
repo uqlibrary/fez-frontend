@@ -74,7 +74,6 @@ exports[`SeminarPaperForm renders  component 1`] = `
         className="column"
       >
         <Field
-          className="input-long-hint"
           component={[Function]}
           disabled={false}
           floatingLabelText="Series"
