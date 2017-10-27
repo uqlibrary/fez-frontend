@@ -1,3 +1,4 @@
+
 import {default as locale} from './locale';
 
 const {validationErrors} = locale;
@@ -5,7 +6,7 @@ const {validationErrors} = locale;
 // Generic
 export const required = value => value ? undefined : validationErrors.required;
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? validationErrors.email : undefined;
-export const url = (value) => value && !/^((http[s]?|ftp):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/i.test(value) ? validationErrors.url : undefined;
+export const url = (value) => value && !/^((http[s]?|ftp[s]?):\/\/)?([\w\.-]+)\.([a-z\.]{1,6})([\/\w \?\&\=\.\+-]*)\/?$/i.test(value) ? validationErrors.url : undefined;
 export const authorRequired = (authors) => !authors || authors.length === 0 || authors.filter(item => (item.selected)).length === 0 ? validationErrors.authorRequired : undefined;
 
 // Min Length
