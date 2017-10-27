@@ -54,6 +54,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
+        formComponent: components ? components.AudioDocumentForm : null,
         citationComponent: components ? components.AudioCitation : null,
         hasFormComponent: true
     },
@@ -162,6 +163,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_PATENT,
         name: 'Patent',
         class: 'Uqlibrary\\FezCore\\Types\\Patent',
+        formComponent: components ? components.PatentForm : null,
         hasFormComponent: true
     },
     {
@@ -176,12 +178,14 @@ export const publicationTypes = (components) => [
         name: 'Research Report',
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
         formComponent: components ? components.ResearchReportForm : null,
+        citationComponent: components ? components.ResearchReportCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
         name: 'Seminar Paper',
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
+        formComponent: components ? components.SeminarPaperForm : null,
         hasFormComponent: true
     },
     {

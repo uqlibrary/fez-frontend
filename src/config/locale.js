@@ -1253,6 +1253,347 @@ export default {
                     }
                 }
             },
+            audioDocument: {
+                information: {
+                    title: 'Audio document information',
+                    help: {
+                        title: 'Audio document information',
+                        text: (
+                            <div>
+                                <p><b>Place of publication:</b> Please enter the geographical location for the publisher
+                                    or producer of the work, i.e. city, country</p>
+                                <p><b>Publication date:</b> Please enter the date recorded on the work, where available.
+                                    For online recordings or broadcasts, enter the date first publicly presented or released. </p>
+                            </div>
+                        ),
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            title: 'Title',
+                            hint: 'Title of work'
+                        },
+                        publicationPlace: {
+                            title: 'Place of publication',
+                            hint: 'City, Country'
+                        },
+                        publisher: {
+                            title: 'Publisher',
+                            hint: 'Please enter the name of the publisher or producer of the work.'
+                        },
+                        abstract: {
+                            title: 'Abstract',
+                            hint: 'Please provide an abstract or summary of the work.'
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                    }
+                },
+                creator: {
+                    title: 'Creators',
+                    description: 'Provide a list of creators for this publication',
+                    help: {
+                        title: 'Creators',
+                        text: 'This is the creator or creator of the work, e.g. interviewer, program co-ordinator or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Creator\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add creator'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'creator\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed creator',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                    }
+                },
+                contributor: {
+                    title: 'Contributors',
+                    description: 'Provide a list of contributors for this publication',
+                    help: {
+                        title: 'Contributors',
+                        text: 'This is the contributor, and may be different to the creator, e.g. interviewee or performer (if not self-produced). Please enter contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Contributor\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add contributor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Contributor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed contributor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            title: 'Notes (not publicly viewable)',
+                            hint: 'Please add any additional information here.',
+                        },
+                        url: {
+                            title: 'Link',
+                            hint: 'Enter URL for this work.',
+                        }
+                    }
+                },
+            },
+            patent: {
+                information: {
+                    title: 'Patent information',
+                    help: {
+                        title: 'Patent information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        title: 'Title of patent',
+                        patentNumber: 'Patent number',
+                        countryOfOrigin: 'Country of origin',
+                        date: {
+                            title: 'Date patent issued',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        patentOwner: 'Patent owner'
+                    }
+                },
+                authors: {
+                    title: 'Creators',
+                    help: {
+                        title: 'Creators',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Provide a list of creators for this patent and assign yourself as an creator',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Creator\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add creator'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Creator\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed creator',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other patent details',
+                    help: {
+                        title: 'Other patent details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: 'Notes (not publicly viewable)',
+                        url: 'Enter URL for this patent'
+                    }
+                },
+            },
+            seminarPaper: {
+                information: {
+                    title: 'Seminar paper information',
+                    help: {
+                        title: 'Seminar paper information',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            title: 'Title',
+                            hint: 'Title of paper',
+                        },
+                        orgUnit: {
+                            title: 'School, department or centre',
+                            hint: ''
+                        },
+                        institution: {
+                            title: 'Institution',
+                            hint: ''
+                        },
+                        series: {
+                            title: 'Series',
+                            hint: 'Enter seminar series'
+                        },
+                        seminarDate: {
+                            title: 'Seminar date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors help',
+                        text: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information help',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            title: 'Notes (not publicly viewable)',
+                            hint: 'Please, add any additional information here',
+                        },
+                        url: {
+                            title: 'Link',
+                            hint: 'Enter a valid URL for this publication'
+                        }
+                    }
+                },
+            },
             preprint: {
                 information: {
                     title: 'Preprint information',
@@ -1332,7 +1673,7 @@ export default {
                     },
                     fieldLabels: {
                         notes: {
-                            title: 'Additional notes',
+                            title: 'Notes (not publicly viewable)',
                             hint: 'Please add any additional information here'
                         },
                         url: {
@@ -1615,5 +1956,3 @@ export default {
             `Record: https://fez-staging.library.uq.edu.au/view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
     }
 };
-
-

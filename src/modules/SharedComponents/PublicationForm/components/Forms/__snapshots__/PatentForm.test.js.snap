@@ -1,20 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PreprintForm renders  component 1`] = `
+exports[`PatentForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.",
-        "title": "Preprint information",
+        "text": "some help",
+        "title": "Patent information",
       }
     }
-    title="Preprint information"
+    title="Patent information"
   >
     <div
       className="columns"
+      style={
+        Object {
+          "marginTop": "-12px",
+        }
+      }
     >
       <div
         className="column"
@@ -24,12 +29,16 @@ exports[`PreprintForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Title"
+          floatingLabelText="Title of patent"
           fullWidth={true}
-          hintText="Title of document"
           multiLine={true}
           name="rek_title"
           rows={1}
+          style={
+            Object {
+              "marginBottom": "-12px",
+            }
+          }
           type="text"
           validate={
             Array [
@@ -43,6 +52,18 @@ exports[`PreprintForm renders  component 1`] = `
       className="columns"
     >
       <div
+        className="column is-half"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Patent number"
+          fullWidth={true}
+          name="fez_record_search_key_patent_number.rek_patent_number"
+          type="text"
+        />
+      </div>
+      <div
         className="column"
       >
         <Field
@@ -50,7 +71,7 @@ exports[`PreprintForm renders  component 1`] = `
           className="requiredHintField"
           component={[Function]}
           disabled={false}
-          floatingTitle="Date"
+          floatingTitle="Date patent issued"
           floatingTitleRequired={true}
           name="rek_date"
           validate={
@@ -61,6 +82,34 @@ exports[`PreprintForm renders  component 1`] = `
         />
       </div>
     </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column is-half"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Country of origin"
+          fullWidth={true}
+          name="fez_record_search_key_country_of_issue.rek_country_of_issue"
+          type="text"
+        />
+      </div>
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Patent owner"
+          fullWidth={true}
+          name="fez_record_search_key_publisher.rek_publisher"
+          type="text"
+        />
+      </div>
+    </div>
   </StandardCard>
   <StandardCard
     className=""
@@ -68,13 +117,13 @@ exports[`PreprintForm renders  component 1`] = `
       Object {
         "buttonLabel": "OK",
         "text": "some help",
-        "title": "Authors",
+        "title": "Creators",
       }
     }
-    title="Authors"
+    title="Creators"
   >
     <div>
-      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
+      Provide a list of creators for this patent and assign yourself as an creator
     </div>
     <Field
       className="requiredField"
@@ -84,10 +133,10 @@ exports[`PreprintForm renders  component 1`] = `
         Object {
           "form": Object {
             "locale": Object {
-              "addButton": "Add author",
+              "addButton": "Add creator",
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Please type the name exactly as published",
-              "nameAsPublishedLabel": "Author's name as published",
+              "nameAsPublishedLabel": "Creator's name as published",
             },
           },
           "header": Object {
@@ -101,7 +150,7 @@ exports[`PreprintForm renders  component 1`] = `
                 "confirmationTitle": "Delete all",
               },
               "identifierColumn": "UQ identifier",
-              "nameColumn": "Author's name as published",
+              "nameColumn": "Creator's name as published",
               "reorderColumn": "Reorder items",
             },
           },
@@ -128,7 +177,7 @@ exports[`PreprintForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed creator",
             },
           },
         }
@@ -148,10 +197,10 @@ exports[`PreprintForm renders  component 1`] = `
       Object {
         "buttonLabel": "OK",
         "text": "some help",
-        "title": "Optional publication details",
+        "title": "Other patent details",
       }
     }
-    title="Optional publication details"
+    title="Other patent details"
   >
     <div
       className="columns"
@@ -164,7 +213,6 @@ exports[`PreprintForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Please add any additional information here"
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}
@@ -181,9 +229,8 @@ exports[`PreprintForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Link (URL)"
+          floatingLabelText="Enter URL for this patent"
           fullWidth={true}
-          hintText="Enter URL for this publication"
           name="rek_link"
           type="text"
           validate={

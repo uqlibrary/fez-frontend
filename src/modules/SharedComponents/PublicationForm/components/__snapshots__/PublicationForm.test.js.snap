@@ -152,7 +152,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Audio Document"
@@ -383,7 +383,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Patent"
@@ -446,7 +446,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Seminar Paper"
