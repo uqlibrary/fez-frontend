@@ -35,6 +35,7 @@ const validate = (values) => {
 
     switch(data.rek_display_type) {
         case general.PUBLICATION_TYPE_BOOK:
+        case general.PUBLICATION_TYPE_AUDIO_DOCUMENT:
             // either author or editor should be selected and linked to a user
             if (
                 (!data.authors && !data.editors) ||
@@ -42,7 +43,7 @@ const validate = (values) => {
                 (data.authors && data.authors.filter(item => (item.selected)).length === 0 &&
                     (!data.editors || (data.editors && data.editors.filter(item => (item.selected)).length === 0)))
             ) {
-                errors.authors = locale.validation.authorEditorRequired;
+                errors.authors = locale.validationErrors.authorEditorRequired;
             }
             break;
         default:

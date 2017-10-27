@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import AuthorsCitationView from './AuthorsCitationView';
-import YearCitationView from './YearCitationView';
+import * as Partials from './partials';
 
 export default class AudioCitation extends Component {
     static propTypes = {
@@ -14,7 +13,7 @@ export default class AudioCitation extends Component {
     }
 
     render() {
-        const audio = {
+        const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             publisher: this.props.publication.fez_record_search_key_publisher ?
@@ -26,42 +25,30 @@ export default class AudioCitation extends Component {
         };
 
         // eSpace citation view for Audio
-        // {Creator}{Publication Year| (|).} {Title| |.}{Publisher| |.}{Series| |.}{doi| doi:|}
+        // {Creator}{Publication Year| (|).} <i>{Title| |.}</i> {Publisher| |.}{Series| |.} {doi| doi:|}
         return (
             <div className="citationContent citationAudio">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
 
-                {/* authors list */}
-                <AuthorsCitationView publication={this.props.publication} />
+                {/* {Creator}*/}
+                <Partials.AuthorsCitationView publication={this.props.publication}/>
 
-                {/* publication year */}
-                <YearCitationView publication={this.props.publication} />.
+                {/* {Publication Year| (|).} */}
+                <Partials.YearCitationView date={this.props.publication.rek_date}/>
 
-                {/* audio title */}
-                <span className="citationTitle"> {audio.title}.</span>
+                {/* <i>{Title| |.}</i> */}
+                <Partials.CitationView className="citationTitle" value={record.title}/>
 
-                {/* publisher */}
-                {
-                    audio.publisher &&
-                    <span className="citationPublisher"> {audio.publisher}.</span>
-                }
+                {/* {Publisher| |.}*/}
+                <Partials.CitationView className="citationPublisher" value={record.publisher}/>
 
-                {/* series */}
-                {
-                    audio.series &&
-                    <span className="citationSeries"> {audio.series}.</span>
-                }
+                {/* {Series| |.} */}
+                <Partials.CitationView className="citationSeries" value={record.series}/>
 
-                {/* doi */}
-                {
-                    audio.doi &&
-                    <span className="citationDOI">
-                        <span className="citationLabel"> doi: </span>
-                        <span className="citationValue"> {audio.doi}</span>
-                    </span>
-                }
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi}/>
             </div>
         );
     }

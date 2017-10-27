@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 
-function setup({publication, isShallow = true}) {
+function setup({publication, isShallow = false}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
     };
@@ -33,13 +33,13 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('EditorsCitationView renders ', () => {
-    it('component with no contributors', () => {
+describe('EditorsCitationView test ', () => {
+    it('should render component with no contributors', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with one contributor', () => {
+    it('should render component with one contributor', () => {
         const testObject = {
             "fez_record_search_key_contributor": [{
                 "rek_contributor_id": null,
@@ -52,7 +52,7 @@ describe('EditorsCitationView renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with two contributors', () => {
+    it('should render component with two contributors', () => {
         const testObject = {
             "fez_record_search_key_contributor": [
                 {
@@ -73,7 +73,7 @@ describe('EditorsCitationView renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with three contributors', () => {
+    it('should render component with three contributors', () => {
         const testObject = {
             "fez_record_search_key_contributor": [
                 {

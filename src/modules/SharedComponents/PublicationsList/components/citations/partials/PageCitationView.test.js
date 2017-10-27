@@ -11,7 +11,7 @@ import {locale} from 'config';
 import {conferencePaper} from 'mock/data/testing/records';
 
 
-function setup({publication, searchKey, className, isShallow = true}) {
+function setup({publication, searchKey, className, isShallow = false}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
         searchKey: searchKey,
@@ -36,8 +36,8 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('PageCitationView renders ', () => {
-    it('component with a mock espace record', () => {
+describe('PageCitationView test ', () => {
+    it('should render component with a mock espace record', () => {
         const wrapper = setup({
             publication: conferencePaper,
             searchKey: {

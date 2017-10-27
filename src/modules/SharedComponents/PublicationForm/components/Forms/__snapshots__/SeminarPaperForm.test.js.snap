@@ -203,9 +203,9 @@ exports[`SeminarPaperForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Additional notes"
+          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Please add any additional information here"
+          hintText="Please, add any additional information here"
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}

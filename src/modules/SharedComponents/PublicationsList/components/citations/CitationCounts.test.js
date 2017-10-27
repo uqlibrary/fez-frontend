@@ -10,7 +10,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 import {myRecordsList} from 'mock/data';
 
-function setup({publication, isShallow = true}) {
+function setup({publication, isShallow = false}) {
 
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,

@@ -291,7 +291,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISBN",
-              "inputFieldHint": "Please type ISBN value",
+              "inputFieldHint": "Please, type ISBN value",
               "inputFieldLabel": "ISBN value",
             },
           },
@@ -349,7 +349,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISSN",
-              "inputFieldHint": "Please type ISSN value",
+              "inputFieldHint": "Please, type ISSN value",
               "inputFieldLabel": "ISSN value",
             },
           },
