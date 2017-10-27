@@ -1253,6 +1253,107 @@ export default {
                     }
                 }
             },
+            newspaperArticle: {
+                information: {
+                    title: 'Newspaper article information',
+                    help: {
+                        title: 'Newspaper article information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Enter article title'
+                        },
+                        newspaperName: {
+                            floatingLabelText: 'Newspaper name',
+                            hintText: 'Enter title of the journal'
+                        },
+                        date: {
+                            title: 'Publication Date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        startPage: {
+                            floatingLabelText: 'Start page',
+                            hintText: ''
+                        },
+                        endPage: {
+                            floatingLabelText: 'End page',
+                            hintText: ''
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please, type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional publication details',
+                    help: {
+                        title: 'Optional publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please, add any additional information here'
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Please, type URL for this publication'
+                        }
+                    }
+                }
+            },
             Patent: {
                 information: {
                     title: 'Patent information',
@@ -1336,6 +1437,7 @@ export default {
                     }
                 },
             },
+
             fileUpload: {
                 title: 'Files',
                 help: {

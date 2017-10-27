@@ -156,6 +156,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
         name: 'Newspaper Article',
         class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle',
+        formComponent: components ? components.NewspaperArticleForm : null,
         hasFormComponent: true
     },
     {

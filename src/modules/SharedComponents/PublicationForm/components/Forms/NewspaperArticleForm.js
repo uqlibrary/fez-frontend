@@ -1,25 +1,27 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-
 import {Field} from 'redux-form/immutable';
 
-import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
+import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox'; // ListEditorField
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+// import {SeriesField} from 'modules/SharedComponents/AutoSuggestField';
 import {validation, locale} from 'config';
+import PropTypes from 'prop-types';
 
-export default class GenericDocumentForm extends Component {
+export default class NewspaperArticleForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool,
-        subtypeVocabId: PropTypes.number
+        submitting: PropTypes.bool
     };
 
     constructor(props) {
         super(props);
     }
 
+    getNumbersOnly = (value) => {
+        return value.replace(/[^\d]/g, '');
+    };
+
     render() {
-        // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.generic;
+        const txt = locale.components.publicationForm.newspaperArticle;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -27,42 +29,54 @@ export default class GenericDocumentForm extends Component {
                         <div className="column">
                             <Field
                                 component={TextField}
-                                disabled={this.props.submitting}
                                 autoFocus
+                                disabled={this.props.submitting}
                                 name="rek_title"
+                                className="requiredField"
                                 type="text"
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
-                                hintText={txt.information.fieldLabels.documentTitle.hint}
+                                {...txt.information.fieldLabels.documentTitle}
+                                validate={[validation.required]}
+
+                            />
+                        </div>
+                    </div>
+                    <div className="columns">
+                        <div className="column">
+                            <Field
+                                component={TextField}
+                                disabled={this.props.submitting}
+                                name="fez_record_search_key_newspaper.rek_newspaper"
                                 className="requiredField"
+                                type="text"
+                                fullWidth
+                                {...txt.information.fieldLabels.newspaperName}
                                 validate={[validation.required]}
                             />
                         </div>
                     </div>
 
                     <div className="columns">
-                        <div className="column">
+                        <div className="column is-3-tablet">
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                                name="fez_record_search_key_start_page.rek_start_page"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace}
+                                {...txt.information.fieldLabels.startPage}
                             />
                         </div>
-                    </div>
-                    <div className="columns">
-                        <div className="column">
+                        <div className="column is-3-tablet">
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_publisher.rek_publisher"
+                                name="fez_record_search_key_end_page.rek_end_page"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publisher}
+                                {...txt.information.fieldLabels.endPage}
                             />
                         </div>
                         <div className="column">
@@ -78,35 +92,19 @@ export default class GenericDocumentForm extends Component {
                             />
                         </div>
                     </div>
-                    <div className="columns">
-                        <div className="column">
-                            <Field
-                                component={TextField}
-                                disabled={this.props.submitting}
-                                name="rek_description"
-                                type="text"
-                                fullWidth
-                                rows={3}
-                                multiLine
-                                floatingLabelText={txt.information.fieldLabels.abstract.title}
-                                hintText={txt.information.fieldLabels.abstract.hint}
-                            />
-                        </div>
-                    </div>
-                </StandardCard>
 
+                </StandardCard>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <div>{txt.authors.description}</div>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
-                        className="requiredField"
                         name="authors"
                         locale={txt.authors.field}
+                        showContributorAssignment
+                        className="requiredField"
                         validate={[validation.authorRequired]}
                         disabled={this.props.submitting} />
                 </StandardCard>
-
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <div className="columns">
                         <div className="column">
@@ -118,8 +116,7 @@ export default class GenericDocumentForm extends Component {
                                 fullWidth
                                 rows={1}
                                 multiLine
-                                floatingLabelText={txt.optional.fieldLabels.notes.title}
-                                hintText={txt.optional.fieldLabels.notes.hint}
+                                {...txt.optional.fieldLabels.notes}
                             />
                         </div>
                     </div>
@@ -131,9 +128,8 @@ export default class GenericDocumentForm extends Component {
                                 name="rek_link"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.link.title}
-                                hintText={txt.optional.fieldLabels.link.hint}
-                                validate={[validation.url, validation.maxLength255]}
+                                {...txt.optional.fieldLabels.url}
+                                validate={[validation.url]}
                             />
                         </div>
                     </div>

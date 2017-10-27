@@ -168,7 +168,7 @@ export default class ClaimRecord extends Component {
                                     type="text"
                                     fullWidth
                                     floatingLabelText={txt.comments.fieldLabels.url}
-                                    validate={[validation.url, validation.maxLength255]}/>
+                                    validate={[validation.url]}/>
                             </StandardCard>
 
                             <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>

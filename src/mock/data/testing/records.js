@@ -2210,6 +2210,265 @@ export const generic = {
     "fez_record_search_key_volume_number": null
 };
 
+export const newspaperArticle = {
+    "rek_pid": "UQ:8119",
+    "rek_title_xsdmf_id": 10714,
+    "rek_title": "Diabetes and People with Intellectual Disability",
+    "rek_description_xsdmf_id": 11413,
+    "rek_description": "Intellectual disability is present in 2.7% of the population (19). For a person to have intellectual disability, three conditions must be satisfied. The person must: - have an IQ below 70 - have deficits in at least two areas of adaptive functioning - have the onset of disability before the age of 18 years (1). 'Developmental disability' is another term used. It is 'differences in neurologically-based functions associated with significant long-term difficulties (1)'. In 1998 half a million Australians were found to have developmental disability (3). The two definitions, intellectual disability and developmental disability, are very similar. Diabetes mellitus is present in this population, as in any other group of people. We do not know the exact prevalence of diabetes mellitus (DM) in people with intellectual disability (PWID) but it is likely to be higher than in the general population. Type 1 DM is up to 35 times as common in people with ID (2). Type 2 DM is also common, but there is no reliable estimate of its prevalence.",
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 191,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 7073,
+    "rek_date": "2006-06-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 731,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2006-07-19T00:00:00Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2015-07-31T17:19:23Z",
+    "rek_file_downloads": 4974,
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Rey-Conde, Therese\" href=\"/list/author_id/13517/\">Rey-Conde, Therese</a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Lennox, Nicholas\" href=\"/list/author_id/963/\">Lennox, Nicholas</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Tucker, Madonna\" href=\"/list/author_id/614/\">Tucker, Madonna</a> (<span class=\"citation_date\">2006, June 01</span>). <a class=\"citation_title\" title=\"Click to view Newspaper Article: Diabetes and People with Intellectual Disability\" href=\"/view/UQ:8119\">Diabetes and People with Intellectual Disability</a>. <i><span class=\"citation_newspaper\">Australian Diabetes Educator</span></i>, p.<span class=\"citation_start_page\">38</span>-<span class=\"citation_end_page\">42</span>.",
+    "rek_genre_xsdmf_id": 7208,
+    "rek_genre": "Newspaper Article",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 803,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 28826095,
+            "rek_author_pid": "UQ:8119",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Rey-Conde, Therese",
+            "rek_author_order": 1
+        },
+        {
+            "rek_author_id": 28826096,
+            "rek_author_pid": "UQ:8119",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Lennox, Nicholas",
+            "rek_author_order": 2
+        },
+        {
+            "rek_author_id": 28826097,
+            "rek_author_pid": "UQ:8119",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Tucker, Madonna",
+            "rek_author_order": 3
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 28200453,
+            "rek_author_id_pid": "UQ:8119",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 13517,
+            "rek_author_id_order": 1
+        },
+        {
+            "rek_author_id_id": 28200454,
+            "rek_author_id_pid": "UQ:8119",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 963,
+            "rek_author_id_order": 2
+        },
+        {
+            "rek_author_id_id": 28200455,
+            "rek_author_id_pid": "UQ:8119",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 614,
+            "rek_author_id_order": 3
+        }
+    ],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3082056,
+            "rek_contributor_pid": "UQ:8119",
+            "rek_contributor_xsdmf_id": 7057,
+            "rek_contributor": "Jayne Lehmann",
+            "rek_contributor_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_edition": null,
+    "fez_record_search_key_end_page": {
+        "rek_end_page_id": 5494217,
+        "rek_end_page_pid": "UQ:8119",
+        "rek_end_page_xsdmf_id": 7079,
+        "rek_end_page": "42"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 3850342,
+            "rek_file_attachment_name_pid": "UQ:8119",
+            "rek_file_attachment_name_xsdmf_id": 7134,
+            "rek_file_attachment_name": "presmd_trc_ade_06.xml",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 3850343,
+            "rek_file_attachment_name_pid": "UQ:8119",
+            "rek_file_attachment_name_xsdmf_id": 7134,
+            "rek_file_attachment_name": "trc_ade_06.pdf",
+            "rek_file_attachment_name_order": 2
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_herdc_code": null,
+    "fez_record_search_key_herdc_status": null,
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11494025,
+            "rek_ismemberof_pid": "UQ:8119",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3831",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 11494026,
+            "rek_ismemberof_pid": "UQ:8119",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:152266",
+            "rek_ismemberof_order": 2
+        }
+    ],
+    "fez_record_search_key_issn": [],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 29115846,
+            "rek_keywords_pid": "UQ:8119",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "diabetes",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 29115847,
+            "rek_keywords_pid": "UQ:8119",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "intellectual disability",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29115848,
+            "rek_keywords_pid": "UQ:8119",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "medical management plan",
+            "rek_keywords_order": 3
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5213271,
+            "rek_language_pid": "UQ:8119",
+            "rek_language_xsdmf_id": 10720,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_newspaper": {
+        "rek_newspaper_id": 2858,
+        "rek_newspaper_pid": "UQ:8119",
+        "rek_newspaper_xsdmf_id": 10723,
+        "rek_newspaper": "Australian Diabetes Educator"
+    },
+    "fez_record_search_key_notes": null,
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 306686,
+        "rek_oa_status_pid": "UQ:8119",
+        "rek_oa_status_xsdmf_id": 16992,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_place_of_publication": null,
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4421688,
+        "rek_publisher_pid": "UQ:8119",
+        "rek_publisher_xsdmf_id": 7072,
+        "rek_publisher": "ComStat Printing & Design"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1169972,
+        "rek_refereed_source_pid": "UQ:8119",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_section": {
+        "rek_section_id": 79,
+        "rek_section_pid": "UQ:8119",
+        "rek_section_xsdmf_id": 7083,
+        "rek_section": "2"
+    },
+    "fez_record_search_key_start_page": {
+        "rek_start_page_id": 5564394,
+        "rek_start_page_pid": "UQ:8119",
+        "rek_start_page_xsdmf_id": 7078,
+        "rek_start_page": "38"
+    },
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9083520,
+            "rek_subject_pid": "UQ:8119",
+            "rek_subject_xsdmf_id": 7061,
+            "rek_subject": 321216,
+            "rek_subject_order": 1
+        }
+    ],
+    "fez_record_search_key_total_pages": null,
+    "fez_record_search_key_translated_newspaper": null,
+    "fez_record_search_key_translated_title": null
+};
+
 // TODO: each publication type should have a sample from eSpace data for testing
 
 export const audio = {
