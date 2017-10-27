@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import AuthorsCitationView from './AuthorsCitationView';
-import EditorsCitationView from './EditorsCitationView';
-import YearCitationView from './YearCitationView';
-import PageRangeCitationView from './PageRangeCitationView';
+import * as Partials from './partials';
 
 export default class ConferencePaperCitation extends Component {
     static propTypes = {
@@ -16,7 +13,7 @@ export default class ConferencePaperCitation extends Component {
     }
 
     render() {
-        const conferencePaper = {
+        const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             name: this.props.publication.fez_record_search_key_conference_name ?
@@ -25,55 +22,48 @@ export default class ConferencePaperCitation extends Component {
                 this.props.publication.fez_record_search_key_conference_location.rek_conference_location : null,
             dates: this.props.publication.fez_record_search_key_conference_dates ?
                 this.props.publication.fez_record_search_key_conference_dates.rek_conference_dates : null,
+            placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication ?
+                this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
+            publisher: this.props.publication.fez_record_search_key_publisher ?
+                this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
             doi: this.props.publication.fez_record_search_key_doi ?
                 this.props.publication.fez_record_search_key_doi.rek_doi : null
         };
 
         // eSpace citation view for conference paper
-        // {4191} ({4041}). {10605}. In: {4194||, }{9622||.} <i>{11061}</i>, {4172}, ({4189||}{4190|-|}). {4174}.{16516| doi:|} - Legacy Fez
-        // Author (Year). Title of paper. In: Editor, Proceedings title. Conference name, Conference location, (Start page-End page). Conference dates. doi:DOI
+        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Conference Name| |,}{Conference Location| |,}{Conference Date| |.}{Place of Publication| |:}{Publisher| |.} {doi| doi:||}
         return (
             <div className="citationContent citationConferencePaper">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
 
-                {/* authors list */}
-                <AuthorsCitationView publication={this.props.publication} />
-                {/* publication year */}
-                <YearCitationView publication={this.props.publication} />.
-                {/* conferencePaper title */}
-                {
-                    conferencePaper.title &&
-                    <span className="citationTitle"> {conferencePaper.title}.</span>
-                }
-                {/*  In: Editor, Proceedings title. */}
-                <EditorsCitationView publication={this.props.publication} />
-                {/* conferencePaper title */}
-                {
-                    conferencePaper.name &&
-                    <span className="citationConferencePaperName"> {conferencePaper.name},</span>
-                }
-                {/* conferencePaper location */}
-                {
-                    conferencePaper.location &&
-                    <span className="citationConferencePaperLocation"> {conferencePaper.location}, </span>
-                }
-                {/* pages (start page-end page) */}
-                <PageRangeCitationView publication={this.props.publication} />
-                {/* conference dates */}
-                {
-                    conferencePaper.dates &&
-                    <span className="citationConferencePaperConferenceDates"> {conferencePaper.dates}.</span>
-                }
-                {/* doi */}
-                {
-                    conferencePaper.doi &&
-                    <span className="citationDOI">
-                        <span className="citationLabel"> doi: </span>
-                        <span className="citationValue"> {conferencePaper.doi} </span>
-                    </span>
-                }
+                {/* {Author}*/}
+                <Partials.AuthorsCitationView publication={this.props.publication} />
+
+                {/* {Publication Year| (|).}*/}
+                <Partials.YearCitationView date={this.props.publication.rek_date} />
+
+                {/* <i>{Title| |.}</i>*/}
+                <Partials.CitationView className="citationTitle" value={record.title} />
+
+                {/* {Conference Name| |,}*/}
+                <Partials.CitationView className="citationConferenceName" value={record.name} suffix=", " />
+                {/* {Conference Location| |,}*/}
+
+                <Partials.CitationView className="citationConferenceLocation" value={record.location} suffix=", " />
+
+                {/* {Conference Date| |.}*/}
+                <Partials.CitationView className="citationConferenceDates" value={record.dates} />
+
+                {/* {Place of Publication| |:} */}
+                <Partials.CitationView className="citationPlaceOfPublication" value={record.placeOfPublication} suffix=":" />
+
+                {/* {Publisher| |.} */}
+                <Partials.CitationView className="citationPublisher" value={record.publisher} />
+
+                {/* {doi| doi:|} */}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

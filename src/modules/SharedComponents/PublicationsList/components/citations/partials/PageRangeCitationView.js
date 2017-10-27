@@ -9,10 +9,10 @@ const PageRangeCitationView = ({publication, searchKey, className, prefix, suffi
         <PageCitationView publication={publication} searchKey={searchKey.endPage} className="citationEndPage"/>;
 
     return (
-        <span className={className}>
+        <span className={`${className}${!startPage && !endPage ? ' empty' : ''}`}>
             {(startPage || endPage) ? prefix : ''}
             {startPage}
-            {endPage && '-'}
+            {(startPage && endPage) && '-'}
             {endPage}
             {(startPage || endPage) ? suffix : ''}
         </span>
@@ -39,8 +39,8 @@ PageRangeCitationView.defaultProps = {
         }
     },
     className: 'citationPageRange',
-    prefix: '(',
-    suffix: ')'
+    prefix: '',
+    suffix: '.'
 };
 
 export default PageRangeCitationView;

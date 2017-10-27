@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DoiCitationView test  should render component with doi 1`] = `
+<DoiCitationView
+  doi="10.121212/lskdjflsdjf"
+>
+  <span
+    className="citationDOI"
+  >
+    <span
+      className="citationLabel"
+    >
+       doi: 
+    </span>
+    <span
+      className="citationValue"
+    >
+      10.121212/lskdjflsdjf
+    </span>
+  </span>
+</DoiCitationView>
+`;
+
+exports[`DoiCitationView test  should render component with empty span 1`] = `
+<DoiCitationView>
+  <span
+    className="citationDOI empty"
+  />
+</DoiCitationView>
+`;

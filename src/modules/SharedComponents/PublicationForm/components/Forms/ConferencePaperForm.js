@@ -139,6 +139,7 @@ export default class ConferencePaperForm extends Component {
                         locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
+                        validate={[validation.authorRequired]}
                         disabled={this.props.submitting} />
                 </StandardCard>
 

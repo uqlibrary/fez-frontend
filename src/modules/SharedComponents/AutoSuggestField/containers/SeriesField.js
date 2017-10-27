@@ -9,6 +9,13 @@ export class SeriesAutoSuggestField extends Component {
         input: PropTypes.object
     };
 
+    static defaultProps = {
+        locale: {
+            fieldLabel: 'Series',
+            fieldHint: 'Start typing series name'
+        }
+    };
+
     constructor(props) {
         super(props);
     }
@@ -18,10 +25,6 @@ export class SeriesAutoSuggestField extends Component {
             <AutoSuggestField
                 onChange={this.props.input.onChange}
                 async
-                locale={{
-                    fieldLabel: 'Series',
-                    fieldHint: 'Start typing series name'
-                }}
                 {...this.props} />
         );
     }

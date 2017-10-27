@@ -354,19 +354,18 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('getClaimIssueRequest returns issues request', () => {
+    it('should create getFixIssueRequest request', () => {
         const input = {publication: {}, author: {}};
 
-        input.publication.rek_title = 'Test title';
         input.publication.rek_pid = 'UQ:1111';
         input.author.aut_display_name = 'J. Smith';
         input.author.aut_org_username = 'uqjsmith';
         input.comments = 'Some comments...';
 
 
-        const expected = { issue: 'Record was claimed: "Test title" (UQ:1111) by J. Smith (uqjsmith): Some comments...' };
-        const result = transformers.getClaimIssueRequest(input);
+        const expected = {issue: 'Record: https://fez-staging.library.uq.edu.au/view/UQ:1111 \n User \'J. Smith (uqjsmith)\' has indicated that they require a fix to this publication: Some comments...'}
+
+        const result = transformers.getFixIssueRequest(input);
         expect(result).toEqual(expected);
     });
-
 });

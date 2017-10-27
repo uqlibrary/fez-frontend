@@ -25,33 +25,16 @@ const onSubmit = (values, dispatch) => {
 };
 
 const validate = (values) => {
+    // add only multi field validations
+    // single field validations should be implemented using validate prop: <Field validate={[validation.required]} />
+
     // reset global errors, eg form submit failure
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
     const errors = {};
-    if (data.rek_display_type === general.PUBLICATION_TYPE_BOOK_CHAPTER
-        || data.rek_display_type === general.PUBLICATION_TYPE_JOURNAL_ARTICLE
-        || data.rek_display_type === general.PUBLICATION_TYPE_CONFERENCE_PAPER) {
-        // author should be selected and linked to the current user
-        if (!data.authors || data.authors.length === 0 || data.authors.filter(item => (item.selected)).length === 0) {
-            errors.authors = locale.components.publicationForm.bookChapter.validationError;
-        }
-    }
 
     switch(data.rek_display_type) {
         case general.PUBLICATION_TYPE_BOOK:
-            // either author or editor should be selected and linked to a user
-            if (
-                (!data.authors && !data.editors) ||
-                (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
-                (data.authors && data.authors.filter(item => (item.selected)).length === 0 &&
-                    (!data.editors || (data.editors && data.editors.filter(item => (item.selected)).length === 0)))
-            ) {
-                errors.authors = locale.components.publicationForm.book.validationError;
-            }
-            break;
-
-
         case general.PUBLICATION_TYPE_AUDIO_DOCUMENT:
             // either author or editor should be selected and linked to a user
             if (
@@ -60,11 +43,11 @@ const validate = (values) => {
                 (data.authors && data.authors.filter(item => (item.selected)).length === 0 &&
                     (!data.editors || (data.editors && data.editors.filter(item => (item.selected)).length === 0)))
             ) {
-                errors.authors = locale.components.publicationForm.audioDocument.validationError;
+                errors.authors = locale.validationErrors.authorEditorRequired;
             }
             break;
-
-        default: break;
+        default:
+            break;
     }
 
     return errors;
