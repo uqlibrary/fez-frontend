@@ -6,3 +6,4 @@ export {default as ConferencePaperForm} from './ConferencePaperForm';
 export {default as WorkingPaperForm} from './WorkingPaperForm';
 export {default as AudioDocumentForm} from './AudioDocumentForm';
 export {default as ResearchReportForm} from './ResearchReportForm';
+export {default as PatentForm} from './PatentForm';
