@@ -57,7 +57,7 @@ exports[`PatentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Patent Number"
+          floatingLabelText="Patent number"
           fullWidth={true}
           name="fez_record_search_key_patent_number.rek_patent_number"
           type="text"
@@ -91,7 +91,7 @@ exports[`PatentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Country of Origin"
+          floatingLabelText="Country of origin"
           fullWidth={true}
           name="fez_record_search_key_country_of_issue.rek_country_of_issue"
           type="text"
@@ -211,7 +211,7 @@ exports[`PatentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Please add any additional information here"
+          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
