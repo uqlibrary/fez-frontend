@@ -10,7 +10,7 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
     <span
       className="citationLabel"
     >
-      doi: 
+       doi: 
     </span>
     <span
       className="citationValue"
@@ -22,7 +22,9 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
 `;
 
 exports[`DoiCitationView test  should render component with empty span 1`] = `
-<span
-  className="citationDOI empty"
-/>
+<DoiCitationView>
+  <span
+    className="citationDOI empty"
+  />
+</DoiCitationView>
 `;

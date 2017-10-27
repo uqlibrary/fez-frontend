@@ -11,7 +11,7 @@ import {locale} from 'config';
 import {conferencePaper} from 'mock/data/testing/records';
 
 
-function setup({publication, searchKey, className, isShallow = true}) {
+function setup({publication, searchKey, className, isShallow = false}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
         searchKey: searchKey,

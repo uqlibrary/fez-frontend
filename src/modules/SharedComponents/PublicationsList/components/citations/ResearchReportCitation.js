@@ -13,7 +13,7 @@ export default class ResearchReportCitation extends Component {
     }
 
     render() {
-        const researchReport = {
+        const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             publisher: this.props.publication.fez_record_search_key_publisher ?
@@ -38,22 +38,22 @@ export default class ResearchReportCitation extends Component {
                 <Partials.AuthorsCitationView publication={this.props.publication} />
 
                 {/* publication year */}
-                <Partials.YearCitationView publication={this.props.publication} />.
+                <Partials.YearCitationView date={this.props.publication.rek_date} />
 
                 {/* research report title */}
-                <Partials.CitationView citationClass="citationTitle">{researchReport.title}</Partials.CitationView>
+                <Partials.CitationView className="citationTitle" value={record.title} />
 
                 {/* series */}
-                <Partials.CitationView citationClass="citationSeries">{researchReport.series}</Partials.CitationView>
+                <Partials.CitationView className="citationSeries" value={record.series} />
 
                 {/* place of publication */}
-                <Partials.CitationView citationClass="citationPlaceOfPublication" suffix=":">{researchReport.placeOfPublication}</Partials.CitationView>
+                <Partials.CitationView className="citationPlaceOfPublication" suffix=":" value={record.placeOfPublication} />
 
                 {/* publisher */}
-                <Partials.CitationView citationClass="citationPublisher">{researchReport.publisher}</Partials.CitationView>
+                <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
                 {/* doi */}
-                <Partials.DoiCitationView>{researchReport.doi}</Partials.DoiCitationView>
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

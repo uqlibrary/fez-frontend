@@ -11,7 +11,7 @@ import {locale} from 'config';
 import {researchReport} from 'mock/data/testing/records';
 
 
-function setup({prefix, suffix, className, value, isShallow = true}) {
+function setup({prefix, suffix, className, value, isShallow = false}) {
     const props = {
         prefix: prefix || ' ', // : PropTypes.string,
         suffix: suffix || '.', // : PropTypes.string,
@@ -44,17 +44,17 @@ describe('CitationView test ', () => {
     });
 
     it('should render component with correct props', () => {
-        const wrapper = setup({prefix: ' ', suffix: ':', className: 'citationClassName', value: 'Some text', isShallow: false });
+        const wrapper = setup({prefix: ' ', suffix: ':', className: 'citationClassName', value: 'Some text' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with correct suffix', () => {
-        const wrapper = setup({prefix: ' ', suffix: '.', className: 'citationClassName', value: 'Some text.', isShallow: false });
+        const wrapper = setup({prefix: ' ', suffix: '.', className: 'citationClassName', value: 'Some text.' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with no prefix or suffix', () => {
-        const wrapper = setup({prefix: ' ', suffix: '.', className: 'citationClassName', isShallow: false });
+        const wrapper = setup({prefix: ' ', suffix: '.', className: 'citationClassName' });
         expect(toJson(wrapper)).toMatchSnapshot();
     })
 });

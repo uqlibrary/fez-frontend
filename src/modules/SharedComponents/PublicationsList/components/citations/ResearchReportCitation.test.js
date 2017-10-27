@@ -11,7 +11,7 @@ import {locale} from 'config';
 import {researchReport} from 'mock/data/testing/records';
 
 
-function setup({publication, isShallow = true}) {
+function setup({publication, isShallow = false}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
     };
@@ -46,7 +46,7 @@ describe('ResearchReportCitation renders ', () => {
     });
 
     it('component with a mock espace record 1', () => {
-        const wrapper = setup({ publication: researchReport, isShallow: false });
+        const wrapper = setup({ publication: researchReport });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -11,7 +11,7 @@ import {locale} from 'config';
 import {conferencePaper} from 'mock/data/testing/records';
 
 
-function setup({publication, isShallow = true}) {
+function setup({publication, isShallow = false}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
     };
@@ -40,12 +40,7 @@ describe('PageRangeCitationView test ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render component with a mock espace record', () => {
-        const wrapper = setup({publication: conferencePaper});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('startPage only', () => {
+    it('should render startPage only', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_start_page: {
@@ -56,11 +51,25 @@ describe('PageRangeCitationView test ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('endPage only', () => {
+    it('should render endPage only', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_end_page: {
                     rek_end_page: 11
+                }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render startPage to endPage', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_start_page: {
+                    rek_start_page: 13
+                },
+                fez_record_search_key_end_page: {
+                    rek_end_page: 17
                 }
             }
         });

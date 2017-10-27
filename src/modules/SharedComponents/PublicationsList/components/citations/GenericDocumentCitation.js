@@ -13,31 +13,32 @@ export default class GenericDocumentCitation extends Component {
     }
 
     render() {
-        const genericDocument = {
+        const record = {
             id: this.props.publication.rek_pid,
-            publisher: this.props.publication.fez_record_search_key_publisher ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
+            publisher: this.props.publication.fez_record_search_key_publisher ?
+                this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
             title: this.props.publication ? this.props.publication.rek_title : null
         };
 
         // eSpace citation view for Generic article
         // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Publisher| |.}
-
         return (
             <div className="citationContent citationGenericDocument">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
 
-                <Partials.AuthorsCitationView publication={this.props.publication}/>
+                {/* {Author}*/}
+                <Partials.AuthorsCitationView publication={this.props.publication} />
 
-                <Partials.YearCitationView publication={this.props.publication}/>.
+                {/* {Publication Year| (|).}*/}
+                <Partials.YearCitationView date={this.props.publication.rek_date} />
 
-                <span className="citationTitle">{genericDocument.title}</span>.
+                {/* <i>{Title| |.}</i>*/}
+                <Partials.CitationView className="citationTitle" value={record.title} />
 
-                {
-                    genericDocument.publisher &&
-                    <span className="citationPublisher"> {genericDocument.publisher}.</span>
-                }
+                {/* {Publisher| |.} */}
+                <Partials.CitationView className="citationPublisher" value={record.publisher} />
             </div>
         );
     }

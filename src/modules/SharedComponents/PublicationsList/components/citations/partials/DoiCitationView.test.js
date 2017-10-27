@@ -11,7 +11,7 @@ import {locale} from 'config';
 import {researchReport} from 'mock/data/testing/records';
 
 
-function setup({doi, isShallow = true}) {
+function setup({doi, isShallow = false}) {
     const props = {
         doi: doi
     };
@@ -41,7 +41,7 @@ describe('DoiCitationView test ', () => {
     });
 
     it('should render component with doi', () => {
-        const wrapper = setup({doi: '10.121212/lskdjflsdjf', isShallow: false });
+        const wrapper = setup({doi: '10.121212/lskdjflsdjf'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

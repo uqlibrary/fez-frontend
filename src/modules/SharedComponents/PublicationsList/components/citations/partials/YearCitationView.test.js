@@ -10,7 +10,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 
 
-function setup({date, isShallow = true}) {
+function setup({date, isShallow = false}) {
     const props = {
         date: date, // : PropTypes.object.isRequired,
     };

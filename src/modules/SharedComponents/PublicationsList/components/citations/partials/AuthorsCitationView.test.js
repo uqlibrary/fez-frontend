@@ -10,7 +10,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 import {locale} from 'config';
 
-function setup({publication, prefix, suffix, isShallow = true}) {
+function setup({publication, prefix, suffix, isShallow = false}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
         prefix: prefix,

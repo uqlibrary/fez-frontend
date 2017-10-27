@@ -15,7 +15,7 @@ export default class BookCitation extends Component {
     render() {
         const record = {
             id: this.props.publication.rek_pid,
-            isEditedBook: this.props.publication.rek_subtype === 'Edited book',
+            isEditedBook: this.props.publication.rek_subtype && this.props.publication.rek_subtype.toLowerCase() === 'edited book',
             title: this.props.publication.rek_title,
             edition: this.props.publication.fez_record_search_key_edition ?
                 this.props.publication.fez_record_search_key_edition.rek_edition : null,

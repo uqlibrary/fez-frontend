@@ -6,7 +6,7 @@ const DoiCitationView = ({doi}) => {
 
     return (
         <span className="citationDOI">
-            <span className="citationLabel">doi: </span>
+            <span className="citationLabel"> doi: </span>
             <span className="citationValue">{doi}</span>
         </span>
     );
