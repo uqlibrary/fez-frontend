@@ -1608,7 +1608,7 @@ export default {
                             hint: 'Title of document'
                         },
                         date: {
-                            title: 'Date',
+                            title: 'Preprint date',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'
