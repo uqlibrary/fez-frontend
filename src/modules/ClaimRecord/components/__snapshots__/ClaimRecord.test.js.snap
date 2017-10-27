@@ -841,7 +841,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           validate={
             Array [
               [Function],
-              [Function],
             ]
           }
         />
@@ -1731,7 +1730,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           type="text"
           validate={
             Array [
-              [Function],
               [Function],
             ]
           }
@@ -2880,7 +2878,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           type="text"
           validate={
             Array [
-              [Function],
               [Function],
             ]
           }
