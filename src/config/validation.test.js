@@ -21,11 +21,39 @@ describe('Validation method', () => {
     });
 
     it('should validate url', () => {
+        const testValue = validation.url('http://test.com');
+        expect(testValue).toEqual(undefined);
+
+        const testValue2 = validation.url('https://apps.webofknowledge.com/full_record.do?product=WOS&search_mode=GeneralSearch&qid=4&SID=V2InJRD4KnBeEPoPCGm&page=1&doc=1');
+        expect(testValue2).toEqual(undefined);
+
+        const testValue3 = validation.url('https://www.uq.edu.au?test=This%20is%20a%20test');
+        expect(testValue3).toEqual(undefined);
+
+        const testValue4 = validation.url('ftp://192.168.0.1/test.pdf');
+        expect(testValue4).toEqual(undefined);
+
+        const testValue5 = validation.url('ftps://192.168.0.1:password@username/test.pdf');
+        expect(testValue5).toEqual(undefined);
+
+        const testValue6 = validation.url('https://fez-staging.library.uq.edu.au/view/UQ:36649');
+        expect(testValue6).toEqual(undefined);
+
         const testFailValue = validation.url('sdjflsjdlfjsl');
         expect(testFailValue).toEqual(locale.validationErrors.url);
 
-        const testValue = validation.required('http://hello.com');
-        expect(testValue).toEqual(undefined);
+        const testFailValue2 = validation.url('file:///test.jpg');
+        expect(testFailValue2).toEqual(locale.validationErrors.url);
+
+        const testFailValue3 = validation.url('www.test.com');
+        expect(testFailValue3).toEqual(locale.validationErrors.url);
+
+        const testFailValue4 = validation.url('mailto:test@test.com');
+        expect(testFailValue4).toEqual(locale.validationErrors.url);
+
+        const testFailValue5 = validation.url('javascript:window.alert(\'test\');');
+        expect(testFailValue5).toEqual(locale.validationErrors.url);
+
     });
 
     it('should validate Issn', () => {
