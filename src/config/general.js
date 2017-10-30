@@ -171,6 +171,7 @@ export const publicationTypes = (components) => [
         name: 'Preprint',
         class: 'Uqlibrary\\FezCore\\Types\\Preprint',
         formComponent: components ? components.PreprintForm : null,
+        citationComponent: components ? components.PreprintCitation : null,
         hasFormComponent: true
     },
     {
@@ -186,6 +187,7 @@ export const publicationTypes = (components) => [
         name: 'Seminar Paper',
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
         formComponent: components ? components.SeminarPaperForm : null,
+        citationComponent: components ? components.SeminarPaperCitation : null,
         hasFormComponent: true
     },
     {

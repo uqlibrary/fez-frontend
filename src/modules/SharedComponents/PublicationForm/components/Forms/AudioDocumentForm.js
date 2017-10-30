@@ -32,8 +32,7 @@ export default class AudioDocumentForm extends Component {
                                 name="rek_title"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
-                                hintText={txt.information.fieldLabels.documentTitle.hint}
+                                {...txt.information.fieldLabels.documentTitle}
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
@@ -47,10 +46,7 @@ export default class AudioDocumentForm extends Component {
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
-                                className="requiredField"
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace.title}
-                                hintText={txt.information.fieldLabels.publicationPlace.hint}
-                                validate={[validation.required]}
+                                {...txt.information.fieldLabels.publicationPlace}
                             />
                         </div>
                     </div>
@@ -62,10 +58,7 @@ export default class AudioDocumentForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
-                                className="requiredField input-long-hint"
-                                floatingLabelText={txt.information.fieldLabels.publisher.title}
-                                hintText={txt.information.fieldLabels.publisher.hint}
-                                validate={[validation.required]}
+                                {...txt.information.fieldLabels.publisher}
                             />
                         </div>
                         <div className="column">
@@ -86,13 +79,12 @@ export default class AudioDocumentForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="rek_formatted_abstract"
+                                name="rek_description"
                                 type="text"
                                 fullWidth
                                 rows={3}
                                 multiLine
-                                floatingLabelText={txt.information.fieldLabels.abstract.title}
-                                hintText={txt.information.fieldLabels.abstract.hint}
+                                {...txt.information.fieldLabels.abstract}
                             />
                         </div>
                     </div>
@@ -132,8 +124,7 @@ export default class AudioDocumentForm extends Component {
                                 fullWidth
                                 rows={1}
                                 multiLine
-                                floatingLabelText={txt.optional.fieldLabels.notes.title}
-                                hintText={txt.optional.fieldLabels.notes.hint}
+                                {...txt.optional.fieldLabels.notes}
                             />
                         </div>
                     </div>
@@ -145,8 +136,7 @@ export default class AudioDocumentForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.url.title}
-                                hintText={txt.optional.fieldLabels.url.hint}
+                                {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
                         </div>
