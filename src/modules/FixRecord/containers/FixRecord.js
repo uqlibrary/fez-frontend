@@ -5,7 +5,7 @@ import Immutable from 'immutable';
 import FixRecord from '../components/FixRecord';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
-import {confirmDiscardFormChanges} from '../../SharedComponents/ConfirmDiscardFormChanges';
+import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'FixRecord';
 

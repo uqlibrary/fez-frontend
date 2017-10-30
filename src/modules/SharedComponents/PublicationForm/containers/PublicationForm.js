@@ -4,7 +4,7 @@ import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
 import {locale, general} from 'config';
-import {confirmDiscardFormChanges} from '../../ConfirmDiscardFormChanges';
+import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'PublicationForm';
 
