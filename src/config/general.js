@@ -198,6 +198,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
         name: 'Video Document',
         class: 'Uqlibrary\\FezCore\\Types\\Video',
+        formComponent: components ? components.VideoDocumentForm : null,
         hasFormComponent: true
     },
     {
