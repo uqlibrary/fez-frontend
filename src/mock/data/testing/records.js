@@ -2710,7 +2710,7 @@ export const generic = {
     "fez_record_search_key_volume_number": null
 };
 
-export const audio = {
+export const audioDocument = {
     "rek_pid":"UQ:151787",
     "rek_title_xsdmf_id":9543,
     "rek_title":"Hearing the city Symposium Title 5: In conversation",

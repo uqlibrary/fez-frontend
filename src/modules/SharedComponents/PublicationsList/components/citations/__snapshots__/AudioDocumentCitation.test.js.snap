@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AudioCitation renders  component with a mock espace record 1`] = `
-<AudioCitation
+exports[`AudioDocumentCitation renders  component with a mock espace record 1`] = `
+<AudioDocumentCitation
   publication={
     Object {
       "fez_record_search_key_access_conditions": null,
@@ -819,11 +819,11 @@ exports[`AudioCitation renders  component with a mock espace record 1`] = `
       />
     </DoiCitationView>
   </div>
-</AudioCitation>
+</AudioDocumentCitation>
 `;
 
-exports[`AudioCitation renders  component with empty publication 1`] = `
-<AudioCitation
+exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
+<AudioDocumentCitation
   publication={Object {}}
 >
   <div
@@ -906,5 +906,5 @@ exports[`AudioCitation renders  component with empty publication 1`] = `
       />
     </DoiCitationView>
   </div>
-</AudioCitation>
+</AudioDocumentCitation>
 `;

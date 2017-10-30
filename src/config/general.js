@@ -55,7 +55,7 @@ export const publicationTypes = (components) => [
         name: 'Audio Document',
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
         formComponent: components ? components.AudioDocumentForm : null,
-        citationComponent: components ? components.AudioCitation : null,
+        citationComponent: components ? components.AudioDocumentCitation : null,
         hasFormComponent: true
     },
     {
