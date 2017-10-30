@@ -539,7 +539,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
         South African Medical Research Council.
       </span>
     </CitationView>
-    .
     <DoiCitationView
       doi={null}
     >
@@ -645,7 +644,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
         className="citationPublisher empty"
       />
     </CitationView>
-    .
     <DoiCitationView
       doi={null}
     >

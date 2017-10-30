@@ -57,7 +57,7 @@ export default class DepartmentTechnicalReportCitation extends Component {
 
                 {/* {Publisher| |.} */}
                 <Partials.CitationView className="citationPublisher" value={record.publisher} />
-                .
+
                 {/* {doi| doi:|}*/}
                 <Partials.DoiCitationView doi={record.doi} />
             </div>
