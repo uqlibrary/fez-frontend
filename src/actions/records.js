@@ -16,9 +16,9 @@ import {locale} from 'config';
  * @returns {action}
  */
 export function createNewRecord(data) {
-    const { errorAlert } = locale.components.publicationForm;
+    const {errorAlert} = locale.components.publicationForm;
     return dispatch => {
-        dispatch({type: actions.RECORD_PROCESSING});
+        dispatch({type: actions.RECORD_CREATE_SAVING});
 
         // set default values, links
         const recordRequest = {
@@ -37,10 +37,13 @@ export function createNewRecord(data) {
         if (recordRequest.files) delete recordRequest.files;
         if (recordRequest.author) delete recordRequest.author;
 
+        let newRecord = null;
         return post(routes.NEW_RECORD_API(), recordRequest)
             .then(response => {
                 // set a pid on a new record
                 data.rek_pid = response.data.rek_pid;
+                newRecord = response.data;
+
                 // process files
                 if (!data.files || !data.files.queue || data.files.queue.length === 0) {
                     return response;
@@ -48,24 +51,28 @@ export function createNewRecord(data) {
                     return putUploadFiles(response.data.rek_pid, data.files.queue, dispatch);
                 }
             })
-            .then(response => {
-                if (!data.files || !data.files.queue || data.files.queue.length === 0) {
-                    return response;
-                } else {
-                    // process uploaded files into API format for a patch
-                    const recordPatch = {
-                        ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
-                    };
+            .then(
+                response => {
+                    if (!data.files || !data.files.queue || data.files.queue.length === 0) {
+                        return response;
+                    } else {
+                        // process uploaded files into API format for a patch
+                        const recordPatch = {
+                            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
+                        };
 
-                    return patch(routes.EXISTING_RECORD_API({pid: data.rek_pid}), recordPatch)
-                        .catch((error) => {
-                            return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));
-                        });
-                }
-            })
+                        return patch(routes.EXISTING_RECORD_API({pid: data.rek_pid}), recordPatch)
+                            .catch((error) => {
+                                return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));
+                            });
+                    }
+                },
+                error => {
+                    return Promise.resolve({data: { ...newRecord, fileUploadFailed: true, fileUploadError: error}});
+                })
             .then(response => {
                 dispatch({
-                    type: actions.RECORD_CREATED,
+                    type: actions.RECORD_CREATE_SUCCESS,
                     payload: response.data
                 });
                 return Promise.resolve(response.data);
@@ -79,5 +86,17 @@ export function createNewRecord(data) {
 
                 return Promise.reject(new Error(`${errorAlert.createRecordMessage} (${error.message})`));
             });
+    };
+}
+
+/**
+ * Clear new record
+ * @returns {action}
+ */
+export function clearNewRecord() {
+    return dispatch => {
+        dispatch({
+            type: actions.RECORD_CREATE_RESET
+        });
     };
 }
