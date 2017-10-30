@@ -4089,4 +4089,213 @@ export const researchReport = {
     "fez_record_search_key_volume_number":null
 };
 
+export const seminarPaper = {
+    "rek_pid": "UQ:240363",
+    "rek_title_xsdmf_id": 6929,
+    "rek_title": "Rural livelihoods in PNG",
+    "rek_description_xsdmf_id": null,
+    "rek_description": null,
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 189,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 6966,
+    "rek_date": "2011-04-20T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 11632,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2011-04-23T08:39:43Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2015-07-31T10:44:55Z",
+    "rek_file_downloads": 161,
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Hunt, Colin\" href=\"/list/author_id/72423/\">Hunt, Colin</a> (<span class=\"citation_date\">2011</span>). <i><a class=\"citation_title\" title=\"Click to view Seminar Paper: Rural livelihoods in PNG\" href=\"/view/UQ:240363\">Rural livelihoods in PNG</a></i>, <span class=\"citation_series\">Logging, oil plam and livelihoods in PNG</span>, <span class=\"citation_org_unit_name\">The Centre for Tropical Environmental and Sustainability Science and the Cairns Institute</span>, <span class=\"citation_org_name\">James Cook University</span>.",
+    "rek_genre_xsdmf_id": 7211,
+    "rek_genre": "Seminar Paper",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 831,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": 12512,
+    "rek_herdc_notes": "Published by-Line : Colin Hunt, School of Economics, The University of Queensland, email:&nbsp;<br /> c.hunt@uq.edu.au",
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 28876139,
+            "rek_author_pid": "UQ:240363",
+            "rek_author_xsdmf_id": 6936,
+            "rek_author": "Hunt, Colin",
+            "rek_author_order": 1
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 28248699,
+            "rek_author_id_pid": "UQ:240363",
+            "rek_author_id_xsdmf_id": 6931,
+            "rek_author_id": 72423,
+            "rek_author_id_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_end_page": null,
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 3869611,
+            "rek_file_attachment_name_pid": "UQ:240363",
+            "rek_file_attachment_name_xsdmf_id": 7018,
+            "rek_file_attachment_name": "presmd_rural_livelihoods_in_png_presentation.xml",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 3869612,
+            "rek_file_attachment_name_pid": "UQ:240363",
+            "rek_file_attachment_name_xsdmf_id": 7018,
+            "rek_file_attachment_name": "rural_livelihoods_in_png_presentation.pptx",
+            "rek_file_attachment_name_order": 2
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_institutional_status": {
+        "rek_institutional_status_id": 3230362,
+        "rek_institutional_status_pid": "UQ:240363",
+        "rek_institutional_status_xsdmf_id": 12406,
+        "rek_institutional_status": 453223
+    },
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11512531,
+            "rek_ismemberof_pid": "UQ:240363",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3817",
+            "rek_ismemberof_order": 1
+        }
+    ],
+    "fez_record_search_key_keywords": [],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5222626,
+            "rek_language_pid": "UQ:240363",
+            "rek_language_xsdmf_id": 10729,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_location": [
+        {
+            "rek_location_id": 71885,
+            "rek_location_pid": "UQ:240363",
+            "rek_location_xsdmf_id": 6968,
+            "rek_location": "Brisbane, Qld., Australia",
+            "rek_location_order": null
+        }
+    ],
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1109127,
+        "rek_notes_pid": "UQ:240363",
+        "rek_notes_xsdmf_id": 12511,
+        "rek_notes": "Seminar powerpoint"
+    },
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 316495,
+        "rek_oa_status_pid": "UQ:240363",
+        "rek_oa_status_xsdmf_id": 17001,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_org_name": {
+        "rek_org_name_id": 349382,
+        "rek_org_name_pid": "UQ:240363",
+        "rek_org_name_xsdmf_id": 6956,
+        "rek_org_name": "James Cook University"
+    },
+    "fez_record_search_key_org_unit_name": {
+        "rek_org_unit_name_id": 338984,
+        "rek_org_unit_name_pid": "UQ:240363",
+        "rek_org_unit_name_xsdmf_id": 6953,
+        "rek_org_unit_name": "The Centre for Tropical Environmental and Sustainability Science and the Cairns Institute"
+    },
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4429186,
+        "rek_publisher_pid": "UQ:240363",
+        "rek_publisher_xsdmf_id": 6964,
+        "rek_publisher": "James Cook University"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1179307,
+        "rek_refereed_source_pid": "UQ:240363",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_series": {
+        "rek_series_id": 193140,
+        "rek_series_pid": "UQ:240363",
+        "rek_series_xsdmf_id": 6951,
+        "rek_series": "Logging, oil plam and livelihoods in PNG"
+    },
+    "fez_record_search_key_start_page": null,
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9090454,
+            "rek_subject_pid": "UQ:240363",
+            "rek_subject_xsdmf_id": 6948,
+            "rek_subject": 450783,
+            "rek_subject_order": 1
+        },
+        {
+            "rek_subject_id": 9090455,
+            "rek_subject_pid": "UQ:240363",
+            "rek_subject_xsdmf_id": 6948,
+            "rek_subject": 450781,
+            "rek_subject_order": 2
+        }
+    ],
+    "fez_record_search_key_total_pages": null
+};
+
 // TODO: each publication type should have a sample from eSpace data for testing

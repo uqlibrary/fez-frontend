@@ -187,6 +187,7 @@ export const publicationTypes = (components) => [
         name: 'Seminar Paper',
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
         formComponent: components ? components.SeminarPaperForm : null,
+        citationComponent: components ? components.SeminarPaperCitation : null,
         hasFormComponent: true
     },
     {
