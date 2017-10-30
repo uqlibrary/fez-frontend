@@ -36,6 +36,7 @@ const validate = (values) => {
     switch(data.rek_display_type) {
         case general.PUBLICATION_TYPE_BOOK:
         case general.PUBLICATION_TYPE_AUDIO_DOCUMENT:
+        case general.PUBLICATION_TYPE_VIDEO_DOCUMENT:
             // either author or editor should be selected and linked to a user
             if (
                 (!data.authors && !data.editors) ||
