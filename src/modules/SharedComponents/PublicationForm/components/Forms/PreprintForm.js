@@ -94,7 +94,7 @@ export default class PreprintForm extends Component {
                                 fullWidth
                                 floatingLabelText={txt.optional.fieldLabels.url.title}
                                 hintText={txt.optional.fieldLabels.url.hint}
-                                validate={[validation.url, validation.maxLength255]}
+                                validate={[validation.url]}
                             />
                         </div>
                     </div>

@@ -397,7 +397,6 @@ exports[`ResearchReportForm renders  component 1`] = `
           validate={
             Array [
               [Function],
-              [Function],
             ]
           }
         />
