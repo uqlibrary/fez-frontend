@@ -47,7 +47,6 @@ export default class VideoDocumentForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publicationPlace}
-                                validate={[validation.required]}
                             />
                         </div>
                     </div>
@@ -60,7 +59,6 @@ export default class VideoDocumentForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher}
-                                validate={[validation.required]}
                             />
                         </div>
                         <div className="column">
