@@ -15,8 +15,7 @@ export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         onFormSubmitSuccess: PropTypes.func.isRequired,
-        onFormCancel: PropTypes.func.isRequired,
-        // onDiscardUnsavedForm: PropTypes.func
+        onFormCancel: PropTypes.func.isRequired
     };
 
     static contextTypes = {
@@ -26,7 +25,6 @@ export default class PublicationForm extends Component {
     constructor(props) {
         super(props);
         this.publicationTypes = publicationTypes({...recordForms});
-        // this.discardFormChangesConfirmationBox = null;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -57,15 +55,6 @@ export default class PublicationForm extends Component {
             null;
     };
 
-    /*
-    confirmDiscardFormChanges = (location) => {
-        this.discardFormChangesConfirmationBox._onAction = () => this.props.onDiscardUnsavedForm(location.pathname);
-        this.discardFormChangesConfirmationBox.showConfirmation();
-
-        return false;
-    };
-    */
-
     render() {
         // populate publication types select box
         const publicationTypeItems = [
@@ -89,16 +78,6 @@ export default class PublicationForm extends Component {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.props.onFormCancel}
                     locale={txt.cancelWorkflowConfirmation} />
-
-                {
-                    /*
-                     <ConfirmDialogBox
-                     onRef={ref => (this.discardFormChangesConfirmationBox = ref)}
-                     locale={locale.global.discardFormChangesConfirmation} />
-
-                     <Prompt when={this.props.dirty} message={this.confirmDiscardFormChanges}/>
-                     */
-                }
 
                 <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 

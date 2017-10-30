@@ -33,13 +33,6 @@ export default class NewRecord extends React.Component {
         this.props.history.push(routes.pathConfig.records.mine);
     }
 
-    /*
-    _discardUnsavedForm = (location) => {
-        console.log(location);
-        this.props.history.push(location);
-    };
-    */
-
     render() {
         const txt = locale.pages.addRecord;
         const {rawSearchQuery} = this.props;
@@ -60,7 +53,6 @@ export default class NewRecord extends React.Component {
                 <PublicationForm
                     onFormSubmitSuccess={this._recordSaved}
                     onFormCancel={this._restartWorkflow}
-                    // onDiscardUnsavedForm={this._discardUnsavedForm}
                     initialValues={initialValues}
                 />
             </div>
