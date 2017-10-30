@@ -25,7 +25,7 @@ export default class SeminarPaperCitation extends Component {
         };
 
         // eSpace citation view for Seminar Paper
-        // {Author}{Year| (|).}<i>{Title| |.}</i>{Seminar series| |,}{School, Department or Centre| |,}{Institution| |.}
+        // {Author}{Year| (|).}<i>{Title| |.}</i>{Seminar series| |.}{School, Department or Centre| |,}{Institution| |.}
         return (
             <div className="citationContent citationSeminarPaper">
                 <FontIcon className="material-icons citationIcon" data-place="left">
@@ -41,7 +41,7 @@ export default class SeminarPaperCitation extends Component {
                 {/* <i>{Title| |.}</i> */}
                 <Partials.CitationView className="citationTitle" value={record.title}/>
 
-                {/* {Seminar series| |,} */}
+                {/* {Seminar series| |.} */}
                 <Partials.CitationView className="citationSeries" value={record.series}/>
 
                 {/* {School, Department or Centre| |,}  - fez_record_search_key_org_unit_name.rek_org_unit_name */}
