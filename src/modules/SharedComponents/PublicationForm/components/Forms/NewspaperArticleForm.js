@@ -3,6 +3,7 @@ import {Field} from 'redux-form/immutable';
 import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation, locale} from 'config';
+import {NewspaperNameField} from 'modules/SharedComponents/AutoSuggestField';
 import PropTypes from 'prop-types';
 
 export default class NewspaperArticleForm extends Component {
@@ -40,13 +41,10 @@ export default class NewspaperArticleForm extends Component {
                     <div className="columns">
                         <div className="column">
                             <Field
-                                component={TextField}
-                                disabled={this.props.submitting}
+                                component={NewspaperNameField}
                                 name="fez_record_search_key_newspaper.rek_newspaper"
-                                className="requiredField"
-                                type="text"
-                                fullWidth
-                                {...txt.information.fieldLabels.newspaperName}
+                                disabled={this.props.submitting}
+                                className="requiredHintField"
                                 validate={[validation.required]}
                             />
                         </div>
