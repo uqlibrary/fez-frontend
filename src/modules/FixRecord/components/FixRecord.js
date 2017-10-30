@@ -193,7 +193,7 @@ export default class FixRecord extends Component {
                                     type="text"
                                     fullWidth
                                     floatingLabelText={txt.fix.comments.fieldLabels.url}
-                                    validate={[validation.url, validation.maxLength255]}/>
+                                    validate={[validation.url]}/>
                             </StandardCard>
                             <StandardCard title={txt.fix.fileUpload.title} help={txt.fix.fileUpload.help}>
                                 {txt.fix.fileUpload.description}

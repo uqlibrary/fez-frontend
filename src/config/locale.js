@@ -1276,20 +1276,20 @@ export default {
                     },
                     fieldLabels: {
                         documentTitle: {
-                            title: 'Title',
-                            hint: 'Title of work'
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of work'
                         },
                         publicationPlace: {
-                            title: 'Place of publication',
-                            hint: 'City, Country'
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'City, Country'
                         },
                         publisher: {
-                            title: 'Publisher',
-                            hint: 'Please enter the name of the publisher or producer of the work.'
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please enter the name of the publisher or producer of the work.'
                         },
                         abstract: {
-                            title: 'Abstract',
-                            hint: 'Please provide an abstract or summary of the work.'
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please provide an abstract or summary of the work.'
                         },
                         date: {
                             title: 'Publication date',
@@ -1406,12 +1406,12 @@ export default {
                     },
                     fieldLabels: {
                         notes: {
-                            title: 'Notes (not publicly viewable)',
-                            hint: 'Please add any additional information here.',
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here.',
                         },
                         url: {
-                            title: 'Link',
-                            hint: 'Enter URL for this work.',
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this work.',
                         }
                     }
                 },

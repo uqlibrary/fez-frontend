@@ -529,7 +529,6 @@ exports[`Component FixRecord  should render fix record form 1`] = `
           validate={
             Array [
               [Function],
-              [Function],
             ]
           }
         />

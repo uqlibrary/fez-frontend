@@ -208,7 +208,7 @@ export default class BookChapterForm extends Component {
                                 disabled={this.props.submitting}
                                 fullWidth
                                 floatingLabelText={txt.other.fieldLabels.url}
-                                validate={[validation.url, validation.maxLength255]}
+                                validate={[validation.url]}
                             />
                         </div>
                     </div>
