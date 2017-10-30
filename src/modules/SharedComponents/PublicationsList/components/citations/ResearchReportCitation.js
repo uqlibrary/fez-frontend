@@ -51,9 +51,6 @@ export default class ResearchReportCitation extends Component {
 
                 {/* publisher */}
                 <Partials.CitationView className="citationPublisher" value={record.publisher} />
-
-                {/* doi */}
-                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }
