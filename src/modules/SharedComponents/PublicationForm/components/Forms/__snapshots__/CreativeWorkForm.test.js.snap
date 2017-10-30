@@ -182,6 +182,11 @@ exports[`CreativeWorkForm renders  component 1`] = `
       }
       name="authors"
       showContributorAssignment={true}
+      validate={
+        Array [
+          [Function],
+        ]
+      }
     />
   </StandardCard>
   <StandardCard
