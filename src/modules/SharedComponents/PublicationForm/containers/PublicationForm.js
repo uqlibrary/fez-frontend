@@ -4,6 +4,7 @@ import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
 import {locale, general} from 'config';
+import {confirmDiscardFormChanges} from '../../ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'PublicationForm';
 
@@ -61,7 +62,7 @@ let PublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit
-})(PublicationForm);
+})(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
 
 const mapStateToProps = (state) => {
     return {
