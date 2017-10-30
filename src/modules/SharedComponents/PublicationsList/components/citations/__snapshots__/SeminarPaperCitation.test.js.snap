@@ -498,7 +498,6 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
     </CitationView>
     <CitationView
       className="citationSeries"
-      suffix=","
       value="Logging, oil plam and livelihoods in PNG"
     >
       <span
@@ -506,7 +505,7 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
       >
          
         Logging, oil plam and livelihoods in PNG
-        ,
+        .
       </span>
     </CitationView>
     <CitationView
@@ -524,10 +523,15 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
     </CitationView>
     <CitationView
       className="citationOrgName"
+      value="James Cook University"
     >
       <span
-        className="citationOrgName empty"
-      />
+        className="citationOrgName"
+      >
+         
+        James Cook University
+        .
+      </span>
     </CitationView>
   </div>
 </SeminarPaperCitation>
@@ -595,7 +599,6 @@ exports[`SeminarPaperCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationSeries"
-      suffix=","
       value={null}
     >
       <span
