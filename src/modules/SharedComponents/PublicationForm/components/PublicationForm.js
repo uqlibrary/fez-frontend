@@ -90,13 +90,15 @@ export default class PublicationForm extends Component {
                     onAction={this.props.onFormCancel}
                     locale={txt.cancelWorkflowConfirmation} />
 
-                /*
-                <ConfirmDialogBox
-                    onRef={ref => (this.discardFormChangesConfirmationBox = ref)}
-                    locale={txt.discardFormChangesConfirmation} />
+                {
+                    /*
+                     <ConfirmDialogBox
+                     onRef={ref => (this.discardFormChangesConfirmationBox = ref)}
+                     locale={txt.discardFormChangesConfirmation} />
 
-                <Prompt when={this.props.dirty} message={this.confirmDiscardFormChanges}/>
-                */
+                     <Prompt when={this.props.dirty} message={this.confirmDiscardFormChanges}/>
+                     */
+                }
 
                 <Prompt when={this.props.dirty} message={txt.discardFormChangesConfirmation.confirmationMessage}/>
 

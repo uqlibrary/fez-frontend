@@ -15,6 +15,10 @@ exports[`PublicationForm renders  component initialised with just one field - pu
     onAction={[Function]}
     onRef={[Function]}
   />
+  <Prompt
+    message="Are you sure you want to navigate away and discard all changes to the form?"
+    when={true}
+  />
   <StandardCard
     className=""
     help={
