@@ -486,7 +486,6 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
     </YearCitationView>
     <CitationView
       className="citationTitle"
-      suffix="."
       value="Rural livelihoods in PNG"
     >
       <span
@@ -498,11 +497,12 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
       </span>
     </CitationView>
     <CitationView
+      className="citationSeries"
       suffix=","
       value="Logging, oil plam and livelihoods in PNG"
     >
       <span
-        className=""
+        className="citationSeries"
       >
          
         Logging, oil plam and livelihoods in PNG
@@ -510,11 +510,12 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
       </span>
     </CitationView>
     <CitationView
+      className="citationOrgUnit"
       suffix=","
       value="The Centre for Tropical Environmental and Sustainability Science and the Cairns Institute"
     >
       <span
-        className=""
+        className="citationOrgUnit"
       >
          
         The Centre for Tropical Environmental and Sustainability Science and the Cairns Institute
@@ -522,10 +523,10 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
       </span>
     </CitationView>
     <CitationView
-      suffix="."
+      className="citationOrgName"
     >
       <span
-        className=" empty"
+        className="citationOrgName empty"
       />
     </CitationView>
   </div>
@@ -587,34 +588,35 @@ exports[`SeminarPaperCitation renders  component with empty publication 1`] = `
     </YearCitationView>
     <CitationView
       className="citationTitle"
-      suffix="."
     >
       <span
         className="citationTitle empty"
       />
     </CitationView>
     <CitationView
+      className="citationSeries"
       suffix=","
       value={null}
     >
       <span
-        className=" empty"
+        className="citationSeries empty"
       />
     </CitationView>
     <CitationView
+      className="citationOrgUnit"
       suffix=","
       value={null}
     >
       <span
-        className=" empty"
+        className="citationOrgUnit empty"
       />
     </CitationView>
     <CitationView
-      suffix="."
+      className="citationOrgName"
       value={null}
     >
       <span
-        className=" empty"
+        className="citationOrgName empty"
       />
     </CitationView>
   </div>

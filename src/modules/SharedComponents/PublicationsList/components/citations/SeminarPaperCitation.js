@@ -20,7 +20,7 @@ export default class SeminarPaperCitation extends Component {
                 this.props.publication.fez_record_search_key_series.rek_series : null,
             orgUnit: this.props.publication.fez_record_search_key_org_unit_name ?
                 this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
-            org: this.props.publication.fez_record_search_key_org_name ?
+            orgName: this.props.publication.fez_record_search_key_org_name ?
                 this.props.publication.fez_record_search_key_org_unit_name.rek_org_name : null,
         };
 
@@ -39,16 +39,16 @@ export default class SeminarPaperCitation extends Component {
                 <Partials.YearCitationView date={this.props.publication.rek_date}/>
 
                 {/* <i>{Title| |.}</i> */}
-                <Partials.CitationView className="citationTitle" value={record.title} suffix="."/>
+                <Partials.CitationView className="citationTitle" value={record.title}/>
 
                 {/* {Seminar series| |,} */}
-                <Partials.CitationView value={record.series} suffix=","/>
+                <Partials.CitationView className="citationSeries" value={record.series} suffix=","/>
 
                 {/* {School, Department or Centre| |,}  - fez_record_search_key_org_unit_name.rek_org_unit_name */}
-                <Partials.CitationView value={record.orgUnit} suffix=","/>
+                <Partials.CitationView className="citationOrgUnit" value={record.orgUnit} suffix=","/>
 
                 {/* {Institution| |.} - fez_record_search_key_org_name.rek_org_name */}
-                <Partials.CitationView value={record.org} suffix="."/>
+                <Partials.CitationView className="citationOrgName" value={record.orgName}/>
 
             </div>
         );
