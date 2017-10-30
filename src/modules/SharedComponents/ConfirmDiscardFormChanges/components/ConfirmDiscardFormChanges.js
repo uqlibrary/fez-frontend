@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {locale} from 'config';
 
 function confirmDiscardFormChanges(WrappedComponent) {
     class ConfirmDiscardFormChanges extends React.Component {
@@ -12,7 +13,7 @@ function confirmDiscardFormChanges(WrappedComponent) {
         }
 
         promptDiscardFormChanges(isUnsaved = false) {
-            window.onbeforeunload = isUnsaved && (() => true);
+            window.onbeforeunload = isUnsaved && (() => locale.global.discardFormChangesConfirmation.confirmationMessage);
         }
 
         render() {
