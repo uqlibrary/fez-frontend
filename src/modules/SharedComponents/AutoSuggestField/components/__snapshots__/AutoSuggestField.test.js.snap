@@ -16,6 +16,7 @@ exports[`AutoSuggestField component should render 1`] = `
   }
   maxResults={7}
   onChange={[Function]}
+  validate={null}
 />
 `;
 
@@ -44,6 +45,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
     }
     maxResults={7}
     onChange={[Function]}
+    validate={null}
   >
     <AutoComplete
       anchorOrigin={
@@ -85,6 +87,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
           "vertical": "top",
         }
       }
+      validate={null}
     >
       <div
         style={
@@ -113,6 +116,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
           rows={1}
           type="text"
           underlineShow={true}
+          validate={null}
           value=""
         >
           <div
@@ -1047,6 +1051,7 @@ exports[`AutoSuggestField component should render autosuggest field and call act
                 }
               }
               type="text"
+              validate={null}
               value=""
             />
             <TextFieldUnderline
@@ -1596,6 +1601,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
     }
     maxResults={7}
     onChange={[Function]}
+    validate={null}
   >
     <AutoComplete
       anchorOrigin={
@@ -1638,6 +1644,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
           "vertical": "top",
         }
       }
+      validate={null}
     >
       <div
         style={
@@ -1667,6 +1674,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
           rows={1}
           type="text"
           underlineShow={true}
+          validate={null}
           value=""
         >
           <div
@@ -2602,6 +2610,7 @@ exports[`AutoSuggestField component should render with className set 1`] = `
                 }
               }
               type="text"
+              validate={null}
               value=""
             />
             <TextFieldUnderline
@@ -3150,6 +3159,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
     }
     maxResults={7}
     onChange={[Function]}
+    validate={null}
   >
     <AutoComplete
       anchorOrigin={
@@ -3191,6 +3201,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
           "vertical": "top",
         }
       }
+      validate={null}
     >
       <div
         style={
@@ -3219,6 +3230,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
           rows={1}
           type="text"
           underlineShow={true}
+          validate={null}
           value=""
         >
           <div
@@ -4153,6 +4165,7 @@ exports[`AutoSuggestField component should render with disabled flag set to true
                 }
               }
               type="text"
+              validate={null}
               value=""
             />
             <TextFieldUnderline

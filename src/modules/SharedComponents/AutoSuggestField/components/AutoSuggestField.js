@@ -15,7 +15,8 @@ export class AutoSuggestField extends Component {
         disabled: PropTypes.bool,
         className: PropTypes.string,
         maxResults: PropTypes.number,
-        debounceDelay: PropTypes.number
+        debounceDelay: PropTypes.number,
+        validate: PropTypes.func
     };
 
     static defaultProps = {
@@ -24,7 +25,8 @@ export class AutoSuggestField extends Component {
             fieldLabel: 'Enter text',
             fieldHint: 'Please type text'
         },
-        debounceDelay: 150
+        debounceDelay: 150,
+        validate: null
     };
 
     constructor(props) {
@@ -86,6 +88,7 @@ export class AutoSuggestField extends Component {
                 onUpdateInput={this.textUpdated}
                 onNewRequest={this.valueSelected}
                 className={this.props.className}
+                validate={this.props.validate}
             />
         );
     }

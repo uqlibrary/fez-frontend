@@ -3,17 +3,22 @@ import PropTypes from 'prop-types';
 import {AutoSuggestField} from '../components/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
+import {validation} from 'config';
+
 
 export class NewspaperNameAutoSuggestField extends Component {
     static propTypes = {
-        input: PropTypes.object
+        input: PropTypes.object,
+        className: PropTypes.string,
+        validate: PropTypes.func
     };
 
     static defaultProps = {
         locale: {
             fieldLabel: 'Newspaper name',
             fieldHint: 'Start typing newspaper name'
-        }
+        },
+        validate: validation.required
     };
 
     constructor(props) {

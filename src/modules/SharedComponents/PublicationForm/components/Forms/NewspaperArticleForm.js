@@ -44,7 +44,7 @@ export default class NewspaperArticleForm extends Component {
                                 component={NewspaperNameField}
                                 name="fez_record_search_key_newspaper.rek_newspaper"
                                 disabled={this.props.submitting}
-                                className="requiredHintField"
+                                className="requiredField"
                                 validate={[validation.required]}
                             />
                         </div>
