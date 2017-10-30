@@ -99,6 +99,7 @@ export const publicationTypes = (components) => [
         name: 'Creative Work',
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
         citationComponent: components ? components.CreativeWorkCitation : null,
+        formComponent: components ? components.CreativeWorkForm : null,
         vocabId: 453594,
         hasFormComponent: true
     },

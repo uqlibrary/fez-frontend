@@ -1683,6 +1683,107 @@ export default {
                     }
                 }
             },
+            creativeWork: {
+                information: {
+                    title: 'Creative work information',
+                    help: {
+                        title: 'Creative work information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        articleTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of creative work'
+                        },
+                        placeOfPublication: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'City, country'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: ''
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please provide an abstract or summary of the work.'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'For a creative work, author includes creator, performer or curator. Enter authors in the order and form they appear on the work or associated material. Examples of associated material are promotional material, performance programs or exhibition catalogues. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here.',
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this work.',
+                        }
+                    }
+                },
+            },
             fileUpload: {
                 title: 'Files',
                 help: {
