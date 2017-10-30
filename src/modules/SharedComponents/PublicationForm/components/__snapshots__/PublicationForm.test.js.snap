@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PublicationForm renders  component initialised with just one field - publication type 1`] = `
+exports[`PublicationForm test should render component initialised with just one field - publication type 1`] = `
 <form>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -135,7 +135,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Generic Document"
@@ -156,7 +156,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Audio Document"
@@ -387,7 +387,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Patent"
@@ -408,7 +408,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Preprint"
@@ -429,7 +429,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Research Report"
@@ -450,7 +450,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Seminar Paper"

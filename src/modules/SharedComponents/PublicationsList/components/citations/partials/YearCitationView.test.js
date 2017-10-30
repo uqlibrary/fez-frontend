@@ -10,9 +10,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 
 
-function setup({publication, isShallow = true}) {
+function setup({date, isShallow = false}) {
     const props = {
-        publication: publication || {}, // : PropTypes.object.isRequired,
+        date: date, // : PropTypes.object.isRequired,
     };
 
     if(isShallow) {
@@ -33,33 +33,33 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('YearCitationView renders ', () => {
-    it('component with no rek_date', () => {
+describe('YearCitationView test ', () => {
+    it('should render component with no date', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with rek_date not in TZ format', () => {
+    it('should render component with date not in TZ format', () => {
         const testObject = {
             'rek_date': '2010-08-01 00:00:00'
         };
-        const wrapper = setup({ publication: testObject });
+        const wrapper = setup({ date: testObject.rek_date });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with rek_date in TZ format', () => {
+    it('should render component with date in TZ format', () => {
         const testObject = {
             'rek_date': '2017-07-01T00:00:00Z'
         };
-        const wrapper = setup({ publication: testObject });
+        const wrapper = setup({ date: testObject.rek_date });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with rek_date invalid date format', () => {
+    it('should render component with date invalid date format', () => {
         const testObject = {
             'rek_date': 'BLA BLA BLA'
         };
-        const wrapper = setup({ publication: testObject });
+        const wrapper = setup({ date: testObject.rek_date });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

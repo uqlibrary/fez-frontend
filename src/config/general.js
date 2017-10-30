@@ -46,12 +46,15 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
         name: 'Generic Document',
         class: 'Uqlibrary\\FezCore\\Types\\Generic',
+        formComponent: components ? components.GenericDocumentForm : null,
+        citationComponent: components ? components.GenericDocumentCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
+        formComponent: components ? components.AudioDocumentForm : null,
         citationComponent: components ? components.AudioCitation : null,
         hasFormComponent: true
     },
@@ -160,24 +163,29 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_PATENT,
         name: 'Patent',
         class: 'Uqlibrary\\FezCore\\Types\\Patent',
+        formComponent: components ? components.PatentForm : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_PREPRINT,
         name: 'Preprint',
         class: 'Uqlibrary\\FezCore\\Types\\Preprint',
+        formComponent: components ? components.PreprintForm : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_RESEARCH_REPORT,
         name: 'Research Report',
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
+        formComponent: components ? components.ResearchReportForm : null,
+        citationComponent: components ? components.ResearchReportCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
         name: 'Seminar Paper',
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
+        formComponent: components ? components.SeminarPaperForm : null,
         hasFormComponent: true
     },
     {

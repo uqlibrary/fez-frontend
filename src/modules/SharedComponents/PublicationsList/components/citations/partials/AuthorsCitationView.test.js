@@ -10,7 +10,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 import {locale} from 'config';
 
-function setup({publication, prefix, suffix, isShallow = true}) {
+function setup({publication, prefix, suffix, isShallow = false}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
         prefix: prefix,
@@ -35,13 +35,13 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('AuthorsCitationView renders ', () => {
-    it('component with no authors', () => {
+describe('AuthorsCitationView test ', () => {
+    it('should render component with no authors', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with one author', () => {
+    it('should render component with one author', () => {
         const testObject = {
             "fez_record_search_key_author": [{
                 "rek_author_id": null,
@@ -54,7 +54,7 @@ describe('AuthorsCitationView renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with two authors', () => {
+    it('should render component with two authors', () => {
         const testObject = {
             "fez_record_search_key_author": [
                 {
@@ -75,7 +75,7 @@ describe('AuthorsCitationView renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with three authors', () => {
+    it('should render component with three authors', () => {
         const testObject = {
             "fez_record_search_key_author": [
                 {
@@ -102,7 +102,7 @@ describe('AuthorsCitationView renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with three authors with prefix/suffix', () => {
+    it('should render component with three authors with prefix/suffix', () => {
         const testObject = {
             "fez_record_search_key_author": [
                 {
