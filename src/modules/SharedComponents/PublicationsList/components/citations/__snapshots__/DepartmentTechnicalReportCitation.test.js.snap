@@ -500,7 +500,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
     </CitationView>
     <CitationView
       className="citationSeries"
-      suffix=","
+      suffix=", "
       value="Technical Report"
     >
       <span
@@ -508,7 +508,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
       >
          
         Technical Report
-        ,
+        , 
       </span>
     </CitationView>
     <CitationView
@@ -520,26 +520,32 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
       />
     </CitationView>
     <CitationView
-      className="citationPlaceOfPublication"
-      suffix=":"
-      value={null}
+      className="citationOrgUnitName"
+      suffix=", "
+      value="Burden of Disease Research Unit of the South African Medical Research Council"
     >
       <span
-        className="citationPlaceOfPublication empty"
-      />
-    </CitationView>
-    <CitationView
-      className="citationPublisher"
-      value="South African Medical Research Council."
-    >
-      <span
-        className="citationPublisher"
+        className="citationOrgUnitName"
       >
          
-        South African Medical Research Council.
+        Burden of Disease Research Unit of the South African Medical Research Council
+        , 
+      </span>
+    </CitationView>
+    <CitationView
+      className="citationOrgName"
+      value="South African Medical Research Council"
+    >
+      <span
+        className="citationOrgName"
+      >
+         
+        South African Medical Research Council
+        .
       </span>
     </CitationView>
     <DoiCitationView
+      className="citationDoi"
       doi={null}
     >
       <span
@@ -612,7 +618,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
     </CitationView>
     <CitationView
       className="citationSeries"
-      suffix=","
+      suffix=", "
       value={null}
     >
       <span
@@ -628,23 +634,24 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
       />
     </CitationView>
     <CitationView
-      className="citationPlaceOfPublication"
-      suffix=":"
+      className="citationOrgUnitName"
+      suffix=", "
       value={null}
     >
       <span
-        className="citationPlaceOfPublication empty"
+        className="citationOrgUnitName empty"
       />
     </CitationView>
     <CitationView
-      className="citationPublisher"
+      className="citationOrgName"
       value={null}
     >
       <span
-        className="citationPublisher empty"
+        className="citationOrgName empty"
       />
     </CitationView>
     <DoiCitationView
+      className="citationDoi"
       doi={null}
     >
       <span

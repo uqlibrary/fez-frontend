@@ -20,16 +20,16 @@ export default class DepartmentTechnicalReportCitation extends Component {
                 this.props.publication.fez_record_search_key_series.rek_series : null,
             reportNumber: this.props.publication.fez_record_search_key_report_number ?
                 this.props.publication.fez_record_search_key_report_number.rek_report_number : null,
-            placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication ?
-                this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
-            publisher: this.props.publication.fez_record_search_key_publisher ?
-                this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
+            orgUnitName: this.props.publication.fez_record_search_key_org_unit_name ?
+                this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
+            orgName: this.props.publication.fez_record_search_key_org_name ?
+                this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
             doi: this.props.publication.fez_record_search_key_doi ?
                 this.props.publication.fez_record_search_key_doi.rek_doi : null
         };
 
         // eSpace citation view for Department Technical Report
-        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Series Title| |,} {Report Number| |.}{Place of Publication| |:}{Publisher| |.} {doi| doi:|}
+        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Series Title| |,} {Report Number| |.}{School, Department or Centre| |,}{Institution| |.}{doi| doi:|}
 
         return (
             <div className="citationContent citationDepartmentTechnicalReport">
@@ -47,19 +47,19 @@ export default class DepartmentTechnicalReportCitation extends Component {
                 <Partials.CitationView className="citationTitle" value={record.title} />
 
                 {/* {Series Title| |,} */}
-                <Partials.CitationView className="citationSeries" value={record.series} suffix="," />
+                <Partials.CitationView className="citationSeries" value={record.series} suffix=", " />
 
                 {/* {Report Number| |.} */}
                 <Partials.CitationView className="citationReportNumber" value={record.reportNumber} />
 
-                {/* {Place of Publication| |:} */}
-                <Partials.CitationView className="citationPlaceOfPublication" value={record.placeOfPublication} suffix=":"/>
+                {/* {School, Department or Centre| |,} */}
+                <Partials.CitationView className="citationOrgUnitName" value={record.orgUnitName} suffix=", "/>
 
-                {/* {Publisher| |.} */}
-                <Partials.CitationView className="citationPublisher" value={record.publisher} />
+                {/* {Institution| |.} */}
+                <Partials.CitationView className="citationOrgName" value={record.orgName} />
 
                 {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView doi={record.doi} />
+                <Partials.DoiCitationView className="citationDoi" doi={record.doi} />
             </div>
         );
     }
