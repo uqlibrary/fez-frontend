@@ -7,6 +7,7 @@ import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 import {SelectField, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes, validation} from 'config';
+import {Prompt} from 'react-router-dom';
 
 import * as recordForms from './Forms';
 
@@ -14,7 +15,8 @@ export default class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         onFormSubmitSuccess: PropTypes.func.isRequired,
-        onFormCancel: PropTypes.func.isRequired
+        onFormCancel: PropTypes.func.isRequired,
+        // onDiscardUnsavedForm: PropTypes.func
     };
 
     static contextTypes = {
@@ -24,6 +26,7 @@ export default class PublicationForm extends Component {
     constructor(props) {
         super(props);
         this.publicationTypes = publicationTypes({...recordForms});
+        // this.discardFormChangesConfirmationBox = null;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -54,6 +57,15 @@ export default class PublicationForm extends Component {
             null;
     };
 
+    /*
+    confirmDiscardFormChanges = (location) => {
+        this.discardFormChangesConfirmationBox._onAction = () => this.props.onDiscardUnsavedForm(location.pathname);
+        this.discardFormChangesConfirmationBox.showConfirmation();
+
+        return false;
+    };
+    */
+
     render() {
         // populate publication types select box
         const publicationTypeItems = [
@@ -77,6 +89,16 @@ export default class PublicationForm extends Component {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.props.onFormCancel}
                     locale={txt.cancelWorkflowConfirmation} />
+
+                /*
+                <ConfirmDialogBox
+                    onRef={ref => (this.discardFormChangesConfirmationBox = ref)}
+                    locale={txt.discardFormChangesConfirmation} />
+
+                <Prompt when={this.props.dirty} message={this.confirmDiscardFormChanges}/>
+                */
+
+                <Prompt when={this.props.dirty} message={txt.discardFormChangesConfirmation.confirmationMessage}/>
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field

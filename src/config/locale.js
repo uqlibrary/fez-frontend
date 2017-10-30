@@ -1086,6 +1086,12 @@ export default {
             successAlert: {
                 title: 'Success',
                 message: 'New publication has been saved successfully.'
+            },
+            discardFormChangesConfirmation: {
+                confirmationTitle: 'Discard changes?',
+                confirmationMessage: 'Are you sure you want to navigate away and discard all changes to the form?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
             }
         },
         claimPublicationForm: {
