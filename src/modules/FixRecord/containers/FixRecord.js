@@ -5,6 +5,7 @@ import Immutable from 'immutable';
 import FixRecord from '../components/FixRecord';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
+import {confirmDiscardFormChanges} from '../../SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'FixRecord';
 
@@ -40,7 +41,7 @@ let FixRecordContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit
-})(FixRecord);
+})(confirmDiscardFormChanges(FixRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
     return {

@@ -7,6 +7,7 @@ import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUplo
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {AuthorLinkingField} from 'modules/SharedComponents/AuthorLinking';
 import {validation, locale, routes} from 'config';
+import {Prompt} from 'react-router-dom';
 
 export default class ClaimRecord extends Component {
     static propTypes = {
@@ -129,6 +130,9 @@ export default class ClaimRecord extends Component {
                                     cancelButtonLabel: fromAddRecord
                                         ? txt.successWorkflowConfirmation.addRecordButtonLabel
                                         : txt.successWorkflowConfirmation.cancelButtonLabel}} />
+
+                            <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
+
                             {
                                 publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
                                 && !authorLinked &&

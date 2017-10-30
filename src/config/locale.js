@@ -16,6 +16,12 @@ export default {
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
         },
+        discardFormChangesConfirmation: {
+            confirmationTitle: 'Discard changes?',
+            confirmationMessage: 'Are you sure you want to navigate away and discard all changes to the form?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes'
+        },
         linkWillOpenInNewWindow: 'Link to [destination] will open in a new window.',
         sources: {
             espace: {
@@ -1714,12 +1720,6 @@ export default {
             successAlert: {
                 title: 'Success',
                 message: 'New publication has been saved successfully.'
-            },
-            discardFormChangesConfirmation: {
-                confirmationTitle: 'Discard changes?',
-                confirmationMessage: 'Are you sure you want to navigate away and discard all changes to the form?',
-                cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
             }
         },
         claimPublicationForm: {

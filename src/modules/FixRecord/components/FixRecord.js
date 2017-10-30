@@ -9,6 +9,7 @@ import MenuItem from 'material-ui/MenuItem';
 import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {validation, locale, routes} from 'config';
+import {Prompt} from 'react-router-dom';
 
 export default class FixRecord extends Component {
     static propTypes = {
@@ -144,6 +145,8 @@ export default class FixRecord extends Component {
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
+                    <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
+
                     <StandardCard title={txt.subTitle} help={txt.help}>
                         <PublicationCitation publication={recordToFix}/>
 

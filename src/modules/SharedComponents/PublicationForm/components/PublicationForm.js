@@ -94,13 +94,13 @@ export default class PublicationForm extends Component {
                     /*
                      <ConfirmDialogBox
                      onRef={ref => (this.discardFormChangesConfirmationBox = ref)}
-                     locale={txt.discardFormChangesConfirmation} />
+                     locale={locale.global.discardFormChangesConfirmation} />
 
                      <Prompt when={this.props.dirty} message={this.confirmDiscardFormChanges}/>
                      */
                 }
 
-                <Prompt when={this.props.dirty} message={txt.discardFormChangesConfirmation.confirmationMessage}/>
+                <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field
