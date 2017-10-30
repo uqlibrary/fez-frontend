@@ -257,7 +257,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Creative Work"
