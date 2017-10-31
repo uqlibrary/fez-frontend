@@ -7,6 +7,10 @@ exports[`Component FixRecord  should render fix record form 1`] = `
   <form
     onKeyDown={[Function]}
   >
+    <Prompt
+      message="Are you sure you want to navigate away and discard all changes to the form?"
+      when={true}
+    />
     <StandardCard
       className=""
       title="Record to be amended"
@@ -619,6 +623,10 @@ exports[`Component FixRecord  should render record citation, two actions in sele
   <form
     onKeyDown={[Function]}
   >
+    <Prompt
+      message="Are you sure you want to navigate away and discard all changes to the form?"
+      when={true}
+    />
     <StandardCard
       className=""
       title="Record to be amended"
@@ -1105,6 +1113,10 @@ exports[`Component FixRecord  should render record citation, two actions in sele
   <form
     onKeyDown={[Function]}
   >
+    <Prompt
+      message="Are you sure you want to navigate away and discard all changes to the form?"
+      when={true}
+    />
     <StandardCard
       className=""
       title="Record to be amended"
@@ -1591,6 +1603,10 @@ exports[`Component FixRecord  should render unclaim form 1`] = `
   <form
     onKeyDown={[Function]}
   >
+    <Prompt
+      message="Are you sure you want to navigate away and discard all changes to the form?"
+      when={true}
+    />
     <StandardCard
       className=""
       title="Record to be amended"
