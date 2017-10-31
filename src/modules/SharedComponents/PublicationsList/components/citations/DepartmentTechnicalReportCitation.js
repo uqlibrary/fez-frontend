@@ -53,13 +53,13 @@ export default class DepartmentTechnicalReportCitation extends Component {
                 <Partials.CitationView className="citationReportNumber" value={record.reportNumber} />
 
                 {/* {School, Department or Centre| |,} */}
-                <Partials.CitationView className="citationOrgUnitName" value={record.orgUnitName} suffix=", "/>
+                <Partials.CitationView className="citationOrgUnit" value={record.orgUnitName} suffix=", "/>
 
                 {/* {Institution| |.} */}
                 <Partials.CitationView className="citationOrgName" value={record.orgName} />
 
                 {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView className="citationDoi" doi={record.doi} />
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

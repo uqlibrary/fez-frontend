@@ -520,12 +520,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
       />
     </CitationView>
     <CitationView
-      className="citationOrgUnitName"
+      className="citationOrgUnit"
       suffix=", "
       value="Burden of Disease Research Unit of the South African Medical Research Council"
     >
       <span
-        className="citationOrgUnitName"
+        className="citationOrgUnit"
       >
          
         Burden of Disease Research Unit of the South African Medical Research Council
@@ -545,7 +545,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
       </span>
     </CitationView>
     <DoiCitationView
-      className="citationDoi"
       doi={null}
     >
       <span
@@ -634,12 +633,12 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
       />
     </CitationView>
     <CitationView
-      className="citationOrgUnitName"
+      className="citationOrgUnit"
       suffix=", "
       value={null}
     >
       <span
-        className="citationOrgUnitName empty"
+        className="citationOrgUnit empty"
       />
     </CitationView>
     <CitationView
@@ -651,7 +650,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
       />
     </CitationView>
     <DoiCitationView
-      className="citationDoi"
       doi={null}
     >
       <span
