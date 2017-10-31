@@ -44,6 +44,7 @@ exports[`DesignForm renders  component 1`] = `
         className="column"
       >
         <Field
+          className="requiredField"
           component={[Function]}
           disabled={false}
           floatingLabelText="Project name"
@@ -51,6 +52,11 @@ exports[`DesignForm renders  component 1`] = `
           hintText="Title of project"
           name="fez_record_search_key_project_name.rek_project_name"
           type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
         />
       </div>
     </div>
@@ -80,6 +86,7 @@ exports[`DesignForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
+          className="requiredField"
           component={[Function]}
           disabled={false}
           floatingLabelText="Publisher"
@@ -87,12 +94,18 @@ exports[`DesignForm renders  component 1`] = `
           hintText="Please enter the name of the publisher."
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
         />
       </div>
       <div
         className="column"
       >
         <Field
+          className="requiredField"
           component={[Function]}
           disabled={false}
           floatingLabelText="Place of publication"
@@ -100,6 +113,11 @@ exports[`DesignForm renders  component 1`] = `
           hintText="Please enter the geographical location for the publisher."
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
         />
       </div>
     </div>
