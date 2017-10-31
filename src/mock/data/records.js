@@ -1416,13 +1416,19 @@ export const internalTitleSearchList = {
     "to": 5,
     "data": [
         {
+            "fez_record_search_key_date_photo_taken": {
+                "rek_date_photo_taken_id": 5314,
+                "rek_date_photo_taken_pid": "UQ:151598",
+                "rek_date_photo_taken_xsdmf_id": 8348,
+                "rek_date_photo_taken": "1986-01-01T00:00:00Z"
+            },
             "rek_pid": "UQ:342708",
             "rek_title_xsdmf_id": 10588,
             "rek_title": "Vaccination day",
             "rek_description_xsdmf_id": null,
             "rek_description": null,
             "rek_display_type_xsdmf_id": 3673,
-            "rek_display_type": 179,
+            "rek_display_type": 228, // 179,
             "rek_status_xsdmf_id": 3680,
             "rek_status": 2,
             "rek_date_xsdmf_id": 6386,
@@ -1528,7 +1534,7 @@ export const internalTitleSearchList = {
                 "rek_date_available_xsdmf_id": null,
                 "rek_date_available": "2014-01-01T00:00:00Z"
             },
-            "fez_record_search_key_date_photo_taken": null,
+            // "fez_record_search_key_date_photo_taken": null,
             "fez_record_search_key_date_recorded": null,
             "fez_record_search_key_date_scanned": null,
             "fez_record_search_key_doi": {
