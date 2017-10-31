@@ -44,7 +44,7 @@ describe('ImageDocumentForm renders ', () => {
         expect(wrapper.find('Field').length).toEqual(6);
     });
 
-    it('component with 5 required input fields', () => {
+    it('component with 3 required input fields', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field .requiredField').length).toEqual(2);
         expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
