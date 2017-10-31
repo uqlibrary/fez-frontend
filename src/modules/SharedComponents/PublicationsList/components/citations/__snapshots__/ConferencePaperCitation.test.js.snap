@@ -939,90 +939,154 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=""
+          value="Larance, Briony"
         >
-          Larance, Briony
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            Larance, Briony
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Peacock, Amy"
         >
-          Peacock, Amy
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Peacock, Amy
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Campbell, Gabrielle"
         >
-          Campbell, Gabrielle
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Campbell, Gabrielle
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Freckleton, Sarah"
         >
-          Freckleton, Sarah
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Freckleton, Sarah
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Smith, Kimberley"
         >
-          Smith, Kimberley
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Smith, Kimberley
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Mattick, Richard"
         >
-          Mattick, Richard
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Mattick, Richard
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Bruno, Raimondo"
         >
-          Bruno, Raimondo
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Bruno, Raimondo
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Nielsen, Suzanne"
         >
-          Nielsen, Suzanne
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Nielsen, Suzanne
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Cohen, Milton"
         >
-          Cohen, Milton
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Cohen, Milton
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Lintzeris, Nicholas"
         >
-          Lintzeris, Nicholas
-          , 
-        </span>
-        <span
-          className="citationAuthor"
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Lintzeris, Nicholas
+          </span>
+        </CitationView>
+        <a
+          onClick={[Function]}
+          onKeyPress={[Function]}
         >
-          Shand, Fiona
-          , 
-        </span>
-        <span
-          className="citationAuthor"
-        >
-          Hall, Wayne D.
-          , 
-        </span>
-        <span
-          className="citationAuthor"
-        >
-          Farrell, Michael
-           and 
-        </span>
-        <span
-          className="citationAuthor"
-        >
-          Degenhardt, Louisa
-           
-        </span>
+          <CitationView
+            className="citationShowMoreAuthors"
+            prefix=" "
+            suffix="... "
+            value="4 more"
+          >
+            <span
+              className="citationShowMoreAuthors"
+            >
+               
+              4 more
+              ... 
+            </span>
+          </CitationView>
+        </a>
       </span>
     </AuthorsCitationView>
     <YearCitationView

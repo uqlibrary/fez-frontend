@@ -44,12 +44,19 @@ exports[`AuthorsCitationView test  should render component with one author 1`] =
   <span
     className="citationAuthors"
   >
-    <span
+    <CitationView
       className="citationAuthor"
+      prefix=""
+      suffix=" "
+      value="Pedroso, Marcelo Monteiro"
     >
-      Pedroso, Marcelo Monteiro
-       
-    </span>
+      <span
+        className="citationAuthor"
+      >
+        Pedroso, Marcelo Monteiro
+         
+      </span>
+    </CitationView>
   </span>
 </AuthorsCitationView>
 `;
@@ -92,24 +99,45 @@ exports[`AuthorsCitationView test  should render component with three authors 1`
   <span
     className="citationAuthors"
   >
-    <span
+    <CitationView
       className="citationAuthor"
+      prefix=""
+      suffix=""
+      value="Pedroso, Marcelo Monteiro"
     >
-      Pedroso, Marcelo Monteiro
-      , 
-    </span>
-    <span
+      <span
+        className="citationAuthor"
+      >
+        Pedroso, Marcelo Monteiro
+      </span>
+    </CitationView>
+    <CitationView
       className="citationAuthor"
+      prefix=", "
+      suffix=""
+      value="Smith, J"
     >
-      Smith, J
-       and 
-    </span>
-    <span
+      <span
+        className="citationAuthor"
+      >
+        , 
+        Smith, J
+      </span>
+    </CitationView>
+    <CitationView
       className="citationAuthor"
+      prefix=" and "
+      suffix=" "
+      value="Andersen, J"
     >
-      Andersen, J
-       
-    </span>
+      <span
+        className="citationAuthor"
+      >
+         and 
+        Andersen, J
+         
+      </span>
+    </CitationView>
   </span>
 </AuthorsCitationView>
 `;
@@ -155,24 +183,45 @@ exports[`AuthorsCitationView test  should render component with three authors wi
     className="citationAuthors"
   >
     Authored by: 
-    <span
+    <CitationView
       className="citationAuthor"
+      prefix=""
+      suffix=""
+      value="Pedroso, Marcelo Monteiro"
     >
-      Pedroso, Marcelo Monteiro
-      , 
-    </span>
-    <span
+      <span
+        className="citationAuthor"
+      >
+        Pedroso, Marcelo Monteiro
+      </span>
+    </CitationView>
+    <CitationView
       className="citationAuthor"
+      prefix=", "
+      suffix=""
+      value="Smith, J"
     >
-      Smith, J
-       and 
-    </span>
-    <span
+      <span
+        className="citationAuthor"
+      >
+        , 
+        Smith, J
+      </span>
+    </CitationView>
+    <CitationView
       className="citationAuthor"
+      prefix=" and "
+      suffix=" "
+      value="Andersen, J"
     >
-      Andersen, J
-       
-    </span>
+      <span
+        className="citationAuthor"
+      >
+         and 
+        Andersen, J
+         
+      </span>
+    </CitationView>
      people.
   </span>
 </AuthorsCitationView>
@@ -210,18 +259,32 @@ exports[`AuthorsCitationView test  should render component with two authors 1`] 
   <span
     className="citationAuthors"
   >
-    <span
+    <CitationView
       className="citationAuthor"
+      prefix=""
+      suffix=""
+      value="Pedroso, Marcelo Monteiro"
     >
-      Pedroso, Marcelo Monteiro
-       and 
-    </span>
-    <span
+      <span
+        className="citationAuthor"
+      >
+        Pedroso, Marcelo Monteiro
+      </span>
+    </CitationView>
+    <CitationView
       className="citationAuthor"
+      prefix=" and "
+      suffix=" "
+      value="Smith, J"
     >
-      Smith, J
-       
-    </span>
+      <span
+        className="citationAuthor"
+      >
+         and 
+        Smith, J
+         
+      </span>
+    </CitationView>
   </span>
 </AuthorsCitationView>
 `;

@@ -465,12 +465,19 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=" "
+          value="Hunt, Colin"
         >
-          Hunt, Colin
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+            Hunt, Colin
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView

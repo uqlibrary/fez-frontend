@@ -781,12 +781,19 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=" "
+          value="Louise Olsen-Kettle"
         >
-          Louise Olsen-Kettle
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+            Louise Olsen-Kettle
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView

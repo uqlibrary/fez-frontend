@@ -737,36 +737,71 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=""
+          value="Shutter, Leigh"
         >
-          Shutter, Leigh
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            Shutter, Leigh
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Arthurs, Andy"
         >
-          Arthurs, Andy
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Arthurs, Andy
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Bamford, Greg"
         >
-          Bamford, Greg
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Bamford, Greg
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="McColl, Mary Rose"
         >
-          McColl, Mary Rose
-           and 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            McColl, Mary Rose
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=" and "
+          suffix=" "
+          value="Skinner, Peter R."
         >
-          Skinner, Peter R.
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+             and 
+            Skinner, Peter R.
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView

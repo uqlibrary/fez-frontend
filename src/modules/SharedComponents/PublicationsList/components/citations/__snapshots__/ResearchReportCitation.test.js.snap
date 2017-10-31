@@ -593,12 +593,19 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=" "
+          value="Vishal Asai"
         >
-          Vishal Asai
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+            Vishal Asai
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView
@@ -1272,12 +1279,19 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=" "
+          value="Vishal Asai"
         >
-          Vishal Asai
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+            Vishal Asai
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView

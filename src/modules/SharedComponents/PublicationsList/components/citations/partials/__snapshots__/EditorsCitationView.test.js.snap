@@ -67,12 +67,19 @@ exports[`EditorsCitationView test  should render component with one contributor 
       className="citationEditors"
     >
       edited by
-      <span
+      <CitationView
         className="citationAuthor"
+        prefix=""
+        suffix=" "
+        value="Pedroso, Marcelo Monteiro"
       >
-        Pedroso, Marcelo Monteiro
-         
-      </span>
+        <span
+          className="citationAuthor"
+        >
+          Pedroso, Marcelo Monteiro
+           
+        </span>
+      </CitationView>
       .
     </span>
   </AuthorsCitationView>
@@ -146,24 +153,45 @@ exports[`EditorsCitationView test  should render component with three contributo
       className="citationEditors"
     >
       edited by
-      <span
+      <CitationView
         className="citationAuthor"
+        prefix=""
+        suffix=""
+        value="Pedroso, Marcelo Monteiro"
       >
-        Pedroso, Marcelo Monteiro
-        , 
-      </span>
-      <span
+        <span
+          className="citationAuthor"
+        >
+          Pedroso, Marcelo Monteiro
+        </span>
+      </CitationView>
+      <CitationView
         className="citationAuthor"
+        prefix=", "
+        suffix=""
+        value="Smith, J"
       >
-        Smith, J
-         and 
-      </span>
-      <span
+        <span
+          className="citationAuthor"
+        >
+          , 
+          Smith, J
+        </span>
+      </CitationView>
+      <CitationView
         className="citationAuthor"
+        prefix=" and "
+        suffix=" "
+        value="Andersen, J"
       >
-        Andersen, J
-         
-      </span>
+        <span
+          className="citationAuthor"
+        >
+           and 
+          Andersen, J
+           
+        </span>
+      </CitationView>
       .
     </span>
   </AuthorsCitationView>
@@ -225,18 +253,32 @@ exports[`EditorsCitationView test  should render component with two contributors
       className="citationEditors"
     >
       edited by
-      <span
+      <CitationView
         className="citationAuthor"
+        prefix=""
+        suffix=""
+        value="Pedroso, Marcelo Monteiro"
       >
-        Pedroso, Marcelo Monteiro
-         and 
-      </span>
-      <span
+        <span
+          className="citationAuthor"
+        >
+          Pedroso, Marcelo Monteiro
+        </span>
+      </CitationView>
+      <CitationView
         className="citationAuthor"
+        prefix=" and "
+        suffix=" "
+        value="Smith, J"
       >
-        Smith, J
-         
-      </span>
+        <span
+          className="citationAuthor"
+        >
+           and 
+          Smith, J
+           
+        </span>
+      </CitationView>
       .
     </span>
   </AuthorsCitationView>
