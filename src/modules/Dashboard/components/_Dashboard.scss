@@ -62,7 +62,10 @@
     height: 60px !important;
     .researchIdAvatar {
       background-color: transparent !important;
-      margin-right: 6px;
+      width: 52px;
+      a {
+        width: 52px;
+      }
       &:hover {
         cursor: pointer;
       }
