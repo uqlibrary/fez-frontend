@@ -15,6 +15,10 @@ exports[`PublicationForm test should render component initialised with just one 
     onAction={[Function]}
     onRef={[Function]}
   />
+  <Prompt
+    message="Are you sure you want to navigate away and discard all changes to the form?"
+    when={true}
+  />
   <StandardCard
     className=""
     help={
