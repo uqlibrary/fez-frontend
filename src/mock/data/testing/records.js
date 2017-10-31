@@ -251,7 +251,7 @@ export const creativeWork = {
     "fez_record_search_key_translated_title": null
 };
 
-export const image = {
+export const imageDocument = {
     "rek_pid": "UQ:164935",
     "rek_title_xsdmf_id": 10699,
     "rek_title": "Reference Desk, Library",

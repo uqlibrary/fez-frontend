@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ImageCitation renders  component with a mock espace record 1`] = `
-<ImageCitation
+exports[`ImageDocumentCitation renders  component with a mock espace record 1`] = `
+<ImageDocumentCitation
   publication={
     Object {
       "fez_record_search_key_acknowledgements": null,
@@ -227,7 +227,7 @@ exports[`ImageCitation renders  component with a mock espace record 1`] = `
   }
 >
   <div
-    className="citationContent citationImage"
+    className="citationContent citationImageDocument"
   >
     <FontIcon
       className="material-icons citationIcon"
@@ -528,15 +528,15 @@ exports[`ImageCitation renders  component with a mock espace record 1`] = `
       </span>
     </CitationView>
   </div>
-</ImageCitation>
+</ImageDocumentCitation>
 `;
 
-exports[`ImageCitation renders  component with empty publication 1`] = `
-<ImageCitation
+exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
+<ImageDocumentCitation
   publication={Object {}}
 >
   <div
-    className="citationContent citationImage"
+    className="citationContent citationImageDocument"
   >
     <FontIcon
       className="material-icons citationIcon"
@@ -600,5 +600,5 @@ exports[`ImageCitation renders  component with empty publication 1`] = `
       />
     </CitationView>
   </div>
-</ImageCitation>
+</ImageDocumentCitation>
 `;

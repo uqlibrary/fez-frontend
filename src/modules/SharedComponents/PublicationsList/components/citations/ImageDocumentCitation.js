@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import * as Partials from './partials';
 
-export default class ImageCitation extends Component {
+export default class ImageDocumentCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };
@@ -20,11 +20,11 @@ export default class ImageCitation extends Component {
                 this.props.publication.fez_record_search_key_source.rek_source : null
         };
 
-        // eSpace citation view for Image
+        // eSpace citation view for Image Document
         // {Creator}{Publication Year| (|).}<i>{Title| |.}</i>{Source| |.}
 
         return (
-            <div className="citationContent citationImage">
+            <div className="citationContent citationImageDocument">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>

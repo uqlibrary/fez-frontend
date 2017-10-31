@@ -131,7 +131,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_IMAGE,
         name: 'Image',
         class: 'Uqlibrary\\FezCore\\Types\\Image',
-        citationComponent: components ? components.ImageCitation : null,
+        citationComponent: components ? components.ImageDocumentCitation : null,
         hasFormComponent: true
     },
     {

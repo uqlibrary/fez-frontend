@@ -1,14 +1,14 @@
-jest.dontMock('./ImageCitation');
+jest.dontMock('./ImageDocumentCitation');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import ImageCitation from './ImageCitation';
+import ImageDocumentCitation from './ImageDocumentCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
-import {image} from 'mock/data/testing/records';
+import {imageDocument} from 'mock/data/testing/records';
 
 function setup({publication, isShallow = false}) {
     const props = {
@@ -16,10 +16,10 @@ function setup({publication, isShallow = false}) {
     };
 
     if(isShallow) {
-        return shallow(<ImageCitation {...props} />);
+        return shallow(<ImageDocumentCitation {...props} />);
     }
 
-    return mount(<ImageCitation {...props} />, {
+    return mount(<ImageDocumentCitation {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -33,14 +33,14 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('ImageCitation renders ', () => {
+describe('ImageDocumentCitation renders ', () => {
     it('component with empty publication', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({ publication: image });
+        const wrapper = setup({ publication: imageDocument });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
