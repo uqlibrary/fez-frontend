@@ -2040,6 +2040,115 @@ export default {
                     }
                 },
             },
+            design: {
+                information: {
+                    title: 'Design information',
+                    help: {
+                        title: 'Design information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        articleTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of design'
+                        },
+                        projectName: {
+                            floatingLabelText: 'Project name',
+                            hintText: 'Title of project'
+                        },
+                        projectDescription: {
+                            floatingLabelText: 'Project description',
+                            hintText: 'Please provide a summary/description of the project.'
+                        },
+                        placeOfPublication: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'Please enter the geographical location for the publisher.'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please enter the name of the publisher.'
+                        },
+                        location: {
+                            floatingLabelText: 'Location',
+                            hintText: 'Please enter the geographical location for the design itself.'
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                    }
+                },
+                authors: {
+                    title: 'Designer name',
+                    description: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    help: {
+                        title: 'Designers',
+                        text: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Designer name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add designer'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Designers name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed designer',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here.',
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this work.',
+                        }
+                    }
+                },
+            },
             fileUpload: {
                 title: 'Files',
                 help: {
