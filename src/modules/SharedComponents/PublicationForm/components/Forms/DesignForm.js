@@ -49,8 +49,6 @@ export default class DesignForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.projectName}
-                                className="requiredField"
-                                validate={[validation.required]}
                             />
                         </div>
                     </div>
@@ -79,8 +77,6 @@ export default class DesignForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher}
-                                className="requiredField"
-                                validate={[validation.required]}
                             />
                         </div>
                         <div className="column">
@@ -91,8 +87,6 @@ export default class DesignForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.placeOfPublication}
-                                className="requiredField"
-                                validate={[validation.required]}
                             />
                         </div>
                     </div>
