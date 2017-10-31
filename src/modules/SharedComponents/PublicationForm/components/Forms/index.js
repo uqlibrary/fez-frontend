@@ -11,3 +11,4 @@ export {default as PreprintForm} from './PreprintForm';
 export {default as PatentForm} from './PatentForm';
 export {default as CreativeWorkForm} from './CreativeWorkForm';
 export {default as VideoDocumentForm} from './VideoDocumentForm';
+export {default as ImageDocumentForm} from './ImageDocumentForm';
