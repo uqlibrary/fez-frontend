@@ -413,7 +413,7 @@ export default {
             fileUploadFailedWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
                 confirmationMessage: (<p>
-                    Your record has been saved, <strong>but file upload has failed.</strong>
+                    Your record has been saved, <strong>but file upload has failed. </strong>
                     Please, re-try to upload files via "Fix record" screen. <br/><br/>
                     Your item will be referred to a UQ eSpace Staging staff member for editing,
                     prior to being moved into a publicly viewable collection. Please note that our current

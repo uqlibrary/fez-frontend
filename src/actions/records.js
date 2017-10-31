@@ -38,8 +38,11 @@ export function createNewRecord(data) {
         if (recordRequest.author) delete recordRequest.author;
 
         let newRecord = null;
+
+        console.log('step 1 - NEW_RECORD_API()');
         return post(routes.NEW_RECORD_API(), recordRequest)
             .then(response => {
+                console.log('step 2 - putUploadFiles()');
                 // set a pid on a new record
                 data.rek_pid = response.data.rek_pid;
                 newRecord = response.data;
@@ -48,29 +51,20 @@ export function createNewRecord(data) {
                 if (!data.files || !data.files.queue || data.files.queue.length === 0) {
                     return response;
                 } else {
-                    return putUploadFiles(response.data.rek_pid, data.files.queue, dispatch);
+                    const recordPatch = {
+                        ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
+                    };
+
+                    // both of requests should success for files to be recorded successfully
+                    return Promise.all([
+                        putUploadFiles(response.data.rek_pid, data.files.queue, dispatch),
+                        patch(routes.EXISTING_RECORD_API({pid: data.rek_pid}), recordPatch)
+                    ]);
                 }
             })
-            .then(
-                response => {
-                    if (!data.files || !data.files.queue || data.files.queue.length === 0) {
-                        return response;
-                    } else {
-                        // process uploaded files into API format for a patch
-                        const recordPatch = {
-                            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
-                        };
-
-                        return patch(routes.EXISTING_RECORD_API({pid: data.rek_pid}), recordPatch)
-                            .catch((error) => {
-                                return Promise.reject(new Error(`${errorAlert.patchFilesMessage} (${error.message})`));
-                            });
-                    }
-                },
-                error => {
-                    return Promise.resolve({data: { ...newRecord, fileUploadFailed: true, fileUploadError: error}});
-                })
             .then(response => {
+                console.log('Promise.all ??? ');
+
                 dispatch({
                     type: actions.RECORD_CREATE_SUCCESS,
                     payload: response.data
@@ -78,6 +72,9 @@ export function createNewRecord(data) {
                 return Promise.resolve(response.data);
             })
             .catch(error => {
+                console.log('FAILED: catch(error): ' + error);
+                console.log('FAILED: catch(error): ' + newRecord);
+
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.RECORD_CREATE_FAILED,

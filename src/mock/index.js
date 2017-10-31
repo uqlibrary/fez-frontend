@@ -81,15 +81,17 @@ mock
     .onGet(new RegExp(escapeRegExp(routes.POSSIBLE_RECORDS_API({...standardQueryString}))))
         .reply(200, mockData.possibleUnclaimedList)
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}))))
-        // .reply(200, 's3-ap-southeast-2.amazonaws.com')
-        .reply(500, 'error')
+        .reply(200, 's3-ap-southeast-2.amazonaws.com')
+        // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'})
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-        .reply(200, {data: {}})
-        // .reply(500, 'error')
+        // .reply(200, {data: {}})
+        .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'})
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
         .reply(200, {data: {...mockData.record}})
+        // .reply(500, {message: 'error - failed POST NEW_RECORD_API'})
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}))))
         .reply(200, {data: {...mockData.record}})
+        // .reply(500, {message: 'error - failed PATCH EXISTING_RECORD_API'})
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}))))
         .reply(200, {data: {...mockData.record}})
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
@@ -98,9 +100,8 @@ mock
         .reply(200, {data: ''})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))
         .reply(200, {data: {}})
-    // .onAny().passThrough();
     .onAny().reply((config) => {
         console.log('url not found...');
         console.log(config.url);
-        return [404, `MOCK URL NOT FOUND: ${config.url}`];
+        return [404, {message: `MOCK URL NOT FOUND: ${config.url}`}];
     });
