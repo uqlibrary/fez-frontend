@@ -1075,15 +1075,15 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
           <CitationView
             className="citationShowMoreAuthors"
             prefix=" "
-            suffix="... "
-            value="4 more"
+            suffix=" "
+            value="4 more..."
           >
             <span
               className="citationShowMoreAuthors"
             >
                
-              4 more
-              ... 
+              4 more...
+               
             </span>
           </CitationView>
         </a>
