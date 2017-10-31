@@ -215,6 +215,7 @@ export const publicationTypes = (components) => [
         name: 'Working Paper',
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
         formComponent: components ? components.WorkingPaperForm : null,
+        citationComponent: components ? components.WorkingPaperCitation : null,
         hasFormComponent: true
     }
 ];
