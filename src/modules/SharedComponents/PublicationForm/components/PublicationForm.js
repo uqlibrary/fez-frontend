@@ -7,6 +7,7 @@ import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 import {SelectField, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes, validation} from 'config';
+import {Prompt} from 'react-router-dom';
 
 import * as recordForms from './Forms';
 
@@ -77,6 +78,8 @@ export default class PublicationForm extends Component {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.props.onFormCancel}
                     locale={txt.cancelWorkflowConfirmation} />
+
+                <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field

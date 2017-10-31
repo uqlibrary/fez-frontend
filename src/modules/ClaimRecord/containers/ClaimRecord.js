@@ -5,6 +5,7 @@ import Immutable from 'immutable';
 import ClaimRecord from '../components/ClaimRecord';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
+import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'ClaimRecord';
 
@@ -33,7 +34,7 @@ let ClaimPublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit
-})(ClaimRecord);
+})(confirmDiscardFormChanges(ClaimRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
     return {
