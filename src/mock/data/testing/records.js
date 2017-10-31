@@ -1,3 +1,396 @@
+export const design = {
+    "rek_pid": "UQ:162308",
+    "rek_title_xsdmf_id": 12299,
+    "rek_title": "Site setting and circumstance: A house and courtyard garden, Riga, Latvia",
+    "rek_description_xsdmf_id": 12199,
+    "rek_description": "The project is an exploration in the role of the garden as a means of generating a sense of place and to become a key focus in the formation and memory of a dwelling. The project is situated in Latvia, in the suburb of Meshaparks, an old established suburb of Riga. The suburb is characterized by larger lot sizes with villas set amongst trees. In the early 1930's Scandinavian functionalist architecture came to prominence and continued in popularity for a short period, dying out in the mid 1930's. The subject project involved the restoration of an existing timber functionalist house designed in 1933 by the architect Lidija Hofmane-Grinberga and constructed in the same year. The site also contained two outbuildings designed and constructed in the mid and late 1980's The project aimed to draw out the latent potential of the site circumstance that comprised the sunny garden hidden from the street and buildings that enclosed the garden to create an informal yet enclosed space that became in effect the major outdoor \"room\" of the house. The design draws inspiration from traditional Latvian farmhouse courtyard gardens, Japanese enclosed gardens as well as the work of Finnish architect Alvar Aalto.",
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 316,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": null,
+    "rek_date": "2017-10-31T13:53:23Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 2575,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2009-01-30T11:08:42Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2014-10-05T09:50:47Z",
+    "rek_file_downloads": 15,
+    "rek_citation": "",
+    "rek_genre_xsdmf_id": 12156,
+    "rek_genre": "Design",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 888,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_acknowledgements": null,
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 30053844,
+            "rek_author_pid": "UQ:162308",
+            "rek_author_xsdmf_id": 12125,
+            "rek_author": "Dickson, Michael",
+            "rek_author_order": 1
+        },
+        {
+            "rek_author_id": 30053845,
+            "rek_author_pid": "UQ:162308",
+            "rek_author_xsdmf_id": 12125,
+            "rek_author": "Francis, Mara",
+            "rek_author_order": 2
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 29399570,
+            "rek_author_id_pid": "UQ:162308",
+            "rek_author_id_xsdmf_id": 12120,
+            "rek_author_id": 5490,
+            "rek_author_id_order": 1
+        },
+        {
+            "rek_author_id_id": 29399571,
+            "rek_author_id_pid": "UQ:162308",
+            "rek_author_id_xsdmf_id": 12120,
+            "rek_author_id": 0,
+            "rek_author_id_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3202233,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Dickson Francis sia Architects",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3202234,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Azimuts sia Surveyors",
+            "rek_contributor_order": 2
+        },
+        {
+            "rek_contributor_id": 3202235,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "ARB Nams sia Structural consultants",
+            "rek_contributor_order": 3
+        },
+        {
+            "rek_contributor_id": 3202236,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Projektshanas birojs a.i.d.e Electrical consultants",
+            "rek_contributor_order": 4
+        },
+        {
+            "rek_contributor_id": 3202237,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Telekom serviss sia Low voltage consultants",
+            "rek_contributor_order": 5
+        },
+        {
+            "rek_contributor_id": 3202238,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Voteks sia Ventilation consultants",
+            "rek_contributor_order": 6
+        },
+        {
+            "rek_contributor_id": 3202239,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "HVAC sia Heating, water and sewerage consultants",
+            "rek_contributor_order": 7
+        },
+        {
+            "rek_contributor_id": 3202240,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Latinwest sia Swimming pool consultants",
+            "rek_contributor_order": 8
+        },
+        {
+            "rek_contributor_id": 3202241,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Aleja D sia Landscape consultants",
+            "rek_contributor_order": 9
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2387113,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2387114,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 2
+        },
+        {
+            "rek_contributor_id_id": 2387115,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 3
+        },
+        {
+            "rek_contributor_id_id": 2387116,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 4
+        },
+        {
+            "rek_contributor_id_id": 2387117,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 5
+        },
+        {
+            "rek_contributor_id_id": 2387118,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 6
+        },
+        {
+            "rek_contributor_id_id": 2387119,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 7
+        },
+        {
+            "rek_contributor_id_id": 2387120,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 8
+        },
+        {
+            "rek_contributor_id_id": 2387121,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 9
+        }
+    ],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_creator_id": [],
+    "fez_record_search_key_creator_name": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_date_available": {
+        "rek_date_available_id": 958217,
+        "rek_date_available_pid": "UQ:162308",
+        "rek_date_available_xsdmf_id": 12163,
+        "rek_date_available": "2008-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_end_page": null,
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [],
+    "fez_record_search_key_geographic_area": [],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11965237,
+            "rek_ismemberof_pid": "UQ:162308",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3804",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 11965238,
+            "rek_ismemberof_pid": "UQ:162308",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:152266",
+            "rek_ismemberof_order": 2
+        },
+        {
+            "rek_ismemberof_id": 11965239,
+            "rek_ismemberof_pid": "UQ:162308",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:254105",
+            "rek_ismemberof_order": 3
+        }
+    ],
+    "fez_record_search_key_job_number": null,
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 30033418,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Architecture",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 30033419,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Landscape design",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 30033420,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Restoration",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 30033421,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Interior and Environmental Design",
+            "rek_keywords_order": 4
+        },
+        {
+            "rek_keywords_id": 30033422,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Original Creative Works - Design/Architectural work",
+            "rek_keywords_order": 5
+        }
+    ],
+    "fez_record_search_key_language": [],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_location": [
+        {
+            "rek_location_id": 76950,
+            "rek_location_pid": "UQ:162308",
+            "rek_location_xsdmf_id": 12159,
+            "rek_location": "Meshaparks, Riga, Latvia",
+            "rek_location_order": null
+        }
+    ],
+    "fez_record_search_key_notes": null,
+    "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_original_format": null,
+    "fez_record_search_key_place_of_publication": {
+        "rek_place_of_publication_id": 4344342,
+        "rek_place_of_publication_pid": "UQ:162308",
+        "rek_place_of_publication_xsdmf_id": 12303,
+        "rek_place_of_publication": "Riga, Latvia"
+    },
+    "fez_record_search_key_project_name": {
+        "rek_project_name_id": 3660,
+        "rek_project_name_pid": "UQ:162308",
+        "rek_project_name_xsdmf_id": 12165,
+        "rek_project_name": "Site setting and circumstance: A house and courtyard garden, Riga, Latvia"
+    },
+    "fez_record_search_key_project_start_date": {
+        "rek_project_start_date_id": 8,
+        "rek_project_start_date_pid": "UQ:162308",
+        "rek_project_start_date_xsdmf_id": 12154,
+        "rek_project_start_date": "2005-01-05 00:00:00"
+    },
+    "fez_record_search_key_publisher": null,
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1420425,
+        "rek_refereed_source_pid": "UQ:162308",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_rights": null,
+    "fez_record_search_key_scale": null,
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_series": null,
+    "fez_record_search_key_source": null,
+    "fez_record_search_key_start_page": null,
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9416991,
+            "rek_subject_pid": "UQ:162308",
+            "rek_subject_xsdmf_id": 12137,
+            "rek_subject": 310000,
+            "rek_subject_order": 1
+        },
+        {
+            "rek_subject_id": 9416992,
+            "rek_subject_pid": "UQ:162308",
+            "rek_subject_xsdmf_id": 12137,
+            "rek_subject": 450025,
+            "rek_subject_order": 2
+        },
+        {
+            "rek_subject_id": 9416993,
+            "rek_subject_pid": "UQ:162308",
+            "rek_subject_xsdmf_id": 12137,
+            "rek_subject": 452674,
+            "rek_subject_order": 3
+        },
+        {
+            "rek_subject_id": 9416994,
+            "rek_subject_pid": "UQ:162308",
+            "rek_subject_xsdmf_id": 12137,
+            "rek_subject": 452675,
+            "rek_subject_order": 4
+        }
+    ],
+    "fez_record_search_key_total_pages": {
+        "rek_total_pages_id": 5709778,
+        "rek_total_pages_pid": "UQ:162308",
+        "rek_total_pages_xsdmf_id": 12309,
+        "rek_total_pages": "1 Design project"
+    },
+    "fez_record_search_key_translated_title": null
+};
+
 export const creativeWork = {
     "rek_pid": "UQ:177836",
     "rek_title_xsdmf_id": 12000,

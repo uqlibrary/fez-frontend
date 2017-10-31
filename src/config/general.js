@@ -120,6 +120,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_DESIGN,
         name: 'Design',
         class: 'Uqlibrary\\FezCore\\Types\\Design',
+        citationComponent: components ? components.DesignCitation : null,
         hasFormComponent: true
     },
     {
