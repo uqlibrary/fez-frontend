@@ -318,7 +318,6 @@ exports[`BookChapterForm renders  component 1`] = `
         }
       }
       name="editors"
-      showContributorAssignment={true}
     />
   </StandardCard>
   <StandardCard
