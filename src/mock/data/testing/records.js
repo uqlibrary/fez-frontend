@@ -4551,4 +4551,312 @@ export const seminarPaper = {
     "fez_record_search_key_total_pages": null
 };
 
+export const manuscript = {
+    "rek_pid": "UQ:677394",
+    "rek_title_xsdmf_id": 16809,
+    "rek_title": "Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944",
+    "rek_description_xsdmf_id": null,
+    "rek_description": null,
+    "rek_display_type_xsdmf_id": 16810,
+    "rek_display_type": 374,
+    "rek_status_xsdmf_id": 16816,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 16739,
+    "rek_date": "1944-07-15T00:00:00Z",
+    "rek_object_type_xsdmf_id": 16811,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 16818,
+    "rek_depositor": 3946,
+    "rek_created_date_xsdmf_id": 16813,
+    "rek_created_date": "2017-08-01T07:43:30Z",
+    "rek_updated_date_xsdmf_id": 16814,
+    "rek_updated_date": "2017-08-03T01:58:44Z",
+    "rek_file_downloads": 0,
+    "rek_citation": "<a class=\"citation_title\" title=\"Click to view Manuscript: Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944\" href=\"/view/UQ:677394\">Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944</a>",
+    "rek_genre_xsdmf_id": 16740,
+    "rek_genre": "text/tiff",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": 16773,
+    "rek_formatted_abstract": "Father Edward Leo Hayes Collection, UQFL2 contains correspondence and manuscript material on literary and historical matters, mostly in Queensland and New South Wales. It also includes personal papers of Father Hayes, relating to his activities as parish priest; bookplates, photographs, realia. <br /><br />Father Hayes was born in 1889 at Frederickton, New South Wales, and began book collecting at age seven. He commenced studies for the priesthood at St Columbia's College, Springwood, in 1911 and was ordained after further study at St Patrick's, Manly, in 1918. Over the course of 70 years he amassed one of the greatest collections of Australiana, including more than 25,000 volumes, 30,000 manuscript items, 1,500 Indigenous artefacts, maps, stamps, coins, weapons, geological specimens, cattle bells, and a variety of other material. On 19-20 October 1967 a convoy of removal trucks transported eighty large crates and 400 cartons of material to The University of Queensland Library at St Lucia, doubling its holdings on Australian subjects and effectively putting the Library on the map as an institution capable of supporting high-level research in Australian studies. (Information from Follett, Roslyn &amp; University of Queensland. Library &amp; Fryer Library (2010). Found in Fryer : stories from the Fryer Library collection. The University of Queensland Library, St Lucia, Qld.)<br />",
+    "rek_depositor_affiliation_xsdmf_id": 16822,
+    "rek_depositor_affiliation": 789,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 16815,
+    "rek_copyright": "on",
+    "fez_record_search_key_acknowledgements": null,
+    "fez_record_search_key_additional_notes": {
+        "rek_additional_notes_id": 1145,
+        "rek_additional_notes_pid": "UQ:677394",
+        "rek_additional_notes_xsdmf_id": 16817,
+        "rek_additional_notes": "Letter dated 15 July 1944 from Thea Astley to Mr [Paul] Grano sending 9 poems for criticism. Poems not included in collection."
+    },
+    "fez_record_search_key_advisory_statement": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 30314532,
+            "rek_author_pid": "UQ:677394",
+            "rek_author_xsdmf_id": 16722,
+            "rek_author": "Hayes, Edward Leo, 1889-1967",
+            "rek_author_order": 1
+        }
+    ],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 29593860,
+            "rek_author_id_pid": "UQ:677394",
+            "rek_author_id_xsdmf_id": 16717,
+            "rek_author_id": 0,
+            "rek_author_id_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3208035,
+            "rek_contributor_pid": "UQ:677394",
+            "rek_contributor_xsdmf_id": 16730,
+            "rek_contributor": "Astley, Thea, 1925-2004",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3208036,
+            "rek_contributor_pid": "UQ:677394",
+            "rek_contributor_xsdmf_id": 16730,
+            "rek_contributor": "Grano, Paul, 1894-1975",
+            "rek_contributor_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2391513,
+            "rek_contributor_id_pid": "UQ:677394",
+            "rek_contributor_id_xsdmf_id": 16725,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2391514,
+            "rek_contributor_id_pid": "UQ:677394",
+            "rek_contributor_id_xsdmf_id": 16725,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 2
+        }
+    ],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_date_available": {
+        "rek_date_available_id": 964186,
+        "rek_date_available_pid": "UQ:677394",
+        "rek_date_available_xsdmf_id": 16761,
+        "rek_date_available": "2017-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 4292134,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "FezACML_UQFL2_i3255.tif.xml",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 4292135,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "FezACML_UQFL2_i3255a.zip.xml",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 4292136,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "FezACML_UQFL2_i3255_copyright_permission.pdf.xml",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 4292137,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "FezACML_UQ_677394.xml",
+            "rek_file_attachment_name_order": 4
+        },
+        {
+            "rek_file_attachment_name_id": 4292138,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "presmd_UQFL2_i3255.xml",
+            "rek_file_attachment_name_order": 5
+        },
+        {
+            "rek_file_attachment_name_id": 4292139,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "presmd_UQFL2_i3255a.xml",
+            "rek_file_attachment_name_order": 6
+        },
+        {
+            "rek_file_attachment_name_id": 4292140,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "presmd_UQFL2_i3255_copyright_permission.xml",
+            "rek_file_attachment_name_order": 7
+        },
+        {
+            "rek_file_attachment_name_id": 4292141,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "preview_UQFL2_i3255.jpg",
+            "rek_file_attachment_name_order": 8
+        },
+        {
+            "rek_file_attachment_name_id": 4292142,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "thumbnail_UQFL2_i3255.jpg",
+            "rek_file_attachment_name_order": 9
+        },
+        {
+            "rek_file_attachment_name_id": 4292143,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "UQFL2_i3255.tif",
+            "rek_file_attachment_name_order": 10
+        },
+        {
+            "rek_file_attachment_name_id": 4292144,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "UQFL2_i3255a.zip",
+            "rek_file_attachment_name_order": 11
+        },
+        {
+            "rek_file_attachment_name_id": 4292145,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "UQFL2_i3255_copyright_permission.pdf",
+            "rek_file_attachment_name_order": 12
+        },
+        {
+            "rek_file_attachment_name_id": 4292146,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "web_UQFL2_i3255.jpg",
+            "rek_file_attachment_name_order": 13
+        }
+    ],
+    "fez_record_search_key_geographic_area": [],
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 12099445,
+            "rek_ismemberof_pid": "UQ:677394",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:278419",
+            "rek_ismemberof_order": 1
+        }
+    ],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 30307584,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Hayes, Edward Leo, 1889-1967 -- Archives",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 30307585,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Hayes, Edward Leo, 1889-1967 -- Manuscripts",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 30307586,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Astley, Thea, 1925-2004 -- Correspondence",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 30307587,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Grano, Paul, 1894-1975 -- Correspondence",
+            "rek_keywords_order": 4
+        },
+        {
+            "rek_keywords_id": 30307588,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Authors, Australian -- 20th century",
+            "rek_keywords_order": 5
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5518446,
+            "rek_language_pid": "UQ:677394",
+            "rek_language_xsdmf_id": 16751,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 382640,
+        "rek_oa_status_pid": "UQ:677394",
+        "rek_oa_status_xsdmf_id": 16989,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_original_format": {
+        "rek_original_format_id": 22324,
+        "rek_original_format_pid": "UQ:677394",
+        "rek_original_format_xsdmf_id": 16742,
+        "rek_original_format": "Leter, 1p; 26 x 20 cm."
+    },
+    "fez_record_search_key_rights": {
+        "rek_rights_id": 126671,
+        "rek_rights_pid": "UQ:677394",
+        "rek_rights_xsdmf_id": 16800,
+        "rek_rights": "For all enquiries about this work, please contact the Fryer Library, The University of Queensland Library."
+    },
+    "fez_record_search_key_series": {
+        "rek_series_id": 210709,
+        "rek_series_pid": "UQ:677394",
+        "rek_series_xsdmf_id": 16748,
+        "rek_series": "Father Edward Leo Hayes Collection, UQFL2"
+    },
+    "fez_record_search_key_source": {
+        "rek_source_id": 72075,
+        "rek_source_pid": "UQ:677394",
+        "rek_source_xsdmf_id": 16746,
+        "rek_source": "Father Edward Leo Hayes Collection, UQFL2 : 3255"
+    },
+    "fez_record_search_key_subject": [],
+    "fez_record_search_key_transcript": null,
+    "fez_record_search_key_translated_title": null
+};
+
 // TODO: each publication type should have a sample from eSpace data for testing

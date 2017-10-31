@@ -153,6 +153,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_MANUSCRIPT,
         name: 'Manuscript',
         class: 'Uqlibrary\\FezCore\\Types\\Manuscript',
+        citationComponent: components ? components.ManuscriptCitation : null,
         hasFormComponent: false
     },
     {
