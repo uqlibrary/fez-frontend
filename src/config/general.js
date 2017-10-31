@@ -113,6 +113,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         name: 'Department Technical Report',
         class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
+        citationComponent: components ? components.DepartmentTechnicalReportCitation : null,
         hasFormComponent: true
     },
     {

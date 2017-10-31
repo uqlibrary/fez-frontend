@@ -19,6 +19,7 @@ import PreprintCitation from './citations/PreprintCitation';
 import SeminarPaperCitation from './citations/SeminarPaperCitation';
 import CreativeWorkCitation from './citations/CreativeWorkCitation';
 import ManuscriptCitation from './citations/ManuscriptCitation';
+import DepartmentTechnicalReportCitation from './citations/DepartmentTechnicalReportCitation';
 
 export default class PublicationCitation extends Component {
     static propTypes = {
@@ -40,7 +41,7 @@ export default class PublicationCitation extends Component {
         // keep a list of all available citations
         this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation,
             AudioDocumentCitation, GenericDocumentCitation, ResearchReportCitation, PreprintCitation, SeminarPaperCitation,
-            CreativeWorkCitation, ManuscriptCitation};
+            CreativeWorkCitation, ManuscriptCitation, DepartmentTechnicalReportCitation};
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }
