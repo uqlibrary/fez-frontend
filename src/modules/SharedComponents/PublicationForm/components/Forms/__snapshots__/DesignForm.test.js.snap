@@ -115,7 +115,7 @@ exports[`DesignForm renders  component 1`] = `
           floatingLabelText="Location"
           fullWidth={true}
           hintText="Please enter the geographical location for the design itself."
-          name="fez_record_search_key_location.rek_location"
+          name="fez_record_search_key_location[0].rek_location"
           type="text"
         />
       </div>

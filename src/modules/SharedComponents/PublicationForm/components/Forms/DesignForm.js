@@ -96,7 +96,7 @@ export default class DesignForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="fez_record_search_key_location.rek_location"
+                                name="fez_record_search_key_location[0].rek_location"
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.location}
