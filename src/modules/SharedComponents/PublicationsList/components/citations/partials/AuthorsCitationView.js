@@ -54,7 +54,7 @@ class AuthorsCitationView extends React.Component {
         )) : [];
 
         return [
-            firstAuthor ? <CitationView className="citationAuthor" key={0} value={firstAuthor[searchKey.subkey]} prefix="" suffix={!lastAuthor ? ' ' : ''}/> : '',
+            <CitationView className="citationAuthor" key={0} value={firstAuthor[searchKey.subkey]} prefix="" suffix={!lastAuthor ? ' ' : ''}/>,
             ...middleAuthors,
             lastAuthor ? <CitationView className="citationAuthor" key={authors.length} value={lastAuthor[searchKey.subkey]} prefix=" and " suffix=" "/> : '',
         ];
