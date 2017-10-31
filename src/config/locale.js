@@ -1941,7 +1941,7 @@ export default {
                     }
                 },
             },
-            image: {
+            imageDocument: {
                 information: {
                     title: 'Image information',
                     help: {

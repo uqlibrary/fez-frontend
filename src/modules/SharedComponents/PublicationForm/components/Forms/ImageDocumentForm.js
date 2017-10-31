@@ -7,7 +7,7 @@ import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation, locale} from 'config';
 
-export default class ImageForm extends Component {
+export default class ImageDocumentForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool
     };
@@ -18,7 +18,7 @@ export default class ImageForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.image;
+        const txt = locale.components.publicationForm.imageDocument;
 
         return (
             <div>

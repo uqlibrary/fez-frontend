@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ImageForm renders  component 1`] = `
+exports[`ImageDocumentForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""

@@ -1,9 +1,9 @@
-jest.dontMock('./ImageForm');
+jest.dontMock('./ImageDocumentForm');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import ImageForm from './ImageForm';
+import ImageDocumentForm from './ImageDocumentForm';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -15,10 +15,10 @@ function setup({submitting, isShallow = true}){
     };
 
     if(isShallow) {
-        return shallow(<ImageForm {...props} />);
+        return shallow(<ImageDocumentForm {...props} />);
     }
 
-    return mount(<ImageForm {...props} />, {
+    return mount(<ImageDocumentForm {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -33,7 +33,7 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('ImageForm renders ', () => {
+describe('ImageDocumentForm renders ', () => {
     it('component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
