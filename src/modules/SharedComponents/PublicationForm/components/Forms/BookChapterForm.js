@@ -121,7 +121,6 @@ export default class BookChapterForm extends Component {
                     <div>{txt.editors.description}</div>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
                         name="editors"
                         locale={txt.editors.field}
                         disabled={this.props.submitting} />
