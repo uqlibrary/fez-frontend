@@ -1,3 +1,966 @@
+export const digilibImage = {
+    "rek_pid": "UQ:151598",
+    "rek_title_xsdmf_id": 4198,
+    "rek_title": "Conveyor, copper mine, Mount Morgan",
+    "rek_description_xsdmf_id": null,
+    "rek_description": null,
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 228,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": null,
+    "rek_date": "2017-10-31T17:50:11Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 218,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2008-06-30T09:39:35Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2015-07-31T06:28:46Z",
+    "rek_file_downloads": 87,
+    "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Keniger, Michael, 1947-\" href=\"/list/author/Keniger%2C+Michael%2C+1947-/\">Keniger, Michael, 1947-</a>. <i><a class=\"citation_title\" title=\"Click to view Digilib Image: Conveyor, copper mine, Mount Morgan\" href=\"/view/UQ:151598\">Conveyor, copper mine, Mount Morgan</a></i>. ",
+    "rek_genre_xsdmf_id": 7206,
+    "rek_genre": "Image",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 790,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "off",
+    "fez_record_search_key_alternative_title": [],
+    "fez_record_search_key_architect_name": [],
+    "fez_record_search_key_architect_id": [],
+    "fez_record_search_key_architectural_features": [
+        {
+            "rek_architectural_features_id": 107509,
+            "rek_architectural_features_pid": "UQ:151598",
+            "rek_architectural_features_xsdmf_id": 8312,
+            "rek_architectural_features_order": 1,
+            "rek_architectural_features": "Two-storey"
+        },
+        {
+            "rek_architectural_features_id": 107510,
+            "rek_architectural_features_pid": "UQ:151598",
+            "rek_architectural_features_xsdmf_id": 8312,
+            "rek_architectural_features_order": 2,
+            "rek_architectural_features": "Gable roofs"
+        }
+    ],
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 29844022,
+            "rek_author_pid": "UQ:151598",
+            "rek_author_xsdmf_id": 4213,
+            "rek_author": "Keniger, Michael, 1947-",
+            "rek_author_order": 1
+        }
+    ],
+    "fez_record_search_key_author_id": [],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_building_materials": [
+        {
+            "rek_building_materials_id": 69363,
+            "rek_building_materials_pid": "UQ:151598",
+            "rek_building_materials_xsdmf_id": 8309,
+            "rek_building_materials_order": 1,
+            "rek_building_materials": "Timber"
+        },
+        {
+            "rek_building_materials_id": 69364,
+            "rek_building_materials_pid": "UQ:151598",
+            "rek_building_materials_xsdmf_id": 8309,
+            "rek_building_materials_order": 2,
+            "rek_building_materials": "Corrugated iron"
+        }
+    ],
+    "fez_record_search_key_category": [
+        {
+            "rek_category_id": 32808,
+            "rek_category_pid": "UQ:151598",
+            "rek_category_xsdmf_id": 8293,
+            "rek_category_order": 1,
+            "rek_category": "Mines"
+        },
+        {
+            "rek_category_id": 32809,
+            "rek_category_pid": "UQ:151598",
+            "rek_category_xsdmf_id": 8293,
+            "rek_category_order": 2,
+            "rek_category": "Machinery"
+        }
+    ],
+    "fez_record_search_key_condition": [
+        {
+            "rek_condition_id": 16251,
+            "rek_condition_pid": "UQ:151598",
+            "rek_condition_xsdmf_id": 8303,
+            "rek_condition_order": 1,
+            "rek_condition": "Abandoned buildings"
+        }
+    ],
+    "fez_record_search_key_construction_date": null,
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_date_photo_taken": {
+        "rek_date_photo_taken_id": 5314,
+        "rek_date_photo_taken_pid": "UQ:151598",
+        "rek_date_photo_taken_xsdmf_id": 8348,
+        "rek_date_photo_taken": "1986-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_date_scanned": {
+        "rek_date_scanned_id": 5414,
+        "rek_date_scanned_pid": "UQ:151598",
+        "rek_date_scanned_xsdmf_id": 8347,
+        "rek_date_scanned": "2006-07-18T00:00:00Z"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 4012517,
+            "rek_file_attachment_name_pid": "UQ:151598",
+            "rek_file_attachment_name_xsdmf_id": 8271,
+            "rek_file_attachment_name": "Mt_Morgan_103.tif",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 4012518,
+            "rek_file_attachment_name_pid": "UQ:151598",
+            "rek_file_attachment_name_xsdmf_id": 8271,
+            "rek_file_attachment_name": "presmd_Mt_Morgan_103.xml",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 4012519,
+            "rek_file_attachment_name_pid": "UQ:151598",
+            "rek_file_attachment_name_xsdmf_id": 8271,
+            "rek_file_attachment_name": "preview_Mt_Morgan_103.jpg",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 4012520,
+            "rek_file_attachment_name_pid": "UQ:151598",
+            "rek_file_attachment_name_xsdmf_id": 8271,
+            "rek_file_attachment_name": "thumbnail_Mt_Morgan_103.jpg",
+            "rek_file_attachment_name_order": 4
+        },
+        {
+            "rek_file_attachment_name_id": 4012521,
+            "rek_file_attachment_name_pid": "UQ:151598",
+            "rek_file_attachment_name_xsdmf_id": 8271,
+            "rek_file_attachment_name": "web_Mt_Morgan_103.jpg",
+            "rek_file_attachment_name_order": 5
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_interior_features": [],
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11912995,
+            "rek_ismemberof_pid": "UQ:151598",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3683",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 11912996,
+            "rek_ismemberof_pid": "UQ:151598",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:209864",
+            "rek_ismemberof_order": 2
+        }
+    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_location": [
+        {
+            "rek_location_id": 74628,
+            "rek_location_pid": "UQ:151598",
+            "rek_location_xsdmf_id": 8346,
+            "rek_location": "Mount Morgan, Queensland",
+            "rek_location_order": 1
+        },
+        {
+            "rek_location_id": 74629,
+            "rek_location_pid": "UQ:151598",
+            "rek_location_xsdmf_id": 8346,
+            "rek_location": "Australia",
+            "rek_location_order": 2
+        }
+    ],
+    "fez_record_search_key_notes": null,
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 351021,
+        "rek_oa_status_pid": "UQ:151598",
+        "rek_oa_status_xsdmf_id": 17013,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_period": [],
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4611429,
+        "rek_publisher_pid": "UQ:151598",
+        "rek_publisher_xsdmf_id": 8349,
+        "rek_publisher": "The University of Queensland Library"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1397450,
+        "rek_refereed_source_pid": "UQ:151598",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_rights": null,
+    "fez_record_search_key_structural_systems": [
+        {
+            "rek_structural_systems_id": 49653,
+            "rek_structural_systems_pid": "UQ:151598",
+            "rek_structural_systems_xsdmf_id": 8306,
+            "rek_structural_systems_order": 1,
+            "rek_structural_systems": "Timber construction"
+        }
+    ],
+    "fez_record_search_key_style": [],
+    "fez_record_search_key_subcategory": [
+        {
+            "rek_subcategory_id": 38881,
+            "rek_subcategory_pid": "UQ:151598",
+            "rek_subcategory_xsdmf_id": 8298,
+            "rek_subcategory_order": 1,
+            "rek_subcategory": "Mines"
+        },
+        {
+            "rek_subcategory_id": 38882,
+            "rek_subcategory_pid": "UQ:151598",
+            "rek_subcategory_xsdmf_id": 8298,
+            "rek_subcategory_order": 2,
+            "rek_subcategory": "Mining equipment"
+        }
+    ],
+    "fez_record_search_key_surrounding_features": []
+};
+
+export const workingPaper = {
+    "rek_pid": "UQ:176145",
+    "rek_title_xsdmf_id": 10736,
+    "rek_title": "Education, Employment and Social Inclusion within the European Union",
+    "rek_description_xsdmf_id": 11371,
+    "rek_description": "Employment and social inclusion have been regular themes in the agenda of the European Union for the past fifteen years. From a soft coordinated approach mainly focused on the fight against unemployment, the European Union has moved towards a more coordinated but still voluntary strategy for its Member States and this agenda now has multiple economic, social and environmental objectives. A constant feature of these strategies has been the use of education and training policies, in particular for young people who are at risk of social exclusion. This paper reviews the relevant agenda of the European Union and presents the concept of second chance schools initiated by the European Commission in 1995. It seeks to understand how the elements associated with these youth and the policy-makers are combined in order to achieve success in terms of job opportunities and better inclusion for young people.",
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 183,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 6623,
+    "rek_date": "2006-11-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 4005,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2009-04-16T10:09:27Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2015-07-31T07:31:06Z",
+    "rek_file_downloads": 74,
+    "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Laselle, Laurence\" href=\"/list/author/Laselle%2C+Laurence/\">Laselle, Laurence</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Tisdell, Clem\" href=\"/list/author_id/610/\">Tisdell, Clem</a> (<span class=\"citation_date\">2006</span>). <i><a class=\"citation_title\" title=\"Click to view Working Paper: Education, Employment and Social Inclusion within the European Union\" href=\"/view/UQ:176145\">Education, Employment and Social Inclusion within the European Union</a></i>. <span class=\"citation_series\">Working papers on Social Economics, Policy and Development</span> <span class=\"citation_report_number\">46</span>, <span class=\"citation_org_unit_name\">School of Economics</span>, <span class=\"citation_org_name\">The University of Queensland</span>.",
+    "rek_genre_xsdmf_id": 7215,
+    "rek_genre": "Working Paper",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 803,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 28885263,
+            "rek_author_pid": "UQ:176145",
+            "rek_author_xsdmf_id": 6593,
+            "rek_author": "Laselle, Laurence",
+            "rek_author_order": 1
+        },
+        {
+            "rek_author_id": 28885264,
+            "rek_author_pid": "UQ:176145",
+            "rek_author_xsdmf_id": 6593,
+            "rek_author": "Tisdell, Clem",
+            "rek_author_order": 2
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 28257006,
+            "rek_author_id_pid": "UQ:176145",
+            "rek_author_id_xsdmf_id": 6588,
+            "rek_author_id": 0,
+            "rek_author_id_order": 1
+        },
+        {
+            "rek_author_id_id": 28257007,
+            "rek_author_id_pid": "UQ:176145",
+            "rek_author_id_xsdmf_id": 6588,
+            "rek_author_id": 610,
+            "rek_author_id_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_end_page": {
+        "rek_end_page_id": 5502160,
+        "rek_end_page_pid": "UQ:176145",
+        "rek_end_page_xsdmf_id": 10746,
+        "rek_end_page": "23"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 3880976,
+            "rek_file_attachment_name_pid": "UQ:176145",
+            "rek_file_attachment_name_xsdmf_id": 6673,
+            "rek_file_attachment_name": "presmd_wp46.xml",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 3880977,
+            "rek_file_attachment_name_pid": "UQ:176145",
+            "rek_file_attachment_name_xsdmf_id": 6673,
+            "rek_file_attachment_name": "wp46.pdf",
+            "rek_file_attachment_name_order": 2
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11518234,
+            "rek_ismemberof_pid": "UQ:176145",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:13199",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 11518235,
+            "rek_ismemberof_pid": "UQ:176145",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:152266",
+            "rek_ismemberof_order": 2
+        },
+        {
+            "rek_ismemberof_id": 11518236,
+            "rek_ismemberof_pid": "UQ:176145",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3923",
+            "rek_ismemberof_order": 3
+        }
+    ],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 29166484,
+            "rek_keywords_pid": "UQ:176145",
+            "rek_keywords_xsdmf_id": 7970,
+            "rek_keywords": "European Union",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 29166485,
+            "rek_keywords_pid": "UQ:176145",
+            "rek_keywords_xsdmf_id": 7970,
+            "rek_keywords": "Education",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29166486,
+            "rek_keywords_pid": "UQ:176145",
+            "rek_keywords_xsdmf_id": 7970,
+            "rek_keywords": "Employment",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 29166487,
+            "rek_keywords_pid": "UQ:176145",
+            "rek_keywords_xsdmf_id": 7970,
+            "rek_keywords": "Social inclusion",
+            "rek_keywords_order": 4
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5226028,
+            "rek_language_pid": "UQ:176145",
+            "rek_language_xsdmf_id": 10742,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_link": [
+        {
+            "rek_link_id": 3191760,
+            "rek_link_pid": "UQ:176145",
+            "rek_link_xsdmf_id": 6685,
+            "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
+            "rek_link_order": 1
+        }
+    ],
+    "fez_record_search_key_link_description": [
+        {
+            "rek_link_description_id": 3191729,
+            "rek_link_description_pid": "UQ:176145",
+            "rek_link_description_xsdmf_id": 6684,
+            "rek_link_description": "Link to School of Economics working papers",
+            "rek_link_description_order": 1
+        }
+    ],
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1111115,
+        "rek_notes_pid": "UQ:176145",
+        "rek_notes_xsdmf_id": 12526,
+        "rek_notes": "ISSN 1448-8563"
+    },
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 320034,
+        "rek_oa_status_pid": "UQ:176145",
+        "rek_oa_status_xsdmf_id": 17007,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_org_name": {
+        "rek_org_name_id": 349870,
+        "rek_org_name_pid": "UQ:176145",
+        "rek_org_name_xsdmf_id": 6613,
+        "rek_org_name": "The University of Queensland"
+    },
+    "fez_record_search_key_org_unit_name": {
+        "rek_org_unit_name_id": 339466,
+        "rek_org_unit_name_pid": "UQ:176145",
+        "rek_org_unit_name_xsdmf_id": 6610,
+        "rek_org_unit_name": "School of Economics"
+    },
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4431865,
+        "rek_publisher_pid": "UQ:176145",
+        "rek_publisher_xsdmf_id": 6621,
+        "rek_publisher": "School of Economics"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1182477,
+        "rek_refereed_source_pid": "UQ:176145",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_report_number": {
+        "rek_report_number_id": 16088,
+        "rek_report_number_pid": "UQ:176145",
+        "rek_report_number_xsdmf_id": 6619,
+        "rek_report_number": "46"
+    },
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_series": {
+        "rek_series_id": 193608,
+        "rek_series_pid": "UQ:176145",
+        "rek_series_xsdmf_id": 6608,
+        "rek_series": "Working papers on Social Economics, Policy and Development"
+    },
+    "fez_record_search_key_start_page": {
+        "rek_start_page_id": 5572428,
+        "rek_start_page_pid": "UQ:176145",
+        "rek_start_page_xsdmf_id": 10745,
+        "rek_start_page": "1"
+    },
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9095145,
+            "rek_subject_pid": "UQ:176145",
+            "rek_subject_xsdmf_id": 6605,
+            "rek_subject": 452775,
+            "rek_subject_order": 1
+        },
+        {
+            "rek_subject_id": 9095146,
+            "rek_subject_pid": "UQ:176145",
+            "rek_subject_xsdmf_id": 6605,
+            "rek_subject": 452784,
+            "rek_subject_order": 2
+        }
+    ],
+    "fez_record_search_key_total_pages": {
+        "rek_total_pages_id": 5481346,
+        "rek_total_pages_pid": "UQ:176145",
+        "rek_total_pages_xsdmf_id": 10747,
+        "rek_total_pages": "23"
+    },
+    "fez_record_search_key_translated_title": null
+};
+
+export const design = {
+    "rek_pid": "UQ:162308",
+    "rek_title_xsdmf_id": 12299,
+    "rek_title": "Site setting and circumstance: A house and courtyard garden, Riga, Latvia",
+    "rek_description_xsdmf_id": 12199,
+    "rek_description": "The project is an exploration in the role of the garden as a means of generating a sense of place and to become a key focus in the formation and memory of a dwelling. The project is situated in Latvia, in the suburb of Meshaparks, an old established suburb of Riga. The suburb is characterized by larger lot sizes with villas set amongst trees. In the early 1930's Scandinavian functionalist architecture came to prominence and continued in popularity for a short period, dying out in the mid 1930's. The subject project involved the restoration of an existing timber functionalist house designed in 1933 by the architect Lidija Hofmane-Grinberga and constructed in the same year. The site also contained two outbuildings designed and constructed in the mid and late 1980's The project aimed to draw out the latent potential of the site circumstance that comprised the sunny garden hidden from the street and buildings that enclosed the garden to create an informal yet enclosed space that became in effect the major outdoor \"room\" of the house. The design draws inspiration from traditional Latvian farmhouse courtyard gardens, Japanese enclosed gardens as well as the work of Finnish architect Alvar Aalto.",
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 316,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": null,
+    "rek_date": "2017-10-31T13:53:23Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 2575,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2009-01-30T11:08:42Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2014-10-05T09:50:47Z",
+    "rek_file_downloads": 15,
+    "rek_citation": "",
+    "rek_genre_xsdmf_id": 12156,
+    "rek_genre": "Design",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 888,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_acknowledgements": null,
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 30053844,
+            "rek_author_pid": "UQ:162308",
+            "rek_author_xsdmf_id": 12125,
+            "rek_author": "Dickson, Michael",
+            "rek_author_order": 1
+        },
+        {
+            "rek_author_id": 30053845,
+            "rek_author_pid": "UQ:162308",
+            "rek_author_xsdmf_id": 12125,
+            "rek_author": "Francis, Mara",
+            "rek_author_order": 2
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 29399570,
+            "rek_author_id_pid": "UQ:162308",
+            "rek_author_id_xsdmf_id": 12120,
+            "rek_author_id": 5490,
+            "rek_author_id_order": 1
+        },
+        {
+            "rek_author_id_id": 29399571,
+            "rek_author_id_pid": "UQ:162308",
+            "rek_author_id_xsdmf_id": 12120,
+            "rek_author_id": 0,
+            "rek_author_id_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3202233,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Dickson Francis sia Architects",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3202234,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Azimuts sia Surveyors",
+            "rek_contributor_order": 2
+        },
+        {
+            "rek_contributor_id": 3202235,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "ARB Nams sia Structural consultants",
+            "rek_contributor_order": 3
+        },
+        {
+            "rek_contributor_id": 3202236,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Projektshanas birojs a.i.d.e Electrical consultants",
+            "rek_contributor_order": 4
+        },
+        {
+            "rek_contributor_id": 3202237,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Telekom serviss sia Low voltage consultants",
+            "rek_contributor_order": 5
+        },
+        {
+            "rek_contributor_id": 3202238,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Voteks sia Ventilation consultants",
+            "rek_contributor_order": 6
+        },
+        {
+            "rek_contributor_id": 3202239,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "HVAC sia Heating, water and sewerage consultants",
+            "rek_contributor_order": 7
+        },
+        {
+            "rek_contributor_id": 3202240,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Latinwest sia Swimming pool consultants",
+            "rek_contributor_order": 8
+        },
+        {
+            "rek_contributor_id": 3202241,
+            "rek_contributor_pid": "UQ:162308",
+            "rek_contributor_xsdmf_id": 12133,
+            "rek_contributor": "Aleja D sia Landscape consultants",
+            "rek_contributor_order": 9
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2387113,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2387114,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 2
+        },
+        {
+            "rek_contributor_id_id": 2387115,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 3
+        },
+        {
+            "rek_contributor_id_id": 2387116,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 4
+        },
+        {
+            "rek_contributor_id_id": 2387117,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 5
+        },
+        {
+            "rek_contributor_id_id": 2387118,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 6
+        },
+        {
+            "rek_contributor_id_id": 2387119,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 7
+        },
+        {
+            "rek_contributor_id_id": 2387120,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 8
+        },
+        {
+            "rek_contributor_id_id": 2387121,
+            "rek_contributor_id_pid": "UQ:162308",
+            "rek_contributor_id_xsdmf_id": 12128,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 9
+        }
+    ],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_creator_id": [],
+    "fez_record_search_key_creator_name": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_date_available": {
+        "rek_date_available_id": 958217,
+        "rek_date_available_pid": "UQ:162308",
+        "rek_date_available_xsdmf_id": 12163,
+        "rek_date_available": "2008-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_end_page": null,
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [],
+    "fez_record_search_key_geographic_area": [],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11965237,
+            "rek_ismemberof_pid": "UQ:162308",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3804",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 11965238,
+            "rek_ismemberof_pid": "UQ:162308",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:152266",
+            "rek_ismemberof_order": 2
+        },
+        {
+            "rek_ismemberof_id": 11965239,
+            "rek_ismemberof_pid": "UQ:162308",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:254105",
+            "rek_ismemberof_order": 3
+        }
+    ],
+    "fez_record_search_key_job_number": null,
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 30033418,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Architecture",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 30033419,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Landscape design",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 30033420,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Restoration",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 30033421,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Interior and Environmental Design",
+            "rek_keywords_order": 4
+        },
+        {
+            "rek_keywords_id": 30033422,
+            "rek_keywords_pid": "UQ:162308",
+            "rek_keywords_xsdmf_id": 12138,
+            "rek_keywords": "Original Creative Works - Design/Architectural work",
+            "rek_keywords_order": 5
+        }
+    ],
+    "fez_record_search_key_language": [],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_location": [
+        {
+            "rek_location_id": 76950,
+            "rek_location_pid": "UQ:162308",
+            "rek_location_xsdmf_id": 12159,
+            "rek_location": "Meshaparks, Riga, Latvia",
+            "rek_location_order": null
+        }
+    ],
+    "fez_record_search_key_notes": null,
+    "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_original_format": null,
+    "fez_record_search_key_place_of_publication": {
+        "rek_place_of_publication_id": 4344342,
+        "rek_place_of_publication_pid": "UQ:162308",
+        "rek_place_of_publication_xsdmf_id": 12303,
+        "rek_place_of_publication": "Riga, Latvia"
+    },
+    "fez_record_search_key_project_name": {
+        "rek_project_name_id": 3660,
+        "rek_project_name_pid": "UQ:162308",
+        "rek_project_name_xsdmf_id": 12165,
+        "rek_project_name": "Site setting and circumstance: A house and courtyard garden, Riga, Latvia"
+    },
+    "fez_record_search_key_project_start_date": {
+        "rek_project_start_date_id": 8,
+        "rek_project_start_date_pid": "UQ:162308",
+        "rek_project_start_date_xsdmf_id": 12154,
+        "rek_project_start_date": "2005-01-05 00:00:00"
+    },
+    "fez_record_search_key_publisher": null,
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1420425,
+        "rek_refereed_source_pid": "UQ:162308",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_rights": null,
+    "fez_record_search_key_scale": null,
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_series": null,
+    "fez_record_search_key_source": null,
+    "fez_record_search_key_start_page": null,
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9416991,
+            "rek_subject_pid": "UQ:162308",
+            "rek_subject_xsdmf_id": 12137,
+            "rek_subject": 310000,
+            "rek_subject_order": 1
+        },
+        {
+            "rek_subject_id": 9416992,
+            "rek_subject_pid": "UQ:162308",
+            "rek_subject_xsdmf_id": 12137,
+            "rek_subject": 450025,
+            "rek_subject_order": 2
+        },
+        {
+            "rek_subject_id": 9416993,
+            "rek_subject_pid": "UQ:162308",
+            "rek_subject_xsdmf_id": 12137,
+            "rek_subject": 452674,
+            "rek_subject_order": 3
+        },
+        {
+            "rek_subject_id": 9416994,
+            "rek_subject_pid": "UQ:162308",
+            "rek_subject_xsdmf_id": 12137,
+            "rek_subject": 452675,
+            "rek_subject_order": 4
+        }
+    ],
+    "fez_record_search_key_total_pages": {
+        "rek_total_pages_id": 5709778,
+        "rek_total_pages_pid": "UQ:162308",
+        "rek_total_pages_xsdmf_id": 12309,
+        "rek_total_pages": "1 Design project"
+    },
+    "fez_record_search_key_translated_title": null
+};
+
 export const creativeWork = {
     "rek_pid": "UQ:177836",
     "rek_title_xsdmf_id": 12000,
@@ -247,6 +1210,216 @@ export const creativeWork = {
         "rek_total_pages_pid": "UQ:177836",
         "rek_total_pages_xsdmf_id": 11992,
         "rek_total_pages": "10"
+    },
+    "fez_record_search_key_translated_title": null
+};
+
+export const departmentTechnicalReport = {
+    "rek_pid": "UQ:165945",
+    "rek_title_xsdmf_id": 10766,
+    "rek_title": "Estimates of injury mortality and disability based on the Cape Metropole study",
+    "rek_description_xsdmf_id": 11455,
+    "rek_description": "Injuries are a leading cause of death and burden of disease in persons younger than 60 years of age (Peden et al., 2002) and it has been estimated that in 2000, injuries accounted for 9% of the world’s deaths and 12% of the world’s burden of disease (WHO, 2002). Injuries follow a strong gender pattern and injury mortality among men is twice that among women. Injuries affect mainly young, economically active adults between the ages of 15 and 44 years with this age group accounting for almost 50% of the world’s injury-related mortality (WHO, 2002). More than 90% of the world’s deaths from injuries occur in low- and middle-income countries (WHO, 2002). Males in Africa and the low- and middle-income countries of Europe have the highest injury-related mortality rates worldwide. Among females, the highest injuryrelated mortality rates are found in Africa and India. Zwi et al. highlight this neglected health problem in developing countries and argue for an immediate policy response (Zwi et al.,",
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 181,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 6510,
+    "rek_date": "2002-01-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 3784,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2009-03-04T10:33:37Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2014-10-05T09:39:20Z",
+    "rek_file_downloads": 0,
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Norman, Rosana\" href=\"/list/author_id/72682/\">Norman, Rosana</a>  (<span class=\"citation_date\">2002</span>) <a class=\"citation_title\" title=\"Click to view Department Technical Report: Estimates of injury mortality and disability based on the Cape Metropole study\" href=\"/view/UQ:165945\">Estimates of injury mortality and disability based on the Cape Metropole study</a>. <span class=\"citation_series\">Technical Report</span> , <span class=\"citation_org_unit_name\">Burden of Disease Research Unit of the South African Medical Research Council</span>, <span class=\"citation_org_name\">South African Medical Research Council</span>.",
+    "rek_genre_xsdmf_id": 7204,
+    "rek_genre": "Department Technical Report",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 803,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 29062849,
+            "rek_author_pid": "UQ:165945",
+            "rek_author_xsdmf_id": 6468,
+            "rek_author": "Norman, Rosana",
+            "rek_author_order": 1
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 28430389,
+            "rek_author_id_pid": "UQ:165945",
+            "rek_author_id_xsdmf_id": 6463,
+            "rek_author_id": 72682,
+            "rek_author_id_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_end_page": {
+        "rek_end_page_id": 5543155,
+        "rek_end_page_pid": "UQ:165945",
+        "rek_end_page_xsdmf_id": 10776,
+        "rek_end_page": "75"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_herdc_code": null,
+    "fez_record_search_key_herdc_status": null,
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11613236,
+            "rek_ismemberof_pid": "UQ:165945",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3751",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 11613237,
+            "rek_ismemberof_pid": "UQ:165945",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:152266",
+            "rek_ismemberof_order": 2
+        }
+    ],
+    "fez_record_search_key_keywords": [],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5270831,
+            "rek_language_pid": "UQ:165945",
+            "rek_language_xsdmf_id": 10772,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_link": [
+        {
+            "rek_link_id": 3201460,
+            "rek_link_pid": "UQ:165945",
+            "rek_link_xsdmf_id": 6574,
+            "rek_link": "http://www.mrc.ac.za/bod/cmsreport.pdf",
+            "rek_link_order": 1
+        }
+    ],
+    "fez_record_search_key_link_description": [
+        {
+            "rek_link_description_id": 3201429,
+            "rek_link_description_pid": "UQ:165945",
+            "rek_link_description_xsdmf_id": 6573,
+            "rek_link_description": "Link to full text",
+            "rek_link_description_order": 1
+        }
+    ],
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1123270,
+        "rek_notes_pid": "UQ:165945",
+        "rek_notes_xsdmf_id": 12446,
+        "rek_notes": "ISBN 1-920015-12-4"
+    },
+    "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_org_name": {
+        "rek_org_name_id": 352116,
+        "rek_org_name_pid": "UQ:165945",
+        "rek_org_name_xsdmf_id": 6512,
+        "rek_org_name": "South African Medical Research Council"
+    },
+    "fez_record_search_key_org_unit_name": {
+        "rek_org_unit_name_id": 341693,
+        "rek_org_unit_name_pid": "UQ:165945",
+        "rek_org_unit_name_xsdmf_id": 6505,
+        "rek_org_unit_name": "Burden of Disease Research Unit of the South African Medical Research Council"
+    },
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4476285,
+        "rek_publisher_pid": "UQ:165945",
+        "rek_publisher_xsdmf_id": 6508,
+        "rek_publisher": "South African Medical Research Council."
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1233090,
+        "rek_refereed_source_pid": "UQ:165945",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_report_number": null,
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_series": {
+        "rek_series_id": 197810,
+        "rek_series_pid": "UQ:165945",
+        "rek_series_xsdmf_id": 6503,
+        "rek_series": "Technical Report"
+    },
+    "fez_record_search_key_start_page": {
+        "rek_start_page_id": 5613694,
+        "rek_start_page_pid": "UQ:165945",
+        "rek_start_page_xsdmf_id": 10775,
+        "rek_start_page": "1"
+    },
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9154715,
+            "rek_subject_pid": "UQ:165945",
+            "rek_subject_xsdmf_id": 6480,
+            "rek_subject": 452650,
+            "rek_subject_order": 1
+        }
+    ],
+    "fez_record_search_key_total_pages": {
+        "rek_total_pages_id": 5527264,
+        "rek_total_pages_pid": "UQ:165945",
+        "rek_total_pages_xsdmf_id": 10777,
+        "rek_total_pages": "75"
     },
     "fez_record_search_key_translated_title": null
 };
@@ -3509,121 +4682,121 @@ export const mockRecordToFix = {
     "fez_record_search_key_advisory_statement":null,
     "fez_record_search_key_alternate_genre":[
 
-],
+    ],
     "fez_record_search_key_alternative_title":[
 
-],
+    ],
     "fez_record_search_key_ands_collection_type":null,
     "fez_record_search_key_architectural_features":[
 
-],
+    ],
     "fez_record_search_key_article_number":null,
     "fez_record_search_key_assigned_group_id":[
 
-],
+    ],
     "fez_record_search_key_assigned_user_id":[
 
-],
+    ],
     "fez_record_search_key_author":[
-    {
-        "rek_author_id":30038090,
-        "rek_author_pid":"UQ:41878",
-        "rek_author_xsdmf_id":6351,
-        "rek_author":"Brown, M. A.",
-        "rek_author_order":2
-    },
-    {
-        "rek_author_id":30038089,
-        "rek_author_pid":"UQ:41878",
-        "rek_author_xsdmf_id":6351,
-        "rek_author":"He, Y.",
-        "rek_author_order":1
-    },
-    {
-        "rek_author_id":30038091,
-        "rek_author_pid":"UQ:41878",
-        "rek_author_xsdmf_id":6351,
-        "rek_author":"Rothnagel, J. A.",
-        "rek_author_order":3
-    },
-    {
-        "rek_author_id":30038092,
-        "rek_author_pid":"UQ:41878",
-        "rek_author_xsdmf_id":6351,
-        "rek_author":"Saunders, N. A.",
-        "rek_author_order":4
-    },
-    {
-        "rek_author_id":30038093,
-        "rek_author_pid":"UQ:41878",
-        "rek_author_xsdmf_id":6351,
-        "rek_author":"Smith, R.",
-        "rek_author_order":5
-    }
-],
+        {
+            "rek_author_id":30038090,
+            "rek_author_pid":"UQ:41878",
+            "rek_author_xsdmf_id":6351,
+            "rek_author":"Brown, M. A.",
+            "rek_author_order":2
+        },
+        {
+            "rek_author_id":30038089,
+            "rek_author_pid":"UQ:41878",
+            "rek_author_xsdmf_id":6351,
+            "rek_author":"He, Y.",
+            "rek_author_order":1
+        },
+        {
+            "rek_author_id":30038091,
+            "rek_author_pid":"UQ:41878",
+            "rek_author_xsdmf_id":6351,
+            "rek_author":"Rothnagel, J. A.",
+            "rek_author_order":3
+        },
+        {
+            "rek_author_id":30038092,
+            "rek_author_pid":"UQ:41878",
+            "rek_author_xsdmf_id":6351,
+            "rek_author":"Saunders, N. A.",
+            "rek_author_order":4
+        },
+        {
+            "rek_author_id":30038093,
+            "rek_author_pid":"UQ:41878",
+            "rek_author_xsdmf_id":6351,
+            "rek_author":"Smith, R.",
+            "rek_author_order":5
+        }
+    ],
     "fez_record_search_key_author_affiliation_id":[
 
-],
+    ],
     "fez_record_search_key_author_affiliation_country":[
 
-],
+    ],
     "fez_record_search_key_author_affiliation_full_address":[
 
-],
+    ],
     "fez_record_search_key_author_affiliation_name":[
 
-],
+    ],
     "fez_record_search_key_author_id":[
-    {
-        "rek_author_id_id":29384218,
-        "rek_author_id_pid":"UQ:41878",
-        "rek_author_id_xsdmf_id":6346,
-        "rek_author_id":0,
-        "rek_author_id_order":1
-    },
-    {
-        "rek_author_id_id":29384219,
-        "rek_author_id_pid":"UQ:41878",
-        "rek_author_id_xsdmf_id":6346,
-        "rek_author_id":410,
-        "rek_author_id_order":2
-    },
-    {
-        "rek_author_id_id":29384220,
-        "rek_author_id_pid":"UQ:41878",
-        "rek_author_id_xsdmf_id":6346,
-        "rek_author_id":786,
-        "rek_author_id_order":3
-    },
-    {
-        "rek_author_id_id":29384221,
-        "rek_author_id_pid":"UQ:41878",
-        "rek_author_id_xsdmf_id":6346,
-        "rek_author_id":687,
-        "rek_author_id_order":4
-    },
-    {
-        "rek_author_id_id":29384222,
-        "rek_author_id_pid":"UQ:41878",
-        "rek_author_id_xsdmf_id":6346,
-        "rek_author_id":4100,
-        "rek_author_id_order":5
-    }
-],
+        {
+            "rek_author_id_id":29384218,
+            "rek_author_id_pid":"UQ:41878",
+            "rek_author_id_xsdmf_id":6346,
+            "rek_author_id":0,
+            "rek_author_id_order":1
+        },
+        {
+            "rek_author_id_id":29384219,
+            "rek_author_id_pid":"UQ:41878",
+            "rek_author_id_xsdmf_id":6346,
+            "rek_author_id":410,
+            "rek_author_id_order":2
+        },
+        {
+            "rek_author_id_id":29384220,
+            "rek_author_id_pid":"UQ:41878",
+            "rek_author_id_xsdmf_id":6346,
+            "rek_author_id":786,
+            "rek_author_id_order":3
+        },
+        {
+            "rek_author_id_id":29384221,
+            "rek_author_id_pid":"UQ:41878",
+            "rek_author_id_xsdmf_id":6346,
+            "rek_author_id":687,
+            "rek_author_id_order":4
+        },
+        {
+            "rek_author_id_id":29384222,
+            "rek_author_id_pid":"UQ:41878",
+            "rek_author_id_xsdmf_id":6346,
+            "rek_author_id":4100,
+            "rek_author_id_order":5
+        }
+    ],
     "fez_record_search_key_author_role":[
 
-],
+    ],
     "fez_record_search_key_book_title":null,
     "fez_record_search_key_building_materials":[
 
-],
+    ],
     "fez_record_search_key_category":[
 
-],
+    ],
     "fez_record_search_key_chapter_number":null,
     "fez_record_search_key_condition":[
 
-],
+    ],
     "fez_record_search_key_conference_dates":null,
     "fez_record_search_key_conference_id":null,
     "fez_record_search_key_conference_location":null,
@@ -3631,36 +4804,36 @@ export const mockRecordToFix = {
     "fez_record_search_key_construction_date":null,
     "fez_record_search_key_contact_details_email":[
 
-],
+    ],
     "fez_record_search_key_contributor":[
 
-],
+    ],
     "fez_record_search_key_contributor_id":[
 
-],
+    ],
     "fez_record_search_key_convener":null,
     "fez_record_search_key_corresponding_email":[
 
-],
+    ],
     "fez_record_search_key_corresponding_name":[
 
-],
+    ],
     "fez_record_search_key_corresponding_country":[
 
-],
+    ],
     "fez_record_search_key_corresponding_organisation":[
 
-],
+    ],
     "fez_record_search_key_country_of_issue":null,
     "fez_record_search_key_coverage_period":[
 
-],
+    ],
     "fez_record_search_key_creator_id":[
 
-],
+    ],
     "fez_record_search_key_creator_name":[
 
-],
+    ],
     "fez_record_search_key_datastream_policy":null,
     "fez_record_search_key_data_volume":null,
     "fez_record_search_key_date_available":null,
@@ -3671,161 +4844,161 @@ export const mockRecordToFix = {
     "fez_record_search_key_edition":null,
     "fez_record_search_key_end_date":null,
     "fez_record_search_key_end_page":{
-    "rek_end_page_id":5708077,
+        "rek_end_page_id":5708077,
         "rek_end_page_pid":"UQ:41878",
         "rek_end_page_xsdmf_id":6384,
         "rek_end_page":"253A"
-},
+    },
     "fez_record_search_key_fields_of_research":[
 
-],
+    ],
     "fez_record_search_key_file_attachment_access_condition":[
 
-],
+    ],
     "fez_record_search_key_file_attachment_embargo_date":[
 
-],
+    ],
     "fez_record_search_key_file_attachment_name":[
 
-],
+    ],
     "fez_record_search_key_geographic_area":[
 
-],
+    ],
     "fez_record_search_key_grant_acronym":[
 
-],
+    ],
     "fez_record_search_key_grant_agency":[
 
-],
+    ],
     "fez_record_search_key_grant_agency_id":[
 
-],
+    ],
     "fez_record_search_key_grant_id":[
 
-],
+    ],
     "fez_record_search_key_grant_text":[
 
-],
+    ],
     "fez_record_search_key_herdc_code":{
-    "rek_herdc_code_id":4887870,
+        "rek_herdc_code_id":4887870,
         "rek_herdc_code_pid":"UQ:41878",
         "rek_herdc_code_xsdmf_id":12386,
         "rek_herdc_code":450013
-},
+    },
     "fez_record_search_key_herdc_status":{
-    "rek_herdc_status_id":3755768,
+        "rek_herdc_status_id":3755768,
         "rek_herdc_status_pid":"UQ:41878",
         "rek_herdc_status_xsdmf_id":12405,
         "rek_herdc_status":453220
-},
+    },
     "fez_record_search_key_identifier":[
 
-],
+    ],
     "fez_record_search_key_institutional_status":{
-    "rek_institutional_status_id":3388459,
+        "rek_institutional_status_id":3388459,
         "rek_institutional_status_pid":"UQ:41878",
         "rek_institutional_status_xsdmf_id":12406,
         "rek_institutional_status":453225
-},
+    },
     "fez_record_search_key_interior_features":[
 
-],
+    ],
     "fez_record_search_key_isbn":[
 
-],
+    ],
     "fez_record_search_key_isdatasetof":[
 
-],
+    ],
     "fez_record_search_key_isderivationof":[
 
-],
+    ],
     "fez_record_search_key_isi_loc":{
-    "rek_isi_loc_id":4013895,
+        "rek_isi_loc_id":4013895,
         "rek_isi_loc_pid":"UQ:41878",
         "rek_isi_loc_xsdmf_id":10797,
         "rek_isi_loc":"000224648802120"
-},
+    },
     "fez_record_search_key_ismemberof":[
-    {
-        "rek_ismemberof_id":11962368,
-        "rek_ismemberof_pid":"UQ:41878",
-        "rek_ismemberof_xsdmf_id":149,
-        "rek_ismemberof":"UQ:152266",
-        "rek_ismemberof_order":2
-    },
-    {
-        "rek_ismemberof_id":11962367,
-        "rek_ismemberof_pid":"UQ:41878",
-        "rek_ismemberof_xsdmf_id":149,
-        "rek_ismemberof":"UQ:3825",
-        "rek_ismemberof_order":1
-    }
-],
+        {
+            "rek_ismemberof_id":11962368,
+            "rek_ismemberof_pid":"UQ:41878",
+            "rek_ismemberof_xsdmf_id":149,
+            "rek_ismemberof":"UQ:152266",
+            "rek_ismemberof_order":2
+        },
+        {
+            "rek_ismemberof_id":11962367,
+            "rek_ismemberof_pid":"UQ:41878",
+            "rek_ismemberof_xsdmf_id":149,
+            "rek_ismemberof":"UQ:3825",
+            "rek_ismemberof_order":1
+        }
+    ],
     "fez_record_search_key_issn":[
-    {
-        "rek_issn_id":5349729,
-        "rek_issn_pid":"UQ:41878",
-        "rek_issn_xsdmf_id":10796,
-        "rek_issn":"1059-1524",
-        "rek_issn_order":1
-    },
-    {
-        "rek_issn_id":5349730,
-        "rek_issn_pid":"UQ:41878",
-        "rek_issn_xsdmf_id":10796,
-        "rek_issn":"1939-4586",
-        "rek_issn_order":2
-    }
-],
+        {
+            "rek_issn_id":5349729,
+            "rek_issn_pid":"UQ:41878",
+            "rek_issn_xsdmf_id":10796,
+            "rek_issn":"1059-1524",
+            "rek_issn_order":1
+        },
+        {
+            "rek_issn_id":5349730,
+            "rek_issn_pid":"UQ:41878",
+            "rek_issn_xsdmf_id":10796,
+            "rek_issn":"1939-4586",
+            "rek_issn_order":2
+        }
+    ],
     "fez_record_search_key_issue_number":null,
     "fez_record_search_key_job_number":null,
     "fez_record_search_key_journal_name":{
-    "rek_journal_name_id":5236446,
+        "rek_journal_name_id":5236446,
         "rek_journal_name_pid":"UQ:41878",
         "rek_journal_name_xsdmf_id":11071,
         "rek_journal_name":"Molecular Biology of The Cell"
-},
+    },
     "fez_record_search_key_keywords":[
-    {
-        "rek_keywords_id":30026357,
-        "rek_keywords_pid":"UQ:41878",
-        "rek_keywords_xsdmf_id":7956,
-        "rek_keywords":"Cell Biology",
-        "rek_keywords_order":1
-    }
-],
+        {
+            "rek_keywords_id":30026357,
+            "rek_keywords_pid":"UQ:41878",
+            "rek_keywords_xsdmf_id":7956,
+            "rek_keywords":"Cell Biology",
+            "rek_keywords_order":1
+        }
+    ],
     "fez_record_search_key_language":[
-    {
-        "rek_language_id":5459649,
-        "rek_language_pid":"UQ:41878",
-        "rek_language_xsdmf_id":10570,
-        "rek_language":"eng",
-        "rek_language_order":1
-    }
-],
+        {
+            "rek_language_id":5459649,
+            "rek_language_pid":"UQ:41878",
+            "rek_language_xsdmf_id":10570,
+            "rek_language":"eng",
+            "rek_language_order":1
+        }
+    ],
     "fez_record_search_key_language_of_book_title":[
 
-],
+    ],
     "fez_record_search_key_language_of_journal_name":[
 
-],
+    ],
     "fez_record_search_key_language_of_proceedings_title":[
 
-],
+    ],
     "fez_record_search_key_language_of_title":[
 
-],
+    ],
     "fez_record_search_key_length":null,
     "fez_record_search_key_license":null,
     "fez_record_search_key_link":[
 
-],
+    ],
     "fez_record_search_key_link_description":[
 
-],
+    ],
     "fez_record_search_key_location":[
 
-],
+    ],
     "fez_record_search_key_native_script_book_title":null,
     "fez_record_search_key_native_script_conference_name":null,
     "fez_record_search_key_native_script_journal_name":null,
@@ -3836,11 +5009,11 @@ export const mockRecordToFix = {
     "fez_record_search_key_oa_embargo_days":null,
     "fez_record_search_key_oa_notes":null,
     "fez_record_search_key_oa_status":{
-    "rek_oa_status_id":362796,
+        "rek_oa_status_id":362796,
         "rek_oa_status_pid":"UQ:41878",
         "rek_oa_status_xsdmf_id":16607,
         "rek_oa_status":453692
-},
+    },
     "fez_record_search_key_org_name":null,
     "fez_record_search_key_org_unit_name":null,
     "fez_record_search_key_original_format":null,
@@ -3848,37 +5021,37 @@ export const mockRecordToFix = {
     "fez_record_search_key_patent_number":null,
     "fez_record_search_key_period":[
 
-],
+    ],
     "fez_record_search_key_place_of_publication":{
-    "rek_place_of_publication_id":4343575,
+        "rek_place_of_publication_id":4343575,
         "rek_place_of_publication_pid":"UQ:41878",
         "rek_place_of_publication_xsdmf_id":9625,
         "rek_place_of_publication":"Bethesda"
-},
+    },
     "fez_record_search_key_proceedings_title":null,
     "fez_record_search_key_project_description":null,
     "fez_record_search_key_project_id":null,
     "fez_record_search_key_project_name":null,
     "fez_record_search_key_project_start_date":null,
     "fez_record_search_key_publisher":{
-    "rek_publisher_id":4629173,
+        "rek_publisher_id":4629173,
         "rek_publisher_pid":"UQ:41878",
         "rek_publisher_xsdmf_id":9626,
         "rek_publisher":"American Society for Cell Biology"
-},
+    },
     "fez_record_search_key_pubmed_id":null,
     "fez_record_search_key_refereed":{
-    "rek_refereed_id":2560543,
+        "rek_refereed_id":2560543,
         "rek_refereed_pid":"UQ:41878",
         "rek_refereed_xsdmf_id":7940,
         "rek_refereed":1
-},
+    },
     "fez_record_search_key_refereed_source":{
-    "rek_refereed_source_id":1418859,
+        "rek_refereed_source_id":1418859,
         "rek_refereed_source_pid":"UQ:41878",
         "rek_refereed_source_xsdmf_id":16623,
         "rek_refereed_source":"453635"
-},
+    },
     "fez_record_search_key_related_datasets":null,
     "fez_record_search_key_related_publications":null,
     "fez_record_search_key_report_number":null,
@@ -3894,49 +5067,49 @@ export const mockRecordToFix = {
     "fez_record_search_key_section":null,
     "fez_record_search_key_seo_code":[
 
-],
+    ],
     "fez_record_search_key_series":null,
     "fez_record_search_key_software_required":[
 
-],
+    ],
     "fez_record_search_key_source":null,
     "fez_record_search_key_start_date":null,
     "fez_record_search_key_start_page":{
-    "rek_start_page_id":5781267,
+        "rek_start_page_id":5781267,
         "rek_start_page_pid":"UQ:41878",
         "rek_start_page_xsdmf_id":6383,
         "rek_start_page":"252A"
-},
+    },
     "fez_record_search_key_structural_systems":[
 
-],
+    ],
     "fez_record_search_key_style":[
 
-],
+    ],
     "fez_record_search_key_subcategory":[
 
-],
+    ],
     "fez_record_search_key_subject":[
 
-],
+    ],
     "fez_record_search_key_supervisor":[
 
-],
+    ],
     "fez_record_search_key_supervisor_id":[
 
-],
+    ],
     "fez_record_search_key_surrounding_features":[
 
-],
+    ],
     "fez_record_search_key_time_period_end_date":null,
     "fez_record_search_key_time_period_start_date":null,
     "fez_record_search_key_total_chapters":null,
     "fez_record_search_key_total_pages":{
-    "rek_total_pages_id":5708182,
+        "rek_total_pages_id":5708182,
         "rek_total_pages_pid":"UQ:41878",
         "rek_total_pages_xsdmf_id":9623,
         "rek_total_pages":"2"
-},
+    },
     "fez_record_search_key_transcript":null,
     "fez_record_search_key_translated_book_title":null,
     "fez_record_search_key_translated_conference_name":null,
@@ -3946,13 +5119,13 @@ export const mockRecordToFix = {
     "fez_record_search_key_translated_title":null,
     "fez_record_search_key_type_of_data":[
 
-],
+    ],
     "fez_record_search_key_volume_number":{
-    "rek_volume_number_id":5294487,
+        "rek_volume_number_id":5294487,
         "rek_volume_number_pid":"UQ:41878",
         "rek_volume_number_xsdmf_id":6379,
         "rek_volume_number":"15"
-}
+    }
 };
 
 export const researchReport = {
@@ -4549,6 +5722,536 @@ export const seminarPaper = {
         }
     ],
     "fez_record_search_key_total_pages": null
+};
+
+export const manuscript = {
+    "rek_pid": "UQ:677394",
+    "rek_title_xsdmf_id": 16809,
+    "rek_title": "Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944",
+    "rek_description_xsdmf_id": null,
+    "rek_description": null,
+    "rek_display_type_xsdmf_id": 16810,
+    "rek_display_type": 374,
+    "rek_status_xsdmf_id": 16816,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 16739,
+    "rek_date": "1944-07-15T00:00:00Z",
+    "rek_object_type_xsdmf_id": 16811,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 16818,
+    "rek_depositor": 3946,
+    "rek_created_date_xsdmf_id": 16813,
+    "rek_created_date": "2017-08-01T07:43:30Z",
+    "rek_updated_date_xsdmf_id": 16814,
+    "rek_updated_date": "2017-08-03T01:58:44Z",
+    "rek_file_downloads": 0,
+    "rek_citation": "<a class=\"citation_title\" title=\"Click to view Manuscript: Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944\" href=\"/view/UQ:677394\">Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944</a>",
+    "rek_genre_xsdmf_id": 16740,
+    "rek_genre": "text/tiff",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": 16773,
+    "rek_formatted_abstract": "Father Edward Leo Hayes Collection, UQFL2 contains correspondence and manuscript material on literary and historical matters, mostly in Queensland and New South Wales. It also includes personal papers of Father Hayes, relating to his activities as parish priest; bookplates, photographs, realia. <br /><br />Father Hayes was born in 1889 at Frederickton, New South Wales, and began book collecting at age seven. He commenced studies for the priesthood at St Columbia's College, Springwood, in 1911 and was ordained after further study at St Patrick's, Manly, in 1918. Over the course of 70 years he amassed one of the greatest collections of Australiana, including more than 25,000 volumes, 30,000 manuscript items, 1,500 Indigenous artefacts, maps, stamps, coins, weapons, geological specimens, cattle bells, and a variety of other material. On 19-20 October 1967 a convoy of removal trucks transported eighty large crates and 400 cartons of material to The University of Queensland Library at St Lucia, doubling its holdings on Australian subjects and effectively putting the Library on the map as an institution capable of supporting high-level research in Australian studies. (Information from Follett, Roslyn &amp; University of Queensland. Library &amp; Fryer Library (2010). Found in Fryer : stories from the Fryer Library collection. The University of Queensland Library, St Lucia, Qld.)<br />",
+    "rek_depositor_affiliation_xsdmf_id": 16822,
+    "rek_depositor_affiliation": 789,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 16815,
+    "rek_copyright": "on",
+    "fez_record_search_key_acknowledgements": null,
+    "fez_record_search_key_additional_notes": {
+        "rek_additional_notes_id": 1145,
+        "rek_additional_notes_pid": "UQ:677394",
+        "rek_additional_notes_xsdmf_id": 16817,
+        "rek_additional_notes": "Letter dated 15 July 1944 from Thea Astley to Mr [Paul] Grano sending 9 poems for criticism. Poems not included in collection."
+    },
+    "fez_record_search_key_advisory_statement": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 30314532,
+            "rek_author_pid": "UQ:677394",
+            "rek_author_xsdmf_id": 16722,
+            "rek_author": "Hayes, Edward Leo, 1889-1967",
+            "rek_author_order": 1
+        }
+    ],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 29593860,
+            "rek_author_id_pid": "UQ:677394",
+            "rek_author_id_xsdmf_id": 16717,
+            "rek_author_id": 0,
+            "rek_author_id_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3208035,
+            "rek_contributor_pid": "UQ:677394",
+            "rek_contributor_xsdmf_id": 16730,
+            "rek_contributor": "Astley, Thea, 1925-2004",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3208036,
+            "rek_contributor_pid": "UQ:677394",
+            "rek_contributor_xsdmf_id": 16730,
+            "rek_contributor": "Grano, Paul, 1894-1975",
+            "rek_contributor_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2391513,
+            "rek_contributor_id_pid": "UQ:677394",
+            "rek_contributor_id_xsdmf_id": 16725,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2391514,
+            "rek_contributor_id_pid": "UQ:677394",
+            "rek_contributor_id_xsdmf_id": 16725,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 2
+        }
+    ],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_date_available": {
+        "rek_date_available_id": 964186,
+        "rek_date_available_pid": "UQ:677394",
+        "rek_date_available_xsdmf_id": 16761,
+        "rek_date_available": "2017-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 4292134,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "FezACML_UQFL2_i3255.tif.xml",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 4292135,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "FezACML_UQFL2_i3255a.zip.xml",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 4292136,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "FezACML_UQFL2_i3255_copyright_permission.pdf.xml",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 4292137,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "FezACML_UQ_677394.xml",
+            "rek_file_attachment_name_order": 4
+        },
+        {
+            "rek_file_attachment_name_id": 4292138,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "presmd_UQFL2_i3255.xml",
+            "rek_file_attachment_name_order": 5
+        },
+        {
+            "rek_file_attachment_name_id": 4292139,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "presmd_UQFL2_i3255a.xml",
+            "rek_file_attachment_name_order": 6
+        },
+        {
+            "rek_file_attachment_name_id": 4292140,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "presmd_UQFL2_i3255_copyright_permission.xml",
+            "rek_file_attachment_name_order": 7
+        },
+        {
+            "rek_file_attachment_name_id": 4292141,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "preview_UQFL2_i3255.jpg",
+            "rek_file_attachment_name_order": 8
+        },
+        {
+            "rek_file_attachment_name_id": 4292142,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "thumbnail_UQFL2_i3255.jpg",
+            "rek_file_attachment_name_order": 9
+        },
+        {
+            "rek_file_attachment_name_id": 4292143,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "UQFL2_i3255.tif",
+            "rek_file_attachment_name_order": 10
+        },
+        {
+            "rek_file_attachment_name_id": 4292144,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "UQFL2_i3255a.zip",
+            "rek_file_attachment_name_order": 11
+        },
+        {
+            "rek_file_attachment_name_id": 4292145,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "UQFL2_i3255_copyright_permission.pdf",
+            "rek_file_attachment_name_order": 12
+        },
+        {
+            "rek_file_attachment_name_id": 4292146,
+            "rek_file_attachment_name_pid": "UQ:677394",
+            "rek_file_attachment_name_xsdmf_id": 16693,
+            "rek_file_attachment_name": "web_UQFL2_i3255.jpg",
+            "rek_file_attachment_name_order": 13
+        }
+    ],
+    "fez_record_search_key_geographic_area": [],
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 12099445,
+            "rek_ismemberof_pid": "UQ:677394",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:278419",
+            "rek_ismemberof_order": 1
+        }
+    ],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 30307584,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Hayes, Edward Leo, 1889-1967 -- Archives",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 30307585,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Hayes, Edward Leo, 1889-1967 -- Manuscripts",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 30307586,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Astley, Thea, 1925-2004 -- Correspondence",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 30307587,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Grano, Paul, 1894-1975 -- Correspondence",
+            "rek_keywords_order": 4
+        },
+        {
+            "rek_keywords_id": 30307588,
+            "rek_keywords_pid": "UQ:677394",
+            "rek_keywords_xsdmf_id": 16735,
+            "rek_keywords": "Authors, Australian -- 20th century",
+            "rek_keywords_order": 5
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5518446,
+            "rek_language_pid": "UQ:677394",
+            "rek_language_xsdmf_id": 16751,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 382640,
+        "rek_oa_status_pid": "UQ:677394",
+        "rek_oa_status_xsdmf_id": 16989,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_original_format": {
+        "rek_original_format_id": 22324,
+        "rek_original_format_pid": "UQ:677394",
+        "rek_original_format_xsdmf_id": 16742,
+        "rek_original_format": "Leter, 1p; 26 x 20 cm."
+    },
+    "fez_record_search_key_rights": {
+        "rek_rights_id": 126671,
+        "rek_rights_pid": "UQ:677394",
+        "rek_rights_xsdmf_id": 16800,
+        "rek_rights": "For all enquiries about this work, please contact the Fryer Library, The University of Queensland Library."
+    },
+    "fez_record_search_key_series": {
+        "rek_series_id": 210709,
+        "rek_series_pid": "UQ:677394",
+        "rek_series_xsdmf_id": 16748,
+        "rek_series": "Father Edward Leo Hayes Collection, UQFL2"
+    },
+    "fez_record_search_key_source": {
+        "rek_source_id": 72075,
+        "rek_source_pid": "UQ:677394",
+        "rek_source_xsdmf_id": 16746,
+        "rek_source": "Father Edward Leo Hayes Collection, UQFL2 : 3255"
+    },
+    "fez_record_search_key_subject": [],
+    "fez_record_search_key_transcript": null,
+    "fez_record_search_key_translated_title": null
+};
+
+export const imageDocument = {
+    "rek_pid": "UQ:164935",
+    "rek_title_xsdmf_id": 10699,
+    "rek_title": "Reference Desk, Library",
+    "rek_description_xsdmf_id": null,
+    "rek_description": null,
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 238,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 8563,
+    "rek_date": "1955-01-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 141,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2009-02-21T13:44:31Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2016-08-15T06:03:12Z",
+    "rek_file_downloads": 183,
+    "rek_citation": " (<span class=\"citation_date\">1955</span>). <a class=\"citation_title\" title=\"Click to view Image: Reference Desk, Library\" href=\"/view/UQ:164935\">Reference Desk, Library</a>. ",
+    "rek_genre_xsdmf_id": 8564,
+    "rek_genre": "image/tiff",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": 11449,
+    "rek_formatted_abstract": "Fryer Library University of Queensland Photograph Collection, UQFL466 consist of approximately 1100 photographs relating to the University of Queensland.<br />Photographs have been arranged in the following series:<br />&bull; AA: University of Queensland site at George Street<br />&bull; AB: St Lucia site before the establishment of the University of Queensland<br />&bull; AC: Buildings and grounds of the University of Queensland<br />&bull; AD: University of Queensland St Lucia campus buildings other than Great Court<br />&bull; AE: University of Queensland Non St Lucia Campus Buildings<br />&bull; AF: University of Queensland grounds<br />&bull; AG: University of Queensland Library<br />&bull; AH: University of Queensland ceremonies<br />&bull; AI: Research, teaching, business, cultural and support facilities of the University of Queensland<br />&bull; AJ: University of Queensland students<br />&bull; AK: University of Queensland Alumni (including ceremonies)<br />&bull; AL: Staff, benefactors and official associates of the University of Queensland<br />&bull; AM: University of Queensland sports<br />&bull; AP: University of Queensland honour boards, plaques, etc.",
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 789,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_acknowledgements": null,
+    "fez_record_search_key_advisory_statement": null,
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [
+        {
+            "rek_assigned_user_id_id": 903944,
+            "rek_assigned_user_id_pid": "UQ:164935",
+            "rek_assigned_user_id_xsdmf_id": 9501,
+            "rek_assigned_user_id": 141,
+            "rek_assigned_user_id_order": 1
+        }
+    ],
+    "fez_record_search_key_author": [],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_date_available": {
+        "rek_date_available_id": 896555,
+        "rek_date_available_pid": "UQ:164935",
+        "rek_date_available_xsdmf_id": 10697,
+        "rek_date_available": "2009-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 3798608,
+            "rek_file_attachment_name_pid": "UQ:164935",
+            "rek_file_attachment_name_xsdmf_id": 8625,
+            "rek_file_attachment_name": "presmd_uqfl466_b8_AG_P_108.xml",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 3798609,
+            "rek_file_attachment_name_pid": "UQ:164935",
+            "rek_file_attachment_name_xsdmf_id": 8625,
+            "rek_file_attachment_name": "preview_uqfl466_b8_AG_P_108.jpg",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 3798610,
+            "rek_file_attachment_name_pid": "UQ:164935",
+            "rek_file_attachment_name_xsdmf_id": 8625,
+            "rek_file_attachment_name": "thumbnail_uqfl466_b8_AG_P_108.jpg",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 3798611,
+            "rek_file_attachment_name_pid": "UQ:164935",
+            "rek_file_attachment_name_xsdmf_id": 8625,
+            "rek_file_attachment_name": "uqfl466_b8_AG_P_108.jpg",
+            "rek_file_attachment_name_order": 4
+        },
+        {
+            "rek_file_attachment_name_id": 3798612,
+            "rek_file_attachment_name_pid": "UQ:164935",
+            "rek_file_attachment_name_xsdmf_id": 8625,
+            "rek_file_attachment_name": "web_uqfl466_b8_AG_P_108.jpg",
+            "rek_file_attachment_name_order": 5
+        }
+    ],
+    "fez_record_search_key_geographic_area": [
+        {
+            "rek_geographic_area_id": 10759,
+            "rek_geographic_area_pid": "UQ:164935",
+            "rek_geographic_area_xsdmf_id": 17125,
+            "rek_geographic_area_order": 1,
+            "rek_geographic_area": "153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11406667,
+            "rek_ismemberof_pid": "UQ:164935",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:278419",
+            "rek_ismemberof_order": 1
+        }
+    ],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 28947937,
+            "rek_keywords_pid": "UQ:164935",
+            "rek_keywords_xsdmf_id": 8555,
+            "rek_keywords": "University of Queensland -- History",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 28947938,
+            "rek_keywords_pid": "UQ:164935",
+            "rek_keywords_xsdmf_id": 8555,
+            "rek_keywords": "Central Library, The University of Queensland",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 28947939,
+            "rek_keywords_pid": "UQ:164935",
+            "rek_keywords_xsdmf_id": 8555,
+            "rek_keywords": "Librarians",
+            "rek_keywords_order": 3
+        }
+    ],
+    "fez_record_search_key_language": [],
+    "fez_record_search_key_license": null,
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1097936,
+        "rek_notes_pid": "UQ:164935",
+        "rek_notes_xsdmf_id": 12466,
+        "rek_notes": "Reference Desk, Duhig Building, University of Queensland Library, circa 1955. This area in the Duhig Building houses the AskIT desk and Ezones"
+    },
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 281614,
+        "rek_oa_status_pid": "UQ:164935",
+        "rek_oa_status_xsdmf_id": 17010,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_original_format": {
+        "rek_original_format_id": 7670,
+        "rek_original_format_pid": "UQ:164935",
+        "rek_original_format_xsdmf_id": 8567,
+        "rek_original_format": "Photograph; b&w."
+    },
+    "fez_record_search_key_place_of_publication": null,
+    "fez_record_search_key_publisher": null,
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1120295,
+        "rek_refereed_source_pid": "UQ:164935",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_rights": {
+        "rek_rights_id": 108945,
+        "rek_rights_pid": "UQ:164935",
+        "rek_rights_xsdmf_id": 8574,
+        "rek_rights": "Copyright expired"
+    },
+    "fez_record_search_key_series": {
+        "rek_series_id": 187133,
+        "rek_series_pid": "UQ:164935",
+        "rek_series_xsdmf_id": 11046,
+        "rek_series": "Fryer Library University of Queensland Photograph Collection, UQFL466"
+    },
+    "fez_record_search_key_source": {
+        "rek_source_id": 57344,
+        "rek_source_pid": "UQ:164935",
+        "rek_source_xsdmf_id": 8572,
+        "rek_source": "Fryer Library University of Queensland Photograph Collection, UQFL466, Box 8, AG/P/108"
+    },
+    "fez_record_search_key_subject": [],
+    "fez_record_search_key_translated_title": null
 };
 
 // TODO: each publication type should have a sample from eSpace data for testing

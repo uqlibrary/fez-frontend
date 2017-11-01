@@ -113,24 +113,29 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         name: 'Department Technical Report',
         class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
+        citationComponent: components ? components.DepartmentTechnicalReportCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DESIGN,
         name: 'Design',
         class: 'Uqlibrary\\FezCore\\Types\\Design',
+        citationComponent: components ? components.DesignCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
         name: 'Digilib Image',
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
+        citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_IMAGE,
         name: 'Image',
         class: 'Uqlibrary\\FezCore\\Types\\Image',
+        citationComponent: components ? components.ImageDocumentCitation : null,
+        formComponent: components ? components.ImageDocumentForm : null,
         hasFormComponent: true
     },
     {
@@ -153,6 +158,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_MANUSCRIPT,
         name: 'Manuscript',
         class: 'Uqlibrary\\FezCore\\Types\\Manuscript',
+        citationComponent: components ? components.ManuscriptCitation : null,
         hasFormComponent: false
     },
     {
@@ -210,6 +216,7 @@ export const publicationTypes = (components) => [
         name: 'Working Paper',
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
         formComponent: components ? components.WorkingPaperForm : null,
+        citationComponent: components ? components.WorkingPaperCitation : null,
         hasFormComponent: true
     }
 ];
