@@ -2079,7 +2079,7 @@ export default {
                 },
             },
             citationAuthors: {
-                showMore: '[numberOfAuthors] more...',
+                showMore: 'Show [numberOfAuthors] more...',
                 showLess: 'Show less'
             },
             defaultActions: [

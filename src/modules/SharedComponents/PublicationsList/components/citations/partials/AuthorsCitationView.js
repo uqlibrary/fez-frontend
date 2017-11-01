@@ -9,7 +9,8 @@ class AuthorsCitationView extends React.Component {
         searchKey: PropTypes.object,
         className: PropTypes.string,
         prefix: PropTypes.string,
-        suffix: PropTypes.string
+        suffix: PropTypes.string,
+        initialNumberOfAuthors: PropTypes.number
     };
 
     static defaultProps = {
@@ -18,7 +19,8 @@ class AuthorsCitationView extends React.Component {
             subkey: 'rek_author',
             order: 'rek_author_order'
         },
-        className: 'citationAuthors'
+        className: 'citationAuthors',
+        initialNumberOfAuthors: 10
         // TODO: link to author: idSearchKey: {key: 'fez_record_search_key_author_id', subkey: 'rek_author_id'}
     };
 
@@ -26,8 +28,8 @@ class AuthorsCitationView extends React.Component {
         super(props);
         this.authorsCount = Array.isArray(props.publication[props.searchKey.key]) ? props.publication[props.searchKey.key].length : 0;
         this.state = {
-            showMore: this.authorsCount < 10,
-            restAuthors: this.authorsCount - 10
+            showMore: this.authorsCount < props.initialNumberOfAuthors,
+            restAuthors: this.authorsCount - props.initialNumberOfAuthors
         };
         this.authors = [];
     }
@@ -65,13 +67,11 @@ class AuthorsCitationView extends React.Component {
     };
 
     renderShowMoreLink = (showMoreText) => (
-        <a onClick={this._toggleShowMore} onKeyPress={this._toggleShowMore}>
-            <CitationView className="citationShowMoreAuthors" suffix=" " prefix=" " value={showMoreText}/>
-        </a>
+        <a tabIndex={0} className="citationShowMoreAuthors" onClick={this._toggleShowMore} onKeyPress={this._toggleShowMore}> {showMoreText} </a>
     );
 
     render() {
-        const {className, prefix, suffix} = this.props;
+        const {className, prefix, suffix, initialNumberOfAuthors} = this.props;
         const {showMore, showLess} = locale.components.publicationCitation.citationAuthors;
         if (this.authorsCount === 0) return (<span className={`${className || ''} empty`} />);
 
@@ -80,7 +80,7 @@ class AuthorsCitationView extends React.Component {
                 {prefix}
                 {
                     !this.state.showMore &&
-                    this.authors.slice(0, 10)
+                    this.authors.slice(0, initialNumberOfAuthors)
                 }
                 {
                     !this.state.showMore &&
@@ -91,7 +91,7 @@ class AuthorsCitationView extends React.Component {
                     this.authors
                 }
                 {
-                    this.authorsCount > 10 && this.state.showMore &&
+                    this.authorsCount > initialNumberOfAuthors && this.state.showMore &&
                     this.renderShowMoreLink(showLess)
                 }
                 {suffix}

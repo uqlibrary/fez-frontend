@@ -6,6 +6,7 @@ exports[`EditorsCitationView test  should render component with no contributors 
 >
   <AuthorsCitationView
     className="citationEditors"
+    initialNumberOfAuthors={10}
     prefix="edited by"
     publication={Object {}}
     searchKey={
@@ -41,6 +42,7 @@ exports[`EditorsCitationView test  should render component with one contributor 
 >
   <AuthorsCitationView
     className="citationEditors"
+    initialNumberOfAuthors={10}
     prefix="edited by"
     publication={
       Object {
@@ -115,6 +117,7 @@ exports[`EditorsCitationView test  should render component with three contributo
 >
   <AuthorsCitationView
     className="citationEditors"
+    initialNumberOfAuthors={10}
     prefix="edited by"
     publication={
       Object {
@@ -221,6 +224,7 @@ exports[`EditorsCitationView test  should render component with two contributors
 >
   <AuthorsCitationView
     className="citationEditors"
+    initialNumberOfAuthors={10}
     prefix="edited by"
     publication={
       Object {

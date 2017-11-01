@@ -3,6 +3,7 @@
 exports[`AuthorsCitationView test  should render component with no authors 1`] = `
 <AuthorsCitationView
   className="citationAuthors"
+  initialNumberOfAuthors={10}
   publication={Object {}}
   searchKey={
     Object {
@@ -21,6 +22,7 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
 exports[`AuthorsCitationView test  should render component with one author 1`] = `
 <AuthorsCitationView
   className="citationAuthors"
+  initialNumberOfAuthors={10}
   publication={
     Object {
       "fez_record_search_key_author": Array [
@@ -64,6 +66,7 @@ exports[`AuthorsCitationView test  should render component with one author 1`] =
 exports[`AuthorsCitationView test  should render component with ten authors and show more link 1`] = `
 <AuthorsCitationView
   className="citationAuthors"
+  initialNumberOfAuthors={10}
   prefix="Authored by: "
   publication={
     Object {
@@ -286,23 +289,14 @@ exports[`AuthorsCitationView test  should render component with ten authors and 
       </span>
     </CitationView>
     <a
+      className="citationShowMoreAuthors"
       onClick={[Function]}
       onKeyPress={[Function]}
+      tabIndex={0}
     >
-      <CitationView
-        className="citationShowMoreAuthors"
-        prefix=" "
-        suffix=" "
-        value="2 more..."
-      >
-        <span
-          className="citationShowMoreAuthors"
-        >
-           
-          2 more...
-           
-        </span>
-      </CitationView>
+       
+      Show 2 more...
+       
     </a>
      people.
   </span>
@@ -312,6 +306,7 @@ exports[`AuthorsCitationView test  should render component with ten authors and 
 exports[`AuthorsCitationView test  should render component with ten authors and show more link 2`] = `
 <AuthorsCitationView
   className="citationAuthors"
+  initialNumberOfAuthors={10}
   prefix="Authored by: "
   publication={
     Object {
@@ -561,23 +556,14 @@ exports[`AuthorsCitationView test  should render component with ten authors and 
       </span>
     </CitationView>
     <a
+      className="citationShowMoreAuthors"
       onClick={[Function]}
       onKeyPress={[Function]}
+      tabIndex={0}
     >
-      <CitationView
-        className="citationShowMoreAuthors"
-        prefix=" "
-        suffix=" "
-        value="Show less"
-      >
-        <span
-          className="citationShowMoreAuthors"
-        >
-           
-          Show less
-           
-        </span>
-      </CitationView>
+       
+      Show less
+       
     </a>
      people.
   </span>
@@ -587,6 +573,7 @@ exports[`AuthorsCitationView test  should render component with ten authors and 
 exports[`AuthorsCitationView test  should render component with three authors 1`] = `
 <AuthorsCitationView
   className="citationAuthors"
+  initialNumberOfAuthors={10}
   publication={
     Object {
       "fez_record_search_key_author": Array [
@@ -668,6 +655,7 @@ exports[`AuthorsCitationView test  should render component with three authors 1`
 exports[`AuthorsCitationView test  should render component with three authors with prefix/suffix 1`] = `
 <AuthorsCitationView
   className="citationAuthors"
+  initialNumberOfAuthors={10}
   prefix="Authored by: "
   publication={
     Object {
@@ -753,6 +741,7 @@ exports[`AuthorsCitationView test  should render component with three authors wi
 exports[`AuthorsCitationView test  should render component with two authors 1`] = `
 <AuthorsCitationView
   className="citationAuthors"
+  initialNumberOfAuthors={10}
   publication={
     Object {
       "fez_record_search_key_author": Array [
