@@ -179,7 +179,7 @@ exports[`BookChapterForm renders  component 1`] = `
     title="Authors"
   >
     <div>
-      Provide a list of authors for this publication and assign yourself as an author or an editor
+      Provide a list of authors for this publication and assign yourself as an author
     </div>
     <Field
       className="requiredField"
