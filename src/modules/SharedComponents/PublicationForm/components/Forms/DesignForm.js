@@ -39,7 +39,6 @@ export default class DesignForm extends Component {
                             />
                         </div>
                     </div>
-
                     <div className="columns">
                         <div className="column">
                             <Field
@@ -52,7 +51,6 @@ export default class DesignForm extends Component {
                             />
                         </div>
                     </div>
-
                     <div className="columns">
                         <div className="column">
                             <Field
@@ -67,7 +65,6 @@ export default class DesignForm extends Component {
                             />
                         </div>
                     </div>
-
                     <div className="columns">
                         <div className="column is-half">
                             <Field
@@ -90,7 +87,6 @@ export default class DesignForm extends Component {
                             />
                         </div>
                     </div>
-
                     <div className="columns">
                         <div className="column is-half">
                             <Field
@@ -116,7 +112,6 @@ export default class DesignForm extends Component {
                         </div>
                     </div>
                 </StandardCard>
-
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <div>{txt.authors.description}</div>
                     <Field
@@ -128,7 +123,6 @@ export default class DesignForm extends Component {
                         disabled={this.props.submitting}
                         validate={[validation.authorRequired]} />
                 </StandardCard>
-
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <div className="columns">
                         <div className="column">
