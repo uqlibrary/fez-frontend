@@ -1,3 +1,363 @@
+export const conferenceProceedings = {
+    "rek_pid": "UQ:159544",
+    "rek_title_xsdmf_id": 10639,
+    "rek_title": "Experiences and Challenges in Sewers: Measurements and Hydrodynamics",
+    "rek_description_xsdmf_id": 11462,
+    "rek_description": "The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences.",
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 197,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 7352,
+    "rek_date": "2008-01-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 737,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2008-11-28T13:06:29Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2014-10-05T09:14:08Z",
+    "rek_file_downloads": 3215,
+    "rek_citation": "<a class=\"citation_title\" title=\"Click to view Conference Proceedings: Experiences and Challenges in Sewers: Measurements and Hydrodynamics\" href=\"/view/UQ:159544\">Experiences and Challenges in Sewers: Measurements and Hydrodynamics</a> (<span class=\"citation_date\">2008</span>) . Edited by <span class=\"citation_contributor\"><span class=\"citation_contributor\">Frédérique Larrarte</span> and <span class=\"citation_contributor\">Hubert Chanson</span></span>. <i><span class=\"citation_conference_name\">International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC</span></i>, <span class=\"citation_conference_dates\">19-21 August 2008</span>, <span class=\"citation_conference_location\">Bouguenais, France</span>.",
+    "rek_genre_xsdmf_id": 7378,
+    "rek_genre": "Conference Proceedings",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 891,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [],
+    "fez_record_search_key_conference_dates": {
+        "rek_conference_dates_id": 1009085,
+        "rek_conference_dates_pid": "UQ:159544",
+        "rek_conference_dates_xsdmf_id": 7365,
+        "rek_conference_dates": "19-21 August 2008"
+    },
+    "fez_record_search_key_conference_location": {
+        "rek_conference_location_id": 1019406,
+        "rek_conference_location_pid": "UQ:159544",
+        "rek_conference_location_xsdmf_id": 7363,
+        "rek_conference_location": "Bouguenais, France"
+    },
+    "fez_record_search_key_conference_name": {
+        "rek_conference_name_id": 1003967,
+        "rek_conference_name_pid": "UQ:159544",
+        "rek_conference_name_xsdmf_id": 10647,
+        "rek_conference_name": "International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC"
+    },
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3104156,
+            "rek_contributor_pid": "UQ:159544",
+            "rek_contributor_xsdmf_id": 7350,
+            "rek_contributor": "Frédérique Larrarte",
+            "rek_contributor_order": 1
+        },
+        {
+            "rek_contributor_id": 3104157,
+            "rek_contributor_pid": "UQ:159544",
+            "rek_contributor_xsdmf_id": 7350,
+            "rek_contributor": "Hubert Chanson",
+            "rek_contributor_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2314832,
+            "rek_contributor_id_pid": "UQ:159544",
+            "rek_contributor_id_xsdmf_id": 7345,
+            "rek_contributor_id": 0,
+            "rek_contributor_id_order": 1
+        },
+        {
+            "rek_contributor_id_id": 2314833,
+            "rek_contributor_id_pid": "UQ:159544",
+            "rek_contributor_id_xsdmf_id": 7345,
+            "rek_contributor_id": 193,
+            "rek_contributor_id_order": 2
+        }
+    ],
+    "fez_record_search_key_convener": {
+        "rek_convener_id": 60560,
+        "rek_convener_pid": "UQ:159544",
+        "rek_convener_xsdmf_id": 11366,
+        "rek_convener": "Frédérique Larrarte"
+    },
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_date_available": {
+        "rek_date_available_id": 921895,
+        "rek_date_available_pid": "UQ:159544",
+        "rek_date_available_xsdmf_id": 10637,
+        "rek_date_available": "2008-01-01T00:00:00Z"
+    },
+    "fez_record_search_key_edition": null,
+    "fez_record_search_key_end_page": {
+        "rek_end_page_id": 5523425,
+        "rek_end_page_pid": "UQ:159544",
+        "rek_end_page_xsdmf_id": 7375,
+        "rek_end_page": "114"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 3961054,
+            "rek_file_attachment_name_pid": "UQ:159544",
+            "rek_file_attachment_name_xsdmf_id": 7476,
+            "rek_file_attachment_name": "ch7008.pdf",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 3961055,
+            "rek_file_attachment_name_pid": "UQ:159544",
+            "rek_file_attachment_name_xsdmf_id": 7476,
+            "rek_file_attachment_name": "presmd_ch7008.xml",
+            "rek_file_attachment_name_order": 2
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_herdc_code": null,
+    "fez_record_search_key_herdc_status": null,
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isbn": [
+        {
+            "rek_isbn_id": 1062723,
+            "rek_isbn_pid": "UQ:159544",
+            "rek_isbn_xsdmf_id": 10827,
+            "rek_isbn": "9781864999280",
+            "rek_isbn_order": 1
+        }
+    ],
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11573575,
+            "rek_ismemberof_pid": "UQ:159544",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:152266",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 11573576,
+            "rek_ismemberof_pid": "UQ:159544",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:195545",
+            "rek_ismemberof_order": 2
+        }
+    ],
+    "fez_record_search_key_issn": [],
+    "fez_record_search_key_issue_number": null,
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 29246862,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "Sewers",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 29246863,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "Measurements",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29246864,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "Hydraulics",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 29246865,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "Open channel flows",
+            "rek_keywords_order": 4
+        },
+        {
+            "rek_keywords_id": 29246866,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "Sediments",
+            "rek_keywords_order": 5
+        },
+        {
+            "rek_keywords_id": 29246867,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "Turbidity",
+            "rek_keywords_order": 6
+        },
+        {
+            "rek_keywords_id": 29246868,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "Hydrodynamics",
+            "rek_keywords_order": 7
+        },
+        {
+            "rek_keywords_id": 29246869,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "Sedimentation",
+            "rek_keywords_order": 8
+        },
+        {
+            "rek_keywords_id": 29246870,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "design",
+            "rek_keywords_order": 9
+        },
+        {
+            "rek_keywords_id": 29246871,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "operation",
+            "rek_keywords_order": 10
+        },
+        {
+            "rek_keywords_id": 29246872,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "rehabilitation",
+            "rek_keywords_order": 11
+        },
+        {
+            "rek_keywords_id": 29246873,
+            "rek_keywords_pid": "UQ:159544",
+            "rek_keywords_xsdmf_id": 7950,
+            "rek_keywords": "urban environment",
+            "rek_keywords_order": 12
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5251066,
+            "rek_language_pid": "UQ:159544",
+            "rek_language_xsdmf_id": 10636,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1119327,
+        "rek_notes_pid": "UQ:159544",
+        "rek_notes_xsdmf_id": 12436,
+        "rek_notes": "The full conference proceedings bibliographic details are : LARRARTE, F., and CHANSON, H. (2008). \"Experiences and Challenges in Sewers: Measurements and Hydrodynamics.\" Proceedings of the International Meeting on Measurements and Hydraulics of Sewers, Summer School GEMCEA/LCPC, 19-21 Aug. 2008, Bouguenais, Hydraulic Model Report No. CH70/08, Div. of Civil Engineering, The University of Queensland, Brisbane, Australia, 114 pages (ISBN 9781864999280)."
+    },
+    "fez_record_search_key_oa_status": null,
+    "fez_record_search_key_place_of_publication": {
+        "rek_place_of_publication_id": 4191351,
+        "rek_place_of_publication_pid": "UQ:159544",
+        "rek_place_of_publication_xsdmf_id": 10562,
+        "rek_place_of_publication": "Brisbane, Australia"
+    },
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4456387,
+        "rek_publisher_pid": "UQ:159544",
+        "rek_publisher_xsdmf_id": 10560,
+        "rek_publisher": "Department of Civil Engineering at The University of Queensland"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1209272,
+        "rek_refereed_source_pid": "UQ:159544",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_start_page": {
+        "rek_start_page_id": 5593765,
+        "rek_start_page_pid": "UQ:159544",
+        "rek_start_page_xsdmf_id": 7374,
+        "rek_start_page": "1"
+    },
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9121205,
+            "rek_subject_pid": "UQ:159544",
+            "rek_subject_xsdmf_id": 7356,
+            "rek_subject": 290000,
+            "rek_subject_order": 1
+        },
+        {
+            "rek_subject_id": 9121206,
+            "rek_subject_pid": "UQ:159544",
+            "rek_subject_xsdmf_id": 7356,
+            "rek_subject": 290800,
+            "rek_subject_order": 2
+        },
+        {
+            "rek_subject_id": 9121207,
+            "rek_subject_pid": "UQ:159544",
+            "rek_subject_xsdmf_id": 7356,
+            "rek_subject": 290802,
+            "rek_subject_order": 3
+        },
+        {
+            "rek_subject_id": 9121208,
+            "rek_subject_pid": "UQ:159544",
+            "rek_subject_xsdmf_id": 7356,
+            "rek_subject": 291104,
+            "rek_subject_order": 4
+        }
+    ],
+    "fez_record_search_key_total_pages": {
+        "rek_total_pages_id": 5506335,
+        "rek_total_pages_pid": "UQ:159544",
+        "rek_total_pages_xsdmf_id": 10557,
+        "rek_total_pages": "114"
+    },
+    "fez_record_search_key_translated_conference_name": null,
+    "fez_record_search_key_translated_title": null,
+    "fez_record_search_key_volume_number": null
+};
+
 export const digilibImage = {
     "rek_pid": "UQ:151598",
     "rek_title_xsdmf_id": 4198,
