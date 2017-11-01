@@ -13,8 +13,17 @@ import BookChapterCitation from './citations/BookChapterCitation';
 import BookCitation from './citations/BookCitation';
 import ConferencePaperCitation from './citations/ConferencePaperCitation';
 import GenericDocumentCitation from './citations/GenericDocumentCitation';
-import AudioCitation from './citations/AudioCitation';
+import AudioDocumentCitation from './citations/AudioDocumentCitation';
 import ResearchReportCitation from './citations/ResearchReportCitation';
+import PreprintCitation from './citations/PreprintCitation';
+import SeminarPaperCitation from './citations/SeminarPaperCitation';
+import CreativeWorkCitation from './citations/CreativeWorkCitation';
+import ManuscriptCitation from './citations/ManuscriptCitation';
+import DepartmentTechnicalReportCitation from './citations/DepartmentTechnicalReportCitation';
+import ImageDocumentCitation from './citations/ImageDocumentCitation';
+import DesignCitation from './citations/DesignCitation';
+import DigilibImageCitation from './citations/DigilibImageCitation';
+import WorkingPaperCitation from './citations/WorkingPaperCitation';
 
 export default class PublicationCitation extends Component {
     static propTypes = {
@@ -35,7 +44,9 @@ export default class PublicationCitation extends Component {
         super(props);
         // keep a list of all available citations
         this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation,
-            AudioCitation, GenericDocumentCitation, ResearchReportCitation};
+            AudioDocumentCitation, GenericDocumentCitation, ResearchReportCitation, PreprintCitation, SeminarPaperCitation,
+            CreativeWorkCitation, ManuscriptCitation, DepartmentTechnicalReportCitation, ImageDocumentCitation, DesignCitation,
+            DigilibImageCitation, WorkingPaperCitation};
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }

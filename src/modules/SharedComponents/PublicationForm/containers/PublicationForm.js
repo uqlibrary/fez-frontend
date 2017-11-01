@@ -4,6 +4,7 @@ import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
 import {locale, general} from 'config';
+import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'PublicationForm';
 
@@ -36,6 +37,7 @@ const validate = (values) => {
     switch(data.rek_display_type) {
         case general.PUBLICATION_TYPE_BOOK:
         case general.PUBLICATION_TYPE_AUDIO_DOCUMENT:
+        case general.PUBLICATION_TYPE_VIDEO_DOCUMENT:
             // either author or editor should be selected and linked to a user
             if (
                 (!data.authors && !data.editors) ||
@@ -57,7 +59,7 @@ let PublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit
-})(PublicationForm);
+})(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
 
 const mapStateToProps = (state) => {
     return {

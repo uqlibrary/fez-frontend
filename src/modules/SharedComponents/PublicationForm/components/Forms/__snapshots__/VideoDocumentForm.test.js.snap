@@ -1,0 +1,328 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoDocumentForm renders  component 1`] = `
+<div>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": <div>
+          <p>
+            <b>
+              Place of publication:
+            </b>
+             Please enter the geographical location for the publisher or producer of the work, i.e. city, country
+          </p>
+          <p>
+            <b>
+              Publication date:
+            </b>
+             Please enter the date recorded on the work, where available. For online recordings or broadcasts, enter the date first publicly presented or released. 
+          </p>
+        </div>,
+        "title": "Video information",
+      }
+    }
+    title="Video information"
+  >
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          autoFocus={true}
+          className="requiredField"
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Title"
+          fullWidth={true}
+          hintText="Title of work"
+          name="rek_title"
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Place of publication"
+          fullWidth={true}
+          hintText="City, Country"
+          name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column is-half"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Publisher"
+          fullWidth={true}
+          hintText="Please enter the name of the publisher or producer of the work."
+          name="fez_record_search_key_publisher.rek_publisher"
+          type="text"
+        />
+      </div>
+      <div
+        className="column"
+      >
+        <Field
+          allowPartial={true}
+          className="requiredHintField"
+          component={[Function]}
+          disabled={false}
+          floatingTitle="Publication date"
+          floatingTitleRequired={true}
+          name="rek_date"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Abstract"
+          fullWidth={true}
+          hintText="Please provide an abstract or summary of the work."
+          multiLine={true}
+          name="rek_description"
+          rows={3}
+          type="text"
+        />
+      </div>
+    </div>
+  </StandardCard>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": "This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.",
+        "title": "Creators",
+      }
+    }
+    title="Creators"
+  >
+    <div>
+      Provide a list of creators for this publication
+    </div>
+    <Field
+      className="requiredField"
+      component={[Function]}
+      disabled={false}
+      locale={
+        Object {
+          "form": Object {
+            "locale": Object {
+              "addButton": "Add creator",
+              "identifierLabel": "UQ identifier (if available)",
+              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedLabel": "Creator's name as published",
+            },
+          },
+          "header": Object {
+            "locale": Object {
+              "contributorAssignmentColumn": "Select your name",
+              "deleteAll": "Remove all items",
+              "deleteAllConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete all items?",
+                "confirmationTitle": "Delete all",
+              },
+              "identifierColumn": "UQ identifier",
+              "nameColumn": "creator's name as published",
+              "reorderColumn": "Reorder items",
+            },
+          },
+          "row": Object {
+            "locale": Object {
+              "deleteHint": "Remove this item",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete this item?",
+                "confirmationTitle": "Delete item",
+              },
+              "moveDownHint": "Move item down the order",
+              "moveUpHint": "Move item up the order",
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed creator",
+            },
+          },
+        }
+      }
+      name="authors"
+      showContributorAssignment={true}
+    />
+  </StandardCard>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": "This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Please enter contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.",
+        "title": "Contributors",
+      }
+    }
+    title="Contributors"
+  >
+    <div>
+      Provide a list of contributors for this publication
+    </div>
+    <Field
+      component={[Function]}
+      disabled={false}
+      locale={
+        Object {
+          "form": Object {
+            "locale": Object {
+              "addButton": "Add contributor",
+              "identifierLabel": "UQ identifier (if available)",
+              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedLabel": "Contributor's name as published",
+            },
+          },
+          "header": Object {
+            "locale": Object {
+              "contributorAssignmentColumn": "Select your name",
+              "deleteAll": "Remove all items",
+              "deleteAllConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete all items?",
+                "confirmationTitle": "Delete all",
+              },
+              "identifierColumn": "UQ identifier",
+              "nameColumn": "Contributor's name as published",
+              "reorderColumn": "Reorder items",
+            },
+          },
+          "row": Object {
+            "locale": Object {
+              "deleteHint": "Remove this item",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete this item?",
+                "confirmationTitle": "Delete item",
+              },
+              "moveDownHint": "Move item down the order",
+              "moveUpHint": "Move item up the order",
+              "ordinalData": Array [
+                "First",
+                "Second",
+                "Third",
+                "Fourth",
+                "Fifth",
+                "Sixth",
+                "Seventh",
+                "Eighth",
+                "Ninth",
+                "Tenth",
+              ],
+              "suffix": " listed contributor",
+            },
+          },
+        }
+      }
+      name="editors"
+      showContributorAssignment={true}
+    />
+  </StandardCard>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.",
+        "title": "Optional information",
+      }
+    }
+    title="Optional information"
+  >
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Notes (not publicly viewable)"
+          fullWidth={true}
+          hintText="Please add any additional information here."
+          multiLine={true}
+          name="fez_record_search_key_notes.rek_notes"
+          rows={1}
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          floatingLabelText="Link"
+          fullWidth={true}
+          hintText="Enter URL for this work."
+          name="rek_link"
+          type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </div>
+    </div>
+  </StandardCard>
+</div>
+`;

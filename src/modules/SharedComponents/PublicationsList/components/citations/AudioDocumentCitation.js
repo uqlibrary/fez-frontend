@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import * as Partials from './partials';
 
-export default class AudioCitation extends Component {
+export default class AudioDocumentCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired
     };

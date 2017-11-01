@@ -812,6 +812,10 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         onCancelAction={[Function]}
         onRef={[Function]}
       />
+      <Prompt
+        message="Are you sure you want to navigate away and discard all changes to the form?"
+        when={true}
+      />
       <StandardCard
         className=""
         help={
@@ -840,7 +844,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           type="text"
           validate={
             Array [
-              [Function],
               [Function],
             ]
           }
@@ -1703,6 +1706,10 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         onCancelAction={[Function]}
         onRef={[Function]}
       />
+      <Prompt
+        message="Are you sure you want to navigate away and discard all changes to the form?"
+        when={true}
+      />
       <StandardCard
         className=""
         help={
@@ -1731,7 +1738,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           type="text"
           validate={
             Array [
-              [Function],
               [Function],
             ]
           }
@@ -2697,6 +2703,10 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
+      <Prompt
+        message="Are you sure you want to navigate away and discard all changes to the form?"
+        when={true}
+      />
       <StandardCard
         className="requiredField"
         help={
@@ -2880,7 +2890,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           type="text"
           validate={
             Array [
-              [Function],
               [Function],
             ]
           }

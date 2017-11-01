@@ -27,7 +27,7 @@ export default class ResearchReportCitation extends Component {
         };
 
         // eSpace citation view for ResearchReport
-        // {Author}{Year| (|).}<i>{Title of report| |.}</i>{Series| |,}{Place of Publication| |:}{Publisher| |.} {doi| doi:|}
+        // {Author}{Year| (|).}<i>{Title of report| |.}</i>{Series| |.}{Place of Publication| |:}{Publisher| |.} {doi| doi:|}
         return (
             <div className="citationContent citationResearchReport">
                 <FontIcon className="material-icons citationIcon" data-place="left">

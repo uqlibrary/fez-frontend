@@ -55,7 +55,7 @@ export const publicationTypes = (components) => [
         name: 'Audio Document',
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
         formComponent: components ? components.AudioDocumentForm : null,
-        citationComponent: components ? components.AudioCitation : null,
+        citationComponent: components ? components.AudioDocumentCitation : null,
         hasFormComponent: true
     },
     {
@@ -98,6 +98,8 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_CREATIVE_WORK,
         name: 'Creative Work',
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
+        citationComponent: components ? components.CreativeWorkCitation : null,
+        formComponent: components ? components.CreativeWorkForm : null,
         vocabId: 453594,
         hasFormComponent: true
     },
@@ -111,24 +113,29 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         name: 'Department Technical Report',
         class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
+        citationComponent: components ? components.DepartmentTechnicalReportCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DESIGN,
         name: 'Design',
         class: 'Uqlibrary\\FezCore\\Types\\Design',
+        citationComponent: components ? components.DesignCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
         name: 'Digilib Image',
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
+        citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_IMAGE,
         name: 'Image',
         class: 'Uqlibrary\\FezCore\\Types\\Image',
+        citationComponent: components ? components.ImageDocumentCitation : null,
+        formComponent: components ? components.ImageDocumentForm : null,
         hasFormComponent: true
     },
     {
@@ -151,6 +158,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_MANUSCRIPT,
         name: 'Manuscript',
         class: 'Uqlibrary\\FezCore\\Types\\Manuscript',
+        citationComponent: components ? components.ManuscriptCitation : null,
         hasFormComponent: false
     },
     {
@@ -171,6 +179,7 @@ export const publicationTypes = (components) => [
         name: 'Preprint',
         class: 'Uqlibrary\\FezCore\\Types\\Preprint',
         formComponent: components ? components.PreprintForm : null,
+        citationComponent: components ? components.PreprintCitation : null,
         hasFormComponent: true
     },
     {
@@ -186,6 +195,7 @@ export const publicationTypes = (components) => [
         name: 'Seminar Paper',
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
         formComponent: components ? components.SeminarPaperForm : null,
+        citationComponent: components ? components.SeminarPaperCitation : null,
         hasFormComponent: true
     },
     {
@@ -198,6 +208,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
         name: 'Video Document',
         class: 'Uqlibrary\\FezCore\\Types\\Video',
+        formComponent: components ? components.VideoDocumentForm : null,
         hasFormComponent: true
     },
     {
@@ -205,6 +216,7 @@ export const publicationTypes = (components) => [
         name: 'Working Paper',
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
         formComponent: components ? components.WorkingPaperForm : null,
+        citationComponent: components ? components.WorkingPaperCitation : null,
         hasFormComponent: true
     }
 ];

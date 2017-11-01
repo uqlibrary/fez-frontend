@@ -63,4 +63,14 @@ describe('YearCitationView test ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with TZ date and custom prefix and suffix', () => {
+        const testObject = {
+            'rek_date': '2017-07-01T00:00:00Z',
+            'prefix': '[',
+            'suffix': '].'
+        };
+        const wrapper = setup({ date: testObject.rek_date, prefix: testObject.prefix, suffix: testObject.suffix });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });
