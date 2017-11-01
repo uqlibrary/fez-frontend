@@ -44,7 +44,7 @@ describe('DesignForm renders ', () => {
         expect(wrapper.find('Field').length).toEqual(10);
     });
 
-    it('component with 6 required input fields', () => {
+    it('component with 3 required input fields', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field .requiredField').length).toEqual(2);
         expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
