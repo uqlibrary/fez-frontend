@@ -325,6 +325,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={
         Object {
           "fez_record_search_key_article_number": null,
@@ -627,18 +628,32 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=""
+          value="Laselle, Laurence"
         >
-          Laselle, Laurence
-           and 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            Laselle, Laurence
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=" and "
+          suffix=" "
+          value="Tisdell, Clem"
         >
-          Tisdell, Clem
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+             and 
+            Tisdell, Clem
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView
@@ -761,6 +776,7 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
         Object {
