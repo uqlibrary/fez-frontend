@@ -36,7 +36,7 @@ class AuthorsCitationView extends React.Component {
 
     componentWillMount() {
         const {publication, searchKey} = this.props;
-        const authors = Array.isArray(publication[searchKey.key]) && publication[searchKey.key]
+        const authors = Array.isArray(publication[searchKey.key]) && publication[searchKey.key].length > 0 && publication[searchKey.key]
             .sort((author1, author2) => (
                 author1[searchKey.order] - author2[searchKey.order])
             );
