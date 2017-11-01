@@ -1071,9 +1071,9 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <a
           className="citationShowMoreAuthors"
+          href="#"
           onClick={[Function]}
           onKeyPress={[Function]}
-          tabIndex={0}
         >
            
           Show 4 more...

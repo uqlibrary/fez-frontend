@@ -62,12 +62,13 @@ class AuthorsCitationView extends React.Component {
         ];
     };
 
-    _toggleShowMore = () => {
+    _toggleShowMore = (e) => {
+        e.preventDefault();
         this.setState({showMore: !this.state.showMore});
     };
 
     renderShowMoreLink = (showMoreText) => (
-        <a tabIndex={0} className="citationShowMoreAuthors" onClick={this._toggleShowMore} onKeyPress={this._toggleShowMore}> {showMoreText} </a>
+        <a href="#" className="citationShowMoreAuthors" onClick={this._toggleShowMore} onKeyPress={this._toggleShowMore}> {showMoreText} </a>
     );
 
     render() {

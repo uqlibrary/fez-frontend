@@ -290,9 +290,9 @@ exports[`AuthorsCitationView test  should render component with ten authors and 
     </CitationView>
     <a
       className="citationShowMoreAuthors"
+      href="#"
       onClick={[Function]}
       onKeyPress={[Function]}
-      tabIndex={0}
     >
        
       Show 2 more...
@@ -557,9 +557,9 @@ exports[`AuthorsCitationView test  should render component with ten authors and 
     </CitationView>
     <a
       className="citationShowMoreAuthors"
+      href="#"
       onClick={[Function]}
       onKeyPress={[Function]}
-      tabIndex={0}
     >
        
       Show less

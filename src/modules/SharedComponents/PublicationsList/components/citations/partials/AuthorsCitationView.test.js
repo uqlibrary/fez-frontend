@@ -213,7 +213,7 @@ describe('AuthorsCitationView test ', () => {
         expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(1);
         expect(wrapper.find('.citationShowMoreAuthors').text()).toEqual(' Show 2 more... ');
 
-        wrapper.instance()._toggleShowMore();
+        wrapper.instance()._toggleShowMore({preventDefault: jest.fn()});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().showMore).toBeTruthy();
         expect(wrapper.find('.citationAuthor').length).toEqual(12);
