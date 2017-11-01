@@ -31,7 +31,7 @@ export default class JournalCitation extends Component {
                 </FontIcon>
 
                 {/* {Title of journal} */}
-                <Partials.CitationView className="citationTitle" value={record.title} prefix="" suffix="" />
+                <Partials.CitationView className="citationJournalName" value={record.title} prefix="" suffix=" " />
 
                 {/* {Publication Year| (|).}*/}
                 <Partials.YearCitationView date={this.props.publication.rek_date} />

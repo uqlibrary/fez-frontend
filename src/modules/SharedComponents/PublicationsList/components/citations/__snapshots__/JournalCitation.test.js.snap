@@ -361,15 +361,16 @@ exports[`JournalCitation renders  component with a mock espace record 1`] = `
       </span>
     </FontIcon>
     <CitationView
-      className="citationTitle"
+      className="citationJournalName"
       prefix=""
-      suffix=""
+      suffix=" "
       value="Management international review"
     >
       <span
-        className="citationTitle"
+        className="citationJournalName"
       >
         Management international review
+         
       </span>
     </CitationView>
     <YearCitationView
@@ -450,12 +451,12 @@ exports[`JournalCitation renders  component with empty publication 1`] = `
       </span>
     </FontIcon>
     <CitationView
-      className="citationTitle"
+      className="citationJournalName"
       prefix=""
-      suffix=""
+      suffix=" "
     >
       <span
-        className="citationTitle empty"
+        className="citationJournalName empty"
       />
     </CitationView>
     <YearCitationView
