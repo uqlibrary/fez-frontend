@@ -17,7 +17,6 @@
   }
   &.orcid::before {
     content: url(../../src/images/orcid_icon.svg);
-    zoom: 0.8;
   }
   &.publons::before {
     content: url(../../src/images/publons_icon.svg);
@@ -55,5 +54,8 @@
   &.dashboard {
     width: 40px;
     height: 40px;
+    &.orcid::before {
+      zoom: 0.8;
+    }
   }
 }
