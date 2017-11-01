@@ -127,6 +127,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
         name: 'Digilib Image',
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
+        citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false
     },
     {

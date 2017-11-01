@@ -477,6 +477,8 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
     </AuthorsCitationView>
     <YearCitationView
       date="2002-01-01T00:00:00Z"
+      prefix="("
+      suffix=")."
     >
       <span
         className="citationYear"
@@ -603,7 +605,10 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView>
+    <YearCitationView
+      prefix="("
+      suffix=")."
+    >
       <span
         className="citationYear empty"
       />
