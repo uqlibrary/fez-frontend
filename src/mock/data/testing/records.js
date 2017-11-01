@@ -6651,4 +6651,437 @@ export const videoDocument = {
     "fez_record_search_key_volume_number":null
 };
 
+export const journal = {
+    "rek_pid":"UQ:186337",
+    "rek_title_xsdmf_id":10691,
+    "rek_title":"Management international review",
+    "rek_description_xsdmf_id":null,
+    "rek_description":null,
+    "rek_display_type_xsdmf_id":3673,
+    "rek_display_type":294,
+    "rek_status_xsdmf_id":3680,
+    "rek_status":2,
+    "rek_date_xsdmf_id":10464,
+    "rek_date":"2005-01-01T00:00:00Z",
+    "rek_object_type_xsdmf_id":3674,
+    "rek_object_type":3,
+    "rek_depositor_xsdmf_id":7578,
+    "rek_depositor":7974,
+    "rek_created_date_xsdmf_id":3677,
+    "rek_created_date":"2009-11-16T16:06:07Z",
+    "rek_updated_date_xsdmf_id":3678,
+    "rek_updated_date":"2017-08-10T09:56:32Z",
+    "rek_file_downloads":0,
+    "rek_citation":"<a class=\"citation_title\" title=\"Click to view Journal: Management international review\" href=\"\/view\/UQ:186337\">Management international review<\/a> (<span class=\"citation_date\">2005<\/span>) Volume <span class=\"citation_volume_number\">45<\/span> Issue <span class=\"citation_issue_number\">1, Special issue<\/span>",
+    "rek_genre_xsdmf_id":10466,
+    "rek_genre":"Journal",
+    "rek_genre_type_xsdmf_id":null,
+    "rek_genre_type":null,
+    "rek_formatted_title_xsdmf_id":null,
+    "rek_formatted_title":null,
+    "rek_formatted_abstract_xsdmf_id":null,
+    "rek_formatted_abstract":null,
+    "rek_depositor_affiliation_xsdmf_id":11881,
+    "rek_depositor_affiliation":830,
+    "rek_thomson_citation_count":null,
+    "rek_thomson_citation_count_xsdmf_id":null,
+    "rek_subtype_xsdmf_id":null,
+    "rek_subtype":null,
+    "rek_scopus_citation_count":null,
+    "rek_herdc_notes_xsdmf_id":null,
+    "rek_herdc_notes":null,
+    "rek_scopus_doc_type_xsdmf_id":null,
+    "rek_scopus_doc_type":null,
+    "rek_wok_doc_type_xsdmf_id":null,
+    "rek_wok_doc_type":null,
+    "rek_pubmed_doc_type_xsdmf_id":null,
+    "rek_pubmed_doc_type":null,
+    "rek_security_inherited":1,
+    "rek_altmetric_score":null,
+    "rek_altmetric_score_xsdmf_id":null,
+    "rek_altmetric_id":null,
+    "rek_altmetric_id_xsdmf_id":null,
+    "rek_copyright_xsdmf_id":3679,
+    "rek_copyright":"on",
+    "fez_record_search_key_access_conditions":null,
+    "fez_record_search_key_acknowledgements":null,
+    "fez_record_search_key_additional_notes":null,
+    "fez_record_search_key_advisory_statement":null,
+    "fez_record_search_key_alternate_genre":[
+
+    ],
+    "fez_record_search_key_alternative_title":[
+
+    ],
+    "fez_record_search_key_ands_collection_type":null,
+    "fez_record_search_key_architectural_features":[
+
+    ],
+    "fez_record_search_key_article_number":null,
+    "fez_record_search_key_assigned_group_id":[
+
+    ],
+    "fez_record_search_key_assigned_user_id":[
+
+    ],
+    "fez_record_search_key_author":[
+
+    ],
+    "fez_record_search_key_author_affiliation_id":[
+
+    ],
+    "fez_record_search_key_author_affiliation_country":[
+
+    ],
+    "fez_record_search_key_author_affiliation_full_address":[
+
+    ],
+    "fez_record_search_key_author_affiliation_name":[
+
+    ],
+    "fez_record_search_key_author_id":[
+
+    ],
+    "fez_record_search_key_author_role":[
+
+    ],
+    "fez_record_search_key_book_title":null,
+    "fez_record_search_key_building_materials":[
+
+    ],
+    "fez_record_search_key_category":[
+
+    ],
+    "fez_record_search_key_chapter_number":null,
+    "fez_record_search_key_condition":[
+
+    ],
+    "fez_record_search_key_conference_dates":null,
+    "fez_record_search_key_conference_id":null,
+    "fez_record_search_key_conference_location":null,
+    "fez_record_search_key_conference_name":null,
+    "fez_record_search_key_construction_date":null,
+    "fez_record_search_key_contact_details_email":[
+
+    ],
+    "fez_record_search_key_contributor":[
+        {
+            "rek_contributor_id":3174701,
+            "rek_contributor_pid":"UQ:186337",
+            "rek_contributor_xsdmf_id":null,
+            "rek_contributor":"Hakanson, Lars",
+            "rek_contributor_order":1
+        }
+    ],
+    "fez_record_search_key_contributor_id":[
+        {
+            "rek_contributor_id_id":2366662,
+            "rek_contributor_id_pid":"UQ:186337",
+            "rek_contributor_id_xsdmf_id":null,
+            "rek_contributor_id":77821,
+            "rek_contributor_id_order":1
+        }
+    ],
+    "fez_record_search_key_convener":null,
+    "fez_record_search_key_corresponding_email":[
+
+    ],
+    "fez_record_search_key_corresponding_name":[
+
+    ],
+    "fez_record_search_key_corresponding_country":[
+
+    ],
+    "fez_record_search_key_corresponding_organisation":[
+
+    ],
+    "fez_record_search_key_country_of_issue":null,
+    "fez_record_search_key_coverage_period":[
+
+    ],
+    "fez_record_search_key_creator_id":[
+
+    ],
+    "fez_record_search_key_creator_name":[
+
+    ],
+    "fez_record_search_key_datastream_policy":null,
+    "fez_record_search_key_data_volume":null,
+    "fez_record_search_key_date_available":null,
+    "fez_record_search_key_date_photo_taken":null,
+    "fez_record_search_key_date_recorded":null,
+    "fez_record_search_key_date_scanned":null,
+    "fez_record_search_key_doi":null,
+    "fez_record_search_key_edition":null,
+    "fez_record_search_key_end_date":null,
+    "fez_record_search_key_end_page":null,
+    "fez_record_search_key_fields_of_research":[
+
+    ],
+    "fez_record_search_key_file_attachment_access_condition":[
+
+    ],
+    "fez_record_search_key_file_attachment_embargo_date":[
+
+    ],
+    "fez_record_search_key_file_attachment_name":[
+
+    ],
+    "fez_record_search_key_geographic_area":[
+
+    ],
+    "fez_record_search_key_grant_acronym":[
+
+    ],
+    "fez_record_search_key_grant_agency":[
+
+    ],
+    "fez_record_search_key_grant_agency_id":[
+
+    ],
+    "fez_record_search_key_grant_id":[
+
+    ],
+    "fez_record_search_key_grant_text":[
+
+    ],
+    "fez_record_search_key_herdc_code":null,
+    "fez_record_search_key_herdc_status":null,
+    "fez_record_search_key_identifier":[
+
+    ],
+    "fez_record_search_key_institutional_status":null,
+    "fez_record_search_key_interior_features":[
+
+    ],
+    "fez_record_search_key_isbn":[
+
+    ],
+    "fez_record_search_key_isdatasetof":[
+
+    ],
+    "fez_record_search_key_isderivationof":[
+
+    ],
+    "fez_record_search_key_isi_loc":null,
+    "fez_record_search_key_ismemberof":[
+        {
+            "rek_ismemberof_id":11786345,
+            "rek_ismemberof_pid":"UQ:186337",
+            "rek_ismemberof_xsdmf_id":null,
+            "rek_ismemberof":"UQ:152266",
+            "rek_ismemberof_order":1
+        },
+        {
+            "rek_ismemberof_id":11786346,
+            "rek_ismemberof_pid":"UQ:186337",
+            "rek_ismemberof_xsdmf_id":null,
+            "rek_ismemberof":"UQ:3815",
+            "rek_ismemberof_order":2
+        }
+    ],
+    "fez_record_search_key_issn":[
+        {
+            "rek_issn_id":5242199,
+            "rek_issn_pid":"UQ:186337",
+            "rek_issn_xsdmf_id":null,
+            "rek_issn":"0025-181X",
+            "rek_issn_order":1
+        },
+        {
+            "rek_issn_id":5242200,
+            "rek_issn_pid":"UQ:186337",
+            "rek_issn_xsdmf_id":null,
+            "rek_issn":"0938-8249",
+            "rek_issn_order":2
+        }
+    ],
+    "fez_record_search_key_issue_number":{
+        "rek_issue_number_id":4491855,
+        "rek_issue_number_pid":"UQ:186337",
+        "rek_issue_number_xsdmf_id":null,
+        "rek_issue_number":"1, Special issue"
+    },
+    "fez_record_search_key_job_number":null,
+    "fez_record_search_key_journal_name":null,
+    "fez_record_search_key_keywords":[
+        {
+            "rek_keywords_id":29636091,
+            "rek_keywords_pid":"UQ:186337",
+            "rek_keywords_xsdmf_id":null,
+            "rek_keywords":"Knowledge",
+            "rek_keywords_order":1
+        },
+        {
+            "rek_keywords_id":29636092,
+            "rek_keywords_pid":"UQ:186337",
+            "rek_keywords_xsdmf_id":null,
+            "rek_keywords":"Multinational corporations",
+            "rek_keywords_order":2
+        }
+    ],
+    "fez_record_search_key_language":[
+        {
+            "rek_language_id":5358540,
+            "rek_language_pid":"UQ:186337",
+            "rek_language_xsdmf_id":null,
+            "rek_language":"eng",
+            "rek_language_order":1
+        }
+    ],
+    "fez_record_search_key_language_of_book_title":[
+
+    ],
+    "fez_record_search_key_language_of_journal_name":[
+
+    ],
+    "fez_record_search_key_language_of_proceedings_title":[
+
+    ],
+    "fez_record_search_key_language_of_title":[
+
+    ],
+    "fez_record_search_key_length":null,
+    "fez_record_search_key_license":null,
+    "fez_record_search_key_link":[
+        {
+            "rek_link_id":3227604,
+            "rek_link_pid":"UQ:186337",
+            "rek_link_xsdmf_id":null,
+            "rek_link":"http:\/\/proquest.umi.com\/pqdlink?Ver=1&Exp=11-17-2014&RQT=318&PMID=27051",
+            "rek_link_order":1
+        }
+    ],
+    "fez_record_search_key_link_description":[
+        {
+            "rek_link_description_id":3227573,
+            "rek_link_description_pid":"UQ:186337",
+            "rek_link_description_xsdmf_id":null,
+            "rek_link_description":"Journal website",
+            "rek_link_description_order":1
+        }
+    ],
+    "fez_record_search_key_location":[
+
+    ],
+    "fez_record_search_key_native_script_book_title":null,
+    "fez_record_search_key_native_script_conference_name":null,
+    "fez_record_search_key_native_script_journal_name":null,
+    "fez_record_search_key_native_script_proceedings_title":null,
+    "fez_record_search_key_native_script_title":null,
+    "fez_record_search_key_newspaper":null,
+    "fez_record_search_key_notes":null,
+    "fez_record_search_key_oa_embargo_days":null,
+    "fez_record_search_key_oa_notes":null,
+    "fez_record_search_key_oa_status":{
+        "rek_oa_status_id":396589,
+        "rek_oa_status_pid":"UQ:186337",
+        "rek_oa_status_xsdmf_id":null,
+        "rek_oa_status":453698
+    },
+    "fez_record_search_key_org_name":null,
+    "fez_record_search_key_org_unit_name":null,
+    "fez_record_search_key_original_format":null,
+    "fez_record_search_key_parent_publication":null,
+    "fez_record_search_key_patent_number":null,
+    "fez_record_search_key_period":[
+
+    ],
+    "fez_record_search_key_place_of_publication":{
+        "rek_place_of_publication_id":4288859,
+        "rek_place_of_publication_pid":"UQ:186337",
+        "rek_place_of_publication_xsdmf_id":null,
+        "rek_place_of_publication":"Wiesbaden, Germany"
+    },
+    "fez_record_search_key_proceedings_title":null,
+    "fez_record_search_key_project_description":null,
+    "fez_record_search_key_project_id":null,
+    "fez_record_search_key_project_name":null,
+    "fez_record_search_key_project_start_date":null,
+    "fez_record_search_key_publisher":{
+        "rek_publisher_id":4556217,
+        "rek_publisher_pid":"UQ:186337",
+        "rek_publisher_xsdmf_id":null,
+        "rek_publisher":"Betriebswirtschaftlicher Verlag T. Gabler"
+    },
+    "fez_record_search_key_pubmed_id":null,
+    "fez_record_search_key_refereed":null,
+    "fez_record_search_key_refereed_source":{
+        "rek_refereed_source_id":1333354,
+        "rek_refereed_source_pid":"UQ:186337",
+        "rek_refereed_source_xsdmf_id":null,
+        "rek_refereed_source":"453635"
+    },
+    "fez_record_search_key_related_datasets":null,
+    "fez_record_search_key_related_publications":null,
+    "fez_record_search_key_report_number":null,
+    "fez_record_search_key_retracted":null,
+    "fez_record_search_key_rights":null,
+    "fez_record_search_key_roman_script_book_title":null,
+    "fez_record_search_key_roman_script_conference_name":null,
+    "fez_record_search_key_roman_script_journal_name":null,
+    "fez_record_search_key_roman_script_proceedings_title":null,
+    "fez_record_search_key_roman_script_title":null,
+    "fez_record_search_key_scale":null,
+    "fez_record_search_key_scopus_id":null,
+    "fez_record_search_key_section":null,
+    "fez_record_search_key_seo_code":[
+
+    ],
+    "fez_record_search_key_series":null,
+    "fez_record_search_key_software_required":[
+
+    ],
+    "fez_record_search_key_source":null,
+    "fez_record_search_key_start_date":null,
+    "fez_record_search_key_start_page":null,
+    "fez_record_search_key_structural_systems":[
+
+    ],
+    "fez_record_search_key_style":[
+
+    ],
+    "fez_record_search_key_subcategory":[
+
+    ],
+    "fez_record_search_key_subject":[
+        {
+            "rek_subject_id":9304112,
+            "rek_subject_pid":"UQ:186337",
+            "rek_subject_xsdmf_id":null,
+            "rek_subject":452815,
+            "rek_subject_order":1
+        }
+    ],
+    "fez_record_search_key_supervisor":[
+
+    ],
+    "fez_record_search_key_supervisor_id":[
+
+    ],
+    "fez_record_search_key_surrounding_features":[
+
+    ],
+    "fez_record_search_key_time_period_end_date":null,
+    "fez_record_search_key_time_period_start_date":null,
+    "fez_record_search_key_total_chapters":null,
+    "fez_record_search_key_total_pages":null,
+    "fez_record_search_key_transcript":null,
+    "fez_record_search_key_translated_book_title":null,
+    "fez_record_search_key_translated_conference_name":null,
+    "fez_record_search_key_translated_journal_name":null,
+    "fez_record_search_key_translated_newspaper":null,
+    "fez_record_search_key_translated_proceedings_title":null,
+    "fez_record_search_key_translated_title":null,
+    "fez_record_search_key_type_of_data":[
+
+    ],
+    "fez_record_search_key_volume_number":{
+        "rek_volume_number_id":5214858,
+        "rek_volume_number_pid":"UQ:186337",
+        "rek_volume_number_xsdmf_id":null,
+        "rek_volume_number":"45"
+    }
+};
+
 // TODO: each publication type should have a sample from eSpace data for testing

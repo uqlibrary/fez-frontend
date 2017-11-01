@@ -142,6 +142,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_JOURNAL,
         name: 'Journal',
         class: 'Uqlibrary\\FezCore\\Types\\Journal',
+        citationComponent: components ? components.JournalCitation : null,
         hasFormComponent: false
     },
     {
