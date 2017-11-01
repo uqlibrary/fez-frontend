@@ -958,7 +958,7 @@ export default {
                         text: 'some help',
                         buttonLabel: 'OK'
                     },
-                    description: 'Provide a list of authors for this publication and assign yourself as an author or an editor',
+                    description: 'Provide a list of authors for this publication and assign yourself as an author',
                     field: {
                         form: {
                             locale: {
