@@ -288,6 +288,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={
         Object {
           "fez_record_search_key_article_number": null,
@@ -553,16 +554,25 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=" "
+          value="Webster-Mannison, Marci"
         >
-          Webster-Mannison, Marci
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+            Webster-Mannison, Marci
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView
       date="2006-01-01T00:00:00Z"
+      prefix="("
+      suffix=")."
     >
       <span
         className="citationYear"
@@ -648,6 +658,7 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
         Object {
@@ -661,7 +672,10 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView>
+    <YearCitationView
+      prefix="("
+      suffix=")."
+    >
       <span
         className="citationYear empty"
       />

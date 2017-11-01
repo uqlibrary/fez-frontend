@@ -72,7 +72,7 @@
       &.error {
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
-        opacity: 0.75;
+        filter: gray;
       }
     }
     .orcid { // orcid required to be more prominent

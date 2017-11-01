@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AudioDocumentCitation renders  component with a mock espace record 1`] = `
-<AudioDocumentCitation
+exports[`VideoDocumentCitation renders  component with a mock espace record 1`] = `
+<VideoDocumentCitation
   publication={
     Object {
       "fez_record_search_key_access_conditions": null,
@@ -17,82 +17,18 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "fez_record_search_key_assigned_user_id": Array [],
       "fez_record_search_key_author": Array [
         Object {
-          "rek_author": "Shutter, Leigh",
-          "rek_author_id": 29123821,
+          "rek_author": "Walters, S.",
+          "rek_author_id": 29062316,
           "rek_author_order": 1,
-          "rek_author_pid": "UQ:151787",
-          "rek_author_xsdmf_id": 9514,
-        },
-        Object {
-          "rek_author": "Arthurs, Andy",
-          "rek_author_id": 29123822,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:151787",
-          "rek_author_xsdmf_id": 9514,
-        },
-        Object {
-          "rek_author": "Bamford, Greg",
-          "rek_author_id": 29123823,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:151787",
-          "rek_author_xsdmf_id": 9514,
-        },
-        Object {
-          "rek_author": "McColl, Mary Rose",
-          "rek_author_id": 29123824,
-          "rek_author_order": 4,
-          "rek_author_pid": "UQ:151787",
-          "rek_author_xsdmf_id": 9514,
-        },
-        Object {
-          "rek_author": "Skinner, Peter R.",
-          "rek_author_id": 29123825,
-          "rek_author_order": 5,
-          "rek_author_pid": "UQ:151787",
-          "rek_author_xsdmf_id": 9514,
+          "rek_author_pid": "UQ:161756",
+          "rek_author_xsdmf_id": 11754,
         },
       ],
       "fez_record_search_key_author_affiliation_country": Array [],
       "fez_record_search_key_author_affiliation_full_address": Array [],
       "fez_record_search_key_author_affiliation_id": Array [],
       "fez_record_search_key_author_affiliation_name": Array [],
-      "fez_record_search_key_author_id": Array [
-        Object {
-          "rek_author_id": 0,
-          "rek_author_id_id": 28491062,
-          "rek_author_id_order": 1,
-          "rek_author_id_pid": "UQ:151787",
-          "rek_author_id_xsdmf_id": 9509,
-        },
-        Object {
-          "rek_author_id": 0,
-          "rek_author_id_id": 28491063,
-          "rek_author_id_order": 2,
-          "rek_author_id_pid": "UQ:151787",
-          "rek_author_id_xsdmf_id": 9509,
-        },
-        Object {
-          "rek_author_id": 486,
-          "rek_author_id_id": 28491064,
-          "rek_author_id_order": 3,
-          "rek_author_id_pid": "UQ:151787",
-          "rek_author_id_xsdmf_id": 9509,
-        },
-        Object {
-          "rek_author_id": 0,
-          "rek_author_id_id": 28491065,
-          "rek_author_id_order": 4,
-          "rek_author_id_pid": "UQ:151787",
-          "rek_author_id_xsdmf_id": 9509,
-        },
-        Object {
-          "rek_author_id": 146,
-          "rek_author_id_id": 28491066,
-          "rek_author_id_order": 5,
-          "rek_author_id_pid": "UQ:151787",
-          "rek_author_id_xsdmf_id": 9509,
-        },
-      ],
+      "fez_record_search_key_author_id": Array [],
       "fez_record_search_key_author_role": Array [],
       "fez_record_search_key_book_title": null,
       "fez_record_search_key_building_materials": Array [],
@@ -106,7 +42,15 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "fez_record_search_key_construction_date": null,
       "fez_record_search_key_contact_details_email": Array [],
       "fez_record_search_key_contributor": Array [],
-      "fez_record_search_key_contributor_id": Array [],
+      "fez_record_search_key_contributor_id": Array [
+        Object {
+          "rek_contributor_id": 3792,
+          "rek_contributor_id_id": 2325838,
+          "rek_contributor_id_order": 1,
+          "rek_contributor_id_pid": "UQ:161756",
+          "rek_contributor_id_xsdmf_id": 11749,
+        },
+      ],
       "fez_record_search_key_convener": null,
       "fez_record_search_key_corresponding_country": Array [],
       "fez_record_search_key_corresponding_email": Array [],
@@ -147,31 +91,17 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "fez_record_search_key_isi_loc": null,
       "fez_record_search_key_ismemberof": Array [
         Object {
-          "rek_ismemberof": "UQ:3804",
-          "rek_ismemberof_id": 11644074,
+          "rek_ismemberof": "UQ:11401",
+          "rek_ismemberof_id": 11612973,
           "rek_ismemberof_order": 1,
-          "rek_ismemberof_pid": "UQ:151787",
-          "rek_ismemberof_xsdmf_id": 149,
-        },
-        Object {
-          "rek_ismemberof": "UQ:161208",
-          "rek_ismemberof_id": 11644075,
-          "rek_ismemberof_order": 2,
-          "rek_ismemberof_pid": "UQ:151787",
+          "rek_ismemberof_pid": "UQ:161756",
           "rek_ismemberof_xsdmf_id": 149,
         },
         Object {
           "rek_ismemberof": "UQ:152266",
-          "rek_ismemberof_id": 11644076,
-          "rek_ismemberof_order": 3,
-          "rek_ismemberof_pid": "UQ:151787",
-          "rek_ismemberof_xsdmf_id": 149,
-        },
-        Object {
-          "rek_ismemberof": "UQ:12837",
-          "rek_ismemberof_id": 11644077,
-          "rek_ismemberof_order": 4,
-          "rek_ismemberof_pid": "UQ:151787",
+          "rek_ismemberof_id": 11612974,
+          "rek_ismemberof_order": 2,
+          "rek_ismemberof_pid": "UQ:161756",
           "rek_ismemberof_xsdmf_id": 149,
         },
       ],
@@ -183,10 +113,10 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "fez_record_search_key_language": Array [
         Object {
           "rek_language": "eng",
-          "rek_language_id": 5283977,
+          "rek_language_id": 5270701,
           "rek_language_order": 1,
-          "rek_language_pid": "UQ:151787",
-          "rek_language_xsdmf_id": 9541,
+          "rek_language_pid": "UQ:161756",
+          "rek_language_xsdmf_id": 11783,
         },
       ],
       "fez_record_search_key_language_of_book_title": Array [],
@@ -195,8 +125,24 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "fez_record_search_key_language_of_title": Array [],
       "fez_record_search_key_length": null,
       "fez_record_search_key_license": null,
-      "fez_record_search_key_link": Array [],
-      "fez_record_search_key_link_description": Array [],
+      "fez_record_search_key_link": Array [
+        Object {
+          "rek_link": "http://segweb.org/",
+          "rek_link_id": 3201413,
+          "rek_link_order": 1,
+          "rek_link_pid": "UQ:161756",
+          "rek_link_xsdmf_id": 11871,
+        },
+      ],
+      "fez_record_search_key_link_description": Array [
+        Object {
+          "rek_link_description": "Link to Society of Economic Geologists publications website",
+          "rek_link_description_id": 3201382,
+          "rek_link_description_order": 1,
+          "rek_link_description_pid": "UQ:161756",
+          "rek_link_description_xsdmf_id": 11870,
+        },
+      ],
       "fez_record_search_key_location": Array [],
       "fez_record_search_key_native_script_book_title": null,
       "fez_record_search_key_native_script_conference_name": null,
@@ -210,7 +156,12 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "fez_record_search_key_oa_status": null,
       "fez_record_search_key_org_name": null,
       "fez_record_search_key_org_unit_name": null,
-      "fez_record_search_key_original_format": null,
+      "fez_record_search_key_original_format": Object {
+        "rek_original_format": "DVD",
+        "rek_original_format_id": 13284,
+        "rek_original_format_pid": "UQ:161756",
+        "rek_original_format_xsdmf_id": 11774,
+      },
       "fez_record_search_key_parent_publication": null,
       "fez_record_search_key_patent_number": null,
       "fez_record_search_key_period": Array [],
@@ -220,25 +171,25 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "fez_record_search_key_project_id": null,
       "fez_record_search_key_project_name": null,
       "fez_record_search_key_project_start_date": null,
-      "fez_record_search_key_publisher": Object {
-        "rek_publisher": "Centre for Subtropical Design, Queensland University of Technology",
-        "rek_publisher_id": 4489060,
-        "rek_publisher_pid": "UQ:151787",
-        "rek_publisher_xsdmf_id": 9540,
-      },
+      "fez_record_search_key_publisher": null,
       "fez_record_search_key_pubmed_id": null,
       "fez_record_search_key_refereed": null,
       "fez_record_search_key_refereed_source": Object {
         "rek_refereed_source": "453638",
-        "rek_refereed_source_id": 1252323,
-        "rek_refereed_source_pid": "UQ:151787",
+        "rek_refereed_source_id": 1232915,
+        "rek_refereed_source_pid": "UQ:161756",
         "rek_refereed_source_xsdmf_id": 16623,
       },
       "fez_record_search_key_related_datasets": null,
       "fez_record_search_key_related_publications": null,
       "fez_record_search_key_report_number": null,
       "fez_record_search_key_retracted": null,
-      "fez_record_search_key_rights": null,
+      "fez_record_search_key_rights": Object {
+        "rek_rights": "x",
+        "rek_rights_id": 114934,
+        "rek_rights_pid": "UQ:161756",
+        "rek_rights_xsdmf_id": 11784,
+      },
       "fez_record_search_key_roman_script_book_title": null,
       "fez_record_search_key_roman_script_conference_name": null,
       "fez_record_search_key_roman_script_journal_name": null,
@@ -248,7 +199,12 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "fez_record_search_key_scopus_id": null,
       "fez_record_search_key_section": null,
       "fez_record_search_key_seo_code": Array [],
-      "fez_record_search_key_series": "some series value",
+      "fez_record_search_key_series": Object {
+        "rek_series": "SEG Special Publication Video Series",
+        "rek_series_id": 197774,
+        "rek_series_pid": "UQ:161756",
+        "rek_series_xsdmf_id": 11780,
+      },
       "fez_record_search_key_software_required": Array [],
       "fez_record_search_key_source": null,
       "fez_record_search_key_start_date": null,
@@ -258,25 +214,11 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "fez_record_search_key_subcategory": Array [],
       "fez_record_search_key_subject": Array [
         Object {
-          "rek_subject": 310199,
-          "rek_subject_id": 9196765,
+          "rek_subject": 451986,
+          "rek_subject_id": 9154394,
           "rek_subject_order": 1,
-          "rek_subject_pid": "UQ:151787",
-          "rek_subject_xsdmf_id": 9526,
-        },
-        Object {
-          "rek_subject": 450019,
-          "rek_subject_id": 9196766,
-          "rek_subject_order": 2,
-          "rek_subject_pid": "UQ:151787",
-          "rek_subject_xsdmf_id": 9526,
-        },
-        Object {
-          "rek_subject": 450776,
-          "rek_subject_id": 9196767,
-          "rek_subject_order": 3,
-          "rek_subject_pid": "UQ:151787",
-          "rek_subject_xsdmf_id": 9526,
+          "rek_subject_pid": "UQ:161756",
+          "rek_subject_xsdmf_id": 11766,
         },
       ],
       "fez_record_search_key_supervisor": Array [],
@@ -299,35 +241,35 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "rek_altmetric_id_xsdmf_id": null,
       "rek_altmetric_score": null,
       "rek_altmetric_score_xsdmf_id": null,
-      "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Shutter, Leigh\\" href=\\"/list/author/Shutter%2C+Leigh/\\">Shutter, Leigh</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Arthurs, Andy\\" href=\\"/list/author/Arthurs%2C+Andy/\\">Arthurs, Andy</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Bamford, Greg\\" href=\\"/list/author_id/486/\\">Bamford, Greg</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for McColl, Mary Rose\\" href=\\"/list/author/McColl%2C+Mary+Rose/\\">McColl, Mary Rose</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Skinner, Peter R.\\" href=\\"/list/author_id/146/\\">Skinner, Peter R.</a> (<span class=\\"citation_date\\">2007</span>) <a class=\\"citation_title\\" title=\\"Click to view Audio Document: Hearing the city Symposium Title 5: In conversation\\" href=\\"/view/UQ:151787\\">Hearing the city Symposium Title 5: In conversation</a>.  :<span class=\\"citation_publisher\\">Centre for Subtropical Design, Queensland University of Technology</span>. ",
+      "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Walters, S.\\" href=\\"/list/author/Walters%2C+S./\\">Walters, S.</a>, (<span class=\\"citation_date\\">2002</span>). <i><a class=\\"citation_title\\" title=\\"Click to view Video Document: Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies &mdash; What a grain can tell you\\" href=\\"/view/UQ:161756\\">Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you</a></i>. <span class=\\"citation_series\\">SEG Special Publication Video Series</span>.",
       "rek_copyright": "on",
       "rek_copyright_xsdmf_id": 3679,
-      "rek_created_date": "2008-07-08T11:32:20Z",
+      "rek_created_date": "2009-01-27T10:14:08Z",
       "rek_created_date_xsdmf_id": 3677,
-      "rek_date": "2007-01-01T00:00:00Z",
-      "rek_date_xsdmf_id": 9531,
-      "rek_depositor": 298,
-      "rek_depositor_affiliation": 835,
+      "rek_date": "2002-01-01T00:00:00Z",
+      "rek_date_xsdmf_id": 11771,
+      "rek_depositor": 2470,
+      "rek_depositor_affiliation": 956,
       "rek_depositor_affiliation_xsdmf_id": 11881,
       "rek_depositor_xsdmf_id": 7578,
-      "rek_description": null,
-      "rek_description_xsdmf_id": null,
-      "rek_display_type": 263,
+      "rek_description": "Recorded lectures from the SEG International Exchange Lecturer tour, Denver",
+      "rek_description_xsdmf_id": 11805,
+      "rek_display_type": 310,
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,
       "rek_formatted_abstract_xsdmf_id": null,
       "rek_formatted_title": null,
       "rek_formatted_title_xsdmf_id": null,
-      "rek_genre": "CD-ROM",
+      "rek_genre": "Generic Document",
       "rek_genre_type": null,
       "rek_genre_type_xsdmf_id": null,
-      "rek_genre_xsdmf_id": 9532,
+      "rek_genre_xsdmf_id": 11772,
       "rek_herdc_notes": null,
       "rek_herdc_notes_xsdmf_id": null,
       "rek_object_type": 3,
       "rek_object_type_xsdmf_id": 3674,
-      "rek_pid": "UQ:151787",
+      "rek_pid": "UQ:161756",
       "rek_pubmed_doc_type": null,
       "rek_pubmed_doc_type_xsdmf_id": null,
       "rek_scopus_citation_count": null,
@@ -340,9 +282,9 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       "rek_subtype_xsdmf_id": null,
       "rek_thomson_citation_count": null,
       "rek_thomson_citation_count_xsdmf_id": null,
-      "rek_title": "Hearing the city Symposium Title 5: In conversation",
-      "rek_title_xsdmf_id": 9543,
-      "rek_updated_date": "2014-10-04T20:45:09Z",
+      "rek_title": "Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you",
+      "rek_title_xsdmf_id": 11786,
+      "rek_updated_date": "2014-10-05T09:58:14Z",
       "rek_updated_date_xsdmf_id": 3678,
       "rek_wok_doc_type": null,
       "rek_wok_doc_type_xsdmf_id": null,
@@ -350,7 +292,7 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
   }
 >
   <div
-    className="citationContent citationAudio"
+    className="citationContent citationVideo"
   >
     <FontIcon
       className="material-icons citationIcon"
@@ -380,7 +322,6 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
-      initialNumberOfAuthors={10}
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -396,82 +337,18 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "fez_record_search_key_assigned_user_id": Array [],
           "fez_record_search_key_author": Array [
             Object {
-              "rek_author": "Shutter, Leigh",
-              "rek_author_id": 29123821,
+              "rek_author": "Walters, S.",
+              "rek_author_id": 29062316,
               "rek_author_order": 1,
-              "rek_author_pid": "UQ:151787",
-              "rek_author_xsdmf_id": 9514,
-            },
-            Object {
-              "rek_author": "Arthurs, Andy",
-              "rek_author_id": 29123822,
-              "rek_author_order": 2,
-              "rek_author_pid": "UQ:151787",
-              "rek_author_xsdmf_id": 9514,
-            },
-            Object {
-              "rek_author": "Bamford, Greg",
-              "rek_author_id": 29123823,
-              "rek_author_order": 3,
-              "rek_author_pid": "UQ:151787",
-              "rek_author_xsdmf_id": 9514,
-            },
-            Object {
-              "rek_author": "McColl, Mary Rose",
-              "rek_author_id": 29123824,
-              "rek_author_order": 4,
-              "rek_author_pid": "UQ:151787",
-              "rek_author_xsdmf_id": 9514,
-            },
-            Object {
-              "rek_author": "Skinner, Peter R.",
-              "rek_author_id": 29123825,
-              "rek_author_order": 5,
-              "rek_author_pid": "UQ:151787",
-              "rek_author_xsdmf_id": 9514,
+              "rek_author_pid": "UQ:161756",
+              "rek_author_xsdmf_id": 11754,
             },
           ],
           "fez_record_search_key_author_affiliation_country": Array [],
           "fez_record_search_key_author_affiliation_full_address": Array [],
           "fez_record_search_key_author_affiliation_id": Array [],
           "fez_record_search_key_author_affiliation_name": Array [],
-          "fez_record_search_key_author_id": Array [
-            Object {
-              "rek_author_id": 0,
-              "rek_author_id_id": 28491062,
-              "rek_author_id_order": 1,
-              "rek_author_id_pid": "UQ:151787",
-              "rek_author_id_xsdmf_id": 9509,
-            },
-            Object {
-              "rek_author_id": 0,
-              "rek_author_id_id": 28491063,
-              "rek_author_id_order": 2,
-              "rek_author_id_pid": "UQ:151787",
-              "rek_author_id_xsdmf_id": 9509,
-            },
-            Object {
-              "rek_author_id": 486,
-              "rek_author_id_id": 28491064,
-              "rek_author_id_order": 3,
-              "rek_author_id_pid": "UQ:151787",
-              "rek_author_id_xsdmf_id": 9509,
-            },
-            Object {
-              "rek_author_id": 0,
-              "rek_author_id_id": 28491065,
-              "rek_author_id_order": 4,
-              "rek_author_id_pid": "UQ:151787",
-              "rek_author_id_xsdmf_id": 9509,
-            },
-            Object {
-              "rek_author_id": 146,
-              "rek_author_id_id": 28491066,
-              "rek_author_id_order": 5,
-              "rek_author_id_pid": "UQ:151787",
-              "rek_author_id_xsdmf_id": 9509,
-            },
-          ],
+          "fez_record_search_key_author_id": Array [],
           "fez_record_search_key_author_role": Array [],
           "fez_record_search_key_book_title": null,
           "fez_record_search_key_building_materials": Array [],
@@ -485,7 +362,15 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "fez_record_search_key_construction_date": null,
           "fez_record_search_key_contact_details_email": Array [],
           "fez_record_search_key_contributor": Array [],
-          "fez_record_search_key_contributor_id": Array [],
+          "fez_record_search_key_contributor_id": Array [
+            Object {
+              "rek_contributor_id": 3792,
+              "rek_contributor_id_id": 2325838,
+              "rek_contributor_id_order": 1,
+              "rek_contributor_id_pid": "UQ:161756",
+              "rek_contributor_id_xsdmf_id": 11749,
+            },
+          ],
           "fez_record_search_key_convener": null,
           "fez_record_search_key_corresponding_country": Array [],
           "fez_record_search_key_corresponding_email": Array [],
@@ -526,31 +411,17 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "fez_record_search_key_isi_loc": null,
           "fez_record_search_key_ismemberof": Array [
             Object {
-              "rek_ismemberof": "UQ:3804",
-              "rek_ismemberof_id": 11644074,
+              "rek_ismemberof": "UQ:11401",
+              "rek_ismemberof_id": 11612973,
               "rek_ismemberof_order": 1,
-              "rek_ismemberof_pid": "UQ:151787",
-              "rek_ismemberof_xsdmf_id": 149,
-            },
-            Object {
-              "rek_ismemberof": "UQ:161208",
-              "rek_ismemberof_id": 11644075,
-              "rek_ismemberof_order": 2,
-              "rek_ismemberof_pid": "UQ:151787",
+              "rek_ismemberof_pid": "UQ:161756",
               "rek_ismemberof_xsdmf_id": 149,
             },
             Object {
               "rek_ismemberof": "UQ:152266",
-              "rek_ismemberof_id": 11644076,
-              "rek_ismemberof_order": 3,
-              "rek_ismemberof_pid": "UQ:151787",
-              "rek_ismemberof_xsdmf_id": 149,
-            },
-            Object {
-              "rek_ismemberof": "UQ:12837",
-              "rek_ismemberof_id": 11644077,
-              "rek_ismemberof_order": 4,
-              "rek_ismemberof_pid": "UQ:151787",
+              "rek_ismemberof_id": 11612974,
+              "rek_ismemberof_order": 2,
+              "rek_ismemberof_pid": "UQ:161756",
               "rek_ismemberof_xsdmf_id": 149,
             },
           ],
@@ -562,10 +433,10 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "fez_record_search_key_language": Array [
             Object {
               "rek_language": "eng",
-              "rek_language_id": 5283977,
+              "rek_language_id": 5270701,
               "rek_language_order": 1,
-              "rek_language_pid": "UQ:151787",
-              "rek_language_xsdmf_id": 9541,
+              "rek_language_pid": "UQ:161756",
+              "rek_language_xsdmf_id": 11783,
             },
           ],
           "fez_record_search_key_language_of_book_title": Array [],
@@ -574,8 +445,24 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "fez_record_search_key_language_of_title": Array [],
           "fez_record_search_key_length": null,
           "fez_record_search_key_license": null,
-          "fez_record_search_key_link": Array [],
-          "fez_record_search_key_link_description": Array [],
+          "fez_record_search_key_link": Array [
+            Object {
+              "rek_link": "http://segweb.org/",
+              "rek_link_id": 3201413,
+              "rek_link_order": 1,
+              "rek_link_pid": "UQ:161756",
+              "rek_link_xsdmf_id": 11871,
+            },
+          ],
+          "fez_record_search_key_link_description": Array [
+            Object {
+              "rek_link_description": "Link to Society of Economic Geologists publications website",
+              "rek_link_description_id": 3201382,
+              "rek_link_description_order": 1,
+              "rek_link_description_pid": "UQ:161756",
+              "rek_link_description_xsdmf_id": 11870,
+            },
+          ],
           "fez_record_search_key_location": Array [],
           "fez_record_search_key_native_script_book_title": null,
           "fez_record_search_key_native_script_conference_name": null,
@@ -589,7 +476,12 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "fez_record_search_key_oa_status": null,
           "fez_record_search_key_org_name": null,
           "fez_record_search_key_org_unit_name": null,
-          "fez_record_search_key_original_format": null,
+          "fez_record_search_key_original_format": Object {
+            "rek_original_format": "DVD",
+            "rek_original_format_id": 13284,
+            "rek_original_format_pid": "UQ:161756",
+            "rek_original_format_xsdmf_id": 11774,
+          },
           "fez_record_search_key_parent_publication": null,
           "fez_record_search_key_patent_number": null,
           "fez_record_search_key_period": Array [],
@@ -599,25 +491,25 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "fez_record_search_key_project_id": null,
           "fez_record_search_key_project_name": null,
           "fez_record_search_key_project_start_date": null,
-          "fez_record_search_key_publisher": Object {
-            "rek_publisher": "Centre for Subtropical Design, Queensland University of Technology",
-            "rek_publisher_id": 4489060,
-            "rek_publisher_pid": "UQ:151787",
-            "rek_publisher_xsdmf_id": 9540,
-          },
+          "fez_record_search_key_publisher": null,
           "fez_record_search_key_pubmed_id": null,
           "fez_record_search_key_refereed": null,
           "fez_record_search_key_refereed_source": Object {
             "rek_refereed_source": "453638",
-            "rek_refereed_source_id": 1252323,
-            "rek_refereed_source_pid": "UQ:151787",
+            "rek_refereed_source_id": 1232915,
+            "rek_refereed_source_pid": "UQ:161756",
             "rek_refereed_source_xsdmf_id": 16623,
           },
           "fez_record_search_key_related_datasets": null,
           "fez_record_search_key_related_publications": null,
           "fez_record_search_key_report_number": null,
           "fez_record_search_key_retracted": null,
-          "fez_record_search_key_rights": null,
+          "fez_record_search_key_rights": Object {
+            "rek_rights": "x",
+            "rek_rights_id": 114934,
+            "rek_rights_pid": "UQ:161756",
+            "rek_rights_xsdmf_id": 11784,
+          },
           "fez_record_search_key_roman_script_book_title": null,
           "fez_record_search_key_roman_script_conference_name": null,
           "fez_record_search_key_roman_script_journal_name": null,
@@ -627,7 +519,12 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "fez_record_search_key_scopus_id": null,
           "fez_record_search_key_section": null,
           "fez_record_search_key_seo_code": Array [],
-          "fez_record_search_key_series": "some series value",
+          "fez_record_search_key_series": Object {
+            "rek_series": "SEG Special Publication Video Series",
+            "rek_series_id": 197774,
+            "rek_series_pid": "UQ:161756",
+            "rek_series_xsdmf_id": 11780,
+          },
           "fez_record_search_key_software_required": Array [],
           "fez_record_search_key_source": null,
           "fez_record_search_key_start_date": null,
@@ -637,25 +534,11 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "fez_record_search_key_subcategory": Array [],
           "fez_record_search_key_subject": Array [
             Object {
-              "rek_subject": 310199,
-              "rek_subject_id": 9196765,
+              "rek_subject": 451986,
+              "rek_subject_id": 9154394,
               "rek_subject_order": 1,
-              "rek_subject_pid": "UQ:151787",
-              "rek_subject_xsdmf_id": 9526,
-            },
-            Object {
-              "rek_subject": 450019,
-              "rek_subject_id": 9196766,
-              "rek_subject_order": 2,
-              "rek_subject_pid": "UQ:151787",
-              "rek_subject_xsdmf_id": 9526,
-            },
-            Object {
-              "rek_subject": 450776,
-              "rek_subject_id": 9196767,
-              "rek_subject_order": 3,
-              "rek_subject_pid": "UQ:151787",
-              "rek_subject_xsdmf_id": 9526,
+              "rek_subject_pid": "UQ:161756",
+              "rek_subject_xsdmf_id": 11766,
             },
           ],
           "fez_record_search_key_supervisor": Array [],
@@ -678,35 +561,35 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "rek_altmetric_id_xsdmf_id": null,
           "rek_altmetric_score": null,
           "rek_altmetric_score_xsdmf_id": null,
-          "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Shutter, Leigh\\" href=\\"/list/author/Shutter%2C+Leigh/\\">Shutter, Leigh</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Arthurs, Andy\\" href=\\"/list/author/Arthurs%2C+Andy/\\">Arthurs, Andy</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Bamford, Greg\\" href=\\"/list/author_id/486/\\">Bamford, Greg</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for McColl, Mary Rose\\" href=\\"/list/author/McColl%2C+Mary+Rose/\\">McColl, Mary Rose</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Skinner, Peter R.\\" href=\\"/list/author_id/146/\\">Skinner, Peter R.</a> (<span class=\\"citation_date\\">2007</span>) <a class=\\"citation_title\\" title=\\"Click to view Audio Document: Hearing the city Symposium Title 5: In conversation\\" href=\\"/view/UQ:151787\\">Hearing the city Symposium Title 5: In conversation</a>.  :<span class=\\"citation_publisher\\">Centre for Subtropical Design, Queensland University of Technology</span>. ",
+          "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Walters, S.\\" href=\\"/list/author/Walters%2C+S./\\">Walters, S.</a>, (<span class=\\"citation_date\\">2002</span>). <i><a class=\\"citation_title\\" title=\\"Click to view Video Document: Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies &mdash; What a grain can tell you\\" href=\\"/view/UQ:161756\\">Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you</a></i>. <span class=\\"citation_series\\">SEG Special Publication Video Series</span>.",
           "rek_copyright": "on",
           "rek_copyright_xsdmf_id": 3679,
-          "rek_created_date": "2008-07-08T11:32:20Z",
+          "rek_created_date": "2009-01-27T10:14:08Z",
           "rek_created_date_xsdmf_id": 3677,
-          "rek_date": "2007-01-01T00:00:00Z",
-          "rek_date_xsdmf_id": 9531,
-          "rek_depositor": 298,
-          "rek_depositor_affiliation": 835,
+          "rek_date": "2002-01-01T00:00:00Z",
+          "rek_date_xsdmf_id": 11771,
+          "rek_depositor": 2470,
+          "rek_depositor_affiliation": 956,
           "rek_depositor_affiliation_xsdmf_id": 11881,
           "rek_depositor_xsdmf_id": 7578,
-          "rek_description": null,
-          "rek_description_xsdmf_id": null,
-          "rek_display_type": 263,
+          "rek_description": "Recorded lectures from the SEG International Exchange Lecturer tour, Denver",
+          "rek_description_xsdmf_id": 11805,
+          "rek_display_type": 310,
           "rek_display_type_xsdmf_id": 3673,
           "rek_file_downloads": 0,
           "rek_formatted_abstract": null,
           "rek_formatted_abstract_xsdmf_id": null,
           "rek_formatted_title": null,
           "rek_formatted_title_xsdmf_id": null,
-          "rek_genre": "CD-ROM",
+          "rek_genre": "Generic Document",
           "rek_genre_type": null,
           "rek_genre_type_xsdmf_id": null,
-          "rek_genre_xsdmf_id": 9532,
+          "rek_genre_xsdmf_id": 11772,
           "rek_herdc_notes": null,
           "rek_herdc_notes_xsdmf_id": null,
           "rek_object_type": 3,
           "rek_object_type_xsdmf_id": 3674,
-          "rek_pid": "UQ:151787",
+          "rek_pid": "UQ:161756",
           "rek_pubmed_doc_type": null,
           "rek_pubmed_doc_type_xsdmf_id": null,
           "rek_scopus_citation_count": null,
@@ -719,9 +602,9 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
           "rek_subtype_xsdmf_id": null,
           "rek_thomson_citation_count": null,
           "rek_thomson_citation_count_xsdmf_id": null,
-          "rek_title": "Hearing the city Symposium Title 5: In conversation",
-          "rek_title_xsdmf_id": 9543,
-          "rek_updated_date": "2014-10-04T20:45:09Z",
+          "rek_title": "Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you",
+          "rek_title_xsdmf_id": 11786,
+          "rek_updated_date": "2014-10-05T09:58:14Z",
           "rek_updated_date_xsdmf_id": 3678,
           "rek_wok_doc_type": null,
           "rek_wok_doc_type_xsdmf_id": null,
@@ -738,134 +621,59 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
       <span
         className="citationAuthors"
       >
-        <CitationView
+        <span
           className="citationAuthor"
-          prefix=""
-          suffix=""
-          value="Shutter, Leigh"
         >
-          <span
-            className="citationAuthor"
-          >
-            Shutter, Leigh
-          </span>
-        </CitationView>
-        <CitationView
-          className="citationAuthor"
-          prefix=", "
-          suffix=""
-          value="Arthurs, Andy"
-        >
-          <span
-            className="citationAuthor"
-          >
-            , 
-            Arthurs, Andy
-          </span>
-        </CitationView>
-        <CitationView
-          className="citationAuthor"
-          prefix=", "
-          suffix=""
-          value="Bamford, Greg"
-        >
-          <span
-            className="citationAuthor"
-          >
-            , 
-            Bamford, Greg
-          </span>
-        </CitationView>
-        <CitationView
-          className="citationAuthor"
-          prefix=", "
-          suffix=""
-          value="McColl, Mary Rose"
-        >
-          <span
-            className="citationAuthor"
-          >
-            , 
-            McColl, Mary Rose
-          </span>
-        </CitationView>
-        <CitationView
-          className="citationAuthor"
-          prefix=" and "
-          suffix=" "
-          value="Skinner, Peter R."
-        >
-          <span
-            className="citationAuthor"
-          >
-             and 
-            Skinner, Peter R.
-             
-          </span>
-        </CitationView>
+          Walters, S.
+           
+        </span>
       </span>
     </AuthorsCitationView>
     <YearCitationView
-      date="2007-01-01T00:00:00Z"
-      prefix="("
-      suffix=")."
+      date="2002-01-01T00:00:00Z"
     >
       <span
         className="citationYear"
       >
         (
-        2007
+        2002
         ).
       </span>
     </YearCitationView>
     <CitationView
       className="citationTitle"
-      value="Hearing the city Symposium Title 5: In conversation"
+      value="Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you"
     >
       <span
         className="citationTitle"
       >
          
-        Hearing the city Symposium Title 5: In conversation
-        .
-      </span>
-    </CitationView>
-    <CitationView
-      className="citationPublisher"
-      value="Centre for Subtropical Design, Queensland University of Technology"
-    >
-      <span
-        className="citationPublisher"
-      >
-         
-        Centre for Subtropical Design, Queensland University of Technology
+        Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you
         .
       </span>
     </CitationView>
     <CitationView
       className="citationSeries"
+      value="SEG Special Publication Video Series"
     >
       <span
-        className="citationSeries empty"
-      />
+        className="citationSeries"
+      >
+         
+        SEG Special Publication Video Series
+        .
+      </span>
     </CitationView>
-    <DoiCitationView
-      doi={null}
-    >
-      <span
-        className="citationDOI empty"
-      />
-    </DoiCitationView>
   </div>
-</AudioDocumentCitation>
+</VideoDocumentCitation>
 `;
 
-exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
-<AudioDocumentCitation
+exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
+<VideoDocumentCitation
   publication={Object {}}
 >
   <div
-    className="citationContent citationAudio"
+    className="citationContent citationVideo"
   >
     <FontIcon
       className="material-icons citationIcon"
@@ -895,7 +703,6 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
-      initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
         Object {
@@ -909,10 +716,7 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
-      prefix="("
-      suffix=")."
-    >
+    <YearCitationView>
       <span
         className="citationYear empty"
       />
@@ -925,14 +729,6 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
       />
     </CitationView>
     <CitationView
-      className="citationPublisher"
-      value={null}
-    >
-      <span
-        className="citationPublisher empty"
-      />
-    </CitationView>
-    <CitationView
       className="citationSeries"
       value={null}
     >
@@ -940,13 +736,6 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
         className="citationSeries empty"
       />
     </CitationView>
-    <DoiCitationView
-      doi={null}
-    >
-      <span
-        className="citationDOI empty"
-      />
-    </DoiCitationView>
   </div>
-</AudioDocumentCitation>
+</VideoDocumentCitation>
 `;

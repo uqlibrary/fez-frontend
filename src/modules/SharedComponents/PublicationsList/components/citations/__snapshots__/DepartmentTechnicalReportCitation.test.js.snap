@@ -245,6 +245,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={
         Object {
           "fez_record_search_key_article_number": null,
@@ -467,16 +468,25 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=" "
+          value="Norman, Rosana"
         >
-          Norman, Rosana
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+            Norman, Rosana
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView
       date="2002-01-01T00:00:00Z"
+      prefix="("
+      suffix=")."
     >
       <span
         className="citationYear"
@@ -590,6 +600,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
         Object {
@@ -603,7 +614,10 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView>
+    <YearCitationView
+      prefix="("
+      suffix=")."
+    >
       <span
         className="citationYear empty"
       />

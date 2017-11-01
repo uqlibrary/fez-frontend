@@ -127,6 +127,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
         name: 'Digilib Image',
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
+        citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false
     },
     {
@@ -208,6 +209,7 @@ export const publicationTypes = (components) => [
         name: 'Video Document',
         class: 'Uqlibrary\\FezCore\\Types\\Video',
         formComponent: components ? components.VideoDocumentForm : null,
+        citationComponent: components ? components.VideoDocumentCitation : null,
         hasFormComponent: true
     },
     {
@@ -215,6 +217,7 @@ export const publicationTypes = (components) => [
         name: 'Working Paper',
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
         formComponent: components ? components.WorkingPaperForm : null,
+        citationComponent: components ? components.WorkingPaperCitation : null,
         hasFormComponent: true
     }
 ];

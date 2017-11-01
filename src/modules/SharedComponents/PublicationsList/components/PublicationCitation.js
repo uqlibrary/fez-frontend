@@ -22,6 +22,9 @@ import ManuscriptCitation from './citations/ManuscriptCitation';
 import DepartmentTechnicalReportCitation from './citations/DepartmentTechnicalReportCitation';
 import ImageDocumentCitation from './citations/ImageDocumentCitation';
 import DesignCitation from './citations/DesignCitation';
+import DigilibImageCitation from './citations/DigilibImageCitation';
+import WorkingPaperCitation from './citations/WorkingPaperCitation';
+import VideoDocumentCitation from './citations/VideoDocumentCitation';
 
 export default class PublicationCitation extends Component {
     static propTypes = {
@@ -43,7 +46,9 @@ export default class PublicationCitation extends Component {
         // keep a list of all available citations
         this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation,
             AudioDocumentCitation, GenericDocumentCitation, ResearchReportCitation, PreprintCitation, SeminarPaperCitation,
-            CreativeWorkCitation, ManuscriptCitation, DepartmentTechnicalReportCitation, ImageDocumentCitation, DesignCitation};
+            CreativeWorkCitation, ManuscriptCitation, DepartmentTechnicalReportCitation, ImageDocumentCitation, DesignCitation,
+            DigilibImageCitation, WorkingPaperCitation, VideoDocumentCitation
+        };
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }

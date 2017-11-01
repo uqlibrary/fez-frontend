@@ -2171,6 +2171,10 @@ export default {
                     title: 'Google scholar',
                 },
             },
+            citationAuthors: {
+                showMore: 'Show [numberOfAuthors] more...',
+                showLess: 'Show less'
+            },
             defaultActions: [
                 {key: 'fixRecord', label: 'Fix record', primary: false},
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord

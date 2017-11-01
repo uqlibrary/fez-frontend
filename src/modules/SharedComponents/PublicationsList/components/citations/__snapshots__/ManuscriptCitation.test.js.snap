@@ -343,6 +343,7 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={
         Object {
           "fez_record_search_key_acknowledgements": null,
@@ -663,16 +664,25 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=" "
+          value="Hayes, Edward Leo, 1889-1967"
         >
-          Hayes, Edward Leo, 1889-1967
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+            Hayes, Edward Leo, 1889-1967
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView
       date="1944-07-15T00:00:00Z"
+      prefix="("
+      suffix=")."
     >
       <span
         className="citationYear"
@@ -745,6 +755,7 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
         Object {
@@ -758,7 +769,10 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView>
+    <YearCitationView
+      prefix="("
+      suffix=")."
+    >
       <span
         className="citationYear empty"
       />
