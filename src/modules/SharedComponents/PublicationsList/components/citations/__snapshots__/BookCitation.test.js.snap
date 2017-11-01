@@ -332,6 +332,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -641,30 +642,58 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=""
+          value="Teesson, Maree"
         >
-          Teesson, Maree
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            Teesson, Maree
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Hall, Wayne"
         >
-          Hall, Wayne
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Hall, Wayne
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Proudfoot, Heather"
         >
-          Proudfoot, Heather
-           and 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Proudfoot, Heather
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=" and "
+          suffix=" "
+          value="Degenhardt, Louisa"
         >
-          Degenhardt, Louisa
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+             and 
+            Degenhardt, Louisa
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView
@@ -776,6 +805,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
         Object {
@@ -1375,6 +1405,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
     >
       <AuthorsCitationView
         className="citationEditors"
+        initialNumberOfAuthors={10}
         prefix=""
         publication={
           Object {
@@ -1636,24 +1667,45 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
         <span
           className="citationEditors"
         >
-          <span
+          <CitationView
             className="citationAuthor"
+            prefix=""
+            suffix=""
+            value="Smith, A"
           >
-            Smith, A
-            , 
-          </span>
-          <span
+            <span
+              className="citationAuthor"
+            >
+              Smith, A
+            </span>
+          </CitationView>
+          <CitationView
             className="citationAuthor"
+            prefix=", "
+            suffix=""
+            value="Smith, C"
           >
-            Smith, C
-             and 
-          </span>
-          <span
+            <span
+              className="citationAuthor"
+            >
+              , 
+              Smith, C
+            </span>
+          </CitationView>
+          <CitationView
             className="citationAuthor"
+            prefix=" and "
+            suffix=" "
+            value="Smith, B"
           >
-            Smith, B
-             
-          </span>
+            <span
+              className="citationAuthor"
+            >
+               and 
+              Smith, B
+               
+            </span>
+          </CitationView>
            ed.
         </span>
       </AuthorsCitationView>

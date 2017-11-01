@@ -884,6 +884,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={
         Object {
           "fez_record_search_key_access_conditions": null,
@@ -1745,60 +1746,123 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=""
+          value="Azimi, Iman"
         >
-          Azimi, Iman
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            Azimi, Iman
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Milevskiy, Michael J. G."
         >
-          Milevskiy, Michael J. G.
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Milevskiy, Michael J. G.
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Kaemmerer, Elke"
         >
-          Kaemmerer, Elke
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Kaemmerer, Elke
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Turner, Dane"
         >
-          Turner, Dane
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Turner, Dane
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Yapa, Kunsala T. D. S."
         >
-          Yapa, Kunsala T. D. S.
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Yapa, Kunsala T. D. S.
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Brown, Melissa A."
         >
-          Brown, Melissa A.
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Brown, Melissa A.
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Thompson, Erik W."
         >
-          Thompson, Erik W.
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Thompson, Erik W.
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Roberts-Thomson, Sarah J."
         >
-          Roberts-Thomson, Sarah J.
-           and 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Roberts-Thomson, Sarah J.
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=" and "
+          suffix=" "
+          value="Monteith, Gregory R."
         >
-          Monteith, Gregory R.
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+             and 
+            Monteith, Gregory R.
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView
@@ -4527,6 +4591,7 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
         Object {

@@ -317,6 +317,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={
         Object {
           "fez_record_search_key_article_number": null,
@@ -611,24 +612,45 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
       <span
         className="citationAuthors"
       >
-        <span
+        <CitationView
           className="citationAuthor"
+          prefix=""
+          suffix=""
+          value="Asmussen, S."
         >
-          Asmussen, S.
-          , 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            Asmussen, S.
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=", "
+          suffix=""
+          value="Kroese, D. P."
         >
-          Kroese, D. P.
-           and 
-        </span>
-        <span
+          <span
+            className="citationAuthor"
+          >
+            , 
+            Kroese, D. P.
+          </span>
+        </CitationView>
+        <CitationView
           className="citationAuthor"
+          prefix=" and "
+          suffix=" "
+          value="Rubinstein, R. Y."
         >
-          Rubinstein, R. Y.
-           
-        </span>
+          <span
+            className="citationAuthor"
+          >
+             and 
+            Rubinstein, R. Y.
+             
+          </span>
+        </CitationView>
       </span>
     </AuthorsCitationView>
     <YearCitationView
@@ -695,6 +717,7 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
     </FontIcon>
     <AuthorsCitationView
       className="citationAuthors"
+      initialNumberOfAuthors={10}
       publication={Object {}}
       searchKey={
         Object {
