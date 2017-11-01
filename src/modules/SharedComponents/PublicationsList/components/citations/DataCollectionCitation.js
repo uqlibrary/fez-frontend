@@ -34,7 +34,7 @@ export default class DataCollectionCitation extends Component {
                 </FontIcon>
 
                 {/* {Creator} */}
-                <Partials.AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView publication={this.props.publication} suffix="" />
 
                 {/* {Publication Year| (|).} */}
                 <Partials.YearCitationView date={this.props.publication.rek_date} />
@@ -45,10 +45,10 @@ export default class DataCollectionCitation extends Component {
                 {/* {Publisher| |.} */}
                 <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
-                {/* {Collection Type| (|).} */}
+                {/* {Collection Type| (|).} - awaiting vocab lookup in record */}
                 <Partials.CitationView className="citationCollectionType" value={record.collectionType} />
 
-                {/* {doi| doi:|}*/}
+                {/* {doi| doi:|} */}
                 <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
