@@ -415,19 +415,6 @@ export default {
                 confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
-            },
-            fileUploadFailedWorkflowConfirmation: {
-                confirmationTitle: 'Your record has been submitted',
-                confirmationMessage: (<p>
-                    Your record has been saved, <strong>but file upload has failed. </strong>
-                    Please, re-try to upload files via "Fix record" screen. <br/><br/>
-                    Your item will be referred to a UQ eSpace Staging staff member for editing,
-                    prior to being moved into a publicly viewable collection. Please note that our current
-                    processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
-                    HERDC 2015 and Q-index.
-                </p>),
-                cancelButtonLabel: 'Add another missing record',
-                confirmButtonLabel: 'Go to my research'
             }
         },
         claimPublications: {
@@ -564,7 +551,7 @@ export default {
                 errorAlert: {
                     type: 'error_outline',
                     title: 'Error',
-                    message: 'Error has occurred during request and request cannot be processed. Please, review the form and try again.'
+                    message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`)
                 },
                 progressAlert: {
                     type: 'info_outline',
@@ -2068,20 +2055,24 @@ export default {
                 confirmButtonLabel: 'Yes'
             },
             validationAlert: {
+                type: 'warning',
                 title: 'Validation',
                 message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
             },
             errorAlert: {
+                type: 'error_outline',
                 title: 'Error',
-                createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed. Please, review the form and try again.',
-                fileUploadMessage: 'Files failed to upload but record was saved, please contact eSpace admins',
-                patchFilesMessage: 'Record was created and files were uploaded but failed to link files to created record, please contact eSpace admins'
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`),
+                createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed.',
+                fileUploadMessage: 'Error has occurred while uploading files.',
             },
             progressAlert: {
+                type: 'info_outline',
                 title: 'Saving',
                 message: 'Creating new publication is in progress.'
             },
             successAlert: {
+                type: 'done',
                 title: 'Success',
                 message: 'New publication has been saved successfully.'
             }
@@ -2148,7 +2139,7 @@ export default {
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: 'Error has occurred during request and claim cannot be processed. Please, review the form and try again.'
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`)
             },
             progressAlert: {
                 type: 'info_outline',

@@ -75,7 +75,7 @@ export default class ClaimRecord extends Component {
         submitSucceeded = false, txt, authorLinked = false}) => {
         let alertProps = null;
         if (submitFailed && error) {
-            alertProps = {...txt.errorAlert};
+            alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
         } else if (!submitFailed && dirty && invalid) {
             alertProps = {...txt.validationAlert};
         } else if (submitting) {

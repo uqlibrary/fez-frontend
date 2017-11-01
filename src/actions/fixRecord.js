@@ -56,6 +56,15 @@ export function clearFixRecord() {
     };
 }
 
+
+// const promiseSerial = funcs =>
+//     funcs.reduce((promise, func) =>
+//         promise.then(
+//             result => func.then(result2 => result.concat(result2))
+//         ), Promise.resolve([]));
+// promise.then(result => func().then(Array.prototype.concat.bind(result))),
+
+
 /**
  * Fix record request: patch record, send issue to espace admins:
  *      update record with uploaded files, url
@@ -93,26 +102,26 @@ export function fixRecord(data) {
     return dispatch => {
         dispatch({type: actions.FIX_RECORD_PROCESSING});
 
-        const requests = [];
-        // if user added files - upload files
-        if (data.files && data.files.queue && data.files.queue.length > 0) {
-            requests.push(repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch));
-        }
         // if user updated links/added files - update record
+        let patchRecordRequest = null;
         if (data.files && data.files.queue && data.files.queue.length > 0 || data.rek_link) {
-            const patchRecordRequest = {
+            patchRecordRequest = {
                 rek_pid: data.publication.rek_pid,
                 ...transformers.getRecordLinkSearchKey(data),
                 ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
             };
-            requests.push(patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest));
         }
 
-        // set issue notification
+        // create request for issue notification
         const createIssueRequest = transformers.getFixIssueRequest(data);
-        requests.push(post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest));
 
-        return Promise.all(requests)
+        return Promise.resolve([])
+            .then(()=> ((data.files && data.files.queue && data.files.queue.length > 0)
+                ? repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
+            .then(()=> (patchRecordRequest
+                ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
+            .then(()=> (
+                post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
             .then((responses) => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
@@ -123,7 +132,7 @@ export function fixRecord(data) {
             .catch(error => {
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
-                    payload: error
+                    payload: error.message
                 });
                 return Promise.reject(error);
             });
@@ -140,10 +149,10 @@ export function unclaimRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Incomplete data for requests'
+                payload: 'Incomplete data for requests.'
             });
 
-            return Promise.reject({message: 'Incomplete data for requests'});
+            return Promise.reject({message: 'Incomplete data for requests.'});
         };
     }
 
@@ -154,9 +163,9 @@ export function unclaimRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Current author is not linked to this record'
+                payload: 'Current author is not linked to this record.'
             });
-            return Promise.reject({message: 'Current author is not linked to this record'});
+            return Promise.reject({message: 'Current author is not linked to this record.'});
         };
     }
 
@@ -180,7 +189,7 @@ export function unclaimRecord(data) {
             .catch((error) => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({type: actions.FIX_RECORD_FAILED});
-                return Promise.reject({message: 'Failed patch record request'});
+                return Promise.reject({message: 'Failed patch record request.'});
             });
     };
 }

@@ -28,12 +28,14 @@ export function putUploadFile(pid, file, dispatch) {
                 };
 
                 console.log('PUT: ' + getPresignedResponse.data + ': ' + file.name);
-                api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
-                    resolve(uploadResponse.data);
-                }).catch(uploadError => {
-                    dispatch(fileUploadActions.notifyUploadFailed(file.name));
-                    reject(uploadError);
-                });
+                api.put(getPresignedResponse.data, file, options)
+                    .then(uploadResponse => {
+                        resolve(uploadResponse.data);
+                    })
+                    .catch(uploadError => {
+                        dispatch(fileUploadActions.notifyUploadFailed(file.name));
+                        reject(uploadError);
+                    });
             })
             .catch((error) => {
                 const {errorAlert} = locale.components.publicationForm;

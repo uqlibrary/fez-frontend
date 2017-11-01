@@ -98,11 +98,11 @@ export default class FixRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
+    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
         submitSucceeded = false, alertLocale = {}}) => {
         let alertProps = null;
         if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert};
+            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
         } else if (!submitFailed && dirty && invalid) {
             alertProps = {...alertLocale.validationAlert};
         } else if (submitting) {

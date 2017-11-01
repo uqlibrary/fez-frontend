@@ -60,14 +60,10 @@ export function createNewRecord(data) {
                 }
             })
             .then(response => {
-                console.log('Promise.all ??? ');
-
                 dispatch({
                     type: actions.RECORD_CREATE_SUCCESS,
                     payload: response.data
                 });
-                console.log('Promise.all resolved - response came back from recordPatch');
-                console.log(response.data);
                 return Promise.resolve(response.data);
             })
             .catch(error => {
@@ -88,7 +84,7 @@ export function createNewRecord(data) {
 
                     dispatch({
                         type: actions.RECORD_CREATE_FAILED,
-                        payload: error
+                        payload: error.message
                     });
 
                     return Promise.reject(new Error(`${errorAlert.createRecordMessage} (${error.message})`));
