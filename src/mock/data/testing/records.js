@@ -278,6 +278,296 @@ export const digilibImage = {
     "fez_record_search_key_surrounding_features": []
 };
 
+export const workingPaper = {
+    "rek_pid": "UQ:176145",
+    "rek_title_xsdmf_id": 10736,
+    "rek_title": "Education, Employment and Social Inclusion within the European Union",
+    "rek_description_xsdmf_id": 11371,
+    "rek_description": "Employment and social inclusion have been regular themes in the agenda of the European Union for the past fifteen years. From a soft coordinated approach mainly focused on the fight against unemployment, the European Union has moved towards a more coordinated but still voluntary strategy for its Member States and this agenda now has multiple economic, social and environmental objectives. A constant feature of these strategies has been the use of education and training policies, in particular for young people who are at risk of social exclusion. This paper reviews the relevant agenda of the European Union and presents the concept of second chance schools initiated by the European Commission in 1995. It seeks to understand how the elements associated with these youth and the policy-makers are combined in order to achieve success in terms of job opportunities and better inclusion for young people.",
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 183,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 6623,
+    "rek_date": "2006-11-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 4005,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2009-04-16T10:09:27Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2015-07-31T07:31:06Z",
+    "rek_file_downloads": 74,
+    "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Laselle, Laurence\" href=\"/list/author/Laselle%2C+Laurence/\">Laselle, Laurence</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Tisdell, Clem\" href=\"/list/author_id/610/\">Tisdell, Clem</a> (<span class=\"citation_date\">2006</span>). <i><a class=\"citation_title\" title=\"Click to view Working Paper: Education, Employment and Social Inclusion within the European Union\" href=\"/view/UQ:176145\">Education, Employment and Social Inclusion within the European Union</a></i>. <span class=\"citation_series\">Working papers on Social Economics, Policy and Development</span> <span class=\"citation_report_number\">46</span>, <span class=\"citation_org_unit_name\">School of Economics</span>, <span class=\"citation_org_name\">The University of Queensland</span>.",
+    "rek_genre_xsdmf_id": 7215,
+    "rek_genre": "Working Paper",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 803,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 28885263,
+            "rek_author_pid": "UQ:176145",
+            "rek_author_xsdmf_id": 6593,
+            "rek_author": "Laselle, Laurence",
+            "rek_author_order": 1
+        },
+        {
+            "rek_author_id": 28885264,
+            "rek_author_pid": "UQ:176145",
+            "rek_author_xsdmf_id": 6593,
+            "rek_author": "Tisdell, Clem",
+            "rek_author_order": 2
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 28257006,
+            "rek_author_id_pid": "UQ:176145",
+            "rek_author_id_xsdmf_id": 6588,
+            "rek_author_id": 0,
+            "rek_author_id_order": 1
+        },
+        {
+            "rek_author_id_id": 28257007,
+            "rek_author_id_pid": "UQ:176145",
+            "rek_author_id_xsdmf_id": 6588,
+            "rek_author_id": 610,
+            "rek_author_id_order": 2
+        }
+    ],
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_end_page": {
+        "rek_end_page_id": 5502160,
+        "rek_end_page_pid": "UQ:176145",
+        "rek_end_page_xsdmf_id": 10746,
+        "rek_end_page": "23"
+    },
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 3880976,
+            "rek_file_attachment_name_pid": "UQ:176145",
+            "rek_file_attachment_name_xsdmf_id": 6673,
+            "rek_file_attachment_name": "presmd_wp46.xml",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 3880977,
+            "rek_file_attachment_name_pid": "UQ:176145",
+            "rek_file_attachment_name_xsdmf_id": 6673,
+            "rek_file_attachment_name": "wp46.pdf",
+            "rek_file_attachment_name_order": 2
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11518234,
+            "rek_ismemberof_pid": "UQ:176145",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:13199",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 11518235,
+            "rek_ismemberof_pid": "UQ:176145",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:152266",
+            "rek_ismemberof_order": 2
+        },
+        {
+            "rek_ismemberof_id": 11518236,
+            "rek_ismemberof_pid": "UQ:176145",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:3923",
+            "rek_ismemberof_order": 3
+        }
+    ],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 29166484,
+            "rek_keywords_pid": "UQ:176145",
+            "rek_keywords_xsdmf_id": 7970,
+            "rek_keywords": "European Union",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 29166485,
+            "rek_keywords_pid": "UQ:176145",
+            "rek_keywords_xsdmf_id": 7970,
+            "rek_keywords": "Education",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29166486,
+            "rek_keywords_pid": "UQ:176145",
+            "rek_keywords_xsdmf_id": 7970,
+            "rek_keywords": "Employment",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 29166487,
+            "rek_keywords_pid": "UQ:176145",
+            "rek_keywords_xsdmf_id": 7970,
+            "rek_keywords": "Social inclusion",
+            "rek_keywords_order": 4
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5226028,
+            "rek_language_pid": "UQ:176145",
+            "rek_language_xsdmf_id": 10742,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_link": [
+        {
+            "rek_link_id": 3191760,
+            "rek_link_pid": "UQ:176145",
+            "rek_link_xsdmf_id": 6685,
+            "rek_link": "http://www.uq.edu.au/economics/index.html?page=18854",
+            "rek_link_order": 1
+        }
+    ],
+    "fez_record_search_key_link_description": [
+        {
+            "rek_link_description_id": 3191729,
+            "rek_link_description_pid": "UQ:176145",
+            "rek_link_description_xsdmf_id": 6684,
+            "rek_link_description": "Link to School of Economics working papers",
+            "rek_link_description_order": 1
+        }
+    ],
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1111115,
+        "rek_notes_pid": "UQ:176145",
+        "rek_notes_xsdmf_id": 12526,
+        "rek_notes": "ISSN 1448-8563"
+    },
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 320034,
+        "rek_oa_status_pid": "UQ:176145",
+        "rek_oa_status_xsdmf_id": 17007,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_org_name": {
+        "rek_org_name_id": 349870,
+        "rek_org_name_pid": "UQ:176145",
+        "rek_org_name_xsdmf_id": 6613,
+        "rek_org_name": "The University of Queensland"
+    },
+    "fez_record_search_key_org_unit_name": {
+        "rek_org_unit_name_id": 339466,
+        "rek_org_unit_name_pid": "UQ:176145",
+        "rek_org_unit_name_xsdmf_id": 6610,
+        "rek_org_unit_name": "School of Economics"
+    },
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4431865,
+        "rek_publisher_pid": "UQ:176145",
+        "rek_publisher_xsdmf_id": 6621,
+        "rek_publisher": "School of Economics"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1182477,
+        "rek_refereed_source_pid": "UQ:176145",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_report_number": {
+        "rek_report_number_id": 16088,
+        "rek_report_number_pid": "UQ:176145",
+        "rek_report_number_xsdmf_id": 6619,
+        "rek_report_number": "46"
+    },
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_series": {
+        "rek_series_id": 193608,
+        "rek_series_pid": "UQ:176145",
+        "rek_series_xsdmf_id": 6608,
+        "rek_series": "Working papers on Social Economics, Policy and Development"
+    },
+    "fez_record_search_key_start_page": {
+        "rek_start_page_id": 5572428,
+        "rek_start_page_pid": "UQ:176145",
+        "rek_start_page_xsdmf_id": 10745,
+        "rek_start_page": "1"
+    },
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9095145,
+            "rek_subject_pid": "UQ:176145",
+            "rek_subject_xsdmf_id": 6605,
+            "rek_subject": 452775,
+            "rek_subject_order": 1
+        },
+        {
+            "rek_subject_id": 9095146,
+            "rek_subject_pid": "UQ:176145",
+            "rek_subject_xsdmf_id": 6605,
+            "rek_subject": 452784,
+            "rek_subject_order": 2
+        }
+    ],
+    "fez_record_search_key_total_pages": {
+        "rek_total_pages_id": 5481346,
+        "rek_total_pages_pid": "UQ:176145",
+        "rek_total_pages_xsdmf_id": 10747,
+        "rek_total_pages": "23"
+    },
+    "fez_record_search_key_translated_title": null
+};
+
 export const design = {
     "rek_pid": "UQ:162308",
     "rek_title_xsdmf_id": 12299,
