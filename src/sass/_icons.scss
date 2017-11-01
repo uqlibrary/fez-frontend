@@ -54,5 +54,8 @@
   &.dashboard {
     width: 40px;
     height: 40px;
+    &.orcid::before {
+      zoom: 0.8;
+    }
   }
 }
