@@ -561,7 +561,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgUnit"
-      suffix=", "
+      suffix=","
       value="School of Natural and Rural Systems"
     >
       <span
@@ -569,7 +569,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
       >
          
         School of Natural and Rural Systems
-        , 
+        ,
       </span>
     </CitationView>
     <CitationView
@@ -670,7 +670,7 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgUnit"
-      suffix=", "
+      suffix=","
       value={null}
     >
       <span
