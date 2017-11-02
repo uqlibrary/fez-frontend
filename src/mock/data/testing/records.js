@@ -1,3 +1,232 @@
+export const thesis = {
+    "rek_pid": "UQ:170415",
+    "rek_title_xsdmf_id": 10667,
+    "rek_title": "It's for love not money: Queensland graziers' perceptions of sustainable development",
+    "rek_description_xsdmf_id": 11378,
+    "rek_description": "Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development.",
+    "rek_display_type_xsdmf_id": 12278,
+    "rek_display_type": 187,
+    "rek_status_xsdmf_id": 12283,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 6853,
+    "rek_date": "2008-06-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 12279,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 12285,
+    "rek_depositor": 3917,
+    "rek_created_date_xsdmf_id": 12280,
+    "rek_created_date": "2009-03-18T10:16:36Z",
+    "rek_updated_date_xsdmf_id": 12281,
+    "rek_updated_date": "2015-07-31T07:22:31Z",
+    "rek_file_downloads": 523,
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Jennifer Moffatt\" href=\"/list/author_id/76506/\">Jennifer Moffatt</a> (<span class=\"citation_date\">2008</span>). <i><a class=\"citation_title\" title=\"Click to view Thesis: It's for love not money: Queensland graziers' perceptions of sustainable development\" href=\"/view/UQ:170415\">It's for love not money: Queensland graziers' perceptions of sustainable development</a></i> <span class=\"citation_genre_type\">PhD Thesis</span>, <span class=\"citation_org_unit_name\">School of Natural and Rural Systems</span>, <span class=\"citation_org_name\">The University of Queensland</span>.",
+    "rek_genre_xsdmf_id": 7214,
+    "rek_genre": "Thesis",
+    "rek_genre_type_xsdmf_id": 7330,
+    "rek_genre_type": "PhD Thesis",
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 12290,
+    "rek_depositor_affiliation": 804,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 12282,
+    "rek_copyright": "on",
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 30117280,
+            "rek_author_pid": "UQ:170415",
+            "rek_author_xsdmf_id": 6823,
+            "rek_author": "Jennifer Moffatt",
+            "rek_author_order": 1
+        }
+    ],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 29437412,
+            "rek_author_id_pid": "UQ:170415",
+            "rek_author_id_xsdmf_id": 6818,
+            "rek_author_id": 76506,
+            "rek_author_id_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_doi": null,
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 4174776,
+            "rek_file_attachment_name_pid": "UQ:170415",
+            "rek_file_attachment_name_xsdmf_id": 6905,
+            "rek_file_attachment_name": "Permission_Moffatt_J.pdf",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 4174777,
+            "rek_file_attachment_name_pid": "UQ:170415",
+            "rek_file_attachment_name_xsdmf_id": 6905,
+            "rek_file_attachment_name": "presmd_Permission_Moffatt_J.xml",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 4174778,
+            "rek_file_attachment_name_pid": "UQ:170415",
+            "rek_file_attachment_name_xsdmf_id": 6905,
+            "rek_file_attachment_name": "presmd_s31882862_PhD_Totalthesis.xml",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 4174779,
+            "rek_file_attachment_name_pid": "UQ:170415",
+            "rek_file_attachment_name_xsdmf_id": 6905,
+            "rek_file_attachment_name": "s31882862_PhD_Totalthesis.pdf",
+            "rek_file_attachment_name_order": 4
+        }
+    ],
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 12028039,
+            "rek_ismemberof_pid": "UQ:170415",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:210175",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 12028040,
+            "rek_ismemberof_pid": "UQ:170415",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:216495",
+            "rek_ismemberof_order": 2
+        },
+        {
+            "rek_ismemberof_id": 12028041,
+            "rek_ismemberof_pid": "UQ:170415",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:179407",
+            "rek_ismemberof_order": 3
+        }
+    ],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 30182157,
+            "rek_keywords_pid": "UQ:170415",
+            "rek_keywords_xsdmf_id": 7968,
+            "rek_keywords": "Sustainable development; graziers; farmers; agriculture; land management; business",
+            "rek_keywords_order": 1
+        }
+    ],
+    "fez_record_search_key_language": [],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1169545,
+        "rek_notes_pid": "UQ:170415",
+        "rek_notes_xsdmf_id": 12516,
+        "rek_notes": "Pages requiring colour printing: 2, 76, 166, 210, 214, 215, 221, 222, 223, 224, 226. Pages in landscape format: 240-245. The author has given permission for this thesis to be made open access."
+    },
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 366032,
+        "rek_oa_status_pid": "UQ:170415",
+        "rek_oa_status_xsdmf_id": 17004,
+        "rek_oa_status": 453695
+    },
+    "fez_record_search_key_org_name": {
+        "rek_org_name_id": 400082,
+        "rek_org_name_pid": "UQ:170415",
+        "rek_org_name_xsdmf_id": 6843,
+        "rek_org_name": "The University of Queensland"
+    },
+    "fez_record_search_key_org_unit_name": {
+        "rek_org_unit_name_id": 389498,
+        "rek_org_unit_name_pid": "UQ:170415",
+        "rek_org_unit_name_xsdmf_id": 6840,
+        "rek_org_unit_name": "School of Natural and Rural Systems"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9479409,
+            "rek_subject_pid": "UQ:170415",
+            "rek_subject_xsdmf_id": 6835,
+            "rek_subject": 300000,
+            "rek_subject_order": 1
+        }
+    ],
+    "fez_record_search_key_supervisor": [
+        {
+            "rek_supervisor_id": 436623,
+            "rek_supervisor_pid": "UQ:170415",
+            "rek_supervisor_xsdmf_id": 10555,
+            "rek_supervisor": "Professor Helen Ross",
+            "rek_supervisor_order": 1
+        },
+        {
+            "rek_supervisor_id": 436624,
+            "rek_supervisor_pid": "UQ:170415",
+            "rek_supervisor_xsdmf_id": 10555,
+            "rek_supervisor": "Professor Geoffrey Lawrence",
+            "rek_supervisor_order": 2
+        },
+        {
+            "rek_supervisor_id": 436625,
+            "rek_supervisor_pid": "UQ:170415",
+            "rek_supervisor_xsdmf_id": 10555,
+            "rek_supervisor": "Professor John Taylor",
+            "rek_supervisor_order": 3
+        }
+    ],
+    "fez_record_search_key_supervisor_id": [
+        {
+            "rek_supervisor_id_id": 386386,
+            "rek_supervisor_id_pid": "UQ:170415",
+            "rek_supervisor_id_xsdmf_id": 10550,
+            "rek_supervisor_id": 0,
+            "rek_supervisor_id_order": 1
+        },
+        {
+            "rek_supervisor_id_id": 386387,
+            "rek_supervisor_id_pid": "UQ:170415",
+            "rek_supervisor_id_xsdmf_id": 10550,
+            "rek_supervisor_id": 0,
+            "rek_supervisor_id_order": 2
+        },
+        {
+            "rek_supervisor_id_id": 386388,
+            "rek_supervisor_id_pid": "UQ:170415",
+            "rek_supervisor_id_xsdmf_id": 10550,
+            "rek_supervisor_id": 0,
+            "rek_supervisor_id_order": 3
+        }
+    ],
+    "fez_record_search_key_translated_title": null
+};
+
 export const conferenceProceedings = {
     "rek_pid": "UQ:159544",
     "rek_title_xsdmf_id": 10639,

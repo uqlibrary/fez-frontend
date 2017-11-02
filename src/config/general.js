@@ -205,6 +205,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_THESIS,
         name: 'Thesis',
         class: 'Uqlibrary\\FezCore\\Types\\Thesis',
+        citationComponent: components ? components.ThesisCitation : null,
         hasFormComponent: true
     },
     {
