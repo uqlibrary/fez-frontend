@@ -82,6 +82,7 @@ export default class FixRecord extends Component {
             this._navigateToMyResearch();
         } else {
             this.cancelConfirmationBox.showConfirmation();
+            this.setConfirmationOpened();
         }
     };
 
@@ -96,6 +97,23 @@ export default class FixRecord extends Component {
             event.preventDefault();
             this.props.handleSubmit();
         }
+    };
+
+    setConfirmationOpened = () => {
+        this.setState({
+            confirmationOpened: true
+        });
+    };
+
+    _setConfirmationClosed = () => {
+        this.setState({
+            confirmationOpened: false
+        });
+    };
+
+    _handleSubmit = () => {
+        this.setConfirmationOpened();
+        this.props.handleSubmit();
     };
 
     getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
@@ -145,7 +163,7 @@ export default class FixRecord extends Component {
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
-                    <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
+                    <Prompt when={this.props.dirty && !this.state.confirmationOpened} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 
                     <StandardCard title={txt.subTitle} help={txt.help}>
                         <PublicationCitation publication={recordToFix}/>
@@ -168,6 +186,7 @@ export default class FixRecord extends Component {
                             <ConfirmDialogBox
                                 onRef={this._setCancelConfirmation}
                                 onAction={this._navigateToMyResearch}
+                                onCancelAction={this._setConfirmationClosed}
                                 locale={txt.fix.cancelWorkflowConfirmation}/>
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
@@ -241,7 +260,7 @@ export default class FixRecord extends Component {
                                     secondary
                                     fullWidth
                                     label={txt.submit}
-                                    onTouchTap={this.props.handleSubmit}
+                                    onTouchTap={this._handleSubmit}
                                     disabled={this.props.submitting || this.props.invalid}/>
                             </div>
                         }
