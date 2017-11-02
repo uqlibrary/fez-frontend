@@ -20,7 +20,7 @@ export function loadRecordToFix(pid) {
                     payload: response.data
                 });
             })
-            .catch((error) => {
+            .catch(error => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.FIX_RECORD_LOAD_FAILED,
@@ -56,15 +56,6 @@ export function clearFixRecord() {
     };
 }
 
-
-// const promiseSerial = funcs =>
-//     funcs.reduce((promise, func) =>
-//         promise.then(
-//             result => func.then(result2 => result.concat(result2))
-//         ), Promise.resolve([]));
-// promise.then(result => func().then(Array.prototype.concat.bind(result))),
-
-
 /**
  * Fix record request: patch record, send issue to espace admins:
  *      update record with uploaded files, url
@@ -89,6 +80,8 @@ export function fixRecord(data) {
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
 
+    const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+
     if (!isAuthorLinked) {
         return dispatch => {
             dispatch({
@@ -104,7 +97,7 @@ export function fixRecord(data) {
 
         // if user updated links/added files - update record
         let patchRecordRequest = null;
-        if (data.files && data.files.queue && data.files.queue.length > 0 || data.rek_link) {
+        if (hasFilesToUpload || data.rek_link) {
             patchRecordRequest = {
                 rek_pid: data.publication.rek_pid,
                 ...transformers.getRecordLinkSearchKey(data),
@@ -116,20 +109,21 @@ export function fixRecord(data) {
         const createIssueRequest = transformers.getFixIssueRequest(data);
 
         return Promise.resolve([])
-            .then(()=> ((data.files && data.files.queue && data.files.queue.length > 0)
-                ? repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
-            .then(()=> (patchRecordRequest
-                ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
-            .then(()=> (
-                post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
-            .then((responses) => {
+            .then(()=> (hasFilesToUpload ? repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
+            .then(()=> (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
+            .then(()=> (post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
+            .then(responses => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
-                    payload: {pid: data.publication.rek_pid}
+                    payload: {
+                        pid: data.publication.rek_pid
+                    }
                 });
                 return Promise.resolve(responses);
             })
             .catch(error => {
+                // dispatch an action if session failed
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
                     payload: error.message
@@ -156,6 +150,7 @@ export function unclaimRecord(data) {
         };
     }
 
+    // TODO: special case for contributors required
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
 
@@ -179,14 +174,14 @@ export function unclaimRecord(data) {
         };
 
         return patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
-            .then((response) => {
+            .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_UNCLAIM_SUCCESS,
                     payload: {pid: data.publication.rek_pid}
                 });
                 return Promise.resolve(response);
             })
-            .catch((error) => {
+            .catch(error => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({type: actions.FIX_RECORD_FAILED});
                 return Promise.reject({message: 'Failed patch record request.'});

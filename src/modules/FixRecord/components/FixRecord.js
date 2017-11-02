@@ -142,6 +142,12 @@ export default class FixRecord extends Component {
                 key={`fix_record_action_${index}`} />
         ));
 
+        // set confirmation message depending on file upload status
+        const saveConfirmationLocale = {...txt.fix.successWorkflowConfirmation};
+        if (this.props.publicationToFixFileUploadingError) {
+            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
+        }
+
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -173,7 +179,7 @@ export default class FixRecord extends Component {
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={this._navigateToDashboard}
-                                locale={txt.fix.successWorkflowConfirmation}/>
+                                locale={saveConfirmationLocale}/>
                             <StandardCard title={txt.fix.comments.title} help={txt.fix.comments.help}>
                                 <Field
                                     component={TextField}

@@ -38,33 +38,23 @@ export function createNewRecord(data) {
         if (recordRequest.author) delete recordRequest.author;
 
         let newRecord = null;
+        const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+        const recordPatch = hasFilesToUpload ? {...transformers.getRecordFileAttachmentSearchKey(data.files.queue)} : null;
 
         return post(routes.NEW_RECORD_API(), recordRequest)
             .then(response => {
                 // save new record response
                 newRecord = response.data;
-
-                // process files
-                if (!data.files || !data.files.queue || data.files.queue.length === 0) {
-                    return response;
-                } else {
-                    const recordPatch = {
-                        ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
-                    };
-
-                    // both of requests should success for the files to be recorded successfully
-                    return Promise.all([
-                        putUploadFiles(response.data.rek_pid, data.files.queue, dispatch),
-                        patch(routes.EXISTING_RECORD_API({pid: response.data.rek_pid}), recordPatch)
-                    ]);
-                }
+                return response;
             })
-            .then(response => {
+            .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.data.rek_pid, data.files.queue, dispatch) : newRecord))
+            .then(() => (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: newRecord.data.rek_pid}), recordPatch) : newRecord))
+            .then((response) => {
                 dispatch({
                     type: actions.RECORD_CREATE_SUCCESS,
-                    payload: response.data
+                    payload: response.data ? response.data : newRecord
                 });
-                return Promise.resolve(response.data);
+                return Promise.resolve(response.data ? response.data : newRecord);
             })
             .catch(error => {
                 // record was created, but file upload or record patch failed
@@ -78,17 +68,16 @@ export function createNewRecord(data) {
                     });
 
                     return Promise.resolve(newRecord);
-                } else {
-                    // all requests failed
-                    if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
-
-                    dispatch({
-                        type: actions.RECORD_CREATE_FAILED,
-                        payload: error.message
-                    });
-
-                    return Promise.reject(new Error(`${errorAlert.createRecordMessage} (${error.message})`));
                 }
+                // all requests failed
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+
+                dispatch({
+                    type: actions.RECORD_CREATE_FAILED,
+                    payload: error.message
+                });
+
+                return Promise.reject(new Error(`${errorAlert.createRecordMessage} (${error.message})`));
             });
     };
 }

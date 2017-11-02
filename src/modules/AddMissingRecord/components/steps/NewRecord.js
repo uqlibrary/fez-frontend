@@ -46,13 +46,20 @@ export default class NewRecord extends React.Component {
             rek_title: (!validation.isValidDOIValue(rawSearchQuery) && !validation.isValidPubMedValue(rawSearchQuery)) ? rawSearchQuery : ''
         };
 
+        // set confirmation message depending on file upload status
+        const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+        if (this.props.newRecordFileUploadingError) {
+            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
+        } else {
+            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.successConfirmationMessage;
+        }
         return (
             <div>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._navigateToMyResearch}
                     onCancelAction={this._restartWorkflow}
-                    locale={this.props.newRecordFileUploadingError ? txt.fileUploadFailedWorkflowConfirmation : txt.successWorkflowConfirmation}
+                    locale={saveConfirmationLocale}
                 />
                 <PublicationForm
                     onFormSubmitSuccess={this._recordSaved}

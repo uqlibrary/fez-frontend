@@ -486,7 +486,9 @@ exports[`Component FixRecord  should render fix record form 1`] = `
           Object {
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": "Your request will be referred to a UQ eSpace staff member for review/action.",
+            "confirmationMessage": <p>
+              Your request will be referred to a UQ eSpace staff member for review/action.
+            </p>,
             "confirmationTitle": "Your request has been submitted",
           }
         }
