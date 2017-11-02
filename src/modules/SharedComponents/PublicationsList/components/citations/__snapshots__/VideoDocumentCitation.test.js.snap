@@ -637,19 +637,21 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
       date="2002-01-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="citationDate"
       >
         (
         2002
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Video 12: 1) Discovery History and Geology of the Cannington Ag-Pb-Zn Deposit 2) Advances in Micro-Analytical Technologies — What a grain can tell you"
@@ -727,14 +729,16 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >

@@ -1,3 +1,346 @@
+export const newspaperArticle = {
+    "rek_pid": "UQ:184230",
+    "rek_title_xsdmf_id": 10714,
+    "rek_title": "Improve Your Communication with Doctors",
+    "rek_description_xsdmf_id": null,
+    "rek_description": null,
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 191,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 7073,
+    "rek_date": "2010-05-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 5004,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2009-09-26T10:55:03Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2015-07-31T07:44:52Z",
+    "rek_file_downloads": 342,
+    "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Wong, Kam Cheong\" href=\"/list/author/Wong%2C+Kam+Cheong/\">Wong, Kam Cheong</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Wong, Catherine\" href=\"/list/author/Wong%2C+Catherine/\">Wong, Catherine</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Li, Stephen\" href=\"/list/author/Li%2C+Stephen/\">Li, Stephen</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Woo, Kai Hui\" href=\"/list/author/Woo%2C+Kai+Hui/\">Woo, Kai Hui</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Woo, Kai Zhi\" href=\"/list/author/Woo%2C+Kai+Zhi/\">Woo, Kai Zhi</a> (<span class=\"citation_date\">2010, May 01</span>). <a class=\"citation_title\" title=\"Click to view Newspaper Article: Improve Your Communication with Doctors\" href=\"/view/UQ:184230\">Improve Your Communication with Doctors</a>. <i><span class=\"citation_newspaper\">Australian Chinese Daily News [Aozhou Xin Bao] (Australian Chinese Weekly Magazine)</span></i>, p.<span class=\"citation_start_page\">1127: 66-67; 1128: 66-67; 1129: 65-67</span>.",
+    "rek_genre_xsdmf_id": 7208,
+    "rek_genre": "Newspaper Article",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": 11414,
+    "rek_formatted_abstract": "It is undeniable that a good doctor-patient communication is essential and critical in providing an effective treatment to the patient. Many patients have difficulty in finding relevant words to communicate with their doctors especially if there is a language barrier. If patients use an English-Chinese medical dictionary, they have to search the dictionary multiple times to find the relevant words and yet they still cannot find all the needed words and sentences to communicate with their doctors. Dictionary does not tell readers what the relevant and important points are and how to express them to their doctors. <br /><br />Dr Kam Cheong Wong and Dr Zhiqiang Wang, from the Centre of Chronic Disease (School of Medicine, University of Queensland, Australia), published a journal paper in the Australian and New Zealand Journal of Public Health regarding the importance of using bilingual English-Chinese language in a health survey. The survey was conducted in Brisbane (Queensland, Australia) using a bilingual English-Chinese questionnaire. The survey found that two-third of the Chinese community preferred to use Chinese language in the health survey (please refer to the reference).<br /><br />Health authorities in many countries such as Australia traditionally rely on provision of interpreter services to help doctors and patients in their day-to-day communication. Even so the interpreter cannot teach a patient what to say to his/her doctor. To improve the communication, governments have started to invest more in health education to empower people in disease prevention and health care access. Patients are encouraged to communicate with their doctors and become &lsquo;partners&rsquo; in disease management. Nevertheless, there is a missing link because of language barrier. This language barrier is not only because of the inability to speak English fluently. Many people who speak fluent English state that they&nbsp;are not comfortable in medical consultations because medical jargons are not something they use in everyday conversations.<br /><br />Knowing the need for a book to help the communication between doctors and patients, Dr Kam Cheong Wong has written a manuscript for a book titled &ldquo;Improve Your Communication with Doctors&rdquo;. The co-author, Catherine Wong, is a school teacher who has many years of teaching experience. Dr Wong has purposely chosen a non-medical background co-author to ensure the text is easily understood by the public so that they can communicate with their doctors effectively. The Chairman of the Australian Chinese Medical Association, Dr Stephen Li, has reviewed the manuscript and written a supportive Foreword for the book.<br /><br />This book gives patients important information to make it easier to communicate with their doctors under many different clinical circumstances. It can improve doctor-patient communication to bridge the missing link and to empower the patients to become &lsquo;partners&rsquo; with their doctors. Medical students, junior doctors (medical interns), and general practitioners/ family doctors can use this book to facilitate the communications with their patients. This book is not just meant for patients, it can be read by a layperson to improve his/her knowledge about common illnesses. Sample topics are included in the attached document.<br />",
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 788,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 28884370,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Wong, Kam Cheong",
+            "rek_author_order": 1
+        },
+        {
+            "rek_author_id": 28884371,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Wong, Catherine",
+            "rek_author_order": 2
+        },
+        {
+            "rek_author_id": 28884372,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Li, Stephen",
+            "rek_author_order": 3
+        },
+        {
+            "rek_author_id": 28884373,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Woo, Kai Hui",
+            "rek_author_order": 4
+        },
+        {
+            "rek_author_id": 28884374,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Woo, Kai Zhi",
+            "rek_author_order": 5
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 28256129,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 1
+        },
+        {
+            "rek_author_id_id": 28256130,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 2
+        },
+        {
+            "rek_author_id_id": 28256131,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 3
+        },
+        {
+            "rek_author_id_id": 28256132,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 4
+        },
+        {
+            "rek_author_id_id": 28256133,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 5
+        }
+    ],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3085088,
+            "rek_contributor_pid": "UQ:184230",
+            "rek_contributor_xsdmf_id": 7057,
+            "rek_contributor": "Li, Stephen",
+            "rek_contributor_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_edition": {
+        "rek_edition_id": 86136,
+        "rek_edition_pid": "UQ:184230",
+        "rek_edition_xsdmf_id": 7074,
+        "rek_edition": "1127; 1128; 1129"
+    },
+    "fez_record_search_key_end_page": null,
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 3880317,
+            "rek_file_attachment_name_pid": "UQ:184230",
+            "rek_file_attachment_name_xsdmf_id": 7134,
+            "rek_file_attachment_name": "Improve_Communication.pdf",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 3880318,
+            "rek_file_attachment_name_pid": "UQ:184230",
+            "rek_file_attachment_name_xsdmf_id": 7134,
+            "rek_file_attachment_name": "presmd_Improve_Communication.xml",
+            "rek_file_attachment_name_order": 2
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_herdc_code": null,
+    "fez_record_search_key_herdc_status": null,
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11517701,
+            "rek_ismemberof_pid": "UQ:184230",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:12339",
+            "rek_ismemberof_order": 1
+        }
+    ],
+    "fez_record_search_key_issn": [],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 29165518,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "communication",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 29165519,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "patient",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29165520,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Doctor",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 29165521,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "English",
+            "rek_keywords_order": 4
+        },
+        {
+            "rek_keywords_id": 29165522,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Chinese",
+            "rek_keywords_order": 5
+        },
+        {
+            "rek_keywords_id": 29165523,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "multicultural",
+            "rek_keywords_order": 6
+        },
+        {
+            "rek_keywords_id": 29165524,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Multilingualism",
+            "rek_keywords_order": 7
+        },
+        {
+            "rek_keywords_id": 29165525,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Interpreters",
+            "rek_keywords_order": 8
+        },
+        {
+            "rek_keywords_id": 29165526,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Translation",
+            "rek_keywords_order": 9
+        },
+        {
+            "rek_keywords_id": 29165527,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Bilinguals",
+            "rek_keywords_order": 10
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5225760,
+            "rek_language_pid": "UQ:184230",
+            "rek_language_xsdmf_id": 10720,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        },
+        {
+            "rek_language_id": 5225761,
+            "rek_language_pid": "UQ:184230",
+            "rek_language_xsdmf_id": 10720,
+            "rek_language": "chi",
+            "rek_language_order": 2
+        }
+    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_newspaper": {
+        "rek_newspaper_id": 2865,
+        "rek_newspaper_pid": "UQ:184230",
+        "rek_newspaper_xsdmf_id": 10723,
+        "rek_newspaper": "Australian Chinese Daily News [Aozhou Xin Bao] (Australian Chinese Weekly Magazine)"
+    },
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1110956,
+        "rek_notes_pid": "UQ:184230",
+        "rek_notes_xsdmf_id": 12481,
+        "rek_notes": "This book is written in a “patient-centered” format. It includes common symptoms and diseases. The texts are presented in English and Chinese side by side on the same page. Readers can look up in Section 1 in the table of content of the book for a main symptom. The symptoms are organized according to the body-parts and some symptoms that are specific to female, male and children are grouped under the chapters “female problems”, “male problems” and “children problems” respectively. They will find the relevant information under the headings “The possible causes” and “Important information that you shall tell your doctor” which contain the relevant and important points to discuss with their doctor. Common topics which may not be specific to a symptom such as “drug allergy”, “smoking”, and “breaking bad news” will be found in the section “Common topics”. When a diagnosis is discussed, the reader can look up in Section 2 in the table of content for a relevant diagnosis. The diagnoses are organized according to the body-parts. Diagnoses specifically related to female, male and children are grouped under the chapters “women’s health”, “men’s health”, and “children’s health” respectively. Readers will find “the relevant findings” and “the relevant treatment” which include the relevant points that a family doctor may tell his/her patient. The reader can use those points to discuss with their doctor. For example, if the doctor does not explain the relevant findings or the possible causes for the illness, the reader can make use of the points listed in the chapter to discuss with their doctor. The chapters are organized according to body- parts because patients may not familiar with body-systems such as endocrinology, but they are familiar with body-parts. Alternatively, readers can find the relevant topics by looking up the index section at the end of the book."
+    },
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 319742,
+        "rek_oa_status_pid": "UQ:184230",
+        "rek_oa_status_xsdmf_id": 16992,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_place_of_publication": null,
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4431620,
+        "rek_publisher_pid": "UQ:184230",
+        "rek_publisher_xsdmf_id": 7072,
+        "rek_publisher": "Australian Chinese Daily News"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1182195,
+        "rek_refereed_source_pid": "UQ:184230",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_section": null,
+    "fez_record_search_key_start_page": {
+        "rek_start_page_id": 5572250,
+        "rek_start_page_pid": "UQ:184230",
+        "rek_start_page_xsdmf_id": 7078,
+        "rek_start_page": "1127: 66-67; 1128: 66-67; 1129: 65-67"
+    },
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9094495,
+            "rek_subject_pid": "UQ:184230",
+            "rek_subject_xsdmf_id": 7061,
+            "rek_subject": 320100,
+            "rek_subject_order": 1
+        },
+        {
+            "rek_subject_id": 9094496,
+            "rek_subject_pid": "UQ:184230",
+            "rek_subject_xsdmf_id": 7061,
+            "rek_subject": 450590,
+            "rek_subject_order": 2
+        }
+    ],
+    "fez_record_search_key_total_pages": null,
+    "fez_record_search_key_translated_newspaper": null,
+    "fez_record_search_key_translated_title": null
+};
+
 export const thesis = {
     "rek_pid": "UQ:170415",
     "rek_title_xsdmf_id": 10667,
