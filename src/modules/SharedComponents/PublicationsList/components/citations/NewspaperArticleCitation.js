@@ -49,7 +49,7 @@ export default class NewspaperArticleCitation extends Component {
                 <Partials.CitationView className="citationNewspaper" value={record.newspaper} suffix="" />
 
                 {/* {Start page| , |} */}
-                <Partials.CitationView className="citationStartPage" value={record.startPage} prefix=", p." />
+                <Partials.CitationView className="citationStartPage" value={record.startPage} prefix=", " />
 
                 {/* {End page|-|} */}
                 <Partials.CitationView className="citationEndPage" value={record.endPage} prefix="-" />
