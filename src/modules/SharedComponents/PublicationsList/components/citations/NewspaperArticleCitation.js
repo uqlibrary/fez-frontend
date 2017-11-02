@@ -22,13 +22,13 @@ export default class NewspaperArticleCitation extends Component {
             startPage: this.props.publication.fez_record_search_key_start_page
                 ? this.props.publication.fez_record_search_key_start_page.rek_start_page
                 : null,
-            issueNumber: this.props.publication.fez_record_search_key_edition
-                ? this.props.publication.fez_record_search_key_edition.rek_edition
+            endPage: this.props.publication.fez_record_search_key_end_page
+                ? this.props.publication.fez_record_search_key_end_page.rek_end_page
                 : null
         };
 
         // eSpace citation view for Newspaper Article
-        // {Author}{Publication Date| (|).|Y, m d}{Title| |.}<i>{Newspaper| |}</i>{Start page|, p. |}{Issue number|-|}.
+        // {Author}{Publication Date| (|).|y, m d}{Title| |.}<i>{Newspaper| |}</i>{Start page| , |}{End page|-|}
 
         return (
             <div className="citationContent citationNewspaperArticle">
@@ -36,23 +36,23 @@ export default class NewspaperArticleCitation extends Component {
                     format_quote
                 </FontIcon>
 
-                {/* {Author}                        */}
+                {/* {Author} */}
                 <Partials.AuthorsCitationView publication={this.props.publication} />
 
                 {/* {Publication Date| (|).|Y, m d} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} format="[Y], [M] [d]" />
+                <Partials.DateCitationView date={this.props.publication.rek_date} format="YYYY[,] MMMM D" />
 
-                {/* {Title| |.}                     */}
+                {/* {Title| |.} */}
                 <Partials.CitationView className="citationTitleNoItalics" value={record.title} />
 
-                {/* <i>{Newspaper| |}</i>           */}
-                <Partials.CitationView className="citationNewspaper" value={record.newspaper} suffix=" " />
+                {/* <i>{Newspaper| |}</i> */}
+                <Partials.CitationView className="citationNewspaper" value={record.newspaper} suffix="" />
 
-                {/* {Start page|, p. |}             */}
-                <Partials.CitationView className="citationStartPage" value={record.startPage} prefix="p." />
+                {/* {Start page| , |} */}
+                <Partials.CitationView className="citationStartPage" value={record.startPage} prefix=", p." />
 
-                {/* {Issue number|-|}.              */}
-                <Partials.CitationView className="citationIssueNumber" value={record.issueNumber} prefix="-" />
+                {/* {End page|-|} */}
+                <Partials.CitationView className="citationEndPage" value={record.endPage} prefix="-" />
             </div>
         );
     }
