@@ -540,13 +540,13 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
       </span>
     </YearCitationView>
     <CitationView
-      className="citationPatentTitle"
+      className="citationTitle"
       prefix=" "
       suffix="."
       value="Bacterial plaques staining composition for evaluating dental caries activity"
     >
       <span
-        className="citationPatentTitle"
+        className="citationTitle"
       >
          
         Bacterial plaques staining composition for evaluating dental caries activity
@@ -629,12 +629,12 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
       />
     </YearCitationView>
     <CitationView
-      className="citationPatentTitle"
+      className="citationTitle"
       prefix=" "
       suffix="."
     >
       <span
-        className="citationPatentTitle empty"
+        className="citationTitle empty"
       />
     </CitationView>
     <CitationView

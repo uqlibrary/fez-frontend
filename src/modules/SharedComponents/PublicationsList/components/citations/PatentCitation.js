@@ -35,7 +35,7 @@ export default class PatentCitation extends Component {
                 <Partials.YearCitationView date={this.props.publication.rek_date} />
 
                 {/* {Title of patent} */}
-                <Partials.CitationView className="citationPatentTitle" value={record.title} prefix=" " suffix="." />
+                <Partials.CitationView className="citationTitle" value={record.title} prefix=" " suffix="." />
 
                 {/* {Patent number| |.}*/}
                 <Partials.CitationView className="citationPatentNumber" value={record.patentNumber} prefix=" " suffix="."/>
