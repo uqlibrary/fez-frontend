@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'config';
+import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 
 const DoiCitationView = ({doi}) => {
     if (!doi) return (<span className="citationDOI empty"/>);
@@ -15,7 +16,10 @@ const DoiCitationView = ({doi}) => {
                 rel="noopener noreferrer"
                 title={txt.ariaLabel} >
                 <span className="citationLabel">{txt.prefix}</span>
-                <span className="citationValue">{doi}</span>
+                <span className="citationValue">
+                    {doi}
+                    <ActionOpenInNew className="citationOpenUrlIcon"/>
+                </span>
             </a>
         </span>
     );
