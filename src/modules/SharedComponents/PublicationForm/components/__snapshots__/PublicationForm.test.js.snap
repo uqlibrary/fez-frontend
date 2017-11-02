@@ -13,6 +13,7 @@ exports[`PublicationForm test should render component initialised with just one 
       }
     }
     onAction={[Function]}
+    onCancelAction={[Function]}
     onRef={[Function]}
   />
   <Prompt

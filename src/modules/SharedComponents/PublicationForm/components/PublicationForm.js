@@ -25,6 +25,7 @@ export default class PublicationForm extends Component {
     constructor(props) {
         super(props);
         this.publicationTypes = publicationTypes({...recordForms});
+        this.state = {confirmationOpened: false};
     }
 
     componentWillReceiveProps(nextProps) {
@@ -34,6 +35,7 @@ export default class PublicationForm extends Component {
     }
 
     _showConfirmation = () => {
+        this.setConfirmationOpened();
         if (this.props.pristine) {
             this.props.onFormCancel();
         } else {
@@ -53,6 +55,14 @@ export default class PublicationForm extends Component {
                 })
             :
             null;
+    };
+
+    setConfirmationOpened = (opened = true) => {
+        this.setState({confirmationOpened: opened});
+    };
+
+    _setConfirmationClosed = () => {
+        this.setConfirmationOpened(false);
     };
 
     render() {
@@ -77,9 +87,10 @@ export default class PublicationForm extends Component {
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.props.onFormCancel}
+                    onCancelAction={this._setConfirmationClosed}
                     locale={txt.cancelWorkflowConfirmation} />
 
-                <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
+                <Prompt when={this.props.dirty && !this.state.confirmationOpened} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field
