@@ -945,19 +945,21 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
       date="2016-01-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="DateCitationView"
       >
         (
         2016
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Non-coding RNAs in Mammary Gland Development and Disease"
@@ -3274,14 +3276,16 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >

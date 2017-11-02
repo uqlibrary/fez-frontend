@@ -802,13 +802,14 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
       </span>
     </AuthorsCitationView>
     <DateCitationView
+      className="DateCitationView"
       date="2010-05-01T00:00:00Z"
       format="YYYY[,] MMMM D"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationDate"
+        className="DateCitationView"
       >
         (
         2010, May 1
@@ -816,11 +817,11 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
       </span>
     </DateCitationView>
     <CitationView
-      className="citationTitleNoItalics"
+      className="citationNewspaperArticleTitle"
       value="Improve Your Communication with Doctors"
     >
       <span
-        className="citationTitleNoItalics"
+        className="citationNewspaperArticleTitle"
       >
          
         Improve Your Communication with Doctors
@@ -915,6 +916,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
       />
     </AuthorsCitationView>
     <DateCitationView
+      className="DateCitationView"
       format="YYYY[,] MMMM D"
       prefix="("
       suffix=")."
@@ -924,10 +926,10 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
       />
     </DateCitationView>
     <CitationView
-      className="citationTitleNoItalics"
+      className="citationNewspaperArticleTitle"
     >
       <span
-        className="citationTitleNoItalics empty"
+        className="citationNewspaperArticleTitle empty"
       />
     </CitationView>
     <CitationView

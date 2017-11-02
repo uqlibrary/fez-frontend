@@ -1865,19 +1865,21 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
       date="2017-07-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="DateCitationView"
       >
         (
         2017
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
@@ -4605,14 +4607,16 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >

@@ -609,19 +609,21 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
       date="2017-10-12T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="DateCitationView"
       >
         (
         2017
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4"
@@ -1298,19 +1300,21 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
       date="2017-10-12T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="DateCitationView"
       >
         (
         2017
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4"
@@ -1427,14 +1431,16 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >

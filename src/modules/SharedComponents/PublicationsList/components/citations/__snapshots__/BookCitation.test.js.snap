@@ -696,19 +696,21 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
       date="2011-01-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="DateCitationView"
       >
         (
         2011
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Addictions"
@@ -819,14 +821,16 @@ exports[`BookCitation renders  component with empty publication 1`] = `
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >
@@ -1710,19 +1714,21 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
         </span>
       </AuthorsCitationView>
     </EditorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
       date="2011-01-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="DateCitationView"
       >
         (
         2011
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Addictions"

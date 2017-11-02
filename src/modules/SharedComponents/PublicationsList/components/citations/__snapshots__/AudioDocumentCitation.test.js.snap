@@ -805,19 +805,21 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
       date="2007-01-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="DateCitationView"
       >
         (
         2007
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Hearing the city Symposium Title 5: In conversation"
@@ -909,14 +911,16 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >

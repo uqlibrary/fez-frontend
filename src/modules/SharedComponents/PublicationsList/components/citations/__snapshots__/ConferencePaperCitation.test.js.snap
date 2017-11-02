@@ -1081,19 +1081,21 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </a>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
       date="2014-01-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="DateCitationView"
       >
         (
         2014
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy"
@@ -1240,14 +1242,16 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >

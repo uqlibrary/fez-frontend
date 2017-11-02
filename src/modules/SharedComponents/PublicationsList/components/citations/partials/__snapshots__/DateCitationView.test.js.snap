@@ -2,13 +2,14 @@
 
 exports[`DateCitationView test should render component with date : [July 1st, 2017] 1`] = `
 <DateCitationView
+  className="DateCitationView"
   date="2017-07-01T00:00:00Z"
   format="MMMM Do[,] YYYY"
   prefix="["
   suffix="]"
 >
   <span
-    className="citationDate"
+    className="DateCitationView"
   >
     [
     July 1st, 2017
@@ -19,13 +20,14 @@ exports[`DateCitationView test should render component with date : [July 1st, 20
 
 exports[`DateCitationView test should render component with date : On the 1st day of June in 2017 1`] = `
 <DateCitationView
+  className="DateCitationView"
   date="2017-07-01T00:00:00Z"
   format="[On the ]Do[ day of ]MMMM[ in ]YYYY"
   prefix=""
   suffix=""
 >
   <span
-    className="citationDate"
+    className="DateCitationView"
   >
     On the 1st day of July in 2017
   </span>
@@ -34,16 +36,17 @@ exports[`DateCitationView test should render component with date : On the 1st da
 
 exports[`DateCitationView test should render component with date in TZ format 1`] = `
 <DateCitationView
+  className="DateCitationView"
   date="2017-07-01T00:00:00Z"
-  format="D[/]M[/]YYYY"
+  format="YYYY"
   prefix="("
   suffix=")."
 >
   <span
-    className="citationDate"
+    className="DateCitationView"
   >
     (
-    1/7/2017
+    2017
     ).
   </span>
 </DateCitationView>
@@ -51,16 +54,17 @@ exports[`DateCitationView test should render component with date in TZ format 1`
 
 exports[`DateCitationView test should render component with date not in TZ format 1`] = `
 <DateCitationView
+  className="DateCitationView"
   date="2010-08-01 00:00:00"
-  format="D[/]M[/]YYYY"
+  format="YYYY"
   prefix="("
   suffix=")."
 >
   <span
-    className="citationDate"
+    className="DateCitationView"
   >
     (
-    1/8/2010
+    2010
     ).
   </span>
 </DateCitationView>
@@ -68,16 +72,17 @@ exports[`DateCitationView test should render component with date not in TZ forma
 
 exports[`DateCitationView test should render component with default prefix and suffix : (1/6/2017). 1`] = `
 <DateCitationView
+  className="DateCitationView"
   date="2017-07-01T00:00:00Z"
-  format="D[/]M[/]YYYY"
+  format="YYYY"
   prefix="("
   suffix=")."
 >
   <span
-    className="citationDate"
+    className="DateCitationView"
   >
     (
-    1/7/2017
+    2017
     ).
   </span>
 </DateCitationView>
@@ -85,13 +90,14 @@ exports[`DateCitationView test should render component with default prefix and s
 
 exports[`DateCitationView test should render component with just the year in brackets : (2017). 1`] = `
 <DateCitationView
+  className="DateCitationView"
   date="2017-07-01T00:00:00Z"
   format="YYYY"
   prefix="("
   suffix=")."
 >
   <span
-    className="citationDate"
+    className="DateCitationView"
   >
     (
     2017
@@ -102,8 +108,9 @@ exports[`DateCitationView test should render component with just the year in bra
 
 exports[`DateCitationView test should render empty component with date invalid date format 1`] = `
 <DateCitationView
+  className="DateCitationView"
   date="This is not a date"
-  format="D[/]M[/]YYYY"
+  format="YYYY"
   prefix="("
   suffix=")."
 >
@@ -115,7 +122,8 @@ exports[`DateCitationView test should render empty component with date invalid d
 
 exports[`DateCitationView test should render empty component with no date 1`] = `
 <DateCitationView
-  format="D[/]M[/]YYYY"
+  className="DateCitationView"
+  format="YYYY"
   prefix="("
   suffix=")."
 >

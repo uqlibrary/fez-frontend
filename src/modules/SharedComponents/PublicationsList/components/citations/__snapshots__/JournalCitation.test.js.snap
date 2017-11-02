@@ -373,19 +373,21 @@ exports[`JournalCitation renders  component with a mock espace record 1`] = `
          
       </span>
     </CitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
       date="2005-01-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="DateCitationView"
       >
         (
         2005
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationVolumeNumber"
       suffix=" "
@@ -459,14 +461,16 @@ exports[`JournalCitation renders  component with empty publication 1`] = `
         className="citationJournalName empty"
       />
     </CitationView>
-    <YearCitationView
+    <DateCitationView
+      className="DateCitationView"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationVolumeNumber"
       suffix=" "
