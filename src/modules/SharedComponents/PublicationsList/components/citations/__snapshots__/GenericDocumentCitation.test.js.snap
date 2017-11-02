@@ -798,14 +798,14 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
       </span>
     </AuthorsCitationView>
     <DateCitationView
-      className="DateCitationView"
+      className="citationDate"
       date="2011-03-29T00:00:00Z"
       format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="DateCitationView"
+        className="citationDate"
       >
         (
         2011
@@ -886,7 +886,7 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
       />
     </AuthorsCitationView>
     <DateCitationView
-      className="DateCitationView"
+      className="citationDate"
       format="YYYY"
       prefix="("
       suffix=")."

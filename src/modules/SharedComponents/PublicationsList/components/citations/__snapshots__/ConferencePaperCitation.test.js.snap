@@ -1082,14 +1082,14 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
       </span>
     </AuthorsCitationView>
     <DateCitationView
-      className="DateCitationView"
+      className="citationDate"
       date="2014-01-01T00:00:00Z"
       format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="DateCitationView"
+        className="citationDate"
       >
         (
         2014
@@ -1243,7 +1243,7 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
       />
     </AuthorsCitationView>
     <DateCitationView
-      className="DateCitationView"
+      className="citationDate"
       format="YYYY"
       prefix="("
       suffix=")."

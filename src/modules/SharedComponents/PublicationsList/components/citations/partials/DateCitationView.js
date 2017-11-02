@@ -22,7 +22,7 @@ DateCitationView.defaultProps = {
     format: 'YYYY',
     prefix: '(',
     suffix: ').',
-    className: 'DateCitationView'
+    className: 'citationDate'
 };
 
 export default DateCitationView;

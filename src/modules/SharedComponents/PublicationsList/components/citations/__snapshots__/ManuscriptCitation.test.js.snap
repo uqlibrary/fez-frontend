@@ -680,14 +680,14 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
       </span>
     </AuthorsCitationView>
     <DateCitationView
-      className="DateCitationView"
+      className="citationDate"
       date="1944-07-15T00:00:00Z"
       format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="DateCitationView"
+        className="citationDate"
       >
         (
         1944
@@ -772,7 +772,7 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
       />
     </AuthorsCitationView>
     <DateCitationView
-      className="DateCitationView"
+      className="citationDate"
       format="YYYY"
       prefix="("
       suffix=")."
