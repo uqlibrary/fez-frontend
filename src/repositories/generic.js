@@ -23,11 +23,11 @@ function processError(error, resolve, reject) {
  * @param {object} data to be posted, refer to backend API
  * @returns {Promise}
  */
-export function put(apiUrl, data, options) {
+export function put(apiUrl, data, options, encodeUrl = false) {
     console.log('PUT: ' + apiUrl);
     return new Promise((resolve, reject) => {
         api
-            .put(encodeURI(apiUrl), data, options)
+            .put(encodeUrl ? encodeURI(apiUrl) : apiUrl, data, options)
             .then(response => {
                 console.log(response.data);
                 resolve(response.data);
