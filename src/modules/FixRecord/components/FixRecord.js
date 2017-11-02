@@ -99,16 +99,14 @@ export default class FixRecord extends Component {
         }
     };
 
-    setConfirmationOpened = () => {
+    setConfirmationOpened = (opened = true) => {
         this.setState({
-            confirmationOpened: true
+            confirmationOpened: opened
         });
     };
 
     _setConfirmationClosed = () => {
-        this.setState({
-            confirmationOpened: false
-        });
+        this.setConfirmationOpened(false);
     };
 
     _handleSubmit = () => {

@@ -795,6 +795,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           }
         }
         onAction={[Function]}
+        onCancelAction={[Function]}
         onRef={[Function]}
       />
       <ConfirmDialogBox
@@ -1689,6 +1690,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
         }
         onAction={[Function]}
+        onCancelAction={[Function]}
         onRef={[Function]}
       />
       <ConfirmDialogBox
@@ -2686,6 +2688,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           }
         }
         onAction={[Function]}
+        onCancelAction={[Function]}
         onRef={[Function]}
       />
       <ConfirmDialogBox

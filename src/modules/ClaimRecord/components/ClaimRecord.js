@@ -18,6 +18,7 @@ export default class ClaimRecord extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {confirmationOpened: false};
     }
 
     componentWillMount() {
@@ -53,6 +54,7 @@ export default class ClaimRecord extends Component {
     }
 
     _showConfirmation = () => {
+        this.setConfirmationOpened();
         if (this.props.pristine) {
             if (!!this.props.initialValues.get('publication').get('sources')) {
                 this._navigateToAddRecord();
@@ -69,6 +71,16 @@ export default class ClaimRecord extends Component {
             event.preventDefault();
             this.props.handleSubmit();
         }
+    };
+
+    setConfirmationOpened = (opened = true) => {
+        this.setState({
+            confirmationOpened: opened
+        });
+    };
+
+    _setConfirmationClosed = () => {
+        this.setConfirmationOpened(false);
     };
 
     getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
@@ -96,6 +108,11 @@ export default class ClaimRecord extends Component {
         this.cancelConfirmationBox = ref;
     };
 
+    _handleSubmit = () => {
+        this.setConfirmationOpened();
+        this.props.handleSubmit();
+    };
+
     render() {
         const txt = locale.components.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
@@ -119,6 +136,7 @@ export default class ClaimRecord extends Component {
                             <ConfirmDialogBox
                                 onRef={this._setCancelConfirmation}
                                 onAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
+                                onCancelAction={this._setConfirmationClosed}
                                 locale={txt.cancelWorkflowConfirmation}/>
 
                             <ConfirmDialogBox
@@ -131,7 +149,7 @@ export default class ClaimRecord extends Component {
                                         ? txt.successWorkflowConfirmation.addRecordButtonLabel
                                         : txt.successWorkflowConfirmation.cancelButtonLabel}} />
 
-                            <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
+                            <Prompt when={this.props.dirty && !this.state.confirmationOpened} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 
                             {
                                 publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
@@ -207,7 +225,7 @@ export default class ClaimRecord extends Component {
                                     secondary
                                     fullWidth
                                     label={txt.submit}
-                                    onTouchTap={this.props.handleSubmit}
+                                    onTouchTap={this._handleSubmit}
                                     disabled={this.props.submitting || this.props.invalid}
                                 />
                             </div>
