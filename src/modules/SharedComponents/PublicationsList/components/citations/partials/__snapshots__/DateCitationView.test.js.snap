@@ -1,104 +1,129 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DateCitationView test  should render component with TZ date and custom prefix and suffix 1`] = `
-<YearCitationView
+exports[`DateCitationView test  should render component with a blank format, prefix and suffix 1`] = `
+<DateCitationView
   date="2017-07-01T00:00:00Z"
-  prefix="("
-  suffix=")."
+  format=""
+  prefix=""
+  suffix=""
+>
+  <span
+    className="citationDate"
+  />
+</DateCitationView>
+`;
+
+exports[`DateCitationView test  should render component with date : [July 1st, 2017] 1`] = `
+<DateCitationView
+  date="2017-07-01T00:00:00Z"
+  format="[M] [D], [Y]"
+  prefix="["
+  suffix="]"
 >
   <span
     className="citationDate"
   >
-    (
-    1
-     
-    July
-     
-    2017
-    ).
+    [July 6th, 2017]
   </span>
-</YearCitationView>
+</DateCitationView>
+`;
+
+exports[`DateCitationView test  should render component with date : On the 1st day of June in 2017 1`] = `
+<DateCitationView
+  date="2017-07-01T00:00:00Z"
+  format="On the [D] day of [M] in [Y]"
+  prefix=""
+  suffix=""
+>
+  <span
+    className="citationDate"
+  >
+    On the 6th day of July in 2017
+  </span>
+</DateCitationView>
 `;
 
 exports[`DateCitationView test  should render component with date in TZ format 1`] = `
-<YearCitationView
+<DateCitationView
   date="2017-07-01T00:00:00Z"
+  format="[d]/[m]/[y]"
   prefix="("
   suffix=")."
 >
   <span
     className="citationDate"
   >
-    (
-    1
-     
-    July
-     
-    2017
-    ).
+    (1/6/17).
   </span>
-</YearCitationView>
-`;
-
-exports[`DateCitationView test  should render component with date in newspaperArticle format 1`] = `
-<YearCitationView
-  date="2017-07-01T00:00:00Z"
-  prefix="("
-  suffix=")."
->
-  <span
-    className="citationDate"
-  >
-    (
-    1
-     
-    July
-     
-    2017
-    ).
-  </span>
-</YearCitationView>
+</DateCitationView>
 `;
 
 exports[`DateCitationView test  should render component with date invalid date format 1`] = `
-<YearCitationView
+<DateCitationView
   date="BLA BLA BLA"
+  format="[d]/[m]/[y]"
   prefix="("
   suffix=")."
 >
   <span
-    className="citationDate empty error"
+    className="citationDate invalid"
   />
-</YearCitationView>
+</DateCitationView>
 `;
 
 exports[`DateCitationView test  should render component with date not in TZ format 1`] = `
-<YearCitationView
+<DateCitationView
   date="2010-08-01 00:00:00"
+  format="[d]/[m]/[y]"
   prefix="("
   suffix=")."
 >
   <span
     className="citationDate"
   >
-    (
-    1
-     
-    August
-     
-    2010
-    ).
+    (1/7/10).
   </span>
-</YearCitationView>
+</DateCitationView>
 `;
 
-exports[`DateCitationView test  should render component with no date 1`] = `
-<YearCitationView
+exports[`DateCitationView test  should render component with default prefix and suffix : (1/6/2017). 1`] = `
+<DateCitationView
+  date="2017-07-01T00:00:00Z"
+  format="[d]/[m]/[Y]"
   prefix="("
   suffix=")."
 >
   <span
-    className="citationYear empty nodate"
+    className="citationDate"
+  >
+    (1/6/2017).
+  </span>
+</DateCitationView>
+`;
+
+exports[`DateCitationView test  should render component with just the year in brackets : (2017). 1`] = `
+<DateCitationView
+  date="2017-07-01T00:00:00Z"
+  format="[Y]"
+  prefix="("
+  suffix=")."
+>
+  <span
+    className="citationDate"
+  >
+    (2017).
+  </span>
+</DateCitationView>
+`;
+
+exports[`DateCitationView test  should render component with no date 1`] = `
+<DateCitationView
+  format="[d]/[m]/[y]"
+  prefix="("
+  suffix=")."
+>
+  <span
+    className="citationDate empty"
   />
-</YearCitationView>
+</DateCitationView>
 `;

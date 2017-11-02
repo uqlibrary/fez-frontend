@@ -10,9 +10,12 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 
 
-function setup({date, isShallow = false}) {
+function setup({date, format, prefix, suffix, isShallow = false}) {
     const props = {
-        date: date, // : PropTypes.object.isRequired,
+        date: date,
+        format: format,
+        prefix: prefix,
+        suffix: suffix
     };
 
     if(isShallow) {
@@ -55,12 +58,28 @@ describe('DateCitationView test ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render component with date in newspaperArticle format', () => {
-        const testObject = {
-            'rek_date': '2017-07-01T00:00:00Z',
-            'format' : 'newspaperArticle'
-        };
-        const wrapper = setup({ date: testObject.rek_date, format: testObject.format });
+    it('should render component with date : [July 1st, 2017]', () => {
+        const wrapper = setup({ date: '2017-07-01T00:00:00Z', format: '[M] [D], [Y]', prefix: '[', suffix: ']' });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with default prefix and suffix : (1/6/2017).', () => {
+        const wrapper = setup({ date: '2017-07-01T00:00:00Z', format: '[d]/[m]/[Y]' });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with date : On the 1st day of June in 2017', () => {
+        const wrapper = setup({ date: '2017-07-01T00:00:00Z', format: 'On the [D] day of [M] in [Y]', prefix: '', suffix: '' });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with a blank format, prefix and suffix', () => {
+        const wrapper = setup({ date: '2017-07-01T00:00:00Z', format: '', prefix: '', suffix: '' });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with just the year in brackets : (2017).', () => {
+        const wrapper = setup({ date: '2017-07-01T00:00:00Z', format: '[Y]'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -69,16 +88,6 @@ describe('DateCitationView test ', () => {
             'rek_date': 'BLA BLA BLA'
         };
         const wrapper = setup({ date: testObject.rek_date });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render component with TZ date and custom prefix and suffix', () => {
-        const testObject = {
-            'rek_date': '2017-07-01T00:00:00Z',
-            'prefix': '[',
-            'suffix': '].'
-        };
-        const wrapper = setup({ date: testObject.rek_date, prefix: testObject.prefix, suffix: testObject.suffix });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

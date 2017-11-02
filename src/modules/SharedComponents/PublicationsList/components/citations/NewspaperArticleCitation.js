@@ -28,7 +28,7 @@ export default class NewspaperArticleCitation extends Component {
         };
 
         // eSpace citation view for Newspaper Article
-        // {Author}{Publication Date| (|).|y, m d}{Title| |.}<i>{Newspaper| |}</i>{Start page|, p. |}{Issue number|-|}.
+        // {Author}{Publication Date| (|).|Y, m d}{Title| |.}<i>{Newspaper| |}</i>{Start page|, p. |}{Issue number|-|}.
 
         return (
             <div className="citationContent citationNewspaperArticle">
@@ -39,8 +39,8 @@ export default class NewspaperArticleCitation extends Component {
                 {/* {Author}                        */}
                 <Partials.AuthorsCitationView publication={this.props.publication} />
 
-                {/* {Publication Date| (|).|y, m d} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} format="newspaperArticle" />
+                {/* {Publication Date| (|).|Y, m d} */}
+                <Partials.DateCitationView date={this.props.publication.rek_date} format="[Y], [M] [d]" />
 
                 {/* {Title| |.}                     */}
                 <Partials.CitationView className="citationTitleNoItalics" value={record.title} />
