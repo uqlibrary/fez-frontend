@@ -3209,16 +3209,25 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
       <span
         className="citationDOI"
       >
-        <span
-          className="citationLabel"
+         
+        <a
+          className="citationDoiLink"
+          href="https://doi.org/10.1007/978-94-017-7417-8_7"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Open this DOI in an new window"
         >
-           doi: 
-        </span>
-        <span
-          className="citationValue"
-        >
-          10.1007/978-94-017-7417-8_7
-        </span>
+          <span
+            className="citationLabel"
+          >
+            https://doi.org/
+          </span>
+          <span
+            className="citationValue"
+          >
+            10.1007/978-94-017-7417-8_7
+          </span>
+        </a>
       </span>
     </DoiCitationView>
   </div>

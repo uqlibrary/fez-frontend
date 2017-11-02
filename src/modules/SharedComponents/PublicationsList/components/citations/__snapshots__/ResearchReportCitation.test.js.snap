@@ -673,16 +673,25 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
       <span
         className="citationDOI"
       >
-        <span
-          className="citationLabel"
+         
+        <a
+          className="citationDoiLink"
+          href="https://doi.org/10.129839/sometext"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Open this DOI in an new window"
         >
-           doi: 
-        </span>
-        <span
-          className="citationValue"
-        >
-          10.129839/sometext
-        </span>
+          <span
+            className="citationLabel"
+          >
+            https://doi.org/
+          </span>
+          <span
+            className="citationValue"
+          >
+            10.129839/sometext
+          </span>
+        </a>
       </span>
     </DoiCitationView>
   </div>
@@ -1362,16 +1371,25 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
       <span
         className="citationDOI"
       >
-        <span
-          className="citationLabel"
+         
+        <a
+          className="citationDoiLink"
+          href="https://doi.org/10.129839/sometext"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Open this DOI in an new window"
         >
-           doi: 
-        </span>
-        <span
-          className="citationValue"
-        >
-          10.129839/sometext
-        </span>
+          <span
+            className="citationLabel"
+          >
+            https://doi.org/
+          </span>
+          <span
+            className="citationValue"
+          >
+            10.129839/sometext
+          </span>
+        </a>
       </span>
     </DoiCitationView>
   </div>
