@@ -49,7 +49,7 @@ export default class PublicationCitation extends Component {
         this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation,
             AudioDocumentCitation, GenericDocumentCitation, ResearchReportCitation, PreprintCitation, SeminarPaperCitation,
             CreativeWorkCitation, ManuscriptCitation, DepartmentTechnicalReportCitation, ImageDocumentCitation, DesignCitation,
-            DigilibImageCitation, WorkingPaperCitation, VideoDocumentCitation, JournalCitation,ConferenceProceedingsCitation
+            DigilibImageCitation, WorkingPaperCitation, VideoDocumentCitation, JournalCitation, ConferenceProceedingsCitation
         };
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
