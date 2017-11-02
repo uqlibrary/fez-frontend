@@ -842,6 +842,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
     <CitationView
       className="citationStartPage"
       prefix=", "
+      suffix=""
       value="1127: 66-67; 1128: 66-67; 1129: 65-67"
     >
       <span
@@ -849,7 +850,6 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
       >
         , 
         1127: 66-67; 1128: 66-67; 1129: 65-67
-        .
       </span>
     </CitationView>
     <CitationView
@@ -942,6 +942,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
     <CitationView
       className="citationStartPage"
       prefix=", "
+      suffix=""
       value={null}
     >
       <span
