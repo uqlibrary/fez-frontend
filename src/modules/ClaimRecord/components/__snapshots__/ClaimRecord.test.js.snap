@@ -7,16 +7,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
   <form
     onKeyDown={[Function]}
   >
-    <NavigationDialogBox
-      txt={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to navigate away and discard all changes to the form?",
-          "confirmationTitle": "Discard changes?",
-        }
-      }
-    />
     <StandardCard
       className=""
       help={
@@ -922,16 +912,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
   <form
     onKeyDown={[Function]}
   >
-    <NavigationDialogBox
-      txt={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to navigate away and discard all changes to the form?",
-          "confirmationTitle": "Discard changes?",
-        }
-      }
-    />
     <StandardCard
       className=""
       help={
@@ -1822,16 +1802,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
   <form
     onKeyDown={[Function]}
   >
-    <NavigationDialogBox
-      txt={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to navigate away and discard all changes to the form?",
-          "confirmationTitle": "Discard changes?",
-        }
-      }
-    />
     <StandardCard
       className=""
       help={
@@ -2980,16 +2950,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
   <form
     onKeyDown={[Function]}
   >
-    <NavigationDialogBox
-      txt={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure you want to navigate away and discard all changes to the form?",
-          "confirmationTitle": "Discard changes?",
-        }
-      }
-    />
     <StandardCard
       className=""
       help={
