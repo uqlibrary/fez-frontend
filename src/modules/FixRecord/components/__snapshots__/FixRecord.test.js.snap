@@ -463,8 +463,8 @@ exports[`Component FixRecord  should render fix record form 1`] = `
       </Field>
     </StandardCard>
     <div>
-      <NavigationDailogBox
-        locale={
+      <NavigationDialogBox
+        txt={
           Object {
             "cancelButtonLabel": "No",
             "confirmButtonLabel": "Yes",

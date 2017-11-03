@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {default as NavigationPrompt} from './NavigationPrompt';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import {locale} from 'config';
 
-const NavigationDailogBox = ({when, locale}) => {
+const NavigationDialogBox = ({when, txt}) => {
     return (
         <NavigationPrompt when={when}>
             {
@@ -12,16 +13,20 @@ const NavigationDailogBox = ({when, locale}) => {
                         onRef={_setNavigationConfirmation}
                         onAction={onConfirm}
                         onCancelAction={onCancel}
-                        locale={locale}/>
+                        locale={txt}/>
                 )
             }
         </NavigationPrompt>
     );
 };
 
-NavigationDailogBox.propTypes = {
+NavigationDialogBox.propTypes = {
     when: PropTypes.bool.isRequired,
-    locale: PropTypes.object.isRequired
+    txt: PropTypes.object
 };
 
-export default NavigationDailogBox;
+NavigationDialogBox.defaultProps = {
+    txt: locale.global.discardFormChangesConfirmation
+};
+
+export default NavigationDialogBox;

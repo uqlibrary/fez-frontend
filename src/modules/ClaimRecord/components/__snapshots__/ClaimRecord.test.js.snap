@@ -7,6 +7,16 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
   <form
     onKeyDown={[Function]}
   >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to navigate away and discard all changes to the form?",
+          "confirmationTitle": "Discard changes?",
+        }
+      }
+    />
     <StandardCard
       className=""
       help={
@@ -795,7 +805,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           }
         }
         onAction={[Function]}
-        onCancelAction={[Function]}
         onRef={[Function]}
       />
       <ConfirmDialogBox
@@ -812,10 +821,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         onAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
-      />
-      <Prompt
-        message="Are you sure you want to navigate away and discard all changes to the form?"
-        when={true}
       />
       <StandardCard
         className=""
@@ -917,6 +922,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
   <form
     onKeyDown={[Function]}
   >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to navigate away and discard all changes to the form?",
+          "confirmationTitle": "Discard changes?",
+        }
+      }
+    />
     <StandardCard
       className=""
       help={
@@ -1690,7 +1705,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
         }
         onAction={[Function]}
-        onCancelAction={[Function]}
         onRef={[Function]}
       />
       <ConfirmDialogBox
@@ -1707,10 +1721,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         onAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
-      />
-      <Prompt
-        message="Are you sure you want to navigate away and discard all changes to the form?"
-        when={true}
       />
       <StandardCard
         className=""
@@ -1812,6 +1822,16 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
   <form
     onKeyDown={[Function]}
   >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to navigate away and discard all changes to the form?",
+          "confirmationTitle": "Discard changes?",
+        }
+      }
+    />
     <StandardCard
       className=""
       help={
@@ -2688,7 +2708,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           }
         }
         onAction={[Function]}
-        onCancelAction={[Function]}
         onRef={[Function]}
       />
       <ConfirmDialogBox
@@ -2705,10 +2724,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         onAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
-      />
-      <Prompt
-        message="Are you sure you want to navigate away and discard all changes to the form?"
-        when={true}
       />
       <StandardCard
         className="requiredField"
@@ -2965,6 +2980,16 @@ exports[`Component ClaimRecord  should render publication citation, error messag
   <form
     onKeyDown={[Function]}
   >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to navigate away and discard all changes to the form?",
+          "confirmationTitle": "Discard changes?",
+        }
+      }
+    />
     <StandardCard
       className=""
       help={

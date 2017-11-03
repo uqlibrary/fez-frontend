@@ -163,7 +163,7 @@ export default class FixRecord extends Component {
                     {
                         this.state.selectedRecordAction === 'fix' &&
                         <div>
-                            <NavigationDialogBox when={this.props.dirty} locale={locale.global.discardFormChangesConfirmation} />
+                            <NavigationDialogBox when={this.props.dirty}/>
                             <ConfirmDialogBox
                                 onRef={this._setCancelConfirmation}
                                 onAction={this._navigateToMyResearch}

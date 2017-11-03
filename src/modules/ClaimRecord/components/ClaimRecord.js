@@ -6,8 +6,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {AuthorLinkingField} from 'modules/SharedComponents/AuthorLinking';
+import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
 import {validation, locale, routes} from 'config';
-import {Prompt} from 'react-router-dom';
 
 export default class ClaimRecord extends Component {
     static propTypes = {
@@ -42,19 +42,18 @@ export default class ClaimRecord extends Component {
     }
 
     _navigateToMyResearch = () => {
-        this.props.history.push(routes.pathConfig.records.mine);
+        this.props.history.replace(routes.pathConfig.records.mine);
     }
 
     _navigateToAddRecord = () => {
-        this.props.history.push(routes.pathConfig.records.add.find);
+        this.props.history.replace(routes.pathConfig.records.add.find);
     }
 
     _navigateToPossibleMyResearch = () => {
-        this.props.history.push(routes.pathConfig.records.possible);
+        this.props.history.replace(routes.pathConfig.records.possible);
     }
 
     _showConfirmation = () => {
-        this.setConfirmationOpened();
         if (this.props.pristine) {
             if (!!this.props.initialValues.get('publication').get('sources')) {
                 this._navigateToAddRecord();
@@ -71,16 +70,6 @@ export default class ClaimRecord extends Component {
             event.preventDefault();
             this.props.handleSubmit();
         }
-    };
-
-    setConfirmationOpened = (opened = true) => {
-        this.setState({
-            confirmationOpened: opened
-        });
-    };
-
-    _setConfirmationClosed = () => {
-        this.setConfirmationOpened(false);
     };
 
     getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
@@ -108,10 +97,6 @@ export default class ClaimRecord extends Component {
         this.cancelConfirmationBox = ref;
     };
 
-    _handleSubmit = () => {
-        this.setConfirmationOpened();
-        this.props.handleSubmit();
-    };
 
     render() {
         const txt = locale.components.claimPublicationForm;
@@ -127,6 +112,8 @@ export default class ClaimRecord extends Component {
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
+
+                    <NavigationDialogBox when={this.props.dirty} />
                     <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
                         <PublicationCitation publication={publication}/>
                     </StandardCard>
@@ -136,7 +123,6 @@ export default class ClaimRecord extends Component {
                             <ConfirmDialogBox
                                 onRef={this._setCancelConfirmation}
                                 onAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
-                                onCancelAction={this._setConfirmationClosed}
                                 locale={txt.cancelWorkflowConfirmation}/>
 
                             <ConfirmDialogBox
@@ -148,8 +134,6 @@ export default class ClaimRecord extends Component {
                                     cancelButtonLabel: fromAddRecord
                                         ? txt.successWorkflowConfirmation.addRecordButtonLabel
                                         : txt.successWorkflowConfirmation.cancelButtonLabel}} />
-
-                            <Prompt when={this.props.dirty && !this.state.confirmationOpened} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 
                             {
                                 publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
@@ -225,7 +209,7 @@ export default class ClaimRecord extends Component {
                                     secondary
                                     fullWidth
                                     label={txt.submit}
-                                    onTouchTap={this._handleSubmit}
+                                    onTouchTap={this.props.handleSubmit}
                                     disabled={this.props.submitting || this.props.invalid}
                                 />
                             </div>
