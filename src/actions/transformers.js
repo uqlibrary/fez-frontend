@@ -114,8 +114,22 @@ export const getRecordAuthorsSearchKey = (authors) => {
 * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
 * @returns {Object} formatted {fez_record_search_key_author_id} for record request
 */
-export const getRecordAuthorsIdSearchKey = (authors) => {
-    if (!authors || authors.length === 0) return {};
+export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
+    // return empty object if all parameters are null
+    if ((!authors || authors.length === 0) && !defaultAuthorId) return {};
+
+    // return default author if provided
+    if ((!authors || authors.length === 0) && defaultAuthorId) {
+        return {
+            fez_record_search_key_author_id: [
+                {
+                    rek_author_id: defaultAuthorId,
+                    rek_author_id_order: 1
+                }
+            ]
+        };
+    }
+
     return {
         fez_record_search_key_author_id: authors.map(
             (item, index) => (

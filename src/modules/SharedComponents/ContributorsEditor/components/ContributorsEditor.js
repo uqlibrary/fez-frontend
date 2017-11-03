@@ -17,6 +17,7 @@ export class ContributorsEditor extends Component {
         author: PropTypes.object,
         onChange: PropTypes.func,
         locale: PropTypes.object,
+        input: PropTypes.object
     };
 
     static defaultProps = {
@@ -30,9 +31,8 @@ export class ContributorsEditor extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
-            contributors: [],
+            contributors: props.input && props.input.name && props.input.value ? props.input.value : [],
             isCurrentAuthorSelected: false,
             errorMessage: ''
         };

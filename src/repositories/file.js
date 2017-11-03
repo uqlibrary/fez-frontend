@@ -1,7 +1,8 @@
-import {api, generateCancelToken} from 'config';
+import {generateCancelToken} from 'config';
 import {fileUploadActions} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import * as routes from './routes';
+import {get, put, post} from './generic';
 
 /**
  * Uploads a file directly into an S3 bucket via API
@@ -11,36 +12,30 @@ import * as routes from './routes';
  * @returns {Promise}
  */
 export function putUploadFile(pid, file, dispatch) {
-    return new Promise((resolve, reject) => {
-        const fileUploadUrl = routes.FILE_UPLOAD_API({pid: pid, fileName: file.name});
-        console.log('GET: ' + fileUploadUrl);
-        api.get(fileUploadUrl)
-            .then(getPresignedResponse => {
-                const options = {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    },
-                    onUploadProgress: event => {
-                        const completed = Math.floor((event.loaded * 100) / event.total);
-                        dispatch(fileUploadActions.notifyProgress(file.name, completed));
-                    },
-                    cancelToken: generateCancelToken().token
-                };
-
-                console.log('PUT: ' + getPresignedResponse.data + ': ' + file.name);
-                api.put(getPresignedResponse.data, file, options).then(uploadResponse => {
-                    resolve(uploadResponse.data);
-                }).catch(uploadError => {
-                    dispatch(fileUploadActions.notifyUploadFailed(file.name));
-                    reject(uploadError);
-                });
-            })
-            .catch((error) => {
-                const {errorAlert} = locale.components.publicationForm;
-                dispatch(fileUploadActions.notifyUploadFailed(file.name));
-                reject(new Error(`${errorAlert.fileUploadMessage} (${error.message})`));
-            });
-    });
+    const fileUploadUrl = routes.FILE_UPLOAD_API({pid: pid, fileName: file.name});
+    return get(fileUploadUrl)
+        .then(uploadUrl => {
+            const options = {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                },
+                onUploadProgress: event => {
+                    const completed = Math.floor((event.loaded * 100) / event.total);
+                    dispatch(fileUploadActions.notifyProgress(file.name, completed));
+                },
+                cancelToken: generateCancelToken().token
+            };
+            return put(uploadUrl, file, options);
+        })
+        .then(uploadResponse => (Promise.resolve(uploadResponse)))
+        .catch(error => {
+            const issue = {issue: `File upload failed: app: ${navigator.appVersion}, connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
+            connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, user agent: ${navigator.userAgent}`};
+            post(routes.RECORDS_ISSUES_API({pid: pid}), issue);
+            const {errorAlert} = locale.components.publicationForm;
+            dispatch(fileUploadActions.notifyUploadFailed(file.name));
+            return Promise.reject(new Error(`${errorAlert.fileUploadMessage} (${error.message})`));
+        });
 }
 
 /**
