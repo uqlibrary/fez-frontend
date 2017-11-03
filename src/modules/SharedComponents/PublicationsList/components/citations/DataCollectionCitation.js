@@ -44,7 +44,7 @@ export default class DataCollectionCitation extends Component {
                 {/* {Publisher| |.} */}
                 <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
-                {/* {Collection Type| (|).} - awaiting vocab lookup in record */}
+                {/* {Collection Type| (|).} */}
                 <Partials.CitationView className="citationCollectionType" value={record.collectionType} />
 
                 {/* {doi| doi:|} */}
