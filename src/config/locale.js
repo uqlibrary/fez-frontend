@@ -60,11 +60,6 @@ export default {
                 idKey: 'fez_record_search_key_doi.rek_doi'
             },
         },
-        doiCitationLink: {
-            ariaLabel: 'Open this DOI in an new window',
-            prefix: 'https://doi.org/',
-            externalUrl: 'https://doi.org/[id]',
-        },
         embargoDateFormat: 'YYYY-MM-DD'
     },
     authentication: {
