@@ -2,9 +2,8 @@
 
 exports[`PublicationForm test should render component initialised with just one field - publication type 1`] = `
 <form>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
+  <NavigationDialogBox
+    txt={
       Object {
         "cancelButtonLabel": "No",
         "confirmButtonLabel": "Yes",
@@ -12,13 +11,6 @@ exports[`PublicationForm test should render component initialised with just one 
         "confirmationTitle": "Abandon workflow",
       }
     }
-    onAction={[Function]}
-    onCancelAction={[Function]}
-    onRef={[Function]}
-  />
-  <Prompt
-    message="Are you sure you want to navigate away and discard all changes to the form?"
-    when={true}
   />
   <StandardCard
     className=""

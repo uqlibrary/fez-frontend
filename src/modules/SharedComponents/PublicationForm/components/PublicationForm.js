@@ -66,7 +66,7 @@ export default class PublicationForm extends Component {
         const txt = locale.components.publicationForm;
         return (
             <form>
-                <NavigationDialogBox when={this.props.dirty} locale={txt.cancelWorkflowConfirmation} />
+                <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field

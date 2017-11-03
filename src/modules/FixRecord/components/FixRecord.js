@@ -155,7 +155,7 @@ export default class FixRecord extends Component {
                     {
                         this.state.selectedRecordAction === 'fix' &&
                         <div>
-                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} locale={txt.fix.cancelWorkflowConfirmation} />
+                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.fix.cancelWorkflowConfirmation} />
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}

@@ -153,7 +153,7 @@ describe('Component FixRecord ', () => {
     it('should redirect to other pages', () => {
         const testMethod = jest.fn();
 
-        const wrapper = setup({history: {replace: testMethod}});
+        const wrapper = setup({history: {push: testMethod}});
         wrapper.instance()._navigateToMyResearch();
         expect(testMethod).toHaveBeenCalledWith('/records/mine');
 
@@ -186,29 +186,6 @@ describe('Component FixRecord ', () => {
             const alert = wrapper.getAlert({...testCase.parameters});
             expect(alert.props.title).toEqual(testCase.expected);
         });
-    });
-
-    it('should not show confirmation dialog if form is clean', () => {
-        const testMethod = jest.fn();
-
-        const wrapper = setup({});
-        wrapper.setState({selectedRecordAction: 'fix'});
-        wrapper.instance()._navigateToMyResearch = testMethod;
-
-        wrapper.instance()._showConfirmation();
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should show confirmation dialog if form is dirty', () => {
-        const testMethod = jest.fn();
-
-        const wrapper = setup({});
-        wrapper.setState({selectedRecordAction: 'fix'});
-        wrapper.setProps({pristine: false});
-        wrapper.instance().cancelConfirmationBox = {showConfirmation: testMethod};
-
-        wrapper.instance()._showConfirmation();
-        expect(testMethod).toHaveBeenCalled();
     });
 
     it('should clear record to fix when leaving the form', () => {
