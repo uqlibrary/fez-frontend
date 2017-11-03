@@ -17,7 +17,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
           <br />
           <br />
           <strong>
-            Attention, file upload has failed. Please, re-try to upload files via "Fix record" screen or contact eSpace administrators. 
+            Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators. 
           </strong>
           <br />
           <br />

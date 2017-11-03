@@ -418,8 +418,7 @@ export default {
                     HERDC 2015 and Q-index.</p>),
                 fileFailConfirmationMessage: (<p>
                     Your record has been saved. <br/><br/>
-                    <strong>Attention, file upload has failed.
-                    Please, re-try to upload files via "Fix record" screen or contact eSpace administrators. </strong><br/><br/>
+                    <strong>Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators. </strong><br/><br/>
                     Your item will be referred to a UQ eSpace Staging staff member for editing,
                     prior to being moved into a publicly viewable collection. Please note that our current
                     processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
@@ -2144,8 +2143,8 @@ export default {
                     Your item will be referred to a UQ eSpace Staging staff member
                     for editing, prior to being moved into a publicly viewable collection.<br/><br/>
                     <strong>
-                        Attention, file upload has failed.
-                        Please, re-try to upload files via "Fix record" screen or contact eSpace administrators.
+                        Please note, file upload has failed.
+                        Retry uploading files via "Fix record" screen or contact eSpace administrators.
                     </strong>
                 </p>),
                 cancelButtonLabel: 'Claim more publications',

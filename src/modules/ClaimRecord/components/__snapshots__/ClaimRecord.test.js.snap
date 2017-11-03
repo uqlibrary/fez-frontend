@@ -813,7 +813,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               <br />
               <br />
               <strong>
-                Attention, file upload has failed. Please, re-try to upload files via "Fix record" screen or contact eSpace administrators.
+                Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators.
               </strong>
             </p>,
             "successConfirmationMessage": <p>
@@ -1720,7 +1720,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               <br />
               <br />
               <strong>
-                Attention, file upload has failed. Please, re-try to upload files via "Fix record" screen or contact eSpace administrators.
+                Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators.
               </strong>
             </p>,
             "successConfirmationMessage": <p>
@@ -2730,7 +2730,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               <br />
               <br />
               <strong>
-                Attention, file upload has failed. Please, re-try to upload files via "Fix record" screen or contact eSpace administrators.
+                Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators.
               </strong>
             </p>,
             "successConfirmationMessage": <p>

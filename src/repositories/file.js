@@ -2,7 +2,7 @@ import {generateCancelToken} from 'config';
 import {fileUploadActions} from 'uqlibrary-react-toolbox';
 import {locale} from 'config';
 import * as routes from './routes';
-import {get, put} from './generic';
+import {get, put, post} from './generic';
 
 /**
  * Uploads a file directly into an S3 bucket via API
@@ -29,6 +29,9 @@ export function putUploadFile(pid, file, dispatch) {
         })
         .then(uploadResponse => (Promise.resolve(uploadResponse)))
         .catch(error => {
+            const issue = {issue: `File upload failed: app: ${navigator.appVersion}, connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
+            connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, user agent: ${navigator.userAgent}`};
+            post(routes.RECORDS_ISSUES_API({pid: pid}), issue);
             const {errorAlert} = locale.components.publicationForm;
             dispatch(fileUploadActions.notifyUploadFailed(file.name));
             return Promise.reject(new Error(`${errorAlert.fileUploadMessage} (${error.message})`));
