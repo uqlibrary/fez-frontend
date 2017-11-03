@@ -1,3 +1,575 @@
+export const newspaperArticle = {
+    "rek_pid": "UQ:184230",
+    "rek_title_xsdmf_id": 10714,
+    "rek_title": "Improve Your Communication with Doctors",
+    "rek_description_xsdmf_id": null,
+    "rek_description": null,
+    "rek_display_type_xsdmf_id": 3673,
+    "rek_display_type": 191,
+    "rek_status_xsdmf_id": 3680,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 7073,
+    "rek_date": "2010-05-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 3674,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7578,
+    "rek_depositor": 5004,
+    "rek_created_date_xsdmf_id": 3677,
+    "rek_created_date": "2009-09-26T10:55:03Z",
+    "rek_updated_date_xsdmf_id": 3678,
+    "rek_updated_date": "2015-07-31T07:44:52Z",
+    "rek_file_downloads": 342,
+    "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Wong, Kam Cheong\" href=\"/list/author/Wong%2C+Kam+Cheong/\">Wong, Kam Cheong</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Wong, Catherine\" href=\"/list/author/Wong%2C+Catherine/\">Wong, Catherine</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Li, Stephen\" href=\"/list/author/Li%2C+Stephen/\">Li, Stephen</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Woo, Kai Hui\" href=\"/list/author/Woo%2C+Kai+Hui/\">Woo, Kai Hui</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Woo, Kai Zhi\" href=\"/list/author/Woo%2C+Kai+Zhi/\">Woo, Kai Zhi</a> (<span class=\"citation_date\">2010, May 01</span>). <a class=\"citation_title\" title=\"Click to view Newspaper Article: Improve Your Communication with Doctors\" href=\"/view/UQ:184230\">Improve Your Communication with Doctors</a>. <i><span class=\"citation_newspaper\">Australian Chinese Daily News [Aozhou Xin Bao] (Australian Chinese Weekly Magazine)</span></i>, p.<span class=\"citation_start_page\">1127: 66-67; 1128: 66-67; 1129: 65-67</span>.",
+    "rek_genre_xsdmf_id": 7208,
+    "rek_genre": "Newspaper Article",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": 11414,
+    "rek_formatted_abstract": "It is undeniable that a good doctor-patient communication is essential and critical in providing an effective treatment to the patient. Many patients have difficulty in finding relevant words to communicate with their doctors especially if there is a language barrier. If patients use an English-Chinese medical dictionary, they have to search the dictionary multiple times to find the relevant words and yet they still cannot find all the needed words and sentences to communicate with their doctors. Dictionary does not tell readers what the relevant and important points are and how to express them to their doctors. <br /><br />Dr Kam Cheong Wong and Dr Zhiqiang Wang, from the Centre of Chronic Disease (School of Medicine, University of Queensland, Australia), published a journal paper in the Australian and New Zealand Journal of Public Health regarding the importance of using bilingual English-Chinese language in a health survey. The survey was conducted in Brisbane (Queensland, Australia) using a bilingual English-Chinese questionnaire. The survey found that two-third of the Chinese community preferred to use Chinese language in the health survey (please refer to the reference).<br /><br />Health authorities in many countries such as Australia traditionally rely on provision of interpreter services to help doctors and patients in their day-to-day communication. Even so the interpreter cannot teach a patient what to say to his/her doctor. To improve the communication, governments have started to invest more in health education to empower people in disease prevention and health care access. Patients are encouraged to communicate with their doctors and become &lsquo;partners&rsquo; in disease management. Nevertheless, there is a missing link because of language barrier. This language barrier is not only because of the inability to speak English fluently. Many people who speak fluent English state that they&nbsp;are not comfortable in medical consultations because medical jargons are not something they use in everyday conversations.<br /><br />Knowing the need for a book to help the communication between doctors and patients, Dr Kam Cheong Wong has written a manuscript for a book titled &ldquo;Improve Your Communication with Doctors&rdquo;. The co-author, Catherine Wong, is a school teacher who has many years of teaching experience. Dr Wong has purposely chosen a non-medical background co-author to ensure the text is easily understood by the public so that they can communicate with their doctors effectively. The Chairman of the Australian Chinese Medical Association, Dr Stephen Li, has reviewed the manuscript and written a supportive Foreword for the book.<br /><br />This book gives patients important information to make it easier to communicate with their doctors under many different clinical circumstances. It can improve doctor-patient communication to bridge the missing link and to empower the patients to become &lsquo;partners&rsquo; with their doctors. Medical students, junior doctors (medical interns), and general practitioners/ family doctors can use this book to facilitate the communications with their patients. This book is not just meant for patients, it can be read by a layperson to improve his/her knowledge about common illnesses. Sample topics are included in the attached document.<br />",
+    "rek_depositor_affiliation_xsdmf_id": 11881,
+    "rek_depositor_affiliation": 788,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 3679,
+    "rek_copyright": "on",
+    "fez_record_search_key_article_number": null,
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 28884370,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Wong, Kam Cheong",
+            "rek_author_order": 1
+        },
+        {
+            "rek_author_id": 28884371,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Wong, Catherine",
+            "rek_author_order": 2
+        },
+        {
+            "rek_author_id": 28884372,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Li, Stephen",
+            "rek_author_order": 3
+        },
+        {
+            "rek_author_id": 28884373,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Woo, Kai Hui",
+            "rek_author_order": 4
+        },
+        {
+            "rek_author_id": 28884374,
+            "rek_author_pid": "UQ:184230",
+            "rek_author_xsdmf_id": 7049,
+            "rek_author": "Woo, Kai Zhi",
+            "rek_author_order": 5
+        }
+    ],
+    "fez_record_search_key_author_affiliation_country": [],
+    "fez_record_search_key_author_affiliation_full_address": [],
+    "fez_record_search_key_author_affiliation_id": [],
+    "fez_record_search_key_author_affiliation_name": [],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 28256129,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 1
+        },
+        {
+            "rek_author_id_id": 28256130,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 2
+        },
+        {
+            "rek_author_id_id": 28256131,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 3
+        },
+        {
+            "rek_author_id_id": 28256132,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 4
+        },
+        {
+            "rek_author_id_id": 28256133,
+            "rek_author_id_pid": "UQ:184230",
+            "rek_author_id_xsdmf_id": 7044,
+            "rek_author_id": 0,
+            "rek_author_id_order": 5
+        }
+    ],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3085088,
+            "rek_contributor_pid": "UQ:184230",
+            "rek_contributor_xsdmf_id": 7057,
+            "rek_contributor": "Li, Stephen",
+            "rek_contributor_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_corresponding_country": [],
+    "fez_record_search_key_corresponding_email": [],
+    "fez_record_search_key_corresponding_name": [],
+    "fez_record_search_key_corresponding_organisation": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_edition": {
+        "rek_edition_id": 86136,
+        "rek_edition_pid": "UQ:184230",
+        "rek_edition_xsdmf_id": 7074,
+        "rek_edition": "1127; 1128; 1129"
+    },
+    "fez_record_search_key_end_page": null,
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 3880317,
+            "rek_file_attachment_name_pid": "UQ:184230",
+            "rek_file_attachment_name_xsdmf_id": 7134,
+            "rek_file_attachment_name": "Improve_Communication.pdf",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 3880318,
+            "rek_file_attachment_name_pid": "UQ:184230",
+            "rek_file_attachment_name_xsdmf_id": 7134,
+            "rek_file_attachment_name": "presmd_Improve_Communication.xml",
+            "rek_file_attachment_name_order": 2
+        }
+    ],
+    "fez_record_search_key_grant_acronym": [],
+    "fez_record_search_key_grant_agency": [],
+    "fez_record_search_key_grant_agency_id": [],
+    "fez_record_search_key_grant_text": [],
+    "fez_record_search_key_herdc_code": null,
+    "fez_record_search_key_herdc_status": null,
+    "fez_record_search_key_institutional_status": null,
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 11517701,
+            "rek_ismemberof_pid": "UQ:184230",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:12339",
+            "rek_ismemberof_order": 1
+        }
+    ],
+    "fez_record_search_key_issn": [],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 29165518,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "communication",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 29165519,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "patient",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29165520,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Doctor",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 29165521,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "English",
+            "rek_keywords_order": 4
+        },
+        {
+            "rek_keywords_id": 29165522,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Chinese",
+            "rek_keywords_order": 5
+        },
+        {
+            "rek_keywords_id": 29165523,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "multicultural",
+            "rek_keywords_order": 6
+        },
+        {
+            "rek_keywords_id": 29165524,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Multilingualism",
+            "rek_keywords_order": 7
+        },
+        {
+            "rek_keywords_id": 29165525,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Interpreters",
+            "rek_keywords_order": 8
+        },
+        {
+            "rek_keywords_id": 29165526,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Translation",
+            "rek_keywords_order": 9
+        },
+        {
+            "rek_keywords_id": 29165527,
+            "rek_keywords_pid": "UQ:184230",
+            "rek_keywords_xsdmf_id": 7958,
+            "rek_keywords": "Bilinguals",
+            "rek_keywords_order": 10
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5225760,
+            "rek_language_pid": "UQ:184230",
+            "rek_language_xsdmf_id": 10720,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        },
+        {
+            "rek_language_id": 5225761,
+            "rek_language_pid": "UQ:184230",
+            "rek_language_xsdmf_id": 10720,
+            "rek_language": "chi",
+            "rek_language_order": 2
+        }
+    ],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_newspaper": {
+        "rek_newspaper_id": 2865,
+        "rek_newspaper_pid": "UQ:184230",
+        "rek_newspaper_xsdmf_id": 10723,
+        "rek_newspaper": "Australian Chinese Daily News [Aozhou Xin Bao] (Australian Chinese Weekly Magazine)"
+    },
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1110956,
+        "rek_notes_pid": "UQ:184230",
+        "rek_notes_xsdmf_id": 12481,
+        "rek_notes": "This book is written in a “patient-centered” format. It includes common symptoms and diseases. The texts are presented in English and Chinese side by side on the same page. Readers can look up in Section 1 in the table of content of the book for a main symptom. The symptoms are organized according to the body-parts and some symptoms that are specific to female, male and children are grouped under the chapters “female problems”, “male problems” and “children problems” respectively. They will find the relevant information under the headings “The possible causes” and “Important information that you shall tell your doctor” which contain the relevant and important points to discuss with their doctor. Common topics which may not be specific to a symptom such as “drug allergy”, “smoking”, and “breaking bad news” will be found in the section “Common topics”. When a diagnosis is discussed, the reader can look up in Section 2 in the table of content for a relevant diagnosis. The diagnoses are organized according to the body-parts. Diagnoses specifically related to female, male and children are grouped under the chapters “women’s health”, “men’s health”, and “children’s health” respectively. Readers will find “the relevant findings” and “the relevant treatment” which include the relevant points that a family doctor may tell his/her patient. The reader can use those points to discuss with their doctor. For example, if the doctor does not explain the relevant findings or the possible causes for the illness, the reader can make use of the points listed in the chapter to discuss with their doctor. The chapters are organized according to body- parts because patients may not familiar with body-systems such as endocrinology, but they are familiar with body-parts. Alternatively, readers can find the relevant topics by looking up the index section at the end of the book."
+    },
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 319742,
+        "rek_oa_status_pid": "UQ:184230",
+        "rek_oa_status_xsdmf_id": 16992,
+        "rek_oa_status": 453697
+    },
+    "fez_record_search_key_place_of_publication": null,
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4431620,
+        "rek_publisher_pid": "UQ:184230",
+        "rek_publisher_xsdmf_id": 7072,
+        "rek_publisher": "Australian Chinese Daily News"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_refereed_source": {
+        "rek_refereed_source_id": 1182195,
+        "rek_refereed_source_pid": "UQ:184230",
+        "rek_refereed_source_xsdmf_id": 16623,
+        "rek_refereed_source": "453638"
+    },
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_section": null,
+    "fez_record_search_key_start_page": {
+        "rek_start_page_id": 5572250,
+        "rek_start_page_pid": "UQ:184230",
+        "rek_start_page_xsdmf_id": 7078,
+        "rek_start_page": "1127: 66-67; 1128: 66-67; 1129: 65-67"
+    },
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9094495,
+            "rek_subject_pid": "UQ:184230",
+            "rek_subject_xsdmf_id": 7061,
+            "rek_subject": 320100,
+            "rek_subject_order": 1
+        },
+        {
+            "rek_subject_id": 9094496,
+            "rek_subject_pid": "UQ:184230",
+            "rek_subject_xsdmf_id": 7061,
+            "rek_subject": 450590,
+            "rek_subject_order": 2
+        }
+    ],
+    "fez_record_search_key_total_pages": null,
+    "fez_record_search_key_translated_newspaper": null,
+    "fez_record_search_key_translated_title": null
+};
+
+export const thesis = {
+    "rek_pid": "UQ:170415",
+    "rek_title_xsdmf_id": 10667,
+    "rek_title": "It's for love not money: Queensland graziers' perceptions of sustainable development",
+    "rek_description_xsdmf_id": 11378,
+    "rek_description": "Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development.",
+    "rek_display_type_xsdmf_id": 12278,
+    "rek_display_type": 187,
+    "rek_status_xsdmf_id": 12283,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 6853,
+    "rek_date": "2008-06-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 12279,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 12285,
+    "rek_depositor": 3917,
+    "rek_created_date_xsdmf_id": 12280,
+    "rek_created_date": "2009-03-18T10:16:36Z",
+    "rek_updated_date_xsdmf_id": 12281,
+    "rek_updated_date": "2015-07-31T07:22:31Z",
+    "rek_file_downloads": 523,
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Jennifer Moffatt\" href=\"/list/author_id/76506/\">Jennifer Moffatt</a> (<span class=\"citation_date\">2008</span>). <i><a class=\"citation_title\" title=\"Click to view Thesis: It's for love not money: Queensland graziers' perceptions of sustainable development\" href=\"/view/UQ:170415\">It's for love not money: Queensland graziers' perceptions of sustainable development</a></i> <span class=\"citation_genre_type\">PhD Thesis</span>, <span class=\"citation_org_unit_name\">School of Natural and Rural Systems</span>, <span class=\"citation_org_name\">The University of Queensland</span>.",
+    "rek_genre_xsdmf_id": 7214,
+    "rek_genre": "Thesis",
+    "rek_genre_type_xsdmf_id": 7330,
+    "rek_genre_type": "PhD Thesis",
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": 12290,
+    "rek_depositor_affiliation": 804,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 12282,
+    "rek_copyright": "on",
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 30117280,
+            "rek_author_pid": "UQ:170415",
+            "rek_author_xsdmf_id": 6823,
+            "rek_author": "Jennifer Moffatt",
+            "rek_author_order": 1
+        }
+    ],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 29437412,
+            "rek_author_id_pid": "UQ:170415",
+            "rek_author_id_xsdmf_id": 6818,
+            "rek_author_id": 76506,
+            "rek_author_id_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor": [],
+    "fez_record_search_key_contributor_id": [],
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_doi": null,
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 4174776,
+            "rek_file_attachment_name_pid": "UQ:170415",
+            "rek_file_attachment_name_xsdmf_id": 6905,
+            "rek_file_attachment_name": "Permission_Moffatt_J.pdf",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 4174777,
+            "rek_file_attachment_name_pid": "UQ:170415",
+            "rek_file_attachment_name_xsdmf_id": 6905,
+            "rek_file_attachment_name": "presmd_Permission_Moffatt_J.xml",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 4174778,
+            "rek_file_attachment_name_pid": "UQ:170415",
+            "rek_file_attachment_name_xsdmf_id": 6905,
+            "rek_file_attachment_name": "presmd_s31882862_PhD_Totalthesis.xml",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 4174779,
+            "rek_file_attachment_name_pid": "UQ:170415",
+            "rek_file_attachment_name_xsdmf_id": 6905,
+            "rek_file_attachment_name": "s31882862_PhD_Totalthesis.pdf",
+            "rek_file_attachment_name_order": 4
+        }
+    ],
+    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isi_loc": null,
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 12028039,
+            "rek_ismemberof_pid": "UQ:170415",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:210175",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 12028040,
+            "rek_ismemberof_pid": "UQ:170415",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:216495",
+            "rek_ismemberof_order": 2
+        },
+        {
+            "rek_ismemberof_id": 12028041,
+            "rek_ismemberof_pid": "UQ:170415",
+            "rek_ismemberof_xsdmf_id": 149,
+            "rek_ismemberof": "UQ:179407",
+            "rek_ismemberof_order": 3
+        }
+    ],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 30182157,
+            "rek_keywords_pid": "UQ:170415",
+            "rek_keywords_xsdmf_id": 7968,
+            "rek_keywords": "Sustainable development; graziers; farmers; agriculture; land management; business",
+            "rek_keywords_order": 1
+        }
+    ],
+    "fez_record_search_key_language": [],
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_notes": {
+        "rek_notes_id": 1169545,
+        "rek_notes_pid": "UQ:170415",
+        "rek_notes_xsdmf_id": 12516,
+        "rek_notes": "Pages requiring colour printing: 2, 76, 166, 210, 214, 215, 221, 222, 223, 224, 226. Pages in landscape format: 240-245. The author has given permission for this thesis to be made open access."
+    },
+    "fez_record_search_key_oa_status": {
+        "rek_oa_status_id": 366032,
+        "rek_oa_status_pid": "UQ:170415",
+        "rek_oa_status_xsdmf_id": 17004,
+        "rek_oa_status": 453695
+    },
+    "fez_record_search_key_org_name": {
+        "rek_org_name_id": 400082,
+        "rek_org_name_pid": "UQ:170415",
+        "rek_org_name_xsdmf_id": 6843,
+        "rek_org_name": "The University of Queensland"
+    },
+    "fez_record_search_key_org_unit_name": {
+        "rek_org_unit_name_id": 389498,
+        "rek_org_unit_name_pid": "UQ:170415",
+        "rek_org_unit_name_xsdmf_id": 6840,
+        "rek_org_unit_name": "School of Natural and Rural Systems"
+    },
+    "fez_record_search_key_refereed": null,
+    "fez_record_search_key_scopus_id": null,
+    "fez_record_search_key_subject": [
+        {
+            "rek_subject_id": 9479409,
+            "rek_subject_pid": "UQ:170415",
+            "rek_subject_xsdmf_id": 6835,
+            "rek_subject": 300000,
+            "rek_subject_order": 1
+        }
+    ],
+    "fez_record_search_key_supervisor": [
+        {
+            "rek_supervisor_id": 436623,
+            "rek_supervisor_pid": "UQ:170415",
+            "rek_supervisor_xsdmf_id": 10555,
+            "rek_supervisor": "Professor Helen Ross",
+            "rek_supervisor_order": 1
+        },
+        {
+            "rek_supervisor_id": 436624,
+            "rek_supervisor_pid": "UQ:170415",
+            "rek_supervisor_xsdmf_id": 10555,
+            "rek_supervisor": "Professor Geoffrey Lawrence",
+            "rek_supervisor_order": 2
+        },
+        {
+            "rek_supervisor_id": 436625,
+            "rek_supervisor_pid": "UQ:170415",
+            "rek_supervisor_xsdmf_id": 10555,
+            "rek_supervisor": "Professor John Taylor",
+            "rek_supervisor_order": 3
+        }
+    ],
+    "fez_record_search_key_supervisor_id": [
+        {
+            "rek_supervisor_id_id": 386386,
+            "rek_supervisor_id_pid": "UQ:170415",
+            "rek_supervisor_id_xsdmf_id": 10550,
+            "rek_supervisor_id": 0,
+            "rek_supervisor_id_order": 1
+        },
+        {
+            "rek_supervisor_id_id": 386387,
+            "rek_supervisor_id_pid": "UQ:170415",
+            "rek_supervisor_id_xsdmf_id": 10550,
+            "rek_supervisor_id": 0,
+            "rek_supervisor_id_order": 2
+        },
+        {
+            "rek_supervisor_id_id": 386388,
+            "rek_supervisor_id_pid": "UQ:170415",
+            "rek_supervisor_id_xsdmf_id": 10550,
+            "rek_supervisor_id": 0,
+            "rek_supervisor_id_order": 3
+        }
+    ],
+    "fez_record_search_key_translated_title": null
+};
+
 export const conferenceProceedings = {
     "rek_pid": "UQ:159544",
     "rek_title_xsdmf_id": 10639,

@@ -8,8 +8,10 @@ import {locale, validation, routes} from 'config';
 
 export default class NewRecord extends React.Component {
     static propTypes = {
+        actions: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
-        rawSearchQuery: PropTypes.string
+        rawSearchQuery: PropTypes.string,
+        newRecordFileUploadingError: PropTypes.bool
     };
 
     static defaultProps = {
@@ -26,10 +28,12 @@ export default class NewRecord extends React.Component {
     };
 
     _restartWorkflow = () => {
+        this.props.actions.clearNewRecord();
         this.props.history.push(routes.pathConfig.records.add.find);
     };
 
     _navigateToMyResearch = () => {
+        this.props.actions.clearNewRecord();
         this.props.history.push(routes.pathConfig.records.mine);
     }
 
@@ -42,13 +46,20 @@ export default class NewRecord extends React.Component {
             rek_title: (!validation.isValidDOIValue(rawSearchQuery) && !validation.isValidPubMedValue(rawSearchQuery)) ? rawSearchQuery : ''
         };
 
+        // set confirmation message depending on file upload status
+        const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+        if (this.props.newRecordFileUploadingError) {
+            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
+        } else {
+            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.successConfirmationMessage;
+        }
         return (
             <div>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._navigateToMyResearch}
                     onCancelAction={this._restartWorkflow}
-                    locale={txt.successWorkflowConfirmation}
+                    locale={saveConfirmationLocale}
                 />
                 <PublicationForm
                     onFormSubmitSuccess={this._recordSaved}

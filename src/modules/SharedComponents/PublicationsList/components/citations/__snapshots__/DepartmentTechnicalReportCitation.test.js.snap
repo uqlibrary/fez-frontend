@@ -483,19 +483,21 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
       date="2002-01-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="citationDate"
       >
         (
         2002
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Estimates of injury mortality and disability based on the Cape Metropole study"
@@ -614,14 +616,16 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >

@@ -47,6 +47,22 @@ export default class PublicationForm extends Component {
             null;
     };
 
+    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
+        submitSucceeded = false, alertLocale = {}}) => {
+        let alertProps = null;
+        if (submitFailed && error) {
+            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
+        } else if (!submitFailed && dirty && invalid) {
+            alertProps = {...alertLocale.validationAlert};
+        } else if (submitting) {
+            alertProps = {...alertLocale.progressAlert};
+        } else if (submitSucceeded) {
+            alertProps = {...alertLocale.successAlert};
+        }
+        return alertProps ? (<Alert {...alertProps} />) : null;
+    };
+
+
     render() {
         // populate publication types select box
         const publicationTypeItems = [
@@ -96,20 +112,7 @@ export default class PublicationForm extends Component {
                     </StandardCard>
                 }
                 {
-                    this.props.submitFailed && this.props.error &&
-                    <Alert type="error_outline" title={ txt.errorAlert.title } message={ this.props.error } />
-                }
-                {
-                    !this.props.submitFailed && this.props.dirty && this.props.invalid &&
-                    <Alert type="warning" {...txt.validationAlert} />
-                }
-                {
-                    this.props.submitting &&
-                    <Alert type="info_outline" {...txt.progressAlert} />
-                }
-                {
-                    this.props.submitSucceeded &&
-                    <Alert type="info" {...txt.successAlert} />
+                    this.getAlert({...this.props, alertLocale: txt})
                 }
                 <div className="columns action-buttons">
                     <div className="column is-hidden-mobile"/>

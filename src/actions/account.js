@@ -52,7 +52,7 @@ export function loadCurrentAccount() {
                     payload: authorDetailsResponse
                 });
             })
-            .catch((error) => {
+            .catch(error => {
                 if (!account) {
                     dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 } else if (!currentAuthor) {

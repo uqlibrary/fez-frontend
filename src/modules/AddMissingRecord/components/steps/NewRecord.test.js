@@ -43,7 +43,7 @@ describe('Add new record', () => {
             push: navigateToMyResearch
         };
 
-        const wrapper = setup({history: history});
+        const wrapper = setup({history: history, actions: {clearNewRecord: jest.fn()}});
         wrapper.instance()._navigateToMyResearch();
 
         expect(navigateToMyResearch).toBeCalled();
@@ -55,7 +55,7 @@ describe('Add new record', () => {
             push: navigateToSearch
         };
 
-        const wrapper = setup({history: history});
+        const wrapper = setup({history: history, actions: {clearNewRecord: jest.fn()}});
         wrapper.instance()._restartWorkflow();
 
         expect(navigateToSearch).toBeCalled();

@@ -27,7 +27,6 @@ const onSubmit = (values, dispatch, props) => {
             //     dispatch(reset(FORM_NAME));
             // }, 100);
         }).catch(error => {
-            console.log(error);
             throw new SubmissionError({_error: error.message});
         });
 };
