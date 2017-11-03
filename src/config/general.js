@@ -108,6 +108,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_DATA_COLLECTION,
         name: 'Data Collection',
         class: 'Uqlibrary\\FezCore\\Types\\DataCollection',
+        citationComponent: components ? components.DataCollectionCitation : null,
         hasFormComponent: false
     },
     {

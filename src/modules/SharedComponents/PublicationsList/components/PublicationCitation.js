@@ -30,6 +30,7 @@ import PatentCitation from './citations/PatentCitation';
 import ConferenceProceedingsCitation from './citations/ConferenceProceedingsCitation';
 import ThesisCitation from './citations/ThesisCitation';
 import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
+import DataCollectionCitation from './citations/DataCollectionCitation';
 
 export default class PublicationCitation extends Component {
     static propTypes = {
@@ -53,8 +54,8 @@ export default class PublicationCitation extends Component {
             AudioDocumentCitation, GenericDocumentCitation, ResearchReportCitation, PreprintCitation, SeminarPaperCitation,
             CreativeWorkCitation, ManuscriptCitation, DepartmentTechnicalReportCitation, ImageDocumentCitation, DesignCitation,
             DigilibImageCitation, WorkingPaperCitation, VideoDocumentCitation, JournalCitation, ConferenceProceedingsCitation,
-            ThesisCitation, NewspaperArticleCitation, PatentCitation
-        };
+            ThesisCitation, NewspaperArticleCitation, PatentCitation, DataCollectionCitation};
+
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }

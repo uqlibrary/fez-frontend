@@ -1,3 +1,373 @@
+export const dataCollection = {
+    "rek_pid": "UQ:403997",
+    "rek_title_xsdmf_id": 16197,
+    "rek_title": "When is the Kadowaki-Woods ratio universal?: Supplementary Material",
+    "rek_description_xsdmf_id": 16079,
+    "rek_description": "The supplementary material contains details of the derivations.<br />Sections:<br />I. Scattering and the self-energy in arbitrary bandstructures systems<br />a. The Two-Band Case<br />b. The Spectral Density Function<br />II. Interband scattering<br />a. Effects of significant interband scattering on the intraband self-energy components<br />III. Derivation of the conductivity formula<br />",
+    "rek_display_type_xsdmf_id": 106,
+    "rek_display_type": 371,
+    "rek_status_xsdmf_id": 538,
+    "rek_status": 2,
+    "rek_date_xsdmf_id": 16037,
+    "rek_date": "2015-01-01T00:00:00Z",
+    "rek_object_type_xsdmf_id": 236,
+    "rek_object_type": 3,
+    "rek_depositor_xsdmf_id": 7575,
+    "rek_depositor": 5376,
+    "rek_created_date_xsdmf_id": 527,
+    "rek_created_date": "2016-09-08T13:34:54Z",
+    "rek_updated_date_xsdmf_id": 528,
+    "rek_updated_date": "2017-03-06T02:00:45Z",
+    "rek_file_downloads": 0,
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Cavanagh, D. C.\" href=\"/list/author_id/2791296/\">Cavanagh, D. C.</a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Jacko, A. C.\" href=\"/list/author_id/6391/\">Jacko, A. C.</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Powell, B. J.\" href=\"/list/author_id/2436/\">Powell, B. J.</a> (<span class=\"citation_date\">2015</span>): <a class=\"citation_title\" title=\"Click to view Data Collection: When is the Kadowaki-Woods ratio universal?: Supplementary Material\" href=\"/view/UQ:403997\">When is the Kadowaki-Woods ratio universal?: Supplementary Material</a>. <span class=\"citation_publisher\">The University of Queensland</span>. <span class=\"citation_ands_collection_type\">Dataset</span>.",
+    "rek_genre_xsdmf_id": 16248,
+    "rek_genre": "Dataset Collection",
+    "rek_genre_type_xsdmf_id": null,
+    "rek_genre_type": null,
+    "rek_formatted_title_xsdmf_id": null,
+    "rek_formatted_title": null,
+    "rek_formatted_abstract_xsdmf_id": null,
+    "rek_formatted_abstract": null,
+    "rek_depositor_affiliation_xsdmf_id": null,
+    "rek_depositor_affiliation": null,
+    "rek_thomson_citation_count": null,
+    "rek_thomson_citation_count_xsdmf_id": null,
+    "rek_subtype_xsdmf_id": null,
+    "rek_subtype": null,
+    "rek_scopus_citation_count": null,
+    "rek_herdc_notes_xsdmf_id": null,
+    "rek_herdc_notes": null,
+    "rek_scopus_doc_type_xsdmf_id": null,
+    "rek_scopus_doc_type": null,
+    "rek_wok_doc_type_xsdmf_id": null,
+    "rek_wok_doc_type": null,
+    "rek_pubmed_doc_type_xsdmf_id": null,
+    "rek_pubmed_doc_type": null,
+    "rek_security_inherited": 1,
+    "rek_altmetric_score": null,
+    "rek_altmetric_score_xsdmf_id": null,
+    "rek_altmetric_id": null,
+    "rek_altmetric_id_xsdmf_id": null,
+    "rek_copyright_xsdmf_id": 537,
+    "rek_copyright": "on",
+    "fez_record_search_key_access_conditions": {
+        "rek_access_conditions_id": 3800,
+        "rek_access_conditions_pid": "UQ:403997",
+        "rek_access_conditions_xsdmf_id": 16213,
+        "rek_access_conditions": "453619"
+    },
+    "fez_record_search_key_additional_notes": null,
+    "fez_record_search_key_ands_collection_type": {
+        "rek_ands_collection_type_id": 3656,
+        "rek_ands_collection_type_pid": "UQ:403997",
+        "rek_ands_collection_type_xsdmf_id": 16272,
+        "rek_ands_collection_type": "453616"
+    },
+    "fez_record_search_key_assigned_group_id": [],
+    "fez_record_search_key_assigned_user_id": [],
+    "fez_record_search_key_author": [
+        {
+            "rek_author_id": 29725478,
+            "rek_author_pid": "UQ:403997",
+            "rek_author_xsdmf_id": 16015,
+            "rek_author": "Cavanagh, D. C.",
+            "rek_author_order": 1
+        },
+        {
+            "rek_author_id": 29725479,
+            "rek_author_pid": "UQ:403997",
+            "rek_author_xsdmf_id": 16015,
+            "rek_author": "Jacko, A. C.",
+            "rek_author_order": 2
+        },
+        {
+            "rek_author_id": 29725480,
+            "rek_author_pid": "UQ:403997",
+            "rek_author_xsdmf_id": 16015,
+            "rek_author": "Powell, B. J.",
+            "rek_author_order": 3
+        }
+    ],
+    "fez_record_search_key_author_id": [
+        {
+            "rek_author_id_id": 29086921,
+            "rek_author_id_pid": "UQ:403997",
+            "rek_author_id_xsdmf_id": 16269,
+            "rek_author_id": 2791296,
+            "rek_author_id_order": 1
+        },
+        {
+            "rek_author_id_id": 29086922,
+            "rek_author_id_pid": "UQ:403997",
+            "rek_author_id_xsdmf_id": 16269,
+            "rek_author_id": 6391,
+            "rek_author_id_order": 2
+        },
+        {
+            "rek_author_id_id": 29086923,
+            "rek_author_id_pid": "UQ:403997",
+            "rek_author_id_xsdmf_id": 16269,
+            "rek_author_id": 2436,
+            "rek_author_id_order": 3
+        }
+    ],
+    "fez_record_search_key_author_role": [
+        {
+            "rek_author_role_id": 6622,
+            "rek_author_role_pid": "UQ:403997",
+            "rek_author_role_xsdmf_id": 16244,
+            "rek_author_role_order": 1,
+            "rek_author_role": "Investigator"
+        },
+        {
+            "rek_author_role_id": 6623,
+            "rek_author_role_pid": "UQ:403997",
+            "rek_author_role_xsdmf_id": 16244,
+            "rek_author_role_order": 2,
+            "rek_author_role": "Investigator"
+        },
+        {
+            "rek_author_role_id": 6624,
+            "rek_author_role_pid": "UQ:403997",
+            "rek_author_role_xsdmf_id": 16244,
+            "rek_author_role_order": 3,
+            "rek_author_role": "Chief Investigator"
+        }
+    ],
+    "fez_record_search_key_contact_details_email": [
+        {
+            "rek_contact_details_email_id": 4927,
+            "rek_contact_details_email_pid": "UQ:403997",
+            "rek_contact_details_email_xsdmf_id": 16274,
+            "rek_contact_details_email_order": 1,
+            "rek_contact_details_email": "david.cavanagh1@uqconnect.edu.au"
+        }
+    ],
+    "fez_record_search_key_contributor": [
+        {
+            "rek_contributor_id": 3205212,
+            "rek_contributor_pid": "UQ:403997",
+            "rek_contributor_xsdmf_id": 16024,
+            "rek_contributor": "Cavanagh, David",
+            "rek_contributor_order": 1
+        }
+    ],
+    "fez_record_search_key_contributor_id": [
+        {
+            "rek_contributor_id_id": 2380785,
+            "rek_contributor_id_pid": "UQ:403997",
+            "rek_contributor_id_xsdmf_id": 16019,
+            "rek_contributor_id": 2791296,
+            "rek_contributor_id_order": 1
+        }
+    ],
+    "fez_record_search_key_coverage_period": [],
+    "fez_record_search_key_data_volume": null,
+    "fez_record_search_key_datastream_policy": null,
+    "fez_record_search_key_doi": null,
+    "fez_record_search_key_end_date": null,
+    "fez_record_search_key_fields_of_research": [
+        {
+            "rek_fields_of_research_id": 8398,
+            "rek_fields_of_research_pid": "UQ:403997",
+            "rek_fields_of_research_xsdmf_id": 16043,
+            "rek_fields_of_research": 451890,
+            "rek_fields_of_research_order": 1
+        },
+        {
+            "rek_fields_of_research_id": 8399,
+            "rek_fields_of_research_pid": "UQ:403997",
+            "rek_fields_of_research_xsdmf_id": 16043,
+            "rek_fields_of_research": 451951,
+            "rek_fields_of_research_order": 2
+        },
+        {
+            "rek_fields_of_research_id": 8400,
+            "rek_fields_of_research_pid": "UQ:403997",
+            "rek_fields_of_research_xsdmf_id": 16043,
+            "rek_fields_of_research": 451875,
+            "rek_fields_of_research_order": 3
+        }
+    ],
+    "fez_record_search_key_file_attachment_access_condition": [],
+    "fez_record_search_key_file_attachment_embargo_date": [],
+    "fez_record_search_key_file_attachment_name": [
+        {
+            "rek_file_attachment_name_id": 4194637,
+            "rek_file_attachment_name_pid": "UQ:403997",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "FezACML_UQ403993_supp.pdf.xml",
+            "rek_file_attachment_name_order": 1
+        },
+        {
+            "rek_file_attachment_name_id": 4194638,
+            "rek_file_attachment_name_pid": "UQ:403997",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "FezACML_UQ_403997.xml",
+            "rek_file_attachment_name_order": 2
+        },
+        {
+            "rek_file_attachment_name_id": 4194639,
+            "rek_file_attachment_name_pid": "UQ:403997",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "presmd_UQ403993_supp.xml",
+            "rek_file_attachment_name_order": 3
+        },
+        {
+            "rek_file_attachment_name_id": 4194640,
+            "rek_file_attachment_name_pid": "UQ:403997",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "UQ403993_supp.pdf",
+            "rek_file_attachment_name_order": 4
+        }
+    ],
+    "fez_record_search_key_geographic_area": [
+        {
+            "rek_geographic_area_id": 19035,
+            "rek_geographic_area_pid": "UQ:403997",
+            "rek_geographic_area_xsdmf_id": 16217,
+            "rek_geographic_area_order": 1,
+            "rek_geographic_area": "153.237305,-27.059126"
+        }
+    ],
+    "fez_record_search_key_grant_id": [
+        {
+            "rek_grant_id_id": 400,
+            "rek_grant_id_pid": "UQ:403997",
+            "rek_grant_id_xsdmf_id": 16200,
+            "rek_grant_id_order": 1,
+            "rek_grant_id": "DP130100757"
+        },
+        {
+            "rek_grant_id_id": 401,
+            "rek_grant_id_pid": "UQ:403997",
+            "rek_grant_id_xsdmf_id": 16200,
+            "rek_grant_id_order": 2,
+            "rek_grant_id": "FT130100161"
+        }
+    ],
+    "fez_record_search_key_isdatasetof": [
+        {
+            "rek_isdatasetof_id": 3040,
+            "rek_isdatasetof_pid": "UQ:403997",
+            "rek_isdatasetof_xsdmf_id": 16601,
+            "rek_isdatasetof": "UQ:375917",
+            "rek_isdatasetof_order": 1
+        }
+    ],
+    "fez_record_search_key_ismemberof": [
+        {
+            "rek_ismemberof_id": 12043941,
+            "rek_ismemberof_pid": "UQ:403997",
+            "rek_ismemberof_xsdmf_id": 16597,
+            "rek_ismemberof": "UQ:289097",
+            "rek_ismemberof_order": 1
+        },
+        {
+            "rek_ismemberof_id": 12043942,
+            "rek_ismemberof_pid": "UQ:403997",
+            "rek_ismemberof_xsdmf_id": 16597,
+            "rek_ismemberof": "UQ:161065",
+            "rek_ismemberof_order": 2
+        }
+    ],
+    "fez_record_search_key_keywords": [
+        {
+            "rek_keywords_id": 29835604,
+            "rek_keywords_pid": "UQ:403997",
+            "rek_keywords_xsdmf_id": 16041,
+            "rek_keywords": "Heavy-fermion systems",
+            "rek_keywords_order": 1
+        },
+        {
+            "rek_keywords_id": 29835605,
+            "rek_keywords_pid": "UQ:403997",
+            "rek_keywords_xsdmf_id": 16041,
+            "rek_keywords": "Strongly correlated metals",
+            "rek_keywords_order": 2
+        },
+        {
+            "rek_keywords_id": 29835606,
+            "rek_keywords_pid": "UQ:403997",
+            "rek_keywords_xsdmf_id": 16041,
+            "rek_keywords": "Mean-field theory",
+            "rek_keywords_order": 3
+        },
+        {
+            "rek_keywords_id": 29835607,
+            "rek_keywords_pid": "UQ:403997",
+            "rek_keywords_xsdmf_id": 16041,
+            "rek_keywords": "Transport-properties",
+            "rek_keywords_order": 4
+        }
+    ],
+    "fez_record_search_key_language": [
+        {
+            "rek_language_id": 5409448,
+            "rek_language_pid": "UQ:403997",
+            "rek_language_xsdmf_id": 16066,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }
+    ],
+    "fez_record_search_key_license": {
+        "rek_license_id": 26248,
+        "rek_license_pid": "UQ:403997",
+        "rek_license_xsdmf_id": 16246,
+        "rek_license": 453701
+    },
+    "fez_record_search_key_link": [],
+    "fez_record_search_key_link_description": [],
+    "fez_record_search_key_project_description": {
+        "rek_project_description_id": 3467,
+        "rek_project_description_pid": "UQ:403997",
+        "rek_project_description_xsdmf_id": 16513,
+        "rek_project_description": "Ratios allow us to understand how big we expect something to be. This project will discover new ratios in materials that are difficult to understand, but have remarkable properties that could lead to dramatic new technologies if we understood them better."
+    },
+    "fez_record_search_key_project_id": null,
+    "fez_record_search_key_project_name": {
+        "rek_project_name_id": 3058,
+        "rek_project_name_pid": "UQ:403997",
+        "rek_project_name_xsdmf_id": 16099,
+        "rek_project_name": "Trouble at the bottom: Exploring the limits of Fermi liquid theory through dimensionless ratios"
+    },
+    "fez_record_search_key_publisher": {
+        "rek_publisher_id": 4598458,
+        "rek_publisher_pid": "UQ:403997",
+        "rek_publisher_xsdmf_id": 16050,
+        "rek_publisher": "The University of Queensland"
+    },
+    "fez_record_search_key_related_datasets": null,
+    "fez_record_search_key_related_publications": null,
+    "fez_record_search_key_rights": {
+        "rek_rights_id": 116375,
+        "rek_rights_pid": "UQ:403997",
+        "rek_rights_xsdmf_id": 16211,
+        "rek_rights": "2015, The University of Queensland"
+    },
+    "fez_record_search_key_seo_code": [],
+    "fez_record_search_key_software_required": [],
+    "fez_record_search_key_start_date": null,
+    "fez_record_search_key_time_period_end_date": null,
+    "fez_record_search_key_time_period_start_date": null,
+    "fez_record_search_key_type_of_data": [
+        {
+            "rek_type_of_data_id": 831,
+            "rek_type_of_data_pid": "UQ:403997",
+            "rek_type_of_data_xsdmf_id": 16250,
+            "rek_type_of_data_order": 1,
+            "rek_type_of_data": "Text"
+        },
+        {
+            "rek_type_of_data_id": 832,
+            "rek_type_of_data_pid": "UQ:403997",
+            "rek_type_of_data_xsdmf_id": 16250,
+            "rek_type_of_data_order": 2,
+            "rek_type_of_data": "Calculations"
+        }
+    ]
+};
+
 export const newspaperArticle = {
     "rek_pid": "UQ:184230",
     "rek_title_xsdmf_id": 10714,
