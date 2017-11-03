@@ -315,4 +315,12 @@ describe('Component ClaimRecord ', () => {
         wrapper.instance()._navigateToAddRecord();
         expect(testMethod).toHaveBeenCalledWith('/records/add/find');
     });
+
+    it('should render navigation prompt', () => {
+        const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({dirty: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
