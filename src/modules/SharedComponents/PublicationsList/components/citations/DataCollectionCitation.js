@@ -18,8 +18,7 @@ export default class DataCollectionCitation extends Component {
             title: this.props.publication.rek_title,
             publisher: this.props.publication.fez_record_search_key_publisher ?
                 this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
-            collectionType: this.props.publication.fez_record_search_key_ands_collection_type ?
-                this.props.publication.fez_record_search_key_ands_collection_type.rek_ands_collection_type : null,
+            collectionType: this.props.publication.rek_display_type_lookup || null,
             doi: this.props.publication.fez_record_search_key_doi ?
                 this.props.publication.fez_record_search_key_doi.rek_doi : null
         };

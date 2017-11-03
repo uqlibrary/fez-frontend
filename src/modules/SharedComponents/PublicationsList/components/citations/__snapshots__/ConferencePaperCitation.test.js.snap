@@ -1117,25 +1117,16 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
       <span
         className="citationDOI"
       >
-         
-        <a
-          className="citationLink"
-          href="https://doi.org/10.1111/dar.12222"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="Open this DOI in an new window"
+        <span
+          className="citationLabel"
         >
-          <span
-            className="citationLabel"
-          >
-            https://doi.org/
-          </span>
-          <span
-            className="citationValue"
-          >
-            10.1111/dar.12222
-          </span>
-        </a>
+           doi: 
+        </span>
+        <span
+          className="citationValue"
+        >
+          10.1111/dar.12222
+        </span>
       </span>
     </DoiCitationView>
   </div>
