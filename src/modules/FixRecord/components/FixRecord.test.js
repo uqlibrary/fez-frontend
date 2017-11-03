@@ -153,7 +153,7 @@ describe('Component FixRecord ', () => {
     it('should redirect to other pages', () => {
         const testMethod = jest.fn();
 
-        const wrapper = setup({history: {push: testMethod}});
+        const wrapper = setup({history: {replace: testMethod}});
         wrapper.instance()._navigateToMyResearch();
         expect(testMethod).toHaveBeenCalledWith('/records/mine');
 
