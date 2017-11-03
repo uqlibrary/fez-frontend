@@ -112,8 +112,6 @@ export default class ClaimRecord extends Component {
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
-
-                    <NavigationDialogBox when={this.props.dirty} />
                     <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
                         <PublicationCitation publication={publication}/>
                     </StandardCard>
@@ -134,7 +132,10 @@ export default class ClaimRecord extends Component {
                                     cancelButtonLabel: fromAddRecord
                                         ? txt.successWorkflowConfirmation.addRecordButtonLabel
                                         : txt.successWorkflowConfirmation.cancelButtonLabel}} />
-
+                            {
+                                this.props.dirty &&
+                                <NavigationDialogBox when={this.props.dirty}/>
+                            }
                             {
                                 publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
                                 && !authorLinked &&

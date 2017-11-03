@@ -5,6 +5,8 @@ import {withRouter} from 'react-router-dom';
 /**
  * A replacement component for the react-router `Prompt`.
  * Allows for more flexible dialogs.
+ *
+ * https://gist.github.com/bummzack/a586533607ece482475e0c211790dd50
  */
 class NavigationPrompt extends React.Component {
     constructor(props) {
@@ -17,17 +19,20 @@ class NavigationPrompt extends React.Component {
 
     componentDidMount() {
         this.unblock = this.props.history.block((nextLocation, action) => {
-            this.setState({
-                nextLocation: nextLocation
-            });
-
-            if (this.props.when && action === 'PUSH') {
+            if (this.props.when && (action === 'PUSH' || action === 'POP')) {
+                this.setState({
+                    nextLocation: nextLocation
+                });
                 this.confirmationBox.showConfirmation();
                 return !this.props.when;
             }
 
             return this.props.when;
         });
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        console.log(nextProps, nextState);
     }
 
     componentWillUnmount() {
