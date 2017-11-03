@@ -25,7 +25,6 @@ export function putUploadFile(pid, file, dispatch) {
                 },
                 cancelToken: generateCancelToken().token
             };
-            console.log('PUT: ' + uploadUrl + ': ' + file.name);
             return put(uploadUrl, file, options);
         })
         .then(uploadResponse => (Promise.resolve(uploadResponse)))

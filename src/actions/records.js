@@ -39,6 +39,8 @@ export function createNewRecord(data) {
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+        console.log(hasFilesToUpload);
+        console.log(data);
         const recordPatch = hasFilesToUpload ? {...transformers.getRecordFileAttachmentSearchKey(data.files.queue)} : null;
 
         return post(routes.NEW_RECORD_API(), recordRequest)
@@ -47,8 +49,8 @@ export function createNewRecord(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.data.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() => (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: newRecord.data.rek_pid}), recordPatch) : newRecord))
+            .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
+            .then(() => (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
             .then((response) => {
                 dispatch({
                     type: actions.RECORD_CREATE_SUCCESS,

@@ -28,6 +28,18 @@ export default class PublicationForm extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        if (nextProps.formValues.get('rek_display_type') !== this.props.formValues.get('rek_display_type')) {
+            console.log('componentWillReceiveProps(nextProps)');
+            console.log(nextProps.formValues.get('rek_title'));
+            console.log(nextProps.formValues.get('rek_display_type'));
+            // TODO: should check if user filled more fields and ask if they are sure they want to switch to a new display type?
+            // clear the form for another doc type
+            this.props.initialize({
+                rek_title: nextProps.formValues.get('rek_title'),
+                rek_display_type: nextProps.formValues.get('rek_display_type')
+            });
+        }
+
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
         }
@@ -39,6 +51,12 @@ export default class PublicationForm extends Component {
         } else {
             this.confirmationBox.showConfirmation();
         }
+    }
+
+    _resetForm = () => {
+        this.props.initialize({});
+        this.props.reset();
+        this.props.onFormCancel();
     }
 
     _getPublicationTypeForm = (publicationTypeId) => {
@@ -92,10 +110,10 @@ export default class PublicationForm extends Component {
             <form>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this.props.onFormCancel}
+                    onAction={this._resetForm}
                     locale={txt.cancelWorkflowConfirmation} />
 
-                <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
+                <Prompt when={false} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field
