@@ -2,6 +2,7 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     publicationToClaim: null,
+    publicationToClaimFileUploadingError: false,
     possibleCounts: 0,
     possiblePublicationsPagingData: {},
     possiblePublicationsList: [],
@@ -26,6 +27,7 @@ const handlers = {
     [actions.PUBLICATION_TO_CLAIM_SET]: (state, action) => (
         {
             ...state,
+            publicationToClaimFileUploadingError: false,
             publicationToClaim: action.payload
         }
     ),
@@ -33,6 +35,7 @@ const handlers = {
     [actions.PUBLICATION_TO_CLAIM_CLEAR]: (state) => (
         {
             ...state,
+            publicationToClaimFileUploadingError: false,
             publicationToClaim: null
         }
     ),
@@ -104,6 +107,7 @@ const handlers = {
     [actions.CLAIM_PUBLICATION_CREATE_COMPLETED]: (state, action) => (
         {
             ...state,
+            publicationToClaimFileUploadingError: !!action.payload.fileUploadFailed,
             publicationsClaimedInProgress: [...state.publicationsClaimedInProgress, action.payload.pid]
         }
     )

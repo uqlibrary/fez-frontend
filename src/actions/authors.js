@@ -30,6 +30,7 @@ export function searchAuthors(query, filterBy) {
                 });
             })
             .catch(error => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.AUTHORS_LOAD_FAILED,
                     payload: error
@@ -55,6 +56,7 @@ export function loadAuthorDetails(authorId) {
                 });
             })
             .catch(error => {
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.AUTHOR_DETAILS_FAILED,
                     payload: error

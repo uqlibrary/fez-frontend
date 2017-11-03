@@ -20,7 +20,7 @@ export function loadRecordToFix(pid) {
                     payload: response.data
                 });
             })
-            .catch((error) => {
+            .catch(error => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.FIX_RECORD_LOAD_FAILED,
@@ -80,6 +80,8 @@ export function fixRecord(data) {
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
 
+    const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+
     if (!isAuthorLinked) {
         return dispatch => {
             dispatch({
@@ -93,37 +95,38 @@ export function fixRecord(data) {
     return dispatch => {
         dispatch({type: actions.FIX_RECORD_PROCESSING});
 
-        const requests = [];
-        // if user added files - upload files
-        if (data.files && data.files.queue && data.files.queue.length > 0) {
-            requests.push(repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch));
-        }
         // if user updated links/added files - update record
-        if (data.files && data.files.queue && data.files.queue.length > 0 || data.rek_link) {
-            const patchRecordRequest = {
+        let patchRecordRequest = null;
+        if (hasFilesToUpload || data.rek_link) {
+            patchRecordRequest = {
                 rek_pid: data.publication.rek_pid,
                 ...transformers.getRecordLinkSearchKey(data),
                 ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
             };
-            requests.push(patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest));
         }
 
-        // set issue notification
+        // create request for issue notification
         const createIssueRequest = transformers.getFixIssueRequest(data);
-        requests.push(post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest));
 
-        return Promise.all(requests)
-            .then((responses) => {
+        return Promise.resolve([])
+            .then(()=> (hasFilesToUpload ? repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
+            .then(()=> (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
+            .then(()=> (post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
+            .then(responses => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
-                    payload: {pid: data.publication.rek_pid}
+                    payload: {
+                        pid: data.publication.rek_pid
+                    }
                 });
                 return Promise.resolve(responses);
             })
             .catch(error => {
+                // dispatch an action if session failed
+                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
-                    payload: error
+                    payload: error.message
                 });
                 return Promise.reject(error);
             });
@@ -140,13 +143,14 @@ export function unclaimRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Incomplete data for requests'
+                payload: 'Incomplete data for requests.'
             });
 
-            return Promise.reject({message: 'Incomplete data for requests'});
+            return Promise.reject({message: 'Incomplete data for requests.'});
         };
     }
 
+    // TODO: special case for contributors required
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
 
@@ -154,9 +158,9 @@ export function unclaimRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Current author is not linked to this record'
+                payload: 'Current author is not linked to this record.'
             });
-            return Promise.reject({message: 'Current author is not linked to this record'});
+            return Promise.reject({message: 'Current author is not linked to this record.'});
         };
     }
 
@@ -170,17 +174,17 @@ export function unclaimRecord(data) {
         };
 
         return patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
-            .then((response) => {
+            .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_UNCLAIM_SUCCESS,
                     payload: {pid: data.publication.rek_pid}
                 });
                 return Promise.resolve(response);
             })
-            .catch((error) => {
+            .catch(error => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({type: actions.FIX_RECORD_FAILED});
-                return Promise.reject({message: 'Failed patch record request'});
+                return Promise.reject({message: 'Failed patch record request.'});
             });
     };
 }
