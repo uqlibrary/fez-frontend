@@ -39,8 +39,6 @@ export function createNewRecord(data) {
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        console.log(hasFilesToUpload);
-        console.log(data);
         const recordPatch = hasFilesToUpload ? {...transformers.getRecordFileAttachmentSearchKey(data.files.queue)} : null;
 
         return post(routes.NEW_RECORD_API(), recordRequest)

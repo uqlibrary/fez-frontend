@@ -31,10 +31,6 @@ class NavigationPrompt extends React.Component {
         });
     }
 
-    componentWillUpdate(nextProps, nextState) {
-        console.log(nextProps, nextState);
-    }
-
     componentWillUnmount() {
         this.unblock();
     }
