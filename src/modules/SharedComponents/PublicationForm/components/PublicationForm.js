@@ -5,9 +5,9 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-import {SelectField, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
+import {SelectField, StandardCard, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes, validation} from 'config';
-import {Prompt} from 'react-router-dom';
+import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
 
 import * as recordForms from './Forms';
 
@@ -25,21 +25,11 @@ export default class PublicationForm extends Component {
     constructor(props) {
         super(props);
         this.publicationTypes = publicationTypes({...recordForms});
-        this.state = {confirmationOpened: false};
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
-        }
-    }
-
-    _showConfirmation = () => {
-        this.setConfirmationOpened();
-        if (this.props.pristine) {
-            this.props.onFormCancel();
-        } else {
-            this.confirmationBox.showConfirmation();
         }
     }
 
@@ -55,14 +45,6 @@ export default class PublicationForm extends Component {
                 })
             :
             null;
-    };
-
-    setConfirmationOpened = (opened = true) => {
-        this.setState({confirmationOpened: opened});
-    };
-
-    _setConfirmationClosed = () => {
-        this.setConfirmationOpened(false);
     };
 
     render() {
@@ -84,13 +66,7 @@ export default class PublicationForm extends Component {
         const txt = locale.components.publicationForm;
         return (
             <form>
-                <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this.props.onFormCancel}
-                    onCancelAction={this._setConfirmationClosed}
-                    locale={txt.cancelWorkflowConfirmation} />
-
-                <Prompt when={this.props.dirty && !this.state.confirmationOpened} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
+                <NavigationDialogBox when={this.props.dirty} locale={txt.cancelWorkflowConfirmation} />
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field
@@ -108,7 +84,6 @@ export default class PublicationForm extends Component {
                 {
                     this._getPublicationTypeForm(this.props.formValues.get('rek_display_type'))
                 }
-
                 {
                     this.props.formValues.get('rek_display_type') > 0 &&
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
@@ -143,7 +118,7 @@ export default class PublicationForm extends Component {
                             fullWidth
                             label={txt.cancel}
                             disabled={this.props.submitting}
-                            onTouchTap={this._showConfirmation} />
+                            onTouchTap={this.props.onFormCancel} />
                     </div>
                     {this.props.formValues.get('rek_display_type') > 0 &&
                     <div className="column is-narrow-desktop">

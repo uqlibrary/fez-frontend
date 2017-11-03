@@ -70,19 +70,11 @@ export default class FixRecord extends Component {
     }
 
     _navigateToMyResearch = () => {
-        this.props.history.replace(routes.pathConfig.records.mine);
+        this.props.history.push(routes.pathConfig.records.mine);
     }
 
     _navigateToDashboard = () => {
-        this.props.history.replace(routes.pathConfig.dashboard);
-    };
-
-    _showConfirmation = () => {
-        if (this.props.pristine || !this.cancelConfirmationBox) {
-            this._navigateToMyResearch();
-        } else {
-            this.cancelConfirmationBox.showConfirmation();
-        }
+        this.props.history.push(routes.pathConfig.dashboard);
     };
 
     _actionSelected = (event, value) => {
@@ -163,11 +155,7 @@ export default class FixRecord extends Component {
                     {
                         this.state.selectedRecordAction === 'fix' &&
                         <div>
-                            <NavigationDialogBox when={this.props.dirty} locale={txt.fix.cancelWorkflowConfirmation} />
-                            <ConfirmDialogBox
-                                onRef={this._setCancelConfirmation}
-                                onAction={this._navigateToMyResearch}
-                                locale={txt.fix.cancelWorkflowConfirmation}/>
+                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} locale={txt.fix.cancelWorkflowConfirmation} />
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
@@ -231,7 +219,7 @@ export default class FixRecord extends Component {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._showConfirmation}/>
+                                onTouchTap={this._navigateToMyResearch}/>
                         </div>
                         {
                             this.state.selectedRecordAction &&

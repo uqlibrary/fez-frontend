@@ -4,6 +4,7 @@ import {default as NavigationPrompt} from './NavigationPrompt';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
 
 const NavigationDailogBox = ({when, locale}) => {
+    if (!when) return <span />;
     return (
         <NavigationPrompt when={when}>
             {
