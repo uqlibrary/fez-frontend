@@ -521,19 +521,21 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
       date="2008-06-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="citationDate"
       >
         (
         2008
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="It's for love not money: Queensland graziers' perceptions of sustainable development"
@@ -644,14 +646,16 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >
