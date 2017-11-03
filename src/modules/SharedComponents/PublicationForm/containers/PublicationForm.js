@@ -63,8 +63,7 @@ let PublicationFormContainer = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        destroyOnUnmount: false
+        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({})
     };
 };
 
