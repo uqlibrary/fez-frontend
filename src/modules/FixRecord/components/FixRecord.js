@@ -109,10 +109,6 @@ export default class FixRecord extends Component {
         this.successConfirmationBox = ref;
     };
 
-    _setCancelConfirmation = (ref) => {
-        this.cancelConfirmationBox = ref;
-    };
-
     render() {
         const txt = locale.pages.fixRecord;
 
