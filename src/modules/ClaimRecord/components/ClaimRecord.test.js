@@ -215,9 +215,6 @@ describe('Component ClaimRecord ', () => {
         wrapper.setState({selectedRecordAction: 'unclaim'});
         wrapper.instance()._setSuccessConfirmation('successBox');
         expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
-
-        wrapper.instance()._setCancelConfirmation('cancelBox');
-        expect(wrapper.instance().cancelConfirmationBox).toEqual('cancelBox');
     });
 
     it('should submit form when user hits Enter', () => {
