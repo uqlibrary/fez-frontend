@@ -18,9 +18,7 @@ exports[`AuthorItem renders  should be disabled 1`] = `
       label={
         <span
           className="author-link-name"
-        >
-          Test user
-        </span>
+        />
       }
       labelPosition="after"
       labelStyle={Object {}}
@@ -38,7 +36,7 @@ exports[`AuthorItem renders  should be disabled 1`] = `
       <span
         className="author-link-order-text"
       >
-        First  listed author
+        First  listed undefined
       </span>
     </div>
   </div>
@@ -63,9 +61,7 @@ exports[`AuthorItem renders  should be linked 1`] = `
       label={
         <span
           className="author-link-name"
-        >
-          Test user
-        </span>
+        />
       }
       labelPosition="after"
       labelStyle={Object {}}
@@ -82,7 +78,7 @@ exports[`AuthorItem renders  should be linked 1`] = `
       <span
         className="author-link-order-text"
       >
-        First  listed author
+        First  listed undefined
       </span>
     </div>
   </div>
@@ -107,9 +103,7 @@ exports[`AuthorItem renders  should be linked and disabled 1`] = `
       label={
         <span
           className="author-link-name"
-        >
-          Test user
-        </span>
+        />
       }
       labelPosition="after"
       labelStyle={Object {}}
@@ -127,7 +121,7 @@ exports[`AuthorItem renders  should be linked and disabled 1`] = `
       <span
         className="author-link-order-text"
       >
-        First  listed author
+        First  listed undefined
       </span>
     </div>
   </div>
@@ -152,9 +146,7 @@ exports[`AuthorItem renders  should be selected 1`] = `
       label={
         <span
           className="author-link-name"
-        >
-          Test user
-        </span>
+        />
       }
       labelPosition="after"
       labelStyle={Object {}}
@@ -171,7 +163,7 @@ exports[`AuthorItem renders  should be selected 1`] = `
       <span
         className="author-link-order-text"
       >
-        First  listed author
+        First  listed undefined
       </span>
     </div>
   </div>
@@ -196,9 +188,7 @@ exports[`AuthorItem renders  should be selected and disabled 1`] = `
       label={
         <span
           className="author-link-name"
-        >
-          Test user
-        </span>
+        />
       }
       labelPosition="after"
       labelStyle={Object {}}
@@ -215,7 +205,7 @@ exports[`AuthorItem renders  should be selected and disabled 1`] = `
       <span
         className="author-link-order-text"
       >
-        First  listed author
+        First  listed undefined
       </span>
     </div>
   </div>
@@ -240,9 +230,7 @@ exports[`AuthorItem renders  should be unselected and able to select author 1`] 
       label={
         <span
           className="author-link-name"
-        >
-          Test user
-        </span>
+        />
       }
       labelPosition="after"
       labelStyle={Object {}}
@@ -260,7 +248,7 @@ exports[`AuthorItem renders  should be unselected and able to select author 1`] 
       <span
         className="author-link-order-text"
       >
-        First  listed author
+        First  listed undefined
       </span>
     </div>
   </div>

@@ -48,7 +48,7 @@ exports[`AuthorLinking should be disabled 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -80,7 +80,7 @@ exports[`AuthorLinking should be disabled 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -112,7 +112,7 @@ exports[`AuthorLinking should be disabled 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -148,7 +148,7 @@ exports[`AuthorLinking should be disabled 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -180,7 +180,7 @@ exports[`AuthorLinking should be disabled 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -212,7 +212,7 @@ exports[`AuthorLinking should be disabled 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -248,7 +248,7 @@ exports[`AuthorLinking should be disabled 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -280,7 +280,7 @@ exports[`AuthorLinking should be disabled 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -312,7 +312,7 @@ exports[`AuthorLinking should be disabled 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -372,7 +372,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -404,7 +404,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -436,7 +436,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -472,7 +472,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -504,7 +504,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -536,7 +536,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -572,7 +572,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -604,7 +604,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -636,7 +636,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -696,7 +696,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -728,7 +728,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -760,7 +760,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -796,7 +796,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -828,7 +828,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -860,7 +860,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -896,7 +896,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -928,7 +928,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}
@@ -960,7 +960,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
                 "Ninth",
                 "Tenth",
               ],
-              "suffix": " listed author",
+              "suffix": " listed [type]",
             }
           }
           onAuthorSelected={[Function]}

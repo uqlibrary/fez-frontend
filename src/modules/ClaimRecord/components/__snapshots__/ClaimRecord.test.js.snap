@@ -2851,14 +2851,9 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           searchKey={
             Object {
               "order": "rek_author_id_order",
+              "type": "author",
               "value": "rek_author_id",
             }
-          }
-          validate={
-            Array [
-              [Function],
-              [Function],
-            ]
           }
         />
       </StandardCard>

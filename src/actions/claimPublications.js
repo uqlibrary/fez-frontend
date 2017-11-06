@@ -144,6 +144,9 @@ export function clearClaimPublication() {
  * @param {array} files to be uploaded for this record
  * @returns {action}
  */
+
+// TODO: This also needs to post a contributor/editor to the record
+
 export function claimPublication(data) {
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
     data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
@@ -162,6 +165,8 @@ export function claimPublication(data) {
         dispatch({type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING});
 
         let recordAuthorsIdSearchKeys = {};
+
+        // FOR AUTHORS
         if (data.publication.fez_record_search_key_author &&
             data.publication.fez_record_search_key_author.length === 1) {
             // auto-assign current author if there's only one author
@@ -174,6 +179,21 @@ export function claimPublication(data) {
         } else if (data.authorLinking && data.authorLinking.authors) {
             // author has assigned themselves on the form
             recordAuthorsIdSearchKeys = transformers.getRecordAuthorsIdSearchKey(data.authorLinking.authors);
+        }
+
+        // FOR CONTRIBUTORS
+        if (data.publication.fez_record_search_key_contributor &&
+            data.publication.fez_record_search_key_contributor.length === 1) {
+            // auto-assign current contributor if there's only one contributor
+            recordAuthorsIdSearchKeys = {
+                fez_record_search_key_contributor_id: [{
+                    rek_contributor_id: data.contributor.aut_id,
+                    rek_contributor_id_order: 1
+                }]
+            };
+        } else if (data.contributorLinking && data.contributorLinking.authors) {
+            // contributor has assigned themselves on the form
+            recordAuthorsIdSearchKeys = transformers.getRecordContributorsIdSearchKey(data.contributorLinking.authors);
         }
 
         // claim existing record request

@@ -33,7 +33,8 @@ export default class AuthorLinking extends React.Component {
         super(props);
         this.state = {
             selectedAuthor: null,
-            authorLinkingConfirmed: false
+            authorLinkingConfirmed: false,
+            authorType: this.props.searchKey.type
         };
 
         /**
@@ -77,11 +78,15 @@ export default class AuthorLinking extends React.Component {
      */
     getAuthorsToRender = ({authorList, linkedAuthorIdList, disabled} = {}, {selectedAuthor = {}} = {}) => {
         const authors = authorList.map((author, index) => {
-            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index].rek_author_id !== 0;
-            const selected = selectedAuthor && author.rek_author_order === selectedAuthor.rek_author_id_order;
+            const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index][this.props.searchKey.value] !== 0;
+            const selected = (selectedAuthor && (author['rek_' + this.props.searchKey.type + '_order'] === selectedAuthor['rek_' + this.props.searchKey.type + '_id_order']));
+            console.log('SELECTED: ' + selected + ': AUTHOR :' + JSON.stringify(author));
+            console.log('SELECTED AUTHOR: ' + JSON.stringify(selectedAuthor));
+
 
             return (
                 <AuthorItem
+                    type={this.props.searchKey.type}
                     index={index}
                     key={index}
                     author={author}
@@ -136,10 +141,10 @@ export default class AuthorLinking extends React.Component {
      */
     transformToAuthorOrderId = (authorId, author) => {
         return {
-            rek_author_id_id: null,
-            rek_author_id_pid: author.rek_author_pid,
+            ['rek_' + this.props.searchKey.type + '_id_id']: author['rek_' + this.props.searchKey.type + '_id_id'] || null,
+            ['rek_' + this.props.searchKey.type + '_id_pid']: author['rek_' + this.props.searchKey.type + '_pid'] || null,
             [this.props.searchKey.value]: authorId,
-            [this.props.searchKey.order]: author.rek_author_order
+            [this.props.searchKey.order]: author['rek_' + this.props.searchKey.type + '_order']
         };
     };
 
@@ -151,10 +156,14 @@ export default class AuthorLinking extends React.Component {
      */
     _selectAuthor = (author) => {
         const selectedAuthor = this.transformToAuthorOrderId(this.props.loggedInAuthor.aut_id, author);
+        console.log('SELECTED ' + this.props.searchKey.type.toUpperCase() + ' --> ' + JSON.stringify(selectedAuthor));
 
         this.setState({
             selectedAuthor: selectedAuthor,
-            authorLinkingConfirmed: false
+            authorLinkingConfirmed: false,
+            authorType: this.props.searchKey.type
+        }, () => {
+            console.log('STATE: ' + JSON.stringify(this.state));
         });
     };
 

@@ -27,7 +27,7 @@ const linkedAuthorIdList = [
     {rek_author_id_id: null, rek_author_id_pid: "UQ:111111", rek_author_id: 0, rek_author_id_order: 9}
 ];
 
-const searchKey = {value: 'rek_author_id', order: 'rek_author_id_order'};
+const searchKey = {value: 'rek_author_id', order: 'rek_author_id_order', type: 'author'};
 
 function setup({linkedAuthorIdList}){
     const props = {

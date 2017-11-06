@@ -2203,6 +2203,15 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
+            contributorLinking: {
+                title: 'Editor linking',
+                text: 'We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: ',
+                help: {
+                    title: 'Editor linking',
+                    text: '...',
+                    buttonLabel: 'OK'
+                }
+            },
             comments: {
                 title: 'Please, suggest changes and/or upload additional files below',
                 help: {
