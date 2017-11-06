@@ -60,7 +60,8 @@ export default {
                 idKey: 'fez_record_search_key_doi.rek_doi'
             },
         },
-        embargoDateFormat: 'YYYY-MM-DD'
+        embargoDateFormat: 'YYYY-MM-DD',
+        defaultLinkDescription: 'Link to publication'
     },
     authentication: {
         signInText: 'Log in',
