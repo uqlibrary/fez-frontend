@@ -1,20 +1,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import * as actions from 'actions';
 
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
+import {thesisSubTypes} from 'config/general';
 
 export class PublicationThesisTypeList extends Component {
     static propTypes = {
         onChange: PropTypes.func,
         locale: PropTypes.object,
-        itemsList: PropTypes.array,
-        itemsLoading: PropTypes.bool,
-        loadPublicationThesisTypeList: PropTypes.func,
         selectedValue: PropTypes.any,
-        vocabId: PropTypes.number,
         className: PropTypes.string,
         disabled: PropTypes.bool
     };
@@ -39,10 +35,6 @@ export class PublicationThesisTypeList extends Component {
     }
 
     componentDidMount() {
-        if (this.props.itemsList.length === 0) {
-            this.props.loadPublicationThesisTypeList(this.props.vocabId);
-        }
-
         if (this.props.selectedValue !== null) {
             this._updateSelectedValue(this.props.selectedValue);
         }
@@ -65,41 +57,25 @@ export class PublicationThesisTypeList extends Component {
     };
 
     render() {
-        const renderThesisTypeItems = this.props.itemsList.map((item, index) => {
+        const renderThesisTypeItems = thesisSubTypes.map((item, index) => {
             return <MenuItem value={item} primaryText={item} key={`pub_thesis_type_${index}`}/>;
         });
-        const loadingIndicationText = `${this.props.locale.label} ${this.props.itemsLoading ? this.props.locale.loading : ''}`;
         return (
             <SelectField
                 id="selectedValue"
                 name="selectedValue"
                 {...this.context.selectFieldMobileOverrides}
                 className={this.props.className}
-                value={this.props.itemsLoading ? null : this.state.selectedValue}
+                value={this.state.selectedValue}
                 maxHeight={250}
                 onChange={this._onSubtypeSelected}
-                disabled={this.props.disabled || this.props.itemsLoading}
+                disabled={this.props.disabled}
                 dropDownMenuProps={{animated: false}}
-                floatingLabelText={loadingIndicationText}>
+                floatingLabelText={this.props.locale.label}>
                 {renderThesisTypeItems}
             </SelectField>
         );
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-        itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[ownProps.vocabId]
-            ? state.get('controlledVocabulariesReducer')[ownProps.vocabId].itemsList : [],
-        itemsLoading: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[ownProps.vocabId]
-            ? state.get('controlledVocabulariesReducer')[ownProps.vocabId].itemsLoading : false
-    };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        loadPublicationThesisTypeList: (category) => dispatch(actions.loadVocabulariesList(category))
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(PublicationThesisTypeList);
+export default connect()(PublicationThesisTypeList);

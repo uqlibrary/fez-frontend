@@ -234,5 +234,20 @@ export const openAccessIdLookup = {
     453697: 'Other',
 };
 
+export const thesisSubTypes = [
+    'B.A. Thesis',
+    'B.Sc Thesis',
+    'Bachelor\'s Thesis',
+    'Higher Doctorate',
+    'Honours Thesis',
+    'M.A. Thesis',
+    'M.Sc Thesis',
+    'Master\'s Thesis',
+    'MPhil Thesis',
+    'Other',
+    'PhD Thesis',
+    'Professional Doctorate'
+];
+
 export const OrgUnitsVocabId = 453703;
 
