@@ -81,11 +81,6 @@ export default class ClaimRecord extends Component {
         this.successConfirmationBox = ref;
     };
 
-    _setCancelConfirmation = (ref) => {
-        this.cancelConfirmationBox = ref;
-    };
-
-
     render() {
         const txt = locale.components.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
@@ -121,9 +116,7 @@ export default class ClaimRecord extends Component {
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
                                 locale={saveConfirmationLocale} />
-                            {
-                                <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
-                            }
+                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
                             {
                                 publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
                                 && !authorLinked &&

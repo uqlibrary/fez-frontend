@@ -18,8 +18,8 @@ class NavigationPrompt extends React.Component {
     }
 
     componentDidMount() {
-        this.unblock = this.props.history.block((nextLocation, action) => {
-            if (this.props.when && (action === 'PUSH' || action === 'POP')) {
+        this.unblock = this.props.history.block((nextLocation) => {
+            if (this.props.when) {
                 this.setState({
                     nextLocation: nextLocation
                 });
