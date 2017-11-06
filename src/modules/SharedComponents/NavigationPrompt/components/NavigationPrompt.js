@@ -19,8 +19,6 @@ export class NavigationPrompt extends React.Component {
         super(props);
         this.state = {nextLocation: null};
         this.confirmationBox = null;
-        this._onCancel = this._onCancel.bind(this);
-        this._onConfirm = this._onConfirm.bind(this);
     }
 
     componentDidMount() {
@@ -45,18 +43,18 @@ export class NavigationPrompt extends React.Component {
         this.confirmationBox = ref;
     };
 
-    _onCancel() {
+    _onCancel = () => {
         this.setState({nextLocation: null});
-    }
+    };
 
-    _onConfirm() {
+    _onConfirm = () => {
         this.navigateToNextLocation();
-    }
+    };
 
-    navigateToNextLocation() {
+    navigateToNextLocation = () => {
         this.unblock();
         this.props.history.push(this.state.nextLocation.pathname);
-    }
+    };
 
     render() {
         return (
