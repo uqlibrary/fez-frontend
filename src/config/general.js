@@ -238,4 +238,5 @@ export const openAccessIdLookup = {
 };
 
 export const OrgUnitsVocabId = 453703;
+export const FieldOfResearchVocabId = 451780;
 

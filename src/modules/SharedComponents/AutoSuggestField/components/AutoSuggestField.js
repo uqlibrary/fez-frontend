@@ -7,6 +7,7 @@ export class AutoSuggestField extends Component {
         onChange: PropTypes.func,
         async: PropTypes.bool,
         itemsList: PropTypes.array,
+        dataSourceConfig: PropTypes.object,
         itemsListLoading: PropTypes.bool,
         selectedValue: PropTypes.any,
         category: PropTypes.any,
@@ -15,7 +16,8 @@ export class AutoSuggestField extends Component {
         disabled: PropTypes.bool,
         className: PropTypes.string,
         maxResults: PropTypes.number,
-        debounceDelay: PropTypes.number
+        debounceDelay: PropTypes.number,
+        forceItemSelection: PropTypes.bool
     };
 
     static defaultProps = {
@@ -51,6 +53,7 @@ export class AutoSuggestField extends Component {
     }
 
     updateSelectedValue = (value) => {
+        console.log(value);
         this.setState({
             selectedValue: value
         }, () => {
@@ -64,11 +67,17 @@ export class AutoSuggestField extends Component {
     };
 
     textUpdated = (searchText) => {
-        this.updateSelectedValue(searchText);
+        if (!this.props.forceItemSelection) {
+            this.updateSelectedValue(searchText);
+        }
     };
 
-    valueSelected = (value) => {
-        this.updateSelectedValue(value);
+    valueSelected = (value, index) => {
+        if (index >= 0) {
+            this.updateSelectedValue(this.props.itemsList[index]);
+        } else if (!this.props.forceItemSelection) {
+            this.updateSelectedValue(value);
+        }
     };
 
     render() {
@@ -86,6 +95,7 @@ export class AutoSuggestField extends Component {
                 onUpdateInput={this.textUpdated}
                 onNewRequest={this.valueSelected}
                 className={this.props.className}
+                dataSourceConfig={this.props.dataSourceConfig}
             />
         );
     }
