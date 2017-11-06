@@ -5,9 +5,9 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-import {SelectField, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
+import {SelectField, StandardCard, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes, validation} from 'config';
-import {Prompt} from 'react-router-dom';
+import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
 
 import * as recordForms from './Forms';
 
@@ -30,14 +30,6 @@ export default class PublicationForm extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
-        }
-    }
-
-    _showConfirmation = () => {
-        if (this.props.pristine) {
-            this.props.onFormCancel();
-        } else {
-            this.confirmationBox.showConfirmation();
         }
     }
 
@@ -90,12 +82,7 @@ export default class PublicationForm extends Component {
         const txt = locale.components.publicationForm;
         return (
             <form>
-                <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this.props.onFormCancel}
-                    locale={txt.cancelWorkflowConfirmation} />
-
-                <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
+                <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field
@@ -134,7 +121,7 @@ export default class PublicationForm extends Component {
                             fullWidth
                             label={txt.cancel}
                             disabled={this.props.submitting}
-                            onTouchTap={this._showConfirmation} />
+                            onTouchTap={this.props.onFormCancel} />
                     </div>
                     {this.props.formValues.get('rek_display_type') > 0 &&
                     <div className="column is-narrow-desktop">

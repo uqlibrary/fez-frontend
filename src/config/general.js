@@ -237,7 +237,7 @@ export const openAccessIdLookup = {
     453697: 'Other',
 };
 
-export const thesisSubTypes = [
+export const thesisSubtypes = [
     'B.A. Thesis',
     'B.Sc Thesis',
     'Bachelor\'s Thesis',

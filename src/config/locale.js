@@ -65,7 +65,8 @@ export default {
             prefix: 'https://doi.org/',
             externalUrl: 'https://doi.org/[id]',
         },
-        embargoDateFormat: 'YYYY-MM-DD'
+        embargoDateFormat: 'YYYY-MM-DD',
+        defaultLinkDescription: 'Link to publication'
     },
     authentication: {
         signInText: 'Log in',

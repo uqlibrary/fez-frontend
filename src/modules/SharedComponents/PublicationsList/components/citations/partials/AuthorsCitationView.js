@@ -28,7 +28,7 @@ class AuthorsCitationView extends React.Component {
         super(props);
         this.authorsCount = Array.isArray(props.publication[props.searchKey.key]) ? props.publication[props.searchKey.key].length : 0;
         this.state = {
-            showMore: this.authorsCount < props.initialNumberOfAuthors,
+            showMore: this.authorsCount <= props.initialNumberOfAuthors,
             restAuthors: this.authorsCount - props.initialNumberOfAuthors
         };
         this.authors = [];
