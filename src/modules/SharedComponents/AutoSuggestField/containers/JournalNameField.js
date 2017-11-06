@@ -6,7 +6,7 @@ import * as actions from 'actions';
 import {validation} from 'config';
 
 
-export class NewspaperNameAutoSuggestField extends Component {
+export class JournalNameAutoSuggestField extends Component {
     static propTypes = {
         input: PropTypes.object,
         className: PropTypes.string,
@@ -15,8 +15,8 @@ export class NewspaperNameAutoSuggestField extends Component {
 
     static defaultProps = {
         locale: {
-            fieldLabel: 'Newspaper name',
-            fieldHint: 'Start typing newspaper name'
+            fieldLabel: 'Journal name',
+            fieldHint: 'Start typing journal name'
         },
         validate: validation.required
     };
@@ -50,5 +50,5 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const NewspaperNameField = connect(mapStateToProps, mapDispatchToProps)(NewspaperNameAutoSuggestField);
+export const JournalNameField = connect(mapStateToProps, mapDispatchToProps)(JournalNameAutoSuggestField);
 
