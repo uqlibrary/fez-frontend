@@ -491,11 +491,11 @@ export default {
             actionsOptions: [
                 {
                     action: 'fix',
-                    title: 'I am the author of this record - I would like to make a correction, or upload files'
+                    title: 'I am the author/editor/contributor of this record - I would like to make a correction, or upload files'
                 },
                 {
                     action: 'unclaim',
-                    title: 'I am not the author of this record - I would like this record removed from my profile'
+                    title: 'I am not the author/editor/contributor of this record - I would like this record removed from my profile'
                 }
             ],
             cancel: 'Cancel',
