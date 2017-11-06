@@ -12,6 +12,7 @@ import {Prompt} from 'react-router-dom';
 export default class ClaimRecord extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
+        publicationToClaimFileUploadingError: PropTypes.bool,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -75,7 +76,7 @@ export default class ClaimRecord extends Component {
         submitSucceeded = false, txt, authorLinked = false}) => {
         let alertProps = null;
         if (submitFailed && error) {
-            alertProps = {...txt.errorAlert};
+            alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
         } else if (!submitFailed && dirty && invalid) {
             alertProps = {...txt.validationAlert};
         } else if (submitting) {
@@ -107,6 +108,16 @@ export default class ClaimRecord extends Component {
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
         const fromAddRecord = !!publication.sources;
+
+        // set confirmation message depending on file upload status and publication fromAddRecord
+        const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+        saveConfirmationLocale.cancelButtonLabel = fromAddRecord
+            ? txt.successWorkflowConfirmation.addRecordButtonLabel : txt.successWorkflowConfirmation.cancelButtonLabel;
+        if (this.props.publicationToClaimFileUploadingError) {
+            saveConfirmationLocale.confirmationMessage = txt.successWorkflowConfirmation.fileFailConfirmationMessage;
+        } else {
+            saveConfirmationLocale.confirmationMessage = txt.successWorkflowConfirmation.successConfirmationMessage;
+        }
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -125,11 +136,7 @@ export default class ClaimRecord extends Component {
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
-                                locale={{
-                                    ...txt.successWorkflowConfirmation,
-                                    cancelButtonLabel: fromAddRecord
-                                        ? txt.successWorkflowConfirmation.addRecordButtonLabel
-                                        : txt.successWorkflowConfirmation.cancelButtonLabel}} />
+                                locale={saveConfirmationLocale} />
 
                             <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 

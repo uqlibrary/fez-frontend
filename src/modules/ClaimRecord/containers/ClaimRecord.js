@@ -38,6 +38,7 @@ let ClaimPublicationFormContainer = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
+        publicationToClaimFileUploadingError: state.get('claimPublicationReducer').publicationToClaimFileUploadingError,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {
             publication: state.get('claimPublicationReducer').publicationToClaim,

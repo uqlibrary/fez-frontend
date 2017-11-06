@@ -797,19 +797,21 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
         </CitationView>
       </span>
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
       date="2011-03-29T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="citationDate"
       >
         (
         2011
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Numerical solution of partial differential equations"
@@ -883,14 +885,16 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
         className="citationAuthors empty"
       />
     </AuthorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >

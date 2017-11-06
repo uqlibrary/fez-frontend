@@ -1165,19 +1165,21 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
         </span>
       </AuthorsCitationView>
     </EditorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
       date="2008-01-01T00:00:00Z"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear"
+        className="citationDate"
       >
         (
         2008
         ).
       </span>
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
       value="Experiences and Challenges in Sewers: Measurements and Hydrodynamics"
@@ -1321,14 +1323,16 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
         />
       </AuthorsCitationView>
     </EditorsCitationView>
-    <YearCitationView
+    <DateCitationView
+      className="citationDate"
+      format="YYYY"
       prefix="("
       suffix=")."
     >
       <span
-        className="citationYear empty"
+        className="citationDate empty"
       />
-    </YearCitationView>
+    </DateCitationView>
     <CitationView
       className="citationTitle"
     >

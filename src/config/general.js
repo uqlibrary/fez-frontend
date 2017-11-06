@@ -11,7 +11,7 @@ export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
     rek_object_type: 3,
-    rek_status: 3,
+    rek_status: 2,
     fez_record_search_key_ismemberof: [
         {rek_ismemberof: 'UQ:218198'}
     ]
@@ -108,6 +108,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_DATA_COLLECTION,
         name: 'Data Collection',
         class: 'Uqlibrary\\FezCore\\Types\\DataCollection',
+        citationComponent: components ? components.DataCollectionCitation : null,
         hasFormComponent: false
     },
     {
@@ -168,6 +169,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
         name: 'Newspaper Article',
         class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle',
+        citationComponent: components ? components.NewspaperArticleCitation : null,
         hasFormComponent: true
     },
     {
@@ -175,6 +177,7 @@ export const publicationTypes = (components) => [
         name: 'Patent',
         class: 'Uqlibrary\\FezCore\\Types\\Patent',
         formComponent: components ? components.PatentForm : null,
+        citationComponent: components ? components.PatentCitation : null,
         hasFormComponent: true
     },
     {
