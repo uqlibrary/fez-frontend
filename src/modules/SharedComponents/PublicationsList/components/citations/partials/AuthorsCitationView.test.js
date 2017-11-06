@@ -219,4 +219,76 @@ describe('AuthorsCitationView test ', () => {
         expect(wrapper.find('.citationAuthor').length).toEqual(12);
         expect(wrapper.find('.citationShowMoreAuthors').text()).toEqual(' Show less ');
     });
+
+    it('should render component with exactly ten authors', () => {
+        const testObject = {
+            "fez_record_search_key_author": [
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Pedroso, Marcelo Monteiro",
+                    "rek_author_order": 1
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Smith, J",
+                    "rek_author_order": 2
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 3
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 4
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 5
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 6
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 7
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 8
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 9
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 10
+                }
+            ]
+        };
+        const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.state().showMore).toBeTruthy();
+        expect(wrapper.find('.citationAuthor').length).toEqual(10);
+        expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(0);
+    });
 });

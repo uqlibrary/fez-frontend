@@ -8,8 +8,8 @@ import MenuItem from 'material-ui/MenuItem';
 
 import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
+import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
 import {validation, locale, routes} from 'config';
-import {Prompt} from 'react-router-dom';
 
 export default class FixRecord extends Component {
     static propTypes = {
@@ -77,14 +77,6 @@ export default class FixRecord extends Component {
         this.props.history.push(routes.pathConfig.dashboard);
     };
 
-    _showConfirmation = () => {
-        if (this.props.pristine || !this.cancelConfirmationBox) {
-            this._navigateToMyResearch();
-        } else {
-            this.cancelConfirmationBox.showConfirmation();
-        }
-    };
-
     _actionSelected = (event, value) => {
         this.setState({
             selectedRecordAction: value
@@ -117,10 +109,6 @@ export default class FixRecord extends Component {
         this.successConfirmationBox = ref;
     };
 
-    _setCancelConfirmation = (ref) => {
-        this.cancelConfirmationBox = ref;
-    };
-
     render() {
         const txt = locale.pages.fixRecord;
 
@@ -151,8 +139,6 @@ export default class FixRecord extends Component {
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
-                    <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
-
                     <StandardCard title={txt.subTitle} help={txt.help}>
                         <PublicationCitation publication={recordToFix}/>
 
@@ -171,10 +157,7 @@ export default class FixRecord extends Component {
                     {
                         this.state.selectedRecordAction === 'fix' &&
                         <div>
-                            <ConfirmDialogBox
-                                onRef={this._setCancelConfirmation}
-                                onAction={this._navigateToMyResearch}
-                                locale={txt.fix.cancelWorkflowConfirmation}/>
+                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.fix.cancelWorkflowConfirmation} />
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
@@ -238,7 +221,7 @@ export default class FixRecord extends Component {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._showConfirmation}/>
+                                onTouchTap={this._navigateToMyResearch}/>
                         </div>
                         {
                             this.state.selectedRecordAction &&

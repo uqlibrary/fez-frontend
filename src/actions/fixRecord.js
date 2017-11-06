@@ -110,7 +110,7 @@ export function fixRecord(data) {
 
         return Promise.resolve([])
             .then(()=> (hasFilesToUpload ? repositories.putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
-            .then(()=> (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
+            .then(()=> (hasFilesToUpload || data.rek_link ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
             .then(()=> (post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
             .then(responses => {
                 dispatch({

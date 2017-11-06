@@ -108,14 +108,7 @@ describe('PublicationForm test', () => {
         })
     });
 
-    it('should render component calls onFormCancel method', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({onFormCancel: testMethod, pristine: true});
-        wrapper.instance()._showConfirmation();
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should render component calls onFormSubmitSuccess method', () => {
+    it('should call  onFormSubmitSuccess method', () => {
         const testMethod = jest.fn();
         const wrapper = setup({onFormSubmitSuccess: testMethod});
         wrapper.setProps({ submitSucceeded: true });
