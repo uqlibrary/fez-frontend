@@ -19,7 +19,6 @@ export default class ClaimRecord extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {confirmationOpened: false};
     }
 
     componentWillMount() {
