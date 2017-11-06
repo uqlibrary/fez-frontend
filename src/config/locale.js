@@ -1617,6 +1617,131 @@ export default {
                     }
                 },
             },
+            thesis: {
+                information: {
+                    title: 'Thesis information',
+                    help: {
+                        title: 'Thesis information',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            title: 'Title',
+                            hint: 'Thesis title',
+                        },
+                        orgUnit: {
+                            title: 'School, department or centre',
+                            hint: ''
+                        },
+                        institution: {
+                            title: 'Institution',
+                            hint: ''
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        thesisType: {
+                            title: 'Thesis Type',
+                            hint: ''
+                        },
+                        fieldOfResearch: {
+                            title: 'Fields of Research',
+                            hint: 'Select up to 3 Field of Research (FoR) codes'
+                        },
+                        DOI: {
+                            title: 'DOI',
+                            hint: ''
+                        },
+                        totalPages: {
+                            title: 'Total pages',
+                            hint: ''
+                        },
+                        abstract: {
+                            title: 'Abstract',
+                            hint: 'Provide an abstract or summary of the work.'
+                        },
+                        notes: {
+                            title: 'Additional Notes',
+                            hintText: 'Add any additional information here',
+                        },
+                        author: {
+                            title: 'Author name',
+                            hint: ''
+                        }
+                    }
+                },
+                supervisors: {
+                    title: 'Supervisors',
+                    help: {
+                        title: 'Supervisors help',
+                        text: 'Enter Supervisor names e.g. Firstname Lastname. Additional boxes will appear for more supervisors.',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter Supervisor names e.g. Firstname Lastname. Additional boxes will appear for more supervisors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Supervisor\'s name as published',
+                                nameAsPublishedHint: '',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add supervisor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Supervisor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed supervisor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information help',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            title: 'Notes (not publicly viewable)',
+                            hint: 'Please, add any additional information here',
+                        },
+                        url: {
+                            title: 'Link',
+                            hint: 'Enter a valid URL for this publication'
+                        }
+                    }
+                },
+            },
             preprint: {
                 information: {
                     title: 'Preprint information',
