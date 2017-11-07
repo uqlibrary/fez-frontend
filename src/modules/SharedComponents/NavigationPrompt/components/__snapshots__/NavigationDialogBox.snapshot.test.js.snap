@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationDialogBox component should render 1`] = `
+<NavigationDialogBox
+  txt={
+    Object {
+      "cancelButtonLabel": "No",
+      "confirmButtonLabel": "Yes",
+      "confirmationMessage": "Are you sure?",
+      "confirmationTitle": "Confirmation",
+    }
+  }
+  when={true}
+/>
+`;
