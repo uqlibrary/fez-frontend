@@ -8,13 +8,17 @@ import {withRouter} from 'react-router-dom';
  *
  * https://gist.github.com/bummzack/a586533607ece482475e0c211790dd50
  */
-class NavigationPrompt extends React.Component {
+export class NavigationPrompt extends React.Component {
+    static propTypes = {
+        when: PropTypes.bool.isRequired,
+        children: PropTypes.func.isRequired,
+        history: PropTypes.object
+    };
+
     constructor(props) {
         super(props);
         this.state = {nextLocation: null};
         this.confirmationBox = null;
-        this.onCancel = this.onCancel.bind(this);
-        this.onConfirm = this.onConfirm.bind(this);
     }
 
     componentDidMount() {
@@ -39,32 +43,26 @@ class NavigationPrompt extends React.Component {
         this.confirmationBox = ref;
     };
 
-    onCancel() {
+    _onCancel = () => {
         this.setState({nextLocation: null});
-    }
+    };
 
-    onConfirm() {
+    _onConfirm = () => {
         this.navigateToNextLocation();
-    }
+    };
 
-    navigateToNextLocation() {
+    navigateToNextLocation = () => {
         this.unblock();
         this.props.history.push(this.state.nextLocation.pathname);
-    }
+    };
 
     render() {
         return (
             <div>
-                {this.props.children(this.setNavigationConfirmation, this.onConfirm, this.onCancel)}
+                {this.props.children(this.setNavigationConfirmation, this._onConfirm, this._onCancel)}
             </div>
         );
     }
 }
-
-NavigationPrompt.propTypes = {
-    when: PropTypes.bool.isRequired,
-    children: PropTypes.func.isRequired,
-    history: PropTypes.object
-};
 
 export default withRouter(NavigationPrompt);
