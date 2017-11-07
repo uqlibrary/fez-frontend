@@ -32,6 +32,7 @@ export class AutoSuggestField extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            searchText: props.selectedValue,
             selectedValue: null
         };
         this.bounce = null;
@@ -46,16 +47,25 @@ export class AutoSuggestField extends Component {
         }
     }
 
+    componentWillReceiveProps(newProps) {
+        if (newProps.selectedValue !== this.props.selectedValue) {
+            console.log(newProps.selectedValue);
+            this.setState({
+                selectedValue: newProps.selectedValue,
+                searchText: newProps.selectedValue
+            });
+        }
+    }
+
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange && nextState.selectedValue !== this.state.selectedValue) {
+        if (this.props.onChange && !!nextState.selectedValue && nextState.selectedValue !== this.state.selectedValue) {
             this.props.onChange(nextState.selectedValue);
         }
     }
 
     updateSelectedValue = (value) => {
-        console.log(value);
         this.setState({
-            selectedValue: value
+            selectedValue: value,
         }, () => {
             if (this.props.async && this.props.loadSuggestions && this.state.selectedValue && this.state.selectedValue.trim().length > 0) {
                 if (this.bounce) {
@@ -67,12 +77,19 @@ export class AutoSuggestField extends Component {
     };
 
     textUpdated = (searchText) => {
+        this.setState({
+            searchText: searchText
+        });
+
         if (!this.props.forceItemSelection) {
             this.updateSelectedValue(searchText);
         }
     };
 
-    valueSelected = (value, index) => {
+    clearField = (value, index) => {
+        this.setState({
+            searchText: ''
+        });
         if (index >= 0) {
             this.updateSelectedValue(this.props.itemsList[index]);
         } else if (!this.props.forceItemSelection) {
@@ -83,17 +100,18 @@ export class AutoSuggestField extends Component {
     render() {
         return (
             <AutoComplete
+                id="itemName"
+                searchText={this.state.searchText}
                 disabled={this.props.disabled}
                 listStyle={{maxHeight: 200, overflow: 'auto'}}
                 filter={!this.props.async ? AutoComplete.caseInsensitiveFilter : () => (true)}
-                id="textField"
                 maxSearchResults={this.props.maxResults}
                 floatingLabelText={this.props.locale.fieldLabel}
                 hintText={this.props.locale.fieldHint}
                 dataSource={this.props.itemsList}
                 fullWidth
                 onUpdateInput={this.textUpdated}
-                onNewRequest={this.valueSelected}
+                onNewRequest={this.clearField}
                 className={this.props.className}
                 dataSourceConfig={this.props.dataSourceConfig}
             />

@@ -4,6 +4,7 @@ import {Field} from 'redux-form/immutable';
 
 import {StandardCard} from 'uqlibrary-react-toolbox';
 import {OrgUnitsField, SeriesField, FieldOfResearchField} from 'modules/SharedComponents/AutoSuggestField';
+import {ListEditorField} from 'modules/SharedComponents/ListEditor';
 
 export default class WorkingPaperForm extends Component {
     static propTypes = {
@@ -19,14 +20,17 @@ export default class WorkingPaperForm extends Component {
             <div>
                 <StandardCard title="Placeholder for working paper">
                     <Field
-                        component={FieldOfResearchField}
-                        name="fez_record_search_key_subject"
+                        component={ListEditorField}
+                        inputField={FieldOfResearchField}
+                        hideReorder
+                        maxCount={3}
+                        name="forField"
                         disabled={this.props.submitting}
 
                     />
                     <Field
                         component={OrgUnitsField}
-                        name="testField"
+                        name="OrgUnitsField"
                         disabled={this.props.submitting}
 
                     />
@@ -34,8 +38,16 @@ export default class WorkingPaperForm extends Component {
                         component={SeriesField}
                         name="testField2"
                         disabled={this.props.submitting}
-
                     />
+                    <FieldOfResearchField input={{onChange: (value) => { console.log(value); }}} selectedValue="ladjfljsdfljsdlfjlj" />
+
+                    <Field
+                        component={FieldOfResearchField}
+                        name="singleForField"
+                        disabled={this.props.submitting}
+                        selectedValue="ladjfljsdfljsdlfjlj"
+                    />
+
                 </StandardCard>
             </div>
         );

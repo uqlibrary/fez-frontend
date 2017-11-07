@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListRowHeader renders  header for contributor editor control with delete all disabled 1`] = `
+<div
+  className="columns is-gapless is-mobile listHeader datalist datalist-header"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all items?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column name datalist-title"
+  >
+    Name
+  </div>
+  <div
+    className="column is-narrow is-hidden-mobile order datalist-title"
+  >
+    Reorder items
+  </div>
+  <div
+    className="column is-narrow buttons datalist-buttons"
+  >
+    <IconButton
+      disableTouchRipple={false}
+      disabled={true}
+      iconStyle={Object {}}
+      onTouchTap={[Function]}
+      tooltip="Remove all items"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete_forever
+      </FontIcon>
+    </IconButton>
+  </div>
+</div>
+`;
+
+exports[`ListRowHeader renders  header for contributor editor control with name and delete all button only 1`] = `
+<div
+  className="columns is-gapless is-mobile listHeader datalist datalist-header"
+>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all items?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <div
+    className="column name datalist-title"
+  >
+    Name
+  </div>
+  <div
+    className="column is-narrow is-hidden-mobile order datalist-title"
+  >
+    Reorder items
+  </div>
+  <div
+    className="column is-narrow buttons datalist-buttons"
+  >
+    <IconButton
+      disableTouchRipple={false}
+      disabled={false}
+      iconStyle={Object {}}
+      onTouchTap={[Function]}
+      tooltip="Remove all items"
+      tooltipPosition="bottom-center"
+      touch={false}
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        delete_forever
+      </FontIcon>
+    </IconButton>
+  </div>
+</div>
+`;

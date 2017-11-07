@@ -24,6 +24,7 @@ export class FieldOfResearchAutoSuggestField extends Component {
     }
 
     render() {
+        console.log(this.props);
         return (
             <AutoSuggestField
                 forceItemSelection
