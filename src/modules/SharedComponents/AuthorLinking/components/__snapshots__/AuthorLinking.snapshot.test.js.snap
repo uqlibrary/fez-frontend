@@ -53,6 +53,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -85,6 +86,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -117,6 +119,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
       </div>
       <div
@@ -153,6 +156,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -185,6 +189,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -217,6 +222,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
       </div>
       <div
@@ -253,6 +259,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -285,6 +292,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -317,6 +325,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
       </div>
     </Infinite>
@@ -377,6 +386,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -409,6 +419,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -441,6 +452,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
       </div>
       <div
@@ -477,6 +489,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -509,6 +522,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -541,6 +555,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
       </div>
       <div
@@ -577,6 +592,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -609,6 +625,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -641,6 +658,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
       </div>
     </Infinite>
@@ -701,6 +719,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -733,6 +752,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -765,6 +785,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
       </div>
       <div
@@ -801,6 +822,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -833,6 +855,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -865,6 +888,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
       </div>
       <div
@@ -901,6 +925,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -933,6 +958,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
         <AuthorItem
           author={
@@ -965,6 +991,7 @@ exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = 
           }
           onAuthorSelected={[Function]}
           selected={null}
+          type="author"
         />
       </div>
     </Infinite>

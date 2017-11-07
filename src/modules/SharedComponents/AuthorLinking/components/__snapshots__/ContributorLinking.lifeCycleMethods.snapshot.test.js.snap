@@ -1,0 +1,1270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContributorLinking should call componentDidMount life cycle method 1`] = `
+<AuthorLinking
+  authorList={
+    Array [
+      Object {
+        "rek_contributor": "Overgaard, Nana H.",
+        "rek_contributor_id": null,
+        "rek_contributor_order": 1,
+        "rek_contributor_pid": "UQ:111111",
+      },
+      Object {
+        "rek_contributor": "Cruz, Jazmina L.",
+        "rek_contributor_id": null,
+        "rek_contributor_order": 2,
+        "rek_contributor_pid": "UQ:111111",
+      },
+    ]
+  }
+  disabled={false}
+  linkedAuthorIdList={
+    Array [
+      Object {
+        "rek_contributor_id": 0,
+        "rek_contributor_id_id": null,
+        "rek_contributor_id_order": 1,
+        "rek_contributor_id_pid": "UQ:111111",
+      },
+      Object {
+        "rek_contributor_id": 0,
+        "rek_contributor_id_id": null,
+        "rek_contributor_id_order": 2,
+        "rek_contributor_id_pid": "UQ:111111",
+      },
+    ]
+  }
+  locale={
+    Object {
+      "confirmation": "I confirm and understand that I am claiming this publication under the above name, and confirm this is me",
+    }
+  }
+  searchKey={
+    Object {
+      "order": "rek_contributor_id_order",
+      "type": "contributor",
+      "value": "rek_contributor_id",
+    }
+  }
+>
+  <div>
+    <div
+      className="author-link-list"
+    >
+      <Infinite
+        className="author-link-infinite-scroll"
+        containerHeight={200}
+        displayBottomUpwards={false}
+        elementHeight={73}
+        handleScroll={[Function]}
+        infiniteLoadBeginEdgeOffset={50}
+        isInfiniteLoading={false}
+        loadingSpinnerDelegate={<div />}
+        onInfiniteLoad={[Function]}
+        styles={Object {}}
+        timeScrollStateLastsForAfterUserScrolls={150}
+        useWindowAsScrollContainer={false}
+      >
+        <div
+          className="author-link-infinite-scroll"
+          onScroll={[Function]}
+          style={
+            Object {
+              "WebkitOverflowScrolling": "touch",
+              "height": 200,
+              "overflowX": "hidden",
+              "overflowY": "scroll",
+            }
+          }
+        >
+          <div
+            style={Object {}}
+          >
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "width": "100%",
+                }
+              }
+            />
+            <div
+              className="columns is-multiline is-gapless is-marginless"
+            >
+              <AuthorItem
+                author={
+                  Object {
+                    "rek_contributor": "Overgaard, Nana H.",
+                    "rek_contributor_id": null,
+                    "rek_contributor_order": 1,
+                    "rek_contributor_pid": "UQ:111111",
+                  }
+                }
+                disabled={false}
+                index={0}
+                linked={false}
+                locale={
+                  Object {
+                    "ordinalData": Array [
+                      "First",
+                      "Second",
+                      "Third",
+                      "Fourth",
+                      "Fifth",
+                      "Sixth",
+                      "Seventh",
+                      "Eighth",
+                      "Ninth",
+                      "Tenth",
+                    ],
+                    "suffix": " listed [type]",
+                  }
+                }
+                onAuthorSelected={[Function]}
+                selected={null}
+                type="contributor"
+              >
+                <div
+                  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+                >
+                  <div
+                    className="authorButton"
+                  >
+                    <FlatButton
+                      disabled={false}
+                      fullWidth={true}
+                      icon={
+                        <ToggleRadioButtonUnchecked
+                          className="author-link-status"
+                        />
+                      }
+                      label={
+                        <span
+                          className="author-link-name"
+                        >
+                          Overgaard, Nana H.
+                        </span>
+                      }
+                      labelPosition="after"
+                      labelStyle={Object {}}
+                      onKeyboardFocus={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onTouchStart={[Function]}
+                      onTouchTap={[Function]}
+                      primary={null}
+                      secondary={false}
+                    >
+                      <EnhancedButton
+                        containerElement="button"
+                        disabled={false}
+                        focusRippleColor="#999999"
+                        focusRippleOpacity={0.3}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onKeyboardFocus={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onTouchStart={[Function]}
+                        onTouchTap={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "rgba(0, 0, 0, 0)",
+                            "borderRadius": 2,
+                            "color": "rgba(0, 0, 0, 0.87)",
+                            "height": 36,
+                            "lineHeight": "36px",
+                            "margin": 0,
+                            "minWidth": "100%",
+                            "overflow": "hidden",
+                            "padding": 0,
+                            "textAlign": "center",
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                          }
+                        }
+                        tabIndex={0}
+                        touchRippleColor="#999999"
+                        touchRippleOpacity={0.3}
+                        type="button"
+                      >
+                        <button
+                          disabled={false}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onTouchStart={[Function]}
+                          onTouchTap={[Function]}
+                          style={
+                            Object {
+                              "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)",
+                              "border": 10,
+                              "borderRadius": 2,
+                              "boxSizing": "border-box",
+                              "color": "rgba(0, 0, 0, 0.87)",
+                              "cursor": "pointer",
+                              "display": "inline-block",
+                              "fontFamily": "Roboto, sans-serif",
+                              "fontSize": "inherit",
+                              "fontWeight": "inherit",
+                              "height": 36,
+                              "lineHeight": "36px",
+                              "margin": 0,
+                              "minWidth": "100%",
+                              "muiPrepared": true,
+                              "outline": "none",
+                              "overflow": "hidden",
+                              "padding": 0,
+                              "position": "relative",
+                              "textAlign": "center",
+                              "textDecoration": "none",
+                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                              "verticalAlign": null,
+                              "zIndex": 1,
+                            }
+                          }
+                          tabIndex={0}
+                          type="button"
+                        >
+                          <TouchRipple
+                            abortOnScroll={true}
+                            color="#999999"
+                            opacity={0.3}
+                          >
+                            <div
+                              onMouseDown={[Function]}
+                              onMouseLeave={[Function]}
+                              onMouseUp={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                              <ToggleRadioButtonUnchecked
+                                className="author-link-status"
+                                color="rgba(0, 0, 0, 0.87)"
+                                style={
+                                  Object {
+                                    "marginLeft": 12,
+                                    "marginRight": 0,
+                                    "verticalAlign": "middle",
+                                  }
+                                }
+                              >
+                                <SvgIcon
+                                  className="author-link-status"
+                                  color="rgba(0, 0, 0, 0.87)"
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  style={
+                                    Object {
+                                      "marginLeft": 12,
+                                      "marginRight": 0,
+                                      "verticalAlign": "middle",
+                                    }
+                                  }
+                                  viewBox="0 0 24 24"
+                                >
+                                  <svg
+                                    className="author-link-status"
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                    style={
+                                      Object {
+                                        "color": "rgba(0, 0, 0, 0.87)",
+                                        "display": "inline-block",
+                                        "fill": "rgba(0, 0, 0, 0.87)",
+                                        "height": 24,
+                                        "marginLeft": 12,
+                                        "marginRight": 0,
+                                        "muiPrepared": true,
+                                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                        "userSelect": "none",
+                                        "verticalAlign": "middle",
+                                        "width": 24,
+                                      }
+                                    }
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                    />
+                                  </svg>
+                                </SvgIcon>
+                              </ToggleRadioButtonUnchecked>
+                              <FlatButtonLabel
+                                label={
+                                  <span
+                                    className="author-link-name"
+                                  >
+                                    Overgaard, Nana H.
+                                  </span>
+                                }
+                                style={
+                                  Object {
+                                    "fontSize": 14,
+                                    "fontWeight": 500,
+                                    "letterSpacing": 0,
+                                    "paddingLeft": 8,
+                                    "textTransform": "uppercase",
+                                  }
+                                }
+                              >
+                                <span
+                                  style={
+                                    Object {
+                                      "fontSize": 14,
+                                      "fontWeight": 500,
+                                      "letterSpacing": 0,
+                                      "muiPrepared": true,
+                                      "paddingLeft": 8,
+                                      "paddingRight": 16,
+                                      "position": "relative",
+                                      "textTransform": "uppercase",
+                                      "verticalAlign": "middle",
+                                    }
+                                  }
+                                >
+                                  <span
+                                    className="author-link-name"
+                                  >
+                                    Overgaard, Nana H.
+                                  </span>
+                                </span>
+                              </FlatButtonLabel>
+                            </div>
+                          </TouchRipple>
+                        </button>
+                      </EnhancedButton>
+                    </FlatButton>
+                    <div
+                      className="author-link-order"
+                    >
+                      <span
+                        className="author-link-order-text"
+                      >
+                        First  listed contributor
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </AuthorItem>
+              <AuthorItem
+                author={
+                  Object {
+                    "rek_contributor": "Cruz, Jazmina L.",
+                    "rek_contributor_id": null,
+                    "rek_contributor_order": 2,
+                    "rek_contributor_pid": "UQ:111111",
+                  }
+                }
+                disabled={false}
+                index={1}
+                linked={false}
+                locale={
+                  Object {
+                    "ordinalData": Array [
+                      "First",
+                      "Second",
+                      "Third",
+                      "Fourth",
+                      "Fifth",
+                      "Sixth",
+                      "Seventh",
+                      "Eighth",
+                      "Ninth",
+                      "Tenth",
+                    ],
+                    "suffix": " listed [type]",
+                  }
+                }
+                onAuthorSelected={[Function]}
+                selected={null}
+                type="contributor"
+              >
+                <div
+                  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+                >
+                  <div
+                    className="authorButton"
+                  >
+                    <FlatButton
+                      disabled={false}
+                      fullWidth={true}
+                      icon={
+                        <ToggleRadioButtonUnchecked
+                          className="author-link-status"
+                        />
+                      }
+                      label={
+                        <span
+                          className="author-link-name"
+                        >
+                          Cruz, Jazmina L.
+                        </span>
+                      }
+                      labelPosition="after"
+                      labelStyle={Object {}}
+                      onKeyboardFocus={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onTouchStart={[Function]}
+                      onTouchTap={[Function]}
+                      primary={null}
+                      secondary={false}
+                    >
+                      <EnhancedButton
+                        containerElement="button"
+                        disabled={false}
+                        focusRippleColor="#999999"
+                        focusRippleOpacity={0.3}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onKeyboardFocus={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onTouchStart={[Function]}
+                        onTouchTap={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "rgba(0, 0, 0, 0)",
+                            "borderRadius": 2,
+                            "color": "rgba(0, 0, 0, 0.87)",
+                            "height": 36,
+                            "lineHeight": "36px",
+                            "margin": 0,
+                            "minWidth": "100%",
+                            "overflow": "hidden",
+                            "padding": 0,
+                            "textAlign": "center",
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                          }
+                        }
+                        tabIndex={0}
+                        touchRippleColor="#999999"
+                        touchRippleOpacity={0.3}
+                        type="button"
+                      >
+                        <button
+                          disabled={false}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onTouchStart={[Function]}
+                          onTouchTap={[Function]}
+                          style={
+                            Object {
+                              "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)",
+                              "border": 10,
+                              "borderRadius": 2,
+                              "boxSizing": "border-box",
+                              "color": "rgba(0, 0, 0, 0.87)",
+                              "cursor": "pointer",
+                              "display": "inline-block",
+                              "fontFamily": "Roboto, sans-serif",
+                              "fontSize": "inherit",
+                              "fontWeight": "inherit",
+                              "height": 36,
+                              "lineHeight": "36px",
+                              "margin": 0,
+                              "minWidth": "100%",
+                              "muiPrepared": true,
+                              "outline": "none",
+                              "overflow": "hidden",
+                              "padding": 0,
+                              "position": "relative",
+                              "textAlign": "center",
+                              "textDecoration": "none",
+                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                              "verticalAlign": null,
+                              "zIndex": 1,
+                            }
+                          }
+                          tabIndex={0}
+                          type="button"
+                        >
+                          <TouchRipple
+                            abortOnScroll={true}
+                            color="#999999"
+                            opacity={0.3}
+                          >
+                            <div
+                              onMouseDown={[Function]}
+                              onMouseLeave={[Function]}
+                              onMouseUp={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                              <ToggleRadioButtonUnchecked
+                                className="author-link-status"
+                                color="rgba(0, 0, 0, 0.87)"
+                                style={
+                                  Object {
+                                    "marginLeft": 12,
+                                    "marginRight": 0,
+                                    "verticalAlign": "middle",
+                                  }
+                                }
+                              >
+                                <SvgIcon
+                                  className="author-link-status"
+                                  color="rgba(0, 0, 0, 0.87)"
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  style={
+                                    Object {
+                                      "marginLeft": 12,
+                                      "marginRight": 0,
+                                      "verticalAlign": "middle",
+                                    }
+                                  }
+                                  viewBox="0 0 24 24"
+                                >
+                                  <svg
+                                    className="author-link-status"
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                    style={
+                                      Object {
+                                        "color": "rgba(0, 0, 0, 0.87)",
+                                        "display": "inline-block",
+                                        "fill": "rgba(0, 0, 0, 0.87)",
+                                        "height": 24,
+                                        "marginLeft": 12,
+                                        "marginRight": 0,
+                                        "muiPrepared": true,
+                                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                        "userSelect": "none",
+                                        "verticalAlign": "middle",
+                                        "width": 24,
+                                      }
+                                    }
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                    />
+                                  </svg>
+                                </SvgIcon>
+                              </ToggleRadioButtonUnchecked>
+                              <FlatButtonLabel
+                                label={
+                                  <span
+                                    className="author-link-name"
+                                  >
+                                    Cruz, Jazmina L.
+                                  </span>
+                                }
+                                style={
+                                  Object {
+                                    "fontSize": 14,
+                                    "fontWeight": 500,
+                                    "letterSpacing": 0,
+                                    "paddingLeft": 8,
+                                    "textTransform": "uppercase",
+                                  }
+                                }
+                              >
+                                <span
+                                  style={
+                                    Object {
+                                      "fontSize": 14,
+                                      "fontWeight": 500,
+                                      "letterSpacing": 0,
+                                      "muiPrepared": true,
+                                      "paddingLeft": 8,
+                                      "paddingRight": 16,
+                                      "position": "relative",
+                                      "textTransform": "uppercase",
+                                      "verticalAlign": "middle",
+                                    }
+                                  }
+                                >
+                                  <span
+                                    className="author-link-name"
+                                  >
+                                    Cruz, Jazmina L.
+                                  </span>
+                                </span>
+                              </FlatButtonLabel>
+                            </div>
+                          </TouchRipple>
+                        </button>
+                      </EnhancedButton>
+                    </FlatButton>
+                    <div
+                      className="author-link-order"
+                    >
+                      <span
+                        className="author-link-order-text"
+                      >
+                        Second  listed contributor
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </AuthorItem>
+            </div>
+            <div>
+              <div />
+            </div>
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+      </Infinite>
+    </div>
+  </div>
+</AuthorLinking>
+`;
+
+exports[`ContributorLinking should call componentDidMount life cycle method 2`] = `
+<AuthorLinking
+  authorList={
+    Array [
+      Object {
+        "rek_contributor": "Overgaard, Nana H.",
+        "rek_contributor_id": null,
+        "rek_contributor_order": 1,
+        "rek_contributor_pid": "UQ:111111",
+      },
+      Object {
+        "rek_contributor": "Cruz, Jazmina L.",
+        "rek_contributor_id": null,
+        "rek_contributor_order": 2,
+        "rek_contributor_pid": "UQ:111111",
+      },
+    ]
+  }
+  disabled={false}
+  linkedAuthorIdList={Array []}
+  locale={
+    Object {
+      "confirmation": "I confirm and understand that I am claiming this publication under the above name, and confirm this is me",
+    }
+  }
+  searchKey={
+    Object {
+      "order": "rek_contributor_id_order",
+      "type": "contributor",
+      "value": "rek_contributor_id",
+    }
+  }
+>
+  <div>
+    <div
+      className="author-link-list"
+    >
+      <Infinite
+        className="author-link-infinite-scroll"
+        containerHeight={200}
+        displayBottomUpwards={false}
+        elementHeight={73}
+        handleScroll={[Function]}
+        infiniteLoadBeginEdgeOffset={50}
+        isInfiniteLoading={false}
+        loadingSpinnerDelegate={<div />}
+        onInfiniteLoad={[Function]}
+        styles={Object {}}
+        timeScrollStateLastsForAfterUserScrolls={150}
+        useWindowAsScrollContainer={false}
+      >
+        <div
+          className="author-link-infinite-scroll"
+          onScroll={[Function]}
+          style={
+            Object {
+              "WebkitOverflowScrolling": "touch",
+              "height": 200,
+              "overflowX": "hidden",
+              "overflowY": "scroll",
+            }
+          }
+        >
+          <div
+            style={Object {}}
+          >
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "width": "100%",
+                }
+              }
+            />
+            <div
+              className="columns is-multiline is-gapless is-marginless"
+            >
+              <AuthorItem
+                author={
+                  Object {
+                    "rek_contributor": "Overgaard, Nana H.",
+                    "rek_contributor_id": null,
+                    "rek_contributor_order": 1,
+                    "rek_contributor_pid": "UQ:111111",
+                  }
+                }
+                disabled={false}
+                index={0}
+                linked={false}
+                locale={
+                  Object {
+                    "ordinalData": Array [
+                      "First",
+                      "Second",
+                      "Third",
+                      "Fourth",
+                      "Fifth",
+                      "Sixth",
+                      "Seventh",
+                      "Eighth",
+                      "Ninth",
+                      "Tenth",
+                    ],
+                    "suffix": " listed [type]",
+                  }
+                }
+                onAuthorSelected={[Function]}
+                selected={null}
+                type="contributor"
+              >
+                <div
+                  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+                >
+                  <div
+                    className="authorButton"
+                  >
+                    <FlatButton
+                      disabled={false}
+                      fullWidth={true}
+                      icon={
+                        <ToggleRadioButtonUnchecked
+                          className="author-link-status"
+                        />
+                      }
+                      label={
+                        <span
+                          className="author-link-name"
+                        >
+                          Overgaard, Nana H.
+                        </span>
+                      }
+                      labelPosition="after"
+                      labelStyle={Object {}}
+                      onKeyboardFocus={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onTouchStart={[Function]}
+                      onTouchTap={[Function]}
+                      primary={null}
+                      secondary={false}
+                    >
+                      <EnhancedButton
+                        containerElement="button"
+                        disabled={false}
+                        focusRippleColor="#999999"
+                        focusRippleOpacity={0.3}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onKeyboardFocus={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onTouchStart={[Function]}
+                        onTouchTap={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "rgba(0, 0, 0, 0)",
+                            "borderRadius": 2,
+                            "color": "rgba(0, 0, 0, 0.87)",
+                            "height": 36,
+                            "lineHeight": "36px",
+                            "margin": 0,
+                            "minWidth": "100%",
+                            "overflow": "hidden",
+                            "padding": 0,
+                            "textAlign": "center",
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                          }
+                        }
+                        tabIndex={0}
+                        touchRippleColor="#999999"
+                        touchRippleOpacity={0.3}
+                        type="button"
+                      >
+                        <button
+                          disabled={false}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onTouchStart={[Function]}
+                          onTouchTap={[Function]}
+                          style={
+                            Object {
+                              "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)",
+                              "border": 10,
+                              "borderRadius": 2,
+                              "boxSizing": "border-box",
+                              "color": "rgba(0, 0, 0, 0.87)",
+                              "cursor": "pointer",
+                              "display": "inline-block",
+                              "fontFamily": "Roboto, sans-serif",
+                              "fontSize": "inherit",
+                              "fontWeight": "inherit",
+                              "height": 36,
+                              "lineHeight": "36px",
+                              "margin": 0,
+                              "minWidth": "100%",
+                              "muiPrepared": true,
+                              "outline": "none",
+                              "overflow": "hidden",
+                              "padding": 0,
+                              "position": "relative",
+                              "textAlign": "center",
+                              "textDecoration": "none",
+                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                              "verticalAlign": null,
+                              "zIndex": 1,
+                            }
+                          }
+                          tabIndex={0}
+                          type="button"
+                        >
+                          <TouchRipple
+                            abortOnScroll={true}
+                            color="#999999"
+                            opacity={0.3}
+                          >
+                            <div
+                              onMouseDown={[Function]}
+                              onMouseLeave={[Function]}
+                              onMouseUp={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                              <ToggleRadioButtonUnchecked
+                                className="author-link-status"
+                                color="rgba(0, 0, 0, 0.87)"
+                                style={
+                                  Object {
+                                    "marginLeft": 12,
+                                    "marginRight": 0,
+                                    "verticalAlign": "middle",
+                                  }
+                                }
+                              >
+                                <SvgIcon
+                                  className="author-link-status"
+                                  color="rgba(0, 0, 0, 0.87)"
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  style={
+                                    Object {
+                                      "marginLeft": 12,
+                                      "marginRight": 0,
+                                      "verticalAlign": "middle",
+                                    }
+                                  }
+                                  viewBox="0 0 24 24"
+                                >
+                                  <svg
+                                    className="author-link-status"
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                    style={
+                                      Object {
+                                        "color": "rgba(0, 0, 0, 0.87)",
+                                        "display": "inline-block",
+                                        "fill": "rgba(0, 0, 0, 0.87)",
+                                        "height": 24,
+                                        "marginLeft": 12,
+                                        "marginRight": 0,
+                                        "muiPrepared": true,
+                                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                        "userSelect": "none",
+                                        "verticalAlign": "middle",
+                                        "width": 24,
+                                      }
+                                    }
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                    />
+                                  </svg>
+                                </SvgIcon>
+                              </ToggleRadioButtonUnchecked>
+                              <FlatButtonLabel
+                                label={
+                                  <span
+                                    className="author-link-name"
+                                  >
+                                    Overgaard, Nana H.
+                                  </span>
+                                }
+                                style={
+                                  Object {
+                                    "fontSize": 14,
+                                    "fontWeight": 500,
+                                    "letterSpacing": 0,
+                                    "paddingLeft": 8,
+                                    "textTransform": "uppercase",
+                                  }
+                                }
+                              >
+                                <span
+                                  style={
+                                    Object {
+                                      "fontSize": 14,
+                                      "fontWeight": 500,
+                                      "letterSpacing": 0,
+                                      "muiPrepared": true,
+                                      "paddingLeft": 8,
+                                      "paddingRight": 16,
+                                      "position": "relative",
+                                      "textTransform": "uppercase",
+                                      "verticalAlign": "middle",
+                                    }
+                                  }
+                                >
+                                  <span
+                                    className="author-link-name"
+                                  >
+                                    Overgaard, Nana H.
+                                  </span>
+                                </span>
+                              </FlatButtonLabel>
+                            </div>
+                          </TouchRipple>
+                        </button>
+                      </EnhancedButton>
+                    </FlatButton>
+                    <div
+                      className="author-link-order"
+                    >
+                      <span
+                        className="author-link-order-text"
+                      >
+                        First  listed contributor
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </AuthorItem>
+              <AuthorItem
+                author={
+                  Object {
+                    "rek_contributor": "Cruz, Jazmina L.",
+                    "rek_contributor_id": null,
+                    "rek_contributor_order": 2,
+                    "rek_contributor_pid": "UQ:111111",
+                  }
+                }
+                disabled={false}
+                index={1}
+                linked={false}
+                locale={
+                  Object {
+                    "ordinalData": Array [
+                      "First",
+                      "Second",
+                      "Third",
+                      "Fourth",
+                      "Fifth",
+                      "Sixth",
+                      "Seventh",
+                      "Eighth",
+                      "Ninth",
+                      "Tenth",
+                    ],
+                    "suffix": " listed [type]",
+                  }
+                }
+                onAuthorSelected={[Function]}
+                selected={null}
+                type="contributor"
+              >
+                <div
+                  className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
+                >
+                  <div
+                    className="authorButton"
+                  >
+                    <FlatButton
+                      disabled={false}
+                      fullWidth={true}
+                      icon={
+                        <ToggleRadioButtonUnchecked
+                          className="author-link-status"
+                        />
+                      }
+                      label={
+                        <span
+                          className="author-link-name"
+                        >
+                          Cruz, Jazmina L.
+                        </span>
+                      }
+                      labelPosition="after"
+                      labelStyle={Object {}}
+                      onKeyboardFocus={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onTouchStart={[Function]}
+                      onTouchTap={[Function]}
+                      primary={null}
+                      secondary={false}
+                    >
+                      <EnhancedButton
+                        containerElement="button"
+                        disabled={false}
+                        focusRippleColor="#999999"
+                        focusRippleOpacity={0.3}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        onKeyboardFocus={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onTouchStart={[Function]}
+                        onTouchTap={[Function]}
+                        style={
+                          Object {
+                            "backgroundColor": "rgba(0, 0, 0, 0)",
+                            "borderRadius": 2,
+                            "color": "rgba(0, 0, 0, 0.87)",
+                            "height": 36,
+                            "lineHeight": "36px",
+                            "margin": 0,
+                            "minWidth": "100%",
+                            "overflow": "hidden",
+                            "padding": 0,
+                            "textAlign": "center",
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                          }
+                        }
+                        tabIndex={0}
+                        touchRippleColor="#999999"
+                        touchRippleOpacity={0.3}
+                        type="button"
+                      >
+                        <button
+                          disabled={false}
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onTouchStart={[Function]}
+                          onTouchTap={[Function]}
+                          style={
+                            Object {
+                              "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                              "backgroundColor": "rgba(0, 0, 0, 0)",
+                              "border": 10,
+                              "borderRadius": 2,
+                              "boxSizing": "border-box",
+                              "color": "rgba(0, 0, 0, 0.87)",
+                              "cursor": "pointer",
+                              "display": "inline-block",
+                              "fontFamily": "Roboto, sans-serif",
+                              "fontSize": "inherit",
+                              "fontWeight": "inherit",
+                              "height": 36,
+                              "lineHeight": "36px",
+                              "margin": 0,
+                              "minWidth": "100%",
+                              "muiPrepared": true,
+                              "outline": "none",
+                              "overflow": "hidden",
+                              "padding": 0,
+                              "position": "relative",
+                              "textAlign": "center",
+                              "textDecoration": "none",
+                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                              "verticalAlign": null,
+                              "zIndex": 1,
+                            }
+                          }
+                          tabIndex={0}
+                          type="button"
+                        >
+                          <TouchRipple
+                            abortOnScroll={true}
+                            color="#999999"
+                            opacity={0.3}
+                          >
+                            <div
+                              onMouseDown={[Function]}
+                              onMouseLeave={[Function]}
+                              onMouseUp={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchStart={[Function]}
+                            >
+                              <ToggleRadioButtonUnchecked
+                                className="author-link-status"
+                                color="rgba(0, 0, 0, 0.87)"
+                                style={
+                                  Object {
+                                    "marginLeft": 12,
+                                    "marginRight": 0,
+                                    "verticalAlign": "middle",
+                                  }
+                                }
+                              >
+                                <SvgIcon
+                                  className="author-link-status"
+                                  color="rgba(0, 0, 0, 0.87)"
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  style={
+                                    Object {
+                                      "marginLeft": 12,
+                                      "marginRight": 0,
+                                      "verticalAlign": "middle",
+                                    }
+                                  }
+                                  viewBox="0 0 24 24"
+                                >
+                                  <svg
+                                    className="author-link-status"
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                    style={
+                                      Object {
+                                        "color": "rgba(0, 0, 0, 0.87)",
+                                        "display": "inline-block",
+                                        "fill": "rgba(0, 0, 0, 0.87)",
+                                        "height": 24,
+                                        "marginLeft": 12,
+                                        "marginRight": 0,
+                                        "muiPrepared": true,
+                                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                                        "userSelect": "none",
+                                        "verticalAlign": "middle",
+                                        "width": 24,
+                                      }
+                                    }
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                    />
+                                  </svg>
+                                </SvgIcon>
+                              </ToggleRadioButtonUnchecked>
+                              <FlatButtonLabel
+                                label={
+                                  <span
+                                    className="author-link-name"
+                                  >
+                                    Cruz, Jazmina L.
+                                  </span>
+                                }
+                                style={
+                                  Object {
+                                    "fontSize": 14,
+                                    "fontWeight": 500,
+                                    "letterSpacing": 0,
+                                    "paddingLeft": 8,
+                                    "textTransform": "uppercase",
+                                  }
+                                }
+                              >
+                                <span
+                                  style={
+                                    Object {
+                                      "fontSize": 14,
+                                      "fontWeight": 500,
+                                      "letterSpacing": 0,
+                                      "muiPrepared": true,
+                                      "paddingLeft": 8,
+                                      "paddingRight": 16,
+                                      "position": "relative",
+                                      "textTransform": "uppercase",
+                                      "verticalAlign": "middle",
+                                    }
+                                  }
+                                >
+                                  <span
+                                    className="author-link-name"
+                                  >
+                                    Cruz, Jazmina L.
+                                  </span>
+                                </span>
+                              </FlatButtonLabel>
+                            </div>
+                          </TouchRipple>
+                        </button>
+                      </EnhancedButton>
+                    </FlatButton>
+                    <div
+                      className="author-link-order"
+                    >
+                      <span
+                        className="author-link-order-text"
+                      >
+                        Second  listed contributor
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </AuthorItem>
+            </div>
+            <div>
+              <div />
+            </div>
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+      </Infinite>
+    </div>
+  </div>
+</AuthorLinking>
+`;

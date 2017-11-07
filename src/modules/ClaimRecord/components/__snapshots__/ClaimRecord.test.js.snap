@@ -2855,6 +2855,12 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "value": "rek_author_id",
             }
           }
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
         />
       </StandardCard>
       <StandardCard

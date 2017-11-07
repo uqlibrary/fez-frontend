@@ -135,7 +135,10 @@ export default class ClaimRecord extends Component {
 
                             <Prompt when={this.props.dirty} message={locale.global.discardFormChangesConfirmation.confirmationMessage}/>
 
-                            {publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1 && !authorLinked &&
+                            {
+                                publication.fez_record_search_key_author &&
+                                publication.fez_record_search_key_author.length > 1 &&
+                                !authorLinked &&
                                 <StandardCard
                                     title={txt.authorLinking.title}
                                     help={txt.authorLinking.help}
@@ -154,12 +157,14 @@ export default class ClaimRecord extends Component {
                                         linkedAuthorIdList={publication.fez_record_search_key_author_id}
                                         disabled={this.props.submitting}
                                         className="requiredField"
-                                        // validate={[validation.required, validation.isValidAuthorLink]}
+                                        validate={[validation.required, validation.isValidAuthorLink]}
                                     />
                                 </StandardCard>
                             }
 
-                            {publication.fez_record_search_key_contributor &&
+                            {
+                                publication.fez_record_search_key_author.length === 0 &&
+                                publication.fez_record_search_key_contributor &&
                                 publication.fez_record_search_key_contributor.length > 1 &&
                                 !contributorLinked &&
                                 <StandardCard

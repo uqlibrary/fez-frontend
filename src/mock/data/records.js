@@ -14797,74 +14797,12 @@ export const possibleUnclaimedList = {
         "fez_record_search_key_article_number": null,
         "fez_record_search_key_assigned_group_id": [],
         "fez_record_search_key_assigned_user_id": [],
-        "fez_record_search_key_author": [
-            {
-                "rek_author_id": 30275879,
-                "rek_author_pid": "UQ:641272",
-                "rek_author_xsdmf_id": 6034,
-                "rek_author": "Ky Lane",
-                "rek_author_order": 1
-            },
-            {
-                "rek_author_id": 30275874,
-                "rek_author_pid": "UQ:641272",
-                "rek_author_xsdmf_id": 6034,
-                "rek_author": "John Smith",
-                "rek_author_order": 2
-            },
-            {
-                "rek_author_id": 30275879,
-                "rek_author_pid": "UQ:641272",
-                "rek_author_xsdmf_id": 6034,
-                "rek_author": "Michelle Smith",
-                "rek_author_order": 3
-            },
-            {
-                "rek_author_id": 30275874,
-                "rek_author_pid": "UQ:641272",
-                "rek_author_xsdmf_id": 6034,
-                "rek_author": "Henry Baggins",
-                "rek_author_order": 4
-            }
-        ],
+        "fez_record_search_key_author": [],
         "fez_record_search_key_author_affiliation_country": [],
         "fez_record_search_key_author_affiliation_full_address": [],
         "fez_record_search_key_author_affiliation_id": [],
         "fez_record_search_key_author_affiliation_name": [],
-        "fez_record_search_key_author_id": [
-            {
-                "rek_author_id_id": 29564287,
-                "rek_author_id_pid": "UQ:641272",
-                "rek_author_id_xsdmf_id": 6029,
-                "rek_author_id": 144,
-                "rek_author_id_order": 1,
-                "rek_author_id_lookup": "Ky Lane"
-            },
-            {
-                "rek_author_id_id": 29564285,
-                "rek_author_id_pid": "UQ:641272",
-                "rek_author_id_xsdmf_id": 6029,
-                "rek_author_id": 0,
-                "rek_author_id_order": 2,
-                "rek_author_id_lookup": "John Smith"
-            },
-            {
-                "rek_author_id_id": 29564287,
-                "rek_author_id_pid": "UQ:641272",
-                "rek_author_id_xsdmf_id": 6029,
-                "rek_author_id": 144,
-                "rek_author_id_order": 3,
-                "rek_author_id_lookup": "Michelle Smith"
-            },
-            {
-                "rek_author_id_id": 29564285,
-                "rek_author_id_pid": "UQ:641272",
-                "rek_author_id_xsdmf_id": 6029,
-                "rek_author_id": 0,
-                "rek_author_id_order": 4,
-                "rek_author_id_lookup": "Henry Baggins"
-            }
-        ],
+        "fez_record_search_key_author_id": [],
         "fez_record_search_key_contributor": [
             {
                 "rek_contributor_id": 3208183,
