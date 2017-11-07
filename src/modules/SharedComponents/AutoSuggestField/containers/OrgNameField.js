@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {AutoSuggestField} from '../components/AutoSuggestField';
-import {OrgUnitsVocabId} from 'config/general';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
-export class OrgUnitsAutoSuggestField extends Component {
+export class OrgNameAutoSuggestField extends Component {
     static propTypes = {
         input: PropTypes.object,
         className: PropTypes.string,
@@ -15,8 +14,8 @@ export class OrgUnitsAutoSuggestField extends Component {
     };
 
     static defaultProps = {
-        floatingLabelText: 'School, department or centre',
-        hintText: 'Start typing organisation unit name'
+        floatingLabelText: 'Institution',
+        hintText: 'Start typing an institution name'
     };
 
     constructor(props) {
@@ -27,6 +26,7 @@ export class OrgUnitsAutoSuggestField extends Component {
         return (
             <AutoSuggestField
                 onChange={this.props.input.onChange}
+                async
                 errorText={this.props.meta.error}
                 {...this.props} />
         );
@@ -34,18 +34,19 @@ export class OrgUnitsAutoSuggestField extends Component {
 }
 
 const mapStateToProps = (state) => {
+    const category = 'org_name';
     return {
-        category: OrgUnitsVocabId,
-        itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[OrgUnitsVocabId]
-            ? state.get('controlledVocabulariesReducer')[OrgUnitsVocabId].itemsList : []
+        category: category,
+        itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
+            ? state.get('searchKeysReducer')[category].itemsList : []
     };
 };
 
 const mapDispatchToProps = (dispatch) => (
     {
-        loadSuggestions: (category) => dispatch(actions.loadVocabulariesList(category))
+        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery))
     }
 );
 
-export const OrgUnitsField = connect(mapStateToProps, mapDispatchToProps)(OrgUnitsAutoSuggestField);
+export const OrgNameField = connect(mapStateToProps, mapDispatchToProps)(OrgNameAutoSuggestField);
 

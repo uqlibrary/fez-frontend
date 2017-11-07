@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 import {validation} from 'config';
 import {StandardCard} from 'uqlibrary-react-toolbox';
-import {OrgUnitsField, SeriesField} from 'modules/SharedComponents/AutoSuggestField';
+import {OrgUnitNameField, OrgNameField, JournalNameField, SeriesField, ReportNumberField} from 'modules/SharedComponents/AutoSuggestField';
 
 export default class WorkingPaperForm extends Component {
     static propTypes = {
@@ -19,23 +19,18 @@ export default class WorkingPaperForm extends Component {
             <div>
                 <StandardCard title="Placeholder for working paper">
                     <Field
-                        component={OrgUnitsField}
+                        component={OrgUnitNameField}
                         name="testField"
-                        floatingLabelText="OrgNameField 1"
+                        floatingLabelText="School, Institute or Centre"
                         disabled={this.props.submitting}
+                        className="requiredField"
+                        validate={[validation.required]}
 
                     />
                     <Field
-                        component={SeriesField}
-                        name="testField2"
-                        floatingLabelText="SeriesField 1"
-                        disabled={this.props.submitting}
-
-                    />
-                    <Field
-                        component={OrgUnitsField}
+                        component={OrgNameField}
                         name="testField3"
-                        floatingLabelText="OrgNameField 2"
+                        floatingLabelText="Institute"
                         disabled={this.props.submitting}
                         className="requiredField"
                         validate={[validation.required]}
@@ -44,7 +39,25 @@ export default class WorkingPaperForm extends Component {
                     <Field
                         component={SeriesField}
                         name="testField4"
-                        floatingLabelText="SeriesField 2"
+                        floatingLabelText="Series"
+                        disabled={this.props.submitting}
+                        className="requiredField"
+                        validate={[validation.required]}
+
+                    />
+                    <Field
+                        component={JournalNameField}
+                        name="testField4"
+                        floatingLabelText="Journal name"
+                        disabled={this.props.submitting}
+                        className="requiredField"
+                        validate={[validation.required]}
+
+                    />
+                    <Field
+                        component={ReportNumberField}
+                        name="testField45"
+                        floatingLabelText="Report number"
                         disabled={this.props.submitting}
                         className="requiredField"
                         validate={[validation.required]}

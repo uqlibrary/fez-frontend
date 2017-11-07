@@ -67,6 +67,17 @@ exports[`AutoSuggestField component should render autosuggest field and call act
       }
       maxSearchResults={7}
       menuCloseDelay={300}
+      menuProps={
+        Object {
+          "menuItemStyle": Object {
+            "height": "auto",
+            "lineHeight": "18px",
+            "minHeight": "18px",
+            "padding": "8px 0",
+            "whiteSpace": "normal",
+          },
+        }
+      }
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}
@@ -1616,6 +1627,17 @@ exports[`AutoSuggestField component should render with className set 1`] = `
       }
       maxSearchResults={7}
       menuCloseDelay={300}
+      menuProps={
+        Object {
+          "menuItemStyle": Object {
+            "height": "auto",
+            "lineHeight": "18px",
+            "minHeight": "18px",
+            "padding": "8px 0",
+            "whiteSpace": "normal",
+          },
+        }
+      }
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}
@@ -3165,6 +3187,17 @@ exports[`AutoSuggestField component should render with disabled flag set to true
       }
       maxSearchResults={7}
       menuCloseDelay={300}
+      menuProps={
+        Object {
+          "menuItemStyle": Object {
+            "height": "auto",
+            "lineHeight": "18px",
+            "minHeight": "18px",
+            "padding": "8px 0",
+            "whiteSpace": "normal",
+          },
+        }
+      }
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}

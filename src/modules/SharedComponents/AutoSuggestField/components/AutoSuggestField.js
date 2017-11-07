@@ -92,6 +92,7 @@ export class AutoSuggestField extends Component {
                 className={this.props.className}
                 ref={this.setAutoCompleteInput}
                 errorText={this.props.errorText}
+                menuProps={{menuItemStyle: {whiteSpace: 'normal', lineHeight: '18px', padding: '8px 0', minHeight: '18px', height: 'auto'}}}
             />
         );
     }

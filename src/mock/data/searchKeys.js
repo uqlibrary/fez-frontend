@@ -38,4 +38,43 @@ export const searchKeyList = {
         "School of Information Technology and Electrical Engineering",
         "School of History, Philosophy, Religion, and Classics"
     ],
+    org_name: [
+        "Australian National University",
+        "The University of Queensland Australia",
+        "The Australian National University",
+        "Energy Economics and Management Group",
+        "University of Queensland, Australia",
+        "University of South Australia",
+        "University of Western Australia",
+        "Instituto Cervantes, Berlin, Germany",
+        "The University of Queensland, Brisbane",
+        "Biala Community Health, Queensland Health",
+        "Bureau of Labor Statistics",
+        "The World Bank",
+        "University of British Columbia",
+        "University of Milan Bicocca"
+    ],
+    report_number: [
+        "Array",
+        "2013-01 and 2015-02",
+        "A278154",
+        "AIAA-2008-2667",
+        "Berichte aus dem Weltwirtschaftlichen Colloquium der Universität Bremen Nr. 84",
+        "Berichte aus dem Weltwirtschaftlichen Colloquium der Universität Bremen Nr. 90",
+        "I. C. Aero Report 81-03",
+        "B.AHE.0010",
+        "B.AWW.0227",
+        "B.BAH.004",
+        "B.NBP.0382",
+        "B.NBP.0488",
+        "B_FLT_0224 V2",
+        "Berichte aus dem Weltwirtschaftlichen Colloquium der Universität Bremen Nr. 84",
+        "CE154",
+        "CH72/08",
+        "Berichte aus dem Weltwirtschaftlichen Colloquium der Universität Bremen Nr. 84",
+        "Berichte aus dem Weltwirtschaftlichen Colloquium der Universität Bremen Nr. 90",
+        "C17032",
+        "C70/13/1.SC/INF.2/REV2",
+        "CE 100"
+    ]
 };
