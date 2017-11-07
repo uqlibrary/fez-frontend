@@ -6,14 +6,16 @@ import * as actions from 'actions';
 
 export class SeriesAutoSuggestField extends Component {
     static propTypes = {
-        input: PropTypes.object
+        input: PropTypes.object,
+        className: PropTypes.string,
+        meta: PropTypes.object,
+        floatingLabelText: PropTypes.string,
+        hintText: PropTypes.string
     };
 
     static defaultProps = {
-        locale: {
-            fieldLabel: 'Series',
-            fieldHint: 'Start typing series name'
-        }
+        floatingLabelText: 'Series',
+        hintText: 'Start typing series name'
     };
 
     constructor(props) {
@@ -25,6 +27,7 @@ export class SeriesAutoSuggestField extends Component {
             <AutoSuggestField
                 onChange={this.props.input.onChange}
                 async
+                errorText={this.props.meta.error}
                 {...this.props} />
         );
     }

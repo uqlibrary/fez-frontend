@@ -6,11 +6,13 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {AuthorLinkingField} from 'modules/SharedComponents/AuthorLinking';
+import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
 import {validation, locale, routes} from 'config';
 
 export default class ClaimRecord extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
+        publicationToClaimFileUploadingError: PropTypes.bool,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -51,18 +53,6 @@ export default class ClaimRecord extends Component {
         this.props.history.push(routes.pathConfig.records.possible);
     }
 
-    _showConfirmation = () => {
-        if (this.props.pristine) {
-            if (!!this.props.initialValues.get('publication').get('sources')) {
-                this._navigateToAddRecord();
-            } else {
-                this._navigateToPossibleMyResearch();
-            }
-        } else {
-            this.cancelConfirmationBox.showConfirmation();
-        }
-    }
-
     _handleKeyboardFormSubmit = (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault();
@@ -74,7 +64,7 @@ export default class ClaimRecord extends Component {
         submitSucceeded = false, txt, authorLinked = false}) => {
         let alertProps = null;
         if (submitFailed && error) {
-            alertProps = {...txt.errorAlert};
+            alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
         } else if (!submitFailed && dirty && invalid) {
             alertProps = {...txt.validationAlert};
         } else if (submitting) {
@@ -91,10 +81,6 @@ export default class ClaimRecord extends Component {
         this.successConfirmationBox = ref;
     };
 
-    _setCancelConfirmation = (ref) => {
-        this.cancelConfirmationBox = ref;
-    };
-
     render() {
         const txt = locale.components.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
@@ -106,6 +92,16 @@ export default class ClaimRecord extends Component {
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
         const fromAddRecord = !!publication.sources;
+
+        // set confirmation message depending on file upload status and publication fromAddRecord
+        const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+        saveConfirmationLocale.cancelButtonLabel = fromAddRecord
+            ? txt.successWorkflowConfirmation.addRecordButtonLabel : txt.successWorkflowConfirmation.cancelButtonLabel;
+        if (this.props.publicationToClaimFileUploadingError) {
+            saveConfirmationLocale.confirmationMessage = txt.successWorkflowConfirmation.fileFailConfirmationMessage;
+        } else {
+            saveConfirmationLocale.confirmationMessage = txt.successWorkflowConfirmation.successConfirmationMessage;
+        }
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -116,19 +112,11 @@ export default class ClaimRecord extends Component {
                         (!publication.rek_pid || !authorLinked) &&
                         <div>
                             <ConfirmDialogBox
-                                onRef={this._setCancelConfirmation}
-                                onAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
-                                locale={txt.cancelWorkflowConfirmation}/>
-
-                            <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
-                                locale={{
-                                    ...txt.successWorkflowConfirmation,
-                                    cancelButtonLabel: fromAddRecord
-                                        ? txt.successWorkflowConfirmation.addRecordButtonLabel
-                                        : txt.successWorkflowConfirmation.cancelButtonLabel}} />
+                                locale={saveConfirmationLocale} />
+                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
                             {
                                 publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
                                 && !authorLinked &&
@@ -194,7 +182,7 @@ export default class ClaimRecord extends Component {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._showConfirmation}/>
+                                onTouchTap={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}/>
                         </div>
                         {
                             (!publication.rek_pid || !authorLinked) &&

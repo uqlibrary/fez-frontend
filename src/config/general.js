@@ -11,7 +11,7 @@ export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
     rek_object_type: 3,
-    rek_status: 3,
+    rek_status: 2,
     fez_record_search_key_ismemberof: [
         {rek_ismemberof: 'UQ:218198'}
     ]
@@ -54,7 +54,8 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
-        citationComponent: components ? components.AudioCitation : null,
+        formComponent: components ? components.AudioDocumentForm : null,
+        citationComponent: components ? components.AudioDocumentCitation : null,
         hasFormComponent: true
     },
     {
@@ -91,12 +92,15 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
         name: 'Conference Proceedings',
         class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
+        citationComponent: components ? components.ConferenceProceedingsCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_CREATIVE_WORK,
         name: 'Creative Work',
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
+        citationComponent: components ? components.CreativeWorkCitation : null,
+        formComponent: components ? components.CreativeWorkForm : null,
         vocabId: 453594,
         hasFormComponent: true
     },
@@ -104,36 +108,44 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_DATA_COLLECTION,
         name: 'Data Collection',
         class: 'Uqlibrary\\FezCore\\Types\\DataCollection',
+        citationComponent: components ? components.DataCollectionCitation : null,
         hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         name: 'Department Technical Report',
         class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
+        citationComponent: components ? components.DepartmentTechnicalReportCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DESIGN,
         name: 'Design',
         class: 'Uqlibrary\\FezCore\\Types\\Design',
+        citationComponent: components ? components.DesignCitation : null,
+        formComponent: components ? components.DesignForm : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
         name: 'Digilib Image',
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
+        citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false
     },
     {
         id: PUBLICATION_TYPE_IMAGE,
         name: 'Image',
         class: 'Uqlibrary\\FezCore\\Types\\Image',
+        citationComponent: components ? components.ImageDocumentCitation : null,
+        formComponent: components ? components.ImageDocumentForm : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_JOURNAL,
         name: 'Journal',
         class: 'Uqlibrary\\FezCore\\Types\\Journal',
+        citationComponent: components ? components.JournalCitation : null,
         hasFormComponent: false
     },
     {
@@ -150,6 +162,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_MANUSCRIPT,
         name: 'Manuscript',
         class: 'Uqlibrary\\FezCore\\Types\\Manuscript',
+        citationComponent: components ? components.ManuscriptCitation : null,
         hasFormComponent: false
     },
     {
@@ -157,6 +170,7 @@ export const publicationTypes = (components) => [
         name: 'Newspaper Article',
         class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle',
         formComponent: components ? components.NewspaperArticleForm : null,
+        citationComponent: components ? components.NewspaperArticleCitation : null,
         hasFormComponent: true
     },
     {
@@ -164,12 +178,15 @@ export const publicationTypes = (components) => [
         name: 'Patent',
         class: 'Uqlibrary\\FezCore\\Types\\Patent',
         formComponent: components ? components.PatentForm : null,
+        citationComponent: components ? components.PatentCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_PREPRINT,
         name: 'Preprint',
         class: 'Uqlibrary\\FezCore\\Types\\Preprint',
+        formComponent: components ? components.PreprintForm : null,
+        citationComponent: components ? components.PreprintCitation : null,
         hasFormComponent: true
     },
     {
@@ -177,24 +194,30 @@ export const publicationTypes = (components) => [
         name: 'Research Report',
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
         formComponent: components ? components.ResearchReportForm : null,
+        citationComponent: components ? components.ResearchReportCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
         name: 'Seminar Paper',
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
+        formComponent: components ? components.SeminarPaperForm : null,
+        citationComponent: components ? components.SeminarPaperCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_THESIS,
         name: 'Thesis',
         class: 'Uqlibrary\\FezCore\\Types\\Thesis',
+        citationComponent: components ? components.ThesisCitation : null,
         hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
         name: 'Video Document',
         class: 'Uqlibrary\\FezCore\\Types\\Video',
+        formComponent: components ? components.VideoDocumentForm : null,
+        citationComponent: components ? components.VideoDocumentCitation : null,
         hasFormComponent: true
     },
     {
@@ -202,6 +225,7 @@ export const publicationTypes = (components) => [
         name: 'Working Paper',
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
         formComponent: components ? components.WorkingPaperForm : null,
+        citationComponent: components ? components.WorkingPaperCitation : null,
         hasFormComponent: true
     }
 ];

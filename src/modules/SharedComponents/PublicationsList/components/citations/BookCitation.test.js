@@ -9,9 +9,10 @@ import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 import {book} from 'mock/data/testing/records';
+import {editedBook} from 'mock/data/testing/records';
 
 
-function setup({publication, isShallow = true}) {
+function setup({publication, isShallow = false}) {
     const props = {
         publication: publication || {}, // : PropTypes.object.isRequired,
     };
@@ -42,6 +43,11 @@ describe('BookCitation renders ', () => {
 
     it('component with a mock espace record', () => {
         const wrapper = setup({ publication: book });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render citation for edited book record', () => {
+        const wrapper = setup({ publication: editedBook });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

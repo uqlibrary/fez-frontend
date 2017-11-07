@@ -164,7 +164,7 @@ export default class JournalArticleForm extends Component {
                                 disabled={this.props.submitting}
                                 fullWidth
                                 floatingLabelText={txt.optional.fieldLabels.url}
-                                validate={[validation.url, validation.maxLength255]}
+                                validate={[validation.url]}
                             />
                         </div>
                     </div>

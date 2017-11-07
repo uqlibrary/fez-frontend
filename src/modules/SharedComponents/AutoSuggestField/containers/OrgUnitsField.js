@@ -7,14 +7,16 @@ import * as actions from 'actions';
 
 export class OrgUnitsAutoSuggestField extends Component {
     static propTypes = {
-        input: PropTypes.object
+        input: PropTypes.object,
+        className: PropTypes.string,
+        meta: PropTypes.object,
+        floatingLabelText: PropTypes.string,
+        hintText: PropTypes.string
     };
 
     static defaultProps = {
-        locale: {
-            fieldLabel: 'School, department or centre',
-            fieldHint: 'Start typing organisation unit name'
-        }
+        floatingLabelText: 'School, department or centre',
+        hintText: 'Start typing organisation unit name'
     };
 
     constructor(props) {
@@ -25,6 +27,7 @@ export class OrgUnitsAutoSuggestField extends Component {
         return (
             <AutoSuggestField
                 onChange={this.props.input.onChange}
+                errorText={this.props.meta.error}
                 {...this.props} />
         );
     }

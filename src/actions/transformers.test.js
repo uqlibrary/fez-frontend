@@ -16,7 +16,7 @@ describe('Transformers tests ', () => {
             ],
             fez_record_search_key_link_description: [
                 {
-                    rek_link_description: 'http://google.com',
+                    rek_link_description: 'Link to publication',
                     rek_link_description_order: 1
                 }
             ]

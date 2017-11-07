@@ -44,9 +44,9 @@ describe('NewspaperArticleForm renders ', () => {
         expect(wrapper.find('Field').length).toEqual(8);
     });
 
-    it('component with 4 required input fields', () => {
+    it('component with 6 required input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field .requiredField').length).toEqual(3);
+        expect(wrapper.find('Field .requiredField').length).toEqual(5);
         expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
     });
 

@@ -19,5 +19,23 @@ export const searchKeyList = {
         '14th Annual 4MBS Festival of Classics 2007',
         '14th Australian International Aerospace Congress, AIAC 2011',
         '14th International Congress on Sound and Vibration 2007, ICSV 2007'
-    ]
+    ],
+    journal_name: [
+        "Medical Journal of Australia",
+        "Physical Review A",
+        "Australian Journal of Chemistry",
+        "Australian Veterinary Journal",
+        "Australian and New Zealand Journal of Psychiatry",
+        "Australian Journal of Psychology",
+        "Australian Dental Journal"
+    ],
+    org_unit_name: [
+        "School of Molecular and Microbial Sciences",
+        "School of Mechanical and Mining Engineering",
+        "School of Agriculture and Food Sciences",
+        "School of English, Media Studies and Art History",
+        "School of Land, Crop and Food Sciences",
+        "School of Information Technology and Electrical Engineering",
+        "School of History, Philosophy, Religion, and Classics"
+    ],
 };

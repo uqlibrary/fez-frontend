@@ -44,6 +44,7 @@ export default class NewspaperArticleForm extends Component {
                                 component={JournalNameField}
                                 name="fez_record_search_key_newspaper.rek_newspaper"
                                 disabled={this.props.submitting}
+                                {...txt.information.fieldLabels.newspaperName}
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
@@ -59,6 +60,8 @@ export default class NewspaperArticleForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.startPage}
+                                className="requiredField"
+                                validate={[validation.required]}
                             />
                         </div>
                         <div className="column is-3-tablet">
@@ -69,6 +72,8 @@ export default class NewspaperArticleForm extends Component {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.endPage}
+                                className="requiredField"
+                                validate={[validation.required]}
                             />
                         </div>
                         <div className="column">
@@ -95,7 +100,7 @@ export default class NewspaperArticleForm extends Component {
                         showContributorAssignment
                         className="requiredField"
                         validate={[validation.authorRequired]}
-                        disabled={this.props.submitting} />
+                        disabled={this.props.submitting}/>
                 </StandardCard>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <div className="columns">

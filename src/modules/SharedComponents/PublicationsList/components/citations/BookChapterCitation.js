@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import AuthorsCitationView from './AuthorsCitationView';
-import EditorsCitationView from './EditorsCitationView';
-import YearCitationView from './YearCitationView';
-import PageRangeCitationView from './PageRangeCitationView';
+import * as Partials from './partials';
 
 export default class BookChapterCitation extends Component {
     static propTypes = {
@@ -16,7 +13,7 @@ export default class BookChapterCitation extends Component {
     }
 
     render() {
-        const bookChapter = {
+        const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             bookTitle: this.props.publication.fez_record_search_key_book_title ?
@@ -32,57 +29,39 @@ export default class BookChapterCitation extends Component {
         };
 
         // eSpace citation view for Book Chapter
-        // {6230} ({6260}). {10623}. In {6238|| (Ed.),} <i>{10630}</i> {6261|| ed.} ({6265|pp. }{6266|-})  {6258}: {6259}.{16518| doi:|}
-        // authors (year). title. In editors (Ed.), <i>book title</i> edition ed. (pp. start page-end page) place of publication: publisher. doi: DOI
+        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Book Title| |.}{Editor| edited by |.}{Place of Publication| |:}{Publisher| |.}{Start page| |}{End page|-|.}{doi| doi:|}
         return (
             <div className="citationContent citationBookChapter">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
 
-                {/* authors list */}
-                <AuthorsCitationView publication={this.props.publication} />
+                {/* {Author} */}
+                <Partials.AuthorsCitationView publication={this.props.publication} />
 
-                {/* publication year */}
-                <YearCitationView publication={this.props.publication} />.
+                {/* {Publication Year| (|).} */}
+                <Partials.DateCitationView date={this.props.publication.rek_date} />
 
-                {/* chapter title */}
-                <span className="citationTitle"> {bookChapter.title}. </span>
+                {/* {Title| |.} */}
+                <Partials.CitationView className="citationTitle" value={record.title} />
 
-                {/* editors list */}
-                <EditorsCitationView publication={this.props.publication} prefix="In " suffix=" (Ed.)," />
+                {/* Book Title| |. */}
+                <Partials.CitationView className="citationBookTitle" value={record.bookTitle} />
 
-                {/* book title */}
-                {
-                    bookChapter.bookTitle &&
-                    <span className="citationBookTitle"> {bookChapter.bookTitle},</span>
-                }
-                {/* book edition */}
-                {
-                    bookChapter.edition &&
-                    <span className="citationBookEdition"> {bookChapter.edition} ed.</span>
-                }
-                {/* pages (pp. start page-end page) */}
-                <PageRangeCitationView publication={this.props.publication} prefix=" (pp. " suffix=") " />
-                {/* place of publication */}
-                {
-                    bookChapter.placeOfPublication &&
-                    <span className="citationPlaceOfPublication"> {bookChapter.placeOfPublication}:</span>
-                }
-                {/* publisher */}
-                {
-                    bookChapter.publisher &&
-                    <span className="citationPublisher"> {bookChapter.publisher}</span>
-                }
-                .
-                {/* doi */}
-                {
-                    bookChapter.doi &&
-                    <span className="citationDOI">
-                        <span className="citationLabel"> doi: </span>
-                        <span className="citationValue"> {bookChapter.doi} </span>
-                    </span>
-                }
+                {/* {Editor| edited by |.}*/}
+                <Partials.EditorsCitationView publication={this.props.publication} />
+
+                {/* {Place of Publication| |:} */}
+                <Partials.CitationView className="citationPlaceOfPublication" value={record.placeOfPublication} suffix=":" />
+
+                {/* {Publisher| |.} */}
+                <Partials.CitationView className="citationPublisher" value={record.publisher} />
+
+                {/* {Start page| |}{End page|-|.} */}
+                <Partials.PageRangeCitationView publication={this.props.publication} />
+
+                {/* {doi| doi:|} */}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

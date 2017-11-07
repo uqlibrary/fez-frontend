@@ -1,0 +1,726 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DigilibImageCitation renders  component with a mock espace record 1`] = `
+<DigilibImageCitation
+  publication={
+    Object {
+      "fez_record_search_key_alternative_title": Array [],
+      "fez_record_search_key_architect_id": Array [],
+      "fez_record_search_key_architect_name": Array [],
+      "fez_record_search_key_architectural_features": Array [
+        Object {
+          "rek_architectural_features": "Two-storey",
+          "rek_architectural_features_id": 107509,
+          "rek_architectural_features_order": 1,
+          "rek_architectural_features_pid": "UQ:151598",
+          "rek_architectural_features_xsdmf_id": 8312,
+        },
+        Object {
+          "rek_architectural_features": "Gable roofs",
+          "rek_architectural_features_id": 107510,
+          "rek_architectural_features_order": 2,
+          "rek_architectural_features_pid": "UQ:151598",
+          "rek_architectural_features_xsdmf_id": 8312,
+        },
+      ],
+      "fez_record_search_key_article_number": null,
+      "fez_record_search_key_assigned_group_id": Array [],
+      "fez_record_search_key_assigned_user_id": Array [],
+      "fez_record_search_key_author": Array [
+        Object {
+          "rek_author": "Keniger, Michael, 1947-",
+          "rek_author_id": 29844022,
+          "rek_author_order": 1,
+          "rek_author_pid": "UQ:151598",
+          "rek_author_xsdmf_id": 4213,
+        },
+      ],
+      "fez_record_search_key_author_affiliation_country": Array [],
+      "fez_record_search_key_author_affiliation_full_address": Array [],
+      "fez_record_search_key_author_affiliation_id": Array [],
+      "fez_record_search_key_author_affiliation_name": Array [],
+      "fez_record_search_key_author_id": Array [],
+      "fez_record_search_key_building_materials": Array [
+        Object {
+          "rek_building_materials": "Timber",
+          "rek_building_materials_id": 69363,
+          "rek_building_materials_order": 1,
+          "rek_building_materials_pid": "UQ:151598",
+          "rek_building_materials_xsdmf_id": 8309,
+        },
+        Object {
+          "rek_building_materials": "Corrugated iron",
+          "rek_building_materials_id": 69364,
+          "rek_building_materials_order": 2,
+          "rek_building_materials_pid": "UQ:151598",
+          "rek_building_materials_xsdmf_id": 8309,
+        },
+      ],
+      "fez_record_search_key_category": Array [
+        Object {
+          "rek_category": "Mines",
+          "rek_category_id": 32808,
+          "rek_category_order": 1,
+          "rek_category_pid": "UQ:151598",
+          "rek_category_xsdmf_id": 8293,
+        },
+        Object {
+          "rek_category": "Machinery",
+          "rek_category_id": 32809,
+          "rek_category_order": 2,
+          "rek_category_pid": "UQ:151598",
+          "rek_category_xsdmf_id": 8293,
+        },
+      ],
+      "fez_record_search_key_condition": Array [
+        Object {
+          "rek_condition": "Abandoned buildings",
+          "rek_condition_id": 16251,
+          "rek_condition_order": 1,
+          "rek_condition_pid": "UQ:151598",
+          "rek_condition_xsdmf_id": 8303,
+        },
+      ],
+      "fez_record_search_key_construction_date": null,
+      "fez_record_search_key_contributor": Array [],
+      "fez_record_search_key_contributor_id": Array [],
+      "fez_record_search_key_corresponding_country": Array [],
+      "fez_record_search_key_corresponding_email": Array [],
+      "fez_record_search_key_corresponding_name": Array [],
+      "fez_record_search_key_corresponding_organisation": Array [],
+      "fez_record_search_key_datastream_policy": null,
+      "fez_record_search_key_date_photo_taken": Object {
+        "rek_date_photo_taken": "1986-01-01T00:00:00Z",
+        "rek_date_photo_taken_id": 5314,
+        "rek_date_photo_taken_pid": "UQ:151598",
+        "rek_date_photo_taken_xsdmf_id": 8348,
+      },
+      "fez_record_search_key_date_scanned": Object {
+        "rek_date_scanned": "2006-07-18T00:00:00Z",
+        "rek_date_scanned_id": 5414,
+        "rek_date_scanned_pid": "UQ:151598",
+        "rek_date_scanned_xsdmf_id": 8347,
+      },
+      "fez_record_search_key_file_attachment_access_condition": Array [],
+      "fez_record_search_key_file_attachment_embargo_date": Array [],
+      "fez_record_search_key_file_attachment_name": Array [
+        Object {
+          "rek_file_attachment_name": "Mt_Morgan_103.tif",
+          "rek_file_attachment_name_id": 4012517,
+          "rek_file_attachment_name_order": 1,
+          "rek_file_attachment_name_pid": "UQ:151598",
+          "rek_file_attachment_name_xsdmf_id": 8271,
+        },
+        Object {
+          "rek_file_attachment_name": "presmd_Mt_Morgan_103.xml",
+          "rek_file_attachment_name_id": 4012518,
+          "rek_file_attachment_name_order": 2,
+          "rek_file_attachment_name_pid": "UQ:151598",
+          "rek_file_attachment_name_xsdmf_id": 8271,
+        },
+        Object {
+          "rek_file_attachment_name": "preview_Mt_Morgan_103.jpg",
+          "rek_file_attachment_name_id": 4012519,
+          "rek_file_attachment_name_order": 3,
+          "rek_file_attachment_name_pid": "UQ:151598",
+          "rek_file_attachment_name_xsdmf_id": 8271,
+        },
+        Object {
+          "rek_file_attachment_name": "thumbnail_Mt_Morgan_103.jpg",
+          "rek_file_attachment_name_id": 4012520,
+          "rek_file_attachment_name_order": 4,
+          "rek_file_attachment_name_pid": "UQ:151598",
+          "rek_file_attachment_name_xsdmf_id": 8271,
+        },
+        Object {
+          "rek_file_attachment_name": "web_Mt_Morgan_103.jpg",
+          "rek_file_attachment_name_id": 4012521,
+          "rek_file_attachment_name_order": 5,
+          "rek_file_attachment_name_pid": "UQ:151598",
+          "rek_file_attachment_name_xsdmf_id": 8271,
+        },
+      ],
+      "fez_record_search_key_grant_acronym": Array [],
+      "fez_record_search_key_grant_agency": Array [],
+      "fez_record_search_key_grant_agency_id": Array [],
+      "fez_record_search_key_grant_text": Array [],
+      "fez_record_search_key_institutional_status": null,
+      "fez_record_search_key_interior_features": Array [],
+      "fez_record_search_key_isderivationof": Array [],
+      "fez_record_search_key_ismemberof": Array [
+        Object {
+          "rek_ismemberof": "UQ:3683",
+          "rek_ismemberof_id": 11912995,
+          "rek_ismemberof_order": 1,
+          "rek_ismemberof_pid": "UQ:151598",
+          "rek_ismemberof_xsdmf_id": 149,
+        },
+        Object {
+          "rek_ismemberof": "UQ:209864",
+          "rek_ismemberof_id": 11912996,
+          "rek_ismemberof_order": 2,
+          "rek_ismemberof_pid": "UQ:151598",
+          "rek_ismemberof_xsdmf_id": 149,
+        },
+      ],
+      "fez_record_search_key_link": Array [],
+      "fez_record_search_key_link_description": Array [],
+      "fez_record_search_key_location": Array [
+        Object {
+          "rek_location": "Mount Morgan, Queensland",
+          "rek_location_id": 74628,
+          "rek_location_order": 1,
+          "rek_location_pid": "UQ:151598",
+          "rek_location_xsdmf_id": 8346,
+        },
+        Object {
+          "rek_location": "Australia",
+          "rek_location_id": 74629,
+          "rek_location_order": 2,
+          "rek_location_pid": "UQ:151598",
+          "rek_location_xsdmf_id": 8346,
+        },
+      ],
+      "fez_record_search_key_notes": null,
+      "fez_record_search_key_oa_status": Object {
+        "rek_oa_status": 453697,
+        "rek_oa_status_id": 351021,
+        "rek_oa_status_pid": "UQ:151598",
+        "rek_oa_status_xsdmf_id": 17013,
+      },
+      "fez_record_search_key_period": Array [],
+      "fez_record_search_key_publisher": Object {
+        "rek_publisher": "The University of Queensland Library",
+        "rek_publisher_id": 4611429,
+        "rek_publisher_pid": "UQ:151598",
+        "rek_publisher_xsdmf_id": 8349,
+      },
+      "fez_record_search_key_refereed": null,
+      "fez_record_search_key_refereed_source": Object {
+        "rek_refereed_source": "453638",
+        "rek_refereed_source_id": 1397450,
+        "rek_refereed_source_pid": "UQ:151598",
+        "rek_refereed_source_xsdmf_id": 16623,
+      },
+      "fez_record_search_key_rights": null,
+      "fez_record_search_key_structural_systems": Array [
+        Object {
+          "rek_structural_systems": "Timber construction",
+          "rek_structural_systems_id": 49653,
+          "rek_structural_systems_order": 1,
+          "rek_structural_systems_pid": "UQ:151598",
+          "rek_structural_systems_xsdmf_id": 8306,
+        },
+      ],
+      "fez_record_search_key_style": Array [],
+      "fez_record_search_key_subcategory": Array [
+        Object {
+          "rek_subcategory": "Mines",
+          "rek_subcategory_id": 38881,
+          "rek_subcategory_order": 1,
+          "rek_subcategory_pid": "UQ:151598",
+          "rek_subcategory_xsdmf_id": 8298,
+        },
+        Object {
+          "rek_subcategory": "Mining equipment",
+          "rek_subcategory_id": 38882,
+          "rek_subcategory_order": 2,
+          "rek_subcategory_pid": "UQ:151598",
+          "rek_subcategory_xsdmf_id": 8298,
+        },
+      ],
+      "fez_record_search_key_surrounding_features": Array [],
+      "rek_altmetric_id": null,
+      "rek_altmetric_id_xsdmf_id": null,
+      "rek_altmetric_score": null,
+      "rek_altmetric_score_xsdmf_id": null,
+      "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Keniger, Michael, 1947-\\" href=\\"/list/author/Keniger%2C+Michael%2C+1947-/\\">Keniger, Michael, 1947-</a>. <i><a class=\\"citation_title\\" title=\\"Click to view Digilib Image: Conveyor, copper mine, Mount Morgan\\" href=\\"/view/UQ:151598\\">Conveyor, copper mine, Mount Morgan</a></i>. ",
+      "rek_copyright": "off",
+      "rek_copyright_xsdmf_id": 3679,
+      "rek_created_date": "2008-06-30T09:39:35Z",
+      "rek_created_date_xsdmf_id": 3677,
+      "rek_date": "2017-10-31T17:50:11Z",
+      "rek_date_xsdmf_id": null,
+      "rek_depositor": 218,
+      "rek_depositor_affiliation": 790,
+      "rek_depositor_affiliation_xsdmf_id": 11881,
+      "rek_depositor_xsdmf_id": 7578,
+      "rek_description": null,
+      "rek_description_xsdmf_id": null,
+      "rek_display_type": 228,
+      "rek_display_type_xsdmf_id": 3673,
+      "rek_file_downloads": 87,
+      "rek_formatted_abstract": null,
+      "rek_formatted_abstract_xsdmf_id": null,
+      "rek_formatted_title": null,
+      "rek_formatted_title_xsdmf_id": null,
+      "rek_genre": "Image",
+      "rek_genre_type": null,
+      "rek_genre_type_xsdmf_id": null,
+      "rek_genre_xsdmf_id": 7206,
+      "rek_herdc_notes": null,
+      "rek_herdc_notes_xsdmf_id": null,
+      "rek_object_type": 3,
+      "rek_object_type_xsdmf_id": 3674,
+      "rek_pid": "UQ:151598",
+      "rek_pubmed_doc_type": null,
+      "rek_pubmed_doc_type_xsdmf_id": null,
+      "rek_scopus_citation_count": null,
+      "rek_scopus_doc_type": null,
+      "rek_scopus_doc_type_xsdmf_id": null,
+      "rek_security_inherited": 1,
+      "rek_status": 2,
+      "rek_status_xsdmf_id": 3680,
+      "rek_subtype": null,
+      "rek_subtype_xsdmf_id": null,
+      "rek_thomson_citation_count": null,
+      "rek_thomson_citation_count_xsdmf_id": null,
+      "rek_title": "Conveyor, copper mine, Mount Morgan",
+      "rek_title_xsdmf_id": 4198,
+      "rek_updated_date": "2015-07-31T06:28:46Z",
+      "rek_updated_date_xsdmf_id": 3678,
+      "rek_wok_doc_type": null,
+      "rek_wok_doc_type_xsdmf_id": null,
+    }
+  }
+>
+  <div
+    className="citationContent citationDesign"
+  >
+    <FontIcon
+      className="material-icons citationIcon"
+      data-place="left"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <span
+        className="material-icons citationIcon"
+        data-place="left"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "color": "rgba(0, 0, 0, 0.87)",
+            "display": "inline-block",
+            "fontSize": 24,
+            "muiPrepared": true,
+            "position": "relative",
+            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+            "userSelect": "none",
+          }
+        }
+      >
+        format_quote
+      </span>
+    </FontIcon>
+    <AuthorsCitationView
+      className="citationAuthors"
+      initialNumberOfAuthors={10}
+      publication={
+        Object {
+          "fez_record_search_key_alternative_title": Array [],
+          "fez_record_search_key_architect_id": Array [],
+          "fez_record_search_key_architect_name": Array [],
+          "fez_record_search_key_architectural_features": Array [
+            Object {
+              "rek_architectural_features": "Two-storey",
+              "rek_architectural_features_id": 107509,
+              "rek_architectural_features_order": 1,
+              "rek_architectural_features_pid": "UQ:151598",
+              "rek_architectural_features_xsdmf_id": 8312,
+            },
+            Object {
+              "rek_architectural_features": "Gable roofs",
+              "rek_architectural_features_id": 107510,
+              "rek_architectural_features_order": 2,
+              "rek_architectural_features_pid": "UQ:151598",
+              "rek_architectural_features_xsdmf_id": 8312,
+            },
+          ],
+          "fez_record_search_key_article_number": null,
+          "fez_record_search_key_assigned_group_id": Array [],
+          "fez_record_search_key_assigned_user_id": Array [],
+          "fez_record_search_key_author": Array [
+            Object {
+              "rek_author": "Keniger, Michael, 1947-",
+              "rek_author_id": 29844022,
+              "rek_author_order": 1,
+              "rek_author_pid": "UQ:151598",
+              "rek_author_xsdmf_id": 4213,
+            },
+          ],
+          "fez_record_search_key_author_affiliation_country": Array [],
+          "fez_record_search_key_author_affiliation_full_address": Array [],
+          "fez_record_search_key_author_affiliation_id": Array [],
+          "fez_record_search_key_author_affiliation_name": Array [],
+          "fez_record_search_key_author_id": Array [],
+          "fez_record_search_key_building_materials": Array [
+            Object {
+              "rek_building_materials": "Timber",
+              "rek_building_materials_id": 69363,
+              "rek_building_materials_order": 1,
+              "rek_building_materials_pid": "UQ:151598",
+              "rek_building_materials_xsdmf_id": 8309,
+            },
+            Object {
+              "rek_building_materials": "Corrugated iron",
+              "rek_building_materials_id": 69364,
+              "rek_building_materials_order": 2,
+              "rek_building_materials_pid": "UQ:151598",
+              "rek_building_materials_xsdmf_id": 8309,
+            },
+          ],
+          "fez_record_search_key_category": Array [
+            Object {
+              "rek_category": "Mines",
+              "rek_category_id": 32808,
+              "rek_category_order": 1,
+              "rek_category_pid": "UQ:151598",
+              "rek_category_xsdmf_id": 8293,
+            },
+            Object {
+              "rek_category": "Machinery",
+              "rek_category_id": 32809,
+              "rek_category_order": 2,
+              "rek_category_pid": "UQ:151598",
+              "rek_category_xsdmf_id": 8293,
+            },
+          ],
+          "fez_record_search_key_condition": Array [
+            Object {
+              "rek_condition": "Abandoned buildings",
+              "rek_condition_id": 16251,
+              "rek_condition_order": 1,
+              "rek_condition_pid": "UQ:151598",
+              "rek_condition_xsdmf_id": 8303,
+            },
+          ],
+          "fez_record_search_key_construction_date": null,
+          "fez_record_search_key_contributor": Array [],
+          "fez_record_search_key_contributor_id": Array [],
+          "fez_record_search_key_corresponding_country": Array [],
+          "fez_record_search_key_corresponding_email": Array [],
+          "fez_record_search_key_corresponding_name": Array [],
+          "fez_record_search_key_corresponding_organisation": Array [],
+          "fez_record_search_key_datastream_policy": null,
+          "fez_record_search_key_date_photo_taken": Object {
+            "rek_date_photo_taken": "1986-01-01T00:00:00Z",
+            "rek_date_photo_taken_id": 5314,
+            "rek_date_photo_taken_pid": "UQ:151598",
+            "rek_date_photo_taken_xsdmf_id": 8348,
+          },
+          "fez_record_search_key_date_scanned": Object {
+            "rek_date_scanned": "2006-07-18T00:00:00Z",
+            "rek_date_scanned_id": 5414,
+            "rek_date_scanned_pid": "UQ:151598",
+            "rek_date_scanned_xsdmf_id": 8347,
+          },
+          "fez_record_search_key_file_attachment_access_condition": Array [],
+          "fez_record_search_key_file_attachment_embargo_date": Array [],
+          "fez_record_search_key_file_attachment_name": Array [
+            Object {
+              "rek_file_attachment_name": "Mt_Morgan_103.tif",
+              "rek_file_attachment_name_id": 4012517,
+              "rek_file_attachment_name_order": 1,
+              "rek_file_attachment_name_pid": "UQ:151598",
+              "rek_file_attachment_name_xsdmf_id": 8271,
+            },
+            Object {
+              "rek_file_attachment_name": "presmd_Mt_Morgan_103.xml",
+              "rek_file_attachment_name_id": 4012518,
+              "rek_file_attachment_name_order": 2,
+              "rek_file_attachment_name_pid": "UQ:151598",
+              "rek_file_attachment_name_xsdmf_id": 8271,
+            },
+            Object {
+              "rek_file_attachment_name": "preview_Mt_Morgan_103.jpg",
+              "rek_file_attachment_name_id": 4012519,
+              "rek_file_attachment_name_order": 3,
+              "rek_file_attachment_name_pid": "UQ:151598",
+              "rek_file_attachment_name_xsdmf_id": 8271,
+            },
+            Object {
+              "rek_file_attachment_name": "thumbnail_Mt_Morgan_103.jpg",
+              "rek_file_attachment_name_id": 4012520,
+              "rek_file_attachment_name_order": 4,
+              "rek_file_attachment_name_pid": "UQ:151598",
+              "rek_file_attachment_name_xsdmf_id": 8271,
+            },
+            Object {
+              "rek_file_attachment_name": "web_Mt_Morgan_103.jpg",
+              "rek_file_attachment_name_id": 4012521,
+              "rek_file_attachment_name_order": 5,
+              "rek_file_attachment_name_pid": "UQ:151598",
+              "rek_file_attachment_name_xsdmf_id": 8271,
+            },
+          ],
+          "fez_record_search_key_grant_acronym": Array [],
+          "fez_record_search_key_grant_agency": Array [],
+          "fez_record_search_key_grant_agency_id": Array [],
+          "fez_record_search_key_grant_text": Array [],
+          "fez_record_search_key_institutional_status": null,
+          "fez_record_search_key_interior_features": Array [],
+          "fez_record_search_key_isderivationof": Array [],
+          "fez_record_search_key_ismemberof": Array [
+            Object {
+              "rek_ismemberof": "UQ:3683",
+              "rek_ismemberof_id": 11912995,
+              "rek_ismemberof_order": 1,
+              "rek_ismemberof_pid": "UQ:151598",
+              "rek_ismemberof_xsdmf_id": 149,
+            },
+            Object {
+              "rek_ismemberof": "UQ:209864",
+              "rek_ismemberof_id": 11912996,
+              "rek_ismemberof_order": 2,
+              "rek_ismemberof_pid": "UQ:151598",
+              "rek_ismemberof_xsdmf_id": 149,
+            },
+          ],
+          "fez_record_search_key_link": Array [],
+          "fez_record_search_key_link_description": Array [],
+          "fez_record_search_key_location": Array [
+            Object {
+              "rek_location": "Mount Morgan, Queensland",
+              "rek_location_id": 74628,
+              "rek_location_order": 1,
+              "rek_location_pid": "UQ:151598",
+              "rek_location_xsdmf_id": 8346,
+            },
+            Object {
+              "rek_location": "Australia",
+              "rek_location_id": 74629,
+              "rek_location_order": 2,
+              "rek_location_pid": "UQ:151598",
+              "rek_location_xsdmf_id": 8346,
+            },
+          ],
+          "fez_record_search_key_notes": null,
+          "fez_record_search_key_oa_status": Object {
+            "rek_oa_status": 453697,
+            "rek_oa_status_id": 351021,
+            "rek_oa_status_pid": "UQ:151598",
+            "rek_oa_status_xsdmf_id": 17013,
+          },
+          "fez_record_search_key_period": Array [],
+          "fez_record_search_key_publisher": Object {
+            "rek_publisher": "The University of Queensland Library",
+            "rek_publisher_id": 4611429,
+            "rek_publisher_pid": "UQ:151598",
+            "rek_publisher_xsdmf_id": 8349,
+          },
+          "fez_record_search_key_refereed": null,
+          "fez_record_search_key_refereed_source": Object {
+            "rek_refereed_source": "453638",
+            "rek_refereed_source_id": 1397450,
+            "rek_refereed_source_pid": "UQ:151598",
+            "rek_refereed_source_xsdmf_id": 16623,
+          },
+          "fez_record_search_key_rights": null,
+          "fez_record_search_key_structural_systems": Array [
+            Object {
+              "rek_structural_systems": "Timber construction",
+              "rek_structural_systems_id": 49653,
+              "rek_structural_systems_order": 1,
+              "rek_structural_systems_pid": "UQ:151598",
+              "rek_structural_systems_xsdmf_id": 8306,
+            },
+          ],
+          "fez_record_search_key_style": Array [],
+          "fez_record_search_key_subcategory": Array [
+            Object {
+              "rek_subcategory": "Mines",
+              "rek_subcategory_id": 38881,
+              "rek_subcategory_order": 1,
+              "rek_subcategory_pid": "UQ:151598",
+              "rek_subcategory_xsdmf_id": 8298,
+            },
+            Object {
+              "rek_subcategory": "Mining equipment",
+              "rek_subcategory_id": 38882,
+              "rek_subcategory_order": 2,
+              "rek_subcategory_pid": "UQ:151598",
+              "rek_subcategory_xsdmf_id": 8298,
+            },
+          ],
+          "fez_record_search_key_surrounding_features": Array [],
+          "rek_altmetric_id": null,
+          "rek_altmetric_id_xsdmf_id": null,
+          "rek_altmetric_score": null,
+          "rek_altmetric_score_xsdmf_id": null,
+          "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Keniger, Michael, 1947-\\" href=\\"/list/author/Keniger%2C+Michael%2C+1947-/\\">Keniger, Michael, 1947-</a>. <i><a class=\\"citation_title\\" title=\\"Click to view Digilib Image: Conveyor, copper mine, Mount Morgan\\" href=\\"/view/UQ:151598\\">Conveyor, copper mine, Mount Morgan</a></i>. ",
+          "rek_copyright": "off",
+          "rek_copyright_xsdmf_id": 3679,
+          "rek_created_date": "2008-06-30T09:39:35Z",
+          "rek_created_date_xsdmf_id": 3677,
+          "rek_date": "2017-10-31T17:50:11Z",
+          "rek_date_xsdmf_id": null,
+          "rek_depositor": 218,
+          "rek_depositor_affiliation": 790,
+          "rek_depositor_affiliation_xsdmf_id": 11881,
+          "rek_depositor_xsdmf_id": 7578,
+          "rek_description": null,
+          "rek_description_xsdmf_id": null,
+          "rek_display_type": 228,
+          "rek_display_type_xsdmf_id": 3673,
+          "rek_file_downloads": 87,
+          "rek_formatted_abstract": null,
+          "rek_formatted_abstract_xsdmf_id": null,
+          "rek_formatted_title": null,
+          "rek_formatted_title_xsdmf_id": null,
+          "rek_genre": "Image",
+          "rek_genre_type": null,
+          "rek_genre_type_xsdmf_id": null,
+          "rek_genre_xsdmf_id": 7206,
+          "rek_herdc_notes": null,
+          "rek_herdc_notes_xsdmf_id": null,
+          "rek_object_type": 3,
+          "rek_object_type_xsdmf_id": 3674,
+          "rek_pid": "UQ:151598",
+          "rek_pubmed_doc_type": null,
+          "rek_pubmed_doc_type_xsdmf_id": null,
+          "rek_scopus_citation_count": null,
+          "rek_scopus_doc_type": null,
+          "rek_scopus_doc_type_xsdmf_id": null,
+          "rek_security_inherited": 1,
+          "rek_status": 2,
+          "rek_status_xsdmf_id": 3680,
+          "rek_subtype": null,
+          "rek_subtype_xsdmf_id": null,
+          "rek_thomson_citation_count": null,
+          "rek_thomson_citation_count_xsdmf_id": null,
+          "rek_title": "Conveyor, copper mine, Mount Morgan",
+          "rek_title_xsdmf_id": 4198,
+          "rek_updated_date": "2015-07-31T06:28:46Z",
+          "rek_updated_date_xsdmf_id": 3678,
+          "rek_wok_doc_type": null,
+          "rek_wok_doc_type_xsdmf_id": null,
+        }
+      }
+      searchKey={
+        Object {
+          "key": "fez_record_search_key_author",
+          "order": "rek_author_order",
+          "subkey": "rek_author",
+        }
+      }
+    >
+      <span
+        className="citationAuthors"
+      >
+        <CitationView
+          className="citationAuthor"
+          prefix=""
+          suffix=" "
+          value="Keniger, Michael, 1947-"
+        >
+          <span
+            className="citationAuthor"
+          >
+            Keniger, Michael, 1947-
+             
+          </span>
+        </CitationView>
+      </span>
+    </AuthorsCitationView>
+    <DateCitationView
+      className="citationDate"
+      date="1986-01-01T00:00:00Z"
+      format="YYYY"
+      prefix="("
+      suffix=")."
+    >
+      <span
+        className="citationDate"
+      >
+        (
+        1986
+        ).
+      </span>
+    </DateCitationView>
+    <CitationView
+      className="citationTitle"
+      value="Conveyor, copper mine, Mount Morgan"
+    >
+      <span
+        className="citationTitle"
+      >
+         
+        Conveyor, copper mine, Mount Morgan
+        .
+      </span>
+    </CitationView>
+  </div>
+</DigilibImageCitation>
+`;
+
+exports[`DigilibImageCitation renders  component with empty publication 1`] = `
+<DigilibImageCitation
+  publication={Object {}}
+>
+  <div
+    className="citationContent citationDesign"
+  >
+    <FontIcon
+      className="material-icons citationIcon"
+      data-place="left"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <span
+        className="material-icons citationIcon"
+        data-place="left"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "color": "rgba(0, 0, 0, 0.87)",
+            "display": "inline-block",
+            "fontSize": 24,
+            "muiPrepared": true,
+            "position": "relative",
+            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+            "userSelect": "none",
+          }
+        }
+      >
+        format_quote
+      </span>
+    </FontIcon>
+    <AuthorsCitationView
+      className="citationAuthors"
+      initialNumberOfAuthors={10}
+      publication={Object {}}
+      searchKey={
+        Object {
+          "key": "fez_record_search_key_author",
+          "order": "rek_author_order",
+          "subkey": "rek_author",
+        }
+      }
+    >
+      <span
+        className="citationAuthors empty"
+      />
+    </AuthorsCitationView>
+    <DateCitationView
+      className="citationDate"
+      date={null}
+      format="YYYY"
+      prefix="("
+      suffix=")."
+    >
+      <span
+        className="citationDate empty"
+      />
+    </DateCitationView>
+    <CitationView
+      className="citationTitle"
+    >
+      <span
+        className="citationTitle empty"
+      />
+    </CitationView>
+  </div>
+</DigilibImageCitation>
+`;

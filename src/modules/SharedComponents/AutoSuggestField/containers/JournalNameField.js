@@ -3,22 +3,19 @@ import PropTypes from 'prop-types';
 import {AutoSuggestField} from '../components/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
-import {validation} from 'config';
-
 
 export class JournalNameAutoSuggestField extends Component {
     static propTypes = {
         input: PropTypes.object,
         className: PropTypes.string,
-        validate: PropTypes.func
+        meta: PropTypes.object,
+        floatingLabelText: PropTypes.string,
+        hintText: PropTypes.string
     };
 
     static defaultProps = {
-        locale: {
-            fieldLabel: 'Journal name',
-            fieldHint: 'Start typing journal name'
-        },
-        validate: validation.required
+        floatingLabelText: 'Journal name',
+        hintText: 'Start typing journal name'
     };
 
     constructor(props) {
@@ -30,6 +27,7 @@ export class JournalNameAutoSuggestField extends Component {
             <AutoSuggestField
                 onChange={this.props.input.onChange}
                 async
+                errorText={this.props.meta.error}
                 {...this.props} />
         );
     }

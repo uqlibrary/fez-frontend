@@ -8,6 +8,7 @@ import MenuItem from 'material-ui/MenuItem';
 
 import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
+import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
 import {validation, locale, routes} from 'config';
 
 export default class FixRecord extends Component {
@@ -76,14 +77,6 @@ export default class FixRecord extends Component {
         this.props.history.push(routes.pathConfig.dashboard);
     };
 
-    _showConfirmation = () => {
-        if (this.props.pristine || !this.cancelConfirmationBox) {
-            this._navigateToMyResearch();
-        } else {
-            this.cancelConfirmationBox.showConfirmation();
-        }
-    };
-
     _actionSelected = (event, value) => {
         this.setState({
             selectedRecordAction: value
@@ -97,11 +90,11 @@ export default class FixRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
+    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
         submitSucceeded = false, alertLocale = {}}) => {
         let alertProps = null;
         if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert};
+            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
         } else if (!submitFailed && dirty && invalid) {
             alertProps = {...alertLocale.validationAlert};
         } else if (submitting) {
@@ -114,10 +107,6 @@ export default class FixRecord extends Component {
 
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
-    };
-
-    _setCancelConfirmation = (ref) => {
-        this.cancelConfirmationBox = ref;
     };
 
     render() {
@@ -141,6 +130,12 @@ export default class FixRecord extends Component {
                 key={`fix_record_action_${index}`} />
         ));
 
+        // set confirmation message depending on file upload status
+        const saveConfirmationLocale = {...txt.fix.successWorkflowConfirmation};
+        if (this.props.publicationToFixFileUploadingError) {
+            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
+        }
+
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -162,15 +157,12 @@ export default class FixRecord extends Component {
                     {
                         this.state.selectedRecordAction === 'fix' &&
                         <div>
-                            <ConfirmDialogBox
-                                onRef={this._setCancelConfirmation}
-                                onAction={this._navigateToMyResearch}
-                                locale={txt.fix.cancelWorkflowConfirmation}/>
+                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.fix.cancelWorkflowConfirmation} />
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={this._navigateToDashboard}
-                                locale={txt.fix.successWorkflowConfirmation}/>
+                                locale={saveConfirmationLocale}/>
                             <StandardCard title={txt.fix.comments.title} help={txt.fix.comments.help}>
                                 <Field
                                     component={TextField}
@@ -229,7 +221,7 @@ export default class FixRecord extends Component {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._showConfirmation}/>
+                                onTouchTap={this._navigateToMyResearch}/>
                         </div>
                         {
                             this.state.selectedRecordAction &&

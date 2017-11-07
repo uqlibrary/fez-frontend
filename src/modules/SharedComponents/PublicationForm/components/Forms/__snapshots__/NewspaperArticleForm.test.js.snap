@@ -49,6 +49,8 @@ exports[`NewspaperArticleForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
+          floatingLabelText="Newspaper name"
+          hintText="Enter title of the journal"
           name="fez_record_search_key_newspaper.rek_newspaper"
           validate={
             Array [
@@ -65,6 +67,7 @@ exports[`NewspaperArticleForm renders  component 1`] = `
         className="column is-3-tablet"
       >
         <Field
+          className="requiredField"
           component={[Function]}
           disabled={false}
           floatingLabelText="Start page"
@@ -72,12 +75,18 @@ exports[`NewspaperArticleForm renders  component 1`] = `
           hintText=""
           name="fez_record_search_key_start_page.rek_start_page"
           type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
         />
       </div>
       <div
         className="column is-3-tablet"
       >
         <Field
+          className="requiredField"
           component={[Function]}
           disabled={false}
           floatingLabelText="End page"
@@ -85,6 +94,11 @@ exports[`NewspaperArticleForm renders  component 1`] = `
           hintText=""
           name="fez_record_search_key_end_page.rek_end_page"
           type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
         />
       </div>
       <div

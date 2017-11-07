@@ -14,7 +14,7 @@ const DashboardResearcherIds = ({values}) => {
                         target="_blank"
                         aria-label={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}>
                         <div title={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
-                            className={'fez-icon ' + item + ' dashboard'}>{item}</div>
+                            className={'fez-icon ' + item + ' dashboard'} />
                     </a>
                 </div>)
             )}

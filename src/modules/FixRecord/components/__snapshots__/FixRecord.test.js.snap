@@ -463,9 +463,8 @@ exports[`Component FixRecord  should render fix record form 1`] = `
       </Field>
     </StandardCard>
     <div>
-      <ConfirmDialogBox
-        hideCancelButton={false}
-        locale={
+      <NavigationDialogBox
+        txt={
           Object {
             "cancelButtonLabel": "No",
             "confirmButtonLabel": "Yes",
@@ -473,8 +472,6 @@ exports[`Component FixRecord  should render fix record form 1`] = `
             "confirmationTitle": "Cancel request",
           }
         }
-        onAction={[Function]}
-        onRef={[Function]}
       />
       <ConfirmDialogBox
         hideCancelButton={false}
@@ -482,7 +479,9 @@ exports[`Component FixRecord  should render fix record form 1`] = `
           Object {
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": "Your request will be referred to a UQ eSpace staff member for review/action.",
+            "confirmationMessage": <p>
+              Your request will be referred to a UQ eSpace staff member for review/action.
+            </p>,
             "confirmationTitle": "Your request has been submitted",
           }
         }

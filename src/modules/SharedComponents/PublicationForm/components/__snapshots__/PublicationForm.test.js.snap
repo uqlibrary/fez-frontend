@@ -2,9 +2,8 @@
 
 exports[`PublicationForm test should render component initialised with just one field - publication type 1`] = `
 <form>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
+  <NavigationDialogBox
+    txt={
       Object {
         "cancelButtonLabel": "No",
         "confirmButtonLabel": "Yes",
@@ -12,8 +11,6 @@ exports[`PublicationForm test should render component initialised with just one 
         "confirmationTitle": "Abandon workflow",
       }
     }
-    onAction={[Function]}
-    onRef={[Function]}
   />
   <StandardCard
     className=""
@@ -152,7 +149,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Audio Document"
@@ -257,7 +254,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Creative Work"
@@ -299,7 +296,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Design"
@@ -320,7 +317,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Image"
@@ -404,7 +401,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Preprint"
@@ -446,7 +443,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Seminar Paper"
@@ -488,7 +485,7 @@ exports[`PublicationForm test should render component initialised with just one 
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Video Document"
