@@ -1198,6 +1198,10 @@ export default {
                             month: 'Month',
                             year: 'Year'
                         },
+                        series: {
+                            floatingLabelText: 'Series title',
+                            hintText: 'Enter title of series'
+                        },
                         totalPages: {
                             floatingLabelText: 'Total pages',
                             hintText: 'Please, type total number of pages in the publication'

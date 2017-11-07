@@ -130,6 +130,8 @@ exports[`ResearchReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
+          floatingLabelText="Series title"
+          hintText="Enter title of series"
           name="fez_record_search_key_series.rek_series"
         />
       </div>
