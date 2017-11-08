@@ -11,19 +11,19 @@ export class AutoSuggestField extends Component {
         selectedValue: PropTypes.any,
         category: PropTypes.any,
         loadSuggestions: PropTypes.func,
-        locale: PropTypes.object,
         disabled: PropTypes.bool,
         className: PropTypes.string,
         maxResults: PropTypes.number,
-        debounceDelay: PropTypes.number
+        debounceDelay: PropTypes.number,
+        errorText: PropTypes.string,
+        floatingLabelText: PropTypes.string,
+        hintText: PropTypes.string
     };
 
     static defaultProps = {
         maxResults: 7,
-        locale: {
-            fieldLabel: 'Enter text',
-            fieldHint: 'Please type text'
-        },
+        floatingLabelText: 'Enter text',
+        hintText: 'Please type text',
         debounceDelay: 150
     };
 
@@ -67,9 +67,13 @@ export class AutoSuggestField extends Component {
         this.updateSelectedValue(searchText);
     };
 
+    setAutoCompleteInput = (input) => this.setState({input});
+
     valueSelected = (value) => {
         this.updateSelectedValue(value);
+        if(this.state.input) {this.state.input.focus();}
     };
+
 
     render() {
         return (
@@ -79,13 +83,16 @@ export class AutoSuggestField extends Component {
                 filter={!this.props.async ? AutoComplete.caseInsensitiveFilter : () => (true)}
                 id="textField"
                 maxSearchResults={this.props.maxResults}
-                floatingLabelText={this.props.locale.fieldLabel}
-                hintText={this.props.locale.fieldHint}
+                floatingLabelText={this.props.floatingLabelText}
+                hintText={this.props.hintText}
                 dataSource={this.props.itemsList}
                 fullWidth
                 onUpdateInput={this.textUpdated}
                 onNewRequest={this.valueSelected}
                 className={this.props.className}
+                ref={this.setAutoCompleteInput}
+                errorText={this.props.errorText}
+                menuProps={{menuItemStyle: {whiteSpace: 'normal', lineHeight: '18px', padding: '8px 0', minHeight: '18px', height: 'auto'}}}
             />
         );
     }

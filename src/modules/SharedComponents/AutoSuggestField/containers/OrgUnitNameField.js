@@ -4,7 +4,7 @@ import {AutoSuggestField} from '../components/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
-export class SeriesAutoSuggestField extends Component {
+export class OrgUnitNameAutoSuggestField extends Component {
     static propTypes = {
         input: PropTypes.object,
         className: PropTypes.string,
@@ -14,8 +14,8 @@ export class SeriesAutoSuggestField extends Component {
     };
 
     static defaultProps = {
-        floatingLabelText: 'Series',
-        hintText: 'Start typing series name'
+        floatingLabelText: 'School, Institute or Centre ',
+        hintText: 'Start typing a organisational unit name'
     };
 
     constructor(props) {
@@ -34,7 +34,7 @@ export class SeriesAutoSuggestField extends Component {
 }
 
 const mapStateToProps = (state) => {
-    const category = 'series';
+    const category = 'org_unit_name';
     return {
         category: category,
         itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
@@ -48,5 +48,5 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const SeriesField = connect(mapStateToProps, mapDispatchToProps)(SeriesAutoSuggestField);
+export const OrgUnitNameField = connect(mapStateToProps, mapDispatchToProps)(OrgUnitNameAutoSuggestField);
 

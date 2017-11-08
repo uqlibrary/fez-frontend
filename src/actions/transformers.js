@@ -158,7 +158,28 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
                     ? item
                     : {
                         rek_author_id: 0,
-                        rek_author_id_order: index + 1
+                        rek_author_id_order: item.hasOwnProperty('rek_author_id_order') ? item.rek_author_id_order : index + 1
+                    }
+            )
+        )
+    };
+};
+
+/* unclaimRecordContributorsIdSearchKey - returns contributors id object formatted for record request
+ * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, contributorId: 410} or
+ * {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678742", rek_contributor_id: 683, rek_contributor_id_order: 12}
+ * @returns {Object} formatted {fez_record_search_key_contributor_id} for record request
+ */
+export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId) => {
+    if (!contributors || contributors.length === 0) return {fez_record_search_key_contributor_id: []};
+    return {
+        fez_record_search_key_contributor_id: contributors.map(
+            (item, index) => (
+                item.hasOwnProperty('rek_contributor_id') && item.hasOwnProperty('rek_contributor_id_order') && item.rek_contributor_id !== contributorId
+                    ? item
+                    : {
+                        rek_contributor_id: 0,
+                        rek_contributor_id_order: item.hasOwnProperty('rek_contributor_id_order') ? item.rek_contributor_id_order : index + 1
                     }
             )
         )

@@ -1,9 +1,9 @@
-jest.dontMock('./BookForm');
+jest.dontMock('./NewspaperArticleForm');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import BookForm from './BookForm';
+import NewspaperArticleForm from './NewspaperArticleForm';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -12,14 +12,13 @@ function setup({submitting, subtypeVocabId, isShallow = true}){
 
     const props = {
         submitting: submitting || false, // : PropTypes.bool,
-        subtypeVocabId: subtypeVocabId || 0, // : PropTypes.number
     };
 
     if(isShallow) {
-        return shallow(<BookForm {...props} />);
+        return shallow(<NewspaperArticleForm {...props} />);
     }
 
-    return mount(<BookForm {...props} />, {
+    return mount(<NewspaperArticleForm {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -34,15 +33,15 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('BookForm renders ', () => {
+describe('NewspaperArticleForm renders ', () => {
     it('component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 11 input fields', () => {
+    it('component with 8 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(11);
+        expect(wrapper.find('Field').length).toEqual(8);
     });
 
     it('component with 6 required input fields', () => {

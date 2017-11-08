@@ -237,6 +237,20 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
+    it('unclaimRecordAuthorsIdSearchKey returns empty request object', () => {
+        const input = [];
+        const expected = {fez_record_search_key_author_id: []};
+        const result = transformers.unclaimRecordAuthorsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('unclaimRecordContributorsIdSearchKey returns empty request object', () => {
+        const input = [];
+        const expected = {fez_record_search_key_contributor_id: []};
+        const result = transformers.unclaimRecordContributorsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
     it('getRecordAuthorsIdSearchKey returns request object', () => {
         const input = [
             {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
@@ -256,6 +270,44 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
+    it('unclaimRecordAuthorsIdSearchKey returns request object', () => {
+        const input = [
+            {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
+            {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
+            {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null},
+            {nameAsPublished: "Smith D.", disabled: false, selected: false, authorId: 1001}
+        ];
+        const expected = {
+            fez_record_search_key_author_id: [
+                { rek_author_id: 0, rek_author_id_order: 1 },
+                { rek_author_id: 0, rek_author_id_order: 2 },
+                { rek_author_id: 0, rek_author_id_order: 3 },
+                { rek_author_id: 0, rek_author_id_order: 4 }
+            ]
+        };
+        const result = transformers.unclaimRecordAuthorsIdSearchKey(input, 1001);
+        expect(result).toEqual(expected);
+    });
+
+    it('unclaimRecordContributorsIdSearchKey returns request object', () => {
+        const input = [
+            {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
+            {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
+            {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null},
+            {nameAsPublished: "Smith D.", disabled: false, selected: false, authorId: 1001}
+        ];
+        const expected = {
+            fez_record_search_key_contributor_id: [
+                { rek_contributor_id: 0, rek_contributor_id_order: 1 },
+                { rek_contributor_id: 0, rek_contributor_id_order: 2 },
+                { rek_contributor_id: 0, rek_contributor_id_order: 3 },
+                { rek_contributor_id: 0, rek_contributor_id_order: 4 }
+            ]
+        };
+        const result = transformers.unclaimRecordContributorsIdSearchKey(input, 1001);
+        expect(result).toEqual(expected);
+    });
+    
     it('getRecordAuthorsIdSearchKey returns request object for alternative format', () => {
         const input = [
             {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12},
@@ -273,6 +325,40 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
+    it('unclaimRecordAuthorsIdSearchKey returns request object for alternative format', () => {
+        const input = [
+            {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 683, rek_author_id_order: 12},
+            {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 0, rek_author_id_order: 13},
+            {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 0, rek_author_id_order: 14},
+        ];
+        const expected = {
+            fez_record_search_key_author_id: [
+                {rek_author_id: 0, rek_author_id_order: 12},
+                {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 0, rek_author_id_order: 13},
+                {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 0, rek_author_id_order: 14}
+            ]
+        };
+        const result = transformers.unclaimRecordAuthorsIdSearchKey(input, 683);
+        expect(result).toEqual(expected);
+    });
+    
+    it('unclaimRecordContributorsIdSearchKey returns request object for alternative format', () => {
+        const input = [
+            {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 683, rek_contributor_id_order: 12},
+            {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 0, rek_contributor_id_order: 13},
+            {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 0, rek_contributor_id_order: 14},
+        ];
+        const expected = {
+            fez_record_search_key_contributor_id: [
+                {rek_contributor_id: 0, rek_contributor_id_order: 12},
+                {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 0, rek_contributor_id_order: 13},
+                {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 0, rek_contributor_id_order: 14}
+            ]
+        };
+        const result = transformers.unclaimRecordContributorsIdSearchKey(input, 683);
+        expect(result).toEqual(expected);
+    });
+    
     it('getRecordContributorsSearchKey returns empty request object', () => {
         const input = [];
         const expected = {};
