@@ -40,10 +40,11 @@ export default class FixRecord extends Component {
 
     componentWillMount() {
         const {recordToFix, author} = this.props;
-        const isAuthorLinked = author && recordToFix && recordToFix.fez_record_search_key_author_id && recordToFix.fez_record_search_key_author_id.length > 0 &&
-            recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
-        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !isAuthorLinked) {
+        const isAuthorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
+        const isContributorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
+
+        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !isAuthorLinked && !isContributorLinked) {
             // if either author or publication data is missing, abandon form
             this.props.history.go(-1);
         }
@@ -68,6 +69,10 @@ export default class FixRecord extends Component {
         // clear previously selected recordToFix for a fix
         this.props.actions.clearFixRecord();
     }
+
+    isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
+        return recordToFix[searchKey] && recordToFix[searchKey].length > 0 && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+    };
 
     _navigateToMyResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);

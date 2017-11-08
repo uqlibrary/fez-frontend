@@ -430,7 +430,7 @@ exports[`Component FixRecord  should render fix record form 1`] = `
           disabled={false}
           focusState="none"
           insetChildren={false}
-          primaryText="I am the author of this record - I would like to make a correction, or upload files"
+          primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
           targetOrigin={
             Object {
               "horizontal": "left",
@@ -451,7 +451,7 @@ exports[`Component FixRecord  should render fix record form 1`] = `
           disabled={false}
           focusState="none"
           insetChildren={false}
-          primaryText="I am not the author of this record - I would like this record removed from my profile"
+          primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
           targetOrigin={
             Object {
               "horizontal": "left",
@@ -1041,7 +1041,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
           disabled={false}
           focusState="none"
           insetChildren={false}
-          primaryText="I am the author of this record - I would like to make a correction, or upload files"
+          primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
           targetOrigin={
             Object {
               "horizontal": "left",
@@ -1062,7 +1062,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
           disabled={false}
           focusState="none"
           insetChildren={false}
-          primaryText="I am not the author of this record - I would like this record removed from my profile"
+          primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
           targetOrigin={
             Object {
               "horizontal": "left",
@@ -1527,7 +1527,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
           disabled={false}
           focusState="none"
           insetChildren={false}
-          primaryText="I am the author of this record - I would like to make a correction, or upload files"
+          primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
           targetOrigin={
             Object {
               "horizontal": "left",
@@ -1548,7 +1548,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
           disabled={false}
           focusState="none"
           insetChildren={false}
-          primaryText="I am not the author of this record - I would like this record removed from my profile"
+          primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
           targetOrigin={
             Object {
               "horizontal": "left",
@@ -2013,7 +2013,7 @@ exports[`Component FixRecord  should render unclaim form 1`] = `
           disabled={false}
           focusState="none"
           insetChildren={false}
-          primaryText="I am the author of this record - I would like to make a correction, or upload files"
+          primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
           targetOrigin={
             Object {
               "horizontal": "left",
@@ -2034,7 +2034,7 @@ exports[`Component FixRecord  should render unclaim form 1`] = `
           disabled={false}
           focusState="none"
           insetChildren={false}
-          primaryText="I am not the author of this record - I would like this record removed from my profile"
+          primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
           targetOrigin={
             Object {
               "horizontal": "left",

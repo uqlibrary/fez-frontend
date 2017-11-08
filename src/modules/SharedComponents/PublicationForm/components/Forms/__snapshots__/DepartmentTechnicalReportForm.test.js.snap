@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResearchReportForm renders  component 1`] = `
+exports[`GenericDocumentForm renders  component 1`] = `
 <div>
   <StandardCard
     className=""
@@ -8,18 +8,13 @@ exports[`ResearchReportForm renders  component 1`] = `
       Object {
         "buttonLabel": "OK",
         "text": "some help",
-        "title": "Research report information",
+        "title": "Department technical report information",
       }
     }
-    title="Research report information"
+    title="Department technical report information"
   >
     <div
       className="columns"
-      style={
-        Object {
-          "marginTop": "-12px",
-        }
-      }
     >
       <div
         className="column"
@@ -31,15 +26,10 @@ exports[`ResearchReportForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Title"
           fullWidth={true}
-          hintText="Please, type title of research report"
+          hintText="Title of report"
           multiLine={true}
           name="rek_title"
           rows={1}
-          style={
-            Object {
-              "marginBottom": "-12px",
-            }
-          }
           type="text"
           validate={
             Array [
@@ -58,11 +48,9 @@ exports[`ResearchReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Place of publication"
-          fullWidth={true}
-          hintText="Please, type the place of publication"
-          name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-          type="text"
+          floatingLabelText="School, Institute or Centre"
+          hintText=""
+          name="fez_record_search_key_org_unit_name.rek_org_unit_name"
         />
       </div>
       <div
@@ -71,11 +59,22 @@ exports[`ResearchReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Publisher"
-          fullWidth={true}
-          hintText="Please, type the name of the publisher"
-          name="fez_record_search_key_publisher.rek_publisher"
-          type="text"
+          floatingLabelText="Institution name"
+          hintText=""
+          name="fez_record_search_key_org_name.rek_org_name"
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <Field
+          component={[Function]}
+          disabled={false}
+          name="fez_record_search_key_series.rek_series"
         />
       </div>
     </div>
@@ -86,20 +85,9 @@ exports[`ResearchReportForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
-          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Total pages"
-          fullWidth={true}
-          hintText="Please, type total number of pages in the publication"
-          name="fez_record_search_key_total_pages.rek_total_pages"
-          normalize={[Function]}
-          type="text"
-          validate={
-            Array [
-              [Function],
-            ]
-          }
+          name="fez_record_search_key_report_number.rek_report_number"
         />
       </div>
       <div
@@ -130,9 +118,13 @@ exports[`ResearchReportForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Series title"
-          hintText="Enter title of series"
-          name="fez_record_search_key_series.rek_series"
+          floatingLabelText="Abstract"
+          fullWidth={true}
+          hintText="Please provide an abstract or summary of the work."
+          multiLine={true}
+          name="rek_description"
+          rows={3}
+          type="text"
         />
       </div>
     </div>
@@ -219,122 +211,6 @@ exports[`ResearchReportForm renders  component 1`] = `
   </StandardCard>
   <StandardCard
     className=""
-    title="ISBN"
-  >
-    <div>
-      You can add up to five ISBN values
-    </div>
-    <Field
-      component={[Function]}
-      disabled={false}
-      isValid={[Function]}
-      locale={
-        Object {
-          "form": Object {
-            "locale": Object {
-              "addButtonLabel": "Add ISBN",
-              "inputFieldHint": "Please, type ISBN value",
-              "inputFieldLabel": "ISBN value",
-            },
-          },
-          "header": Object {
-            "locale": Object {
-              "deleteAll": "Remove all items",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all items?",
-                "confirmationTitle": "Delete all",
-              },
-              "nameColumn": "ISBN",
-              "reorderColumn": "Reorder items",
-            },
-          },
-          "row": Object {
-            "locale": Object {
-              "deleteHint": "Remove this item",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete this item?",
-                "confirmationTitle": "Delete item",
-              },
-              "moveDownHint": "Move item down the order",
-              "moveUpHint": "Move item up the order",
-            },
-          },
-        }
-      }
-      maxCount={5}
-      name="fez_record_search_key_isbn"
-      searchKey={
-        Object {
-          "order": "rek_isbn_order",
-          "value": "rek_isbn",
-        }
-      }
-    />
-  </StandardCard>
-  <StandardCard
-    className=""
-    title="ISSN"
-  >
-    <div>
-      You can add up to five ISSN values
-    </div>
-    <Field
-      component={[Function]}
-      disabled={false}
-      isValid={[Function]}
-      locale={
-        Object {
-          "form": Object {
-            "locale": Object {
-              "addButtonLabel": "Add ISSN",
-              "inputFieldHint": "Please, type ISSN value",
-              "inputFieldLabel": "ISSN value",
-            },
-          },
-          "header": Object {
-            "locale": Object {
-              "deleteAll": "Remove all items",
-              "deleteAllConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete all items?",
-                "confirmationTitle": "Delete all",
-              },
-              "nameColumn": "ISSN",
-              "reorderColumn": "Reorder items",
-            },
-          },
-          "row": Object {
-            "locale": Object {
-              "deleteHint": "Remove this item",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to delete this item?",
-                "confirmationTitle": "Delete item",
-              },
-              "moveDownHint": "Move item down the order",
-              "moveUpHint": "Move item up the order",
-            },
-          },
-        }
-      }
-      maxCount={5}
-      name="fez_record_search_key_issn"
-      searchKey={
-        Object {
-          "order": "rek_issn_order",
-          "value": "rek_issn",
-        }
-      }
-    />
-  </StandardCard>
-  <StandardCard
-    className=""
     help={
       Object {
         "buttonLabel": "OK",
@@ -344,25 +220,6 @@ exports[`ResearchReportForm renders  component 1`] = `
     }
     title="Other publication details"
   >
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Abstract"
-          fullWidth={true}
-          hintText="Please, provide an abstract or summary of the work"
-          multiLine={true}
-          name="rek_description"
-          rows={1}
-          type="text"
-        />
-      </div>
-    </div>
     <div
       className="columns"
     >
