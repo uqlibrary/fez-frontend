@@ -788,22 +788,12 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         hideCancelButton={false}
         locale={
           Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
-            "confirmationTitle": "Cancel claiming a publication",
-          }
-        }
-        onAction={[Function]}
-        onRef={[Function]}
-      />
-      <ConfirmDialogBox
-        hideCancelButton={false}
-        locale={
-          Object {
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationMessage": <p>
+              Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
+            </p>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -822,9 +812,15 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <Prompt
-        message="Are you sure you want to navigate away and discard all changes to the form?"
-        when={true}
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
+            "confirmationTitle": "Cancel claiming a publication",
+          }
+        }
       />
       <StandardCard
         className=""
@@ -1692,22 +1688,12 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         hideCancelButton={false}
         locale={
           Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
-            "confirmationTitle": "Cancel claiming a publication",
-          }
-        }
-        onAction={[Function]}
-        onRef={[Function]}
-      />
-      <ConfirmDialogBox
-        hideCancelButton={false}
-        locale={
-          Object {
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationMessage": <p>
+              Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
+            </p>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -1726,9 +1712,15 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <Prompt
-        message="Are you sure you want to navigate away and discard all changes to the form?"
-        when={true}
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
+            "confirmationTitle": "Cancel claiming a publication",
+          }
+        }
       />
       <StandardCard
         className=""
@@ -2699,22 +2691,12 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         hideCancelButton={false}
         locale={
           Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
-            "confirmationTitle": "Cancel claiming a publication",
-          }
-        }
-        onAction={[Function]}
-        onRef={[Function]}
-      />
-      <ConfirmDialogBox
-        hideCancelButton={false}
-        locale={
-          Object {
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationMessage": <p>
+              Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
+            </p>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -2733,9 +2715,15 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <Prompt
-        message="Are you sure you want to navigate away and discard all changes to the form?"
-        when={true}
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
+            "confirmationTitle": "Cancel claiming a publication",
+          }
+        }
       />
       <StandardCard
         className="requiredField"
@@ -3862,22 +3850,12 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         hideCancelButton={false}
         locale={
           Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
-            "confirmationTitle": "Cancel claiming a publication",
-          }
-        }
-        onAction={[Function]}
-        onRef={[Function]}
-      />
-      <ConfirmDialogBox
-        hideCancelButton={false}
-        locale={
-          Object {
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationMessage": <p>
+              Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
+            </p>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -3896,9 +3874,15 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <Prompt
-        message="Are you sure you want to navigate away and discard all changes to the form?"
-        when={true}
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
+            "confirmationTitle": "Cancel claiming a publication",
+          }
+        }
       />
       <StandardCard
         className="requiredField"
@@ -5025,22 +5009,12 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         hideCancelButton={false}
         locale={
           Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
-            "confirmationTitle": "Cancel claiming a publication",
-          }
-        }
-        onAction={[Function]}
-        onRef={[Function]}
-      />
-      <ConfirmDialogBox
-        hideCancelButton={false}
-        locale={
-          Object {
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationMessage": <p>
+              Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
+            </p>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -5059,8 +5033,15 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
-      <Prompt
-        message="Are you sure you want to navigate away and discard all changes to the form?"
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel claiming this publication?",
+            "confirmationTitle": "Cancel claiming a publication",
+          }
+        }
         when={true}
       />
       <StandardCard
