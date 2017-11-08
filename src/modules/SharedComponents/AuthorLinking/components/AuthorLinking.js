@@ -34,7 +34,6 @@ export default class AuthorLinking extends React.Component {
         this.state = {
             selectedAuthor: null,
             authorLinkingConfirmed: false,
-            authorType: this.props.searchKey.type
         };
 
         /**
@@ -136,11 +135,12 @@ export default class AuthorLinking extends React.Component {
      * @returns {{}}
      */
     transformToAuthorOrderId = (authorId, author) => {
+        const {value, order, type} = this.props.searchKey;
         return {
-            ['rek_' + this.props.searchKey.type + '_id_id']: author['rek_' + this.props.searchKey.type + '_id_id'] || null,
-            ['rek_' + this.props.searchKey.type + '_id_pid']: author['rek_' + this.props.searchKey.type + '_pid'] || null,
-            [this.props.searchKey.value]: authorId,
-            [this.props.searchKey.order]: author['rek_' + this.props.searchKey.type + '_order']
+            [`rek_${type}_id_id`]: null,
+            [`rek_${type}_id_pid`]: author[`rek_${type}_pid`] || null,
+            [value]: authorId,
+            [order]: author[`rek_${type}_order`]
         };
     };
 
