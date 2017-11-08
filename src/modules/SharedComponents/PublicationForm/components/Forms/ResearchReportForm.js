@@ -98,6 +98,7 @@ export default class ResearchReportForm extends Component {
                                 component={SeriesField}
                                 name="fez_record_search_key_series.rek_series"
                                 disabled={this.props.submitting}
+                                {...txt.information.fieldLabels.series}
                             />
                         </div>
                     </div>
