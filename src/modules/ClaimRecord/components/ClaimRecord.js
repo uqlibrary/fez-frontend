@@ -71,8 +71,7 @@ export default class ClaimRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
-        submitSucceeded = false, txt, authorLinked = false}, contributorLinked = false) => {
+    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false, submitSucceeded = false, txt, authorLinked = false}, contributorLinked = false) => {
         let alertProps = null;
         if (submitFailed && error) {
             alertProps = {...txt.errorAlert};
@@ -109,7 +108,7 @@ export default class ClaimRecord extends Component {
             publication.fez_record_search_key_contributor_id.filter(authorId => authorId.rek_contributor_id === author.aut_id).length > 0;
 
         const fromAddRecord = !!publication.sources;
-        console.log('Publication : ' + JSON.stringify(publication));
+        // console.log('Publication : ' + JSON.stringify(publication));
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>

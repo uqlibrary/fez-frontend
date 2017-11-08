@@ -16,7 +16,7 @@ export function loadAcmlQuickTemplates() {
                     payload: accessTypes.data
                 });
             })
-            .catch((error) => {
+            .catch(error => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.ACML_QUICK_TEMPLATES_FAILED,

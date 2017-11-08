@@ -60,7 +60,13 @@ export default {
                 idKey: 'fez_record_search_key_doi.rek_doi'
             },
         },
-        embargoDateFormat: 'YYYY-MM-DD'
+        doiCitationLink: {
+            ariaLabel: 'Open this DOI in an new window',
+            prefix: 'https://doi.org/',
+            externalUrl: 'https://doi.org/[id]',
+        },
+        embargoDateFormat: 'YYYY-MM-DD',
+        defaultLinkDescription: 'Link to publication'
     },
     authentication: {
         signInText: 'Log in',
@@ -412,7 +418,18 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
-                confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
+                successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member for editing,
+                    prior to being moved into a publicly viewable collection. Please note that our current processing
+                    priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
+                    HERDC 2015 and Q-index.</p>),
+                fileFailConfirmationMessage: (<p>
+                    Your record has been saved. <br/><br/>
+                    <strong>Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators. </strong><br/><br/>
+                    Your item will be referred to a UQ eSpace Staging staff member for editing,
+                    prior to being moved into a publicly viewable collection. Please note that our current
+                    processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
+                    HERDC 2015 and Q-index.
+                </p>),
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
             }
@@ -539,7 +556,7 @@ export default {
                 },
                 successWorkflowConfirmation: {
                     confirmationTitle: 'Your request has been submitted',
-                    confirmationMessage: 'Your request will be referred to a UQ eSpace staff member for review/action.',
+                    confirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
                     cancelButtonLabel: 'Go to my dashboard',
                     confirmButtonLabel: 'Go to my research'
                 },
@@ -551,7 +568,7 @@ export default {
                 errorAlert: {
                     type: 'error_outline',
                     title: 'Error',
-                    message: 'Error has occurred during request and request cannot be processed. Please, review the form and try again.'
+                    message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`)
                 },
                 progressAlert: {
                     type: 'info_outline',
@@ -2164,20 +2181,24 @@ export default {
                 confirmButtonLabel: 'Yes'
             },
             validationAlert: {
+                type: 'warning',
                 title: 'Validation',
                 message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
             },
             errorAlert: {
+                type: 'error_outline',
                 title: 'Error',
-                createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed. Please, review the form and try again.',
-                fileUploadMessage: 'Files failed to upload but record was saved, please contact eSpace admins',
-                patchFilesMessage: 'Record was created and files were uploaded but failed to link files to created record, please contact eSpace admins'
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`),
+                createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed.',
+                fileUploadMessage: 'Error has occurred while uploading files.',
             },
             progressAlert: {
+                type: 'info_outline',
                 title: 'Saving',
                 message: 'Creating new publication is in progress.'
             },
             successAlert: {
+                type: 'done',
                 title: 'Success',
                 message: 'New publication has been saved successfully.'
             }
@@ -2240,7 +2261,16 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Claim has been submitted',
-                confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.',
+                successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member
+                    for editing, prior to being moved into a publicly viewable collection.</p>),
+                fileFailConfirmationMessage: (<p>
+                    Your item will be referred to a UQ eSpace Staging staff member
+                    for editing, prior to being moved into a publicly viewable collection.<br/><br/>
+                    <strong>
+                        Please note, file upload has failed.
+                        Retry uploading files via "Fix record" screen or contact eSpace administrators.
+                    </strong>
+                </p>),
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
@@ -2253,7 +2283,7 @@ export default {
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: 'Error has occurred during request and claim cannot be processed. Please, review the form and try again.'
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`)
             },
             progressAlert: {
                 type: 'info_outline',

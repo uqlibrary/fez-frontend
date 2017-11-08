@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, stopSubmit, reset, SubmissionError} from 'redux-form/immutable';
+import {reduxForm, getFormValues, stopSubmit, SubmissionError} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ClaimRecord from '../components/ClaimRecord';
 import {withRouter} from 'react-router-dom';
@@ -17,9 +17,9 @@ const onSubmit = (values, dispatch) => {
             // reported bug to redux-form:
             // reset form after success action was dispatched:
             // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-            setTimeout(()=>{
-                dispatch(reset(FORM_NAME));
-            }, 100);
+            // setTimeout(()=>{
+            //     dispatch(reset(FORM_NAME));
+            // }, 100);
         }).catch(error => {
             throw new SubmissionError({_error: error.message});
         });
@@ -38,6 +38,7 @@ let ClaimPublicationFormContainer = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
+        publicationToClaimFileUploadingError: state.get('claimPublicationReducer').publicationToClaimFileUploadingError,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {
             publication: state.get('claimPublicationReducer').publicationToClaim,
