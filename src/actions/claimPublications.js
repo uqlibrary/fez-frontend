@@ -151,7 +151,7 @@ export function claimPublication(data) {
         data.publication.fez_record_search_key_contributor_id.filter(authorId => authorId.rek_contributor_id === data.author.aut_id).length > 0;
 
     // do not try to claim record if it's internal record and already assigned to the current author
-    if (data.publication.rek_pid && isAuthorLinked || isContributorLinked) {
+    if (data.publication.rek_pid && (isAuthorLinked || isContributorLinked)) {
         return dispatch => {
             dispatch({
                 type: actions.CLAIM_PUBLICATION_CREATE_FAILED,

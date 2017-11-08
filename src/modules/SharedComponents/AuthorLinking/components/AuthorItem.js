@@ -57,7 +57,7 @@ export default class AuthorItem extends React.Component {
     getAuthorName = (author) => {
         return (
             <span className="author-link-name">
-                {author['rek_' + this.props.type]}
+                {author[`rek_${this.props.type}`]}
             </span>
         );
     };

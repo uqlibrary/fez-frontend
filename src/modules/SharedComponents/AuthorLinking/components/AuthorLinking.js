@@ -78,7 +78,7 @@ export default class AuthorLinking extends React.Component {
     getAuthorsToRender = ({authorList, linkedAuthorIdList, disabled} = {}, {selectedAuthor = {}} = {}) => {
         const authors = authorList.map((author, index) => {
             const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index][this.props.searchKey.value] !== 0;
-            const selected = (selectedAuthor && (author['rek_' + this.props.searchKey.type + '_order'] === selectedAuthor['rek_' + this.props.searchKey.type + '_id_order']));
+            const selected = (selectedAuthor && (author[`rek_${this.props.searchKey.type}_order`] === selectedAuthor[`rek_'${this.props.searchKey.type}_id_order`]));
             return (
                 <AuthorItem
                     type={this.props.searchKey.type}
@@ -155,7 +155,6 @@ export default class AuthorLinking extends React.Component {
         this.setState({
             selectedAuthor: selectedAuthor,
             authorLinkingConfirmed: false,
-            authorType: this.props.searchKey.type
         });
     };
 
