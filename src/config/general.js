@@ -117,6 +117,7 @@ export const publicationTypes = (components) => [
         name: 'Department Technical Report',
         class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
         citationComponent: components ? components.DepartmentTechnicalReportCitation : null,
+        formComponent: components ? components.DepartmentTechnicalReportForm : null,
         hasFormComponent: true
     },
     {
@@ -170,6 +171,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
         name: 'Newspaper Article',
         class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle',
+        formComponent: components ? components.NewspaperArticleForm : null,
         citationComponent: components ? components.NewspaperArticleCitation : null,
         hasFormComponent: true
     },
