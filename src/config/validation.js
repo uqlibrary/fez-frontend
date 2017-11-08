@@ -19,6 +19,7 @@ export const required = value => value ? undefined : validationErrors.required;
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? validationErrors.email : undefined;
 export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? validationErrors.url : maxLength2000(value);
 export const authorRequired = (authors) => !authors || authors.length === 0 || authors.filter(item => (item.selected)).length === 0 ? validationErrors.authorRequired : undefined;
+export const editorRequired = (editors) => !editors || editors.length === 0 || editors.filter(item => (item.selected)).length === 0 ? validationErrors.editorRequired : undefined;
 
 // DateTime
 export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? validationErrors.dateTimeDay : undefined;
