@@ -827,6 +827,48 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         when={true}
       />
       <StandardCard
+        className="requiredField"
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": "...",
+            "title": "Editor linking",
+          }
+        }
+        title="Editor linking"
+      >
+        <label
+          htmlFor="contributorLinking"
+        >
+          We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: 
+        </label>
+        <Field
+          authorList={Array []}
+          className="requiredField"
+          component={[Function]}
+          linkedAuthorIdList={Array []}
+          loggedInAuthor={
+            Object {
+              "aut_id": 410,
+            }
+          }
+          name="contributorLinking"
+          searchKey={
+            Object {
+              "order": "rek_contributor_id_order",
+              "type": "contributor",
+              "value": "rek_contributor_id",
+            }
+          }
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
+        />
+      </StandardCard>
+      <StandardCard
         className=""
         help={
           Object {
@@ -1730,6 +1772,48 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         message="Are you sure you want to navigate away and discard all changes to the form?"
         when={true}
       />
+      <StandardCard
+        className="requiredField"
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": "...",
+            "title": "Editor linking",
+          }
+        }
+        title="Editor linking"
+      >
+        <label
+          htmlFor="contributorLinking"
+        >
+          We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: 
+        </label>
+        <Field
+          authorList={Array []}
+          className="requiredField"
+          component={[Function]}
+          linkedAuthorIdList={Array []}
+          loggedInAuthor={
+            Object {
+              "aut_id": 410,
+            }
+          }
+          name="contributorLinking"
+          searchKey={
+            Object {
+              "order": "rek_contributor_id_order",
+              "type": "contributor",
+              "value": "rek_contributor_id",
+            }
+          }
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
+        />
+      </StandardCard>
       <StandardCard
         className=""
         help={
@@ -2883,6 +2967,48 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "order": "rek_author_id_order",
               "type": "author",
               "value": "rek_author_id",
+            }
+          }
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
+        />
+      </StandardCard>
+      <StandardCard
+        className="requiredField"
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": "...",
+            "title": "Editor linking",
+          }
+        }
+        title="Editor linking"
+      >
+        <label
+          htmlFor="contributorLinking"
+        >
+          We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: 
+        </label>
+        <Field
+          authorList={Array []}
+          className="requiredField"
+          component={[Function]}
+          linkedAuthorIdList={Array []}
+          loggedInAuthor={
+            Object {
+              "aut_id": 410,
+            }
+          }
+          name="contributorLinking"
+          searchKey={
+            Object {
+              "order": "rek_contributor_id_order",
+              "type": "contributor",
+              "value": "rek_contributor_id",
             }
           }
           validate={
@@ -4057,6 +4183,48 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         />
       </StandardCard>
       <StandardCard
+        className="requiredField"
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": "...",
+            "title": "Editor linking",
+          }
+        }
+        title="Editor linking"
+      >
+        <label
+          htmlFor="contributorLinking"
+        >
+          We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: 
+        </label>
+        <Field
+          authorList={Array []}
+          className="requiredField"
+          component={[Function]}
+          linkedAuthorIdList={Array []}
+          loggedInAuthor={
+            Object {
+              "aut_id": 410,
+            }
+          }
+          name="contributorLinking"
+          searchKey={
+            Object {
+              "order": "rek_contributor_id_order",
+              "type": "contributor",
+              "value": "rek_contributor_id",
+            }
+          }
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
+        />
+      </StandardCard>
+      <StandardCard
         className=""
         help={
           Object {
@@ -5209,6 +5377,48 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "order": "rek_author_id_order",
               "type": "author",
               "value": "rek_author_id",
+            }
+          }
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
+        />
+      </StandardCard>
+      <StandardCard
+        className="requiredField"
+        help={
+          Object {
+            "buttonLabel": "OK",
+            "text": "...",
+            "title": "Editor linking",
+          }
+        }
+        title="Editor linking"
+      >
+        <label
+          htmlFor="contributorLinking"
+        >
+          We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: 
+        </label>
+        <Field
+          authorList={Array []}
+          className="requiredField"
+          component={[Function]}
+          linkedAuthorIdList={Array []}
+          loggedInAuthor={
+            Object {
+              "aut_id": 410,
+            }
+          }
+          name="contributorLinking"
+          searchKey={
+            Object {
+              "order": "rek_contributor_id_order",
+              "type": "contributor",
+              "value": "rek_contributor_id",
             }
           }
           validate={

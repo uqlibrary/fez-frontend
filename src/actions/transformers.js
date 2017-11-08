@@ -115,7 +115,6 @@ export const getRecordAuthorsSearchKey = (authors) => {
 * @returns {Object} formatted {fez_record_search_key_author_id} for record request
 */
 export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
-    console.log('Authors : ' + authors);
     // return empty object if all parameters are null
     if ((!authors || authors.length === 0) && !defaultAuthorId) return {};
 
