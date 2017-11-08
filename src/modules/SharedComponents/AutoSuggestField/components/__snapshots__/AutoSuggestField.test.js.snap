@@ -5,15 +5,11 @@ exports[`AutoSuggestField component should render 1`] = `
   async={false}
   debounceDelay={150}
   disabled={false}
+  floatingLabelText="Enter text"
+  hintText="Please type text"
   itemsList={Array []}
   itemsListLoading={false}
   loadSuggestions={[Function]}
-  locale={
-    Object {
-      "fieldHint": "Please type text",
-      "fieldLabel": "Enter text",
-    }
-  }
   maxResults={7}
   onChange={[Function]}
 />
@@ -33,15 +29,11 @@ exports[`AutoSuggestField component should render autosuggest field and call act
     async={false}
     debounceDelay={150}
     disabled={false}
+    floatingLabelText="Enter text"
+    hintText="Please type text"
     itemsList={Array []}
     itemsListLoading={false}
     loadSuggestions={[Function]}
-    locale={
-      Object {
-        "fieldHint": "Please type text",
-        "fieldLabel": "Enter text",
-      }
-    }
     maxResults={7}
     onChange={[Function]}
   >
@@ -75,6 +67,17 @@ exports[`AutoSuggestField component should render autosuggest field and call act
       }
       maxSearchResults={7}
       menuCloseDelay={300}
+      menuProps={
+        Object {
+          "menuItemStyle": Object {
+            "height": "auto",
+            "lineHeight": "18px",
+            "minHeight": "18px",
+            "padding": "8px 0",
+            "whiteSpace": "normal",
+          },
+        }
+      }
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}
@@ -1585,15 +1588,11 @@ exports[`AutoSuggestField component should render with className set 1`] = `
     className="requiredField"
     debounceDelay={150}
     disabled={false}
+    floatingLabelText="Enter text"
+    hintText="Please type text"
     itemsList={Array []}
     itemsListLoading={false}
     loadSuggestions={[Function]}
-    locale={
-      Object {
-        "fieldHint": "Please type text",
-        "fieldLabel": "Enter text",
-      }
-    }
     maxResults={7}
     onChange={[Function]}
   >
@@ -1628,6 +1627,17 @@ exports[`AutoSuggestField component should render with className set 1`] = `
       }
       maxSearchResults={7}
       menuCloseDelay={300}
+      menuProps={
+        Object {
+          "menuItemStyle": Object {
+            "height": "auto",
+            "lineHeight": "18px",
+            "minHeight": "18px",
+            "padding": "8px 0",
+            "whiteSpace": "normal",
+          },
+        }
+      }
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}
@@ -3139,15 +3149,11 @@ exports[`AutoSuggestField component should render with disabled flag set to true
     async={false}
     debounceDelay={150}
     disabled={true}
+    floatingLabelText="Enter text"
+    hintText="Please type text"
     itemsList={Array []}
     itemsListLoading={false}
     loadSuggestions={[Function]}
-    locale={
-      Object {
-        "fieldHint": "Please type text",
-        "fieldLabel": "Enter text",
-      }
-    }
     maxResults={7}
     onChange={[Function]}
   >
@@ -3181,6 +3187,17 @@ exports[`AutoSuggestField component should render with disabled flag set to true
       }
       maxSearchResults={7}
       menuCloseDelay={300}
+      menuProps={
+        Object {
+          "menuItemStyle": Object {
+            "height": "auto",
+            "lineHeight": "18px",
+            "minHeight": "18px",
+            "padding": "8px 0",
+            "whiteSpace": "normal",
+          },
+        }
+      }
       onNewRequest={[Function]}
       onUpdateInput={[Function]}
       open={false}

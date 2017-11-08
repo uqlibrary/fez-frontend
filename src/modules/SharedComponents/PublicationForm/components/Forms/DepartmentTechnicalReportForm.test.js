@@ -1,25 +1,24 @@
-jest.dontMock('./BookForm');
+jest.dontMock('./GenericDocumentForm');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import BookForm from './BookForm';
+import DepartmentTechnicalReportForm from './DepartmentTechnicalReportForm';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-function setup({submitting, subtypeVocabId, isShallow = true}){
+function setup({submitting, isShallow = true}){
 
     const props = {
         submitting: submitting || false, // : PropTypes.bool,
-        subtypeVocabId: subtypeVocabId || 0, // : PropTypes.number
     };
 
     if(isShallow) {
-        return shallow(<BookForm {...props} />);
+        return shallow(<DepartmentTechnicalReportForm {...props} />);
     }
 
-    return mount(<BookForm {...props} />, {
+    return mount(<DepartmentTechnicalReportForm {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -34,20 +33,20 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('BookForm renders ', () => {
+describe('GenericDocumentForm renders ', () => {
     it('component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 11 input fields', () => {
+    it('component with 10 input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(11);
+        expect(wrapper.find('Field').length).toEqual(10);
     });
 
-    it('component with 6 required input fields', () => {
+    it('component with 3 required input fields', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field .requiredField').length).toEqual(5);
+        expect(wrapper.find('Field .requiredField').length).toEqual(2);
         expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
     });
 

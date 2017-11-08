@@ -4414,7 +4414,7 @@ export const myRecordsList = {
                     "rek_author_id_id": 28609418,
                     "rek_author_id_pid": "UQ:36649",
                     "rek_author_id_xsdmf_id": null,
-                    "rek_author_id": 410,
+                    "rek_author_id": 4100,
                     "rek_author_id_order": 1
                 },
                 {
@@ -4458,8 +4458,24 @@ export const myRecordsList = {
             "fez_record_search_key_conference_name": null,
             "fez_record_search_key_construction_date": null,
             "fez_record_search_key_contact_details_email": [],
-            "fez_record_search_key_contributor": [],
-            "fez_record_search_key_contributor_id": [],
+            "fez_record_search_key_contributor": [
+                {
+                    "rek_contributor_id": 29242856,
+                    "rek_contributor_pid": "UQ:36649",
+                    "rek_contributor_xsdmf_id": null,
+                    "rek_contributor": "Brown, M. A.",
+                    "rek_contributor_order": 3
+                }
+            ],
+            "fez_record_search_key_contributor_id": [
+                {
+                    "rek_contributor_id_id": 28609418,
+                    "rek_contributor_id_pid": "UQ:36649",
+                    "rek_contributor_id_xsdmf_id": null,
+                    "rek_contributor_id": 410,
+                    "rek_contributor_id_order": 1
+                }
+            ],
             "fez_record_search_key_convener": null,
             "fez_record_search_key_corresponding_email": [],
             "fez_record_search_key_corresponding_name": [],
