@@ -104,8 +104,8 @@ export default class ClaimRecord extends Component {
         }
         const authorLinked = publication && author && publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
-        const contributorLinked = publication && author && publication.fez_record_search_key_contributor_id && publication.fez_record_search_key_contributor_id.length > 0 &&
-            publication.fez_record_search_key_contributor_id.filter(authorId => authorId.rek_contributor_id === author.aut_id).length > 0;
+        // const contributorLinked = publication && author && publication.fez_record_search_key_contributor_id && publication.fez_record_search_key_contributor_id.length > 0 &&
+        //     publication.fez_record_search_key_contributor_id.filter(authorId => authorId.rek_contributor_id === author.aut_id).length > 0;
 
         const fromAddRecord = !!publication.sources;
         // console.log('Publication : ' + JSON.stringify(publication));
