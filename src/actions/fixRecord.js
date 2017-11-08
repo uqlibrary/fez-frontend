@@ -135,7 +135,7 @@ export function fixRecord(data) {
 
 /**
  * Unclaim record
- * @param {object} - record to be unclaimed
+ * @param   {object}  data    Record to be unclaimed
  * @returns {action}
  */
 export function unclaimRecord(data) {
@@ -150,11 +150,13 @@ export function unclaimRecord(data) {
         };
     }
 
-    // TODO: special case for contributors required
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
 
-    if (!isAuthorLinked) {
+    const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
+        data.publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === data.author.aut_id).length > 0;
+
+    if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
@@ -170,7 +172,8 @@ export function unclaimRecord(data) {
         // PATCH record (with the rek_author_id set to 0)
         const patchRecordRequest = {
             rek_pid: data.publication.rek_pid,
-            ...transformers.unclaimRecordAuthorsIdSearchKey(data.publication.fez_record_search_key_author_id, data.author.aut_id)
+            ...transformers.unclaimRecordAuthorsIdSearchKey(data.publication.fez_record_search_key_author_id, data.author.aut_id),
+            ...transformers.unclaimRecordContributorsIdSearchKey(data.publication.fez_record_search_key_contributor_id, data.author.aut_id)
         };
 
         return patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
