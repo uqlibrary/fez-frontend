@@ -60,10 +60,8 @@ exports[`GenericDocumentForm renders  component 1`] = `
           component={[Function]}
           disabled={false}
           floatingLabelText="Institution name"
-          fullWidth={true}
           hintText=""
           name="fez_record_search_key_org_name.rek_org_name"
-          type="text"
         />
       </div>
     </div>

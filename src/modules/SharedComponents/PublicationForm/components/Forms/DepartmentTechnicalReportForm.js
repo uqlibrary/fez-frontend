@@ -5,7 +5,7 @@ import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
-import {SeriesField, ReportNumberField, OrgUnitNameField} from 'modules/SharedComponents/AutoSuggestField';
+import {SeriesField, ReportNumberField, OrgUnitNameField, OrgNameField} from 'modules/SharedComponents/AutoSuggestField';
 
 export default class DepartmentTechnicalReportForm extends Component {
     static propTypes = {
@@ -54,11 +54,9 @@ export default class DepartmentTechnicalReportForm extends Component {
                         </div>
                         <div className="column">
                             <Field
-                                component={TextField}
-                                disabled={this.props.submitting}
+                                component={OrgNameField}
                                 name="fez_record_search_key_org_name.rek_org_name"
-                                type="text"
-                                fullWidth
+                                disabled={this.props.submitting}
                                 {...txt.information.fieldLabels.orgName}
                             />
                         </div>
