@@ -638,6 +638,8 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors"
@@ -645,45 +647,46 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=""
+          suffix=", "
           value="Teesson, Maree"
         >
           <span
             className="citationAuthor"
           >
             Teesson, Maree
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Hall, Wayne"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Hall, Wayne
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Proudfoot, Heather"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Proudfoot, Heather
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
           prefix=" and "
-          suffix=" "
+          suffix=""
           value="Degenhardt, Louisa"
         >
           <span
@@ -691,9 +694,9 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
           >
              and 
             Degenhardt, Louisa
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -816,6 +819,8 @@ exports[`BookCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors empty"
@@ -1667,6 +1672,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
           }
         }
         suffix=" ed."
+        thresholdDisplay={3}
       >
         <span
           className="citationEditors"
@@ -1674,32 +1680,33 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
           <CitationView
             className="citationAuthor"
             prefix=""
-            suffix=""
+            suffix=", "
             value="Smith, A"
           >
             <span
               className="citationAuthor"
             >
               Smith, A
+              , 
             </span>
           </CitationView>
           <CitationView
             className="citationAuthor"
-            prefix=", "
-            suffix=""
+            prefix=""
+            suffix=", "
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
-              , 
               Smith, C
+              , 
             </span>
           </CitationView>
           <CitationView
             className="citationAuthor"
             prefix=" and "
-            suffix=" "
+            suffix=""
             value="Smith, B"
           >
             <span
@@ -1707,7 +1714,6 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
             >
                and 
               Smith, B
-               
             </span>
           </CitationView>
            ed.

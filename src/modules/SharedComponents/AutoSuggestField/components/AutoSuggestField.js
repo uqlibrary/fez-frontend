@@ -7,25 +7,25 @@ export class AutoSuggestField extends Component {
         onChange: PropTypes.func,
         async: PropTypes.bool,
         itemsList: PropTypes.array,
-        dataSourceConfig: PropTypes.object,
         itemsListLoading: PropTypes.bool,
+        dataSourceConfig: PropTypes.object,
         selectedValue: PropTypes.any,
         category: PropTypes.any,
         loadSuggestions: PropTypes.func,
-        locale: PropTypes.object,
         disabled: PropTypes.bool,
         className: PropTypes.string,
         maxResults: PropTypes.number,
         debounceDelay: PropTypes.number,
-        forceItemSelection: PropTypes.bool
+        forceItemSelection: PropTypes.bool,
+        floatingLabelText: PropTypes.string,
+        hintText: PropTypes.string,
+        meta: PropTypes.object
     };
 
     static defaultProps = {
         maxResults: 7,
-        locale: {
-            fieldLabel: 'Enter text',
-            fieldHint: 'Please type text'
-        },
+        floatingLabelText: 'Enter text',
+        hintText: 'Please type text',
         debounceDelay: 150
     };
 
@@ -49,7 +49,6 @@ export class AutoSuggestField extends Component {
 
     componentWillReceiveProps(newProps) {
         if (newProps.selectedValue !== this.props.selectedValue) {
-            console.log(newProps.selectedValue);
             this.setState({
                 selectedValue: newProps.selectedValue,
                 searchText: newProps.selectedValue
@@ -86,34 +85,49 @@ export class AutoSuggestField extends Component {
         }
     };
 
-    clearField = (value, index) => {
-        this.setState({
-            searchText: ''
-        });
+    valueSelected = (value, index) => {
         if (index >= 0) {
             this.updateSelectedValue(this.props.itemsList[index]);
         } else if (!this.props.forceItemSelection) {
             this.updateSelectedValue(value);
         }
+
+        // clean upe input field
+        if (this.props.forceItemSelection) {
+            this.setState({
+                searchText: ''
+            });
+        }
+        // refocus on the field after selection
+        if(this.state.input) {
+            this.state.input.focus();
+        }
     };
+
+    setAutoCompleteInput = (input) => (
+        this.setState({input})
+    );
 
     render() {
         return (
             <AutoComplete
-                id="itemName"
+                id="textField"
+                ref={this.setAutoCompleteInput}
                 searchText={this.state.searchText}
                 disabled={this.props.disabled}
                 listStyle={{maxHeight: 200, overflow: 'auto'}}
                 filter={!this.props.async ? AutoComplete.caseInsensitiveFilter : () => (true)}
                 maxSearchResults={this.props.maxResults}
-                floatingLabelText={this.props.locale.fieldLabel}
-                hintText={this.props.locale.fieldHint}
+                floatingLabelText={this.props.floatingLabelText}
+                hintText={this.props.hintText}
                 dataSource={this.props.itemsList}
                 fullWidth
                 onUpdateInput={this.textUpdated}
-                onNewRequest={this.clearField}
+                onNewRequest={this.valueSelected}
                 className={this.props.className}
                 dataSourceConfig={this.props.dataSourceConfig}
+                errorText={this.props.meta ? this.props.meta.error : null}
+                menuProps={{menuItemStyle: {whiteSpace: 'normal', lineHeight: '18px', padding: '8px 0', minHeight: '18px', height: 'auto'}}}
             />
         );
     }

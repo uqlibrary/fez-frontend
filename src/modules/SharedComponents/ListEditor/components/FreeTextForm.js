@@ -3,24 +3,22 @@ import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
-export default class ListForm extends Component {
+export default class FreeTextForm extends Component {
     static propTypes = {
         onAdd: PropTypes.func.isRequired,
         isValid: PropTypes.func,
-        locale: PropTypes.object,
+        floatingLabelText: PropTypes.string,
+        hintText: PropTypes.string,
+        addButtonLabel: PropTypes.string,
         disabled: PropTypes.bool,
-        inputField: PropTypes.func
+        meta: PropTypes.object
     };
 
     static defaultProps = {
-        isValid: () => {
-            return '';
-        },
-        locale: {
-            inputFieldLabel: 'Item name',
-            inputFieldHint: 'Please type the item name',
-            addButtonLabel: 'Add'
-        }
+        isValid: () => '',
+        floatingLabelText: 'Item name',
+        hintText: 'Please type the item name',
+        addButtonLabel: 'Add'
     }
 
     constructor(props) {
@@ -56,46 +54,29 @@ export default class ListForm extends Component {
         });
     }
 
-    addKeyValueItem = (item) => {
-        this.props.onAdd(item);
-        this.setState({
-            itemName: ''
-        });
-    }
-
     render() {
-        console.log(this.state.itemName);
         return (
             <div className="columns">
                 <div className="column">
-                    {
-                        this.props.inputField &&
-                        <this.props.inputField
-                            input={{onChange: this.addKeyValueItem}}
-                            ref="itemName"
-                            selectedValue={this.state.itemName}
-                        />
-                    }
-                    {
-                        !this.props.inputField &&
-                        <TextField
-                            fullWidth
-                            ref="itemName"
-                            floatingLabelText={this.props.locale.inputFieldLabel}
-                            hintText={this.props.locale.inputFieldHint}
-                            value={this.state.itemName}
-                            onChange={this.onNameChanged}
-                            onKeyPress={this.addItem}
-                            errorText={this.props.isValid(this.state.itemName)}
-                            disabled={this.props.disabled}/>
-                    }
+                    <TextField
+                        fullWidth
+                        ref="itemName"
+                        floatingLabelText={this.props.floatingLabelText}
+                        hintText={this.props.hintText}
+                        value={this.state.itemName}
+                        onChange={this.onNameChanged}
+                        onKeyPress={this.addItem}
+                        errorText={this.props.isValid(this.state.itemName) || (this.props.meta && this.props.meta.error)
+                            ? `${this.props.meta.error || ''} ${this.props.isValid(this.state.itemName)}`
+                            : null}
+                        disabled={this.props.disabled} />
                 </div>
                 <div className="column is-narrow">
                     <RaisedButton
                         className="is-mui-spacing-button"
                         fullWidth
                         primary
-                        label={this.props.locale.addButtonLabel}
+                        label={this.props.addButtonLabel}
                         disabled={this.props.disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0}
                         onClick={this.addItem}/>
                 </div>

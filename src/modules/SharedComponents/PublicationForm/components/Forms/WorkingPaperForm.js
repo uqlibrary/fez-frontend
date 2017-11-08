@@ -4,7 +4,8 @@ import {Field} from 'redux-form/immutable';
 
 import {StandardCard} from 'uqlibrary-react-toolbox';
 import {OrgUnitsField, SeriesField, FieldOfResearchField} from 'modules/SharedComponents/AutoSuggestField';
-import {ListEditorField} from 'modules/SharedComponents/ListEditor';
+import {ListEditorField, LookupListEditorField} from 'modules/SharedComponents/ListEditor';
+import {validation, locale} from 'config';
 
 export default class WorkingPaperForm extends Component {
     static propTypes = {
@@ -20,13 +21,15 @@ export default class WorkingPaperForm extends Component {
             <div>
                 <StandardCard title="Placeholder for working paper">
                     <Field
-                        component={ListEditorField}
+                        className="requiredField"
+                        component={LookupListEditorField}
                         inputField={FieldOfResearchField}
                         hideReorder
+                        distinctOnly
                         maxCount={3}
                         name="forField"
                         disabled={this.props.submitting}
-
+                        validate={[validation.requiredList]}
                     />
                     <Field
                         component={OrgUnitsField}
@@ -39,13 +42,23 @@ export default class WorkingPaperForm extends Component {
                         name="testField2"
                         disabled={this.props.submitting}
                     />
-                    <FieldOfResearchField input={{onChange: (value) => { console.log(value); }}} selectedValue="ladjfljsdfljsdlfjlj" />
+                    <FieldOfResearchField input={{onChange: (value) => { console.log(value); }}} />
 
                     <Field
+                        component={ListEditorField}
+                        name="fez_record_search_key_isbn"
+                        isValid={validation.isValidIssn}
+                        validate={[validation.requiredList]}
+                        maxCount={5}
+                        searchKey={{value: 'rek_isbn', order: 'rek_isbn_order'}}
+                        locale={locale.components.isbnForm.field}
+                        disabled={this.props.submitting} />
+
+                    <Field
+                        className="requiredField"
                         component={FieldOfResearchField}
                         name="singleForField"
                         disabled={this.props.submitting}
-                        selectedValue="ladjfljsdfljsdlfjlj"
                     />
 
                 </StandardCard>

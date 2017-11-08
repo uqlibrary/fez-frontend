@@ -468,6 +468,8 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors"
@@ -475,45 +477,46 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=""
+          suffix=", "
           value="Walsh, Laurence J"
         >
           <span
             className="citationAuthor"
           >
             Walsh, Laurence J
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Ota R"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Ota R
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Nagao S"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Nagao S
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
           prefix=" and "
-          suffix=" "
+          suffix=""
           value="Sato T"
         >
           <span
@@ -521,9 +524,9 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
           >
              and 
             Sato T
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -617,6 +620,8 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors empty"

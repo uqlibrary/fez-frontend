@@ -660,6 +660,8 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors"
@@ -667,16 +669,16 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=" "
+          suffix=""
           value="Hayes, Edward Leo, 1889-1967"
         >
           <span
             className="citationAuthor"
           >
             Hayes, Edward Leo, 1889-1967
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -766,6 +768,8 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors empty"

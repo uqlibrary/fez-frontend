@@ -66,10 +66,10 @@ export default class PublicationForm extends Component {
     render() {
         console.log('formValues.forField: ');
         console.log(this.props.formValues ? this.props.formValues.get('forField') : 'n/a');
-        console.log('formValues.OrgUnitsField: ');
-        console.log(this.props.formValues ? this.props.formValues.get('OrgUnitsField') : 'n/a');
-        console.log('formValues.singleForField: ');
-        console.log(this.props.formValues ? this.props.formValues.get('singleForField') : 'n/a');
+        // console.log('formValues.OrgUnitsField: ');
+        // console.log(this.props.formValues ? this.props.formValues.get('OrgUnitsField') : 'n/a');
+        // console.log('formValues.singleForField: ');
+        // console.log(this.props.formValues ? this.props.formValues.get('singleForField') : 'n/a');
         // populate publication types select box
         const publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {

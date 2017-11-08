@@ -17,39 +17,11 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_assigned_user_id": Array [],
       "fez_record_search_key_author": Array [
         Object {
-          "rek_author": "Brown, M. A.",
-          "rek_author_id": 29242856,
-          "rek_author_order": 3,
-          "rek_author_pid": "UQ:36649",
-          "rek_author_xsdmf_id": null,
-        },
-        Object {
-          "rek_author": "Lane, T. F.",
-          "rek_author_id": 29242854,
+          "rek_author": "Tweedy, S. M.",
+          "rek_author_id": 29135061,
           "rek_author_order": 1,
-          "rek_author_pid": "UQ:36649",
-          "rek_author_xsdmf_id": null,
-        },
-        Object {
-          "rek_author": "Leder, P.",
-          "rek_author_id": 29242858,
-          "rek_author_order": 5,
-          "rek_author_pid": "UQ:36649",
-          "rek_author_xsdmf_id": null,
-        },
-        Object {
-          "rek_author": "Lin, C. W.",
-          "rek_author_id": 29242855,
-          "rek_author_order": 2,
-          "rek_author_pid": "UQ:36649",
-          "rek_author_xsdmf_id": null,
-        },
-        Object {
-          "rek_author": "Solomon, E.",
-          "rek_author_id": 29242857,
-          "rek_author_order": 4,
-          "rek_author_pid": "UQ:36649",
-          "rek_author_xsdmf_id": null,
+          "rek_author_pid": "UQ:137936",
+          "rek_author_xsdmf_id": 6230,
         },
       ],
       "fez_record_search_key_author_affiliation_country": Array [],
@@ -58,43 +30,21 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_author_affiliation_name": Array [],
       "fez_record_search_key_author_id": Array [
         Object {
-          "rek_author_id": 410,
-          "rek_author_id_id": 28609418,
+          "rek_author_id": 406,
+          "rek_author_id_id": 28502077,
+          "rek_author_id_lookup": "Tweedy, Sean M.",
           "rek_author_id_order": 1,
-          "rek_author_id_pid": "UQ:36649",
-          "rek_author_id_xsdmf_id": null,
-        },
-        Object {
-          "rek_author_id": 0,
-          "rek_author_id_id": 28609419,
-          "rek_author_id_order": 2,
-          "rek_author_id_pid": "UQ:36649",
-          "rek_author_id_xsdmf_id": null,
-        },
-        Object {
-          "rek_author_id": 4100,
-          "rek_author_id_id": 28609420,
-          "rek_author_id_order": 3,
-          "rek_author_id_pid": "UQ:36649",
-          "rek_author_id_xsdmf_id": null,
-        },
-        Object {
-          "rek_author_id": 0,
-          "rek_author_id_id": 28609421,
-          "rek_author_id_order": 4,
-          "rek_author_id_pid": "UQ:36649",
-          "rek_author_id_xsdmf_id": null,
-        },
-        Object {
-          "rek_author_id": 0,
-          "rek_author_id_id": 28609422,
-          "rek_author_id_order": 5,
-          "rek_author_id_pid": "UQ:36649",
-          "rek_author_id_xsdmf_id": null,
+          "rek_author_id_pid": "UQ:137936",
+          "rek_author_id_xsdmf_id": 6225,
         },
       ],
       "fez_record_search_key_author_role": Array [],
-      "fez_record_search_key_book_title": null,
+      "fez_record_search_key_book_title": Object {
+        "rek_book_title": "Health Care Practice in Australia",
+        "rek_book_title_id": 298671,
+        "rek_book_title_pid": "UQ:137936",
+        "rek_book_title_xsdmf_id": 10630,
+      },
       "fez_record_search_key_building_materials": Array [],
       "fez_record_search_key_category": Array [],
       "fez_record_search_key_chapter_number": null,
@@ -105,8 +55,54 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_conference_name": null,
       "fez_record_search_key_construction_date": null,
       "fez_record_search_key_contact_details_email": Array [],
-      "fez_record_search_key_contributor": Array [],
-      "fez_record_search_key_contributor_id": Array [],
+      "fez_record_search_key_contributor": Array [
+        Object {
+          "rek_contributor": "Taylor, Sandra",
+          "rek_contributor_id": 3143123,
+          "rek_contributor_order": 1,
+          "rek_contributor_pid": "UQ:137936",
+          "rek_contributor_xsdmf_id": 6238,
+        },
+        Object {
+          "rek_contributor": "Foster, Michele",
+          "rek_contributor_id": 3143124,
+          "rek_contributor_order": 2,
+          "rek_contributor_pid": "UQ:137936",
+          "rek_contributor_xsdmf_id": 6238,
+        },
+        Object {
+          "rek_contributor": "Fleming, Jennifer",
+          "rek_contributor_id": 3143125,
+          "rek_contributor_order": 3,
+          "rek_contributor_pid": "UQ:137936",
+          "rek_contributor_xsdmf_id": 6238,
+        },
+      ],
+      "fez_record_search_key_contributor_id": Array [
+        Object {
+          "rek_contributor_id": 0,
+          "rek_contributor_id_id": 2345832,
+          "rek_contributor_id_order": 1,
+          "rek_contributor_id_pid": "UQ:137936",
+          "rek_contributor_id_xsdmf_id": 6233,
+        },
+        Object {
+          "rek_contributor_id": 295,
+          "rek_contributor_id_id": 2345833,
+          "rek_contributor_id_lookup": "Foster, Michele M.",
+          "rek_contributor_id_order": 2,
+          "rek_contributor_id_pid": "UQ:137936",
+          "rek_contributor_id_xsdmf_id": 6233,
+        },
+        Object {
+          "rek_contributor_id": 255,
+          "rek_contributor_id_id": 2345834,
+          "rek_contributor_id_lookup": "Fleming, Jennifer Michelle",
+          "rek_contributor_id_order": 3,
+          "rek_contributor_id_pid": "UQ:137936",
+          "rek_contributor_id_xsdmf_id": 6233,
+        },
+      ],
       "fez_record_search_key_convener": null,
       "fez_record_search_key_corresponding_country": Array [],
       "fez_record_search_key_corresponding_email": Array [],
@@ -122,19 +118,14 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_date_photo_taken": null,
       "fez_record_search_key_date_recorded": null,
       "fez_record_search_key_date_scanned": null,
-      "fez_record_search_key_doi": Object {
-        "rek_doi": "10.1038/sj.onc.1203760",
-        "rek_doi_id": 1561717,
-        "rek_doi_pid": "UQ:36649",
-        "rek_doi_xsdmf_id": null,
-      },
+      "fez_record_search_key_doi": null,
       "fez_record_search_key_edition": null,
       "fez_record_search_key_end_date": null,
       "fez_record_search_key_end_page": Object {
-        "rek_end_page": "4090",
-        "rek_end_page_id": 5587534,
-        "rek_end_page_pid": "UQ:36649",
-        "rek_end_page_xsdmf_id": null,
+        "rek_end_page": "269",
+        "rek_end_page_id": 5558697,
+        "rek_end_page_pid": "UQ:137936",
+        "rek_end_page_xsdmf_id": 6266,
       },
       "fez_record_search_key_fields_of_research": Array [],
       "fez_record_search_key_file_attachment_access_condition": Array [],
@@ -147,226 +138,66 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_grant_id": Array [],
       "fez_record_search_key_grant_text": Array [],
       "fez_record_search_key_herdc_code": Object {
-        "rek_herdc_code": 450009,
-        "rek_herdc_code_id": 4756778,
-        "rek_herdc_code_pid": "UQ:36649",
-        "rek_herdc_code_xsdmf_id": null,
+        "rek_herdc_code": 450006,
+        "rek_herdc_code_id": 4725870,
+        "rek_herdc_code_lookup": "B1",
+        "rek_herdc_code_pid": "UQ:137936",
+        "rek_herdc_code_xsdmf_id": 12389,
       },
       "fez_record_search_key_herdc_status": Object {
-        "rek_herdc_status": 453220,
-        "rek_herdc_status_id": 3631125,
-        "rek_herdc_status_pid": "UQ:36649",
-        "rek_herdc_status_xsdmf_id": null,
+        "rek_herdc_status": 453221,
+        "rek_herdc_status_id": 3616374,
+        "rek_herdc_status_lookup": "Confirmed Code",
+        "rek_herdc_status_pid": "UQ:137936",
+        "rek_herdc_status_xsdmf_id": 12405,
       },
       "fez_record_search_key_identifier": Array [],
-      "fez_record_search_key_institutional_status": Object {
-        "rek_institutional_status": 453225,
-        "rek_institutional_status_id": 3285795,
-        "rek_institutional_status_pid": "UQ:36649",
-        "rek_institutional_status_xsdmf_id": null,
-      },
+      "fez_record_search_key_institutional_status": null,
       "fez_record_search_key_interior_features": Array [],
-      "fez_record_search_key_isbn": Array [],
+      "fez_record_search_key_isbn": Array [
+        Object {
+          "rek_isbn": "9780195558333",
+          "rek_isbn_id": 1082683,
+          "rek_isbn_order": 1,
+          "rek_isbn_pid": "UQ:137936",
+          "rek_isbn_xsdmf_id": 10820,
+        },
+      ],
       "fez_record_search_key_isdatasetof": Array [],
       "fez_record_search_key_isderivationof": Array [],
-      "fez_record_search_key_isi_loc": Object {
-        "rek_isi_loc": "000088955100001",
-        "rek_isi_loc_id": 3932152,
-        "rek_isi_loc_pid": "UQ:36649",
-        "rek_isi_loc_xsdmf_id": null,
-      },
+      "fez_record_search_key_isi_loc": null,
       "fez_record_search_key_ismemberof": Array [
         Object {
-          "rek_ismemberof": "UQ:3825",
-          "rek_ismemberof_id": 11715820,
+          "rek_ismemberof": "UQ:3829",
+          "rek_ismemberof_id": 11654231,
+          "rek_ismemberof_lookup": "School of Human Movement and Nutrition Sciences Publications",
           "rek_ismemberof_order": 1,
-          "rek_ismemberof_pid": "UQ:36649",
-          "rek_ismemberof_xsdmf_id": null,
+          "rek_ismemberof_pid": "UQ:137936",
+          "rek_ismemberof_xsdmf_id": 149,
         },
-      ],
-      "fez_record_search_key_issn": Array [
         Object {
-          "rek_issn": "0950-9232",
-          "rek_issn_id": 5170197,
-          "rek_issn_order": 1,
-          "rek_issn_pid": "UQ:36649",
-          "rek_issn_xsdmf_id": null,
+          "rek_ismemberof": "UQ:138536",
+          "rek_ismemberof_id": 11654232,
+          "rek_ismemberof_lookup": "2009 Higher Education Research Data Collection",
+          "rek_ismemberof_order": 2,
+          "rek_ismemberof_pid": "UQ:137936",
+          "rek_ismemberof_xsdmf_id": 149,
         },
       ],
-      "fez_record_search_key_issue_number": Object {
-        "rek_issue_number": "36",
-        "rek_issue_number_id": 4450205,
-        "rek_issue_number_pid": "UQ:36649",
-        "rek_issue_number_xsdmf_id": null,
-      },
+      "fez_record_search_key_issn": Array [],
+      "fez_record_search_key_issue_number": null,
       "fez_record_search_key_job_number": null,
-      "fez_record_search_key_journal_name": Object {
-        "rek_journal_name": "Oncogene",
-        "rek_journal_name_id": 5107691,
-        "rek_journal_name_pid": "UQ:36649",
-        "rek_journal_name_xsdmf_id": null,
-      },
-      "fez_record_search_key_keywords": Array [
-        Object {
-          "rek_keywords": "Biochemistry & Molecular Biology",
-          "rek_keywords_id": 29462836,
-          "rek_keywords_order": 1,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Oncology",
-          "rek_keywords_id": 29462837,
-          "rek_keywords_order": 2,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Cell Biology",
-          "rek_keywords_id": 29462838,
-          "rek_keywords_order": 3,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Genetics & Heredity",
-          "rek_keywords_id": 29462839,
-          "rek_keywords_order": 4,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Transgenic",
-          "rek_keywords_id": 29462840,
-          "rek_keywords_order": 5,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Brca1",
-          "rek_keywords_id": 29462841,
-          "rek_keywords_order": 6,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Tumor Suppressor",
-          "rek_keywords_id": 29462842,
-          "rek_keywords_order": 7,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Gene Transfer",
-          "rek_keywords_id": 29462843,
-          "rek_keywords_order": 8,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Ovarian-cancer",
-          "rek_keywords_id": 29462844,
-          "rek_keywords_order": 9,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Brca1-deficient Mice",
-          "rek_keywords_id": 29462845,
-          "rek_keywords_order": 10,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Breast Carcinomas",
-          "rek_keywords_id": 29462846,
-          "rek_keywords_order": 11,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Meiotic Cells",
-          "rek_keywords_id": 29462847,
-          "rek_keywords_order": 12,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Dna-repair",
-          "rek_keywords_id": 29462848,
-          "rek_keywords_order": 13,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Mutations",
-          "rek_keywords_id": 29462849,
-          "rek_keywords_order": 14,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "P53",
-          "rek_keywords_id": 29462850,
-          "rek_keywords_order": 15,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Region",
-          "rek_keywords_id": 29462851,
-          "rek_keywords_order": 16,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Susceptibility",
-          "rek_keywords_id": 29462852,
-          "rek_keywords_order": 17,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-        Object {
-          "rek_keywords": "Methylation",
-          "rek_keywords_id": 29462853,
-          "rek_keywords_order": 18,
-          "rek_keywords_pid": "UQ:36649",
-          "rek_keywords_xsdmf_id": null,
-        },
-      ],
-      "fez_record_search_key_language": Array [
-        Object {
-          "rek_language": "eng",
-          "rek_language_id": 5316101,
-          "rek_language_order": 1,
-          "rek_language_pid": "UQ:36649",
-          "rek_language_xsdmf_id": null,
-        },
-      ],
+      "fez_record_search_key_journal_name": null,
+      "fez_record_search_key_keywords": Array [],
+      "fez_record_search_key_language": Array [],
       "fez_record_search_key_language_of_book_title": Array [],
       "fez_record_search_key_language_of_journal_name": Array [],
       "fez_record_search_key_language_of_proceedings_title": Array [],
       "fez_record_search_key_language_of_title": Array [],
       "fez_record_search_key_length": null,
       "fez_record_search_key_license": null,
-      "fez_record_search_key_link": Array [
-        Object {
-          "rek_link": "http://www.nature.com/onc/index.html",
-          "rek_link_id": 3220736,
-          "rek_link_order": 1,
-          "rek_link_pid": "UQ:36649",
-          "rek_link_xsdmf_id": null,
-        },
-      ],
-      "fez_record_search_key_link_description": Array [
-        Object {
-          "rek_link_description": "Journal web site",
-          "rek_link_description_id": 3220705,
-          "rek_link_description_order": 1,
-          "rek_link_description_pid": "UQ:36649",
-          "rek_link_description_xsdmf_id": null,
-        },
-      ],
+      "fez_record_search_key_link": Array [],
+      "fez_record_search_key_link_description": Array [],
       "fez_record_search_key_location": Array [],
       "fez_record_search_key_native_script_book_title": null,
       "fez_record_search_key_native_script_conference_name": null,
@@ -377,12 +208,7 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_notes": null,
       "fez_record_search_key_oa_embargo_days": null,
       "fez_record_search_key_oa_notes": null,
-      "fez_record_search_key_oa_status": Object {
-        "rek_oa_status": 453698,
-        "rek_oa_status_id": 434681,
-        "rek_oa_status_pid": "UQ:36649",
-        "rek_oa_status_xsdmf_id": null,
-      },
+      "fez_record_search_key_oa_status": null,
       "fez_record_search_key_org_name": null,
       "fez_record_search_key_org_unit_name": null,
       "fez_record_search_key_original_format": null,
@@ -390,10 +216,10 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_patent_number": null,
       "fez_record_search_key_period": Array [],
       "fez_record_search_key_place_of_publication": Object {
-        "rek_place_of_publication": "London",
-        "rek_place_of_publication_id": 4255783,
-        "rek_place_of_publication_pid": "UQ:36649",
-        "rek_place_of_publication_xsdmf_id": null,
+        "rek_place_of_publication": "Melbourne",
+        "rek_place_of_publication_id": 4228542,
+        "rek_place_of_publication_pid": "UQ:137936",
+        "rek_place_of_publication_xsdmf_id": 6258,
       },
       "fez_record_search_key_proceedings_title": null,
       "fez_record_search_key_project_description": null,
@@ -401,23 +227,20 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_project_name": null,
       "fez_record_search_key_project_start_date": null,
       "fez_record_search_key_publisher": Object {
-        "rek_publisher": "Nature Publishing Group",
-        "rek_publisher_id": 4522398,
-        "rek_publisher_pid": "UQ:36649",
-        "rek_publisher_xsdmf_id": null,
+        "rek_publisher": "Oxford University Press",
+        "rek_publisher_id": 4494808,
+        "rek_publisher_pid": "UQ:137936",
+        "rek_publisher_xsdmf_id": 6259,
       },
+      "fez_record_search_key_pubmed_central_id": null,
       "fez_record_search_key_pubmed_id": null,
-      "fez_record_search_key_refereed": Object {
-        "rek_refereed": 1,
-        "rek_refereed_id": 2666559,
-        "rek_refereed_pid": "UQ:36649",
-        "rek_refereed_xsdmf_id": null,
-      },
+      "fez_record_search_key_refereed": null,
       "fez_record_search_key_refereed_source": Object {
-        "rek_refereed_source": "453635",
-        "rek_refereed_source_id": 1290000,
-        "rek_refereed_source_pid": "UQ:36649",
-        "rek_refereed_source_xsdmf_id": null,
+        "rek_refereed_source": "453638",
+        "rek_refereed_source_id": 1258088,
+        "rek_refereed_source_lookup": "Not yet assessed",
+        "rek_refereed_source_pid": "UQ:137936",
+        "rek_refereed_source_xsdmf_id": 16623,
       },
       "fez_record_search_key_related_datasets": null,
       "fez_record_search_key_related_publications": null,
@@ -438,26 +261,64 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_source": null,
       "fez_record_search_key_start_date": null,
       "fez_record_search_key_start_page": Object {
-        "rek_start_page": "4085",
-        "rek_start_page_id": 5659951,
-        "rek_start_page_pid": "UQ:36649",
-        "rek_start_page_xsdmf_id": null,
+        "rek_start_page": "255",
+        "rek_start_page_id": 5631041,
+        "rek_start_page_pid": "UQ:137936",
+        "rek_start_page_xsdmf_id": 6265,
       },
       "fez_record_search_key_structural_systems": Array [],
       "fez_record_search_key_style": Array [],
       "fez_record_search_key_subcategory": Array [],
-      "fez_record_search_key_subject": Array [],
+      "fez_record_search_key_subject": Array [
+        Object {
+          "rek_subject": 450006,
+          "rek_subject_id": 9209064,
+          "rek_subject_lookup": "B1",
+          "rek_subject_order": 1,
+          "rek_subject_pid": "UQ:137936",
+          "rek_subject_xsdmf_id": 6244,
+        },
+        Object {
+          "rek_subject": 452653,
+          "rek_subject_id": 9209065,
+          "rek_subject_lookup": "111703 Care for Disabled",
+          "rek_subject_order": 2,
+          "rek_subject_pid": "UQ:137936",
+          "rek_subject_xsdmf_id": 6244,
+        },
+        Object {
+          "rek_subject": 452662,
+          "rek_subject_id": 9209066,
+          "rek_subject_lookup": "111712 Health Promotion",
+          "rek_subject_order": 3,
+          "rek_subject_pid": "UQ:137936",
+          "rek_subject_xsdmf_id": 6244,
+        },
+        Object {
+          "rek_subject": 451433,
+          "rek_subject_id": 9209067,
+          "rek_subject_lookup": "920403 Disability and Functional Capacity",
+          "rek_subject_order": 4,
+          "rek_subject_pid": "UQ:137936",
+          "rek_subject_xsdmf_id": 6244,
+        },
+      ],
       "fez_record_search_key_supervisor": Array [],
       "fez_record_search_key_supervisor_id": Array [],
       "fez_record_search_key_surrounding_features": Array [],
       "fez_record_search_key_time_period_end_date": null,
       "fez_record_search_key_time_period_start_date": null,
-      "fez_record_search_key_total_chapters": null,
+      "fez_record_search_key_total_chapters": Object {
+        "rek_total_chapters": "14",
+        "rek_total_chapters_id": 196266,
+        "rek_total_chapters_pid": "UQ:137936",
+        "rek_total_chapters_xsdmf_id": 9644,
+      },
       "fez_record_search_key_total_pages": Object {
-        "rek_total_pages": "6",
-        "rek_total_pages_id": 5575453,
-        "rek_total_pages_pid": "UQ:36649",
-        "rek_total_pages_xsdmf_id": null,
+        "rek_total_pages": "15",
+        "rek_total_pages_id": 5544814,
+        "rek_total_pages_pid": "UQ:137936",
+        "rek_total_pages_xsdmf_id": 9632,
       },
       "fez_record_search_key_transcript": null,
       "fez_record_search_key_translated_book_title": null,
@@ -467,63 +328,64 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       "fez_record_search_key_translated_proceedings_title": null,
       "fez_record_search_key_translated_title": null,
       "fez_record_search_key_type_of_data": Array [],
-      "fez_record_search_key_volume_number": Object {
-        "rek_volume_number": "19",
-        "rek_volume_number_id": 5170306,
-        "rek_volume_number_pid": "UQ:36649",
-        "rek_volume_number_xsdmf_id": null,
-      },
-      "rek_altmetric_id": 0,
+      "fez_record_search_key_volume_number": null,
+      "rek_altmetric_id": null,
       "rek_altmetric_id_xsdmf_id": null,
-      "rek_altmetric_score": 0,
+      "rek_altmetric_score": null,
       "rek_altmetric_score_xsdmf_id": null,
-      "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Lane, T. F.\\" href=\\"/list/author/Lane%2C+T.+F./\\">Lane, T. F.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Lin, C. W.\\" href=\\"/list/author/Lin%2C+C.+W./\\">Lin, C. W.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Brown, M. A.\\" href=\\"/list/author_id/1671/\\">Brown, M. A.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Solomon, E.\\" href=\\"/list/author/Solomon%2C+E./\\">Solomon, E.</a> and <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Leder, P.\\" href=\\"/list/author/Leder%2C+P./\\">Leder, P.</a> (<span class=\\"citation_date\\">2000</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice\\" href=\\"/view/UQ:36649\\">Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice</a>. <i><span class=\\"citation_journal_name\\">Oncogene</span></i>, <i><span class=\\"citation_volume_number\\">19</span></i> <span class=\\"citation_issue_number\\">36</span>: <span class=\\"citation_start_page\\">4085</span>-<span class=\\"citation_end_page\\">4090</span>. doi:<span class=\\"citation_doi\\">10.1038/sj.onc.1203760</span>",
+      "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Tweedy, S. M.\\" href=\\"/list/author_id/406/\\">Tweedy, S. M.</a> (<span class=\\"citation_date\\">2008</span>). <a class=\\"citation_title\\" title=\\"Click to view Book Chapter: Reducing preventable health disadvantage for people with disabilities through physical activity promotion\\" href=\\"/view/UQ:137936\\">Reducing preventable health disadvantage for people with disabilities through physical activity promotion</a>. In <span class=\\"citation_contributor\\"><span class=\\"citation_contributor\\">Taylor, Sandra</span>, <span class=\\"citation_contributor\\">Foster, Michele</span> and <span class=\\"citation_contributor\\">Fleming, Jennifer</span></span> (Ed.), <i><span class=\\"citation_book_title\\">Health Care Practice in Australia</span></i>  (pp. <span class=\\"citation_start_page\\">255</span>-<span class=\\"citation_end_page\\">269</span>)  <span class=\\"citation_place_of_publication\\">Melbourne</span>: <span class=\\"citation_publisher\\">Oxford University Press</span>.",
       "rek_copyright": "on",
       "rek_copyright_xsdmf_id": 3679,
-      "rek_created_date": "2007-08-13T11:55:20Z",
+      "rek_created_date": "2008-05-08T13:05:29Z",
       "rek_created_date_xsdmf_id": 3677,
-      "rek_date": "2000-08-24T00:00:00Z",
-      "rek_date_xsdmf_id": 6386,
-      "rek_depositor": null,
-      "rek_depositor_affiliation": 881,
+      "rek_date": "2008-01-01T00:00:00Z",
+      "rek_date_xsdmf_id": 6260,
+      "rek_depositor": 1577,
+      "rek_depositor_affiliation": 933,
       "rek_depositor_affiliation_xsdmf_id": 11881,
-      "rek_depositor_xsdmf_id": null,
-      "rek_description": "We have generated transgenic mice that harbor a 140 kb genomic fragment of the human BRCA1 locus (TgN.BRCA1(GEN)). We find that the transgene directs appropriate expression of human BRCA1 transcripts in multiple mouse tissues, and that human BRCA1 protein is expressed and stabilized following exposure to DIVA damage, Such mice are completely normal, with no overt signs of BRCA1 toxicity commonly observed when BRCA1 is expressed from heterologous promoters. Most importantly, however, the transgene rescues the otherwise lethal phenotype associated with the targeted hypomorphic allele (Brca1(Delta exIISA)). Brca1(-/-); TgN.BRCA1(GEN) bigenic animals develop normally and can be maintained as a distinct line. These results show that a 140 kb fragment of chromosome 17 contains all elements necessary for the correct expression, localization, and function of the BRCA1 protein, Further, the model provides evidence that function and regulation of the human BRCA1 gene can be studied and manipulated in a genetically tractable mammalian system.",
-      "rek_description_xsdmf_id": 11441,
-      "rek_display_type": 179,
+      "rek_depositor_xsdmf_id": 7578,
+      "rek_description": null,
+      "rek_description_xsdmf_id": null,
+      "rek_display_type": 177,
+      "rek_display_type_lookup": "Book Chapter",
       "rek_display_type_xsdmf_id": 3673,
       "rek_file_downloads": 0,
       "rek_formatted_abstract": null,
       "rek_formatted_abstract_xsdmf_id": null,
       "rek_formatted_title": null,
       "rek_formatted_title_xsdmf_id": null,
-      "rek_genre": "Journal Article",
+      "rek_genre": "Book Chapter",
       "rek_genre_type": null,
       "rek_genre_type_xsdmf_id": null,
-      "rek_genre_xsdmf_id": 7207,
+      "rek_genre_xsdmf_id": 7201,
       "rek_herdc_notes": null,
       "rek_herdc_notes_xsdmf_id": null,
       "rek_object_type": 3,
+      "rek_object_type_lookup": "Record",
       "rek_object_type_xsdmf_id": 3674,
-      "rek_pid": "UQ:36649",
+      "rek_pid": "UQ:137936",
       "rek_pubmed_doc_type": null,
+      "rek_pubmed_doc_type_lookup": null,
       "rek_pubmed_doc_type_xsdmf_id": null,
       "rek_scopus_citation_count": null,
       "rek_scopus_doc_type": null,
+      "rek_scopus_doc_type_lookup": null,
       "rek_scopus_doc_type_xsdmf_id": null,
       "rek_security_inherited": 1,
       "rek_status": 2,
+      "rek_status_lookup": "Published",
       "rek_status_xsdmf_id": 3680,
-      "rek_subtype": "Article (original research)",
-      "rek_subtype_xsdmf_id": 12379,
-      "rek_thomson_citation_count": 19,
+      "rek_subtype": "Research book chapter (original research)",
+      "rek_subtype_xsdmf_id": 12378,
+      "rek_thomson_citation_count": null,
       "rek_thomson_citation_count_xsdmf_id": null,
-      "rek_title": "Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice",
-      "rek_title_xsdmf_id": 10588,
-      "rek_updated_date": "2017-09-24T03:29:04Z",
+      "rek_title": "Reducing preventable health disadvantage for people with disabilities through physical activity promotion",
+      "rek_title_xsdmf_id": 10623,
+      "rek_updated_date": "2014-10-04T15:22:27Z",
       "rek_updated_date_xsdmf_id": 3678,
-      "rek_wok_doc_type": "@",
-      "rek_wok_doc_type_xsdmf_id": 12551,
+      "rek_wok_doc_type": null,
+      "rek_wok_doc_type_lookup": null,
+      "rek_wok_doc_type_xsdmf_id": null,
     }
   }
 >
@@ -534,87 +396,16 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
       className="citationCount"
     >
       <a
-        aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
-        href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
-        rel="noopener noreferrer"
+        aria-label="Link to Reducing preventable health disadvantage for people with disabilities through physical activity promotion (Google scholar) will open in a new window."
+        href="https://scholar.google.com/scholar?q=intitle:[id]Reducing%20preventable%20health%20disadvantage%20for%20people%20with%20disabilities%20through%20physical%20activity%20promotion"
         target="_blank"
-        title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
-      >
-        <div
-          className="fez-icon wos large"
-        />
-        <span
-          className="citationCountNumber"
-        >
-          19
-        </span>
-      </a>
-    </span>
-    <span
-      className="citationCount"
-    >
-      <a
-        aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
-        href="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
-        target="_blank"
-        title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
+        title="Link to Reducing preventable health disadvantage for people with disabilities through physical activity promotion (Google scholar) will open in a new window."
       >
         <div
           className="fez-icon google large"
         />
       </a>
     </span>
-    <div
-      className="citationCount column"
-    >
-      <a
-        href="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
-        target="_blank"
-      >
-        <div
-          className="columns is-mobile is-gapless"
-        >
-          <div
-            className="column is-narrow citationCountNumber"
-          >
-            View full statistics
-            <ActionOpenInNew
-              className="citationOpenUrlIcon"
-            >
-              <SvgIcon
-                className="citationOpenUrlIcon"
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                viewBox="0 0 24 24"
-              >
-                <svg
-                  className="citationOpenUrlIcon"
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "color": "rgba(0, 0, 0, 0.87)",
-                      "display": "inline-block",
-                      "fill": "currentColor",
-                      "height": 24,
-                      "muiPrepared": true,
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "userSelect": "none",
-                      "width": 24,
-                    }
-                  }
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                  />
-                </svg>
-              </SvgIcon>
-            </ActionOpenInNew>
-          </div>
-        </div>
-      </a>
-    </div>
   </div>
 </CitationCounts>
 `;

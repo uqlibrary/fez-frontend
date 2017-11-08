@@ -1742,6 +1742,8 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors"
@@ -1749,110 +1751,111 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=""
+          suffix=", "
           value="Azimi, Iman"
         >
           <span
             className="citationAuthor"
           >
             Azimi, Iman
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Milevskiy, Michael J. G."
         >
           <span
             className="citationAuthor"
           >
-            , 
             Milevskiy, Michael J. G.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Kaemmerer, Elke"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Kaemmerer, Elke
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Turner, Dane"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Turner, Dane
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Yapa, Kunsala T. D. S."
         >
           <span
             className="citationAuthor"
           >
-            , 
             Yapa, Kunsala T. D. S.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Brown, Melissa A."
         >
           <span
             className="citationAuthor"
           >
-            , 
             Brown, Melissa A.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Thompson, Erik W."
         >
           <span
             className="citationAuthor"
           >
-            , 
             Thompson, Erik W.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Roberts-Thomson, Sarah J."
         >
           <span
             className="citationAuthor"
           >
-            , 
             Roberts-Thomson, Sarah J.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
           prefix=" and "
-          suffix=" "
+          suffix=""
           value="Monteith, Gregory R."
         >
           <span
@@ -1860,9 +1863,9 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
           >
              and 
             Monteith, Gregory R.
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -4644,6 +4647,8 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors empty"

@@ -16,6 +16,11 @@ export const minLength10 = minLength(10);
 
 // Generic
 export const required = value => value ? undefined : validationErrors.required;
+export const requiredList = value => {
+    console.log('validate:requiredList:' + (value && value.length > 0 ? null : validationErrors.required));
+    return value && value.length > 0 ? undefined : validationErrors.required;
+};
+
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? validationErrors.email : undefined;
 export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? validationErrors.url : maxLength2000(value);
 export const authorRequired = (authors) => !authors || authors.length === 0 || authors.filter(item => (item.selected)).length === 0 ? validationErrors.authorRequired : undefined;

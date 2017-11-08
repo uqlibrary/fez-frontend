@@ -590,6 +590,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors"
@@ -597,16 +599,16 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=" "
+          suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
             Vishal Asai
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -1323,6 +1325,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors"
@@ -1330,16 +1334,16 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=" "
+          suffix=""
           value="Vishal Asai"
         >
           <span
             className="citationAuthor"
           >
             Vishal Asai
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -1510,6 +1514,8 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors empty"

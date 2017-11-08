@@ -874,6 +874,8 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors"
@@ -881,58 +883,59 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=""
+          suffix=", "
           value="Sandhu, Gurveen K."
         >
           <span
             className="citationAuthor"
           >
             Sandhu, Gurveen K.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Milevskiy, Michael J.G."
         >
           <span
             className="citationAuthor"
           >
-            , 
             Milevskiy, Michael J.G.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Wilson, Wesley"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Wilson, Wesley
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Shewan, Annette M."
         >
           <span
             className="citationAuthor"
           >
-            , 
             Shewan, Annette M.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
           prefix=" and "
-          suffix=" "
+          suffix=""
           value="Brown, Melissa A."
         >
           <span
@@ -940,9 +943,9 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
           >
              and 
             Brown, Melissa A.
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -1405,7 +1408,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
       <AuthorsCitationView
         className="citationEditors"
         initialNumberOfAuthors={10}
-        prefix="edited by"
+        prefix=" edited by "
         publication={
           Object {
             "fez_record_search_key_access_conditions": null,
@@ -1829,41 +1832,43 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
             "subkey": "rek_contributor",
           }
         }
-        suffix="."
+        suffix=". "
+        thresholdDisplay={3}
       >
         <span
           className="citationEditors"
         >
-          edited by
+           edited by 
           <CitationView
             className="citationAuthor"
             prefix=""
-            suffix=""
+            suffix=", "
             value="Smith, A"
           >
             <span
               className="citationAuthor"
             >
               Smith, A
+              , 
             </span>
           </CitationView>
           <CitationView
             className="citationAuthor"
-            prefix=", "
-            suffix=""
+            prefix=""
+            suffix=", "
             value="Smith, C"
           >
             <span
               className="citationAuthor"
             >
-              , 
               Smith, C
+              , 
             </span>
           </CitationView>
           <CitationView
             className="citationAuthor"
             prefix=" and "
-            suffix=" "
+            suffix=""
             value="Smith, B"
           >
             <span
@@ -1871,10 +1876,9 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
             >
                and 
               Smith, B
-               
             </span>
           </CitationView>
-          .
+          . 
         </span>
       </AuthorsCitationView>
     </EditorsCitationView>
@@ -3313,6 +3317,8 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors empty"
@@ -3349,7 +3355,7 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
       <AuthorsCitationView
         className="citationEditors"
         initialNumberOfAuthors={10}
-        prefix="edited by"
+        prefix=" edited by "
         publication={Object {}}
         searchKey={
           Object {
@@ -3358,7 +3364,8 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
             "subkey": "rek_contributor",
           }
         }
-        suffix="."
+        suffix=". "
+        thresholdDisplay={3}
       >
         <span
           className="citationEditors empty"

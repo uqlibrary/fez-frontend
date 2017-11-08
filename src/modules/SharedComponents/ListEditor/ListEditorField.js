@@ -1,6 +1,6 @@
 import React from 'react';
-import ListEditor from './components/ListEditor';
+import FreeTextListEditor from './components/FreeTextListEditor';
 
 export default function ListEditorField(fieldProps) {
-    return(<ListEditor onChange={fieldProps.input.onChange} {...fieldProps} />);
+    return(<FreeTextListEditor onChange={fieldProps.input.onChange} {...fieldProps} />);
 }

@@ -2311,8 +2311,8 @@ export default {
                 },
             },
             citationAuthors: {
-                showMore: 'Show [numberOfAuthors] more...',
-                showLess: 'Show less'
+                showMoreLabel: 'Show [numberOfAuthors] more...',
+                showLessLabel: 'Show less'
             },
             defaultActions: [
                 {key: 'fixRecord', label: 'Fix record', primary: false},

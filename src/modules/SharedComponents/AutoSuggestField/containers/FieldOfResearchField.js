@@ -12,11 +12,7 @@ export class FieldOfResearchAutoSuggestField extends Component {
     };
 
     static defaultProps = {
-        maxResults: 100,
-        locale: {
-            fieldLabel: 'Field of research',
-            fieldHint: 'Start typing field of research or code'
-        }
+        maxResults: 100
     };
 
     constructor(props) {
@@ -24,7 +20,6 @@ export class FieldOfResearchAutoSuggestField extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <AutoSuggestField
                 forceItemSelection

@@ -936,6 +936,8 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors"
@@ -943,142 +945,145 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=""
+          suffix=", "
           value="Larance, Briony"
         >
           <span
             className="citationAuthor"
           >
             Larance, Briony
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Peacock, Amy"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Peacock, Amy
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Campbell, Gabrielle"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Campbell, Gabrielle
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Freckleton, Sarah"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Freckleton, Sarah
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Smith, Kimberley"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Smith, Kimberley
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Mattick, Richard"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Mattick, Richard
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Bruno, Raimondo"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Bruno, Raimondo
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Nielsen, Suzanne"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Nielsen, Suzanne
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Cohen, Milton"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Cohen, Milton
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Lintzeris, Nicholas"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Lintzeris, Nicholas
+            , 
           </span>
         </CitationView>
-        <a
-          className="citationShowMoreAuthors"
-          href="#"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-        >
-           
-          Show 4 more...
-           
-        </a>
+        <span>
+           
+          <a
+            className="citationShowMoreAuthors"
+            href="#"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+          >
+            Show 4 more...
+          </a>
+        </span>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -1279,6 +1284,8 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors empty"

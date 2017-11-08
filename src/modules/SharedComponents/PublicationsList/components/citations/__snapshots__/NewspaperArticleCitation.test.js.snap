@@ -730,6 +730,8 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors"
@@ -737,58 +739,59 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=""
+          suffix=", "
           value="Wong, Kam Cheong"
         >
           <span
             className="citationAuthor"
           >
             Wong, Kam Cheong
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Wong, Catherine"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Wong, Catherine
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Li, Stephen"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Li, Stephen
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Woo, Kai Hui"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Woo, Kai Hui
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
           prefix=" and "
-          suffix=" "
+          suffix=""
           value="Woo, Kai Zhi"
         >
           <span
@@ -796,9 +799,9 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
           >
              and 
             Woo, Kai Zhi
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -910,6 +913,8 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdDisplay={3}
     >
       <span
         className="citationAuthors empty"

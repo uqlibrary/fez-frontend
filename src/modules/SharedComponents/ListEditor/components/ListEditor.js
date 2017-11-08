@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
-import ListForm from './ListForm';
 
 export default class ListsEditor extends Component {
     static propTypes = {
@@ -14,11 +13,15 @@ export default class ListsEditor extends Component {
         onChange: PropTypes.func,
         locale: PropTypes.object,
         hideReorder: PropTypes.bool,
-        inputField: PropTypes.func
+        distinctOnly: PropTypes.bool,
+        meta: PropTypes.object,
+        inputField: PropTypes.func,
+        formComponent: PropTypes.object
     };
 
     static defaultProps = {
         hideReorder: false,
+        distinctOnly: false,
         searchKey: {
             value: 'rek_value',
             order: 'rek_order'
@@ -50,7 +53,9 @@ export default class ListsEditor extends Component {
     }
 
     addItem = (item) => {
-        if (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) {
+        console.log(item);
+        if ((this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount)
+            && (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)) {
             this.setState({
                 itemList: [...this.state.itemList, item]
             });
@@ -109,12 +114,13 @@ export default class ListsEditor extends Component {
 
         return (
             <div className={this.props.className}>
-                <ListForm
+                <this.props.formComponent
                     inputField={this.props.inputField}
                     onAdd={this.addItem}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                     isValid={this.props.isValid}
-                    disabled={this.props.disabled || (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)}/>
+                    disabled={this.props.disabled || (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)}
+                    meta={this.props.meta} />
                 {
                     this.state.itemList.length > 0 &&
                     <ListRowHeader

@@ -7,7 +7,7 @@ exports[`EditorsCitationView test  should render component with no contributors 
   <AuthorsCitationView
     className="citationEditors"
     initialNumberOfAuthors={10}
-    prefix="edited by"
+    prefix=" edited by "
     publication={Object {}}
     searchKey={
       Object {
@@ -16,7 +16,8 @@ exports[`EditorsCitationView test  should render component with no contributors 
         "subkey": "rek_contributor",
       }
     }
-    suffix="."
+    suffix=". "
+    thresholdDisplay={3}
   >
     <span
       className="citationEditors empty"
@@ -43,7 +44,7 @@ exports[`EditorsCitationView test  should render component with one contributor 
   <AuthorsCitationView
     className="citationEditors"
     initialNumberOfAuthors={10}
-    prefix="edited by"
+    prefix=" edited by "
     publication={
       Object {
         "fez_record_search_key_contributor": Array [
@@ -63,26 +64,26 @@ exports[`EditorsCitationView test  should render component with one contributor 
         "subkey": "rek_contributor",
       }
     }
-    suffix="."
+    suffix=". "
+    thresholdDisplay={3}
   >
     <span
       className="citationEditors"
     >
-      edited by
+       edited by 
       <CitationView
         className="citationAuthor"
         prefix=""
-        suffix=" "
+        suffix=""
         value="Pedroso, Marcelo Monteiro"
       >
         <span
           className="citationAuthor"
         >
           Pedroso, Marcelo Monteiro
-           
         </span>
       </CitationView>
-      .
+      . 
     </span>
   </AuthorsCitationView>
 </EditorsCitationView>
@@ -118,7 +119,7 @@ exports[`EditorsCitationView test  should render component with three contributo
   <AuthorsCitationView
     className="citationEditors"
     initialNumberOfAuthors={10}
-    prefix="edited by"
+    prefix=" edited by "
     publication={
       Object {
         "fez_record_search_key_contributor": Array [
@@ -150,41 +151,43 @@ exports[`EditorsCitationView test  should render component with three contributo
         "subkey": "rek_contributor",
       }
     }
-    suffix="."
+    suffix=". "
+    thresholdDisplay={3}
   >
     <span
       className="citationEditors"
     >
-      edited by
+       edited by 
       <CitationView
         className="citationAuthor"
         prefix=""
-        suffix=""
+        suffix=", "
         value="Pedroso, Marcelo Monteiro"
       >
         <span
           className="citationAuthor"
         >
           Pedroso, Marcelo Monteiro
+          , 
         </span>
       </CitationView>
       <CitationView
         className="citationAuthor"
-        prefix=", "
-        suffix=""
+        prefix=""
+        suffix=", "
         value="Smith, J"
       >
         <span
           className="citationAuthor"
         >
-          , 
           Smith, J
+          , 
         </span>
       </CitationView>
       <CitationView
         className="citationAuthor"
         prefix=" and "
-        suffix=" "
+        suffix=""
         value="Andersen, J"
       >
         <span
@@ -192,10 +195,9 @@ exports[`EditorsCitationView test  should render component with three contributo
         >
            and 
           Andersen, J
-           
         </span>
       </CitationView>
-      .
+      . 
     </span>
   </AuthorsCitationView>
 </EditorsCitationView>
@@ -225,7 +227,7 @@ exports[`EditorsCitationView test  should render component with two contributors
   <AuthorsCitationView
     className="citationEditors"
     initialNumberOfAuthors={10}
-    prefix="edited by"
+    prefix=" edited by "
     publication={
       Object {
         "fez_record_search_key_contributor": Array [
@@ -251,12 +253,13 @@ exports[`EditorsCitationView test  should render component with two contributors
         "subkey": "rek_contributor",
       }
     }
-    suffix="."
+    suffix=". "
+    thresholdDisplay={3}
   >
     <span
       className="citationEditors"
     >
-      edited by
+       edited by 
       <CitationView
         className="citationAuthor"
         prefix=""
@@ -271,19 +274,17 @@ exports[`EditorsCitationView test  should render component with two contributors
       </CitationView>
       <CitationView
         className="citationAuthor"
-        prefix=" and "
-        suffix=" "
+        prefix=""
+        suffix=""
         value="Smith, J"
       >
         <span
           className="citationAuthor"
         >
-           and 
           Smith, J
-           
         </span>
       </CitationView>
-      .
+      . 
     </span>
   </AuthorsCitationView>
 </EditorsCitationView>
