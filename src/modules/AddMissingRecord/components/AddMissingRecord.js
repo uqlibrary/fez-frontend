@@ -13,7 +13,8 @@ export default class AddMissingRecord extends React.Component {
         actions: PropTypes.object,
         history: PropTypes.object,
         location: PropTypes.object,
-        match: PropTypes.object
+        match: PropTypes.object,
+        author: PropTypes.object
     };
 
     constructor(props) {

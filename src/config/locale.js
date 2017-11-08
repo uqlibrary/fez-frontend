@@ -1645,11 +1645,11 @@ export default {
                             year: 'Year'
                         },
                         thesisType: {
-                            title: 'Thesis Type',
+                            title: 'Thesis type',
                             hint: ''
                         },
                         fieldOfResearch: {
-                            title: 'Fields of Research',
+                            title: 'Fields of research',
                             hint: 'Select up to 3 Field of Research (FoR) codes'
                         },
                         DOI: {
@@ -1665,7 +1665,7 @@ export default {
                             hint: 'Provide an abstract or summary of the work.'
                         },
                         notes: {
-                            title: 'Additional Notes',
+                            title: 'Additional notes',
                             hintText: 'Add any additional information here',
                         },
                         author: {
@@ -2574,7 +2574,8 @@ export default {
         minLength: 'Must be at least [min] characters',
         authorLinking: 'Please, select and confirm an author',
         authorRequired: 'Please, provide a list of authors/creators of the publication and link an author name to the current user',
-        authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user'
+        authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user',
+        supervisorRequired: 'Please, provide a list of supervisors'
     },
     issues: {
         fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>

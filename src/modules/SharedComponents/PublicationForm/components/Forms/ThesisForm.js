@@ -10,7 +10,7 @@ import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEdit
 export default class ThesisForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool
-    }
+    };
     constructor(props) {
         super(props);
     }
@@ -89,11 +89,9 @@ export default class ThesisForm extends Component {
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                autoFocus
-                                name="fez_record_search_key_author.rek_author"
+                                name="authors"
                                 type="text"
                                 fullWidth
-                                multiLine
                                 rows={1}
                                 floatingLabelText={txt.information.fieldLabels.author.title}
                                 hintText={txt.information.fieldLabels.date.hint}
@@ -107,12 +105,12 @@ export default class ThesisForm extends Component {
                     <div>{txt.supervisors.description}</div>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
                         className="requiredField"
                         name="supervisors"
+                        validate={[validation.supervisorRequired]}
                         locale={txt.supervisors.field}
                         disabled={this.props.submitting}
-                        validate={[validation.authorRequired]} />
+                    />
                 </StandardCard>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <div className="columns">
