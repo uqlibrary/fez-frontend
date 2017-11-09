@@ -1,48 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PcmIdCitationView test  should render component with empty span 1`] = `
-<PcmIdCitationView>
+exports[`PmcidLink test  should render component with empty span 1`] = `
+<PmcidLink>
   <span
-    className="citationPCMID empty"
+    className="LinkPMCID empty"
   />
-</PcmIdCitationView>
+</PmcidLink>
 `;
 
-exports[`PcmIdCitationView test  should render component with pcmId 1`] = `
-<PcmIdCitationView
+exports[`PmcidLink test  should render component with pcmId 1`] = `
+<PmcidLink
   pcmId="PCM12345677"
 >
   <span
-    className="citationPCMID"
+    className="LinkPCMID"
   >
      
     <a
-      className="citationPcmIdLink"
+      className="LinkPcmIdUrl"
       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PCM12345677"
       rel="noopener noreferrer"
       target="_blank"
       title="Full text via Pubmed Central (open access)"
     >
       <span
-        className="citationLabel"
+        className="LinkLabel"
       >
         https://www.ncbi.nlm.nih.gov/pmc/articles/
       </span>
       <span
-        className="citationValue"
+        className="LinkValue"
       >
         PCM12345677
         <ActionOpenInNew
-          className="citationOpenUrlIcon"
+          className="LinkOpenPmcidUrlIcon"
         >
           <SvgIcon
-            className="citationOpenUrlIcon"
+            className="LinkOpenPmcidUrlIcon"
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
             viewBox="0 0 24 24"
           >
             <svg
-              className="citationOpenUrlIcon"
+              className="LinkOpenPmcidUrlIcon"
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
               style={
@@ -68,5 +68,5 @@ exports[`PcmIdCitationView test  should render component with pcmId 1`] = `
       </span>
     </a>
   </span>
-</PcmIdCitationView>
+</PmcidLink>
 `;

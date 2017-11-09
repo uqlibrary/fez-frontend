@@ -1,9 +1,9 @@
-jest.dontMock('./PcmIdCitationView');
+jest.dontMock('./PmcidLink');
 
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import PcmIdCitationView from './PcmIdCitationView';
+import PmcidLink from './PmcIdLink';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -15,10 +15,10 @@ function setup({pcmId, isShallow = false}) {
     };
 
     if(isShallow) {
-        return shallow(<PcmIdCitationView {...props} />);
+        return shallow(<PmcidLink {...props} />);
     }
 
-    return mount(<PcmIdCitationView {...props} />, {
+    return mount(<PmcidLink {...props} />, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -32,7 +32,7 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('PcmIdCitationView test ', () => {
+describe('PmcidLink test ', () => {
     it('should render component with empty span', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -3,31 +3,31 @@ import PropTypes from 'prop-types';
 import {locale} from 'config';
 import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 
-const PcmIdCitationView = ({pcmId}) => {
-    if (!pcmId) return (<span className="citationPCMID empty"/>);
-    const txt = locale.global.pcmIdCitationLink;
+const PmcidLink = ({pcmId}) => {
+    if (!pcmId) return (<span className="LinkPMCID empty"/>);
+    const txt = locale.global.PmcidLink;
     const pcmIdLink = txt.externalUrl.replace('[id]', pcmId);
     return (
-        <span className="citationPCMID">
+        <span className="LinkPCMID">
             &nbsp;
             <a
                 href={pcmIdLink}
-                className="citationPcmIdLink"
+                className="LinkPcmIdUrl"
                 target="_blank"
                 rel="noopener noreferrer"
                 title={txt.ariaLabel} >
-                <span className="citationLabel">{txt.prefix}</span>
-                <span className="citationValue">
+                <span className="LinkLabel">{txt.prefix}</span>
+                <span className="LinkValue">
                     {pcmId}
-                    <ActionOpenInNew className="citationOpenUrlIcon"/>
+                    <ActionOpenInNew className="LinkOpenPmcidUrlIcon"/>
                 </span>
             </a>
         </span>
     );
 };
 
-PcmIdCitationView.propTypes = {
+PmcidLink.propTypes = {
     pcmId: PropTypes.string
 };
 
-export default PcmIdCitationView;
+export default PmcidLink;
