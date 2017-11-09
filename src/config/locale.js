@@ -1652,10 +1652,6 @@ export default {
                             title: 'Thesis type',
                             hint: ''
                         },
-                        fieldOfResearch: {
-                            title: 'Fields of research',
-                            hint: 'Select up to 3 Field of Research (FoR) codes'
-                        },
                         DOI: {
                             title: 'DOI',
                             hint: ''
@@ -1726,6 +1722,15 @@ export default {
                             }
                         }
                     }
+                },
+                fieldOfResearch: {
+                    title: 'Field of research',
+                    help: {
+                        title: 'Optional information help',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    text: 'Select up to 3 Field of Research (FoR) codes'
                 },
                 optional: {
                     title: 'Optional information',

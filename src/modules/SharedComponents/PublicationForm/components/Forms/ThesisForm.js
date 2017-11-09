@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
-import {OrgUnitNameField} from 'modules/SharedComponents/AutoSuggestField';
+import {OrgUnitNameField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {validation, locale} from 'config';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 
@@ -112,18 +112,24 @@ export default class ThesisForm extends Component {
                         disabled={this.props.submitting}
                     />
                 </StandardCard>
-                <StandardCard title={txt.optional.title} help={txt.optional.help}>
+
+                <StandardCard title={txt.fieldOfResearch.title} help={txt.fieldOfResearch.help}>
                     <div className="columns">
                         <div className="column">
+                            <div>{txt.fieldOfResearch.text}</div>
                             <Field
-                                component={TextField}
-                                disabled={this.props.submitting}
+                                component={FieldOfResearchListField}
                                 name="fez_record_search_key_subject.rek_subject"
-                                type="text"
-                                fullWidth
-                                floatingLabelText={txt.information.fieldLabels.fieldOfResearch.title}/>
+                                hideReorder
+                                distinctOnly
+                                maxCount={3}
+                                disabled={this.props.submitting}
+                                locale={locale.components.fieldOfResearchForm.field} />
                         </div>
                     </div>
+                </StandardCard>
+
+                <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <div className="columns">
                         <div className="column is-half">
                             <Field
