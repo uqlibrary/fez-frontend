@@ -107,6 +107,9 @@ button[type=button] {
     margin-top: 12px !important;
   }
 }
+#contentContainer:focus {
+  outline: none;
+}
 
 // Class to space elements against scroll bars
 .scrollbar-spacer{

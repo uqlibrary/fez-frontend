@@ -8,6 +8,9 @@ import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 import AppBar from 'material-ui/AppBar';
 import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
 import * as pages from './pages';
+import IconButton from 'material-ui/IconButton';
+import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
+
 
 export default class App extends React.Component {
     static propTypes = {
@@ -75,7 +78,7 @@ export default class App extends React.Component {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
         const menuItems = routes.getMenuConfig(this.props.user.account);
-
+        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
@@ -91,7 +94,6 @@ export default class App extends React.Component {
                 {
                     !this.props.user.accountLoading &&
                     <div className="layout-fill align-stretch">
-
                         <AppBar
                             className="AppBar align-center"
                             showMenuIconButton={!this.state.docked}
@@ -100,10 +102,19 @@ export default class App extends React.Component {
                             title={locale.global.title}
                             titleStyle={titleStyle}
                             onLeftIconButtonTouchTap={this.toggleDrawer}
+                            iconElementLeft={
+                                <IconButton tooltip={locale.global.mainNavButton.tooltip}
+                                    tooltipPosition="bottom-right"
+                                    hoveredStyle={appBarButtonStyles}
+                                >
+                                    <NavigationMenu />
+                                </IconButton>
+                            }
                             iconElementRight={
                                 <div style={{marginTop: '-10px'}}>
                                     <AuthButton
                                         isAuthorizedUser={isAuthorizedUser}
+                                        hoveredStyle={appBarButtonStyles}
                                         loginUrl={AUTH_URL_LOGIN}
                                         logoutUrl={AUTH_URL_LOGOUT}
                                         signInTooltipText={locale.authentication.signInText}
@@ -121,6 +132,8 @@ export default class App extends React.Component {
                             toggleDrawer={this.toggleDrawer}
                             isMobile={this.state.isMobile}
                             history={this.props.history}
+                            skipNavAriaLabel={locale.global.skipNav.ariaLabel}
+                            skipNavTitle={locale.global.skipNav.title}
                         />
 
                         <div className="content-container" id="contentContainer" style={container} tabIndex={-1}>

@@ -9,6 +9,24 @@ exports[`App tests for user account and author status User is logged in but are 
   >
     <AppBar
       className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
       iconElementRight={
         <div
           style={
@@ -18,6 +36,12 @@ exports[`App tests for user account and author status User is logged in but are 
           }
         >
           <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
             isAuthorizedUser={true}
             loginUrl="https://auth.library.uq.edu.au/login"
             logoutUrl="https://auth.library.uq.edu.au/logout"
@@ -94,6 +118,8 @@ exports[`App tests for user account and author status User is logged in but are 
           },
         ]
       }
+      skipNavAriaLabel="Click to skip navigation"
+      skipNavTitle="Click to skip main navigation"
       toggleDrawer={[Function]}
     />
     <div
@@ -233,6 +259,24 @@ exports[`App tests for user account and author status User is not logged in and 
   >
     <AppBar
       className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
       iconElementRight={
         <div
           style={
@@ -242,6 +286,12 @@ exports[`App tests for user account and author status User is not logged in and 
           }
         >
           <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
             isAuthorizedUser={false}
             loginUrl="https://auth.library.uq.edu.au/login"
             logoutUrl="https://auth.library.uq.edu.au/logout"
@@ -288,6 +338,8 @@ exports[`App tests for user account and author status User is not logged in and 
           },
         ]
       }
+      skipNavAriaLabel="Click to skip navigation"
+      skipNavTitle="Click to skip main navigation"
       toggleDrawer={[Function]}
     />
     <div
@@ -343,6 +395,24 @@ exports[`App tests for user account and author status User logged in and is an a
   >
     <AppBar
       className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
       iconElementRight={
         <div
           style={
@@ -352,6 +422,12 @@ exports[`App tests for user account and author status User logged in and is an a
           }
         >
           <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
             isAuthorizedUser={true}
             loginUrl="https://auth.library.uq.edu.au/login"
             logoutUrl="https://auth.library.uq.edu.au/logout"
@@ -428,6 +504,8 @@ exports[`App tests for user account and author status User logged in and is an a
           },
         ]
       }
+      skipNavAriaLabel="Click to skip navigation"
+      skipNavTitle="Click to skip main navigation"
       toggleDrawer={[Function]}
     />
     <div
@@ -567,6 +645,24 @@ exports[`App tests for user account and author status User logged in but is not 
   >
     <AppBar
       className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
       iconElementRight={
         <div
           style={
@@ -576,6 +672,12 @@ exports[`App tests for user account and author status User logged in but is not 
           }
         >
           <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
             isAuthorizedUser={true}
             loginUrl="https://auth.library.uq.edu.au/login"
             logoutUrl="https://auth.library.uq.edu.au/logout"
@@ -652,6 +754,8 @@ exports[`App tests for user account and author status User logged in but is not 
           },
         ]
       }
+      skipNavAriaLabel="Click to skip navigation"
+      skipNavTitle="Click to skip main navigation"
       toggleDrawer={[Function]}
     />
     <div
