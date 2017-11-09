@@ -831,7 +831,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
         }
       }
       suffix=" "
-      thresholdDisplay={3}
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors"
@@ -947,7 +947,7 @@ exports[`DesignCitation renders  component with empty publication 1`] = `
         }
       }
       suffix=" "
-      thresholdDisplay={3}
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"

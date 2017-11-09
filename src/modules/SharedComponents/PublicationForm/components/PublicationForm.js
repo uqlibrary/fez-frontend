@@ -7,7 +7,7 @@ import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 import {SelectField, StandardCard, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes, validation} from 'config';
-import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
+import {NavigationDialogBox} from 'uqlibrary-react-toolbox';
 
 import * as recordForms from './Forms';
 
@@ -66,6 +66,8 @@ export default class PublicationForm extends Component {
     render() {
         console.log('formValues.forField: ');
         console.log(this.props.formValues ? this.props.formValues.get('forField') : 'n/a');
+        console.log('formValues.singleForField: ');
+        console.log(this.props.formValues ? this.props.formValues.get('singleForField') : 'n/a');
         const publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;

@@ -3,7 +3,7 @@ import {Field} from 'redux-form/immutable';
 
 import {TextField, StandardCard, ListEditorField, PartialDateField} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {SeriesField} from 'modules/SharedComponents/AutoSuggestField';
+import {SeriesField} from 'modules/SharedComponents/LookupFields';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
@@ -98,6 +98,7 @@ export default class ResearchReportForm extends Component {
                                 component={SeriesField}
                                 name="fez_record_search_key_series.rek_series"
                                 disabled={this.props.submitting}
+                                {...txt.information.fieldLabels.series}
                             />
                         </div>
                     </div>

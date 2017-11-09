@@ -109,16 +109,28 @@ describe('Controlled vocabularies reducer', () => {
         const expectedData = ['Three', 'Four'];
 
         const expectedState = {
-            987655: {
-                itemsList: ['One', 'Two'],
-                itemsLoading: false,
-                itemsLoadingError: false
+            "123456": {
+                "itemsKeyValueList":
+                    [
+                        {
+                            "key": 453582,
+                            "value": "Three"
+                        },
+                        {
+                            "key": 453583,
+                            "value": "Four"
+                        }
+                    ],
+                "itemsList": ["Three", "Four"],
+                "itemsLoading": false,
+                "itemsLoadingError": false
             },
-            123456: {
-                itemsList: expectedData,
-                itemsLoading: false,
-                itemsLoadingError: false
-            }
+            "987655":
+                {
+                    "itemsList": ["One", "Two"],
+                    "itemsLoading": false,
+                    "itemsLoadingError": false
+                }
         };
 
         const state = controlledVocabulariesReducer(oldState, {type: `${actions.VOCABULARIES_LOADED}@123456`, payload: inputData});

@@ -465,7 +465,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
         }
       }
       suffix=" "
-      thresholdDisplay={3}
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors"
@@ -614,7 +614,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
         }
       }
       suffix=" "
-      thresholdDisplay={3}
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"

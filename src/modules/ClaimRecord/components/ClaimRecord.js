@@ -6,7 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {AuthorLinkingField} from 'modules/SharedComponents/AuthorLinking';
-import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
+import {NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {validation, locale, routes} from 'config';
 
 export default class ClaimRecord extends Component {

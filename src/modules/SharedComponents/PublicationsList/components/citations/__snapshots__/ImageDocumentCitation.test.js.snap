@@ -489,7 +489,7 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
         }
       }
       suffix=" "
-      thresholdDisplay={3}
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"
@@ -583,7 +583,7 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
         }
       }
       suffix=" "
-      thresholdDisplay={3}
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"

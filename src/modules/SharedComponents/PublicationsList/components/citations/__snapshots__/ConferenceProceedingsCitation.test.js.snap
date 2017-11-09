@@ -1131,7 +1131,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
           }
         }
         suffix=" ed. "
-        thresholdDisplay={3}
+        thresholdNumberOfAuthors={3}
       >
         <span
           className="citationEditors"
@@ -1316,7 +1316,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
           }
         }
         suffix=" ed. "
-        thresholdDisplay={3}
+        thresholdNumberOfAuthors={3}
       >
         <span
           className="citationEditors empty"

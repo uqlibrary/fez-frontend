@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
 import {StandardCard} from 'uqlibrary-react-toolbox';
-import {OrgUnitsField, SeriesField, FieldOfResearchField} from 'modules/SharedComponents/AutoSuggestField';
-import {ListEditorField, LookupListEditorField} from 'modules/SharedComponents/ListEditor';
+import {SeriesField, FieldOfResearchField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
+import {ListEditorField} from 'uqlibrary-react-toolbox';
 import {validation, locale} from 'config';
 
 export default class WorkingPaperForm extends Component {
@@ -22,20 +22,14 @@ export default class WorkingPaperForm extends Component {
                 <StandardCard title="Placeholder for working paper">
                     <Field
                         className="requiredField"
-                        component={LookupListEditorField}
-                        inputField={FieldOfResearchField}
+                        component={FieldOfResearchListField}
                         hideReorder
                         distinctOnly
                         maxCount={3}
                         name="forField"
                         disabled={this.props.submitting}
+                        locale={locale.components.fieldOfResearchForm.field}
                         validate={[validation.requiredList]}
-                    />
-                    <Field
-                        component={OrgUnitsField}
-                        name="OrgUnitsField"
-                        disabled={this.props.submitting}
-
                     />
                     <Field
                         component={SeriesField}
@@ -58,6 +52,7 @@ export default class WorkingPaperForm extends Component {
                         className="requiredField"
                         component={FieldOfResearchField}
                         name="singleForField"
+                        validate={[validation.required]}
                         disabled={this.props.submitting}
                     />
 

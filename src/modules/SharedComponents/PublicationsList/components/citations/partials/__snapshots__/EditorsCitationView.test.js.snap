@@ -17,7 +17,7 @@ exports[`EditorsCitationView test  should render component with no contributors 
       }
     }
     suffix=". "
-    thresholdDisplay={3}
+    thresholdNumberOfAuthors={3}
   >
     <span
       className="citationEditors empty"
@@ -65,7 +65,7 @@ exports[`EditorsCitationView test  should render component with one contributor 
       }
     }
     suffix=". "
-    thresholdDisplay={3}
+    thresholdNumberOfAuthors={3}
   >
     <span
       className="citationEditors"
@@ -152,7 +152,7 @@ exports[`EditorsCitationView test  should render component with three contributo
       }
     }
     suffix=". "
-    thresholdDisplay={3}
+    thresholdNumberOfAuthors={3}
   >
     <span
       className="citationEditors"
@@ -254,7 +254,7 @@ exports[`EditorsCitationView test  should render component with two contributors
       }
     }
     suffix=". "
-    thresholdDisplay={3}
+    thresholdNumberOfAuthors={3}
   >
     <span
       className="citationEditors"
