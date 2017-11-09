@@ -64,7 +64,7 @@ exports[`ThesisForm renders  component 1`] = `
         />
       </div>
       <div
-        className="column is-half"
+        className="column"
       >
         <Field
           className="requiredField"
@@ -89,13 +89,16 @@ exports[`ThesisForm renders  component 1`] = `
         className="column is-half"
       >
         <Field
-          allowPartial={true}
-          className="requiredHintField"
+          className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingTitle="Publication date"
-          floatingTitleRequired={true}
-          name="rek_date"
+          locale={
+            Object {
+              "label": "Thesis type",
+              "loading": "loading...",
+            }
+          }
+          name="rek_genre_type"
           validate={
             Array [
               [Function],
@@ -104,19 +107,16 @@ exports[`ThesisForm renders  component 1`] = `
         />
       </div>
       <div
-        className="column is-half"
+        className="column"
       >
         <Field
-          className="requiredField"
+          allowPartial={true}
+          className="requiredHintField"
           component={[Function]}
           disabled={false}
-          locale={
-            Object {
-              "label": "Thesis Type",
-              "loading": "loading...",
-            }
-          }
-          name="rek_genre_type"
+          floatingTitle="Publication date"
+          floatingTitleRequired={true}
+          name="rek_date"
           validate={
             Array [
               [Function],
@@ -132,14 +132,12 @@ exports[`ThesisForm renders  component 1`] = `
         className="column"
       >
         <Field
-          autoFocus={true}
           className="requiredField"
           component={[Function]}
           disabled={false}
           floatingLabelText="Author name"
           fullWidth={true}
-          multiLine={true}
-          name="fez_record_search_key_author.rek_author"
+          name="currentAuthor.0.nameAsPublished"
           rows={1}
           type="text"
           validate={
@@ -223,7 +221,6 @@ exports[`ThesisForm renders  component 1`] = `
         }
       }
       name="supervisors"
-      showContributorAssignment={true}
       validate={
         Array [
           [Function],
@@ -251,7 +248,7 @@ exports[`ThesisForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Fields of Research"
+          floatingLabelText="Fields of research"
           fullWidth={true}
           name="fez_record_search_key_subject.rek_subject"
           type="text"
@@ -274,7 +271,7 @@ exports[`ThesisForm renders  component 1`] = `
         />
       </div>
       <div
-        className="column is-half"
+        className="column"
       >
         <Field
           component={[Function]}
@@ -313,7 +310,7 @@ exports[`ThesisForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Additional Notes"
+          floatingLabelText="Additional notes"
           fullWidth={true}
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"

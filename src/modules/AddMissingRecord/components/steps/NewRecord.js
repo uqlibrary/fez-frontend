@@ -12,7 +12,8 @@ export default class NewRecord extends React.Component {
         history: PropTypes.object.isRequired,
         rawSearchQuery: PropTypes.string,
         newRecordFileUploadingError: PropTypes.bool,
-        author: PropTypes.object
+        author: PropTypes.object,
+        meta: PropTypes.object
     };
 
     static defaultProps = {
@@ -47,7 +48,12 @@ export default class NewRecord extends React.Component {
 
         // set initial value only if it's a title (not pubmed/DOI)
         const initialValues = {
-            authors: this.props.author ? this.props.author.aut_display_name : '',
+            currentAuthor: [
+                {
+                    'nameAsPublished': this.props.author ? this.props.author.aut_display_name : '',
+                    'authorId': this.props.author ? this.props.author.aut_id : ''
+                }
+            ],
             rek_title: (!validation.isValidDOIValue(rawSearchQuery) && !validation.isValidPubMedValue(rawSearchQuery)) ? rawSearchQuery : ''
         };
 

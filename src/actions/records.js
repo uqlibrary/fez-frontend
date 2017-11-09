@@ -25,8 +25,8 @@ export function createNewRecord(data) {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
             ...transformers.getRecordLinkSearchKey(data),
-            ...transformers.getRecordAuthorsSearchKey(data.authors),
-            ...transformers.getRecordAuthorsIdSearchKey(data.authors),
+            ...transformers.getRecordAuthorsSearchKey(data.authors || data.currentAuthor),
+            ...transformers.getRecordAuthorsIdSearchKey(data.authors || data.currentAuthor),
             ...transformers.getRecordContributorsSearchKey(data.editors),
             ...transformers.getRecordContributorsIdSearchKey(data.editors)
         };

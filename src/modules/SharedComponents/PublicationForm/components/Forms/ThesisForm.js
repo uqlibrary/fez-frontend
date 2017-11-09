@@ -49,7 +49,7 @@ export default class ThesisForm extends Component {
                                 floatingLabelText={txt.information.fieldLabels.orgUnit.title}
                             />
                         </div>
-                        <div className="column is-half">
+                        <div className="column">
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
@@ -64,6 +64,15 @@ export default class ThesisForm extends Component {
                     <div className="columns">
                         <div className="column is-half">
                             <Field
+                                component={ThesisSubtypeField}
+                                name="rek_genre_type"
+                                disabled={this.props.submitting}
+                                validate={[validation.required]}
+                                locale={{label: txt.information.fieldLabels.thesisType.title, loading: locale.global.loading}}
+                                className="requiredField" />
+                        </div>
+                        <div className="column">
+                            <Field
                                 component={PartialDateField}
                                 disabled={this.props.submitting}
                                 name="rek_date"
@@ -74,22 +83,13 @@ export default class ThesisForm extends Component {
                                 floatingTitleRequired
                             />
                         </div>
-                        <div className="column is-half">
-                            <Field
-                                component={ThesisSubtypeField}
-                                name="rek_genre_type"
-                                disabled={this.props.submitting}
-                                validate={[validation.required]}
-                                locale={{label: txt.information.fieldLabels.thesisType.title, loading: locale.global.loading}}
-                                className="requiredField" />
-                        </div>
                     </div>
                     <div className="columns">
                         <div className="column">
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}
-                                name="authors"
+                                name="currentAuthor.0.nameAsPublished"
                                 type="text"
                                 fullWidth
                                 rows={1}
@@ -134,7 +134,7 @@ export default class ThesisForm extends Component {
                                 fullWidth
                                 floatingLabelText={txt.information.fieldLabels.DOI.title}/>
                         </div>
-                        <div className="column is-half">
+                        <div className="column">
                             <Field
                                 component={TextField}
                                 disabled={this.props.submitting}

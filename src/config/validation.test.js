@@ -105,6 +105,17 @@ describe('Validation method', () => {
         expect(validation.isValidPublicationTitle(' global    ')).toBeFalsy();
         expect(validation.isValidPublicationTitle(' global war ')).toBeTruthy();
     });
-    
+
+
+    it('it should validate authors', () => {
+        const authorNoneSelected = ["Fred"];
+        const authorSelected = [{
+            selected:true
+        }];
+        expect(validation.authorRequired([])).toEqual(locale.validationErrors.authorRequired);
+        expect(validation.authorRequired(authorNoneSelected)).toEqual(locale.validationErrors.authorRequired);
+        expect(validation.authorRequired(authorSelected)).toEqual(undefined);
+    });
+
 });
 
