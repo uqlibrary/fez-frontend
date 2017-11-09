@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
+import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {AuthorLinkingField} from 'modules/SharedComponents/AuthorLinking';
-import {NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {validation, locale, routes} from 'config';
 
 export default class ClaimRecord extends Component {

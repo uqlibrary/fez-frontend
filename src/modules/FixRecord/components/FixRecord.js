@@ -6,9 +6,9 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
 
-import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
+import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, NavigationDialogBox,
+    FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
-import {NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {validation, locale, routes} from 'config';
 
 export default class FixRecord extends Component {

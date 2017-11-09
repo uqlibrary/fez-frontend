@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
-import {StandardCard} from 'uqlibrary-react-toolbox';
+import {StandardCard, ListEditorField} from 'uqlibrary-react-toolbox';
 import {SeriesField, FieldOfResearchField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
-import {ListEditorField} from 'uqlibrary-react-toolbox';
 import {validation, locale} from 'config';
 
 export default class WorkingPaperForm extends Component {

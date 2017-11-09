@@ -5,9 +5,8 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-import {SelectField, StandardCard, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
+import {SelectField, StandardCard, Alert, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes, validation} from 'config';
-import {NavigationDialogBox} from 'uqlibrary-react-toolbox';
 
 import * as recordForms from './Forms';
 
