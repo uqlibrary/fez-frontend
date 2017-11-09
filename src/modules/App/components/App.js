@@ -13,7 +13,8 @@ export default class App extends React.Component {
     static propTypes = {
         user: PropTypes.object,
         actions: PropTypes.object,
-        location: PropTypes.object
+        location: PropTypes.object,
+        history: PropTypes.object.isRequired
     };
 
     static childContextTypes = {
@@ -62,6 +63,11 @@ export default class App extends React.Component {
     toggleDrawer = () => {
         this.setState({
             menuDrawerOpen: !this.state.menuDrawerOpen
+        }, () => {
+            if(this.state.menuDrawerOpen || this.state.docked) {
+                // Main menu opened - focus on div#mainMenu, next tabbed element would be the skip nav element
+                document.getElementById('mainMenu').focus();
+            }
         });
     };
 
@@ -73,7 +79,6 @@ export default class App extends React.Component {
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
-
         return (
             <div className="layout-fill">
                 {
@@ -115,9 +120,10 @@ export default class App extends React.Component {
                             logoText={locale.global.title}
                             toggleDrawer={this.toggleDrawer}
                             isMobile={this.state.isMobile}
+                            history={this.props.history}
                         />
 
-                        <div className="content-container" style={container}>
+                        <div className="content-container" id="contentContainer" style={container} tabIndex={-1}>
                             {
                                 // user is not logged in
                                 !this.props.user.accountLoading && !this.props.user.account &&

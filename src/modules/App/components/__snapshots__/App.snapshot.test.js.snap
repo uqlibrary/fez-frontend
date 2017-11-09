@@ -98,7 +98,9 @@ exports[`App tests for user account and author status User is logged in but are 
     />
     <div
       className="content-container"
+      id="contentContainer"
       style={Object {}}
+      tabIndex={-1}
     >
       <Switch>
         <Route
@@ -290,7 +292,9 @@ exports[`App tests for user account and author status User is not logged in and 
     />
     <div
       className="content-container"
+      id="contentContainer"
       style={Object {}}
+      tabIndex={-1}
     >
       <div
         className="layout-fill dashAlert"
@@ -428,7 +432,9 @@ exports[`App tests for user account and author status User logged in and is an a
     />
     <div
       className="content-container"
+      id="contentContainer"
       style={Object {}}
+      tabIndex={-1}
     >
       <Switch>
         <Route
@@ -650,7 +656,9 @@ exports[`App tests for user account and author status User logged in but is not 
     />
     <div
       className="content-container"
+      id="contentContainer"
       style={Object {}}
+      tabIndex={-1}
     >
       <div
         className="layout-fill dashAlert"
