@@ -14,4 +14,5 @@ export {default as CreativeWorkForm} from './CreativeWorkForm';
 export {default as VideoDocumentForm} from './VideoDocumentForm';
 export {default as ImageDocumentForm} from './ImageDocumentForm';
 export {default as DesignForm} from './DesignForm';
+export {default as ThesisForm} from './ThesisForm';
 export {default as DepartmentTechnicalReportForm} from './DepartmentTechnicalReportForm';

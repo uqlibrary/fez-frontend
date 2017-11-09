@@ -23,7 +23,12 @@ export const requiredList = value => {
 
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? validationErrors.email : undefined;
 export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? validationErrors.url : maxLength2000(value);
-export const authorRequired = (authors) => !authors || authors.length === 0 || authors.filter(item => (item.selected)).length === 0 ? validationErrors.authorRequired : undefined;
+
+export const peopleRequired = (itemList, validationError, checkSelected = true) =>  {
+    return !itemList || itemList.length === 0 || (checkSelected && itemList && itemList.filter(item => (item.selected)).length === 0) ? validationError : undefined;
+};
+export const authorRequired = (authors) => peopleRequired(authors, validationErrors.authorRequired, true);
+export const supervisorRequired = (supervisors) => peopleRequired(supervisors, validationErrors.supervisorRequired, false);
 
 // DateTime
 export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? validationErrors.dateTimeDay : undefined;

@@ -9,8 +9,14 @@ function setup(values) {
 }
 
 describe('Add new record', () => {
+
+    it('should not render publication form if author is not loaded', () => {
+        const wrapper = setup({author: null});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render stepper and a publication form', () => {
-        const wrapper = setup({history: {}});
+        const wrapper = setup({history: {}, author: {'aut_display_name': 'Fred', 'aut_id': 44}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
