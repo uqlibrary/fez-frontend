@@ -80,3 +80,7 @@ export const isValidIsbn = subject => {
 export const isValidAuthorLink = (link) => {
     return link.valid ? '' : locale.validationErrors.authorLinking;
 };
+
+export const isValidContributorLink = (link) => {
+    return link.valid ? '' : locale.validationErrors.contributorLinking;
+};

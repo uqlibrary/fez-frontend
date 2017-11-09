@@ -145,6 +145,7 @@ export default class ClaimRecord extends Component {
                                 </StandardCard>
                             }
                             {
+                                publication.fez_record_search_key_author &&
                                 publication.fez_record_search_key_author.length === 0 &&
                                 publication.fez_record_search_key_contributor &&
                                 publication.fez_record_search_key_contributor.length > 1 &&
@@ -167,7 +168,7 @@ export default class ClaimRecord extends Component {
                                         linkedAuthorIdList={publication.fez_record_search_key_contributor_id}
                                         disabled={this.props.submitting}
                                         className="requiredField"
-                                        validate={[validation.required, validation.isValidAuthorLink]}
+                                        validate={[validation.required, validation.isValidContributorLink]}
                                     />
                                 </StandardCard>
                             }

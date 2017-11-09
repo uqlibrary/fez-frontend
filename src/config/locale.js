@@ -2780,6 +2780,7 @@ export default {
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
         authorLinking: 'Please, select and confirm an author',
+        contributorLinking: 'Please, select and confirm a contributor',
         authorRequired: 'Please, provide a list of authors/creators of the publication and link an author name to the current user',
         authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user'
     },
