@@ -12,8 +12,7 @@ export default class NewRecord extends React.Component {
         history: PropTypes.object.isRequired,
         rawSearchQuery: PropTypes.string,
         newRecordFileUploadingError: PropTypes.bool,
-        author: PropTypes.object,
-        meta: PropTypes.object
+        author: PropTypes.object
     };
 
     static defaultProps = {
