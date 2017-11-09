@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CitationCountView test  should render component with given count 1`] = `
+<CitationCountView
+  count={4}
+  link="www.google.com"
+  source="wos"
+  title="Google"
+>
+  <span
+    className="citationCount"
+  >
+    <ExternalLink
+      ariaLabel="Google"
+      className="wosCitationCount"
+      externalLinkIcon={false}
+      linkTooltip="Google"
+      linkUrl="www.google.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <a
+        aria-label="Google"
+        className="wosCitationCount"
+        href="www.google.com"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Google"
+      >
+        <div
+          className="fez-icon wos large"
+        />
+        <span
+          className="citationCountNumber"
+        >
+          4
+        </span>
+      </a>
+    </ExternalLink>
+  </span>
+</CitationCountView>
+`;

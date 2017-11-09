@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'config';
-import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
+import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 
 const DoiCitationView = ({doi}) => {
     if (!doi) return (<span className="citationDOI empty"/>);
@@ -10,17 +10,10 @@ const DoiCitationView = ({doi}) => {
     return (
         <span className="citationDOI">
             &nbsp;
-            <a href={doiLink}
-                className="citationDoiLink"
-                target="_blank"
-                rel="noopener noreferrer"
-                title={txt.ariaLabel} >
+            <ExternalLink className="citationDoiLink" linkUrl={doiLink} linkTooltip={txt.ariaLabel}>
                 <span className="citationLabel">{txt.prefix}</span>
-                <span className="citationValue">
-                    {doi}
-                    <ActionOpenInNew className="citationOpenUrlIcon"/>
-                </span>
-            </a>
+                <span className="citationValue">{doi}</span>
+            </ExternalLink>
         </span>
     );
 };

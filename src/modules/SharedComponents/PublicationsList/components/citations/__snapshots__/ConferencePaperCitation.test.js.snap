@@ -1178,33 +1178,42 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         className="citationDOI"
       >
          
-        <a
+        <ExternalLink
           className="citationDoiLink"
-          href="https://doi.org/10.1111/dar.12222"
+          externalLinkIcon={true}
+          linkTooltip="Open this DOI in an new window"
+          linkUrl="https://doi.org/10.1111/dar.12222"
           rel="noopener noreferrer"
           target="_blank"
-          title="Open this DOI in an new window"
         >
-          <span
-            className="citationLabel"
+          <a
+            className="citationDoiLink"
+            href="https://doi.org/10.1111/dar.12222"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Open this DOI in an new window"
           >
-            https://doi.org/
-          </span>
-          <span
-            className="citationValue"
-          >
-            10.1111/dar.12222
+            <span
+              className="citationLabel"
+            >
+              https://doi.org/
+            </span>
+            <span
+              className="citationValue"
+            >
+              10.1111/dar.12222
+            </span>
             <ActionOpenInNew
-              className="citationOpenUrlIcon"
+              className="openExternalUrlIcon"
             >
               <SvgIcon
-                className="citationOpenUrlIcon"
+                className="openExternalUrlIcon"
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
                 viewBox="0 0 24 24"
               >
                 <svg
-                  className="citationOpenUrlIcon"
+                  className="openExternalUrlIcon"
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -1227,8 +1236,8 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                 </svg>
               </SvgIcon>
             </ActionOpenInNew>
-          </span>
-        </a>
+          </a>
+        </ExternalLink>
       </span>
     </DoiCitationView>
   </div>

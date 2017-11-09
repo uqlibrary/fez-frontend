@@ -3212,33 +3212,42 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         className="citationDOI"
       >
          
-        <a
+        <ExternalLink
           className="citationDoiLink"
-          href="https://doi.org/10.1007/978-94-017-7417-8_7"
+          externalLinkIcon={true}
+          linkTooltip="Open this DOI in an new window"
+          linkUrl="https://doi.org/10.1007/978-94-017-7417-8_7"
           rel="noopener noreferrer"
           target="_blank"
-          title="Open this DOI in an new window"
         >
-          <span
-            className="citationLabel"
+          <a
+            className="citationDoiLink"
+            href="https://doi.org/10.1007/978-94-017-7417-8_7"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Open this DOI in an new window"
           >
-            https://doi.org/
-          </span>
-          <span
-            className="citationValue"
-          >
-            10.1007/978-94-017-7417-8_7
+            <span
+              className="citationLabel"
+            >
+              https://doi.org/
+            </span>
+            <span
+              className="citationValue"
+            >
+              10.1007/978-94-017-7417-8_7
+            </span>
             <ActionOpenInNew
-              className="citationOpenUrlIcon"
+              className="openExternalUrlIcon"
             >
               <SvgIcon
-                className="citationOpenUrlIcon"
+                className="openExternalUrlIcon"
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
                 viewBox="0 0 24 24"
               >
                 <svg
-                  className="citationOpenUrlIcon"
+                  className="openExternalUrlIcon"
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -3261,8 +3270,8 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                 </svg>
               </SvgIcon>
             </ActionOpenInNew>
-          </span>
-        </a>
+          </a>
+        </ExternalLink>
       </span>
     </DoiCitationView>
   </div>
