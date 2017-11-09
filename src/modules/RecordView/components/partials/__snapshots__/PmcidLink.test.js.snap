@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PmcidLink test  should render component with empty span 1`] = `
-<PmcidLink>
+exports[`PubmedCentralLink test  should render component with empty span 1`] = `
+<PubmedCentralLink>
   <span
-    className="LinkPMCID empty"
+    className="pubmedCentralLink empty"
   />
-</PmcidLink>
+</PubmedCentralLink>
 `;
 
-exports[`PmcidLink test  should render component with pcmId 1`] = `
-<PmcidLink
-  pcmId="PCM12345677"
+exports[`PubmedCentralLink test  should render component with pubmedCentralId 1`] = `
+<PubmedCentralLink
+  pubmedCentralId="PMC12345677"
 >
   <span
-    className="LinkPCMID"
+    className="pubmedCentralLink"
   >
      
     <a
-      className="LinkPcmIdUrl"
-      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PCM12345677"
+      className="pubmedCentralLink"
+      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
       rel="noopener noreferrer"
       target="_blank"
       title="Full text via Pubmed Central (open access)"
@@ -31,7 +31,7 @@ exports[`PmcidLink test  should render component with pcmId 1`] = `
       <span
         className="LinkValue"
       >
-        PCM12345677
+        PMC12345677
         <ActionOpenInNew
           className="LinkOpenPmcidUrlIcon"
         >
@@ -68,5 +68,5 @@ exports[`PmcidLink test  should render component with pcmId 1`] = `
       </span>
     </a>
   </span>
-</PmcidLink>
+</PubmedCentralLink>
 `;
