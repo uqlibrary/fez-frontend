@@ -13,8 +13,8 @@ exports[`CitationCountView test  should render component with given count 1`] = 
     <ExternalLink
       aria-label="Google"
       className="wosCitationCount"
-      externalLinkIcon={false}
       href="www.google.com"
+      openInNewIcon={false}
       rel="noopener noreferrer"
       target="_blank"
       title="Google"

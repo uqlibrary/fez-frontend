@@ -13,20 +13,22 @@ exports[`PubmedCentralLink test  should render component with pubmedCentralId 1`
   pubmedCentralId="PMC12345677"
 >
   <ExternalLink
+    aria-label="Full text via Pubmed Central (open access)"
     className="pubmedCentralLinkUrl"
-    externalLinkIcon={true}
+    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
     linkText="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
-    linkTooltip="Full text via Pubmed Central (open access)"
-    linkUrl="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
+    openInNewIcon={true}
     rel="noopener noreferrer"
     target="_blank"
+    title="Full text via Pubmed Central (open access)"
   >
     <a
+      aria-label="Full text via Pubmed Central (open access)"
       className="pubmedCentralLinkUrl"
-      linkTooltip="Full text via Pubmed Central (open access)"
-      linkUrl="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
+      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
       rel="noopener noreferrer"
       target="_blank"
+      title="Full text via Pubmed Central (open access)"
     >
       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677
       <ActionOpenInNew

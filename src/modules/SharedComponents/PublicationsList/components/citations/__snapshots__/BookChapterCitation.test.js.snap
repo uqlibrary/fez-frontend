@@ -3215,8 +3215,8 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
-          externalLinkIcon={true}
           href="https://doi.org/10.1007/978-94-017-7417-8_7"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
           title="Open this DOI in an new window"

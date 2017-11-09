@@ -10,7 +10,7 @@ const CitationCountView = ({source, count, link, title}) => {
                 href={link}
                 aria-label={title}
                 title={title}
-                externalLinkIcon={false}
+                openInNewIcon={false}
             >
                 <div className={`fez-icon ${source} large`} />
                 <span className="citationCountNumber">{count}</span>

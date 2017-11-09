@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 
-
 const ExternalLink = (props) => {
-    const {linkText, className, children, externalLinkIcon, ...rest} = props;
+    const {linkText, className, children, openInNewIcon, ...rest} = props;
 
     return (
         <a
@@ -19,7 +18,7 @@ const ExternalLink = (props) => {
                 !linkText && children && children
             }
             {
-                externalLinkIcon &&
+                openInNewIcon &&
                 <ActionOpenInNew className="openExternalUrlIcon"/>
             }
         </a>
@@ -29,7 +28,7 @@ const ExternalLink = (props) => {
 ExternalLink.propTypes = {
     linkText: PropTypes.string,
     className: PropTypes.string,
-    externalLinkIcon: PropTypes.bool,
+    openInNewIcon: PropTypes.bool,
     children: PropTypes.any,
 };
 
@@ -37,7 +36,7 @@ ExternalLink.defaultProps = {
     className: 'externalLink',
     target: '_blank',
     rel: 'noopener noreferrer',
-    externalLinkIcon: true
+    openInNewIcon: true
 };
 
 export default ExternalLink;

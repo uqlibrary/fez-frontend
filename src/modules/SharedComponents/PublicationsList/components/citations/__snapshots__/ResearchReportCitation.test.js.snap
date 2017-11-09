@@ -679,8 +679,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
-          externalLinkIcon={true}
           href="https://doi.org/10.129839/sometext"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
           title="Open this DOI in an new window"
@@ -1423,8 +1423,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         <ExternalLink
           aria-label="Open this DOI in an new window"
           className="citationDoiLink"
-          externalLinkIcon={true}
           href="https://doi.org/10.129839/sometext"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
           title="Open this DOI in an new window"

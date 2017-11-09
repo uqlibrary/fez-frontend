@@ -9,12 +9,12 @@ import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 
-function setup({linkText, linkUrl = 'www.google.com', linkTooltip, externalLinkIcon = true, className = 'externalLink', isShallow = false}) {
+function setup({linkText, linkUrl = 'www.google.com', linkTooltip, openInNewIcon = true, className = 'externalLink', isShallow = false}) {
     const props = {
         linkText: linkText,
         linkUrl: linkUrl,
         linkTooltip: linkTooltip,
-        externalLinkIcon: externalLinkIcon,
+        openInNewIcon: openInNewIcon,
         className: className
     };
 
@@ -43,7 +43,7 @@ describe('ExternalLink test ', () => {
     });
 
     it('should render component without open-in-new window icon', () => {
-        const wrapper = setup({linkUrl: 'www.google.com', linkText: 'Google', externalLinkIcon: false});
+        const wrapper = setup({linkUrl: 'www.google.com', linkText: 'Google', openInNewIcon: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
