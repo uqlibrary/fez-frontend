@@ -7,9 +7,9 @@ const CitationCountView = ({source, count, link, title}) => {
         <span className="citationCount">
             <ExternalLink
                 className={`${source}CitationCount`}
-                linkUrl={link}
-                ariaLabel={title}
-                linkTooltip={title}
+                href={link}
+                aria-label={title}
+                title={title}
                 externalLinkIcon={false}
             >
                 <div className={`fez-icon ${source} large`} />

@@ -4544,14 +4544,16 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       >
          
         <ExternalLink
+          aria-label="Open this DOI in an new window"
           className="citationDoiLink"
           externalLinkIcon={true}
-          linkTooltip="Open this DOI in an new window"
-          linkUrl="https://doi.org/10.1242/jcs.196659"
+          href="https://doi.org/10.1242/jcs.196659"
           rel="noopener noreferrer"
           target="_blank"
+          title="Open this DOI in an new window"
         >
           <a
+            aria-label="Open this DOI in an new window"
             className="citationDoiLink"
             href="https://doi.org/10.1242/jcs.196659"
             rel="noopener noreferrer"

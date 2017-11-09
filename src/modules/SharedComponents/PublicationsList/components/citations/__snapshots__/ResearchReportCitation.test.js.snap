@@ -677,14 +677,16 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
       >
          
         <ExternalLink
+          aria-label="Open this DOI in an new window"
           className="citationDoiLink"
           externalLinkIcon={true}
-          linkTooltip="Open this DOI in an new window"
-          linkUrl="https://doi.org/10.129839/sometext"
+          href="https://doi.org/10.129839/sometext"
           rel="noopener noreferrer"
           target="_blank"
+          title="Open this DOI in an new window"
         >
           <a
+            aria-label="Open this DOI in an new window"
             className="citationDoiLink"
             href="https://doi.org/10.129839/sometext"
             rel="noopener noreferrer"
@@ -1419,14 +1421,16 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
       >
          
         <ExternalLink
+          aria-label="Open this DOI in an new window"
           className="citationDoiLink"
           externalLinkIcon={true}
-          linkTooltip="Open this DOI in an new window"
-          linkUrl="https://doi.org/10.129839/sometext"
+          href="https://doi.org/10.129839/sometext"
           rel="noopener noreferrer"
           target="_blank"
+          title="Open this DOI in an new window"
         >
           <a
+            aria-label="Open this DOI in an new window"
             className="citationDoiLink"
             href="https://doi.org/10.129839/sometext"
             rel="noopener noreferrer"

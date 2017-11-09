@@ -556,13 +556,13 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
+          aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
           className="wosCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
-          linkUrl="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
         >
           <a
             aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
@@ -594,13 +594,13 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
+          aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
           className="googleCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
-          linkUrl="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
+          href="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
         >
           <a
             aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
@@ -632,8 +632,8 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
           <ExternalLink
             className="externalLink"
             externalLinkIcon={true}
+            href="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
             linkText="View full statistics"
-            linkUrl="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -721,13 +721,13 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to undefined (Web of science) will open in a new window."
+          aria-label="Link to undefined (Web of science) will open in a new window."
           className="wosCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to undefined (Web of science) will open in a new window."
-          linkUrl="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to undefined (Web of science) will open in a new window."
         >
           <a
             aria-label="Link to undefined (Web of science) will open in a new window."
@@ -759,13 +759,13 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to undefined (Scopus) will open in a new window."
+          aria-label="Link to undefined (Scopus) will open in a new window."
           className="scopusCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to undefined (Scopus) will open in a new window."
-          linkUrl="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to undefined (Scopus) will open in a new window."
         >
           <a
             aria-label="Link to undefined (Scopus) will open in a new window."
@@ -797,13 +797,13 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to undefined (Altmetric) will open in a new window."
+          aria-label="Link to undefined (Altmetric) will open in a new window."
           className="altmetricCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to undefined (Altmetric) will open in a new window."
-          linkUrl="http://www.altmetric.com/details.php?citation_id=12345"
+          href="http://www.altmetric.com/details.php?citation_id=12345"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to undefined (Altmetric) will open in a new window."
         >
           <a
             aria-label="Link to undefined (Altmetric) will open in a new window."
@@ -835,13 +835,13 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to undefined (Google scholar) will open in a new window."
+          aria-label="Link to undefined (Google scholar) will open in a new window."
           className="googleCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to undefined (Google scholar) will open in a new window."
-          linkUrl="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+          href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to undefined (Google scholar) will open in a new window."
         >
           <a
             aria-label="Link to undefined (Google scholar) will open in a new window."
@@ -883,8 +883,8 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
           <ExternalLink
             className="externalLink"
             externalLinkIcon={true}
+            href="https://app.library.uq.edu.au/#/authors/view/pid:111"
             linkText="View full statistics"
-            linkUrl="https://app.library.uq.edu.au/#/authors/view/pid:111"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -982,13 +982,13 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to undefined (Web of science) will open in a new window."
+          aria-label="Link to undefined (Web of science) will open in a new window."
           className="wosCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to undefined (Web of science) will open in a new window."
-          linkUrl="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to undefined (Web of science) will open in a new window."
         >
           <a
             aria-label="Link to undefined (Web of science) will open in a new window."
@@ -1020,13 +1020,13 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to undefined (Scopus) will open in a new window."
+          aria-label="Link to undefined (Scopus) will open in a new window."
           className="scopusCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to undefined (Scopus) will open in a new window."
-          linkUrl="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to undefined (Scopus) will open in a new window."
         >
           <a
             aria-label="Link to undefined (Scopus) will open in a new window."
@@ -1058,13 +1058,13 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to undefined (Altmetric) will open in a new window."
+          aria-label="Link to undefined (Altmetric) will open in a new window."
           className="altmetricCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to undefined (Altmetric) will open in a new window."
-          linkUrl="http://www.altmetric.com/details.php?citation_id=12345"
+          href="http://www.altmetric.com/details.php?citation_id=12345"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to undefined (Altmetric) will open in a new window."
         >
           <a
             aria-label="Link to undefined (Altmetric) will open in a new window."
@@ -1096,13 +1096,13 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
         className="citationCount"
       >
         <ExternalLink
-          ariaLabel="Link to undefined (Google scholar) will open in a new window."
+          aria-label="Link to undefined (Google scholar) will open in a new window."
           className="googleCitationCount"
           externalLinkIcon={false}
-          linkTooltip="Link to undefined (Google scholar) will open in a new window."
-          linkUrl="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+          href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
           rel="noopener noreferrer"
           target="_blank"
+          title="Link to undefined (Google scholar) will open in a new window."
         >
           <a
             aria-label="Link to undefined (Google scholar) will open in a new window."
@@ -1136,8 +1136,8 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
           <ExternalLink
             className="externalLink"
             externalLinkIcon={true}
+            href="https://app.library.uq.edu.au/#/authors/view/pid:111"
             linkText="View full statistics"
-            linkUrl="https://app.library.uq.edu.au/#/authors/view/pid:111"
             rel="noopener noreferrer"
             target="_blank"
           >

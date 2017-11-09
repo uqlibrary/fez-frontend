@@ -119,9 +119,9 @@ export default class PublicationCitation extends Component {
                         <h3 className="publicationTitle">
                             {!this.props.publication.rek_pid ? (this.props.publication.rek_title) : (
                                 <ExternalLink
-                                    linkUrl={locale.global.sources.espace.externalUrl.replace('[id]', this.props.publication.rek_pid)}
+                                    href={locale.global.sources.espace.externalUrl.replace('[id]', this.props.publication.rek_pid)}
                                     linkText={this.props.publication.rek_title}
-                                    ariaLabel={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
+                                    aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
                                 />
                             )}
                         </h3>
@@ -140,9 +140,9 @@ export default class PublicationCitation extends Component {
                                             <ExternalLink
                                                 key={'source_' + index}
                                                 className="publicationSource"
-                                                linkUrl={sourceConfig.externalUrl.replace('[id]', source.id)}
+                                                href={sourceConfig.externalUrl.replace('[id]', source.id)}
                                                 linkText={sourceConfig.title}
-                                                ariaLabel={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}
+                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}
                                             />
                                         );
                                     })

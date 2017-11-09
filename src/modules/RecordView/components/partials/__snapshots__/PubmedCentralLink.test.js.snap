@@ -3,7 +3,7 @@
 exports[`PubmedCentralLink test  should render component with empty span 1`] = `
 <PubmedCentralLink>
   <span
-    className="pubmedCentralLink empty"
+    className="pubmedCentralLinkUrl empty"
   />
 </PubmedCentralLink>
 `;
@@ -13,7 +13,7 @@ exports[`PubmedCentralLink test  should render component with pubmedCentralId 1`
   pubmedCentralId="PMC12345677"
 >
   <ExternalLink
-    className="pubmedCentralLink"
+    className="pubmedCentralLinkUrl"
     externalLinkIcon={true}
     linkText="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
     linkTooltip="Full text via Pubmed Central (open access)"
@@ -22,11 +22,11 @@ exports[`PubmedCentralLink test  should render component with pubmedCentralId 1`
     target="_blank"
   >
     <a
-      className="pubmedCentralLink"
-      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
+      className="pubmedCentralLinkUrl"
+      linkTooltip="Full text via Pubmed Central (open access)"
+      linkUrl="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
       rel="noopener noreferrer"
       target="_blank"
-      title="Full text via Pubmed Central (open access)"
     >
       https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677
       <ActionOpenInNew
