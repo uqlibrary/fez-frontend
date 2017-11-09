@@ -118,8 +118,8 @@ exports[`App tests for user account and author status User is logged in but are 
           },
         ]
       }
-      skipNavAriaLabel="Click to skip navigation"
-      skipNavTitle="Click to skip main navigation"
+      skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
+      skipNavTitle="Skip Navigation"
       toggleDrawer={[Function]}
     />
     <div
@@ -338,8 +338,8 @@ exports[`App tests for user account and author status User is not logged in and 
           },
         ]
       }
-      skipNavAriaLabel="Click to skip navigation"
-      skipNavTitle="Click to skip main navigation"
+      skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
+      skipNavTitle="Skip Navigation"
       toggleDrawer={[Function]}
     />
     <div
@@ -504,8 +504,8 @@ exports[`App tests for user account and author status User logged in and is an a
           },
         ]
       }
-      skipNavAriaLabel="Click to skip navigation"
-      skipNavTitle="Click to skip main navigation"
+      skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
+      skipNavTitle="Skip Navigation"
       toggleDrawer={[Function]}
     />
     <div
@@ -754,8 +754,8 @@ exports[`App tests for user account and author status User logged in but is not 
           },
         ]
       }
-      skipNavAriaLabel="Click to skip navigation"
-      skipNavTitle="Click to skip main navigation"
+      skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
+      skipNavTitle="Skip Navigation"
       toggleDrawer={[Function]}
     />
     <div

@@ -10,8 +10,8 @@ export default {
             tooltip: 'Main navigation'
         },
         skipNav: {
-            title: 'Click to skip main navigation',
-            ariaLabel: 'Click to skip navigation',
+            title: 'Skip Navigation',
+            ariaLabel: 'Click to skip, or tab to progress to the navigation',
         },
         loginAlert: {
             title: 'You are not logged in',

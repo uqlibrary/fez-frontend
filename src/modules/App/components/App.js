@@ -118,7 +118,7 @@ export default class App extends React.Component {
                                         loginUrl={AUTH_URL_LOGIN}
                                         logoutUrl={AUTH_URL_LOGOUT}
                                         signInTooltipText={locale.authentication.signInText}
-                                        signOutTooltipText={isAuthorizedUser ? (locale.authentication.signOutText + ' - ' + this.props.user.account.name) : ''} />
+                                        signOutTooltipText={isAuthorizedUser ? (`${locale.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
                                 </div>
                             }
                         />
