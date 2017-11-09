@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
-import {OrgUnitsField} from 'modules/SharedComponents/AutoSuggestField';
+import {OrgUnitNameField} from 'modules/SharedComponents/AutoSuggestField';
 import {validation, locale} from 'config';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 
@@ -41,7 +41,7 @@ export default class ThesisForm extends Component {
                     <div className="columns">
                         <div className="column is-half">
                             <Field
-                                component={OrgUnitsField}
+                                component={OrgUnitNameField}
                                 name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                                 disabled={this.props.submitting}
                                 validate={[validation.required]}
