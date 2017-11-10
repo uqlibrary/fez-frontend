@@ -54,7 +54,7 @@ export default class JournalArticleCitation extends Component {
 
                 {/* {Start page|, |}{End page|-|} */}
                 <Partials.PageRangeCitationView publication={this.props.publication} suffix="" />
-                .
+                <span>. </span>
                 {/* {doi| doi:|}*/}
                 <Partials.DoiCitationView doi={record.doi} />
             </div>

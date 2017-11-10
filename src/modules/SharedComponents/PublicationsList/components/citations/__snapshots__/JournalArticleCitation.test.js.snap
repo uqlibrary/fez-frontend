@@ -4538,7 +4538,9 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </PageCitationView>
       </span>
     </PageRangeCitationView>
-    .
+    <span>
+      . 
+    </span>
     <DoiCitationView
       doi="10.1242/jcs.196659"
     >
@@ -4732,7 +4734,9 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
         className="citationPageRange empty"
       />
     </PageRangeCitationView>
-    .
+    <span>
+      . 
+    </span>
     <DoiCitationView
       doi={null}
     >
