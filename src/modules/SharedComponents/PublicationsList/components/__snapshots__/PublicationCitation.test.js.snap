@@ -13,17 +13,16 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
       <h3
         className="publicationTitle"
       >
-        <a
+        <ExternalLink
           aria-label="Link to Reducing preventable health disadvantage for people with disabilities through physical activity promotion will open in a new window."
+          className="externalLink"
           href="https://fez-staging.library.uq.edu.au/view/UQ:137936"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
         >
           Reducing preventable health disadvantage for people with disabilities through physical activity promotion
-          <ActionOpenInNew
-            className="titleOpenUrlIcon"
-          />
-        </a>
+        </ExternalLink>
       </h3>
       <BookChapterCitation
         publication={
@@ -883,17 +882,16 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
       <h3
         className="publicationTitle"
       >
-        <a
+        <ExternalLink
           aria-label="Link to Reducing preventable health disadvantage for people with disabilities through physical activity promotion will open in a new window."
+          className="externalLink"
           href="https://fez-staging.library.uq.edu.au/view/UQ:137936"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
         >
           Reducing preventable health disadvantage for people with disabilities through physical activity promotion
-          <ActionOpenInNew
-            className="titleOpenUrlIcon"
-          />
-        </a>
+        </ExternalLink>
       </h3>
       <BookChapterCitation
         publication={
@@ -1715,17 +1713,16 @@ exports[`PublicationCitation renders  component with default item 1`] = `
       <h3
         className="publicationTitle"
       >
-        <a
+        <ExternalLink
           aria-label="Link to Reducing preventable health disadvantage for people with disabilities through physical activity promotion will open in a new window."
+          className="externalLink"
           href="https://fez-staging.library.uq.edu.au/view/UQ:137936"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
         >
           Reducing preventable health disadvantage for people with disabilities through physical activity promotion
-          <ActionOpenInNew
-            className="titleOpenUrlIcon"
-          />
-        </a>
+        </ExternalLink>
       </h3>
       <BookChapterCitation
         publication={

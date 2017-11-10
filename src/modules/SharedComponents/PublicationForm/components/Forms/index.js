@@ -16,3 +16,4 @@ export {default as ImageDocumentForm} from './ImageDocumentForm';
 export {default as DesignForm} from './DesignForm';
 export {default as ThesisForm} from './ThesisForm';
 export {default as DepartmentTechnicalReportForm} from './DepartmentTechnicalReportForm';
+export {default as ConferenceProceedingsForm} from './ConferenceProceedingsForm';

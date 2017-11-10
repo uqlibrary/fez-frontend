@@ -12,10 +12,6 @@ export const maxLength2000 = maxLength(2000); // URL's must be under 2000 charac
 export const minLength = min => value => value && value.trim().length < min ? validationErrors.minLength.replace('[min]', min) : undefined;
 export const minLength10 = minLength(10);
 
-// Generic
-export const required = value => value ? undefined : validationErrors.required;
-export const requiredList = value => (value && value.length > 0 ? undefined : validationErrors.required);
-
 // TODO: fix validation, make it generic etc....
 export const isValidDOIValue = value => {
     const regexGroup = [
@@ -42,6 +38,9 @@ export const isValidPublicationTitle = value => {
     return isValid.test(value.trim());
 };
 
+// Generic
+export const required = value => value ? undefined : validationErrors.required;
+export const requiredList = value => (value && value.length > 0 ? undefined : validationErrors.required);
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? validationErrors.email : undefined;
 export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? validationErrors.url : maxLength2000(value);
 export const doi = (value) => !!value && !isValidDOIValue(value) ? validationErrors.doi : undefined;
@@ -50,7 +49,9 @@ export const peopleRequired = (itemList, validationError, checkSelected = true) 
     !itemList || itemList.length === 0 || (checkSelected && itemList && itemList.filter(item => (item.selected)).length === 0)
         ? validationError : undefined
 );
+
 export const authorRequired = (authors) => peopleRequired(authors, validationErrors.authorRequired, true);
+export const editorRequired = (editors) => peopleRequired(editors, validationErrors.editorRequired, true);
 export const supervisorRequired = (supervisors) => peopleRequired(supervisors, validationErrors.supervisorRequired, false);
 
 // DateTime

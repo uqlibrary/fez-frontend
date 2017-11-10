@@ -106,16 +106,12 @@ describe('Validation method', () => {
         expect(validation.isValidPublicationTitle(' global war ')).toBeTruthy();
     });
 
-
-    it('it should validate authors', () => {
-        const authorNoneSelected = ["Fred"];
-        const authorSelected = [{
-            selected:true
-        }];
-        expect(validation.authorRequired([])).toEqual(locale.validationErrors.authorRequired);
-        expect(validation.authorRequired(authorNoneSelected)).toEqual(locale.validationErrors.authorRequired);
-        expect(validation.authorRequired(authorSelected)).toEqual(undefined);
+    it('it should validate person selected correctly', () => {
+        expect(validation.peopleRequired([], 'Error', true)).toEqual('Error');
+        expect(validation.peopleRequired([{name: 'First person'}], 'Error', true)).toEqual('Error');
+        expect(validation.peopleRequired([{name: 'First person', selected: true}], 'Error', true)).toBeFalsy();
+        expect(validation.peopleRequired([], 'Error', false)).toEqual('Error');
+        expect(validation.peopleRequired([{name: 'First person'}], 'Error', false)).toBeFalsy();
     });
-
 });
 

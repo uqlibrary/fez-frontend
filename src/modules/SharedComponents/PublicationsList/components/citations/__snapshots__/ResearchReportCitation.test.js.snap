@@ -678,33 +678,44 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         className="citationDOI"
       >
          
-        <a
+        <ExternalLink
+          aria-label="Open this DOI in an new window"
           className="citationDoiLink"
           href="https://doi.org/10.129839/sometext"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
           title="Open this DOI in an new window"
         >
-          <span
-            className="citationLabel"
+          <a
+            aria-label="Open this DOI in an new window"
+            className="citationDoiLink"
+            href="https://doi.org/10.129839/sometext"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Open this DOI in an new window"
           >
-            https://doi.org/
-          </span>
-          <span
-            className="citationValue"
-          >
-            10.129839/sometext
+            <span
+              className="citationLabel"
+            >
+              https://doi.org/
+            </span>
+            <span
+              className="citationValue"
+            >
+              10.129839/sometext
+            </span>
             <ActionOpenInNew
-              className="citationOpenUrlIcon"
+              className="openExternalUrlIcon"
             >
               <SvgIcon
-                className="citationOpenUrlIcon"
+                className="openExternalUrlIcon"
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
                 viewBox="0 0 24 24"
               >
                 <svg
-                  className="citationOpenUrlIcon"
+                  className="openExternalUrlIcon"
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -727,8 +738,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
                 </svg>
               </SvgIcon>
             </ActionOpenInNew>
-          </span>
-        </a>
+          </a>
+        </ExternalLink>
       </span>
     </DoiCitationView>
   </div>
@@ -1413,33 +1424,44 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         className="citationDOI"
       >
          
-        <a
+        <ExternalLink
+          aria-label="Open this DOI in an new window"
           className="citationDoiLink"
           href="https://doi.org/10.129839/sometext"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
           title="Open this DOI in an new window"
         >
-          <span
-            className="citationLabel"
+          <a
+            aria-label="Open this DOI in an new window"
+            className="citationDoiLink"
+            href="https://doi.org/10.129839/sometext"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Open this DOI in an new window"
           >
-            https://doi.org/
-          </span>
-          <span
-            className="citationValue"
-          >
-            10.129839/sometext
+            <span
+              className="citationLabel"
+            >
+              https://doi.org/
+            </span>
+            <span
+              className="citationValue"
+            >
+              10.129839/sometext
+            </span>
             <ActionOpenInNew
-              className="citationOpenUrlIcon"
+              className="openExternalUrlIcon"
             >
               <SvgIcon
-                className="citationOpenUrlIcon"
+                className="openExternalUrlIcon"
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
                 viewBox="0 0 24 24"
               >
                 <svg
-                  className="citationOpenUrlIcon"
+                  className="openExternalUrlIcon"
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -1462,8 +1484,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
                 </svg>
               </SvgIcon>
             </ActionOpenInNew>
-          </span>
-        </a>
+          </a>
+        </ExternalLink>
       </span>
     </DoiCitationView>
   </div>
