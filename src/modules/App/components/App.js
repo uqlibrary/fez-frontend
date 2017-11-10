@@ -66,11 +66,6 @@ export default class App extends React.Component {
     toggleDrawer = () => {
         this.setState({
             menuDrawerOpen: !this.state.menuDrawerOpen
-        }, () => {
-            if(this.state.menuDrawerOpen || this.state.docked) {
-                // Main menu opened - focus on div#mainMenu, next tabbed element would be the skip nav element
-                document.getElementById('mainMenu').focus();
-            }
         });
     };
 
@@ -103,9 +98,11 @@ export default class App extends React.Component {
                             titleStyle={titleStyle}
                             onLeftIconButtonTouchTap={this.toggleDrawer}
                             iconElementLeft={
-                                <IconButton tooltip={locale.global.mainNavButton.tooltip}
+                                <IconButton
+                                    tooltip={locale.global.mainNavButton.tooltip}
                                     tooltipPosition="bottom-right"
                                     hoveredStyle={appBarButtonStyles}
+                                    tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1}
                                 >
                                     <NavigationMenu />
                                 </IconButton>
@@ -134,6 +131,7 @@ export default class App extends React.Component {
                             history={this.props.history}
                             skipNavAriaLabel={locale.global.skipNav.ariaLabel}
                             skipNavTitle={locale.global.skipNav.title}
+                            SkipNavFocusElementId="contentContainer"
                         />
 
                         <div className="content-container" id="contentContainer" style={container} tabIndex={-1}>
