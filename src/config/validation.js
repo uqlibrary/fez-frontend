@@ -18,8 +18,10 @@ export const minLength10 = minLength(10);
 export const required = value => value ? undefined : validationErrors.required;
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? validationErrors.email : undefined;
 export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? validationErrors.url : maxLength2000(value);
-export const authorRequired = (authors) => !authors || authors.length === 0 || authors.filter(item => (item.selected)).length === 0 ? validationErrors.authorRequired : undefined;
-export const editorRequired = (editors) => !editors || editors.length === 0 || editors.filter(item => (item.selected)).length === 0 ? validationErrors.editorRequired : undefined;
+
+export const isPersonSelected = (persons) => persons && persons.length !== 0 && persons.filter(item => (item.selected)).length !== 0;
+export const authorRequired = (authors) => isPersonSelected(authors) ? undefined : validationErrors.authorRequired;
+export const editorRequired = (editors) => isPersonSelected(editors) ? undefined : validationErrors.editorRequired;
 
 // DateTime
 export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? validationErrors.dateTimeDay : undefined;
