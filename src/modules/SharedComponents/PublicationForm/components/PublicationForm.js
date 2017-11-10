@@ -63,10 +63,6 @@ export default class PublicationForm extends Component {
 
 
     render() {
-        console.log('formValues.forField: ');
-        console.log(this.props.formValues ? this.props.formValues.get('forField') : 'n/a');
-        console.log('formValues.singleForField: ');
-        console.log(this.props.formValues ? this.props.formValues.get('singleForField') : 'n/a');
         const publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;
