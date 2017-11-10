@@ -54,7 +54,8 @@ exports[`ThesisForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="School, department or centre"
+          floatingLabelText="School, Institute or Centre"
+          hintText=""
           name="fez_record_search_key_org_unit_name.rek_org_unit_name"
           validate={
             Array [
@@ -70,10 +71,9 @@ exports[`ThesisForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
-          floatingLabelText="Institution"
-          fullWidth={true}
+          floatingLabelText="Institution name"
+          hintText=""
           name="fez_record_search_key_org_name.rek_org_name"
-          type="text"
           validate={
             Array [
               [Function],
@@ -95,7 +95,6 @@ exports[`ThesisForm renders  component 1`] = `
           locale={
             Object {
               "label": "Thesis type",
-              "loading": "loading...",
             }
           }
           name="rek_genre_type"
@@ -137,6 +136,7 @@ exports[`ThesisForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Author name"
           fullWidth={true}
+          hintText=""
           name="currentAuthor.0.nameAsPublished"
           rows={1}
           type="text"
@@ -154,14 +154,14 @@ exports[`ThesisForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Enter Supervisor names e.g. Firstname Lastname. Additional boxes will appear for more supervisors.",
+        "text": "Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.",
         "title": "Supervisors help",
       }
     }
     title="Supervisors"
   >
     <div>
-      Enter Supervisor names e.g. Firstname Lastname. Additional boxes will appear for more supervisors.
+      Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.
     </div>
     <Field
       className="requiredField"
@@ -237,24 +237,64 @@ exports[`ThesisForm renders  component 1`] = `
         "title": "Optional information help",
       }
     }
+    title="Field of research"
+  >
+    <div>
+      Select up to 3 Field of Research (FoR) codes
+    </div>
+    <Field
+      component={[Function]}
+      disabled={false}
+      distinctOnly={true}
+      hideReorder={true}
+      locale={
+        Object {
+          "form": Object {
+            "locale": Object {
+              "inputFieldHint": "Please, type field of research value then select a value from the list",
+              "inputFieldLabel": "Field of research",
+            },
+          },
+          "header": Object {
+            "locale": Object {
+              "deleteAll": "Remove all items",
+              "deleteAllConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete all items?",
+                "confirmationTitle": "Delete all",
+              },
+              "nameColumn": "Field of research",
+            },
+          },
+          "row": Object {
+            "locale": Object {
+              "deleteHint": "Remove this item",
+              "deleteRecordConfirmation": Object {
+                "cancelButtonLabel": "No",
+                "confirmButtonLabel": "Yes",
+                "confirmationMessage": "Are you sure you want to delete this item?",
+                "confirmationTitle": "Delete item",
+              },
+            },
+          },
+        }
+      }
+      maxCount={3}
+      name="fieldOfResearch"
+    />
+  </StandardCard>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": "Some help",
+        "title": "Optional information help",
+      }
+    }
     title="Optional information"
   >
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
-      >
-        <Field
-          component={[Function]}
-          disabled={false}
-          floatingLabelText="Fields of research"
-          fullWidth={true}
-          name="fez_record_search_key_subject.rek_subject"
-          type="text"
-        />
-      </div>
-    </div>
     <div
       className="columns"
     >
@@ -266,8 +306,14 @@ exports[`ThesisForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="DOI"
           fullWidth={true}
+          hintText=""
           name="fez_record_search_key_doi.rek_doi"
           type="text"
+          validate={
+            Array [
+              [Function],
+            ]
+          }
         />
       </div>
       <div
@@ -278,7 +324,9 @@ exports[`ThesisForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Total pages"
           fullWidth={true}
+          hintText=""
           name="fez_record_search_key_total_pages.rek_total_pages"
+          normalize={[Function]}
           type="text"
         />
       </div>
@@ -294,6 +342,7 @@ exports[`ThesisForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Abstract"
           fullWidth={true}
+          hintText="Provide an abstract or summary of the work"
           multiLine={true}
           name="fez_record_search_key_description.rek_description"
           rows={1}
@@ -310,8 +359,9 @@ exports[`ThesisForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
-          floatingLabelText="Additional notes"
+          floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
+          hintText="Provide any additional information"
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}

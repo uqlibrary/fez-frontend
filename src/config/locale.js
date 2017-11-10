@@ -640,14 +640,20 @@ export default {
                     },
                     fieldLabels: {
                         documentTitle: {
-                            title: 'Title',
-                            hint: 'Title of document'
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of generic document'
                         },
-                        publicationPlace: 'Place of publication',
-                        publisher: 'Publisher',
+                        publicationPlace: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: ''
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: ''
+                        },
                         abstract: {
-                            title: 'Abstract',
-                            hint: 'Add a full article abstract here.'
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Add a full article abstract here.'
                         },
                         date: {
                             title: 'Publication date',
@@ -716,12 +722,12 @@ export default {
                     },
                     fieldLabels: {
                         notes: {
-                            title: 'Notes (not publicly viewable)',
-                            hint: 'Please add any additional information'
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information'
                         },
-                        link: {
-                            title: 'Link',
-                            hint: 'Enter URL for this publication'
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this publication'
                         }
                     }
 
@@ -736,8 +742,14 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        articleTitle: 'Title of document',
-                        journalTitle: 'Journal name',
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of journal article'
+                        },
+                        journalTitle: {
+                            floatingLabelText: 'Journal name',
+                            hintText: ''
+                        },
                         date: {
                             title: 'Publication date',
                             day: 'Day',
@@ -1530,20 +1542,20 @@ export default {
                     },
                     fieldLabels: {
                         documentTitle: {
-                            title: 'Title',
-                            hint: 'Title of paper',
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of paper',
                         },
-                        orgUnit: {
-                            title: 'School, department or centre',
-                            hint: ''
+                        orgUnitName: {
+                            floatingLabelText: 'School, department or centre',
+                            hintText: ''
                         },
-                        institution: {
-                            title: 'Institution',
-                            hint: ''
+                        orgName: {
+                            floatingLabelText: 'Institution',
+                            hintText: ''
                         },
                         series: {
-                            title: 'Series',
-                            hint: 'Enter seminar series'
+                            floatingLabelText: 'Series',
+                            hintText: 'Enter seminar series'
                         },
                         seminarDate: {
                             title: 'Seminar date',
@@ -1611,12 +1623,12 @@ export default {
                     },
                     fieldLabels: {
                         notes: {
-                            title: 'Notes (not publicly viewable)',
-                            hint: 'Please, add any additional information here',
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please, add any additional information here',
                         },
                         url: {
-                            title: 'Link',
-                            hint: 'Enter a valid URL for this publication'
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter a valid URL for this publication'
                         }
                     }
                 },
@@ -1631,16 +1643,16 @@ export default {
                     },
                     fieldLabels: {
                         documentTitle: {
-                            title: 'Title',
-                            hint: 'Thesis title',
+                            floatingLabelText: 'Title',
+                            hintText: 'Thesis title'
                         },
-                        orgUnit: {
-                            title: 'School, department or centre',
-                            hint: ''
+                        orgName: {
+                            floatingLabelText: 'Institution name',
+                            hintText: ''
                         },
-                        institution: {
-                            title: 'Institution',
-                            hint: ''
+                        orgUnitName: {
+                            floatingLabelText: 'School, Institute or Centre',
+                            hintText: ''
                         },
                         date: {
                             title: 'Publication date',
@@ -1649,28 +1661,11 @@ export default {
                             year: 'Year'
                         },
                         thesisType: {
-                            title: 'Thesis type',
-                            hint: ''
-                        },
-                        DOI: {
-                            title: 'DOI',
-                            hint: ''
-                        },
-                        totalPages: {
-                            title: 'Total pages',
-                            hint: ''
-                        },
-                        abstract: {
-                            title: 'Abstract',
-                            hint: 'Provide an abstract or summary of the work.'
-                        },
-                        notes: {
-                            title: 'Additional notes',
-                            hintText: 'Add any additional information here',
+                            label: 'Thesis type'
                         },
                         author: {
-                            title: 'Author name',
-                            hint: ''
+                            floatingLabelText: 'Author name',
+                            hintText: ''
                         }
                     }
                 },
@@ -1678,10 +1673,10 @@ export default {
                     title: 'Supervisors',
                     help: {
                         title: 'Supervisors help',
-                        text: 'Enter Supervisor names e.g. Firstname Lastname. Additional boxes will appear for more supervisors.',
+                        text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
                         buttonLabel: 'OK'
                     },
-                    description: 'Enter Supervisor names e.g. Firstname Lastname. Additional boxes will appear for more supervisors.',
+                    description: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
                     field: {
                         form: {
                             locale: {
@@ -1730,7 +1725,7 @@ export default {
                         text: 'Some help',
                         buttonLabel: 'OK'
                     },
-                    text: 'Select up to 3 Field of Research (FoR) codes'
+                    description: 'Select up to 3 Field of Research (FoR) codes'
                 },
                 optional: {
                     title: 'Optional information',
@@ -1740,13 +1735,21 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        notes: {
-                            title: 'Notes (not publicly viewable)',
-                            hint: 'Please, add any additional information here',
+                        doi: {
+                            floatingLabelText: 'DOI',
+                            hintText: ''
                         },
-                        url: {
-                            title: 'Link',
-                            hint: 'Enter a valid URL for this publication'
+                        totalPages: {
+                            floatingLabelText: 'Total pages',
+                            hintText: ''
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Provide an abstract or summary of the work'
+                        },
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Provide any additional information',
                         }
                     }
                 },
@@ -1761,8 +1764,8 @@ export default {
                     },
                     fieldLabels: {
                         documentTitle: {
-                            title: 'Title',
-                            hint: 'Title of document'
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of report'
                         },
                         date: {
                             title: 'Preprint date',
@@ -1830,12 +1833,12 @@ export default {
                     },
                     fieldLabels: {
                         notes: {
-                            title: 'Notes (not publicly viewable)',
-                            hint: 'Please add any additional information here'
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here'
                         },
                         url: {
-                            title: 'Link (URL)',
-                            hint: 'Enter URL for this publication'
+                            floatingLabelText: 'Link (URL)',
+                            hintText: 'Enter URL for this publication'
                         }
                     }
                 }
@@ -2944,6 +2947,7 @@ export default {
         required: 'This field is required',
         email: 'Email address is not valid',
         url: 'URL is not valid',
+        doi: 'DOI is not valid',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',

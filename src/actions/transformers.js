@@ -100,7 +100,6 @@ export const getRecordAuthorsSearchKey = (authors) => {
     return {
         fez_record_search_key_author: authors.map((item, index) => (
             {
-                rek_author_id: null,
                 rek_author: item.nameAsPublished,
                 rek_author_order: index + 1
             }
@@ -108,6 +107,29 @@ export const getRecordAuthorsSearchKey = (authors) => {
     };
 };
 
+export const getRecordSupervisorsSearchKey = (supervisors) => {
+    if (!supervisors || supervisors.length === 0) return {};
+    return {
+        fez_record_search_key_supervisor: supervisors.map((item, index) => (
+            {
+                rek_supervisor: item.nameAsPublished,
+                rek_supervisor_order: index + 1
+            }
+        ))
+    };
+};
+
+export const getRecordSubjectSearchKey = (subjects) => {
+    if (!subjects || subjects.length === 0) return {};
+    return {
+        fez_record_search_key_subject: subjects.map((item, index) => (
+            {
+                rek_subject_id: item.rek_value.key,
+                rek_subject_order: index + 1
+            }
+        ))
+    };
+};
 
 /* getRecordAuthorsIdSearchKey - returns authors id object formatted for record request
 * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or

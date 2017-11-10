@@ -28,14 +28,18 @@ export function createNewRecord(data) {
             ...transformers.getRecordAuthorsSearchKey(data.authors || data.currentAuthor),
             ...transformers.getRecordAuthorsIdSearchKey(data.authors || data.currentAuthor),
             ...transformers.getRecordContributorsSearchKey(data.editors),
-            ...transformers.getRecordContributorsIdSearchKey(data.editors)
+            ...transformers.getRecordContributorsIdSearchKey(data.editors),
+            ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
+            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch)
         };
 
         // delete extra form values from request object
         if (recordRequest.authors) delete recordRequest.authors;
         if (recordRequest.editors) delete recordRequest.editors;
         if (recordRequest.files) delete recordRequest.files;
-        if (recordRequest.author) delete recordRequest.author;
+        if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
+        if (recordRequest.supervisors) delete recordRequest.supervisors;
+        if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;

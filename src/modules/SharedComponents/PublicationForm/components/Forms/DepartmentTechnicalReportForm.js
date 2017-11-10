@@ -16,10 +16,6 @@ export default class DepartmentTechnicalReportForm extends Component {
         super(props);
     }
 
-    getNumbersOnly = (value) => {
-        return value.replace(/[^\d]/g, '');
-    };
-
     render() {
         const txt = locale.components.publicationForm.departmentTechnicalReport;
         return (

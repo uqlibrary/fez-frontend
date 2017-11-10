@@ -33,8 +33,7 @@ export default class PreprintForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
-                                hintText={txt.information.fieldLabels.documentTitle.hint}
+                                {...txt.information.fieldLabels.documentTitle}
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
@@ -79,8 +78,7 @@ export default class PreprintForm extends Component {
                                 fullWidth
                                 rows={1}
                                 multiLine
-                                floatingLabelText={txt.optional.fieldLabels.notes.title}
-                                hintText={txt.optional.fieldLabels.notes.hint}
+                                {...txt.optional.fieldLabels.notes}
                             />
                         </div>
                     </div>
@@ -92,8 +90,7 @@ export default class PreprintForm extends Component {
                                 name="rek_link"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.url.title}
-                                hintText={txt.optional.fieldLabels.url.hint}
+                                {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
                         </div>

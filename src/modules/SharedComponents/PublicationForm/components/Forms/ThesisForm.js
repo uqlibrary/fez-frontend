@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
-import {OrgUnitNameField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
+import {OrgNameField, OrgUnitNameField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {validation, locale} from 'config';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 
@@ -14,6 +14,10 @@ export default class ThesisForm extends Component {
     constructor(props) {
         super(props);
     }
+
+    getNumbersOnly = (value) => {
+        return value.replace(/[^\d]/g, '');
+    };
 
     render() {
         const txt = locale.components.publicationForm.thesis;
@@ -31,8 +35,7 @@ export default class ThesisForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
-                                hintText={txt.information.fieldLabels.documentTitle.hint}
+                                {...txt.information.fieldLabels.documentTitle}
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
@@ -46,19 +49,17 @@ export default class ThesisForm extends Component {
                                 disabled={this.props.submitting}
                                 validate={[validation.required]}
                                 className="requiredField"
-                                floatingLabelText={txt.information.fieldLabels.orgUnit.title}
+                                {...txt.information.fieldLabels.orgUnitName}
                             />
                         </div>
                         <div className="column">
                             <Field
-                                component={TextField}
+                                component={OrgNameField}
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_org_name.rek_org_name"
-                                type="text"
-                                fullWidth
                                 className="requiredField"
                                 validate={[validation.required]}
-                                floatingLabelText={txt.information.fieldLabels.institution.title}/>
+                                {...txt.information.fieldLabels.orgName}/>
                         </div>
                     </div>
                     <div className="columns">
@@ -68,7 +69,7 @@ export default class ThesisForm extends Component {
                                 name="rek_genre_type"
                                 disabled={this.props.submitting}
                                 validate={[validation.required]}
-                                locale={{label: txt.information.fieldLabels.thesisType.title, loading: locale.global.loading}}
+                                locale={txt.information.fieldLabels.thesisType}
                                 className="requiredField" />
                         </div>
                         <div className="column">
@@ -80,8 +81,7 @@ export default class ThesisForm extends Component {
                                 className="requiredHintField"
                                 validate={[validation.required]}
                                 floatingTitle={txt.information.fieldLabels.date.title}
-                                floatingTitleRequired
-                            />
+                                floatingTitleRequired />
                         </div>
                     </div>
                     <div className="columns">
@@ -93,11 +93,9 @@ export default class ThesisForm extends Component {
                                 type="text"
                                 fullWidth
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.author.title}
-                                hintText={txt.information.fieldLabels.date.hint}
+                                {...txt.information.fieldLabels.author}
                                 className="requiredField"
-                                validate={[validation.required]}
-                            />
+                                validate={[validation.required]} />
                         </div>
                     </div>
                 </StandardCard>
@@ -114,19 +112,15 @@ export default class ThesisForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.fieldOfResearch.title} help={txt.fieldOfResearch.help}>
-                    <div className="columns">
-                        <div className="column">
-                            <div>{txt.fieldOfResearch.text}</div>
-                            <Field
-                                component={FieldOfResearchListField}
-                                name="fez_record_search_key_subject.rek_subject"
-                                hideReorder
-                                distinctOnly
-                                maxCount={3}
-                                disabled={this.props.submitting}
-                                locale={locale.components.fieldOfResearchForm.field} />
-                        </div>
-                    </div>
+                    <div>{txt.fieldOfResearch.description}</div>
+                    <Field
+                        component={FieldOfResearchListField}
+                        name="fieldOfResearch"
+                        hideReorder
+                        distinctOnly
+                        maxCount={3}
+                        disabled={this.props.submitting}
+                        locale={locale.components.fieldOfResearchForm.field} />
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
@@ -137,8 +131,9 @@ export default class ThesisForm extends Component {
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_doi.rek_doi"
                                 type="text"
+                                validate={[validation.doi]}
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.DOI.title}/>
+                                {...txt.optional.fieldLabels.doi} />
                         </div>
                         <div className="column">
                             <Field
@@ -147,7 +142,8 @@ export default class ThesisForm extends Component {
                                 name="fez_record_search_key_total_pages.rek_total_pages"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.totalPages.title}/>
+                                normalize={this.getNumbersOnly}
+                                {...txt.optional.fieldLabels.totalPages} />
                         </div>
                     </div>
                     <div className="columns">
@@ -160,7 +156,7 @@ export default class ThesisForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.abstract.title}/>
+                                {...txt.optional.fieldLabels.abstract} />
                         </div>
                     </div>
                     <div className="columns">
@@ -173,7 +169,7 @@ export default class ThesisForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.notes.title}/>
+                                {...txt.optional.fieldLabels.notes} />
                         </div>
                     </div>
                 </StandardCard>
