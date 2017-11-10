@@ -546,90 +546,140 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
   <div
     className="citationCounts columns is-multiline is-gapless is-marginless"
   >
-    <span
-      className="citationCount"
+    <CitationCountView
+      count={19}
+      link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
+      source="wos"
+      title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
     >
-      <a
-        aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
-        href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon wos large"
-        />
-        <span
-          className="citationCountNumber"
+        <ExternalLink
+          aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
+          className="wosCitationCount"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
         >
-          19
-        </span>
-      </a>
-    </span>
-    <span
-      className="citationCount"
+          <a
+            aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
+            className="wosCitationCount"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000088955100001&SrcAuth=uqueensland"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Web of science) will open in a new window."
+          >
+            <div
+              className="fez-icon wos large"
+            />
+            <span
+              className="citationCountNumber"
+            >
+              19
+            </span>
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
+    <CitationCountView
+      count={null}
+      link="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
+      source="google"
+      title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
     >
-      <a
-        aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
-        href="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
-        target="_blank"
-        title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon google large"
-        />
-      </a>
-    </span>
+        <ExternalLink
+          aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
+          className="googleCitationCount"
+          href="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
+        >
+          <a
+            aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
+            className="googleCitationCount"
+            href="https://scholar.google.com/scholar?q=intitle:[id]Gene%20replacement%20with%20the%20human%20BRCA1%20locus:%20tissue%20specific%20expression%20and%20rescue%20of%20embryonic%20lethality%20in%20mice"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice (Google scholar) will open in a new window."
+          >
+            <div
+              className="fez-icon google large"
+            />
+            <span
+              className="citationCountNumber"
+            />
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
     <div
       className="citationCount column"
     >
-      <a
-        href="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
-        target="_blank"
+      <div
+        className="columns is-mobile is-gapless"
       >
         <div
-          className="columns is-mobile is-gapless"
+          className="column is-narrow citationCountNumber"
         >
-          <div
-            className="column is-narrow citationCountNumber"
+          <ExternalLink
+            className="externalLink"
+            href="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
+            openInNewIcon={true}
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            View full statistics
-            <ActionOpenInNew
-              className="citationOpenUrlIcon"
+            <a
+              className="externalLink"
+              href="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <SvgIcon
-                className="citationOpenUrlIcon"
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                viewBox="0 0 24 24"
+              View full statistics
+              <ActionOpenInNew
+                className="openExternalUrlIcon"
               >
-                <svg
-                  className="citationOpenUrlIcon"
+                <SvgIcon
+                  className="openExternalUrlIcon"
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "color": "rgba(0, 0, 0, 0.87)",
-                      "display": "inline-block",
-                      "fill": "currentColor",
-                      "height": 24,
-                      "muiPrepared": true,
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "userSelect": "none",
-                      "width": 24,
-                    }
-                  }
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                  />
-                </svg>
-              </SvgIcon>
-            </ActionOpenInNew>
-          </div>
+                  <svg
+                    className="openExternalUrlIcon"
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "color": "rgba(0, 0, 0, 0.87)",
+                        "display": "inline-block",
+                        "fill": "currentColor",
+                        "height": 24,
+                        "muiPrepared": true,
+                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "userSelect": "none",
+                        "width": 24,
+                      }
+                    }
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                    />
+                  </svg>
+                </SvgIcon>
+              </ActionOpenInNew>
+            </a>
+          </ExternalLink>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </CitationCounts>
@@ -660,81 +710,158 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
   <div
     className="citationCounts columns is-multiline is-gapless is-marginless"
   >
-    <span
-      className="citationCount"
+    <CitationCountView
+      count={1}
+      link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+      source="wos"
+      title="Link to undefined (Web of science) will open in a new window."
     >
-      <a
-        aria-label="Link to undefined (Web of science) will open in a new window."
-        href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Link to undefined (Web of science) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon wos large"
-        />
-        <span
-          className="citationCountNumber"
+        <ExternalLink
+          aria-label="Link to undefined (Web of science) will open in a new window."
+          className="wosCitationCount"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to undefined (Web of science) will open in a new window."
         >
-          1
-        </span>
-      </a>
-    </span>
-    <span
-      className="citationCount"
+          <a
+            aria-label="Link to undefined (Web of science) will open in a new window."
+            className="wosCitationCount"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to undefined (Web of science) will open in a new window."
+          >
+            <div
+              className="fez-icon wos large"
+            />
+            <span
+              className="citationCountNumber"
+            >
+              1
+            </span>
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
+    <CitationCountView
+      count={1}
+      link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+      source="scopus"
+      title="Link to undefined (Scopus) will open in a new window."
     >
-      <a
-        aria-label="Link to undefined (Scopus) will open in a new window."
-        href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Link to undefined (Scopus) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon scopus large"
-        />
-        <span
-          className="citationCountNumber"
+        <ExternalLink
+          aria-label="Link to undefined (Scopus) will open in a new window."
+          className="scopusCitationCount"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to undefined (Scopus) will open in a new window."
         >
-          1
-        </span>
-      </a>
-    </span>
-    <span
-      className="citationCount"
+          <a
+            aria-label="Link to undefined (Scopus) will open in a new window."
+            className="scopusCitationCount"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to undefined (Scopus) will open in a new window."
+          >
+            <div
+              className="fez-icon scopus large"
+            />
+            <span
+              className="citationCountNumber"
+            >
+              1
+            </span>
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
+    <CitationCountView
+      count={1}
+      link="http://www.altmetric.com/details.php?citation_id=12345"
+      source="altmetric"
+      title="Link to undefined (Altmetric) will open in a new window."
     >
-      <a
-        aria-label="Link to undefined (Altmetric) will open in a new window."
-        href="http://www.altmetric.com/details.php?citation_id=12345"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Link to undefined (Altmetric) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon altmetric large"
-        />
-        <span
-          className="citationCountNumber"
+        <ExternalLink
+          aria-label="Link to undefined (Altmetric) will open in a new window."
+          className="altmetricCitationCount"
+          href="http://www.altmetric.com/details.php?citation_id=12345"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to undefined (Altmetric) will open in a new window."
         >
-          1
-        </span>
-      </a>
-    </span>
-    <span
-      className="citationCount"
+          <a
+            aria-label="Link to undefined (Altmetric) will open in a new window."
+            className="altmetricCitationCount"
+            href="http://www.altmetric.com/details.php?citation_id=12345"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to undefined (Altmetric) will open in a new window."
+          >
+            <div
+              className="fez-icon altmetric large"
+            />
+            <span
+              className="citationCountNumber"
+            >
+              1
+            </span>
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
+    <CitationCountView
+      count={1}
+      link="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+      source="google"
+      title="Link to undefined (Google scholar) will open in a new window."
     >
-      <a
-        aria-label="Link to undefined (Google scholar) will open in a new window."
-        href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
-        target="_blank"
-        title="Link to undefined (Google scholar) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon google large"
-        />
-        1
-      </a>
-    </span>
+        <ExternalLink
+          aria-label="Link to undefined (Google scholar) will open in a new window."
+          className="googleCitationCount"
+          href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to undefined (Google scholar) will open in a new window."
+        >
+          <a
+            aria-label="Link to undefined (Google scholar) will open in a new window."
+            className="googleCitationCount"
+            href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to undefined (Google scholar) will open in a new window."
+          >
+            <div
+              className="fez-icon google large"
+            />
+            <span
+              className="citationCountNumber"
+            >
+              1
+            </span>
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
     <span
       className="citationCount"
     >
@@ -746,53 +873,63 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
     <div
       className="citationCount column"
     >
-      <a
-        href="https://app.library.uq.edu.au/#/authors/view/pid:111"
-        target="_blank"
+      <div
+        className="columns is-mobile is-gapless"
       >
         <div
-          className="columns is-mobile is-gapless"
+          className="column is-narrow citationCountNumber"
         >
-          <div
-            className="column is-narrow citationCountNumber"
+          <ExternalLink
+            className="externalLink"
+            href="https://app.library.uq.edu.au/#/authors/view/pid:111"
+            openInNewIcon={true}
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            View full statistics
-            <ActionOpenInNew
-              className="citationOpenUrlIcon"
+            <a
+              className="externalLink"
+              href="https://app.library.uq.edu.au/#/authors/view/pid:111"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <SvgIcon
-                className="citationOpenUrlIcon"
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                viewBox="0 0 24 24"
+              View full statistics
+              <ActionOpenInNew
+                className="openExternalUrlIcon"
               >
-                <svg
-                  className="citationOpenUrlIcon"
+                <SvgIcon
+                  className="openExternalUrlIcon"
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "color": "rgba(0, 0, 0, 0.87)",
-                      "display": "inline-block",
-                      "fill": "currentColor",
-                      "height": 24,
-                      "muiPrepared": true,
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "userSelect": "none",
-                      "width": 24,
-                    }
-                  }
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                  />
-                </svg>
-              </SvgIcon>
-            </ActionOpenInNew>
-          </div>
+                  <svg
+                    className="openExternalUrlIcon"
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "color": "rgba(0, 0, 0, 0.87)",
+                        "display": "inline-block",
+                        "fill": "currentColor",
+                        "height": 24,
+                        "muiPrepared": true,
+                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "userSelect": "none",
+                        "width": 24,
+                      }
+                    }
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                    />
+                  </svg>
+                </SvgIcon>
+              </ActionOpenInNew>
+            </a>
+          </ExternalLink>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </CitationCounts>
@@ -833,131 +970,218 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
   <div
     className="citationCounts columns is-multiline is-gapless is-marginless"
   >
-    <span
-      className="citationCount"
+    <CitationCountView
+      count={1}
+      link="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+      source="wos"
+      title="Link to undefined (Web of science) will open in a new window."
     >
-      <a
-        aria-label="Link to undefined (Web of science) will open in a new window."
-        href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Link to undefined (Web of science) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon wos large"
-        />
-        <span
-          className="citationCountNumber"
+        <ExternalLink
+          aria-label="Link to undefined (Web of science) will open in a new window."
+          className="wosCitationCount"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to undefined (Web of science) will open in a new window."
         >
-          1
-        </span>
-      </a>
-    </span>
-    <span
-      className="citationCount"
+          <a
+            aria-label="Link to undefined (Web of science) will open in a new window."
+            className="wosCitationCount"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to undefined (Web of science) will open in a new window."
+          >
+            <div
+              className="fez-icon wos large"
+            />
+            <span
+              className="citationCountNumber"
+            >
+              1
+            </span>
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
+    <CitationCountView
+      count={1}
+      link="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+      source="scopus"
+      title="Link to undefined (Scopus) will open in a new window."
     >
-      <a
-        aria-label="Link to undefined (Scopus) will open in a new window."
-        href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Link to undefined (Scopus) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon scopus large"
-        />
-        <span
-          className="citationCountNumber"
+        <ExternalLink
+          aria-label="Link to undefined (Scopus) will open in a new window."
+          className="scopusCitationCount"
+          href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to undefined (Scopus) will open in a new window."
         >
-          1
-        </span>
-      </a>
-    </span>
-    <span
-      className="citationCount"
+          <a
+            aria-label="Link to undefined (Scopus) will open in a new window."
+            className="scopusCitationCount"
+            href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to undefined (Scopus) will open in a new window."
+          >
+            <div
+              className="fez-icon scopus large"
+            />
+            <span
+              className="citationCountNumber"
+            >
+              1
+            </span>
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
+    <CitationCountView
+      count={1}
+      link="http://www.altmetric.com/details.php?citation_id=12345"
+      source="altmetric"
+      title="Link to undefined (Altmetric) will open in a new window."
     >
-      <a
-        aria-label="Link to undefined (Altmetric) will open in a new window."
-        href="http://www.altmetric.com/details.php?citation_id=12345"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Link to undefined (Altmetric) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon altmetric large"
-        />
-        <span
-          className="citationCountNumber"
+        <ExternalLink
+          aria-label="Link to undefined (Altmetric) will open in a new window."
+          className="altmetricCitationCount"
+          href="http://www.altmetric.com/details.php?citation_id=12345"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to undefined (Altmetric) will open in a new window."
         >
-          1
-        </span>
-      </a>
-    </span>
-    <span
-      className="citationCount"
+          <a
+            aria-label="Link to undefined (Altmetric) will open in a new window."
+            className="altmetricCitationCount"
+            href="http://www.altmetric.com/details.php?citation_id=12345"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to undefined (Altmetric) will open in a new window."
+          >
+            <div
+              className="fez-icon altmetric large"
+            />
+            <span
+              className="citationCountNumber"
+            >
+              1
+            </span>
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
+    <CitationCountView
+      count={1}
+      link="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+      source="google"
+      title="Link to undefined (Google scholar) will open in a new window."
     >
-      <a
-        aria-label="Link to undefined (Google scholar) will open in a new window."
-        href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
-        target="_blank"
-        title="Link to undefined (Google scholar) will open in a new window."
+      <span
+        className="citationCount"
       >
-        <div
-          className="fez-icon google large"
-        />
-        1
-      </a>
-    </span>
+        <ExternalLink
+          aria-label="Link to undefined (Google scholar) will open in a new window."
+          className="googleCitationCount"
+          href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+          openInNewIcon={false}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Link to undefined (Google scholar) will open in a new window."
+        >
+          <a
+            aria-label="Link to undefined (Google scholar) will open in a new window."
+            className="googleCitationCount"
+            href="https://scholar.google.com/scholar?q=intitle:[id]undefined"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Link to undefined (Google scholar) will open in a new window."
+          >
+            <div
+              className="fez-icon google large"
+            />
+            <span
+              className="citationCountNumber"
+            >
+              1
+            </span>
+          </a>
+        </ExternalLink>
+      </span>
+    </CitationCountView>
     <div
       className="citationCount column"
     >
-      <a
-        href="https://app.library.uq.edu.au/#/authors/view/pid:111"
-        target="_blank"
+      <div
+        className="columns is-mobile is-gapless"
       >
         <div
-          className="columns is-mobile is-gapless"
+          className="column is-narrow citationCountNumber"
         >
-          <div
-            className="column is-narrow citationCountNumber"
+          <ExternalLink
+            className="externalLink"
+            href="https://app.library.uq.edu.au/#/authors/view/pid:111"
+            openInNewIcon={true}
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            View full statistics
-            <ActionOpenInNew
-              className="citationOpenUrlIcon"
+            <a
+              className="externalLink"
+              href="https://app.library.uq.edu.au/#/authors/view/pid:111"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <SvgIcon
-                className="citationOpenUrlIcon"
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                viewBox="0 0 24 24"
+              View full statistics
+              <ActionOpenInNew
+                className="openExternalUrlIcon"
               >
-                <svg
-                  className="citationOpenUrlIcon"
+                <SvgIcon
+                  className="openExternalUrlIcon"
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "color": "rgba(0, 0, 0, 0.87)",
-                      "display": "inline-block",
-                      "fill": "currentColor",
-                      "height": 24,
-                      "muiPrepared": true,
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "userSelect": "none",
-                      "width": 24,
-                    }
-                  }
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                  />
-                </svg>
-              </SvgIcon>
-            </ActionOpenInNew>
-          </div>
+                  <svg
+                    className="openExternalUrlIcon"
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "color": "rgba(0, 0, 0, 0.87)",
+                        "display": "inline-block",
+                        "fill": "currentColor",
+                        "height": 24,
+                        "muiPrepared": true,
+                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                        "userSelect": "none",
+                        "width": 24,
+                      }
+                    }
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                    />
+                  </svg>
+                </SvgIcon>
+              </ActionOpenInNew>
+            </a>
+          </ExternalLink>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </CitationCounts>

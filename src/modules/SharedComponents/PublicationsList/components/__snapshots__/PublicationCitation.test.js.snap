@@ -13,17 +13,16 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
       <h3
         className="publicationTitle"
       >
-        <a
+        <ExternalLink
           aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice will open in a new window."
+          className="externalLink"
           href="https://fez-staging.library.uq.edu.au/view/UQ:36649"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
         >
           Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice
-          <ActionOpenInNew
-            className="titleOpenUrlIcon"
-          />
-        </a>
+        </ExternalLink>
       </h3>
       <JournalArticleCitation
         publication={
@@ -1191,17 +1190,16 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
       <h3
         className="publicationTitle"
       >
-        <a
+        <ExternalLink
           aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice will open in a new window."
+          className="externalLink"
           href="https://fez-staging.library.uq.edu.au/view/UQ:36649"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
         >
           Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice
-          <ActionOpenInNew
-            className="titleOpenUrlIcon"
-          />
-        </a>
+        </ExternalLink>
       </h3>
       <JournalArticleCitation
         publication={
@@ -2331,17 +2329,16 @@ exports[`PublicationCitation renders  component with default item 1`] = `
       <h3
         className="publicationTitle"
       >
-        <a
+        <ExternalLink
           aria-label="Link to Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice will open in a new window."
+          className="externalLink"
           href="https://fez-staging.library.uq.edu.au/view/UQ:36649"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
         >
           Gene replacement with the human BRCA1 locus: tissue specific expression and rescue of embryonic lethality in mice
-          <ActionOpenInNew
-            className="titleOpenUrlIcon"
-          />
-        </a>
+        </ExternalLink>
       </h3>
       <JournalArticleCitation
         publication={

@@ -65,6 +65,11 @@ export default {
             prefix: 'https://doi.org/',
             externalUrl: 'https://doi.org/[id]',
         },
+        pubmedCentralLink: {
+            ariaLabel: 'Full text via Pubmed Central (open access)',
+            prefix: 'https://www.ncbi.nlm.nih.gov/pmc/articles/',
+            externalUrl: 'https://www.ncbi.nlm.nih.gov/pmc/articles/[id]'
+        },
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to publication'
     },
