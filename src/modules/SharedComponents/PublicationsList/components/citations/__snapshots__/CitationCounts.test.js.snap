@@ -632,7 +632,6 @@ exports[`CitationCounts renders  component with a mock record metrics 1`] = `
           <ExternalLink
             className="externalLink"
             href="https://app.library.uq.edu.au/#/authors/view/UQ:36649"
-            linkText="View full statistics"
             openInNewIcon={true}
             rel="noopener noreferrer"
             target="_blank"
@@ -883,7 +882,6 @@ exports[`CitationCounts renders  component with all metrics 1`] = `
           <ExternalLink
             className="externalLink"
             href="https://app.library.uq.edu.au/#/authors/view/pid:111"
-            linkText="View full statistics"
             openInNewIcon={true}
             rel="noopener noreferrer"
             target="_blank"
@@ -1136,7 +1134,6 @@ exports[`CitationCounts renders  component with non rendering oa status 1`] = `
           <ExternalLink
             className="externalLink"
             href="https://app.library.uq.edu.au/#/authors/view/pid:111"
-            linkText="View full statistics"
             openInNewIcon={true}
             rel="noopener noreferrer"
             target="_blank"

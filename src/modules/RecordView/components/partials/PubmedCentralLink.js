@@ -9,11 +9,12 @@ const PubmedCentralLink = ({pubmedCentralId}) => {
     return (
         <ExternalLink
             className="pubmedCentralLinkUrl"
-            linkText={txt.prefix + pubmedCentralId}
             href={txt.externalUrl.replace('[id]', pubmedCentralId)}
             title={txt.ariaLabel}
             aria-label={txt.ariaLabel}
-        />
+        >
+            {txt.prefix + pubmedCentralId}
+        </ExternalLink>
     );
 };
 

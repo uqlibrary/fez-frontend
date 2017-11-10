@@ -78,7 +78,7 @@ export default class CitationCounts extends Component {
                     <div className="citationCount column">
                         <div className="columns is-mobile is-gapless">
                             <div className="column is-narrow citationCountNumber">
-                                <ExternalLink linkText={txt.statsLabel} href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`}/>
+                                <ExternalLink href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`}>{txt.statsLabel}</ExternalLink>
                             </div>
                         </div>
                     </div>

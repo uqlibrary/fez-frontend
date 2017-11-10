@@ -3,15 +3,14 @@
 exports[`ExternalLink test  should render component with open-in-new window icon 1`] = `
 <ExternalLink
   className="externalLink"
-  linkText="Google"
-  linkUrl="www.google.com"
+  href="www.google.com"
   openInNewIcon={true}
   rel="noopener noreferrer"
   target="_blank"
 >
   <a
     className="externalLink"
-    linkUrl="www.google.com"
+    href="www.google.com"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -56,15 +55,14 @@ exports[`ExternalLink test  should render component with open-in-new window icon
 exports[`ExternalLink test  should render component without open-in-new window icon 1`] = `
 <ExternalLink
   className="externalLink"
-  linkText="Google"
-  linkUrl="www.google.com"
+  href="www.google.com"
   openInNewIcon={false}
   rel="noopener noreferrer"
   target="_blank"
 >
   <a
     className="externalLink"
-    linkUrl="www.google.com"
+    href="www.google.com"
     rel="noopener noreferrer"
     target="_blank"
   >

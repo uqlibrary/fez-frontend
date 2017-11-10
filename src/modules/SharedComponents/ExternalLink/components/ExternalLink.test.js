@@ -9,20 +9,12 @@ import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {locale} from 'config';
 
-function setup({linkText, linkUrl = 'www.google.com', linkTooltip, openInNewIcon = true, className = 'externalLink', isShallow = false}) {
-    const props = {
-        linkText: linkText,
-        linkUrl: linkUrl,
-        linkTooltip: linkTooltip,
-        openInNewIcon: openInNewIcon,
-        className: className
-    };
-
+function setup({text, isShallow = false, ...rest}) {
     if(isShallow) {
-        return shallow(<ExternalLink {...props} />);
+        return shallow(<ExternalLink {...rest}>{text}</ExternalLink>);
     }
 
-    return mount(<ExternalLink {...props} />, {
+    return mount(<ExternalLink {...rest}>{text}</ExternalLink>, {
         context: {
             muiTheme: getMuiTheme()
         },
@@ -38,12 +30,12 @@ beforeAll(() => {
 
 describe('ExternalLink test ', () => {
     it('should render component with open-in-new window icon', () => {
-        const wrapper = setup({linkUrl: 'www.google.com', linkText: 'Google'});
+        const wrapper = setup({href: 'www.google.com', text: 'Google'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component without open-in-new window icon', () => {
-        const wrapper = setup({linkUrl: 'www.google.com', linkText: 'Google', openInNewIcon: false});
+        const wrapper = setup({href: 'www.google.com', text: 'Google', openInNewIcon: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
