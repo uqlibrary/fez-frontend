@@ -92,6 +92,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
         name: 'Conference Proceedings',
         class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
+        formComponent: components ? components.ConferenceProceedingsForm : null,
         citationComponent: components ? components.ConferenceProceedingsCitation : null,
         hasFormComponent: true
     },

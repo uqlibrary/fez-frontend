@@ -2489,6 +2489,119 @@ export default {
                     }
                 }
             },
+            conferenceProceedings: {
+                information: {
+                    title: 'Conference proceedings information',
+                    help: {
+                        title: 'Conference proceedings information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        title: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of conference'
+                        },
+                        conferenceName: {
+                            floatingLabelText: 'Conference name',
+                            hintText: 'Please, type the name of conference'
+                        },
+                        conferenceLocation: {
+                            floatingLabelText: 'Conference location',
+                            hintText: 'Please, type the place of conference'
+                        },
+                        conferenceDates: {
+                            floatingLabelText: 'Conference dates (eg 13-15 December 2011)',
+                            hintText: 'Please, type the dates of conference'
+                        },
+                        proceedingsTitle: {
+                            floatingLabelText: 'Proceedings title',
+                            hintText: 'Please, type the title of proceedings'
+                        },
+                        publicationPlace: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'Please, type the place of publication'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please, type the name of the publisher'
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                editors: {
+                    title: 'Editors',
+                    help: {
+                        title: 'Editors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Provide a list of editors for this publication and assign yourself as an editor',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Editor\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add editor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Editor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed editor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other publication details',
+                    help: {
+                        title: 'Other publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information'
+                        },
+                        link: {
+                            floatingLabelText: 'Link (URL)',
+                            hintText: 'Enter URL for this publication'
+                        }
+                    }
+                }
+            },
             fileUpload: {
                 title: 'Files',
                 help: {
@@ -2772,6 +2885,7 @@ export default {
         minLength: 'Must be at least [min] characters',
         authorLinking: 'Please, select and confirm an author',
         authorRequired: 'Please, provide a list of authors/creators of the publication and link an author name to the current user',
+        editorRequired: 'Please, provide a list of editors of the publication and link an editor name to the current user',
         authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user'
     },
     issues: {

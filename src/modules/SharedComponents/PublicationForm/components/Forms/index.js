@@ -15,3 +15,4 @@ export {default as VideoDocumentForm} from './VideoDocumentForm';
 export {default as ImageDocumentForm} from './ImageDocumentForm';
 export {default as DesignForm} from './DesignForm';
 export {default as DepartmentTechnicalReportForm} from './DepartmentTechnicalReportForm';
+export {default as ConferenceProceedingsForm} from './ConferenceProceedingsForm';
