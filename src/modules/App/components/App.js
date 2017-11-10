@@ -102,8 +102,7 @@ export default class App extends React.Component {
                                     tooltip={locale.global.mainNavButton.tooltip}
                                     tooltipPosition="bottom-right"
                                     hoveredStyle={appBarButtonStyles}
-                                    tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1}
-                                >
+                                    tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1} >
                                     <NavigationMenu />
                                 </IconButton>
                             }
