@@ -131,7 +131,7 @@ export default class App extends React.Component {
                             history={this.props.history}
                             skipNavAriaLabel={locale.global.skipNav.ariaLabel}
                             skipNavTitle={locale.global.skipNav.title}
-                            SkipNavFocusElementId="contentContainer"
+                            skipNavFocusElementId="contentContainer"
                         />
 
                         <div className="content-container" id="contentContainer" style={container} tabIndex={-1}>

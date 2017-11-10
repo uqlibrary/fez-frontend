@@ -68,7 +68,6 @@ exports[`App tests for user account and author status User is logged in but are 
       zDepth={1}
     />
     <MenuDrawer
-      SkipNavFocusElementId="contentContainer"
       docked={false}
       drawerOpen={false}
       isMobile={false}
@@ -121,6 +120,7 @@ exports[`App tests for user account and author status User is logged in but are 
         ]
       }
       skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
+      skipNavFocusElementId="contentContainer"
       skipNavTitle="Skip Navigation"
       toggleDrawer={[Function]}
     />
@@ -320,7 +320,6 @@ exports[`App tests for user account and author status User is not logged in and 
       zDepth={1}
     />
     <MenuDrawer
-      SkipNavFocusElementId="contentContainer"
       docked={false}
       drawerOpen={false}
       isMobile={false}
@@ -343,6 +342,7 @@ exports[`App tests for user account and author status User is not logged in and 
         ]
       }
       skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
+      skipNavFocusElementId="contentContainer"
       skipNavTitle="Skip Navigation"
       toggleDrawer={[Function]}
     />
@@ -458,7 +458,6 @@ exports[`App tests for user account and author status User logged in and is an a
       zDepth={1}
     />
     <MenuDrawer
-      SkipNavFocusElementId="contentContainer"
       docked={false}
       drawerOpen={false}
       isMobile={false}
@@ -511,6 +510,7 @@ exports[`App tests for user account and author status User logged in and is an a
         ]
       }
       skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
+      skipNavFocusElementId="contentContainer"
       skipNavTitle="Skip Navigation"
       toggleDrawer={[Function]}
     />
@@ -710,7 +710,6 @@ exports[`App tests for user account and author status User logged in but is not 
       zDepth={1}
     />
     <MenuDrawer
-      SkipNavFocusElementId="contentContainer"
       docked={false}
       drawerOpen={false}
       isMobile={false}
@@ -763,6 +762,7 @@ exports[`App tests for user account and author status User logged in but is not 
         ]
       }
       skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
+      skipNavFocusElementId="contentContainer"
       skipNavTitle="Skip Navigation"
       toggleDrawer={[Function]}
     />
