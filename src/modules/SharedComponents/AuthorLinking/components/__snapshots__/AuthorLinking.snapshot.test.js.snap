@@ -666,7 +666,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
 </div>
 `;
 
-exports[`AuthorLinking should render author Bridge as linked and disabled 1`] = `
+exports[`AuthorLinking should render author Bridge as linked 1`] = `
 <div>
   <div
     className="author-link-list"
@@ -1024,10 +1024,10 @@ exports[`ContributorLinking should be disabled 1`] = `
         <AuthorItem
           author={
             Object {
-              "rek_author": "Overgaard, Nana H.",
-              "rek_author_id": null,
-              "rek_author_order": 1,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Overgaard, Nana H.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 1,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={true}
@@ -1052,15 +1052,15 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
         <AuthorItem
           author={
             Object {
-              "rek_author": "Cruz, Jazmina L.",
-              "rek_author_id": null,
-              "rek_author_order": 2,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Cruz, Jazmina L.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 2,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={true}
@@ -1085,15 +1085,15 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
         <AuthorItem
           author={
             Object {
-              "rek_author": "Bridge, Jennifer A.",
-              "rek_author_id": null,
-              "rek_author_order": 3,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Bridge, Jennifer A.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 3,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={true}
@@ -1118,7 +1118,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
       </div>
       <div
@@ -1127,10 +1127,10 @@ exports[`ContributorLinking should be disabled 1`] = `
         <AuthorItem
           author={
             Object {
-              "rek_author": "Nel, Hendrik J.",
-              "rek_author_id": null,
-              "rek_author_order": 4,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Nel, Hendrik J.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 4,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={true}
@@ -1155,7 +1155,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
       </div>
     </Infinite>
@@ -1188,10 +1188,10 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
         <AuthorItem
           author={
             Object {
-              "rek_author": "Overgaard, Nana H.",
-              "rek_author_id": null,
-              "rek_author_order": 1,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Overgaard, Nana H.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 1,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={false}
@@ -1216,15 +1216,15 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
         <AuthorItem
           author={
             Object {
-              "rek_author": "Cruz, Jazmina L.",
-              "rek_author_id": null,
-              "rek_author_order": 2,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Cruz, Jazmina L.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 2,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={false}
@@ -1249,15 +1249,15 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
         <AuthorItem
           author={
             Object {
-              "rek_author": "Bridge, Jennifer A.",
-              "rek_author_id": null,
-              "rek_author_order": 3,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Bridge, Jennifer A.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 3,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={false}
@@ -1282,7 +1282,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
       </div>
       <div
@@ -1291,10 +1291,10 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
         <AuthorItem
           author={
             Object {
-              "rek_author": "Nel, Hendrik J.",
-              "rek_author_id": null,
-              "rek_author_order": 4,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Nel, Hendrik J.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 4,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={false}
@@ -1319,7 +1319,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
       </div>
     </Infinite>
@@ -1327,7 +1327,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
 </div>
 `;
 
-exports[`ContributorLinking should render author Bridge as linked and disabled 1`] = `
+exports[`ContributorLinking should render author Bridge as linked 1`] = `
 <div>
   <div
     className="author-link-list"
@@ -1352,15 +1352,15 @@ exports[`ContributorLinking should render author Bridge as linked and disabled 1
         <AuthorItem
           author={
             Object {
-              "rek_author": "Overgaard, Nana H.",
-              "rek_author_id": null,
-              "rek_author_order": 1,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Overgaard, Nana H.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 1,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={false}
           index={0}
-          linked={false}
+          linked={true}
           locale={
             Object {
               "ordinalData": Array [
@@ -1380,20 +1380,20 @@ exports[`ContributorLinking should render author Bridge as linked and disabled 1
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
         <AuthorItem
           author={
             Object {
-              "rek_author": "Cruz, Jazmina L.",
-              "rek_author_id": null,
-              "rek_author_order": 2,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Cruz, Jazmina L.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 2,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={false}
           index={1}
-          linked={false}
+          linked={true}
           locale={
             Object {
               "ordinalData": Array [
@@ -1413,15 +1413,15 @@ exports[`ContributorLinking should render author Bridge as linked and disabled 1
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
         <AuthorItem
           author={
             Object {
-              "rek_author": "Bridge, Jennifer A.",
-              "rek_author_id": null,
-              "rek_author_order": 3,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Bridge, Jennifer A.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 3,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={false}
@@ -1446,7 +1446,7 @@ exports[`ContributorLinking should render author Bridge as linked and disabled 1
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
       </div>
       <div
@@ -1455,15 +1455,15 @@ exports[`ContributorLinking should render author Bridge as linked and disabled 1
         <AuthorItem
           author={
             Object {
-              "rek_author": "Nel, Hendrik J.",
-              "rek_author_id": null,
-              "rek_author_order": 4,
-              "rek_author_pid": "UQ:654776",
+              "rek_contributor": "Nel, Hendrik J.",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 4,
+              "rek_contributor_pid": "UQ:654776",
             }
           }
           disabled={false}
           index={3}
-          linked={false}
+          linked={true}
           locale={
             Object {
               "ordinalData": Array [
@@ -1483,7 +1483,7 @@ exports[`ContributorLinking should render author Bridge as linked and disabled 1
           }
           onAuthorSelected={[Function]}
           selected={null}
-          type="contributor"
+          type="author"
         />
       </div>
     </Infinite>

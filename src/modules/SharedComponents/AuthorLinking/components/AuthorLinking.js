@@ -59,7 +59,7 @@ export default class AuthorLinking extends React.Component {
 
         // Transform and cache list to output so component doesn't have to go through transform step every time
         if (linkedAuthorIdList.length === 0) {
-            this.listToOutput = authorList.map((author) => this.transformToAuthorOrderId(0, author));
+            this.listToOutput = authorList.map((author) => this.transformToAuthorOrderId(0, author, this.props.searchKey));
         } else {
             this.listToOutput = linkedAuthorIdList;
         }
@@ -78,7 +78,7 @@ export default class AuthorLinking extends React.Component {
     getAuthorsToRender = ({authorList, linkedAuthorIdList, disabled} = {}, {selectedAuthor = {}} = {}) => {
         const authors = authorList.map((author, index) => {
             const linked = linkedAuthorIdList.length > 0 && linkedAuthorIdList[index][this.props.searchKey.value] !== 0;
-            const selected = (selectedAuthor && (author[`rek_${this.props.searchKey.type}_order`] === selectedAuthor[`rek_'${this.props.searchKey.type}_id_order`]));
+            const selected = (selectedAuthor && (author[`rek_${this.props.searchKey.type}_order`] === selectedAuthor[`rek_${this.props.searchKey.type}_id_order`]));
             return (
                 <AuthorItem
                     type={this.props.searchKey.type}
@@ -134,8 +134,8 @@ export default class AuthorLinking extends React.Component {
      * @param author
      * @returns {{}}
      */
-    transformToAuthorOrderId = (authorId, author) => {
-        const {value, order, type} = this.props.searchKey;
+    transformToAuthorOrderId = (authorId, author, searchKey) => {
+        const {value, order, type} = searchKey;
         return {
             [`rek_${type}_id_id`]: null,
             [`rek_${type}_id_pid`]: author[`rek_${type}_pid`] || null,
@@ -151,7 +151,8 @@ export default class AuthorLinking extends React.Component {
      * @private
      */
     _selectAuthor = (author) => {
-        const selectedAuthor = this.transformToAuthorOrderId(this.props.loggedInAuthor.aut_id, author);
+        const selectedAuthor = this.transformToAuthorOrderId(this.props.loggedInAuthor.aut_id, author, this.props.searchKey);
+        console.log('Selected author: ' + JSON.stringify(selectedAuthor));
         this.setState({
             selectedAuthor: selectedAuthor,
             authorLinkingConfirmed: false,
