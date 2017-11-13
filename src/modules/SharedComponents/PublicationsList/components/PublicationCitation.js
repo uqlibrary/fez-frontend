@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import {publicationTypes, locale} from 'config';
-import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 
 // citations for different publication types
 import {routes} from 'config';
@@ -31,6 +30,7 @@ import ConferenceProceedingsCitation from './citations/ConferenceProceedingsCita
 import ThesisCitation from './citations/ThesisCitation';
 import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
+import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 
 export default class PublicationCitation extends Component {
     static propTypes = {
@@ -118,13 +118,12 @@ export default class PublicationCitation extends Component {
                     <div className="column">
                         <h3 className="publicationTitle">
                             {!this.props.publication.rek_pid ? (this.props.publication.rek_title) : (
-                                <a href={locale.global.sources.espace.externalUrl.replace('[id]', this.props.publication.rek_pid)}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
+                                <ExternalLink
+                                    href={locale.global.sources.espace.externalUrl.replace('[id]', this.props.publication.rek_pid)}
                                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
                                 >
-                                    {this.props.publication.rek_title}<ActionOpenInNew className="titleOpenUrlIcon" />
-                                </a>
+                                    {this.props.publication.rek_title}
+                                </ExternalLink>
                             )}
                         </h3>
                         {
@@ -139,15 +138,14 @@ export default class PublicationCitation extends Component {
                                     this.props.publication.sources.map((source, index) => {
                                         const sourceConfig = locale.global.sources[source.source];
                                         return (
-                                            <a
-                                                href={sourceConfig.externalUrl.replace('[id]', source.id)}
+                                            <ExternalLink
                                                 key={'source_' + index}
-                                                rel="noopener noreferrer"
-                                                target="_blank"
                                                 className="publicationSource"
-                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
-                                                {sourceConfig.title}<ActionOpenInNew className="citationOpenUrlIcon"/>
-                                            </a>
+                                                href={sourceConfig.externalUrl.replace('[id]', source.id)}
+                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}
+                                            >
+                                                {sourceConfig.title}
+                                            </ExternalLink>
                                         );
                                     })
                                 }

@@ -201,7 +201,7 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('getRecordAuthorsSearchKey returns request object', () => {
+    it('should return request object from getRecordAuthorsSearchKey', () => {
         const input = [
             {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
@@ -210,23 +210,63 @@ describe('Transformers tests ', () => {
         const expected = {
             fez_record_search_key_author: [
                 {
-                    rek_author_id: null,
                     rek_author: 'Smith A.',
                     rek_author_order: 1
                 },
                 {
-                    rek_author_id: null,
                     rek_author: 'Smith B.',
                     rek_author_order: 2
                 },
                 {
-                    rek_author_id: null,
                     rek_author: 'Smith C.',
                     rek_author_order: 3
                 }
             ]
         };
         const result = transformers.getRecordAuthorsSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('getRecordSupervisorsSearchKey returns request object', () => {
+        const input = [
+            {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
+            {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: null},
+            {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null}
+        ];
+        const expected = {
+            fez_record_search_key_supervisor: [
+                {
+                    rek_supervisor: 'Smith A.',
+                    rek_supervisor_order: 1
+                },
+                {
+                    rek_supervisor: 'Smith B.',
+                    rek_supervisor_order: 2
+                },
+                {
+                    rek_supervisor: 'Smith C.',
+                    rek_supervisor_order: 3
+                }
+            ]
+        };
+        const result = transformers.getRecordSupervisorsSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('getRecordSubjectSearchKey returns request object', () => {
+        const input = [
+            {rek_order: 1, rek_value: {key: 451799, value: "01 Mathematical Sciences"}},
+            {rek_order: 2, rek_value: {key: 451802, value: "0101 Mathematical Sciences"}},
+            {rek_order: 3, rek_value: {key: 451801, value: "010101 Mathematical Sciences"}}
+        ];
+        const expected = {
+            fez_record_search_key_subject: [
+                {rek_subject_id: 451799, rek_subject_order: 1},
+                {rek_subject_id: 451802, rek_subject_order: 2},
+                {rek_subject_id: 451801, rek_subject_order: 3}
+            ]
+        };
+        const result = transformers.getRecordSubjectSearchKey(input);
         expect(result).toEqual(expected);
     });
 

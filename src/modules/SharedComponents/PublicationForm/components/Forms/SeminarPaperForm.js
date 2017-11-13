@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
 import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
+import {OrgNameField, OrgUnitNameField, SeriesField} from 'modules/SharedComponents/LookupFields';
+
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation, locale} from 'config';
 
@@ -32,50 +34,38 @@ export default class SeminarPaperForm extends Component {
                                 name="rek_title"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
-                                hintText={txt.information.fieldLabels.documentTitle.hint}
+                                multiLine
+                                rows={1}
+                                {...txt.information.fieldLabels.documentTitle}
                                 className="requiredField"
-                                validate={[validation.required]}
-                            />
+                                validate={[validation.required]} />
                         </div>
                     </div>
 
                     <div className="columns">
                         <div className="column">
                             <Field
-                                component={TextField}
+                                component={OrgUnitNameField}
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-                                type="text"
-                                fullWidth
-                                floatingLabelText={txt.information.fieldLabels.orgUnit.title}
-                                hintText={txt.information.fieldLabels.orgUnit.hint}
-                            />
+                                {...txt.information.fieldLabels.orgUnitName} />
                         </div>
                         <div className="column">
                             <Field
-                                component={TextField}
+                                component={OrgNameField}
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_org_name.rek_org_name"
-                                type="text"
-                                fullWidth
-                                floatingLabelText={txt.information.fieldLabels.institution.title}
-                                hintText={txt.information.fieldLabels.institution.hint}
-                            />
+                                {...txt.information.fieldLabels.orgName} />
                         </div>
                     </div>
 
                     <div className="columns">
                         <div className="column">
                             <Field
-                                component={TextField}
+                                component={SeriesField}
                                 disabled={this.props.submitting}
                                 name="fez_record_search_key_series.rek_series"
-                                type="text"
-                                fullWidth
-                                floatingLabelText={txt.information.fieldLabels.series.title}
-                                hintText={txt.information.fieldLabels.series.hint}
-                            />
+                                {...txt.information.fieldLabels.series} />
                         </div>
                         <div className="column">
                             <Field
@@ -116,9 +106,7 @@ export default class SeminarPaperForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.optional.fieldLabels.notes.title}
-                                hintText={txt.optional.fieldLabels.notes.hint}
-                            />
+                                {...txt.optional.fieldLabels.notes} />
                         </div>
                     </div>
                     <div className="columns">
@@ -129,10 +117,8 @@ export default class SeminarPaperForm extends Component {
                                 type="text"
                                 disabled={this.props.submitting}
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.url.title}
-                                hintText={txt.optional.fieldLabels.url.hint}
-                                validate={[validation.url]}
-                            />
+                                {...txt.optional.fieldLabels.url}
+                                validate={[validation.url]} />
                         </div>
                     </div>
                 </StandardCard>

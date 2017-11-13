@@ -105,6 +105,13 @@ describe('Validation method', () => {
         expect(validation.isValidPublicationTitle(' global    ')).toBeFalsy();
         expect(validation.isValidPublicationTitle(' global war ')).toBeTruthy();
     });
-    
+
+    it('it should validate person selected correctly', () => {
+        expect(validation.peopleRequired([], 'Error', true)).toEqual('Error');
+        expect(validation.peopleRequired([{name: 'First person'}], 'Error', true)).toEqual('Error');
+        expect(validation.peopleRequired([{name: 'First person', selected: true}], 'Error', true)).toBeFalsy();
+        expect(validation.peopleRequired([], 'Error', false)).toEqual('Error');
+        expect(validation.peopleRequired([{name: 'First person'}], 'Error', false)).toBeFalsy();
+    });
 });
 

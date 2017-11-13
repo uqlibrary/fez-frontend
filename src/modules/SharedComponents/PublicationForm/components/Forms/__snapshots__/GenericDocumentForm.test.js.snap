@@ -26,7 +26,7 @@ exports[`GenericDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Title"
           fullWidth={true}
-          hintText="Title of document"
+          hintText="Title of generic document"
           multiLine={true}
           name="rek_title"
           rows={1}
@@ -50,6 +50,7 @@ exports[`GenericDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Place of publication"
           fullWidth={true}
+          hintText=""
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
         />
@@ -66,6 +67,7 @@ exports[`GenericDocumentForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Publisher"
           fullWidth={true}
+          hintText=""
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />

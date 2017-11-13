@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AuthorsCitationView from './AuthorsCitationView';
 
-const EditorsCitationView = ({publication, prefix = 'edited by', suffix = '.'}) => {
+const EditorsCitationView = ({publication, prefix = ' edited by ', suffix = '. '}) => {
     return (
         <AuthorsCitationView
             publication={publication}

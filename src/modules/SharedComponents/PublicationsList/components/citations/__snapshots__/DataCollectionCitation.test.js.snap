@@ -784,6 +784,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors"
@@ -791,32 +793,33 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=""
+          suffix=", "
           value="Cavanagh, D. C."
         >
           <span
             className="citationAuthor"
           >
             Cavanagh, D. C.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Jacko, A. C."
         >
           <span
             className="citationAuthor"
           >
-            , 
             Jacko, A. C.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
           prefix=" and "
-          suffix=" "
+          suffix=""
           value="Powell, B. J."
         >
           <span
@@ -824,9 +827,9 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
           >
              and 
             Powell, B. J.
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -912,6 +915,8 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"
