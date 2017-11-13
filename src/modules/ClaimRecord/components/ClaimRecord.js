@@ -5,7 +5,7 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
-import {AuthorLinkingField} from 'modules/SharedComponents/AuthorLinking';
+import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
 import {validation, locale, routes} from 'config';
 
 export default class ClaimRecord extends Component {
@@ -91,17 +91,16 @@ export default class ClaimRecord extends Component {
         const contributorLinked = publication && author && publication.fez_record_search_key_contributor_id && publication.fez_record_search_key_contributor_id.length > 0 &&
             publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === author.aut_id).length > 0;
 
+        // if publication.sources is set, user is claiming from Add missing record page
         const fromAddRecord = !!publication.sources;
-
         // set confirmation message depending on file upload status and publication fromAddRecord
         const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
         saveConfirmationLocale.cancelButtonLabel = fromAddRecord
             ? txt.successWorkflowConfirmation.addRecordButtonLabel : txt.successWorkflowConfirmation.cancelButtonLabel;
-        if (this.props.publicationToClaimFileUploadingError) {
-            saveConfirmationLocale.confirmationMessage = txt.successWorkflowConfirmation.fileFailConfirmationMessage;
-        } else {
-            saveConfirmationLocale.confirmationMessage = txt.successWorkflowConfirmation.successConfirmationMessage;
-        }
+        saveConfirmationLocale.confirmationMessage = this.props.publicationToClaimFileUploadingError
+            ?  txt.successWorkflowConfirmation.fileFailConfirmationMessage
+            : txt.successWorkflowConfirmation.successConfirmationMessage;
+
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -129,11 +128,6 @@ export default class ClaimRecord extends Component {
                                     <Field
                                         name="authorLinking"
                                         component={AuthorLinkingField}
-                                        searchKey={{
-                                            value: 'rek_author_id',
-                                            order: 'rek_author_id_order',
-                                            type: 'author'
-                                        }}
                                         loggedInAuthor={author}
                                         authorList={publication.fez_record_search_key_author}
                                         linkedAuthorIdList={publication.fez_record_search_key_author_id}
@@ -143,6 +137,7 @@ export default class ClaimRecord extends Component {
                                     />
                                 </StandardCard>
                             }
+                            {/* Show contributor linking only for records that don't have authors, eg Edited Books */}
                             {
                                 publication.fez_record_search_key_author &&
                                 publication.fez_record_search_key_author.length === 0 &&
@@ -156,12 +151,7 @@ export default class ClaimRecord extends Component {
                                     <label htmlFor="contributorLinking">{txt.contributorLinking.text}</label>
                                     <Field
                                         name="contributorLinking"
-                                        component={AuthorLinkingField}
-                                        searchKey={{
-                                            value: 'rek_contributor_id',
-                                            order: 'rek_contributor_id_order',
-                                            type: 'contributor'
-                                        }}
+                                        component={ContributorLinkingField}
                                         loggedInAuthor={author}
                                         authorList={publication.fez_record_search_key_contributor}
                                         linkedAuthorIdList={publication.fez_record_search_key_contributor_id}
