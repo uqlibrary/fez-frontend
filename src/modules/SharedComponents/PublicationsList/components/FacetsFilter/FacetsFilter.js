@@ -87,11 +87,11 @@ export default class FacetsFilter extends React.Component {
                 title: key,
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
-                        const i = publicationTypes().findIndex((type) => {
+                        const typeIndex = publicationTypes().findIndex((type) => {
                             return type.id === rawFacet.buckets[index].key;
                         });
                         return {
-                            title: publicationTypes()[i].name,
+                            title: publicationTypes()[typeIndex].name,
                             key: item.key,
                             count: item.doc_count
                         };
