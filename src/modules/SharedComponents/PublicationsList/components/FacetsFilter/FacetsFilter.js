@@ -1,5 +1,5 @@
 import React from 'react';
-import {locale} from 'config';
+import {locale, publicationTypes} from 'config';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/RaisedButton';
 import {List, ListItem} from 'material-ui/List';
@@ -86,11 +86,22 @@ export default class FacetsFilter extends React.Component {
             const facetToDisplay = {
                 title: key,
                 facets: rawFacet.buckets.map((item, index) => {
-                    return {
-                        title: rawFacetLookup && rawFacetLookup.buckets.length > index ? rawFacetLookup.buckets[index].key : item.key,
-                        key: item.key,
-                        count: item.doc_count
-                    };
+                    if (key === 'Display type') {
+                        const typeIndex = publicationTypes().findIndex((type) => {
+                            return type.id === rawFacet.buckets[index].key;
+                        });
+                        return {
+                            title: publicationTypes()[typeIndex].name,
+                            key: item.key,
+                            count: item.doc_count
+                        };
+                    } else {
+                        return {
+                            title: rawFacetLookup && rawFacetLookup.buckets.length > index ? rawFacetLookup.buckets[index].key : item.key,
+                            key: item.key,
+                            count: item.doc_count
+                        };
+                    }
                 })
             };
 
