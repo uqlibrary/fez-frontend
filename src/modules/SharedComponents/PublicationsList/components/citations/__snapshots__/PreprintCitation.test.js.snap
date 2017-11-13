@@ -608,6 +608,8 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors"
@@ -615,32 +617,33 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=""
+          suffix=", "
           value="Asmussen, S."
         >
           <span
             className="citationAuthor"
           >
             Asmussen, S.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Kroese, D. P."
         >
           <span
             className="citationAuthor"
           >
-            , 
             Kroese, D. P.
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
           prefix=" and "
-          suffix=" "
+          suffix=""
           value="Rubinstein, R. Y."
         >
           <span
@@ -648,9 +651,9 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
           >
              and 
             Rubinstein, R. Y.
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -728,6 +731,8 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"

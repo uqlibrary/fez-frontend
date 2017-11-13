@@ -34,8 +34,7 @@ export default class GenericDocumentForm extends Component {
                                 fullWidth
                                 multiLine
                                 rows={1}
-                                floatingLabelText={txt.information.fieldLabels.documentTitle.title}
-                                hintText={txt.information.fieldLabels.documentTitle.hint}
+                                {...txt.information.fieldLabels.documentTitle}
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
@@ -50,7 +49,7 @@ export default class GenericDocumentForm extends Component {
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publicationPlace}
+                                {...txt.information.fieldLabels.publicationPlace}
                             />
                         </div>
                     </div>
@@ -62,7 +61,7 @@ export default class GenericDocumentForm extends Component {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.publisher}
+                                {...txt.information.fieldLabels.publisher}
                             />
                         </div>
                         <div className="column">
@@ -88,8 +87,7 @@ export default class GenericDocumentForm extends Component {
                                 fullWidth
                                 rows={3}
                                 multiLine
-                                floatingLabelText={txt.information.fieldLabels.abstract.title}
-                                hintText={txt.information.fieldLabels.abstract.hint}
+                                {...txt.information.fieldLabels.abstract}
                             />
                         </div>
                     </div>
@@ -118,8 +116,7 @@ export default class GenericDocumentForm extends Component {
                                 fullWidth
                                 rows={1}
                                 multiLine
-                                floatingLabelText={txt.optional.fieldLabels.notes.title}
-                                hintText={txt.optional.fieldLabels.notes.hint}
+                                {...txt.optional.fieldLabels.notes}
                             />
                         </div>
                     </div>
@@ -131,8 +128,7 @@ export default class GenericDocumentForm extends Component {
                                 name="rek_link"
                                 type="text"
                                 fullWidth
-                                floatingLabelText={txt.optional.fieldLabels.link.title}
-                                hintText={txt.optional.fieldLabels.link.hint}
+                                {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
                             />
                         </div>

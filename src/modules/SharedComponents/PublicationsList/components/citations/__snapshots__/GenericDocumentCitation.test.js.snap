@@ -778,6 +778,8 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors"
@@ -785,16 +787,16 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=" "
+          suffix=""
           value="Louise Olsen-Kettle"
         >
           <span
             className="citationAuthor"
           >
             Louise Olsen-Kettle
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -880,6 +882,8 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"

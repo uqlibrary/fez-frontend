@@ -2869,6 +2869,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           searchKey={
             Object {
               "order": "rek_author_id_order",
+              "type": "author",
               "value": "rek_author_id",
             }
           }
@@ -4027,6 +4028,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           searchKey={
             Object {
               "order": "rek_author_id_order",
+              "type": "author",
               "value": "rek_author_id",
             }
           }
@@ -5186,6 +5188,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           searchKey={
             Object {
               "order": "rek_author_id_order",
+              "type": "author",
               "value": "rek_author_id",
             }
           }

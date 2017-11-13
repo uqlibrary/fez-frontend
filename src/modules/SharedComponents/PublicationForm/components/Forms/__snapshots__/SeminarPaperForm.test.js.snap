@@ -27,7 +27,9 @@ exports[`SeminarPaperForm renders  component 1`] = `
           floatingLabelText="Title"
           fullWidth={true}
           hintText="Title of paper"
+          multiLine={true}
           name="rek_title"
+          rows={1}
           type="text"
           validate={
             Array [
@@ -47,10 +49,8 @@ exports[`SeminarPaperForm renders  component 1`] = `
           component={[Function]}
           disabled={false}
           floatingLabelText="School, department or centre"
-          fullWidth={true}
           hintText=""
           name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-          type="text"
         />
       </div>
       <div
@@ -60,10 +60,8 @@ exports[`SeminarPaperForm renders  component 1`] = `
           component={[Function]}
           disabled={false}
           floatingLabelText="Institution"
-          fullWidth={true}
           hintText=""
           name="fez_record_search_key_org_name.rek_org_name"
-          type="text"
         />
       </div>
     </div>
@@ -77,10 +75,8 @@ exports[`SeminarPaperForm renders  component 1`] = `
           component={[Function]}
           disabled={false}
           floatingLabelText="Series"
-          fullWidth={true}
           hintText="Enter seminar series"
           name="fez_record_search_key_series.rek_series"
-          type="text"
         />
       </div>
       <div

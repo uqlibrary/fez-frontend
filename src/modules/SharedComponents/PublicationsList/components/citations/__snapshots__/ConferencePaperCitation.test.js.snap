@@ -936,6 +936,8 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors"
@@ -943,142 +945,145 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=""
+          suffix=", "
           value="Larance, Briony"
         >
           <span
             className="citationAuthor"
           >
             Larance, Briony
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Peacock, Amy"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Peacock, Amy
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Campbell, Gabrielle"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Campbell, Gabrielle
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Freckleton, Sarah"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Freckleton, Sarah
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Smith, Kimberley"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Smith, Kimberley
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Mattick, Richard"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Mattick, Richard
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Bruno, Raimondo"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Bruno, Raimondo
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Nielsen, Suzanne"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Nielsen, Suzanne
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Cohen, Milton"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Cohen, Milton
+            , 
           </span>
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=", "
-          suffix=""
+          prefix=""
+          suffix=", "
           value="Lintzeris, Nicholas"
         >
           <span
             className="citationAuthor"
           >
-            , 
             Lintzeris, Nicholas
+            , 
           </span>
         </CitationView>
-        <a
-          className="citationShowMoreAuthors"
-          href="#"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-        >
-           
-          Show 4 more...
-           
-        </a>
+        <span>
+           
+          <a
+            className="citationShowMoreAuthors"
+            href="#"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+          >
+            Show 4 more...
+          </a>
+        </span>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -1178,33 +1183,44 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         className="citationDOI"
       >
          
-        <a
+        <ExternalLink
+          aria-label="Open this DOI in an new window"
           className="citationDoiLink"
           href="https://doi.org/10.1111/dar.12222"
+          openInNewIcon={true}
           rel="noopener noreferrer"
           target="_blank"
           title="Open this DOI in an new window"
         >
-          <span
-            className="citationLabel"
+          <a
+            aria-label="Open this DOI in an new window"
+            className="citationDoiLink"
+            href="https://doi.org/10.1111/dar.12222"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Open this DOI in an new window"
           >
-            https://doi.org/
-          </span>
-          <span
-            className="citationValue"
-          >
-            10.1111/dar.12222
+            <span
+              className="citationLabel"
+            >
+              https://doi.org/
+            </span>
+            <span
+              className="citationValue"
+            >
+              10.1111/dar.12222
+            </span>
             <ActionOpenInNew
-              className="citationOpenUrlIcon"
+              className="openExternalUrlIcon"
             >
               <SvgIcon
-                className="citationOpenUrlIcon"
+                className="openExternalUrlIcon"
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
                 viewBox="0 0 24 24"
               >
                 <svg
-                  className="citationOpenUrlIcon"
+                  className="openExternalUrlIcon"
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={
@@ -1227,8 +1243,8 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
                 </svg>
               </SvgIcon>
             </ActionOpenInNew>
-          </span>
-        </a>
+          </a>
+        </ExternalLink>
       </span>
     </DoiCitationView>
   </div>
@@ -1279,6 +1295,8 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"

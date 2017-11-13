@@ -88,4 +88,13 @@ describe('FacetsFilter renders ', () => {
         wrapper.instance().handleResetClick();
         expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({}));
     });
+
+    it('components for mock data', () => {
+        const facetsData = possibleUnclaimedList.filters.facets;
+        facetsData['Display type'].buckets.push({'key': 174, 'doc_count': 4});
+        facetsData['Display type (lookup)'].buckets.push({'key': 'Book Chapter', 'doc_count': 4});
+
+        const wrapper = setup({facetsData});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

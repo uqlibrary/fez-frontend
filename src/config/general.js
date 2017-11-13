@@ -92,6 +92,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
         name: 'Conference Proceedings',
         class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
+        formComponent: components ? components.ConferenceProceedingsForm : null,
         citationComponent: components ? components.ConferenceProceedingsCitation : null,
         hasFormComponent: true
     },
@@ -210,6 +211,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_THESIS,
         name: 'Thesis',
         class: 'Uqlibrary\\FezCore\\Types\\Thesis',
+        formComponent: components ? components.ThesisForm : null,
         citationComponent: components ? components.ThesisCitation : null,
         hasFormComponent: true
     },
@@ -239,5 +241,21 @@ export const openAccessIdLookup = {
     453697: 'Other',
 };
 
+export const thesisSubtypes = [
+    'B.A. Thesis',
+    'B.Sc Thesis',
+    'Bachelor\'s Thesis',
+    'Higher Doctorate',
+    'Honours Thesis',
+    'M.A. Thesis',
+    'M.Sc Thesis',
+    'Master\'s Thesis',
+    'MPhil Thesis',
+    'Other',
+    'PhD Thesis',
+    'Professional Doctorate'
+];
+
 export const OrgUnitsVocabId = 453703;
+export const FieldOfResearchVocabId = 451780;
 

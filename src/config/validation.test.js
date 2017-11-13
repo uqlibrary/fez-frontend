@@ -105,6 +105,23 @@ describe('Validation method', () => {
         expect(validation.isValidPublicationTitle(' global    ')).toBeFalsy();
         expect(validation.isValidPublicationTitle(' global war ')).toBeTruthy();
     });
-    
+
+    it('it should validate person selected correctly', () => {
+        expect(validation.peopleRequired([], 'Error', true)).toEqual('Error');
+        expect(validation.peopleRequired([{name: 'First person'}], 'Error', true)).toEqual('Error');
+        expect(validation.peopleRequired([{name: 'First person', selected: true}], 'Error', true)).toBeFalsy();
+        expect(validation.peopleRequired([], 'Error', false)).toEqual('Error');
+        expect(validation.peopleRequired([{name: 'First person'}], 'Error', false)).toBeFalsy();
+    });
+
+    it('it should validate author/contributor link correctly', () => {
+        const contributorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
+        const authorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
+
+        expect(validation.isValidAuthorLink(authorLinkValid)).toEqual('');
+        expect(validation.isValidAuthorLink('Invalid data')).toEqual('Please, select and confirm an author');
+        expect(validation.isValidContributorLink(contributorLinkValid)).toEqual('');
+        expect(validation.isValidContributorLink('Invalid data')).toEqual('Please, select and confirm a contributor');
+    });
 });
 

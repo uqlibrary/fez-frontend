@@ -73,6 +73,11 @@ export default {
             prefix: 'https://doi.org/',
             externalUrl: 'https://doi.org/[id]',
         },
+        pubmedCentralLink: {
+            ariaLabel: 'Full text via Pubmed Central (open access)',
+            prefix: 'https://www.ncbi.nlm.nih.gov/pmc/articles/',
+            externalUrl: 'https://www.ncbi.nlm.nih.gov/pmc/articles/[id]'
+        },
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to publication'
     },
@@ -648,14 +653,20 @@ export default {
                     },
                     fieldLabels: {
                         documentTitle: {
-                            title: 'Title',
-                            hint: 'Title of document'
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of generic document'
                         },
-                        publicationPlace: 'Place of publication',
-                        publisher: 'Publisher',
+                        publicationPlace: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: ''
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: ''
+                        },
                         abstract: {
-                            title: 'Abstract',
-                            hint: 'Add a full article abstract here.'
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Add a full article abstract here.'
                         },
                         date: {
                             title: 'Publication date',
@@ -724,12 +735,12 @@ export default {
                     },
                     fieldLabels: {
                         notes: {
-                            title: 'Notes (not publicly viewable)',
-                            hint: 'Please add any additional information'
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information'
                         },
-                        link: {
-                            title: 'Link',
-                            hint: 'Enter URL for this publication'
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this publication'
                         }
                     }
 
@@ -744,8 +755,14 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        articleTitle: 'Title of document',
-                        journalTitle: 'Journal name',
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of journal article'
+                        },
+                        journalTitle: {
+                            floatingLabelText: 'Journal name',
+                            hintText: ''
+                        },
                         date: {
                             title: 'Publication date',
                             day: 'Day',
@@ -1538,20 +1555,20 @@ export default {
                     },
                     fieldLabels: {
                         documentTitle: {
-                            title: 'Title',
-                            hint: 'Title of paper',
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of paper',
                         },
-                        orgUnit: {
-                            title: 'School, department or centre',
-                            hint: ''
+                        orgUnitName: {
+                            floatingLabelText: 'School, department or centre',
+                            hintText: ''
                         },
-                        institution: {
-                            title: 'Institution',
-                            hint: ''
+                        orgName: {
+                            floatingLabelText: 'Institution',
+                            hintText: ''
                         },
                         series: {
-                            title: 'Series',
-                            hint: 'Enter seminar series'
+                            floatingLabelText: 'Series',
+                            hintText: 'Enter seminar series'
                         },
                         seminarDate: {
                             title: 'Seminar date',
@@ -1619,12 +1636,133 @@ export default {
                     },
                     fieldLabels: {
                         notes: {
-                            title: 'Notes (not publicly viewable)',
-                            hint: 'Please, add any additional information here',
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please, add any additional information here',
                         },
                         url: {
-                            title: 'Link',
-                            hint: 'Enter a valid URL for this publication'
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter a valid URL for this publication'
+                        }
+                    }
+                },
+            },
+            thesis: {
+                information: {
+                    title: 'Thesis information',
+                    help: {
+                        title: 'Thesis information',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Thesis title'
+                        },
+                        orgName: {
+                            floatingLabelText: 'Institution name',
+                            hintText: ''
+                        },
+                        orgUnitName: {
+                            floatingLabelText: 'School, Institute or Centre',
+                            hintText: ''
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        thesisType: {
+                            label: 'Thesis type'
+                        },
+                        author: {
+                            floatingLabelText: 'Author name',
+                            hintText: ''
+                        }
+                    }
+                },
+                supervisors: {
+                    title: 'Supervisors',
+                    help: {
+                        title: 'Supervisors help',
+                        text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Supervisor\'s name as published',
+                                nameAsPublishedHint: '',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add supervisor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Supervisor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed supervisor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                fieldOfResearch: {
+                    title: 'Field of research',
+                    help: {
+                        title: 'Optional information help',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Select up to 3 Field of Research (FoR) codes'
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information help',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        doi: {
+                            floatingLabelText: 'DOI',
+                            hintText: ''
+                        },
+                        totalPages: {
+                            floatingLabelText: 'Total pages',
+                            hintText: ''
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Provide an abstract or summary of the work'
+                        },
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Provide any additional information',
                         }
                     }
                 },
@@ -1639,8 +1777,8 @@ export default {
                     },
                     fieldLabels: {
                         documentTitle: {
-                            title: 'Title',
-                            hint: 'Title of document'
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of report'
                         },
                         date: {
                             title: 'Preprint date',
@@ -1708,12 +1846,12 @@ export default {
                     },
                     fieldLabels: {
                         notes: {
-                            title: 'Notes (not publicly viewable)',
-                            hint: 'Please add any additional information here'
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here'
                         },
                         url: {
-                            title: 'Link (URL)',
-                            hint: 'Enter URL for this publication'
+                            floatingLabelText: 'Link (URL)',
+                            hintText: 'Enter URL for this publication'
                         }
                     }
                 }
@@ -2300,6 +2438,14 @@ export default {
                             floatingLabelText: 'School, Institute or Centre',
                             hintText: ''
                         },
+                        series: {
+                            floatingLabelText: 'Series',
+                            hintText: ''
+                        },
+                        reportNumber: {
+                            floatingLabelText: 'Report number',
+                            hintText: ''
+                        },
                         date: {
                             title: 'Date published',
                             day: 'Day',
@@ -2497,6 +2643,119 @@ export default {
                     }
                 }
             },
+            conferenceProceedings: {
+                information: {
+                    title: 'Conference proceedings information',
+                    help: {
+                        title: 'Conference proceedings information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        title: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of conference'
+                        },
+                        conferenceName: {
+                            floatingLabelText: 'Conference name',
+                            hintText: 'Please, type the name of conference'
+                        },
+                        conferenceLocation: {
+                            floatingLabelText: 'Conference location',
+                            hintText: 'Please, type the place of conference'
+                        },
+                        conferenceDates: {
+                            floatingLabelText: 'Conference dates (eg 13-15 December 2011)',
+                            hintText: 'Please, type the dates of conference'
+                        },
+                        proceedingsTitle: {
+                            floatingLabelText: 'Proceedings title',
+                            hintText: 'Please, type the title of proceedings'
+                        },
+                        publicationPlace: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'Please, type the place of publication'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please, type the name of the publisher'
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                editors: {
+                    title: 'Editors',
+                    help: {
+                        title: 'Editors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Provide a list of editors for this publication and assign yourself as an editor',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Editor\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add editor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Editor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed editor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other publication details',
+                    help: {
+                        title: 'Other publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information'
+                        },
+                        link: {
+                            floatingLabelText: 'Link (URL)',
+                            hintText: 'Enter URL for this publication'
+                        }
+                    }
+                }
+            },
             fileUpload: {
                 title: 'Files',
                 help: {
@@ -2551,6 +2810,15 @@ export default {
                 text: 'We were unable to automatically detect who you are from the list of authors on this publication. Please, select your name from the list below: ',
                 help: {
                     title: 'Author linking',
+                    text: '...',
+                    buttonLabel: 'OK'
+                }
+            },
+            contributorLinking: {
+                title: 'Editor linking',
+                text: 'We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: ',
+                help: {
+                    title: 'Editor linking',
                     text: '...',
                     buttonLabel: 'OK'
                 }
@@ -2642,8 +2910,8 @@ export default {
                 },
             },
             citationAuthors: {
-                showMore: 'Show [numberOfAuthors] more...',
-                showLess: 'Show less'
+                showMoreLabel: 'Show [numberOfAuthors] more...',
+                showLessLabel: 'Show less'
             },
             defaultActions: [
                 {key: 'fixRecord', label: 'Fix record', primary: false},
@@ -2738,6 +3006,46 @@ export default {
                 }
             }
         },
+        fieldOfResearchForm: {
+            title: 'Field of research',
+            text: 'You can add up to three field of research values',
+            help: {
+                title: 'Field of research',
+                text: 'more info',
+                buttonLabel: 'OK'
+            },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Field of research',
+                        inputFieldHint: 'Please, type field of research value then select a value from the list'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Field of research',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         paging: {
             nextPage: 'Next',
             previousPage: 'Previous',
@@ -2774,13 +3082,17 @@ export default {
         required: 'This field is required',
         email: 'Email address is not valid',
         url: 'URL is not valid',
+        doi: 'DOI is not valid',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
         authorLinking: 'Please, select and confirm an author',
+        contributorLinking: 'Please, select and confirm a contributor',
         authorRequired: 'Please, provide a list of authors/creators of the publication and link an author name to the current user',
-        authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user'
+        authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user',
+        supervisorRequired: 'Please, provide a list of supervisors',
+        editorRequired: 'Please, provide a list of editors of the publication and link an editor name to the current user',
     },
     issues: {
         fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>

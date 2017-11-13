@@ -604,6 +604,8 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors"
@@ -611,16 +613,16 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=" "
+          suffix=""
           value="Keniger, Michael, 1947-"
         >
           <span
             className="citationAuthor"
           >
             Keniger, Michael, 1947-
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -698,6 +700,8 @@ exports[`DigilibImageCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"

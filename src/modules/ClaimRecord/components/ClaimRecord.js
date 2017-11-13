@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
+import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {AuthorLinkingField} from 'modules/SharedComponents/AuthorLinking';
-import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
 import {validation, locale, routes} from 'config';
 
 export default class ClaimRecord extends Component {
@@ -60,8 +59,7 @@ export default class ClaimRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
-        submitSucceeded = false, txt, authorLinked = false}) => {
+    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false, submitSucceeded = false, txt, authorLinked = false, contributorLinked = false}) => {
         let alertProps = null;
         if (submitFailed && error) {
             alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
@@ -71,7 +69,7 @@ export default class ClaimRecord extends Component {
             alertProps = {...txt.progressAlert};
         } else if (submitSucceeded) {
             alertProps = {...txt.successAlert};
-        } else if (authorLinked) {
+        } else if (authorLinked || contributorLinked) {
             alertProps = {...txt.alreadyClaimedAlert};
         }
         return alertProps ? (<Alert {...alertProps} />) : null;
@@ -90,6 +88,8 @@ export default class ClaimRecord extends Component {
         }
         const authorLinked = publication && author && publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
+        const contributorLinked = publication && author && publication.fez_record_search_key_contributor_id && publication.fez_record_search_key_contributor_id.length > 0 &&
+            publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === author.aut_id).length > 0;
 
         const fromAddRecord = !!publication.sources;
 
@@ -118,7 +118,8 @@ export default class ClaimRecord extends Component {
                                 locale={saveConfirmationLocale} />
                             <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
                             {
-                                publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
+                                publication.fez_record_search_key_author &&
+                                publication.fez_record_search_key_author.length > 1
                                 && !authorLinked &&
                                 <StandardCard
                                     title={txt.authorLinking.title}
@@ -128,13 +129,45 @@ export default class ClaimRecord extends Component {
                                     <Field
                                         name="authorLinking"
                                         component={AuthorLinkingField}
-                                        searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
+                                        searchKey={{
+                                            value: 'rek_author_id',
+                                            order: 'rek_author_id_order',
+                                            type: 'author'
+                                        }}
                                         loggedInAuthor={author}
                                         authorList={publication.fez_record_search_key_author}
                                         linkedAuthorIdList={publication.fez_record_search_key_author_id}
                                         disabled={this.props.submitting}
                                         className="requiredField"
                                         validate={[validation.required, validation.isValidAuthorLink]}
+                                    />
+                                </StandardCard>
+                            }
+                            {
+                                publication.fez_record_search_key_author &&
+                                publication.fez_record_search_key_author.length === 0 &&
+                                publication.fez_record_search_key_contributor &&
+                                publication.fez_record_search_key_contributor.length > 1 &&
+                                !contributorLinked &&
+                                <StandardCard
+                                    title={txt.contributorLinking.title}
+                                    help={txt.contributorLinking.help}
+                                    className="requiredField">
+                                    <label htmlFor="contributorLinking">{txt.contributorLinking.text}</label>
+                                    <Field
+                                        name="contributorLinking"
+                                        component={AuthorLinkingField}
+                                        searchKey={{
+                                            value: 'rek_contributor_id',
+                                            order: 'rek_contributor_id_order',
+                                            type: 'contributor'
+                                        }}
+                                        loggedInAuthor={author}
+                                        authorList={publication.fez_record_search_key_contributor}
+                                        linkedAuthorIdList={publication.fez_record_search_key_contributor_id}
+                                        disabled={this.props.submitting}
+                                        className="requiredField"
+                                        validate={[validation.required, validation.isValidContributorLink]}
                                     />
                                 </StandardCard>
                             }
