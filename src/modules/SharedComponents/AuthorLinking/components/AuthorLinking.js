@@ -152,7 +152,6 @@ export default class AuthorLinking extends React.Component {
      */
     _selectAuthor = (author) => {
         const selectedAuthor = this.transformToAuthorOrderId(this.props.loggedInAuthor.aut_id, author, this.props.searchKey);
-        console.log('Selected author: ' + JSON.stringify(selectedAuthor));
         this.setState({
             selectedAuthor: selectedAuthor,
             authorLinkingConfirmed: false,
