@@ -11,7 +11,6 @@ import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
-
 export default class App extends React.Component {
     static propTypes = {
         user: PropTypes.object,
@@ -77,6 +76,8 @@ export default class App extends React.Component {
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        console.log('docked: ' + this.state.docked);
+        console.log('menuDrawerOpen: ' + this.state.menuDrawerOpen);
         return (
             <div className="layout-fill">
                 {
@@ -123,17 +124,18 @@ export default class App extends React.Component {
                             menuItems={menuItems}
                             drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                             docked={this.state.docked}
+                            history={this.props.history}
                             logoImage={locale.global.logo}
                             logoText={locale.global.title}
-                            toggleDrawer={this.toggleDrawer}
+                            onToggleDrawer={this.toggleDrawer}
                             isMobile={this.state.isMobile}
-                            history={this.props.history}
-                            skipNavAriaLabel={locale.global.skipNav.ariaLabel}
-                            skipNavTitle={locale.global.skipNav.title}
-                            skipNavFocusElementId="contentContainer"
-                        />
+                            locale={{
+                                skipNavAriaLabel: locale.global.skipNav.ariaLabel,
+                                skipNavTitle: locale.global.skipNav.title,
+                                closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
+                            }} />
 
-                        <div className="content-container" id="contentContainer" style={container} tabIndex={-1}>
+                        <div className="content-container" style={container}>
                             {
                                 // user is not logged in
                                 !this.props.user.accountLoading && !this.props.user.account &&

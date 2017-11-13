@@ -7,7 +7,8 @@ export default {
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         loading: 'loading...',
         mainNavButton: {
-            tooltip: 'Main navigation'
+            tooltip: 'Main navigation',
+            closeMenuLabel: 'Close menu'
         },
         skipNav: {
             title: 'Skip Navigation',
