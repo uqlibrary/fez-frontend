@@ -1,6 +1,6 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
-import {APP_URL} from './general';
+import {APP_URL} from 'config';
 
 export default {
     global: {

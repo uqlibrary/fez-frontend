@@ -2,7 +2,7 @@ import React from 'react';
 import * as validation from './validation';
 import {accounts} from 'mock/data/account';
 import {locale} from '.';
-import {APP_URL} from './general';
+import {APP_URL} from 'config';
 
 describe('Validation method', () => {
     it('should validate required', () => {

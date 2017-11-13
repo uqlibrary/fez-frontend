@@ -1,6 +1,6 @@
 import React from 'react';
 import * as transformers from './transformers';
-import {APP_URL} from './general';
+import {APP_URL} from 'config';
 
 describe('Transformers tests ', () => {
 
