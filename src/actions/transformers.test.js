@@ -1,5 +1,6 @@
 import React from 'react';
 import * as transformers from './transformers';
+import {APP_URL} from './general';
 
 describe('Transformers tests ', () => {
 
@@ -347,7 +348,7 @@ describe('Transformers tests ', () => {
         const result = transformers.unclaimRecordContributorsIdSearchKey(input, 1001);
         expect(result).toEqual(expected);
     });
-    
+
     it('getRecordAuthorsIdSearchKey returns request object for alternative format', () => {
         const input = [
             {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12},
@@ -381,7 +382,7 @@ describe('Transformers tests ', () => {
         const result = transformers.unclaimRecordAuthorsIdSearchKey(input, 683);
         expect(result).toEqual(expected);
     });
-    
+
     it('unclaimRecordContributorsIdSearchKey returns request object for alternative format', () => {
         const input = [
             {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 683, rek_contributor_id_order: 12},
@@ -398,7 +399,7 @@ describe('Transformers tests ', () => {
         const result = transformers.unclaimRecordContributorsIdSearchKey(input, 683);
         expect(result).toEqual(expected);
     });
-    
+
     it('getRecordContributorsSearchKey returns empty request object', () => {
         const input = [];
         const expected = {};
@@ -489,7 +490,7 @@ describe('Transformers tests ', () => {
         input.comments = 'Some comments...';
 
 
-        const expected = {issue: 'Record: https://fez-staging.library.uq.edu.au/view/UQ:1111 \n User \'J. Smith (uqjsmith)\' has indicated that they require a fix to this publication: Some comments...'}
+        const expected = {issue: 'Record: ' + APP_URL + 'view/UQ:1111 \n User \'J. Smith (uqjsmith)\' has indicated that they require a fix to this publication: Some comments...'}
 
         const result = transformers.getFixIssueRequest(input);
         expect(result).toEqual(expected);

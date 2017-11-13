@@ -1,5 +1,6 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
+import {APP_URL} from './general';
 
 export default {
     global: {
@@ -28,7 +29,7 @@ export default {
                 id: 'espace',
                 title: 'eSpace',
                 priority: 0,
-                externalUrl: 'https://fez-staging.library.uq.edu.au/view/[id]',
+                externalUrl: APP_URL + 'view/[id]',
                 idKey: 'rek_pid'
             },
             wos: {
@@ -3078,6 +3079,6 @@ export default {
     },
     issues: {
         fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
-            `Record: https://fez-staging.library.uq.edu.au/view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
+            'Record: ' + APP_URL + `view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
     }
 };
