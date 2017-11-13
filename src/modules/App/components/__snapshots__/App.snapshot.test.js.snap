@@ -71,6 +71,13 @@ exports[`App tests for user account and author status User is logged in but are 
       docked={false}
       drawerOpen={false}
       isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -119,16 +126,11 @@ exports[`App tests for user account and author status User is logged in but are 
           },
         ]
       }
-      skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
-      skipNavFocusElementId="contentContainer"
-      skipNavTitle="Skip Navigation"
-      toggleDrawer={[Function]}
+      onToggleDrawer={[Function]}
     />
     <div
       className="content-container"
-      id="contentContainer"
       style={Object {}}
-      tabIndex={-1}
     >
       <Switch>
         <Route
@@ -323,6 +325,13 @@ exports[`App tests for user account and author status User is not logged in and 
       docked={false}
       drawerOpen={false}
       isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -341,16 +350,11 @@ exports[`App tests for user account and author status User is not logged in and 
           },
         ]
       }
-      skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
-      skipNavFocusElementId="contentContainer"
-      skipNavTitle="Skip Navigation"
-      toggleDrawer={[Function]}
+      onToggleDrawer={[Function]}
     />
     <div
       className="content-container"
-      id="contentContainer"
       style={Object {}}
-      tabIndex={-1}
     >
       <div
         className="layout-fill dashAlert"
@@ -461,6 +465,13 @@ exports[`App tests for user account and author status User logged in and is an a
       docked={false}
       drawerOpen={false}
       isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -509,16 +520,11 @@ exports[`App tests for user account and author status User logged in and is an a
           },
         ]
       }
-      skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
-      skipNavFocusElementId="contentContainer"
-      skipNavTitle="Skip Navigation"
-      toggleDrawer={[Function]}
+      onToggleDrawer={[Function]}
     />
     <div
       className="content-container"
-      id="contentContainer"
       style={Object {}}
-      tabIndex={-1}
     >
       <Switch>
         <Route
@@ -713,6 +719,13 @@ exports[`App tests for user account and author status User logged in but is not 
       docked={false}
       drawerOpen={false}
       isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -761,16 +774,11 @@ exports[`App tests for user account and author status User logged in but is not 
           },
         ]
       }
-      skipNavAriaLabel="Click to skip, or tab to progress to the navigation"
-      skipNavFocusElementId="contentContainer"
-      skipNavTitle="Skip Navigation"
-      toggleDrawer={[Function]}
+      onToggleDrawer={[Function]}
     />
     <div
       className="content-container"
-      id="contentContainer"
       style={Object {}}
-      tabIndex={-1}
     >
       <div
         className="layout-fill dashAlert"
