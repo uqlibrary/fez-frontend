@@ -1,9 +1,16 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import {setupCache} from 'axios-cache-adapter';
 import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from './general';
 
+export const cache = setupCache({
+    maxAge: 15 * 60 * 1000,
+    debug: true             // keep debug ON for now
+});
+
 export const api = axios.create({
-    baseURL: API_URL
+    baseURL: API_URL,
+    adapter: cache.adapter
 });
 
 // need to generate a new token for each request otherwise if you try a new request with the old token,

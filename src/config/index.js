@@ -6,7 +6,7 @@ export {
     TOKEN_NAME
 } from './general';
 
-export {api, generateCancelToken} from './axios';
+export {api, generateCancelToken, cache} from './axios';
 
 export {default as theme} from './theme';
 
