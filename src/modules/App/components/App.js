@@ -76,8 +76,6 @@ export default class App extends React.Component {
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
-        console.log('docked: ' + this.state.docked);
-        console.log('menuDrawerOpen: ' + this.state.menuDrawerOpen);
         return (
             <div className="layout-fill">
                 {
