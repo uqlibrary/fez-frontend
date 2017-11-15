@@ -145,10 +145,13 @@ export function clearClaimPublication() {
  */
 export function claimPublication(data) {
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
-    data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
+        data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
+
+    const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
+        data.publication.fez_record_search_key_contributor_id.filter(authorId => authorId.rek_contributor_id === data.author.aut_id).length > 0;
 
     // do not try to claim record if it's internal record and already assigned to the current author
-    if (data.publication.rek_pid && isAuthorLinked) {
+    if (data.publication.rek_pid && (isAuthorLinked || isContributorLinked)) {
         return dispatch => {
             dispatch({
                 type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
@@ -163,11 +166,17 @@ export function claimPublication(data) {
         dispatch({type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING});
 
         let recordAuthorsIdSearchKeys = {};
+        let recordContributorsIdSearchKeys = {};
 
-        // TODO: special case for contributors required
         if ((data.publication.fez_record_search_key_author && data.publication.fez_record_search_key_author.length === 1)
             || (data.authorLinking && data.authorLinking.authors)) {
             recordAuthorsIdSearchKeys = transformers.getRecordAuthorsIdSearchKey(data.authorLinking ? data.authorLinking.authors : null, data.author.aut_id);
+        }
+
+        // If there is only 1 contributor on the record, or we're sending some contributor data to patch the record, form the data
+        if ((data.publication.fez_record_search_key_contributor && data.publication.fez_record_search_key_contributor.length === 1) ||
+            (data.contributorLinking && data.contributorLinking.authors)) {
+            recordContributorsIdSearchKeys = transformers.getRecordContributorsIdSearchKey(data.contributorLinking ? data.contributorLinking.authors : null, data.author.aut_id);
         }
 
         // claim record from external source
@@ -177,13 +186,15 @@ export function claimPublication(data) {
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
             ...{fez_record_search_key_notes: {rek_notes: data.comments}},
-            ...recordAuthorsIdSearchKeys
+            ...recordAuthorsIdSearchKeys,
+            ...recordContributorsIdSearchKeys
         } : null;
 
-        // update record with author id/link
+        // update record with author/contributor id/link
         const patchRecordRequest = data.publication.rek_pid ? {
             ...transformers.getRecordLinkSearchKey(data),
-            ...recordAuthorsIdSearchKeys
+            ...recordAuthorsIdSearchKeys,
+            ...recordContributorsIdSearchKeys
         } : null;
 
         // update record with files
@@ -195,7 +206,7 @@ export function claimPublication(data) {
         let claimRecordRequestSuccess = false;
 
         return Promise.resolve([])
-            // save a new record if claiming from external source
+        // save a new record if claiming from external source
             .then(() => !data.publication.rek_pid ? post(routes.NEW_RECORD_API(), createRecordRequest) : null)
             // update pid of newly saved record
             .then((newRecord) => {

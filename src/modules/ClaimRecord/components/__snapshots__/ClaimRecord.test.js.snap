@@ -2866,12 +2866,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             }
           }
           name="authorLinking"
-          searchKey={
-            Object {
-              "order": "rek_author_id_order",
-              "value": "rek_author_id",
-            }
-          }
           validate={
             Array [
               [Function],
@@ -4024,12 +4018,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             }
           }
           name="authorLinking"
-          searchKey={
-            Object {
-              "order": "rek_author_id_order",
-              "value": "rek_author_id",
-            }
-          }
           validate={
             Array [
               [Function],
@@ -5183,12 +5171,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             }
           }
           name="authorLinking"
-          searchKey={
-            Object {
-              "order": "rek_author_id_order",
-              "value": "rek_author_id",
-            }
-          }
           validate={
             Array [
               [Function],

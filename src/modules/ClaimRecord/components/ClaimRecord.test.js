@@ -195,7 +195,11 @@ describe('Component ClaimRecord ', () => {
             {
                 parameters: {authorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
                 expected: 'alreadyClaimed'
-            }
+            },
+            {
+                parameters: {contributorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
+                expected: 'alreadyClaimed'
+            },
         ];
 
         testCases.forEach(testCase => {
@@ -239,17 +243,6 @@ describe('Component ClaimRecord ', () => {
         const wrapper = setup({initialValues: Immutable.Map({author: null}), history: {go: testMethod}});
         expect(testMethod).toHaveBeenCalled();
     });
-
-    // if (this.props.pristine) {
-    //     if (!!this.props.initialValues.get('publication').get('sources')) {
-    //         this._navigateToAddRecord();
-    //     } else {
-    //         this._navigateToPossibleMyResearch();
-    //     }
-    // } else {
-    //     this.cancelConfirmationBox.showConfirmation();
-    // }
-    //
 
     it('should display confirmation box after successful submission', () => {
         const testMethod = jest.fn();

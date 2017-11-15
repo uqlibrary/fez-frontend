@@ -77,4 +77,10 @@ export const isValidIsbn = subject => {
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
 };
 
-export const isValidAuthorLink = (link) => (link.valid ? '' : locale.validationErrors.authorLinking);
+export const isValidAuthorLink = (link) => {
+    return link.valid ? '' : locale.validationErrors.authorLinking;
+};
+
+export const isValidContributorLink = (link) => {
+    return link.valid ? '' : locale.validationErrors.contributorLinking;
+};

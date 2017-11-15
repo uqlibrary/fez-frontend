@@ -7,6 +7,14 @@ export default {
         title: 'UQ eSpace',
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         loading: 'loading...',
+        mainNavButton: {
+            tooltip: 'Main navigation',
+            closeMenuLabel: 'Close menu'
+        },
+        skipNav: {
+            title: 'Skip Navigation',
+            ariaLabel: 'Click to skip, or tab to progress to the navigation',
+        },
         loginAlert: {
             title: 'You are not logged in',
             message: 'Please, login to UQ eSpace for full search results and more services.',
@@ -2807,6 +2815,15 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
+            contributorLinking: {
+                title: 'Editor linking',
+                text: 'We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: ',
+                help: {
+                    title: 'Editor linking',
+                    text: '...',
+                    buttonLabel: 'OK'
+                }
+            },
             comments: {
                 title: 'Please, suggest changes and/or upload additional files below',
                 help: {
@@ -3072,6 +3089,7 @@ export default {
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
         authorLinking: 'Please, select and confirm an author',
+        contributorLinking: 'Please, select and confirm a contributor',
         authorRequired: 'Please, provide a list of authors/creators of the publication and link an author name to the current user',
         authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user',
         supervisorRequired: 'Please, provide a list of supervisors',

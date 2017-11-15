@@ -7,6 +7,7 @@ import RadioButtonChecked from 'material-ui/svg-icons/toggle/radio-button-checke
 
 export default class AuthorItem extends React.Component {
     static propTypes = {
+        type: PropTypes.string,
         linked: PropTypes.bool,
         selected: PropTypes.bool,
         disabled: PropTypes.bool,
@@ -19,7 +20,7 @@ export default class AuthorItem extends React.Component {
     static defaultProps = {
         locale: {
             ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-            suffix: ' listed author'
+            suffix: ' listed [type]'
         }
     };
 
@@ -56,7 +57,7 @@ export default class AuthorItem extends React.Component {
     getAuthorName = (author) => {
         return (
             <span className="author-link-name">
-                {author.rek_author}
+                {author[`rek_${this.props.type}`]}
             </span>
         );
     };
@@ -64,7 +65,7 @@ export default class AuthorItem extends React.Component {
     render() {
         const {linked, author, selected, index} = this.props;
         const {ordinalData, suffix} = this.props.locale;
-        const authorOrder = (index < ordinalData.length ? ordinalData[index] : (index + 1)) + ' ' + suffix;
+        const authorOrder = (index < ordinalData.length ? ordinalData[index] : (index + 1)) + ' ' + suffix.replace('[type]', this.props.type);
         const icon = this.getAuthorItemStatusIcon(linked, selected);
         const disabled = this.props.disabled || linked;
         const authorName = this.getAuthorName(author);
