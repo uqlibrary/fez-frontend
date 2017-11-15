@@ -1,5 +1,6 @@
 export {
     API_URL,
+    APP_URL,
     AUTH_URL_LOGIN,
     AUTH_URL_LOGOUT,
     SESSION_COOKIE_NAME,
