@@ -42,7 +42,7 @@ export const prepareTextSearchQuery = (searchQuery) => {
  * @returns {string}
  */
 export const getStandardSearchParameters = ({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => (
-    `page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection}&${getFacetsQueryString(facets)}${withUnknownAuthors >= 0 ? `&with_unknown_authors=${withUnknownAuthors}` : ''}`
+    `page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection.toLowerCase()}&${getFacetsQueryString(facets)}${withUnknownAuthors >= 0 ? `&with_unknown_authors=${withUnknownAuthors}` : ''}`
 );
 
 /**

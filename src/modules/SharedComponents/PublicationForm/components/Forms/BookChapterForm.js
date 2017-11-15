@@ -113,6 +113,7 @@ export default class BookChapterForm extends Component {
                         locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
+                        validate={[validation.authorRequired]}
                         disabled={this.props.submitting} />
                 </StandardCard>
 
@@ -120,7 +121,6 @@ export default class BookChapterForm extends Component {
                     <div>{txt.editors.description}</div>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
                         name="editors"
                         locale={txt.editors.field}
                         disabled={this.props.submitting} />
@@ -207,7 +207,7 @@ export default class BookChapterForm extends Component {
                                 disabled={this.props.submitting}
                                 fullWidth
                                 floatingLabelText={txt.other.fieldLabels.url}
-                                validate={[validation.url, validation.maxLength255]}
+                                validate={[validation.url]}
                             />
                         </div>
                     </div>

@@ -54,14 +54,17 @@ const DashboardProfile = ({authorDetails}) => {
                     </div>
 
                     {/* Publication count */}
-                    <div className="column is-narrow is-hidden-tablet-only authorCount">
-                        <DashboardArticleCount
-                            values={{
-                                articleCount: authorDetails.espace.doc_count,
-                                articleFirstYear: authorDetails.espace.first_year,
-                                articleLastYear: authorDetails.espace.last_year,
-                            }}/>
-                    </div>
+                    {
+                        authorDetails.espace &&
+                        <div className="column is-narrow is-hidden-tablet-only authorCount">
+                            <DashboardArticleCount
+                                values={{
+                                    articleCount: authorDetails.espace.doc_count,
+                                    articleFirstYear: authorDetails.espace.first_year,
+                                    articleLastYear: authorDetails.espace.last_year,
+                                }}/>
+                        </div>
+                    }
                 </div>
             }
         </div>

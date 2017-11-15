@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import {publicationTypes, locale} from 'config';
-import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new';
 
 // citations for different publication types
 import {routes} from 'config';
@@ -12,7 +11,26 @@ import JournalArticleCitation from './citations/JournalArticleCitation';
 import BookChapterCitation from './citations/BookChapterCitation';
 import BookCitation from './citations/BookCitation';
 import ConferencePaperCitation from './citations/ConferencePaperCitation';
-import AudioCitation from './citations/AudioCitation';
+import GenericDocumentCitation from './citations/GenericDocumentCitation';
+import AudioDocumentCitation from './citations/AudioDocumentCitation';
+import ResearchReportCitation from './citations/ResearchReportCitation';
+import PreprintCitation from './citations/PreprintCitation';
+import SeminarPaperCitation from './citations/SeminarPaperCitation';
+import CreativeWorkCitation from './citations/CreativeWorkCitation';
+import ManuscriptCitation from './citations/ManuscriptCitation';
+import DepartmentTechnicalReportCitation from './citations/DepartmentTechnicalReportCitation';
+import ImageDocumentCitation from './citations/ImageDocumentCitation';
+import DesignCitation from './citations/DesignCitation';
+import DigilibImageCitation from './citations/DigilibImageCitation';
+import WorkingPaperCitation from './citations/WorkingPaperCitation';
+import VideoDocumentCitation from './citations/VideoDocumentCitation';
+import JournalCitation from './citations/JournalCitation';
+import PatentCitation from './citations/PatentCitation';
+import ConferenceProceedingsCitation from './citations/ConferenceProceedingsCitation';
+import ThesisCitation from './citations/ThesisCitation';
+import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
+import DataCollectionCitation from './citations/DataCollectionCitation';
+import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 
 export default class PublicationCitation extends Component {
     static propTypes = {
@@ -31,9 +49,13 @@ export default class PublicationCitation extends Component {
 
     constructor(props) {
         super(props);
-
         // keep a list of all available citations
-        this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation, AudioCitation};
+        this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation,
+            AudioDocumentCitation, GenericDocumentCitation, ResearchReportCitation, PreprintCitation, SeminarPaperCitation,
+            CreativeWorkCitation, ManuscriptCitation, DepartmentTechnicalReportCitation, ImageDocumentCitation, DesignCitation,
+            DigilibImageCitation, WorkingPaperCitation, VideoDocumentCitation, JournalCitation, ConferenceProceedingsCitation,
+            ThesisCitation, NewspaperArticleCitation, PatentCitation, DataCollectionCitation};
+
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }
@@ -96,13 +118,12 @@ export default class PublicationCitation extends Component {
                     <div className="column">
                         <h3 className="publicationTitle">
                             {!this.props.publication.rek_pid ? (this.props.publication.rek_title) : (
-                                <a href={locale.global.sources.espace.externalUrl.replace('[id]', this.props.publication.rek_pid)}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
+                                <ExternalLink
+                                    href={locale.global.sources.espace.externalUrl.replace('[id]', this.props.publication.rek_pid)}
                                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
                                 >
-                                    {this.props.publication.rek_title}<ActionOpenInNew className="titleOpenUrlIcon" />
-                                </a>
+                                    {this.props.publication.rek_title}
+                                </ExternalLink>
                             )}
                         </h3>
                         {
@@ -117,15 +138,14 @@ export default class PublicationCitation extends Component {
                                     this.props.publication.sources.map((source, index) => {
                                         const sourceConfig = locale.global.sources[source.source];
                                         return (
-                                            <a
-                                                href={sourceConfig.externalUrl.replace('[id]', source.id)}
+                                            <ExternalLink
                                                 key={'source_' + index}
-                                                rel="noopener noreferrer"
-                                                target="_blank"
                                                 className="publicationSource"
-                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
-                                                {sourceConfig.title}<ActionOpenInNew className="citationOpenUrlIcon"/>
-                                            </a>
+                                                href={sourceConfig.externalUrl.replace('[id]', source.id)}
+                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}
+                                            >
+                                                {sourceConfig.title}
+                                            </ExternalLink>
                                         );
                                     })
                                 }

@@ -9,8 +9,14 @@ function setup(values) {
 }
 
 describe('Add new record', () => {
+
+    it('should not render publication form if author is not loaded', () => {
+        const wrapper = setup({author: null});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render stepper and a publication form', () => {
-        const wrapper = setup({history: {}});
+        const wrapper = setup({history: {}, author: {'aut_display_name': 'Fred', 'aut_id': 44}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -43,7 +49,7 @@ describe('Add new record', () => {
             push: navigateToMyResearch
         };
 
-        const wrapper = setup({history: history});
+        const wrapper = setup({history: history, actions: {clearNewRecord: jest.fn()}});
         wrapper.instance()._navigateToMyResearch();
 
         expect(navigateToMyResearch).toBeCalled();
@@ -55,7 +61,7 @@ describe('Add new record', () => {
             push: navigateToSearch
         };
 
-        const wrapper = setup({history: history});
+        const wrapper = setup({history: history, actions: {clearNewRecord: jest.fn()}});
         wrapper.instance()._restartWorkflow();
 
         expect(navigateToSearch).toBeCalled();

@@ -1,4 +1,4 @@
-import {api} from '../config';
+import {api, cache} from '../config';
 /**
  * @param error
  * @param resolve
@@ -18,6 +18,29 @@ function processError(error, resolve, reject) {
 }
 
 /**
+ * Send a put request
+ * @param {string} apiUrl
+ * @param {object} data to be posted, refer to backend API
+ * @returns {Promise}
+ */
+export function put(apiUrl, data, options, encodeUrl = false) {
+    console.log('PUT: ' + apiUrl);
+    return new Promise((resolve, reject) => {
+        api
+            .put(encodeUrl ? encodeURI(apiUrl) : apiUrl, data, options)
+            .then(response => {
+                console.log(response.data);
+                resolve(response.data);
+            })
+            .catch(error => {
+                console.log('PUT api call error');
+                console.log(error);
+                reject(error);
+            });
+    });
+}
+
+/**
  * Send a post request
  * @param {string} apiUrl
  * @param {object} data to be posted, refer to backend API
@@ -27,12 +50,15 @@ export function post(apiUrl, data) {
     console.log('POST: ' + apiUrl);
     console.log(data);
     return new Promise((resolve, reject) => {
-        api.post(encodeURI(apiUrl), data).then(response => {
-            console.log(response.data);
-            resolve(response.data);
-        }).catch(error => {
-            reject(error);
-        });
+        api
+            .post(encodeURI(apiUrl), data)
+            .then(response => {
+                console.log(response.data);
+                resolve(response.data);
+            })
+            .catch(error => {
+                reject(error);
+            });
     });
 }
 
@@ -64,7 +90,9 @@ export function get(apiUrl) {
     console.log('GET: ' + apiUrl);
     return new Promise((resolve, reject) => {
         api.get(encodeURI(apiUrl)).then(response => {
-            console.log(response.data);
+            cache.store.length().then(length => {
+                console.log('Cache store length: ', length);
+            });
             resolve(response.data);
         }).catch(error => {
             processError(error, resolve, reject);

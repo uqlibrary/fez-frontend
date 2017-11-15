@@ -1,10 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PublicationForm renders  component initialised with just one field - publication type 1`] = `
+exports[`PublicationForm test should render component initialised with just one field - publication type 1`] = `
 <form>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
+  <NavigationDialogBox
+    txt={
       Object {
         "cancelButtonLabel": "No",
         "confirmButtonLabel": "Yes",
@@ -12,8 +11,6 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         "confirmationTitle": "Abandon workflow",
       }
     }
-    onAction={[Function]}
-    onRef={[Function]}
   />
   <StandardCard
     className=""
@@ -131,7 +128,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Generic Document"
@@ -152,7 +149,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Audio Document"
@@ -236,7 +233,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Conference Proceedings"
@@ -257,7 +254,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Creative Work"
@@ -278,7 +275,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Department Technical Report"
@@ -299,7 +296,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Design"
@@ -320,7 +317,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Image"
@@ -362,7 +359,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Newspaper Article"
@@ -383,7 +380,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Patent"
@@ -404,7 +401,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Preprint"
@@ -425,7 +422,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Research Report"
@@ -446,7 +443,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Seminar Paper"
@@ -467,7 +464,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Thesis"
@@ -488,7 +485,7 @@ exports[`PublicationForm renders  component initialised with just one field - pu
         }
         checked={false}
         desktop={false}
-        disabled={true}
+        disabled={false}
         focusState="none"
         insetChildren={false}
         primaryText="Video Document"

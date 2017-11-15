@@ -20,6 +20,7 @@ export const getFixIssueRequest = pipe(getIssueValues, locale.issues.fixRecord, 
 
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
+* NOTE: link description is required to save link
 * @param {Object} form data may contain link attribute  {rek_link: {string}}
 * @returns {Object} formatted {fez_record_search_key_link*} for record request
 */
@@ -31,6 +32,12 @@ export const getRecordLinkSearchKey = (data) => {
             {
                 rek_link: data.rek_link,
                 rek_link_order: 1
+            }
+        ],
+        fez_record_search_key_link_description: [
+            {
+                rek_link_description: locale.global.defaultLinkDescription,
+                rek_link_description_order: 1
             }
         ]
     };
@@ -93,7 +100,6 @@ export const getRecordAuthorsSearchKey = (authors) => {
     return {
         fez_record_search_key_author: authors.map((item, index) => (
             {
-                rek_author_id: null,
                 rek_author: item.nameAsPublished,
                 rek_author_order: index + 1
             }
@@ -101,14 +107,51 @@ export const getRecordAuthorsSearchKey = (authors) => {
     };
 };
 
+export const getRecordSupervisorsSearchKey = (supervisors) => {
+    if (!supervisors || supervisors.length === 0) return {};
+    return {
+        fez_record_search_key_supervisor: supervisors.map((item, index) => (
+            {
+                rek_supervisor: item.nameAsPublished,
+                rek_supervisor_order: index + 1
+            }
+        ))
+    };
+};
+
+export const getRecordSubjectSearchKey = (subjects) => {
+    if (!subjects || subjects.length === 0) return {};
+    return {
+        fez_record_search_key_subject: subjects.map((item, index) => (
+            {
+                rek_subject_id: item.rek_value.key,
+                rek_subject_order: index + 1
+            }
+        ))
+    };
+};
 
 /* getRecordAuthorsIdSearchKey - returns authors id object formatted for record request
 * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
 * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
 * @returns {Object} formatted {fez_record_search_key_author_id} for record request
 */
-export const getRecordAuthorsIdSearchKey = (authors) => {
-    if (!authors || authors.length === 0) return {};
+export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
+    // return empty object if all parameters are null
+    if ((!authors || authors.length === 0) && !defaultAuthorId) return {};
+
+    // return default author if provided
+    if ((!authors || authors.length === 0) && defaultAuthorId) {
+        return {
+            fez_record_search_key_author_id: [
+                {
+                    rek_author_id: defaultAuthorId,
+                    rek_author_id_order: 1
+                }
+            ]
+        };
+    }
+
     return {
         fez_record_search_key_author_id: authors.map(
             (item, index) => (
@@ -137,7 +180,28 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
                     ? item
                     : {
                         rek_author_id: 0,
-                        rek_author_id_order: index + 1
+                        rek_author_id_order: item.hasOwnProperty('rek_author_id_order') ? item.rek_author_id_order : index + 1
+                    }
+            )
+        )
+    };
+};
+
+/* unclaimRecordContributorsIdSearchKey - returns contributors id object formatted for record request
+ * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, contributorId: 410} or
+ * {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678742", rek_contributor_id: 683, rek_contributor_id_order: 12}
+ * @returns {Object} formatted {fez_record_search_key_contributor_id} for record request
+ */
+export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId) => {
+    if (!contributors || contributors.length === 0) return {fez_record_search_key_contributor_id: []};
+    return {
+        fez_record_search_key_contributor_id: contributors.map(
+            (item, index) => (
+                item.hasOwnProperty('rek_contributor_id') && item.hasOwnProperty('rek_contributor_id_order') && item.rek_contributor_id !== contributorId
+                    ? item
+                    : {
+                        rek_contributor_id: 0,
+                        rek_contributor_id_order: item.hasOwnProperty('rek_contributor_id_order') ? item.rek_contributor_id_order : index + 1
                     }
             )
         )

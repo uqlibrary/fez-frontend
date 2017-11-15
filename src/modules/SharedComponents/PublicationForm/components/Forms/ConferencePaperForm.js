@@ -139,6 +139,7 @@ export default class ConferencePaperForm extends Component {
                         locale={txt.authors.field}
                         showContributorAssignment
                         className="requiredField"
+                        validate={[validation.authorRequired]}
                         disabled={this.props.submitting} />
                 </StandardCard>
 
@@ -209,7 +210,7 @@ export default class ConferencePaperForm extends Component {
                                 disabled={this.props.submitting}
                                 fullWidth
                                 floatingLabelText={txt.other.fieldLabels.url}
-                                validate={[validation.url, validation.maxLength255]}
+                                validate={[validation.url]}
                             />
                         </div>
                     </div>

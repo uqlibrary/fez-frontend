@@ -58,7 +58,8 @@ button[type=button] {
 }
 
 // Adds red asterix to required fields
-.requiredField label:after, .requiredHintField div:first-child:after {
+.requiredField label:after,
+.requiredHintField div:first-child:after {
   content: "*";
   padding-right: 5px;
   padding-left: 5px;
@@ -85,17 +86,6 @@ button[type=button] {
   }
 }
 
-// Fixes text input where the hint text wraps, and sits over a floating label
-@include mobile {
-  .input-long-hint > div {
-    width: 100% !important;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-
 // Repositions the help icon
 .is-helpicon {
   margin: -10px 5px 0 0 !important;
@@ -114,27 +104,14 @@ button[type=button] {
     line-height: 75px !important;
   }
   button {
-    line-height: 75px;
+    margin-top: 12px !important;
   }
+}
+#contentContainer:focus {
+  outline: none;
 }
 
 // Class to space elements against scroll bars
 .scrollbar-spacer{
   width: 17px !important;
-}
-
-// A solution for a floating title look-alike for a combination of inputs (ie. partial dates)
-.dateTitle{
-  margin: 28px 0 -10px 0;
-  @include mobile {
-    margin: 28px 0 -6px 0;
-  }
-  font-size: $text-body-small;
-  color: #888888; // $secondary-color;
-  &.required::after {
-    content: "*";
-    padding-right: 5px;
-    padding-left: 5px;
-    color: $error-color;
-  }
 }

@@ -31,7 +31,7 @@ export function loadAuthorPublicationsByYear(userName) {
                     }
                 });
             })
-            .catch((error) => {
+            .catch(error => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED,
@@ -67,7 +67,7 @@ export function loadAuthorPublicationsStats(userName) {
                     payload: statsData
                 });
             })
-            .catch((error) => {
+            .catch(error => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 if (!statsData) {
                     dispatch({

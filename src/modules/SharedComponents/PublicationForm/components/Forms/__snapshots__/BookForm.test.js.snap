@@ -298,7 +298,7 @@ exports[`BookForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISBN",
-              "inputFieldHint": "Please type ISBN value",
+              "inputFieldHint": "Please, type ISBN value",
               "inputFieldLabel": "ISBN value",
             },
           },
@@ -356,7 +356,7 @@ exports[`BookForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISSN",
-              "inputFieldHint": "Please type ISSN value",
+              "inputFieldHint": "Please, type ISSN value",
               "inputFieldLabel": "ISSN value",
             },
           },
@@ -442,7 +442,6 @@ exports[`BookForm renders  component 1`] = `
           type="text"
           validate={
             Array [
-              [Function],
               [Function],
             ]
           }

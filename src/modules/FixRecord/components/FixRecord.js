@@ -6,7 +6,8 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
 
-import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
+import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, NavigationDialogBox,
+    FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {validation, locale, routes} from 'config';
 
@@ -39,10 +40,11 @@ export default class FixRecord extends Component {
 
     componentWillMount() {
         const {recordToFix, author} = this.props;
-        const isAuthorLinked = author && recordToFix && recordToFix.fez_record_search_key_author_id && recordToFix.fez_record_search_key_author_id.length > 0 &&
-            recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
 
-        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !isAuthorLinked) {
+        const isAuthorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
+        const isContributorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
+
+        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !isAuthorLinked && !isContributorLinked) {
             // if either author or publication data is missing, abandon form
             this.props.history.go(-1);
         }
@@ -68,20 +70,16 @@ export default class FixRecord extends Component {
         this.props.actions.clearFixRecord();
     }
 
+    isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
+        return recordToFix[searchKey] && recordToFix[searchKey].length > 0 && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+    };
+
     _navigateToMyResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);
     }
 
     _navigateToDashboard = () => {
         this.props.history.push(routes.pathConfig.dashboard);
-    };
-
-    _showConfirmation = () => {
-        if (this.props.pristine || !this.cancelConfirmationBox) {
-            this._navigateToMyResearch();
-        } else {
-            this.cancelConfirmationBox.showConfirmation();
-        }
     };
 
     _actionSelected = (event, value) => {
@@ -97,11 +95,11 @@ export default class FixRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
+    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
         submitSucceeded = false, alertLocale = {}}) => {
         let alertProps = null;
         if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert};
+            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
         } else if (!submitFailed && dirty && invalid) {
             alertProps = {...alertLocale.validationAlert};
         } else if (submitting) {
@@ -114,10 +112,6 @@ export default class FixRecord extends Component {
 
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
-    };
-
-    _setCancelConfirmation = (ref) => {
-        this.cancelConfirmationBox = ref;
     };
 
     render() {
@@ -141,6 +135,12 @@ export default class FixRecord extends Component {
                 key={`fix_record_action_${index}`} />
         ));
 
+        // set confirmation message depending on file upload status
+        const saveConfirmationLocale = {...txt.fix.successWorkflowConfirmation};
+        if (this.props.publicationToFixFileUploadingError) {
+            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
+        }
+
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -162,15 +162,12 @@ export default class FixRecord extends Component {
                     {
                         this.state.selectedRecordAction === 'fix' &&
                         <div>
-                            <ConfirmDialogBox
-                                onRef={this._setCancelConfirmation}
-                                onAction={this._navigateToMyResearch}
-                                locale={txt.fix.cancelWorkflowConfirmation}/>
+                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.fix.cancelWorkflowConfirmation} />
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={this._navigateToDashboard}
-                                locale={txt.fix.successWorkflowConfirmation}/>
+                                locale={saveConfirmationLocale}/>
                             <StandardCard title={txt.fix.comments.title} help={txt.fix.comments.help}>
                                 <Field
                                     component={TextField}
@@ -190,7 +187,7 @@ export default class FixRecord extends Component {
                                     type="text"
                                     fullWidth
                                     floatingLabelText={txt.fix.comments.fieldLabels.url}
-                                    validate={[validation.url, validation.maxLength255]}/>
+                                    validate={[validation.url]}/>
                             </StandardCard>
                             <StandardCard title={txt.fix.fileUpload.title} help={txt.fix.fileUpload.help}>
                                 {txt.fix.fileUpload.description}
@@ -229,7 +226,7 @@ export default class FixRecord extends Component {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._showConfirmation}/>
+                                onTouchTap={this._navigateToMyResearch}/>
                         </div>
                         {
                             this.state.selectedRecordAction &&

@@ -1,11 +1,20 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
+import {APP_URL} from 'config';
 
 export default {
     global: {
         title: 'UQ eSpace',
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         loading: 'loading...',
+        mainNavButton: {
+            tooltip: 'Main navigation',
+            closeMenuLabel: 'Close menu'
+        },
+        skipNav: {
+            title: 'Skip Navigation',
+            ariaLabel: 'Click to skip, or tab to progress to the navigation',
+        },
         loginAlert: {
             title: 'You are not logged in',
             message: 'Please, login to UQ eSpace for full search results and more services.',
@@ -16,13 +25,19 @@ export default {
             message: 'Please contact the UQ Manager to resolve this.',
             type: 'info_outline'
         },
+        discardFormChangesConfirmation: {
+            confirmationTitle: 'Discard changes?',
+            confirmationMessage: 'Are you sure you want to navigate away and discard all changes to the form?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes'
+        },
         linkWillOpenInNewWindow: 'Link to [destination] will open in a new window.',
         sources: {
             espace: {
                 id: 'espace',
                 title: 'eSpace',
                 priority: 0,
-                externalUrl: 'https://fez-staging.library.uq.edu.au/view/[id]',
+                externalUrl: APP_URL + 'view/[id]',
                 idKey: 'rek_pid'
             },
             wos: {
@@ -54,7 +69,18 @@ export default {
                 idKey: 'fez_record_search_key_doi.rek_doi'
             },
         },
-        embargoDateFormat: 'YYYY-MM-DD'
+        doiCitationLink: {
+            ariaLabel: 'Open this DOI in an new window',
+            prefix: 'https://doi.org/',
+            externalUrl: 'https://doi.org/[id]',
+        },
+        pubmedCentralLink: {
+            ariaLabel: 'Full text via Pubmed Central (open access)',
+            prefix: 'https://www.ncbi.nlm.nih.gov/pmc/articles/',
+            externalUrl: 'https://www.ncbi.nlm.nih.gov/pmc/articles/[id]'
+        },
+        embargoDateFormat: 'YYYY-MM-DD',
+        defaultLinkDescription: 'Link to publication'
     },
     authentication: {
         signInText: 'Log in',
@@ -406,7 +432,18 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
-                confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection. Please note that our current processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015, HERDC 2015 and Q-index.',
+                successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member for editing,
+                    prior to being moved into a publicly viewable collection. Please note that our current processing
+                    priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
+                    HERDC 2015 and Q-index.</p>),
+                fileFailConfirmationMessage: (<p>
+                    Your record has been saved. <br/><br/>
+                    <strong>Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators. </strong><br/><br/>
+                    Your item will be referred to a UQ eSpace Staging staff member for editing,
+                    prior to being moved into a publicly viewable collection. Please note that our current
+                    processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
+                    HERDC 2015 and Q-index.
+                </p>),
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
             }
@@ -468,11 +505,11 @@ export default {
             actionsOptions: [
                 {
                     action: 'fix',
-                    title: 'I am the author of this record - I would like to make a correction, or upload files'
+                    title: 'I am the author/editor/contributor of this record - I would like to make a correction, or upload files'
                 },
                 {
                     action: 'unclaim',
-                    title: 'I am not the author of this record - I would like this record removed from my profile'
+                    title: 'I am not the author/editor/contributor of this record - I would like this record removed from my profile'
                 }
             ],
             cancel: 'Cancel',
@@ -533,7 +570,7 @@ export default {
                 },
                 successWorkflowConfirmation: {
                     confirmationTitle: 'Your request has been submitted',
-                    confirmationMessage: 'Your request will be referred to a UQ eSpace staff member for review/action.',
+                    confirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
                     cancelButtonLabel: 'Go to my dashboard',
                     confirmButtonLabel: 'Go to my research'
                 },
@@ -545,7 +582,7 @@ export default {
                 errorAlert: {
                     type: 'error_outline',
                     title: 'Error',
-                    message: 'Error has occurred during request and request cannot be processed. Please, review the form and try again.'
+                    message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`)
                 },
                 progressAlert: {
                     type: 'info_outline',
@@ -607,6 +644,109 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
+            generic: {
+                information: {
+                    title: 'Generic document information',
+                    help: {
+                        title: 'General document information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of generic document'
+                        },
+                        publicationPlace: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: ''
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: ''
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Add a full article abstract here.'
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    help: {
+                        title: 'Adding contributors',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional Information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information'
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this publication'
+                        }
+                    }
+
+                }
+            },
             journalArticle: {
                 information: {
                     title: 'Journal article information',
@@ -616,10 +756,16 @@ export default {
                         buttonLabel: 'OK'
                     },
                     fieldLabels: {
-                        articleTitle: 'Title',
-                        journalTitle: 'Journal name',
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of journal article'
+                        },
+                        journalTitle: {
+                            floatingLabelText: 'Journal name',
+                            hintText: ''
+                        },
                         date: {
-                            title: 'Journal published date',
+                            title: 'Publication date',
                             day: 'Day',
                             month: 'Month',
                             year: 'Year'
@@ -691,8 +837,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
+                }
             },
             book: {
                 information: {
@@ -825,8 +970,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors and/or editors of the publication and link one author or editor to the current user'
+                }
             },
             bookChapter: {
                 information: {
@@ -857,7 +1001,7 @@ export default {
                         text: 'some help',
                         buttonLabel: 'OK'
                     },
-                    description: 'Provide a list of authors for this publication and assign yourself as an author or an editor',
+                    description: 'Provide a list of authors for this publication and assign yourself as an author',
                     field: {
                         form: {
                             locale: {
@@ -962,8 +1106,7 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
-                },
-                validationError: 'Please, provide a list of authors of the publication and link an author name to the current user'
+                }
             },
             conferencePaper: {
                 information: {
@@ -1052,8 +1195,1567 @@ export default {
                         notes: 'Notes (not publicly viewable)',
                         url: 'Link (URL)'
                     }
+                }
+            },
+            researchReport: {
+                information: {
+                    title: 'Research report information',
+                    help: {
+                        title: 'Research report information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Please, type title of research report'
+                        },
+                        publicationPlace: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'Please, type the place of publication'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please, type the name of the publisher'
+                        },
+                        date: {
+                            title: 'Date published',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        series: {
+                            floatingLabelText: 'Series title',
+                            hintText: 'Enter title of series'
+                        },
+                        totalPages: {
+                            floatingLabelText: 'Total pages',
+                            hintText: 'Please, type total number of pages in the publication'
+                        }
+                    }
                 },
-                validationError: 'Please, provide a list of authors of the publication and link one author to the current user'
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please, type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other publication details',
+                    help: {
+                        title: 'Other publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please, provide an abstract or summary of the work'
+                        },
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please, add any additional information here'
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Please, type URL for this publication'
+                        }
+                    }
+                }
+            },
+            audioDocument: {
+                information: {
+                    title: 'Audio document information',
+                    help: {
+                        title: 'Audio document information',
+                        text: (
+                            <div>
+                                <p><b>Place of publication:</b> Please enter the geographical location for the publisher
+                                    or producer of the work, i.e. city, country</p>
+                                <p><b>Publication date:</b> Please enter the date recorded on the work, where available.
+                                    For online recordings or broadcasts, enter the date first publicly presented or released. </p>
+                            </div>
+                        ),
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of work'
+                        },
+                        publicationPlace: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'City, Country'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please enter the name of the publisher or producer of the work.'
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please provide an abstract or summary of the work.'
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                    }
+                },
+                creator: {
+                    title: 'Creators',
+                    description: 'Provide a list of creators for this publication',
+                    help: {
+                        title: 'Creators',
+                        text: 'This is the creator or creator of the work, e.g. interviewer, program co-ordinator or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Creator\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add creator'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'creator\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed creator',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                    }
+                },
+                contributor: {
+                    title: 'Contributors',
+                    description: 'Provide a list of contributors for this publication',
+                    help: {
+                        title: 'Contributors',
+                        text: 'This is the contributor, and may be different to the creator, e.g. interviewee or performer (if not self-produced). Please enter contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Contributor\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add contributor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Contributor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed contributor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here.',
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this work.',
+                        }
+                    }
+                },
+            },
+            patent: {
+                information: {
+                    title: 'Patent information',
+                    help: {
+                        title: 'Patent information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        title: 'Title of patent',
+                        patentNumber: 'Patent number',
+                        countryOfOrigin: 'Country of origin',
+                        date: {
+                            title: 'Date patent issued',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        patentOwner: 'Patent owner'
+                    }
+                },
+                authors: {
+                    title: 'Creators',
+                    help: {
+                        title: 'Creators',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Provide a list of creators for this patent and assign yourself as an creator',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Creator\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add creator'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Creator\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed creator',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other patent details',
+                    help: {
+                        title: 'Other patent details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: 'Notes (not publicly viewable)',
+                        url: 'Enter URL for this patent'
+                    }
+                },
+            },
+            seminarPaper: {
+                information: {
+                    title: 'Seminar paper information',
+                    help: {
+                        title: 'Seminar paper information',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of paper',
+                        },
+                        orgUnitName: {
+                            floatingLabelText: 'School, department or centre',
+                            hintText: ''
+                        },
+                        orgName: {
+                            floatingLabelText: 'Institution',
+                            hintText: ''
+                        },
+                        series: {
+                            floatingLabelText: 'Series',
+                            hintText: 'Enter seminar series'
+                        },
+                        seminarDate: {
+                            title: 'Seminar date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors help',
+                        text: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information help',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please, add any additional information here',
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter a valid URL for this publication'
+                        }
+                    }
+                },
+            },
+            thesis: {
+                information: {
+                    title: 'Thesis information',
+                    help: {
+                        title: 'Thesis information',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Thesis title'
+                        },
+                        orgName: {
+                            floatingLabelText: 'Institution name',
+                            hintText: ''
+                        },
+                        orgUnitName: {
+                            floatingLabelText: 'School, Institute or Centre',
+                            hintText: ''
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        thesisType: {
+                            label: 'Thesis type'
+                        },
+                        author: {
+                            floatingLabelText: 'Author name',
+                            hintText: ''
+                        }
+                    }
+                },
+                supervisors: {
+                    title: 'Supervisors',
+                    help: {
+                        title: 'Supervisors help',
+                        text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Supervisor\'s name as published',
+                                nameAsPublishedHint: '',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add supervisor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Supervisor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed supervisor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                fieldOfResearch: {
+                    title: 'Field of research',
+                    help: {
+                        title: 'Optional information help',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Select up to 3 Field of Research (FoR) codes'
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information help',
+                        text: 'Some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        doi: {
+                            floatingLabelText: 'DOI',
+                            hintText: ''
+                        },
+                        totalPages: {
+                            floatingLabelText: 'Total pages',
+                            hintText: ''
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Provide an abstract or summary of the work'
+                        },
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Provide any additional information',
+                        }
+                    }
+                },
+            },
+            preprint: {
+                information: {
+                    title: 'Preprint information',
+                    help: {
+                        title: 'Preprint information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of report'
+                        },
+                        date: {
+                            title: 'Preprint date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional publication details',
+                    help: {
+                        title: 'Optional publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here'
+                        },
+                        url: {
+                            floatingLabelText: 'Link (URL)',
+                            hintText: 'Enter URL for this publication'
+                        }
+                    }
+                }
+            },
+            creativeWork: {
+                information: {
+                    title: 'Creative work information',
+                    help: {
+                        title: 'Creative work information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        articleTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of creative work'
+                        },
+                        placeOfPublication: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'City, country'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: ''
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please provide an abstract or summary of the work.'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'For a creative work, author includes creator, performer or curator. Enter authors in the order and form they appear on the work or associated material. Examples of associated material are promotional material, performance programs or exhibition catalogues. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here.',
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this work.',
+                        }
+                    }
+                },
+            },
+            video: {
+                information: {
+                    title: 'Video information',
+                    help: {
+                        title: 'Video information',
+                        text: (
+                            <div>
+                                <p><b>Place of publication:</b> Please enter the geographical location for the publisher
+                                    or producer of the work, i.e. city, country</p>
+                                <p><b>Publication date:</b> Please enter the date recorded on the work, where available.
+                                    For online recordings or broadcasts, enter the date first publicly presented or released. </p>
+                            </div>
+                        ),
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of work'
+                        },
+                        publicationPlace: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'City, Country'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please enter the name of the publisher or producer of the work.'
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please provide an abstract or summary of the work.'
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                    }
+                },
+                creator: {
+                    title: 'Creators',
+                    description: 'Provide a list of creators for this publication',
+                    help: {
+                        title: 'Creators',
+                        text: 'This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Creator\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add creator'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'creator\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed creator',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                    }
+                },
+                contributor: {
+                    title: 'Contributors',
+                    description: 'Provide a list of contributors for this publication',
+                    help: {
+                        title: 'Contributors',
+                        text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Please enter contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Contributor\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add contributor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Contributor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed contributor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here.',
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this work.',
+                        }
+                    }
+                },
+            },
+            imageDocument: {
+                information: {
+                    title: 'Image information',
+                    help: {
+                        title: 'Image information',
+                        text: 'Some text.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of image'
+                        },
+                        date: {
+                            title: 'Date created',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please provide an abstract or summary of the work.'
+                        },
+                    },
+                },
+                creator: {
+                    title: 'Creator name',
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    help: {
+                        title: 'Creators',
+                        text: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Creator\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add creator'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'creator\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed creator',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here.',
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this work.',
+                        }
+                    }
+                },
+            },
+            design: {
+                information: {
+                    title: 'Design information',
+                    help: {
+                        title: 'Design information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        articleTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of design'
+                        },
+                        projectName: {
+                            floatingLabelText: 'Project name',
+                            hintText: 'Title of project'
+                        },
+                        projectDescription: {
+                            floatingLabelText: 'Project description',
+                            hintText: 'Please provide a summary/description of the project.'
+                        },
+                        placeOfPublication: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'Please enter the geographical location for the publisher.'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please enter the name of the publisher.'
+                        },
+                        location: {
+                            floatingLabelText: 'Location',
+                            hintText: 'Please enter the geographical location for the design itself.'
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                    }
+                },
+                authors: {
+                    title: 'Designer name',
+                    description: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    help: {
+                        title: 'Designers',
+                        text: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                        buttonLabel: 'OK'
+                    },
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Designer name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add designer'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Designers name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed designer',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                    }
+                },
+                optional: {
+                    title: 'Optional information',
+                    help: {
+                        title: 'Optional information',
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information here.',
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Enter URL for this work.',
+                        }
+                    }
+                },
+            },
+            newspaperArticle: {
+                information: {
+                    title: 'Newspaper article information',
+                    help: {
+                        title: 'Newspaper article information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Enter article title'
+                        },
+                        newspaperName: {
+                            floatingLabelText: 'Newspaper name',
+                            hintText: 'Enter title of the journal'
+                        },
+                        date: {
+                            title: 'Publication Date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        startPage: {
+                            floatingLabelText: 'Start page',
+                            hintText: ''
+                        },
+                        endPage: {
+                            floatingLabelText: 'End page',
+                            hintText: ''
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please, type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                optional: {
+                    title: 'Optional publication details',
+                    help: {
+                        title: 'Optional publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please, add any additional information here'
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Please, type URL for this publication'
+                        }
+                    }
+                }
+            },
+            departmentTechnicalReport: {
+                information: {
+                    title: 'Department technical report information',
+                    help: {
+                        title: 'Department technical report information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of report'
+                        },
+                        orgName: {
+                            floatingLabelText: 'Institution name',
+                            hintText: ''
+                        },
+                        orgUnitName: {
+                            floatingLabelText: 'School, Institute or Centre',
+                            hintText: ''
+                        },
+                        series: {
+                            floatingLabelText: 'Series',
+                            hintText: ''
+                        },
+                        reportNumber: {
+                            floatingLabelText: 'Report number',
+                            hintText: ''
+                        },
+                        date: {
+                            title: 'Date published',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        totalPages: {
+                            floatingLabelText: 'Total pages',
+                            hintText: 'Please, type total number of pages in the publication'
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please provide an abstract or summary of the work.'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please, type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other publication details',
+                    help: {
+                        title: 'Other publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please, add any additional information here'
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Please, type URL for this publication'
+                        }
+                    }
+                }
+            },
+            workingPaper: {
+                information: {
+                    title: 'Working paper information',
+                    help: {
+                        title: 'Working paper information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        documentTitle: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of paper'
+                        },
+                        orgUnitName: {
+                            floatingLabelText: 'School, Institute or Centre ',
+                            hintText: ''
+                        },
+                        orgName: {
+                            floatingLabelText: 'Institution',
+                            hintText: ''
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        },
+                        series: {
+                            floatingLabelText: 'Series',
+                            hintText: ''
+                        },
+                        paperNumber: {
+                            floatingLabelText: 'Paper number',
+                            hintText: ''
+                        },
+                        totalPages: {
+                            floatingLabelText: 'Total pages',
+                            hintText: 'Enter total number of pages in the paper.'
+                        },
+                        abstract: {
+                            floatingLabelText: 'Abstract',
+                            hintText: 'Please provide an abstract or summary of the work.'
+                        }
+                    }
+                },
+                authors: {
+                    title: 'Authors',
+                    help: {
+                        title: 'Authors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Author\'s name as published',
+                                nameAsPublishedHint: 'Please, type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add author'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Author\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed author',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other publication details',
+                    help: {
+                        title: 'Other publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please, add any additional information here'
+                        },
+                        url: {
+                            floatingLabelText: 'Link',
+                            hintText: 'Please, type URL for this publication'
+                        }
+                    }
+                }
+            },
+            conferenceProceedings: {
+                information: {
+                    title: 'Conference proceedings information',
+                    help: {
+                        title: 'Conference proceedings information',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        title: {
+                            floatingLabelText: 'Title',
+                            hintText: 'Title of conference'
+                        },
+                        conferenceName: {
+                            floatingLabelText: 'Conference name',
+                            hintText: 'Please, type the name of conference'
+                        },
+                        conferenceLocation: {
+                            floatingLabelText: 'Conference location',
+                            hintText: 'Please, type the place of conference'
+                        },
+                        conferenceDates: {
+                            floatingLabelText: 'Conference dates (eg 13-15 December 2011)',
+                            hintText: 'Please, type the dates of conference'
+                        },
+                        proceedingsTitle: {
+                            floatingLabelText: 'Proceedings title',
+                            hintText: 'Please, type the title of proceedings'
+                        },
+                        publicationPlace: {
+                            floatingLabelText: 'Place of publication',
+                            hintText: 'Please, type the place of publication'
+                        },
+                        publisher: {
+                            floatingLabelText: 'Publisher',
+                            hintText: 'Please, type the name of the publisher'
+                        },
+                        date: {
+                            title: 'Publication date',
+                            day: 'Day',
+                            month: 'Month',
+                            year: 'Year'
+                        }
+                    }
+                },
+                editors: {
+                    title: 'Editors',
+                    help: {
+                        title: 'Editors',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    description: 'Provide a list of editors for this publication and assign yourself as an editor',
+                    field: {
+                        form: {
+                            locale: {
+                                nameAsPublishedLabel: 'Editor\'s name as published',
+                                nameAsPublishedHint: 'Please type the name exactly as published',
+                                identifierLabel: 'UQ identifier (if available)',
+                                addButton: 'Add editor'
+                            }
+                        },
+                        header: {
+                            locale: {
+                                contributorAssignmentColumn: 'Select your name',
+                                nameColumn: 'Editor\'s name as published',
+                                identifierColumn: 'UQ identifier',
+                                reorderColumn: 'Reorder items',
+                                deleteAll: 'Remove all items',
+                                deleteAllConfirmation: {
+                                    confirmationTitle: 'Delete all',
+                                    confirmationMessage: 'Are you sure you want to delete all items?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        },
+                        row: {
+                            locale: {
+                                suffix: ' listed editor',
+                                moveUpHint: 'Move item up the order',
+                                moveDownHint: 'Move item down the order',
+                                deleteHint: 'Remove this item',
+                                ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                                deleteRecordConfirmation: {
+                                    confirmationTitle: 'Delete item',
+                                    confirmationMessage: 'Are you sure you want to delete this item?',
+                                    cancelButtonLabel: 'No',
+                                    confirmButtonLabel: 'Yes'
+                                }
+                            }
+                        }
+                    }
+                },
+                other: {
+                    title: 'Other publication details',
+                    help: {
+                        title: 'Other publication details',
+                        text: 'some help',
+                        buttonLabel: 'OK'
+                    },
+                    fieldLabels: {
+                        notes: {
+                            floatingLabelText: 'Notes (not publicly viewable)',
+                            hintText: 'Please add any additional information'
+                        },
+                        link: {
+                            floatingLabelText: 'Link (URL)',
+                            hintText: 'Enter URL for this publication'
+                        }
+                    }
+                }
             },
             fileUpload: {
                 title: 'Files',
@@ -1070,20 +2772,24 @@ export default {
                 confirmButtonLabel: 'Yes'
             },
             validationAlert: {
+                type: 'warning',
                 title: 'Validation',
                 message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
             },
             errorAlert: {
+                type: 'error_outline',
                 title: 'Error',
-                createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed. Please, review the form and try again.',
-                fileUploadMessage: 'Files failed to upload but record was saved, please contact eSpace admins',
-                patchFilesMessage: 'Record was created and files were uploaded but failed to link files to created record, please contact eSpace admins'
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`),
+                createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed.',
+                fileUploadMessage: 'Error has occurred while uploading files.',
             },
             progressAlert: {
+                type: 'info_outline',
                 title: 'Saving',
                 message: 'Creating new publication is in progress.'
             },
             successAlert: {
+                type: 'done',
                 title: 'Success',
                 message: 'New publication has been saved successfully.'
             }
@@ -1109,8 +2815,17 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
+            contributorLinking: {
+                title: 'Editor linking',
+                text: 'We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: ',
+                help: {
+                    title: 'Editor linking',
+                    text: '...',
+                    buttonLabel: 'OK'
+                }
+            },
             comments: {
-                title: 'Please suggest changes and/or upload additional files below',
+                title: 'Please, suggest changes and/or upload additional files below',
                 help: {
                     title: 'Additional information',
                     text: '...',
@@ -1137,7 +2852,16 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Claim has been submitted',
-                confirmationMessage: 'Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.',
+                successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member
+                    for editing, prior to being moved into a publicly viewable collection.</p>),
+                fileFailConfirmationMessage: (<p>
+                    Your item will be referred to a UQ eSpace Staging staff member
+                    for editing, prior to being moved into a publicly viewable collection.<br/><br/>
+                    <strong>
+                        Please note, file upload has failed.
+                        Retry uploading files via "Fix record" screen or contact eSpace administrators.
+                    </strong>
+                </p>),
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
@@ -1150,7 +2874,7 @@ export default {
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: 'Error has occurred during request and claim cannot be processed. Please, review the form and try again.'
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`)
             },
             progressAlert: {
                 type: 'info_outline',
@@ -1186,8 +2910,12 @@ export default {
                     title: 'Google scholar',
                 },
             },
+            citationAuthors: {
+                showMoreLabel: 'Show [numberOfAuthors] more...',
+                showLessLabel: 'Show less'
+            },
             defaultActions: [
-                {key: 'fixRecord', label: 'Fix record', primary: false}, // TODO: implement fixRecord
+                {key: 'fixRecord', label: 'Fix record', primary: false},
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ]
         },
@@ -1203,7 +2931,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISBN value',
-                        inputFieldHint: 'Please type ISBN value',
+                        inputFieldHint: 'Please, type ISBN value',
                         addButtonLabel: 'Add ISBN'
                     }
                 },
@@ -1247,7 +2975,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISSN value',
-                        inputFieldHint: 'Please type ISSN value',
+                        inputFieldHint: 'Please, type ISSN value',
                         addButtonLabel: 'Add ISSN'
                     }
                 },
@@ -1268,6 +2996,46 @@ export default {
                     locale: {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
+        fieldOfResearchForm: {
+            title: 'Field of research',
+            text: 'You can add up to three field of research values',
+            help: {
+                title: 'Field of research',
+                text: 'more info',
+                buttonLabel: 'OK'
+            },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Field of research',
+                        inputFieldHint: 'Please, type field of research value then select a value from the list'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Field of research',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
                         deleteHint: 'Remove this item',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
@@ -1308,23 +3076,27 @@ export default {
         }
     },
     validationErrors: {
-        publicationSearch: 'Please, enter a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
-        isbn: 'Invalid ISBN value',
-        issn: 'Invalid ISSN value',
+        publicationSearch: 'Please, type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
+        isbn: 'ISBN value is not valid',
+        issn: 'ISSN value is not valid',
         fileUpload: 'File upload is not in valid state',
         required: 'This field is required',
-        email: 'Please enter a valid email address',
-        url: 'Please enter a valid URL',
+        email: 'Email address is not valid',
+        url: 'URL is not valid',
+        doi: 'DOI is not valid',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
         minLength: 'Must be at least [min] characters',
-        authorLinking: 'One author must be selected and be confirmed'
+        authorLinking: 'Please, select and confirm an author',
+        contributorLinking: 'Please, select and confirm a contributor',
+        authorRequired: 'Please, provide a list of authors/creators of the publication and link an author name to the current user',
+        authorEditorRequired: 'Please, provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user',
+        supervisorRequired: 'Please, provide a list of supervisors',
+        editorRequired: 'Please, provide a list of editors of the publication and link an editor name to the current user',
     },
     issues: {
         fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
-            `Record: https://fez-staging.library.uq.edu.au/view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
+            'Record: ' + APP_URL + `view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
     }
 };
-
-

@@ -33,8 +33,10 @@ export default class JournalArticleForm extends Component {
                                 autoFocus
                                 name="rek_title"
                                 type="text"
+                                rows={1}
+                                multiLine
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.articleTitle}
+                                {...txt.information.fieldLabels.documentTitle}
                                 className="requiredField"
                                 validate={[validation.required]}
                             />
@@ -49,7 +51,7 @@ export default class JournalArticleForm extends Component {
                                 type="text"
                                 className="requiredField"
                                 fullWidth
-                                floatingLabelText={txt.information.fieldLabels.journalTitle}
+                                {...txt.information.fieldLabels.journalTitle}
                                 validate={[validation.required]}
                             />
                         </div>
@@ -89,7 +91,7 @@ export default class JournalArticleForm extends Component {
                         name="authors"
                         locale={txt.authors.field}
                         disabled={this.props.submitting}
-                    />
+                        validate={[validation.authorRequired]} />
                 </StandardCard>
 
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
@@ -164,7 +166,7 @@ export default class JournalArticleForm extends Component {
                                 disabled={this.props.submitting}
                                 fullWidth
                                 floatingLabelText={txt.optional.fieldLabels.url}
-                                validate={[validation.url, validation.maxLength255]}
+                                validate={[validation.url]}
                             />
                         </div>
                     </div>

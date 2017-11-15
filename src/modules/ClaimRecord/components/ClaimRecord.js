@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
+import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
-import {AuthorLinkingField} from 'modules/SharedComponents/AuthorLinking';
+import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
 import {validation, locale, routes} from 'config';
 
 export default class ClaimRecord extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
+        publicationToClaimFileUploadingError: PropTypes.bool,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -51,18 +52,6 @@ export default class ClaimRecord extends Component {
         this.props.history.push(routes.pathConfig.records.possible);
     }
 
-    _showConfirmation = () => {
-        if (this.props.pristine) {
-            if (!!this.props.initialValues.get('publication').get('sources')) {
-                this._navigateToAddRecord();
-            } else {
-                this._navigateToPossibleMyResearch();
-            }
-        } else {
-            this.cancelConfirmationBox.showConfirmation();
-        }
-    }
-
     _handleKeyboardFormSubmit = (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault();
@@ -70,18 +59,17 @@ export default class ClaimRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false,
-        submitSucceeded = false, txt, authorLinked = false}) => {
+    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false, submitSucceeded = false, txt, authorLinked = false, contributorLinked = false}) => {
         let alertProps = null;
         if (submitFailed && error) {
-            alertProps = {...txt.errorAlert};
+            alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
         } else if (!submitFailed && dirty && invalid) {
             alertProps = {...txt.validationAlert};
         } else if (submitting) {
             alertProps = {...txt.progressAlert};
         } else if (submitSucceeded) {
             alertProps = {...txt.successAlert};
-        } else if (authorLinked) {
+        } else if (authorLinked || contributorLinked) {
             alertProps = {...txt.alreadyClaimedAlert};
         }
         return alertProps ? (<Alert {...alertProps} />) : null;
@@ -89,10 +77,6 @@ export default class ClaimRecord extends Component {
 
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
-    };
-
-    _setCancelConfirmation = (ref) => {
-        this.cancelConfirmationBox = ref;
     };
 
     render() {
@@ -104,9 +88,19 @@ export default class ClaimRecord extends Component {
         }
         const authorLinked = publication && author && publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
+        const contributorLinked = publication && author && publication.fez_record_search_key_contributor_id && publication.fez_record_search_key_contributor_id.length > 0 &&
+            publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === author.aut_id).length > 0;
 
-        console.log(publication);
+        // if publication.sources is set, user is claiming from Add missing record page
         const fromAddRecord = !!publication.sources;
+        // set confirmation message depending on file upload status and publication fromAddRecord
+        const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+        saveConfirmationLocale.cancelButtonLabel = fromAddRecord
+            ? txt.successWorkflowConfirmation.addRecordButtonLabel : txt.successWorkflowConfirmation.cancelButtonLabel;
+        saveConfirmationLocale.confirmationMessage = this.props.publicationToClaimFileUploadingError
+            ?  txt.successWorkflowConfirmation.fileFailConfirmationMessage
+            : txt.successWorkflowConfirmation.successConfirmationMessage;
+
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -117,21 +111,14 @@ export default class ClaimRecord extends Component {
                         (!publication.rek_pid || !authorLinked) &&
                         <div>
                             <ConfirmDialogBox
-                                onRef={this._setCancelConfirmation}
-                                onAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
-                                locale={txt.cancelWorkflowConfirmation}/>
-
-                            <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}
-                                locale={{
-                                    ...txt.successWorkflowConfirmation,
-                                    cancelButtonLabel: fromAddRecord
-                                        ? txt.successWorkflowConfirmation.addRecordButtonLabel
-                                        : txt.successWorkflowConfirmation.cancelButtonLabel}} />
+                                locale={saveConfirmationLocale} />
+                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
                             {
-                                publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 1
+                                publication.fez_record_search_key_author &&
+                                publication.fez_record_search_key_author.length > 1
                                 && !authorLinked &&
                                 <StandardCard
                                     title={txt.authorLinking.title}
@@ -141,13 +128,36 @@ export default class ClaimRecord extends Component {
                                     <Field
                                         name="authorLinking"
                                         component={AuthorLinkingField}
-                                        searchKey={{value: 'rek_author_id', order: 'rek_author_id_order'}}
                                         loggedInAuthor={author}
                                         authorList={publication.fez_record_search_key_author}
                                         linkedAuthorIdList={publication.fez_record_search_key_author_id}
                                         disabled={this.props.submitting}
                                         className="requiredField"
                                         validate={[validation.required, validation.isValidAuthorLink]}
+                                    />
+                                </StandardCard>
+                            }
+                            {/* Show contributor linking only for records that don't have authors, eg Edited Books */}
+                            {
+                                publication.fez_record_search_key_author &&
+                                publication.fez_record_search_key_author.length === 0 &&
+                                publication.fez_record_search_key_contributor &&
+                                publication.fez_record_search_key_contributor.length > 1 &&
+                                !contributorLinked &&
+                                <StandardCard
+                                    title={txt.contributorLinking.title}
+                                    help={txt.contributorLinking.help}
+                                    className="requiredField">
+                                    <label htmlFor="contributorLinking">{txt.contributorLinking.text}</label>
+                                    <Field
+                                        name="contributorLinking"
+                                        component={ContributorLinkingField}
+                                        loggedInAuthor={author}
+                                        authorList={publication.fez_record_search_key_contributor}
+                                        linkedAuthorIdList={publication.fez_record_search_key_contributor_id}
+                                        disabled={this.props.submitting}
+                                        className="requiredField"
+                                        validate={[validation.required, validation.isValidContributorLink]}
                                     />
                                 </StandardCard>
                             }
@@ -169,7 +179,7 @@ export default class ClaimRecord extends Component {
                                     type="text"
                                     fullWidth
                                     floatingLabelText={txt.comments.fieldLabels.url}
-                                    validate={[validation.url, validation.maxLength255]}/>
+                                    validate={[validation.url]}/>
                             </StandardCard>
 
                             <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
@@ -195,7 +205,7 @@ export default class ClaimRecord extends Component {
                                 fullWidth
                                 label={txt.cancel}
                                 disabled={this.props.submitting}
-                                onTouchTap={this._showConfirmation}/>
+                                onTouchTap={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}/>
                         </div>
                         {
                             (!publication.rek_pid || !authorLinked) &&

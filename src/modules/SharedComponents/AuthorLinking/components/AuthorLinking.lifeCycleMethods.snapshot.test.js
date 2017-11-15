@@ -9,7 +9,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-const searchKey = {value: 'rek_author_id', order: 'rek_author_id_order'};
+const searchKey = {value: 'rek_author_id', order: 'rek_author_id_order', type: 'author'};
 
 function setup(props) {
     return mount(<AuthorLinking {...props} />, {

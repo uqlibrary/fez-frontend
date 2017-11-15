@@ -129,9 +129,6 @@ describe('Component FixRecord ', () => {
         wrapper.setState({selectedRecordAction: 'unclaim'});
         wrapper.instance()._setSuccessConfirmation('successBox');
         expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
-
-        wrapper.instance()._setCancelConfirmation('cancelBox');
-        expect(wrapper.instance().cancelConfirmationBox).toEqual('cancelBox');
     });
 
     it('should submit form when user hits Enter', () => {
@@ -186,29 +183,6 @@ describe('Component FixRecord ', () => {
             const alert = wrapper.getAlert({...testCase.parameters});
             expect(alert.props.title).toEqual(testCase.expected);
         });
-    });
-
-    it('should not show confirmation dialog if form is clean', () => {
-        const testMethod = jest.fn();
-
-        const wrapper = setup({});
-        wrapper.setState({selectedRecordAction: 'fix'});
-        wrapper.instance()._navigateToMyResearch = testMethod;
-
-        wrapper.instance()._showConfirmation();
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should show confirmation dialog if form is dirty', () => {
-        const testMethod = jest.fn();
-
-        const wrapper = setup({});
-        wrapper.setState({selectedRecordAction: 'fix'});
-        wrapper.setProps({pristine: false});
-        wrapper.instance().cancelConfirmationBox = {showConfirmation: testMethod};
-
-        wrapper.instance()._showConfirmation();
-        expect(testMethod).toHaveBeenCalled();
     });
 
     it('should clear record to fix when leaving the form', () => {

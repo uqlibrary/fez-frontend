@@ -5,7 +5,7 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-import {SelectField, StandardCard, Alert, ConfirmDialogBox, FileUploadField} from 'uqlibrary-react-toolbox';
+import {SelectField, StandardCard, Alert, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes, validation} from 'config';
 
 import * as recordForms from './Forms';
@@ -32,14 +32,6 @@ export default class PublicationForm extends Component {
         }
     }
 
-    _showConfirmation = () => {
-        if (this.props.pristine) {
-            this.props.onFormCancel();
-        } else {
-            this.confirmationBox.showConfirmation();
-        }
-    }
-
     _getPublicationTypeForm = (publicationTypeId) => {
         const filteredPublicationType = publicationTypeId ?
             this.publicationTypes.filter((item) => { return item.id === publicationTypeId; }) : null;
@@ -54,8 +46,23 @@ export default class PublicationForm extends Component {
             null;
     };
 
+    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
+        submitSucceeded = false, alertLocale = {}}) => {
+        let alertProps = null;
+        if (submitFailed && error) {
+            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
+        } else if (!submitFailed && dirty && invalid) {
+            alertProps = {...alertLocale.validationAlert};
+        } else if (submitting) {
+            alertProps = {...alertLocale.progressAlert};
+        } else if (submitSucceeded) {
+            alertProps = {...alertLocale.successAlert};
+        }
+        return alertProps ? (<Alert {...alertProps} />) : null;
+    };
+
+
     render() {
-        // populate publication types select box
         const publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;
@@ -69,14 +76,10 @@ export default class PublicationForm extends Component {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })
         ];
-
         const txt = locale.components.publicationForm;
         return (
             <form>
-                <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this.props.onFormCancel}
-                    locale={txt.cancelWorkflowConfirmation} />
+                <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
 
                 <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
                     <Field
@@ -94,7 +97,6 @@ export default class PublicationForm extends Component {
                 {
                     this._getPublicationTypeForm(this.props.formValues.get('rek_display_type'))
                 }
-
                 {
                     this.props.formValues.get('rek_display_type') > 0 &&
                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
@@ -107,20 +109,7 @@ export default class PublicationForm extends Component {
                     </StandardCard>
                 }
                 {
-                    this.props.submitFailed && this.props.error &&
-                    <Alert type="error_outline" title={ txt.errorAlert.title } message={ this.props.error } />
-                }
-                {
-                    !this.props.submitFailed && this.props.dirty && this.props.invalid &&
-                    <Alert type="warning" {...txt.validationAlert} />
-                }
-                {
-                    this.props.submitting &&
-                    <Alert type="info_outline" {...txt.progressAlert} />
-                }
-                {
-                    this.props.submitSucceeded &&
-                    <Alert type="info" {...txt.successAlert} />
+                    this.getAlert({...this.props, alertLocale: txt})
                 }
                 <div className="columns action-buttons">
                     <div className="column is-hidden-mobile"/>
@@ -129,7 +118,7 @@ export default class PublicationForm extends Component {
                             fullWidth
                             label={txt.cancel}
                             disabled={this.props.submitting}
-                            onTouchTap={this._showConfirmation} />
+                            onTouchTap={this.props.onFormCancel} />
                     </div>
                     {this.props.formValues.get('rek_display_type') > 0 &&
                     <div className="column is-narrow-desktop">

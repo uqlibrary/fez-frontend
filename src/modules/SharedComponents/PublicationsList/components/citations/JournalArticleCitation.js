@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
-import AuthorsCitationView from './AuthorsCitationView';
-import YearCitationView from './YearCitationView';
-import PageRangeCitationView from './PageRangeCitationView';
+import * as Partials from './partials';
 
 export default class JournalArticleCitation extends Component {
     static propTypes = {
@@ -15,7 +13,7 @@ export default class JournalArticleCitation extends Component {
     }
 
     render() {
-        const journalArticle = {
+        const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             journalName: this.props.publication.fez_record_search_key_journal_name ?
@@ -29,37 +27,36 @@ export default class JournalArticleCitation extends Component {
         };
 
         // eSpace citation view for Journal Article
-        // {6351} ({6386}) {10588}. <i>{11071}</i>, <i>{6379}</i> {6377||:} {6383}{6384|-}.{16514| doi:|}
-        // authors (year) title. <i>journal name</i>, <i>volume</i> {issue:} start page-end page. doi: DOI
+        // {Author}{Year| (|).}<i>{Title| |.}</i>{Journal name| |}{Volume number| |}{Issue number| (|)}{Start page|, |}{End page|-|}. {doi| doi:|}
         return (
             <div className="citationContent citationJournalArticle">
                 <FontIcon className="material-icons citationIcon" data-place="left">
                     format_quote
                 </FontIcon>
-                <AuthorsCitationView publication={this.props.publication} />
-                <YearCitationView publication={this.props.publication} />
-                <span className="citationTitle"> {journalArticle.title}.</span>
-                {
-                    journalArticle.journalName &&
-                    <span className="citationJournalName"> {journalArticle.journalName},</span>
-                }
-                {
-                    journalArticle.volumeNumber &&
-                    <span className="citationVolumeNumber"> {journalArticle.volumeNumber}</span>
-                }
-                {
-                    journalArticle.issueNumber &&
-                    <span className="citationIssueNumber"> {journalArticle.issueNumber}</span>
-                }
-                <PageRangeCitationView publication={this.props.publication} prefix=": " suffix="" />
-                .
-                {
-                    journalArticle.doi &&
-                    <span className="citationDOI">
-                        <span className="citationLabel"> doi: </span>
-                        <span className="citationValue"> {journalArticle.doi} </span>
-                    </span>
-                }
+
+                {/* {Author}*/}
+                <Partials.AuthorsCitationView publication={this.props.publication} />
+
+                {/* {Year| (|).}*/}
+                <Partials.DateCitationView date={this.props.publication.rek_date} />
+
+                {/* {Title| |.} */}
+                <Partials.CitationView className="citationTitle" value={record.title} />
+
+                {/* {Journal name| |}*/}
+                <Partials.CitationView className="citationJournalName" value={record.journalName} suffix=" " />
+
+                {/* {Volume number| |}*/}
+                <Partials.CitationView className="citationVolumeNumber" value={record.volumeNumber} suffix=" "/>
+
+                {/* {Issue number| (|)}*/}
+                <Partials.CitationView className="citationIssueNumber" value={record.issueNumber} prefix="(" suffix=") "/>
+
+                {/* {Start page|, |}{End page|-|} */}
+                <Partials.PageRangeCitationView publication={this.props.publication} suffix="" />
+                <span>. </span>
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

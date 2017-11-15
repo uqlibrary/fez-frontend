@@ -195,7 +195,11 @@ describe('Component ClaimRecord ', () => {
             {
                 parameters: {authorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
                 expected: 'alreadyClaimed'
-            }
+            },
+            {
+                parameters: {contributorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
+                expected: 'alreadyClaimed'
+            },
         ];
 
         testCases.forEach(testCase => {
@@ -215,9 +219,6 @@ describe('Component ClaimRecord ', () => {
         wrapper.setState({selectedRecordAction: 'unclaim'});
         wrapper.instance()._setSuccessConfirmation('successBox');
         expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
-
-        wrapper.instance()._setCancelConfirmation('cancelBox');
-        expect(wrapper.instance().cancelConfirmationBox).toEqual('cancelBox');
     });
 
     it('should submit form when user hits Enter', () => {
@@ -240,49 +241,6 @@ describe('Component ClaimRecord ', () => {
     it('should redirect if no author or record set', () => {
         const testMethod = jest.fn();
         const wrapper = setup({initialValues: Immutable.Map({author: null}), history: {go: testMethod}});
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    // if (this.props.pristine) {
-    //     if (!!this.props.initialValues.get('publication').get('sources')) {
-    //         this._navigateToAddRecord();
-    //     } else {
-    //         this._navigateToPossibleMyResearch();
-    //     }
-    // } else {
-    //     this.cancelConfirmationBox.showConfirmation();
-    // }
-    //
-    it('should show confirmation dialog if form is not clean', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({});
-
-        wrapper.instance().cancelConfirmationBox = {showConfirmation: testMethod};
-        wrapper.instance()._showConfirmation();
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should redirect to possibly my publications', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({});
-        wrapper.setProps({pristine: true});
-        wrapper.instance()._navigateToPossibleMyResearch = testMethod;
-        wrapper.instance()._showConfirmation();
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should redirect to add record if user claims record from add record find screen', () => {
-        const testMethod = jest.fn();
-        const initialValues = Immutable.Map(
-            {
-                author: Immutable.Map({aut_id: 410}),
-                publication: Immutable.Map({...journalArticle, sources: ['wos']})
-            }
-        );
-        const wrapper = setup({initialValues});
-        wrapper.setProps({pristine: true});
-        wrapper.instance()._navigateToAddRecord = testMethod;
-        wrapper.instance()._showConfirmation();
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -314,5 +272,13 @@ describe('Component ClaimRecord ', () => {
 
         wrapper.instance()._navigateToAddRecord();
         expect(testMethod).toHaveBeenCalledWith('/records/add/find');
+    });
+
+    it('should render navigation prompt', () => {
+        const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({dirty: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

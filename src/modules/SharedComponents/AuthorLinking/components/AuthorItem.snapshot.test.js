@@ -10,7 +10,8 @@ function setup({author, index}, boolProps, onAuthorSelected){
         author: author || {rek_author: 'Test user'},
         index: index || 0,
         ...boolProps,
-        onAuthorSelected: onAuthorSelected || undefined
+        onAuthorSelected: onAuthorSelected || undefined,
+        type: 'author'
     };
 
     return shallow(<AuthorItem {...props} />);

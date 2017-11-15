@@ -268,6 +268,11 @@ exports[`ConferencePaperForm renders  component 1`] = `
       }
       name="authors"
       showContributorAssignment={true}
+      validate={
+        Array [
+          [Function],
+        ]
+      }
     />
   </StandardCard>
   <StandardCard
@@ -286,7 +291,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISBN",
-              "inputFieldHint": "Please type ISBN value",
+              "inputFieldHint": "Please, type ISBN value",
               "inputFieldLabel": "ISBN value",
             },
           },
@@ -344,7 +349,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISSN",
-              "inputFieldHint": "Please type ISSN value",
+              "inputFieldHint": "Please, type ISSN value",
               "inputFieldLabel": "ISSN value",
             },
           },
@@ -458,7 +463,6 @@ exports[`ConferencePaperForm renders  component 1`] = `
           type="text"
           validate={
             Array [
-              [Function],
               [Function],
             ]
           }
