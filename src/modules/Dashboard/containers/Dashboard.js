@@ -6,13 +6,11 @@ import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
     return {
-        account: state.get('accountReducer').account,
-        authorDetails: state.get('accountReducer').authorDetails,
-        loadingAuthorDetails: state.get('accountReducer').loadingAuthorDetails,
-        possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts,
+        ...state.get('accountReducer'),
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),
-        ...state.get('publicationsReducer')
+        ...state.get('publicationsReducer'),
+        possiblyYourPublicationsCount: state.get('claimPublicationReducer').possibleCounts
     };
 };
 
