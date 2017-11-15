@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
-import {StandardPage} from 'uqlibrary-react-toolbox';
-import {Stepper} from 'modules/SharedComponents/Stepper';
+import {StandardPage, Stepper} from 'uqlibrary-react-toolbox';
 import {locale, routes} from 'config';
 
 export default class AddMissingRecord extends React.Component {
@@ -13,7 +12,8 @@ export default class AddMissingRecord extends React.Component {
         actions: PropTypes.object,
         history: PropTypes.object,
         location: PropTypes.object,
-        match: PropTypes.object
+        match: PropTypes.object,
+        author: PropTypes.object
     };
 
     constructor(props) {

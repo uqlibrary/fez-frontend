@@ -74,6 +74,8 @@ exports[`GenericDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
+          floatingLabelText="Series"
+          hintText=""
           name="fez_record_search_key_series.rek_series"
         />
       </div>
@@ -87,6 +89,8 @@ exports[`GenericDocumentForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
+          floatingLabelText="Report number"
+          hintText=""
           name="fez_record_search_key_report_number.rek_report_number"
         />
       </div>

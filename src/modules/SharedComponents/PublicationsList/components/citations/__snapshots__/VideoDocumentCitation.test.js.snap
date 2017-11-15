@@ -618,6 +618,8 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors"
@@ -625,16 +627,16 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
         <CitationView
           className="citationAuthor"
           prefix=""
-          suffix=" "
+          suffix=""
           value="Walters, S."
         >
           <span
             className="citationAuthor"
           >
             Walters, S.
-             
           </span>
         </CitationView>
+         
       </span>
     </AuthorsCitationView>
     <DateCitationView
@@ -724,6 +726,8 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
           "subkey": "rek_author",
         }
       }
+      suffix=" "
+      thresholdNumberOfAuthors={3}
     >
       <span
         className="citationAuthors empty"

@@ -5,9 +5,8 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-import {SelectField, StandardCard, Alert, FileUploadField} from 'uqlibrary-react-toolbox';
+import {SelectField, StandardCard, Alert, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
 import {locale, publicationTypes, validation} from 'config';
-import {NavigationDialogBox} from 'modules/SharedComponents/NavigationPrompt';
 
 import * as recordForms from './Forms';
 
@@ -64,7 +63,6 @@ export default class PublicationForm extends Component {
 
 
     render() {
-        // populate publication types select box
         const publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;
@@ -78,7 +76,6 @@ export default class PublicationForm extends Component {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })
         ];
-
         const txt = locale.components.publicationForm;
         return (
             <form>

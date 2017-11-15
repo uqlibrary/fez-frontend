@@ -3,7 +3,7 @@ import {Field} from 'redux-form/immutable';
 
 import {TextField, StandardCard, ListEditorField, PartialDateField} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {SeriesField} from 'modules/SharedComponents/AutoSuggestField';
+import {SeriesField} from 'modules/SharedComponents/LookupFields';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 

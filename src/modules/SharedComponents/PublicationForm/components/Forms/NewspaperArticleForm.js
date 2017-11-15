@@ -3,7 +3,7 @@ import {Field} from 'redux-form/immutable';
 import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation, locale} from 'config';
-import {JournalNameField} from 'modules/SharedComponents/AutoSuggestField';
+import {JournalNameField} from 'modules/SharedComponents/LookupFields';
 import PropTypes from 'prop-types';
 
 export default class NewspaperArticleForm extends Component {

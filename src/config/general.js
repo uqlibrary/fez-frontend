@@ -3,10 +3,10 @@ export const SESSION_COOKIE_NAME = 'UQLID';
 export const TOKEN_NAME = 'X-Uql-Token';
 
 // URLS
-// export const API_URL = process.env.NODE_ENV === 'development' ? 'http://dev-api.library.uq.edu.au:8050/' : 'https://api.library.uq.edu.au/staging/';
-export const API_URL = 'https://api.library.uq.edu.au/staging/';
+export const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.library.uq.edu.au/v1/' : 'https://api.library.uq.edu.au/staging/';
 export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
+export const APP_URL = process.env.NODE_ENV === 'production' ? 'https://espace.library.uq.edu.au/' : 'https://fez-staging.library.uq.edu.au/';
 
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
@@ -92,6 +92,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
         name: 'Conference Proceedings',
         class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
+        formComponent: components ? components.ConferenceProceedingsForm : null,
         citationComponent: components ? components.ConferenceProceedingsCitation : null,
         hasFormComponent: true
     },
@@ -210,6 +211,7 @@ export const publicationTypes = (components) => [
         id: PUBLICATION_TYPE_THESIS,
         name: 'Thesis',
         class: 'Uqlibrary\\FezCore\\Types\\Thesis',
+        formComponent: components ? components.ThesisForm : null,
         citationComponent: components ? components.ThesisCitation : null,
         hasFormComponent: true
     },
@@ -239,5 +241,21 @@ export const openAccessIdLookup = {
     453697: 'Other',
 };
 
+export const thesisSubtypes = [
+    'B.A. Thesis',
+    'B.Sc Thesis',
+    'Bachelor\'s Thesis',
+    'Higher Doctorate',
+    'Honours Thesis',
+    'M.A. Thesis',
+    'M.Sc Thesis',
+    'Master\'s Thesis',
+    'MPhil Thesis',
+    'Other',
+    'PhD Thesis',
+    'Professional Doctorate'
+];
+
 export const OrgUnitsVocabId = 453703;
+export const FieldOfResearchVocabId = 451780;
 

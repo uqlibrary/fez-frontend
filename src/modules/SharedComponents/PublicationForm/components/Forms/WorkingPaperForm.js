@@ -3,7 +3,7 @@ import {Field} from 'redux-form/immutable';
 
 import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {OrgUnitNameField, SeriesField, ReportNumberField, OrgNameField} from 'modules/SharedComponents/AutoSuggestField';
+import {OrgUnitNameField, SeriesField, ReportNumberField, OrgNameField} from 'modules/SharedComponents/LookupFields';
 import {validation, locale} from 'config';
 import PropTypes from 'prop-types';
 
@@ -15,7 +15,6 @@ export default class WorkingPaperForm extends Component {
     constructor(props) {
         super(props);
     }
-
     getNumbersOnly = (value) => {
         return value.replace(/[^\d]/g, '');
     };

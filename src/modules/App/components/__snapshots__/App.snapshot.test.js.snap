@@ -9,6 +9,25 @@ exports[`App tests for user account and author status User is logged in but are 
   >
     <AppBar
       className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tabIndex={1}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
       iconElementRight={
         <div
           style={
@@ -18,6 +37,12 @@ exports[`App tests for user account and author status User is logged in but are 
           }
         >
           <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
             isAuthorizedUser={true}
             loginUrl="https://auth.library.uq.edu.au/login"
             logoutUrl="https://auth.library.uq.edu.au/logout"
@@ -46,6 +71,13 @@ exports[`App tests for user account and author status User is logged in but are 
       docked={false}
       drawerOpen={false}
       isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -94,7 +126,7 @@ exports[`App tests for user account and author status User is logged in but are 
           },
         ]
       }
-      toggleDrawer={[Function]}
+      onToggleDrawer={[Function]}
     />
     <div
       className="content-container"
@@ -231,6 +263,25 @@ exports[`App tests for user account and author status User is not logged in and 
   >
     <AppBar
       className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tabIndex={1}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
       iconElementRight={
         <div
           style={
@@ -240,6 +291,12 @@ exports[`App tests for user account and author status User is not logged in and 
           }
         >
           <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
             isAuthorizedUser={false}
             loginUrl="https://auth.library.uq.edu.au/login"
             logoutUrl="https://auth.library.uq.edu.au/logout"
@@ -268,6 +325,13 @@ exports[`App tests for user account and author status User is not logged in and 
       docked={false}
       drawerOpen={false}
       isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -286,7 +350,7 @@ exports[`App tests for user account and author status User is not logged in and 
           },
         ]
       }
-      toggleDrawer={[Function]}
+      onToggleDrawer={[Function]}
     />
     <div
       className="content-container"
@@ -339,6 +403,25 @@ exports[`App tests for user account and author status User logged in and is an a
   >
     <AppBar
       className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tabIndex={1}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
       iconElementRight={
         <div
           style={
@@ -348,6 +431,12 @@ exports[`App tests for user account and author status User logged in and is an a
           }
         >
           <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
             isAuthorizedUser={true}
             loginUrl="https://auth.library.uq.edu.au/login"
             logoutUrl="https://auth.library.uq.edu.au/logout"
@@ -376,6 +465,13 @@ exports[`App tests for user account and author status User logged in and is an a
       docked={false}
       drawerOpen={false}
       isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -424,7 +520,7 @@ exports[`App tests for user account and author status User logged in and is an a
           },
         ]
       }
-      toggleDrawer={[Function]}
+      onToggleDrawer={[Function]}
     />
     <div
       className="content-container"
@@ -561,6 +657,25 @@ exports[`App tests for user account and author status User logged in but is not 
   >
     <AppBar
       className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tabIndex={1}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
       iconElementRight={
         <div
           style={
@@ -570,6 +685,12 @@ exports[`App tests for user account and author status User logged in but is not 
           }
         >
           <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
             isAuthorizedUser={true}
             loginUrl="https://auth.library.uq.edu.au/login"
             logoutUrl="https://auth.library.uq.edu.au/logout"
@@ -598,6 +719,13 @@ exports[`App tests for user account and author status User logged in but is not 
       docked={false}
       drawerOpen={false}
       isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
       logoText="UQ eSpace"
       menuItems={
@@ -646,7 +774,7 @@ exports[`App tests for user account and author status User logged in but is not 
           },
         ]
       }
-      toggleDrawer={[Function]}
+      onToggleDrawer={[Function]}
     />
     <div
       className="content-container"

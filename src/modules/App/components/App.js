@@ -8,12 +8,15 @@ import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 import AppBar from 'material-ui/AppBar';
 import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
 import * as pages from './pages';
+import IconButton from 'material-ui/IconButton';
+import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 export default class App extends React.Component {
     static propTypes = {
         user: PropTypes.object,
         actions: PropTypes.object,
-        location: PropTypes.object
+        location: PropTypes.object,
+        history: PropTypes.object.isRequired
     };
 
     static childContextTypes = {
@@ -69,11 +72,10 @@ export default class App extends React.Component {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
         const menuItems = routes.getMenuConfig(this.props.user.account);
-
+        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
-
         return (
             <div className="layout-fill">
                 {
@@ -86,7 +88,6 @@ export default class App extends React.Component {
                 {
                     !this.props.user.accountLoading &&
                     <div className="layout-fill align-stretch">
-
                         <AppBar
                             className="AppBar align-center"
                             showMenuIconButton={!this.state.docked}
@@ -95,14 +96,24 @@ export default class App extends React.Component {
                             title={locale.global.title}
                             titleStyle={titleStyle}
                             onLeftIconButtonTouchTap={this.toggleDrawer}
+                            iconElementLeft={
+                                <IconButton
+                                    tooltip={locale.global.mainNavButton.tooltip}
+                                    tooltipPosition="bottom-right"
+                                    hoveredStyle={appBarButtonStyles}
+                                    tabIndex={(this.state.docked || !this.state.menuDrawerOpen) ? 1 : -1} >
+                                    <NavigationMenu />
+                                </IconButton>
+                            }
                             iconElementRight={
                                 <div style={{marginTop: '-10px'}}>
                                     <AuthButton
                                         isAuthorizedUser={isAuthorizedUser}
+                                        hoveredStyle={appBarButtonStyles}
                                         loginUrl={AUTH_URL_LOGIN}
                                         logoutUrl={AUTH_URL_LOGOUT}
                                         signInTooltipText={locale.authentication.signInText}
-                                        signOutTooltipText={isAuthorizedUser ? (locale.authentication.signOutText + ' - ' + this.props.user.account.name) : ''} />
+                                        signOutTooltipText={isAuthorizedUser ? (`${locale.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
                                 </div>
                             }
                         />
@@ -111,11 +122,16 @@ export default class App extends React.Component {
                             menuItems={menuItems}
                             drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                             docked={this.state.docked}
+                            history={this.props.history}
                             logoImage={locale.global.logo}
                             logoText={locale.global.title}
-                            toggleDrawer={this.toggleDrawer}
+                            onToggleDrawer={this.toggleDrawer}
                             isMobile={this.state.isMobile}
-                        />
+                            locale={{
+                                skipNavAriaLabel: locale.global.skipNav.ariaLabel,
+                                skipNavTitle: locale.global.skipNav.title,
+                                closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
+                            }} />
 
                         <div className="content-container" style={container}>
                             {

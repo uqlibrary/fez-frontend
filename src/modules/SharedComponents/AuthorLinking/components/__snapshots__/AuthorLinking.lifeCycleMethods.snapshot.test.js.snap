@@ -43,6 +43,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
   searchKey={
     Object {
       "order": "rek_author_id_order",
+      "type": "author",
       "value": "rek_author_id",
     }
   }
@@ -117,11 +118,12 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                       "Ninth",
                       "Tenth",
                     ],
-                    "suffix": " listed author",
+                    "suffix": " listed [type]",
                   }
                 }
                 onAuthorSelected={[Function]}
                 selected={null}
+                type="author"
               >
                 <div
                   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
@@ -381,11 +383,12 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                       "Ninth",
                       "Tenth",
                     ],
-                    "suffix": " listed author",
+                    "suffix": " listed [type]",
                   }
                 }
                 onAuthorSelected={[Function]}
                 selected={null}
+                type="author"
               >
                 <div
                   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
@@ -667,6 +670,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
   searchKey={
     Object {
       "order": "rek_author_id_order",
+      "type": "author",
       "value": "rek_author_id",
     }
   }
@@ -741,11 +745,12 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                       "Ninth",
                       "Tenth",
                     ],
-                    "suffix": " listed author",
+                    "suffix": " listed [type]",
                   }
                 }
                 onAuthorSelected={[Function]}
                 selected={null}
+                type="author"
               >
                 <div
                   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
@@ -1005,11 +1010,12 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                       "Ninth",
                       "Tenth",
                     ],
-                    "suffix": " listed author",
+                    "suffix": " listed [type]",
                   }
                 }
                 onAuthorSelected={[Function]}
                 selected={null}
+                type="author"
               >
                 <div
                   className="column is-one-third-desktop is-one-third-tablet is-full-mobile"
