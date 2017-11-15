@@ -5,7 +5,17 @@ import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from './general';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
-    debug: true             // keep debug ON for now
+    debug: true,             // keep debug ON for now
+    exclude: {
+        query: false,
+        paths: [
+            'external/records/search',
+            'records/search?rule=lookup',
+            'records/search?title=',
+            'records/search?doi=',
+            'records/search?id=pmid:'
+        ]
+    },
 });
 
 export const api = axios.create({
@@ -23,3 +33,17 @@ export const generateCancelToken = () => {
 
 api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
+
+let isGet = null;
+api.interceptors.request.use(request => {
+    isGet = request.method === 'get';
+    return request;
+});
+
+api.interceptors.response.use(response => {
+    if (!isGet) {
+        console.log('Clearing store');
+        return cache.store.clear().then(() => Promise.resolve(response));
+    }
+    return response;
+});
