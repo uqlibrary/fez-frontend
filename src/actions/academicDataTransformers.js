@@ -1,12 +1,13 @@
 /**
  * Returns the data for graph - count of unique publication types
  *
- * @param {object} raw data
+ * @param {array} raw data
  * @param {number} keepPublicationTypes -  keep X of pub types, sum others
  * @returns {array} in format [ ['Journal articles', 429], ['Conference papers', 112], ['Other', 129] ]
  */
 export function getPublicationsPerType(data, keepPublicationTypes) {
-    const values = data.reduce((a, b) => {return a.concat(b.pivot);}, []);
+    const rawData = [...data];
+    const values = rawData.reduce((a, b) => {return a.concat(b.pivot);}, []);
     const publicationTypesCountObject = values
         .reduce((a, b) => {
             a[b.value] = (a[b.value] >= 0) ? (a[b.value] + b.count) : b.count;
@@ -41,10 +42,11 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
 /**
  * getCategories - transforms raw academic publication years data into categories, eg years
  * eg [1977, 1980, 1982]
- * @param {object} raw data
+ * @param {array} raw data
  * @returns {Array}
  */
-export function getPublicationsPerYearCategories(rawData) {
+export function getPublicationsPerYearCategories(data) {
+    const rawData = [...data];
     // extract years and parse year value into int
     const categories = rawData.map((yearData) => { return parseInt(yearData.value, 10); });
 
@@ -60,7 +62,8 @@ export function getPublicationsPerYearCategories(rawData) {
  * @param {array} output of getPublicationsPerType()
  * @returns {Array}
  */
-export function getPublicationsPerYearSeries(rawData, topPublicationTypes) {
+export function getPublicationsPerYearSeries(data, topPublicationTypes) {
+    const rawData = [...data];
     // initialise data structure
     const initialValues = new Array(rawData.length).fill(0);
 
@@ -98,10 +101,11 @@ export function getPublicationsPerYearSeries(rawData, topPublicationTypes) {
 
 /**
  * WOS/SCOPUS stats
- * @param {object} raw data
+ * @param {array} raw data
  * @returns {object}
  */
-export function getPublicationsStats(rawData) {
+export function getPublicationsStats(data) {
+    const rawData = [...data];
     const years = rawData.aggregations.date_year_t.buckets
         .map(item => { return item.key; })
         .sort((item1, item2) => { return item1 - item2; });
