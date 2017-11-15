@@ -26,8 +26,8 @@ const DashboardProfile = ({authorDetails, author}) => {
                                 values={{
                                     uqr_id: authorDetails.uqr_id || author.aut_id || '',
                                     title: authorDetails.title || author.aut_title || '',
-                                    givenName: authorDetails.given_name || author.aut_display_name || '',
-                                    familyName: authorDetails.family_name || '',
+                                    givenName: authorDetails.given_name || author.aut_fname || '',
+                                    familyName: authorDetails.family_name || author.aut_lname || ''
                                 }}/>
                         </div>
                     }
@@ -35,9 +35,9 @@ const DashboardProfile = ({authorDetails, author}) => {
                     <div className="column authorDetails">
                         <DashboardAuthorDetails
                             values={{
-                                title: authorDetails.title,
-                                givenName: authorDetails.given_name,
-                                familyName: authorDetails.family_name,
+                                title: authorDetails.title || author.aut_title || '',
+                                givenName: authorDetails.given_name || author.aut_fname || '',
+                                familyName: authorDetails.family_name || author.aut_lname || '',
                                 orgUnits: authorDetails.org_units,
                                 positions: authorDetails.positions
                             }}

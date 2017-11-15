@@ -23,7 +23,7 @@ exports[`Dashboard Profile test renders dashboard - display name should load fro
         values={
           Object {
             "familyName": "",
-            "givenName": "J. Researcher",
+            "givenName": "",
             "title": "Prof",
             "uqr_id": 410,
           }
@@ -36,11 +36,11 @@ exports[`Dashboard Profile test renders dashboard - display name should load fro
       <DashboardAuthorDetails
         values={
           Object {
-            "familyName": undefined,
-            "givenName": undefined,
+            "familyName": "",
+            "givenName": "",
             "orgUnits": undefined,
             "positions": undefined,
-            "title": undefined,
+            "title": "Prof",
           }
         }
       />
