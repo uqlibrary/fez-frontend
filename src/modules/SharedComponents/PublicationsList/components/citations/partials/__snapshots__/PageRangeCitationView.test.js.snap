@@ -135,6 +135,63 @@ exports[`PageRangeCitationView test  should render startPage only 1`] = `
 </PageRangeCitationView>
 `;
 
+exports[`PageRangeCitationView test  should render startPage only if end page is empty 1`] = `
+<PageRangeCitationView
+  className="citationPageRange"
+  prefix=""
+  publication={
+    Object {
+      "fez_record_search_key_end_page": Object {},
+      "fez_record_search_key_start_page": Object {
+        "rek_start_page": 13,
+      },
+    }
+  }
+  searchKey={
+    Object {
+      "endPage": Object {
+        "key": "fez_record_search_key_end_page",
+        "subkey": "rek_end_page",
+      },
+      "startPage": Object {
+        "key": "fez_record_search_key_start_page",
+        "subkey": "rek_start_page",
+      },
+    }
+  }
+  suffix="."
+>
+  <span
+    className="citationPageRange"
+  >
+    <PageCitationView
+      className="citationStartPage"
+      publication={
+        Object {
+          "fez_record_search_key_end_page": Object {},
+          "fez_record_search_key_start_page": Object {
+            "rek_start_page": 13,
+          },
+        }
+      }
+      searchKey={
+        Object {
+          "key": "fez_record_search_key_start_page",
+          "subkey": "rek_start_page",
+        }
+      }
+    >
+      <span
+        className="citationStartPage"
+      >
+        13
+      </span>
+    </PageCitationView>
+    .
+  </span>
+</PageRangeCitationView>
+`;
+
 exports[`PageRangeCitationView test  should render startPage to endPage 1`] = `
 <PageRangeCitationView
   className="citationPageRange"
