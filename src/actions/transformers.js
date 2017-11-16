@@ -169,6 +169,7 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
 /* unclaimRecordAuthorsIdSearchKey - returns authors id object formatted for record request
 * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
 * {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12}
+* @param {number} if of a current user in case authors is empty, return auhtors structure with a solo current author id
 * @returns {Object} formatted {fez_record_search_key_author_id} for record request
 */
 export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
@@ -229,10 +230,25 @@ export const getRecordContributorsSearchKey = (authors) => {
 /* getRecordContributorsIdSearchKey - returns editors id object formatted for record request
 * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
 * {rek_contributor_id: 100, rek_contributor_id_order: 1}
+* @param {number} defaultAuthorId - if of a current user in case authors is empty, return contributors structure with a solo current author id
 * @returns {Object} formatted {fez_record_search_key_contributor_id} for record request
 */
-export const getRecordContributorsIdSearchKey = (authors) => {
-    if (!authors || authors.length === 0) return {};
+export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
+    // return empty object if all parameters are null
+    if ((!authors || authors.length === 0) && !defaultAuthorId) return {};
+
+    // return default author if provided
+    if ((!authors || authors.length === 0) && defaultAuthorId) {
+        return {
+            fez_record_search_key_contributor_id: [
+                {
+                    rek_contributor_id: defaultAuthorId,
+                    rek_contributor_id_order: 1
+                }
+            ]
+        };
+    }
+
     return {
         fez_record_search_key_contributor_id: authors.map(
             (item, index) => (

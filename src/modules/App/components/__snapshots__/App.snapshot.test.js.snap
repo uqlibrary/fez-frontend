@@ -92,12 +92,12 @@ exports[`App tests for user account and author status User is logged in but are 
             "primaryText": "My research",
           },
           Object {
-            "linkTo": "/records/add/find",
-            "primaryText": "Add a missing record",
-          },
-          Object {
             "linkTo": "/records/possible",
             "primaryText": "Claim possible publications",
+          },
+          Object {
+            "linkTo": "/records/add/find",
+            "primaryText": "Add a missing record",
           },
           Object {
             "divider": true,
@@ -114,15 +114,15 @@ exports[`App tests for user account and author status User is logged in but are 
           },
           Object {
             "linkTo": "/browse",
-            "primaryText": "Browse",
+            "primaryText": "Browse eSpace",
             "public": true,
-            "secondaryText": "UQ's digital repository",
+            "secondaryText": "",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
             "public": true,
-            "secondaryText": undefined,
+            "secondaryText": "",
           },
         ]
       }
@@ -338,15 +338,15 @@ exports[`App tests for user account and author status User is not logged in and 
         Array [
           Object {
             "linkTo": "/browse",
-            "primaryText": "Browse",
+            "primaryText": "Browse eSpace",
             "public": true,
-            "secondaryText": "UQ's digital repository",
+            "secondaryText": "",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
             "public": true,
-            "secondaryText": undefined,
+            "secondaryText": "",
           },
         ]
       }
@@ -486,12 +486,12 @@ exports[`App tests for user account and author status User logged in and is an a
             "primaryText": "My research",
           },
           Object {
-            "linkTo": "/records/add/find",
-            "primaryText": "Add a missing record",
-          },
-          Object {
             "linkTo": "/records/possible",
             "primaryText": "Claim possible publications",
+          },
+          Object {
+            "linkTo": "/records/add/find",
+            "primaryText": "Add a missing record",
           },
           Object {
             "divider": true,
@@ -508,15 +508,15 @@ exports[`App tests for user account and author status User logged in and is an a
           },
           Object {
             "linkTo": "/browse",
-            "primaryText": "Browse",
+            "primaryText": "Browse eSpace",
             "public": true,
-            "secondaryText": "UQ's digital repository",
+            "secondaryText": "",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
             "public": true,
-            "secondaryText": undefined,
+            "secondaryText": "",
           },
         ]
       }
@@ -740,12 +740,12 @@ exports[`App tests for user account and author status User logged in but is not 
             "primaryText": "My research",
           },
           Object {
-            "linkTo": "/records/add/find",
-            "primaryText": "Add a missing record",
-          },
-          Object {
             "linkTo": "/records/possible",
             "primaryText": "Claim possible publications",
+          },
+          Object {
+            "linkTo": "/records/add/find",
+            "primaryText": "Add a missing record",
           },
           Object {
             "divider": true,
@@ -762,15 +762,15 @@ exports[`App tests for user account and author status User logged in but is not 
           },
           Object {
             "linkTo": "/browse",
-            "primaryText": "Browse",
+            "primaryText": "Browse eSpace",
             "public": true,
-            "secondaryText": "UQ's digital repository",
+            "secondaryText": "",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
             "public": true,
-            "secondaryText": undefined,
+            "secondaryText": "",
           },
         ]
       }

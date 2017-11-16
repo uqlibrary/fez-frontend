@@ -40,11 +40,11 @@ exports[`MyRecords test renders list of publications 1`] = `
         noResultsFound={
           Object {
             "text": <div>
-              We were unable to find any results. Please, check if there are any possibly your publications via 
+              We were unable to find any results. You may be able to 
               <a
                 href="/records/possible"
               >
-                claim possible publications
+                claim publications we think may be yours
               </a>
                or 
               <a
@@ -59,18 +59,19 @@ exports[`MyRecords test renders list of publications 1`] = `
         text={
           <div>
             <div>
-              Please, check if there are any possibly your publications via 
+              Add to this list by 
               <a
                 href="/records/possible"
               >
-                 claim possible publications
+                claiming a publication
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                add a missing publication
+                adding a missing publication
               </a>
+              .
             </div>
           </div>
         }
@@ -79,18 +80,19 @@ exports[`MyRecords test renders list of publications 1`] = `
         <div>
           <div>
             <div>
-              Please, check if there are any possibly your publications via 
+              Add to this list by 
               <a
                 href="/records/possible"
               >
-                 claim possible publications
+                claiming a publication
               </a>
                or 
               <a
                 href="/records/add/find"
               >
-                add a missing publication
+                adding a missing publication
               </a>
+              .
             </div>
           </div>
         </div>
@@ -11271,11 +11273,11 @@ exports[`MyRecords test renders no results 1`] = `
         className=""
         text={
           <div>
-            We were unable to find any results. Please, check if there are any possibly your publications via 
+            We were unable to find any results. You may be able to 
             <a
               href="/records/possible"
             >
-              claim possible publications
+              claim publications we think may be yours
             </a>
              or 
             <a
@@ -11288,11 +11290,11 @@ exports[`MyRecords test renders no results 1`] = `
         title="No publications found"
       >
         <div>
-          We were unable to find any results. Please, check if there are any possibly your publications via 
+          We were unable to find any results. You may be able to 
           <a
             href="/records/possible"
           >
-            claim possible publications
+            claim publications we think may be yours
           </a>
            or 
           <a

@@ -5,7 +5,6 @@ import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from './general';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
-    debug: true,             // keep debug ON for now
     exclude: {
         query: false,
         paths: [

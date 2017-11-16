@@ -5,9 +5,13 @@ import toJson from 'enzyme-to-json';
 import React from 'react';
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 
-function setup({authorDetails}) {
-    const props = {authorDetails}
-    return shallow(<DashboardAuthorProfile {...props} />);
+function setup(props) {
+    const testProps = {
+        authorDetails: props.authorDetails || {},
+        author: props.author || {}
+    };
+
+    return shallow(<DashboardAuthorProfile {...testProps} />);
 }
 
 describe('Dashboard Profile test', () => {
@@ -80,7 +84,29 @@ describe('Dashboard Profile test', () => {
                 publons_id: '',
                 mypub_url: 'uqresearcher',
             }
-
+        };
+        const wrapper = setup(props);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('renders dashboard - display name should load from either author or authorDetails', () => {
+        const props = {
+            authorDetails: {
+                espace_id: 20288,
+                image_exists: 1,
+                username: 'uqresearcher',
+                staff_id: '0000111',
+                scopus_id: '',
+                google_scholar_id: '',
+                researcher_id: 'G-111-1111',
+                orcid_id: '0000-0001-1111-1111',
+                publons_id: '',
+                mypub_url: 'uqresearcher',
+            },
+            author: {
+                aut_id: 410,
+                aut_display_name: 'J. Researcher',
+                aut_title: 'Prof'
+            }
         };
         const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();

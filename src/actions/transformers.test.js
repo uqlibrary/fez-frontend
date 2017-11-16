@@ -2,9 +2,9 @@ import React from 'react';
 import * as transformers from './transformers';
 import {APP_URL} from 'config';
 
-describe('Transformers tests ', () => {
+describe('getRecordLinkSearchKey test ', () => {
 
-    it('getRecordLinkSearchKey returns request object structure with link', () => {
+    it('should return request object structure with link', () => {
         const data = {
             rek_link: 'http://google.com'
         };
@@ -26,14 +26,17 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('getRecordLinkSearchKey returns empty request object structure if no link is provided', () => {
+    it('should return empty request object structure if no link is provided', () => {
         const data = {};
         const expected = null;
         const result = transformers.getRecordLinkSearchKey(data);
         expect(result).toEqual(expected);
     });
+});
 
-    it('getRecordFileAttachmentSearchKey returns empty request object structure if no files are provided', () => {
+describe('getRecordFileAttachmentSearchKey test ', () => {
+
+    it('should return empty request object structure if no files are provided', () => {
         const files = [];
         const record = {};
         const expected = {};
@@ -41,7 +44,7 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('getRecordFileAttachmentSearchKey returns request object structure for files', () => {
+    it('should return request object structure for files', () => {
         const files = [
             {
                 access_condition_id: 1,
@@ -86,7 +89,7 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('getRecordFileAttachmentSearchKey returns request object structure for files and empty record', () => {
+    it('should return request object structure for files and empty record', () => {
         const files = [
             {
                 access_condition_id: 1,
@@ -135,7 +138,7 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('getRecordFileAttachmentSearchKey returns request object structure for files and existing files in record', () => {
+    it('should return request object structure for files and existing files in record', () => {
         const files = [
             {
                 access_condition_id: 1,
@@ -195,40 +198,167 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('getRecordAuthorsSearchKey returns empty request object', () => {
-        const input = [];
-        const expected = {};
-        const result = transformers.getRecordAuthorsSearchKey(input);
+});
+
+describe('getFixIssueRequest test ', () => {
+
+    it('should create issue request', () => {
+        const input = {publication: {}, author: {}};
+
+        input.publication.rek_pid = 'UQ:1111';
+        input.author.aut_display_name = 'J. Smith';
+        input.author.aut_org_username = 'uqjsmith';
+        input.comments = 'Some comments...';
+
+
+        const expected = {issue: 'Record: ' + APP_URL + 'view/UQ:1111 \n User \'J. Smith (uqjsmith)\' has indicated that they require a fix to this publication: Some comments...'}
+
+        const result = transformers.getFixIssueRequest(input);
         expect(result).toEqual(expected);
     });
 
-    it('should return request object from getRecordAuthorsSearchKey', () => {
+});
+
+describe('unclaimRecord[Author/Contributor]SearchKey test ', () => {
+
+    it('should return empty author id request object', () => {
         const input = [
-            {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
-            {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
-            {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null}
         ];
         const expected = {
-            fez_record_search_key_author: [
-                {
-                    rek_author: 'Smith A.',
-                    rek_author_order: 1
-                },
-                {
-                    rek_author: 'Smith B.',
-                    rek_author_order: 2
-                },
-                {
-                    rek_author: 'Smith C.',
-                    rek_author_order: 3
-                }
-            ]
+            fez_record_search_key_author_id: []
         };
-        const result = transformers.getRecordAuthorsSearchKey(input);
+
+        const result = transformers.unclaimRecordAuthorsIdSearchKey(input, 1001);
         expect(result).toEqual(expected);
     });
 
-    it('getRecordSupervisorsSearchKey returns request object', () => {
+    it('should remove selected author from author id request object', () => {
+        const input = [
+            {rek_author_id: 0, rek_author_id_order: 1, rek_author_id_id: null, rek_author_id_pid: "UQ:347818"},
+            {rek_author_id: 1001, rek_author_id_order: 2, rek_author_id_id: null, rek_author_id_pid: "UQ:347812"},
+            {rek_author_id: 1002, rek_author_id_order: 3, rek_author_id_id: null, rek_author_id_pid: "UQ:347813"},
+            {rek_author_id: 0, rek_author_id_order: 4, rek_author_id_id: null, rek_author_id_pid: "UQ:347814"}
+        ];
+        const expected = {
+            fez_record_search_key_author_id: [
+                {rek_author_id: 0, rek_author_id_order: 1, rek_author_id_id: null, rek_author_id_pid: "UQ:347818"},
+                {rek_author_id: 0, rek_author_id_order: 2},
+                {rek_author_id: 1002, rek_author_id_order: 3, rek_author_id_id: null, rek_author_id_pid: "UQ:347813"},
+                {rek_author_id: 0, rek_author_id_order: 4, rek_author_id_id: null, rek_author_id_pid: "UQ:347814"}
+            ]
+        };
+
+        const result = transformers.unclaimRecordAuthorsIdSearchKey(input, 1001);
+        expect(result).toEqual(expected);
+    });
+
+    it('should remove selected author from author id request object and update order if missing', () => {
+        const input = [
+            {rek_author_id: 0, rek_author_id_order: 1, rek_author_id_id: null, rek_author_id_pid: "UQ:347818"},
+            {rek_author_id: 1001, rek_author_id_id: null, rek_author_id_pid: "UQ:347812"},
+            {rek_author_id: 1002, rek_author_id_order: 3, rek_author_id_id: null, rek_author_id_pid: "UQ:347813"},
+            {rek_author_id: 0, rek_author_id_order: 4, rek_author_id_id: null, rek_author_id_pid: "UQ:347814"}
+        ];
+        const expected = {
+            fez_record_search_key_author_id: [
+                {rek_author_id: 0, rek_author_id_order: 1, rek_author_id_id: null, rek_author_id_pid: "UQ:347818"},
+                {rek_author_id: 0, rek_author_id_order: 2},
+                {rek_author_id: 1002, rek_author_id_order: 3, rek_author_id_id: null, rek_author_id_pid: "UQ:347813"},
+                {rek_author_id: 0, rek_author_id_order: 4, rek_author_id_id: null, rek_author_id_pid: "UQ:347814"}
+            ]
+        };
+
+        const result = transformers.unclaimRecordAuthorsIdSearchKey(input, 1001);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return empty contributor id request object', () => {
+        const input = [];
+        const expected = {
+            fez_record_search_key_contributor_id: []
+        };
+
+        const result = transformers.unclaimRecordContributorsIdSearchKey(input, 1001);
+        expect(result).toEqual(expected);
+    });
+
+    it('should remove selected contributor from contributor id object', () => {
+        const input = [
+            {rek_contributor_id: 0, rek_contributor_id_order: 1, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347818"},
+            {rek_contributor_id: 1001, rek_contributor_id_order: 2, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347812"},
+            {rek_contributor_id: 1002, rek_contributor_id_order: 3, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347813"},
+            {rek_contributor_id: 0, rek_contributor_id_order: 4, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347814"}
+        ];
+        const expected = {
+            fez_record_search_key_contributor_id: [
+                {rek_contributor_id: 0, rek_contributor_id_order: 1, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347818"},
+                {rek_contributor_id: 0, rek_contributor_id_order: 2},
+                {rek_contributor_id: 1002, rek_contributor_id_order: 3, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347813"},
+                {rek_contributor_id: 0, rek_contributor_id_order: 4, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347814"}
+            ]
+        };
+        const result = transformers.unclaimRecordContributorsIdSearchKey(input, 1001);
+        expect(result).toEqual(expected);
+    });
+
+    it('should remove selected contributor from contributor id object and update order if missing', () => {
+        const input = [
+            {rek_contributor_id: 0, rek_contributor_id_order: 1, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347818"},
+            {rek_contributor_id: 1001, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347812"},
+            {rek_contributor_id: 1002, rek_contributor_id_order: 3, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347813"},
+            {rek_contributor_id: 0, rek_contributor_id_order: 4, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347814"}
+        ];
+        const expected = {
+            fez_record_search_key_contributor_id: [
+                {rek_contributor_id: 0, rek_contributor_id_order: 1, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347818"},
+                {rek_contributor_id: 0, rek_contributor_id_order: 2},
+                {rek_contributor_id: 1002, rek_contributor_id_order: 3, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347813"},
+                {rek_contributor_id: 0, rek_contributor_id_order: 4, rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:347814"}
+            ]
+        };
+        const result = transformers.unclaimRecordContributorsIdSearchKey(input, 1001);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getRecordSubjectSearchKey test ', () => {
+
+    it('should return empty subjects object', () => {
+        const input = [];
+        const expected = {};
+        const result = transformers.getRecordSubjectSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return subjects list based on input', () => {
+        const input = [
+            {rek_order: 1, rek_value: {key: 451799, value: "01 Mathematical Sciences"}},
+            {rek_order: 2, rek_value: {key: 451802, value: "0101 Mathematical Sciences"}},
+            {rek_order: 3, rek_value: {key: 451801, value: "010101 Mathematical Sciences"}}
+        ];
+        const expected = {
+            fez_record_search_key_subject: [
+                {rek_subject_id: 451799, rek_subject_order: 1},
+                {rek_subject_id: 451802, rek_subject_order: 2},
+                {rek_subject_id: 451801, rek_subject_order: 3}
+            ]
+        };
+        const result = transformers.getRecordSubjectSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+});
+
+describe('getRecordSupervisorsSearchKey test ', () => {
+
+    it('should return empty supervisors object', () => {
+        const input = [];
+        const expected = {};
+        const result = transformers.getRecordSupervisorsSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should construct supervisor object from data', () => {
         const input = [
             {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: null},
@@ -254,45 +384,54 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('getRecordSubjectSearchKey returns request object', () => {
-        const input = [
-            {rek_order: 1, rek_value: {key: 451799, value: "01 Mathematical Sciences"}},
-            {rek_order: 2, rek_value: {key: 451802, value: "0101 Mathematical Sciences"}},
-            {rek_order: 3, rek_value: {key: 451801, value: "010101 Mathematical Sciences"}}
-        ];
-        const expected = {
-            fez_record_search_key_subject: [
-                {rek_subject_id: 451799, rek_subject_order: 1},
-                {rek_subject_id: 451802, rek_subject_order: 2},
-                {rek_subject_id: 451801, rek_subject_order: 3}
-            ]
-        };
-        const result = transformers.getRecordSubjectSearchKey(input);
+});
+
+describe('getRecordAuthorsSearchKey test ', () => {
+
+    it('should return empty request object', () => {
+        const input = [];
+        const expected = {};
+        const result = transformers.getRecordAuthorsSearchKey(input);
         expect(result).toEqual(expected);
     });
 
-    it('getRecordAuthorsIdSearchKey returns empty request object', () => {
+    it('should return authors name object', () => {
+        const input = [
+            {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
+            {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
+            {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null}
+        ];
+        const expected = {
+            fez_record_search_key_author: [
+                {
+                    rek_author: 'Smith A.',
+                    rek_author_order: 1
+                },
+                {
+                    rek_author: 'Smith B.',
+                    rek_author_order: 2
+                },
+                {
+                    rek_author: 'Smith C.',
+                    rek_author_order: 3
+                }
+            ]
+        };
+        const result = transformers.getRecordAuthorsSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getRecordAuthorsIdSearchKey test ', () => {
+
+    it('should return empty authors object', () => {
         const input = [];
         const expected = {};
         const result = transformers.getRecordAuthorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
 
-    it('unclaimRecordAuthorsIdSearchKey returns empty request object', () => {
-        const input = [];
-        const expected = {fez_record_search_key_author_id: []};
-        const result = transformers.unclaimRecordAuthorsIdSearchKey(input);
-        expect(result).toEqual(expected);
-    });
-
-    it('unclaimRecordContributorsIdSearchKey returns empty request object', () => {
-        const input = [];
-        const expected = {fez_record_search_key_contributor_id: []};
-        const result = transformers.unclaimRecordContributorsIdSearchKey(input);
-        expect(result).toEqual(expected);
-    });
-
-    it('getRecordAuthorsIdSearchKey returns request object', () => {
+    it('should return authors object from authors control data', () => {
         const input = [
             {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
@@ -301,55 +440,17 @@ describe('Transformers tests ', () => {
         ];
         const expected = {
             fez_record_search_key_author_id: [
-                { rek_author_id: null, rek_author_id_order: 1 },
-                { rek_author_id: 100, rek_author_id_order: 2 },
-                { rek_author_id: null, rek_author_id_order: 3 },
-                { rek_author_id: 1001, rek_author_id_order: 4 }
+                {rek_author_id: null, rek_author_id_order: 1},
+                {rek_author_id: 100, rek_author_id_order: 2},
+                {rek_author_id: null, rek_author_id_order: 3},
+                {rek_author_id: 1001, rek_author_id_order: 4}
             ]
         };
         const result = transformers.getRecordAuthorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
 
-    it('unclaimRecordAuthorsIdSearchKey returns request object', () => {
-        const input = [
-            {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
-            {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
-            {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null},
-            {nameAsPublished: "Smith D.", disabled: false, selected: false, authorId: 1001}
-        ];
-        const expected = {
-            fez_record_search_key_author_id: [
-                { rek_author_id: 0, rek_author_id_order: 1 },
-                { rek_author_id: 0, rek_author_id_order: 2 },
-                { rek_author_id: 0, rek_author_id_order: 3 },
-                { rek_author_id: 0, rek_author_id_order: 4 }
-            ]
-        };
-        const result = transformers.unclaimRecordAuthorsIdSearchKey(input, 1001);
-        expect(result).toEqual(expected);
-    });
-
-    it('unclaimRecordContributorsIdSearchKey returns request object', () => {
-        const input = [
-            {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
-            {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
-            {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null},
-            {nameAsPublished: "Smith D.", disabled: false, selected: false, authorId: 1001}
-        ];
-        const expected = {
-            fez_record_search_key_contributor_id: [
-                { rek_contributor_id: 0, rek_contributor_id_order: 1 },
-                { rek_contributor_id: 0, rek_contributor_id_order: 2 },
-                { rek_contributor_id: 0, rek_contributor_id_order: 3 },
-                { rek_contributor_id: 0, rek_contributor_id_order: 4 }
-            ]
-        };
-        const result = transformers.unclaimRecordContributorsIdSearchKey(input, 1001);
-        expect(result).toEqual(expected);
-    });
-
-    it('getRecordAuthorsIdSearchKey returns request object for alternative format', () => {
+    it('should return authors object from original search key data format', () => {
         const input = [
             {rek_author_id_id: null, rek_author_id_pid: "UQ:678742", rek_author_id: 683, rek_author_id_order: 12},
             {rek_author_id_id: null, rek_author_id_pid: "UQ:678741", rek_author_id: 0, rek_author_id_order: 13},
@@ -366,48 +467,30 @@ describe('Transformers tests ', () => {
         expect(result).toEqual(expected);
     });
 
-    it('unclaimRecordAuthorsIdSearchKey returns request object for alternative format', () => {
-        const input = [
-            {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 683, rek_author_id_order: 12},
-            {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 0, rek_author_id_order: 13},
-            {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 0, rek_author_id_order: 14},
-        ];
+    it('should assign current user id as a solo author', () => {
+        const authors = [];
+        const defaultId = 1001;
+
         const expected = {
             fez_record_search_key_author_id: [
-                {rek_author_id: 0, rek_author_id_order: 12},
-                {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 0, rek_author_id_order: 13},
-                {rek_author_id_id: null, rek_author_id_pid: "UQ:678740", rek_author_id: 0, rek_author_id_order: 14}
+                { rek_author_id: 1001, rek_author_id_order: 1 }
             ]
         };
-        const result = transformers.unclaimRecordAuthorsIdSearchKey(input, 683);
+        const result = transformers.getRecordAuthorsIdSearchKey(authors, defaultId);
         expect(result).toEqual(expected);
     });
+});
 
-    it('unclaimRecordContributorsIdSearchKey returns request object for alternative format', () => {
-        const input = [
-            {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 683, rek_contributor_id_order: 12},
-            {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 0, rek_contributor_id_order: 13},
-            {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 0, rek_contributor_id_order: 14},
-        ];
-        const expected = {
-            fez_record_search_key_contributor_id: [
-                {rek_contributor_id: 0, rek_contributor_id_order: 12},
-                {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 0, rek_contributor_id_order: 13},
-                {rek_contributor_id_id: null, rek_contributor_id_pid: "UQ:678740", rek_contributor_id: 0, rek_contributor_id_order: 14}
-            ]
-        };
-        const result = transformers.unclaimRecordContributorsIdSearchKey(input, 683);
-        expect(result).toEqual(expected);
-    });
-
-    it('getRecordContributorsSearchKey returns empty request object', () => {
+describe('getRecordContributorsSearchKey test ', () => {
+    
+    it('should return empty contributors object', () => {
         const input = [];
         const expected = {};
         const result = transformers.getRecordContributorsSearchKey(input);
         expect(result).toEqual(expected);
     });
 
-    it('getRecordContributorsSearchKey returns request object', () => {
+    it('should return populated contributors object', () => {
         const input = [
             {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
@@ -435,15 +518,18 @@ describe('Transformers tests ', () => {
         const result = transformers.getRecordContributorsSearchKey(input);
         expect(result).toEqual(expected);
     });
+});
 
-    it('getRecordContributorsIdSearchKey returns empty request object', () => {
+describe('getRecordContributorsIdSearchKey test ', () => {
+
+    it('should return empty contributors request object', () => {
         const input = [];
         const expected = {};
         const result = transformers.getRecordContributorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
 
-    it('getRecordContributorsIdSearchKey returns request object', () => {
+    it('should construct contributors id object from component data', () => {
         const input = [
             {nameAsPublished: "Smith A.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith B.", disabled: false, selected: true, authorId: 100},
@@ -452,47 +538,45 @@ describe('Transformers tests ', () => {
         ];
         const expected = {
             fez_record_search_key_contributor_id: [
-                { rek_contributor_id: null, rek_contributor_id_order: 1 },
-                { rek_contributor_id: 100, rek_contributor_id_order: 2 },
-                { rek_contributor_id: null, rek_contributor_id_order: 3 },
-                { rek_contributor_id: 1001, rek_contributor_id_order: 4 },
+                {rek_contributor_id: null, rek_contributor_id_order: 1},
+                {rek_contributor_id: 100, rek_contributor_id_order: 2},
+                {rek_contributor_id: null, rek_contributor_id_order: 3},
+                {rek_contributor_id: 1001, rek_contributor_id_order: 4},
             ]
         };
         const result = transformers.getRecordContributorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
 
-    it('getRecordContributorsIdSearchKey returns request object', () => {
+    it('should not modify contributors object for original data', () => {
         const input = [
-            { rek_contributor_id: null, rek_contributor_id_order: 1 },
-            { rek_contributor_id: 100, rek_contributor_id_order: 2 },
-            { rek_contributor_id: null, rek_contributor_id_order: 3 },
-            { rek_contributor_id: 1001, rek_contributor_id_order: 4 }
+            {rek_contributor_id: null, rek_contributor_id_order: 1},
+            {rek_contributor_id: 100, rek_contributor_id_order: 2},
+            {rek_contributor_id: null, rek_contributor_id_order: 3},
+            {rek_contributor_id: 1001, rek_contributor_id_order: 4}
         ];
         const expected = {
             fez_record_search_key_contributor_id: [
-                { rek_contributor_id: null, rek_contributor_id_order: 1 },
-                { rek_contributor_id: 100, rek_contributor_id_order: 2 },
-                { rek_contributor_id: null, rek_contributor_id_order: 3 },
-                { rek_contributor_id: 1001, rek_contributor_id_order: 4 },
+                {rek_contributor_id: null, rek_contributor_id_order: 1},
+                {rek_contributor_id: 100, rek_contributor_id_order: 2},
+                {rek_contributor_id: null, rek_contributor_id_order: 3},
+                {rek_contributor_id: 1001, rek_contributor_id_order: 4},
             ]
         };
         const result = transformers.getRecordContributorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
 
-    it('should create getFixIssueRequest request', () => {
-        const input = {publication: {}, author: {}};
+    it('should assign current user id as a solo contributor', () => {
+        const authors = [];
+        const defaultId = 1001;
 
-        input.publication.rek_pid = 'UQ:1111';
-        input.author.aut_display_name = 'J. Smith';
-        input.author.aut_org_username = 'uqjsmith';
-        input.comments = 'Some comments...';
-
-
-        const expected = {issue: 'Record: ' + APP_URL + 'view/UQ:1111 \n User \'J. Smith (uqjsmith)\' has indicated that they require a fix to this publication: Some comments...'}
-
-        const result = transformers.getFixIssueRequest(input);
+        const expected = {
+            fez_record_search_key_contributor_id: [
+                {rek_contributor_id: 1001, rek_contributor_id_order: 1}
+            ]
+        };
+        const result = transformers.getRecordContributorsIdSearchKey(authors, defaultId);
         expect(result).toEqual(expected);
     });
 });

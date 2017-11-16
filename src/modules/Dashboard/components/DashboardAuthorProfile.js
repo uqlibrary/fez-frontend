@@ -7,7 +7,7 @@ import DashboardArticleCount from './DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
-const DashboardProfile = ({authorDetails}) => {
+const DashboardProfile = ({authorDetails, author}) => {
     const txt = locale.pages.dashboard.header;
     return (
         <div className="imageCover">
@@ -24,10 +24,10 @@ const DashboardProfile = ({authorDetails}) => {
                         <div className="column is-narrow authorAvatar">
                             <DashboardAuthorAvatar
                                 values={{
-                                    uqr_id: authorDetails.uqr_id,
-                                    title: authorDetails.title,
-                                    givenName: authorDetails.given_name,
-                                    familyName: authorDetails.family_name,
+                                    uqr_id: authorDetails.uqr_id || author.aut_id || '',
+                                    title: authorDetails.title || author.aut_title || '',
+                                    givenName: authorDetails.given_name || author.aut_fname || '',
+                                    familyName: authorDetails.family_name || author.aut_lname || ''
                                 }}/>
                         </div>
                     }
@@ -35,9 +35,9 @@ const DashboardProfile = ({authorDetails}) => {
                     <div className="column authorDetails">
                         <DashboardAuthorDetails
                             values={{
-                                title: authorDetails.title,
-                                givenName: authorDetails.given_name,
-                                familyName: authorDetails.family_name,
+                                title: authorDetails.title || author.aut_title || '',
+                                givenName: authorDetails.given_name || author.aut_fname || '',
+                                familyName: authorDetails.family_name || author.aut_lname || '',
                                 orgUnits: authorDetails.org_units,
                                 positions: authorDetails.positions
                             }}
@@ -72,7 +72,8 @@ const DashboardProfile = ({authorDetails}) => {
 };
 
 DashboardProfile.propTypes = {
-    authorDetails: PropTypes.object
+    authorDetails: PropTypes.object,
+    author: PropTypes.object
 };
 
 export default DashboardProfile;

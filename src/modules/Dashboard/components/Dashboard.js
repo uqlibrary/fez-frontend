@@ -23,6 +23,7 @@ class Dashboard extends React.Component {
         // account data
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
+        author: PropTypes.object,
         loadingAuthorDetails: PropTypes.bool,
 
         // graph data
@@ -122,7 +123,7 @@ class Dashboard extends React.Component {
                     <div className="columns is-multiline is-gapless">
                         <div className="column is-12 is-hidden-mobile">
                             <div className="is-hidden-mobile">
-                                <DashboardAuthorProfile authorDetails={this.props.authorDetails}/>
+                                <DashboardAuthorProfile authorDetails={this.props.authorDetails} author={this.props.author} />
                             </div>
                         </div>
                         <div className="column is-12 possiblePublicationLure">

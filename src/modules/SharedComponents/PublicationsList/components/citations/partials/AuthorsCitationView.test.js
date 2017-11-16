@@ -69,10 +69,10 @@ describe('AuthorsCitationView test ', () => {
         const testObject = {
             "fez_record_search_key_author": [
                 {
-                "rek_author_id": null,
-                "rek_author_pid": "UQ:678742",
-                "rek_author": "Pedroso, Marcelo Monteiro",
-                "rek_author_order": 1
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Pedroso, Marcelo Monteiro",
+                    "rek_author_order": 1
                 },
                 {
                     "rek_author_id": null,
