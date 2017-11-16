@@ -68,6 +68,11 @@ export default class App extends React.Component {
         });
     };
 
+    redirectUserToLogin = () => {
+        const returnUrl = window.btoa(window.location.href);
+        window.location.href = `${AUTH_URL_LOGIN}?return=${returnUrl}`;
+    };
+
     render() {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
@@ -139,7 +144,7 @@ export default class App extends React.Component {
                                 !this.props.user.accountLoading && !this.props.user.account &&
                                 <div className="layout-fill dashAlert">
                                     <div className="layout-card">
-                                        <Alert {...locale.global.loginAlert} />
+                                        <Alert {...locale.global.loginAlert} actionButtonLabel="hi" action={this.redirectUserToLogin} />
                                     </div>
                                 </div>
                             }
