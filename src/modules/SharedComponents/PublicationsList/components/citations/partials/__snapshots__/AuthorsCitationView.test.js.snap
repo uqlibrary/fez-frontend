@@ -95,13 +95,14 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
     </CitationView>
     <CitationView
       className="citationAuthor"
-      prefix=""
+      prefix=" and "
       suffix=""
       value="Smith, J"
     >
       <span
         className="citationAuthor"
       >
+         and 
         Smith, J
       </span>
     </CitationView>
