@@ -283,6 +283,93 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
 </AuthorsCitationView>
 `;
 
+exports[`AuthorsCitationView test  should render component with 3 authors with prefix/suffix without changing original data structure 1`] = `
+<AuthorsCitationView
+  className=""
+  initialNumberOfAuthors={10}
+  prefix="Authored by: "
+  publication={
+    Object {
+      "fez_record_search_key_author": Array [
+        Object {
+          "rek_author": "Pedroso, Marcelo Monteiro",
+          "rek_author_id": null,
+          "rek_author_order": 3,
+          "rek_author_pid": "UQ:678742",
+        },
+        Object {
+          "rek_author": "Smith, J",
+          "rek_author_id": null,
+          "rek_author_order": 1,
+          "rek_author_pid": "UQ:678742",
+        },
+        Object {
+          "rek_author": "Andersen, J",
+          "rek_author_id": null,
+          "rek_author_order": 2,
+          "rek_author_pid": "UQ:678742",
+        },
+      ],
+    }
+  }
+  searchKey={
+    Object {
+      "key": "fez_record_search_key_author",
+      "order": "rek_author_order",
+      "subkey": "rek_author",
+    }
+  }
+  suffix=" people."
+  thresholdNumberOfAuthors={3}
+>
+  <span
+    className=""
+  >
+    Authored by: 
+    <CitationView
+      className="citationAuthor"
+      prefix=""
+      suffix=", "
+      value="Smith, J"
+    >
+      <span
+        className="citationAuthor"
+      >
+        Smith, J
+        , 
+      </span>
+    </CitationView>
+    <CitationView
+      className="citationAuthor"
+      prefix=""
+      suffix=", "
+      value="Andersen, J"
+    >
+      <span
+        className="citationAuthor"
+      >
+        Andersen, J
+        , 
+      </span>
+    </CitationView>
+    <CitationView
+      className="citationAuthor"
+      prefix=" and "
+      suffix=""
+      value="Pedroso, Marcelo Monteiro"
+    >
+      <span
+        className="citationAuthor"
+      >
+         and 
+        Pedroso, Marcelo Monteiro
+      </span>
+    </CitationView>
+     people.
+  </span>
+</AuthorsCitationView>
+`;
+
 exports[`AuthorsCitationView test  should render component with 10 authors (8 initial number and threshold 2) 1`] = `
 <AuthorsCitationView
   className=""
