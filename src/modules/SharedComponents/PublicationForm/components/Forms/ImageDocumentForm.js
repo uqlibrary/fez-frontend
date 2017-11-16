@@ -18,7 +18,7 @@ export default class ImageDocumentForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.imageDocument;
+        const txt = locale.forms.publicationForm.imageDocument;
 
         return (
             <div>

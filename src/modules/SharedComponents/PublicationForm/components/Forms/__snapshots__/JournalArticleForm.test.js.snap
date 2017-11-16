@@ -112,8 +112,8 @@ exports[`JournalArticleForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Authors",
+        "text": "Help text...",
+        "title": "Adding contributors",
       }
     }
     title="Authors"

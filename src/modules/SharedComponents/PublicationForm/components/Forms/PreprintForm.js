@@ -18,7 +18,7 @@ export default class PreprintForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.preprint;
+        const txt = locale.forms.publicationForm.preprint;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

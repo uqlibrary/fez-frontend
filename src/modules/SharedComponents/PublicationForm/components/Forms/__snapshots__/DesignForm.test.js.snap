@@ -224,7 +224,7 @@ exports[`DesignForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.",
+        "text": "text...",
         "title": "Optional information",
       }
     }

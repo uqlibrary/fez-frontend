@@ -19,7 +19,7 @@ export default class GenericDocumentForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.generic;
+        const txt = locale.forms.publicationForm.generic;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

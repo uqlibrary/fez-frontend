@@ -123,7 +123,7 @@ exports[`PatentForm renders  component 1`] = `
     title="Creators"
   >
     <div>
-      Provide a list of creators for this patent and assign yourself as an creator
+      This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.
     </div>
     <Field
       className="requiredField"

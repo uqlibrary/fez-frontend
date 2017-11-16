@@ -127,14 +127,14 @@ exports[`VideoDocumentForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.",
+        "text": "some help",
         "title": "Creators",
       }
     }
     title="Creators"
   >
     <div>
-      Provide a list of creators for this publication
+      This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.
     </div>
     <Field
       className="requiredField"
@@ -161,7 +161,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
                 "confirmationTitle": "Delete all",
               },
               "identifierColumn": "UQ identifier",
-              "nameColumn": "creator's name as published",
+              "nameColumn": "Creator's name as published",
               "reorderColumn": "Reorder items",
             },
           },
@@ -276,7 +276,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.",
+        "text": "text...",
         "title": "Optional information",
       }
     }

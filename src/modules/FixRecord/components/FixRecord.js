@@ -116,6 +116,8 @@ export default class FixRecord extends Component {
 
     render() {
         const txt = locale.pages.fixRecord;
+        const txtFixForm = locale.forms.fixPublicationForm;
+        const txtUnclaimForm = locale.forms.unclaimPublicationForm;
 
         if(this.props.authorLoading || this.props.recordToFixLoading) {
             return (
@@ -136,7 +138,7 @@ export default class FixRecord extends Component {
         ));
 
         // set confirmation message depending on file upload status
-        const saveConfirmationLocale = {...txt.fix.successWorkflowConfirmation};
+        const saveConfirmationLocale = {...txtFixForm.successWorkflowConfirmation};
         if (this.props.publicationToFixFileUploadingError) {
             saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
         }
@@ -162,13 +164,13 @@ export default class FixRecord extends Component {
                     {
                         this.state.selectedRecordAction === 'fix' &&
                         <div>
-                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.fix.cancelWorkflowConfirmation} />
+                            <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={this._navigateToDashboard}
                                 locale={saveConfirmationLocale}/>
-                            <StandardCard title={txt.fix.comments.title} help={txt.fix.comments.help}>
+                            <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                 <Field
                                     component={TextField}
                                     className="requiredField"
@@ -178,7 +180,7 @@ export default class FixRecord extends Component {
                                     fullWidth
                                     multiLine
                                     rows={1}
-                                    floatingLabelText={txt.fix.comments.fieldLabels.comments}
+                                    floatingLabelText={txtFixForm.comments.fieldLabels.comments}
                                     validate={[validation.required]}/>
                                 <Field
                                     component={TextField}
@@ -186,11 +188,11 @@ export default class FixRecord extends Component {
                                     name="rek_link"
                                     type="text"
                                     fullWidth
-                                    floatingLabelText={txt.fix.comments.fieldLabels.url}
+                                    floatingLabelText={txtFixForm.comments.fieldLabels.url}
                                     validate={[validation.url]}/>
                             </StandardCard>
-                            <StandardCard title={txt.fix.fileUpload.title} help={txt.fix.fileUpload.help}>
-                                {txt.fix.fileUpload.description}
+                            <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
+                                {txtFixForm.fileUpload.description}
                                 <Field
                                     name="files"
                                     component={FileUploadField}
@@ -204,19 +206,19 @@ export default class FixRecord extends Component {
 
                     {
                         this.state.selectedRecordAction === 'unclaim' &&
-                        <StandardCard title={txt.unclaim.title} help={txt.unclaim.help}>
-                            <Alert {...txt.unclaim.alert}/>
-                            {txt.unclaim.description}
+                        <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
+                            <Alert {...txtUnclaimForm.alert}/>
+                            {txtUnclaimForm.description}
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
                                 onAction={this._navigateToMyResearch}
                                 onCancelAction={this._navigateToDashboard}
-                                locale={txt.unclaim.successWorkflowConfirmation}/>
+                                locale={txtUnclaimForm.successWorkflowConfirmation}/>
                         </StandardCard>
                     }
 
                     {
-                        this.getAlert({...this.props, alertLocale: txt.fix})
+                        this.getAlert({...this.props, alertLocale: txtFixForm})
                     }
 
                     <div className="columns action-buttons">

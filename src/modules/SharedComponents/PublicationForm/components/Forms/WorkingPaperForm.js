@@ -20,7 +20,7 @@ export default class WorkingPaperForm extends Component {
     };
 
     render() {
-        const txt = locale.components.publicationForm.workingPaper;
+        const txt = locale.forms.publicationForm.workingPaper;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

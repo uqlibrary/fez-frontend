@@ -16,7 +16,7 @@ import {locale} from 'config';
  * @returns {action}
  */
 export function createNewRecord(data) {
-    const {errorAlert} = locale.components.publicationForm;
+    const {errorAlert} = locale.forms.publicationForm;
     return dispatch => {
         dispatch({type: actions.RECORD_CREATE_SAVING});
 

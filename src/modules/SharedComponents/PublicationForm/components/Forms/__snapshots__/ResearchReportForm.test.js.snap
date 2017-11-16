@@ -142,8 +142,8 @@ exports[`ResearchReportForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Authors",
+        "text": "Help text...",
+        "title": "Adding contributors",
       }
     }
     title="Authors"
@@ -161,7 +161,7 @@ exports[`ResearchReportForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add author",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please, type the name exactly as published",
+              "nameAsPublishedHint": "Please type the name exactly as published",
               "nameAsPublishedLabel": "Author's name as published",
             },
           },

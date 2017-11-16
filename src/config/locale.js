@@ -3,6 +3,7 @@ import {StandardCard} from 'uqlibrary-react-toolbox';
 import {APP_URL} from 'config';
 import {default as validationErrors} from './locale.validation';
 import {default as components} from './locale.components';
+import {default as forms} from './locale.forms';
 
 /*
 
@@ -24,7 +25,7 @@ help: {
 
 export default {
     global: {
-        title: 'UQ eSpace',
+        title: 'UQ eSpace DEMO',
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
         loading: 'loading...',
         mainNavButton: {
@@ -134,6 +135,105 @@ export default {
         },
     },
     pages: {
+        about: {
+            title: 'About UQ eSpace',
+            children: (
+                <StandardCard>
+                    UQ eSpace is the single authoritative source for the research outputs and research data of the
+                    staff and students of the University of Queensland and is the archival home of UQ Research
+                    Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
+                    publications to the wider world and provides data for mandatory Government reporting
+                    requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
+                    systems, including Academic Portal and the DataHub. It operates as an institutional repository
+                    for open access publications, research datasets and other digitised materials created by staff
+                    of the University such as print materials, photographs, audio materials, videos, manuscripts and
+                    other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
+                    publication profile of researchers at UQ.
+                    <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
+                        requires UQ researchers to make publications arising from their research openly available via UQ
+                        eSpace. It has also implemented a Research Data Management policy that sets out the requirements
+                        for University of Queensland researchers to ensure that their research data are managed
+                        according to legal, statutory, ethical and funding body requirements.</p>
+                    <h3>General Enquiries</h3>
+                    <p>
+                        Tel: 07 334 69775 <br/>
+                        Email: espace@library.uq.edu.au <br/>
+                    </p>
+                    <h3>Staff contact</h3>
+                    <p>
+                        Andrew Heath <br/>
+                        Manager, UQ eSpace<br/>
+                        Tel: 07 334 69981<br/>
+                        Email: a.heath@library.uq.edu.au<br/>
+                    </p>
+                    <p>
+                        Mary-Anne Marrington<br/>
+                        Senior Librarian, UQ eSpace<br/>
+                        Tel: 07 334 69775<br/>
+                        Email: m.marrington@library.uq.edu.au<br/>
+                    </p>
+                </StandardCard>
+            )
+        },
+        browse: {
+            title: 'Browse eSpace',
+            text: (
+                <div>
+                    <p>Welcome to The University of Queensland's institutional digital repository</p>
+                    <p>
+                        Public browse is coming soon...
+                    </p>
+                </div>
+            ),
+            help: {
+                title: 'Browse eSpace help',
+                text: (
+                    <div>
+                        <h3>Browse</h3>
+                        <p>
+                            Latest articles....
+                        </p>
+                        <h3>Browse collections</h3>
+                        <p>
+                            Latest collections....
+                        </p>
+                    </div>
+                ),
+                buttonLabel: 'OK'
+            }
+        },
+        notFound: {
+            title: 'Page not found',
+            children: (
+                <StandardCard>
+                    <p>The requested page could not be found.</p>
+                    <p>Sorry about that, but here's what you can do next:
+                        <ul>
+                            <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.</li>
+                            <li>Start again at the home page.</li>
+                            <li>If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.</li>
+                        </ul>
+                    </p>
+                </StandardCard>
+            )
+        },
+        authenticationRequired: {
+            title: 'Authentication required',
+            children: (
+                <StandardCard>
+                    <p>The requested page is available to authenticated users only.</p>
+                    <p>Please, login to continue</p>
+                </StandardCard>
+            )
+        },
+        permissionDenied: {
+            title: 'Permissions denied',
+            children: (
+                <StandardCard>
+                    <p>The requested page available to authorised users only.</p>
+                </StandardCard>
+            )
+        },
         dashboard: {
             loading: 'Loading your dashboard...',
             header: {
@@ -223,105 +323,6 @@ export default {
                 },
             },
         },
-        about: {
-            title: 'About UQ eSpace',
-            children: (
-                <StandardCard>
-                    UQ eSpace is the single authoritative source for the research outputs and research data of the
-                    staff and students of the University of Queensland and is the archival home of UQ Research
-                    Higher Degree digital theses. UQ eSpace raises the visibility and accessibility of UQ
-                    publications to the wider world and provides data for mandatory Government reporting
-                    requirements such as Excellence in Research for Australia (ERA), as well as for internal UQ
-                    systems, including Academic Portal and the DataHub. It operates as an institutional repository
-                    for open access publications, research datasets and other digitised materials created by staff
-                    of the University such as print materials, photographs, audio materials, videos, manuscripts and
-                    other original works. UQ eSpace provides metadata to UQ Researchers in order to raise the
-                    publication profile of researchers at UQ.
-                    <p>The University of Queensland has implemented an Open Access for UQ Research Outputs policy that
-                        requires UQ researchers to make publications arising from their research openly available via UQ
-                        eSpace. It has also implemented a Research Data Management policy that sets out the requirements
-                        for University of Queensland researchers to ensure that their research data are managed
-                        according to legal, statutory, ethical and funding body requirements.</p>
-                    <h3>General Enquiries</h3>
-                    <p>
-                        Tel: 07 334 69775 <br/>
-                        Email: espace@library.uq.edu.au <br/>
-                    </p>
-                    <h3>Staff contact</h3>
-                    <p>
-                        Andrew Heath <br/>
-                        Manager, UQ eSpace<br/>
-                        Tel: 07 334 69981<br/>
-                        Email: a.heath@library.uq.edu.au<br/>
-                    </p>
-                    <p>
-                        Mary-Anne Marrington<br/>
-                        Senior Librarian, UQ eSpace<br/>
-                        Tel: 07 334 69775<br/>
-                        Email: m.marrington@library.uq.edu.au<br/>
-                    </p>
-                </StandardCard>
-            )
-        },
-        notFound: {
-            title: 'Page not found',
-            children: (
-                <StandardCard>
-                    <p>The requested page could not be found.</p>
-                    <p>Sorry about that, but here's what you can do next:
-                        <ul>
-                            <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.</li>
-                            <li>Start again at the home page.</li>
-                            <li>If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.</li>
-                        </ul>
-                    </p>
-                </StandardCard>
-            )
-        },
-        browse: {
-            title: 'Browse eSpace',
-            text: (
-                <div>
-                    <p>Welcome to The University of Queensland's institutional digital repository</p>
-                    <p>
-                        Public browse is coming soon...
-                    </p>
-                </div>
-            ),
-            help: {
-                title: 'Browse eSpace help',
-                text: (
-                    <div>
-                        <h3>Browse</h3>
-                        <p>
-                            Latest articles....
-                        </p>
-                        <h3>Browse collections</h3>
-                        <p>
-                            Latest collections....
-                        </p>
-                    </div>
-                ),
-                buttonLabel: 'OK'
-            }
-        },
-        authenticationRequired: {
-            title: 'Authentication required',
-            children: (
-                <StandardCard>
-                    <p>The requested page is available to authenticated users only.</p>
-                    <p>Please, login to continue</p>
-                </StandardCard>
-            )
-        },
-        permissionDenied: {
-            title: 'Permissions denied',
-            children: (
-                <StandardCard>
-                    <p>The requested page available to authorised users only.</p>
-                </StandardCard>
-            )
-        },
         myResearch: {
             title: 'My research',
             help: {
@@ -350,6 +351,53 @@ export default {
                         missing publication</a>
                     </div>
                 ),
+            },
+            facetsFilter: {
+                title: 'Refine results',
+                help: {
+                    title: 'Refining your results',
+                    text: 'Help about ....',
+                    buttonLabel: 'Ok'
+                },
+                excludeFacetsList: ['Scopus document type', 'Subtype']
+            }
+        },
+        claimPublications: {
+            title: 'Claim possible publications',
+            loadingMessage: 'Searching for your publications...',
+            facetSearchMessage: 'Applying filters...',
+            noResultsFound: {
+                title: 'No matching publications found',
+                text: 'No publications were automatically matched for you to claim.',
+                help: {
+                    title: 'No matching records found',
+                    text: 'Why search didn\'t return any items....',
+                    buttonLabel: 'Ok'
+                }
+            },
+            searchResults: {
+                title: 'Possibly your publications',
+                text: '[resultsCount] out of [totalCount] potential match(es) displayed. Select any item to claim it as your work.',
+                help: {
+                    title: 'Possibly your publications',
+                    text: 'Help about ....',
+                    buttonLabel: 'Ok'
+                },
+                hide: 'Not mine',
+                claim: 'Claim this publication',
+                inProgress: 'In progress'
+            },
+            hidePublicationConfirmation: {
+                confirmationTitle: 'Hide publication',
+                confirmationMessage: 'Are you sure you want to hide selected possibly your publication from this view?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
+            },
+            hideAllPublicationsConfirmation: {
+                confirmationTitle: 'Hide publications',
+                confirmationMessage: 'Are you sure you want to hide all possibly your publications from this view?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
             },
             facetsFilter: {
                 title: 'Refine results',
@@ -436,7 +484,7 @@ export default {
                 unclaimable: 'All authors have been assigned'
             },
             step3: {
-                // all text values come from components.publicationForm
+                // all text values come from forms.PublicationForm
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
@@ -454,53 +502,6 @@ export default {
                 </p>),
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
-            }
-        },
-        claimPublications: {
-            title: 'Claim possible publications',
-            loadingMessage: 'Searching for your publications...',
-            facetSearchMessage: 'Applying filters...',
-            noResultsFound: {
-                title: 'No matching publications found',
-                text: 'No publications were automatically matched for you to claim.',
-                help: {
-                    title: 'No matching records found',
-                    text: 'Why search didn\'t return any items....',
-                    buttonLabel: 'Ok'
-                }
-            },
-            searchResults: {
-                title: 'Possibly your publications',
-                text: '[resultsCount] out of [totalCount] potential match(es) displayed. Select any item to claim it as your work.',
-                help: {
-                    title: 'Possibly your publications',
-                    text: 'Help about ....',
-                    buttonLabel: 'Ok'
-                },
-                hide: 'Not mine',
-                claim: 'Claim this publication',
-                inProgress: 'In progress'
-            },
-            hidePublicationConfirmation: {
-                confirmationTitle: 'Hide publication',
-                confirmationMessage: 'Are you sure you want to hide selected possibly your publication from this view?',
-                cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
-            },
-            hideAllPublicationsConfirmation: {
-                confirmationTitle: 'Hide publications',
-                confirmationMessage: 'Are you sure you want to hide all possibly your publications from this view?',
-                cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
-            },
-            facetsFilter: {
-                title: 'Refine results',
-                help: {
-                    title: 'Refining your results',
-                    text: 'Help about ....',
-                    buttonLabel: 'Ok'
-                },
-                excludeFacetsList: ['Scopus document type', 'Subtype']
             }
         },
         fixRecord: {
@@ -521,88 +522,7 @@ export default {
                 }
             ],
             cancel: 'Cancel',
-            submit: 'Submit',
-            unclaim: {
-                title: 'Remove this record from my profile',
-                description: (<div>
-                    Some explanation about what this means etc, lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at neque eros. In et ligula quam.
-                    Etiam porttitor gravida tortor, eget ultrices duidolor sit amet, consectetur adipiscing elit. Morbi at neque eros. In et ligula quam. Etiam porttitor gravida tortor,
-                    eget ultrices dui onsectetur adipiscing elit. Morbi at neque eros. In et ligula quam. Etiam porttitor gravida tortor, eget ultrices dui scelerisque a.
-                </div>),
-                help: {
-                    title: 'Unclaim a record',
-                    text: 'Enter the text that will help people here',
-                    buttonLabel: 'OK'
-                },
-                successWorkflowConfirmation: {
-                    confirmationTitle: 'Unclaim a record',
-                    confirmationMessage: 'You have unclaimed record successfully',
-                    cancelButtonLabel: 'Go to my dashboard',
-                    confirmButtonLabel: 'Go to my research'
-                },
-                alert: {
-                    type: 'warning',
-                    title: 'WARNING',
-                    message: 'You are about to remove this publication from your eSpace profile.'
-                }
-            },
-            fix: {
-                comments: {
-                    title: 'Suggest a correction',
-                    help: {
-                        title: 'Request a change',
-                        text: '...',
-                        buttonLabel: 'OK'
-                    },
-                    fieldLabels: {
-                        comments: 'Describe the problem with this record, eg record is a duplicate, or suggested changes',
-                        url: 'Link (URL)'
-                    }
-                },
-                fileUpload: {
-                    title: 'Upload files',
-                    description: (<div>
-                        Upload an Open Access file, HERDC evidence or an NTRO Research Statement
-                    </div>),
-                    help: {
-                        title: 'Upload files',
-                        text: '...',
-                        buttonLabel: 'OK'
-                    }
-                },
-                cancelWorkflowConfirmation: {
-                    confirmationTitle: 'Cancel request',
-                    confirmationMessage: 'Are you sure you want to cancel this request?',
-                    cancelButtonLabel: 'No',
-                    confirmButtonLabel: 'Yes'
-                },
-                successWorkflowConfirmation: {
-                    confirmationTitle: 'Your request has been submitted',
-                    confirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
-                    cancelButtonLabel: 'Go to my dashboard',
-                    confirmButtonLabel: 'Go to my research'
-                },
-                validationAlert: {
-                    type: 'warning',
-                    title: 'Validation',
-                    message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
-                },
-                errorAlert: {
-                    type: 'error_outline',
-                    title: 'Error',
-                    message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`)
-                },
-                progressAlert: {
-                    type: 'info_outline',
-                    title: 'Saving',
-                    message: 'Request is being processed.'
-                },
-                successAlert: {
-                    type: 'done',
-                    title: 'Success',
-                    message: 'Fix record request has been submitted successfully.'
-                }
-            }
+            submit: 'Submit'
         },
         masquerade: {
             title: 'Masquerade',
@@ -624,8 +544,9 @@ export default {
             }
         }
     },
-    ...components,
+    components: components,
     ...validationErrors,
+    ...forms,
     issues: {
         fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
             'Record: ' + APP_URL + `view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
