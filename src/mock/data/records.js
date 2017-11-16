@@ -14601,77 +14601,14 @@ export const myRecordsList = {
                     "rek_author_pid": "UQ:102296",
                     "rek_author_xsdmf_id": 4191,
                     "rek_author": "Brinkworth, R. I.",
-                    "rek_author_order": 4
+                    "rek_author_order": 1
                 },
                 {
                     "rek_author_id": 29118962,
                     "rek_author_pid": "UQ:102296",
                     "rek_author_xsdmf_id": 4191,
                     "rek_author": "Brown, M. A.",
-                    "rek_author_order": 7
-                },
-                {
-                    "rek_author_id": 29118956,
-                    "rek_author_pid": "UQ:102296",
-                    "rek_author_xsdmf_id": 4191,
-                    "rek_author": "Chenevix-Trench, G.",
-                    "rek_author_order": 1
-                },
-                {
-                    "rek_author_id": 29118963,
-                    "rek_author_pid": "UQ:102296",
-                    "rek_author_xsdmf_id": 4191,
-                    "rek_author": "Easton, D. F.",
-                    "rek_author_order": 8
-                },
-                {
-                    "rek_author_id": 29118965,
-                    "rek_author_pid": "UQ:102296",
-                    "rek_author_xsdmf_id": 4191,
-                    "rek_author": "Goldgar, D. E.",
-                    "rek_author_order": 10
-                },
-                {
-                    "rek_author_id": 29118957,
-                    "rek_author_pid": "UQ:102296",
-                    "rek_author_xsdmf_id": 4191,
-                    "rek_author": "Healey, S. C.",
                     "rek_author_order": 2
-                },
-                {
-                    "rek_author_id": 29118960,
-                    "rek_author_pid": "UQ:102296",
-                    "rek_author_xsdmf_id": 4191,
-                    "rek_author": "KConFab, K. C. F.",
-                    "rek_author_order": 5
-                },
-                {
-                    "rek_author_id": 29118958,
-                    "rek_author_pid": "UQ:102296",
-                    "rek_author_xsdmf_id": 4191,
-                    "rek_author": "Lakhani, S.",
-                    "rek_author_order": 3
-                },
-                {
-                    "rek_author_id": 29118961,
-                    "rek_author_pid": "UQ:102296",
-                    "rek_author_xsdmf_id": 4191,
-                    "rek_author": "Marsh, A.",
-                    "rek_author_order": 6
-                },
-                {
-                    "rek_author_id": 29118966,
-                    "rek_author_pid": "UQ:102296",
-                    "rek_author_xsdmf_id": 4191,
-                    "rek_author": "Spurdle, A. B.",
-                    "rek_author_order": 11
-                },
-                {
-                    "rek_author_id": 29118964,
-                    "rek_author_pid": "UQ:102296",
-                    "rek_author_xsdmf_id": 4191,
-                    "rek_author": "Tavtigian, S.",
-                    "rek_author_order": 9
                 }
             ],
             "fez_record_search_key_author_affiliation_id": [],
@@ -14692,69 +14629,6 @@ export const myRecordsList = {
                     "rek_author_id_xsdmf_id": 3951,
                     "rek_author_id": 22360,
                     "rek_author_id_order": 2
-                },
-                {
-                    "rek_author_id_id": 28486203,
-                    "rek_author_id_pid": "UQ:102296",
-                    "rek_author_id_xsdmf_id": 3951,
-                    "rek_author_id": 3247,
-                    "rek_author_id_order": 3
-                },
-                {
-                    "rek_author_id_id": 28486204,
-                    "rek_author_id_pid": "UQ:102296",
-                    "rek_author_id_xsdmf_id": 3951,
-                    "rek_author_id": 27687,
-                    "rek_author_id_order": 4
-                },
-                {
-                    "rek_author_id_id": 28486205,
-                    "rek_author_id_pid": "UQ:102296",
-                    "rek_author_id_xsdmf_id": 3951,
-                    "rek_author_id": 63011,
-                    "rek_author_id_order": 5
-                },
-                {
-                    "rek_author_id_id": 28486206,
-                    "rek_author_id_pid": "UQ:102296",
-                    "rek_author_id_xsdmf_id": 3951,
-                    "rek_author_id": 36035,
-                    "rek_author_id_order": 6
-                },
-                {
-                    "rek_author_id_id": 28486207,
-                    "rek_author_id_pid": "UQ:102296",
-                    "rek_author_id_xsdmf_id": 3951,
-                    "rek_author_id": 410,
-                    "rek_author_id_order": 7
-                },
-                {
-                    "rek_author_id_id": 28486208,
-                    "rek_author_id_pid": "UQ:102296",
-                    "rek_author_id_xsdmf_id": 3951,
-                    "rek_author_id": 35300,
-                    "rek_author_id_order": 8
-                },
-                {
-                    "rek_author_id_id": 28486209,
-                    "rek_author_id_pid": "UQ:102296",
-                    "rek_author_id_xsdmf_id": 3951,
-                    "rek_author_id": 63017,
-                    "rek_author_id_order": 9
-                },
-                {
-                    "rek_author_id_id": 28486210,
-                    "rek_author_id_pid": "UQ:102296",
-                    "rek_author_id_xsdmf_id": 3951,
-                    "rek_author_id": 33918,
-                    "rek_author_id_order": 10
-                },
-                {
-                    "rek_author_id_id": 28486211,
-                    "rek_author_id_pid": "UQ:102296",
-                    "rek_author_id_xsdmf_id": 3951,
-                    "rek_author_id": 2463,
-                    "rek_author_id_order": 11
                 }
             ],
             "fez_record_search_key_author_role": [],
