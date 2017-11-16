@@ -850,13 +850,14 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=""
+          prefix=" and "
           suffix=""
           value="Francis, Mara"
         >
           <span
             className="citationAuthor"
           >
+             and 
             Francis, Mara
           </span>
         </CitationView>
