@@ -76,7 +76,7 @@ export default class PublicationForm extends Component {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })
         ];
-        const txt = locale.components.publicationForm;
+        const txt = locale.forms.publicationForm;
         return (
             <form>
                 <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />

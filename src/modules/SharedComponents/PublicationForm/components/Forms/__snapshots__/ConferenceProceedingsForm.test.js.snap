@@ -192,7 +192,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
     title="Editors"
   >
     <div>
-      Provide a list of editors for this publication and assign yourself as an editor
+      Provide a list of editors for this publication
     </div>
     <Field
       className="requiredField"
@@ -210,7 +210,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           },
           "header": Object {
             "locale": Object {
-              "contributorAssignmentColumn": "Select your name",
+              "contributorAssignmentColumn": "Select your name (if applicable)",
               "deleteAll": "Remove all items",
               "deleteAllConfirmation": Object {
                 "cancelButtonLabel": "No",

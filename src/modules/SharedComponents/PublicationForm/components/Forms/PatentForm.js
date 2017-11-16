@@ -17,7 +17,7 @@ export default class PatentForm extends Component {
     }
 
     render() {
-        const txt = locale.components.publicationForm.patent;
+        const txt = locale.forms.publicationForm.patent;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

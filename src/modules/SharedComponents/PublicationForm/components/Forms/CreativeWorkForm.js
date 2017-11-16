@@ -19,7 +19,7 @@ export default class CreativeWorkForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.creativeWork;
+        const txt = locale.forms.publicationForm.creativeWork;
 
         return (
             <div>

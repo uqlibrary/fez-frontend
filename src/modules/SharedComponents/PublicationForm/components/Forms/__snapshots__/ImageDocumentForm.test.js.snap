@@ -84,14 +84,14 @@ exports[`ImageDocumentForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.",
+        "text": "some help",
         "title": "Creators",
       }
     }
-    title="Creator name"
+    title="Creators"
   >
     <div>
-      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
+      This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.
     </div>
     <Field
       className="requiredField"
@@ -118,7 +118,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
                 "confirmationTitle": "Delete all",
               },
               "identifierColumn": "UQ identifier",
-              "nameColumn": "creator's name as published",
+              "nameColumn": "Creator's name as published",
               "reorderColumn": "Reorder items",
             },
           },
@@ -164,7 +164,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.",
+        "text": "Text...",
         "title": "Optional information",
       }
     }

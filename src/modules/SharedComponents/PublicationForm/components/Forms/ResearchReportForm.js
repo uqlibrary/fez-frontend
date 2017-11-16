@@ -21,7 +21,7 @@ export default class ResearchReportForm extends Component {
     };
 
     render() {
-        const txt = locale.components.publicationForm.researchReport;
+        const txt = locale.forms.publicationForm.researchReport;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
