@@ -44,8 +44,7 @@ exports[`App tests for user account and author status User is logged in but are 
               }
             }
             isAuthorizedUser={true}
-            loginUrl="https://auth.library.uq.edu.au/login"
-            logoutUrl="https://auth.library.uq.edu.au/logout"
+            onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - J STAFF"
           />
@@ -298,8 +297,7 @@ exports[`App tests for user account and author status User is not logged in and 
               }
             }
             isAuthorizedUser={false}
-            loginUrl="https://auth.library.uq.edu.au/login"
-            logoutUrl="https://auth.library.uq.edu.au/logout"
+            onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText=""
           />
@@ -440,8 +438,7 @@ exports[`App tests for user account and author status User logged in and is an a
               }
             }
             isAuthorizedUser={true}
-            loginUrl="https://auth.library.uq.edu.au/login"
-            logoutUrl="https://auth.library.uq.edu.au/logout"
+            onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - J STAFF"
           />
@@ -694,8 +691,7 @@ exports[`App tests for user account and author status User logged in but is not 
               }
             }
             isAuthorizedUser={true}
-            loginUrl="https://auth.library.uq.edu.au/login"
-            logoutUrl="https://auth.library.uq.edu.au/logout"
+            onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - J STAFF"
           />

@@ -69,8 +69,9 @@ export default class App extends React.Component {
     };
 
     redirectUserToLogin = () => {
+        const redirectUrl = (!this.props.user.accountLoading && this.props.user.account !== null) ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
         const returnUrl = window.btoa(window.location.href);
-        window.location.href = `${AUTH_URL_LOGIN}?return=${returnUrl}`;
+        window.location.href = `${redirectUrl}?return=${returnUrl}`;
     };
 
     render() {
@@ -116,8 +117,7 @@ export default class App extends React.Component {
                                     <AuthButton
                                         isAuthorizedUser={isAuthorizedUser}
                                         hoveredStyle={appBarButtonStyles}
-                                        loginUrl={AUTH_URL_LOGIN}
-                                        logoutUrl={AUTH_URL_LOGOUT}
+                                        onClick={this.redirectUserToLogin}
                                         signInTooltipText={locale.authentication.signInText}
                                         signOutTooltipText={isAuthorizedUser ? (`${locale.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
                                 </div>
@@ -145,7 +145,7 @@ export default class App extends React.Component {
                                 !this.props.user.accountLoading && !this.props.user.account &&
                                 <div className="layout-fill dashAlert">
                                     <div className="layout-card">
-                                        <Alert {...locale.global.loginAlert} action={this.redirectUserToLogin.bind()} />
+                                        <Alert {...locale.global.loginAlert} action={this.redirectUserToLogin} />
                                     </div>
                                 </div>
                             }
