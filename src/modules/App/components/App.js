@@ -68,6 +68,11 @@ export default class App extends React.Component {
         });
     };
 
+    redirectUserToLogin = () => {
+        const returnUrl = window.btoa(window.location.href);
+        window.location.href = `${AUTH_URL_LOGIN}?return=${returnUrl}`;
+    };
+
     render() {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
@@ -76,6 +81,7 @@ export default class App extends React.Component {
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        console.log('Auth login: ' + AUTH_URL_LOGIN);
         return (
             <div className="layout-fill">
                 {
@@ -139,7 +145,7 @@ export default class App extends React.Component {
                                 !this.props.user.accountLoading && !this.props.user.account &&
                                 <div className="layout-fill dashAlert">
                                     <div className="layout-card">
-                                        <Alert {...locale.global.loginAlert} />
+                                        <Alert {...locale.global.loginAlert} action={this.redirectUserToLogin.bind()} />
                                     </div>
                                 </div>
                             }

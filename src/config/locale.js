@@ -19,6 +19,7 @@ export default {
             title: 'You are not logged in',
             message: 'Please, login to UQ eSpace for full search results and more services.',
             type: 'info_outline',
+            actionButtonLabel: 'Click to login'
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',
