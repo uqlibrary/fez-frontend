@@ -274,13 +274,14 @@ exports[`EditorsCitationView test  should render component with two contributors
       </CitationView>
       <CitationView
         className="citationAuthor"
-        prefix=""
+        prefix=" and "
         suffix=""
         value="Smith, J"
       >
         <span
           className="citationAuthor"
         >
+           and 
           Smith, J
         </span>
       </CitationView>

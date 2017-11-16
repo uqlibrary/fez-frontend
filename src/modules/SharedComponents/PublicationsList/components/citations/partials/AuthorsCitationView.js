@@ -52,7 +52,7 @@ export default class AuthorsCitationView extends React.Component {
 
     renderAuthors = (authors) => {
         return authors.map((author, index) => {
-            const prefix = authors.length > 2 && index === authors.length - 1 ? ' and ' : '';
+            const prefix = authors.length >= 2 && index === authors.length - 1 ? ' and ' : '';
             const suffix = authors.length > 2 && index < authors.length - 1 ? ', ' : '';
 
             return (
