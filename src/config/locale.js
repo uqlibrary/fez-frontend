@@ -2,6 +2,24 @@ import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox';
 import {APP_URL} from 'config';
 
+/*
+
+NOTE:
+- text can be either plain text, eg text: 'Some text to display' or
+- text can be formatted HTML text, eg text: (<div>Click here to search google: <a href='google.com'>search google</a></div>)
+IMPORTANT: if currently text contains placeholders, eg any characters in square brackets, eg [noOfResults] it cannot be formatted with HTML tags’
+
+- help objects have the following shape:
+help: {
+    title: 'About these metrics',
+    text: (<div></div>),
+    buttonLabel: 'OK'
+}
+- text can be plain or formatted HTML component with links/tags/etc
+- if help is not required, delete help: {} fully (including closing '},')
+
+*/
+
 export default {
     global: {
         title: 'UQ eSpace',
@@ -88,42 +106,29 @@ export default {
     },
     menu: {
         myDashboard: {
-            primaryText: 'My dashboard'
+            primaryText: 'My dashboard',
+            // secondaryText is set to user's email
         },
         myResearch: {
             primaryText: 'My research'
         },
-        addMissingRecord: {
-            primaryText: 'Add a missing record'
-        },
         claimPublication: {
             primaryText: 'Claim possible publications'
         },
-        manageUsers: {
-            primaryText: 'Manage users'
-        },
-        manageGroups: {
-            primaryText: 'Manage groups'
-        },
-        manageAuthors: {
-            primaryText: 'Manage authors'
-        },
-        browse: {
-            primaryText: 'Browse',
-            secondaryText: 'UQ\'s digital repository'
+        addMissingRecord: {
+            primaryText: 'Add a missing record'
         },
         masquerade: {
             primaryText: 'Masquerade',
             secondaryText: 'as another user'
         },
-        search: {
-            primaryText: 'Search'
-        },
-        faqs: {
-            primaryText: 'FAQs'
+        browse: {
+            primaryText: 'Browse eSpace',
+            secondaryText: ''
         },
         about: {
             primaryText: 'About',
+            secondaryText: ''
         },
     },
     pages: {
@@ -328,8 +333,9 @@ export default {
             },
             text: (
                 <div>
-                    <div>Please, check if there are any possibly your publications via <a href="/records/possible"> claim
-                        possible publications</a> or <a href="/records/add/find">add a missing publication</a></div>
+                    <div>
+                        Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
+                    </div>
                 </div>
             ),
             loadingMessage: 'Searching for your publications...',
@@ -338,8 +344,7 @@ export default {
                 title: 'No publications found',
                 text: (
                     <div>
-                        We were unable to find any results. Please, check if there are any possibly your publications
-                        via <a href="/records/possible">claim possible publications</a> or <a href="/records/add/find">add a
+                        We were unable to find any results. You may be able to <a href="/records/possible">claim publications we think may be yours</a> or <a href="/records/add/find">add a
                         missing publication</a>
                     </div>
                 ),
@@ -387,7 +392,8 @@ export default {
                 },
                 searchResults: {
                     title: 'Possible matches found',
-                    text: 'Top [noOfResults] potential match(es) displayed for "[searchQuery]" - claim a matching publication below, refine your search or create a new eSpace record.',
+                    resultsText: 'Top [noOfResults] potential match(es) displayed for "[searchQuery]".',
+                    text: 'Claim a matching publication below, refine your search or create a new eSpace record.',
                     help: {
                         title: 'Possible matches found',
                         text: 'Why search displays these items....',

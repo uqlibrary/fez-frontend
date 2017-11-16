@@ -84,7 +84,16 @@ export default class RecordsSearchResults extends React.Component {
                     {
                         this.props.publicationsList.length > 0 &&
                         <StandardCard {...searchResultsTxt.searchResults}>
-                            <div>{searchResultsTxt.searchResults.text.replace('[noOfResults]', this.props.publicationsList.length).replace('[searchQuery]', this.props.rawSearchQuery)}</div>
+                            <div>
+                                {
+                                    searchResultsTxt.searchResults.resultsText
+                                        .replace('[noOfResults]', this.props.publicationsList.length)
+                                        .replace('[searchQuery]', this.props.rawSearchQuery)
+                                }
+                            </div>
+                            <div>
+                                {searchResultsTxt.searchResults.text}
+                            </div>
                             <PublicationsList
                                 publicationsList={this.props.publicationsList}
                                 customActions={actions}
