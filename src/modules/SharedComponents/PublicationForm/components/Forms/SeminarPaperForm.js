@@ -20,7 +20,7 @@ export default class SeminarPaperForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.seminarPaper;
+        const txt = locale.forms.publicationForm.seminarPaper;
 
         return (
             <div>

@@ -16,7 +16,7 @@ export default class NewspaperArticleForm extends Component {
     }
 
     render() {
-        const txt = locale.components.publicationForm.newspaperArticle;
+        const txt = locale.forms.publicationForm.newspaperArticle;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

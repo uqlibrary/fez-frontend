@@ -18,8 +18,7 @@ export default class AudioDocumentForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.audioDocument;
-
+        const txt = locale.forms.publicationForm.audioDocument;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

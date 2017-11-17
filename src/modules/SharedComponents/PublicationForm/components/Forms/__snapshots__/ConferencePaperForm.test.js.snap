@@ -200,14 +200,14 @@ exports[`ConferencePaperForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Authors",
+        "text": "Help text...",
+        "title": "Adding contributors",
       }
     }
     title="Authors"
   >
     <div>
-      Provide a list of authors for this publication and assign yourself as an author
+      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
     </div>
     <Field
       className="requiredField"
