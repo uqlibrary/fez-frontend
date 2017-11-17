@@ -45,7 +45,7 @@ describe('Form reducer plugin', () => {
 
         nextState = plugins.resetValue(nextState, action);
 
-        expect(nextState.get('values').get(action.payload.name)).toBeUndefined();
+        expect(nextState.get('values').has(action.payload.name.split('.').shift())).toBeFalsy();
         expect(nextState.get('registeredFields').has(action.payload.name)).toBeFalsy();
         expect(nextState.get('fields').has(action.payload.name.split('.').shift())).toBeFalsy();
     });
