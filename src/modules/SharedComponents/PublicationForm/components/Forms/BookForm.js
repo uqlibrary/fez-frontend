@@ -18,7 +18,7 @@ export default class BookForm extends Component {
     }
 
     render() {
-        const txt = locale.components.publicationForm.book;
+        const txt = locale.forms.publicationForm.book;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

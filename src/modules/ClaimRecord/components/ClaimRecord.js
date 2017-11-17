@@ -80,7 +80,7 @@ export default class ClaimRecord extends Component {
     };
 
     render() {
-        const txt = locale.components.claimPublicationForm;
+        const txt = locale.forms.claimPublicationForm;
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
         if (!author || !publication) {

@@ -20,7 +20,7 @@ export default class ThesisForm extends Component {
     };
 
     render() {
-        const txt = locale.components.publicationForm.thesis;
+        const txt = locale.forms.publicationForm.thesis;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
