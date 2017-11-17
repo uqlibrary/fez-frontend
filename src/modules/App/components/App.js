@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
 
-import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
+import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
 
 // application components
 import AppBar from 'material-ui/AppBar';
@@ -70,7 +70,7 @@ export default class App extends React.Component {
 
     redirectUserToLogin = () => {
         const redirectUrl = (!this.props.user.accountLoading && this.props.user.account !== null) ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
-        const returnUrl = window.btoa(window.location.href);
+        const returnUrl = (!this.props.user.accountLoading && this.props.user.account !== null) ? window.btoa(APP_URL) : window.btoa(window.location.href);
         window.location.href = `${redirectUrl}?return=${returnUrl}`;
     };
 
@@ -82,7 +82,8 @@ export default class App extends React.Component {
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
-        console.log('Auth login: ' + AUTH_URL_LOGIN);
+        console.log('Environment : ' + process.env.NODE_ENV);
+        console.log('Environment logout URL : ' + APP_URL);
         return (
             <div className="layout-fill">
                 {
