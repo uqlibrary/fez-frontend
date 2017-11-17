@@ -114,14 +114,14 @@ exports[`CreativeWorkForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Authors",
+        "text": "Help text...",
+        "title": "Adding contributors",
       }
     }
     title="Authors"
   >
     <div>
-      For a creative work, author includes creator, performer or curator. Enter authors in the order and form they appear on the work or associated material. Examples of associated material are promotional material, performance programs or exhibition catalogues. Additional boxes will appear for more authors.
+      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
     </div>
     <Field
       className="requiredField"
@@ -194,7 +194,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor, purus eget posuere fermentum, turpis magna auctor metus, in tincidunt est augue et orci.",
+        "text": "Help...",
         "title": "Optional information",
       }
     }

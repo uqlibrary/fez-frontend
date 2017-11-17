@@ -19,7 +19,7 @@ export default class DesignForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.design;
+        const txt = locale.forms.publicationForm.design;
 
         return (
             <div>

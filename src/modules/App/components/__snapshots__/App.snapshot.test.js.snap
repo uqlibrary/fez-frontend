@@ -62,7 +62,7 @@ exports[`App tests for user account and author status User is logged in but are 
           "height": 75,
         }
       }
-      title="UQ eSpace"
+      title="UQ eSpace DEMO"
       titleStyle={Object {}}
       zDepth={1}
     />
@@ -78,7 +78,7 @@ exports[`App tests for user account and author status User is logged in but are 
         }
       }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-      logoText="UQ eSpace"
+      logoText="UQ eSpace DEMO"
       menuItems={
         Array [
           Object {
@@ -91,12 +91,12 @@ exports[`App tests for user account and author status User is logged in but are 
             "primaryText": "My research",
           },
           Object {
-            "linkTo": "/records/add/find",
-            "primaryText": "Add a missing record",
-          },
-          Object {
             "linkTo": "/records/possible",
             "primaryText": "Claim possible publications",
+          },
+          Object {
+            "linkTo": "/records/add/find",
+            "primaryText": "Add a missing record",
           },
           Object {
             "divider": true,
@@ -113,15 +113,15 @@ exports[`App tests for user account and author status User is logged in but are 
           },
           Object {
             "linkTo": "/browse",
-            "primaryText": "Browse",
+            "primaryText": "Browse eSpace",
             "public": true,
-            "secondaryText": "UQ's digital repository",
+            "secondaryText": "",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
             "public": true,
-            "secondaryText": undefined,
+            "secondaryText": "",
           },
         ]
       }
@@ -315,7 +315,7 @@ exports[`App tests for user account and author status User is not logged in and 
           "height": 75,
         }
       }
-      title="UQ eSpace"
+      title="UQ eSpace DEMO"
       titleStyle={Object {}}
       zDepth={1}
     />
@@ -331,20 +331,20 @@ exports[`App tests for user account and author status User is not logged in and 
         }
       }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-      logoText="UQ eSpace"
+      logoText="UQ eSpace DEMO"
       menuItems={
         Array [
           Object {
             "linkTo": "/browse",
-            "primaryText": "Browse",
+            "primaryText": "Browse eSpace",
             "public": true,
-            "secondaryText": "UQ's digital repository",
+            "secondaryText": "",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
             "public": true,
-            "secondaryText": undefined,
+            "secondaryText": "",
           },
         ]
       }
@@ -456,7 +456,7 @@ exports[`App tests for user account and author status User logged in and is an a
           "height": 75,
         }
       }
-      title="UQ eSpace"
+      title="UQ eSpace DEMO"
       titleStyle={Object {}}
       zDepth={1}
     />
@@ -472,7 +472,7 @@ exports[`App tests for user account and author status User logged in and is an a
         }
       }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-      logoText="UQ eSpace"
+      logoText="UQ eSpace DEMO"
       menuItems={
         Array [
           Object {
@@ -485,12 +485,12 @@ exports[`App tests for user account and author status User logged in and is an a
             "primaryText": "My research",
           },
           Object {
-            "linkTo": "/records/add/find",
-            "primaryText": "Add a missing record",
-          },
-          Object {
             "linkTo": "/records/possible",
             "primaryText": "Claim possible publications",
+          },
+          Object {
+            "linkTo": "/records/add/find",
+            "primaryText": "Add a missing record",
           },
           Object {
             "divider": true,
@@ -507,15 +507,15 @@ exports[`App tests for user account and author status User logged in and is an a
           },
           Object {
             "linkTo": "/browse",
-            "primaryText": "Browse",
+            "primaryText": "Browse eSpace",
             "public": true,
-            "secondaryText": "UQ's digital repository",
+            "secondaryText": "",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
             "public": true,
-            "secondaryText": undefined,
+            "secondaryText": "",
           },
         ]
       }
@@ -709,7 +709,7 @@ exports[`App tests for user account and author status User logged in but is not 
           "height": 75,
         }
       }
-      title="UQ eSpace"
+      title="UQ eSpace DEMO"
       titleStyle={Object {}}
       zDepth={1}
     />
@@ -725,7 +725,7 @@ exports[`App tests for user account and author status User logged in but is not 
         }
       }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-      logoText="UQ eSpace"
+      logoText="UQ eSpace DEMO"
       menuItems={
         Array [
           Object {
@@ -738,12 +738,12 @@ exports[`App tests for user account and author status User logged in but is not 
             "primaryText": "My research",
           },
           Object {
-            "linkTo": "/records/add/find",
-            "primaryText": "Add a missing record",
-          },
-          Object {
             "linkTo": "/records/possible",
             "primaryText": "Claim possible publications",
+          },
+          Object {
+            "linkTo": "/records/add/find",
+            "primaryText": "Add a missing record",
           },
           Object {
             "divider": true,
@@ -760,15 +760,15 @@ exports[`App tests for user account and author status User logged in but is not 
           },
           Object {
             "linkTo": "/browse",
-            "primaryText": "Browse",
+            "primaryText": "Browse eSpace",
             "public": true,
-            "secondaryText": "UQ's digital repository",
+            "secondaryText": "",
           },
           Object {
             "linkTo": "/about",
             "primaryText": "About",
             "public": true,
-            "secondaryText": undefined,
+            "secondaryText": "",
           },
         ]
       }

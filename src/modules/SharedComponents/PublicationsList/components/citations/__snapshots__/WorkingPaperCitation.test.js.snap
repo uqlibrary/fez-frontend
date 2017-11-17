@@ -644,13 +644,14 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
         </CitationView>
         <CitationView
           className="citationAuthor"
-          prefix=""
+          prefix=" and "
           suffix=""
           value="Tisdell, Clem"
         >
           <span
             className="citationAuthor"
           >
+             and 
             Tisdell, Clem
           </span>
         </CitationView>

@@ -104,8 +104,8 @@ exports[`SeminarPaperForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.",
-        "title": "Authors help",
+        "text": "Help text...",
+        "title": "Adding contributors",
       }
     }
     title="Authors"

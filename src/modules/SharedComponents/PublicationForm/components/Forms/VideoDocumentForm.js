@@ -18,7 +18,7 @@ export default class VideoDocumentForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.components.publicationForm.video;
+        const txt = locale.forms.publicationForm.video;
 
         return (
             <div>

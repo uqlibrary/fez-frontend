@@ -132,15 +132,15 @@ export const getMenuConfig = (account) => [
         },
         {
             linkTo: pathConfig.records.mine,
-            primaryText: locale.menu.myResearch.primaryText
-        },
-        {
-            linkTo: pathConfig.records.add.find,
-            primaryText: locale.menu.addMissingRecord.primaryText
+            ...locale.menu.myResearch
         },
         {
             linkTo: pathConfig.records.possible,
-            primaryText: locale.menu.claimPublication.primaryText
+            ...locale.menu.claimPublication
+        },
+        {
+            linkTo: pathConfig.records.add.find,
+            ...locale.menu.addMissingRecord
         },
         {
             divider: true,
@@ -150,8 +150,7 @@ export const getMenuConfig = (account) => [
     ...(account && account.canMasquerade ? [
         {
             linkTo: pathConfig.admin.masquerade,
-            primaryText: locale.menu.masquerade.primaryText,
-            secondaryText: locale.menu.masquerade.secondaryText
+            ...locale.menu.masquerade,
         },
         {
             divider: true,
@@ -160,14 +159,12 @@ export const getMenuConfig = (account) => [
     ] : []),
     {
         linkTo: pathConfig.browse,
-        primaryText: locale.menu.browse.primaryText,
-        secondaryText: locale.menu.browse.secondaryText,
+        ...locale.menu.browse,
         public: true
     },
     {
         linkTo: pathConfig.about,
-        primaryText: locale.menu.about.primaryText,
-        secondaryText: locale.menu.about.secondaryText,
+        ...locale.menu.about,
         public: true
     }
 ];

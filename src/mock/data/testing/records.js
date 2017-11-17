@@ -1,9 +1,9 @@
 export const dataCollection = {
-    "rek_pid": "UQ:403997",
+    "rek_pid": "UQ:407731",
     "rek_title_xsdmf_id": 16197,
-    "rek_title": "When is the Kadowaki-Woods ratio universal?: Supplementary Material",
+    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
     "rek_description_xsdmf_id": 16079,
-    "rek_description": "The supplementary material contains details of the derivations.<br />Sections:<br />I. Scattering and the self-energy in arbitrary bandstructures systems<br />a. The Two-Band Case<br />b. The Spectral Density Function<br />II. Interband scattering<br />a. Effects of significant interband scattering on the intraband self-energy components<br />III. Derivation of the conductivity formula<br />",
+    "rek_description": "<strong>Supplementary Results</strong><br />Refinement for Gene Loss and Duplication<br />Estimates under Opal Stop Codon Recodings<br /><br /><strong>Supplementary Methods</strong><br />Identification of Trusted Reference Genomes<br />Refining Marker Sets for Lineage-specific Gene Loss and Duplication<br />Determination of Coding Table<br />Systematic Bias of Completeness and Contamination Estimates<br /><br /><strong>Supplemental Figure S1.</strong> Distribution of the 104 bacterial and 281 gammaproteobacterial marker genes around the E. coli K12 genome.<br /><br /><strong>Supplemental Figure S2.</strong> Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random contig model.<br /><br /><strong>Supplemental Figure S3.</strong> Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. <br /><br /><strong>Supplemental Figure S4. </strong>Maximum-likelihood genome tree inferred from 5656 reference genomes. <br /><br /><strong>Supplemental Figure S5. </strong>Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random fragment model using a window size of 20 kbp.<br /><br /><strong>Supplemental Figure S6. </strong>Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. <br /><br /><strong>Supplemental Figure S7. </strong>Error in completeness and contamination estimates on simulated genomes from different phyla.<br /><br /><strong>Supplemental Figure S8. </strong>Bias in completeness and contamination estimates when modelled as a binomial distribution. <br /><br /><strong>Supplemental Figure S9. </strong>GC-distribution plots of the HMP Capnocytophaga sp. oral taxon 329 genome.<br /><br /><strong>Supplemental Figure S10. </strong>Phylogenetic placement of the two genomes (Cluster 0 and Cluster 1) identified within the HMP Capnocytophaga sp. oral taxon 329 genome.<br /><br /><strong>Supplemental Figure S11.</strong> Completeness estimates for 90 putative population genomes recovered from an acetate-amended aquifer.<br /><br /><strong>Supplemental Figure S12. </strong>Contamination estimates for 90 putative population genomes recovered from an acetate-amended aquifer.<br /><br /><strong>Supplemental Figure S13.</strong> Identification of the 213 marker genes within the Meyerdierks et al. (2010) ANME-1 genome.<br /><br /><strong>Supplemental Figure S14.</strong> Refining a marker set for lineage-specific gene loss and duplication. <br /><br /><strong>Supplemental Tables<br />Supplemental Table S1.</strong> Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using different universal- and domain-specific marker gene sets.<br /><br /><strong>Supplemental Table S2. </strong>Number of marker genes and marker sets for taxonomic groups with &ge; 20 reference genomes. <br /><br /><strong>Supplemental Table S3. </strong>Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). <br /><br /><br /><strong>Supplemental Table S4. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).<br /><br /><strong>Supplemental Table S5.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). <br /><br /><strong>Supplemental Table S6. </strong>Phylogenetically informative marker genes used to infer the reference genome tree <br />along with matching PhyloSift genes.<br /><br /><strong>Supplemental Table S7. </strong>Phylogenetically informative genes used in PhyloSift without a matching CheckM gene.<br /><br /><strong>Supplemental Table S8. </strong>Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).<br /><br /><strong>Supplemental Table S9.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms). <br /><br /><strong>Supplemental Table S10. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).<br /><br /><br /><strong>Supplemental Table S11. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms). <br /><br /><strong>Supplemental Table S12.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms). <br /><br /><br /><strong>Supplemental Table S13.</strong> Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms).<br /><br /><strong>Supplemental Table S14. T</strong>axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty. <br /><br /><strong>Supplemental Table S15. </strong>Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates for simulated genomes at different degrees of taxonomic novelty.<br /><br /><strong>Supplemental Table S16. </strong>Lineage-specific completeness and contamination estimates for isolate genomes from large-scale sequencing initiatives.<br />(see Excel file)<br /><br /><strong>Supplemental Table S17</strong>. Completeness and contamination estimates of the Lactobacillus gasseri MV-22 genome for increasingly basal lineage-specific marker sets.<br /><br /><strong>Supplemental Table S18</strong>. Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background. <br /><br /><strong>Supplemental Table S19</strong>. Lineage-specific completeness and contamination estimates for genomes annotated as finished at IMG, along with predicted translation tables and calculated coding density. (see Excel file)<br /><br /><strong>Supplemental Table S20</strong>: Lineage-specific completeness and contamination estimates for single-cell genomes from the GEBA-MDM initiative along with traditional assembly statistics. (see Excel file)<br /><br /><strong>Supplemental Table S21</strong>: Lineage-specific completeness and contamination estimates for population genomes, plasmids, and phage recovered from metagenomic datasets along with traditional assembly statistics. (see Excel file)<br /><br /><strong>Supplemental Table S22</strong>: Completeness and contamination estimates for population genomes recovered from an acetate-amended aquifer determined using domain-level and lineage-specific marker sets. (see Excel file)<br /><br /><br />",
     "rek_display_type_xsdmf_id": 106,
     "rek_display_type": 371,
     "rek_status_xsdmf_id": 538,
@@ -15,11 +15,11 @@ export const dataCollection = {
     "rek_depositor_xsdmf_id": 7575,
     "rek_depositor": 5376,
     "rek_created_date_xsdmf_id": 527,
-    "rek_created_date": "2016-09-08T13:34:54Z",
+    "rek_created_date": "2016-10-05T09:23:32Z",
     "rek_updated_date_xsdmf_id": 528,
-    "rek_updated_date": "2017-03-06T02:00:45Z",
+    "rek_updated_date": "2017-02-01T03:50:57Z",
     "rek_file_downloads": 0,
-    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Cavanagh, D. C.\" href=\"/list/author_id/2791296/\">Cavanagh, D. C.</a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Jacko, A. C.\" href=\"/list/author_id/6391/\">Jacko, A. C.</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Powell, B. J.\" href=\"/list/author_id/2436/\">Powell, B. J.</a> (<span class=\"citation_date\">2015</span>): <a class=\"citation_title\" title=\"Click to view Data Collection: When is the Kadowaki-Woods ratio universal?: Supplementary Material\" href=\"/view/UQ:403997\">When is the Kadowaki-Woods ratio universal?: Supplementary Material</a>. <span class=\"citation_publisher\">The University of Queensland</span>. <span class=\"citation_ands_collection_type\">Dataset</span>.",
+    "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Parks, Donovan H.\" href=\"/list/author_id/96310/\">Parks, Donovan H.</a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Imelfort, Michael\" href=\"/list/author_id/6366/\">Imelfort, Michael</a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Skennerton, Connor T.\" href=\"/list/author_id/76682/\">Skennerton, Connor T.</a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Hugenholtz, Philip\" href=\"/list/author_id/20288/\">Hugenholtz, Philip</a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Tyson, Gene W.\" href=\"/list/author_id/79391/\">Tyson, Gene W.</a> (<span class=\"citation_date\">2015</span>): <a class=\"citation_title\" title=\"Click to view Data Collection: CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material\" href=\"/view/UQ:407731\">CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material</a>. <span class=\"citation_publisher\">Cold Spring Harbor Laboratory Press</span>. <span class=\"citation_ands_collection_type\">Dataset</span>. doi:<span class=\"citation_doi\">10.14264/uql.2016.841</span>",
     "rek_genre_xsdmf_id": 16248,
     "rek_genre": "Dataset Collection",
     "rek_genre_type_xsdmf_id": null,
@@ -44,22 +44,27 @@ export const dataCollection = {
     "rek_pubmed_doc_type_xsdmf_id": null,
     "rek_pubmed_doc_type": null,
     "rek_security_inherited": 1,
-    "rek_altmetric_score": null,
+    "rek_altmetric_score": 0,
     "rek_altmetric_score_xsdmf_id": null,
-    "rek_altmetric_id": null,
+    "rek_altmetric_id": 0,
     "rek_altmetric_id_xsdmf_id": null,
     "rek_copyright_xsdmf_id": 537,
     "rek_copyright": "on",
     "fez_record_search_key_access_conditions": {
-        "rek_access_conditions_id": 3800,
-        "rek_access_conditions_pid": "UQ:403997",
+        "rek_access_conditions_id": 3968,
+        "rek_access_conditions_pid": "UQ:407731",
         "rek_access_conditions_xsdmf_id": 16213,
         "rek_access_conditions": "453619"
     },
-    "fez_record_search_key_additional_notes": null,
+    "fez_record_search_key_additional_notes": {
+        "rek_additional_notes_id": 103,
+        "rek_additional_notes_pid": "UQ:407731",
+        "rek_additional_notes_xsdmf_id": 3441,
+        "rek_additional_notes": "CheckM is open source software available at http://ecogenomics.github.io/CheckM"
+    },
     "fez_record_search_key_ands_collection_type": {
-        "rek_ands_collection_type_id": 3656,
-        "rek_ands_collection_type_pid": "UQ:403997",
+        "rek_ands_collection_type_id": 3813,
+        "rek_ands_collection_type_pid": "UQ:407731",
         "rek_ands_collection_type_xsdmf_id": 16272,
         "rek_ands_collection_type": "453616"
     },
@@ -67,306 +72,467 @@ export const dataCollection = {
     "fez_record_search_key_assigned_user_id": [],
     "fez_record_search_key_author": [
         {
-            "rek_author_id": 29725478,
-            "rek_author_pid": "UQ:403997",
+            "rek_author_id": 29757422,
+            "rek_author_pid": "UQ:407731",
             "rek_author_xsdmf_id": 16015,
-            "rek_author": "Cavanagh, D. C.",
+            "rek_author": "Parks, Donovan H.",
             "rek_author_order": 1
         },
         {
-            "rek_author_id": 29725479,
-            "rek_author_pid": "UQ:403997",
+            "rek_author_id": 29757423,
+            "rek_author_pid": "UQ:407731",
             "rek_author_xsdmf_id": 16015,
-            "rek_author": "Jacko, A. C.",
+            "rek_author": "Imelfort, Michael",
             "rek_author_order": 2
         },
         {
-            "rek_author_id": 29725480,
-            "rek_author_pid": "UQ:403997",
+            "rek_author_id": 29757424,
+            "rek_author_pid": "UQ:407731",
             "rek_author_xsdmf_id": 16015,
-            "rek_author": "Powell, B. J.",
+            "rek_author": "Skennerton, Connor T.",
             "rek_author_order": 3
+        },
+        {
+            "rek_author_id": 29757425,
+            "rek_author_pid": "UQ:407731",
+            "rek_author_xsdmf_id": 16015,
+            "rek_author": "Hugenholtz, Philip",
+            "rek_author_order": 4
+        },
+        {
+            "rek_author_id": 29757426,
+            "rek_author_pid": "UQ:407731",
+            "rek_author_xsdmf_id": 16015,
+            "rek_author": "Tyson, Gene W.",
+            "rek_author_order": 5
         }
     ],
     "fez_record_search_key_author_id": [
         {
-            "rek_author_id_id": 29086921,
-            "rek_author_id_pid": "UQ:403997",
+            "rek_author_id_id": 29117987,
+            "rek_author_id_pid": "UQ:407731",
             "rek_author_id_xsdmf_id": 16269,
-            "rek_author_id": 2791296,
-            "rek_author_id_order": 1
+            "rek_author_id": 96310,
+            "rek_author_id_order": 1,
+            "rek_author_id_lookup": "Donovan Parks"
         },
         {
-            "rek_author_id_id": 29086922,
-            "rek_author_id_pid": "UQ:403997",
+            "rek_author_id_id": 29117988,
+            "rek_author_id_pid": "UQ:407731",
             "rek_author_id_xsdmf_id": 16269,
-            "rek_author_id": 6391,
-            "rek_author_id_order": 2
+            "rek_author_id": 6366,
+            "rek_author_id_order": 2,
+            "rek_author_id_lookup": "Michael Imelfort"
         },
         {
-            "rek_author_id_id": 29086923,
-            "rek_author_id_pid": "UQ:403997",
+            "rek_author_id_id": 29117989,
+            "rek_author_id_pid": "UQ:407731",
             "rek_author_id_xsdmf_id": 16269,
-            "rek_author_id": 2436,
-            "rek_author_id_order": 3
+            "rek_author_id": 76682,
+            "rek_author_id_order": 3,
+            "rek_author_id_lookup": "Connor Skennerton"
+        },
+        {
+            "rek_author_id_id": 29117990,
+            "rek_author_id_pid": "UQ:407731",
+            "rek_author_id_xsdmf_id": 16269,
+            "rek_author_id": 20288,
+            "rek_author_id_order": 4,
+            "rek_author_id_lookup": "Hugenholtz, Philip"
+        },
+        {
+            "rek_author_id_id": 29117991,
+            "rek_author_id_pid": "UQ:407731",
+            "rek_author_id_xsdmf_id": 16269,
+            "rek_author_id": 79391,
+            "rek_author_id_order": 5,
+            "rek_author_id_lookup": "Gene Tyson"
         }
     ],
     "fez_record_search_key_author_role": [
         {
-            "rek_author_role_id": 6622,
-            "rek_author_role_pid": "UQ:403997",
+            "rek_author_role_id": 7448,
+            "rek_author_role_pid": "UQ:407731",
             "rek_author_role_xsdmf_id": 16244,
             "rek_author_role_order": 1,
             "rek_author_role": "Investigator"
         },
         {
-            "rek_author_role_id": 6623,
-            "rek_author_role_pid": "UQ:403997",
+            "rek_author_role_id": 7449,
+            "rek_author_role_pid": "UQ:407731",
             "rek_author_role_xsdmf_id": 16244,
             "rek_author_role_order": 2,
             "rek_author_role": "Investigator"
         },
         {
-            "rek_author_role_id": 6624,
-            "rek_author_role_pid": "UQ:403997",
+            "rek_author_role_id": 7450,
+            "rek_author_role_pid": "UQ:407731",
             "rek_author_role_xsdmf_id": 16244,
             "rek_author_role_order": 3,
-            "rek_author_role": "Chief Investigator"
+            "rek_author_role": "Investigator"
+        },
+        {
+            "rek_author_role_id": 7451,
+            "rek_author_role_pid": "UQ:407731",
+            "rek_author_role_xsdmf_id": 16244,
+            "rek_author_role_order": 4,
+            "rek_author_role": "Investigator"
+        },
+        {
+            "rek_author_role_id": 7452,
+            "rek_author_role_pid": "UQ:407731",
+            "rek_author_role_xsdmf_id": 16244,
+            "rek_author_role_order": 5,
+            "rek_author_role": "Investigator"
         }
     ],
     "fez_record_search_key_contact_details_email": [
         {
-            "rek_contact_details_email_id": 4927,
-            "rek_contact_details_email_pid": "UQ:403997",
+            "rek_contact_details_email_id": 4821,
+            "rek_contact_details_email_pid": "UQ:407731",
             "rek_contact_details_email_xsdmf_id": 16274,
             "rek_contact_details_email_order": 1,
-            "rek_contact_details_email": "david.cavanagh1@uqconnect.edu.au"
+            "rek_contact_details_email": "g.tyson@uq.edu.au"
         }
     ],
     "fez_record_search_key_contributor": [
         {
-            "rek_contributor_id": 3205212,
-            "rek_contributor_pid": "UQ:403997",
+            "rek_contributor_id": 3204368,
+            "rek_contributor_pid": "UQ:407731",
             "rek_contributor_xsdmf_id": 16024,
-            "rek_contributor": "Cavanagh, David",
+            "rek_contributor": "Tyson, Gene W. ",
             "rek_contributor_order": 1
         }
     ],
     "fez_record_search_key_contributor_id": [
         {
-            "rek_contributor_id_id": 2380785,
-            "rek_contributor_id_pid": "UQ:403997",
+            "rek_contributor_id_id": 2381367,
+            "rek_contributor_id_pid": "UQ:407731",
             "rek_contributor_id_xsdmf_id": 16019,
-            "rek_contributor_id": 2791296,
-            "rek_contributor_id_order": 1
+            "rek_contributor_id": 79391,
+            "rek_contributor_id_order": 1,
+            "rek_contributor_id_lookup": "Gene Tyson"
         }
     ],
     "fez_record_search_key_coverage_period": [],
     "fez_record_search_key_data_volume": null,
     "fez_record_search_key_datastream_policy": null,
-    "fez_record_search_key_doi": null,
+    "fez_record_search_key_doi": {
+        "rek_doi_id": 1642473,
+        "rek_doi_pid": "UQ:407731",
+        "rek_doi_xsdmf_id": 16572,
+        "rek_doi": "10.14264/uql.2016.841"
+    },
     "fez_record_search_key_end_date": null,
     "fez_record_search_key_fields_of_research": [
         {
-            "rek_fields_of_research_id": 8398,
-            "rek_fields_of_research_pid": "UQ:403997",
+            "rek_fields_of_research_id": 8831,
+            "rek_fields_of_research_pid": "UQ:407731",
             "rek_fields_of_research_xsdmf_id": 16043,
-            "rek_fields_of_research": 451890,
+            "rek_fields_of_research": 452086,
             "rek_fields_of_research_order": 1
         },
         {
-            "rek_fields_of_research_id": 8399,
-            "rek_fields_of_research_pid": "UQ:403997",
+            "rek_fields_of_research_id": 8832,
+            "rek_fields_of_research_pid": "UQ:407731",
             "rek_fields_of_research_xsdmf_id": 16043,
-            "rek_fields_of_research": 451951,
+            "rek_fields_of_research": 452109,
             "rek_fields_of_research_order": 2
-        },
-        {
-            "rek_fields_of_research_id": 8400,
-            "rek_fields_of_research_pid": "UQ:403997",
-            "rek_fields_of_research_xsdmf_id": 16043,
-            "rek_fields_of_research": 451875,
-            "rek_fields_of_research_order": 3
         }
     ],
     "fez_record_search_key_file_attachment_access_condition": [],
     "fez_record_search_key_file_attachment_embargo_date": [],
     "fez_record_search_key_file_attachment_name": [
         {
-            "rek_file_attachment_name_id": 4194637,
-            "rek_file_attachment_name_pid": "UQ:403997",
+            "rek_file_attachment_name_id": 4194724,
+            "rek_file_attachment_name_pid": "UQ:407731",
             "rek_file_attachment_name_xsdmf_id": 16175,
-            "rek_file_attachment_name": "FezACML_UQ403993_supp.pdf.xml",
+            "rek_file_attachment_name": "FezACML_UQ_407731.xml",
             "rek_file_attachment_name_order": 1
         },
         {
-            "rek_file_attachment_name_id": 4194638,
-            "rek_file_attachment_name_pid": "UQ:403997",
+            "rek_file_attachment_name_id": 4194725,
+            "rek_file_attachment_name_pid": "UQ:407731",
             "rek_file_attachment_name_xsdmf_id": 16175,
-            "rek_file_attachment_name": "FezACML_UQ_403997.xml",
+            "rek_file_attachment_name": "presmd_Supplemental_information.xml",
             "rek_file_attachment_name_order": 2
         },
         {
-            "rek_file_attachment_name_id": 4194639,
-            "rek_file_attachment_name_pid": "UQ:403997",
+            "rek_file_attachment_name_id": 4194726,
+            "rek_file_attachment_name_pid": "UQ:407731",
             "rek_file_attachment_name_xsdmf_id": 16175,
-            "rek_file_attachment_name": "presmd_UQ403993_supp.xml",
+            "rek_file_attachment_name": "presmd_Supp_Material.xml",
             "rek_file_attachment_name_order": 3
         },
         {
-            "rek_file_attachment_name_id": 4194640,
-            "rek_file_attachment_name_pid": "UQ:403997",
+            "rek_file_attachment_name_id": 4194727,
+            "rek_file_attachment_name_pid": "UQ:407731",
             "rek_file_attachment_name_xsdmf_id": 16175,
-            "rek_file_attachment_name": "UQ403993_supp.pdf",
+            "rek_file_attachment_name": "presmd_Supp_Table_S16.xml",
             "rek_file_attachment_name_order": 4
+        },
+        {
+            "rek_file_attachment_name_id": 4194728,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "presmd_Supp_Table_S19.xml",
+            "rek_file_attachment_name_order": 5
+        },
+        {
+            "rek_file_attachment_name_id": 4194729,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "presmd_Supp_Table_S20.xml",
+            "rek_file_attachment_name_order": 6
+        },
+        {
+            "rek_file_attachment_name_id": 4194730,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "presmd_Supp_Table_S21.xml",
+            "rek_file_attachment_name_order": 7
+        },
+        {
+            "rek_file_attachment_name_id": 4194731,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "presmd_Supp_Table_S22.xml",
+            "rek_file_attachment_name_order": 8
+        },
+        {
+            "rek_file_attachment_name_id": 4194732,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "Supplemental_information.docx",
+            "rek_file_attachment_name_order": 9
+        },
+        {
+            "rek_file_attachment_name_id": 4194733,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "Supp_Material.zip",
+            "rek_file_attachment_name_order": 10
+        },
+        {
+            "rek_file_attachment_name_id": 4194734,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "Supp_Table_S16.xls",
+            "rek_file_attachment_name_order": 11
+        },
+        {
+            "rek_file_attachment_name_id": 4194735,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "Supp_Table_S19.xls",
+            "rek_file_attachment_name_order": 12
+        },
+        {
+            "rek_file_attachment_name_id": 4194736,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "Supp_Table_S20.xls",
+            "rek_file_attachment_name_order": 13
+        },
+        {
+            "rek_file_attachment_name_id": 4194737,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "Supp_Table_S21.xls",
+            "rek_file_attachment_name_order": 14
+        },
+        {
+            "rek_file_attachment_name_id": 4194738,
+            "rek_file_attachment_name_pid": "UQ:407731",
+            "rek_file_attachment_name_xsdmf_id": 16175,
+            "rek_file_attachment_name": "Supp_Table_S22.xls",
+            "rek_file_attachment_name_order": 15
         }
     ],
     "fez_record_search_key_geographic_area": [
         {
-            "rek_geographic_area_id": 19035,
-            "rek_geographic_area_pid": "UQ:403997",
+            "rek_geographic_area_id": 18585,
+            "rek_geographic_area_pid": "UQ:407731",
             "rek_geographic_area_xsdmf_id": 16217,
             "rek_geographic_area_order": 1,
-            "rek_geographic_area": "153.237305,-27.059126"
+            "rek_geographic_area": "153.050537,-27.352253"
         }
     ],
     "fez_record_search_key_grant_id": [
         {
-            "rek_grant_id_id": 400,
-            "rek_grant_id_pid": "UQ:403997",
+            "rek_grant_id_id": 444,
+            "rek_grant_id_pid": "UQ:407731",
             "rek_grant_id_xsdmf_id": 16200,
             "rek_grant_id_order": 1,
-            "rek_grant_id": "DP130100757"
+            "rek_grant_id": "DP120103498"
         },
         {
-            "rek_grant_id_id": 401,
-            "rek_grant_id_pid": "UQ:403997",
+            "rek_grant_id_id": 445,
+            "rek_grant_id_pid": "UQ:407731",
             "rek_grant_id_xsdmf_id": 16200,
             "rek_grant_id_order": 2,
-            "rek_grant_id": "FT130100161"
+            "rek_grant_id": "DP1093175"
         }
     ],
     "fez_record_search_key_isdatasetof": [
         {
-            "rek_isdatasetof_id": 3040,
-            "rek_isdatasetof_pid": "UQ:403997",
+            "rek_isdatasetof_id": 3294,
+            "rek_isdatasetof_pid": "UQ:407731",
             "rek_isdatasetof_xsdmf_id": 16601,
-            "rek_isdatasetof": "UQ:375917",
-            "rek_isdatasetof_order": 1
+            "rek_isdatasetof": "UQ:365357",
+            "rek_isdatasetof_order": 1,
+            "rek_isdatasetof_lookup": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes"
         }
     ],
     "fez_record_search_key_ismemberof": [
         {
-            "rek_ismemberof_id": 12043941,
-            "rek_ismemberof_pid": "UQ:403997",
+            "rek_ismemberof_id": 12043970,
+            "rek_ismemberof_pid": "UQ:407731",
             "rek_ismemberof_xsdmf_id": 16597,
             "rek_ismemberof": "UQ:289097",
-            "rek_ismemberof_order": 1
+            "rek_ismemberof_order": 1,
+            "rek_ismemberof_lookup": "Research Data Collections"
         },
         {
-            "rek_ismemberof_id": 12043942,
-            "rek_ismemberof_pid": "UQ:403997",
+            "rek_ismemberof_id": 12043971,
+            "rek_ismemberof_pid": "UQ:407731",
             "rek_ismemberof_xsdmf_id": 16597,
-            "rek_ismemberof": "UQ:161065",
-            "rek_ismemberof_order": 2
+            "rek_ismemberof": "UQ:3825",
+            "rek_ismemberof_order": 2,
+            "rek_ismemberof_lookup": "School of Chemistry and Molecular Biosciences"
         }
     ],
     "fez_record_search_key_keywords": [
         {
-            "rek_keywords_id": 29835604,
-            "rek_keywords_pid": "UQ:403997",
+            "rek_keywords_id": 29854347,
+            "rek_keywords_pid": "UQ:407731",
             "rek_keywords_xsdmf_id": 16041,
-            "rek_keywords": "Heavy-fermion systems",
+            "rek_keywords": "Isolates",
             "rek_keywords_order": 1
         },
         {
-            "rek_keywords_id": 29835605,
-            "rek_keywords_pid": "UQ:403997",
+            "rek_keywords_id": 29854348,
+            "rek_keywords_pid": "UQ:407731",
             "rek_keywords_xsdmf_id": 16041,
-            "rek_keywords": "Strongly correlated metals",
+            "rek_keywords": "Single cells",
             "rek_keywords_order": 2
         },
         {
-            "rek_keywords_id": 29835606,
-            "rek_keywords_pid": "UQ:403997",
+            "rek_keywords_id": 29854349,
+            "rek_keywords_pid": "UQ:407731",
             "rek_keywords_xsdmf_id": 16041,
-            "rek_keywords": "Mean-field theory",
+            "rek_keywords": "Metagenomic data",
             "rek_keywords_order": 3
         },
         {
-            "rek_keywords_id": 29835607,
-            "rek_keywords_pid": "UQ:403997",
+            "rek_keywords_id": 29854350,
+            "rek_keywords_pid": "UQ:407731",
             "rek_keywords_xsdmf_id": 16041,
-            "rek_keywords": "Transport-properties",
+            "rek_keywords": "Genome quality",
             "rek_keywords_order": 4
+        },
+        {
+            "rek_keywords_id": 29854351,
+            "rek_keywords_pid": "UQ:407731",
+            "rek_keywords_xsdmf_id": 16041,
+            "rek_keywords": "CheckM",
+            "rek_keywords_order": 5
         }
     ],
     "fez_record_search_key_language": [
         {
-            "rek_language_id": 5409448,
-            "rek_language_pid": "UQ:403997",
+            "rek_language_id": 5415217,
+            "rek_language_pid": "UQ:407731",
             "rek_language_xsdmf_id": 16066,
             "rek_language": "eng",
             "rek_language_order": 1
         }
     ],
     "fez_record_search_key_license": {
-        "rek_license_id": 26248,
-        "rek_license_pid": "UQ:403997",
+        "rek_license_id": 26396,
+        "rek_license_pid": "UQ:407731",
         "rek_license_xsdmf_id": 16246,
         "rek_license": 453701
     },
     "fez_record_search_key_link": [],
     "fez_record_search_key_link_description": [],
     "fez_record_search_key_project_description": {
-        "rek_project_description_id": 3467,
-        "rek_project_description_pid": "UQ:403997",
+        "rek_project_description_id": 3635,
+        "rek_project_description_pid": "UQ:407731",
         "rek_project_description_xsdmf_id": 16513,
-        "rek_project_description": "Ratios allow us to understand how big we expect something to be. This project will discover new ratios in materials that are difficult to understand, but have remarkable properties that could lead to dramatic new technologies if we understood them better."
+        "rek_project_description": "ARC DP120103498 - Genome sequencing has revolutionised biology, but for most microorganisms this revolution has not arrived because the majority cannot be grown in the laboratory. This project will address this grand challenge by targeted sequencing of single cells from the environment that will fill in many major gaps in the microbial tree of life.<br /><br />ARC DP1093175 - Microorganisms underpin life on Earth, but our understanding of their diversity and activity is limited by our inability to grow most of them in the laboratory. Recently, new techniques have emerged that allow access to the genetic information of all microorganisms by directly sequencing DNA and RNA from the environment. In this research we will further develop these frontier technologies, promoting this new area of science in Australia. We will apply these techniques to microbial communities involved in wastewater treatment in order to understand the interactions between microorganisms and the viruses that infect them. Understanding this interaction will have important implications for optimising these treatment processes. <br />"
     },
     "fez_record_search_key_project_id": null,
     "fez_record_search_key_project_name": {
-        "rek_project_name_id": 3058,
-        "rek_project_name_pid": "UQ:403997",
+        "rek_project_name_id": 3226,
+        "rek_project_name_pid": "UQ:407731",
         "rek_project_name_xsdmf_id": 16099,
-        "rek_project_name": "Trouble at the bottom: Exploring the limits of Fermi liquid theory through dimensionless ratios"
+        "rek_project_name": "Toward a complete view of life on earth via single cell genomics"
     },
     "fez_record_search_key_publisher": {
-        "rek_publisher_id": 4598458,
-        "rek_publisher_pid": "UQ:403997",
+        "rek_publisher_id": 4601714,
+        "rek_publisher_pid": "UQ:407731",
         "rek_publisher_xsdmf_id": 16050,
-        "rek_publisher": "The University of Queensland"
+        "rek_publisher": "Cold Spring Harbor Laboratory Press"
     },
     "fez_record_search_key_related_datasets": null,
     "fez_record_search_key_related_publications": null,
     "fez_record_search_key_rights": {
-        "rek_rights_id": 116375,
-        "rek_rights_pid": "UQ:403997",
+        "rek_rights_id": 116537,
+        "rek_rights_pid": "UQ:407731",
         "rek_rights_xsdmf_id": 16211,
         "rek_rights": "2015, The University of Queensland"
     },
     "fez_record_search_key_seo_code": [],
-    "fez_record_search_key_software_required": [],
+    "fez_record_search_key_software_required": [
+        {
+            "rek_software_required_id": 156,
+            "rek_software_required_pid": "UQ:407731",
+            "rek_software_required_xsdmf_id": 16208,
+            "rek_software_required_order": 1,
+            "rek_software_required": "CheckM v0.9.4"
+        }
+    ],
     "fez_record_search_key_start_date": null,
     "fez_record_search_key_time_period_end_date": null,
     "fez_record_search_key_time_period_start_date": null,
     "fez_record_search_key_type_of_data": [
         {
-            "rek_type_of_data_id": 831,
-            "rek_type_of_data_pid": "UQ:403997",
+            "rek_type_of_data_id": 1111,
+            "rek_type_of_data_pid": "UQ:407731",
             "rek_type_of_data_xsdmf_id": 16250,
             "rek_type_of_data_order": 1,
             "rek_type_of_data": "Text"
         },
         {
-            "rek_type_of_data_id": 832,
-            "rek_type_of_data_pid": "UQ:403997",
+            "rek_type_of_data_id": 1112,
+            "rek_type_of_data_pid": "UQ:407731",
             "rek_type_of_data_xsdmf_id": 16250,
             "rek_type_of_data_order": 2,
-            "rek_type_of_data": "Calculations"
+            "rek_type_of_data": "Figures"
+        },
+        {
+            "rek_type_of_data_id": 1113,
+            "rek_type_of_data_pid": "UQ:407731",
+            "rek_type_of_data_xsdmf_id": 16250,
+            "rek_type_of_data_order": 3,
+            "rek_type_of_data": "Spreadsheets"
+        },
+        {
+            "rek_type_of_data_id": 1114,
+            "rek_type_of_data_pid": "UQ:407731",
+            "rek_type_of_data_xsdmf_id": 16250,
+            "rek_type_of_data_order": 4,
+            "rek_type_of_data": "Python files"
         }
-    ]
-};
+    ],
+    "rek_status_lookup": "Published",
+    "rek_object_type_lookup": "Record",
+    "rek_wok_doc_type_lookup": null,
+    "rek_display_type_lookup": "Data Collection",
+    "rek_scopus_doc_type_lookup": null,
+    "rek_pubmed_doc_type_lookup": null
+}
 
 export const newspaperArticle = {
     "rek_pid": "UQ:184230",

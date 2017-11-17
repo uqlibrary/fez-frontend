@@ -17,7 +17,7 @@ export default class ConferenceProceedingsForm extends Component {
     }
 
     render() {
-        const txt = locale.components.publicationForm.conferenceProceedings;
+        const txt = locale.forms.publicationForm.conferenceProceedings;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

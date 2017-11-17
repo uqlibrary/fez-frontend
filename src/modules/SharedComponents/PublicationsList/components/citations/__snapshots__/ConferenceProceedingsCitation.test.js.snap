@@ -1150,13 +1150,14 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
           </CitationView>
           <CitationView
             className="citationAuthor"
-            prefix=""
+            prefix=" and "
             suffix=""
             value="Hubert Chanson"
           >
             <span
               className="citationAuthor"
             >
+               and 
               Hubert Chanson
             </span>
           </CitationView>
