@@ -54,4 +54,12 @@ describe('GenericDocumentCitation renders ', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('component when no title', () => {
+        delete generic.rek_title;
+        const wrapper = setup({
+            publication: generic
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
