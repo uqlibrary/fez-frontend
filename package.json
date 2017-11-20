@@ -51,6 +51,7 @@
     "sass-loader": "^6.0.6",
     "selenium-server": "^3.6.0",
     "sinon": "^3.3.0",
+    "strip-loader": "^0.1.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.2"
