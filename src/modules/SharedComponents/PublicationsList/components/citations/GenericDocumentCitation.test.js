@@ -43,4 +43,23 @@ describe('GenericDocumentCitation renders ', () => {
         const wrapper = setup({ publication: generic });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('component with an empty publisher and title', () => {
+        const wrapper = setup({
+            publication: {
+                ...generic,
+                fez_record_search_key_publisher: {rek_publisher: null},
+                rek_title: null
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('component when no title', () => {
+        delete generic.rek_title;
+        const wrapper = setup({
+            publication: generic
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

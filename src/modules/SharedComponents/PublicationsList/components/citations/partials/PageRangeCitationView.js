@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PageCitationView from './PageCitationView';
 
+const hasPageKey = (publication, key, subkey) => publication[key] && publication[key][subkey];
+
 const PageRangeCitationView = ({publication, searchKey, className, prefix, suffix}) => {
-    const startPage = publication[searchKey.startPage.key] &&
+    const startPage = hasPageKey(publication, searchKey.startPage.key, searchKey.startPage.subkey) &&
         <PageCitationView publication={publication} searchKey={searchKey.startPage} className="citationStartPage"/>;
-    const endPage = publication[searchKey.endPage.key] &&
+    const endPage = hasPageKey(publication, searchKey.endPage.key, searchKey.endPage.subkey) &&
         <PageCitationView publication={publication} searchKey={searchKey.endPage} className="citationEndPage"/>;
 
     return (

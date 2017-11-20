@@ -43,4 +43,14 @@ describe('ThesisCitation renders ', () => {
         const wrapper = setup({ publication: thesis });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('component with an empty doi view', () => {
+        const wrapper = setup({
+            publication: {
+                ...thesis,
+                fez_record_search_key_doi: {rek_doi: null}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

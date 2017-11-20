@@ -44,4 +44,9 @@ describe('ConferenceProceedingsCitation renders ', () => {
         const wrapper = setup({publication: conferenceProceedings});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('component with an empty doi view ', () => {
+        const wrapper = setup({ publication: {...conferenceProceedings, fez_record_search_key_doi: {rek_doi: null}} });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

@@ -75,4 +75,16 @@ describe('PageRangeCitationView test ', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render startPage only if end page is empty', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_start_page: {
+                    rek_start_page: 13
+                },
+                fez_record_search_key_end_page: {}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
