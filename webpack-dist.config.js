@@ -10,6 +10,7 @@ const autoprefixer = require('autoprefixer');
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const WebpackStrip = require('strip-loader');
 const port = 9000;
 
 // options for deployment: global title, Google tag manager id
@@ -166,6 +167,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.js$/,
+                loader: WebpackStrip.loader('console.log')
             }
         ]
     },
