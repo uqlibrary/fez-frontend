@@ -10,6 +10,7 @@ const autoprefixer = require('autoprefixer');
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const WebpackStrip = require('strip-loader');
 const port = 9000;
 
 // options for deployment: global title, Google tag manager id
@@ -21,16 +22,15 @@ if (process.env.USE_MOCK)
     useMock = process.env.USE_MOCK;
 
 let URL_BASE_PATH = '';
-let publicPath = '';
+let publicPath = '/';
 let publicPathOffline = '/';
 let environment = 'staging';
 
 if (process.env.CI_BRANCH !== 'production' && process.env.CI_BRANCH !== 'staging') {
     URL_BASE_PATH += 'espace/' + process.env.CI_BRANCH + '/';
     publicPathOffline += URL_BASE_PATH;
-} else {
+} else if (process.env.CI_BRANCH === 'production') {
     environment = 'production';
-    publicPath = '/';
 }
 
 module.exports = {
@@ -166,6 +166,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.js$/,
+                loader: WebpackStrip.loader('console.log')
             }
         ]
     },
