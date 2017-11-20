@@ -1,11 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
-import {openAccessIdLookup} from 'config/general';
+import {thesisSubtypes} from 'config/general';
 
 const mapStateToProps = () => {
     return {
-        itemsList: openAccessIdLookup,
+        itemsList: thesisSubtypes,
         itemsLoading: false
     };
 };
