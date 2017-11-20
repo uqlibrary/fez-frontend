@@ -5,9 +5,12 @@ import {reducer as formReducer} from 'redux-form/immutable';
 import {helpDrawerReducer, fileUploadReducer} from 'uqlibrary-react-toolbox';
 
 import * as reducers from './reducers';
+import * as plugins from './reducers/formReducerPlugins';
 
 const rootReducer = combineReducers({
-    form: formReducer,
+    form: formReducer.plugin({
+        PublicationForm: plugins.resetValue
+    }),
     helpDrawer: helpDrawerReducer,
     fileUpload: fileUploadReducer,
     ...reducers
