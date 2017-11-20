@@ -49,4 +49,14 @@ describe('ResearchReportCitation renders ', () => {
         const wrapper = setup({ publication: researchReport });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('component with an empty series view', () => {
+        const wrapper = setup({
+            publication: {
+                ...researchReport,
+                fez_record_search_key_series: {rek_series: null}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

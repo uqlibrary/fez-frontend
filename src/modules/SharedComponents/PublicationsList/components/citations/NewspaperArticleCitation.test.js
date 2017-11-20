@@ -43,4 +43,14 @@ describe('NewspaperArticleCitation renders ', () => {
         const wrapper = setup({ publication: newspaperArticle });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('component with an empty end page view', () => {
+        const wrapper = setup({
+            publication: {
+                ...newspaperArticle,
+                fez_record_search_key_end_page: {rek_end_page: null}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
