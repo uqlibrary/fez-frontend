@@ -40,6 +40,7 @@ export const PUBLICATION_TYPE_SEMINAR_PAPER = 189;
 export const PUBLICATION_TYPE_THESIS = 187;
 export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
+export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
 export const publicationTypes = (components) => [
     {
@@ -230,6 +231,13 @@ export const publicationTypes = (components) => [
         formComponent: components ? components.WorkingPaperForm : null,
         citationComponent: components ? components.WorkingPaperCitation : null,
         hasFormComponent: true
+    },
+    {
+        id: PUBLICATION_TYPE_REFERENCE_ENTRY,
+        name: 'Reference Entry',
+        class: 'Uqlibrary\\FezCore\\Types\\ReferenceEntry',
+        citationComponent: components ? components.GenericDocumentCitation : null,
+        hasFormComponent: false
     }
 ];
 

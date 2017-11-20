@@ -105,7 +105,7 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
  * @returns {object}
  */
 export function getPublicationsStats(data) {
-    const rawData = [...data];
+    const rawData = {...data};
     const years = rawData.aggregations.date_year_t.buckets
         .map(item => { return item.key; })
         .sort((item1, item2) => { return item1 - item2; });
@@ -113,7 +113,6 @@ export function getPublicationsStats(data) {
         thomson_citation_count_i: {
             ...rawData.aggregations.thomson_citation_count_i,
             years: `${years[0]} - ${years[years.length - 1]}`
-
         },
         scopus_citation_count_i: {
             ...rawData.aggregations.scopus_citation_count_i,
