@@ -7,7 +7,7 @@ exports[`PreprintForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a augue in nisl suscipit pellentesque eu ac arcu. Nulla dictum bibendum lorem, auctor fringilla justo mollis in. Donec sed fringilla odio. In et finibus eros, a porta enim. Curabitur luctus neque metus, ut bibendum ex venenatis a. Maecenas condimentum lorem mauris, at gravida nisl accumsan id. Donec imperdiet fermentum diam, vel dictum turpis lobortis eu. Quisque commodo pellentesque lorem, et pharetra lorem blandit a. Vestibulum posuere fringilla erat.",
+        "text": "Help...",
         "title": "Preprint information",
       }
     }
@@ -67,8 +67,8 @@ exports[`PreprintForm renders  component 1`] = `
     help={
       Object {
         "buttonLabel": "OK",
-        "text": "some help",
-        "title": "Authors",
+        "text": "Help text...",
+        "title": "Adding contributors",
       }
     }
     title="Authors"

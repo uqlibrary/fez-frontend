@@ -17,7 +17,7 @@ export default class DepartmentTechnicalReportForm extends Component {
     }
 
     render() {
-        const txt = locale.components.publicationForm.departmentTechnicalReport;
+        const txt = locale.forms.publicationForm.departmentTechnicalReport;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

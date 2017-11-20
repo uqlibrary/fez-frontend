@@ -63,7 +63,7 @@ exports[`App tests for user account and author status User is logged in but are 
           "height": 75,
         }
       }
-      title="UQ eSpace"
+      title="UQ eSpace DEMO"
       titleStyle={Object {}}
       zDepth={1}
     />
@@ -79,7 +79,7 @@ exports[`App tests for user account and author status User is logged in but are 
         }
       }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-      logoText="UQ eSpace"
+      logoText="UQ eSpace DEMO"
       menuItems={
         Array [
           Object {
@@ -317,7 +317,7 @@ exports[`App tests for user account and author status User is not logged in and 
           "height": 75,
         }
       }
-      title="UQ eSpace"
+      title="UQ eSpace DEMO"
       titleStyle={Object {}}
       zDepth={1}
     />
@@ -333,7 +333,7 @@ exports[`App tests for user account and author status User is not logged in and 
         }
       }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-      logoText="UQ eSpace"
+      logoText="UQ eSpace DEMO"
       menuItems={
         Array [
           Object {
@@ -457,7 +457,7 @@ exports[`App tests for user account and author status User logged in and is an a
           "height": 75,
         }
       }
-      title="UQ eSpace"
+      title="UQ eSpace DEMO"
       titleStyle={Object {}}
       zDepth={1}
     />
@@ -473,7 +473,7 @@ exports[`App tests for user account and author status User logged in and is an a
         }
       }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-      logoText="UQ eSpace"
+      logoText="UQ eSpace DEMO"
       menuItems={
         Array [
           Object {
@@ -711,7 +711,7 @@ exports[`App tests for user account and author status User logged in but is not 
           "height": 75,
         }
       }
-      title="UQ eSpace"
+      title="UQ eSpace DEMO"
       titleStyle={Object {}}
       zDepth={1}
     />
@@ -727,7 +727,7 @@ exports[`App tests for user account and author status User logged in but is not 
         }
       }
       logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
-      logoText="UQ eSpace"
+      logoText="UQ eSpace DEMO"
       menuItems={
         Array [
           Object {

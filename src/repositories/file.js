@@ -32,7 +32,7 @@ export function putUploadFile(pid, file, dispatch) {
             const issue = {issue: `File upload failed: app: ${navigator.appVersion}, connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
             connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, user agent: ${navigator.userAgent}`};
             post(routes.RECORDS_ISSUES_API({pid: pid}), issue);
-            const {errorAlert} = locale.components.publicationForm;
+            const {errorAlert} = locale.forms.publicationForm;
             dispatch(fileUploadActions.notifyUploadFailed(file.name));
             return Promise.reject(new Error(`${errorAlert.fileUploadMessage} (${error.message})`));
         });

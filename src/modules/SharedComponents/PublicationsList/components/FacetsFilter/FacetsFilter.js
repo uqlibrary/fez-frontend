@@ -91,7 +91,7 @@ export default class FacetsFilter extends React.Component {
                             return type.id === rawFacet.buckets[index].key;
                         });
                         return {
-                            title: publicationTypes()[typeIndex].name,
+                            title: typeIndex > -1 ? publicationTypes()[typeIndex].name : 'Unknown',
                             key: item.key,
                             count: item.doc_count
                         };
