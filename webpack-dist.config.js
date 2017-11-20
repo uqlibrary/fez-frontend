@@ -22,16 +22,15 @@ if (process.env.USE_MOCK)
     useMock = process.env.USE_MOCK;
 
 let URL_BASE_PATH = '';
-let publicPath = '';
+let publicPath = '/';
 let publicPathOffline = '/';
 let environment = 'staging';
 
 if (process.env.CI_BRANCH !== 'production' && process.env.CI_BRANCH !== 'staging') {
     URL_BASE_PATH += 'espace/' + process.env.CI_BRANCH + '/';
     publicPathOffline += URL_BASE_PATH;
-} else {
+} else if (process.env.CI_BRANCH === 'production') {
     environment = 'production';
-    publicPath = '/';
 }
 
 module.exports = {
