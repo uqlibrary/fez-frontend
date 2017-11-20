@@ -90,4 +90,23 @@ describe('App tests for user account and author status', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+
+
+    it('should redirect to login page', () => {
+        Object.defineProperty(window.location, 'href', {
+            writable: true,
+            value: 'https://development.library.uq.edu.au/espace/master/#/dashboard'
+        });
+        window.location.assign = jest.fn();
+        const wrapper = setup({
+            user: {
+                accountLoading: false,
+                account: null
+            },
+            location: {},
+            history: {}
+        }).instance().redirectUserToLogin();
+        expect(window.location.assign).toBeCalledWith('https://auth.library.uq.edu.au/login?return=https://development.library.uq.edu.au/espace/master/#/dashboard');
+    });
+
 });
