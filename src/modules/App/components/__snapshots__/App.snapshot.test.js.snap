@@ -364,7 +364,7 @@ exports[`App tests for user account and author status User is not logged in and 
             action={[Function]}
             actionButtonLabel="Click to login"
             allowDismiss={false}
-            message="Please, login to UQ eSpace for full search results and more services."
+            message="Login to UQ eSpace for full search results and more services."
             title="You are not logged in"
             type="info_outline"
           />

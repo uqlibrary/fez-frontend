@@ -59,7 +59,7 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please add any additional information'
+                            hintText: 'Add any additional information'
                         },
                         url: {
                             floatingLabelText: 'Link',
@@ -243,15 +243,15 @@ export default {
                     fieldLabels: {
                         documentTitle: {
                             floatingLabelText: 'Title',
-                            hintText: 'Please, type title of research report'
+                            hintText: 'Type title of research report'
                         },
                         publicationPlace: {
                             floatingLabelText: 'Place of publication',
-                            hintText: 'Please, type the place of publication'
+                            hintText: 'Type the place of publication'
                         },
                         publisher: {
                             floatingLabelText: 'Publisher',
-                            hintText: 'Please, type the name of the publisher'
+                            hintText: 'Type the name of the publisher'
                         },
                         date: {
                             title: 'Date published',
@@ -265,7 +265,7 @@ export default {
                         },
                         totalPages: {
                             floatingLabelText: 'Total pages',
-                            hintText: 'Please, type total number of pages in the publication'
+                            hintText: 'Type total number of pages in the publication'
                         }
                     }
                 },
@@ -280,15 +280,15 @@ export default {
                     fieldLabels: {
                         abstract: {
                             floatingLabelText: 'Abstract',
-                            hintText: 'Please, provide an abstract or summary of the work'
+                            hintText: 'Type an abstract or summary of the work'
                         },
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please, add any additional information here'
+                            hintText: 'Add any additional information here'
                         },
                         url: {
                             floatingLabelText: 'Link',
-                            hintText: 'Please, type URL for this publication'
+                            hintText: 'Type URL for this publication'
                         }
                     }
                 }
@@ -300,12 +300,12 @@ export default {
                         title: 'Audio document information',
                         text: (
                             <div>
-                                <p><b>Place of publication:</b> Please enter the geographical location for the
+                                <p><b>Place of publication:</b> Provide the geographical location for the
                                     publisher
                                     or producer of the work, i.e. city, country</p>
-                                <p><b>Publication date:</b> Please enter the date recorded on the work, where
+                                <p><b>Publication date:</b> Provide the date recorded on the work, where
                                     available.
-                                    For online recordings or broadcasts, enter the date first publicly presented or
+                                    For online recordings or broadcasts, provide the date first publicly presented or
                                     released. </p>
                             </div>
                         ),
@@ -322,11 +322,11 @@ export default {
                         },
                         publisher: {
                             floatingLabelText: 'Publisher',
-                            hintText: 'Please enter the name of the publisher or producer of the work.'
+                            hintText: 'Type the name of the publisher or producer of the work.'
                         },
                         abstract: {
                             floatingLabelText: 'Abstract',
-                            hintText: 'Please provide an abstract or summary of the work.'
+                            hintText: 'Provide an abstract or summary of the work.'
                         },
                         date: {
                             title: 'Publication date',
@@ -348,7 +348,7 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please add any additional information here.',
+                            hintText: 'Add any additional information here.',
                         },
                         url: {
                             floatingLabelText: 'Link',
@@ -436,7 +436,7 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please, add any additional information here',
+                            hintText: 'Add any additional information here',
                         },
                         url: {
                             floatingLabelText: 'Link',
@@ -550,7 +550,7 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please add any additional information here'
+                            hintText: 'Add any additional information here'
                         },
                         url: {
                             floatingLabelText: 'Link (URL)',
@@ -588,7 +588,7 @@ export default {
                         },
                         abstract: {
                             floatingLabelText: 'Abstract',
-                            hintText: 'Please provide an abstract or summary of the work.'
+                            hintText: 'Provide an abstract or summary of the work.'
                         }
                     }
                 },
@@ -603,7 +603,7 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please add any additional information here.',
+                            hintText: 'Add any additional information here.',
                         },
                         url: {
                             floatingLabelText: 'Link',
@@ -619,10 +619,10 @@ export default {
                         title: 'Video information',
                         text: (
                             <div>
-                                <p><b>Place of publication:</b> Please enter the geographical location for the
+                                <p><b>Place of publication:</b> Type the geographical location for the
                                     publisher
                                     or producer of the work, i.e. city, country</p>
-                                <p><b>Publication date:</b> Please enter the date recorded on the work, where
+                                <p><b>Publication date:</b> Type the date recorded on the work, where
                                     available.
                                     For online recordings or broadcasts, enter the date first publicly presented or
                                     released. </p>
@@ -641,11 +641,11 @@ export default {
                         },
                         publisher: {
                             floatingLabelText: 'Publisher',
-                            hintText: 'Please enter the name of the publisher or producer of the work.'
+                            hintText: 'Type the name of the publisher or producer of the work.'
                         },
                         abstract: {
                             floatingLabelText: 'Abstract',
-                            hintText: 'Please provide an abstract or summary of the work.'
+                            hintText: 'Provide an abstract or summary of the work.'
                         },
                         date: {
                             title: 'Publication date',
@@ -667,7 +667,7 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please add any additional information here.',
+                            hintText: 'Add any additional information here.',
                         },
                         url: {
                             floatingLabelText: 'Link',
@@ -697,7 +697,7 @@ export default {
                         },
                         abstract: {
                             floatingLabelText: 'Abstract',
-                            hintText: 'Please provide an abstract or summary of the work.'
+                            hintText: 'Provide an abstract or summary of the work.'
                         },
                     },
                 },
@@ -712,7 +712,7 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please add any additional information here.',
+                            hintText: 'Add any additional information here.',
                         },
                         url: {
                             floatingLabelText: 'Link',
@@ -740,19 +740,19 @@ export default {
                         },
                         projectDescription: {
                             floatingLabelText: 'Project description',
-                            hintText: 'Please provide a summary/description of the project.'
+                            hintText: 'Provide a summary/description of the project.'
                         },
                         placeOfPublication: {
                             floatingLabelText: 'Place of publication',
-                            hintText: 'Please enter the geographical location for the publisher.'
+                            hintText: 'Type the geographical location for the publisher.'
                         },
                         publisher: {
                             floatingLabelText: 'Publisher',
-                            hintText: 'Please enter the name of the publisher.'
+                            hintText: 'Type the name of the publisher.'
                         },
                         location: {
                             floatingLabelText: 'Location',
-                            hintText: 'Please enter the geographical location for the design itself.'
+                            hintText: 'Type the geographical location for the design itself.'
                         },
                         date: {
                             title: 'Publication date',
@@ -773,7 +773,7 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please add any additional information here.',
+                            hintText: 'Add any additional information here.',
                         },
                         url: {
                             floatingLabelText: 'Link',
@@ -826,11 +826,11 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please, add any additional information here'
+                            hintText: 'Add any additional information here'
                         },
                         url: {
                             floatingLabelText: 'Link',
-                            hintText: 'Please, type URL for this publication'
+                            hintText: 'Type URL for this publication'
                         }
                     }
                 }
@@ -872,11 +872,11 @@ export default {
                         },
                         totalPages: {
                             floatingLabelText: 'Total pages',
-                            hintText: 'Please, type total number of pages in the publication'
+                            hintText: 'Type total number of pages in the publication'
                         },
                         abstract: {
                             floatingLabelText: 'Abstract',
-                            hintText: 'Please provide an abstract or summary of the work.'
+                            hintText: 'Provide an abstract or summary of the work.'
                         }
                     }
                 },
@@ -891,11 +891,11 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please, add any additional information here'
+                            hintText: 'Add any additional information here'
                         },
                         url: {
                             floatingLabelText: 'Link',
-                            hintText: 'Please, type URL for this publication'
+                            hintText: 'Type URL for this publication'
                         }
                     }
                 }
@@ -941,7 +941,7 @@ export default {
                         },
                         abstract: {
                             floatingLabelText: 'Abstract',
-                            hintText: 'Please provide an abstract or summary of the work.'
+                            hintText: 'Provide an abstract or summary of the work.'
                         }
                     }
                 },
@@ -956,11 +956,11 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please, add any additional information here'
+                            hintText: 'Add any additional information here'
                         },
                         url: {
                             floatingLabelText: 'Link',
-                            hintText: 'Please, type URL for this publication'
+                            hintText: 'Type URL for this publication'
                         }
                     }
                 }
@@ -980,27 +980,27 @@ export default {
                         },
                         conferenceName: {
                             floatingLabelText: 'Conference name',
-                            hintText: 'Please, type the name of conference'
+                            hintText: 'Type the name of conference'
                         },
                         conferenceLocation: {
                             floatingLabelText: 'Conference location',
-                            hintText: 'Please, type the place of conference'
+                            hintText: 'Type the place of conference'
                         },
                         conferenceDates: {
                             floatingLabelText: 'Conference dates (eg 13-15 December 2011)',
-                            hintText: 'Please, type the dates of conference'
+                            hintText: 'Type the dates of conference'
                         },
                         proceedingsTitle: {
                             floatingLabelText: 'Proceedings title',
-                            hintText: 'Please, type the title of proceedings'
+                            hintText: 'Type the title of proceedings'
                         },
                         publicationPlace: {
                             floatingLabelText: 'Place of publication',
-                            hintText: 'Please, type the place of publication'
+                            hintText: 'Type the place of publication'
                         },
                         publisher: {
                             floatingLabelText: 'Publisher',
-                            hintText: 'Please, type the name of the publisher'
+                            hintText: 'Type the name of the publisher'
                         },
                         date: {
                             title: 'Publication date',
@@ -1021,7 +1021,7 @@ export default {
                     fieldLabels: {
                         notes: {
                             floatingLabelText: 'Notes (not publicly viewable)',
-                            hintText: 'Please add any additional information'
+                            hintText: 'Add any additional information'
                         },
                         link: {
                             floatingLabelText: 'Link (URL)',
@@ -1047,12 +1047,12 @@ export default {
             validationAlert: {
                 type: 'warning',
                 title: 'Validation',
-                message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.'
             },
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`),
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
                 createRecordMessage: 'Error has occurred during request and adding new publication cannot be processed.',
                 fileUploadMessage: 'Error has occurred while uploading files.',
             },
@@ -1081,7 +1081,7 @@ export default {
             },
             authorLinking: {
                 title: 'Author linking',
-                text: 'We were unable to automatically detect who you are from the list of authors on this publication. Please, select your name from the list below: ',
+                text: 'We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below: ',
                 help: {
                     title: 'Author linking',
                     text: '...',
@@ -1090,7 +1090,7 @@ export default {
             },
             contributorLinking: {
                 title: 'Editor linking',
-                text: 'We were unable to automatically detect who you are from the list of editors on this publication. Please, select your name from the list below: ',
+                text: 'We were unable to automatically detect who you are from the list of editors on this publication. Please select your name from the list below: ',
                 help: {
                     title: 'Editor linking',
                     text: '...',
@@ -1098,7 +1098,7 @@ export default {
                 }
             },
             comments: {
-                title: 'Please, suggest changes and/or upload additional files below',
+                title: 'Please suggest changes and/or upload additional files below',
                 help: {
                     title: 'Additional information',
                     text: '...',
@@ -1142,12 +1142,12 @@ export default {
             validationAlert: {
                 type: 'warning',
                 title: 'Validation',
-                message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.'
             },
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`)
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`)
             },
             progressAlert: {
                 type: 'info_outline',
@@ -1232,12 +1232,12 @@ export default {
             validationAlert: {
                 type: 'warning',
                 title: 'Validation',
-                message: 'Form cannot be submitted until all fields are valid. Please, review all input fields.'
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.'
             },
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please, contact eSpace administrators or try again later.`)
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`)
             },
             progressAlert: {
                 type: 'info_outline',

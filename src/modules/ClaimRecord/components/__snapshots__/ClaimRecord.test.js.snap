@@ -831,7 +831,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             "title": "Additional information",
           }
         }
-        title="Please, suggest changes and/or upload additional files below"
+        title="Please suggest changes and/or upload additional files below"
       >
         <Field
           component={[Function]}
@@ -1731,7 +1731,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "title": "Additional information",
           }
         }
-        title="Please, suggest changes and/or upload additional files below"
+        title="Please suggest changes and/or upload additional files below"
       >
         <Field
           component={[Function]}
@@ -2739,7 +2739,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         <label
           htmlFor="authorLinking"
         >
-          We were unable to automatically detect who you are from the list of authors on this publication. Please, select your name from the list below: 
+          We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below: 
         </label>
         <Field
           authorList={
@@ -2883,7 +2883,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             "title": "Additional information",
           }
         }
-        title="Please, suggest changes and/or upload additional files below"
+        title="Please suggest changes and/or upload additional files below"
       >
         <Field
           component={[Function]}
@@ -3891,7 +3891,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         <label
           htmlFor="authorLinking"
         >
-          We were unable to automatically detect who you are from the list of authors on this publication. Please, select your name from the list below: 
+          We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below: 
         </label>
         <Field
           authorList={
@@ -4035,7 +4035,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             "title": "Additional information",
           }
         }
-        title="Please, suggest changes and/or upload additional files below"
+        title="Please suggest changes and/or upload additional files below"
       >
         <Field
           component={[Function]}
@@ -5044,7 +5044,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         <label
           htmlFor="authorLinking"
         >
-          We were unable to automatically detect who you are from the list of authors on this publication. Please, select your name from the list below: 
+          We were unable to automatically detect who you are from the list of authors on this publication. Please select your name from the list below: 
         </label>
         <Field
           authorList={
@@ -5188,7 +5188,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             "title": "Additional information",
           }
         }
-        title="Please, suggest changes and/or upload additional files below"
+        title="Please suggest changes and/or upload additional files below"
       >
         <Field
           component={[Function]}
