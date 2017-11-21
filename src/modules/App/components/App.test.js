@@ -6,6 +6,7 @@ import React from 'react';
 
 import App from './App';
 import {accounts, authorDetails} from 'mock/data';
+import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
 
 function setup(values) {
     return shallow(<App {...values} />);
@@ -90,13 +91,7 @@ describe('App tests for user account and author status', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-
-
     it('should redirect to login page', () => {
-        Object.defineProperty(window.location, 'href', {
-            writable: true,
-            value: 'https://development.library.uq.edu.au/espace/master/#/dashboard'
-        });
         window.location.assign = jest.fn();
         const wrapper = setup({
             user: {
@@ -106,7 +101,21 @@ describe('App tests for user account and author status', () => {
             location: {},
             history: {}
         }).instance().redirectUserToLogin();
-        expect(window.location.assign).toBeCalledWith('https://auth.library.uq.edu.au/login?return=' + window.btoa('https://development.library.uq.edu.au/espace/master/#/dashboard'));
+        expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGIN));
+    });
+
+
+    it('should redirect to logout page', () => {
+        window.location.assign = jest.fn();
+        const wrapper = setup({
+            user: {
+                accountLoading: false,
+                account: {}
+            },
+            location: {},
+            history: {}
+        }).instance().redirectUserToLogin();
+        expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGOUT));
     });
 
 });
