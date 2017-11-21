@@ -106,7 +106,7 @@ describe('App tests for user account and author status', () => {
             location: {},
             history: {}
         }).instance().redirectUserToLogin();
-        expect(window.location.assign).toBeCalledWith('https://auth.library.uq.edu.au/login?return=https://development.library.uq.edu.au/espace/master/#/dashboard');
+        expect(window.location.assign).toBeCalledWith('https://auth.library.uq.edu.au/login?return=' + window.btoa('https://development.library.uq.edu.au/espace/master/#/dashboard'));
     });
 
 });
