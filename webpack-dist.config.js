@@ -32,7 +32,7 @@ if (process.env.CI_BRANCH !== 'production' && process.env.CI_BRANCH !== 'staging
 } else if (process.env.CI_BRANCH === 'production') {
     environment = 'production';
     publicPath = '/';
-} else {
+} else if (process.env.CI_BRANCH === 'staging') {
     environment = 'staging';
     publicPath = '/';
 }
