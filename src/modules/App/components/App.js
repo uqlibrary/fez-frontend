@@ -71,7 +71,6 @@ export default class App extends React.Component {
     redirectUserToLogin = () => {
         const redirectUrl = (!this.props.user.accountLoading && this.props.user.account !== null) ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
         const returnUrl = (!this.props.user.accountLoading && this.props.user.account !== null) ? APP_URL : window.location.href;
-        console.log('redirect to : ' + redirectUrl + ' return to : ' + returnUrl);
         window.location.assign(`${redirectUrl}?return=${returnUrl}`);
     };
 
