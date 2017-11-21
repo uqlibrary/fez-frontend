@@ -44,4 +44,9 @@ describe('AudioDocumentCitation renders ', () => {
         const wrapper = setup({ publication: audioDocument });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('component with an empty doi view ', () => {
+        const wrapper = setup({ publication: {...audioDocument, fez_record_search_key_doi: {}} });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

@@ -60,4 +60,15 @@ describe('PageCitationView test ', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render component with default className', () => {
+        const wrapper = setup({
+            publication: conferencePaper,
+            searchKey: {
+                key: 'fez_record_search_key_start_page',
+                subkey: 'rek_start_page'
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

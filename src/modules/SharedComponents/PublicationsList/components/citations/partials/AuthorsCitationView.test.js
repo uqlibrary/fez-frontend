@@ -380,4 +380,54 @@ describe('AuthorsCitationView test ', () => {
         expect(wrapper.find('.citationAuthor').length).toEqual(10);
         expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(0);
     });
+
+    it('should render component with 3 authors with prefix/suffix without changing original data structure', () => {
+        const testObject = {
+            "fez_record_search_key_author": [
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Pedroso, Marcelo Monteiro",
+                    "rek_author_order": 3
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Smith, J",
+                    "rek_author_order": 1
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 2
+                }
+            ]
+        };
+
+        const wrapper = setup({ publication: testObject, prefix: 'Authored by: ', suffix: ' people.'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(testObject).toEqual({
+            "fez_record_search_key_author": [
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Pedroso, Marcelo Monteiro",
+                    "rek_author_order": 3
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Smith, J",
+                    "rek_author_order": 1
+                },
+                {
+                    "rek_author_id": null,
+                    "rek_author_pid": "UQ:678742",
+                    "rek_author": "Andersen, J",
+                    "rek_author_order": 2
+                }
+            ]
+        });
+    });
 });

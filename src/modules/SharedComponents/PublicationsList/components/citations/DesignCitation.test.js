@@ -43,4 +43,14 @@ describe('DesignCitation renders ', () => {
         const wrapper = setup({ publication: design });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('component with an empty source', () => {
+        const wrapper = setup({
+            publication: {
+                ...design,
+                fez_record_search_key_source: {rek_source: null}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

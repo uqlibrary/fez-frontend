@@ -56,5 +56,10 @@ describe('CitationView test ', () => {
     it('should render component with no prefix or suffix', () => {
         const wrapper = setup({prefix: ' ', suffix: '.', className: 'citationClassName' });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with no className', () => {
+        const wrapper = setup({value: 'Some text.'});
+        expect(toJson(wrapper)).toMatchSnapshot();
     })
 });
