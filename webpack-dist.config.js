@@ -21,20 +21,30 @@ let useMock = false;
 if (process.env.USE_MOCK)
     useMock = process.env.USE_MOCK;
 
-let URL_BASE_PATH = '';
-let publicPath = '';
-let publicPathOffline = '/';
-let environment = 'staging';
+// get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship) 
+const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
 
-if (process.env.CI_BRANCH !== 'production' && process.env.CI_BRANCH !== 'staging') {
-    URL_BASE_PATH += 'espace/' + process.env.CI_BRANCH + '/';
-    publicPathOffline += URL_BASE_PATH;
-} else if (process.env.CI_BRANCH === 'production') {
-    environment = 'production';
-    publicPath = '/';
-} else {
-    environment = 'staging';
-    publicPath = '/';
+// set build config variables based on branch
+let baseUrlPath = '';
+let publicPath = '';
+let publicPathOffline = '';
+let environment = '';
+    
+switch(branch) {
+    case 'production':
+        environment = 'production';
+        publicPath = '/';
+        publicPathOffline = '/';
+        break;
+    case 'staging':
+        environment = 'staging';
+        publicPath = '/';
+        publicPathOffline = '/';
+        break;
+    default:
+        baseUrlPath += 'espace/' + branch + '/';
+        publicPathOffline += baseUrlPath;
+        environment = 'development';
 }
 
 module.exports = {
@@ -46,12 +56,12 @@ module.exports = {
     ],
     // Where you want the output to go
     output: {
-        path: resolve(__dirname, './dist/', URL_BASE_PATH),
+        path: resolve(__dirname, './dist/', baseUrlPath),
         filename: '[name]-[hash].min.js',
         publicPath: publicPath
     },
     devServer: {
-        contentBase: resolve(__dirname, './dist/', URL_BASE_PATH),
+        contentBase: resolve(__dirname, './dist/', baseUrlPath),
         compress: true,
         port: port,
         host: '0.0.0.0'
@@ -101,7 +111,7 @@ module.exports = {
         new webpack.DefinePlugin({
             __DEVELOPMENT__: false,
             'process.env.NODE_ENV': JSON.stringify(environment),
-            'process.env.BASE_PATH': JSON.stringify(URL_BASE_PATH),
+            'process.env.BASE_PATH': JSON.stringify(baseUrlPath),
             'process.env.USE_MOCK': JSON.stringify(useMock)
         }),
         new webpack.LoaderOptionsPlugin({
