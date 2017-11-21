@@ -251,7 +251,7 @@ exports[`ThesisForm renders  component 1`] = `
         Object {
           "form": Object {
             "locale": Object {
-              "inputFieldHint": "Please, type field of research value then select a value from the list",
+              "inputFieldHint": "Type field of research value then select a value from the list",
               "inputFieldLabel": "Field of research",
             },
           },
