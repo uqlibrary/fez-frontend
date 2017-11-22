@@ -75,11 +75,15 @@ in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.
 - user with expired token: http://localhost:3000/?user=uqexpired#/
 
 ## Deployment
-Application deployment is 100% automated using Codeship, and is hosted in S3. All deployment data is stored within Codeship.
-Deployment pipelines are setup for branches: "master", "production" and any branch starting with "feature-".
+Application deployment is 100% automated using Codeship, and is hosted in S3. 
+All deployment configuration (S3 bucket access keys, post deployment cache invalidation configuration) is stored within Codeship.
+Deployment pipelines are setup for branches: "master", "staging, "production" and any branch starting with "feature-".
 
-- TBA: Deployments to production are hosted on https://espace.library.uq.edu.au/
+- Deployments to production are hosted on https://espace.library.uq.edu.au/
+- Deployments to staging are hosted on https://fez-staging.library.uq.edu.au/
 - All other branches are deployed on https://development.library.uq.edu/espace/`branchName`/.
+
+Staging/production build has routing based on `createBrowserHistory()`, other branches rely on `createHashHistory()` due to URL/Cloudfront restrictions
 
 ## Google Analytics integration
 

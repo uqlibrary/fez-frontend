@@ -128,7 +128,7 @@ exports[`JournalArticleForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add author",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
               "nameAsPublishedLabel": "Author's name as published",
             },
           },

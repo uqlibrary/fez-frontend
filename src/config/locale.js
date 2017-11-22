@@ -38,7 +38,7 @@ export default {
         },
         loginAlert: {
             title: 'You are not logged in',
-            message: 'Please, login to UQ eSpace for full search results and more services.',
+            message: 'Login to UQ eSpace for full search results and more services.',
             type: 'info_outline',
         },
         notRegisteredAuthorAlert: {
@@ -222,7 +222,7 @@ export default {
             children: (
                 <StandardCard>
                     <p>The requested page is available to authenticated users only.</p>
-                    <p>Please, login to continue</p>
+                    <p>Please login to continue</p>
                 </StandardCard>
             )
         },
@@ -433,7 +433,7 @@ export default {
             step2: {
                 noResultsFound: {
                     title: 'No matching publications found',
-                    text: 'We were unable to match any results to your search criteria. Please, search again or create a new eSpace record.',
+                    text: 'We were unable to match any results to your search criteria. Please search again or create a new eSpace record.',
                     help: {
                         title: 'No matching records found',
                         text: 'Why search didn\'t return any items....',
@@ -488,17 +488,11 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
-                successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member for editing,
-                    prior to being moved into a publicly viewable collection. Please note that our current processing
-                    priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
-                    HERDC 2015 and Q-index.</p>),
+                successConfirmationMessage: (<p>Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.</p>),
                 fileFailConfirmationMessage: (<p>
                     Your record has been saved. <br/><br/>
                     <strong>Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators. </strong><br/><br/>
-                    Your item will be referred to a UQ eSpace Staging staff member for editing,
-                    prior to being moved into a publicly viewable collection. Please note that our current
-                    processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
-                    HERDC 2015 and Q-index.
+                    Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
                 </p>),
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'

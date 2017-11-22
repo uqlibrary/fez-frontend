@@ -53,7 +53,7 @@ export default {
             form: {
                 locale: {
                     inputFieldLabel: 'ISBN value',
-                    inputFieldHint: 'Please, type ISBN value',
+                    inputFieldHint: 'Type ISBN value',
                     addButtonLabel: 'Add ISBN'
                 }
             },
@@ -97,7 +97,7 @@ export default {
             form: {
                 locale: {
                     inputFieldLabel: 'ISSN value',
-                    inputFieldHint: 'Please, type ISSN value',
+                    inputFieldHint: 'Type ISSN value',
                     addButtonLabel: 'Add ISSN'
                 }
             },
@@ -141,7 +141,7 @@ export default {
             form: {
                 locale: {
                     nameAsPublishedLabel: 'Author\'s name as published',
-                    nameAsPublishedHint: 'Please type the name exactly as published',
+                    nameAsPublishedHint: 'Type the name exactly as published',
                     identifierLabel: 'UQ identifier (if available)',
                     addButton: 'Add author'
                 }
@@ -191,7 +191,7 @@ export default {
             form: {
                 locale: {
                     nameAsPublishedLabel: 'Editor\'s name as published',
-                    nameAsPublishedHint: 'Please type the name exactly as published',
+                    nameAsPublishedHint: 'Type the name exactly as published',
                     identifierLabel: 'UQ identifier (if available)',
                     addButton: 'Add editor'
                 }
@@ -235,12 +235,12 @@ export default {
             text: 'some help',
             buttonLabel: 'OK'
         },
-        description: 'This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.',
+        description: 'This is the author or creator of the work, e.g. producer or performer (if self-produced). Type creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.',
         field: {
             form: {
                 locale: {
                     nameAsPublishedLabel: 'Creator\'s name as published',
-                    nameAsPublishedHint: 'Please type the name exactly as published',
+                    nameAsPublishedHint: 'Type the name exactly as published',
                     identifierLabel: 'UQ identifier (if available)',
                     addButton: 'Add creator'
                 }
@@ -289,7 +289,7 @@ export default {
             form: {
                 locale: {
                     nameAsPublishedLabel: 'Designer name as published',
-                    nameAsPublishedHint: 'Please type the name exactly as published',
+                    nameAsPublishedHint: 'Type the name exactly as published',
                     identifierLabel: 'UQ identifier (if available)',
                     addButton: 'Add designer'
                 }
@@ -380,14 +380,14 @@ export default {
         description: 'Provide a list of contributors for this publication',
         help: {
             title: 'Contributors',
-            text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Please enter contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+            text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
             buttonLabel: 'OK'
         },
         field: {
             form: {
                 locale: {
                     nameAsPublishedLabel: 'Contributor\'s name as published',
-                    nameAsPublishedHint: 'Please type the name exactly as published',
+                    nameAsPublishedHint: 'Type the name exactly as published',
                     identifierLabel: 'UQ identifier (if available)',
                     addButton: 'Add contributor'
                 }
@@ -436,7 +436,7 @@ export default {
             form: {
                 locale: {
                     inputFieldLabel: 'Field of research',
-                    inputFieldHint: 'Please, type field of research value then select a value from the list'
+                    inputFieldHint: 'Type field of research value then select a value from the list'
                 }
             },
             header: {
