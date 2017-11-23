@@ -1,4 +1,4 @@
-import {api, cache} from '../config';
+import {api} from '../config';
 /**
  * @param error
  * @param resolve
