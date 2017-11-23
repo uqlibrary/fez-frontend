@@ -57,6 +57,7 @@ export default class App extends React.Component {
     }
 
     handleResize = (mediaQuery) => {
+        console.log(mediaQuery);
         this.setState({
             docked: mediaQuery.matches
         });
@@ -74,14 +75,22 @@ export default class App extends React.Component {
         window.location.assign(`${redirectUrl}?return=${returnUrl}`);
     };
 
+    redirectToOrcid = () => {
+        this.props.history.push(routes.pathConfig.authorIdentifiers.orcid.link);
+    };
+
     render() {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
         const menuItems = routes.getMenuConfig(this.props.user.account);
         const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
+        const isAuthorLoading = this.props.user.accountLoading || this.props.user.authorLoading || this.props.user.loadingAuthorDetails;
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        const isOrcidRequired = this.props.user.author && !this.props.user.author.aut_orcid_id
+            && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
+
         return (
             <div className="layout-fill">
                 {
@@ -150,10 +159,20 @@ export default class App extends React.Component {
                             }
                             {
                                 // user is logged in, but doesn't have eSpace author identifier
-                                !isPublicPage && this.props.user.account && !this.props.user.loadingAuthorDetails && !this.props.user.authorDetails &&
+                                !isPublicPage && !isAuthorLoading && !this.props.user.authorDetails &&
                                 <div className="layout-fill dashAlert">
                                     <div className="layout-card">
                                         <Alert {...locale.global.notRegisteredAuthorAlert} />
+                                    </div>
+                                </div>
+                            }
+
+                            {
+                                // user is logged in, but doesn't have ORCID identifier
+                                !isPublicPage && !isAuthorLoading && isOrcidRequired &&
+                                <div className="layout-fill dashAlert">
+                                    <div className="layout-card">
+                                        <Alert {...locale.global.noOrcidAlert} action={this.redirectToOrcid} />
                                     </div>
                                 </div>
                             }

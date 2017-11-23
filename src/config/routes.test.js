@@ -26,12 +26,12 @@ describe('Routes method', () => {
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({}, accounts.uqresearcher);
-        expect(testRoutes.length).toEqual(12);
+        expect(testRoutes.length).toEqual(14);
     });
 
     it('should return a list of routes for user who can masquerade', () => {
         const testRoutes = routes.getRoutesConfig({}, accounts.uqstaff);
-        expect(testRoutes.length).toEqual(13);
+        expect(testRoutes.length).toEqual(15);
     });
 
     it('should render auth required page', () => {
@@ -48,7 +48,8 @@ describe('Routes method', () => {
 
     it('should render permissions denied page', () => {
         const testComponent = jest.fn();
-        const renderPage = routes.getRoutesConfig({StandardPage: testComponent}, accounts.uqresearcher)[11].render;
+        const routesConfig = routes.getRoutesConfig({StandardPage: testComponent}, accounts.uqresearcher);
+        const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {
                 pathname: routes.pathConfig.admin.masquerade
