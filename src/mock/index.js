@@ -33,6 +33,7 @@ mock
     .onGet(new RegExp(escapeRegExp(routes.AUTHOR_DETAILS_API({userId: user})))).reply(config => {
         // mock current author details
         if (user === 'anon') return [403, {}];
+        console.log(mockData.authorDetails[user]);
         if (mockData.authorDetails[user]) return [200, mockData.authorDetails[user]];
         return [404, {}];
     })

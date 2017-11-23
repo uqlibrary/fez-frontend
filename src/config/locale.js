@@ -44,8 +44,14 @@ export default {
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',
-            message: 'Please contact the UQ Manager to resolve this.',
+            message: 'Please contact the UQ eSpace administrator to resolve this.',
             type: 'info_outline'
+        },
+        noOrcidAlert: {
+            title: 'ORCID ID REQUIRED',
+            message: 'You do not have an ORCID ID linked to your UQ eSpace',
+            type: 'info_outline',
+            actionButtonLabel: 'Click here to link or register'
         },
         discardFormChangesConfirmation: {
             confirmationTitle: 'Discard changes?',
