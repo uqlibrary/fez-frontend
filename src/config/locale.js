@@ -545,5 +545,24 @@ export default {
     issues: {
         fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
             'Record: ' + APP_URL + `view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
+    },
+    researcherIdentifiers: {
+        orcid: {
+            grantAccessConfirmation: {
+                confirmationTitle: 'ORCID Grant Access',
+                confirmationMessage: (
+                    <div>
+                        <p>
+                            In order to proceed you will now be directed to ORCID.org website.
+                        </p>
+                        <p>
+                            You will be redirected back after you have granted UQ access.
+                        </p>
+                    </div>
+                ),
+                cancelButtonLabel: 'Cancel',
+                confirmButtonLabel: 'OK'
+            }
+        }
     }
 };
