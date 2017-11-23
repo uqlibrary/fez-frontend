@@ -12,7 +12,7 @@ import * as repositories from 'repositories';
 export function loadAuthorPublicationsByYear(userName) {
     return dispatch => {
         dispatch({type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING});
-        repositories.get(repositories.routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: userName}))
+        return repositories.get(repositories.routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: userName}))
             .then(response => {
                 const data = response !== null && response.hasOwnProperty('facet_counts')
                 && response.facet_counts.hasOwnProperty('facet_pivot') ?
@@ -50,7 +50,7 @@ export function loadAuthorPublicationsStats(userName) {
     return dispatch => {
         dispatch({type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING});
         let statsData = null;
-        repositories.get(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: userName}))
+        return repositories.get(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: userName}))
             .then(response => {
                 statsData = transformer.getPublicationsStats(response);
                 return repositories.get(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: userName}));
@@ -71,12 +71,12 @@ export function loadAuthorPublicationsStats(userName) {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 if (!statsData) {
                     dispatch({
-                        type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED,
+                        type: actions.ACADEMIC_PUBLICATIONS_STATS_FAILED,
                         payload: statsData
                     });
                 } else {
                     dispatch({
-                        type: actions.ACADEMIC_PUBLICATIONS_STATS_FAILED,
+                        type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED,
                         payload: error
                     });
                 }
