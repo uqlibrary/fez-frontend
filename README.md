@@ -68,7 +68,8 @@ The project allows the user to "login" as any test user. Simply add `?user=<user
 in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.
 
 - anonymous user: http://localhost:3000/?user=anon#/
-- registered user: http://localhost:3000/?user=uqresearcher#/
+- researcher user: http://localhost:3000/?user=uqresearcher#/
+- researcher user without orcid: http://localhost:3000/?user=noorcid#/
 - staff/not author user: http://localhost:3000/?user=uqstaff#/
 - undegrad student user: http://localhost:3000/?user=s1111111#/
 - postgrad student user: http://localhost:3000/?user=s2222222#/
