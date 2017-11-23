@@ -8,6 +8,9 @@ export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
 export const APP_URL = process.env.NODE_ENV === 'production' ? 'https://espace.library.uq.edu.au/' : 'https://fez-staging.library.uq.edu.au/';
 
+export const ORCID_BASE_URL = process.env.NODE_ENV === 'production' ? 'https://orcid.org' : 'https://sandbox.orcid.org';
+export const ORCID_PERMISSIONS = '/read-limited /activities/update /person/update';
+
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
     rek_object_type: 3,
