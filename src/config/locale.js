@@ -568,6 +568,29 @@ export default {
                 ),
                 cancelButtonLabel: 'Cancel',
                 confirmButtonLabel: 'OK'
+            },
+            help: {
+                title: 'About ORCID',
+                text: (
+                    <div>
+                        <p>ORCID (Open Researcher Contributor ID) is an open, non-profit, community-based effort endeavouring to provide a registry of unique researcher identifiers and a transparent method of linking research activities and outputs to these identifiers.</p>
+                        <p>An ORCID iD (often referred to as an ORCID) provides a persistent digital identifier that distinguishes you from every other researcher and, through integration in key research workflows such as manuscript and grant submission, supports automated linkages between you and your professional activities ensuring that your work is recognised.</p>
+                        <p>ORCID records hold only non-sensitive information such as name, email, organisation and research activities. Plus, you can control who sees information in your ORCID iD via <a href="http://support.orcid.org/knowledgebase/articles/124518-orcid-privacy-settings" target="_blank">privacy tools</a>.</p>
+                        <p>Your ORCID iD will belong to you throughout your scholarly career as a persistent identifier to distinguish you from other researchers ensuring you receive consistent and reliable attribution of your work.</p>
+                        <h3>Adding information to your profile</h3>
+                        <p>Import your research outputs from your Scopus Author Identifier and ResearcherID – you can do this on the ORCID site with the Search and Link tool under Add works. For more information <a href="http://support.orcid.org/knowledgebase/articles/188278-link-works-website-user" target="_blank">click here</a>.</p>
+                        <p>You can also import publications from your Google Scholar to your ORCID iD. <a href="http://support.orcid.org/knowledgebase/articles/390530-import-works-from-bibtex-files-website-user" target="_blank">Click here</a> for information</p>
+                        <p>There are many other types of work that you may add to your ORCID including artistic performances, stand-alone websites, licenses and datasets. For a full list of works that can be added, <a href="http://members.orcid.org/api/supported-work-types" target="_blank">click here</a>.</p>
+                        <p>More information about how to add details such as your employment, education, awards and funding can be found <a href="http://support.orcid.org/knowledgebase/topics/32827-website-user" target="_blank">here</a>.</p>
+                        <h3>Peer review acknowledgement in ORCID</h3>
+                        <p>Your ORCID record can acknowledge peer review assignments that you undertake.</p>
+                        <p>Simply provide your ORCID iD when accepting a peer review assignment and upon completion the organisation* you have done the peer review for will post an acknowledgement of this activity to your ORCID record, if you have granted this permission.</p>
+                        <p><em>* The organisation needs to be participating in the ORCID peer review program.</em></p>
+                        <h3>Do you have more than one ORCID iD?</h3>
+                        <p>If you have more than one ORCID, the <a href="http://about.orcid.org/help/contact-us" target="_blank">ORCID Support team</a> can help with marking one ORCID iD as the primary identifier and deprecate the other ORCID iDs.</p>
+                        <p>Because ORCID identifiers are designed to be persistent, obsolete iDs will be deprecated, not deleted. The record associated with a deprecated iD will contain a pointer to the primary record</p>
+                    </div>
+                )
             }
         }
     }
