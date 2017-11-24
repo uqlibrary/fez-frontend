@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component AddMissingRecord  method getStepperIndex should return step [0] and Stepper should render the 1st step 1`] = `
+<StandardPage
+  title="Add a missing record to eSpace"
+>
+  <CustomStepper
+    activeStep={0}
+    steps={
+      Array [
+        Object {
+          "label": "Search for your publication",
+        },
+        Object {
+          "label": "Search results",
+        },
+        Object {
+          "label": "Add your publication",
+        },
+      ]
+    }
+  />
+  <addRecordStep
+    actions={Object {}}
+    addRecordStep={[Function]}
+    author={null}
+    history={Object {}}
+    location={
+      Object {
+        "pathname": "/records/add/find",
+      }
+    }
+    match={
+      Object {
+        "path": "/records/add/find",
+      }
+    }
+    rawSearchQuery={null}
+  />
+</StandardPage>
+`;
+
+exports[`Component AddMissingRecord  method getStepperIndex should return step [1] and Stepper should render the 2nd step 1`] = `
+<StandardPage
+  title="Add a missing record to eSpace"
+>
+  <CustomStepper
+    activeStep={1}
+    steps={
+      Array [
+        Object {
+          "label": "Search for your publication",
+        },
+        Object {
+          "label": "Search results",
+        },
+        Object {
+          "label": "Add your publication",
+        },
+      ]
+    }
+  />
+  <addRecordStep
+    actions={Object {}}
+    addRecordStep={[Function]}
+    author={null}
+    history={Object {}}
+    location={
+      Object {
+        "pathname": "/records/add/results",
+      }
+    }
+    match={
+      Object {
+        "path": "/records/add/results",
+      }
+    }
+    rawSearchQuery="This is a test"
+  />
+</StandardPage>
+`;
+
+exports[`Component AddMissingRecord  method getStepperIndex should return step [2] and Stepper should render the 3rd step 1`] = `
+<StandardPage
+  title="Add a missing record to eSpace"
+>
+  <CustomStepper
+    activeStep={2}
+    steps={
+      Array [
+        Object {
+          "label": "Search for your publication",
+        },
+        Object {
+          "label": "Search results",
+        },
+        Object {
+          "label": "Add your publication",
+        },
+      ]
+    }
+  />
+  <addRecordStep
+    actions={Object {}}
+    addRecordStep={[Function]}
+    author={null}
+    history={Object {}}
+    location={
+      Object {
+        "pathname": "/records/add/new",
+      }
+    }
+    match={
+      Object {
+        "path": "/records/add/new",
+      }
+    }
+    rawSearchQuery={null}
+  />
+</StandardPage>
+`;
