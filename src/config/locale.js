@@ -554,6 +554,7 @@ export default {
     },
     researcherIdentifiers: {
         orcid: {
+            title: 'Link ORCID ID to UQ eSpace',
             grantAccessConfirmation: {
                 confirmationTitle: 'ORCID Grant Access',
                 confirmationMessage: (
@@ -591,6 +592,21 @@ export default {
                         <p>Because ORCID identifiers are designed to be persistent, obsolete iDs will be deprecated, not deleted. The record associated with a deprecated iD will contain a pointer to the primary record</p>
                     </div>
                 )
+            },
+            linkOrcid: {
+                title: 'I already have an ORCID iD',
+                help: {
+                    title: 'Already registered?',
+                    text: 'This option enables you to link your existing ORCID iD to UQ.',
+                    buttonLabel: 'OK'
+                },
+                description: (
+                    <div>This option enables you to link your existing ORCID iD to UQ.</div>
+                ),
+                labels: {
+                    submit: 'Link your ORCID iD',
+                    hint: ''
+                }
             }
         }
     }

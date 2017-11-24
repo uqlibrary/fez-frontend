@@ -1,15 +1,18 @@
+const isProduction = () => process.env.NODE_ENV === 'production';
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const TOKEN_NAME = 'X-Uql-Token';
 
 // URLS
-export const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.library.uq.edu.au/v1/' : 'https://api.library.uq.edu.au/staging/';
+export const API_URL = isProduction() ? 'https://api.library.uq.edu.au/v1/' : 'https://api.library.uq.edu.au/staging/';
 export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
-export const APP_URL = process.env.NODE_ENV === 'production' ? 'https://espace.library.uq.edu.au/' : 'https://fez-staging.library.uq.edu.au/';
+export const APP_URL = isProduction() ? 'https://espace.library.uq.edu.au/' : `${window.location.protocol}//${window.location.host}/`;
 
-export const ORCID_BASE_URL = process.env.NODE_ENV === 'production' ? 'https://orcid.org' : 'https://sandbox.orcid.org';
+export const ORCID_BASE_URL = isProduction() ? 'https://orcid.org' : 'https://sandbox.orcid.org';
 export const ORCID_PERMISSIONS = '/read-limited /activities/update /person/update';
+export const ORCID_CLIENT_ID = isProduction() ? 'APP-UIQ1ZTKAU17ZGZSC' : 'APP-37E6CULFAINK5Y8X';
+export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {

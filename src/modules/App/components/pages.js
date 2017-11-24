@@ -7,3 +7,4 @@ export {ClaimRecord} from 'modules/ClaimRecord';
 export {FixRecord} from 'modules/FixRecord';
 export {StandardPage} from 'uqlibrary-react-toolbox';
 export {Masquerade} from 'modules/Masquerade';
+export {Orcid} from 'modules/AuthorIdentifiers';

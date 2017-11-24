@@ -110,7 +110,9 @@ export const getRoutesConfig = (components, account) => {
             },
             {
                 path: pathConfig.authorIdentifiers.orcid.link,
-                render: () => components.StandardPage({title: 'Link ORCID ID to UQ eSpace', children: 'Link or register ORCID ID here.... Coming soon....'})
+                component: components.Orcid,
+                exact: true
+                // render: () => components.StandardPage({title: 'Link ORCID ID to UQ eSpace', children: 'Link or register ORCID ID here.... Coming soon....'})
             },
             {
                 path: pathConfig.authorIdentifiers.googleScholar.link,
