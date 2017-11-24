@@ -673,6 +673,8 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Heavy Tails, Importance Sampling and Cross-Entropy"
     >
       <span
@@ -750,6 +752,8 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"

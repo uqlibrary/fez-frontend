@@ -821,6 +821,8 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
     </DateCitationView>
     <CitationView
       className="citationNewspaperArticleTitle"
+      prefix=" "
+      suffix="."
       value="Improve Your Communication with Doctors"
     >
       <span
@@ -833,6 +835,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
     </CitationView>
     <CitationView
       className="citationNewspaper"
+      prefix=" "
       suffix=""
       value="Australian Chinese Daily News [Aozhou Xin Bao] (Australian Chinese Weekly Magazine)"
     >
@@ -859,6 +862,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
     <CitationView
       className="citationEndPage"
       prefix="-"
+      suffix="."
       value={null}
     >
       <span
@@ -1694,6 +1698,8 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
     </DateCitationView>
     <CitationView
       className="citationNewspaperArticleTitle"
+      prefix=" "
+      suffix="."
       value="Improve Your Communication with Doctors"
     >
       <span
@@ -1706,6 +1712,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
     </CitationView>
     <CitationView
       className="citationNewspaper"
+      prefix=" "
       suffix=""
       value="Australian Chinese Daily News [Aozhou Xin Bao] (Australian Chinese Weekly Magazine)"
     >
@@ -1732,6 +1739,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
     <CitationView
       className="citationEndPage"
       prefix="-"
+      suffix="."
       value={null}
     >
       <span
@@ -1805,6 +1813,8 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
     </DateCitationView>
     <CitationView
       className="citationNewspaperArticleTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationNewspaperArticleTitle empty"
@@ -1812,6 +1822,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
     </CitationView>
     <CitationView
       className="citationNewspaper"
+      prefix=" "
       suffix=""
       value={null}
     >
@@ -1832,6 +1843,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
     <CitationView
       className="citationEndPage"
       prefix="-"
+      suffix="."
       value={null}
     >
       <span

@@ -34,15 +34,9 @@ exports[`Dashboard Profile test renders dashboard - display name should load fro
       className="column authorDetails"
     >
       <DashboardAuthorDetails
-        values={
-          Object {
-            "familyName": "",
-            "givenName": "",
-            "orgUnits": undefined,
-            "positions": undefined,
-            "title": "Prof",
-          }
-        }
+        familyName=""
+        givenName=""
+        title="Prof"
       />
       <DashboardResearcherIds
         values={
@@ -94,23 +88,23 @@ exports[`Dashboard Profile test renders dashboard even if data is missing - espa
       className="column authorDetails"
     >
       <DashboardAuthorDetails
-        values={
-          Object {
-            "familyName": "Researcher",
-            "givenName": "J",
-            "orgUnits": Array [
-              "Institute for Molecular Bioscience",
-              "School of Chemistry and Molecular Biosciences",
-              "The University of Queensland Diamantina Institute",
-            ],
-            "positions": Array [
-              "Affiliate Professor",
-              "Affiliate Professorial Res Fellow",
-              "ARC Australian Laureate Fellow",
-            ],
-            "title": "Professor",
-          }
+        familyName="Researcher"
+        givenName="J"
+        orgUnits={
+          Array [
+            "Institute for Molecular Bioscience",
+            "School of Chemistry and Molecular Biosciences",
+            "The University of Queensland Diamantina Institute",
+          ]
         }
+        positions={
+          Array [
+            "Affiliate Professor",
+            "Affiliate Professorial Res Fellow",
+            "ARC Australian Laureate Fellow",
+          ]
+        }
+        title="Professor"
       />
       <DashboardResearcherIds
         values={
@@ -162,15 +156,9 @@ exports[`Dashboard Profile test renders dashboard even if data is missing - org 
       className="column authorDetails"
     >
       <DashboardAuthorDetails
-        values={
-          Object {
-            "familyName": "Researcher",
-            "givenName": "J",
-            "orgUnits": undefined,
-            "positions": undefined,
-            "title": "Professor",
-          }
-        }
+        familyName="Researcher"
+        givenName="J"
+        title="Professor"
       />
       <DashboardResearcherIds
         values={
@@ -222,23 +210,23 @@ exports[`Dashboard Profile test renders dashboard with all data present 1`] = `
       className="column authorDetails"
     >
       <DashboardAuthorDetails
-        values={
-          Object {
-            "familyName": "Researcher",
-            "givenName": "J",
-            "orgUnits": Array [
-              "Institute for Molecular Bioscience",
-              "School of Chemistry and Molecular Biosciences",
-              "The University of Queensland Diamantina Institute",
-            ],
-            "positions": Array [
-              "Affiliate Professor",
-              "Affiliate Professorial Res Fellow",
-              "ARC Australian Laureate Fellow",
-            ],
-            "title": "Professor",
-          }
+        familyName="Researcher"
+        givenName="J"
+        orgUnits={
+          Array [
+            "Institute for Molecular Bioscience",
+            "School of Chemistry and Molecular Biosciences",
+            "The University of Queensland Diamantina Institute",
+          ]
         }
+        positions={
+          Array [
+            "Affiliate Professor",
+            "Affiliate Professorial Res Fellow",
+            "ARC Australian Laureate Fellow",
+          ]
+        }
+        title="Professor"
       />
       <DashboardResearcherIds
         values={
@@ -256,13 +244,9 @@ exports[`Dashboard Profile test renders dashboard with all data present 1`] = `
       className="column is-narrow is-hidden-tablet-only authorCount"
     >
       <DashboardArticleCount
-        values={
-          Object {
-            "articleCount": "282",
-            "articleFirstYear": 1990,
-            "articleLastYear": 2017,
-          }
-        }
+        articleCount="282"
+        articleFirstYear={1990}
+        articleLastYear={2017}
       />
     </div>
   </div>

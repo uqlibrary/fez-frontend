@@ -675,6 +675,8 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Education, Employment and Social Inclusion within the European Union"
     >
       <span
@@ -687,6 +689,8 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
     </CitationView>
     <CitationView
       className="citationSource"
+      prefix=" "
+      suffix="."
       value="Working papers on Social Economics, Policy and Development"
     >
       <span
@@ -699,6 +703,8 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
     </CitationView>
     <CitationView
       className="citationReportNumber"
+      prefix=" "
+      suffix="."
       value="46"
     >
       <span
@@ -711,6 +717,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
     </CitationView>
     <CitationView
       className="citationOrgUnit"
+      prefix=" "
       suffix=", "
       value="School of Economics"
     >
@@ -724,6 +731,8 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
     </CitationView>
     <CitationView
       className="citationOrgName"
+      prefix=" "
+      suffix="."
       value="The University of Queensland"
     >
       <span
@@ -1426,6 +1435,8 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Education, Employment and Social Inclusion within the European Union"
     >
       <span
@@ -1438,6 +1449,8 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
     </CitationView>
     <CitationView
       className="citationSource"
+      prefix=" "
+      suffix="."
       value="Working papers on Social Economics, Policy and Development"
     >
       <span
@@ -1450,6 +1463,8 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
     </CitationView>
     <CitationView
       className="citationReportNumber"
+      prefix=" "
+      suffix="."
       value="46"
     >
       <span
@@ -1462,6 +1477,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgUnit"
+      prefix=" "
       suffix=", "
       value="School of Economics"
     >
@@ -1475,6 +1491,8 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgName"
+      prefix=" "
+      suffix="."
       value="The University of Queensland"
     >
       <span
@@ -1559,6 +1577,8 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -1566,6 +1586,8 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationSource"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -1574,6 +1596,8 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationReportNumber"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -1582,6 +1606,7 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgUnit"
+      prefix=" "
       suffix=", "
       value={null}
     >
@@ -1591,6 +1616,8 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgName"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
