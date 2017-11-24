@@ -2,6 +2,7 @@
 
 const {resolve} = require('path');
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -87,26 +88,6 @@ module.exports = {
         }),
         new ExtractTextPlugin('[name]-[hash].min.css'),
         new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: false,
-            mangle: false,
-            compress: {
-                warnings: false,
-                screw_ie8: true,
-                conditionals: true,
-                unused: true,
-                comparisons: true,
-                sequences: true,
-                dead_code: true,
-                evaluate: true,
-                if_return: true,
-                join_vars: true,
-
-            },
-            output: {
-                comments: false,
-            },
-        }),
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: false,
@@ -141,7 +122,10 @@ module.exports = {
         //       directory: './'
         //     }
         // }),
-        new InjectPreloader()
+        new InjectPreloader(),
+        new UglifyJsPlugin({
+            sourceMap: true
+        })
     ],
     module: {
         rules: [
