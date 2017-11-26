@@ -157,14 +157,13 @@ export function claimPublication(data) {
                 type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
                 payload: 'Current author has already been assigned to this publication.'
             });
+            return Promise.reject(new Error('Current author has already been assigned to this publication as an author or contributor.'));
         };
     }
 
     const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
 
     return dispatch => {
-        console.log(data);
-
         dispatch({type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING});
 
         let recordAuthorsIdSearchKeys = {};

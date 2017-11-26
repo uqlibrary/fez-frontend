@@ -9,6 +9,7 @@ import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
 const DashboardProfile = ({authorDetails, author}) => {
     const txt = locale.pages.dashboard.header;
+
     return (
         <div className="imageCover">
             {/* HELP */}
@@ -34,7 +35,7 @@ const DashboardProfile = ({authorDetails, author}) => {
                     {/* Author Details/Name/Orgs/ResearcherIDs */}
                     <div className="column authorDetails">
                         <DashboardAuthorDetails
-                            values={{
+                            {...{
                                 title: authorDetails.title || author.aut_title || '',
                                 givenName: authorDetails.given_name || author.aut_fname || '',
                                 familyName: authorDetails.family_name || author.aut_lname || '',
@@ -58,11 +59,11 @@ const DashboardProfile = ({authorDetails, author}) => {
                         authorDetails.espace &&
                         <div className="column is-narrow is-hidden-tablet-only authorCount">
                             <DashboardArticleCount
-                                values={{
+                                {...{
                                     articleCount: authorDetails.espace.doc_count,
                                     articleFirstYear: authorDetails.espace.first_year,
                                     articleLastYear: authorDetails.espace.last_year,
-                                }}/>
+                                }} />
                         </div>
                     }
                 </div>

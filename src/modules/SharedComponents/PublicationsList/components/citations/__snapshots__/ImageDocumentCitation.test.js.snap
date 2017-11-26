@@ -512,6 +512,8 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Reference Desk, Library"
     >
       <span
@@ -524,6 +526,8 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
     </CitationView>
     <CitationView
       className="citationSource"
+      prefix=" "
+      suffix="."
       value="Fryer Library University of Queensland Photograph Collection, UQFL466, Box 8, AG/P/108"
     >
       <span
@@ -601,6 +605,8 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -608,6 +614,8 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationSource"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span

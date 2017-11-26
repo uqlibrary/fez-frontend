@@ -588,6 +588,8 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Sustainable home Brisbane"
     >
       <span
@@ -600,6 +602,7 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value="St Lucia, Brisbane, QLD, Australia"
     >
@@ -613,6 +616,8 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="School of Architecture, The University of Queensland"
     >
       <span
@@ -690,6 +695,8 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -697,6 +704,7 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value={null}
     >
@@ -706,6 +714,8 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span

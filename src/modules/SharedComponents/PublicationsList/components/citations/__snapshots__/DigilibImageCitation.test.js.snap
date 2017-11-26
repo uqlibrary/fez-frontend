@@ -642,6 +642,8 @@ exports[`DigilibImageCitation renders  component with a mock espace record 1`] =
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Conveyor, copper mine, Mount Morgan"
     >
       <span
@@ -720,6 +722,8 @@ exports[`DigilibImageCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"

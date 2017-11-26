@@ -1103,6 +1103,8 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Alcohol use disorders, risky alcohol consumption and adverse events among chronic non-cancer pain patients receiving opioid therapy"
     >
       <span
@@ -1115,6 +1117,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
     </CitationView>
     <CitationView
       className="citationConferenceName"
+      prefix=" "
       suffix=", "
       value="Australasian Professional Society on Alcohol and other Drugs Conference 2014"
     >
@@ -1128,6 +1131,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
     </CitationView>
     <CitationView
       className="citationConferenceLocation"
+      prefix=" "
       suffix=", "
       value="Adelaide, South Australia, Australia"
     >
@@ -1141,6 +1145,8 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
     </CitationView>
     <CitationView
       className="citationConferenceDates"
+      prefix=" "
+      suffix="."
       value="9-12 November, 2014"
     >
       <span
@@ -1153,6 +1159,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value="Chichester, West Sussex, United Kingdom"
     >
@@ -1166,6 +1173,8 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Wiley-Blackwell Publishing"
     >
       <span
@@ -1314,6 +1323,8 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -1321,6 +1332,7 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
     </CitationView>
     <CitationView
       className="citationConferenceName"
+      prefix=" "
       suffix=", "
       value={null}
     >
@@ -1330,6 +1342,7 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
     </CitationView>
     <CitationView
       className="citationConferenceLocation"
+      prefix=" "
       suffix=", "
       value={null}
     >
@@ -1339,6 +1352,8 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
     </CitationView>
     <CitationView
       className="citationConferenceDates"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -1347,6 +1362,7 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value={null}
     >
@@ -1356,6 +1372,8 @@ exports[`ConferencePaperCitation renders  component with empty publication 1`] =
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span

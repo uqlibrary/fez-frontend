@@ -814,6 +814,8 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -822,6 +824,8 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -1648,6 +1652,8 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Numerical solution of partial differential equations"
     >
       <span
@@ -1660,6 +1666,8 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -2490,6 +2498,8 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -2498,6 +2508,8 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -2571,6 +2583,8 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -2579,6 +2593,8 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span

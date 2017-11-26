@@ -1,31 +1,33 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {locale} from 'config';
 
-const DashboardArticleCount = ({values}) => {
-    const txt = locale.pages.dashboard.header.dashboardArticleCount;
-    return (
-        <div className="authorCounter is-centered">
-            {
-                values.articleCount && values.articleFirstYear && values.articleLastYear &&
-                <div>
-                    <div className="noOfArticles">{values.articleCount}</div>
-                    <div className="articlesFrom">{txt.countTitle}</div>
-                    <div
-                        className="dateRange">{values.articleFirstYear}<span>{txt.yearSeparator}</span>{values.articleLastYear}
-                    </div>
-                </div>
-            }
-        </div>
-    );
-};
-
-DashboardArticleCount.propTypes = {
-    values: PropTypes.shape({
+export default class DashboardArticleCount extends PureComponent {
+    static propTypes = {
         articleCount: PropTypes.string,
         articleFirstYear: PropTypes.number,
-        articleLastYear: PropTypes.number,
-    })
-};
+        articleLastYear: PropTypes.number
+    };
 
-export default DashboardArticleCount;
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const txt = locale.pages.dashboard.header.dashboardArticleCount;
+        return (
+            <div className="authorCounter is-centered">
+                {
+                    this.props.articleCount && this.props.articleFirstYear && this.props.articleLastYear &&
+                    <div>
+                        <div className="noOfArticles">{this.props.articleCount}</div>
+                        <div className="articlesFrom">{txt.countTitle}</div>
+                        <div
+                            className="dateRange">{this.props.articleFirstYear}<span>{txt.yearSeparator}</span>{this.props.articleLastYear}
+                        </div>
+                    </div>
+                }
+            </div>
+        );
+    }
+}

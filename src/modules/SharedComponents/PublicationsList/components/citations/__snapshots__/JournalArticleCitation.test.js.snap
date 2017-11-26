@@ -1885,6 +1885,8 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
     >
       <span
@@ -1897,6 +1899,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
     </CitationView>
     <CitationView
       className="citationJournalName"
+      prefix=" "
       suffix=" "
       value="Journal of Cell Science"
     >
@@ -1910,6 +1913,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
     </CitationView>
     <CitationView
       className="citationVolumeNumber"
+      prefix=" "
       suffix=" "
       value="130"
     >
@@ -4679,6 +4683,8 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -4686,6 +4692,7 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
     </CitationView>
     <CitationView
       className="citationJournalName"
+      prefix=" "
       suffix=" "
       value={null}
     >
@@ -4695,6 +4702,7 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
     </CitationView>
     <CitationView
       className="citationVolumeNumber"
+      prefix=" "
       suffix=" "
       value={null}
     >
