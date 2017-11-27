@@ -10,6 +10,7 @@
     "babel-eslint": "8.0.0",
     "babel-jest": "21.0.2",
     "babel-loader": "^7.1.2",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.8",
@@ -145,6 +146,7 @@
         ],
         "plugins": [
           [
+            "dynamic-import-node",
             "transform-runtime",
             {
               "helpers": false,

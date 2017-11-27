@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import Async from 'modules/SharedComponents/Async';
+const PublicationForm = () => (<Async load={import('modules/SharedComponents/PublicationForm/containers/PublicationForm')}/>);
 
 // forms & custom components
-import {PublicationForm} from 'modules/SharedComponents/PublicationForm';
 import {locale, validation, routes} from 'config';
 
 export default class NewRecord extends React.Component {

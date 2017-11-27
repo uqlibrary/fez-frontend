@@ -34,7 +34,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
     onCancelAction={[Function]}
     onRef={[Function]}
   />
-  <Connect(ReduxForm)
+  <PublicationForm
     initialValues={
       Object {
         "currentAuthor": Array [

@@ -51,15 +51,21 @@ switch(branch) {
 module.exports = {
     devtool: 'source-map',
     // The entry file. All your app roots from here.
-    entry: [
-        "babel-polyfill",
-        resolve(__dirname, './src/index.js')
-    ],
+    entry: {
+        // "babel-polyfill",
+        // resolve(__dirname, './src/index.js')
+        client: resolve(__dirname, './src/index.js'),
+        vendor: ['react', 'react-dom', 'react-router-dom']
+    },
     // Where you want the output to go
     output: {
         path: resolve(__dirname, './dist/', baseUrlPath),
         filename: '[name]-[hash].min.js',
-        publicPath: publicPath
+        publicPath: publicPath,
+
+        // path: resolve(__dirname, './dist/', baseUrlPath),
+        // filename: '[name]-[hash].min.js',
+        // publicPath: publicPath
     },
     devServer: {
         contentBase: resolve(__dirname, './dist/', baseUrlPath),
@@ -125,6 +131,10 @@ module.exports = {
         new InjectPreloader(),
         new UglifyJsPlugin({
             sourceMap: true
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: Infinity,
         })
     ],
     module: {

@@ -57,7 +57,6 @@ export default class App extends React.Component {
     }
 
     handleResize = (mediaQuery) => {
-        console.log(mediaQuery);
         this.setState({
             docked: mediaQuery.matches
         });

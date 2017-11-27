@@ -51,10 +51,10 @@ export default class FixRecord extends Component {
     }
 
     componentDidMount() {
-        if (!this.props.recordToFixLoading && !this.props.recordToFix) {
+        if (this.props.actions && !this.props.recordToFixLoading && !this.props.recordToFix) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
-        if (!this.props.authorLoading && !this.props.author) {
+        if (this.props.actions && !this.props.authorLoading && !this.props.author) {
             this.props.actions.loadCurrentAccount();
         }
     }
@@ -67,7 +67,7 @@ export default class FixRecord extends Component {
 
     componentWillUnmount() {
         // clear previously selected recordToFix for a fix
-        this.props.actions.clearFixRecord();
+        if (this.props.actions) this.props.actions.clearFixRecord();
     }
 
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
