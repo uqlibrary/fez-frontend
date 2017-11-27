@@ -540,6 +540,8 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="It's for love not money: Queensland graziers' perceptions of sustainable development"
     >
       <span
@@ -552,6 +554,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
     </CitationView>
     <CitationView
       className="citationThesisType"
+      prefix=" "
       suffix=","
       value="PhD Thesis"
     >
@@ -565,6 +568,7 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgUnit"
+      prefix=" "
       suffix=","
       value="School of Natural and Rural Systems"
     >
@@ -578,6 +582,8 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgName"
+      prefix=" "
+      suffix="."
       value="The University of Queensland"
     >
       <span
@@ -1143,6 +1149,8 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="It's for love not money: Queensland graziers' perceptions of sustainable development"
     >
       <span
@@ -1155,6 +1163,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
     </CitationView>
     <CitationView
       className="citationThesisType"
+      prefix=" "
       suffix=","
       value="PhD Thesis"
     >
@@ -1168,6 +1177,7 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgUnit"
+      prefix=" "
       suffix=","
       value="School of Natural and Rural Systems"
     >
@@ -1181,6 +1191,8 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgName"
+      prefix=" "
+      suffix="."
       value="The University of Queensland"
     >
       <span
@@ -1265,6 +1277,8 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -1272,6 +1286,7 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationThesisType"
+      prefix=" "
       suffix=","
       value={null}
     >
@@ -1281,6 +1296,7 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgUnit"
+      prefix=" "
       suffix=","
       value={null}
     >
@@ -1290,6 +1306,8 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationOrgName"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
