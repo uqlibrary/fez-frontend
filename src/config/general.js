@@ -9,6 +9,11 @@ export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
 export const APP_URL = isProduction() ? 'https://espace.library.uq.edu.au/' : `${window.location.protocol}//${window.location.host}/`;
 
+export const ORCID_PROVIDER_ID = 1;
+export const RESEARCHER_ID_PROVIDER_ID = 2;
+export const SCOPUS_PROVIDER_ID = 3;
+export const PUBLONS_PROVIDER_ID = 4;
+
 export const ORCID_BASE_URL = isProduction() ? 'https://orcid.org' : 'https://sandbox.orcid.org';
 export const ORCID_PERMISSIONS = '/read-limited /activities/update /person/update';
 export const ORCID_CLIENT_ID = isProduction() ? 'APP-UIQ1ZTKAU17ZGZSC' : 'APP-37E6CULFAINK5Y8X';

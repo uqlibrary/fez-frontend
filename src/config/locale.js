@@ -593,7 +593,7 @@ export default {
                     </div>
                 )
             },
-            linkOrcid: {
+            authoriseOrcid: {
                 title: 'I already have an ORCID iD',
                 help: {
                     title: 'Already registered?',
@@ -605,7 +605,18 @@ export default {
                 ),
                 labels: {
                     submit: 'Link your ORCID iD',
-                    hint: ''
+                    hint: 'Link your ORCID iD'
+                }
+            },
+            linkOrcid: {
+                title: 'Linking ORCID',
+                description: (
+                    <div>We have received your ORCID, please click below to link it to UQ.</div>
+                ),
+                labels: {
+                    orcidId: 'Your ORCID: ',
+                    submit: 'Link ORCID',
+                    hint: 'Link ORCID'
                 }
             }
         }

@@ -4,9 +4,11 @@ export const initialState = {
     account: null,
     author: null,
     authorDetails: null,
+    orcidDetails: null,
     accountLoading: true,
     authorLoading: true,
-    loadingAuthorDetails: true
+    loadingAuthorDetails: true,
+    loadingOrcidDetails: false
 };
 
 const handlers = {
@@ -63,6 +65,24 @@ const handlers = {
         ...state,
         authorDetails: null,
         loadingAuthorDetails: true
+    }),
+
+    [actions.AUTHOR_ORCID_DETAILS_FAILED]: (state) => ({
+        ...state,
+        orcidDetails: null,
+        loadingOrcidDetails: false
+    }),
+
+    [actions.AUTHOR_ORCID_DETAILS_LOADED]: (state, action) => ({
+        ...state,
+        orcidDetails: action.payload,
+        loadingOrcidDetails: false
+    }),
+
+    [actions.AUTHOR_ORCID_DETAILS_LOADING]: (state) => ({
+        ...state,
+        orcidDetails: null,
+        loadingOrcidDetails: true
     })
 };
 

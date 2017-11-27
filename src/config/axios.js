@@ -12,7 +12,8 @@ export const cache = setupCache({
             'records/search?rule=lookup',
             'records/search?title=',
             'records/search?doi=',
-            'records/search?id=pmid:'
+            'records/search?id=pmid:',
+            'orcid'
         ]
     },
 });

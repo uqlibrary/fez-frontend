@@ -1,4 +1,5 @@
 import {validation} from 'config';
+import {stringify} from 'querystring';
 
 /**
  * Translate selected facets to query string parameters
@@ -104,3 +105,5 @@ export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery}) => (
 export const SEARCH_KEY_LOOKUP_API = ({searchKey, searchQuery}) => (
     `records/search?rule=lookup&search_key=${searchKey}&lookup_value=${prepareTextSearchQuery(searchQuery)}`
 );
+
+export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => (`orcid/${userId}/request?${stringify(params)}`);
