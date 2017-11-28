@@ -6,8 +6,16 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
 
-import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, NavigationDialogBox,
-    FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
+import {SelectField} from 'uqlibrary-react-toolbox/build/SelectField';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
+import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {validation, locale, routes} from 'config';
 

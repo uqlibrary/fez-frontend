@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {HelpIcon} from 'uqlibrary-react-toolbox';
+import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 import {locale} from 'config';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from './DashboardArticleCount';

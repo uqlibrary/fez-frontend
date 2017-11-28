@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardCard, InlineLoader, StandardRighthandCard} from 'uqlibrary-react-toolbox';
+
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+
 
 // forms & custom components
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';

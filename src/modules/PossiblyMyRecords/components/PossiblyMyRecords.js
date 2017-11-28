@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationsList, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
-import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
+
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
+
 
 import {locale, routes} from 'config';
 

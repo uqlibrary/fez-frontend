@@ -6,7 +6,12 @@ import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
 
 // application components
 import AppBar from 'material-ui/AppBar';
-import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
+import {AppLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {MenuDrawer} from 'uqlibrary-react-toolbox/build/MenuDrawer';
+import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
+import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';

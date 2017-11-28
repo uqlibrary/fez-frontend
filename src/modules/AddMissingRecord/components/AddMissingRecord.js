@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
-import {StandardPage, Stepper} from 'uqlibrary-react-toolbox';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {Stepper} from 'uqlibrary-react-toolbox/build/Stepper';
 import {locale, routes} from 'config';
 
 export default class AddMissingRecord extends React.Component {

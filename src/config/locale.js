@@ -1,5 +1,5 @@
 import React from 'react';
-import {StandardCard} from 'uqlibrary-react-toolbox';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {APP_URL} from 'config';
 import {default as validationErrors} from './locale.validation';
 import {default as components} from './locale.components';
