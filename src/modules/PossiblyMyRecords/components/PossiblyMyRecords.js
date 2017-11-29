@@ -10,7 +10,6 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
 
-
 import {locale, routes} from 'config';
 
 export default class PossiblyMyRecords extends React.Component {
@@ -44,6 +43,13 @@ export default class PossiblyMyRecords extends React.Component {
         if (this.props.account) {
             this.props.actions.searchPossiblyYourPublications({facets: this.state.activeFacets});
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.accountLoading !== nextProps.accountLoading
+            || this.props.loadingPossiblePublicationsList !== nextProps.loadingPossiblePublicationsList
+            || this.props.loadingPossibleCounts !== nextProps.loadingPossibleCounts
+            || this.state !== nextState;
     }
 
     _hidePublication = () => {

@@ -60,6 +60,10 @@ export default class PublicationCitation extends Component {
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }
 
+    shouldComponentUpdate(nextProps) {
+        return JSON.stringify(nextProps.publication) !== JSON.stringify(this.props.publication);
+    }
+
     _renderCitation = (publicationTypeId) => {
         const filteredPublicationType = publicationTypeId ?
             publicationTypes(this.citationComponents).filter((item) => {

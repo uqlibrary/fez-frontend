@@ -48,6 +48,12 @@ export default class MyRecords extends React.Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.accountLoading !== nextProps.accountLoading
+            || this.props.loadingPublicationsList !== nextProps.loadingPublicationsList
+            || this.state !== nextState;
+    }
+
     componentWillUpdate(nextProps, nextState) {
         if (this.state.sortBy !== nextState.sortBy
             || this.state.sortDirection !== nextState.sortDirection

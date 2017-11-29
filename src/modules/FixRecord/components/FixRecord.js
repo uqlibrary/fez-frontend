@@ -46,18 +46,6 @@ export default class FixRecord extends Component {
         };
     }
 
-    componentWillMount() {
-        const {recordToFix, author} = this.props;
-
-        const isAuthorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
-        const isContributorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
-
-        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !isAuthorLinked && !isContributorLinked) {
-            // if either author or publication data is missing, abandon form
-            this.props.history.go(-1);
-        }
-    }
-
     componentDidMount() {
         if (this.props.actions && !this.props.recordToFixLoading && !this.props.recordToFix) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
@@ -79,7 +67,15 @@ export default class FixRecord extends Component {
     }
 
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-        return recordToFix[searchKey] && recordToFix[searchKey].length > 0 && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
+            && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+    };
+
+    isAuthorLinked = () => {
+        const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
+        const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
+
+        return isAuthorLinked || isContributorLinked;
     };
 
     _navigateToMyResearch = () => {
@@ -123,6 +119,12 @@ export default class FixRecord extends Component {
     };
 
     render() {
+        // if author is not linked to this record, abandon form
+        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !this.isAuthorLinked()) {
+            this.props.history.go(-1);
+            return <div />;
+        }
+
         const txt = locale.pages.fixRecord;
         const txtFixForm = locale.forms.fixPublicationForm;
         const txtUnclaimForm = locale.forms.unclaimPublicationForm;
@@ -134,9 +136,6 @@ export default class FixRecord extends Component {
                 </div>
             );
         }
-
-        const {recordToFix, author} = this.props;
-        if (!recordToFix || !author) return (<div />);
 
         const fixOptions = txt.actionsOptions.map((item, index) => (
             <MenuItem
@@ -155,7 +154,7 @@ export default class FixRecord extends Component {
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
                     <StandardCard title={txt.subTitle} help={txt.help}>
-                        <PublicationCitation publication={recordToFix}/>
+                        <PublicationCitation publication={this.props.recordToFix}/>
 
                         <Field
                             component={SelectField}

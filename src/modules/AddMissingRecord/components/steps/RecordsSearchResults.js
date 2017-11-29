@@ -8,9 +8,7 @@ import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 
 
 // forms & custom components
-import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
-import {PublicationListLoadingProgress} from 'modules/SharedComponents/PublicationsList';
-
+import {PublicationsList, PublicationListLoadingProgress} from 'modules/SharedComponents/PublicationsList';
 import {locale, routes} from 'config';
 
 export default class RecordsSearchResults extends React.Component {
@@ -30,6 +28,13 @@ export default class RecordsSearchResults extends React.Component {
 
     constructor(props) {
         super(props);
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return  nextProps.loadingSearch !== this.props.loadingSearch
+        || nextProps.rawSearchQuery !== this.props.rawSearchQuery
+        || nextProps.loadingPublicationSources !== this.props.loadingPublicationSources
+        || nextProps.publicationsList !== this.props.publicationsList;
     }
 
     _showNewRecordForm = () => {

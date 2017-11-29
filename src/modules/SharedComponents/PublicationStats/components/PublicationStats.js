@@ -8,7 +8,6 @@ export default class PublicationStats extends Component {
         publicationsStats: PropTypes.object
     }
     render() {
-        console.log('render');
         const txt = locale.components.publicationStats;
         const pubStats = this.props.publicationsStats;
         if (!pubStats) return (<span className="publicationsStats empty"/>);

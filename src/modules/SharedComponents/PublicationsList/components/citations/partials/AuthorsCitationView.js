@@ -54,6 +54,11 @@ export default class AuthorsCitationView extends React.Component {
         };
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextState !== this.state
+            || JSON.stringify(nextProps.publication[nextProps.searchKey]) !== JSON.stringify(this.props.publication[this.props.searchKey]);
+    }
+
     renderAuthors = (authors) => {
         return authors.map((author, index) => {
             const prefix = authors.length > 1 && index === authors.length - 1 ? ' and ' : '';

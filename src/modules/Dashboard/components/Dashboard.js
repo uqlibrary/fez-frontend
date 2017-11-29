@@ -66,6 +66,12 @@ class Dashboard extends React.Component {
         }
     }
 
+    shouldComponentUpdate(nextProps) {
+        return !(nextProps.loadingPublicationsByYear || nextProps.loadingAuthorDetails
+            || nextProps.loadingPublicationsStats || nextProps.loadingTrendingPublications
+            || nextProps.loadingLatestPublications);
+    }
+
     _claimYourPublications = () => {
         this.props.history.push(routes.pathConfig.records.possible);
     };

@@ -4,56 +4,59 @@ import LinearProgress from 'material-ui/LinearProgress';
 import CircularProgress from 'material-ui/CircularProgress';
 import {locale} from 'config';
 
-const PublicationListLoadingProgress = ({loadingPublicationSources, mobile}) => {
-    const txt = locale.pages.addRecord.step2.searchResults.searchDashboard;
+export default class PublicationListLoadingProgress extends React.Component {
+    static propTypes = {
+        loadingPublicationSources: PropTypes.object.isRequired,
+        mobile: PropTypes.bool
+    }
 
-    return (
-        <div>
-            {
-                !mobile &&
-                <div className="searchDashboardDesktop">
-                    <div className="body-2">
-                        {txt.repositories.map((item, index) => (
-                            <div key={index} className="searchDashboardList">
-                                {item.title}
-                                <span className="is-pulled-right">
-                                    {
-                                        loadingPublicationSources && loadingPublicationSources[item.id] ?
-                                            (
-                                                <div>{loadingPublicationSources[`${item.id}Count`]} {txt.recordSuffix}</div>
-                                            ) : (
-                                                <CircularProgress
+    shouldComponentUpdate(nextProps) {
+        return nextProps.mobile !== this.props.mobile
+            || JSON.stringify(nextProps.loadingPublicationSources) !== JSON.stringify(this.props.loadingPublicationSources);
+    }
+
+    render() {
+        const txt = locale.pages.addRecord.step2.searchResults.searchDashboard;
+        const {loadingPublicationSources, mobile} = this.props;
+
+        return (
+            <div>
+                {
+                    !mobile &&
+                    <div className="searchDashboardDesktop">
+                        <div className="body-2">
+                            {txt.repositories.map((item, index) => (
+                                <div key={index} className="searchDashboardList">
+                                    {item.title}
+                                    <span className="is-pulled-right">
+                                        {
+                                            loadingPublicationSources && loadingPublicationSources[item.id]
+                                                ? (<div>{loadingPublicationSources[`${item.id}Count`]} {txt.recordSuffix}</div>)
+                                                : (<CircularProgress
                                                     size={14}
                                                     thickness={2}
-                                                    aria-label={`${item.title} ${txt.ariaCircularProgressLabelSuffix}`} />
-                                            )
-                                    }
-                                </span>
-                            </div>
-                        ))}
+                                                    aria-label={`${item.title} ${txt.ariaCircularProgressLabelSuffix}`}/>)
+                                        }
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            }
-            {
-                mobile &&
-                <div className="searchDashboardMobile">
-                    <LinearProgress
-                        className="searchDashboardBar"
-                        mode="determinate"
-                        value={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
-                        aria-valuenow={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                    />
-                </div>
-            }
-        </div>
-    );
-};
-
-PublicationListLoadingProgress.propTypes = {
-    loadingPublicationSources: PropTypes.object.isRequired,
-    mobile: PropTypes.bool
-};
-
-export default PublicationListLoadingProgress;
+                }
+                {
+                    mobile &&
+                    <div className="searchDashboardMobile">
+                        <LinearProgress
+                            className="searchDashboardBar"
+                            mode="determinate"
+                            value={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
+                            aria-valuenow={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                        />
+                    </div>
+                }
+            </div>
+        );
+    }
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
-
 import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
 
 // application components
@@ -55,6 +54,15 @@ export default class App extends React.Component {
         this.props.actions.loadCurrentAccount();
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.user.accountLoading !== nextProps.user.accountLoading
+            || this.props.user.authorLoading !== nextProps.user.authorLoading
+            || this.props.user.loadingAuthorDetails !== nextProps.user.loadingAuthorDetails
+            || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
+            || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
+            || this.state !== nextState;
     }
 
     componentWillUnmount() {
