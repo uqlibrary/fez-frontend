@@ -43,15 +43,3 @@ describe('Authors reducer', () => {
     });
 
 });
-
-
-
-/*
-    [actions.AUTHORS_LOADING]: () => ({
-        authorsList: [],
-        authorsListLoading: true,
-        authorsListLoadingError: false
-    })
-
-
- */
