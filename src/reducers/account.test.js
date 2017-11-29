@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 import accountReducer from './account';
 
-describe('Authors reducer', () => {
+describe('account reducer', () => {
 
     const initialState = {
         account: null,
@@ -97,7 +97,13 @@ describe('Authors reducer', () => {
     it('returns the initialState due to an invalid action type', () => {
         const test = accountReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
         expect(test).toEqual({
-            ...initialState
+            ...initialState,
+            authorDetails: null,
+            loadingAuthorDetails: true
         })
     });
+
+
+
+
 });
