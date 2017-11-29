@@ -37,7 +37,7 @@ describe('createRecord reducer', () => {
     });
 
     it('returns the initialState when an invalid action hander is supplied', () => {
-        const test = createRecordReducer(initialState, {type: 'AN_INVALID_ACTION'});
+        const test = createRecordReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
         expect(test).toEqual(initialState);
     });
 });

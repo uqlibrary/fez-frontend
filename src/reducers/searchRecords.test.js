@@ -3276,7 +3276,7 @@ describe('searchRecords reducer', () => {
     });
 
     it('returns the initial state when specifying an invalid handler type', () => {
-        const countState = searchRecordsReducer(initialState, {payload: [], type: 'ACTION_TYPE_DOES_NOT_EXIST'});
+        const countState = searchRecordsReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
         expect(countState).toEqual(initialState);
     });
 

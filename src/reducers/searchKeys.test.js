@@ -29,7 +29,7 @@ describe('searchKeys reducer', () => {
     });
 
     it('returns the initialState when an invalid action type is supplied', () => {
-        const test = searchKeysReducer(initialState, {type: ''});
+        const test = searchKeysReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
         expect(test).toEqual(initialState);
     });
 

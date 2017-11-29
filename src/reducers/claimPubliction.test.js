@@ -150,7 +150,7 @@ describe('claimPublication reducer', () => {
     });
 
     it('returns the initialState if an invalid action type is supplied', () => {
-        const test = claimPublicationReducer(initialState, {type: 'NOT_A_VALID_ACTION_TYPE'});
+        const test = claimPublicationReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
         expect(test).toEqual(initialState);
     });
 
