@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'config';
+import {locale, general, routes} from 'config';
 import {parse} from 'querystring';
 
 import {orcid} from 'services';
@@ -40,6 +40,11 @@ export default class Orcid extends Component {
     _authoriseOrcid = () => {
         const orcidAuthUrl = orcid.requestPermissionUrl(this.props.location.pathname, {show_login: true});
         window.location.replace(orcidAuthUrl);
+    };
+
+    _linkOrcid = () => {
+        this.props.actions.addAcademicIdentifier(this.props.account.id, general.ORCID_PROVIDER_ID);
+        this.props.history.push(routes.pathConfig.dashboard);
     };
 
     render() {
@@ -85,7 +90,7 @@ export default class Orcid extends Component {
                                                 secondary
                                                 fullWidth
                                                 label={txt.linkOrcid.labels.submit}
-                                                onTouchTap={this._showAuthoriseConfirmation}
+                                                onTouchTap={this._linkOrcid}
                                             />
                                         </div>
                                     </div>

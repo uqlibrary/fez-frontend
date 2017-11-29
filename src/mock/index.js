@@ -105,7 +105,12 @@ mock
         .reply(200, {data: {}})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))
         .reply(200, {data: {}})
+    .onPost(new RegExp(escapeRegExp(routes.ACADEMIC_IDENTIFIERS_ADD_API({userId: '.*', providerId: '.*'}))))
+        .reply(200, {data: {}})
+    .onPost(new RegExp(escapeRegExp(routes.ACADEMIC_IDENTIFIERS_GRANT_ADD_API({userId: '.*', providerId: '.*'}))))
+        .reply(200, {data: {}})
     .onAny().reply((config) => {
+        console.log(config);
         console.log('url not found...');
         console.log(config.url);
         return [404, {message: `MOCK URL NOT FOUND: ${config.url}`}];

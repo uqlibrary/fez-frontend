@@ -107,3 +107,8 @@ export const SEARCH_KEY_LOOKUP_API = ({searchKey, searchQuery}) => (
 );
 
 export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => (`orcid/${userId}/request?${stringify(params)}`);
+
+// academic identifiers api
+export const ACADEMIC_IDENTIFIERS_ADD_API = ({userId, providerId}) => (`academic-identifiers/${userId}/${providerId}`);
+export const ACADEMIC_IDENTIFIERS_GRANT_ADD_API = ({userId, providerId}) => (`academic-identifiers/${userId}/${providerId}/grant-add`);
+
