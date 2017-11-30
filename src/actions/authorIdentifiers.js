@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import {get, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
-import {transformIdentifierResponse} from './authorIdentifierTransformer';
+import {transformAuthorIdentifier} from './authorIdentifierTransformer';
 
 /**
  * Returns orcid access token for an author
@@ -41,7 +41,7 @@ export function requestAuthorOrcidInfo(userId, params) {
  */
 export function addAuthorIdentifier(type, userId, identifierId, response = null) {
     return dispatch => {
-        const data = transformIdentifierResponse(type, userId, identifierId, response);
+        const data = transformAuthorIdentifier(type, userId, identifierId, response);
         dispatch({type: actions.ACADEMIC_IDENTIFIER_ADDING});
         return patch(routes.AUTHOR_ADD_IDENTIFIER({userId}), data)
             .then(() => dispatch({type: actions.ACADEMIC_IDENTIFIER_ADDING_DONE}))

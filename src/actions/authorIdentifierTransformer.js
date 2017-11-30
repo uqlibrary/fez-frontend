@@ -1,12 +1,12 @@
 import {AUTHOR_IDENTIFIER_ORCID, authorIdentifierKeys} from 'config/general';
 
-export const transformIdentifierResponse = (type, userId, identifierId, data = null) => {
+export const transformAuthorIdentifier = (type, userId, identifierId, data = null) => {
     const patchData = {
         aut_id: userId,
         [authorIdentifierKeys[type]]: identifierId
     };
 
-    if (type === AUTHOR_IDENTIFIER_ORCID) {
+    if (type === AUTHOR_IDENTIFIER_ORCID && data) {
         patchData.fez_author_identifier_user_grants = {
             aig_name: data.scope,
             aig_expires: data.expires_in,
