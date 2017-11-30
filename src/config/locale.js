@@ -552,7 +552,7 @@ export default {
         fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
             'Record: ' + APP_URL + `view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
     },
-    researcherIdentifiers: {
+    authorIdentifiers: {
         orcid: {
             title: 'Link ORCID ID to UQ eSpace',
             grantAccessConfirmation: {
@@ -616,16 +616,15 @@ export default {
                     hint: 'Create a new ORCID iD'
                 }
             },
-            linkOrcid: {
-                title: 'Linking ORCID',
-                description: (
-                    <div>We have received your ORCID, please click below to link it to UQ.</div>
-                ),
-                labels: {
-                    orcidId: 'Your ORCID: ',
-                    submit: 'Link ORCID',
-                    hint: 'Link ORCID'
-                }
+            stateErrorAlert: {
+                title: 'ORCID',
+                message: 'Error retrieving ORCID - problem with state',
+                type: 'error'
+            },
+            codeErrorAlert: {
+                title: 'ORCID',
+                message: 'Error retrieving ORCID - problem with code',
+                type: 'error'
             }
         }
     }

@@ -9,15 +9,15 @@ export const authorOrcidDetails = {
 };
 
 export const afterOrcid = {
-    "aut_id": 4101,
-    "aut_org_username": "uqnoorcid",
+    "aut_id": 410,
+    "aut_org_username": "uqresearcher",
     "aut_org_staff_id": "0001952",
     "aut_org_student_id": null,
     "aut_email": "",
-    "aut_display_name": "Researcher (no orcid), J",
+    "aut_display_name": "Researcher, J",
     "aut_fname": "J",
     "aut_mname": "",
-    "aut_lname": "Researcher (no orcid)",
+    "aut_lname": "Researcher",
     "aut_title": "Professor",
     "aut_position": "",
     "aut_homepage_link": "",
@@ -36,4 +36,4 @@ export const afterOrcid = {
     "aut_rid_last_updated": "2013-05-17",
     "aut_publons_id": null,
     "aut_student_username": null
-}
+};

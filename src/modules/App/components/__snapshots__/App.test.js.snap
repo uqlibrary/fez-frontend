@@ -235,8 +235,9 @@ exports[`App tests for user account and author status User is logged in but are 
           render={[Function]}
         />
         <Route
+          component={[Function]}
+          exact={true}
           path="/author-identifiers/orcid/link"
-          render={[Function]}
         />
         <Route
           path="/author-identifiers/googleScholar/link"
@@ -653,8 +654,9 @@ exports[`App tests for user account and author status User logged in and is an a
           render={[Function]}
         />
         <Route
+          component={[Function]}
+          exact={true}
           path="/author-identifiers/orcid/link"
-          render={[Function]}
         />
         <Route
           path="/author-identifiers/googleScholar/link"
@@ -929,8 +931,9 @@ exports[`App tests for user account and author status User logged in but is not 
           render={[Function]}
         />
         <Route
+          component={[Function]}
+          exact={true}
           path="/author-identifiers/orcid/link"
-          render={[Function]}
         />
         <Route
           path="/author-identifiers/googleScholar/link"
@@ -1212,8 +1215,9 @@ exports[`App tests for user account and author status should display ORCID requi
           render={[Function]}
         />
         <Route
+          component={[Function]}
+          exact={true}
           path="/author-identifiers/orcid/link"
-          render={[Function]}
         />
         <Route
           path="/author-identifiers/googleScholar/link"
