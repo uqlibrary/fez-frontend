@@ -6,4 +6,4 @@ export {quickTemplates} from './acml';
 export {hindexResponse, publicationStats, trendingPublications, publicationYearsZero,
     publicationYearsBig, publicationYearsSmall} from './academicStats';
 export {searchKeyList} from './searchKeys';
-export {authorOrcidDetails} from './orcid';
+export {authorOrcidDetails, afterOrcid} from './orcid';

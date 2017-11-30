@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {locale, general, routes} from 'config';
-import {parse} from 'querystring';
+import Cookies from 'js-cookie';
+import {parse, stringify} from 'querystring';
+import {createHash} from 'crypto';
 
-import {orcid} from 'services';
+import {locale, routes} from 'config';
+import {APP_URL, SESSION_COOKIE_NAME, AUTHOR_IDENTIFIER_ORCID, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL} from 'config/general';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import {StandardPage, StandardCard, ConfirmDialogBox} from 'uqlibrary-react-toolbox';
@@ -33,18 +35,41 @@ export default class Orcid extends Component {
         this.authoriseConfirmationBox = ref;
     };
 
-    _showAuthoriseConfirmation = () => {
+    _showAuthoriseConfirmation = (orcidUrlGenerator) => {
+        const url = orcidUrlGenerator();
+        this.authoriseConfirmationBox._onAction = () => (window.location.replace(url));
         this.authoriseConfirmationBox.showConfirmation();
     };
 
     _authoriseOrcid = () => {
-        const orcidAuthUrl = orcid.requestPermissionUrl(this.props.location.pathname, {show_login: true});
-        window.location.replace(orcidAuthUrl);
+        return this.requestPermissionUrl(this.props.location.pathname, {show_login: true});
+    };
+
+    _createOrcid = () => {
+        const additionalParams = {
+            show_login: false,
+            family_names: this.props.account.lastName,
+            given_names: this.props.account.firstName
+        };
+        return this.requestPermissionUrl(this.props.location.pathname, additionalParams);
     };
 
     _linkOrcid = () => {
-        this.props.actions.addAcademicIdentifier(this.props.account.id, general.ORCID_PROVIDER_ID);
+        this.props.actions.addAuthorIdentifier(AUTHOR_IDENTIFIER_ORCID, this.props.account.id, this.props.orcidDetails.orcid, this.props.orcidDetails);
         this.props.history.push(routes.pathConfig.dashboard);
+    };
+
+    requestPermissionUrl = (returnUrl, additionalParams = {}) => {
+        const params = {
+            client_id: ORCID_CLIENT_ID,
+            response_type: 'code',
+            redirect_uri: `${APP_URL}#${returnUrl}`,
+            state: createHash('md5').update(Cookies.get(SESSION_COOKIE_NAME)).digest('hex'),
+            scope: '/authenticate',
+            ...additionalParams
+        };
+
+        return `${ORCID_AUTHORIZATION_URL}?${stringify(params)}`;
     };
 
     render() {
@@ -56,24 +81,39 @@ export default class Orcid extends Component {
                     <div>
                         {
                             !this.props.orcidDetails &&
-                            <StandardCard title={txt.authoriseOrcid.title} help={txt.help}>
-                                <div>{txt.authoriseOrcid.description}</div>
+                            <div>
                                 <ConfirmDialogBox
                                     onRef={this._setAuthoriseConfirmation}
-                                    onAction={this._authoriseOrcid}
                                     locale={txt.grantAccessConfirmation} />
-                                <div className="columns action-buttons">
-                                    <div className="column is-hidden-mobile"/>
-                                    <div className="column is-narrow-desktop">
-                                        <RaisedButton
-                                            secondary
-                                            fullWidth
-                                            label={txt.authoriseOrcid.labels.submit}
-                                            onTouchTap={this._showAuthoriseConfirmation}
-                                        />
+                                <StandardCard title={txt.authoriseOrcid.title}>
+                                    <div>{txt.authoriseOrcid.description}</div>
+                                    <div className="columns action-buttons">
+                                        <div className="column is-hidden-mobile"/>
+                                        <div className="column is-narrow-desktop">
+                                            <RaisedButton
+                                                secondary
+                                                fullWidth
+                                                label={txt.authoriseOrcid.labels.submit}
+                                                onTouchTap={() => this._showAuthoriseConfirmation(this._authoriseOrcid)}
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                            </StandardCard>
+                                </StandardCard>
+                                <StandardCard title={txt.createOrcid.title}>
+                                    <div>{txt.createOrcid.description}</div>
+                                    <div className="columns action-buttons">
+                                        <div className="column is-hidden-mobile"/>
+                                        <div className="column is-narrow-desktop">
+                                            <RaisedButton
+                                                secondary
+                                                fullWidth
+                                                label={txt.createOrcid.labels.submit}
+                                                onTouchTap={() => this._showAuthoriseConfirmation(this._createOrcid)}
+                                            />
+                                        </div>
+                                    </div>
+                                </StandardCard>
+                            </div>
                         }
                         {
                             this.props.orcidDetails &&

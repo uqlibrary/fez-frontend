@@ -67,6 +67,7 @@ export const ACCOUNT_API = () => (`account?${new Date().getTime()}`);
 export const AUTHORS_SEARCH_API = ({query}) => (`fez-authors/search?query=${query}`);
 export const CURRENT_AUTHOR_API = () => ('fez-authors');
 export const AUTHOR_DETAILS_API = ({userId}) => (`authors/details/${userId}`);
+export const AUTHOR_ADD_IDENTIFIER = ({userId}) => (`authors/${userId}`);
 
 // academic stats apis
 export const ACADEMIC_STATS_PUBLICATION_YEARS_API = ({userId}) => (`academic/${userId}/publication-years`);
@@ -107,8 +108,3 @@ export const SEARCH_KEY_LOOKUP_API = ({searchKey, searchQuery}) => (
 );
 
 export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => (`orcid/${userId}/request?${stringify(params)}`);
-
-// academic identifiers api
-export const ACADEMIC_IDENTIFIERS_ADD_API = ({userId, providerId}) => (`academic-identifiers/${userId}/${providerId}`);
-export const ACADEMIC_IDENTIFIERS_GRANT_ADD_API = ({userId, providerId}) => (`academic-identifiers/${userId}/${providerId}/grant-add`);
-

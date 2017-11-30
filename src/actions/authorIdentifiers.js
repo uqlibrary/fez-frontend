@@ -1,12 +1,12 @@
 import * as actions from './actionTypes';
-import {get, post} from 'repositories/generic';
+import {get, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
-
+import {transformIdentifierResponse} from './authorIdentifierTransformer';
 
 /**
- * Returns the authors list based on a query, filtered locally by filterBy function
- * @param {string} query passed on to api call
- * @param {function} filterBy function to filter/transform results from api list, eg users with org ids only
+ * Returns orcid access token for an author
+ * @param {string} userId
+ * @param {object} params
  * @returns {action}
  */
 export function requestAuthorOrcidInfo(userId, params) {
@@ -31,25 +31,20 @@ export function requestAuthorOrcidInfo(userId, params) {
 }
 
 /**
- * Link ID provider to author
+ * Link author identifier to an author
  *
- * @param userId
- * @param providerId
+ * @param {string}  type    Type of an identifier e.g. orcid/scopus/researcher_id/google_scholar
+ * @param {string}  userId
+ * @param {string}  identifier ID
+ * @param {object}  response object (entire response - oauth access token)
  * @returns {function(*)}
  */
-export function addAcademicIdentifier(userId, providerId) {
+export function addAuthorIdentifier(type, userId, identifierId, response = null) {
     return dispatch => {
+        const data = transformIdentifierResponse(type, userId, identifierId, response);
         dispatch({type: actions.ACADEMIC_IDENTIFIER_ADDING});
-        dispatch({type: actions.ACADEMIC_IDENTIFIER_GRANT_ADD});
-
-        const addIdentifierPromise = post(routes.ACADEMIC_IDENTIFIERS_ADD_API({userId, providerId}))
+        return patch(routes.AUTHOR_ADD_IDENTIFIER({userId}), data)
             .then(() => dispatch({type: actions.ACADEMIC_IDENTIFIER_ADDING_DONE}))
             .catch((error) => dispatch({type: actions.ACADEMIC_IDENTIFIER_ADDING_FAILED, payload: error}));
-
-        const grantAddIdentifierPromise = post(routes.ACADEMIC_IDENTIFIERS_GRANT_ADD_API({userId, providerId}))
-            .then(() => dispatch({type: actions.ACADEMIC_IDENTIFIER_GRANT_ADD_DONE}))
-            .catch((error) => dispatch({type: actions.ACADEMIC_IDENTIFIER_ADDING_FAILED, payload: error}));
-
-        return Promise.all([addIdentifierPromise, grantAddIdentifierPromise]);
     };
 }

@@ -595,17 +595,25 @@ export default {
             },
             authoriseOrcid: {
                 title: 'I already have an ORCID iD',
-                help: {
-                    title: 'Already registered?',
-                    text: 'This option enables you to link your existing ORCID iD to UQ.',
-                    buttonLabel: 'OK'
-                },
                 description: (
                     <div>This option enables you to link your existing ORCID iD to UQ.</div>
                 ),
                 labels: {
                     submit: 'Link your ORCID iD',
                     hint: 'Link your ORCID iD'
+                }
+            },
+            createOrcid: {
+                title: 'I need an ORCID iD',
+                description: (
+                    <div>
+                        <p>This option enables you to create a new ORCID iD and link it with UQ.</p>
+                        <p>Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.</p>
+                    </div>
+                ),
+                labels: {
+                    submit: 'Create a new ORCID iD',
+                    hint: 'Create a new ORCID iD'
                 }
             },
             linkOrcid: {
