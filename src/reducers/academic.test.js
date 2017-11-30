@@ -70,7 +70,7 @@ describe('academicStatsReducer', () => {
     });
 
     it('does not find handler', () => {
-        const state = academicStatsReducer(undefined, {type: actions.SOME_OTHER_ACTION_TYPE});
+        const state = academicStatsReducer(undefined, {type: 'INVALID_ACTION_TYPE'});
         expect(state).toEqual(initialState);
     });
 });

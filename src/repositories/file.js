@@ -1,5 +1,5 @@
 import {generateCancelToken} from 'config';
-import {fileUploadActions} from 'uqlibrary-react-toolbox/build/FileUploader';
+import {fileUploadActions} from 'uqlibrary-react-toolbox/build/FileUploader/actions';
 import {locale} from 'config';
 import * as routes from './routes';
 import {get, put, post} from './generic';

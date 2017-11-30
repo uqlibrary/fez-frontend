@@ -12,6 +12,8 @@ const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const WebpackStrip = require('strip-loader');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 const port = 9000;
 
 // options for deployment: global title, Google tag manager id
@@ -134,7 +136,10 @@ module.exports = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
-            minChunks: Infinity,
+            minChunks: Infinity
+        }),
+        new BundleAnalyzerPlugin({
+            generateStatsFile: false,
         })
     ],
     module: {
