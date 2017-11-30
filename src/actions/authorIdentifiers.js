@@ -3,6 +3,7 @@ import {get, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import {transformAuthorIdentifier} from './authorIdentifierTransformer';
 import {AUTHOR_IDENTIFIER_ORCID} from 'config/general';
+import {locale} from 'config';
 
 /**
  * Returns orcid access token for an author
@@ -29,6 +30,10 @@ export function requestAuthorOrcidInfo(userId, params) {
             })
             .then((response) => {
                 dispatch({type: actions.AUTHOR_IDENTIFIER_ADDED, payload: response.data});
+                dispatch({
+                    type: actions.APP_NOTIFICATION,
+                    payload: {...locale.authorIdentifiers.orcid.successAlert, dismissAction: () => (dispatch({type: actions.APP_NOTIFICATION_DISMISSED}))}
+                });
             })
             .catch(error => {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});

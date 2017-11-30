@@ -1,13 +1,24 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    hidePossiblyYourPublicationsLure: false
+    hidePossiblyYourPublicationsLure: false,
+    notificationAlert: null
 };
 
 const handlers = {
     [actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE]: () => ({
         ...initialState,
         hidePossiblyYourPublicationsLure: true
+    }),
+
+    [actions.APP_NOTIFICATION]: (state, action) => ({
+        ...state,
+        notificationAlert: action.payload
+    }),
+
+    [actions.APP_NOTIFICATION_DISMISSED]: () => ({
+        ...initialState,
+        notificationAlert: null
     })
 };
 

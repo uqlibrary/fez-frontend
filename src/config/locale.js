@@ -625,6 +625,12 @@ export default {
                 title: 'ORCID',
                 message: 'Error retrieving ORCID - problem with code',
                 type: 'error'
+            },
+            successAlert: {
+                title: 'ORCID',
+                message: 'We did save your ORCID iD and linked to your account.  Your publications will be downloaded automatically within the next 24 hours',
+                type: 'done',
+                allowDismiss: true
             }
         }
     }

@@ -5,7 +5,8 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state) => {
     return {
-        user: {...state.get('accountReducer')}
+        user: {...state.get('accountReducer')},
+        notificationAlert: state.get('appReducer').notificationAlert ? {...state.get('appReducer').notificationAlert} : null
     };
 };
 

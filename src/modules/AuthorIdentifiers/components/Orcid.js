@@ -29,9 +29,9 @@ export default class Orcid extends Component {
     componentDidMount() {
         const {orcid} = locale.authorIdentifiers;
 
-        const queryParams = parse(window.location.search.substr(1, window.location.search.length));
+        const queryParams = parse(window.location.search.substr(1));
 
-        if (queryParams.code && queryParams.state !== this.getState()) {
+        if (queryParams.code && queryParams.state && queryParams.state !== this.getState()) {
             this.setError(orcid.stateErrorAlert);
         } else if (queryParams.code) {
             this.props.actions.requestAuthorOrcidInfo(this.props.account.id, {code: queryParams.code, redirUri: this.props.location.pathname});
@@ -45,7 +45,7 @@ export default class Orcid extends Component {
 
     _showAuthoriseConfirmation = (orcidUrlGenerator) => {
         const url = orcidUrlGenerator();
-        this.authoriseConfirmationBox._onAction = () => (window.location.replace(url));
+        this.authoriseConfirmationBox._onAction = () => (window.location.assign(url));
         this.authoriseConfirmationBox.showConfirmation();
     };
 

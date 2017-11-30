@@ -16,7 +16,8 @@ export default class App extends React.Component {
         user: PropTypes.object,
         actions: PropTypes.object,
         location: PropTypes.object,
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
+        notificationAlert: PropTypes.any
     };
 
     static childContextTypes = {
@@ -173,6 +174,15 @@ export default class App extends React.Component {
                                 <div className="layout-fill dashAlert">
                                     <div className="layout-card">
                                         <Alert {...locale.global.noOrcidAlert} action={this.redirectToOrcid} />
+                                    </div>
+                                </div>
+                            }
+
+                            {
+                                this.props.notificationAlert &&
+                                <div className="layout-fill dashAlert">
+                                    <div className="layout-card">
+                                        <Alert {...this.props.notificationAlert} />
                                     </div>
                                 </div>
                             }
