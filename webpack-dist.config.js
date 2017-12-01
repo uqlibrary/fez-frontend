@@ -11,7 +11,6 @@ const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const WebpackStrip = require('strip-loader');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const port = 9000;
 
@@ -143,12 +142,7 @@ module.exports = {
         //       directory: './'
         //     }
         // }),
-        new InjectPreloader(),
-        new BundleAnalyzerPlugin({
-            reportFilename: 'report.html',
-            generateStatsFile: true,
-            statsFilename: 'stats.json',
-        })
+        new InjectPreloader()
     ],
     module: {
         rules: [
