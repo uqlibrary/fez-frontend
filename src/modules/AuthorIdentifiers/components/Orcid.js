@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import {parse, stringify} from 'querystring';
+import {parse} from 'querystring';
 import {createHash} from 'crypto';
 
 import {locale, routes} from 'config';
-import {APP_URL, SESSION_COOKIE_NAME, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL} from 'config/general';
+import {APP_URL, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from 'config/general';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import {StandardPage, StandardCard, ConfirmDialogBox, Alert} from 'uqlibrary-react-toolbox';
@@ -34,7 +34,7 @@ export default class Orcid extends Component {
         if (queryParams.code && queryParams.state && queryParams.state !== this.getState()) {
             this.setError(orcid.stateErrorAlert);
         } else if (queryParams.code) {
-            this.props.actions.requestAuthorOrcidInfo(this.props.account.id, {code: queryParams.code, redirUri: this.props.location.pathname});
+            this.props.actions.requestAuthorOrcidInfo(this.props.account.id, {code: queryParams.code, redirUri: `${APP_URL}#${this.props.location.pathname}`});
             this.props.history.push(routes.pathConfig.dashboard);
         }
     }
@@ -66,7 +66,10 @@ export default class Orcid extends Component {
         this.setState({error: error});
     };
 
-    getState = () => (createHash('md5').update(Cookies.get(SESSION_COOKIE_NAME)).digest('hex'));
+    getState = () => {
+        const sessionToken = Cookies.get(SESSION_COOKIE_NAME) || Cookies.get(TOKEN_NAME);
+        return createHash('md5').update(sessionToken).digest('hex');
+    };
 
     requestPermissionUrl = (returnUrl, additionalParams = {}) => {
         const params = {
@@ -74,11 +77,13 @@ export default class Orcid extends Component {
             response_type: 'code',
             redirect_uri: `${APP_URL}#${returnUrl}`,
             state: this.getState(),
-            scope: '/authenticate',
+            scope: '/read-limited /activities/update /person/update',
             ...additionalParams
         };
 
-        return `${ORCID_AUTHORIZATION_URL}?${stringify(params)}`;
+        const stringifiedParams = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`).join('&').replace(/%20/g, '+');
+
+        return `${ORCID_AUTHORIZATION_URL}?${stringifiedParams}`;
     };
 
     render() {
