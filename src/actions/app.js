@@ -14,3 +14,7 @@ export function hidePossiblyYourPublicationsLure() {
         type: actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE
     };
 }
+
+export function dismissNotificationAlert() {
+    return dispatch => dispatch({type: actions.APP_NOTIFICATION_DISMISSED});
+}

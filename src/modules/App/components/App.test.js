@@ -186,4 +186,29 @@ describe('App tests for user account and author status', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should display notification alert', () => {
+        const values = {
+            user: {
+                account: {},
+                author: {
+                    aut_orcid_id: '0000-0000-1111-1111'
+                },
+                loadingAuthorDetails: false,
+                authorLoading: false,
+                accountLoading: false
+            },
+            location: {
+                hash: '#/dashboard',
+                pathname: '/',
+            },
+            notificationAlert: {
+                type: 'done',
+                title: 'TEST',
+                message: 'Test message',
+                allowDismiss: true,
+            }
+        };
+        const wrapper = setup(values);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
 });

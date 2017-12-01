@@ -1232,3 +1232,275 @@ exports[`App tests for user account and author status should display ORCID requi
   </div>
 </div>
 `;
+
+exports[`App tests for user account and author status should display notification alert 1`] = `
+<div
+  className="layout-fill"
+>
+  <div
+    className="layout-fill align-stretch"
+  >
+    <AppBar
+      className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tabIndex={1}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
+      iconElementRight={
+        <div
+          style={
+            Object {
+              "marginTop": "-10px",
+            }
+          }
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
+      }
+      iconStyleLeft={
+        Object {
+          "marginTop": 0,
+        }
+      }
+      onLeftIconButtonTouchTap={[Function]}
+      showMenuIconButton={true}
+      style={
+        Object {
+          "height": 75,
+        }
+      }
+      title="UQ eSpace DEMO"
+      titleStyle={Object {}}
+      zDepth={1}
+    />
+    <MenuDrawer
+      docked={false}
+      drawerOpen={false}
+      history={Object {}}
+      isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
+      logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+      logoText="UQ eSpace DEMO"
+      menuItems={
+        Array [
+          Object {
+            "linkTo": "/dashboard",
+            "primaryText": "My dashboard",
+            "secondaryText": undefined,
+          },
+          Object {
+            "linkTo": "/records/mine",
+            "primaryText": "My research",
+          },
+          Object {
+            "linkTo": "/records/possible",
+            "primaryText": "Claim possible publications",
+          },
+          Object {
+            "linkTo": "/records/add/find",
+            "primaryText": "Add a missing record",
+          },
+          Object {
+            "divider": true,
+            "path": "/234234234242",
+          },
+          Object {
+            "linkTo": "/browse",
+            "primaryText": "Browse eSpace",
+            "public": true,
+            "secondaryText": "",
+          },
+          Object {
+            "linkTo": "/about",
+            "primaryText": "About",
+            "public": true,
+            "secondaryText": "",
+          },
+        ]
+      }
+      onToggleDrawer={[Function]}
+    />
+    <div
+      className="content-container"
+      style={Object {}}
+    >
+      <div
+        className="layout-fill dashAlert"
+      >
+        <div
+          className="layout-card"
+        >
+          <Alert
+            allowDismiss={false}
+            message="Please contact the UQ eSpace administrator to resolve this."
+            title="You are not registered in UQ eSpace as an author"
+            type="info_outline"
+          />
+        </div>
+      </div>
+      <div
+        className="layout-fill dashAlert"
+      >
+        <div
+          className="layout-card"
+        >
+          <Alert
+            allowDismiss={true}
+            message="Test message"
+            title="TEST"
+            type="done"
+          />
+        </div>
+      </div>
+      <Switch>
+        <Route
+          path="/about"
+          render={[Function]}
+        />
+        <Route
+          path="/browse"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/:pid/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/author-identifiers/orcid/link"
+        />
+        <Route
+          path="/author-identifiers/googleScholar/link"
+          render={[Function]}
+        />
+        <Route
+          render={[Function]}
+        />
+      </Switch>
+    </div>
+    <Connect(HelpDrawer) />
+  </div>
+</div>
+`;

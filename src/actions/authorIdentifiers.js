@@ -4,6 +4,7 @@ import * as routes from 'repositories/routes';
 import {transformAuthorIdentifier} from './authorIdentifierTransformer';
 import {AUTHOR_IDENTIFIER_ORCID} from 'config/general';
 import {locale} from 'config';
+import {dismissNotificationAlert} from './app';
 
 /**
  * Returns orcid access token for an author
@@ -32,7 +33,10 @@ export function requestAuthorOrcidInfo(userId, params) {
                 dispatch({type: actions.AUTHOR_IDENTIFIER_ADDED, payload: response.data});
                 dispatch({
                     type: actions.APP_NOTIFICATION,
-                    payload: {...locale.authorIdentifiers.orcid.successAlert, dismissAction: () => (dispatch({type: actions.APP_NOTIFICATION_DISMISSED}))}
+                    payload: {
+                        ...locale.authorIdentifiers.orcid.successAlert,
+                        dismissAction: dismissNotificationAlert
+                    }
                 });
             })
             .catch(error => {
