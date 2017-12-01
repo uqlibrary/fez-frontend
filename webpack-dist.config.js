@@ -145,9 +145,7 @@ module.exports = {
         // }),
         new InjectPreloader(),
         new BundleAnalyzerPlugin({
-            reportFilename: 'report.html',
-            generateStatsFile: true,
-            statsFilename: 'stats.json',
+            analyzerMode: process && process.env && process.env.CI ? 'disabled' : 'static'
         })
     ],
     module: {

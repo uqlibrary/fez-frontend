@@ -4,7 +4,6 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const port = 3000;
 let url = 'localhost';
@@ -149,11 +148,6 @@ module.exports = {
             __DEVELOPMENT__: true,
             'process.env.NODE_ENV': JSON.stringify('development'),
             'process.env.USE_MOCK': JSON.stringify(useMock)
-        }),
-        new BundleAnalyzerPlugin({
-            reportFilename: 'report.html',
-            generateStatsFile: true,
-            statsFilename: 'stats.json',
         })
     ],
     resolve: {
