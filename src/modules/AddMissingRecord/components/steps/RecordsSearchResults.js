@@ -8,7 +8,10 @@ import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 
 
 // forms & custom components
-import {PublicationsList, PublicationListLoadingProgress} from 'modules/SharedComponents/PublicationsList';
+import Async from 'modules/SharedComponents/Async';
+const PublicationsList = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationsList/components/PublicationsList')}  componentProps={componentProps} />);
+const PublicationListLoadingProgress = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress')}  componentProps={componentProps} />);
+
 import {locale, routes} from 'config';
 
 export default class RecordsSearchResults extends React.Component {

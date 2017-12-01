@@ -98,7 +98,7 @@ module.exports = {
         new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
-            __DEVELOPMENT__: false,
+            __DEVELOPMENT__: environment === 'development',
             'process.env.NODE_ENV': JSON.stringify(environment),
             'process.env.BASE_PATH': JSON.stringify(baseUrlPath),
             'process.env.USE_MOCK': JSON.stringify(useMock)
