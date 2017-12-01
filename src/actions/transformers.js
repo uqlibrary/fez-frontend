@@ -1,4 +1,4 @@
-import {locale} from 'config';
+import {locale} from 'locale';
 
 const moment = require('moment');
 

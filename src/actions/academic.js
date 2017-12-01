@@ -1,8 +1,6 @@
 import * as transformer from './academicDataTransformers';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-// import {get} from 'repositories/generic';
-// import * as repositories.routes from 'repositories/repositories.routes';
 
 /**
  * Returns the author's publications per year
