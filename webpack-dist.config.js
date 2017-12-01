@@ -139,7 +139,7 @@ module.exports = {
             minChunks: Infinity
         }),
         new BundleAnalyzerPlugin({
-            generateStatsFile: false,
+            analyzerMode: process && process.env && process.env.CI ? 'disabled' : 'static'
         })
     ],
     module: {

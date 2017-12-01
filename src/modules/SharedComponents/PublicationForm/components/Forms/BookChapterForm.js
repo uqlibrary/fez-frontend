@@ -9,6 +9,8 @@ import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {validation, locale} from 'config';
+import {default as formLocale} from 'config/locale.forms.PublicationForm';
+
 import PropTypes from 'prop-types';
 
 export default class BookChapterForm extends Component {
@@ -22,7 +24,7 @@ export default class BookChapterForm extends Component {
     }
 
     render() {
-        const txt = locale.forms.publicationForm.bookChapter;
+        const txt = formLocale.bookChapter;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

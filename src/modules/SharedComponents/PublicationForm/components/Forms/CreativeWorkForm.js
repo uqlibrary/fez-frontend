@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
 import {Field} from 'redux-form/immutable';
 
 import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
@@ -8,7 +7,8 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation, locale} from 'config';
+import {validation} from 'config';
+import {default as formLocale} from 'config/locale.forms.PublicationForm';
 
 export default class CreativeWorkForm extends Component {
     static propTypes = {
@@ -22,7 +22,7 @@ export default class CreativeWorkForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.forms.publicationForm.creativeWork;
+        const txt = formLocale.creativeWork;
 
         return (
             <div>

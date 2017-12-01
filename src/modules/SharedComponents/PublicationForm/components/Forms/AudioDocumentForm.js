@@ -8,7 +8,8 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation, locale} from 'config';
+import {validation} from 'config';
+import {default as formLocale} from 'config/locale.forms.PublicationForm';
 
 export default class AudioDocumentForm extends Component {
     static propTypes = {
@@ -21,7 +22,7 @@ export default class AudioDocumentForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.forms.publicationForm.audioDocument;
+        const txt = formLocale.audioDocument;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Field} from 'redux-form/immutable';
 
 import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
@@ -6,9 +7,10 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation, locale} from 'config';
-import PropTypes from 'prop-types';
 import {SeriesField, ReportNumberField, OrgUnitNameField, OrgNameField} from 'modules/SharedComponents/LookupFields';
+
+import {validation} from 'config';
+import {default as formLocale} from 'config/locale.forms.PublicationForm';
 
 export default class DepartmentTechnicalReportForm extends Component {
     static propTypes = {
@@ -20,7 +22,7 @@ export default class DepartmentTechnicalReportForm extends Component {
     }
 
     render() {
-        const txt = locale.forms.publicationForm.departmentTechnicalReport;
+        const txt = formLocale.departmentTechnicalReport;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

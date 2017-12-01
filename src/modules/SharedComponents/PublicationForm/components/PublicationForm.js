@@ -12,8 +12,8 @@ import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
 
-import {locale, publicationTypes, validation} from 'config';
-import {default as txt} from 'config/locale.forms.publicationForm';
+import {publicationTypes, validation} from 'config';
+import {default as txt} from 'config/locale.forms.PublicationForm';
 
 import * as recordForms from './Forms';
 
@@ -83,7 +83,6 @@ export default class PublicationForm extends Component {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })
         ];
-        // const txt = locale.forms.publicationForm;
         return (
             <form>
                 <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />

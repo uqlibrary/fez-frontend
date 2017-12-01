@@ -17,7 +17,7 @@ UQ's branding for Fez is UQ eSpace.
 - State: `Redux, ReduxForm`
 - Design: `Google Material Design - Material UI`
 - Build and dev tools: `Webpack`
-- Tests: `Jest/Nightwatch`
+- Tests: `Jest`
 
 ## Development
 This project is using `yarn` for dependency management.  Make sure `yarn` is installed on your machine.
@@ -50,15 +50,7 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 Before committing changes, locally run tests and update stapshots (if required). To update snapshots run `npm test -- -u`.
 
 ### E2E testing
-[Nightwatch.js](http://nightwatchjs.org/) is used to run end to end tests.
-
-- start dist version of the project by `yarn start:build:e2e` - runs application in mock mode
-- while dist version of the project is running, start tests by `yarn test:e2e`
-
-Codeship setup:
-
-- `nohup bash -c "yarn start:build:e2e 2>&1 &" && sleep 20; cat nohup.out`
-- `yarn test:e2e`
+TBA
 
 ## Mocking
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import {default as components} from './locale.components';
 
 export default {
     forms: {
