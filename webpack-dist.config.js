@@ -76,7 +76,6 @@ module.exports = {
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
             'process.env.NODE_ENV': JSON.stringify('production'),       // always production build on CI
             'process.env.USE_MOCK': JSON.stringify(useMock),
-            'process.env.BASE_PATH': JSON.stringify('/' + config.basePath),
             'process.env.API_URL': JSON.stringify(config.api),
             'process.env.APP_URL': JSON.stringify(config.url)
         }),

@@ -1,9 +1,4 @@
-/* eslint-disable dot-location */
-/* eslint-disable import/no-commonjs */
-/* eslint-disable strict */
-/* eslint-disable fp/no-let */
-/* eslint-disable fp/no-mutation */
-
+/* eslint-disable */
 'use strict';
 
 let url = 'http://localhost:9000/#/';

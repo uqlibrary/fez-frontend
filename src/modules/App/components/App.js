@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
-import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import {locale} from 'locale';
 
 // application components
 import AppBar from 'material-ui/AppBar';
@@ -138,8 +139,8 @@ export default class App extends React.Component {
                                         isAuthorizedUser={isAuthorizedUser}
                                         hoveredStyle={appBarButtonStyles}
                                         onClick={this.redirectUserToLogin}
-                                        signInTooltipText={locale.authentication.signInText}
-                                        signOutTooltipText={isAuthorizedUser ? (`${locale.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
+                                        signInTooltipText={locale.global.authentication.signInText}
+                                        signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
                                 </div>
                             }
                         />

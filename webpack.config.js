@@ -8,7 +8,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const port = 3000;
 const url = process.env.URL || 'localhost';
 const useMock = !!process.env.USE_MOCK || false;
-const publicPath = 'espace/branch/';
+const publicPath = '';
 
 module.exports = {
     context: path.resolve(__dirname),
@@ -141,8 +141,7 @@ module.exports = {
         new webpack.DefinePlugin({
             __DEVELOPMENT__: true,
             'process.env.NODE_ENV': JSON.stringify('development'),
-            'process.env.USE_MOCK': JSON.stringify(useMock),
-            'process.env.BASE_PATH': JSON.stringify(publicPath)
+            'process.env.USE_MOCK': JSON.stringify(useMock)
         })
     ],
     resolve: {

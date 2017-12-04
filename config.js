@@ -22,7 +22,6 @@ const deployment = {
         gtm: 'GTM-T4NPC25',
         title: 'eSpace - The University of Queensland',
         environment: 'production',
-        publicPathOffline: '/',
         basePath: '',
         publicPath: '/'
     }

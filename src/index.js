@@ -1,7 +1,7 @@
 // External
 import {AppContainer} from 'react-hot-loader';
 import {applyMiddleware, compose, createStore} from 'redux';
-import {createBrowserHistory} from 'history';
+import {createBrowserHistory, createHashHistory} from 'history';
 import {routerMiddleware, connectRouter} from 'connected-react-router/immutable';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
@@ -18,7 +18,10 @@ import Root from './Root';
 import rootReducer from './reducer';
 import 'sass/index.scss';
 
-const history = createBrowserHistory({basename: process.env.BASE_PATH || '/'});
+const history = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging'
+    ? createBrowserHistory()
+    : createHashHistory();
+
 const initialState = Immutable.Map();
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
