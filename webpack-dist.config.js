@@ -77,7 +77,8 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production'),       // always production build on CI
             'process.env.USE_MOCK': JSON.stringify(useMock),
             'process.env.API_URL': JSON.stringify(config.api),
-            'process.env.APP_URL': JSON.stringify(config.url)
+            'process.env.APP_URL': JSON.stringify(config.url),
+            'process.env.BRANCH': JSON.stringify(config.environment)
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's

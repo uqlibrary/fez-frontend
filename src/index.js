@@ -1,13 +1,14 @@
 // External
-import {AppContainer} from 'react-hot-loader';
-import {applyMiddleware, compose, createStore} from 'redux';
-import {createBrowserHistory, createHashHistory} from 'history';
-import {routerMiddleware, connectRouter} from 'connected-react-router/immutable';
-import thunk from 'redux-thunk';
-import {Provider} from 'react-redux';
-import Immutable from 'immutable';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {applyMiddleware, compose, createStore} from 'redux';
+import Immutable from 'immutable';
+import {routerMiddleware, connectRouter} from 'connected-react-router/immutable';
+import thunk from 'redux-thunk';
+import {createBrowserHistory, createHashHistory} from 'history';
+
+import {AppContainer} from 'react-hot-loader';
 
 // Tap fix for material-ui
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -18,7 +19,7 @@ import Root from './Root';
 import rootReducer from './reducer';
 import 'sass/index.scss';
 
-const history = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging'
+const history = process.env.BRANCH === 'production' || process.env.BRANCH === 'staging'
     ? createBrowserHistory()
     : createHashHistory();
 
@@ -36,7 +37,7 @@ const store = createStore(
 );
 
 // Import mock data if required
-if (process.env.NODE_ENV !== 'production' && process.env.USE_MOCK) {
+if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {
     require('./mock');
 }
 
