@@ -15,7 +15,8 @@ import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import FontIcon from 'material-ui/FontIcon';
-import {locale, routes} from 'config';
+import {routes} from 'config';
+import {locale} from 'locale';
 
 class Dashboard extends React.Component {
     static propTypes = {

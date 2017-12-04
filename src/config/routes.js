@@ -1,5 +1,5 @@
-import {locale} from 'config';
 import React from 'react';
+import {locale} from 'locale';
 
 import Async from 'modules/SharedComponents/Async';
 const FixRecord = () => (<Async load={import('modules/FixRecord/containers/FixRecord')} />);

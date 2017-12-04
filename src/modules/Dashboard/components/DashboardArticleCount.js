@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 export default class DashboardArticleCount extends PureComponent {
     static propTypes = {

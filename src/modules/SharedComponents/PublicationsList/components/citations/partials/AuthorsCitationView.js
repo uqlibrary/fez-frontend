@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CitationView from './CitationView';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 export default class AuthorsCitationView extends React.Component {
     static propTypes = {

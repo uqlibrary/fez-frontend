@@ -7,8 +7,8 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
-import {locale, routes} from 'config';
-
+import {locale} from 'locale';
+import {routes} from 'config';
 export default class MyRecords extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,

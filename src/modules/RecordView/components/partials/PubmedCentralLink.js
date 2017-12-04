@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'config';
+import {locale} from 'locale';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 
 const PubmedCentralLink = ({pubmedCentralId}) => {

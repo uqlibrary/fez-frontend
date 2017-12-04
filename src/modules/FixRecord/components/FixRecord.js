@@ -17,7 +17,8 @@ import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
-import {validation, locale, routes} from 'config';
+import {validation, routes} from 'config';
+import {locale} from 'locale';
 
 export default class FixRecord extends Component {
     static propTypes = {

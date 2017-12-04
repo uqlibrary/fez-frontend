@@ -8,8 +8,9 @@ import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
 import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation, locale} from 'config';
-import {default as formLocale} from 'config/locale.forms.PublicationForm';
+import {validation} from 'config';
+import {locale} from 'locale';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class ConferenceProceedingsForm extends Component {
     static propTypes = {

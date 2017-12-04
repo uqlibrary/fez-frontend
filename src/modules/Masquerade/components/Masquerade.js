@@ -3,7 +3,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 export default class Masquerade extends Component {
     static propTypes = {

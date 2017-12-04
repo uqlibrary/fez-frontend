@@ -9,8 +9,9 @@ import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
 
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {validation, locale} from 'config';
-import {default as formLocale} from 'config/locale.forms.PublicationForm';
+import {validation} from 'config';
+import {locale} from 'locale';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class BookForm extends Component {
     static propTypes = {

@@ -1,6 +1,5 @@
 import {generateCancelToken} from 'config';
 import {fileUploadActions} from 'uqlibrary-react-toolbox/build/FileUploader/actions';
-import {locale} from 'config';
 import * as routes from './routes';
 import {get, put, post} from './generic';
 
@@ -32,9 +31,8 @@ export function putUploadFile(pid, file, dispatch) {
             const issue = {issue: `File upload failed: app: ${navigator.appVersion}, connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
             connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, user agent: ${navigator.userAgent}`};
             post(routes.RECORDS_ISSUES_API({pid: pid}), issue);
-            const {errorAlert} = locale.forms.publicationForm;
             dispatch(fileUploadActions.notifyUploadFailed(file.name));
-            return Promise.reject(new Error(`${errorAlert.fileUploadMessage} (${error.message})`));
+            return Promise.reject(new Error(error.message));
         });
 }
 

@@ -13,7 +13,7 @@ import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
 
 import {publicationTypes, validation} from 'config';
-import {default as txt} from 'config/locale.forms.PublicationForm';
+import {default as txt} from 'locale/publicationForm';
 
 import * as recordForms from './Forms';
 

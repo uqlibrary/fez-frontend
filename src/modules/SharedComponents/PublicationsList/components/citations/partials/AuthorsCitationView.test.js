@@ -8,7 +8,6 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
-import {locale} from 'config';
 
 function setup({publication, prefix, suffix, className, initialNumberOfAuthors = 10, thresholdNumberOfAuthors = 3, isShallow = false}) {
     const props = {

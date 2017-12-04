@@ -7,10 +7,7 @@ import PublicationCitation from './PublicationCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Immutable from 'immutable';
-import {locale} from 'config';
 import {myRecordsList} from 'mock/data';
-
 
 function setup({publication, customActions, showDefaultActions, isShallow = true}) {
     const props = {

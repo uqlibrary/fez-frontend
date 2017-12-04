@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 export default class PublicationStats extends Component {
     static propTypes = {

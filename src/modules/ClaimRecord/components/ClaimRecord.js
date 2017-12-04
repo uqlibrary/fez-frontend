@@ -15,7 +15,8 @@ import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPromp
 
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
-import {validation, locale, routes} from 'config';
+import {validation, routes} from 'config';
+import {locale} from 'locale';
 
 export default class ClaimRecord extends Component {
     static propTypes = {

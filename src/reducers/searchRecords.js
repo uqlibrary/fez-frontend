@@ -1,5 +1,5 @@
 import * as actions from 'actions/actionTypes';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 const initialSearchSources = {
     loadingPublicationSources: {

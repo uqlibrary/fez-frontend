@@ -10,7 +10,8 @@ import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
 
-import {locale, routes} from 'config';
+import {routes} from 'config';
+import {locale} from 'locale';
 
 export default class PossiblyMyRecords extends React.Component {
     static propTypes = {

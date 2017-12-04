@@ -10,8 +10,9 @@ import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {OrgNameField, OrgUnitNameField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 
-import {validation, locale} from 'config';
-import {default as formLocale} from 'config/locale.forms.PublicationForm';
+import {validation} from 'config';
+import {locale} from 'locale';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class ThesisForm extends Component {
     static propTypes = {

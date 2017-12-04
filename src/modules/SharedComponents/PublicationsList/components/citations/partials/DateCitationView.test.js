@@ -7,7 +7,6 @@ import DateCitationView from './DateCitationView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {locale} from 'config';
 
 
 function setup({date, format, prefix, suffix, isShallow = false}) {

@@ -10,7 +10,7 @@ import {OrgNameField, OrgUnitNameField, SeriesField} from 'modules/SharedCompone
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 
 import {validation} from 'config';
-import {default as formLocale} from 'config/locale.forms.PublicationForm';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class SeminarPaperForm extends Component {
     static propTypes = {

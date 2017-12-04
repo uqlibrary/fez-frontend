@@ -1,5 +1,5 @@
 import React from 'react';
-import {default as components} from './components';
+import {default as txt} from './components';
 
 export default {
     cancel: 'Abandon and search again',
@@ -46,7 +46,7 @@ export default {
                 }
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         optional: {
             title: 'Optional information',
             help: {
@@ -93,7 +93,7 @@ export default {
                 subtype: 'Publication subtype'
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         optional: {
             title: 'Optional publication details',
             help: {
@@ -133,8 +133,8 @@ export default {
                 }
             }
         },
-        authors: components.authors,
-        editors: components.editors,
+        authors: txt.components.authors,
+        editors: txt.components.editors,
         optional: {
             title: 'Optional publication details',
             help: {
@@ -171,8 +171,8 @@ export default {
                 }
             }
         },
-        authors: components.authors,
-        editors: components.editors,
+        authors: txt.components.authors,
+        editors: txt.components.editors,
         other: {
             title: 'Other publication details',
             help: {
@@ -214,7 +214,7 @@ export default {
                 }
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         other: {
             title: 'Other publication details',
             help: {
@@ -267,7 +267,7 @@ export default {
                 }
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         other: {
             title: 'Other publication details',
             help: {
@@ -334,8 +334,8 @@ export default {
                 },
             }
         },
-        creator: components.creators,
-        contributor: components.contributors,
+        creator: txt.components.creators,
+        contributor: txt.components.contributors,
         optional: {
             title: 'Optional information',
             help: {
@@ -376,7 +376,7 @@ export default {
                 patentOwner: 'Patent owner'
             }
         },
-        authors: components.creators,
+        authors: txt.components.creators,
         other: {
             title: 'Other patent details',
             help: {
@@ -423,7 +423,7 @@ export default {
                 }
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         optional: {
             title: 'Optional information',
             help: {
@@ -479,7 +479,7 @@ export default {
                 }
             }
         },
-        supervisors: components.supervisors,
+        supervisors: txt.components.supervisors,
         fieldOfResearch: {
             title: 'Field of research',
             help: {
@@ -537,7 +537,7 @@ export default {
                 }
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         optional: {
             title: 'Optional publication details',
             help: {
@@ -590,7 +590,7 @@ export default {
                 }
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         optional: {
             title: 'Optional information',
             help: {
@@ -653,8 +653,8 @@ export default {
                 },
             }
         },
-        creator: components.creators,
-        contributor: components.contributors,
+        creator: txt.components.creators,
+        contributor: txt.components.contributors,
         optional: {
             title: 'Optional information',
             help: {
@@ -699,7 +699,7 @@ export default {
                 },
             },
         },
-        creator: components.creators,
+        creator: txt.components.creators,
         optional: {
             title: 'Optional information',
             help: {
@@ -760,7 +760,7 @@ export default {
                 },
             }
         },
-        authors: components.designers,
+        authors: txt.components.designers,
         optional: {
             title: 'Optional information',
             help: {
@@ -813,7 +813,7 @@ export default {
                 }
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         optional: {
             title: 'Optional publication details',
             help: {
@@ -878,7 +878,7 @@ export default {
                 }
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         other: {
             title: 'Other publication details',
             help: {
@@ -943,7 +943,7 @@ export default {
                 }
             }
         },
-        authors: components.authors,
+        authors: txt.components.authors,
         other: {
             title: 'Other publication details',
             help: {
@@ -1008,7 +1008,7 @@ export default {
                 }
             }
         },
-        editors: components.editors,
+        editors: txt.components.editors,
         other: {
             title: 'Other publication details',
             help: {

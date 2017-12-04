@@ -10,7 +10,7 @@ import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEdit
 import {JournalNameField} from 'modules/SharedComponents/LookupFields';
 
 import {validation} from 'config';
-import {default as formLocale} from 'config/locale.forms.PublicationForm';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class NewspaperArticleForm extends Component {
     static propTypes = {

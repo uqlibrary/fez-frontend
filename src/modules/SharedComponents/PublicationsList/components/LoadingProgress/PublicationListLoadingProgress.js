@@ -2,7 +2,7 @@ import React from 'react';
 import {PropTypes} from 'prop-types';
 import LinearProgress from 'material-ui/LinearProgress';
 import CircularProgress from 'material-ui/CircularProgress';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 export default class PublicationListLoadingProgress extends React.Component {
     static propTypes = {

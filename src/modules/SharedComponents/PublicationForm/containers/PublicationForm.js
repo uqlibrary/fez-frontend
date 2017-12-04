@@ -3,7 +3,8 @@ import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redu
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
 import {createNewRecord} from 'actions';
-import {locale, general} from 'config';
+import {general} from 'config';
+import {locale} from 'locale';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'PublicationForm';
