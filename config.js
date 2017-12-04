@@ -5,20 +5,16 @@ const deployment = {
         api: 'https://api.library.uq.edu.au/staging/',
         title: 'eSpace - The University of Queensland (DEVELOPMENT)',
         environment: 'development',
-        publicPath: '',
-        // publicPathOffline: '', - set in webpack
-        basePath: 'https://development.library.uq.edu.au/', // updated in webpack
-        baseUrlPath: 'https://development.library.uq.edu.au/' // updated in webpack
+        basePath: 'espace/', // updated in webpack
+        publicPath: ''
     },
     staging: {
         url: 'https://fez-staging.library.uq.edu.au',
         api: 'https://api.library.uq.edu.au/staging/',
         title: 'eSpace - The University of Queensland (STAGING)',
         environment: 'staging',
-        publicPath: '/',
-        publicPathOffline: '/',
         basePath: '',
-        baseUrlPath: '/'
+        publicPath: '/'
     },
     production: {
         url: 'https://espace.library.uq.edu.au',
@@ -27,9 +23,8 @@ const deployment = {
         title: 'eSpace - The University of Queensland',
         environment: 'production',
         publicPathOffline: '/',
-        publicPath: '/',
         basePath: '',
-        baseUrlPath: '/'
+        publicPath: '/'
     }
 };
 

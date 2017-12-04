@@ -29,9 +29,7 @@ let useMock = (process && process.env && !!process.env.USE_MOCK) || false;
 
 // config for development deployment
 if(config.environment === 'development') {
-    config.basePath = 'espace/' + branch + '/';
-    config.publicPathOffline = 'espace/' + branch + '/';
-    config.baseUrlPath += config.basePath;
+    config.basePath += branch + '/';
 }
 
 module.exports = {
@@ -77,9 +75,8 @@ module.exports = {
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
             'process.env.NODE_ENV': JSON.stringify('production'),       // always production build on CI
-            'process.env.BASE_PATH': JSON.stringify(config.basePath),
             'process.env.USE_MOCK': JSON.stringify(useMock),
-            'process.env.URL_BASE_NAME': JSON.stringify(config.baseUrlPath),
+            'process.env.BASE_PATH': JSON.stringify('/' + config.basePath),
             'process.env.API_URL': JSON.stringify(config.api),
             'process.env.APP_URL': JSON.stringify(config.url)
         }),
@@ -88,7 +85,7 @@ module.exports = {
         // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
         // new OfflinePlugin({
         //     relativePaths: false,
-        //     publicPath: config.publicPathOffline,
+        //     publicPath: config.basePath,
         //     caches: {
         //       main: [':rest:'],
         //     },

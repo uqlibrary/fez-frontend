@@ -18,7 +18,7 @@ import Root from './Root';
 import rootReducer from './reducer';
 import 'sass/index.scss';
 
-const history = createBrowserHistory({basename: process.env.URL_BASE_NAME || '/'});
+const history = createBrowserHistory({basename: process.env.BASE_PATH || '/'});
 const initialState = Immutable.Map();
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
