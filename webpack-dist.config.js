@@ -19,7 +19,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
 
 // get configuration for the branch
-const config = require('./config').default[branch];
+const config = require('./config').default[branch] || require('./config').default['development'];
 
 // local port to serve production build
 const port = 9000;
