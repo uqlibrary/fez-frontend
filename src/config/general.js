@@ -2,11 +2,12 @@
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const TOKEN_NAME = 'X-Uql-Token';
 
-// URLS
-export const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.library.uq.edu.au/v1/' : 'https://api.library.uq.edu.au/staging/';
+// URLS - values are set in webpack build
+export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
+export const APP_URL = process.env.APP_URL || 'https://fez-staging.library.uq.edu.au/';
+
 export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
-export const APP_URL = process.env.NODE_ENV === 'production' ? 'https://espace.library.uq.edu.au/' : 'https://fez-staging.library.uq.edu.au/';
 
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
