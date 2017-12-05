@@ -10,7 +10,7 @@ const getAppUrl = () => {
     } else if (isTesting()) {
         return 'https://fez-staging.library.uq.edu.au/';
     } else {
-        return `${window.location.protocol}//${window.location.host}/`;
+        return `${window.location.protocol}//${window.location.hostname}/`;
     }
 };
 
@@ -26,7 +26,7 @@ export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
 export const APP_URL = getAppUrl();
 
 export const ORCID_BASE_URL = isProduction() ? 'https://orcid.org' : 'https://sandbox.orcid.org';
-export const ORCID_CLIENT_ID = isProduction() ? 'APP-UIQ1ZTKAU17ZGZSC' : 'APP-37E6CULFAINK5Y8X';
+export const ORCID_CLIENT_ID = isProduction() ? 'APP-UIQ1ZTKAU17ZGZSC' : 'APP-OXX6M6MBQ77GUVWX';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
 // Default values for createNewRecord
