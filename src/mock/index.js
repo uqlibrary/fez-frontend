@@ -105,7 +105,7 @@ mock
         .reply(200, {data: {}})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))
         .reply(200, {data: {}})
-    .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_ADD_IDENTIFIER({userId: '.*'}))))
+    .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_ADD_IDENTIFIER({autId: '.*'}))))
         .reply(200, {data: {...mockData.afterOrcid}})
     .onAny().reply((config) => {
         console.log(config);

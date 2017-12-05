@@ -35,7 +35,7 @@ export function requestAuthorOrcidInfo(userId, autId, params) {
                     type: actions.APP_NOTIFICATION,
                     payload: {
                         ...locale.authorIdentifiers.orcid.successAlert,
-                        dismissAction: dismissNotificationAlert
+                        dismissAction: dismissNotificationAlert()
                     }
                 });
             })

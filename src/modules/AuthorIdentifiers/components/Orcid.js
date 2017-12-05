@@ -13,6 +13,7 @@ import {StandardPage, StandardCard, ConfirmDialogBox, Alert} from 'uqlibrary-rea
 export default class Orcid extends Component {
     static propTypes = {
         account: PropTypes.object,
+        author: PropTypes.object,
         locale: PropTypes.object,
         history: PropTypes.object,
         location: PropTypes.object,
@@ -33,9 +34,16 @@ export default class Orcid extends Component {
 
         if (queryParams.code && queryParams.state && queryParams.state !== this.getState()) {
             this.setError(orcid.stateErrorAlert);
-        } else if (queryParams.code) {
-            this.props.actions.requestAuthorOrcidInfo(this.props.account.id, {code: queryParams.code, redirUri: `${APP_URL}#${this.props.location.pathname}`});
-            this.props.history.push(routes.pathConfig.dashboard);
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        const queryParams = parse(window.location.search.substr(1));
+
+        if (queryParams.code) {
+            const {actions, account, author, location, history} = nextProps;
+            actions.requestAuthorOrcidInfo(account.id, author.aut_id, {code: queryParams.code, redirUri: `${APP_URL}#${location.pathname}`});
+            history.push(routes.pathConfig.dashboard);
         }
     }
 
