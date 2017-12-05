@@ -1,5 +1,5 @@
 import React from 'react';
-import {LookupListEditor} from 'uqlibrary-react-toolbox';
+import {LookupListEditor} from 'uqlibrary-react-toolbox/build/ListEditor';
 import {FieldOfResearchField} from './FieldOfResearchField';
 
 export const FieldOfResearchListField = (fieldProps) => {

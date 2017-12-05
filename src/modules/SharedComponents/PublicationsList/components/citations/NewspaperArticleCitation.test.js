@@ -7,7 +7,6 @@ import NewspaperArticleCitation from './NewspaperArticleCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {locale} from 'config';
 import {newspaperArticle} from 'mock/data/testing/records';
 
 function setup({publication, isShallow = false}) {
@@ -41,6 +40,16 @@ describe('NewspaperArticleCitation renders ', () => {
 
     it('component with a mock espace record', () => {
         const wrapper = setup({ publication: newspaperArticle });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('component with an empty end page view', () => {
+        const wrapper = setup({
+            publication: {
+                ...newspaperArticle,
+                fez_record_search_key_end_page: {rek_end_page: null}
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

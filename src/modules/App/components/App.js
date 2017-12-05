@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
-
-import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
+import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import {locale} from 'locale';
 
 // application components
 import AppBar from 'material-ui/AppBar';
-import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
+import {AppLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {MenuDrawer} from 'uqlibrary-react-toolbox/build/MenuDrawer';
+import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
+import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
@@ -52,6 +57,15 @@ export default class App extends React.Component {
         this.state.mediaQuery.addListener(this.handleResize);
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.user.accountLoading !== nextProps.user.accountLoading
+            || this.props.user.authorLoading !== nextProps.user.authorLoading
+            || this.props.user.loadingAuthorDetails !== nextProps.user.loadingAuthorDetails
+            || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
+            || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
+            || this.state !== nextState;
+    }
+
     componentWillUnmount() {
         this.state.mediaQuery.removeListener(this.handleResize);
     }
@@ -68,14 +82,28 @@ export default class App extends React.Component {
         });
     };
 
+    redirectUserToLogin = () => {
+        const redirectUrl = (!this.props.user.accountLoading && this.props.user.account !== null) ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
+        const returnUrl = window.btoa((!this.props.user.accountLoading && this.props.user.account !== null) ? APP_URL : window.location.href);
+        window.location.assign(`${redirectUrl}?return=${returnUrl}`);
+    };
+
+    redirectToOrcid = () => {
+        this.props.history.push(routes.pathConfig.authorIdentifiers.orcid.link);
+    };
+
     render() {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
         const menuItems = routes.getMenuConfig(this.props.user.account);
         const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
+        const isAuthorLoading = this.props.user.accountLoading || this.props.user.authorLoading || this.props.user.loadingAuthorDetails;
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        const isOrcidRequired = this.props.user.author && !this.props.user.author.aut_orcid_id
+            && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
+
         return (
             <div className="layout-fill">
                 {
@@ -110,10 +138,9 @@ export default class App extends React.Component {
                                     <AuthButton
                                         isAuthorizedUser={isAuthorizedUser}
                                         hoveredStyle={appBarButtonStyles}
-                                        loginUrl={AUTH_URL_LOGIN}
-                                        logoutUrl={AUTH_URL_LOGOUT}
-                                        signInTooltipText={locale.authentication.signInText}
-                                        signOutTooltipText={isAuthorizedUser ? (`${locale.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
+                                        onClick={this.redirectUserToLogin}
+                                        signInTooltipText={locale.global.authentication.signInText}
+                                        signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
                                 </div>
                             }
                         />
@@ -139,16 +166,26 @@ export default class App extends React.Component {
                                 !this.props.user.accountLoading && !this.props.user.account &&
                                 <div className="layout-fill dashAlert">
                                     <div className="layout-card">
-                                        <Alert {...locale.global.loginAlert} />
+                                        <Alert {...locale.global.loginAlert} action={this.redirectUserToLogin} />
                                     </div>
                                 </div>
                             }
                             {
                                 // user is logged in, but doesn't have eSpace author identifier
-                                !isPublicPage && this.props.user.account && !this.props.user.loadingAuthorDetails && !this.props.user.authorDetails &&
+                                !isPublicPage && !isAuthorLoading && !this.props.user.authorDetails &&
                                 <div className="layout-fill dashAlert">
                                     <div className="layout-card">
                                         <Alert {...locale.global.notRegisteredAuthorAlert} />
+                                    </div>
+                                </div>
+                            }
+
+                            {
+                                // user is logged in, but doesn't have ORCID identifier
+                                !isPublicPage && !isAuthorLoading && isOrcidRequired &&
+                                <div className="layout-fill dashAlert">
+                                    <div className="layout-card">
+                                        <Alert {...locale.global.noOrcidAlert} action={this.redirectToOrcid} />
                                     </div>
                                 </div>
                             }

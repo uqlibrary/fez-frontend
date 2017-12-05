@@ -7,7 +7,6 @@ import ResearchReportCitation from './ResearchReportCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {locale} from 'config';
 import {researchReport} from 'mock/data/testing/records';
 
 
@@ -47,6 +46,16 @@ describe('ResearchReportCitation renders ', () => {
 
     it('component with a mock espace record 1', () => {
         const wrapper = setup({ publication: researchReport });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('component with an empty series view', () => {
+        const wrapper = setup({
+            publication: {
+                ...researchReport,
+                fez_record_search_key_series: {rek_series: null}
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

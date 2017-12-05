@@ -5,9 +5,6 @@ import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
 
-// actions should not care about locale only true front end should care - remove and return only api errors - let FE deside what to do with those errors!
-import {locale} from 'config';
-
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
  * If error occurs on any stage failed action is displated
@@ -16,7 +13,6 @@ import {locale} from 'config';
  * @returns {action}
  */
 export function createNewRecord(data) {
-    const {errorAlert} = locale.forms.publicationForm;
     return dispatch => {
         dispatch({type: actions.RECORD_CREATE_SAVING});
 
@@ -81,7 +77,7 @@ export function createNewRecord(data) {
                     payload: error.message
                 });
 
-                return Promise.reject(new Error(`${errorAlert.createRecordMessage} (${error.message})`));
+                return Promise.reject(new Error(error.message));
             });
     };
 }

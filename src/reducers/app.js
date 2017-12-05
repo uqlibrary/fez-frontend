@@ -1,4 +1,4 @@
-import * as actions from 'actions/app';
+import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     hidePossiblyYourPublicationsLure: false

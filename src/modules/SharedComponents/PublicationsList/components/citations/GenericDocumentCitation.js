@@ -17,7 +17,7 @@ export default class GenericDocumentCitation extends Component {
             id: this.props.publication.rek_pid,
             publisher: this.props.publication.fez_record_search_key_publisher ?
                 this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
-            title: this.props.publication ? this.props.publication.rek_title : null
+            title: this.props.publication.rek_title ? this.props.publication.rek_title : null
         };
 
         // eSpace citation view for Generic article

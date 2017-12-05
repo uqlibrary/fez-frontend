@@ -7,9 +7,7 @@ import PageRangeCitationView from './PageRangeCitationView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {locale} from 'config';
 import {conferencePaper} from 'mock/data/testing/records';
-
 
 function setup({publication, isShallow = false}) {
     const props = {
@@ -71,6 +69,18 @@ describe('PageRangeCitationView test ', () => {
                 fez_record_search_key_end_page: {
                     rek_end_page: 17
                 }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render startPage only if end page is empty', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_start_page: {
+                    rek_start_page: 13
+                },
+                fez_record_search_key_end_page: {}
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();

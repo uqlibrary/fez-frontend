@@ -195,11 +195,7 @@ describe('Component ClaimRecord ', () => {
             {
                 parameters: {authorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
                 expected: 'alreadyClaimed'
-            },
-            {
-                parameters: {contributorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
-                expected: 'alreadyClaimed'
-            },
+            }
         ];
 
         testCases.forEach(testCase => {

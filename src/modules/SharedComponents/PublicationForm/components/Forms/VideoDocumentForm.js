@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
 import {Field} from 'redux-form/immutable';
 
-import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
+
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation, locale} from 'config';
+
+import {validation} from 'config';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class VideoDocumentForm extends Component {
     static propTypes = {
@@ -18,7 +22,7 @@ export default class VideoDocumentForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.forms.publicationForm.video;
+        const txt = formLocale.video;
 
         return (
             <div>

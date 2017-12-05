@@ -1,7 +1,7 @@
 import React from 'react';
 import * as validation from './validation';
 import {accounts} from 'mock/data/account';
-import {locale} from '.';
+import {locale} from 'locale';
 import {APP_URL} from 'config';
 
 describe('Validation method', () => {
@@ -93,21 +93,21 @@ describe('Validation method', () => {
     });
 
 
-    it('it should validate doi correctly', () => {
+    it('should validate doi', () => {
         expect(validation.isValidDOIValue(' 10.1007/978-3-319-60492-3_52 ')).toBeTruthy();
         expect(validation.isValidDOIValue(' 10.1007/something ')).toBeTruthy();
     });
 
-    it('it should validate pubmed id correctly', () => {
+    it('should validate pubmed id', () => {
         expect(validation.isValidPubMedValue(' 2342523452 ')).toBeTruthy();
     });
 
-    it('it should validate publication title correctly', () => {
+    it('should validate publication title', () => {
         expect(validation.isValidPublicationTitle(' global    ')).toBeFalsy();
         expect(validation.isValidPublicationTitle(' global war ')).toBeTruthy();
     });
 
-    it('it should validate person selected correctly', () => {
+    it('should validate person selected', () => {
         expect(validation.peopleRequired([], 'Error', true)).toEqual('Error');
         expect(validation.peopleRequired([{name: 'First person'}], 'Error', true)).toEqual('Error');
         expect(validation.peopleRequired([{name: 'First person', selected: true}], 'Error', true)).toBeFalsy();
@@ -115,14 +115,14 @@ describe('Validation method', () => {
         expect(validation.peopleRequired([{name: 'First person'}], 'Error', false)).toBeFalsy();
     });
 
-    it('it should validate author/contributor link correctly', () => {
+    it('should validate author/contributor link', () => {
         const contributorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
         const authorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
 
         expect(validation.isValidAuthorLink(authorLinkValid)).toEqual('');
-        expect(validation.isValidAuthorLink('Invalid data')).toEqual('Please, select and confirm an author');
+        expect(validation.isValidAuthorLink('Invalid data')).toEqual(locale.validationErrors.authorLinking);
         expect(validation.isValidContributorLink(contributorLinkValid)).toEqual('');
-        expect(validation.isValidContributorLink('Invalid data')).toEqual('Please, select and confirm a contributor');
+        expect(validation.isValidContributorLink('Invalid data')).toEqual(locale.validationErrors.contributorLinking);
     });
 });
 

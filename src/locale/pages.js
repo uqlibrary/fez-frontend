@@ -1,9 +1,5 @@
 import React from 'react';
-import {StandardCard} from 'uqlibrary-react-toolbox';
-import {APP_URL} from 'config';
-import {default as validationErrors} from './locale.validation';
-import {default as components} from './locale.components';
-import {default as forms} from './locale.forms';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 
 /*
 
@@ -24,116 +20,6 @@ help: {
 */
 
 export default {
-    global: {
-        title: 'UQ eSpace DEMO',
-        logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
-        loading: 'loading...',
-        mainNavButton: {
-            tooltip: 'Main navigation',
-            closeMenuLabel: 'Close menu'
-        },
-        skipNav: {
-            title: 'Skip Navigation',
-            ariaLabel: 'Click to skip, or tab to progress to the navigation',
-        },
-        loginAlert: {
-            title: 'You are not logged in',
-            message: 'Please, login to UQ eSpace for full search results and more services.',
-            type: 'info_outline',
-        },
-        notRegisteredAuthorAlert: {
-            title: 'You are not registered in UQ eSpace as an author',
-            message: 'Please contact the UQ Manager to resolve this.',
-            type: 'info_outline'
-        },
-        discardFormChangesConfirmation: {
-            confirmationTitle: 'Discard changes?',
-            confirmationMessage: 'Are you sure you want to navigate away and discard all changes to the form?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes'
-        },
-        linkWillOpenInNewWindow: 'Link to [destination] will open in a new window.',
-        sources: {
-            espace: {
-                id: 'espace',
-                title: 'eSpace',
-                priority: 0,
-                externalUrl: APP_URL + 'view/[id]',
-                idKey: 'rek_pid'
-            },
-            wos: {
-                id: 'wos',
-                title: 'Web of science',
-                priority: 1,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
-                idKey: 'fez_record_search_key_isi_loc.rek_isi_loc'
-            },
-            scopus: {
-                id: 'scopus',
-                title: 'Scopus',
-                priority: 2,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
-                idKey: 'fez_record_search_key_scopus_id.rek_scopus_id'
-            },
-            pubmed: {
-                id: 'pubmed',
-                title: 'PubMed',
-                priority: 3,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://www.ncbi.nlm.nih.gov/pubmed/[id]',
-                idKey: 'fez_record_search_key_pubmed_id.rek_pubmed_id'
-            },
-            crossref: {
-                id: 'crossref',
-                title: 'Crossref',
-                priority: 4,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=https://doi.org/[id]',
-                idKey: 'fez_record_search_key_doi.rek_doi'
-            },
-        },
-        doiCitationLink: {
-            ariaLabel: 'Open this DOI in an new window',
-            prefix: 'https://doi.org/',
-            externalUrl: 'https://doi.org/[id]',
-        },
-        pubmedCentralLink: {
-            ariaLabel: 'Full text via Pubmed Central (open access)',
-            prefix: 'https://www.ncbi.nlm.nih.gov/pmc/articles/',
-            externalUrl: 'https://www.ncbi.nlm.nih.gov/pmc/articles/[id]'
-        },
-        embargoDateFormat: 'YYYY-MM-DD',
-        defaultLinkDescription: 'Link to publication'
-    },
-    authentication: {
-        signInText: 'Log in',
-        signOutText: 'Log out'
-    },
-    menu: {
-        myDashboard: {
-            primaryText: 'My dashboard',
-            // secondaryText is set to user's email
-        },
-        myResearch: {
-            primaryText: 'My research'
-        },
-        claimPublication: {
-            primaryText: 'Claim possible publications'
-        },
-        addMissingRecord: {
-            primaryText: 'Add a missing record'
-        },
-        masquerade: {
-            primaryText: 'Masquerade',
-            secondaryText: 'as another user'
-        },
-        browse: {
-            primaryText: 'Browse eSpace',
-            secondaryText: ''
-        },
-        about: {
-            primaryText: 'About',
-            secondaryText: ''
-        },
-    },
     pages: {
         about: {
             title: 'About UQ eSpace',
@@ -222,7 +108,7 @@ export default {
             children: (
                 <StandardCard>
                     <p>The requested page is available to authenticated users only.</p>
-                    <p>Please, login to continue</p>
+                    <p>Please login to continue</p>
                 </StandardCard>
             )
         },
@@ -433,7 +319,7 @@ export default {
             step2: {
                 noResultsFound: {
                     title: 'No matching publications found',
-                    text: 'We were unable to match any results to your search criteria. Please, search again or create a new eSpace record.',
+                    text: 'We were unable to match any results to your search criteria. Please search again or create a new eSpace record.',
                     help: {
                         title: 'No matching records found',
                         text: 'Why search didn\'t return any items....',
@@ -488,17 +374,11 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
-                successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member for editing,
-                    prior to being moved into a publicly viewable collection. Please note that our current processing
-                    priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
-                    HERDC 2015 and Q-index.</p>),
+                successConfirmationMessage: (<p>Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.</p>),
                 fileFailConfirmationMessage: (<p>
                     Your record has been saved. <br/><br/>
                     <strong>Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators. </strong><br/><br/>
-                    Your item will be referred to a UQ eSpace Staging staff member for editing,
-                    prior to being moved into a publicly viewable collection. Please note that our current
-                    processing priority is for publications between 2008 and 2014 to meet the requirements of ERA 2015,
-                    HERDC 2015 and Q-index.
+                    Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
                 </p>),
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
@@ -543,12 +423,5 @@ export default {
                 hint: 'Username or student username'
             }
         }
-    },
-    components: components,
-    ...validationErrors,
-    ...forms,
-    issues: {
-        fixRecord: ({pid = '', userName = '', userId = '', comments = ''}) =>
-            'Record: ' + APP_URL + `view/${pid} \n User '${userName} (${userId})' has indicated that they require a fix to this publication: ${comments}`
     }
 };

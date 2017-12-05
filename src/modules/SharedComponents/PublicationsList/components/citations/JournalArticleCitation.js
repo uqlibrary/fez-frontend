@@ -12,6 +12,10 @@ export default class JournalArticleCitation extends Component {
         super(props);
     }
 
+    shouldComponentUpdate(nextProps) {
+        return JSON.stringify(nextProps.publication) !== JSON.stringify(this.props.publication);
+    }
+
     render() {
         const record = {
             id: this.props.publication.rek_pid,

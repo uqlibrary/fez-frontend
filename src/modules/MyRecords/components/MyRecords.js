@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StandardPage, StandardRighthandCard, StandardCard, InlineLoader} from 'uqlibrary-react-toolbox';
-import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
-import {locale, routes} from 'config';
 
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+
+import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
+import {locale} from 'locale';
+import {routes} from 'config';
 export default class MyRecords extends React.Component {
     static propTypes = {
         publicationsList: PropTypes.array,
@@ -41,6 +46,12 @@ export default class MyRecords extends React.Component {
         if (!this.state.allowResultsPaging && !newProps.loadingPublicationsList && newProps.publicationsList.length > 0) {
             this.setState({ allowResultsPaging: true });
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.accountLoading !== nextProps.accountLoading
+            || this.props.loadingPublicationsList !== nextProps.loadingPublicationsList
+            || this.state !== nextState;
     }
 
     componentWillUpdate(nextProps, nextState) {

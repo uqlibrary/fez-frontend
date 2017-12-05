@@ -123,7 +123,7 @@ exports[`PatentForm renders  component 1`] = `
     title="Creators"
   >
     <div>
-      This is the author or creator of the work, e.g. producer or performer (if self-produced). Please enter creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.
+      This is the author or creator of the work, e.g. producer or performer (if self-produced). Type creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.
     </div>
     <Field
       className="requiredField"
@@ -135,7 +135,7 @@ exports[`PatentForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add creator",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
               "nameAsPublishedLabel": "Creator's name as published",
             },
           },

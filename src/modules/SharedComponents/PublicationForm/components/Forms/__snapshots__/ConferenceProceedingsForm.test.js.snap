@@ -61,7 +61,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Conference name"
           fullWidth={true}
-          hintText="Please, type the name of conference"
+          hintText="Type the name of conference"
           name="fez_record_search_key_conference_name.rek_conference_name"
           type="text"
           validate={
@@ -80,7 +80,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Conference location"
           fullWidth={true}
-          hintText="Please, type the place of conference"
+          hintText="Type the place of conference"
           name="fez_record_search_key_conference_location.rek_conference_location"
           type="text"
           validate={
@@ -103,7 +103,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Conference dates (eg 13-15 December 2011)"
           fullWidth={true}
-          hintText="Please, type the dates of conference"
+          hintText="Type the dates of conference"
           name="fez_record_search_key_conference_dates.rek_conference_dates"
           type="text"
           validate={
@@ -121,7 +121,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Proceedings title"
           fullWidth={true}
-          hintText="Please, type the title of proceedings"
+          hintText="Type the title of proceedings"
           name="fez_record_search_key_proceedings_title.rek_proceedings_title"
           type="text"
         />
@@ -138,7 +138,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Place of publication"
           fullWidth={true}
-          hintText="Please, type the place of publication"
+          hintText="Type the place of publication"
           name="fez_record_search_key_place_of_publication.rek_place_of_publication"
           type="text"
         />
@@ -151,7 +151,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Publisher"
           fullWidth={true}
-          hintText="Please, type the name of the publisher"
+          hintText="Type the name of the publisher"
           name="fez_record_search_key_publisher.rek_publisher"
           type="text"
         />
@@ -204,7 +204,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add editor",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
               "nameAsPublishedLabel": "Editor's name as published",
             },
           },
@@ -276,7 +276,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISBN",
-              "inputFieldHint": "Please, type ISBN value",
+              "inputFieldHint": "Type ISBN value",
               "inputFieldLabel": "ISBN value",
             },
           },
@@ -334,7 +334,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISSN",
-              "inputFieldHint": "Please, type ISSN value",
+              "inputFieldHint": "Type ISSN value",
               "inputFieldLabel": "ISSN value",
             },
           },
@@ -398,7 +398,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           disabled={false}
           floatingLabelText="Notes (not publicly viewable)"
           fullWidth={true}
-          hintText="Please add any additional information"
+          hintText="Add any additional information"
           multiLine={true}
           name="fez_record_search_key_notes.rek_notes"
           rows={1}

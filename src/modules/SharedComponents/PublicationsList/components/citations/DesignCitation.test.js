@@ -7,7 +7,6 @@ import DesignCitation from './DesignCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {locale} from 'config';
 import {design} from 'mock/data/testing/records';
 
 function setup({publication, isShallow = false}) {
@@ -41,6 +40,16 @@ describe('DesignCitation renders ', () => {
 
     it('component with a mock espace record', () => {
         const wrapper = setup({ publication: design });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('component with an empty source', () => {
+        const wrapper = setup({
+            publication: {
+                ...design,
+                fez_record_search_key_source: {rek_source: null}
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

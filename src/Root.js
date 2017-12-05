@@ -9,7 +9,7 @@ import {theme} from 'config';
 
 // Top level "pages"
 import {App} from 'modules/App';
-import {ScrollToTop} from 'uqlibrary-react-toolbox';
+import {ScrollToTop} from 'uqlibrary-react-toolbox/build/ScrollToTop';
 
 const Root = ({history}) => {
     return (

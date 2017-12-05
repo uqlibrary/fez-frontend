@@ -1,4 +1,4 @@
-import {locale} from 'config';
+import {locale} from 'locale';
 import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';

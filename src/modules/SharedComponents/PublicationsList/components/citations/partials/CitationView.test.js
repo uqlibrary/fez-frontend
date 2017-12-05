@@ -7,7 +7,6 @@ import CitationView from './CitationView';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {locale} from 'config';
 import {researchReport} from 'mock/data/testing/records';
 
 
@@ -55,6 +54,11 @@ describe('CitationView test ', () => {
 
     it('should render component with no prefix or suffix', () => {
         const wrapper = setup({prefix: ' ', suffix: '.', className: 'citationClassName' });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with no className', () => {
+        const wrapper = setup({value: 'Some text.'});
         expect(toJson(wrapper)).toMatchSnapshot();
     })
 });

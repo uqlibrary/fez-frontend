@@ -7,8 +7,6 @@ import PublicationsList from './PublicationsList';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Immutable from 'immutable';
-import {locale} from 'config';
 import {myRecordsList} from 'mock/data';
 
 

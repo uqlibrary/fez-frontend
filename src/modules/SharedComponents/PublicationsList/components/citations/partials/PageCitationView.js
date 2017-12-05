@@ -14,7 +14,7 @@ const PageCitationView = ({publication, searchKey, className = 'citationPage'}) 
 PageCitationView.propTypes = {
     publication: PropTypes.object.isRequired,
     searchKey: PropTypes.object.isRequired,
-    className: PropTypes.string.isRequired
+    className: PropTypes.string
 };
 
 export default PageCitationView;

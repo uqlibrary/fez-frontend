@@ -110,14 +110,14 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
           "rek_contributor_order": 1,
         },
         Object {
-          "rek_contributor": "Smith, C",
-          "rek_contributor_id": null,
-          "rek_contributor_order": 2,
-        },
-        Object {
           "rek_contributor": "Smith, B",
           "rek_contributor_id": null,
           "rek_contributor_order": 3,
+        },
+        Object {
+          "rek_contributor": "Smith, C",
+          "rek_contributor_id": null,
+          "rek_contributor_order": 2,
         },
       ],
       "fez_record_search_key_contributor_id": Array [],
@@ -559,14 +559,14 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
               "rek_contributor_order": 1,
             },
             Object {
-              "rek_contributor": "Smith, C",
-              "rek_contributor_id": null,
-              "rek_contributor_order": 2,
-            },
-            Object {
               "rek_contributor": "Smith, B",
               "rek_contributor_id": null,
               "rek_contributor_order": 3,
+            },
+            Object {
+              "rek_contributor": "Smith, C",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 2,
             },
           ],
           "fez_record_search_key_contributor_id": Array [],
@@ -965,6 +965,8 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Non-coding RNAs in Mammary Gland Development and Disease"
     >
       <span
@@ -977,6 +979,8 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
     </CitationView>
     <CitationView
       className="citationBookTitle"
+      prefix=" "
+      suffix="."
       value="Non-coding RNA and the Reproductive System"
     >
       <span
@@ -1096,14 +1100,14 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
               "rek_contributor_order": 1,
             },
             Object {
-              "rek_contributor": "Smith, C",
-              "rek_contributor_id": null,
-              "rek_contributor_order": 2,
-            },
-            Object {
               "rek_contributor": "Smith, B",
               "rek_contributor_id": null,
               "rek_contributor_order": 3,
+            },
+            Object {
+              "rek_contributor": "Smith, C",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 2,
             },
           ],
           "fez_record_search_key_contributor_id": Array [],
@@ -1517,14 +1521,14 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                 "rek_contributor_order": 1,
               },
               Object {
-                "rek_contributor": "Smith, C",
-                "rek_contributor_id": null,
-                "rek_contributor_order": 2,
-              },
-              Object {
                 "rek_contributor": "Smith, B",
                 "rek_contributor_id": null,
                 "rek_contributor_order": 3,
+              },
+              Object {
+                "rek_contributor": "Smith, C",
+                "rek_contributor_id": null,
+                "rek_contributor_order": 2,
               },
             ],
             "fez_record_search_key_contributor_id": Array [],
@@ -1884,6 +1888,7 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
     </EditorsCitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value="New York NY United States"
     >
@@ -1897,6 +1902,8 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Springer New York"
     >
       <span
@@ -2018,14 +2025,14 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
               "rek_contributor_order": 1,
             },
             Object {
-              "rek_contributor": "Smith, C",
-              "rek_contributor_id": null,
-              "rek_contributor_order": 2,
-            },
-            Object {
               "rek_contributor": "Smith, B",
               "rek_contributor_id": null,
               "rek_contributor_order": 3,
+            },
+            Object {
+              "rek_contributor": "Smith, C",
+              "rek_contributor_id": null,
+              "rek_contributor_order": 2,
             },
           ],
           "fez_record_search_key_contributor_id": Array [],
@@ -2453,14 +2460,14 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                   "rek_contributor_order": 1,
                 },
                 Object {
-                  "rek_contributor": "Smith, C",
-                  "rek_contributor_id": null,
-                  "rek_contributor_order": 2,
-                },
-                Object {
                   "rek_contributor": "Smith, B",
                   "rek_contributor_id": null,
                   "rek_contributor_order": 3,
+                },
+                Object {
+                  "rek_contributor": "Smith, C",
+                  "rek_contributor_id": null,
+                  "rek_contributor_order": 2,
                 },
               ],
               "fez_record_search_key_contributor_id": Array [],
@@ -2885,14 +2892,14 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
                   "rek_contributor_order": 1,
                 },
                 Object {
-                  "rek_contributor": "Smith, C",
-                  "rek_contributor_id": null,
-                  "rek_contributor_order": 2,
-                },
-                Object {
                   "rek_contributor": "Smith, B",
                   "rek_contributor_id": null,
                   "rek_contributor_order": 3,
+                },
+                Object {
+                  "rek_contributor": "Smith, C",
+                  "rek_contributor_id": null,
+                  "rek_contributor_order": 2,
                 },
               ],
               "fez_record_search_key_contributor_id": Array [],
@@ -3347,6 +3354,8 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -3354,6 +3363,8 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationBookTitle"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -3385,6 +3396,7 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
     </EditorsCitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value={null}
     >
@@ -3394,6 +3406,8 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span

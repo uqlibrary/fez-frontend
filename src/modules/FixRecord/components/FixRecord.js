@@ -6,10 +6,19 @@ import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
 
-import {SelectField, TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, NavigationDialogBox,
-    FileUploadField, InlineLoader} from 'uqlibrary-react-toolbox';
+import {SelectField} from 'uqlibrary-react-toolbox/build/SelectField';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
+import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
-import {validation, locale, routes} from 'config';
+import {validation, routes} from 'config';
+import {locale} from 'locale';
 
 export default class FixRecord extends Component {
     static propTypes = {
@@ -38,23 +47,11 @@ export default class FixRecord extends Component {
         };
     }
 
-    componentWillMount() {
-        const {recordToFix, author} = this.props;
-
-        const isAuthorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
-        const isContributorLinked = author && recordToFix && this.isLoggedInUserLinked(author, recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
-
-        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !isAuthorLinked && !isContributorLinked) {
-            // if either author or publication data is missing, abandon form
-            this.props.history.go(-1);
-        }
-    }
-
     componentDidMount() {
-        if (!this.props.recordToFixLoading && !this.props.recordToFix) {
+        if (this.props.actions && !this.props.recordToFixLoading && !this.props.recordToFix) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
-        if (!this.props.authorLoading && !this.props.author) {
+        if (this.props.actions && !this.props.authorLoading && !this.props.author) {
             this.props.actions.loadCurrentAccount();
         }
     }
@@ -67,11 +64,19 @@ export default class FixRecord extends Component {
 
     componentWillUnmount() {
         // clear previously selected recordToFix for a fix
-        this.props.actions.clearFixRecord();
+        if (this.props.actions) this.props.actions.clearFixRecord();
     }
 
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-        return recordToFix[searchKey] && recordToFix[searchKey].length > 0 && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
+            && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+    };
+
+    isAuthorLinked = () => {
+        const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
+        const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
+
+        return isAuthorLinked || isContributorLinked;
     };
 
     _navigateToMyResearch = () => {
@@ -115,6 +120,12 @@ export default class FixRecord extends Component {
     };
 
     render() {
+        // if author is not linked to this record, abandon form
+        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !this.isAuthorLinked()) {
+            this.props.history.go(-1);
+            return <div />;
+        }
+
         const txt = locale.pages.fixRecord;
         const txtFixForm = locale.forms.fixPublicationForm;
         const txtUnclaimForm = locale.forms.unclaimPublicationForm;
@@ -126,9 +137,6 @@ export default class FixRecord extends Component {
                 </div>
             );
         }
-
-        const {recordToFix, author} = this.props;
-        if (!recordToFix || !author) return (<div />);
 
         const fixOptions = txt.actionsOptions.map((item, index) => (
             <MenuItem
@@ -147,7 +155,7 @@ export default class FixRecord extends Component {
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
                     <StandardCard title={txt.subTitle} help={txt.help}>
-                        <PublicationCitation publication={recordToFix}/>
+                        <PublicationCitation publication={this.props.recordToFix}/>
 
                         <Field
                             component={SelectField}

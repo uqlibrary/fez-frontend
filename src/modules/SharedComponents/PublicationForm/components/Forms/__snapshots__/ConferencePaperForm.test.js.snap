@@ -219,7 +219,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add author",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
               "nameAsPublishedLabel": "Author's name as published",
             },
           },
@@ -291,7 +291,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISBN",
-              "inputFieldHint": "Please, type ISBN value",
+              "inputFieldHint": "Type ISBN value",
               "inputFieldLabel": "ISBN value",
             },
           },
@@ -349,7 +349,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISSN",
-              "inputFieldHint": "Please, type ISSN value",
+              "inputFieldHint": "Type ISSN value",
               "inputFieldLabel": "ISSN value",
             },
           },

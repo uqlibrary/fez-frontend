@@ -7,7 +7,6 @@ import WorkingPaperCitation from './WorkingPaperCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {locale} from 'config';
 import {workingPaper} from 'mock/data/testing/records';
 
 function setup({publication, isShallow = false}) {
@@ -41,6 +40,16 @@ describe('WorkingPaperCitation renders ', () => {
 
     it('component with a mock espace record', () => {
         const wrapper = setup({ publication: workingPaper });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('component with an empty doi view', () => {
+        const wrapper = setup({
+            publication: {
+                ...workingPaper,
+                fez_record_search_key_doi: {rek_doi: null}
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

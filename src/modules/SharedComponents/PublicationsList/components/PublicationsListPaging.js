@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'config';
+import {locale} from 'locale';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import NavigationChevronRight from 'material-ui/svg-icons/navigation/chevron-right';

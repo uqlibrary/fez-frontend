@@ -33,6 +33,7 @@ mock
     .onGet(new RegExp(escapeRegExp(routes.AUTHOR_DETAILS_API({userId: user})))).reply(config => {
         // mock current author details
         if (user === 'anon') return [403, {}];
+        console.log(mockData.authorDetails[user]);
         if (mockData.authorDetails[user]) return [200, mockData.authorDetails[user]];
         return [404, {}];
     })
@@ -89,8 +90,8 @@ mock
         // .reply(200, {data: {}})
         .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'})
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}))))
-        .reply(200, {data: ''})
-        // .reply(500, {message: 'error - failed POST RECORDS_ISSUES_API'})
+        // .reply(200, {data: ''})
+        .reply(500, {message: 'error - failed POST RECORDS_ISSUES_API'})
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
         .reply(200, {data: {...mockData.record}})
         // .reply(500, {message: 'error - failed POST NEW_RECORD_API'})

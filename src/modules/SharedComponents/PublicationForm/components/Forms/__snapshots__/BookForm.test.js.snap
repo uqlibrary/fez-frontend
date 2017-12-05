@@ -157,7 +157,7 @@ exports[`BookForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add author",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
               "nameAsPublishedLabel": "Author's name as published",
             },
           },
@@ -231,7 +231,7 @@ exports[`BookForm renders  component 1`] = `
             "locale": Object {
               "addButton": "Add editor",
               "identifierLabel": "UQ identifier (if available)",
-              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedHint": "Type the name exactly as published",
               "nameAsPublishedLabel": "Editor's name as published",
             },
           },
@@ -298,7 +298,7 @@ exports[`BookForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISBN",
-              "inputFieldHint": "Please, type ISBN value",
+              "inputFieldHint": "Type ISBN value",
               "inputFieldLabel": "ISBN value",
             },
           },
@@ -356,7 +356,7 @@ exports[`BookForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButtonLabel": "Add ISSN",
-              "inputFieldHint": "Please, type ISSN value",
+              "inputFieldHint": "Type ISSN value",
               "inputFieldLabel": "ISSN value",
             },
           },

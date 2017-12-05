@@ -44,8 +44,7 @@ exports[`App tests for user account and author status User is logged in but are 
               }
             }
             isAuthorizedUser={true}
-            loginUrl="https://auth.library.uq.edu.au/login"
-            logoutUrl="https://auth.library.uq.edu.au/logout"
+            onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - J STAFF"
           />
@@ -70,6 +69,7 @@ exports[`App tests for user account and author status User is logged in but are 
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      history={Object {}}
       isMobile={false}
       locale={
         Object {
@@ -235,6 +235,14 @@ exports[`App tests for user account and author status User is logged in but are 
           render={[Function]}
         />
         <Route
+          path="/author-identifiers/orcid/link"
+          render={[Function]}
+        />
+        <Route
+          path="/author-identifiers/googleScholar/link"
+          render={[Function]}
+        />
+        <Route
           access={
             Array [
               "admin",
@@ -298,8 +306,7 @@ exports[`App tests for user account and author status User is not logged in and 
               }
             }
             isAuthorizedUser={false}
-            loginUrl="https://auth.library.uq.edu.au/login"
-            logoutUrl="https://auth.library.uq.edu.au/logout"
+            onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText=""
           />
@@ -324,6 +331,7 @@ exports[`App tests for user account and author status User is not logged in and 
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      history={Object {}}
       isMobile={false}
       locale={
         Object {
@@ -363,9 +371,25 @@ exports[`App tests for user account and author status User is not logged in and 
           className="layout-card"
         >
           <Alert
+            action={[Function]}
+            actionButtonLabel="Click to login"
             allowDismiss={false}
-            message="Please, login to UQ eSpace for full search results and more services."
+            message="Login to UQ eSpace for full search results and more services."
             title="You are not logged in"
+            type="info_outline"
+          />
+        </div>
+      </div>
+      <div
+        className="layout-fill dashAlert"
+      >
+        <div
+          className="layout-card"
+        >
+          <Alert
+            allowDismiss={false}
+            message="Please contact the UQ eSpace administrator to resolve this."
+            title="You are not registered in UQ eSpace as an author"
             type="info_outline"
           />
         </div>
@@ -438,8 +462,7 @@ exports[`App tests for user account and author status User logged in and is an a
               }
             }
             isAuthorizedUser={true}
-            loginUrl="https://auth.library.uq.edu.au/login"
-            logoutUrl="https://auth.library.uq.edu.au/logout"
+            onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - J STAFF"
           />
@@ -464,6 +487,7 @@ exports[`App tests for user account and author status User logged in and is an a
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      history={Object {}}
       isMobile={false}
       locale={
         Object {
@@ -629,6 +653,14 @@ exports[`App tests for user account and author status User logged in and is an a
           render={[Function]}
         />
         <Route
+          path="/author-identifiers/orcid/link"
+          render={[Function]}
+        />
+        <Route
+          path="/author-identifiers/googleScholar/link"
+          render={[Function]}
+        />
+        <Route
           access={
             Array [
               "admin",
@@ -692,8 +724,7 @@ exports[`App tests for user account and author status User logged in but is not 
               }
             }
             isAuthorizedUser={true}
-            loginUrl="https://auth.library.uq.edu.au/login"
-            logoutUrl="https://auth.library.uq.edu.au/logout"
+            onClick={[Function]}
             signInTooltipText="Log in"
             signOutTooltipText="Log out - J STAFF"
           />
@@ -718,6 +749,7 @@ exports[`App tests for user account and author status User logged in but is not 
     <MenuDrawer
       docked={false}
       drawerOpen={false}
+      history={Object {}}
       isMobile={false}
       locale={
         Object {
@@ -788,7 +820,7 @@ exports[`App tests for user account and author status User logged in but is not 
         >
           <Alert
             allowDismiss={false}
-            message="Please contact the UQ Manager to resolve this."
+            message="Please contact the UQ eSpace administrator to resolve this."
             title="You are not registered in UQ eSpace as an author"
             type="info_outline"
           />
@@ -897,6 +929,14 @@ exports[`App tests for user account and author status User logged in but is not 
           render={[Function]}
         />
         <Route
+          path="/author-identifiers/orcid/link"
+          render={[Function]}
+        />
+        <Route
+          path="/author-identifiers/googleScholar/link"
+          render={[Function]}
+        />
+        <Route
           access={
             Array [
               "admin",
@@ -905,6 +945,279 @@ exports[`App tests for user account and author status User logged in but is not 
           component={[Function]}
           exact={true}
           path="/admin/masquerade"
+        />
+        <Route
+          render={[Function]}
+        />
+      </Switch>
+    </div>
+    <Connect(HelpDrawer) />
+  </div>
+</div>
+`;
+
+exports[`App tests for user account and author status should display ORCID required alert 1`] = `
+<div
+  className="layout-fill"
+>
+  <div
+    className="layout-fill align-stretch"
+  >
+    <AppBar
+      className="AppBar align-center"
+      iconElementLeft={
+        <IconButton
+          disableTouchRipple={false}
+          disabled={false}
+          hoveredStyle={
+            Object {
+              "backgroundColor": "rgba(0,0,0,0.3)",
+              "borderRadius": "50%",
+            }
+          }
+          iconStyle={Object {}}
+          tabIndex={1}
+          tooltip="Main navigation"
+          tooltipPosition="bottom-right"
+          touch={false}
+        >
+          <NavigationMenu />
+        </IconButton>
+      }
+      iconElementRight={
+        <div
+          style={
+            Object {
+              "marginTop": "-10px",
+            }
+          }
+        >
+          <AuthButton
+            hoveredStyle={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.3)",
+                "borderRadius": "50%",
+              }
+            }
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </div>
+      }
+      iconStyleLeft={
+        Object {
+          "marginTop": 0,
+        }
+      }
+      onLeftIconButtonTouchTap={[Function]}
+      showMenuIconButton={true}
+      style={
+        Object {
+          "height": 75,
+        }
+      }
+      title="UQ eSpace DEMO"
+      titleStyle={Object {}}
+      zDepth={1}
+    />
+    <MenuDrawer
+      docked={false}
+      drawerOpen={false}
+      history={Object {}}
+      isMobile={false}
+      locale={
+        Object {
+          "closeMenuLabel": "Close menu",
+          "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+          "skipNavTitle": "Skip Navigation",
+        }
+      }
+      logoImage="https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg"
+      logoText="UQ eSpace DEMO"
+      menuItems={
+        Array [
+          Object {
+            "linkTo": "/dashboard",
+            "primaryText": "My dashboard",
+            "secondaryText": undefined,
+          },
+          Object {
+            "linkTo": "/records/mine",
+            "primaryText": "My research",
+          },
+          Object {
+            "linkTo": "/records/possible",
+            "primaryText": "Claim possible publications",
+          },
+          Object {
+            "linkTo": "/records/add/find",
+            "primaryText": "Add a missing record",
+          },
+          Object {
+            "divider": true,
+            "path": "/234234234242",
+          },
+          Object {
+            "linkTo": "/browse",
+            "primaryText": "Browse eSpace",
+            "public": true,
+            "secondaryText": "",
+          },
+          Object {
+            "linkTo": "/about",
+            "primaryText": "About",
+            "public": true,
+            "secondaryText": "",
+          },
+        ]
+      }
+      onToggleDrawer={[Function]}
+    />
+    <div
+      className="content-container"
+      style={Object {}}
+    >
+      <div
+        className="layout-fill dashAlert"
+      >
+        <div
+          className="layout-card"
+        >
+          <Alert
+            allowDismiss={false}
+            message="Please contact the UQ eSpace administrator to resolve this."
+            title="You are not registered in UQ eSpace as an author"
+            type="info_outline"
+          />
+        </div>
+      </div>
+      <div
+        className="layout-fill dashAlert"
+      >
+        <div
+          className="layout-card"
+        >
+          <Alert
+            action={[Function]}
+            actionButtonLabel="Click here to link or register"
+            allowDismiss={false}
+            message="You do not have an ORCID ID linked to your UQ eSpace"
+            title="ORCID ID REQUIRED"
+            type="info_outline"
+          />
+        </div>
+      </div>
+      <Switch>
+        <Route
+          path="/about"
+          render={[Function]}
+        />
+        <Route
+          path="/browse"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/records/:pid/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          path="/author-identifiers/orcid/link"
+          render={[Function]}
+        />
+        <Route
+          path="/author-identifiers/googleScholar/link"
+          render={[Function]}
         />
         <Route
           render={[Function]}

@@ -3,10 +3,20 @@ import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
 import RaisedButton from 'material-ui/RaisedButton';
-import {TextField, StandardPage, StandardCard, Alert, ConfirmDialogBox, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
+
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
+import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
+
+
 import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
-import {validation, locale, routes} from 'config';
+import {validation, routes} from 'config';
+import {locale} from 'locale';
 
 export default class ClaimRecord extends Component {
     static propTypes = {
@@ -59,7 +69,7 @@ export default class ClaimRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false, submitSucceeded = false, txt, authorLinked = false, contributorLinked = false}) => {
+    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false, submitSucceeded = false, txt, authorLinked = false}) => {
         let alertProps = null;
         if (submitFailed && error) {
             alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
@@ -69,7 +79,7 @@ export default class ClaimRecord extends Component {
             alertProps = {...txt.progressAlert};
         } else if (submitSucceeded) {
             alertProps = {...txt.successAlert};
-        } else if (authorLinked || contributorLinked) {
+        } else if (authorLinked) {
             alertProps = {...txt.alreadyClaimedAlert};
         }
         return alertProps ? (<Alert {...alertProps} />) : null;
@@ -108,7 +118,7 @@ export default class ClaimRecord extends Component {
                         <PublicationCitation publication={publication}/>
                     </StandardCard>
                     {
-                        (!publication.rek_pid || !authorLinked) &&
+                        (!publication.rek_pid || !(authorLinked || contributorLinked)) &&
                         <div>
                             <ConfirmDialogBox
                                 onRef={this._setSuccessConfirmation}
@@ -195,7 +205,7 @@ export default class ClaimRecord extends Component {
                     }
 
                     {
-                        this.getAlert({...this.props, txt: txt, authorLinked: publication.rek_pid && authorLinked})
+                        this.getAlert({...this.props, txt: txt, authorLinked: publication.rek_pid && (authorLinked || contributorLinked)})
                     }
 
                     <div className="columns action-buttons">
@@ -208,7 +218,7 @@ export default class ClaimRecord extends Component {
                                 onTouchTap={fromAddRecord ? this._navigateToAddRecord : this._navigateToPossibleMyResearch}/>
                         </div>
                         {
-                            (!publication.rek_pid || !authorLinked) &&
+                            (!publication.rek_pid || !(authorLinked || contributorLinked)) &&
                             <div className="column is-narrow-desktop">
                                 <RaisedButton
                                     secondary

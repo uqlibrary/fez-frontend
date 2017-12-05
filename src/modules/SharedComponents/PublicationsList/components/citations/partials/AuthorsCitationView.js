@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CitationView from './CitationView';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 export default class AuthorsCitationView extends React.Component {
     static propTypes = {
@@ -30,24 +30,33 @@ export default class AuthorsCitationView extends React.Component {
     constructor(props) {
         super(props);
 
-        const authorsCount = props.publication[props.searchKey.key] && Array.isArray(props.publication[props.searchKey.key])
-            ? props.publication[props.searchKey.key].length : 0;
+        const {publication, searchKey: {key, order, subkey}, initialNumberOfAuthors, thresholdNumberOfAuthors} = props;
+
+        const publicationAuthors = publication && publication[key] && [...publication[key]];    // copy authors to separate variable so sorting doesn't change original record
+
+        const authorsCount = publicationAuthors && Array.isArray(publicationAuthors)
+            ? publicationAuthors.length : 0;
 
         this.state = {
-            hasMoreAuthors: authorsCount > (props.initialNumberOfAuthors + props.thresholdNumberOfAuthors),
-            toggleShowMoreLink: authorsCount > (props.initialNumberOfAuthors + props.thresholdNumberOfAuthors),
-            authors: props.publication[props.searchKey.key] && Array.isArray(props.publication[props.searchKey.key])
-                ? props.publication[props.searchKey.key].sort((author1, author2) => (
-                    author1[props.searchKey.order] - author2[props.searchKey.order])
+            hasMoreAuthors: authorsCount > (initialNumberOfAuthors + thresholdNumberOfAuthors),
+            toggleShowMoreLink: authorsCount > (initialNumberOfAuthors + thresholdNumberOfAuthors),
+            authors: publicationAuthors && Array.isArray(publicationAuthors)
+                ? publicationAuthors.sort((author1, author2) => (
+                    author1[order] - author2[order])
                 ).map(author => (
                     {
                         // TODO: add author id for linking
-                        value: author[props.searchKey.subkey],
-                        order: author[props.searchKey.order]
+                        value: author[subkey],
+                        order: author[order]
                     }
                 ))
                 : []
         };
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextState !== this.state
+            || JSON.stringify(nextProps.publication[nextProps.searchKey]) !== JSON.stringify(this.props.publication[this.props.searchKey]);
     }
 
     renderAuthors = (authors) => {
@@ -64,7 +73,7 @@ export default class AuthorsCitationView extends React.Component {
                     suffix={suffix} />
             );
         });
-    }
+    };
 
     _toggleShowMore = (e) => {
         e.preventDefault();
@@ -75,18 +84,22 @@ export default class AuthorsCitationView extends React.Component {
 
     render() {
         const {showMoreLabel, showLessLabel} = locale.components.publicationCitation.citationAuthors;
-        if (this.state.authors.length === 0) return (<span className={`${this.props.className || ''} empty`} />);
+        const {className, prefix, suffix, initialNumberOfAuthors} = this.props;
+        const {authors, hasMoreAuthors, toggleShowMoreLink} = this.state;
+
+        if (authors.length === 0) return (<span className={`${className || ''} empty`} />);
+
         return (
-            <span className={this.props.className || ''}>
-                {this.props.prefix}
+            <span className={className || ''}>
+                {prefix}
                 {
-                    this.renderAuthors(this.state.authors)
-                        .slice(0, this.state.hasMoreAuthors && this.state.toggleShowMoreLink
-                            ? this.props.initialNumberOfAuthors
-                            : this.state.authors.length)
+                    this.renderAuthors(authors)
+                        .slice(0, hasMoreAuthors && toggleShowMoreLink
+                            ? initialNumberOfAuthors
+                            : authors.length)
                 }
                 {
-                    this.state.hasMoreAuthors &&
+                    hasMoreAuthors &&
                     <span>
                         &nbsp;
                         <a href="#"
@@ -94,14 +107,14 @@ export default class AuthorsCitationView extends React.Component {
                             onClick={this._toggleShowMore}
                             onKeyPress={this._toggleShowMore}>
                             {
-                                this.state.toggleShowMoreLink
-                                    ? showMoreLabel.replace('[numberOfAuthors]', this.state.authors.length - this.props.initialNumberOfAuthors)
+                                toggleShowMoreLink
+                                    ? showMoreLabel.replace('[numberOfAuthors]', `${authors.length - initialNumberOfAuthors}`)
                                     : showLessLabel
                             }
                         </a>
                     </span>
                 }
-                {this.props.suffix}
+                {suffix}
             </span>
         );
     }
