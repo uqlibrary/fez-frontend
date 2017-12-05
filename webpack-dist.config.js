@@ -102,7 +102,8 @@ module.exports = {
             minChunks: Infinity
         }),
         new BundleAnalyzerPlugin({
-            analyzerMode: config.environment === 'production' ? 'disabled' : 'static'
+            analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
+            openAnalyzer: !process.env.CI_BRANCH
         })
     ],
     module: {
