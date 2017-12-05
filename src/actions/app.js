@@ -16,5 +16,5 @@ export function hidePossiblyYourPublicationsLure() {
 }
 
 export function dismissNotificationAlert() {
-    return dispatch => dispatch({type: actions.APP_NOTIFICATION_DISMISSED});
+    return {type: actions.APP_NOTIFICATION_DISMISSED};
 }
