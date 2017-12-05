@@ -1,15 +1,14 @@
-import {default as locale} from './locale';
-const {validationErrors} = locale;
+import {locale} from 'locale';
 
 // Min Length
-export const maxLength = max => value => value && value.length > max ? validationErrors.maxLength.replace('[max]', max) : undefined;
+export const maxLength = max => value => value && value.length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
 export const maxLength10 = maxLength(10);
 export const maxLength255 = maxLength(255);
 export const maxLength1000 = maxLength(1000);
 export const maxLength2000 = maxLength(2000); // URL's must be under 2000 characters
 
 // Max Length
-export const minLength = min => value => value && value.trim().length < min ? validationErrors.minLength.replace('[min]', min) : undefined;
+export const minLength = min => value => value && value.trim().length < min ? locale.validationErrors.minLength.replace('[min]', min) : undefined;
 export const minLength10 = minLength(10);
 
 // TODO: fix validation, make it generic etc....
@@ -39,27 +38,27 @@ export const isValidPublicationTitle = value => {
 };
 
 // Generic
-export const required = value => value ? undefined : validationErrors.required;
-export const requiredList = value => (value && value.length > 0 ? undefined : validationErrors.required);
-export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? validationErrors.email : undefined;
-export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? validationErrors.url : maxLength2000(value);
-export const doi = (value) => !!value && !isValidDOIValue(value) ? validationErrors.doi : undefined;
+export const required = value => value ? undefined : locale.validationErrors.required;
+export const requiredList = value => (value && value.length > 0 ? undefined : locale.validationErrors.required);
+export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
+export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
+export const doi = (value) => !!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined;
 
 export const peopleRequired = (itemList, validationError, checkSelected = true) =>  (
     !itemList || itemList.length === 0 || (checkSelected && itemList && itemList.filter(item => (item.selected)).length === 0)
         ? validationError : undefined
 );
 
-export const authorRequired = (authors) => peopleRequired(authors, validationErrors.authorRequired, true);
-export const editorRequired = (editors) => peopleRequired(editors, validationErrors.editorRequired, true);
-export const supervisorRequired = (supervisors) => peopleRequired(supervisors, validationErrors.supervisorRequired, false);
+export const authorRequired = (authors) => peopleRequired(authors, locale.validationErrors.authorRequired, true);
+export const editorRequired = (editors) => peopleRequired(editors, locale.validationErrors.editorRequired, true);
+export const supervisorRequired = (supervisors) => peopleRequired(supervisors, locale.validationErrors.supervisorRequired, false);
 
 // DateTime
-export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? validationErrors.dateTimeDay : undefined;
-export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? validationErrors.dateTimeYear : undefined;
+export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? locale.validationErrors.dateTimeDay : undefined;
+export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? locale.validationErrors.dateTimeYear : undefined;
 
 export const validFileUpload = value => {
-    return value && value.hasOwnProperty('isValid') && !value.isValid ? validationErrors.fileUpload : undefined;
+    return value && value.hasOwnProperty('isValid') && !value.isValid ? locale.validationErrors.fileUpload : undefined;
 };
 export const isValidIssn = subject => {
     const regex = /^([ep]{0,1}ISSN |)[\d]{4}(\-|)[\d]{3}(\d|\S){1}$/;

@@ -2,6 +2,7 @@
 
 const {resolve} = require('path');
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -13,57 +14,39 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const WebpackStrip = require('strip-loader');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const port = 9000;
 
-// options for deployment: global title, Google tag manager id
-const title = 'eSpace - The University of Queensland';
-const gtm = 'GTM-T4NPC25';
-
-let useMock = false;
-if (process.env.USE_MOCK)
-    useMock = process.env.USE_MOCK;
-
-// get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship) 
+// get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship)
 const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
 
-// set build config variables based on branch
-let baseUrlPath = '';
-let publicPath = '';
-let publicPathOffline = '';
-let environment = '';
-    
-switch(branch) {
-    case 'production':
-        environment = 'production';
-        publicPath = '/';
-        publicPathOffline = '/';
-        break;
-    case 'staging':
-        environment = 'staging';
-        publicPath = '/';
-        publicPathOffline = '/';
-        break;
-    default:
-        baseUrlPath += 'espace/' + branch + '/';
-        publicPathOffline += baseUrlPath;
-        environment = 'development';
+// get configuration for the branch
+const config = require('./config').default[branch] || require('./config').default['development'];
+
+// local port to serve production build
+const port = 9000;
+
+// use mock data if required
+let useMock = (process && process.env && !!process.env.USE_MOCK) || false;
+
+// config for development deployment
+if(config.environment === 'development') {
+    config.basePath += branch + '/';
 }
 
 module.exports = {
     devtool: 'source-map',
     // The entry file. All your app roots from here.
-    entry: [
-        "babel-polyfill",
-        resolve(__dirname, './src/index.js')
-    ],
+    entry: {
+        main: resolve(__dirname, './src/index.js'),
+        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux']
+    },
     // Where you want the output to go
     output: {
-        path: resolve(__dirname, './dist/', baseUrlPath),
-        filename: '[name]-[hash].min.js',
-        publicPath: publicPath
+        path: resolve(__dirname, './dist/', config.basePath),
+        filename: 'frontend-js/[name]-[hash].min.js',
+        publicPath: config.publicPath
     },
     devServer: {
-        contentBase: resolve(__dirname, './dist/', baseUrlPath),
+        contentBase: resolve(__dirname, './dist/', config.basePath),
         compress: true,
         port: port,
         host: '0.0.0.0'
@@ -73,13 +56,13 @@ module.exports = {
             logo: './public/images/logo.png',
             prefix: 'mobile-icons/',
             background: '#49075E',
-            title: title
+            title: config.title
         }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
-            title: title,
-            gtm: gtm,
+            title: config.title,
+            gtm: config.gtm,
             inject: true,
             template: resolve(__dirname, './public', 'index.html'),
         }),
@@ -88,54 +71,21 @@ module.exports = {
             clear: false,
         }),
         new ExtractTextPlugin('[name]-[hash].min.css'),
-        new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: false,
-            mangle: false,
-            compress: {
-                warnings: false,
-                screw_ie8: true,
-                conditionals: true,
-                unused: true,
-                comparisons: true,
-                sequences: true,
-                dead_code: true,
-                evaluate: true,
-                if_return: true,
-                join_vars: true,
-
-            },
-            output: {
-                comments: false,
-            },
-        }),
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
-            __DEVELOPMENT__: false,
-            'process.env.NODE_ENV': JSON.stringify(environment),
-            'process.env.BASE_PATH': JSON.stringify(baseUrlPath),
-            'process.env.USE_MOCK': JSON.stringify(useMock)
-        }),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true,
-            debug: false,
-            options: {
-                postcss: [
-                    autoprefixer
-                ],
-                eslint: {
-                    configFile: '.eslintrc',
-                    failOnWarning: false,
-                    failOnError: true
-                }
-            }
+            __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
+            'process.env.NODE_ENV': JSON.stringify('production'),       // always production build on CI
+            'process.env.USE_MOCK': JSON.stringify(useMock),
+            'process.env.API_URL': JSON.stringify(config.api),
+            'process.env.APP_URL': JSON.stringify(config.url),
+            'process.env.BRANCH': JSON.stringify(config.environment)
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's
         // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
         // new OfflinePlugin({
         //     relativePaths: false,
-        //     publicPath: publicPathOffline,
+        //     publicPath: config.basePath,
         //     caches: {
         //       main: [':rest:'],
         //     },
@@ -144,8 +94,16 @@ module.exports = {
         //     }
         // }),
         new InjectPreloader(),
+        new UglifyJsPlugin({
+            sourceMap: true
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: Infinity
+        }),
         new BundleAnalyzerPlugin({
-            analyzerMode: process && process.env && process.env.CI ? 'disabled' : 'static'
+            analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
+            openAnalyzer: !process.env.CI_BRANCH
         })
     ],
     module: {

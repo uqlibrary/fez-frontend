@@ -1,9 +1,12 @@
 import React from 'react';
-import {locale, publicationTypes} from 'config';
 import PropTypes from 'prop-types';
+
 import FlatButton from 'material-ui/RaisedButton';
 import {List, ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+
+import {publicationTypes} from 'config';
+import {locale} from 'locale';
 
 export default class FacetsFilter extends React.Component {
     static propTypes = {

@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import {StandardPage, StandardCard} from 'uqlibrary-react-toolbox';
-import {locale} from 'config';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {locale} from 'locale';
 
 export default class Masquerade extends Component {
     static propTypes = {

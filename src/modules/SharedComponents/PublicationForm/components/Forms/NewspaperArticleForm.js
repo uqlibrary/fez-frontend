@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
-import {Field} from 'redux-form/immutable';
-import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation, locale} from 'config';
-import {JournalNameField} from 'modules/SharedComponents/LookupFields';
 import PropTypes from 'prop-types';
+import {Field} from 'redux-form/immutable';
+
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
+
+import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
+import {JournalNameField} from 'modules/SharedComponents/LookupFields';
+
+import {validation} from 'config';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class NewspaperArticleForm extends Component {
     static propTypes = {
@@ -16,7 +22,7 @@ export default class NewspaperArticleForm extends Component {
     }
 
     render() {
-        const txt = locale.forms.publicationForm.newspaperArticle;
+        const txt = formLocale.newspaperArticle;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>

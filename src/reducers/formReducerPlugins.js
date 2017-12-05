@@ -1,16 +1,18 @@
 import {actionTypes} from 'redux-form';
 
 export const resetValue = (state, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case actionTypes.UNREGISTER_FIELD:
             const key = action.payload.name.split('.').shift();
-            if (state.hasIn(['initial', key])) {
+            if (state && state.hasIn(['initial', key])) {
                 return state;
             }
             return state
-                .deleteIn(['values', key])
-                .deleteIn(['registeredFields', action.payload.name])
-                .deleteIn(['fields', key]);
+                ? state
+                    .deleteIn(['values', key])
+                    .deleteIn(['registeredFields', action.payload.name])
+                    .deleteIn(['fields', key])
+                : null;
         default:
             return state;
     }

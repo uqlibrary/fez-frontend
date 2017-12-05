@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Avatar from 'material-ui/Avatar';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 const profileFallbackImage = require('../../../../public/images/avatar.svg');
 

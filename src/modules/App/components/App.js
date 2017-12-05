@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router';
-
-import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import {locale} from 'locale';
 
 // application components
 import AppBar from 'material-ui/AppBar';
-import {AppLoader, MenuDrawer, HelpDrawer, AuthButton, Alert} from 'uqlibrary-react-toolbox';
+import {AppLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {MenuDrawer} from 'uqlibrary-react-toolbox/build/MenuDrawer';
+import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
+import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
@@ -53,12 +58,20 @@ export default class App extends React.Component {
         this.state.mediaQuery.addListener(this.handleResize);
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.user.accountLoading !== nextProps.user.accountLoading
+            || this.props.user.authorLoading !== nextProps.user.authorLoading
+            || this.props.user.loadingAuthorDetails !== nextProps.user.loadingAuthorDetails
+            || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
+            || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
+            || this.state !== nextState;
+    }
+
     componentWillUnmount() {
         this.state.mediaQuery.removeListener(this.handleResize);
     }
 
     handleResize = (mediaQuery) => {
-        console.log(mediaQuery);
         this.setState({
             docked: mediaQuery.matches
         });
@@ -127,8 +140,8 @@ export default class App extends React.Component {
                                         isAuthorizedUser={isAuthorizedUser}
                                         hoveredStyle={appBarButtonStyles}
                                         onClick={this.redirectUserToLogin}
-                                        signInTooltipText={locale.authentication.signInText}
-                                        signOutTooltipText={isAuthorizedUser ? (`${locale.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
+                                        signInTooltipText={locale.global.authentication.signInText}
+                                        signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.user.account.name}`) : ''} />
                                 </div>
                             }
                         />

@@ -10,6 +10,7 @@
     "babel-eslint": "8.0.0",
     "babel-jest": "21.0.2",
     "babel-loader": "^7.1.2",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.8",
@@ -52,6 +53,7 @@
     "sinon": "^3.3.0",
     "strip-loader": "^0.1.2",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.7.1",
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-dev-server": "^2.9.2"
@@ -145,6 +147,7 @@
         ],
         "plugins": [
           [
+            "dynamic-import-node",
             "transform-runtime",
             {
               "helpers": false,

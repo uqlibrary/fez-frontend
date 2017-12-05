@@ -7,7 +7,7 @@ import RadioButtonCheckedIcon from 'material-ui/svg-icons/toggle/radio-button-ch
 import RadioButtonUncheckedIcon from 'material-ui/svg-icons/toggle/radio-button-unchecked';
 
 
-import {ConfirmDialogBox} from 'uqlibrary-react-toolbox';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 
 export default class ContributorRow extends Component {
     static propTypes = {

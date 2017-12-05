@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-    AuthorsPublicationsPerYearChart,
-    AuthorsPublicationTypesCountChart,
-    Alert,
-    InlineLoader,
-    StandardCard,
-    StandardPage,
-    HelpIcon
-} from 'uqlibrary-react-toolbox';
+import {AuthorsPublicationsPerYearChart} from 'uqlibrary-react-toolbox/build/Charts';
+import {AuthorsPublicationTypesCountChart} from 'uqlibrary-react-toolbox/build/Charts';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';
+
 import DashboardAuthorProfile from './DashboardAuthorProfile';
 import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import FontIcon from 'material-ui/FontIcon';
-import {locale, routes} from 'config';
+import {routes} from 'config';
+import {locale} from 'locale';
 
 class Dashboard extends React.Component {
     static propTypes = {
@@ -65,6 +65,12 @@ class Dashboard extends React.Component {
             this.props.actions.searchLatestPublications(this.props.account.id);
             this.props.actions.searchTrendingPublications(this.props.account.id);
         }
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !(nextProps.loadingPublicationsByYear || nextProps.loadingAuthorDetails
+            || nextProps.loadingPublicationsStats || nextProps.loadingTrendingPublications
+            || nextProps.loadingLatestPublications);
     }
 
     _claimYourPublications = () => {
@@ -183,7 +189,8 @@ class Dashboard extends React.Component {
                     && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
                         (this.props.trendingPublicationsList && this.props.trendingPublicationsList.length > 0)) &&
                     <StandardCard className="card-paddingless">
-                        <Tabs className="publicationTabs" inkBarStyle={{height: '4px', marginTop: '-4px'}}>
+                        <Tabs className="publicationTabs"
+                            inkBarStyle={{height: '4px', marginTop: '-4px'}}>
                             {
                                 this.props.latestPublicationsList.length > 0 &&
                                 <Tab label={txt.myPublications.title} value="myPublications"

@@ -1,29 +1,16 @@
 const isProduction = () => process.env.NODE_ENV === 'production';
-const isStaging = () => process.env.NODE_ENV === 'staging';
-const isTesting = () => process.env.NODE_ENV === 'test';
-
-const getAppUrl = () => {
-    if (isProduction()) {
-        return 'https://espace.library.uq.edu.au/';
-    } else if (isStaging()) {
-        return 'https://fez-staging.library.uq.edu.au/';
-    } else if (isTesting()) {
-        return 'https://fez-staging.library.uq.edu.au/';
-    } else {
-        return `${window.location.protocol}//${window.location.hostname}${window.location.pathname}`;
-    }
-};
 
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 
-// URLS
-export const API_URL = isProduction() ? 'https://api.library.uq.edu.au/v1/' : 'https://api.library.uq.edu.au/staging/';
+// URLS - values are set in webpack build
+export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
+export const APP_URL = process.env.APP_URL || 'https://fez-staging.library.uq.edu.au/';
+
 export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
-export const APP_URL = getAppUrl();
 
 export const ORCID_BASE_URL = isProduction() ? 'https://orcid.org' : 'https://sandbox.orcid.org';
 export const ORCID_CLIENT_ID = isProduction() ? 'APP-UIQ1ZTKAU17ZGZSC' : 'APP-OXX6M6MBQ77GUVWX';

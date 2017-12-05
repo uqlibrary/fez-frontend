@@ -1,7 +1,7 @@
 import React from 'react';
 import * as routes from './routes';
 import {accounts} from 'mock/data/account';
-import {locale} from '.';
+import {locale} from 'locale';
 
 describe('Routes method', () => {
     it('should return a list of menus for anon user', () => {

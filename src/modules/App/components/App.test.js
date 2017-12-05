@@ -4,7 +4,8 @@ import React from 'react';
 
 import App from './App';
 import {accounts, authorDetails} from 'mock/data';
-import {locale, routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import {locale} from 'locale';
 
 function setup(values) {
     values.history = values.history || {};

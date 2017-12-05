@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'config';
+import {locale} from 'locale';
 import {openAccessIdLookup} from 'config/general';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import * as Partials from './partials';

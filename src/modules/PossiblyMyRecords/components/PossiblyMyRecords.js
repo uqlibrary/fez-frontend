@@ -3,9 +3,15 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {PublicationsList, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
-import {InlineLoader, StandardPage, StandardCard, ConfirmDialogBox, StandardRighthandCard} from 'uqlibrary-react-toolbox';
 
-import {locale, routes} from 'config';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
+
+import {routes} from 'config';
+import {locale} from 'locale';
 
 export default class PossiblyMyRecords extends React.Component {
     static propTypes = {
@@ -38,6 +44,13 @@ export default class PossiblyMyRecords extends React.Component {
         if (this.props.account) {
             this.props.actions.searchPossiblyYourPublications({facets: this.state.activeFacets});
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.accountLoading !== nextProps.accountLoading
+            || this.props.loadingPossiblePublicationsList !== nextProps.loadingPossiblePublicationsList
+            || this.props.loadingPossibleCounts !== nextProps.loadingPossibleCounts
+            || this.state !== nextState;
     }
 
     _hidePublication = () => {

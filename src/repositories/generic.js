@@ -1,4 +1,4 @@
-import {api, cache} from '../config';
+import {api} from '../config';
 /**
  * @param error
  * @param resolve
@@ -91,9 +91,6 @@ export function get(apiUrl, encode = true) {
     console.log('GET: ' + apiUrl);
     return new Promise((resolve, reject) => {
         api.get(encode ? encodeURI(apiUrl) : apiUrl).then(response => {
-            cache.store.length().then(length => {
-                console.log('Cache store length: ', length);
-            });
             resolve(response.data);
         }).catch(error => {
             processError(error, resolve, reject);
