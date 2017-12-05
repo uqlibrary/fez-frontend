@@ -12,22 +12,22 @@ import {dismissNotificationAlert} from './app';
  * @param {object} params
  * @returns {action}
  */
-export function requestAuthorOrcidInfo(userId, params) {
+export function requestAuthorOrcidInfo(userId, autId, params) {
     return dispatch => {
         let orcidId = null;
 
         dispatch({type: actions.ORCID_ACCESS_TOKEN_REQUEST});
 
-        return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+        return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}), true)
             .then((response) => {
                 dispatch({type: actions.ORCID_ACCESS_TOKEN_LOADED});
 
-                orcidId = response.data.orcid;
+                orcidId = response.orcid;
 
-                const data = transformAuthorIdentifier(AUTHOR_IDENTIFIER_ORCID, userId, orcidId, response.data);
+                const data = transformAuthorIdentifier(AUTHOR_IDENTIFIER_ORCID, autId, orcidId, response);
 
                 dispatch({type: actions.AUTHOR_IDENTIFIER_ADD});
-                return patch(routes.AUTHOR_ADD_IDENTIFIER({userId}), data);
+                return patch(routes.AUTHOR_ADD_IDENTIFIER({autId}), data);
             })
             .then((response) => {
                 dispatch({type: actions.AUTHOR_IDENTIFIER_ADDED, payload: response.data});
@@ -40,6 +40,7 @@ export function requestAuthorOrcidInfo(userId, params) {
                 });
             })
             .catch(error => {
+                console.log(error);
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 if (!orcidId) {
                     dispatch({
