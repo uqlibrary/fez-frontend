@@ -108,7 +108,6 @@ mock
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_ADD_IDENTIFIER({autId: '.*'}))))
         .reply(200, {data: {...mockData.afterOrcid}})
     .onAny().reply((config) => {
-        console.log(config);
         console.log('url not found...');
         console.log(config.url);
         return [404, {message: `MOCK URL NOT FOUND: ${config.url}`}];

@@ -1,6 +1,7 @@
 const isProduction = () => process.env.NODE_ENV === 'production';
 const isStaging = () => process.env.NODE_ENV === 'staging';
 const isTesting = () => process.env.NODE_ENV === 'test';
+const isDevelopment = () => process.env.NODE_ENV === 'development';
 
 const getAppUrl = () => {
     if (isProduction()) {
@@ -9,6 +10,8 @@ const getAppUrl = () => {
         return 'https://fez-staging.library.uq.edu.au/';
     } else if (isTesting()) {
         return 'https://fez-staging.library.uq.edu.au/';
+    } else if (isDevelopment()) {
+        return `https://development.library.uq.edu.au${window.location.pathname}`;
     } else {
         return `${window.location.protocol}//${window.location.hostname}/`;
     }
