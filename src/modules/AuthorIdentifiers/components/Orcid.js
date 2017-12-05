@@ -99,44 +99,42 @@ export default class Orcid extends Component {
 
         return (
             <StandardPage title={txt.title}>
-                <form onKeyDown={this._handleKeyboardFormSubmit}>
-                    <ConfirmDialogBox
-                        onRef={this._setAuthoriseConfirmation}
-                        locale={txt.grantAccessConfirmation} />
-                    <StandardCard title={txt.authoriseOrcid.title}>
-                        <div>{txt.authoriseOrcid.description}</div>
-                        <div className="columns action-buttons">
-                            <div className="column is-hidden-mobile"/>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    secondary
-                                    fullWidth
-                                    label={txt.authoriseOrcid.labels.submit}
-                                    onTouchTap={() => this._showAuthoriseConfirmation(this._authoriseOrcid)}
-                                />
-                            </div>
+                <ConfirmDialogBox
+                    onRef={this._setAuthoriseConfirmation}
+                    locale={txt.grantAccessConfirmation} />
+                <StandardCard title={txt.authoriseOrcid.title}>
+                    <div>{txt.authoriseOrcid.description}</div>
+                    <div className="columns action-buttons">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                secondary
+                                fullWidth
+                                label={txt.authoriseOrcid.labels.submit}
+                                onTouchTap={() => this._showAuthoriseConfirmation(this._authoriseOrcid)}
+                            />
                         </div>
-                    </StandardCard>
-                    <StandardCard title={txt.createOrcid.title}>
-                        <div>{txt.createOrcid.description}</div>
-                        <div className="columns action-buttons">
-                            <div className="column is-hidden-mobile"/>
-                            <div className="column is-narrow-desktop">
-                                <RaisedButton
-                                    secondary
-                                    fullWidth
-                                    label={txt.createOrcid.labels.submit}
-                                    onTouchTap={() => this._showAuthoriseConfirmation(this._createOrcid)}
-                                />
-                            </div>
+                    </div>
+                </StandardCard>
+                <StandardCard title={txt.createOrcid.title}>
+                    <div>{txt.createOrcid.description}</div>
+                    <div className="columns action-buttons">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-desktop">
+                            <RaisedButton
+                                secondary
+                                fullWidth
+                                label={txt.createOrcid.labels.submit}
+                                onTouchTap={() => this._showAuthoriseConfirmation(this._createOrcid)}
+                            />
                         </div>
-                    </StandardCard>
+                    </div>
+                </StandardCard>
 
-                    {
-                        this.state.error &&
-                        <Alert {...this.state.error} />
-                    }
-                </form>
+                {
+                    this.state.error &&
+                    <Alert {...this.state.error} />
+                }
             </StandardPage>
         );
     }
