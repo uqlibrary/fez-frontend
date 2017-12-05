@@ -42,7 +42,7 @@ module.exports = {
     // Where you want the output to go
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
-        filename: '[name]-[hash].min.js',
+        filename: 'frontend-js/[name]-[hash].min.js',
         publicPath: config.publicPath
     },
     devServer: {
@@ -102,7 +102,7 @@ module.exports = {
             minChunks: Infinity
         }),
         new BundleAnalyzerPlugin({
-            analyzerMode: process && process.env && process.env.CI ? 'disabled' : 'static'
+            analyzerMode: config.environment === 'production' ? 'disabled' : 'static'
         })
     ],
     module: {
