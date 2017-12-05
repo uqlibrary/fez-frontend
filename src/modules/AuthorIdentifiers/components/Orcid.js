@@ -39,9 +39,9 @@ export default class Orcid extends Component {
 
     componentWillReceiveProps(nextProps) {
         const queryParams = parse(window.location.search.substr(1));
+        const {actions, account, author, location, history} = nextProps;
 
-        if (queryParams.code) {
-            const {actions, account, author, location, history} = nextProps;
+        if (queryParams.code && author) {
             actions.requestAuthorOrcidInfo(account.id, author.aut_id, {code: queryParams.code, redirUri: `${APP_URL}#${location.pathname}`});
             history.push(routes.pathConfig.dashboard);
         }
@@ -102,15 +102,15 @@ export default class Orcid extends Component {
                 <ConfirmDialogBox
                     onRef={this._setAuthoriseConfirmation}
                     locale={txt.grantAccessConfirmation} />
-                <StandardCard title={txt.authoriseOrcid.title}>
-                    <div>{txt.authoriseOrcid.description}</div>
+                <StandardCard title={txt.linkOrcid.title}>
+                    <div>{txt.linkOrcid.description}</div>
                     <div className="columns action-buttons">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-desktop">
                             <RaisedButton
                                 secondary
                                 fullWidth
-                                label={txt.authoriseOrcid.labels.submit}
+                                label={txt.linkOrcid.labels.submit}
                                 onTouchTap={() => this._showAuthoriseConfirmation(this._authoriseOrcid)}
                             />
                         </div>

@@ -170,7 +170,7 @@ export default class App extends React.Component {
 
                             {
                                 // user is logged in, but doesn't have ORCID identifier
-                                !isPublicPage && !isAuthorLoading && isOrcidRequired &&
+                                !isPublicPage && !isAuthorLoading && isOrcidRequired && !this.props.notificationAlert &&
                                 <div className="layout-fill dashAlert">
                                     <div className="layout-card">
                                         <Alert {...locale.global.noOrcidAlert} action={this.redirectToOrcid} />

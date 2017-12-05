@@ -17,7 +17,12 @@ export function requestAuthorOrcidInfo(userId, autId, params) {
         let orcidId = null;
 
         dispatch({type: actions.ORCID_ACCESS_TOKEN_REQUEST});
-
+        dispatch({
+            type: actions.APP_NOTIFICATION,
+            payload: {
+                ...locale.authorIdentifiers.orcid.linkProgressAlert
+            }
+        });
         return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}), false)
             .then((response) => {
                 dispatch({type: actions.ORCID_ACCESS_TOKEN_LOADED});

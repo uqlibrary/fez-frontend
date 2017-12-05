@@ -593,7 +593,7 @@ export default {
                     </div>
                 )
             },
-            authoriseOrcid: {
+            linkOrcid: {
                 title: 'I already have an ORCID iD',
                 description: (
                     <div>This option enables you to link your existing ORCID iD to UQ.</div>
@@ -631,6 +631,11 @@ export default {
                 message: 'We did save your ORCID iD and linked to your account.  Your publications will be downloaded automatically within the next 24 hours',
                 type: 'done',
                 allowDismiss: true
+            },
+            linkProgressAlert: {
+                title: 'ORCID',
+                message: 'We are linking your ORCID iD to your account.',
+                type: 'warning'
             }
         }
     }
