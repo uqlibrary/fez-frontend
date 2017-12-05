@@ -5,13 +5,12 @@ import Immutable from 'immutable';
 import Orcid from '../components/Orcid';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
-import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'Orcid';
 
 let OrcidContainer = reduxForm({
     form: FORM_NAME
-})(confirmDiscardFormChanges(Orcid, FORM_NAME));
+})(Orcid);
 
 const mapStateToProps = (state) => {
     return {

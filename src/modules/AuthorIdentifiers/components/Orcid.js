@@ -89,7 +89,7 @@ export default class Orcid extends Component {
             ...additionalParams
         };
 
-        const stringifiedParams = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`).join('&').replace(/%20/g, '+');
+        const stringifiedParams = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`).join('&');
 
         return `${ORCID_AUTHORIZATION_URL}?${stringifiedParams}`;
     };

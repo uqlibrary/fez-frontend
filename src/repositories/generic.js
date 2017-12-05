@@ -81,19 +81,16 @@ export function patch(apiUrl, data) {
     });
 }
 
-const encodeUri = (url, encode = true) => {
-    return (encode ? url : encodeURI(url));
-};
-
 /**
  * Send a get request
  * @param {string} apiUrl
+ * @param {boolean} encode
  * @returns {Promise}
  */
 export function get(apiUrl, encode = true) {
     console.log('GET: ' + apiUrl);
     return new Promise((resolve, reject) => {
-        api.get(encodeUri(apiUrl, encode)).then(response => {
+        api.get(encode ? encodeURI(apiUrl) : apiUrl).then(response => {
             cache.store.length().then(length => {
                 console.log('Cache store length: ', length);
             });

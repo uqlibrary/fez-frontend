@@ -18,7 +18,7 @@ export function requestAuthorOrcidInfo(userId, autId, params) {
 
         dispatch({type: actions.ORCID_ACCESS_TOKEN_REQUEST});
 
-        return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}), true)
+        return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}), false)
             .then((response) => {
                 dispatch({type: actions.ORCID_ACCESS_TOKEN_LOADED});
 
