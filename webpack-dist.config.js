@@ -37,7 +37,7 @@ module.exports = {
     // The entry file. All your app roots from here.
     entry: {
         client: resolve(__dirname, './src/index.js'),
-        vendor: ['react', 'react-dom', 'react-router-dom']
+        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'redux-form']
     },
     // Where you want the output to go
     output: {
