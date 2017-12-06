@@ -6,7 +6,9 @@ const deployment = {
         title: 'eSpace - The University of Queensland (DEVELOPMENT)',
         environment: 'development',
         basePath: 'espace/', // updated in webpack
-        publicPath: ''
+        publicPath: '',
+        orcidUrl: 'https://sandbox.orcid.org',
+        orcidClientId: 'APP-OXX6M6MBQ77GUVWX'
     },
     staging: {
         url: 'https://fez-staging.library.uq.edu.au',
@@ -14,7 +16,9 @@ const deployment = {
         title: 'eSpace - The University of Queensland (STAGING)',
         environment: 'staging',
         basePath: '',
-        publicPath: '/'
+        publicPath: '/',
+        orcidUrl: 'https://sandbox.orcid.org',
+        orcidClientId: 'APP-OXX6M6MBQ77GUVWX'
     },
     production: {
         url: 'https://espace.library.uq.edu.au',
@@ -23,7 +27,9 @@ const deployment = {
         title: 'eSpace - The University of Queensland',
         environment: 'production',
         basePath: '',
-        publicPath: '/'
+        publicPath: '/',
+        orcidUrl: 'https://orcid.org',
+        orcidClientId: 'APP-UIQ1ZTKAU17ZGZSC'
     }
 };
 

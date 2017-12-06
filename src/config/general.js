@@ -1,5 +1,3 @@
-const isProduction = () => process.env.NODE_ENV === 'production';
-
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const TOKEN_NAME = 'X-Uql-Token';
@@ -12,8 +10,8 @@ export const APP_URL = process.env.APP_URL || 'https://fez-staging.library.uq.ed
 export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
 
-export const ORCID_BASE_URL = isProduction() ? 'https://orcid.org' : 'https://sandbox.orcid.org';
-export const ORCID_CLIENT_ID = isProduction() ? 'APP-UIQ1ZTKAU17ZGZSC' : 'APP-OXX6M6MBQ77GUVWX';
+export const ORCID_BASE_URL = process.env.ORCID_URL;
+export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID;
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
 // Default values for createNewRecord
