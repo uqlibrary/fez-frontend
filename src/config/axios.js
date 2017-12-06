@@ -20,7 +20,7 @@ export const cache = setupCache({
 
 export const api = axios.create({
     baseURL: API_URL,
-    adapter: cache.adapter
+    adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter
 });
 
 // need to generate a new token for each request otherwise if you try a new request with the old token,
