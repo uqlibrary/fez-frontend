@@ -1,16 +1,4 @@
-import React from 'react';
 import {locale} from 'locale';
-
-import Async from 'modules/SharedComponents/Async';
-const FixRecord = () => (<Async load={import('modules/FixRecord/containers/FixRecord')} />);
-const ClaimRecord = () => (<Async load={import('modules/ClaimRecord/containers/ClaimRecord')} />);
-const PossiblyMyRecords = () => (<Async load={import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')} />);
-const MyRecords = () => (<Async load={import('modules/MyRecords/containers/MyRecords')} />);
-const Dashboard = () => (<Async load={import('modules/Dashboard/containers/Dashboard')} />);
-// const AddMissingRecord = () => (<Async load={import('modules/AddMissingRecord/containers/AddMissingRecord')} />);
-// const FindRecords = () => (<Async load={import('modules/AddMissingRecord/components/steps/FindRecords')} />);
-// const RecordsSearchResults = () => (<Async load={import('modules/AddMissingRecord/components/steps/RecordsSearchResults')} />);
-// const NewRecord = () => (<Async load={import('modules/AddMissingRecord/components/steps/NewRecord')} />);
 
 export const pathConfig =  {
     index: '/',
@@ -69,36 +57,36 @@ export const getRoutesConfig = (components, account) => {
         ...(account ? [
             {
                 path: pathConfig.index,
-                component: Dashboard,
+                component: components.Dashboard,
                 exact: true
             },
             {
                 path: pathConfig.dashboard,
-                component: Dashboard,
+                component: components.Dashboard,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.mine,
-                component: MyRecords,
+                component: components.MyRecords,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.possible,
-                component: PossiblyMyRecords,
+                component: components.PossiblyMyRecords,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.claim,
-                component: ClaimRecord,
+                component: components.ClaimRecord,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.fix(':pid'),
-                component: FixRecord,
+                component: components.FixRecord,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
