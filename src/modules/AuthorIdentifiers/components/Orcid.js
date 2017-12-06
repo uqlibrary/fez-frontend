@@ -94,6 +94,14 @@ export default class Orcid extends Component {
         return `${ORCID_AUTHORIZATION_URL}?${stringifiedParams}`;
     };
 
+    _confirmLinkOrcid = () => {
+        return this._showAuthoriseConfirmation(this._authoriseOrcid);
+    };
+
+    _confirmCreateOrcid = () => {
+        return this._showAuthoriseConfirmation(this._createOrcid);
+    };
+
     render() {
         const txt = locale.authorIdentifiers.orcid;
 
@@ -111,7 +119,7 @@ export default class Orcid extends Component {
                                 secondary
                                 fullWidth
                                 label={txt.linkOrcid.labels.submit}
-                                onTouchTap={() => this._showAuthoriseConfirmation(this._authoriseOrcid)}
+                                onTouchTap={this._confirmLinkOrcid}
                             />
                         </div>
                     </div>
@@ -125,7 +133,7 @@ export default class Orcid extends Component {
                                 secondary
                                 fullWidth
                                 label={txt.createOrcid.labels.submit}
-                                onTouchTap={() => this._showAuthoriseConfirmation(this._createOrcid)}
+                                onTouchTap={this._confirmCreateOrcid}
                             />
                         </div>
                     </div>
