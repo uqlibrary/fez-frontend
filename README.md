@@ -17,7 +17,8 @@ UQ's branding for Fez is UQ eSpace.
 - State: `Redux, ReduxForm`
 - Design: `Google Material Design - Material UI`
 - Build and dev tools: `Webpack`
-- Tests: `Jest`
+- Unit tests: `Jest`
+- E2E tests: TBA
 
 ## Development
 This project is using `yarn` for dependency management.  Make sure `yarn` is installed on your machine.
@@ -39,7 +40,7 @@ Mock data is provided for all pages and actions under `src/mock/`.
 to keep initial load to a minimum following optimisation has been added to the project:
 
 - Async (lazy) loading of non-essential (essential components are only those components user can see on public pages when not authenticated)
-- Splitting essential vendor libraries out ('react', 'react-dom', 'react-router-dom', 'redux', 'redux-form') - those libraries do not change often and will be cached by the browser
+- Splitting essential vendor libraries out ('react', 'react-dom', 'react-router-dom', 'redux', 'react-redux') - those libraries do not change often and will be cached by the browser
 - Optimise rendering of the components (in ReactJs 15 use react-addon-perf) to minimize wasteful rendering of components, implement PureComponent or shouldComponentUpdate()
 - Locale package is split into smaller chunks to avoid loading it all at once:
    - publicationForm.js locale is loaded only when PublicationForm component is loaded
@@ -84,8 +85,8 @@ const PublicationsList = (componentProps) => (<Async load={import('modules/Share
 <PublicationsList {...props} />
 ```
 - make sure to check BundleAnalyzerPlugin output locally by running `npm run build` or `npm run analyse`: 
-  - client.js file should not exceed 1Mb
-  - client.js should not include any non-essential libraries
+  - main-###.js file should not exceed 1Mb
+  - main-###.js should not include any non-essential libraries
 
 #### Exception handling
 - any custom reject() by promises should return an object with status and message defined `{status: 401, message: 'Unauthorised user'}` [Example](https://github.com/uqlibrary/fez-frontend/blob/5b77d698065ddbff6f8ffcd31cf95ffcacd6f16b/src/repositories/account.js#L13)
