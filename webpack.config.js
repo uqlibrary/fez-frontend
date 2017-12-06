@@ -141,7 +141,8 @@ module.exports = {
         new webpack.DefinePlugin({
             __DEVELOPMENT__: true,
             'process.env.NODE_ENV': JSON.stringify('development'),
-            'process.env.USE_MOCK': JSON.stringify(useMock)
+            'process.env.USE_MOCK': JSON.stringify(useMock),
+            'process.env.APP_URL': JSON.stringify(`http://${url}/`),
         })
     ],
     resolve: {

@@ -4,7 +4,8 @@ import Cookies from 'js-cookie';
 import {parse} from 'querystring';
 import {createHash} from 'crypto';
 
-import {locale, routes} from 'config';
+import {routes} from 'config';
+import {locale} from 'locale';
 import {APP_URL, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from 'config/general';
 
 import RaisedButton from 'material-ui/RaisedButton';
@@ -14,7 +15,6 @@ export default class Orcid extends Component {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
-        locale: PropTypes.object,
         history: PropTypes.object,
         location: PropTypes.object,
         actions: PropTypes.object

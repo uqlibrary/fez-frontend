@@ -498,6 +498,12 @@ export default {
                 message: 'Error retrieving ORCID - problem with code',
                 type: 'error'
             },
+            authoriseOrcidAlert: {
+                title: 'ORCID',
+                message: 'Error in authorising ORCID - problem with your code or app you are trying to link from',
+                type: 'error',
+                allowDismiss: true
+            },
             successAlert: {
                 title: 'ORCID',
                 message: 'We did save your ORCID iD and linked to your account.  Your publications will be downloaded automatically within the next 24 hours',
@@ -507,7 +513,7 @@ export default {
             linkProgressAlert: {
                 title: 'ORCID',
                 message: 'We are linking your ORCID iD to your account.',
-                type: 'warning'
+                type: 'info'
             }
         }
     }

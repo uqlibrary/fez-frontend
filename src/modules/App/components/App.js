@@ -64,6 +64,7 @@ export default class App extends React.Component {
             || this.props.user.loadingAuthorDetails !== nextProps.user.loadingAuthorDetails
             || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
             || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
+            || (!!this.props.notificationAlert && this.props.notificationAlert !== nextProps.notificationAlert)
             || this.state !== nextState;
     }
 

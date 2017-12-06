@@ -3,7 +3,7 @@ import {get, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import {transformAuthorIdentifier} from './authorIdentifierTransformer';
 import {AUTHOR_IDENTIFIER_ORCID} from 'config/general';
-import {locale} from 'config';
+import {locale} from 'locale';
 import {dismissNotificationAlert} from './app';
 
 /**
@@ -47,6 +47,15 @@ export function requestAuthorOrcidInfo(userId, autId, params) {
             .catch(error => {
                 console.log(error);
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 500) {
+                    dispatch({
+                        type: actions.APP_NOTIFICATION,
+                        payload: {
+                            ...locale.authorIdentifiers.orcid.authoriseOrcidAlert,
+                            dismissAction: () => dispatch(dismissNotificationAlert())
+                        }
+                    });
+                }
                 if (!orcidId) {
                     dispatch({
                         type: actions.ORCID_ACCESS_TOKEN_REQUEST_FAILED,

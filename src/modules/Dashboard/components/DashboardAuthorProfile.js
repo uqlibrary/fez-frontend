@@ -45,11 +45,11 @@ const DashboardProfile = ({authorDetails, author}) => {
                         />
                         <DashboardResearcherIds
                             values={{
-                                publons: authorDetails.publons_id,
-                                researcher: authorDetails.researcher_id,
-                                scopus: authorDetails.scopus_id,
-                                google_scholar: authorDetails.google_scholar_id,
-                                orcid: authorDetails.orcid_id
+                                publons: author.aut_publons_id,
+                                researcher: author.aut_researcher_id,
+                                scopus: author.aut_scopus_id,
+                                google_scholar: author.aut_google_scholar_id,
+                                orcid: author.aut_orcid_id
                             }}
                         />
                     </div>
