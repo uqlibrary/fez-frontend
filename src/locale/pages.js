@@ -138,7 +138,7 @@ export default {
                 dashboardResearcherIds: {
                     researcherIsLinked: 'Your [resource] ID is [id]',
                     researcherIsNotLinked: 'You are not linked to [resource]',
-                    orcidUrlPrefix: 'http://orcid.org/',
+                    orcidUrlPrefix: `${process.env.ORCID_URL}/`,
                     orcidLinkPrefix: 'orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCId profile',
                     titles: {
@@ -153,7 +153,7 @@ export default {
                         scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
                         researcher: 'http://www.researcherid.com/rid/',
                         google_scholar: 'https://scholar.google.com.au/citations?user=',
-                        orcid: 'https://orcid.org/'
+                        orcid: `${process.env.ORCID_URL}/`
                     }
                 }
             },
