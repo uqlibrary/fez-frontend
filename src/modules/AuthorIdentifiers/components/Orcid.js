@@ -9,7 +9,10 @@ import {locale} from 'locale';
 import {APP_URL, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from 'config/general';
 
 import RaisedButton from 'material-ui/RaisedButton';
-import {StandardPage, StandardCard, ConfirmDialogBox, Alert} from 'uqlibrary-react-toolbox';
+import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 
 export default class Orcid extends Component {
     static propTypes = {
