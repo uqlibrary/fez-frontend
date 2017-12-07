@@ -14,15 +14,10 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
             return a;
         }, {});
 
-    // transform object to array
-    const publicationTypesCount = [];
-    Object.keys(publicationTypesCountObject)
-        .map(publicationType => {
-            publicationTypesCount.push([publicationType, publicationTypesCountObject[publicationType]]);
-        })
-        .sort((item1, item2) => {
-            return item1[1] - item2[1];
-        });
+    // transform object to array and sort in descending order
+    const publicationTypesCount = Object.keys(publicationTypesCountObject)
+        .map(publicationType => [publicationType, publicationTypesCountObject[publicationType]])
+        .sort((item1, item2) => item2[1] - item1[1]);
 
     if (!keepPublicationTypes || publicationTypesCount.length <= keepPublicationTypes) {
         return publicationTypesCount;
