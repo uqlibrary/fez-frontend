@@ -17,7 +17,8 @@ UQ's branding for Fez is UQ eSpace.
 - State: `Redux, ReduxForm`
 - Design: `Google Material Design - Material UI`
 - Build and dev tools: `Webpack`
-- Tests: `Jest/Nightwatch`
+- Unit tests: `Jest`
+- E2E tests: TBA
 
 ## Development
 This project is using `yarn` for dependency management.  Make sure `yarn` is installed on your machine.
@@ -33,6 +34,59 @@ This project is using `yarn` for dependency management.  Make sure `yarn` is ins
 Mock data is provided for all pages and actions under `src/mock/`.
 
 ### Development notes
+
+#### Optimisation
+
+to keep initial load to a minimum following optimisation has been added to the project:
+
+- Async (lazy) loading of non-essential (essential components are only those components user can see on public pages when not authenticated)
+- Splitting essential vendor libraries out ('react', 'react-dom', 'react-router-dom', 'redux', 'react-redux') - those libraries do not change often and will be cached by the browser
+- Optimise rendering of the components (in ReactJs 15 use react-addon-perf) to minimize wasteful rendering of components, implement PureComponent or shouldComponentUpdate()
+- Locale package is split into smaller chunks to avoid loading it all at once:
+   - publicationForm.js locale is loaded only when PublicationForm component is loaded
+   - other locale files are not too big, all bundled into one for now
+- webpack plugins:
+   
+  - uglify/tree shake:
+
+```
+new UglifyJsPlugin({sourceMap: true})
+```
+
+  - minify in deployment:
+
+```
+new webpack.DefinePlugin({
+  __DEVELOPMENT__: !process.env.CI_BRANCH,                    // always production build on CI
+  'process.env.NODE_ENV': JSON.stringify('production'),       // always production build on CI
+  ...
+  })
+```
+ 
+  - remove momentjs locale:
+
+```  
+new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+```  
+
+#### Optimisation Guidelines
+
+- do not use functional components
+- try to simplify props
+- component should extend React.PureComponent if props are simple 
+- component should extend React.Component, shouldComponentUpdate() should be implemented if props have objects
+- import explicit and specific components (do not import all):
+   - *DO NOT* `import {HelpIcon} from 'uqlibrary-react-toolbox';` 
+   - *DO* `import {HelpIcon} from 'uqlibrary-react-toolbox/build/HelpDrawer';`
+- any set of components which is not required in the initial load, eg PublicationForm, FixForm, ClaimForm etc, should lazy loaded using `<Async>`
+```
+const PublicationsList = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationsList/components/PublicationsList')}  componentProps={componentProps} />);
+...
+<PublicationsList {...props} />
+```
+- make sure to check BundleAnalyzerPlugin output locally by running `npm run build` or `npm run analyse`: 
+  - main-###.js file should not exceed 1Mb
+  - main-###.js should not include any non-essential libraries
 
 #### Exception handling
 - any custom reject() by promises should return an object with status and message defined `{status: 401, message: 'Unauthorised user'}` [Example](https://github.com/uqlibrary/fez-frontend/blob/5b77d698065ddbff6f8ffcd31cf95ffcacd6f16b/src/repositories/account.js#L13)
@@ -50,15 +104,7 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 Before committing changes, locally run tests and update stapshots (if required). To update snapshots run `npm test -- -u`.
 
 ### E2E testing
-[Nightwatch.js](http://nightwatchjs.org/) is used to run end to end tests.
-
-- start dist version of the project by `yarn start:build:e2e` - runs application in mock mode
-- while dist version of the project is running, start tests by `yarn test:e2e`
-
-Codeship setup:
-
-- `nohup bash -c "yarn start:build:e2e 2>&1 &" && sleep 20; cat nohup.out`
-- `yarn test:e2e`
+TBA
 
 ## Mocking
 
@@ -68,7 +114,8 @@ The project allows the user to "login" as any test user. Simply add `?user=<user
 in as that user. Usernames can be found in the `src/mock/data/accounts.js` file.
 
 - anonymous user: http://localhost:3000/?user=anon#/
-- registered user: http://localhost:3000/?user=uqresearcher#/
+- researcher user: http://localhost:3000/?user=uqresearcher#/
+- researcher user without orcid: http://localhost:3000/?user=noorcid#/
 - staff/not author user: http://localhost:3000/?user=uqstaff#/
 - undegrad student user: http://localhost:3000/?user=s1111111#/
 - postgrad student user: http://localhost:3000/?user=s2222222#/

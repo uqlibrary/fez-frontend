@@ -5,8 +5,15 @@ import {Field} from 'redux-form/immutable';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-import {SelectField, StandardCard, Alert, FileUploadField, NavigationDialogBox} from 'uqlibrary-react-toolbox';
-import {locale, publicationTypes, validation} from 'config';
+
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {SelectField} from 'uqlibrary-react-toolbox/build/SelectField';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
+import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
+
+import {publicationTypes, validation} from 'config';
+import {default as txt} from 'locale/publicationForm';
 
 import * as recordForms from './Forms';
 
@@ -76,7 +83,6 @@ export default class PublicationForm extends Component {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })
         ];
-        const txt = locale.forms.publicationForm;
         return (
             <form>
                 <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />

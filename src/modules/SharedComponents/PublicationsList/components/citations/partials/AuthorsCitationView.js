@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CitationView from './CitationView';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 export default class AuthorsCitationView extends React.Component {
     static propTypes = {
@@ -52,6 +52,11 @@ export default class AuthorsCitationView extends React.Component {
                 ))
                 : []
         };
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextState !== this.state
+            || JSON.stringify(nextProps.publication[nextProps.searchKey]) !== JSON.stringify(this.props.publication[this.props.searchKey]);
     }
 
     renderAuthors = (authors) => {

@@ -6,15 +6,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const port = 3000;
-let url = 'localhost';
-let useMock = false;
-
-if (process.env.URL)
-    url = process.env.URL;
-
-if (process.env.USE_MOCK)
-    useMock = process.env.USE_MOCK;
-
+const url = process.env.URL || 'localhost';
+const useMock = !!process.env.USE_MOCK || false;
+const publicPath = '';
 
 module.exports = {
     context: path.resolve(__dirname),
@@ -29,7 +23,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname),
         pathinfo: true,
-        publicPath: `http://${url}:${port}/`,
+        publicPath: `http://${url}:${port}/${publicPath}`,
     },
     devServer: {
         clientLogLevel: 'info',
@@ -45,7 +39,7 @@ module.exports = {
         noInfo: true,
         open: false,
         port: port,
-        publicPath: '/',
+        publicPath: `/${publicPath}`,
         quiet: false,
         stats: 'errors-only',
         watchContentBase: false,

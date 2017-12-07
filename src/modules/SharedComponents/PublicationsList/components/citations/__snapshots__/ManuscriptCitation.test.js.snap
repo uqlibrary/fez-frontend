@@ -698,6 +698,8 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944"
     >
       <span
@@ -710,6 +712,8 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
     </CitationView>
     <CitationView
       className="citationSource"
+      prefix=" "
+      suffix="."
       value="Father Edward Leo Hayes Collection, UQFL2 : 3255"
     >
       <span
@@ -787,6 +791,8 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -794,6 +800,8 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationSource"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span

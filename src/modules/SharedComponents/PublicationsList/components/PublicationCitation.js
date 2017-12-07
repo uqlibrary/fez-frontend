@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import {publicationTypes, locale} from 'config';
+import {publicationTypes} from 'config';
+import {locale} from 'locale';
 
 // citations for different publication types
 import {routes} from 'config';
@@ -58,6 +59,10 @@ export default class PublicationCitation extends Component {
 
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return JSON.stringify(nextProps.publication) !== JSON.stringify(this.props.publication);
     }
 
     _renderCitation = (publicationTypeId) => {

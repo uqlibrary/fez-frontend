@@ -1,4 +1,4 @@
-import {AutoSuggestField} from 'uqlibrary-react-toolbox';
+import {AutoSuggestField} from 'uqlibrary-react-toolbox/build/AutoSuggestField';
 import {FieldOfResearchVocabId} from 'config/general';
 import {connect} from 'react-redux';
 import * as actions from 'actions';

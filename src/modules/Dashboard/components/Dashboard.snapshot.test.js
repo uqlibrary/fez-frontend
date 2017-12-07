@@ -46,13 +46,13 @@ describe('Dashboard test', () => {
     });
 
     it('renders dashboard header only', () => {
-        const wrapper = setup({authorDetails: mock.authorDetails});
+        const wrapper = setup({authorDetails: mock.authorDetails.uqresearcher});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders possibly your publications lure', () => {
         const wrapper = setup({
-            authorDetails: mock.authorDetails,
+            authorDetails: mock.authorDetails.uqresearcher,
             possiblyYourPublicationsCount: 5
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -60,7 +60,7 @@ describe('Dashboard test', () => {
 
     it('doesn\'t render possibly your publications lure', () => {
         const wrapper = setup({
-            authorDetails: mock.authorDetails,
+            authorDetails: mock.authorDetails.uqresearcher,
             possiblyYourPublicationsCount: 5,
             hidePossiblyYourPublicationsLure: true
         });

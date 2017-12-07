@@ -7,10 +7,8 @@ import BookCitation from './BookCitation';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {locale} from 'config';
 import {book} from 'mock/data/testing/records';
 import {editedBook} from 'mock/data/testing/records';
-
 
 function setup({publication, isShallow = false}) {
     const props = {

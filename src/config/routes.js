@@ -1,4 +1,4 @@
-import {locale} from 'config';
+import {locale} from 'locale';
 
 export const pathConfig =  {
     index: '/',
@@ -18,6 +18,16 @@ export const pathConfig =  {
     },
     admin: {
         masquerade: '/admin/masquerade'
+    },
+    authorIdentifiers: {
+        orcid: {
+            link: '/author-identifiers/orcid/link',
+            // unlink: '/author-identifiers/orcid/link'
+        },
+        googleScholar: {
+            link: '/author-identifiers/googleScholar/link',
+            // unlink: '/author-identifiers/googleScholar/link'
+        }
     }
 };
 
@@ -97,6 +107,14 @@ export const getRoutesConfig = (components, account) => {
                 render: (props) => components.AddMissingRecord({...props, addRecordStep: components.NewRecord}),
                 access: [roles.researcher, roles.admin],
                 exact: true
+            },
+            {
+                path: pathConfig.authorIdentifiers.orcid.link,
+                render: () => components.StandardPage({title: 'Link ORCID ID to UQ eSpace', children: 'Link or register ORCID ID here.... Coming soon....'})
+            },
+            {
+                path: pathConfig.authorIdentifiers.googleScholar.link,
+                render: () => components.StandardPage({title: 'Link Google Scholar ID to UQ eSpace', children: 'Link Google Scholar here.... Coming soon....'})
             },
         ] : []),
         ...(account && account.canMasquerade ? [

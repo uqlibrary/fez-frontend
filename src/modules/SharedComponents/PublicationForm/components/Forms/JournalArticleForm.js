@@ -3,10 +3,16 @@ import PropTypes from 'prop-types';
 
 import {Field} from 'redux-form/immutable';
 
-import {TextField, StandardCard, PartialDateField} from 'uqlibrary-react-toolbox';
+import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
+import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
+
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {PublicationSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {validation, locale} from 'config';
+
+import {validation} from 'config';
+import {locale} from 'locale';
+import {default as formLocale} from 'locale/publicationForm';
 
 export default class JournalArticleForm extends Component {
     static propTypes = {
@@ -20,7 +26,7 @@ export default class JournalArticleForm extends Component {
 
     render() {
         // path to the locale data for each of the sections
-        const txt = locale.forms.publicationForm.journalArticle;
+        const txt = formLocale.journalArticle;
 
         return (
             <div>

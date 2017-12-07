@@ -1206,6 +1206,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
     >
       <span
@@ -1218,6 +1220,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Cold Spring Harbor Laboratory Press"
     >
       <span
@@ -1230,6 +1234,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
     </CitationView>
     <CitationView
       className="citationCollectionType"
+      prefix=" "
+      suffix="."
       value="Data Collection"
     >
       <span
@@ -2517,6 +2523,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
     >
       <span
@@ -2529,6 +2537,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Cold Spring Harbor Laboratory Press"
     >
       <span
@@ -2541,6 +2551,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationCollectionType"
+      prefix=" "
+      suffix="."
       value="Data Collection"
     >
       <span
@@ -3832,6 +3844,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -3840,6 +3854,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Cold Spring Harbor Laboratory Press"
     >
       <span
@@ -3852,6 +3868,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationCollectionType"
+      prefix=" "
+      suffix="."
       value="Data Collection"
     >
       <span
@@ -5005,6 +5023,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
     >
       <span
@@ -5017,6 +5037,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Cold Spring Harbor Laboratory Press"
     >
       <span
@@ -5029,6 +5051,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationCollectionType"
+      prefix=" "
+      suffix="."
       value="Data Collection"
     >
       <span
@@ -6320,6 +6344,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
     >
       <span
@@ -6332,6 +6358,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Cold Spring Harbor Laboratory Press"
     >
       <span
@@ -6344,6 +6372,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationCollectionType"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -7621,6 +7651,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
     >
       <span
@@ -7633,6 +7665,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Cold Spring Harbor Laboratory Press"
     >
       <span
@@ -7645,6 +7679,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationCollectionType"
+      prefix=" "
+      suffix="."
       value="Data Collection"
     >
       <span
@@ -8862,6 +8898,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
     >
       <span
@@ -8874,6 +8912,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -8882,6 +8922,8 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     </CitationView>
     <CitationView
       className="citationCollectionType"
+      prefix=" "
+      suffix="."
       value="Data Collection"
     >
       <span
@@ -9030,6 +9072,8 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -9037,6 +9081,8 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -9045,6 +9091,8 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
     </CitationView>
     <CitationView
       className="citationCollectionType"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span

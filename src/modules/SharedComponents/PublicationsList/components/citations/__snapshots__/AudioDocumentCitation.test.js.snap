@@ -825,6 +825,8 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Hearing the city Symposium Title 5: In conversation"
     >
       <span
@@ -837,6 +839,8 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Centre for Subtropical Design, Queensland University of Technology"
     >
       <span
@@ -849,6 +853,8 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
     </CitationView>
     <CitationView
       className="citationSeries"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationSeries empty"
@@ -1690,6 +1696,8 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Hearing the city Symposium Title 5: In conversation"
     >
       <span
@@ -1702,6 +1710,8 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Centre for Subtropical Design, Queensland University of Technology"
     >
       <span
@@ -1714,6 +1724,8 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
     </CitationView>
     <CitationView
       className="citationSeries"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationSeries empty"
@@ -1791,6 +1803,8 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -1798,6 +1812,8 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -1806,6 +1822,8 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationSeries"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span

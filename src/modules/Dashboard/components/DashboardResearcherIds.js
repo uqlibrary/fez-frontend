@@ -1,7 +1,6 @@
 import React from 'react';
-// import Avatar from 'material-ui/Avatar';
 import PropTypes from 'prop-types';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 const DashboardResearcherIds = ({values}) => {
     const txt = locale.pages.dashboard.header.dashboardResearcherIds;

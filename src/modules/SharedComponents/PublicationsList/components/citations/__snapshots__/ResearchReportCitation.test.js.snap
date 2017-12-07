@@ -628,6 +628,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4"
     >
       <span
@@ -640,6 +642,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
     </CitationView>
     <CitationView
       className="citationSeries"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -648,6 +652,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value="Brisbane, Queensland"
     >
@@ -661,6 +666,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="UQ"
     >
       <span
@@ -1374,6 +1381,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4"
     >
       <span
@@ -1386,6 +1395,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
     </CitationView>
     <CitationView
       className="citationSeries"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -1394,6 +1405,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value="Brisbane, Queensland"
     >
@@ -1407,6 +1419,8 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="UQ"
     >
       <span
@@ -2124,6 +2138,8 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Accelerated Apprenticeships: Apprentice, Employer and Teaching Staff Perceptions - 4"
     >
       <span
@@ -2136,6 +2152,8 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
     </CitationView>
     <CitationView
       className="citationSeries"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -2144,6 +2162,7 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value="Brisbane, Queensland"
     >
@@ -2157,6 +2176,8 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="UQ"
     >
       <span
@@ -2305,6 +2326,8 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -2312,6 +2335,8 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
     </CitationView>
     <CitationView
       className="citationSeries"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -2320,6 +2345,7 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value={null}
     >
@@ -2329,6 +2355,8 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span

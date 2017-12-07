@@ -390,6 +390,7 @@ exports[`JournalCitation renders  component with a mock espace record 1`] = `
     </DateCitationView>
     <CitationView
       className="citationVolumeNumber"
+      prefix=" "
       suffix=" "
       value="45"
     >
@@ -473,6 +474,7 @@ exports[`JournalCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationVolumeNumber"
+      prefix=" "
       suffix=" "
       value={null}
     >

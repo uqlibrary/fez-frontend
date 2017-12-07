@@ -1,5 +1,5 @@
 import * as actions from 'actions/actionTypes';
-import {locale} from 'config';
+import {locale} from 'locale';
 
 const initialSearchSources = {
     loadingPublicationSources: {
@@ -61,9 +61,9 @@ export const deduplicateResults = (publicationsList) => {
                         const currentItemPriority = Math
                             .min(...currentItem.sources
                                 .map(source => {
-                                    return locale.global.sources[source];
+                                    return locale.global.sources[source.source].priority;
                                 })); // returns the lowest valued priority source this record has
-                        const itemPriority = locale.global.sources[item.sources[0]]; // items current source priority
+                        const itemPriority = locale.global.sources[item.sources[0].source].priority; // items current source priority
 
                         if (itemPriority < currentItemPriority) {
                             currentItem.sources.push(item.sources[0]);

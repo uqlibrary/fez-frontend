@@ -716,6 +716,8 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Addictions"
     >
       <span
@@ -728,6 +730,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     </CitationView>
     <CitationView
       className="citationEdition"
+      prefix=" "
       suffix=" ed."
       value="2nd"
     >
@@ -741,6 +744,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value="Hove, United Kingdom"
     >
@@ -754,6 +758,8 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Psychology Press"
     >
       <span
@@ -1638,6 +1644,8 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Addictions"
     >
       <span
@@ -1650,6 +1658,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
     </CitationView>
     <CitationView
       className="citationEdition"
+      prefix=" "
       suffix=" ed."
       value="2nd"
     >
@@ -1663,6 +1672,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
     </CitationView>
     <CitationView
       className="citationSeries"
+      prefix=" "
       suffix=","
       value="Clinical Psychology: A Modular Course"
     >
@@ -1676,6 +1686,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value="Hove, United Kingdom"
     >
@@ -1689,6 +1700,8 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Psychology Press"
     >
       <span
@@ -1773,6 +1786,8 @@ exports[`BookCitation renders  component with empty publication 1`] = `
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
     >
       <span
         className="citationTitle empty"
@@ -1780,6 +1795,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationEdition"
+      prefix=" "
       suffix=" ed."
       value={null}
     >
@@ -1789,6 +1805,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value={null}
     >
@@ -1798,6 +1815,8 @@ exports[`BookCitation renders  component with empty publication 1`] = `
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value={null}
     >
       <span
@@ -2672,6 +2691,8 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
     </DateCitationView>
     <CitationView
       className="citationTitle"
+      prefix=" "
+      suffix="."
       value="Addictions"
     >
       <span
@@ -2684,6 +2705,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
     </CitationView>
     <CitationView
       className="citationEdition"
+      prefix=" "
       suffix=" ed."
       value="2nd"
     >
@@ -2697,6 +2719,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
     </CitationView>
     <CitationView
       className="citationSeries"
+      prefix=" "
       suffix=","
       value="Clinical Psychology: A Modular Course"
     >
@@ -2710,6 +2733,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
     </CitationView>
     <CitationView
       className="citationPlaceOfPublication"
+      prefix=" "
       suffix=":"
       value="Hove, United Kingdom"
     >
@@ -2723,6 +2747,8 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
     </CitationView>
     <CitationView
       className="citationPublisher"
+      prefix=" "
+      suffix="."
       value="Psychology Press"
     >
       <span
