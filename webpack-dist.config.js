@@ -80,7 +80,7 @@ module.exports = {
             'process.env.APP_URL': JSON.stringify(config.url),
             'process.env.BRANCH': JSON.stringify(config.environment),
             'process.env.ORCID_URL': JSON.stringify(config.orcidUrl),
-            'process.env_ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId)
+            'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId)
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's
