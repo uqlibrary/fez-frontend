@@ -68,7 +68,7 @@ export function searchPublications(searchQuery) {
 
         dispatch({type: actions.SEARCH_SOURCE_COUNT, payload: searchPromises.length});
 
-        Promise.all(searchPromises)
+        return Promise.all(searchPromises)
             .then((response) => {
                 let flattenedResults = [].concat.apply([], response);
                 flattenedResults = flattenedResults.slice(0, flattenedResults.length);
