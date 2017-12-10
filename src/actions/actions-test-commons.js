@@ -8,5 +8,6 @@ export const getMockStore = () => {
 };
 
 export const expectStoreHasExpectedActions = (store, expectedActions) => {
-    expect(store.getActions().map(action => ({type: action.type}))).toEqual(expectedActions);
+    expect(store.getActions().map(action => ({type: action.type}))).toEqual(expect.arrayContaining(expectedActions));
+    expect(store.getActions().length).toEqual(expectedActions.length);
 };
