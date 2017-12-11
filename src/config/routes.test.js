@@ -4,6 +4,7 @@ import {accounts} from 'mock/data/account';
 import {locale} from 'locale';
 
 describe('Routes method', () => {
+    // console.log('ROUTES: ' + JSON.stringify(routes.pathConfig.authorIdentifiers.googleScholar.link));
     it('should return a list of menus for anon user', () => {
         const testRoutes = routes.getMenuConfig(null);
         expect(testRoutes.length).toEqual(2);

@@ -5,15 +5,15 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state) => {
     return {
-        user: {...state.get('accountReducer')},
-        notificationAlert: state.get('appReducer').notificationAlert ? {...state.get('appReducer').notificationAlert} : null
+        user: {...state.get('accountReducer')}
     };
 };
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
     return {
         actions: bindActionCreators(actions, dispatch)
     };
-}
+};
+
 const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
 export default AppContainer;

@@ -240,8 +240,15 @@ exports[`App tests for user account and author status User is logged in but are 
           path="/author-identifiers/orcid/link"
         />
         <Route
-          path="/author-identifiers/googleScholar/link"
-          render={[Function]}
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/author-identifiers/google-scholar/link/"
         />
         <Route
           access={
@@ -659,8 +666,15 @@ exports[`App tests for user account and author status User logged in and is an a
           path="/author-identifiers/orcid/link"
         />
         <Route
-          path="/author-identifiers/googleScholar/link"
-          render={[Function]}
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/author-identifiers/google-scholar/link/"
         />
         <Route
           access={
@@ -936,8 +950,15 @@ exports[`App tests for user account and author status User logged in but is not 
           path="/author-identifiers/orcid/link"
         />
         <Route
-          path="/author-identifiers/googleScholar/link"
-          render={[Function]}
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          path="/author-identifiers/google-scholar/link/"
         />
         <Route
           access={
@@ -1224,6 +1245,7 @@ exports[`App tests for user account and author status should display ORCID requi
           render={[Function]}
         />
         <Route
+<<<<<<< HEAD
           render={[Function]}
         />
       </Switch>
@@ -1421,6 +1443,8 @@ exports[`App tests for user account and author status should display notificatio
           path="/records/mine"
         />
         <Route
+=======
+>>>>>>> feature-google-scholar
           access={
             Array [
               "researcher",
@@ -1429,6 +1453,7 @@ exports[`App tests for user account and author status should display notificatio
           }
           component={[Function]}
           exact={true}
+<<<<<<< HEAD
           path="/records/possible"
         />
         <Route
@@ -1494,6 +1519,9 @@ exports[`App tests for user account and author status should display notificatio
         <Route
           path="/author-identifiers/googleScholar/link"
           render={[Function]}
+=======
+          path="/author-identifiers/google-scholar/link/"
+>>>>>>> feature-google-scholar
         />
         <Route
           render={[Function]}

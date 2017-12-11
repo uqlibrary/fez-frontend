@@ -7,108 +7,84 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   <div
     className="column is-narrow researchIdAvatar error"
   >
-    <a
-      aria-label="You are not linked to Publons"
+    <ExternalLink
+      className="researcherIDlink"
       href="https://app.library.uq.edu.au/#/id"
+      openInNewIcon={false}
+      rel="noopener noreferrer"
       target="_blank"
+      title="You are not linked to Publons - Click to amend"
     >
       <div
         className="fez-icon publons dashboard"
-        title="You are not linked to Publons"
+        title="You are not linked to Publons - Click to amend"
       />
-    </a>
+    </ExternalLink>
   </div>
   <div
-    className="column is-narrow researchIdAvatar ok"
+    className="column is-narrow researchIdAvatar error"
   >
-    <a
-      aria-label="Your Researcher ID is G-111-1111"
-      href="http://www.researcherid.com/rid/G-111-1111"
+    <ExternalLink
+      className="researcherIDlink"
+      href="https://app.library.uq.edu.au/#/id"
+      openInNewIcon={false}
+      rel="noopener noreferrer"
       target="_blank"
+      title="You are not linked to Researcher (ISI) - Click to amend"
     >
       <div
         className="fez-icon researcher dashboard"
-        title="Your Researcher ID is G-111-1111"
+        title="You are not linked to Researcher (ISI) - Click to amend"
       />
-    </a>
+    </ExternalLink>
   </div>
   <div
     className="column is-narrow researchIdAvatar error"
   >
-    <a
-      aria-label="You are not linked to Scopus"
+    <ExternalLink
+      className="researcherIDlink"
       href="https://app.library.uq.edu.au/#/id"
+      openInNewIcon={false}
+      rel="noopener noreferrer"
       target="_blank"
+      title="You are not linked to Scopus - Click to amend"
     >
       <div
         className="fez-icon scopus dashboard"
-        title="You are not linked to Scopus"
+        title="You are not linked to Scopus - Click to amend"
+      />
+    </ExternalLink>
+  </div>
+  <div
+    className="column is-narrow researchIdAvatar error"
+  >
+    <a
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      title="You are not linked to Google Scholar - Click to amend"
+    >
+      <div
+        className="fez-icon google_scholar dashboard"
+        title="You are not linked to Google Scholar - Click to amend"
       />
     </a>
   </div>
   <div
     className="column is-narrow researchIdAvatar error"
   >
-    <a
-      aria-label="You are not linked to Google Scholar"
+    <ExternalLink
+      className="researcherIDlink"
       href="https://app.library.uq.edu.au/#/id"
+      openInNewIcon={false}
+      rel="noopener noreferrer"
       target="_blank"
-    >
-      <div
-        className="fez-icon google_scholar dashboard"
-        title="You are not linked to Google Scholar"
-      />
-    </a>
-  </div>
-  <div
-    className="column is-narrow researchIdAvatar ok"
-  >
-    <a
-      aria-label="Your ORCID ID is 0000-0001-1111-1111"
-      href="https://orcid.org/0000-0001-1111-1111"
-      target="_blank"
+      title="You are not linked to ORCID - Click to amend"
     >
       <div
         className="fez-icon orcid dashboard"
-        title="Your ORCID ID is 0000-0001-1111-1111"
+        title="You are not linked to ORCID - Click to amend"
       />
-    </a>
-  </div>
-  <div
-    className="column is-narrow"
-  >
-     
-    <a
-      aria-label="Click to visit your ORCId profile"
-      className="orcidLink"
-      href="http://orcid.org/0000-0001-1111-1111"
-      target="_blank"
-      title="Click to visit your ORCId profile"
-    >
-      orcid.org/
-      0000-0001-1111-1111
-    </a>
-  </div>
-</div>
-`;
-
-exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs with weird values as expected for a UQ researcher 1`] = `
-<div
-  className="columns researcherIds is-gapless"
->
-  <div
-    className="column is-narrow researchIdAvatar ok"
-  >
-    <a
-      aria-label="Your undefined ID is This is an edge case example"
-      href="undefinedThis is an edge case example"
-      target="_blank"
-    >
-      <div
-        className="fez-icon anId dashboard"
-        title="Your undefined ID is This is an edge case example"
-      />
-    </a>
+    </ExternalLink>
   </div>
 </div>
 `;

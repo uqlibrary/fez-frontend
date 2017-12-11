@@ -25,8 +25,8 @@ export const pathConfig =  {
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
-            link: '/author-identifiers/googleScholar/link',
-            // unlink: '/author-identifiers/googleScholar/link'
+            link: '/author-identifiers/google-scholar/link/',
+            // unlink: '/author-identifiers/google-scholar/link'
         }
     }
 };
@@ -115,7 +115,9 @@ export const getRoutesConfig = (components, account) => {
             },
             {
                 path: pathConfig.authorIdentifiers.googleScholar.link,
-                render: () => components.StandardPage({title: 'Link Google Scholar ID to UQ eSpace', children: 'Link Google Scholar here.... Coming soon....'})
+                component: components.GoogleScholar,
+                access: [roles.researcher, roles.admin],
+                exact: true
             },
         ] : []),
         ...(account && account.canMasquerade ? [

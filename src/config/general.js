@@ -1,3 +1,5 @@
+// import * as routes from '../config/routes';
+
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const TOKEN_NAME = 'X-Uql-Token';
@@ -283,4 +285,21 @@ export const authorIdentifierKeys = {
     [AUTHOR_IDENTIFIER_SCOPUS]: 'aut_scopus_id',
     [AUTHOR_IDENTIFIER_GOOGLE_SCHOLAR]: 'aut_google_scholar_id',
     [AUTHOR_IDENTIFIER_RESEARCHER_ID]: 'aut_researcher_id'
+};
+
+export const authorIdentifierLinks = {
+    linkedUrl: {
+        publons: 'https://publons.com/author/',
+        scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
+        researcher: 'http://www.researcherid.com/rid/',
+        google_scholar: 'https://scholar.google.com.au/citations?user=',
+        orcid: 'https://orcid.org/'
+    },
+    notLinkedUrl: {
+        publons: 'https://app.library.uq.edu.au/#/id',
+        scopus: 'https://app.library.uq.edu.au/#/id',
+        researcher: 'https://app.library.uq.edu.au/#/id',
+        google_scholar: '/author-identifiers/google-scholar/link/',
+        orcid: 'https://app.library.uq.edu.au/#/id',
+    }
 };

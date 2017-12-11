@@ -7,3 +7,4 @@ export {hindexResponse, publicationStats, trendingPublications, publicationYears
     publicationYearsBig, publicationYearsSmall} from './academicStats';
 export {searchKeyList} from './searchKeys';
 export {authorOrcidDetails, afterOrcid} from './orcid';
+export {afterGoogleScholarPatch} from './googleScholar';

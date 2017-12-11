@@ -71,7 +71,7 @@ describe('PossiblyMyRecords test', () => {
     });
 
     it('renders loading screen while loading author data', () => {
-        const wrapper = setup({ authorLoading: true }).find('PossiblyMyRecords').dive();
+        const wrapper = setup({ accountAuthorLoading: true }).find('PossiblyMyRecords').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

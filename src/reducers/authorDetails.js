@@ -1,23 +1,23 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    loadingAuthorDetails: true,
+    accountAuthorDetailsLoading: true,
     authorDetails: null
 };
 
 const handlers = {
     [actions.AUTHOR_DETAILS_LOADING]: () => ({
-        loadingAuthorDetails: true,
+        accountAuthorDetailsLoading: true,
         authorDetails: null
     }),
 
     [actions.AUTHOR_DETAILS_LOADED]: (state, action) => ({
-        loadingAuthorDetails: false,
+        accountAuthorDetailsLoading: false,
         authorDetails: action.payload
     }),
 
     [actions.AUTHOR_DETAILS_FAILED]: () => ({
-        loadingAuthorDetails: false,
+        accountAuthorDetailsLoading: false,
         authorDetails: null
     })
 };

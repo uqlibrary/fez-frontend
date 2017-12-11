@@ -24,13 +24,13 @@ const create = () => {
     return {store, next, invoke}
 };
 
-function setup({recordToFix = mockRecordToFix, recordToFixLoading, authorLoading, handleSubmit, match,
+function setup({recordToFix = mockRecordToFix, recordToFixLoading, accountAuthorLoading, handleSubmit, match,
                    initialValues, actions, author = {aut_id: 410}, history = {go: jest.fn()}, isShallow = true}){
     const props = {
         recordToFix: recordToFix,
         recordToFixLoading: recordToFixLoading || false,
 
-        authorLoading: authorLoading || false,
+        accountAuthorLoading: accountAuthorLoading || false,
         author: author,
 
         handleSubmit: handleSubmit || jest.fn(),
@@ -68,7 +68,7 @@ beforeAll(() => {
 
 describe('Component FixRecord ', () => {
     it('should render loader when author is loading', () => {
-        const wrapper = setup({authorLoading: true});
+        const wrapper = setup({accountAuthorLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -194,7 +194,7 @@ describe('Component FixRecord ', () => {
 
     it('should load author if author is not loaded', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({isShallow: false, authorLoading: false, author: null, actions: {loadCurrentAccount: actionFunction}});
+        const wrapper = setup({isShallow: false, accountAuthorLoading: false, author: null, actions: {loadCurrentAccount: actionFunction}});
         expect(actionFunction).toHaveBeenCalled();
     });
 

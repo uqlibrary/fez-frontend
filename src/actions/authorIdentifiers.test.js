@@ -31,81 +31,81 @@ describe('Author identifier action creators', () => {
         });
 
     it('should dispatch series of 6 actions on requesting orcid access token and patching user with orcid id', () => {
-        const params = {code: 'Uux34T', redirUri: 'http://localhost'};
+        const params = {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'};
         mock.onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: 'testuser', params: params}))
             .reply(200, authorOrcidDetails);
-        mock.onPatch(repositories.routes.AUTHOR_ADD_IDENTIFIER({autId: 1234}))
+        mock.onPatch(repositories.routes.AUTHOR_API({autId: 1234}))
             .reply(200, {});
 
         const expectedActions = [
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST},
-            {type: actions.APP_NOTIFICATION},
+            {type: actions.APP_ALERT_SHOW},
             {type: actions.ORCID_ACCESS_TOKEN_LOADED},
-            {type: actions.AUTHOR_IDENTIFIER_ADD},
-            {type: actions.AUTHOR_IDENTIFIER_ADDED},
-            {type: actions.APP_NOTIFICATION},
+            {type: actions.AUTHOR_IDENTIFIER_UPDATING},
+            {type: actions.AUTHOR_IDENTIFIER_UPDATED},
+            {type: actions.APP_ALERT_SHOW},
         ];
 
         const store = getMockStore();
-        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', redirUri: 'http://localhost'})).then(() => {
+        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
     });
 
     it('should dispatch series of 4 actions on orcid access token request failed for anonymous users', () => {
-        const params = {code: 'Uux34T', redirUri: 'http://localhost'};
+        const params = {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'};
         mock.onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: 'testuser', params: params}))
             .reply(403);
 
         const expectedActions = [
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST},
-            {type: actions.APP_NOTIFICATION},
+            {type: actions.APP_ALERT_SHOW},
             {type: actions.ACCOUNT_ANONYMOUS},
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST_FAILED}
         ];
 
         const store = getMockStore();
-        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', redirUri: 'http://localhost'})).then(() => {
+        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
     });
 
     it('should dispatch series of 4 actions on orcid access token request failed if incorrect GET params', () => {
-        const params = {code: 'Uux34T', redirUri: 'http://localhost'};
+        const params = {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'};
         mock.onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: 'testuser', params: params}))
             .reply(500);
 
         const expectedActions = [
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST},
-            {type: actions.APP_NOTIFICATION},
-            {type: actions.APP_NOTIFICATION},
+            {type: actions.APP_ALERT_SHOW},
+            {type: actions.APP_ALERT_SHOW},
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST_FAILED}
         ];
 
         const store = getMockStore();
-        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', redirUri: 'http://localhost'})).then(() => {
+        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
     });
 
     it('should dispatch series of 6 actions on PATCH author with orcid id', () => {
-        const params = {code: 'Uux34T', redirUri: 'http://localhost'};
+        const params = {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'};
         mock.onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: 'testuser', params: params}))
             .reply(200, authorOrcidDetails);
-        mock.onPatch(repositories.routes.AUTHOR_ADD_IDENTIFIER({autId: 1234}))
+        mock.onPatch(repositories.routes.AUTHOR_API({autId: 1234}))
             .reply(500);
 
         const expectedActions = [
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST},
-            {type: actions.APP_NOTIFICATION},
+            {type: actions.APP_ALERT_SHOW},
             {type: actions.ORCID_ACCESS_TOKEN_LOADED},
-            {type: actions.AUTHOR_IDENTIFIER_ADD},
-            {type: actions.APP_NOTIFICATION},
-            {type: actions.AUTHOR_IDENTIFIER_ADD_FAILED}
+            {type: actions.AUTHOR_IDENTIFIER_UPDATING},
+            {type: actions.APP_ALERT_SHOW},
+            {type: actions.AUTHOR_IDENTIFIER_UPDATE_FAILED}
         ];
 
         const store = getMockStore();
-        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', redirUri: 'http://localhost'})).then(() => {
+        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
     });

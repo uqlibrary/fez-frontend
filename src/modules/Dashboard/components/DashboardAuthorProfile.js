@@ -7,7 +7,7 @@ import DashboardArticleCount from './DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 
-const DashboardProfile = ({authorDetails, author}) => {
+const DashboardProfile = ({authorDetails, author, history}) => {
     const txt = locale.pages.dashboard.header;
 
     return (
@@ -26,9 +26,9 @@ const DashboardProfile = ({authorDetails, author}) => {
                             <DashboardAuthorAvatar
                                 values={{
                                     uqr_id: authorDetails.uqr_id || author.aut_id || '',
-                                    title: authorDetails.title || author.aut_title || '',
-                                    givenName: authorDetails.given_name || author.aut_fname || '',
-                                    familyName: authorDetails.family_name || author.aut_lname || ''
+                                    title: author.aut_title || '',
+                                    givenName: author.aut_fname || '',
+                                    familyName: author.aut_lname || ''
                                 }}/>
                         </div>
                     }
@@ -36,9 +36,9 @@ const DashboardProfile = ({authorDetails, author}) => {
                     <div className="column authorDetails">
                         <DashboardAuthorDetails
                             {...{
-                                title: authorDetails.title || author.aut_title || '',
-                                givenName: authorDetails.given_name || author.aut_fname || '',
-                                familyName: authorDetails.family_name || author.aut_lname || '',
+                                title: author.aut_title || '',
+                                givenName: author.aut_fname || '',
+                                familyName: author.aut_lname || '',
                                 orgUnits: authorDetails.org_units,
                                 positions: authorDetails.positions
                             }}
@@ -51,6 +51,7 @@ const DashboardProfile = ({authorDetails, author}) => {
                                 google_scholar: author.aut_google_scholar_id,
                                 orcid: author.aut_orcid_id
                             }}
+                            history={history}
                         />
                     </div>
 
@@ -74,7 +75,8 @@ const DashboardProfile = ({authorDetails, author}) => {
 
 DashboardProfile.propTypes = {
     authorDetails: PropTypes.object,
-    author: PropTypes.object
+    author: PropTypes.object,
+    history: PropTypes.object.isRequired
 };
 
 export default DashboardProfile;

@@ -7,10 +7,10 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, { delayResponse: 200 });
+const mock = new MockAdapter(api, { delayResponse: 1200 });
 const escapeRegExp = (input) => (input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
 const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
-const requestOrcidQueryString = {code: '.*', redirUri: '.*'}
+const requestOrcidQueryString = {code: '.*', oricidToFezRedirectUrl: '.*'}
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
 
@@ -39,9 +39,11 @@ mock
         return [404, {}];
     })
     .onGet(new RegExp(escapeRegExp(routes.CURRENT_AUTHOR_API()))).reply(config => {
+        console.log('hi');
         // mock current author details from fez
         if (user === 'anon') return [403, {}];
         if (mockData.currentAuthor[user]) return [200, mockData.currentAuthor[user]];
+
         return [404, {}];
     })
     .onGet(new RegExp(escapeRegExp(routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: user}))))
@@ -90,8 +92,8 @@ mock
         .reply(200, {data: {...mockData.authorOrcidDetails}})
         // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'})
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-        // .reply(200, {data: {}})
-        .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'})
+        .reply(200, {data: {}})
+        // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'})
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}))))
         // .reply(200, {data: ''})
         .reply(500, {message: 'error - failed POST RECORDS_ISSUES_API'})
@@ -105,8 +107,10 @@ mock
         .reply(200, {data: {}})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))
         .reply(200, {data: {}})
-    .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_ADD_IDENTIFIER({autId: '.*'}))))
-        .reply(200, {data: {...mockData.afterOrcid}})
+    .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}))))
+        .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
+        // .reply(200, {data: {...mockData.afterOrcid}})
+        // .reply(200, {data: {...mockData.afterGoogleScholarPatch}})
     .onAny().reply((config) => {
         console.log('url not found...');
         console.log(config.url);

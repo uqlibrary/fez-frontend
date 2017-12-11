@@ -1,6 +1,5 @@
 import React from 'react';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-
 /*
 
 NOTE:
@@ -95,9 +94,12 @@ export default {
                     <p>The requested page could not be found.</p>
                     <p>Sorry about that, but here's what you can do next:
                         <ul>
-                            <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.</li>
+                            <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.
+                            </li>
                             <li>Start again at the home page.</li>
-                            <li>If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.</li>
+                            <li>If you’re sure the page should be at this address, email us at
+                                webmaster@library.uq.edu.au.
+                            </li>
                         </ul>
                     </p>
                 </StandardCard>
@@ -136,25 +138,18 @@ export default {
                     ariaPrefix: 'Photograph of '
                 },
                 dashboardResearcherIds: {
-                    researcherIsLinked: 'Your [resource] ID is [id]',
-                    researcherIsNotLinked: 'You are not linked to [resource]',
-                    orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'http://orcid.org/',
+                    researcherIsLinked: 'Your [resource] ID is [id] - Click to review',
+                    researcherIsNotLinked: 'You are not linked to [resource] - Click to amend',
+                    orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
                     orcidLinkPrefix: 'orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCId profile',
                     titles: {
                         publons: 'Publons',
                         scopus: 'Scopus',
-                        researcher: 'Researcher',
+                        researcher: 'Researcher (ISI)',
                         google_scholar: 'Google Scholar',
                         orcid: 'ORCID'
                     },
-                    linksPrefix: {
-                        publons: 'https://publons.com/author/',
-                        scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
-                        researcher: 'http://www.researcherid.com/rid/',
-                        google_scholar: 'https://scholar.google.com.au/citations?user=',
-                        orcid: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/'
-                    }
                 }
             },
             possiblePublicationsLure: {
@@ -222,9 +217,7 @@ export default {
             },
             text: (
                 <div>
-                    <div>
-                        Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
-                    </div>
+                    Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
                 </div>
             ),
             loadingMessage: 'Searching for your publications...',
@@ -233,7 +226,8 @@ export default {
                 title: 'No publications found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to <a href="/records/possible">claim publications we think may be yours</a> or <a href="/records/add/find">add a
+                        We were unable to find any results. You may be able to <a href="/records/possible">claim
+                        publications we think may be yours</a> or <a href="/records/add/find">add a
                         missing publication</a>
                     </div>
                 ),
@@ -374,11 +368,15 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
-                successConfirmationMessage: (<p>Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.</p>),
+                successConfirmationMessage: (
+                    <p>Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
+                        record.</p>),
                 fileFailConfirmationMessage: (<p>
                     Your record has been saved. <br/><br/>
-                    <strong>Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators. </strong><br/><br/>
-                    Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the record.
+                    <strong>Please note, file upload has failed. Retry uploading files via "Fix record" screen or
+                        contact eSpace administrators. </strong><br/><br/>
+                    Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
+                    record.
                 </p>),
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
@@ -416,16 +414,98 @@ export default {
                 buttonLabel: 'OK'
             },
             description: (<div>
-                <strong>WARNING!!</strong> Masquerading as a user you will effectively become the user you enter here, and changes you make will apply to their account!
+                <strong>WARNING!!</strong> Masquerading as a user you will effectively become the user you enter here,
+                and changes you make will apply to their account!
             </div>),
             labels: {
                 submit: 'Masquerade',
                 hint: 'Username or student username'
             }
-        }
-    },
-    authorIdentifiers: {
-        orcid: {
+        },
+        googleScholarLink: {
+            title: 'Google Scholar identifier',
+            help: {
+                title: 'Google identifier help',
+                text: (
+                    <div>
+                        <h3>How to create the profile?</h3>
+                        <ul>
+                            <li>Sign to your Google account, or create one if you don't have one.</li>
+                            <li>After you sign in, the Citations sign up form will ask you to confirm the spelling of
+                                your name, to enter your affiliation, etc.
+                            </li>
+                            <li>On the next page, you will see a list of articles. Add the articles that are yours.</li>
+                            <li>Once you're done with adding articles, it will ask you what to do when the article data
+                                changes in Google Scholar. You can either have the updates applied to your profile
+                                automatically or you can choose to review them beforehand.
+                            </li>
+                            <li>Finally, you will see your profile.Once you are satisfied with the results, make your
+                                profile public.
+                            </li>
+                        </ul>
+                    </div>
+                ),
+                buttonLabel: 'OK'
+            },
+            labels: {
+                submit: 'Save Google Scholar ID',
+                cancel: 'Cancel',
+                googleScholarIdField: {
+                    floatingLabelText: 'Google Scholar ID',
+                    hintText: 'Enter your Google Scholar ID'
+                }
+            },
+            add: {
+                title: 'Add your Google Scholar identifier',
+                description: (
+                    <div>
+                        <p>Creating your Google Scholar Citation profile will make sure that Google Scholar will easily and
+                            accurately group all the citations of your publications into one pool. A profile generally lists
+                            your name, chosen keywords of research interest, generated citation metrics, and citations
+                            (including links to citing articles).</p>
+                        <p>In order to create a Google Scholar Citation profile, you need a Google Account.</p>
+                        <p>For more information see the <a
+                            href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
+                            target="_blank">Google Scholar Citations help page.</a></p>
+                    </div>
+                )
+            },
+            edit: {
+                title: 'Update your Google Scholar identifier',
+                description: (
+                    <div>
+                        <p>Update your Google Scholar ID below.</p>
+                        <p>For more information see the <a
+                            href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
+                            target="_blank">Google Scholar Citations help page.</a></p>
+                    </div>
+                )
+            },
+            loadingMessage: 'Loading your details',
+
+            validationAlert: {
+                type: 'warning',
+                title: 'Validation',
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.'
+            },
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`)
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Request is being processed.'
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Google Scholar ID updated',
+                message: 'Your Google Scholar ID has been updated in your eSpace profile.',
+                allowDismiss: true
+            }
+        },
+        orcidLink: {
             title: 'Link ORCID ID to UQ eSpace',
             grantAccessConfirmation: {
                 confirmationTitle: 'ORCID Grant Access',
@@ -446,22 +526,57 @@ export default {
                 title: 'About ORCID',
                 text: (
                     <div>
-                        <p>ORCID (Open Researcher Contributor ID) is an open, non-profit, community-based effort endeavouring to provide a registry of unique researcher identifiers and a transparent method of linking research activities and outputs to these identifiers.</p>
-                        <p>An ORCID iD (often referred to as an ORCID) provides a persistent digital identifier that distinguishes you from every other researcher and, through integration in key research workflows such as manuscript and grant submission, supports automated linkages between you and your professional activities ensuring that your work is recognised.</p>
-                        <p>ORCID records hold only non-sensitive information such as name, email, organisation and research activities. Plus, you can control who sees information in your ORCID iD via <a href="http://support.orcid.org/knowledgebase/articles/124518-orcid-privacy-settings" target="_blank">privacy tools</a>.</p>
-                        <p>Your ORCID iD will belong to you throughout your scholarly career as a persistent identifier to distinguish you from other researchers ensuring you receive consistent and reliable attribution of your work.</p>
+                        <p>
+                            ORCID (Open Researcher Contributor ID) is an open, non-profit, community-based effort
+                            endeavouring to provide a registry of unique researcher identifiers and a transparent method
+                            of linking research activities and outputs to these identifiers.
+                        </p>
+                        <p>
+                            An ORCID iD (often referred to as an ORCID) provides a persistent digital identifier that
+                            distinguishes you from every other researcher and, through integration in key research
+                            workflows such as manuscript and grant submission, supports automated linkages between you
+                            and your professional activities ensuring that your work is recognised.
+                        </p>
+                        <p>
+                            ORCID records hold only non-sensitive information such as name, email, organisation and
+                            research activities. Plus, you can control who sees information in your ORCID iD via
+                            <a href="http://support.orcid.org/knowledgebase/articles/124518-orcid-privacy-settings" target="_blank">privacy tools</a>.
+                        </p>
+                        <p>
+                            Your ORCID iD will belong to you throughout your scholarly career as a persistent identifier
+                            to distinguish you from other researchers ensuring you receive consistent and reliable
+                            attribution of your work.
+                        </p>
                         <h3>Adding information to your profile</h3>
-                        <p>Import your research outputs from your Scopus Author Identifier and ResearcherID – you can do this on the ORCID site with the Search and Link tool under Add works. For more information <a href="http://support.orcid.org/knowledgebase/articles/188278-link-works-website-user" target="_blank">click here</a>.</p>
-                        <p>You can also import publications from your Google Scholar to your ORCID iD. <a href="http://support.orcid.org/knowledgebase/articles/390530-import-works-from-bibtex-files-website-user" target="_blank">Click here</a> for information</p>
-                        <p>There are many other types of work that you may add to your ORCID including artistic performances, stand-alone websites, licenses and datasets. For a full list of works that can be added, <a href="http://members.orcid.org/api/supported-work-types" target="_blank">click here</a>.</p>
-                        <p>More information about how to add details such as your employment, education, awards and funding can be found <a href="http://support.orcid.org/knowledgebase/topics/32827-website-user" target="_blank">here</a>.</p>
+                        <p>
+                            Import your research outputs from your Scopus Author Identifier and ResearcherID – you can do
+                            this on the ORCID site with the Search and Link tool under Add works. For more information
+                            <a href="http://support.orcid.org/knowledgebase/articles/188278-link-works-website-user" target="_blank">click here</a>.
+                        </p>
+                        <p>
+                            You can also import publications from your Google Scholar to your ORCID iD. <a href="http://support.orcid.org/knowledgebase/articles/390530-import-works-from-bibtex-files-website-user" target="_blank">Click here</a> for information
+                        </p>
+                        <p>
+                            There are many other types of work that you may add to your ORCID including artistic
+                            performances, stand-alone websites, licenses and datasets. For a full list of works that can
+                            be added, <a href="http://members.orcid.org/api/supported-work-types" target="_blank">click here</a>.
+                        </p>
+                        <p>
+                            More information about how to add details such as your employment, education, awards and
+                            funding can be found <a href="http://support.orcid.org/knowledgebase/topics/32827-website-user" target="_blank">here</a>.
+                        </p>
                         <h3>Peer review acknowledgement in ORCID</h3>
                         <p>Your ORCID record can acknowledge peer review assignments that you undertake.</p>
-                        <p>Simply provide your ORCID iD when accepting a peer review assignment and upon completion the organisation* you have done the peer review for will post an acknowledgement of this activity to your ORCID record, if you have granted this permission.</p>
+                        <p>Simply provide your ORCID iD when accepting a peer review assignment and upon completion the
+                            organisation* you have done the peer review for will post an acknowledgement of this
+                            activity to your ORCID record, if you have granted this permission.</p>
                         <p><em>* The organisation needs to be participating in the ORCID peer review program.</em></p>
                         <h3>Do you have more than one ORCID iD?</h3>
-                        <p>If you have more than one ORCID, the <a href="http://about.orcid.org/help/contact-us" target="_blank">ORCID Support team</a> can help with marking one ORCID iD as the primary identifier and deprecate the other ORCID iDs.</p>
-                        <p>Because ORCID identifiers are designed to be persistent, obsolete iDs will be deprecated, not deleted. The record associated with a deprecated iD will contain a pointer to the primary record</p>
+                        <p>If you have more than one ORCID, the <a href="http://about.orcid.org/help/contact-us" target="_blank">ORCID Support team</a> can help with
+                            marking one ORCID iD as the primary identifier and deprecate the other ORCID iDs.</p>
+                        <p>Because ORCID identifiers are designed to be persistent, obsolete iDs will be deprecated, not
+                            deleted. The record associated with a deprecated iD will contain a pointer to the primary
+                            record</p>
                     </div>
                 )
             },
@@ -480,7 +595,9 @@ export default {
                 description: (
                     <div>
                         <p>This option enables you to create a new ORCID iD and link it with UQ.</p>
-                        <p>Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.</p>
+                        <p>Use this option if you are unsure if you already have an ORCID iD. It will detect matches to
+                            your name and email from the ORCID registry and prompt you to log in to avoid creating a new
+                            ORCID iD.</p>
                     </div>
                 ),
                 labels: {

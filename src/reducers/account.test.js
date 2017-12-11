@@ -8,8 +8,8 @@ describe('account reducer', () => {
         author: null,
         authorDetails: null,
         accountLoading: true,
-        authorLoading: true,
-        loadingAuthorDetails: true
+        accountAuthorLoading: true,
+        accountAuthorDetailsLoading: true
     };
 
     const mockAccount = {};
@@ -45,7 +45,7 @@ describe('account reducer', () => {
         expect(test).toEqual({
             ...initialState,
             author: null,
-            authorLoading: false
+            accountAuthorLoading: false
         })
     });
 
@@ -54,7 +54,7 @@ describe('account reducer', () => {
         expect(test).toEqual({
             ...initialState,
             author: mockAccount,
-            authorLoading: false
+            accountAuthorLoading: false
         })
     });
 
@@ -63,7 +63,7 @@ describe('account reducer', () => {
         expect(test).toEqual({
             ...initialState,
             author: null,
-            authorLoading: true
+            accountAuthorLoading: true
         })
     });
 
@@ -72,7 +72,7 @@ describe('account reducer', () => {
         expect(test).toEqual({
             ...initialState,
             authorDetails: null,
-            loadingAuthorDetails: false
+            accountAuthorDetailsLoading: false
         })
     });
 
@@ -81,7 +81,7 @@ describe('account reducer', () => {
         expect(test).toEqual({
             ...initialState,
             authorDetails: mockAccount,
-            loadingAuthorDetails: false
+            accountAuthorDetailsLoading: false
         })
     });
 
@@ -90,7 +90,7 @@ describe('account reducer', () => {
         expect(test).toEqual({
             ...initialState,
             authorDetails: null,
-            loadingAuthorDetails: true
+            accountAuthorDetailsLoading: true
         })
     });
 
@@ -99,7 +99,7 @@ describe('account reducer', () => {
         expect(test).toEqual({
             ...initialState,
             authorDetails: null,
-            loadingAuthorDetails: true
+            accountAuthorDetailsLoading: true
         })
     });
 

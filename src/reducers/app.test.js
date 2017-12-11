@@ -5,7 +5,7 @@ describe('app reducer', () => {
 
     const initialState = {
         hidePossiblyYourPublicationsLure: false,
-        notificationAlert: null
+        appAlert: null
     };
 
     it('returns that the lure is to be hidden', () => {

@@ -4,7 +4,7 @@ import * as routes from 'repositories/routes';
 import {transformAuthorIdentifier} from './authorIdentifierTransformer';
 import {AUTHOR_IDENTIFIER_ORCID} from 'config/general';
 import {locale} from 'locale';
-import {dismissNotificationAlert} from './app';
+import {dismissAppAlert} from './app';
 
 /**
  * Returns orcid access token for an author
@@ -12,13 +12,13 @@ import {dismissNotificationAlert} from './app';
  * @param {object} params
  * @returns {action}
  */
-export function requestAuthorOrcidInfo(userId, autId, params) {
+export function requestAuthorOrcidInfo(userId, authorId, params) {
     return dispatch => {
         let orcidId = null;
 
         dispatch({type: actions.ORCID_ACCESS_TOKEN_REQUEST});
         dispatch({
-            type: actions.APP_NOTIFICATION,
+            type: actions.APP_ALERT_SHOW,
             payload: {
                 ...locale.authorIdentifiers.orcid.linkProgressAlert
             }
@@ -29,18 +29,18 @@ export function requestAuthorOrcidInfo(userId, autId, params) {
 
                 orcidId = response.orcid;
 
-                const data = transformAuthorIdentifier(AUTHOR_IDENTIFIER_ORCID, autId, orcidId, response);
+                const data = transformAuthorIdentifier(AUTHOR_IDENTIFIER_ORCID, authorId, orcidId, response);
 
-                dispatch({type: actions.AUTHOR_IDENTIFIER_ADD});
-                return patch(routes.AUTHOR_ADD_IDENTIFIER({autId}), data);
+                dispatch({type: actions.AUTHOR_IDENTIFIER_UPDATING});
+                return patch(routes.AUTHOR_API({authorId}), data);
             })
             .then((response) => {
-                dispatch({type: actions.AUTHOR_IDENTIFIER_ADDED, payload: response.data});
+                dispatch({type: actions.AUTHOR_IDENTIFIER_UPDATED, payload: response.data});
                 dispatch({
-                    type: actions.APP_NOTIFICATION,
+                    type: actions.APP_ALERT_SHOW,
                     payload: {
                         ...locale.authorIdentifiers.orcid.successAlert,
-                        dismissAction: () => dispatch(dismissNotificationAlert())
+                        dismissAction: () => dispatch(dismissAppAlert())
                     }
                 });
             })
@@ -49,10 +49,10 @@ export function requestAuthorOrcidInfo(userId, autId, params) {
                 if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 if (error.status === 500) {
                     dispatch({
-                        type: actions.APP_NOTIFICATION,
+                        type: actions.APP_ALERT_SHOW,
                         payload: {
                             ...locale.authorIdentifiers.orcid.authoriseOrcidAlert,
-                            dismissAction: () => dispatch(dismissNotificationAlert())
+                            dismissAction: () => dispatch(dismissAppAlert())
                         }
                     });
                 }
@@ -63,11 +63,10 @@ export function requestAuthorOrcidInfo(userId, autId, params) {
                     });
                 } else {
                     dispatch({
-                        type: actions.AUTHOR_IDENTIFIER_ADD_FAILED,
+                        type: actions.AUTHOR_IDENTIFIER_UPDATE_FAILED,
                         payload: error
                     });
                 }
             });
     };
 }
-

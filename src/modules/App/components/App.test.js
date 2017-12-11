@@ -28,7 +28,7 @@ describe('App tests for user account and author status', () => {
         const values = {
             user: {
                 account: {...accounts.uqstaff},
-                loadingAuthorDetails: false,
+                accountAuthorDetailsLoading: false,
                 accountLoading: false,
                 authorDetails: {...authorDetails.uqresearcher}
             },
@@ -45,7 +45,7 @@ describe('App tests for user account and author status', () => {
         const values = {
             user: {
                 account: {...accounts.uqstaff},
-                loadingAuthorDetails: false,
+                accountAuthorDetailsLoading: false,
                 accountLoading: false,
                 authorDetails: null,
             },
@@ -62,7 +62,7 @@ describe('App tests for user account and author status', () => {
         const values = {
             user: {
                 account: null,
-                loadingAuthorDetails: false,
+                accountAuthorDetailsLoading: false,
                 accountLoading: false,
                 authorDetails: null,
             },
@@ -79,7 +79,7 @@ describe('App tests for user account and author status', () => {
         const values = {
             user: {
                 account: {...accounts.uqstaff},
-                loadingAuthorDetails: true,
+                accountAuthorDetailsLoading: true,
                 accountLoading: false,
                 authorDetails: null,
             },
@@ -174,8 +174,8 @@ describe('App tests for user account and author status', () => {
                 author: {
                     aut_orcid_id: null
                 },
-                loadingAuthorDetails: false,
-                authorLoading: false,
+                accountAuthorDetailsLoading: false,
+                accountAuthorLoading: false,
                 accountLoading: false
             },
             location: {
@@ -194,15 +194,15 @@ describe('App tests for user account and author status', () => {
                 author: {
                     aut_orcid_id: '0000-0000-1111-1111'
                 },
-                loadingAuthorDetails: false,
-                authorLoading: false,
+                accountAuthorDetailsLoading: false,
+                accountAuthorLoading: false,
                 accountLoading: false
             },
             location: {
                 hash: '#/dashboard',
                 pathname: '/',
             },
-            notificationAlert: {
+            appAlert: {
                 type: 'done',
                 title: 'TEST',
                 message: 'Test message',

@@ -5,8 +5,8 @@ export const initialState = {
     author: null,
     authorDetails: null,
     accountLoading: true,
-    authorLoading: true,
-    loadingAuthorDetails: true
+    accountAuthorLoading: true,
+    accountAuthorDetailsLoading: true
 };
 
 const handlers = {
@@ -30,42 +30,47 @@ const handlers = {
     [actions.ACCOUNT_AUTHOR_FAILED]: (state) => ({
         ...state,
         author: null,
-        authorLoading: false
+        accountAuthorLoading: false
     }),
 
     [actions.ACCOUNT_AUTHOR_LOADED]: (state, action) => {
         return {
             ...state,
             author: action.payload,
-            authorLoading: false
+            accountAuthorLoading: false
         };
     },
 
     [actions.ACCOUNT_AUTHOR_LOADING]: (state) => ({
         ...state,
         author: null,
-        authorLoading: true
+        accountAuthorLoading: true
+    }),
+
+    [actions.AUTHOR_IDENTIFIER_UPDATED]: (state, action) => ({
+        ...state,
+        author: action.payload,
     }),
 
     [actions.ACCOUNT_AUTHOR_DETAILS_FAILED]: (state) => ({
         ...state,
         authorDetails: null,
-        loadingAuthorDetails: false
+        accountAuthorDetailsLoading: false
     }),
 
     [actions.ACCOUNT_AUTHOR_DETAILS_LOADED]: (state, action) => ({
         ...state,
         authorDetails: action.payload,
-        loadingAuthorDetails: false
+        accountAuthorDetailsLoading: false
     }),
 
     [actions.ACCOUNT_AUTHOR_DETAILS_LOADING]: (state) => ({
         ...state,
         authorDetails: null,
-        loadingAuthorDetails: true
+        accountAuthorDetailsLoading: true
     }),
 
-    [actions.AUTHOR_IDENTIFIER_ADDED]: (state, action) => ({
+    [actions.AUTHOR_IDENTIFIER_UPDATED]: (state, action) => ({
         ...state,
         author: action.payload
     })

@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
         author: PropTypes.object,
-        loadingAuthorDetails: PropTypes.bool,
+        accountAuthorDetailsLoading: PropTypes.bool,
 
         // graph data
         loadingPublicationsByYear: PropTypes.bool,
@@ -68,7 +68,7 @@ class Dashboard extends React.Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return !(nextProps.loadingPublicationsByYear || nextProps.loadingAuthorDetails
+        return !(nextProps.loadingPublicationsByYear || nextProps.accountAuthorDetailsLoading
             || nextProps.loadingPublicationsStats || nextProps.loadingTrendingPublications
             || nextProps.loadingLatestPublications);
     }
@@ -83,7 +83,7 @@ class Dashboard extends React.Component {
 
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear || this.props.loadingAuthorDetails
+        const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
             || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
             || this.props.loadingLatestPublications;
         const barChart = !loading && this.props.publicationsByYear
@@ -129,7 +129,7 @@ class Dashboard extends React.Component {
                     <div className="columns is-multiline is-gapless">
                         <div className="column is-12 is-hidden-mobile">
                             <div className="is-hidden-mobile">
-                                <DashboardAuthorProfile authorDetails={this.props.authorDetails} author={this.props.author} />
+                                <DashboardAuthorProfile authorDetails={this.props.authorDetails} author={this.props.author} history={this.props.history} />
                             </div>
                         </div>
                         <div className="column is-12 possiblePublicationLure">

@@ -28,7 +28,7 @@ export default class FixRecord extends Component {
         recordToFixLoading: PropTypes.bool,
 
         author: PropTypes.object,
-        authorLoading: PropTypes.bool,
+        accountAuthorLoading: PropTypes.bool,
 
         history: PropTypes.object.isRequired,
         match: PropTypes.object.isRequired,
@@ -51,7 +51,7 @@ export default class FixRecord extends Component {
         if (this.props.actions && !this.props.recordToFixLoading && !this.props.recordToFix) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
-        if (this.props.actions && !this.props.authorLoading && !this.props.author) {
+        if (this.props.actions && !this.props.accountAuthorLoading && !this.props.author) {
             this.props.actions.loadCurrentAccount();
         }
     }
@@ -121,7 +121,7 @@ export default class FixRecord extends Component {
 
     render() {
         // if author is not linked to this record, abandon form
-        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !this.isAuthorLinked()) {
+        if (!(this.props.accountAuthorLoading || this.props.recordToFixLoading) && !this.isAuthorLinked()) {
             this.props.history.go(-1);
             return <div />;
         }
@@ -130,7 +130,7 @@ export default class FixRecord extends Component {
         const txtFixForm = locale.forms.fixPublicationForm;
         const txtUnclaimForm = locale.forms.unclaimPublicationForm;
 
-        if(this.props.authorLoading || this.props.recordToFixLoading) {
+        if(this.props.accountAuthorLoading || this.props.recordToFixLoading) {
             return (
                 <div className="is-centered">
                     <InlineLoader message={txt.loadingMessage}/>

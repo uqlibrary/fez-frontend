@@ -76,8 +76,7 @@ const handlers = {
     [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => (
         {
             ...state,
-            loadingPossibleCounts: true,
-            possibleCounts: 0
+            loadingPossibleCounts: true
         }
     ),
 

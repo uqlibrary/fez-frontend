@@ -67,7 +67,7 @@ export const ACCOUNT_API = () => (`account?${new Date().getTime()}`);
 export const AUTHORS_SEARCH_API = ({query}) => (`fez-authors/search?query=${query}`);
 export const CURRENT_AUTHOR_API = () => ('fez-authors');
 export const AUTHOR_DETAILS_API = ({userId}) => (`authors/details/${userId}`);
-export const AUTHOR_ADD_IDENTIFIER = ({autId}) => (`fez-authors/${autId}`);
+export const AUTHOR_API = ({authorId}) => (`fez-authors/${authorId}`);
 
 // academic stats apis
 export const ACADEMIC_STATS_PUBLICATION_YEARS_API = ({userId}) => (`academic/${userId}/publication-years`);

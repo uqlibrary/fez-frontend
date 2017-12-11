@@ -10,7 +10,9 @@ import {AppLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {MenuDrawer} from 'uqlibrary-react-toolbox/build/MenuDrawer';
 import {HelpDrawer} from 'uqlibrary-react-toolbox/build/HelpDrawer';
 import {AuthButton} from 'uqlibrary-react-toolbox/build/AuthButton';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+
+import AppAlertContainer from '../containers/AppAlert';
+import InlineLoader from 'uqlibrary-react-toolbox/build/Loaders/components/InlineLoader';
 
 import * as pages from './pages';
 import IconButton from 'material-ui/IconButton';
@@ -22,7 +24,6 @@ export default class App extends React.Component {
         actions: PropTypes.object,
         location: PropTypes.object,
         history: PropTypes.object.isRequired,
-        notificationAlert: PropTypes.any
     };
 
     static childContextTypes = {
@@ -36,7 +37,8 @@ export default class App extends React.Component {
             menuDrawerOpen: false,
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1600px)'),
-            isMobile: window.matchMedia('(max-width: 720px)').matches
+            isMobile: window.matchMedia('(max-width: 720px)').matches,
+            menuItems: routes.getMenuConfig(props.user.account)
         };
     }
 
@@ -57,16 +59,62 @@ export default class App extends React.Component {
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
     }
+    componentWillReceiveProps(nextProps) {
+        console.log('componentWillReceiveProps(nextProps)');
+        console.log(nextProps);
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props.user.accountLoading !== nextProps.user.accountLoading
-            || this.props.user.authorLoading !== nextProps.user.authorLoading
-            || this.props.user.loadingAuthorDetails !== nextProps.user.loadingAuthorDetails
-            || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
-            || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
-            || (!!this.props.notificationAlert && this.props.notificationAlert !== nextProps.notificationAlert)
-            || this.state !== nextState;
+        if (this.props.user.account !== nextProps.user.account) {
+            this.setState({
+                menuItems: routes.getMenuConfig(nextProps.user.account)
+            });
+        }
+
+        const isAuthorLoadingNextProps = nextProps.user.accountLoading || nextProps.user.accountAuthorLoading || nextProps.user.accountAuthorDetailsLoading;
+        const isAuthorLoadingThisProps = this.props.user.accountLoading || this.props.user.accountAuthorLoading || this.props.user.accountAuthorDetailsLoading;
+        if (isAuthorLoadingNextProps !== isAuthorLoadingThisProps || nextProps.location.pathname !== this.props.location.pathname) {
+            const isOrcidRequired = nextProps.user.author && !nextProps.user.author.aut_orcid_id
+                && nextProps.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
+            const isPublicPage = this.state.menuItems.filter((menuItem) =>
+                (nextProps.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+
+            // user is not logged in
+            if (!nextProps.user.accountLoading && !nextProps.user.account) {
+                this.props.actions.showAppAlert({
+                    ...locale.global.loginAlert,
+                    action: this.redirectUserToLogin
+                });
+            } else {
+                // user is logged in, but doesn't have ORCID identifier
+                if (!isPublicPage && !isAuthorLoadingNextProps && isOrcidRequired) {
+                    this.props.actions.showAppAlert({
+                        ...locale.global.noOrcidAlert,
+                        action: this.redirectToOrcid
+                    });
+                }
+
+                // user is logged in, but doesn't have eSpace author identifier
+                if (!isPublicPage && !isAuthorLoadingNextProps && !nextProps.user.authorDetails) {
+                    this.props.actions.showAppAlert({
+                        ...locale.global.notRegisteredAuthorAlert
+                    });
+                }
+
+                // hide user specific alerts on public pages
+                if (isPublicPage) {
+                    this.props.actions.dismissAppAlert();
+                }
+            }
+        }
     }
+
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     return this.props.user.accountLoading !== nextProps.user.accountLoading
+    //         || this.props.user.accountAuthorLoading !== nextProps.user.accountAuthorLoading
+    //         || this.props.user.accountAuthorDetailsLoading !== nextProps.user.accountAuthorDetailsLoading
+    //         || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
+    //         || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
+    //         || this.state !== nextState;
+    // }
 
     componentWillUnmount() {
         this.state.mediaQuery.removeListener(this.handleResize);
@@ -97,14 +145,10 @@ export default class App extends React.Component {
     render() {
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
         const container = this.state.docked ? {paddingLeft: 340} : {};
-        const menuItems = routes.getMenuConfig(this.props.user.account);
+
         const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
         const isAuthorizedUser = !this.props.user.accountLoading && this.props.user.account !== null;
-        const isAuthorLoading = this.props.user.accountLoading || this.props.user.authorLoading || this.props.user.loadingAuthorDetails;
-        const isPublicPage = menuItems.filter((menuItem) =>
-            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
-        const isOrcidRequired = this.props.user.author && !this.props.user.author.aut_orcid_id
-            && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
+        const isAuthorLoading = this.props.user.accountLoading || this.props.user.accountAuthorLoading || this.props.user.accountAuthorDetailsLoading;
 
         return (
             <div className="layout-fill">
@@ -148,7 +192,7 @@ export default class App extends React.Component {
                         />
 
                         <MenuDrawer
-                            menuItems={menuItems}
+                            menuItems={this.state.menuItems}
                             drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                             docked={this.state.docked}
                             history={this.props.history}
@@ -163,52 +207,23 @@ export default class App extends React.Component {
                             }} />
 
                         <div className="content-container" style={container}>
+                            <AppAlertContainer />
                             {
-                                // user is not logged in
-                                !this.props.user.accountLoading && !this.props.user.account &&
-                                <div className="layout-fill dashAlert">
-                                    <div className="layout-card">
-                                        <Alert {...locale.global.loginAlert} action={this.redirectUserToLogin} />
-                                    </div>
+                                isAuthorLoading &&
+                                <div className="isLoading is-centered">
+                                    <InlineLoader message={locale.global.loadingUserAccount}/>
                                 </div>
                             }
                             {
-                                // user is logged in, but doesn't have eSpace author identifier
-                                !isPublicPage && !isAuthorLoading && !this.props.user.authorDetails &&
-                                <div className="layout-fill dashAlert">
-                                    <div className="layout-card">
-                                        <Alert {...locale.global.notRegisteredAuthorAlert} />
-                                    </div>
-                                </div>
+                                !isAuthorLoading &&
+                                <Switch>
+                                    {
+                                        routes.getRoutesConfig(pages, this.props.user.account).map((route, index) => (
+                                            <Route key={`route_${index}`} {...route} />
+                                        ))
+                                    }
+                                </Switch>
                             }
-
-                            {
-                                // user is logged in, but doesn't have ORCID identifier
-                                !isPublicPage && !isAuthorLoading && isOrcidRequired && !this.props.notificationAlert &&
-                                <div className="layout-fill dashAlert">
-                                    <div className="layout-card">
-                                        <Alert {...locale.global.noOrcidAlert} action={this.redirectToOrcid} />
-                                    </div>
-                                </div>
-                            }
-
-                            {
-                                this.props.notificationAlert &&
-                                <div className="layout-fill dashAlert">
-                                    <div className="layout-card">
-                                        <Alert {...this.props.notificationAlert} />
-                                    </div>
-                                </div>
-                            }
-
-                            <Switch>
-                                {
-                                    routes.getRoutesConfig(pages, this.props.user.account).map((route, index) => (
-                                        <Route key={`route_${index}`} {...route} />
-                                    ))
-                                }
-                            </Switch>
-
                         </div>
                         <HelpDrawer/>
                     </div>

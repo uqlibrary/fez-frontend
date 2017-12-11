@@ -471,7 +471,7 @@ export const currentAuthor = {
             "aut_people_australia_id": "",
             "aut_description": "",
             "aut_orcid_id": null,
-            "aut_google_scholar_id": "kUemDfMAAAAJ",
+            // "aut_google_scholar_id": "kUemDfMAAAAJ",
             "aut_rid_last_updated": "2013-05-17",
             "aut_publons_id": null,
             "aut_student_username": null
@@ -502,7 +502,7 @@ export const currentAuthor = {
             "aut_people_australia_id": "",
             "aut_description": "",
             "aut_orcid_id": null,
-            "aut_google_scholar_id": "kUemDfMAAAAJ",
+            // "aut_google_scholar_id": "kUemDfMAAAAJ",
             "aut_rid_last_updated": "2013-05-17",
             "aut_publons_id": null,
             "aut_student_username": null
@@ -521,7 +521,7 @@ export const authorDetails = {
         "family_name": "Researcher",
         "title": "Professor",
         "scopus_id": "",
-        "google_scholar_id": "",
+        "google_scholar_id": null, // "kUemDfMAAAAJ",
         "researcher_id": "G-111-1111",
         "orcid_id": "0000-0001-1111-1111",
         "publons_id": "",

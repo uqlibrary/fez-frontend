@@ -15,6 +15,13 @@ export function hidePossiblyYourPublicationsLure() {
     };
 }
 
-export function dismissNotificationAlert() {
-    return {type: actions.APP_NOTIFICATION_DISMISSED};
+export function showAppAlert(appAlert) {
+    return {
+        type: actions.APP_ALERT_SHOW,
+        payload: appAlert
+    };
+}
+
+export function dismissAppAlert() {
+    return {type: actions.APP_ALERT_HIDE};
 }

@@ -56,7 +56,6 @@ export const supervisorRequired = (supervisors) => peopleRequired(supervisors, l
 // DateTime
 export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? locale.validationErrors.dateTimeDay : undefined;
 export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? locale.validationErrors.dateTimeYear : undefined;
-
 export const validFileUpload = value => {
     return value && value.hasOwnProperty('isValid') && !value.isValid ? locale.validationErrors.fileUpload : undefined;
 };
@@ -82,4 +81,14 @@ export const isValidAuthorLink = (link) => {
 
 export const isValidContributorLink = (link) => {
     return link.valid ? '' : locale.validationErrors.contributorLinking;
+};
+
+// Google Scholar ID
+export const isValidGoogleScholarId = id => {
+    const regex = /^\w{12}$/;
+    if (regex.test(id)) {
+        return '';
+    } else {
+        return locale.validationErrors.googleScholarId;
+    }
 };

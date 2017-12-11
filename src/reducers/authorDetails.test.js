@@ -4,7 +4,7 @@ import authorDetailsReducer from './authorDetails'
 describe('authorDetails reducer', () => {
 
     const initialState = {
-        loadingAuthorDetails: true,
+        accountAuthorDetailsLoading: true,
         authorDetails: null
     };
 
@@ -13,7 +13,7 @@ describe('authorDetails reducer', () => {
     it('returns that it is loading data', () => {
         const test = authorDetailsReducer(initialState, {type: actions.AUTHOR_DETAILS_LOADING});
         expect(test).toEqual({
-            loadingAuthorDetails: true,
+            accountAuthorDetailsLoading: true,
             authorDetails: null
         });
     });
@@ -21,7 +21,7 @@ describe('authorDetails reducer', () => {
     it('returns that it has loaded data', () => {
         const test = authorDetailsReducer(initialState, {type: actions.AUTHOR_DETAILS_LOADED, payload: mockAuthorDetails});
         expect(test).toEqual({
-            loadingAuthorDetails: false,
+            accountAuthorDetailsLoading: false,
             authorDetails: mockAuthorDetails
         });
     });
@@ -29,7 +29,7 @@ describe('authorDetails reducer', () => {
     it('returns that it has failed to load data', () => {
         const test = authorDetailsReducer(initialState, {type: actions.AUTHOR_DETAILS_FAILED});
         expect(test).toEqual({
-            loadingAuthorDetails: false,
+            accountAuthorDetailsLoading: false,
             authorDetails: null
         });
     });

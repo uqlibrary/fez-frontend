@@ -2,7 +2,6 @@ import * as actions from './actionTypes';
 import {get} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 
-
 /**
  * Loads the user's account and author details into the application
  * @returns {function(*)}

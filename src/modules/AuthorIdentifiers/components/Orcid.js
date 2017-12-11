@@ -45,7 +45,14 @@ export default class Orcid extends Component {
         const {actions, account, author, location, history} = nextProps;
 
         if (queryParams.code && author) {
-            actions.requestAuthorOrcidInfo(account.id, author.aut_id, {code: queryParams.code, redirUri: `${APP_URL}#${location.pathname}`});
+            actions.requestAuthorOrcidInfo(
+                account.id,
+                author.aut_id,
+                {
+                    code: queryParams.code,
+                    oricidToFezRedirectUrl: `${APP_URL}#${location.pathname}`
+                }
+            );
             history.push(routes.pathConfig.dashboard);
         }
     }
@@ -106,7 +113,7 @@ export default class Orcid extends Component {
     };
 
     render() {
-        const txt = locale.authorIdentifiers.orcid;
+        const txt = locale.pages.orcidLink;
 
         return (
             <StandardPage title={txt.title}>

@@ -2,23 +2,23 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     hidePossiblyYourPublicationsLure: false,
-    notificationAlert: null
+    appAlert: null
 };
 
 const handlers = {
-    [actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE]: () => ({
-        ...initialState,
+    [actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE]: (state) => ({
+        ...state,
         hidePossiblyYourPublicationsLure: true
     }),
 
-    [actions.APP_NOTIFICATION]: (state, action) => ({
+    [actions.APP_ALERT_SHOW]: (state, action) => ({
         ...state,
-        notificationAlert: action.payload
+        appAlert: action.payload
     }),
 
-    [actions.APP_NOTIFICATION_DISMISSED]: () => ({
-        ...initialState,
-        notificationAlert: null
+    [actions.APP_ALERT_HIDE]: (state) => ({
+        ...state,
+        appAlert: null
     })
 };
 
@@ -27,5 +27,6 @@ export default function appReducer(state = initialState, action) {
     if (!handler) {
         return state;
     }
+    console.log(action);
     return handler(state, action);
 }

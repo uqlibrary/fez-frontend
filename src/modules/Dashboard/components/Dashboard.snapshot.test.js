@@ -10,7 +10,7 @@ function setup(
     {
         account,
         authorDetails,
-        loadingAuthorDetails,
+        accountAuthorDetailsLoading,
         loadingPublicationsByYear,
         publicationsByYear,
         publicationTypesCount,
@@ -24,7 +24,7 @@ function setup(
     const props = {
         account: account || mock.accounts.uqresearcher,
         authorDetails: authorDetails,
-        loadingAuthorDetails: loadingAuthorDetails || false,
+        accountAuthorDetailsLoading: accountAuthorDetailsLoading || false,
         loadingPublicationsByYear: loadingPublicationsByYear || false,
         publicationsByYear: publicationsByYear,
         publicationTypesCount: publicationTypesCount,
