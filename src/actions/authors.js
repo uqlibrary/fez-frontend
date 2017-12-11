@@ -13,10 +13,10 @@ export function searchAuthors(query, filterBy) {
     return dispatch => {
         dispatch({type: actions.AUTHORS_LOADING});
 
-        get(routes.AUTHORS_SEARCH_API({query: query}))
+        return get(routes.AUTHORS_SEARCH_API({query: query}))
             .then(response => {
                 return Promise.resolve(
-                    response.data.data.map((item) => {
+                    response.data.map((item) => {
                         item.displayName = item.aut_title + ' ' + item.aut_display_name +
                             (item.aut_org_username ? ' (' + item.aut_org_username + ')' : '');
                         return item;
@@ -48,7 +48,7 @@ export function loadAuthorDetails(authorId) {
     return dispatch => {
         dispatch({type: actions.AUTHOR_DETAILS_LOADING});
 
-        get(routes.AUTHOR_DETAILS_API({userId: authorId}))
+        return get(routes.AUTHOR_DETAILS_API({userId: authorId}))
             .then((data) => {
                 dispatch({
                     type: actions.AUTHOR_DETAILS_LOADED,
