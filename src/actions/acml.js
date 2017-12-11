@@ -9,7 +9,7 @@ import * as routes from 'repositories/routes';
 export function loadAcmlQuickTemplates() {
     return dispatch => {
         dispatch({type: actions.ACML_QUICK_TEMPLATES_LOADING});
-        get(routes.GET_ACML_QUICK_TEMPLATES_API())
+        return get(routes.GET_ACML_QUICK_TEMPLATES_API())
             .then(accessTypes => {
                 dispatch({
                     type: actions.ACML_QUICK_TEMPLATES_LOADED,
