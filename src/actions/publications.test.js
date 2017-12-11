@@ -310,9 +310,6 @@ describe('Publications actions', () => {
         ];
 
         const store = getMockStore();
-
-        // console.log(store.dispatch(publicationsActions.searchTrendingPublications({userId: 'uqmbrow1'})));
-
         return store.dispatch(publicationsActions.searchTrendingPublications('uqmbrow1')).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
@@ -330,9 +327,6 @@ describe('Publications actions', () => {
         ];
 
         const store = getMockStore();
-
-        // console.log(store.dispatch(publicationsActions.searchTrendingPublications({userId: 'uqmbrow1'})));
-
         return store.dispatch(publicationsActions.searchTrendingPublications('uqmbrow1')).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
@@ -349,9 +343,6 @@ describe('Publications actions', () => {
         ];
 
         const store = getMockStore();
-
-        // console.log(store.dispatch(publicationsActions.searchTrendingPublications({userId: 'uqmbrow1'})));
-
         return store.dispatch(publicationsActions.searchTrendingPublications('uqmbrow1')).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
