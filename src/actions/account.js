@@ -15,7 +15,7 @@ export function loadCurrentAccount() {
         let currentAuthor = null;
 
         // load UQL account (based on token)
-        get(routes.ACCOUNT_API())
+        return get(routes.ACCOUNT_API())
             .then(account => {
                 if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
                     return Promise.resolve(account);
