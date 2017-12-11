@@ -15,7 +15,7 @@ export function loadCurrentAccount() {
         let currentAuthor = null;
 
         // load UQL account (based on token)
-        get(routes.ACCOUNT_API())
+        return get(routes.ACCOUNT_API())
             .then(account => {
                 if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
                     return Promise.resolve(account);
@@ -56,7 +56,6 @@ export function loadCurrentAccount() {
                 if (!account) {
                     dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 } else if (!currentAuthor) {
-                    console.log(error);
                     dispatch({type: actions.ACCOUNT_AUTHOR_FAILED});
                 }
                 dispatch({type: actions.ACCOUNT_AUTHOR_DETAILS_FAILED});
