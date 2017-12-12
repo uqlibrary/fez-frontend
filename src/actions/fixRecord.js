@@ -13,7 +13,7 @@ export function loadRecordToFix(pid) {
     return dispatch => {
         dispatch({type: actions.FIX_RECORD_LOADING});
 
-        get(routes.EXISTING_RECORD_API({pid: pid}))
+        return get(routes.EXISTING_RECORD_API({pid: pid}))
             .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_LOADED,
