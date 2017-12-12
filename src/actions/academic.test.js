@@ -70,7 +70,7 @@ describe('Academic action creators', () => {
 
         const expectedActions = [
             {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING},
-            {type: actions.ACCOUNT_ANONYMOUS},
+            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
             {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED}
         ];
 
@@ -104,7 +104,7 @@ describe('Academic action creators', () => {
 
         const expectedActions = [
             {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING},
-            {type: actions.ACCOUNT_ANONYMOUS},
+            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
             {type: actions.ACADEMIC_PUBLICATIONS_STATS_FAILED}
         ];
 

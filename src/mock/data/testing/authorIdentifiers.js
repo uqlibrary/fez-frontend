@@ -7,3 +7,34 @@ export const authorOrcidDetails = {
     "name":"J Researcher",
     "orcid":"0000-0000-1111-2222"
 };
+
+export const testAuthor = {
+    "aut_id": 4101,
+    "aut_org_username": "uqnoauthid",
+    "aut_org_staff_id": "0001952",
+    "aut_org_student_id": null,
+    "aut_email": "",
+    "aut_display_name": "Researcher (no auth ids), J",
+    "aut_fname": "J",
+    "aut_mname": "",
+    "aut_lname": "Researcher (no auth ids)",
+    "aut_title": "Professor",
+    "aut_position": "",
+    "aut_homepage_link": "",
+    "aut_created_date": null,
+    "aut_update_date": "2017-07-23",
+    "aut_external_id": "0000040357",
+    "aut_ref_num": "",
+    "aut_researcher_id": null,
+    "aut_scopus_id": null,
+    "aut_mypub_url": "",
+    "aut_rid_password": "",
+    "aut_people_australia_id": "",
+    "aut_description": "",
+    "aut_orcid_id": null,
+    "aut_google_scholar_id": null,
+    "aut_rid_last_updated": "2013-05-17",
+    "aut_publons_id": null,
+    "aut_student_username": null
+};
+

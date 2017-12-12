@@ -31,11 +31,11 @@ export function requestAuthorOrcidInfo(userId, authorId, params) {
 
                 const data = transformAuthorIdentifier(AUTHOR_IDENTIFIER_ORCID, authorId, orcidId, response);
 
-                dispatch({type: actions.AUTHOR_IDENTIFIER_UPDATING});
+                dispatch({type: actions.CURRENT_AUTHOR_SAVING});
                 return patch(routes.AUTHOR_API({authorId}), data);
             })
             .then((response) => {
-                dispatch({type: actions.AUTHOR_IDENTIFIER_UPDATED, payload: response.data});
+                dispatch({type: actions.CURRENT_AUTHOR_SAVED, payload: response.data});
                 dispatch({
                     type: actions.APP_ALERT_SHOW,
                     payload: {
@@ -46,7 +46,7 @@ export function requestAuthorOrcidInfo(userId, authorId, params) {
             })
             .catch(error => {
                 console.log(error);
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 if (error.status === 500) {
                     dispatch({
                         type: actions.APP_ALERT_SHOW,
@@ -63,10 +63,11 @@ export function requestAuthorOrcidInfo(userId, authorId, params) {
                     });
                 } else {
                     dispatch({
-                        type: actions.AUTHOR_IDENTIFIER_UPDATE_FAILED,
+                        type: actions.CURRENT_AUTHOR_SAVE_FAILED,
                         payload: error
                     });
                 }
             });
     };
 }
+

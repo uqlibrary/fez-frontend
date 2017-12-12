@@ -40,7 +40,7 @@ const handlers = {
         }
     ),
 
-    [actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => (
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED]: (state, action) => (
         {
             ...state,
             loadingPossiblePublicationsList: false,
@@ -55,7 +55,7 @@ const handlers = {
         }
     ),
 
-    [actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED]: (state, action) => (
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED]: (state, action) => (
         {
             ...state,
             possiblePublicationsFacets: action.payload
@@ -80,7 +80,7 @@ const handlers = {
         }
     ),
 
-    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED]: (state, action) => (
+    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED]: (state, action) => (
         {
             ...state,
             loadingPossibleCounts: false,
@@ -96,7 +96,7 @@ const handlers = {
         }
     ),
 
-    [actions.HIDE_PUBLICATIONS_COMPLETED]: (state, action) => (
+    [actions.HIDE_PUBLICATIONS_LOADED]: (state, action) => (
         {
             ...state,
             publicationsClaimedInProgress: [...state.publicationsClaimedInProgress, action.payload.pid]

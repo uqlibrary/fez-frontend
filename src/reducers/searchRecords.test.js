@@ -2343,7 +2343,7 @@ describe('searchRecords reducer', () => {
 
         const loadedState = searchRecordsReducer(initialState, {
             payload: [...espaceList, ...scopusList, ...wosList],
-            type: actions.SEARCH_COMPLETED
+            type: actions.SEARCH_LOADED
         });
         expect(loadedState.loadingSearch).toBeFalsy();
         expect(loadedState.publicationsList).toEqual(postReducerPublicationsList);
@@ -3215,7 +3215,7 @@ describe('searchRecords reducer', () => {
 
         const wosState = searchRecordsReducer(initialState, {
             payload: [...wosList],
-            type: `${actions.SEARCH_COMPLETED}@wos`
+            type: `${actions.SEARCH_LOADED}@wos`
         });
         expect(wosState.loadingSearch).toBeTruthy();
         expect(wosState.publicationsList).toEqual(postReducerWOSPublicationsList);
@@ -3232,7 +3232,7 @@ describe('searchRecords reducer', () => {
         };
         const wosState2 = searchRecordsReducer(aSourceLoadedState, {
             payload: [...wosList],
-            type: `${actions.SEARCH_COMPLETED}@wos`
+            type: `${actions.SEARCH_LOADED}@wos`
         });
         expect(wosState2.loadingSearch).toBeTruthy();
         expect(wosState2.publicationsList.length).toEqual(6); // adds 1 new publication after de-duplication

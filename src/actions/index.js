@@ -9,4 +9,3 @@ export * from './claimPublications';
 export * from './fixRecord';
 export * from './controlledVocabularies';
 export * from './authorIdentifiers';
-export * from './googleScholar';

@@ -97,13 +97,13 @@ export const accounts = {
         "blocked": false
     },
     // researcher without orcid
-    uqnoorcid: {
-        "id": "uqnoorcid",
+    uqnoauthid: {
+        "id": "uqnoauthid",
         "class": ["Campus-MATERHOSP"],
         "type": 3,
         "homeLib": "St Lucia",
         "firstName": "J",
-        "lastName": "Researcher (no orcid)",
+        "lastName": "Researcher (no auth ids)",
         "name": "J Researcher",
         "mail": "j.Researcher@uq.edu.au",
         "barcode": "240675201000000",
@@ -470,24 +470,24 @@ export const currentAuthor = {
             "aut_rid_password": "",
             "aut_people_australia_id": "",
             "aut_description": "",
-            "aut_orcid_id": null,
-            // "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "aut_orcid_id": "0000-0001-1111-1111",
+            "aut_google_scholar_id": "kUemDfMAAAAJ",
             "aut_rid_last_updated": "2013-05-17",
             "aut_publons_id": null,
             "aut_student_username": null
         }
     },
-    uqnoorcid: {
+    uqnoauthid: {
         data: {
             "aut_id": 4101,
-            "aut_org_username": "uqnoorcid",
+            "aut_org_username": "uqnoauthid",
             "aut_org_staff_id": "0001952",
             "aut_org_student_id": null,
             "aut_email": "",
-            "aut_display_name": "Researcher (no orcid), J",
+            "aut_display_name": "Researcher (no auth ids), J",
             "aut_fname": "J",
             "aut_mname": "",
-            "aut_lname": "Researcher (no orcid)",
+            "aut_lname": "Researcher (no auth ids)",
             "aut_title": "Professor",
             "aut_position": "",
             "aut_homepage_link": "",
@@ -495,14 +495,14 @@ export const currentAuthor = {
             "aut_update_date": "2017-07-23",
             "aut_external_id": "0000040357",
             "aut_ref_num": "",
-            "aut_researcher_id": "A-1137-2007",
-            "aut_scopus_id": "35478294000",
+            "aut_researcher_id": null,
+            "aut_scopus_id": null,
             "aut_mypub_url": "",
             "aut_rid_password": "",
             "aut_people_australia_id": "",
             "aut_description": "",
             "aut_orcid_id": null,
-            // "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "aut_google_scholar_id": null,
             "aut_rid_last_updated": "2013-05-17",
             "aut_publons_id": null,
             "aut_student_username": null
@@ -521,7 +521,7 @@ export const authorDetails = {
         "family_name": "Researcher",
         "title": "Professor",
         "scopus_id": "",
-        "google_scholar_id": null, // "kUemDfMAAAAJ",
+        "google_scholar_id": "kUemDfMAAAAJ",
         "researcher_id": "G-111-1111",
         "orcid_id": "0000-0001-1111-1111",
         "publons_id": "",
@@ -536,14 +536,14 @@ export const authorDetails = {
         "scopus_id": null,
         "publons_id": null
     },
-    uqnoorcid: {
+    uqnoauthid: {
         "uqr_id": null,
         "espace_id": 1024,
         "image_exists": null,
-        "username": "uqnoorcid",
+        "username": "uqnoauthid",
         "staff_id": "0006522",
         "given_name": "J",
-        "family_name": "Researcher (no orcid)",
+        "family_name": "Researcher (no auth ids)",
         "title": "Dr",
         "scopus_id": null,
         "google_scholar_id": null,
@@ -556,4 +556,3 @@ export const authorDetails = {
         "espace": {"first_year": 1999, "last_year": 2012, "doc_count": "14"}
     }
 };
-

@@ -363,7 +363,7 @@ describe('Academic data transformers ', () => {
         });
     });
 
-    describe('getPublicationsStats', () => {
+    it('should getPublicationsStats when data is provided', () => {
         const data = {
             "took": 130,
             "timed_out": false,

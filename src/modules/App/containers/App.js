@@ -3,11 +3,9 @@ import App from '../components/App';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions';
 
-const mapStateToProps = (state) => {
-    return {
-        user: {...state.get('accountReducer')}
-    };
-};
+const mapStateToProps = (state) => ({
+    ...state.get('accountReducer')
+});
 
 const mapDispatchToProps = (dispatch) => {
     return {

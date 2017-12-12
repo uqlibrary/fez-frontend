@@ -21,7 +21,7 @@ export function loadRecordToFix(pid) {
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.FIX_RECORD_LOAD_FAILED,
                     payload: error
@@ -123,7 +123,7 @@ export function fixRecord(data) {
             })
             .catch(error => {
                 // dispatch an action if session failed
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
                     payload: error.message
@@ -185,7 +185,7 @@ export function unclaimRecord(data) {
                 return Promise.resolve(response);
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({type: actions.FIX_RECORD_FAILED});
                 return Promise.reject({message: 'Failed patch record request.'});
             });

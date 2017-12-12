@@ -41,8 +41,8 @@ describe('Author identifier action creators', () => {
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST},
             {type: actions.APP_ALERT_SHOW},
             {type: actions.ORCID_ACCESS_TOKEN_LOADED},
-            {type: actions.AUTHOR_IDENTIFIER_UPDATING},
-            {type: actions.AUTHOR_IDENTIFIER_UPDATED},
+            {type: actions.CURRENT_AUTHOR_SAVING},
+            {type: actions.CURRENT_AUTHOR_SAVED},
             {type: actions.APP_ALERT_SHOW},
         ];
 
@@ -60,7 +60,7 @@ describe('Author identifier action creators', () => {
         const expectedActions = [
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST},
             {type: actions.APP_ALERT_SHOW},
-            {type: actions.ACCOUNT_ANONYMOUS},
+            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST_FAILED}
         ];
 
@@ -99,9 +99,9 @@ describe('Author identifier action creators', () => {
             {type: actions.ORCID_ACCESS_TOKEN_REQUEST},
             {type: actions.APP_ALERT_SHOW},
             {type: actions.ORCID_ACCESS_TOKEN_LOADED},
-            {type: actions.AUTHOR_IDENTIFIER_UPDATING},
+            {type: actions.CURRENT_AUTHOR_SAVING},
             {type: actions.APP_ALERT_SHOW},
-            {type: actions.AUTHOR_IDENTIFIER_UPDATE_FAILED}
+            {type: actions.CURRENT_AUTHOR_SAVE_FAILED}
         ];
 
         const store = getMockStore();

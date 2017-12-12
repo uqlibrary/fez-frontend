@@ -3778,7 +3778,7 @@ describe('Latest publications reducer', () => {
 
     it('returns the correct state once loaded latest publications', () => {
         const test = publicationsReducer(initialState, {
-            type: actions.LATEST_PUBLICATIONS_COMPLETED,
+            type: actions.LATEST_PUBLICATIONS_LOADED,
             payload: latestPubsPayload
         });
         expect(test.latestPublicationsList).toEqual(latestPubsPayload.data);
@@ -3802,10 +3802,9 @@ describe('Authors publications reducer', () => {
 
     it('returns the correct state when authors publications have loaded with expected filters and facets', () => {
         const test = publicationsReducer(initialState, {
-            type: actions.AUTHOR_PUBLICATIONS_COMPLETED,
+            type: actions.AUTHOR_PUBLICATIONS_LOADED,
             payload: authorPubsPayload
         });
-        // console.log(test);
 
         expect(test.publicationsList).toEqual(authorPubsPayload.data);
         expect(test.publicationsListPagingData).toEqual({
@@ -3823,7 +3822,7 @@ describe('Authors publications reducer', () => {
     it('returns the correct state when authors publications have loaded without expected filters and facets', () => {
         delete authorPubsPayload['filters'];
         const test = publicationsReducer(initialState, {
-            type: actions.AUTHOR_PUBLICATIONS_COMPLETED,
+            type: actions.AUTHOR_PUBLICATIONS_LOADED,
             payload: authorPubsPayload
         });
         expect(test.publicationsListFacets).toEqual({});
@@ -3847,7 +3846,7 @@ describe('Trending publications reducer', () => {
 
     it('returns the correct state when trending publications are loaded', () => {
         const test = publicationsReducer(initialState, {
-            type: actions.TRENDING_PUBLICATIONS_COMPLETED,
+            type: actions.TRENDING_PUBLICATIONS_LOADED,
             payload: trendingPubsPayload
         });
         expect(test.trendingPublicationsList).toEqual(trendingPubsPayload);

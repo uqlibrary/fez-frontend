@@ -9,7 +9,7 @@ import GoogleScholar from '../components/GoogleScholar';
 const FORM_NAME = 'GoogleScholar';
 
 const onSubmit = (values, dispatch, props) => {
-    return dispatch(actions.patchGoogleScholarId(props.author.aut_id, values.toJS().aut_google_scholar_id))
+    return dispatch(actions.updateCurrentAuthor(props.author.aut_id, values.toJS()))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
@@ -28,6 +28,9 @@ const mapStateToProps = (state) => (
         ...state.get('accountReducer'),
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {
+            aut_id: state.get('accountReducer') && state.get('accountReducer').author
+                ? state.get('accountReducer').author.aut_id
+                : '',
             aut_google_scholar_id: state.get('accountReducer') && state.get('accountReducer').author
                 ? state.get('accountReducer').author.aut_google_scholar_id
                 : ''

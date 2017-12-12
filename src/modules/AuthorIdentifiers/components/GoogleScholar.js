@@ -7,7 +7,6 @@ import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import InlineLoader from 'uqlibrary-react-toolbox/build/Loaders/components/InlineLoader';
 
 import {locale} from 'locale';
 import {routes, validation} from 'config';
@@ -21,19 +20,13 @@ export default class GoogleScholar extends React.PureComponent {
         actions: PropTypes.object.isRequired
     };
 
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
-    componentDidMount() {
-        if (!this.props.accountAuthorLoading && !this.props.author) {
-            this.props.actions.loadCurrentAccount();
-        }
-    }
-
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
+            // show app level alert on success
+            this.props.actions.showAppAlert({
+                ...locale.pages.googleScholarLink.successAlert,
+                dismissAction: this.props.actions.dismissAppAlert
+            });
             this._navigateToDashboard();
         }
     }
@@ -67,17 +60,12 @@ export default class GoogleScholar extends React.PureComponent {
     };
 
     render() {
-        const txt = locale.pages.googleScholarLink;
-        if(this.props.accountAuthorLoading && !this.props.author) {
-            return (
-                <div className="is-centered">
-                    <InlineLoader message={txt.loadingMessage}/>
-                </div>
-            );
-        }
-        if (!this.props.accountAuthorLoading && !this.props.author) {
+        // wait for account details to be loaded
+        if(this.props.accountAuthorLoading || !this.props.author) {
             return (<div />);
         }
+
+        const txt = locale.pages.googleScholarLink;
         const cardLocale = !this.props.author.aut_google_scholar_id
             ? txt.add
             : txt.edit;

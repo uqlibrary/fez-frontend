@@ -64,7 +64,7 @@ describe('claimPublication reducer', () => {
     });
 
     it('returns the records which are possibly yours', () => {
-        const test = claimPublicationReducer(initialState, {type: actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED, payload: mockRecord});
+        const test = claimPublicationReducer(initialState, {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED, payload: mockRecord});
         expect(test).toEqual({
             ...initialState,
             loadingPossiblePublicationsList: false,
@@ -85,7 +85,7 @@ describe('claimPublication reducer', () => {
             "Display type":{"doc_count_error_upper_bound":0,"sum_other_doc_count":0,"buckets":[{"key":130,"doc_count":10}]},
             "Keywords":{"doc_count_error_upper_bound":0,"sum_other_doc_count":8,"buckets":[{"key":"CARDIAC & CARDIOVASCULAR SYSTEMS","doc_count":2},{"key":"Cardiac & Cardiovascular Systems","doc_count":2},{"key":"Cardiovascular System & Cardiology","doc_count":2},{"key":"Respiratory System","doc_count":2},{"key":"ENDOCRINOLOGY & METABOLISM","doc_count":1}]},
         };
-        const test = claimPublicationReducer(initialState, {type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED, payload: facetData});
+        const test = claimPublicationReducer(initialState, {type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED, payload: facetData});
         expect(test).toEqual({
             ...initialState,
             possiblePublicationsFacets: facetData
@@ -123,7 +123,7 @@ describe('claimPublication reducer', () => {
     });
 
     it('returns that the record count has loaded with the data', () => {
-        const test = claimPublicationReducer(initialState, {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED, payload: mockRecord});
+        const test = claimPublicationReducer(initialState, {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED, payload: mockRecord});
         expect(test).toEqual({
             ...initialState,
             loadingPossibleCounts: false,
@@ -132,7 +132,7 @@ describe('claimPublication reducer', () => {
     });
 
     it('returns list of publications hidden/unclaimed', () => {
-        const test = claimPublicationReducer(initialState, {type: actions.HIDE_PUBLICATIONS_COMPLETED, payload: mockRecord});
+        const test = claimPublicationReducer(initialState, {type: actions.HIDE_PUBLICATIONS_LOADED, payload: mockRecord});
         expect(test).toEqual({
             ...initialState,
             publicationsClaimedInProgress: [...initialState.publicationsClaimedInProgress, mockRecord.pid]

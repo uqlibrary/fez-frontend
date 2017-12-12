@@ -1,14 +1,18 @@
-import { shallow, mount } from 'enzyme';
 import React from 'react';
-import GoogleScholar from './GoogleScholar';
+
+import { shallow, mount } from 'enzyme';
+import toJson from 'enzyme-to-json';
+
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 import {MemoryRouter} from 'react-router-dom'
 import {Provider} from 'react-redux';
+
+import GoogleScholar from './GoogleScholar';
+import {testAuthor} from 'mock/data/testing/authorIdentifiers';
 import {locale} from 'locale';
-import toJson from 'enzyme-to-json';
 
 const create = () => {
     const initialState = Immutable.Map();
@@ -22,57 +26,31 @@ const create = () => {
     const invoke = (action) => thunk(store)(next)(action);
     return {store, next, invoke}
 };
-let currentAuthor = {
-    "aut_id": 410,
-    "aut_org_username": "uqresearcher",
-    "aut_org_staff_id": "0001952",
-    "aut_org_student_id": null,
-    "aut_email": "",
-    "aut_display_name": "Researcher, J",
-    "aut_fname": "J",
-    "aut_mname": "",
-    "aut_lname": "Researcher",
-    "aut_title": "Professor",
-    "aut_position": "",
-    "aut_homepage_link": "",
-    "aut_created_date": null,
-    "aut_update_date": "2017-07-23",
-    "aut_external_id": "0000040357",
-    "aut_ref_num": "",
-    "aut_researcher_id": "A-1137-2007",
-    "aut_scopus_id": "35478294000",
-    "aut_mypub_url": "",
-    "aut_rid_password": "",
-    "aut_people_australia_id": "",
-    "aut_description": "",
-    "aut_orcid_id": "0000-0001-1111-1111",
-    "aut_google_scholar_id": null, // "kUemDfMAAAAJ",
-    "aut_rid_last_updated": "2013-05-17",
-    "aut_publons_id": null,
-    "aut_student_username": null
-};
 
-function setup({accountAuthorLoading, handleSubmit, match, initialValues, actions, author = currentAuthor, history = {go: jest.fn()}, isShallow = true, submitSucceeded}){
+function setup(testProps, isShallow = true) {
     const props = {
+        ...testProps,
 
-        accountAuthorLoading: accountAuthorLoading || false,
-        author: author || null,
+        accountAuthorLoading: testProps.accountAuthorLoading || false,
+        author: testProps.author || testAuthor,
+        actions: testProps.actions || {showAppAlert: jest.fn()},
+        history: testProps.history || {push: jest.fn()},
 
-        handleSubmit: handleSubmit || jest.fn(),
-        initialValues: initialValues ||
-            Immutable.Map({
-                author: Immutable.Map(author)
-            }),
-        actions: actions || {},
-        history: history || {},
-        match: match || {},
-
-        submitSucceeded: submitSucceeded || false
+        // redux form props
+        handleSubmit: testProps.handleSubmit || jest.fn(),
+        initialValues: testProps.initialValues || {
+            aut_id: !!testProps.author ? testProps.author.aut_id : testAuthor.aut_id,
+            aut_google_scholar_id: !!testProps.author ? testProps.author.aut_google_scholar_id : testAuthor.aut_google_scholar_id
+        },
+        submitSucceeded: testProps.submitSucceeded || false,
+        submitFailed: testProps.submitFailed || false,
+        error: testProps.error || null
     };
 
     if(isShallow) {
         return shallow(<GoogleScholar {...props} />);
     }
+
     return mount(
         <Provider store={create().store}>
             <MemoryRouter>
@@ -95,45 +73,24 @@ beforeAll(() => {
 
 describe('Component GoogleScholar ', () => {
 
-    it('component remders with a loaded author, with a Field, a RaisedButton and a FlatButton with correct labels', () => {
+    it('should render nothing if author is not loaded', () => {
+        const wrapper = setup({accountAuthorLoading: true, author: null});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render form if author doesn\'t have google scholar id', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(1);
-        expect(wrapper.find('RaisedButton').length).toEqual(1);
-        expect(wrapper.find('RaisedButton').node.props.label).toEqual(locale.pages.authorIdentifiers.googleScholar.buttonLabels.add);
-        expect(wrapper.find('FlatButton').length).toEqual(1);
-        expect(wrapper.find('FlatButton').node.props.label).toEqual(locale.pages.authorIdentifiers.googleScholar.buttonLabels.cancel);
+        expect(wrapper.find('.requiredField').length).toEqual(1);
     });
 
-    it('should render inline loader when author is still loading', () => {
-        const wrapper = setup({accountAuthorLoading: true, author: null, initialValues: {}});
+    it('should render form if author has google scholar id', () => {
+        const wrapper = setup({author: { ...testAuthor, aut_google_scholar_id: 'abc123'}});
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('.requiredField').length).toEqual(1);
     });
 
-    it('should load author if author is not loaded', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({isShallow: false, accountAuthorLoading: false, author: null, actions: {loadCurrentAccount: testMethod}});
-        expect(testMethod).toHaveBeenCalled();
-    });
-
-    it('should render the form, with an input, a update and a cancel button', () => {
-        const wrapper = setup({
-            accountAuthorLoading: false,
-            author: {aut_google_scholar_id: '12345'},
-            initialValues: {
-                author: {aut_google_scholar_id: '12345'}
-            },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(1);
-        expect(wrapper.find('RaisedButton').length).toEqual(1);
-        expect(wrapper.find('RaisedButton').node.props.label).toEqual(locale.pages.authorIdentifiers.googleScholar.buttonLabels.edit);
-        expect(wrapper.find('FlatButton').length).toEqual(1);
-        expect(wrapper.find('FlatButton').node.props.label).toEqual(locale.pages.authorIdentifiers.googleScholar.buttonLabels.cancel);
-
-    });
-
-    it('redirects to the dashbaord', () => {
+    it('should redirect to the dashbaord', () => {
         const testMethod = jest.fn();
         const wrapper = setup({history: {push: testMethod}});
         wrapper.instance()._navigateToDashboard();
@@ -154,15 +111,29 @@ describe('Component GoogleScholar ', () => {
         expect(testMethod).not.toHaveBeenCalled();
     });
 
-    it('it should go back to the dashboard if the submission succeeded', () => {
+    it('should go back to the dashboard if the submission succeeded', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({accountAuthorLoading: false, submitSucceeded: false, history: {push: testMethod}});
+        const wrapper = setup({history: {push: testMethod}});
         wrapper.setProps({submitSucceeded: true});
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
     });
 
-    it('should render an empty div if there is no author data after loading', () => {
-        const wrapper = setup({accountAuthorLoading: false, author: null, initialValues: {}});
+    it('should dispatch action to display success alert', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({actions: {showAppAlert: testMethod}});
+        wrapper.setProps({submitSucceeded: true});
+        expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('should display submission error if saving failed', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({submitFailed: true, error: 'failed!'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should display submission in progress alert', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({submitting: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

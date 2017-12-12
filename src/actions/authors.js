@@ -1,7 +1,6 @@
 import * as actions from './actionTypes';
-import {get} from 'repositories/generic';
+import {get, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
-
 
 /**
  * Returns the authors list based on a query, filtered locally by filterBy function
@@ -30,7 +29,7 @@ export function searchAuthors(query, filterBy) {
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.AUTHORS_LOAD_FAILED,
                     payload: error
@@ -40,27 +39,33 @@ export function searchAuthors(query, filterBy) {
 }
 
 /**
- * Returns the authors details from app.libarary api
- * @param {string} author username
- * @returns {action}
+ * Update current author record
+ * @param {string} authorId
+ * @param {object} patch request
+ * @returns {Promise}
  */
-export function loadAuthorDetails(authorId) {
+export function updateCurrentAuthor(authorId, data) {
     return dispatch => {
-        dispatch({type: actions.AUTHOR_DETAILS_LOADING});
+        dispatch({type: actions.CURRENT_AUTHOR_SAVING});
 
-        get(routes.AUTHOR_DETAILS_API({userId: authorId}))
-            .then((data) => {
+        return patch(routes.AUTHOR_API({authorId}), data)
+            .then((response) => {
                 dispatch({
-                    type: actions.AUTHOR_DETAILS_LOADED,
-                    payload: data
+                    type: actions.CURRENT_AUTHOR_SAVED,
+                    payload: response.data
                 });
+
+                return Promise.resolve(response.data);
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
+
                 dispatch({
-                    type: actions.AUTHOR_DETAILS_FAILED,
-                    payload: error
+                    type: actions.CURRENT_AUTHOR_SAVE_FAILED,
+                    payload: error.message
                 });
+
+                return Promise.reject(error);
             });
     };
 }

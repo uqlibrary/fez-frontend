@@ -37,13 +37,13 @@ export function createSearchPromise(source, queryString, dispatch) {
                         return item;
                     }) : [];
                 dispatch({
-                    type: `${actions.SEARCH_COMPLETED}@${source}`,
+                    type: `${actions.SEARCH_LOADED}@${source}`,
                     payload: data
                 });
                 resolve(data);
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: `${actions.SEARCH_FAILED}@${source}`,
                     payload: error
@@ -72,7 +72,7 @@ export function searchPublications(searchQuery) {
             .then((response) => {
                 let flattenedResults = [].concat.apply([], response);
                 flattenedResults = flattenedResults.slice(0, flattenedResults.length);
-                dispatch({type: actions.SEARCH_COMPLETED, payload: flattenedResults});
+                dispatch({type: actions.SEARCH_LOADED, payload: flattenedResults});
             }, error => {
                 dispatch({type: actions.SEARCH_FAILED, payload: error});
             });

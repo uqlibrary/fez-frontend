@@ -23,25 +23,25 @@ export function searchPossiblyYourPublications({facets = {}}) {
         get(routes.POSSIBLE_RECORDS_API({facets: facets}))
             .then(response => {
                 dispatch({
-                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
                     payload: response,
                 });
 
                 dispatch({
-                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
+                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
                     payload: response.filters && response.filters.facets ? response.filters.facets : {}
                 });
 
                 if (Object.keys(facets).length === 0) {
                     // only update total count if there's no filtering
                     dispatch({
-                        type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+                        type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED,
                         payload: response
                     });
                 }
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
 
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
@@ -85,7 +85,7 @@ export function hideRecord({record, facets = {}}) {
         post(routes.HIDE_POSSIBLE_RECORD_API(), data)
             .then(() => {
                 dispatch({
-                    type: actions.HIDE_PUBLICATIONS_COMPLETED,
+                    type: actions.HIDE_PUBLICATIONS_LOADED,
                     payload: {pid: record.rek_pid}
                 });
 
@@ -93,7 +93,7 @@ export function hideRecord({record, facets = {}}) {
                 dispatch(searchPossiblyYourPublications({facets: facets}));
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_FAILED,
                     payload: []
@@ -249,7 +249,7 @@ export function claimPublication(data) {
                     return Promise.resolve(data.publication);
                 }
                 // dispatch an action if session failed
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
 
                 // failed to create a claim/new record request
                 dispatch({

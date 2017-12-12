@@ -19,7 +19,7 @@ export function loadVocabulariesList(id) {
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: `${actions.VOCABULARIES_LOAD_FAILED}@${id}`,
                     payload: error

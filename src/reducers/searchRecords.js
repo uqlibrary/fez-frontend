@@ -111,7 +111,7 @@ const handlers = {
         };
     },
 
-    [actions.SEARCH_COMPLETED]: (state, action) => {
+    [actions.SEARCH_LOADED]: (state, action) => {
         return {
             ...state,
             loadingSearch: false,
@@ -150,7 +150,7 @@ const handlers = {
         };
     },
 
-    [`${actions.SEARCH_COMPLETED}@`]: (state, action) => {
+    [`${actions.SEARCH_LOADED}@`]: (state, action) => {
         const source = actions.getActionSuffix(action.type);
 
         // set search completed for a specific source

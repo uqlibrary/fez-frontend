@@ -15,14 +15,14 @@ describe('account reducer', () => {
     const mockAccount = {};
 
     it('returns that it is loading data', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_LOADING});
+        const test = accountReducer(initialState, {type: actions.CURRENT_ACCOUNT_LOADING});
         expect(test).toEqual({
             ...initialState
         })
     });
 
     it('returns that it has loaded data', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_LOADED, payload: mockAccount});
+        const test = accountReducer(initialState, {type: actions.CURRENT_ACCOUNT_LOADED, payload: mockAccount});
         expect(test).toEqual({
             ...initialState,
             account: mockAccount,
@@ -31,7 +31,7 @@ describe('account reducer', () => {
     });
 
     it('returns an anon account', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_ANONYMOUS});
+        const test = accountReducer(initialState, {type: actions.CURRENT_ACCOUNT_ANONYMOUS});
         expect(test).toEqual({
             ...initialState,
             accountLoading: false,
@@ -41,7 +41,7 @@ describe('account reducer', () => {
     });
 
     it('returns thats the author account failed to load', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_FAILED});
+        const test = accountReducer(initialState, {type: actions.CURRENT_AUTHOR_FAILED});
         expect(test).toEqual({
             ...initialState,
             author: null,
@@ -50,7 +50,7 @@ describe('account reducer', () => {
     });
 
     it('returns that it has loaded author data', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_LOADED, payload: mockAccount});
+        const test = accountReducer(initialState, {type: actions.CURRENT_AUTHOR_LOADED, payload: mockAccount});
         expect(test).toEqual({
             ...initialState,
             author: mockAccount,
@@ -59,7 +59,7 @@ describe('account reducer', () => {
     });
 
     it('returns that it is loading author data', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_LOADING});
+        const test = accountReducer(initialState, {type: actions.CURRENT_AUTHOR_LOADING});
         expect(test).toEqual({
             ...initialState,
             author: null,
@@ -68,7 +68,7 @@ describe('account reducer', () => {
     });
 
     it('returns that the author details failed to load', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_DETAILS_FAILED});
+        const test = accountReducer(initialState, {type: actions.CURRENT_AUTHOR_DETAILS_FAILED});
         expect(test).toEqual({
             ...initialState,
             authorDetails: null,
@@ -77,7 +77,7 @@ describe('account reducer', () => {
     });
 
     it('returns that the author details have loaded', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_DETAILS_LOADED, payload: mockAccount});
+        const test = accountReducer(initialState, {type: actions.CURRENT_AUTHOR_DETAILS_LOADED, payload: mockAccount});
         expect(test).toEqual({
             ...initialState,
             authorDetails: mockAccount,
@@ -86,7 +86,7 @@ describe('account reducer', () => {
     });
 
     it('returns that the author details are loading', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_DETAILS_LOADING});
+        const test = accountReducer(initialState, {type: actions.CURRENT_AUTHOR_DETAILS_LOADING});
         expect(test).toEqual({
             ...initialState,
             authorDetails: null,

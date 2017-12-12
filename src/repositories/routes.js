@@ -63,7 +63,7 @@ export const getSearchType = (searchQuery) => {
     return `title=${prepareTextSearchQuery(searchQuery)}`;
 };
 
-export const ACCOUNT_API = () => (`account?${new Date().getTime()}`);
+export const CURRENT_ACCOUNT_API = () => (`account?${new Date().getTime()}`);
 export const AUTHORS_SEARCH_API = ({query}) => (`fez-authors/search?query=${query}`);
 export const CURRENT_AUTHOR_API = () => ('fez-authors');
 export const AUTHOR_DETAILS_API = ({userId}) => (`authors/details/${userId}`);

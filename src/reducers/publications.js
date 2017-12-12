@@ -25,7 +25,7 @@ const handlers = {
         };
     },
 
-    [actions.LATEST_PUBLICATIONS_COMPLETED]: (state, action) => {
+    [actions.LATEST_PUBLICATIONS_LOADED]: (state, action) => {
         return {
             ...state,
             latestPublicationsList: action.payload.data,
@@ -52,7 +52,7 @@ const handlers = {
         };
     },
 
-    [actions.AUTHOR_PUBLICATIONS_COMPLETED]: (state, action) => {
+    [actions.AUTHOR_PUBLICATIONS_LOADED]: (state, action) => {
         return {
             ...state,
             publicationsList: action.payload.data,
@@ -87,7 +87,7 @@ const handlers = {
         };
     },
 
-    [actions.TRENDING_PUBLICATIONS_COMPLETED]: (state, action) => {
+    [actions.TRENDING_PUBLICATIONS_LOADED]: (state, action) => {
         return {
             ...state,
             trendingPublicationsList: action.payload,

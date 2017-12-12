@@ -7,7 +7,7 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, { delayResponse: 1200 });
+const mock = new MockAdapter(api, { delayResponse: 200 });
 const escapeRegExp = (input) => (input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
 const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 const requestOrcidQueryString = {code: '.*', oricidToFezRedirectUrl: '.*'}
@@ -25,7 +25,7 @@ if (user && !mockData.accounts[user]) {
 user = user || 'uqresearcher';
 
 mock
-    .onGet(new RegExp(escapeRegExp(routes.ACCOUNT_API()).replace(/\?.*$/,'.*'))).reply(config => {
+    .onGet(new RegExp(escapeRegExp(routes.CURRENT_ACCOUNT_API()).replace(/\?.*$/,'.*'))).reply(config => {
         // mock account response
         if (user === 'anon') return [403, {}];
         if (mockData.accounts[user]) return [200, mockData.accounts[user]];
@@ -39,7 +39,6 @@ mock
         return [404, {}];
     })
     .onGet(new RegExp(escapeRegExp(routes.CURRENT_AUTHOR_API()))).reply(config => {
-        console.log('hi');
         // mock current author details from fez
         if (user === 'anon') return [403, {}];
         if (mockData.currentAuthor[user]) return [200, mockData.currentAuthor[user]];
@@ -108,9 +107,25 @@ mock
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API())))
         .reply(200, {data: {}})
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}))))
-        .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
-        // .reply(200, {data: {...mockData.afterOrcid}})
-        // .reply(200, {data: {...mockData.afterGoogleScholarPatch}})
+        .reply(config => {
+            // mock current author details from fez
+            if (user === 'anon') return [403, {}];
+            const author = mockData.currentAuthor[user];
+            if (author) {
+                const request = JSON.parse(config.data);
+                // google scholar was updated
+                if (request && request.aut_google_scholar_id) {
+                    author.data.aut_google_scholar_id = request.aut_google_scholar_id;
+                }
+                // orcid was updated
+                if (request && request.aut_orcid_id) {
+                    author.data.aut_orcid_id = request.aut_orcid_id;
+                }
+                return [200, author];
+            }
+            return [404, {}];
+        })
+        // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
     .onAny().reply((config) => {
         console.log('url not found...');
         console.log(config.url);

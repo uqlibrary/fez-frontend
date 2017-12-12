@@ -35,6 +35,21 @@ Mock data is provided for all pages and actions under `src/mock/`.
 
 ### Development notes
 
+#### Naming conventions
+
+- React components and files of components and related files (eg scss) are to be named with upper case (eg MenuDrawer.js). Do not add UQ, UQLibrary or similar prefixes to components
+- Other files are to be named with lower case (eg index.js, reducerX.js)
+- *Actions methods naming*: use [verb][Noun] format (if appropriate), eg loadAuthorsList, updateAuthor, createRecord. Actions are not directly related to api calls, don't name actions after API verbs, eg patch/get/put/etc
+- *Action types naming*: use [NOUN]_[VERB] format, eg PUBLICATION_TYPE_SELECTED to indicate that action X was performed on an object Y. Use standard action types names:
+  - [NOUN]_LOADING
+  - [NOUN]_LOADED
+  - [NOUN]_FAILED
+  - [NOUN]_SHOW
+  - [NOUN]_HIDE
+  - etc
+- *Action transformers naming*: use [verb][Noun] format (if appropriate) to indicate what method returns, eg unclaimRecordContributorsIdSearchKey(), getRecordContributorsIdSearchKey(), etc
+
+
 #### Optimisation
 
 to keep initial load to a minimum following optimisation has been added to the project:

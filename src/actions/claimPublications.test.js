@@ -16,6 +16,7 @@ const mockResponse = (status, statusText, response) => {
         }
     });
 };
+
 const getMockStore = () => {
     const middlewares = [ thunk ];
     const mockStore = configureStore(middlewares);

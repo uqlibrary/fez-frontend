@@ -8,13 +8,13 @@ import * as routes from 'repositories/routes';
  */
 export function loadCurrentAccount() {
     return dispatch => {
-        dispatch({type: actions.ACCOUNT_LOADING});
+        dispatch({type: actions.CURRENT_ACCOUNT_LOADING});
 
         let account = null;
         let currentAuthor = null;
 
         // load UQL account (based on token)
-        get(routes.ACCOUNT_API())
+        get(routes.CURRENT_ACCOUNT_API())
             .then(account => {
                 if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
                     return Promise.resolve(account);
@@ -25,40 +25,40 @@ export function loadCurrentAccount() {
             .then(accountResponse => {
                 account = accountResponse;
                 dispatch({
-                    type: actions.ACCOUNT_LOADED,
+                    type: actions.CURRENT_ACCOUNT_LOADED,
                     payload: accountResponse
                 });
 
                 // load current author details (based on token)
-                dispatch({type: actions.ACCOUNT_AUTHOR_LOADING});
+                dispatch({type: actions.CURRENT_AUTHOR_LOADING});
                 return get(routes.CURRENT_AUTHOR_API());
             })
             .then(currentAuthorResponse => {
                 // TODO: to be decommissioned when author/details will become a part of author api
                 currentAuthor = currentAuthorResponse.data;
                 dispatch({
-                    type: actions.ACCOUNT_AUTHOR_LOADED,
+                    type: actions.CURRENT_AUTHOR_LOADED,
                     payload: currentAuthor
                 });
 
                 // load repository author details
-                dispatch({type: actions.ACCOUNT_AUTHOR_DETAILS_LOADING});
+                dispatch({type: actions.CURRENT_AUTHOR_DETAILS_LOADING});
                 return get(routes.AUTHOR_DETAILS_API({userId: currentAuthor.aut_org_username}));
             })
             .then(authorDetailsResponse => {
                 dispatch({
-                    type: actions.ACCOUNT_AUTHOR_DETAILS_LOADED,
+                    type: actions.CURRENT_AUTHOR_DETAILS_LOADED,
                     payload: authorDetailsResponse
                 });
             })
             .catch(error => {
                 if (!account) {
-                    dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                    dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 } else if (!currentAuthor) {
                     console.log(error);
-                    dispatch({type: actions.ACCOUNT_AUTHOR_FAILED});
+                    dispatch({type: actions.CURRENT_AUTHOR_FAILED});
                 }
-                dispatch({type: actions.ACCOUNT_AUTHOR_DETAILS_FAILED});
+                dispatch({type: actions.CURRENT_AUTHOR_DETAILS_FAILED});
             });
     };
 }
@@ -66,7 +66,7 @@ export function loadCurrentAccount() {
 export function logout() {
     console.log('logout!!!');
     return dispatch => {
-        dispatch({type: actions.ACCOUNT_ANONYMOUS});
+        dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
     };
 }
 
