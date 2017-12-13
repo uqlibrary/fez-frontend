@@ -47,7 +47,7 @@ describe('Author identifier action creators', () => {
         ];
 
         const store = getMockStore();
-        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
+        return store.dispatch(authorIdentifierActions.linkAuthorOrcidId('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
     });
@@ -65,7 +65,7 @@ describe('Author identifier action creators', () => {
         ];
 
         const store = getMockStore();
-        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
+        return store.dispatch(authorIdentifierActions.linkAuthorOrcidId('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
     });
@@ -83,7 +83,7 @@ describe('Author identifier action creators', () => {
         ];
 
         const store = getMockStore();
-        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
+        return store.dispatch(authorIdentifierActions.linkAuthorOrcidId('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
     });
@@ -105,7 +105,7 @@ describe('Author identifier action creators', () => {
         ];
 
         const store = getMockStore();
-        return store.dispatch(authorIdentifierActions.requestAuthorOrcidInfo('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
+        return store.dispatch(authorIdentifierActions.linkAuthorOrcidId('testuser', 1234, {code: 'Uux34T', oricidToFezRedirectUrl: 'http://localhost'})).then(() => {
             expectStoreHasExpectedActions(store, expectedActions);
         });
     });

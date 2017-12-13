@@ -41,7 +41,7 @@ describe('Action creators for authors', () => {
         ];
 
         const store = getMockStore();
-        await store.dispatch(authors.updateCurrentAuthor(authorId, patchRequest))
+        await store.dispatch(authors.updateCurrentAuthor(authorId, patchRequest));
         expectStoreHasExpectedActions(store, expectedActions);
     });
 

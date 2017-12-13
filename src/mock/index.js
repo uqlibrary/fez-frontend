@@ -10,7 +10,7 @@ const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
 const escapeRegExp = (input) => (input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
 const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
-const requestOrcidQueryString = {code: '.*', oricidToFezRedirectUrl: '.*'}
+
 // set session cookie in mock mode
 Cookies.set(SESSION_COOKIE_NAME, 'abc123');
 
@@ -87,7 +87,7 @@ mock
         .reply(200, {data: {...mockData.record}})
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}))))
         .reply(200, 's3-ap-southeast-2.amazonaws.com')
-    .onGet(new RegExp(escapeRegExp(routes.AUTHOR_ORCID_DETAILS_API({userId: '.*', params: {...requestOrcidQueryString}}))))
+    .onGet(new RegExp(escapeRegExp(routes.AUTHOR_ORCID_DETAILS_API({userId: '.*', params: {code: '.*', redirUri: '.*'}}))))
         .reply(200, {data: {...mockData.authorOrcidDetails}})
         // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'})
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)

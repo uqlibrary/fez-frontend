@@ -145,13 +145,9 @@ module.exports = {
             __DEVELOPMENT__: true,
             'process.env.NODE_ENV': JSON.stringify('development'),
             'process.env.USE_MOCK': JSON.stringify(useMock),
-<<<<<<< HEAD
             'process.env.APP_URL': JSON.stringify(`http://${url}/`),
             'process.env.ORCID_URL': JSON.stringify(orcidUrl),
             'process.env.ORCID_CLIENT_ID': JSON.stringify(orcidClientId)
-=======
-            'process.env.APP_URL': JSON.stringify(`http://${url}/`)
->>>>>>> feature-google-scholar
         })
     ],
     resolve: {

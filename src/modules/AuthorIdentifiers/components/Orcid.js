@@ -1,59 +1,142 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Cookies from 'js-cookie';
-import {parse} from 'querystring';
 import {createHash} from 'crypto';
-
-import {routes} from 'config';
-import {locale} from 'locale';
-import {APP_URL, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from 'config/general';
+import {parse} from 'querystring';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
-import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
+
+import {ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL} from 'config/general';
+import {locale} from 'locale';
+import {routes} from 'config';
 
 export default class Orcid extends Component {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
-        history: PropTypes.object,
-        location: PropTypes.object,
-        actions: PropTypes.object
+        accountAuthorSaving: PropTypes.bool,
+        history: PropTypes.object.isRequired,
+        location: PropTypes.object.isRequired,
+        actions: PropTypes.object.isRequired
     };
 
     constructor(props) {
         super(props);
+
+        // when ORCID registration went through, and ORCID has redirected back to eSpace
+        // check status of ORCID redirec, if it's still in the same session (state)
+        // in prod/staging
+        // http://espace/path/to/page/?code=bOQpKB&state=5ea13ef0dad88453242fcc8f65a0f90a
+        // or in dev environment
+        // http://development/espace/branch/?code=bOQpKB&state=5ea13ef0dad88453242fcc8f65a0f90a#path/to/page/
+        const orcidSessionId = this.getOrcidSessionId(props.account);
+        const queryString = window.location.hash.indexOf('?') >= 0
+            ? window.location.hash.substr(window.location.hash.indexOf('?') + 1)
+            : window.location.search.substr(1);
+        const queryParams = parse(queryString);
+
         this.state = {
-            error: null
+            orcidParameters: {
+                client_id: ORCID_CLIENT_ID,
+                response_type: 'code',
+                scope: '/read-limited /activities/update /person/update',
+                redirect_uri: `${window.location.origin}${window.location.pathname}${window.location.hash}`,
+                state: orcidSessionId
+            },
+            existingOrcidParameters: {
+                show_login: false,
+                family_names: props.account.lastName,
+                given_names: props.account.firstName
+            },
+            newOrcidParameters: {
+                show_login: true
+            },
+            orcidResponse: {
+                code: queryParams.code || null,
+                state: queryParams.state || null
+            }
         };
     }
 
     componentDidMount() {
-        const {orcid} = locale.authorIdentifiers;
+        if(!this.isValidOrcidSession(this.props.account, this.state.orcidParameters.state, this.state.orcidResponse.state)) {
+            this.props.actions.showAppAlert(
+                {
+                    ...locale.pages.orcidLink.errorAlert,
+                    message: locale.pages.orcidLink.errorAlert.message('Invalid authorisation response from ORCID'),
+                    dismissAction: this.props.actions.dismissAppAlert
+                }
+            );
+        }
 
-        const queryParams = parse(window.location.search.substr(1));
+        // link author to orcid when oricd authorisation response is received from orcid website (url contains required parameters)
+        if (this.state.orcidResponse.code && this.state.orcidResponse.state && this.props.author && this.props.account
+            && this.state.orcidResponse.state === this.state.orcidParameters.state) {
+            console.log('componentDidMount - linkAuthorOrcidId()');
+            this.props.actions.linkAuthorOrcidId(
+                this.props.account.id,
+                this.props.author.aut_id,
+                this.state.orcidResponse.code
+            );
 
-        if (queryParams.code && queryParams.state && queryParams.state !== this.getState()) {
-            this.setError(orcid.stateErrorAlert);
+            // remove all query string by re-navigating
+            this.props.history.replace(routes.pathConfig.authorIdentifiers.orcid.link);
         }
     }
 
     componentWillReceiveProps(nextProps) {
-        const queryParams = parse(window.location.search.substr(1));
-        const {actions, account, author, location, history} = nextProps;
+        console.log('componentWillReceiveProps');
 
-        if (queryParams.code && author) {
-            actions.requestAuthorOrcidInfo(
-                account.id,
-                author.aut_id,
-                {
-                    code: queryParams.code,
-                    oricidToFezRedirectUrl: `${APP_URL}#${location.pathname}`
-                }
-            );
-            history.push(routes.pathConfig.dashboard);
+        // wait for used account to get loaded and set state
+        if (nextProps.account !== this.props.account) {
+            if (nextProps.account.id !== this.props.account.id) {
+                const orcidSessionId = this.getOrcidSessionId(nextProps.account);
+                this.setState({
+                    orcidParameters: {
+                        state: orcidSessionId
+                    },
+                    existingOrcidParameters: {
+                        family_names: nextProps.account ? nextProps.account.lastName : '',
+                        given_names: nextProps.account ? nextProps.account.firstName : ''
+                    }
+                });
+            }
+
+            if(!this.isValidOrcidSession(nextProps.account, this.state.orcidParameters.state, this.state.orcidResponse.state)) {
+                this.props.actions.showAppAlert(
+                    {
+                        ...locale.pages.orcidLink.errorAlert,
+                        message: locale.pages.orcidLink.errorAlert.message('Invalid token from ORCID'),
+                        dismissAction: this.props.actions.dismissAppAlert
+                    }
+                );
+            }
+        }
+
+        // author's orcid id has been updated, navigate back to dashboard and show success message
+        if (nextProps.author && this.props.author && nextProps.author.aut_orcid_id !== this.props.author.aut_orcid_id) {
+            console.log('componentWillReceiveProps - success');
+            this.props.actions.showAppAlert({
+                ...locale.pages.googleScholarLink.successAlert,
+                dismissAction: this.props.actions.dismissAppAlert
+            });
+            this.props.history.push(routes.pathConfig.dashboard);
+        } else if (this.props.accountAuthorSaving !== nextProps.accountAuthorSaving && !nextProps.accountAuthorSaving) {
+            // link author to orcid when orcid authorisation response is received from orcid website (url contains required parameters)
+            if (this.state.orcidResponse.code && this.state.orcidResponse.state && nextProps.author && nextProps.account
+                && this.state.orcidResponse.state === this.state.orcidParameters.state) {
+                console.log('componentWillReceiveProps - linkAuthorOrcidId()');
+                this.props.actions.linkAuthorOrcidId(
+                    nextProps.account.id,
+                    nextProps.author.aut_id,
+                    this.state.orcidResponse.code
+                );
+
+                // remove all query string by re-navigating
+                // this.props.history.replace(routes.pathConfig.authorIdentifiers.orcid.link);
+            }
         }
     }
 
@@ -61,60 +144,34 @@ export default class Orcid extends Component {
         this.authoriseConfirmationBox = ref;
     };
 
-    _showAuthoriseConfirmation = (orcidUrlGenerator) => {
-        const url = orcidUrlGenerator();
+    getOrcidUrl = (isNew = true) => {
+        const params = {
+            ...this.state.orcidParameters,
+            ...(isNew ? this.state.newOrcidParameters : this.state.existingOrcidParameters )
+        };
+        const stringifiedParams = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`).join('&');
+        return `${ORCID_AUTHORIZATION_URL}?${stringifiedParams}`;
+    };
+
+    getOrcidSessionId = (account) => {
+        return account ? createHash('md5').update(`${account.id}/${account.mail}/${(new Date()).setHours(0, 0, 0, 0)}`).digest('hex') : '';
+    };
+
+    isValidOrcidSession = (account, sessionId, receivedSessionId) => (
+        !account || !receivedSessionId || receivedSessionId === sessionId
+    );
+
+    _showAuthoriseConfirmation = (isNew = true) => {
+        const url = this.getOrcidUrl(isNew);
+        console.log(url);
         this.authoriseConfirmationBox._onAction = () => (window.location.assign(url));
         this.authoriseConfirmationBox.showConfirmation();
     };
 
-    _authoriseOrcid = () => {
-        return this.requestPermissionUrl(this.props.location.pathname, {show_login: true});
-    };
-
-    _createOrcid = () => {
-        const additionalParams = {
-            show_login: false,
-            family_names: this.props.account.lastName,
-            given_names: this.props.account.firstName
-        };
-        return this.requestPermissionUrl(this.props.location.pathname, additionalParams);
-    };
-
-    setError = (error) => {
-        this.setState({error: error});
-    };
-
-    getState = () => {
-        const sessionToken = Cookies.get(SESSION_COOKIE_NAME) || Cookies.get(TOKEN_NAME);
-        return createHash('md5').update(sessionToken).digest('hex');
-    };
-
-    requestPermissionUrl = (returnUrl, additionalParams = {}) => {
-        const params = {
-            client_id: ORCID_CLIENT_ID,
-            response_type: 'code',
-            redirect_uri: `${APP_URL}#${returnUrl}`,
-            state: this.getState(),
-            scope: '/read-limited /activities/update /person/update',
-            ...additionalParams
-        };
-
-        const stringifiedParams = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`).join('&');
-
-        return `${ORCID_AUTHORIZATION_URL}?${stringifiedParams}`;
-    };
-
-    _confirmLinkOrcid = () => {
-        return this._showAuthoriseConfirmation(this._authoriseOrcid);
-    };
-
-    _confirmCreateOrcid = () => {
-        return this._showAuthoriseConfirmation(this._createOrcid);
-    };
-
     render() {
         const txt = locale.pages.orcidLink;
-
+        console.log(this.state);
+        console.log(this.props);
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDialogBox
@@ -129,7 +186,7 @@ export default class Orcid extends Component {
                                 secondary
                                 fullWidth
                                 label={txt.linkOrcid.labels.submit}
-                                onTouchTap={this._confirmLinkOrcid}
+                                onTouchTap={this._showAuthoriseConfirmation}
                             />
                         </div>
                     </div>
@@ -143,16 +200,11 @@ export default class Orcid extends Component {
                                 secondary
                                 fullWidth
                                 label={txt.createOrcid.labels.submit}
-                                onTouchTap={this._confirmCreateOrcid}
+                                onTouchTap={this._showAuthoriseConfirmation.bind(this, false)}
                             />
                         </div>
                     </div>
                 </StandardCard>
-
-                {
-                    this.state.error &&
-                    <Alert {...this.state.error} />
-                }
             </StandardPage>
         );
     }

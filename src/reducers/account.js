@@ -6,6 +6,7 @@ export const initialState = {
     authorDetails: null,
     accountLoading: true,
     accountAuthorLoading: true,
+    accountAuthorSaving: false,
     accountAuthorDetailsLoading: true
 };
 
@@ -45,9 +46,20 @@ const handlers = {
         accountAuthorLoading: true
     }),
 
+    [actions.CURRENT_AUTHOR_SAVING]: (state) => ({
+        ...state,
+        accountAuthorSaving: true
+    }),
+
+    [actions.CURRENT_AUTHOR_SAVE_FAILED]: (state) => ({
+        ...state,
+        accountAuthorSaving: false
+    }),
+
     [actions.CURRENT_AUTHOR_SAVED]: (state, action) => ({
         ...state,
-        author: action.payload
+        author: action.payload,
+        accountAuthorSaving: false
     }),
 
     [actions.CURRENT_AUTHOR_DETAILS_FAILED]: (state) => ({
