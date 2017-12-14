@@ -131,27 +131,6 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        primaryText="Generic Document"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={202}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
         primaryText="Audio Document"
         targetOrigin={
           Object {
@@ -307,6 +286,27 @@ exports[`PublicationForm test should render component initialised with just one 
           }
         }
         value={316}
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+        primaryText="Generic Document"
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value={202}
       />
       <MenuItem
         anchorOrigin={
