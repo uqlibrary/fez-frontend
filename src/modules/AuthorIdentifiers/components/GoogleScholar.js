@@ -20,6 +20,13 @@ export default class GoogleScholar extends React.PureComponent {
         actions: PropTypes.object.isRequired
     };
 
+    componentWillMount() {
+        // user should have a fez-author record to proceed
+        if (!this.props.accountAuthorLoading && !this.props.author) {
+            this._navigateToDashboard();
+        }
+    }
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             // show app level alert on success
@@ -29,6 +36,11 @@ export default class GoogleScholar extends React.PureComponent {
             });
             this._navigateToDashboard();
         }
+    }
+
+    componentWillUnmount() {
+        // reset any saving state for current author on exit
+        this.props.actions.resetSavingAuthorState();
     }
 
     _handleKeyboardFormSubmit = (event) => {
@@ -42,7 +54,7 @@ export default class GoogleScholar extends React.PureComponent {
         this.props.history.push(routes.pathConfig.dashboard);
     };
 
-    getAlert = ({submitFailed = false, submitting = false, error, submitSucceeded = false, alertLocale = {}}) => {
+    getAlert = ({submitFailed = false, submitting = false, error, alertLocale = {}}) => {
         let alertProps = null;
         if (submitFailed && error) {
             alertProps = {
@@ -53,14 +65,13 @@ export default class GoogleScholar extends React.PureComponent {
             };
         } else if (submitting) {
             alertProps = {...alertLocale.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...alertLocale.successAlert};
         }
         return alertProps ? (<Alert {...alertProps} />) : null;
     };
 
     render() {
-        // wait for account details to be loaded
+        // wait for author details to be loaded
+        // wait for author details to be loaded
         if(this.props.accountAuthorLoading || !this.props.author) {
             return (<div />);
         }

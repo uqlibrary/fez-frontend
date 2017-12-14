@@ -6,13 +6,18 @@ export const initialState = {
     authorDetails: null,
     accountLoading: true,
     accountAuthorLoading: true,
-    accountAuthorSaving: false,
     accountAuthorDetailsLoading: true
+};
+
+export const initSavingState = {
+    accountAuthorSaving: false,
+    accountAuthorError: null
 };
 
 const handlers = {
     [actions.CURRENT_ACCOUNT_LOADING]: () => ({
-        ...initialState
+        ...initialState,
+        ...initSavingState
     }),
 
     [actions.CURRENT_ACCOUNT_LOADED]: (state, action) => ({
@@ -23,6 +28,7 @@ const handlers = {
 
     [actions.CURRENT_ACCOUNT_ANONYMOUS]: () => ({
         ...initialState,
+        ...initSavingState,
         accountLoading: false,
         accountAuthorLoading: false,
         accountAuthorDetailsLoading: false
@@ -48,18 +54,26 @@ const handlers = {
 
     [actions.CURRENT_AUTHOR_SAVING]: (state) => ({
         ...state,
-        accountAuthorSaving: true
+        accountAuthorSaving: true,
+        accountAuthorError: null
     }),
 
-    [actions.CURRENT_AUTHOR_SAVE_FAILED]: (state) => ({
+    [actions.CURRENT_AUTHOR_SAVE_FAILED]: (state, action) => ({
         ...state,
-        accountAuthorSaving: false
+        accountAuthorSaving: false,
+        accountAuthorError: action.payload
+    }),
+
+    [actions.CURRENT_AUTHOR_SAVE_RESET]: (state) => ({
+        ...state,
+        ...initSavingState
     }),
 
     [actions.CURRENT_AUTHOR_SAVED]: (state, action) => ({
         ...state,
         author: action.payload,
-        accountAuthorSaving: false
+        accountAuthorSaving: false,
+        accountAuthorError: null
     }),
 
     [actions.CURRENT_AUTHOR_DETAILS_FAILED]: (state) => ({

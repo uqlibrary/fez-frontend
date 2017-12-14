@@ -14,9 +14,9 @@ exports[`Component GoogleScholar  should display submission error if saving fail
           "buttonLabel": "OK",
           "text": <div>
             <h3>
-              How to create the profile?
+              How to create Google Scholar profile?
             </h3>
-            <ul>
+            <ol>
               <li>
                 Sign to your Google account, or create one if you don't have one.
               </li>
@@ -32,9 +32,9 @@ exports[`Component GoogleScholar  should display submission error if saving fail
               <li>
                 Finally, you will see your profile.Once you are satisfied with the results, make your profile public.
               </li>
-            </ul>
+            </ol>
           </div>,
-          "title": "Google identifier help",
+          "title": "About Google Scholar",
         }
       }
       title="Add your Google Scholar identifier"
@@ -136,9 +136,9 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
           "buttonLabel": "OK",
           "text": <div>
             <h3>
-              How to create the profile?
+              How to create Google Scholar profile?
             </h3>
-            <ul>
+            <ol>
               <li>
                 Sign to your Google account, or create one if you don't have one.
               </li>
@@ -154,9 +154,9 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
               <li>
                 Finally, you will see your profile.Once you are satisfied with the results, make your profile public.
               </li>
-            </ul>
+            </ol>
           </div>,
-          "title": "Google identifier help",
+          "title": "About Google Scholar",
         }
       }
       title="Add your Google Scholar identifier"
@@ -259,9 +259,9 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
           "buttonLabel": "OK",
           "text": <div>
             <h3>
-              How to create the profile?
+              How to create Google Scholar profile?
             </h3>
-            <ul>
+            <ol>
               <li>
                 Sign to your Google account, or create one if you don't have one.
               </li>
@@ -277,9 +277,9 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
               <li>
                 Finally, you will see your profile.Once you are satisfied with the results, make your profile public.
               </li>
-            </ul>
+            </ol>
           </div>,
-          "title": "Google identifier help",
+          "title": "About Google Scholar",
         }
       }
       title="Add your Google Scholar identifier"
@@ -375,9 +375,9 @@ exports[`Component GoogleScholar  should render form if author has google schola
           "buttonLabel": "OK",
           "text": <div>
             <h3>
-              How to create the profile?
+              How to create Google Scholar profile?
             </h3>
-            <ul>
+            <ol>
               <li>
                 Sign to your Google account, or create one if you don't have one.
               </li>
@@ -393,9 +393,9 @@ exports[`Component GoogleScholar  should render form if author has google schola
               <li>
                 Finally, you will see your profile.Once you are satisfied with the results, make your profile public.
               </li>
-            </ul>
+            </ol>
           </div>,
-          "title": "Google identifier help",
+          "title": "About Google Scholar",
         }
       }
       title="Update your Google Scholar identifier"

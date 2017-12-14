@@ -7,16 +7,18 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 
-import {ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL} from 'config/general';
 import {locale} from 'locale';
-import {routes} from 'config';
+import {routes, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL} from 'config';
 
 export default class Orcid extends Component {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
+        accountAuthorLoading: PropTypes.bool,
         accountAuthorSaving: PropTypes.bool,
+        accountAuthorError: PropTypes.string,
         history: PropTypes.object.isRequired,
         location: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
@@ -26,31 +28,31 @@ export default class Orcid extends Component {
         super(props);
 
         // when ORCID registration went through, and ORCID has redirected back to eSpace
-        // check status of ORCID redirec, if it's still in the same session (state)
+        // check status of ORCID redirect, if it's still in the same session (state)
         // in prod/staging
         // http://espace/path/to/page/?code=bOQpKB&state=5ea13ef0dad88453242fcc8f65a0f90a
         // or in dev environment
         // http://development/espace/branch/?code=bOQpKB&state=5ea13ef0dad88453242fcc8f65a0f90a#path/to/page/
-        const orcidSessionId = this.getOrcidSessionId(props.account);
+        const orcidStateId = this.createOrcidStateId(props.account);
         const queryString = window.location.hash.indexOf('?') >= 0
             ? window.location.hash.substr(window.location.hash.indexOf('?') + 1)
             : window.location.search.substr(1);
         const queryParams = parse(queryString);
 
         this.state = {
-            orcidParameters: {
+            orcidRequest: {
                 client_id: ORCID_CLIENT_ID,
                 response_type: 'code',
                 scope: '/read-limited /activities/update /person/update',
                 redirect_uri: `${window.location.origin}${window.location.pathname}${window.location.hash}`,
-                state: orcidSessionId
+                state: orcidStateId
             },
-            existingOrcidParameters: {
+            existingOrcidRequest: {
                 show_login: false,
                 family_names: props.account.lastName,
                 given_names: props.account.firstName
             },
-            newOrcidParameters: {
+            createOrcidRequest: {
                 show_login: true
             },
             orcidResponse: {
@@ -60,85 +62,77 @@ export default class Orcid extends Component {
         };
     }
 
-    componentDidMount() {
-        if(!this.isValidOrcidSession(this.props.account, this.state.orcidParameters.state, this.state.orcidResponse.state)) {
-            this.props.actions.showAppAlert(
-                {
-                    ...locale.pages.orcidLink.errorAlert,
-                    message: locale.pages.orcidLink.errorAlert.message('Invalid authorisation response from ORCID'),
-                    dismissAction: this.props.actions.dismissAppAlert
-                }
-            );
+    componentWillMount() {
+        // user should have a fez-author record to proceed
+        // user should not be able to re-link to orcid if they already have an orcid id
+        if (!this.props.accountAuthorLoading && (!this.props.author || this.props.author.aut_orcid_id)) {
+            this._navigateToDashboard();
         }
+    }
 
-        // link author to orcid when oricd authorisation response is received from orcid website (url contains required parameters)
-        if (this.state.orcidResponse.code && this.state.orcidResponse.state && this.props.author && this.props.account
-            && this.state.orcidResponse.state === this.state.orcidParameters.state) {
-            console.log('componentDidMount - linkAuthorOrcidId()');
+    componentDidMount() {
+        // link author to orcid when orcid authorisation response is received from orcid website (url contains required parameters)
+        if(this.props.account && this.props.author && !this.props.author.aut_orcid_id && this.state.orcidResponse.code && this.state.orcidResponse.state
+            && this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)) {
             this.props.actions.linkAuthorOrcidId(
                 this.props.account.id,
                 this.props.author.aut_id,
                 this.state.orcidResponse.code
             );
-
-            // remove all query string by re-navigating
-            this.props.history.replace(routes.pathConfig.authorIdentifiers.orcid.link);
         }
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('componentWillReceiveProps');
-
-        // wait for used account to get loaded and set state
-        if (nextProps.account !== this.props.account) {
-            if (nextProps.account.id !== this.props.account.id) {
-                const orcidSessionId = this.getOrcidSessionId(nextProps.account);
-                this.setState({
-                    orcidParameters: {
-                        state: orcidSessionId
-                    },
-                    existingOrcidParameters: {
-                        family_names: nextProps.account ? nextProps.account.lastName : '',
-                        given_names: nextProps.account ? nextProps.account.firstName : ''
-                    }
-                });
-            }
-
-            if(!this.isValidOrcidSession(nextProps.account, this.state.orcidParameters.state, this.state.orcidResponse.state)) {
-                this.props.actions.showAppAlert(
-                    {
-                        ...locale.pages.orcidLink.errorAlert,
-                        message: locale.pages.orcidLink.errorAlert.message('Invalid token from ORCID'),
-                        dismissAction: this.props.actions.dismissAppAlert
-                    }
-                );
-            }
+        // wait for user account to get loaded and set state if props were not available in constructor
+        if (nextProps.account !== this.props.account && nextProps.account.id !== this.props.account.id) {
+            const orcidStateId = this.createOrcidStateId(nextProps.account);
+            this.setState({
+                orcidRequest: {
+                    state: orcidStateId
+                },
+                existingOrcidRequest: {
+                    family_names: nextProps.account ? nextProps.account.lastName : '',
+                    given_names: nextProps.account ? nextProps.account.firstName : ''
+                }
+            });
         }
 
-        // author's orcid id has been updated, navigate back to dashboard and show success message
+        // user should have a fez-author record to proceed
+        // user should not be able to re-link to orcid if they already have an orcid id
+        if (nextProps.author !== this.props.author && (!nextProps.accountAuthorLoading && !nextProps.author || nextProps.author.aut_orcid_id)) {
+            this._navigateToDashboard();
+        }
+
+        // author's orcid id has been updated successfully
         if (nextProps.author && this.props.author && nextProps.author.aut_orcid_id !== this.props.author.aut_orcid_id) {
-            console.log('componentWillReceiveProps - success');
             this.props.actions.showAppAlert({
                 ...locale.pages.googleScholarLink.successAlert,
                 dismissAction: this.props.actions.dismissAppAlert
             });
-            this.props.history.push(routes.pathConfig.dashboard);
-        } else if (this.props.accountAuthorSaving !== nextProps.accountAuthorSaving && !nextProps.accountAuthorSaving) {
-            // link author to orcid when orcid authorisation response is received from orcid website (url contains required parameters)
-            if (this.state.orcidResponse.code && this.state.orcidResponse.state && nextProps.author && nextProps.account
-                && this.state.orcidResponse.state === this.state.orcidParameters.state) {
-                console.log('componentWillReceiveProps - linkAuthorOrcidId()');
-                this.props.actions.linkAuthorOrcidId(
-                    nextProps.account.id,
-                    nextProps.author.aut_id,
-                    this.state.orcidResponse.code
-                );
+            this._navigateToDashboard();
+        }
 
-                // remove all query string by re-navigating
-                // this.props.history.replace(routes.pathConfig.authorIdentifiers.orcid.link);
-            }
+        // link author to orcid when orcid authorisation response is received from orcid website (if props.author were not available in componentDidMount)
+        if (this.props.account && !nextProps.accountAuthorLoading
+            && (nextProps.author !== this.props.author || (nextProps.author && this.props.author.aut_id !== nextProps.author.aut_id))
+            && !nextProps.author.aut_orcid_id && this.state.orcidResponse.code && this.state.orcidResponse.state
+            && this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)) {
+            this.props.actions.linkAuthorOrcidId(
+                nextProps.account.id,
+                nextProps.author.aut_id,
+                this.state.orcidResponse.code
+            );
         }
     }
+
+    componentWillUnmount() {
+        // reset any saving state for current author on exit
+        this.props.actions.resetSavingAuthorState();
+    }
+
+    _navigateToDashboard = () => {
+        this.props.history.push(routes.pathConfig.dashboard);
+    };
 
     _setAuthoriseConfirmation = (ref) => {
         this.authoriseConfirmationBox = ref;
@@ -146,37 +140,66 @@ export default class Orcid extends Component {
 
     getOrcidUrl = (isNew = true) => {
         const params = {
-            ...this.state.orcidParameters,
-            ...(isNew ? this.state.newOrcidParameters : this.state.existingOrcidParameters )
+            ...this.state.orcidRequest,
+            ...(isNew ? this.state.createOrcidRequest : this.state.existingOrcidRequest )
         };
         const stringifiedParams = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`).join('&');
         return `${ORCID_AUTHORIZATION_URL}?${stringifiedParams}`;
     };
 
-    getOrcidSessionId = (account) => {
+    createOrcidStateId = (account) => {
         return account ? createHash('md5').update(`${account.id}/${account.mail}/${(new Date()).setHours(0, 0, 0, 0)}`).digest('hex') : '';
     };
 
-    isValidOrcidSession = (account, sessionId, receivedSessionId) => (
+    isValidOrcidState = (account, sessionId, receivedSessionId) => (
         !account || !receivedSessionId || receivedSessionId === sessionId
     );
 
     _showAuthoriseConfirmation = (isNew = true) => {
         const url = this.getOrcidUrl(isNew);
-        console.log(url);
         this.authoriseConfirmationBox._onAction = () => (window.location.assign(url));
         this.authoriseConfirmationBox.showConfirmation();
     };
 
+    getAlert = ({submitFailed = false, submitting = false, error, alertLocale = {}}) => {
+        let alertProps = null;
+        if (submitFailed && error) {
+            alertProps = {
+                ...alertLocale.errorAlert,
+                message: alertLocale.errorAlert.message
+                    ? alertLocale.errorAlert.message(error)
+                    : error
+            };
+        } else if (submitting) {
+            alertProps = {...alertLocale.progressAlert};
+        }
+        return alertProps ? (<Alert {...alertProps} />) : null;
+    };
+
     render() {
+        // wait for author details to be loaded
+        if(this.props.accountAuthorLoading || !this.props.author) {
+            return (<div />);
+        }
+
         const txt = locale.pages.orcidLink;
-        console.log(this.state);
-        console.log(this.props);
+        const isValidOrcidState = this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state);
+
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDialogBox
                     onRef={this._setAuthoriseConfirmation}
                     locale={txt.grantAccessConfirmation} />
+
+                {
+                    this.getAlert({
+                        submitFailed: !!this.props.accountAuthorError || !isValidOrcidState,
+                        error: !isValidOrcidState ? locale.pages.orcidLink.errorAlert.orcidStateError : this.props.accountAuthorError,
+                        submitting: this.props.accountAuthorSaving,
+                        alertLocale: txt
+                    })
+                }
+
                 <StandardCard title={txt.linkOrcid.title}>
                     <div>{txt.linkOrcid.description}</div>
                     <div className="columns action-buttons">
@@ -185,12 +208,14 @@ export default class Orcid extends Component {
                             <RaisedButton
                                 secondary
                                 fullWidth
+                                disabled={this.props.accountAuthorSaving}
                                 label={txt.linkOrcid.labels.submit}
                                 onTouchTap={this._showAuthoriseConfirmation}
                             />
                         </div>
                     </div>
                 </StandardCard>
+
                 <StandardCard title={txt.createOrcid.title}>
                     <div>{txt.createOrcid.description}</div>
                     <div className="columns action-buttons">
@@ -199,6 +224,7 @@ export default class Orcid extends Component {
                             <RaisedButton
                                 secondary
                                 fullWidth
+                                disabled={this.props.accountAuthorSaving}
                                 label={txt.createOrcid.labels.submit}
                                 onTouchTap={this._showAuthoriseConfirmation.bind(this, false)}
                             />

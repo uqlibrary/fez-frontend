@@ -58,42 +58,38 @@ exports[`MyRecords test renders list of publications 1`] = `
         }
         text={
           <div>
-            <div>
-              Add to this list by 
-              <a
-                href="/records/possible"
-              >
-                claiming a publication
-              </a>
-               or 
-              <a
-                href="/records/add/find"
-              >
-                adding a missing publication
-              </a>
-              .
-            </div>
+            Add to this list by 
+            <a
+              href="/records/possible"
+            >
+              claiming a publication
+            </a>
+             or 
+            <a
+              href="/records/add/find"
+            >
+              adding a missing publication
+            </a>
+            .
           </div>
         }
         title="My research"
       >
         <div>
           <div>
-            <div>
-              Add to this list by 
-              <a
-                href="/records/possible"
-              >
-                claiming a publication
-              </a>
-               or 
-              <a
-                href="/records/add/find"
-              >
-                adding a missing publication
-              </a>
-              .
-            </div>
+            Add to this list by 
+            <a
+              href="/records/possible"
+            >
+              claiming a publication
+            </a>
+             or 
+            <a
+              href="/records/add/find"
+            >
+              adding a missing publication
+            </a>
+            .
           </div>
         </div>
         <PublicationsListSorting

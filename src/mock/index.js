@@ -7,7 +7,7 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, { delayResponse: 200 });
+const mock = new MockAdapter(api, { delayResponse: 1200 });
 const escapeRegExp = (input) => (input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, "\\$&"));
 const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 
@@ -22,7 +22,8 @@ if (user && !mockData.accounts[user]) {
 }
 
 // default user is researcher if user is not defined
-user = user || 'uqresearcher';
+// user = user || 'uqresearcher';
+user = user || 'uqnoauthid';
 
 mock
     .onGet(new RegExp(escapeRegExp(routes.CURRENT_ACCOUNT_API()).replace(/\?.*$/,'.*'))).reply(config => {
@@ -34,7 +35,6 @@ mock
     .onGet(new RegExp(escapeRegExp(routes.AUTHOR_DETAILS_API({userId: user})))).reply(config => {
         // mock current author details
         if (user === 'anon') return [403, {}];
-        console.log(mockData.authorDetails[user]);
         if (mockData.authorDetails[user]) return [200, mockData.authorDetails[user]];
         return [404, {}];
     })
@@ -89,13 +89,13 @@ mock
         .reply(200, 's3-ap-southeast-2.amazonaws.com')
     .onGet(new RegExp(escapeRegExp(routes.AUTHOR_ORCID_DETAILS_API({userId: '.*', params: {code: '.*', redirUri: '.*'}}))))
         .reply(200, {data: {...mockData.authorOrcidDetails}})
-        // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'})
+        // .reply(500, {message: 'error - failed AUTHOR_ORCID_DETAILS_API'})
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
         .reply(200, {data: {}})
         // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'})
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}))))
-        // .reply(200, {data: ''})
-        .reply(500, {message: 'error - failed POST RECORDS_ISSUES_API'})
+        .reply(200, {data: ''})
+        // .reply(500, {message: 'error - failed POST RECORDS_ISSUES_API'})
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API())))
         .reply(200, {data: {...mockData.record}})
         // .reply(500, {message: 'error - failed POST NEW_RECORD_API'})

@@ -11,7 +11,12 @@ function processError(error, resolve, reject) {
         && (error.response.status === 403 || error.response.status === 404
             || error.response.status === 500 || error.response.status === 422
             || error.response.status === 504)) {
-        reject({status: error.response.status, message: error.response.message});
+        reject({
+            status: error.response.status,
+            message: error.response.data
+                ? error.response.data.message
+                : 'Request error with status code ' + error.response.status
+        });
     } else {
         reject(error);
     }
@@ -33,9 +38,7 @@ export function put(apiUrl, data, options, encodeUrl = false) {
                 resolve(response.data);
             })
             .catch(error => {
-                console.log('PUT api call error');
-                console.log(error);
-                reject(error);
+                processError(error, resolve, reject);
             });
     });
 }
@@ -57,7 +60,7 @@ export function post(apiUrl, data) {
                 resolve(response.data);
             })
             .catch(error => {
-                reject(error);
+                processError(error, resolve, reject);
             });
     });
 }
@@ -76,7 +79,7 @@ export function patch(apiUrl, data) {
             console.log(response.data);
             resolve(response.data);
         }).catch(error => {
-            reject(error);
+            processError(error, resolve, reject);
         });
     });
 }

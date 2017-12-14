@@ -263,24 +263,24 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
     };
 };
 
-/* getAuthorIdentifierPatchRequest - returns author patch request to update author identifier
-* @param {string} authorIdentifierType - 'orcid', 'google_scholar', etc defined in config/general.js
-* @param {string} userId - fez-authors id (eg 1671)
-* @param {string} identifierId - new author identifier id
+/*
+* getAuthorIdentifierOrcidPatchRequest - returns author patch request to update author identifier with new orcid id
+* @param {string} authorId - fez-authors id (eg 1671)
+* @param {string} orcidId - new orcid id
 * @param {object} additional data
 * @returns {Object} formatted for author patch request
 */
-export const getAuthorIdentifierPatchRequest = (authorIdentifier, userId, identifierId, data = null) => {
-    if (!authorIdentifier) return {};
+export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = null) => {
+    if (!authorId) return {};
 
-    const patchData = {
-        aut_id: userId,
-        [authorIdentifier.searchKey]: identifierId
+    const patchRequest = {
+        aut_id: authorId,
+        aut_orcid_id: orcidId
     };
 
     // additional data is set for ORCID
-    if (authorIdentifier.name === 'orcid' && data) {
-        patchData.fez_author_identifier_user_grants = {
+    if (orcidId && data) {
+        patchRequest.fez_author_identifier_user_grants = {
             aig_name: data.scope,
             aig_expires: data.expires_in,
             aig_details: data.access_token,
@@ -288,5 +288,5 @@ export const getAuthorIdentifierPatchRequest = (authorIdentifier, userId, identi
         };
     }
 
-    return patchData;
+    return patchRequest;
 };

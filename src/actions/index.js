@@ -8,4 +8,3 @@ export * from './publications';
 export * from './claimPublications';
 export * from './fixRecord';
 export * from './controlledVocabularies';
-export * from './authorIdentifiers';

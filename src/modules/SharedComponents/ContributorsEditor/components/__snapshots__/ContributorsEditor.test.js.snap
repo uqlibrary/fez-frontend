@@ -37,8 +37,10 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
         <ContributorForm
           actions={
             Object {
-              "loadAuthorDetails": [Function],
+              "linkAuthorOrcidId": [Function],
+              "resetSavingAuthorState": [Function],
               "searchAuthors": [Function],
+              "updateCurrentAuthor": [Function],
             }
           }
           authorsList={Array []}
@@ -1675,8 +1677,10 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
         <ContributorForm
           actions={
             Object {
-              "loadAuthorDetails": [Function],
+              "linkAuthorOrcidId": [Function],
+              "resetSavingAuthorState": [Function],
               "searchAuthors": [Function],
+              "updateCurrentAuthor": [Function],
             }
           }
           authorsList={Array []}

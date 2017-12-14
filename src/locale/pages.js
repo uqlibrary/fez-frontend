@@ -600,7 +600,8 @@ export default {
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`)
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
+                orcidStateError: 'Invalid authorisation state response from ORCID. '
             },
             successAlert: {
                 type: 'done',

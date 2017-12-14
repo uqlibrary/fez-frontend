@@ -275,18 +275,6 @@ export const thesisSubtypes = [
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
 
-export const AUTHOR_IDENTIFIER_ORCID = 'orcid';
-export const AUTHOR_IDENTIFIER_SCOPUS = 'scopus';
-export const AUTHOR_IDENTIFIER_GOOGLE_SCHOLAR = 'google_scholar';
-export const AUTHOR_IDENTIFIER_RESEARCHER_ID = 'reseracher';
-
-export const authorIdentifierKeys = {
-    [AUTHOR_IDENTIFIER_ORCID]: 'aut_orcid_id',
-    [AUTHOR_IDENTIFIER_SCOPUS]: 'aut_scopus_id',
-    [AUTHOR_IDENTIFIER_GOOGLE_SCHOLAR]: 'aut_google_scholar_id',
-    [AUTHOR_IDENTIFIER_RESEARCHER_ID]: 'aut_researcher_id'
-};
-
 export const authorIdentifierLinks = {
     linkedUrl: {
         publons: 'https://publons.com/author/',
