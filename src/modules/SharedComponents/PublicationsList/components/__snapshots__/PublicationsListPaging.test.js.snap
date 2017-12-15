@@ -108,6 +108,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       className="page selectedPage"
       disabled={true}
       fullWidth={false}
+      key="0"
       label={1}
       labelPosition="after"
       labelStyle={Object {}}
@@ -123,6 +124,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       className="page"
       disabled={false}
       fullWidth={false}
+      key="1"
       label={2}
       labelPosition="after"
       labelStyle={Object {}}
@@ -138,6 +140,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       className="page"
       disabled={false}
       fullWidth={false}
+      key="2"
       label={3}
       labelPosition="after"
       labelStyle={Object {}}
@@ -270,6 +273,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       className="page"
       disabled={false}
       fullWidth={false}
+      key="0"
       label={1}
       labelPosition="after"
       labelStyle={Object {}}
@@ -285,6 +289,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       className="page"
       disabled={false}
       fullWidth={false}
+      key="1"
       label={2}
       labelPosition="after"
       labelStyle={Object {}}
@@ -300,6 +305,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       className="page selectedPage"
       disabled={true}
       fullWidth={false}
+      key="2"
       label={3}
       labelPosition="after"
       labelStyle={Object {}}
@@ -432,6 +438,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       className="page"
       disabled={false}
       fullWidth={false}
+      key="0"
       label={1}
       labelPosition="after"
       labelStyle={Object {}}
@@ -447,6 +454,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       className="page selectedPage"
       disabled={true}
       fullWidth={false}
+      key="1"
       label={2}
       labelPosition="after"
       labelStyle={Object {}}
@@ -462,6 +470,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       className="page"
       disabled={false}
       fullWidth={false}
+      key="2"
       label={3}
       labelPosition="after"
       labelStyle={Object {}}

@@ -654,6 +654,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                   }
                 >
                   <div
+                    key="::before"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -779,6 +780,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                         type="button"
                       >
                         <NavigationArrowDropDown
+                          key=".0"
                           style={
                             Object {
                               "color": "rgba(0, 0, 0, 0.3)",
@@ -840,6 +842,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                     }
                   />
                   <div
+                    key="::after"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -2026,6 +2029,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                   }
                 >
                   <div
+                    key="::before"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -2153,6 +2157,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                         <TouchRipple
                           abortOnScroll={true}
                           centerRipple={true}
+                          key="touchRipple"
                         >
                           <div
                             onMouseDown={[Function]}
@@ -2162,6 +2167,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                             onTouchStart={[Function]}
                           >
                             <NavigationArrowDropDown
+                              key=".0"
                               style={
                                 Object {
                                   "fill": "inherit",
@@ -2220,6 +2226,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                     }
                   />
                   <div
+                    key="::after"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -3410,6 +3417,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                   }
                 >
                   <div
+                    key="::before"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -3537,6 +3545,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                         <TouchRipple
                           abortOnScroll={true}
                           centerRipple={true}
+                          key="touchRipple"
                         >
                           <div
                             onMouseDown={[Function]}
@@ -3546,6 +3555,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                             onTouchStart={[Function]}
                           >
                             <NavigationArrowDropDown
+                              key=".0"
                               style={
                                 Object {
                                   "fill": "inherit",
@@ -3604,6 +3614,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                     }
                   />
                   <div
+                    key="::after"
                     style={
                       Object {
                         "boxSizing": "border-box",

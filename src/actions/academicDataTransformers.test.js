@@ -1,6 +1,4 @@
-import React from 'react';
 import * as transformers from './academicDataTransformers';
-import {APP_URL} from 'config';
 
 describe('Academic data transformers ', () => {
     describe('getPublicationsPerType test', () => {

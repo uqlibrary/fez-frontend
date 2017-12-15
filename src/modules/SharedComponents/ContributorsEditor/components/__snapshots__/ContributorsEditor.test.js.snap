@@ -1609,6 +1609,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           }
                         >
                           <span
+                            key="labelElement"
                             style={
                               Object {
                                 "color": "rgba(0, 0, 0, 0.3)",
@@ -4774,6 +4775,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           }
                         >
                           <span
+                            key="labelElement"
                             style={
                               Object {
                                 "color": "rgba(0, 0, 0, 0.3)",

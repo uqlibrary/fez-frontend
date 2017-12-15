@@ -40,7 +40,10 @@ function setup({possiblePublicationsList, loadingPossiblePublicationsList, loadi
         account: account || {id: 12345},
         author: author || {aut_id: 12344},
         accountLoading: accountLoading || false,
-        actions: actions || {},
+        actions: {
+            searchPossiblyYourPublications: jest.fn(),
+            ...actions
+        },
         history: history || { push : jest.fn()}
     };
 

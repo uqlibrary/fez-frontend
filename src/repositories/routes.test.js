@@ -1,4 +1,3 @@
-import React from 'react';
 import * as routes from './routes';
 
 describe('Backend routes method', () => {

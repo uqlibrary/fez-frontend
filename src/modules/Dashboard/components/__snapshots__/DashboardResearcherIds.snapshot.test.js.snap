@@ -6,6 +6,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
 >
   <div
     className="column is-narrow researchIdAvatar error"
+    key="0"
   >
     <ExternalLink
       className="researcherIDlink"
@@ -23,6 +24,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   </div>
   <div
     className="column is-narrow researchIdAvatar error"
+    key="1"
   >
     <ExternalLink
       className="researcherIDlink"
@@ -40,6 +42,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   </div>
   <div
     className="column is-narrow researchIdAvatar error"
+    key="2"
   >
     <ExternalLink
       className="researcherIDlink"
@@ -57,6 +60,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   </div>
   <div
     className="column is-narrow researchIdAvatar error"
+    key="3"
   >
     <a
       onClick={[Function]}
@@ -71,6 +75,7 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
   </div>
   <div
     className="column is-narrow researchIdAvatar error"
+    key="4"
   >
     <ExternalLink
       className="researcherIDlink"

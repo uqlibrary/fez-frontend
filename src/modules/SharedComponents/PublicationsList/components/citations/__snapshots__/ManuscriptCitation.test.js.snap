@@ -668,6 +668,7 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Hayes, Edward Leo, 1889-1967"

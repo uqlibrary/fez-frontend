@@ -838,6 +838,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Dickson, Michael"
@@ -850,6 +851,7 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=" and "
           suffix=""
           value="Francis, Mara"
@@ -1749,6 +1751,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Dickson, Michael"
@@ -1761,6 +1764,7 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=" and "
           suffix=""
           value="Francis, Mara"

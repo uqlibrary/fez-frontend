@@ -8,7 +8,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "8.0.0",
-    "babel-jest": "21.0.2",
+    "babel-jest": "^21.0.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-dynamic-import-node": "^1.2.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -26,8 +26,9 @@
     "chromedriver": "^2.33.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
-    "enzyme": "^2.9.1",
-    "enzyme-to-json": "^1.6.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "enzyme-to-json": "^3.3.0",
     "eslint": "^4.11.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
@@ -186,6 +187,9 @@
     },
     "transformIgnorePatterns": [
       "<roodDir>/node_modules/(?!uqlibrary-react-toolbox)"
+    ],
+    "setupFiles": [
+      "./src/test.setup.js"
     ]
   }
 }

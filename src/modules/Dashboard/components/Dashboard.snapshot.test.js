@@ -33,7 +33,13 @@ function setup(
         publicationsList: publicationsList,
         loadingPublicationsStats: loadingPublicationsStats || false,
         publicationsStats: publicationsStats,
-        actions: {},
+        actions: {
+            countPossiblyYourPublications: jest.fn(),
+            loadAuthorPublicationsStats: jest.fn(),
+            searchLatestPublications: jest.fn(),
+            searchTrendingPublications: jest.fn(),
+            loadAuthorPublicationsByYear: jest.fn()
+        },
         history: {}
     };
     return shallow(<Dashboard {...props} />);

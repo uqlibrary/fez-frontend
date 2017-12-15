@@ -1124,6 +1124,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Parks, Donovan H."
@@ -1137,6 +1138,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Imelfort, Michael"
@@ -1150,6 +1152,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Skennerton, Connor T."
@@ -1163,6 +1166,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=""
           suffix=", "
           value="Hugenholtz, Philip"
@@ -1176,6 +1180,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_5"
           prefix=" and "
           suffix=""
           value="Tyson, Gene W."
@@ -2445,6 +2450,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Parks, Donovan H."
@@ -2458,6 +2464,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Imelfort, Michael"
@@ -2471,6 +2478,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Skennerton, Connor T."
@@ -2484,6 +2492,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=""
           suffix=", "
           value="Hugenholtz, Philip"
@@ -2497,6 +2506,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_5"
           prefix=" and "
           suffix=""
           value="Tyson, Gene W."
@@ -3762,6 +3772,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Parks, Donovan H."
@@ -3775,6 +3786,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Imelfort, Michael"
@@ -3788,6 +3800,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Skennerton, Connor T."
@@ -3801,6 +3814,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=""
           suffix=", "
           value="Hugenholtz, Philip"
@@ -3814,6 +3828,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_5"
           prefix=" and "
           suffix=""
           value="Tyson, Gene W."
@@ -6262,6 +6277,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Parks, Donovan H."
@@ -6275,6 +6291,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Imelfort, Michael"
@@ -6288,6 +6305,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Skennerton, Connor T."
@@ -6301,6 +6319,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=""
           suffix=", "
           value="Hugenholtz, Philip"
@@ -6314,6 +6333,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_5"
           prefix=" and "
           suffix=""
           value="Tyson, Gene W."
@@ -7569,6 +7589,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Parks, Donovan H."
@@ -7582,6 +7603,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Imelfort, Michael"
@@ -7595,6 +7617,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Skennerton, Connor T."
@@ -7608,6 +7631,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=""
           suffix=", "
           value="Hugenholtz, Philip"
@@ -7621,6 +7645,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_5"
           prefix=" and "
           suffix=""
           value="Tyson, Gene W."
@@ -8816,6 +8841,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Parks, Donovan H."
@@ -8829,6 +8855,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Imelfort, Michael"
@@ -8842,6 +8869,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Skennerton, Connor T."
@@ -8855,6 +8883,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=""
           suffix=", "
           value="Hugenholtz, Philip"
@@ -8868,6 +8897,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_5"
           prefix=" and "
           suffix=""
           value="Tyson, Gene W."

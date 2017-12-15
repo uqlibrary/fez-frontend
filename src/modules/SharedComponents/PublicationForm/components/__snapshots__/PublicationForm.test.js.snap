@@ -44,6 +44,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="fav_0"
         primaryText="Book"
         targetOrigin={
           Object {
@@ -65,6 +66,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="fav_1"
         primaryText="Book Chapter"
         targetOrigin={
           Object {
@@ -86,6 +88,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="fav_2"
         primaryText="Conference Paper"
         targetOrigin={
           Object {
@@ -107,6 +110,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="fav_3"
         primaryText="Journal Article"
         targetOrigin={
           Object {
@@ -118,6 +122,7 @@ exports[`PublicationForm test should render component initialised with just one 
       />
       <Divider
         inset={false}
+        key="div_0"
       />
       <MenuItem
         anchorOrigin={
@@ -131,6 +136,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="0"
         primaryText="Generic Document"
         targetOrigin={
           Object {
@@ -152,6 +158,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="1"
         primaryText="Audio Document"
         targetOrigin={
           Object {
@@ -173,6 +180,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="2"
         primaryText="Book"
         targetOrigin={
           Object {
@@ -194,6 +202,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="3"
         primaryText="Book Chapter"
         targetOrigin={
           Object {
@@ -215,6 +224,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="4"
         primaryText="Conference Paper"
         targetOrigin={
           Object {
@@ -236,6 +246,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="5"
         primaryText="Conference Proceedings"
         targetOrigin={
           Object {
@@ -257,6 +268,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="6"
         primaryText="Creative Work"
         targetOrigin={
           Object {
@@ -278,6 +290,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="7"
         primaryText="Department Technical Report"
         targetOrigin={
           Object {
@@ -299,6 +312,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="8"
         primaryText="Design"
         targetOrigin={
           Object {
@@ -320,6 +334,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="9"
         primaryText="Image"
         targetOrigin={
           Object {
@@ -341,6 +356,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="10"
         primaryText="Journal Article"
         targetOrigin={
           Object {
@@ -362,6 +378,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="11"
         primaryText="Newspaper Article"
         targetOrigin={
           Object {
@@ -383,6 +400,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="12"
         primaryText="Patent"
         targetOrigin={
           Object {
@@ -404,6 +422,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="13"
         primaryText="Preprint"
         targetOrigin={
           Object {
@@ -425,6 +444,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="14"
         primaryText="Research Report"
         targetOrigin={
           Object {
@@ -446,6 +466,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="15"
         primaryText="Seminar Paper"
         targetOrigin={
           Object {
@@ -467,6 +488,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="16"
         primaryText="Thesis"
         targetOrigin={
           Object {
@@ -488,6 +510,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="17"
         primaryText="Video Document"
         targetOrigin={
           Object {
@@ -509,6 +532,7 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="18"
         primaryText="Working Paper"
         targetOrigin={
           Object {

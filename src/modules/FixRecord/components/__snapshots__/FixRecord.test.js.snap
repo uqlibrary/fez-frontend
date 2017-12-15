@@ -430,6 +430,7 @@ exports[`Component FixRecord  should render fix record form 1`] = `
           disabled={false}
           focusState="none"
           insetChildren={false}
+          key="fix_record_action_0"
           primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
           targetOrigin={
             Object {
@@ -451,6 +452,7 @@ exports[`Component FixRecord  should render fix record form 1`] = `
           disabled={false}
           focusState="none"
           insetChildren={false}
+          key="fix_record_action_1"
           primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
           targetOrigin={
             Object {
@@ -1041,6 +1043,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
           disabled={false}
           focusState="none"
           insetChildren={false}
+          key="fix_record_action_0"
           primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
           targetOrigin={
             Object {
@@ -1062,6 +1065,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
           disabled={false}
           focusState="none"
           insetChildren={false}
+          key="fix_record_action_1"
           primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
           targetOrigin={
             Object {
@@ -1527,6 +1531,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
           disabled={false}
           focusState="none"
           insetChildren={false}
+          key="fix_record_action_0"
           primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
           targetOrigin={
             Object {
@@ -1548,6 +1553,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
           disabled={false}
           focusState="none"
           insetChildren={false}
+          key="fix_record_action_1"
           primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
           targetOrigin={
             Object {
@@ -2013,6 +2019,7 @@ exports[`Component FixRecord  should render unclaim form 1`] = `
           disabled={false}
           focusState="none"
           insetChildren={false}
+          key="fix_record_action_0"
           primaryText="I am the author/editor/contributor of this record - I would like to make a correction, or upload files"
           targetOrigin={
             Object {
@@ -2034,6 +2041,7 @@ exports[`Component FixRecord  should render unclaim form 1`] = `
           disabled={false}
           focusState="none"
           insetChildren={false}
+          key="fix_record_action_1"
           primaryText="I am not the author/editor/contributor of this record - I would like this record removed from my profile"
           targetOrigin={
             Object {

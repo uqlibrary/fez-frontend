@@ -1,30 +1,6 @@
-import {shallow, mount} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
-
 import App from './App';
 import {accounts, authorDetails} from 'mock/data';
-import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
-import {locale} from 'locale';
-
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import {Provider} from 'react-redux';
-import Immutable from 'immutable';
-import {MemoryRouter} from 'react-router-dom'
-
-const create = () => {
-    const initialState = Immutable.Map();
-
-    const store = {
-        getState: jest.fn(() => (initialState)),
-        dispatch: jest.fn(),
-        subscribe: jest.fn()
-    };
-    const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
-    return {store, next, invoke}
-};
+import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -33,7 +9,9 @@ function setup(testProps, isShallow = true) {
         author: testProps.author || null,
         accountLoading: testProps.accountLoading || false,
         accountAuthorLoading: testProps.accountAuthorLoading || false,
-        actions: testProps.actions || {},
+        actions: testProps.actions || {
+            loadCurrentAccount: jest.fn()
+        },
         location: testProps.location || {},
         history: testProps.history || {}
     };
@@ -48,21 +26,7 @@ function setup(testProps, isShallow = true) {
         };
     };
 
-    if (isShallow) return shallow(<App {...props} />);
-
-    return mount(
-        <Provider store={create().store}>
-            <MemoryRouter>
-                <App {...props} />
-            </MemoryRouter>
-        </Provider>, {
-            context: {
-                muiTheme: getMuiTheme()
-            },
-            childContextTypes: {
-                muiTheme: PropTypes.object.isRequired
-            }
-        });
+    return getElement(App, props, isShallow);
 }
 
 describe('Application component', () => {

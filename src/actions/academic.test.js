@@ -1,7 +1,3 @@
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import MockAdapter from 'axios-mock-adapter';
-
 import {api} from 'config';
 import {publicationYearsSmall, publicationStats, hindexResponse} from '../mock/data/academicStats';
 
@@ -9,17 +5,10 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as academicActions from './academic';
 
-const getMockStore = () => {
-    const middlewares = [thunk];
-    const mockStore = configureMockStore(middlewares);
-    return mockStore({});
-};
-
-const expectStoreHasExpectedActions = (store, expectedActions) => {
-    expect(store.getActions().map(action => ({type: action.type}))).toEqual(expect.arrayContaining(expectedActions));
-};
-
 describe('Academic action creators', () => {
+    // extend expect to check actions
+    expect.extend({toHaveDispatchedActions});
+
     let mock;
 
     beforeEach(() => {
@@ -40,9 +29,9 @@ describe('Academic action creators', () => {
             {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED}
         ];
 
-        const store = getMockStore();
+        const store = setupStoreForActions();
         return store.dispatch(academicActions.loadAuthorPublicationsByYear('testuser')).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
+            expect(store.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 
@@ -58,9 +47,9 @@ describe('Academic action creators', () => {
             {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED}
         ];
 
-        const store = getMockStore();
+        const store = setupStoreForActions();
         return store.dispatch(academicActions.loadAuthorPublicationsByYear('testuser')).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
+            expect(store.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 
@@ -74,9 +63,9 @@ describe('Academic action creators', () => {
             {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED}
         ];
 
-        const store = getMockStore();
+        const store = setupStoreForActions();
         return store.dispatch(academicActions.loadAuthorPublicationsByYear('testuser')).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
+            expect(store.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 
@@ -92,9 +81,9 @@ describe('Academic action creators', () => {
             {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED}
         ];
 
-        const store = getMockStore();
+        const store = setupStoreForActions();
         return store.dispatch(academicActions.loadAuthorPublicationsStats('testuser')).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
+            expect(store.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 
@@ -108,9 +97,9 @@ describe('Academic action creators', () => {
             {type: actions.ACADEMIC_PUBLICATIONS_STATS_FAILED}
         ];
 
-        const store = getMockStore();
+        const store = setupStoreForActions();
         return store.dispatch(academicActions.loadAuthorPublicationsStats('testuser')).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
+            expect(store.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 
@@ -126,9 +115,9 @@ describe('Academic action creators', () => {
             {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED}
         ];
 
-        const store = getMockStore();
+        const store = setupStoreForActions();
         return store.dispatch(academicActions.loadAuthorPublicationsStats('testuser')).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
+            expect(store.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 
@@ -144,9 +133,9 @@ describe('Academic action creators', () => {
             {type: actions.ACADEMIC_PUBLICATIONS_STATS_FAILED}
         ];
 
-        const store = getMockStore();
+        const store = setupStoreForActions();
         return store.dispatch(academicActions.loadAuthorPublicationsStats('testuser')).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
+            expect(store.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 });

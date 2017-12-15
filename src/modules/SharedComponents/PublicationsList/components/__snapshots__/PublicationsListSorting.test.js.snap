@@ -36,6 +36,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="0"
         primaryText="Published date"
         targetOrigin={
           Object {
@@ -57,6 +58,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="1"
         primaryText="Search relevance"
         targetOrigin={
           Object {
@@ -78,6 +80,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="2"
         primaryText="Title"
         targetOrigin={
           Object {
@@ -99,6 +102,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="3"
         primaryText="Created date"
         targetOrigin={
           Object {
@@ -120,6 +124,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="4"
         primaryText="Updated date"
         targetOrigin={
           Object {
@@ -141,6 +146,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="5"
         primaryText="Altmetric score"
         targetOrigin={
           Object {
@@ -162,6 +168,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="6"
         primaryText="Scopus citation count"
         targetOrigin={
           Object {
@@ -183,6 +190,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="7"
         primaryText="Thompson citation count"
         targetOrigin={
           Object {
@@ -223,6 +231,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="0"
         primaryText="Desc"
         targetOrigin={
           Object {
@@ -244,6 +253,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
         disabled={false}
         focusState="none"
         insetChildren={false}
+        key="1"
         primaryText="Asc"
         targetOrigin={
           Object {

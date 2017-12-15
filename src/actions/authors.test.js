@@ -1,33 +1,20 @@
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import MockAdapter from 'axios-mock-adapter';
-
 import {api} from 'config';
-
 import * as repositories from 'repositories';
 import * as authors from './authors';
 
-const getMockStore = () => {
-    const middlewares = [thunk];
-    const mockStore = configureMockStore(middlewares);
-    return mockStore({});
-};
-
-const expectStoreHasExpectedActions = (store, expectedActions) => {
-    expect(store.getActions().map(action => ({type: action.type}))).toEqual(expect.arrayContaining(expectedActions));
-};
-
 describe('Action creators for authors', () => {
-    let mock;
+    // extend expect to check actions
+    expect.extend({toHaveDispatchedActions});
+    // usage:
+    // expect(store.getActions()).toHaveDispatchedActions(expectedActions);
 
+    let mock;
     beforeEach(() => {
         mock = new MockAdapter(api, {delayResponse: 100});
     });
-
     afterEach(() => {
         mock.reset();
     });
-
     it('should update fez-author record successfully if API call succeeded', async () => {
         const authorId = 1234;
         const patchRequest = {aut_id: authorId, aut_google_scholar_id: '1001'};
@@ -40,16 +27,17 @@ describe('Action creators for authors', () => {
             { type: 'CURRENT_AUTHOR_SAVED' }
         ];
 
-        const store = getMockStore();
+        const store = setupStoreForActions();
         await store.dispatch(authors.updateCurrentAuthor(authorId, patchRequest));
-        expectStoreHasExpectedActions(store, expectedActions);
+        expect(store.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
     it('should fail update fez-author record if API call failed', async () => {
         const authorId = 1234;
         const patchRequest = {aut_id: authorId, aut_google_scholar_id: '1001'};
 
-        mock.onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+        mock
+            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
             .reply(500);
 
         const expectedActions = [
@@ -57,11 +45,11 @@ describe('Action creators for authors', () => {
             { type: 'CURRENT_AUTHOR_SAVE_FAILED' }
         ];
 
-        const store = getMockStore();
+        const store = setupStoreForActions();
         try {
             await store.dispatch(authors.updateCurrentAuthor(authorId, patchRequest));
         } catch(e) {
-            expectStoreHasExpectedActions(store, expectedActions);
+            expect(store.getActions()).toHaveDispatchedActions(expectedActions);
         }
     });
 });

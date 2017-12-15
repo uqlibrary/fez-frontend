@@ -616,6 +616,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Asmussen, S."
@@ -629,6 +630,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Kroese, D. P."
@@ -642,6 +644,7 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=" and "
           suffix=""
           value="Rubinstein, R. Y."

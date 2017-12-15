@@ -13,6 +13,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="0"
       nestedItems={
         Array [
           <ListItem
@@ -60,6 +61,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="1"
       nestedItems={
         Array [
           <ListItem
@@ -199,6 +201,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="2"
       nestedItems={
         Array [
           <ListItem
@@ -246,6 +249,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="3"
       nestedItems={
         Array [
           <ListItem
@@ -316,6 +320,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="4"
       nestedItems={
         Array [
           <ListItem
@@ -363,6 +368,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="5"
       nestedItems={
         Array [
           <ListItem
@@ -439,6 +445,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="0"
       nestedItems={
         Array [
           <ListItem
@@ -509,6 +516,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="1"
       nestedItems={
         Array [
           <ListItem
@@ -648,6 +656,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="2"
       nestedItems={
         Array [
           <ListItem
@@ -695,6 +704,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="3"
       nestedItems={
         Array [
           <ListItem
@@ -765,6 +775,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="4"
       nestedItems={
         Array [
           <ListItem
@@ -812,6 +823,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="5"
       nestedItems={
         Array [
           <ListItem
@@ -888,6 +900,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="0"
       nestedItems={
         Array [
           <ListItem
@@ -939,6 +952,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="1"
       nestedItems={
         Array [
           <ListItem
@@ -1078,6 +1092,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="2"
       nestedItems={
         Array [
           <ListItem
@@ -1125,6 +1140,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="3"
       nestedItems={
         Array [
           <ListItem
@@ -1195,6 +1211,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="4"
       nestedItems={
         Array [
           <ListItem
@@ -1242,6 +1259,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="5"
       nestedItems={
         Array [
           <ListItem
@@ -1318,6 +1336,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
+      key="0"
       nestedItems={
         Array [
           <ListItem
@@ -1365,6 +1384,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
+      key="1"
       nestedItems={
         Array [
           <ListItem
@@ -1504,6 +1524,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
+      key="2"
       nestedItems={
         Array [
           <ListItem
@@ -1551,6 +1572,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
+      key="3"
       nestedItems={
         Array [
           <ListItem
@@ -1621,6 +1643,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
+      key="4"
       nestedItems={
         Array [
           <ListItem
@@ -1668,6 +1691,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
+      key="5"
       nestedItems={
         Array [
           <ListItem
@@ -1744,6 +1768,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="0"
       nestedItems={
         Array [
           <ListItem
@@ -1883,6 +1908,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="1"
       nestedItems={
         Array [
           <ListItem
@@ -1930,6 +1956,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="2"
       nestedItems={
         Array [
           <ListItem
@@ -2000,6 +2027,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="3"
       nestedItems={
         Array [
           <ListItem
@@ -2047,6 +2075,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
+      key="4"
       nestedItems={
         Array [
           <ListItem

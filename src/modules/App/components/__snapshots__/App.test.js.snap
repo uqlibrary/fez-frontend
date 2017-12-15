@@ -137,16 +137,19 @@ exports[`Application component should render alert if user is not fez author 1`]
     <Connect(AppAlert) />
     <Switch>
       <Route
+        key="route_0"
         path="/about"
         render={[Function]}
       />
       <Route
+        key="route_1"
         path="/browse"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
+        key="route_2"
         path="/"
       />
       <Route
@@ -158,6 +161,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
+        key="route_3"
         path="/dashboard"
       />
       <Route
@@ -169,6 +173,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
+        key="route_4"
         path="/records/mine"
       />
       <Route
@@ -180,6 +185,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
+        key="route_5"
         path="/records/possible"
       />
       <Route
@@ -191,6 +197,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
+        key="route_6"
         path="/records/claim"
       />
       <Route
@@ -202,6 +209,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
+        key="route_7"
         path="/records/:pid/fix"
       />
       <Route
@@ -212,6 +220,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
+        key="route_8"
         path="/records/add/find"
         render={[Function]}
       />
@@ -223,6 +232,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
+        key="route_9"
         path="/records/add/results"
         render={[Function]}
       />
@@ -234,12 +244,14 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
+        key="route_10"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
+        key="route_11"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -251,9 +263,11 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
+        key="route_12"
         path="/author-identifiers/google-scholar/link/"
       />
       <Route
+        key="route_13"
         render={[Function]}
       />
     </Switch>
@@ -385,16 +399,19 @@ exports[`Application component should render app for account with fez author wit
     <Connect(AppAlert) />
     <Switch>
       <Route
+        key="route_0"
         path="/about"
         render={[Function]}
       />
       <Route
+        key="route_1"
         path="/browse"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
+        key="route_2"
         path="/"
       />
       <Route
@@ -406,6 +423,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_3"
         path="/dashboard"
       />
       <Route
@@ -417,6 +435,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_4"
         path="/records/mine"
       />
       <Route
@@ -428,6 +447,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_5"
         path="/records/possible"
       />
       <Route
@@ -439,6 +459,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_6"
         path="/records/claim"
       />
       <Route
@@ -450,6 +471,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_7"
         path="/records/:pid/fix"
       />
       <Route
@@ -460,6 +482,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
+        key="route_8"
         path="/records/add/find"
         render={[Function]}
       />
@@ -471,6 +494,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
+        key="route_9"
         path="/records/add/results"
         render={[Function]}
       />
@@ -482,12 +506,14 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
+        key="route_10"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
+        key="route_11"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -499,9 +525,11 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_12"
         path="/author-identifiers/google-scholar/link/"
       />
       <Route
+        key="route_13"
         render={[Function]}
       />
     </Switch>
@@ -649,16 +677,19 @@ exports[`Application component should render app for account with fez author wit
     <Connect(AppAlert) />
     <Switch>
       <Route
+        key="route_0"
         path="/about"
         render={[Function]}
       />
       <Route
+        key="route_1"
         path="/browse"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
+        key="route_2"
         path="/"
       />
       <Route
@@ -670,6 +701,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_3"
         path="/dashboard"
       />
       <Route
@@ -681,6 +713,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_4"
         path="/records/mine"
       />
       <Route
@@ -692,6 +725,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_5"
         path="/records/possible"
       />
       <Route
@@ -703,6 +737,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_6"
         path="/records/claim"
       />
       <Route
@@ -714,6 +749,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_7"
         path="/records/:pid/fix"
       />
       <Route
@@ -724,6 +760,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
+        key="route_8"
         path="/records/add/find"
         render={[Function]}
       />
@@ -735,6 +772,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
+        key="route_9"
         path="/records/add/results"
         render={[Function]}
       />
@@ -746,12 +784,14 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
+        key="route_10"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
+        key="route_11"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -763,9 +803,11 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
+        key="route_12"
         path="/author-identifiers/google-scholar/link/"
       />
       <Route
+        key="route_13"
         render={[Function]}
       />
     </Switch>
@@ -1025,19 +1067,23 @@ exports[`Application component should render for anon user 1`] = `
     <Connect(AppAlert) />
     <Switch>
       <Route
+        key="route_0"
         path="/about"
         render={[Function]}
       />
       <Route
+        key="route_1"
         path="/browse"
         render={[Function]}
       />
       <Route
         exact={true}
+        key="route_2"
         path="/"
         render={[Function]}
       />
       <Route
+        key="route_3"
         render={[Function]}
       />
     </Switch>
