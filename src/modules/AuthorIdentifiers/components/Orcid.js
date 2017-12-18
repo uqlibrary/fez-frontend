@@ -20,7 +20,6 @@ export default class Orcid extends Component {
         accountAuthorSaving: PropTypes.bool,
         accountAuthorError: PropTypes.string,
         history: PropTypes.object.isRequired,
-        location: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
 
@@ -49,8 +48,8 @@ export default class Orcid extends Component {
             },
             existingOrcidRequest: {
                 show_login: false,
-                family_names: props.account.lastName,
-                given_names: props.account.firstName
+                family_names: props.account ? props.account.lastName : '',
+                given_names: props.account ? props.account.firstName : ''
             },
             createOrcidRequest: {
                 show_login: true
@@ -84,17 +83,20 @@ export default class Orcid extends Component {
 
     componentWillReceiveProps(nextProps) {
         // wait for user account to get loaded and set state if props were not available in constructor
-        if (nextProps.account !== this.props.account && nextProps.account.id !== this.props.account.id) {
+        if (nextProps.account !== this.props.account && (!this.props.account || nextProps.account.id !== this.props.account.id)) {
             const orcidStateId = this.createOrcidStateId(nextProps.account);
-            this.setState({
+
+            this.setState((prevState) => ({
                 orcidRequest: {
+                    ...prevState.orcidRequest,
                     state: orcidStateId
                 },
                 existingOrcidRequest: {
+                    ...prevState.existingOrcidRequest,
                     family_names: nextProps.account ? nextProps.account.lastName : '',
                     given_names: nextProps.account ? nextProps.account.firstName : ''
                 }
-            });
+            }));
         }
 
         // user should have a fez-author record to proceed
@@ -177,8 +179,8 @@ export default class Orcid extends Component {
     };
 
     render() {
-        // wait for author details to be loaded
-        if(this.props.accountAuthorLoading || !this.props.author) {
+        // wait for author and account to be loaded
+        if(!this.props.author || !this.props.account) {
             return (<div />);
         }
 

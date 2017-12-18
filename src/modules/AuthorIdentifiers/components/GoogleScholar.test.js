@@ -1,140 +1,123 @@
-import React from 'react';
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import Immutable from 'immutable';
-import {MemoryRouter} from 'react-router-dom'
-import {Provider} from 'react-redux';
-
 import GoogleScholar from './GoogleScholar';
-import {testAuthor} from 'mock/data/testing/authorIdentifiers';
-import {locale} from 'locale';
-
-const create = () => {
-    const initialState = Immutable.Map();
-
-    const store = {
-        getState: jest.fn(() => (initialState)),
-        dispatch: jest.fn(),
-        subscribe: jest.fn()
-    };
-    const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
-    return {store, next, invoke}
-};
+import {currentAuthor} from 'mock/data/account';
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
 
         accountAuthorLoading: testProps.accountAuthorLoading || false,
-        author: testProps.author || testAuthor,
-        actions: testProps.actions || {showAppAlert: jest.fn()},
+        author: testProps.author || null,
+        actions: testProps.actions || {
+            showAppAlert: jest.fn(),
+            dismissAppAlert: jest.fn(),
+            resetSavingAuthorState: jest.fn()
+        },
         history: testProps.history || {push: jest.fn()},
 
         // redux form props
         handleSubmit: testProps.handleSubmit || jest.fn(),
         initialValues: testProps.initialValues || {
-            aut_id: !!testProps.author ? testProps.author.aut_id : testAuthor.aut_id,
-            aut_google_scholar_id: !!testProps.author ? testProps.author.aut_google_scholar_id : testAuthor.aut_google_scholar_id
+            aut_id: !!testProps.author ? testProps.author.aut_id : '',
+            aut_google_scholar_id: !!testProps.author ? testProps.author.aut_google_scholar_id : ''
         },
         submitSucceeded: testProps.submitSucceeded || false,
         submitFailed: testProps.submitFailed || false,
         error: testProps.error || null
     };
 
-    if(isShallow) {
-        return shallow(<GoogleScholar {...props} />);
-    }
-
-    return mount(
-        <Provider store={create().store}>
-            <MemoryRouter>
-                <GoogleScholar {...props} />
-            </MemoryRouter>
-        </Provider>, {
-            context: {
-                muiTheme: getMuiTheme(),
-
-            },
-            childContextTypes: {
-                muiTheme: PropTypes.object.isRequired
-            }
-        });
+    return getElement(GoogleScholar, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('Component GoogleScholar ', () => {
 
     it('should render nothing if author is not loaded', () => {
-        const wrapper = setup({accountAuthorLoading: true, author: null});
+        const wrapper = setup({
+            accountAuthorLoading: true
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render form if author doesn\'t have google scholar id', () => {
-        const wrapper = setup({});
+        const wrapper = setup({
+            author: currentAuthor.uqnoauthid.data
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.requiredField').length).toEqual(1);
     });
 
     it('should render form if author has google scholar id', () => {
-        const wrapper = setup({author: { ...testAuthor, aut_google_scholar_id: 'abc123'}});
+        const wrapper = setup({
+            author: currentAuthor.uqresearcher.data
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.requiredField').length).toEqual(1);
     });
 
     it('should redirect to the dashbaord', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({history: {push: testMethod}});
+        const wrapper = setup({
+            author: currentAuthor.uqnoauthid.data
+        });
         wrapper.instance()._navigateToDashboard();
-        expect(testMethod).toHaveBeenCalledWith('/dashboard');
+        expect(wrapper.instance().props.history.push).toHaveBeenCalledWith('/dashboard');
     });
 
     it('should submit form when user hits Enter', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({handleSubmit: testMethod});
+        const wrapper = setup({
+            author: currentAuthor.uqnoauthid.data
+        });
         wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', preventDefault: jest.fn()});
-        expect(testMethod).toHaveBeenCalled();
+        expect(wrapper.instance().props.handleSubmit).toHaveBeenCalled();
     });
 
     it('should NOT submit the form when user hits shift+Enter', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({handleSubmit: testMethod});
+        const wrapper = setup({
+            author: currentAuthor.uqnoauthid.data,
+        });
         wrapper.instance()._handleKeyboardFormSubmit({key: 'Enter', shiftKey: true, preventDefault: jest.fn()});
-        expect(testMethod).not.toHaveBeenCalled();
+        expect(wrapper.instance().props.handleSubmit).not.toHaveBeenCalled();
     });
 
     it('should go back to the dashboard if the submission succeeded', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({history: {push: testMethod}});
+        const wrapper = setup({
+            author: currentAuthor.uqnoauthid.data
+        });
         wrapper.setProps({submitSucceeded: true});
-        expect(testMethod).toHaveBeenCalledWith('/dashboard');
+        expect(wrapper.instance().props.history.push).toHaveBeenCalledWith('/dashboard');
     });
 
     it('should dispatch action to display success alert', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({actions: {showAppAlert: testMethod}});
+        const wrapper = setup({
+            author: currentAuthor.uqnoauthid.data
+        });
         wrapper.setProps({submitSucceeded: true});
-        expect(testMethod).toHaveBeenCalled();
+        expect(wrapper.instance().props.actions.showAppAlert).toHaveBeenCalled();
     });
 
     it('should display submission error if saving failed', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({submitFailed: true, error: 'failed!'});
+        const wrapper = setup({
+            author: currentAuthor.uqnoauthid.data,
+            submitFailed: true, error: 'failed!'
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should display submission in progress alert', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({submitting: true});
+        const wrapper = setup({
+            author: currentAuthor.uqnoauthid.data,
+            submitting: true
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should redirect to dashboard if user is not an author', () => {
+        const wrapper = setup({});
+        wrapper.instance().componentWillMount();
+        expect(wrapper.instance().props.history.push).toHaveBeenCalled();
+    });
+
+    it('should reset author update state when component is unmounted', () => {
+        const wrapper = setup({});
+        wrapper.instance().componentWillUnmount();
+        expect(wrapper.instance().props.actions.resetSavingAuthorState).toHaveBeenCalled();
+    });
 });

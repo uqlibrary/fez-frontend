@@ -71,8 +71,7 @@ export default class GoogleScholar extends React.PureComponent {
 
     render() {
         // wait for author details to be loaded
-        // wait for author details to be loaded
-        if(this.props.accountAuthorLoading || !this.props.author) {
+        if(!this.props.author) {
             return (<div />);
         }
 
