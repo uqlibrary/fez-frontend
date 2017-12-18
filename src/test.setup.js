@@ -14,12 +14,14 @@ import {MemoryRouter} from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
+import {api} from 'config';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];
     const mockStore = configureMockStore(middlewares);
     return mockStore({});
 };
+
 const setupStoreForMount = () => {
     const initialState = Immutable.Map();
 
@@ -31,6 +33,10 @@ const setupStoreForMount = () => {
     const next = jest.fn();
     const invoke = (action) => thunk(store)(next)(action);
     return {store, next, invoke};
+};
+
+const setupMockAdapter = () => {
+    return new MockAdapter(api, {delayResponse: 100});
 };
 
 // it's possible to extend expect globally,
@@ -49,7 +55,7 @@ const toHaveDispatchedActions = (actions, expectedActions) => {
         });
     }
     return {
-        message: () => 'received actions don\'t match expected actions',
+        message: (a, b) => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action.type))}]`,
         pass: pass
     };
 };
@@ -88,6 +94,14 @@ global.toJson = toJson;
 
 // make standard libraries/methods globally available to all tests
 global.getElement = getElement;
+
+// set global store for testing actions
 global.setupStoreForActions = setupStoreForActions;
-global.MockAdapter = MockAdapter;
+global.mockActionsStore = setupStoreForActions();
+
+// set global mock api
+global.setupMockAdapter = setupMockAdapter;
+global.mockApi = setupMockAdapter();
+
+// expect extension
 global.toHaveDispatchedActions = toHaveDispatchedActions;

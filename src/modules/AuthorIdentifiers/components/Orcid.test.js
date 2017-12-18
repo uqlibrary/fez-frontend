@@ -1,5 +1,4 @@
 import Orcid from './Orcid';
-import {testAuthor} from 'mock/data/testing/authorIdentifiers';
 import {accounts, currentAuthor} from 'mock/data/account';
 import {ORCID_CLIENT_ID} from 'config';
 

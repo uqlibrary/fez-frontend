@@ -1,6 +1,8 @@
-import {api} from 'config';
+import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import * as authors from './authors';
+import * as authorsActions from './authors';
+import {APP_URL} from 'config';
+import {authorOrcidDetails} from 'mock/data/orcid';
 
 describe('Action creators for authors', () => {
     // extend expect to check actions
@@ -8,48 +10,77 @@ describe('Action creators for authors', () => {
     // usage:
     // expect(store.getActions()).toHaveDispatchedActions(expectedActions);
 
-    let mock;
     beforeEach(() => {
-        mock = new MockAdapter(api, {delayResponse: 100});
+        mockActionsStore = setupStoreForActions();
+        mockApi = setupMockAdapter();
     });
+
     afterEach(() => {
-        mock.reset();
+        mockApi.reset();
     });
+    
     it('should update fez-author record successfully if API call succeeded', async () => {
         const authorId = 1234;
         const patchRequest = {aut_id: authorId, aut_google_scholar_id: '1001'};
 
-        mock.onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+        mockApi
+            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
             .reply(200, {data: {...patchRequest}});
 
         const expectedActions = [
-            { type: 'CURRENT_AUTHOR_SAVING' },
-            { type: 'CURRENT_AUTHOR_SAVED' }
+            { type: actions.CURRENT_AUTHOR_SAVING },
+            { type: actions.CURRENT_AUTHOR_SAVED }
         ];
 
-        const store = setupStoreForActions();
-        await store.dispatch(authors.updateCurrentAuthor(authorId, patchRequest));
-        expect(store.getActions()).toHaveDispatchedActions(expectedActions);
+        await mockActionsStore.dispatch(authorsActions.updateCurrentAuthor(authorId, patchRequest));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
     it('should fail update fez-author record if API call failed', async () => {
         const authorId = 1234;
         const patchRequest = {aut_id: authorId, aut_google_scholar_id: '1001'};
 
-        mock
+        mockApi
             .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
             .reply(500);
 
         const expectedActions = [
-            { type: 'CURRENT_AUTHOR_SAVING' },
-            { type: 'CURRENT_AUTHOR_SAVE_FAILED' }
+            { type: actions.CURRENT_AUTHOR_SAVING },
+            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
         ];
 
-        const store = setupStoreForActions();
         try {
-            await store.dispatch(authors.updateCurrentAuthor(authorId, patchRequest));
+            await mockActionsStore.dispatch(authorsActions.updateCurrentAuthor(authorId, patchRequest));
         } catch(e) {
-            expect(store.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         }
+    });
+
+    it('should link author to orcid and update fez-author record successfully if API call succeeded', async () => {
+        const userId = 'uqresearcher';
+        const authorId = 1234;
+        const orcidCode = '123ABC';
+
+        // parameters required for AUTHOR_ORCID_DETAILS_API call
+        const params = {
+            code: orcidCode,
+            redirUri: APP_URL
+        };
+
+        const patchRequest = {aut_id: authorId, authorOrcidDetails: authorOrcidDetails.orcid};
+
+        mockApi
+            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+            .reply(200, {data: {...authorOrcidDetails}})
+            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+            .reply(200, {data: {...patchRequest}});
+
+        const expectedActions = [
+            { type: actions.CURRENT_AUTHOR_SAVING },
+            { type: actions.CURRENT_AUTHOR_SAVED }
+        ];
+
+        await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });

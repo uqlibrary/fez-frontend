@@ -7,7 +7,7 @@ import * as actions from './actionTypes';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
- * If error occurs on any stage failed action is displated
+ * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
  * @param {array} files to be uploaded for this record
  * @returns {action}

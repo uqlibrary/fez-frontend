@@ -10,20 +10,19 @@ export function loadCurrentAccount() {
     return dispatch => {
         dispatch({type: actions.CURRENT_ACCOUNT_LOADING});
 
-        let account = null;
         let currentAuthor = null;
 
         // load UQL account (based on token)
-        get(routes.CURRENT_ACCOUNT_API())
+        return get(routes.CURRENT_ACCOUNT_API())
             .then(account => {
                 if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
                     return Promise.resolve(account);
                 } else {
+                    dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                     return Promise.reject('Session expired. User is unauthorized.');
                 }
             })
             .then(accountResponse => {
-                account = accountResponse;
                 dispatch({
                     type: actions.CURRENT_ACCOUNT_LOADED,
                     payload: accountResponse
@@ -51,11 +50,8 @@ export function loadCurrentAccount() {
                     payload: authorDetailsResponse
                 });
             })
-            .catch(error => {
-                if (!account) {
-                    dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
-                } else if (!currentAuthor) {
-                    console.log(error);
+            .catch(() => {
+                if (!currentAuthor) {
                     dispatch({type: actions.CURRENT_AUTHOR_FAILED});
                 }
                 dispatch({type: actions.CURRENT_AUTHOR_DETAILS_FAILED});
@@ -64,10 +60,7 @@ export function loadCurrentAccount() {
 }
 
 export function logout() {
-    console.log('logout!!!');
     return dispatch => {
         dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
     };
 }
-
-

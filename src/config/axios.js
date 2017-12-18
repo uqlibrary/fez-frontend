@@ -2,6 +2,8 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import {setupCache} from 'axios-cache-adapter';
 import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME} from './general';
+import {store} from 'config/store';
+import {logout} from 'actions/account';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
@@ -30,7 +32,6 @@ export const generateCancelToken = () => {
     return CancelToken.source();
 };
 
-
 api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
@@ -42,8 +43,24 @@ api.interceptors.request.use(request => {
 
 api.interceptors.response.use(response => {
     if (!isGet) {
-        console.log('Clearing store');
         return cache.store.clear().then(() => Promise.resolve(response));
     }
     return response;
+}, error => {
+    if (error.response && error.response.status === 403) {
+        if (process.env.NODE_ENV === 'test') {
+            global.mockActionsStore.dispatch(logout());
+        } else {
+            store.dispatch(logout());
+        }
+    }
+
+    const errorMessage = {
+        status: error.response ? error.response.status : null,
+        message: error.response && error.response.data && error.response.data.message
+            ? error.response.data.message
+            : `Request error with status code ${error.response.status}. `
+
+    };
+    return Promise.reject(errorMessage);
 });

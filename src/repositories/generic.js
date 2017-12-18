@@ -29,12 +29,10 @@ function processError(error, resolve, reject) {
  * @returns {Promise}
  */
 export function put(apiUrl, data, options, encodeUrl = false) {
-    console.log('PUT: ' + apiUrl);
     return new Promise((resolve, reject) => {
         api
             .put(encodeUrl ? encodeURI(apiUrl) : apiUrl, data, options)
             .then(response => {
-                console.log(response.data);
                 resolve(response.data);
             })
             .catch(error => {
@@ -50,13 +48,10 @@ export function put(apiUrl, data, options, encodeUrl = false) {
  * @returns {Promise}
  */
 export function post(apiUrl, data) {
-    console.log('POST: ' + apiUrl);
-    console.log(data);
     return new Promise((resolve, reject) => {
         api
             .post(encodeURI(apiUrl), data)
             .then(response => {
-                console.log(response.data);
                 resolve(response.data);
             })
             .catch(error => {
@@ -72,11 +67,8 @@ export function post(apiUrl, data) {
  * @returns {Promise}
  */
 export function patch(apiUrl, data) {
-    console.log('PATCH: ' + apiUrl);
-    console.log(data);
     return new Promise((resolve, reject) => {
         api.patch(encodeURI(apiUrl), data).then(response => {
-            console.log(response.data);
             resolve(response.data);
         }).catch(error => {
             processError(error, resolve, reject);
@@ -91,7 +83,6 @@ export function patch(apiUrl, data) {
  * @returns {Promise}
  */
 export function get(apiUrl, encode = true) {
-    console.log('GET: ' + apiUrl);
     return new Promise((resolve, reject) => {
         api.get(encode ? encodeURI(apiUrl) : apiUrl).then(response => {
             resolve(response.data);

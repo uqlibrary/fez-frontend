@@ -136,30 +136,12 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
+<<<<<<< HEAD
         key="0"
         primaryText="Generic Document"
-        targetOrigin={
-          Object {
-            "horizontal": "left",
-            "vertical": "top",
-          }
-        }
-        value={202}
-      />
-      <MenuItem
-        anchorOrigin={
-          Object {
-            "horizontal": "right",
-            "vertical": "top",
-          }
-        }
-        checked={false}
-        desktop={false}
-        disabled={false}
-        focusState="none"
-        insetChildren={false}
-        key="1"
+=======
         primaryText="Audio Document"
+>>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -180,8 +162,12 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="2"
+<<<<<<< HEAD
+        key="1"
+        primaryText="Audio Document"
+=======
         primaryText="Book"
+>>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -202,8 +188,12 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="3"
+<<<<<<< HEAD
+        key="2"
+        primaryText="Book"
+=======
         primaryText="Book Chapter"
+>>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -224,8 +214,12 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="4"
+<<<<<<< HEAD
+        key="3"
+        primaryText="Book Chapter"
+=======
         primaryText="Conference Paper"
+>>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -246,8 +240,12 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="5"
+<<<<<<< HEAD
+        key="4"
+        primaryText="Conference Paper"
+=======
         primaryText="Conference Proceedings"
+>>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -268,8 +266,12 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="6"
+<<<<<<< HEAD
+        key="5"
+        primaryText="Conference Proceedings"
+=======
         primaryText="Creative Work"
+>>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -290,8 +292,12 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="7"
+<<<<<<< HEAD
+        key="6"
+        primaryText="Creative Work"
+=======
         primaryText="Department Technical Report"
+>>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -312,8 +318,12 @@ exports[`PublicationForm test should render component initialised with just one 
         disabled={false}
         focusState="none"
         insetChildren={false}
-        key="8"
+<<<<<<< HEAD
+        key="7"
+        primaryText="Department Technical Report"
+=======
         primaryText="Design"
+>>>>>>> master
         targetOrigin={
           Object {
             "horizontal": "left",
@@ -321,6 +331,32 @@ exports[`PublicationForm test should render component initialised with just one 
           }
         }
         value={316}
+      />
+      <MenuItem
+        anchorOrigin={
+          Object {
+            "horizontal": "right",
+            "vertical": "top",
+          }
+        }
+        checked={false}
+        desktop={false}
+        disabled={false}
+        focusState="none"
+        insetChildren={false}
+<<<<<<< HEAD
+        key="8"
+        primaryText="Design"
+=======
+        primaryText="Generic Document"
+>>>>>>> master
+        targetOrigin={
+          Object {
+            "horizontal": "left",
+            "vertical": "top",
+          }
+        }
+        value={202}
       />
       <MenuItem
         anchorOrigin={

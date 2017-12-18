@@ -11,7 +11,7 @@ export function loadVocabulariesList(id) {
         dispatch({
             type: `${actions.VOCABULARIES_LOADING}@${id}`
         });
-        get(routes.VOCABULARIES_API({id: id}))
+        return get(routes.VOCABULARIES_API({id: id}))
             .then(result => {
                 dispatch({
                     type: `${actions.VOCABULARIES_LOADED}@${id}`,

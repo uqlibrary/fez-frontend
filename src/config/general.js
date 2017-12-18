@@ -55,14 +55,6 @@ export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
 export const publicationTypes = (components) => [
     {
-        id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
-        name: 'Generic Document',
-        class: 'Uqlibrary\\FezCore\\Types\\Generic',
-        formComponent: components ? components.GenericDocumentForm : null,
-        citationComponent: components ? components.GenericDocumentCitation : null,
-        hasFormComponent: true
-    },
-    {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
@@ -146,6 +138,14 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
         citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false
+    },
+    {
+        id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
+        name: 'Generic Document',
+        class: 'Uqlibrary\\FezCore\\Types\\Generic',
+        formComponent: components ? components.GenericDocumentForm : null,
+        citationComponent: components ? components.GenericDocumentCitation : null,
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_IMAGE,

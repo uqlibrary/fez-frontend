@@ -28,6 +28,8 @@ user = user || 'uqnoauthid';
 mock
     .onGet(new RegExp(escapeRegExp(routes.CURRENT_ACCOUNT_API()).replace(/\?.*$/,'.*'))).reply(config => {
         // mock account response
+        console.log('mocking....');
+
         if (user === 'anon') return [403, {}];
         if (mockData.accounts[user]) return [200, mockData.accounts[user]];
         return [404, {}];
