@@ -105,9 +105,10 @@ export default class MyRecords extends React.Component {
 
     render() {
         const txt = locale.pages.myResearch;
-
+        const pagingData = this.props.publicationsListPagingData;
+        const hasRecordsCardTitle = !this.props.loadingPublicationsList ? txt.recordsCardTitle.replace('[perPage]', (pagingData.total < pagingData.per_page) ? pagingData.total : pagingData.per_page).replace('[total]', pagingData.total) : txt.loadingPagingMessage;
         return (
-            <StandardPage title={txt.title}>
+            <StandardPage title={txt.pageTitle}>
                 {
                     (this.props.accountLoading || (!this.state.allowResultsPaging && this.props.loadingPublicationsList)) &&
                     <div className="is-centered"><InlineLoader message={txt.loadingMessage}/></div>
@@ -124,16 +125,16 @@ export default class MyRecords extends React.Component {
                     {
                         !this.props.accountLoading && this.state.allowResultsPaging &&
                         <div className="column">
-                            <StandardCard {...txt}>
-                                <div>{txt.text}</div>
+                            <StandardCard title={hasRecordsCardTitle} help={txt.help}>
+                                {txt.text}
                                 <PublicationsListSorting
-                                    pagingData={this.props.publicationsListPagingData}
+                                    pagingData={pagingData}
                                     onSortByChanged={this.sortByChanged}
                                     onPageSizeChanged={this.pageSizeChanged}
                                     disabled={this.props.loadingPublicationsList} />
                                 <PublicationsListPaging
                                     loading={this.props.loadingPublicationsList}
-                                    pagingData={this.props.publicationsListPagingData}
+                                    pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
                                     disabled={this.props.loadingPublicationsList} />
                                 {
@@ -148,7 +149,7 @@ export default class MyRecords extends React.Component {
                                 }
                                 <PublicationsListPaging
                                     loading={this.props.loadingPublicationsList}
-                                    pagingData={this.props.publicationsListPagingData}
+                                    pagingData={pagingData}
                                     onPageChanged={this.pageChanged}
                                     disabled={this.props.loadingPublicationsList} />
                             </StandardCard>

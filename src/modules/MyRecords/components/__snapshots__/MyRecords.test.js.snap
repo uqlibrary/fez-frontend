@@ -12,20 +12,6 @@ exports[`MyRecords test renders list of publications 1`] = `
     >
       <StandardCard
         className=""
-        facetsFilter={
-          Object {
-            "excludeFacetsList": Array [
-              "Scopus document type",
-              "Subtype",
-            ],
-            "help": Object {
-              "buttonLabel": "Ok",
-              "text": "Help about ....",
-              "title": "Refining your results",
-            },
-            "title": "Refine results",
-          }
-        }
         help={
           Object {
             "buttonLabel": "OK",
@@ -35,67 +21,23 @@ exports[`MyRecords test renders list of publications 1`] = `
             "title": "My research help",
           }
         }
-        loadingMessage="Searching for your publications..."
-        loadingPagingMessage="Retrieving for your publications..."
-        noResultsFound={
-          Object {
-            "text": <div>
-              We were unable to find any results. You may be able to 
-              <a
-                href="/records/possible"
-              >
-                claim publications we think may be yours
-              </a>
-               or 
-              <a
-                href="/records/add/find"
-              >
-                add a missing publication
-              </a>
-            </div>,
-            "title": "No publications found",
-          }
-        }
-        text={
-          <div>
-            <div>
-              Add to this list by 
-              <a
-                href="/records/possible"
-              >
-                claiming a publication
-              </a>
-               or 
-              <a
-                href="/records/add/find"
-              >
-                adding a missing publication
-              </a>
-              .
-            </div>
-          </div>
-        }
-        title="My research"
+        title="Showing undefined of undefined of your eSpace publications"
       >
-        <div>
-          <div>
-            <div>
-              Add to this list by 
-              <a
-                href="/records/possible"
-              >
-                claiming a publication
-              </a>
-               or 
-              <a
-                href="/records/add/find"
-              >
-                adding a missing publication
-              </a>
-              .
-            </div>
-          </div>
-        </div>
+        <span>
+          Add to this list by 
+          <a
+            href="/records/possible"
+          >
+            claiming a publication
+          </a>
+           or 
+          <a
+            href="/records/add/find"
+          >
+            adding a missing publication
+          </a>
+          .
+        </span>
         <PublicationsListSorting
           disabled={false}
           onPageSizeChanged={[Function]}

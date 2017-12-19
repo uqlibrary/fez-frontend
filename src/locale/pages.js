@@ -210,7 +210,8 @@ export default {
             },
         },
         myResearch: {
-            title: 'My research',
+            pageTitle: 'My research',
+            recordsCardTitle: 'Showing [perPage] of [total] of your eSpace publications',
             help: {
                 title: 'My research help',
                 text: (
@@ -221,14 +222,12 @@ export default {
                 buttonLabel: 'OK'
             },
             text: (
-                <div>
-                    <div>
-                        Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
-                    </div>
-                </div>
+                <span>
+                    Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
+                </span>
             ),
             loadingMessage: 'Searching for your publications...',
-            loadingPagingMessage: 'Retrieving for your publications...',
+            loadingPagingMessage: 'Retrieving your publications...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (
