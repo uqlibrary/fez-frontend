@@ -6,7 +6,6 @@ import {get, post, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import * as repositories from 'repositories';
 
-
 /**
  * Search publications from eSpace which are matched to currently logged in username
  * @param {object} activeFacets - optional list of facets
@@ -19,8 +18,7 @@ export function searchPossiblyYourPublications({facets = {}}) {
         }
 
         dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: facets});
-
-        get(routes.POSSIBLE_RECORDS_API({facets: facets}))
+        return get(routes.POSSIBLE_RECORDS_API({facets: facets}))
             .then(response => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
@@ -39,10 +37,10 @@ export function searchPossiblyYourPublications({facets = {}}) {
                         payload: response
                     });
                 }
+
+                return Promise.resolve(response);
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
-
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                     payload: error
@@ -52,6 +50,8 @@ export function searchPossiblyYourPublications({facets = {}}) {
                     type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                     payload: error
                 });
+
+                return Promise.reject(error);
             });
     };
 }
@@ -82,7 +82,7 @@ export function hideRecord({record, facets = {}}) {
             pid: record.rek_pid
         };
 
-        post(routes.HIDE_POSSIBLE_RECORD_API(), data)
+        return post(routes.HIDE_POSSIBLE_RECORD_API(), data)
             .then(() => {
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_LOADED,
@@ -90,14 +90,14 @@ export function hideRecord({record, facets = {}}) {
                 });
 
                 // reload current possibly your publications/count after user hides records
-                dispatch(searchPossiblyYourPublications({facets: facets}));
+                return dispatch(searchPossiblyYourPublications({facets: facets}));
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_FAILED,
                     payload: []
                 });
+                return Promise.reject(error);
             });
     };
 }
@@ -236,6 +236,7 @@ export function claimPublication(data) {
                 return Promise.resolve(data.publication);
             })
             .catch(error => {
+                console.log(error);
                 // new record was created or author claim request was saved, but file upload failed
                 if (claimRecordRequestSuccess) {
                     dispatch({
@@ -248,13 +249,11 @@ export function claimPublication(data) {
 
                     return Promise.resolve(data.publication);
                 }
-                // dispatch an action if session failed
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
 
                 // failed to create a claim/new record request
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
-                    payload: error.message
+                    payload: error
                 });
                 return Promise.reject(error);
             });

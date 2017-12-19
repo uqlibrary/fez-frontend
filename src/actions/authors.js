@@ -14,24 +14,20 @@ export function searchAuthors(query, filterBy) {
     return dispatch => {
         dispatch({type: actions.AUTHORS_LOADING});
 
-        get(routes.AUTHORS_SEARCH_API({query: query}))
+        return get(routes.AUTHORS_SEARCH_API({query: query}))
             .then(response => {
-                return Promise.resolve(
-                    response.data.data.map((item) => {
-                        item.displayName = item.aut_title + ' ' + item.aut_display_name +
-                            (item.aut_org_username ? ' (' + item.aut_org_username + ')' : '');
-                        return item;
-                    })
-                );
-            })
-            .then((data) => {
+                const data = response.data.map((item) => {
+                    item.displayName = item.aut_title + ' ' + item.aut_display_name +
+                        (item.aut_org_username ? ' (' + item.aut_org_username + ')' : '');
+                    return item;
+                });
+
                 dispatch({
                     type: actions.AUTHORS_LOADED,
                     payload: filterBy ? data.filter(filterBy) : data
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.AUTHORS_LOAD_FAILED,
                     payload: error
@@ -60,11 +56,9 @@ export function updateCurrentAuthor(authorId, data) {
                 return Promise.resolve(response.data);
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
-
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVE_FAILED,
-                    payload: error.message
+                    payload: error
                 });
 
                 return Promise.reject(error);
@@ -110,7 +104,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
             .catch(error => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVE_FAILED,
-                    payload: error.message
+                    payload: error
                 });
             });
     };

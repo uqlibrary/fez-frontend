@@ -7,6 +7,9 @@ import {logout} from 'actions/account';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
+    key: (request) => {
+        return request.url + JSON.stringify(request.params);
+    },
     exclude: {
         query: false,
         paths: [

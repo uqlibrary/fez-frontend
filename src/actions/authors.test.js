@@ -2,7 +2,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as authorsActions from './authors';
 import {APP_URL} from 'config';
-import {authorOrcidDetails} from 'mock/data/orcid';
+import * as mockData from 'mock/data';
 
 describe('Action creators for authors', () => {
     // extend expect to check actions
@@ -19,6 +19,76 @@ describe('Action creators for authors', () => {
         mockApi.reset();
     });
     
+    it('dispatches expected actions while searching for authors', async () => {
+        const testParam = 'abc';
+        const testRequest = {'query': testParam};
+
+        mockApi
+            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest))
+            .reply(200, mockData.authorsSearch);
+
+        const expectedActions = [
+            { type: actions.AUTHORS_LOADING },
+            { type: actions.AUTHORS_LOADED }
+        ];
+
+        await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('dispatches expected actions while searching for authors with filter', async () => {
+        const testParam = 'abc';
+        const testFilterParam = (item) => { return !!item.aut_org_username; };
+        const testRequest = {'query': testParam};
+
+        mockApi
+            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest))
+            .reply(200, mockData.authorsSearch);
+
+        const expectedActions = [
+            { type: actions.AUTHORS_LOADING },
+            { type: actions.AUTHORS_LOADED }
+        ];
+
+        await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam, testFilterParam));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('dispatches expected actions while searching for authors by anon user', async () => {
+        const testParam = 'abc';
+        const testRequest = {'query': testParam};
+
+        mockApi
+            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest))
+            .reply(403, mockData.authorsSearch);
+
+        const expectedActions = [
+            { type: actions.AUTHORS_LOADING },
+            { type: actions.CURRENT_ACCOUNT_ANONYMOUS },
+            { type: actions.AUTHORS_LOAD_FAILED }
+        ];
+
+        await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('dispatches expected actions while searching for authors with failed API call', async () => {
+        const testParam = 'abc';
+        const testRequest = {'query': testParam};
+
+        mockApi
+            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest))
+            .reply(500, mockData.authorsSearch);
+
+        const expectedActions = [
+            { type: actions.AUTHORS_LOADING },
+            { type: actions.AUTHORS_LOAD_FAILED }
+        ];
+
+        await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
     it('should update fez-author record successfully if API call succeeded', async () => {
         const authorId = 1234;
         const patchRequest = {aut_id: authorId, aut_google_scholar_id: '1001'};
@@ -51,6 +121,29 @@ describe('Action creators for authors', () => {
 
         try {
             await mockActionsStore.dispatch(authorsActions.updateCurrentAuthor(authorId, patchRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        } catch(e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        }
+    });
+
+    it('should fail update fez-author record for anon user', async () => {
+        const authorId = 1234;
+        const patchRequest = {aut_id: authorId, aut_google_scholar_id: '1001'};
+
+        mockApi
+            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+            .reply(403);
+
+        const expectedActions = [
+            { type: actions.CURRENT_AUTHOR_SAVING },
+            { type: actions.CURRENT_ACCOUNT_ANONYMOUS },
+            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
+        ];
+
+        try {
+            await mockActionsStore.dispatch(authorsActions.updateCurrentAuthor(authorId, patchRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch(e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         }
@@ -67,11 +160,11 @@ describe('Action creators for authors', () => {
             redirUri: APP_URL
         };
 
-        const patchRequest = {aut_id: authorId, authorOrcidDetails: authorOrcidDetails.orcid};
+        const patchRequest = {aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid};
 
         mockApi
             .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
-            .reply(200, {data: {...authorOrcidDetails}})
+            .reply(200, {data: {...mockData.authorOrcidDetails}})
             .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
             .reply(200, {data: {...patchRequest}});
 
@@ -83,4 +176,98 @@ describe('Action creators for authors', () => {
         await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
+
+    it('dispatches expected actions if orcid linking failed', async () => {
+        const userId = 'uqresearcher';
+        const authorId = 1234;
+        const orcidCode = '123ABC';
+
+        // parameters required for AUTHOR_ORCID_DETAILS_API call
+        const params = {
+            code: orcidCode,
+            redirUri: APP_URL
+        };
+
+        const patchRequest = {aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid};
+
+        mockApi
+            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+            .reply(500, {})
+            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+            .reply(200, {data: {...patchRequest}});
+
+        const expectedActions = [
+            { type: actions.CURRENT_AUTHOR_SAVING },
+            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
+        ];
+
+        await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('dispatches expected actions if orcid linking returned no orcid value', async () => {
+        const userId = 'uqresearcher';
+        const authorId = 1234;
+        const orcidCode = '123ABC';
+
+        // parameters required for AUTHOR_ORCID_DETAILS_API call
+        const params = {
+            code: orcidCode,
+            redirUri: APP_URL
+        };
+
+        const patchRequest = {aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid};
+
+        mockApi
+            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+            .reply(200, {data: {...mockData.authorOrcidDetails, orcid: null}})
+            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+            .reply(200, {data: {...patchRequest}});
+
+        const expectedActions = [
+            { type: actions.CURRENT_AUTHOR_SAVING },
+            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
+        ];
+
+        await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('dispatches expected actions if orcid linking author update failed', async () => {
+        const userId = 'uqresearcher';
+        const authorId = 1234;
+        const orcidCode = '123ABC';
+
+        // parameters required for AUTHOR_ORCID_DETAILS_API call
+        const params = {
+            code: orcidCode,
+            redirUri: APP_URL
+        };
+
+        const patchRequest = {aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid};
+
+        mockApi
+            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+            .reply(200, {data: {...mockData.authorOrcidDetails}})
+            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+            .reply(500, {data: {...patchRequest}});
+
+        const expectedActions = [
+            { type: actions.CURRENT_AUTHOR_SAVING },
+            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
+        ];
+
+        await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('dispatches expected actions resetting author saving state', async () => {
+        const expectedActions = [
+            {type: actions.CURRENT_AUTHOR_SAVE_RESET}
+        ];
+
+        await mockActionsStore.dispatch(authorsActions.resetSavingAuthorState());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
 });

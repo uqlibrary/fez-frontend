@@ -43,7 +43,6 @@ export function createSearchPromise(source, queryString, dispatch) {
                 resolve(data);
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: `${actions.SEARCH_FAILED}@${source}`,
                     payload: error

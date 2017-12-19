@@ -18,10 +18,9 @@ export function searchLatestPublications() {
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.LATEST_PUBLICATIONS_FAILED,
-                    payload: []
+                    payload: error
                 });
             });
     };
@@ -47,7 +46,6 @@ export function searchAuthorPublications({userName, page = 1, pageSize = 20, sor
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.AUTHOR_PUBLICATIONS_FAILED,
                     payload: error
@@ -79,7 +77,6 @@ export function searchTrendingPublications(userName) {
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.TRENDING_PUBLICATIONS_FAILED,
                     payload: error

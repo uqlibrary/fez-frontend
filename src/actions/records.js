@@ -69,12 +69,10 @@ export function createNewRecord(data) {
 
                     return Promise.resolve(newRecord);
                 }
-                // all requests failed
-                if (error.status === 403) dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
-                    payload: error.message
+                    payload: error
                 });
 
                 return Promise.reject(new Error(error.message));
