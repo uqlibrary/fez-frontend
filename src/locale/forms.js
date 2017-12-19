@@ -33,7 +33,7 @@ export default {
                 }
             },
             comments: {
-                title: 'Please suggest changes and/or upload additional files below',
+                title: 'Optional: Please suggest changes and/or upload additional files below',
                 help: {
                     title: 'Additional information',
                     text: '...',
@@ -45,7 +45,7 @@ export default {
                 }
             },
             fileUpload: {
-                title: 'Upload additional files',
+                title: 'Optional: Upload additional files',
                 help: {
                     title: 'Files',
                     text: '...',
