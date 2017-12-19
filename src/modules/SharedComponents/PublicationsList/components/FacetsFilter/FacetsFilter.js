@@ -137,15 +137,18 @@ export default class FacetsFilter extends React.Component {
                         })
                     }
                 </List>
-                <div className="columns">
-                    <div className="column is-hidden-mobile"/>
-                    <div className="column is-narrow-tablet">
-                        <FlatButton
-                            fullWidth
-                            label={txt.resetButtonText}
-                            onClick={this.handleResetClick}/>
+                {
+                    Object.keys(this.state.activeFacets).length > 0 &&
+                    <div className="columns">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-tablet">
+                            <FlatButton
+                                fullWidth
+                                label={txt.resetButtonText}
+                                onClick={this.handleResetClick}/>
+                        </div>
                     </div>
-                </div>
+                }
             </div>
         );
     }

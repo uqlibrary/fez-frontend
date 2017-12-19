@@ -79,6 +79,8 @@ describe('FacetsFilter renders ', () => {
 
         wrapper.instance().handleFacetClick('Keywords', 'Biochemistry');
         expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({'Display type': 179, 'Keywords': 'Biochemistry'}));
+
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('components for mock data resetting a facet selection', () => {
