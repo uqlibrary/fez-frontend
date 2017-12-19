@@ -21,9 +21,9 @@ exports[`MyRecords test renders list of publications 1`] = `
             "title": "My research help",
           }
         }
-        title="Showing undefined of undefined of your eSpace publications"
+        title="Showing 20 of 147 of your eSpace publications"
       >
-        <span>
+        <div>
           Add to this list by 
           <a
             href="/records/possible"
@@ -37,18 +37,34 @@ exports[`MyRecords test renders list of publications 1`] = `
             adding a missing publication
           </a>
           .
-        </span>
+        </div>
         <PublicationsListSorting
           disabled={false}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
-          pagingData={Object {}}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 20,
+              "total": 147,
+            }
+          }
         />
         <PublicationsListPaging
           disabled={false}
           loading={false}
           onPageChanged={[Function]}
-          pagingData={Object {}}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 20,
+              "total": 147,
+            }
+          }
         />
         <PublicationsList
           publicationsList={
@@ -11033,7 +11049,15 @@ exports[`MyRecords test renders list of publications 1`] = `
           disabled={false}
           loading={false}
           onPageChanged={[Function]}
-          pagingData={Object {}}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 20,
+              "total": 147,
+            }
+          }
         />
       </StandardCard>
     </div>

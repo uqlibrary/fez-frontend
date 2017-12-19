@@ -106,7 +106,11 @@ export default class MyRecords extends React.Component {
     render() {
         const txt = locale.pages.myResearch;
         const pagingData = this.props.publicationsListPagingData;
-        const hasRecordsCardTitle = !this.props.loadingPublicationsList ? txt.recordsCardTitle.replace('[perPage]', (pagingData.total < pagingData.per_page) ? pagingData.total : pagingData.per_page).replace('[total]', pagingData.total) : txt.loadingPagingMessage;
+        const hasRecordsCardTitle = !this.props.loadingPublicationsList && pagingData.total !== 0 && pagingData.per_page !== 0 ?
+            txt.title
+                .replace('[perPage]', (pagingData.total < pagingData.per_page) ? pagingData.total : pagingData.per_page)
+                .replace('[total]', pagingData.total) :
+            txt.loadingPagingMessage;
         return (
             <StandardPage title={txt.pageTitle}>
                 {

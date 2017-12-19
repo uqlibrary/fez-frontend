@@ -211,7 +211,7 @@ export default {
         },
         myResearch: {
             pageTitle: 'My research',
-            recordsCardTitle: 'Showing [perPage] of [total] of your eSpace publications',
+            title: 'Showing [perPage] of [total] of your eSpace publications',
             help: {
                 title: 'My research help',
                 text: (
@@ -222,9 +222,9 @@ export default {
                 buttonLabel: 'OK'
             },
             text: (
-                <span>
+                <div>
                     Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
-                </span>
+                </div>
             ),
             loadingMessage: 'Searching for your publications...',
             loadingPagingMessage: 'Retrieving your publications...',

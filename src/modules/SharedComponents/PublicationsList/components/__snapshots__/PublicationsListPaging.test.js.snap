@@ -9,7 +9,7 @@ exports[`PublicationsListPaging renders  component with empty paging data 1`] = 
 exports[`PublicationsListPaging renders  component with non-empty paging data, first page 1`] = `
 <div>
   <div
-    className="publicationsListPaging columns is-multiline is-gapless is-hidden-mobile is-hidden-tablet-only"
+    className="publicationsListPaging is-gapless is-hidden-mobile is-hidden-tablet-only"
   >
     <FlatButton
       className="pagingPrevious"
@@ -99,7 +99,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
 exports[`PublicationsListPaging renders  component with non-empty paging data, last page 1`] = `
 <div>
   <div
-    className="publicationsListPaging columns is-multiline is-gapless is-hidden-mobile is-hidden-tablet-only"
+    className="publicationsListPaging is-gapless is-hidden-mobile is-hidden-tablet-only"
   >
     <FlatButton
       className="pagingPrevious"
@@ -189,7 +189,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
 exports[`PublicationsListPaging renders  component with non-empty paging data, second page 1`] = `
 <div>
   <div
-    className="publicationsListPaging columns is-multiline is-gapless is-hidden-mobile is-hidden-tablet-only"
+    className="publicationsListPaging is-gapless is-hidden-mobile is-hidden-tablet-only"
   >
     <FlatButton
       className="pagingPrevious"
