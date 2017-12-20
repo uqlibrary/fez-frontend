@@ -1029,9 +1029,9 @@ export default {
         }
     },
     fileUpload: {
-        title: 'Files',
+        title: 'Upload files',
         help: {
-            title: 'Files',
+            title: 'Upload files',
             text: 'file help...',
             buttonLabel: 'OK'
         }
