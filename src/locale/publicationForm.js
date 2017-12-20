@@ -6,7 +6,8 @@ export default {
     submit: 'Submit for approval',
     publicationType: {
         title: 'Publication type',
-        inputLabelText: 'Select publication type',
+        inputLabelText: 'Publication type',
+        hintText: 'Select a publication type from the dropdown list',
         help: {
             title: 'Publication type',
             text: 'Help about publication types, eg journal article, book, conference paper etc',
