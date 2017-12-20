@@ -38,7 +38,7 @@ export default {
                 showLessLabel: 'Show less'
             },
             defaultActions: [
-                {key: 'fixRecord', label: 'Fix record', primary: false},
+                {key: 'fixRecord', label: 'Request Correction', primary: false},
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ]
         },
