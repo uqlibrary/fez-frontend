@@ -19,7 +19,7 @@ export function loadAcmlQuickTemplates() {
             .catch(error => {
                 dispatch({
                     type: actions.ACML_QUICK_TEMPLATES_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };

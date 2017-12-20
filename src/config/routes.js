@@ -22,6 +22,7 @@ export const pathConfig =  {
     authorIdentifiers: {
         orcid: {
             link: '/author-identifiers/orcid/link',
+            absoluteLink: `${window.location.origin}${window.location.pathname}${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
@@ -189,3 +190,5 @@ export const getMenuConfig = (account) => [
         public: true
     }
 ];
+
+export const ORCID_REDIRECT_URL = `${window.location.origin}${window.location.pathname}${!!window.location.hash ? '#' : ''}${pathConfig.authorIdentifiers.orcid.link}`;

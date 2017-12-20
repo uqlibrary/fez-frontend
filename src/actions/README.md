@@ -58,7 +58,9 @@ describe('[ACTIONS NAME] actions', () => {
     it('dispatches expected actions for successful request', async () => {
         mockApi
             .onGet(repositories.routes.[ROUTE_API]())
-            .reply(200, {data: {...mockData.record}});
+            .reply(200, {data: {...mockData.record}})
+            .onAny() // reply to any request
+            .reply(200, {};
 
         const expectedActions = [
             {type: actions.[ACTION_TYPE]_LOADING},

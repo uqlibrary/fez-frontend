@@ -20,7 +20,7 @@ export function searchLatestPublications() {
             .catch(error => {
                 dispatch({
                     type: actions.LATEST_PUBLICATIONS_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };
@@ -48,7 +48,7 @@ export function searchAuthorPublications({userName, page = 1, pageSize = 20, sor
             .catch(error => {
                 dispatch({
                     type: actions.AUTHOR_PUBLICATIONS_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };
@@ -79,7 +79,7 @@ export function searchTrendingPublications(userName) {
             .catch(error => {
                 dispatch({
                     type: actions.TRENDING_PUBLICATIONS_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };

@@ -32,7 +32,7 @@ export function loadAuthorPublicationsByYear(userName) {
             .catch(error => {
                 dispatch({
                     type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };
@@ -73,7 +73,7 @@ export function loadAuthorPublicationsStats(userName) {
                 } else {
                     dispatch({
                         type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED,
-                        payload: error
+                        payload: error.message
                     });
                 }
             });

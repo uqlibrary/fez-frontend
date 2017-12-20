@@ -277,20 +277,3 @@ export const thesisSubtypes = [
 
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
-
-export const authorIdentifierLinks = {
-    linkedUrl: {
-        publons: 'https://publons.com/author/',
-        scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
-        researcher: 'http://www.researcherid.com/rid/',
-        google_scholar: 'https://scholar.google.com.au/citations?user=',
-        orcid: 'https://orcid.org/'
-    },
-    notLinkedUrl: {
-        publons: 'https://app.library.uq.edu.au/#/id',
-        scopus: 'https://app.library.uq.edu.au/#/id',
-        researcher: 'https://app.library.uq.edu.au/#/id',
-        google_scholar: '/author-identifiers/google-scholar/link/',
-        orcid: 'https://app.library.uq.edu.au/#/id',
-    }
-};

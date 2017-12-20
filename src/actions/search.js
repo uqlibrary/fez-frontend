@@ -45,7 +45,7 @@ export function createSearchPromise(source, queryString, dispatch) {
             .catch(error => {
                 dispatch({
                     type: `${actions.SEARCH_FAILED}@${source}`,
-                    payload: error
+                    payload: error.message
                 });
                 // do not reject - not to prevent Promise.all throwing an error
                 resolve([]);
@@ -71,9 +71,15 @@ export function searchPublications(searchQuery) {
             .then((response) => {
                 let flattenedResults = [].concat.apply([], response);
                 flattenedResults = flattenedResults.slice(0, flattenedResults.length);
-                dispatch({type: actions.SEARCH_LOADED, payload: flattenedResults});
+                dispatch({
+                    type: actions.SEARCH_LOADED,
+                    payload: flattenedResults
+                });
             }, error => {
-                dispatch({type: actions.SEARCH_FAILED, payload: error});
+                dispatch({
+                    type: actions.SEARCH_FAILED,
+                    payload: error.message
+                });
             });
     };
 }
@@ -92,7 +98,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
             .then((response) => {
                 dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
             }, (error) => {
-                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`, payload: error});
+                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`, payload: error.message});
             });
     };
 }

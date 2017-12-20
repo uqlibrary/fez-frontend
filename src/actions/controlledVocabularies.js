@@ -21,7 +21,7 @@ export function loadVocabulariesList(id) {
             .catch(error => {
                 dispatch({
                     type: `${actions.VOCABULARIES_LOAD_FAILED}@${id}`,
-                    payload: error
+                    payload: error.message
                 });
             });
     };

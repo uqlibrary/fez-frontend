@@ -63,7 +63,6 @@ api.interceptors.response.use(response => {
         message: error.response && error.response.data && error.response.data.message
             ? error.response.data.message
             : `Request error with status code ${error.response.status}. `
-
     };
     return Promise.reject(errorMessage);
 });

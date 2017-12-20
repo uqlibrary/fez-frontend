@@ -72,7 +72,7 @@ export function createNewRecord(data) {
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
-                    payload: error
+                    payload: error.message
                 });
 
                 return Promise.reject(new Error(error.message));

@@ -1,8 +1,8 @@
 import * as actions from './actionTypes';
 import {get, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
+import {pathConfig} from 'config/routes';
 import * as transformers from './transformers';
-import {APP_URL} from 'config/general';
 
 /**
  * Returns the authors list based on a query, filtered locally by filterBy function
@@ -30,7 +30,7 @@ export function searchAuthors(query, filterBy) {
             .catch(error => {
                 dispatch({
                     type: actions.AUTHORS_LOAD_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };
@@ -58,7 +58,7 @@ export function updateCurrentAuthor(authorId, data) {
             .catch(error => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVE_FAILED,
-                    payload: error
+                    payload: error.message
                 });
 
                 return Promise.reject(error);
@@ -80,18 +80,24 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
         let orcidId = null;
 
         // parameters required for AUTHOR_ORCID_DETAILS_API call
+        // TODO: redirUri should be moved to backend (API update pending)
         const params = {
             code: orcidCode,
-            redirUri: APP_URL
+            redirUri: pathConfig.authorIdentifiers.orcid.absoluteLink
         };
 
         // get ORCID id for current user
         return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}), false)
             .then((response) => {
                 orcidId = response.data.orcid;
-                if (!orcidId) return Promise.reject({message: 'ORCID id is missing in API response. '});
-                const authorPatchRequest = transformers.getAuthorIdentifierOrcidPatchRequest(authorId, orcidId, response.data);
+
+                // response should contain orcid id
+                if (!orcidId) {
+                    return Promise.reject({message: 'ORCID id is missing in API response. '});
+                }
+
                 // patch author record with corresponding ORCID id
+                const authorPatchRequest = transformers.getAuthorIdentifierOrcidPatchRequest(authorId, orcidId, response.data);
                 return patch(routes.AUTHOR_API({authorId}), authorPatchRequest);
             })
             .then((response) => {
@@ -104,7 +110,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
             .catch(error => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVE_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };

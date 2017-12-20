@@ -1,12 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {authorIdentifierLinks} from 'config/general';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 import {locale} from 'locale';
+import {routes} from 'config';
 
 const DashboardResearcherIds = ({values, history}) => {
     const txt = locale.pages.dashboard.header.dashboardResearcherIds;
-    const link = authorIdentifierLinks;
+    const link = {
+        linkedUrl: {
+            publons: 'https://publons.com/author/',
+            scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
+            researcher: 'http://www.researcherid.com/rid/',
+            google_scholar: 'https://scholar.google.com.au/citations?user=',
+            orcid: 'https://orcid.org/'
+        },
+        notLinkedUrl: {
+            publons: 'https://app.library.uq.edu.au/#/id',
+            scopus: 'https://app.library.uq.edu.au/#/id',
+            researcher: 'https://app.library.uq.edu.au/#/id',
+            google_scholar: routes.pathConfig.authorIdentifiers.googleScholar.link,
+            orcid: routes.pathConfig.authorIdentifiers.orcid.link
+        }
+    };
     const navigateToRoute = (event, item) => {
         history.push(link.notLinkedUrl[item]);
     };

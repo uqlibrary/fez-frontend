@@ -43,12 +43,12 @@ export function searchPossiblyYourPublications({facets = {}}) {
             .catch(error => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                    payload: error
+                    payload: error.message
                 });
 
                 dispatch({
                     type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                    payload: error
+                    payload: error.message
                 });
 
                 return Promise.reject(error);
@@ -253,7 +253,7 @@ export function claimPublication(data) {
                 // failed to create a claim/new record request
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
-                    payload: error
+                    payload: error.message
                 });
                 return Promise.reject(error);
             });

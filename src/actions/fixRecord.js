@@ -23,7 +23,7 @@ export function loadRecordToFix(pid) {
             .catch(error => {
                 dispatch({
                     type: actions.FIX_RECORD_LOAD_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };
@@ -123,7 +123,7 @@ export function fixRecord(data) {
             .catch(error => {
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
-                    payload: error
+                    payload: error.message
                 });
                 return Promise.reject(error);
             });
@@ -184,7 +184,7 @@ export function unclaimRecord(data) {
             .catch(error => {
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
-                    payload: error
+                    payload: error.message
                 });
                 return Promise.reject(error);
             });

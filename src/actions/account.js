@@ -50,11 +50,17 @@ export function loadCurrentAccount() {
                     payload: authorDetailsResponse
                 });
             })
-            .catch(() => {
+            .catch(error => {
                 if (!currentAuthor) {
-                    dispatch({type: actions.CURRENT_AUTHOR_FAILED});
+                    dispatch({
+                        type: actions.CURRENT_AUTHOR_FAILED,
+                        payload: error.message
+                    });
                 }
-                dispatch({type: actions.CURRENT_AUTHOR_DETAILS_FAILED});
+                dispatch({
+                    type: actions.CURRENT_AUTHOR_DETAILS_FAILED,
+                    payload: error.message
+                });
             });
     };
 }

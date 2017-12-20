@@ -93,7 +93,12 @@ export default class App extends React.Component {
     };
 
     redirectToOrcid = () => {
-        this.props.history.push(routes.pathConfig.authorIdentifiers.orcid.link);
+        if (window.location.search.indexOf('?') >= 0 && window.location.search.indexOf('code') >= 0) {
+            // if user already received an orcid response - clean up query string by redirecting via window.location
+            window.location.assign(routes.pathConfig.authorIdentifiers.orcid.absoluteLink);
+        } else {
+            this.props.history.push(routes.pathConfig.authorIdentifiers.orcid.link);
+        }
     };
 
     render() {
