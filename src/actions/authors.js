@@ -87,7 +87,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
         };
 
         // get ORCID id for current user
-        return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}), false)
+        return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
             .then((response) => {
                 orcidId = response.orcid;
 

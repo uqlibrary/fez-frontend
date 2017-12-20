@@ -46,9 +46,9 @@ api.interceptors.request.use(request => {
 
 api.interceptors.response.use(response => {
     if (!isGet) {
-        return cache.store.clear().then(() => Promise.resolve(response));
+        return cache.store.clear().then(() => Promise.resolve(response.data));
     }
-    return response;
+    return Promise.resolve(response.data);
 }, error => {
     if (error.response && error.response.status === 403) {
         if (process.env.NODE_ENV === 'test') {
@@ -62,7 +62,7 @@ api.interceptors.response.use(response => {
         status: error.response ? error.response.status : null,
         message: error.response && error.response.data && error.response.data.message
             ? error.response.data.message
-            : `Request error with status code ${error.response.status}. `
+            : `Request error with status code ${error.response ? error.response.status : 'NA'}. `
     };
     return Promise.reject(errorMessage);
 });

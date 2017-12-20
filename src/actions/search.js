@@ -22,25 +22,25 @@ export function createSearchPromise(source, queryString, dispatch) {
     return new Promise((resolve) => {
         dispatch({type: `${actions.SEARCH_LOADING}@${source}`});
         getSearch(source, queryString)
-            .then(response => {
-                const data = response && response.hasOwnProperty('data') ? response.data
-                    .map(item => {
-                        const sourceConfig = locale.global.sources[source];
-                        item.sources = [
-                            {
-                                source: source,
-                                id: sourceConfig.idKey
-                                    .split('.')
-                                    .reduce((objectValue, pathProperty) => objectValue[pathProperty], item)
-                            }];
-                        item.currentSource = source;
-                        return item;
-                    }) : [];
+            .then(({data = []}) => {
+                const processResponse = data.map(item => {
+                    const sourceConfig = locale.global.sources[source];
+                    item.sources = [
+                        {
+                            source: source,
+                            id: sourceConfig.idKey
+                                .split('.')
+                                .reduce((objectValue, pathProperty) => objectValue[pathProperty], item)
+                        }];
+                    item.currentSource = source;
+                    return item;
+                });
+
                 dispatch({
                     type: `${actions.SEARCH_LOADED}@${source}`,
-                    payload: data
+                    payload: processResponse
                 });
-                resolve(data);
+                resolve(processResponse);
             })
             .catch(error => {
                 dispatch({

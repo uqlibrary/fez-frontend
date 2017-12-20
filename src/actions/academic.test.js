@@ -19,7 +19,7 @@ describe('Academic action creators', () => {
 
     it('should dispatch 3 actions on successful fetch of academic stats by publication year data', async () => {
         mockApi
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: 'testuser'}))
+            .onAny()
             .reply(200, publicationYearsSmall);
 
         const expectedActions = [
@@ -36,7 +36,7 @@ describe('Academic action creators', () => {
         delete publicationYearsSmall.facet_counts;
 
         mockApi
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: 'testuser'}))
+            .onAny()
             .reply(200, publicationYearsSmall);
 
         const expectedActions = [
@@ -51,7 +51,7 @@ describe('Academic action creators', () => {
 
     it('should dispatch 3 actions on error 403 while fetching academic stats by publication year data', async () => {
         mockApi
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_YEARS_API({userId: 'testuser'}))
+            .onAny()
             .reply(403);
 
         const expectedActions = [
@@ -82,8 +82,8 @@ describe('Academic action creators', () => {
 
     it('should dispatch 3 actions on error 403 while fetching author\'s publication stats data', async () => {
         mockApi
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: 'testuser'}))
-            .reply(403, undefined);
+            .onAny()
+            .reply(403, {});
 
         const expectedActions = [
             {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING},
@@ -100,7 +100,7 @@ describe('Academic action creators', () => {
             .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: 'testuser'}))
             .reply(200, publicationStats)
             .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: 'testuser'}))
-            .reply(500, null);
+            .reply(500, {});
 
         const expectedActions = [
             {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING},
@@ -116,7 +116,7 @@ describe('Academic action creators', () => {
             .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: 'testuser'}))
             .reply(200)
             .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: 'testuser'}))
-            .reply(500, null);
+            .reply(500, {});
 
         const expectedActions = [
             {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING},

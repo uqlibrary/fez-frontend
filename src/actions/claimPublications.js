@@ -95,7 +95,7 @@ export function hideRecord({record, facets = {}}) {
             .catch(error => {
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_FAILED,
-                    payload: []
+                    payload: error.message
                 });
                 return Promise.reject(error);
             });
