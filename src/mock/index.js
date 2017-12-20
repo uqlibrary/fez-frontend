@@ -87,7 +87,7 @@ mock
         const vocabId = config.url.substring(config.url.indexOf('/') + 1);
         return [200, mockData.vocabulariesList[vocabId]];
     })
-    .onGet(new RegExp(escapeRegExp(routes.AUTHOR_ORCID_DETAILS_API({userId: '.*', params: {code: '.*', redirUri: '.*'}}))))
+    .onGet(new RegExp(escapeRegExp(routes.AUTHOR_ORCID_DETAILS_API({userId: '.*', params: {code: '.*', redirUri: '.*'}}).apiUrl)))
     .reply(200, {data: {...mockData.authorOrcidDetails}})
     // .reply(500, {message: 'error - failed AUTHOR_ORCID_DETAILS_API'})
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
