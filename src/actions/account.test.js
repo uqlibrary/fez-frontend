@@ -51,8 +51,8 @@ describe('Account action creators', () => {
         mockApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API())
             .reply(200, accounts.uqstaff)
-            .onGet(repositories.routes.CURRENT_AUTHOR_API())
-            .reply(404, {data: {message: 'not found'}});
+            .onAny()
+            .reply(404, {});
 
         const expectedActions = [
             {type: actions.CURRENT_ACCOUNT_LOADING},
@@ -70,8 +70,8 @@ describe('Account action creators', () => {
         mockApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API())
             .reply(200, accounts.uqstaff)
-            .onGet(repositories.routes.CURRENT_AUTHOR_API())
-            .reply(403, {data: {message: 'auth expired'}});
+            .onAny()
+            .reply(403, {});
 
         const expectedActions = [
             {type: actions.CURRENT_ACCOUNT_LOADING},

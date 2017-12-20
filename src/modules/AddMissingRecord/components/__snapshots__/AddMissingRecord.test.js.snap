@@ -24,14 +24,18 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
     actions={Object {}}
     addRecordStep={[Function]}
     author={null}
-    history={Object {}}
+    history={
+      Object {
+        "push": [Function],
+      }
+    }
     location={
       Object {
         "pathname": "/records/add/find",
       }
     }
     match={Object {}}
-    rawSearchQuery={null}
+    rawSearchQuery=""
   />
 </StandardPage>
 `;
@@ -60,7 +64,11 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
     actions={Object {}}
     addRecordStep={[Function]}
     author={null}
-    history={Object {}}
+    history={
+      Object {
+        "push": [Function],
+      }
+    }
     location={
       Object {
         "pathname": "/records/add/results",
@@ -96,14 +104,18 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
     actions={Object {}}
     addRecordStep={[Function]}
     author={null}
-    history={Object {}}
+    history={
+      Object {
+        "push": [Function],
+      }
+    }
     location={
       Object {
         "pathname": "/records/add/new",
       }
     }
     match={Object {}}
-    rawSearchQuery={null}
+    rawSearchQuery=""
   />
 </StandardPage>
 `;

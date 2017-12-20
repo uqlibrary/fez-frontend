@@ -89,7 +89,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
         // get ORCID id for current user
         return get(routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}), false)
             .then((response) => {
-                orcidId = response.data.orcid;
+                orcidId = response.orcid;
 
                 // response should contain orcid id
                 if (!orcidId) {
@@ -97,7 +97,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
                 }
 
                 // patch author record with corresponding ORCID id
-                const authorPatchRequest = transformers.getAuthorIdentifierOrcidPatchRequest(authorId, orcidId, response.data);
+                const authorPatchRequest = transformers.getAuthorIdentifierOrcidPatchRequest(authorId, orcidId, response);
                 return patch(routes.AUTHOR_API({authorId}), authorPatchRequest);
             })
             .then((response) => {
