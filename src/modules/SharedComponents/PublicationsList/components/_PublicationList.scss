@@ -18,7 +18,7 @@
   }
 
   .publicationSources, .citationSources {
-    font-size: 12px;
+    font-size: $text-body-small;
 
     .publicationSource {
       &:after {
@@ -40,9 +40,9 @@
   }
 
   .citationContent {
-    font-size: 12px;
-    line-height: 16px;
-    color: rgba($text-color, 0.88);
+    font-size: $text-body-normal;
+    line-height: $text-line-height-normal;
+    color: rgba($text-color, 0.8);
     margin-bottom: 12px;
 
     .citationJournalName {
@@ -62,7 +62,7 @@
     }
 
     .citationIcon {
-      font-size: $text-body-small !important;
+      font-size: $text-body-normal !important;
     }
   }
 
