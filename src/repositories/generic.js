@@ -47,7 +47,5 @@ export function patch({apiUrl, options = {}}, data, config = {}) {
  * @returns {Promise}
  */
 export function get({apiUrl, options = {}}, config = {}) {
-    // console.log('GET: ' + apiUrl);
-    // console.log({...config, ...options});
     return api.get(apiUrl, {...config, ...options});
 }

@@ -54,13 +54,11 @@ mock
     .reply(200, mockData.trendingPublications)
     .onGet(routes.SEARCH_EXTERNAL_RECORDS_API({}).apiUrl)
     .reply(config => {
-        console.log('external serach....');
         if (config.params.source === 'scopus' && config.params.title) return [200, mockData.externalTitleScopusResultsList];
         if (config.params.source === 'wos' && config.params.title) return [200, mockData.externalTitleSearchResultsList];
         if (config.params.source === 'crossref' && config.params.title) return [200, mockData.externalTitleSearchResultsList];
         if (config.params.source === 'crossref' && config.params.doi) return [200, mockData.externalDoiSearchResultList];
         if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
-
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
         // CURRENT_USER_RECORDS_API

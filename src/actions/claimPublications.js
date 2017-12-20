@@ -236,7 +236,6 @@ export function claimPublication(data) {
                 return Promise.resolve(data.publication);
             })
             .catch(error => {
-                console.log(error);
                 // new record was created or author claim request was saved, but file upload failed
                 if (claimRecordRequestSuccess) {
                     dispatch({

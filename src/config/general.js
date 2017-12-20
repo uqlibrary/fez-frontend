@@ -16,7 +16,6 @@ export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
 
 export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.org';
 export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';
-// console.log('some general stuff');
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
 // Default values for createNewRecord
