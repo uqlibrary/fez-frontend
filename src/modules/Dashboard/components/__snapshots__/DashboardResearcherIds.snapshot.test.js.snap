@@ -77,19 +77,16 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     className="column is-narrow researchIdAvatar error"
     key="4"
   >
-    <ExternalLink
-      className="researcherIDlink"
-      href="https://app.library.uq.edu.au/#/id"
-      openInNewIcon={false}
-      rel="noopener noreferrer"
-      target="_blank"
+    <a
+      onClick={[Function]}
+      onKeyPress={[Function]}
       title="You are not linked to ORCID - Click to amend"
     >
       <div
         className="fez-icon orcid dashboard"
         title="You are not linked to ORCID - Click to amend"
       />
-    </ExternalLink>
+    </a>
   </div>
 </div>
 `;

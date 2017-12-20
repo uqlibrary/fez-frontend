@@ -8,6 +8,7 @@ describe('Search action creators', () => {
 
     // extend expect to check actions
     expect.extend({toHaveDispatchedActions});
+    expect.extend({toHaveAnyOrderDispatchedActions});
 
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
@@ -48,7 +49,7 @@ describe('Search action creators', () => {
         ];
 
         await mockActionsStore.dispatch(searchActions.searchPublications(testTitleSearchParam));
-        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
     it('should dispatch series of search actions for search publications with one failure', async () => {
@@ -80,7 +81,7 @@ describe('Search action creators', () => {
         ];
 
         await mockActionsStore.dispatch(searchActions.searchPublications(testTitleSearchParam));
-        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
     it('should dispatch series of search actions for search publications with crossref returns no data', async () => {
@@ -112,7 +113,7 @@ describe('Search action creators', () => {
         ];
 
         await mockActionsStore.dispatch(searchActions.searchPublications(testTitleSearchParam));
-        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
     it('should dispatch series of actions for anon user', async () => {
@@ -149,7 +150,7 @@ describe('Search action creators', () => {
         ];
 
         await mockActionsStore.dispatch(searchActions.searchPublications(testTitleSearchParam));
-        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
     it('should dispatch events for successful search key lookup api call', async () => {

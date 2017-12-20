@@ -43,7 +43,7 @@ export default class Orcid extends Component {
                 client_id: ORCID_CLIENT_ID,
                 response_type: 'code',
                 scope: '/read-limited /activities/update /person/update',
-                redirect_uri: `${window.location.origin}${window.location.pathname}${window.location.hash}`,
+                redirect_uri: routes.pathConfig.authorIdentifiers.orcid.absoluteLink,
                 state: orcidStateId
             },
             existingOrcidRequest: {
@@ -108,7 +108,7 @@ export default class Orcid extends Component {
         // author's orcid id has been updated successfully
         if (nextProps.author && this.props.author && nextProps.author.aut_orcid_id !== this.props.author.aut_orcid_id) {
             this.props.actions.showAppAlert({
-                ...locale.pages.googleScholarLink.successAlert,
+                ...locale.pages.orcidLink.successAlert,
                 dismissAction: this.props.actions.dismissAppAlert
             });
             this._navigateToDashboard();

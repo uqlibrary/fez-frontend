@@ -59,6 +59,27 @@ const toHaveDispatchedActions = (actions, expectedActions) => {
         pass: pass
     };
 };
+
+// for Promise.all - responses can come back out of order
+const toHaveAnyOrderDispatchedActions = (actions, expectedActions) => {
+    let pass = actions.length === expectedActions.length;
+    if (pass) {
+        const sortedActions = actions.sort((a, b) => (a.type > b.type ? -1 : 1));
+        const sortedExpectedActions = expectedActions.sort((a, b) => (a.type > b.type ? -1 : 1));
+
+        sortedActions.map((item, index) => {
+            if(item.type !==  sortedExpectedActions[index].type) {
+                pass = false;
+                return;
+            }
+        });
+    }
+    return {
+        message: (a, b) => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action.type))}]`,
+        pass: pass
+    };
+};
+
 // usage in test:
 // extend expect to check actions
 // expect.extend({toHaveDispatchedActions});
@@ -105,3 +126,4 @@ global.mockApi = setupMockAdapter();
 
 // expect extension
 global.toHaveDispatchedActions = toHaveDispatchedActions;
+global.toHaveAnyOrderDispatchedActions = toHaveAnyOrderDispatchedActions;
