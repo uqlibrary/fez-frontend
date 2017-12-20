@@ -25710,7 +25710,7 @@ describe('Controlled Vocabularies actions', () => {
         const testId = 451780;
 
         mockApi
-            .onGet(repositories.routes.VOCABULARIES_API({id: testId}))
+            .onGet(repositories.routes.VOCABULARIES_API({id: testId}).apiUrl)
             .reply(200, returnedApiData);
 
         const expectedActions = [
@@ -25726,7 +25726,7 @@ describe('Controlled Vocabularies actions', () => {
         const testId = 451780;
 
         mockApi
-            .onGet(repositories.routes.VOCABULARIES_API({id: testId}))
+            .onAny()
             .reply(403);
 
         const expectedActions = [
@@ -25743,7 +25743,7 @@ describe('Controlled Vocabularies actions', () => {
         const testId = 451780;
 
         mockApi
-            .onGet(repositories.routes.VOCABULARIES_API({id: testId}))
+            .onAny()
             .reply(404);
 
         const expectedActions = [

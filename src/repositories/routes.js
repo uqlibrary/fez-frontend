@@ -43,10 +43,11 @@ export const getSearchType = (searchQuery) => {
     return {title: searchQuery};
 };
 
-export const CURRENT_ACCOUNT_API = () => ({apiUrl: `account?${new Date().getTime()}`});
+export const CURRENT_ACCOUNT_API = () => ({apiUrl: 'account', options: {params: {ts: `${new Date().getTime()}`}}});
 export const AUTHORS_SEARCH_API = ({query}) => ({apiUrl: 'fez-authors/search', options: {params: {query: query}}});
 export const CURRENT_AUTHOR_API = () => ({apiUrl: 'fez-authors'});
 export const AUTHOR_DETAILS_API = ({userId}) => ({apiUrl: `authors/details/${userId}`});
+export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => ({apiUrl: `orcid/${userId}/request`, options: {params: {...params}}});
 
 // academic stats apis
 export const ACADEMIC_STATS_PUBLICATION_YEARS_API = ({userId}) => ({apiUrl: `academic/${userId}/publication-years`});
@@ -69,7 +70,7 @@ export const RECORDS_ISSUES_API = ({pid}) => ({apiUrl: `records/${pid}/issues`})
 
 // search/list records apis
 export const POSSIBLE_RECORDS_API = ({facets = {}}) => ({apiUrl: 'records/search', options: {params: {rule: 'possible', ...getFacetsParams(facets)}}});
-export const HIDE_POSSIBLE_RECORD_API = () => ({apiUrl: 'records/search?rule=possible'}); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
+export const HIDE_POSSIBLE_RECORD_API = () => ({apiUrl: 'records/search', options: {params: {rule: 'possible'}}}); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
 
 export const CURRENT_USER_RECORDS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}});
 
@@ -78,7 +79,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (values) => (
     {apiUrl: 'records/search', options: {params: {...getSearchType(values.searchQuery), ...getStandardSearchParams(values)}}}
 );
 
-export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery}) => (
+export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery = ''}) => (
     {apiUrl: 'external/records/search', options: {params: {source: source, ...getSearchType(searchQuery)}}}
 );
 

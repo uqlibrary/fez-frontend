@@ -189,10 +189,10 @@ describe('Claim publication actions tests ', () => {
             const testRecord = {pid: testPid};
 
             mockApi
-                .onPost(repositories.routes.HIDE_POSSIBLE_RECORD_API({}))
-                .reply(403, {})
-                .onGet(repositories.routes.POSSIBLE_RECORDS_API({facets: {}}))
-                .reply(200, mockData.possibleUnclaimedList);
+                .onGet(repositories.routes.POSSIBLE_RECORDS_API({facets: {}}).apiUrl)
+                .reply(200, mockData.possibleUnclaimedList)
+                .onAny()
+                .reply(403, {});
 
             const expectedActions = [
                 {type: actions.HIDE_PUBLICATIONS_LOADING},
@@ -213,10 +213,10 @@ describe('Claim publication actions tests ', () => {
             const testRecord = {pid: testPid};
 
             mockApi
-                .onPost(repositories.routes.HIDE_POSSIBLE_RECORD_API({}))
-                .reply(500, {})
-                .onGet(repositories.routes.POSSIBLE_RECORDS_API({facets: {}}))
-                .reply(200, mockData.possibleUnclaimedList);
+                .onGet(repositories.routes.POSSIBLE_RECORDS_API({facets: {}}).apiUrl)
+                .reply(200, mockData.possibleUnclaimedList)
+                .onAny()
+                .reply(500, {});
 
             const expectedActions = [
                 {type: actions.HIDE_PUBLICATIONS_LOADING},
@@ -350,7 +350,7 @@ describe('Claim publication actions tests ', () => {
             };
 
             mockApi
-                .onPost(repositories.routes.NEW_RECORD_API())
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, {data: {...testClaimRequest.publication}})
                 .onAny()
                 .reply(200, {});
@@ -406,19 +406,19 @@ describe('Claim publication actions tests ', () => {
             };
 
             mockApi
-                .onPatch(repositories.routes.EXISTING_RECORD_API(testParams))
+                .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(repositories.routes.RECORDS_ISSUES_API({
                     pid: testClaimRequest.publication.rek_pid,
                     fileName: files.files.queue[0].name
-                }))
+                }).apiUrl)
                 .reply(200, {})
                 .onGet(repositories.routes.FILE_UPLOAD_API({
                     pid: testClaimRequest.publication.rek_pid,
                     fileName: files.files.queue[0].name
-                }))
+                }).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
-                .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"}, )
+                .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
                 .reply(500, {});
 
             const expectedActions = [
@@ -443,17 +443,17 @@ describe('Claim publication actions tests ', () => {
             };
 
             mockApi
-                .onPatch(repositories.routes.EXISTING_RECORD_API(testParams))
+                .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(repositories.routes.RECORDS_ISSUES_API({
                     pid: testClaimRequest.publication.rek_pid,
                     fileName: files.files.queue[0].name
-                }))
+                }).apiUrl)
                 .reply(200, {})
                 .onGet(repositories.routes.FILE_UPLOAD_API({
                     pid: testClaimRequest.publication.rek_pid,
                     fileName: files.files.queue[0].name
-                }))
+                }).apiUrl)
                 .reply(500, {})
                 .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"}, )
                 .reply(200, {});

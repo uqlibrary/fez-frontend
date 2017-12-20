@@ -20,7 +20,7 @@ describe('Publications actions', () => {
 
         it('dispatches expected actions on successful load', async () => {
             mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API({pageSize: 5}))
+                .onGet(repositories.routes.CURRENT_USER_RECORDS_API({pageSize: 5}).apiUrl)
                 .reply(200, {});
 
             const expectedActions = [
@@ -34,7 +34,7 @@ describe('Publications actions', () => {
 
         it('dispatches expected actions for anon user', async () => {
             mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API({pageSize: 5}))
+                .onAny()
                 .reply(403, {});
 
             const expectedActions = [
@@ -49,7 +49,7 @@ describe('Publications actions', () => {
 
         it('dispatches expected actions if API fails', async () => {
             mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API({pageSize: 5}))
+                .onAny()
                 .reply(500, {});
 
             const expectedActions = [
@@ -75,7 +75,7 @@ describe('Publications actions', () => {
             };
 
             mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest))
+                .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl)
                 .reply(200, {});
 
             const expectedActions = [
@@ -98,7 +98,7 @@ describe('Publications actions', () => {
             };
 
             mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest))
+                .onAny()
                 .reply(403, {});
 
             const expectedActions = [
@@ -122,7 +122,7 @@ describe('Publications actions', () => {
             };
 
             mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest))
+                .onAny()
                 .reply(500, {});
 
             const expectedActions = [
@@ -142,7 +142,7 @@ describe('Publications actions', () => {
             const testRequest = {userId: testParam};
 
             mockApi
-                .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API(testRequest))
+                .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API(testRequest).apiUrl)
                 .reply(200, mockData.trendingPublications);
 
             const expectedActions = [
@@ -159,7 +159,7 @@ describe('Publications actions', () => {
             const testRequest = {userId: testParam};
 
             mockApi
-                .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API(testRequest))
+                .onAny()
                 .reply(403, {});
 
             const expectedActions = [
@@ -177,7 +177,7 @@ describe('Publications actions', () => {
             const testRequest = {userId: testParam};
 
             mockApi
-                .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATIONS_TRENDING_API(testRequest))
+                .onAny()
                 .reply(500, {});
 
             const expectedActions = [

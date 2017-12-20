@@ -27,11 +27,11 @@ describe('Account action creators', () => {
 
     it('should dispatch expected actions on successful fetch of user details', async () => {
         mockApi
-            .onGet(repositories.routes.CURRENT_ACCOUNT_API())
+            .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqresearcher)
-            .onGet(repositories.routes.CURRENT_AUTHOR_API())
+            .onGet(repositories.routes.CURRENT_AUTHOR_API().apiUrl)
             .reply(200, currentAuthor.uqresearcher)
-            .onGet(repositories.routes.AUTHOR_DETAILS_API({userId: accounts.uqresearcher.id}))
+            .onGet(repositories.routes.AUTHOR_DETAILS_API({userId: accounts.uqresearcher.id}).apiUrl)
             .reply(200, authorDetails.uqresearcher);
 
         const expectedActions = [
@@ -49,7 +49,7 @@ describe('Account action creators', () => {
 
     it('should dispatch expected actions if author returns 404', async () => {
         mockApi
-            .onGet(repositories.routes.CURRENT_ACCOUNT_API())
+            .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqstaff)
             .onAny()
             .reply(404, {});
@@ -68,7 +68,7 @@ describe('Account action creators', () => {
 
     it('should dispatch expected actions if author returns 403', async () => {
         mockApi
-            .onGet(repositories.routes.CURRENT_ACCOUNT_API())
+            .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqstaff)
             .onAny()
             .reply(403, {});
@@ -88,7 +88,7 @@ describe('Account action creators', () => {
 
     it('should dispatch expected actions if account session expired', async () => {
         mockApi
-            .onGet(repositories.routes.CURRENT_ACCOUNT_API())
+            .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqexpired);
 
         const expectedActions = [
@@ -104,11 +104,11 @@ describe('Account action creators', () => {
 
     it('should dispatch expected actions if account, author loaded, but author details failed via loadCurrentAccount()', async () => {
         mockApi
-            .onGet(repositories.routes.CURRENT_ACCOUNT_API())
+            .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqresearcher)
-            .onGet(repositories.routes.CURRENT_AUTHOR_API())
+            .onGet(repositories.routes.CURRENT_AUTHOR_API().apiUrl)
             .reply(200, currentAuthor.uqresearcher)
-            .onGet(repositories.routes.AUTHOR_DETAILS_API({userId: accounts.uqresearcher.id}))
+            .onAny()
             .reply(404, {});
 
         const expectedActions = [

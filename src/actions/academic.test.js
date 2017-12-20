@@ -66,9 +66,9 @@ describe('Academic action creators', () => {
 
     it('should dispatch 2 actions on successful fetch of author\'s publication stats data and successful hindex api call', async () => {
         mockApi
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: 'testuser'}))
+            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: 'testuser'}).apiUrl)
             .reply(200, publicationStats)
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: 'testuser'}))
+            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: 'testuser'}).apiUrl)
             .reply(200, hindexResponse);
 
         const expectedActions = [
@@ -97,9 +97,9 @@ describe('Academic action creators', () => {
 
     it('should dispatch 2 actions on error with stats while fetching author\'s publication stats data but error on hindex api call', async () => {
         mockApi
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: 'testuser'}))
+            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: 'testuser'}).apiUrl)
             .reply(200, publicationStats)
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: 'testuser'}))
+            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: 'testuser'}).apiUrl)
             .reply(500, {});
 
         const expectedActions = [
@@ -113,9 +113,9 @@ describe('Academic action creators', () => {
 
     it('should dispatch 2 actions on success with empty response while fetching author\'s publication stats data but error on hindex api call', async () => {
         mockApi
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: 'testuser'}))
+            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_STATS_API({userId: 'testuser'}).apiUrl)
             .reply(200)
-            .onGet(repositories.routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: 'testuser'}))
+            .onAny()
             .reply(500, {});
 
         const expectedActions = [

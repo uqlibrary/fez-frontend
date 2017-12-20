@@ -19,12 +19,15 @@ export function loadRecordToFix(pid) {
                     type: actions.FIX_RECORD_LOADED,
                     payload: response.data
                 });
+
+                return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
                     type: actions.FIX_RECORD_LOAD_FAILED,
                     payload: error.message
                 });
+                return Promise.reject(error);
             });
     };
 }
@@ -121,6 +124,7 @@ export function fixRecord(data) {
                 return Promise.resolve(responses);
             })
             .catch(error => {
+                console.log(error);
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
                     payload: error.message
@@ -154,6 +158,7 @@ export function unclaimRecord(data) {
         data.publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === data.author.aut_id).length > 0;
 
     if (!isAuthorLinked && !isContributorLinked) {
+        console.log('record not linked');
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,

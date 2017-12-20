@@ -46,7 +46,7 @@ export function updateCurrentAuthor(authorId, data) {
     return dispatch => {
         dispatch({type: actions.CURRENT_AUTHOR_SAVING});
 
-        return patch(routes.AUTHOR_API({authorId}), data)
+        return patch(routes.CURRENT_AUTHOR_API({authorId}), data)
             .then((response) => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVED,
@@ -98,7 +98,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
 
                 // patch author record with corresponding ORCID id
                 const authorPatchRequest = transformers.getAuthorIdentifierOrcidPatchRequest(authorId, orcidId, response);
-                return patch(routes.AUTHOR_API({authorId}), authorPatchRequest);
+                return patch(routes.CURRENT_AUTHOR_API({authorId}), authorPatchRequest);
             })
             .then((response) => {
                 // author details saved successfully

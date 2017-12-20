@@ -71,7 +71,7 @@ describe('ACML actions', () => {
 
     it('calls 2 actions on a successful quick-templates api call', async () => {
         mockApi
-            .onGet(repositories.routes.GET_ACML_QUICK_TEMPLATES_API())
+            .onGet(repositories.routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
             .reply(200, acmlApiData);
 
         const expectedActions = [
@@ -85,7 +85,7 @@ describe('ACML actions', () => {
 
     it('calls 2 actions on a failed 404 quick-templates api call', async () => {
         mockApi
-            .onGet(repositories.routes.GET_ACML_QUICK_TEMPLATES_API())
+            .onAny()
             .reply(404);
 
         const expectedActions = [
@@ -99,7 +99,7 @@ describe('ACML actions', () => {
 
     it('calls 3 actions on a failed 403 quick-templates api call and load anon user', async () => {
         mockApi
-            .onGet(repositories.routes.GET_ACML_QUICK_TEMPLATES_API())
+            .onAny()
             .reply(403);
 
         const expectedActions = [

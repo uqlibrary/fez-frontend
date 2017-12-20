@@ -24,7 +24,7 @@ describe('Action creators for authors', () => {
         const testRequest = {'query': testParam};
 
         mockApi
-            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest))
+            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl)
             .reply(200, mockData.authorsSearch);
 
         const expectedActions = [
@@ -42,7 +42,7 @@ describe('Action creators for authors', () => {
         const testRequest = {'query': testParam};
 
         mockApi
-            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest))
+            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl)
             .reply(200, mockData.authorsSearch);
 
         const expectedActions = [
@@ -59,7 +59,7 @@ describe('Action creators for authors', () => {
         const testRequest = {'query': testParam};
 
         mockApi
-            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest))
+            .onAny()
             .reply(403, mockData.authorsSearch);
 
         const expectedActions = [
@@ -77,7 +77,7 @@ describe('Action creators for authors', () => {
         const testRequest = {'query': testParam};
 
         mockApi
-            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest))
+            .onAny()
             .reply(500, mockData.authorsSearch);
 
         const expectedActions = [
@@ -94,7 +94,7 @@ describe('Action creators for authors', () => {
         const patchRequest = {aut_id: authorId, aut_google_scholar_id: '1001'};
 
         mockApi
-            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+            .onPatch(repositories.routes.CURRENT_AUTHOR_API({authorId: authorId}, patchRequest).apiUrl)
             .reply(200, mockData.currentAuthor['uqresearcher']);
 
         const expectedActions = [
@@ -163,9 +163,9 @@ describe('Action creators for authors', () => {
         const patchRequest = {aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid};
 
         mockApi
-            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}).apiUrl)
             .reply(200, {...mockData.authorOrcidDetails})
-            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+            .onPatch(repositories.routes.CURRENT_AUTHOR_API({authorId: authorId}, patchRequest).apiUrl)
             .reply(200, mockData.currentAuthor['uqresearcher']);
 
         const expectedActions = [
@@ -189,7 +189,7 @@ describe('Action creators for authors', () => {
         };
 
         mockApi
-            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+            .onAny()
             .reply(500, {});
 
         const expectedActions = [
@@ -215,9 +215,9 @@ describe('Action creators for authors', () => {
         const patchRequest = {aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid};
 
         mockApi
-            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}).apiUrl)
             .reply(200, {...mockData.authorOrcidDetails, orcid: null})
-            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+            .onPatch(repositories.routes.CURRENT_AUTHOR_API({authorId: authorId}, patchRequest).apiUrl)
             .reply(200, mockData.currentAuthor['uqresearcher']);
 
         const expectedActions = [
@@ -243,9 +243,9 @@ describe('Action creators for authors', () => {
         const patchRequest = {aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid};
 
         mockApi
-            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+            .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}).apiUrl)
             .reply(200, {data: {...mockData.authorOrcidDetails}})
-            .onPatch(repositories.routes.AUTHOR_API({authorId: authorId}, patchRequest))
+            .onAny()
             .reply(500, {});
 
         const expectedActions = [

@@ -21,7 +21,7 @@ describe('Fix record actions', () => {
     describe('loadRecordToFix action', () => {
         it('dispatches expected actions when loading a record to fix from API successfully', async () => {
             mockApi
-                .onGet(repositories.routes.EXISTING_RECORD_API({pid: testPid}))
+                .onGet(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
                 .reply(200, {data: {...mockData.record}});
 
             const expectedActions = [
@@ -29,27 +29,34 @@ describe('Fix record actions', () => {
                 {type: actions.FIX_RECORD_LOADED}
             ];
 
-            await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
         it('dispatches expected actions when loading a record to fix from API failed', async () => {
             mockApi
-                .onGet(repositories.routes.EXISTING_RECORD_API({pid: testPid}))
+                .onAny()
                 .reply(500);
 
             const expectedActions = [
                 {type: actions.FIX_RECORD_LOADING},
                 {type: actions.FIX_RECORD_LOAD_FAILED}
             ];
-
-            await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
         it('dispatches expected actions when loading a record to fix from API for anon user', async () => {
             mockApi
-                .onGet(repositories.routes.EXISTING_RECORD_API({pid: testPid}))
+                .onAny()
                 .reply(403);
 
             const expectedActions = [
@@ -57,9 +64,12 @@ describe('Fix record actions', () => {
                 {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
                 {type: actions.FIX_RECORD_LOAD_FAILED}
             ];
-
-            await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
     });
 
@@ -68,9 +78,12 @@ describe('Fix record actions', () => {
             const expectedActions = [
                 {type: actions.FIX_RECORD_SET}
             ];
-
-            await mockActionsStore.dispatch(fixRecordActions.setFixRecord(mockData.record));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.setFixRecord(mockData.record));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
         it('dispatches expected actions when clearing a loaded record to fix', async () => {
@@ -78,8 +91,12 @@ describe('Fix record actions', () => {
                 {type: actions.FIX_RECORD_CLEAR}
             ];
 
-            await mockActionsStore.dispatch(fixRecordActions.clearFixRecord());
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.clearFixRecord());
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
     });
 
@@ -94,7 +111,8 @@ describe('Fix record actions', () => {
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
@@ -108,7 +126,8 @@ describe('Fix record actions', () => {
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
@@ -117,11 +136,11 @@ describe('Fix record actions', () => {
             const testInput = {
                 publication: {
                     fez_record_search_key_author_id: [
-                    {
-                        rek_author_id: 123
-                    }
-                ]
-            },
+                        {
+                            rek_author_id: 123
+                        }
+                    ]
+                },
                 author: {
                     aut_id: 124
                 }
@@ -133,7 +152,8 @@ describe('Fix record actions', () => {
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
@@ -144,7 +164,7 @@ describe('Fix record actions', () => {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 },
                 files: {
                     queue: [
@@ -161,18 +181,21 @@ describe('Fix record actions', () => {
             ];
 
             mockApi
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: testPid, fileName: "test.txt"}))
+                .onGet(repositories.routes.FILE_UPLOAD_API({pid: testPid, fileName: "test.txt"}).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
-                .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"}, )
+                .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
                 .reply(200, {})
-                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}))
-                .reply(200, {data: {...testInput}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}))
+                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+                .reply(200, {data: {...mockData.record}})
+                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
                 .reply(200, {});
 
-
-            await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
         it('dispatches expected actions for successful record fix with url link', async () => {
@@ -181,7 +204,7 @@ describe('Fix record actions', () => {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 },
                 rek_link: 'http://www.google.com'
             };
@@ -192,13 +215,17 @@ describe('Fix record actions', () => {
             ];
 
             mockApi
-                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}))
-                .reply(200, {data: {...testInput}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}))
+                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+                .reply(200, {data: {...mockData.record}})
+                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
                 .reply(200, {});
 
-            await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
         it('dispatches expected actions for successful record fix', async () => {
@@ -207,7 +234,7 @@ describe('Fix record actions', () => {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 }
             };
 
@@ -217,11 +244,16 @@ describe('Fix record actions', () => {
             ];
 
             mockApi
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}))
-                .reply(200, {});
+                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
+                .reply(200, {})
+                .onAny().reply(200, {});
 
-            await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
         it('dispatches expected actions for record fix for anon user', async () => {
@@ -230,7 +262,7 @@ describe('Fix record actions', () => {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 }
             };
 
@@ -241,12 +273,13 @@ describe('Fix record actions', () => {
             ];
 
             mockApi
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}))
+                .onAny()
                 .reply(403, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
@@ -257,7 +290,7 @@ describe('Fix record actions', () => {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 }
             };
 
@@ -267,12 +300,13 @@ describe('Fix record actions', () => {
             ];
 
             mockApi
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}))
+                .onAny()
                 .reply(500, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
@@ -290,7 +324,8 @@ describe('Fix record actions', () => {
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
@@ -306,7 +341,8 @@ describe('Fix record actions', () => {
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
@@ -336,7 +372,8 @@ describe('Fix record actions', () => {
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
@@ -366,11 +403,15 @@ describe('Fix record actions', () => {
                 {type: actions.FIX_RECORD_UNCLAIM_SUCCESS}
             ];
 
-            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}))
-                .reply(200, {data: {...testInput}});
+            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+                .reply(200, {data: {...mockData.record}});
 
-            await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
         it('dispatches expected actions for record unclaim for anon user', async () => {
@@ -399,12 +440,14 @@ describe('Fix record actions', () => {
                 {type: actions.FIX_RECORD_FAILED}
             ];
 
-            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}))
+            mockApi
+                .onAny()
                 .reply(403, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
@@ -434,12 +477,14 @@ describe('Fix record actions', () => {
                 {type: actions.FIX_RECORD_FAILED}
             ];
 
-            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}))
+            mockApi
+                .onAny()
                 .reply(500, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
-            } catch(e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });

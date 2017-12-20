@@ -24,11 +24,11 @@ const create = () => {
     return {store, next, invoke}
 };
 
-function setup({recordToFix = mockRecordToFix, recordToFixLoading, accountAuthorLoading, handleSubmit, match,
+function setup({recordToFix = mockRecordToFix, loadingRecordToFix, accountAuthorLoading, handleSubmit, match,
                    initialValues, actions, author = {aut_id: 410}, history = {go: jest.fn()}, isShallow = true}){
     const props = {
         recordToFix: recordToFix,
-        recordToFixLoading: recordToFixLoading || false,
+        loadingRecordToFix: loadingRecordToFix || false,
 
         accountAuthorLoading: accountAuthorLoading || false,
         author: author,
@@ -73,7 +73,7 @@ describe('Component FixRecord ', () => {
     });
 
     it('should render loader when record is loading', () => {
-        const wrapper = setup({recordToFixLoading: true});
+        const wrapper = setup({loadingRecordToFix: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -192,15 +192,9 @@ describe('Component FixRecord ', () => {
         expect(actionFunction).toHaveBeenCalled();
     });
 
-    it('should load author if author is not loaded', () => {
-        const actionFunction = jest.fn();
-        const wrapper = setup({isShallow: false, accountAuthorLoading: false, author: null, actions: {loadCurrentAccount: actionFunction}});
-        expect(actionFunction).toHaveBeenCalled();
-    });
-
     it('should load record if record is not loaded', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({isShallow: false, recordToFixLoading: false,
+        const wrapper = setup({isShallow: false, loadingRecordToFix: false,
             recordToFix: null, actions: {loadRecordToFix: actionFunction}, match: {params: {pid: 'UQ:1001'}}});
         expect(actionFunction).toHaveBeenCalled();
     });
