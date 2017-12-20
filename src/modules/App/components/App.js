@@ -34,7 +34,7 @@ export default class App extends React.Component {
         this.state = {
             menuDrawerOpen: false,
             docked: false,
-            mediaQuery: window.matchMedia('(min-width: 1600px)'),
+            mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches
         };
     }
