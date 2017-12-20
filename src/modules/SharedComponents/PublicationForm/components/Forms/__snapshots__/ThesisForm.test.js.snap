@@ -161,7 +161,7 @@ exports[`ThesisForm renders  component 1`] = `
     title="Supervisors"
   >
     <div>
-      Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.
+      Please provide a list of supervisors and then select your name from the list.
     </div>
     <Field
       className="requiredField"
@@ -174,7 +174,7 @@ exports[`ThesisForm renders  component 1`] = `
               "addButton": "Add supervisor",
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "",
-              "nameAsPublishedLabel": "Supervisor's name as published",
+              "nameAsPublishedLabel": "Enter each supervisor's name as published",
             },
           },
           "header": Object {

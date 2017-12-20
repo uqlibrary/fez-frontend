@@ -145,7 +145,7 @@ exports[`BookForm renders  component 1`] = `
     title="Authors"
   >
     <div>
-      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
+      Please provide a list of authors and then select your name once from the list of authors or editors.
     </div>
     <Field
       className="requiredField"
@@ -158,7 +158,7 @@ exports[`BookForm renders  component 1`] = `
               "addButton": "Add author",
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Author's name as published",
+              "nameAsPublishedLabel": "Enter each author's name as published",
             },
           },
           "header": Object {
@@ -220,7 +220,7 @@ exports[`BookForm renders  component 1`] = `
     title="Editors"
   >
     <div>
-      Provide a list of editors for this publication
+      Please provide a list of editors and then select your name once from the list of authors or editors.
     </div>
     <Field
       component={[Function]}
@@ -232,7 +232,7 @@ exports[`BookForm renders  component 1`] = `
               "addButton": "Add editor",
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Editor's name as published",
+              "nameAsPublishedLabel": "Enter each editor's name as published",
             },
           },
           "header": Object {
