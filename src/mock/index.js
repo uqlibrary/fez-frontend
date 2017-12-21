@@ -21,7 +21,7 @@ if (user && !mockData.accounts[user]) {
 }
 
 // default user is researcher if user is not defined
-user = user || 'uqresearcher';
+user = user || 'uqnoauthid';
 
 
 mock
@@ -88,8 +88,8 @@ mock
         return [200, mockData.vocabulariesList[vocabId]];
     })
     .onGet(new RegExp(escapeRegExp(routes.AUTHOR_ORCID_DETAILS_API({userId: '.*', params: {code: '.*', redirUri: '.*'}}).apiUrl)))
-    .reply(200, {data: {...mockData.authorOrcidDetails}})
-    // .reply(500, {message: 'error - failed AUTHOR_ORCID_DETAILS_API'})
+    .reply(200, {...mockData.authorOrcidDetails})
+    // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
     // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
@@ -114,6 +114,8 @@ mock
 mock
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(200, {data: {...mockData.record}})
+    .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}).apiUrl)))
+    .reply(200, {data: {...mockData.currentAuthor[user]}})
     // .reply(500, {message: 'error - failed PATCH EXISTING_RECORD_API'})
     .onAny().reply((config) => {
         console.log('url not found...');

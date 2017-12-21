@@ -46,6 +46,7 @@ export const getSearchType = (searchQuery) => {
 export const CURRENT_ACCOUNT_API = () => ({apiUrl: 'account', options: {params: {ts: `${new Date().getTime()}`}}});
 export const AUTHORS_SEARCH_API = ({query}) => ({apiUrl: 'fez-authors/search', options: {params: {query: query}}});
 export const CURRENT_AUTHOR_API = () => ({apiUrl: 'fez-authors'});
+export const AUTHOR_API = ({authorId}) => ({apiUrl: `fez-authors/${authorId}`});
 export const AUTHOR_DETAILS_API = ({userId}) => ({apiUrl: `authors/details/${userId}`});
 export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => ({apiUrl: `orcid/${userId}/request`, options: {params: {...params}}});
 
