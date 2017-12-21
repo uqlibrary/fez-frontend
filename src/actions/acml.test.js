@@ -75,8 +75,8 @@ describe('ACML actions', () => {
             .reply(200, acmlApiData);
 
         const expectedActions = [
-            {type: actions.ACML_QUICK_TEMPLATES_LOADING},
-            {type: actions.ACML_QUICK_TEMPLATES_LOADED}
+            actions.ACML_QUICK_TEMPLATES_LOADING,
+            actions.ACML_QUICK_TEMPLATES_LOADED
         ];
 
         await mockActionsStore.dispatch(acmlActions.loadAcmlQuickTemplates());
@@ -89,8 +89,8 @@ describe('ACML actions', () => {
             .reply(404);
 
         const expectedActions = [
-            {type: actions.ACML_QUICK_TEMPLATES_LOADING},
-            {type: actions.ACML_QUICK_TEMPLATES_FAILED}
+            actions.ACML_QUICK_TEMPLATES_LOADING,
+            actions.ACML_QUICK_TEMPLATES_FAILED
         ];
 
         await mockActionsStore.dispatch(acmlActions.loadAcmlQuickTemplates());
@@ -103,9 +103,9 @@ describe('ACML actions', () => {
             .reply(403);
 
         const expectedActions = [
-            {type: actions.ACML_QUICK_TEMPLATES_LOADING},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.ACML_QUICK_TEMPLATES_FAILED}
+            actions.ACML_QUICK_TEMPLATES_LOADING,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.ACML_QUICK_TEMPLATES_FAILED
         ];
 
         await mockActionsStore.dispatch(acmlActions.loadAcmlQuickTemplates());

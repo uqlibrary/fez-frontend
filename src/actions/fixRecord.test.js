@@ -25,8 +25,8 @@ describe('Fix record actions', () => {
                 .reply(200, {data: {...mockData.record}});
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_LOADING},
-                {type: actions.FIX_RECORD_LOADED}
+                actions.FIX_RECORD_LOADING,
+                actions.FIX_RECORD_LOADED
             ];
 
             try {
@@ -43,8 +43,8 @@ describe('Fix record actions', () => {
                 .reply(500);
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_LOADING},
-                {type: actions.FIX_RECORD_LOAD_FAILED}
+                actions.FIX_RECORD_LOADING,
+                actions.FIX_RECORD_LOAD_FAILED
             ];
             try {
                 await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
@@ -60,9 +60,9 @@ describe('Fix record actions', () => {
                 .reply(403);
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_LOADING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.FIX_RECORD_LOAD_FAILED}
+                actions.FIX_RECORD_LOADING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.FIX_RECORD_LOAD_FAILED
             ];
             try {
                 await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
@@ -76,7 +76,7 @@ describe('Fix record actions', () => {
     describe('setting/clearing record to fix action', () => {
         it('dispatches expected actions when setting a loaded record to fix', async () => {
             const expectedActions = [
-                {type: actions.FIX_RECORD_SET}
+                actions.FIX_RECORD_SET
             ];
             try {
                 await mockActionsStore.dispatch(fixRecordActions.setFixRecord(mockData.record));
@@ -88,7 +88,7 @@ describe('Fix record actions', () => {
 
         it('dispatches expected actions when clearing a loaded record to fix', async () => {
             const expectedActions = [
-                {type: actions.FIX_RECORD_CLEAR}
+                actions.FIX_RECORD_CLEAR
             ];
 
             try {
@@ -106,7 +106,7 @@ describe('Fix record actions', () => {
             const testInput = {author: ''};
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_FAILED
             ];
 
             try {
@@ -121,7 +121,7 @@ describe('Fix record actions', () => {
             const testInput = {publication: ''};
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_FAILED
             ];
 
             try {
@@ -147,7 +147,7 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_FAILED
             ];
 
             try {
@@ -176,8 +176,8 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_SUCCESS}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_SUCCESS
             ];
 
             mockApi
@@ -210,8 +210,8 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_SUCCESS}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_SUCCESS
             ];
 
             mockApi
@@ -239,8 +239,8 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_SUCCESS}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_SUCCESS
             ];
 
             mockApi
@@ -267,9 +267,9 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_PROCESSING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.FIX_RECORD_FAILED
             ];
 
             mockApi
@@ -295,8 +295,8 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_FAILED
             ];
 
             mockApi
@@ -319,7 +319,7 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_FAILED
             ];
 
             try {
@@ -336,7 +336,7 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_FAILED
             ];
 
             try {
@@ -367,7 +367,7 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_FAILED
             ];
 
             try {
@@ -399,8 +399,8 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_UNCLAIM_SUCCESS}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_UNCLAIM_SUCCESS
             ];
 
             mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
@@ -435,9 +435,9 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_PROCESSING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.FIX_RECORD_FAILED
             ];
 
             mockApi
@@ -473,8 +473,8 @@ describe('Fix record actions', () => {
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_FAILED
             ];
 
             mockApi

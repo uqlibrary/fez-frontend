@@ -56,8 +56,8 @@ describe('Record action creators', () => {
 
 
             const expectedActions = [
-                {type: actions.CREATE_RECORD_SAVING},
-                {type: actions.CREATE_RECORD_SUCCESS}
+                actions.CREATE_RECORD_SAVING,
+                actions.CREATE_RECORD_SUCCESS
             ];
 
             await mockActionsStore.dispatch(recordActions.createNewRecord(testInput));
@@ -99,9 +99,9 @@ describe('Record action creators', () => {
                 .reply(403, {});
 
             const expectedActions = [
-                {type: actions.CREATE_RECORD_SAVING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.CREATE_RECORD_FAILED}
+                actions.CREATE_RECORD_SAVING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.CREATE_RECORD_FAILED
             ];
 
             try {
@@ -156,8 +156,8 @@ describe('Record action creators', () => {
                 .reply(500);
 
             const expectedActions = [
-                {type: actions.CREATE_RECORD_SAVING},
-                {type: actions.CREATE_RECORD_SUCCESS}
+                actions.CREATE_RECORD_SAVING,
+                actions.CREATE_RECORD_SUCCESS
             ];
 
             await mockActionsStore.dispatch(recordActions.createNewRecord(testInput));
@@ -169,7 +169,7 @@ describe('Record action creators', () => {
     describe('clearNewRecord()', () => {
         it('dispatches expected actions', async () => {
             const expectedActions = [
-                {type: actions.CREATE_RECORD_RESET}
+                actions.CREATE_RECORD_RESET
             ];
 
             await mockActionsStore.dispatch(recordActions.clearNewRecord());

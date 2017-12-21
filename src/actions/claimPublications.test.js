@@ -21,7 +21,7 @@ describe('Claim publication actions tests ', () => {
         const input = {rek_pid: 'PID:11111'};
 
         const expectedActions = [
-            { type: actions.PUBLICATION_TO_CLAIM_SET }
+            actions.PUBLICATION_TO_CLAIM_SET
         ];
 
         await mockActionsStore.dispatch(claimActions.setClaimPublication(input));
@@ -30,7 +30,7 @@ describe('Claim publication actions tests ', () => {
 
     it('dispatches an action to clear a publication to claim', async () => {
         const expectedActions = [
-            { type: actions.PUBLICATION_TO_CLAIM_CLEAR }
+            actions.PUBLICATION_TO_CLAIM_CLEAR
         ];
 
         await mockActionsStore.dispatch(claimActions.clearClaimPublication());
@@ -44,11 +44,11 @@ describe('Claim publication actions tests ', () => {
             .reply(200, {data: {...mockData.possibleUnclaimedList}});
 
         const expectedActions = [
-            {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-            {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-            {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED},
-            {type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED},
-            {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED}
+            actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+            actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+            actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
+            actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
+            actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED
         ];
 
         await mockActionsStore.dispatch(claimActions.countPossiblyYourPublications());
@@ -65,11 +65,11 @@ describe('Claim publication actions tests ', () => {
                 .reply(200, {data: {...mockData.possibleUnclaimedList}});
 
             const expectedActions = [
-                {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED},
-                {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED}
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED
             ];
 
             await mockActionsStore.dispatch(claimActions.searchPossiblyYourPublications(testParams));
@@ -83,9 +83,9 @@ describe('Claim publication actions tests ', () => {
                 .reply(200, {data: {...mockData.possibleUnclaimedList}});
 
             const expectedActions = [
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED}
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED
             ];
 
             await mockActionsStore.dispatch(claimActions.searchPossiblyYourPublications(testParams));
@@ -100,11 +100,11 @@ describe('Claim publication actions tests ', () => {
                 .reply(403, {});
 
             const expectedActions = [
-                {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED},
-                {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED}
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
             ];
 
             try {
@@ -123,10 +123,10 @@ describe('Claim publication actions tests ', () => {
                 .reply(500, {});
 
             const expectedActions = [
-                {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED},
-                {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED}
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
             ];
 
             try {
@@ -150,13 +150,13 @@ describe('Claim publication actions tests ', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                {type: actions.HIDE_PUBLICATIONS_LOADING},
-                {type: actions.HIDE_PUBLICATIONS_LOADED},
-                {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED},
-                {type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED}
+                actions.HIDE_PUBLICATIONS_LOADING,
+                actions.HIDE_PUBLICATIONS_LOADED,
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
+                actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED
             ];
 
             await mockActionsStore.dispatch(claimActions.hideRecord({record: testRecord, facets: {}}));
@@ -173,11 +173,11 @@ describe('Claim publication actions tests ', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                {type: actions.HIDE_PUBLICATIONS_LOADING},
-                {type: actions.HIDE_PUBLICATIONS_LOADED},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED},
-                {type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED}
+                actions.HIDE_PUBLICATIONS_LOADING,
+                actions.HIDE_PUBLICATIONS_LOADED,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED
             ];
 
             await mockActionsStore.dispatch(claimActions.hideRecord({record: testRecord, ...testFacets}));
@@ -195,9 +195,9 @@ describe('Claim publication actions tests ', () => {
                 .reply(403, {});
 
             const expectedActions = [
-                {type: actions.HIDE_PUBLICATIONS_LOADING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.HIDE_PUBLICATIONS_FAILED}
+                actions.HIDE_PUBLICATIONS_LOADING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.HIDE_PUBLICATIONS_FAILED
             ];
 
             try {
@@ -219,8 +219,8 @@ describe('Claim publication actions tests ', () => {
                 .reply(500, {});
 
             const expectedActions = [
-                {type: actions.HIDE_PUBLICATIONS_LOADING},
-                {type: actions.HIDE_PUBLICATIONS_FAILED}
+                actions.HIDE_PUBLICATIONS_LOADING,
+                actions.HIDE_PUBLICATIONS_FAILED
             ];
 
             try {
@@ -253,7 +253,7 @@ describe('Claim publication actions tests ', () => {
                 }
             };
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_FAILED}
+                actions.CLAIM_PUBLICATION_CREATE_FAILED
             ];
 
             try {
@@ -276,7 +276,7 @@ describe('Claim publication actions tests ', () => {
                 }
             };
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_FAILED}
+                actions.CLAIM_PUBLICATION_CREATE_FAILED
             ];
 
             try {
@@ -294,8 +294,8 @@ describe('Claim publication actions tests ', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
-                {type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED}
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];
 
             await mockActionsStore.dispatch(claimActions.claimPublication(testClaimRequest));
@@ -308,8 +308,8 @@ describe('Claim publication actions tests ', () => {
                 .reply(500, {});
 
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
-                {type: actions.CLAIM_PUBLICATION_CREATE_FAILED}
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_FAILED
             ];
 
             try {
@@ -326,9 +326,9 @@ describe('Claim publication actions tests ', () => {
                 .reply(403, {});
 
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.CLAIM_PUBLICATION_CREATE_FAILED}
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.CLAIM_PUBLICATION_CREATE_FAILED
             ];
 
             try {
@@ -356,8 +356,8 @@ describe('Claim publication actions tests ', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
-                {type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED}
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];
 
             try {
@@ -385,8 +385,8 @@ describe('Claim publication actions tests ', () => {
                 .reply(200,['http://upload.file.here/test.jpg']);
 
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
-                {type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED}
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];
 
             await mockActionsStore.dispatch(claimActions.claimPublication({...testClaimRequest, ...files}));
@@ -422,9 +422,9 @@ describe('Claim publication actions tests ', () => {
                 .reply(500, {});
 
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
-                {type: 'FILE_UPLOADED_FAILED@test.jpg'},
-                {type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED}
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                'FILE_UPLOADED_FAILED@test.jpg',
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];
 
             await mockActionsStore.dispatch(claimActions.claimPublication({...testClaimRequest, ...files}));
@@ -460,9 +460,9 @@ describe('Claim publication actions tests ', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
-                {type: 'FILE_UPLOADED_FAILED@test.jpg'},
-                {type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED}
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                'FILE_UPLOADED_FAILED@test.jpg',
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];
 
             await mockActionsStore.dispatch(claimActions.claimPublication({...testClaimRequest, ...files}));
@@ -490,8 +490,8 @@ describe('Claim publication actions tests ', () => {
             mockApi.onAny().reply(200, {});
 
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
-                {type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED}
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];
 
             try {
@@ -523,8 +523,8 @@ describe('Claim publication actions tests ', () => {
             mockApi.onAny().reply(200, {});
 
             const expectedActions = [
-                {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
-                {type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED}
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];
 
             try {

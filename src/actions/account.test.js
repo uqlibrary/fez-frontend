@@ -35,12 +35,12 @@ describe('Account action creators', () => {
             .reply(200, authorDetails.uqresearcher);
 
         const expectedActions = [
-            {type: actions.CURRENT_ACCOUNT_LOADING},
-            {type: actions.CURRENT_ACCOUNT_LOADED},
-            {type: actions.CURRENT_AUTHOR_LOADING},
-            {type: actions.CURRENT_AUTHOR_LOADED},
-            {type: actions.CURRENT_AUTHOR_DETAILS_LOADING},
-            {type: actions.CURRENT_AUTHOR_DETAILS_LOADED}
+            actions.CURRENT_ACCOUNT_LOADING,
+            actions.CURRENT_ACCOUNT_LOADED,
+            actions.CURRENT_AUTHOR_LOADING,
+            actions.CURRENT_AUTHOR_LOADED,
+            actions.CURRENT_AUTHOR_DETAILS_LOADING,
+            actions.CURRENT_AUTHOR_DETAILS_LOADED
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
@@ -55,11 +55,11 @@ describe('Account action creators', () => {
             .reply(404, {});
 
         const expectedActions = [
-            {type: actions.CURRENT_ACCOUNT_LOADING},
-            {type: actions.CURRENT_ACCOUNT_LOADED},
-            {type: actions.CURRENT_AUTHOR_LOADING},
-            {type: actions.CURRENT_AUTHOR_FAILED},
-            {type: actions.CURRENT_AUTHOR_DETAILS_FAILED}
+            actions.CURRENT_ACCOUNT_LOADING,
+            actions.CURRENT_ACCOUNT_LOADED,
+            actions.CURRENT_AUTHOR_LOADING,
+            actions.CURRENT_AUTHOR_FAILED,
+            actions.CURRENT_AUTHOR_DETAILS_FAILED
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
@@ -74,12 +74,12 @@ describe('Account action creators', () => {
             .reply(403, {});
 
         const expectedActions = [
-            {type: actions.CURRENT_ACCOUNT_LOADING},
-            {type: actions.CURRENT_ACCOUNT_LOADED},
-            {type: actions.CURRENT_AUTHOR_LOADING},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.CURRENT_AUTHOR_FAILED},
-            {type: actions.CURRENT_AUTHOR_DETAILS_FAILED}
+            actions.CURRENT_ACCOUNT_LOADING,
+            actions.CURRENT_ACCOUNT_LOADED,
+            actions.CURRENT_AUTHOR_LOADING,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.CURRENT_AUTHOR_FAILED,
+            actions.CURRENT_AUTHOR_DETAILS_FAILED
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
@@ -92,10 +92,10 @@ describe('Account action creators', () => {
             .reply(200, accounts.uqexpired);
 
         const expectedActions = [
-            {type: actions.CURRENT_ACCOUNT_LOADING},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.CURRENT_AUTHOR_FAILED},
-            {type: actions.CURRENT_AUTHOR_DETAILS_FAILED}
+            actions.CURRENT_ACCOUNT_LOADING,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.CURRENT_AUTHOR_FAILED,
+            actions.CURRENT_AUTHOR_DETAILS_FAILED
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
@@ -112,12 +112,12 @@ describe('Account action creators', () => {
             .reply(404, {});
 
         const expectedActions = [
-            {type: actions.CURRENT_ACCOUNT_LOADING},
-            {type: actions.CURRENT_ACCOUNT_LOADED},
-            {type: actions.CURRENT_AUTHOR_LOADING},
-            {type: actions.CURRENT_AUTHOR_LOADED},
-            {type: actions.CURRENT_AUTHOR_DETAILS_LOADING},
-            {type: actions.CURRENT_AUTHOR_DETAILS_FAILED}
+            actions.CURRENT_ACCOUNT_LOADING,
+            actions.CURRENT_ACCOUNT_LOADED,
+            actions.CURRENT_AUTHOR_LOADING,
+            actions.CURRENT_AUTHOR_LOADED,
+            actions.CURRENT_AUTHOR_DETAILS_LOADING,
+            actions.CURRENT_AUTHOR_DETAILS_FAILED
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
@@ -125,7 +125,7 @@ describe('Account action creators', () => {
     });
 
     it('should dispatch expected action when user logs out', () => {
-        const expectedActions = [{type: actions.CURRENT_ACCOUNT_ANONYMOUS}];
+        const expectedActions = [actions.CURRENT_ACCOUNT_ANONYMOUS];
         mockActionsStore.dispatch(accountActions.logout());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });

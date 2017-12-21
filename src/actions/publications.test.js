@@ -24,8 +24,8 @@ describe('Publications actions', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                {type: actions.LATEST_PUBLICATIONS_LOADING},
-                {type: actions.LATEST_PUBLICATIONS_LOADED}
+                actions.LATEST_PUBLICATIONS_LOADING,
+                actions.LATEST_PUBLICATIONS_LOADED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchLatestPublications());
@@ -38,9 +38,9 @@ describe('Publications actions', () => {
                 .reply(403, {});
 
             const expectedActions = [
-                {type: actions.LATEST_PUBLICATIONS_LOADING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.LATEST_PUBLICATIONS_FAILED}
+                actions.LATEST_PUBLICATIONS_LOADING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.LATEST_PUBLICATIONS_FAILED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchLatestPublications());
@@ -53,8 +53,8 @@ describe('Publications actions', () => {
                 .reply(500, {});
 
             const expectedActions = [
-                {type: actions.LATEST_PUBLICATIONS_LOADING},
-                {type: actions.LATEST_PUBLICATIONS_FAILED}
+                actions.LATEST_PUBLICATIONS_LOADING,
+                actions.LATEST_PUBLICATIONS_FAILED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchLatestPublications());
@@ -79,8 +79,8 @@ describe('Publications actions', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                {type: actions.AUTHOR_PUBLICATIONS_LOADING},
-                {type: actions.AUTHOR_PUBLICATIONS_LOADED}
+                actions.AUTHOR_PUBLICATIONS_LOADING,
+                actions.AUTHOR_PUBLICATIONS_LOADED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest));
@@ -102,9 +102,9 @@ describe('Publications actions', () => {
                 .reply(403, {});
 
             const expectedActions = [
-                {type: actions.AUTHOR_PUBLICATIONS_LOADING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.AUTHOR_PUBLICATIONS_FAILED}
+                actions.AUTHOR_PUBLICATIONS_LOADING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.AUTHOR_PUBLICATIONS_FAILED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest));
@@ -126,8 +126,8 @@ describe('Publications actions', () => {
                 .reply(500, {});
 
             const expectedActions = [
-                {type: actions.AUTHOR_PUBLICATIONS_LOADING},
-                {type: actions.AUTHOR_PUBLICATIONS_FAILED}
+                actions.AUTHOR_PUBLICATIONS_LOADING,
+                actions.AUTHOR_PUBLICATIONS_FAILED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest));
@@ -146,8 +146,8 @@ describe('Publications actions', () => {
                 .reply(200, mockData.trendingPublications);
 
             const expectedActions = [
-                {type: actions.TRENDING_PUBLICATIONS_LOADING},
-                {type: actions.TRENDING_PUBLICATIONS_LOADED}
+                actions.TRENDING_PUBLICATIONS_LOADING,
+                actions.TRENDING_PUBLICATIONS_LOADED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications(testParam));
@@ -163,9 +163,9 @@ describe('Publications actions', () => {
                 .reply(403, {});
 
             const expectedActions = [
-                {type: actions.TRENDING_PUBLICATIONS_LOADING},
-                {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-                {type: actions.TRENDING_PUBLICATIONS_FAILED}
+                actions.TRENDING_PUBLICATIONS_LOADING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.TRENDING_PUBLICATIONS_FAILED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications(testParam));
@@ -181,8 +181,8 @@ describe('Publications actions', () => {
                 .reply(500, {});
 
             const expectedActions = [
-                {type: actions.TRENDING_PUBLICATIONS_LOADING},
-                {type: actions.TRENDING_PUBLICATIONS_FAILED}
+                actions.TRENDING_PUBLICATIONS_LOADING,
+                actions.TRENDING_PUBLICATIONS_FAILED
             ];
 
             await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications(testParam));

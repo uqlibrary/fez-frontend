@@ -25714,8 +25714,8 @@ describe('Controlled Vocabularies actions', () => {
             .reply(200, returnedApiData);
 
         const expectedActions = [
-            {type: `${actions.VOCABULARIES_LOADING}@${testId}`},
-            {type: `${actions.VOCABULARIES_LOADED}@${testId}`}
+            `${actions.VOCABULARIES_LOADING}@${testId}`,
+            `${actions.VOCABULARIES_LOADED}@${testId}`
         ];
 
         await mockActionsStore.dispatch(controlledVocabActions.loadVocabulariesList(testId));
@@ -25730,9 +25730,9 @@ describe('Controlled Vocabularies actions', () => {
             .reply(403);
 
         const expectedActions = [
-            {type: `${actions.VOCABULARIES_LOADING}@${testId}`},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: `${actions.VOCABULARIES_LOAD_FAILED}@${testId}`}
+            `${actions.VOCABULARIES_LOADING}@${testId}`,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            `${actions.VOCABULARIES_LOAD_FAILED}@${testId}`
         ];
 
         await mockActionsStore.dispatch(controlledVocabActions.loadVocabulariesList(testId));
@@ -25747,8 +25747,8 @@ describe('Controlled Vocabularies actions', () => {
             .reply(404);
 
         const expectedActions = [
-            {type: `${actions.VOCABULARIES_LOADING}@${testId}`},
-            {type: `${actions.VOCABULARIES_LOAD_FAILED}@${testId}`}
+            `${actions.VOCABULARIES_LOADING}@${testId}`,
+            `${actions.VOCABULARIES_LOAD_FAILED}@${testId}`
         ];
 
         await mockActionsStore.dispatch(controlledVocabActions.loadVocabulariesList(testId));

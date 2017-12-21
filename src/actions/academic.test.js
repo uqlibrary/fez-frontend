@@ -23,9 +23,9 @@ describe('Academic action creators', () => {
             .reply(200, publicationYearsSmall);
 
         const expectedActions = [
-            {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING},
-            {type: actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED},
-            {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED}
+            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsByYear('testuser'));
@@ -40,9 +40,9 @@ describe('Academic action creators', () => {
             .reply(200, publicationYearsSmall);
 
         const expectedActions = [
-            {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING},
-            {type: actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED},
-            {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED}
+            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING,
+            actions.ACADEMIC_PUBLICATIONS_COUNT_LOADED,
+            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsByYear('testuser'));
@@ -55,9 +55,9 @@ describe('Academic action creators', () => {
             .reply(403);
 
         const expectedActions = [
-            {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED}
+            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_LOADING,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.ACADEMIC_PUBLICATIONS_BY_YEAR_FAILED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsByYear('testuser'));
@@ -72,8 +72,8 @@ describe('Academic action creators', () => {
             .reply(200, hindexResponse);
 
         const expectedActions = [
-            {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING},
-            {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED}
+            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
+            actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
@@ -86,9 +86,9 @@ describe('Academic action creators', () => {
             .reply(403, {});
 
         const expectedActions = [
-            {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.ACADEMIC_PUBLICATIONS_STATS_FAILED}
+            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.ACADEMIC_PUBLICATIONS_STATS_FAILED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
@@ -103,8 +103,8 @@ describe('Academic action creators', () => {
             .reply(500, {});
 
         const expectedActions = [
-            {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING},
-            {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADED}
+            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
+            actions.ACADEMIC_PUBLICATIONS_STATS_LOADED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
@@ -119,8 +119,8 @@ describe('Academic action creators', () => {
             .reply(500, {});
 
         const expectedActions = [
-            {type: actions.ACADEMIC_PUBLICATIONS_STATS_LOADING},
-            {type: actions.ACADEMIC_PUBLICATIONS_STATS_FAILED}
+            actions.ACADEMIC_PUBLICATIONS_STATS_LOADING,
+            actions.ACADEMIC_PUBLICATIONS_STATS_FAILED
         ];
 
         await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));

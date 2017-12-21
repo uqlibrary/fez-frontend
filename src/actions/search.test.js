@@ -38,19 +38,19 @@ describe('Search action creators', () => {
             .reply(200, mockData.externalPubMedSearchResultsList);
 
         const expectedActions = [
-            {type: actions.SEARCH_LOADING},
-            {type: `${actions.SEARCH_LOADING}@espace`},
-            {type: `${actions.SEARCH_LOADING}@wos`},
-            {type: `${actions.SEARCH_LOADING}@scopus`},
-            {type: `${actions.SEARCH_LOADING}@pubmed`},
-            {type: `${actions.SEARCH_LOADING}@crossref`},
-            {type: actions.SEARCH_SOURCE_COUNT},
-            {type: `${actions.SEARCH_LOADED}@espace`},
-            {type: `${actions.SEARCH_LOADED}@wos`},
-            {type: `${actions.SEARCH_LOADED}@scopus`},
-            {type: `${actions.SEARCH_LOADED}@pubmed`},
-            {type: `${actions.SEARCH_LOADED}@crossref`},
-            {type: actions.SEARCH_LOADED}
+            actions.SEARCH_LOADING,
+            `${actions.SEARCH_LOADING}@espace`,
+            `${actions.SEARCH_LOADING}@wos`,
+            `${actions.SEARCH_LOADING}@scopus`,
+            `${actions.SEARCH_LOADING}@pubmed`,
+            `${actions.SEARCH_LOADING}@crossref`,
+            actions.SEARCH_SOURCE_COUNT,
+            `${actions.SEARCH_LOADED}@espace`,
+            `${actions.SEARCH_LOADED}@wos`,
+            `${actions.SEARCH_LOADED}@scopus`,
+            `${actions.SEARCH_LOADED}@pubmed`,
+            `${actions.SEARCH_LOADED}@crossref`,
+            actions.SEARCH_LOADED
         ];
 
         await mockActionsStore.dispatch(searchActions.searchPublications(testTitleSearchParam));
@@ -77,19 +77,19 @@ describe('Search action creators', () => {
 
 
         const expectedActions = [
-            {type: actions.SEARCH_LOADING},
-            {type: `${actions.SEARCH_LOADING}@espace`},
-            {type: `${actions.SEARCH_LOADING}@wos`},
-            {type: `${actions.SEARCH_LOADING}@scopus`},
-            {type: `${actions.SEARCH_LOADING}@pubmed`},
-            {type: `${actions.SEARCH_LOADING}@crossref`},
-            {type: actions.SEARCH_SOURCE_COUNT},
-            {type: `${actions.SEARCH_LOADED}@espace`},
-            {type: `${actions.SEARCH_LOADED}@wos`},
-            {type: `${actions.SEARCH_LOADED}@scopus`},
-            {type: `${actions.SEARCH_LOADED}@crossref`},
-            {type: `${actions.SEARCH_FAILED}@pubmed`},
-            {type: actions.SEARCH_LOADED}
+            actions.SEARCH_LOADING,
+            `${actions.SEARCH_LOADING}@espace`,
+            `${actions.SEARCH_LOADING}@wos`,
+            `${actions.SEARCH_LOADING}@scopus`,
+            `${actions.SEARCH_LOADING}@pubmed`,
+            `${actions.SEARCH_LOADING}@crossref`,
+            actions.SEARCH_SOURCE_COUNT,
+            `${actions.SEARCH_LOADED}@espace`,
+            `${actions.SEARCH_LOADED}@wos`,
+            `${actions.SEARCH_LOADED}@scopus`,
+            `${actions.SEARCH_LOADED}@crossref`,
+            `${actions.SEARCH_FAILED}@pubmed`,
+            actions.SEARCH_LOADED
         ];
 
         await mockActionsStore.dispatch(searchActions.searchPublications(testTitleSearchParam));
@@ -116,19 +116,19 @@ describe('Search action creators', () => {
 
 
         const expectedActions = [
-            {type: actions.SEARCH_LOADING},
-            {type: `${actions.SEARCH_LOADING}@espace`},
-            {type: `${actions.SEARCH_LOADING}@wos`},
-            {type: `${actions.SEARCH_LOADING}@scopus`},
-            {type: `${actions.SEARCH_LOADING}@pubmed`},
-            {type: `${actions.SEARCH_LOADING}@crossref`},
-            {type: actions.SEARCH_SOURCE_COUNT},
-            {type: `${actions.SEARCH_LOADED}@espace`},
-            {type: `${actions.SEARCH_LOADED}@wos`},
-            {type: `${actions.SEARCH_LOADED}@scopus`},
-            {type: `${actions.SEARCH_LOADED}@pubmed`},
-            {type: `${actions.SEARCH_LOADED}@crossref`},
-            {type: actions.SEARCH_LOADED}
+            actions.SEARCH_LOADING,
+            `${actions.SEARCH_LOADING}@espace`,
+            `${actions.SEARCH_LOADING}@wos`,
+            `${actions.SEARCH_LOADING}@scopus`,
+            `${actions.SEARCH_LOADING}@pubmed`,
+            `${actions.SEARCH_LOADING}@crossref`,
+            actions.SEARCH_SOURCE_COUNT,
+            `${actions.SEARCH_LOADED}@espace`,
+            `${actions.SEARCH_LOADED}@wos`,
+            `${actions.SEARCH_LOADED}@scopus`,
+            `${actions.SEARCH_LOADED}@pubmed`,
+            `${actions.SEARCH_LOADED}@crossref`,
+            actions.SEARCH_LOADED
         ];
 
         await mockActionsStore.dispatch(searchActions.searchPublications(testTitleSearchParam));
@@ -140,24 +140,24 @@ describe('Search action creators', () => {
             .reply(403);
 
         const expectedActions = [
-            {type: actions.SEARCH_LOADING},
-            {type: `${actions.SEARCH_LOADING}@espace`},
-            {type: `${actions.SEARCH_LOADING}@wos`},
-            {type: `${actions.SEARCH_LOADING}@scopus`},
-            {type: `${actions.SEARCH_LOADING}@pubmed`},
-            {type: `${actions.SEARCH_LOADING}@crossref`},
-            {type: actions.SEARCH_SOURCE_COUNT},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: `${actions.SEARCH_FAILED}@espace`},
-            {type: `${actions.SEARCH_FAILED}@wos`},
-            {type: `${actions.SEARCH_FAILED}@scopus`},
-            {type: `${actions.SEARCH_FAILED}@pubmed`},
-            {type: `${actions.SEARCH_FAILED}@crossref`},
-            {type: actions.SEARCH_LOADED}
+            actions.SEARCH_LOADING,
+            `${actions.SEARCH_LOADING}@espace`,
+            `${actions.SEARCH_LOADING}@wos`,
+            `${actions.SEARCH_LOADING}@scopus`,
+            `${actions.SEARCH_LOADING}@pubmed`,
+            `${actions.SEARCH_LOADING}@crossref`,
+            actions.SEARCH_SOURCE_COUNT,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            `${actions.SEARCH_FAILED}@espace`,
+            `${actions.SEARCH_FAILED}@wos`,
+            `${actions.SEARCH_FAILED}@scopus`,
+            `${actions.SEARCH_FAILED}@pubmed`,
+            `${actions.SEARCH_FAILED}@crossref`,
+            actions.SEARCH_LOADED
         ];
 
         await mockActionsStore.dispatch(searchActions.searchPublications(testTitleSearchParam));
@@ -171,8 +171,8 @@ describe('Search action creators', () => {
             .reply(200, {data: []});
 
         const expectedActions = [
-            {type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@series`},
-            {type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@series`},
+            `${actions.SEARCH_KEY_LOOKUP_LOADING}@series`,
+            `${actions.SEARCH_KEY_LOOKUP_LOADED}@series`,
         ];
 
         await mockActionsStore.dispatch(searchActions.loadSearchKeyList('series', 'conference'));
@@ -185,8 +185,8 @@ describe('Search action creators', () => {
             .reply(404, {});
 
         const expectedActions = [
-            {type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@series`},
-            {type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@series`},
+            `${actions.SEARCH_KEY_LOOKUP_LOADING}@series`,
+            `${actions.SEARCH_KEY_LOOKUP_FAILED}@series`,
         ];
 
         await mockActionsStore.dispatch(searchActions.loadSearchKeyList('series', 'conference'));

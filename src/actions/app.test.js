@@ -17,7 +17,7 @@ describe('App action creator', () => {
 
     it('dispatches expected actions when hidePossiblyYourPublicationsLure() is called', async () => {
         const expectedActions = [
-            {type: actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE}
+            actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE
         ];
 
         await mockActionsStore.dispatch(appActions.hidePossiblyYourPublicationsLure());
@@ -26,7 +26,7 @@ describe('App action creator', () => {
 
     it('dispatches expected actions when showAppAlert() is called', async () => {
         const expectedActions = [
-            {type: actions.APP_ALERT_SHOW}
+            actions.APP_ALERT_SHOW
         ];
 
         await mockActionsStore.dispatch(appActions.showAppAlert({}));
@@ -35,7 +35,7 @@ describe('App action creator', () => {
 
     it('dispatches expected actions when dismissAppAlert() is called', async () => {
         const expectedActions = [
-            {type: actions.APP_ALERT_HIDE}
+            actions.APP_ALERT_HIDE
         ];
 
         await mockActionsStore.dispatch(appActions.dismissAppAlert());

@@ -28,8 +28,8 @@ describe('Action creators for authors', () => {
             .reply(200, mockData.authorsSearch);
 
         const expectedActions = [
-            { type: actions.AUTHORS_LOADING },
-            { type: actions.AUTHORS_LOADED }
+            actions.AUTHORS_LOADING,
+            actions.AUTHORS_LOADED
         ];
 
         await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam));
@@ -46,8 +46,8 @@ describe('Action creators for authors', () => {
             .reply(200, mockData.authorsSearch);
 
         const expectedActions = [
-            { type: actions.AUTHORS_LOADING },
-            { type: actions.AUTHORS_LOADED }
+            actions.AUTHORS_LOADING,
+            actions.AUTHORS_LOADED
         ];
 
         await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam, testFilterParam));
@@ -63,9 +63,9 @@ describe('Action creators for authors', () => {
             .reply(403, mockData.authorsSearch);
 
         const expectedActions = [
-            { type: actions.AUTHORS_LOADING },
-            { type: actions.CURRENT_ACCOUNT_ANONYMOUS },
-            { type: actions.AUTHORS_LOAD_FAILED }
+            actions.AUTHORS_LOADING,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.AUTHORS_LOAD_FAILED
         ];
 
         await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam));
@@ -81,8 +81,8 @@ describe('Action creators for authors', () => {
             .reply(500, mockData.authorsSearch);
 
         const expectedActions = [
-            { type: actions.AUTHORS_LOADING },
-            { type: actions.AUTHORS_LOAD_FAILED }
+            actions.AUTHORS_LOADING,
+            actions.AUTHORS_LOAD_FAILED
         ];
 
         await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam));
@@ -98,8 +98,8 @@ describe('Action creators for authors', () => {
             .reply(200, mockData.currentAuthor['uqresearcher']);
 
         const expectedActions = [
-            { type: actions.CURRENT_AUTHOR_SAVING },
-            { type: actions.CURRENT_AUTHOR_SAVED }
+            actions.CURRENT_AUTHOR_SAVING,
+            actions.CURRENT_AUTHOR_SAVED
         ];
 
         await mockActionsStore.dispatch(authorsActions.updateCurrentAuthor(authorId, patchRequest));
@@ -115,8 +115,8 @@ describe('Action creators for authors', () => {
             .reply(500);
 
         const expectedActions = [
-            { type: actions.CURRENT_AUTHOR_SAVING },
-            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
+            actions.CURRENT_AUTHOR_SAVING,
+            actions.CURRENT_AUTHOR_SAVE_FAILED
         ];
 
         try {
@@ -136,9 +136,9 @@ describe('Action creators for authors', () => {
             .reply(403);
 
         const expectedActions = [
-            { type: actions.CURRENT_AUTHOR_SAVING },
-            { type: actions.CURRENT_ACCOUNT_ANONYMOUS },
-            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
+            actions.CURRENT_AUTHOR_SAVING,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.CURRENT_AUTHOR_SAVE_FAILED
         ];
 
         try {
@@ -169,8 +169,8 @@ describe('Action creators for authors', () => {
             .reply(200, mockData.currentAuthor['uqresearcher']);
 
         const expectedActions = [
-            { type: actions.CURRENT_AUTHOR_SAVING },
-            { type: actions.CURRENT_AUTHOR_SAVED }
+            actions.CURRENT_AUTHOR_SAVING,
+            actions.CURRENT_AUTHOR_SAVED
         ];
 
         await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
@@ -193,8 +193,8 @@ describe('Action creators for authors', () => {
             .reply(500, {});
 
         const expectedActions = [
-            { type: actions.CURRENT_AUTHOR_SAVING },
-            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
+            actions.CURRENT_AUTHOR_SAVING,
+            actions.CURRENT_AUTHOR_SAVE_FAILED
         ];
 
         await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
@@ -221,8 +221,8 @@ describe('Action creators for authors', () => {
             .reply(200, mockData.currentAuthor['uqresearcher']);
 
         const expectedActions = [
-            { type: actions.CURRENT_AUTHOR_SAVING },
-            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
+            actions.CURRENT_AUTHOR_SAVING,
+            actions.CURRENT_AUTHOR_SAVE_FAILED
         ];
 
         await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
@@ -249,8 +249,8 @@ describe('Action creators for authors', () => {
             .reply(500, {});
 
         const expectedActions = [
-            { type: actions.CURRENT_AUTHOR_SAVING },
-            { type: actions.CURRENT_AUTHOR_SAVE_FAILED }
+            actions.CURRENT_AUTHOR_SAVING,
+            actions.CURRENT_AUTHOR_SAVE_FAILED
         ];
 
         await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
@@ -259,7 +259,7 @@ describe('Action creators for authors', () => {
 
     it('dispatches expected actions resetting author saving state', async () => {
         const expectedActions = [
-            {type: actions.CURRENT_AUTHOR_SAVE_RESET}
+            actions.CURRENT_AUTHOR_SAVE_RESET
         ];
 
         await mockActionsStore.dispatch(authorsActions.resetSavingAuthorState());

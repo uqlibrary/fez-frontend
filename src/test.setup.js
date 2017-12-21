@@ -48,14 +48,14 @@ const toHaveDispatchedActions = (actions, expectedActions) => {
     let pass = actions.length === expectedActions.length;
     if (pass) {
         actions.map((item, index) => {
-            if(item.type !==  expectedActions[index].type) {
+            if(item.type !==  expectedActions[index]) {
                 pass = false;
                 return;
             }
         });
     }
     return {
-        message: (a, b) => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action.type))}]`,
+        message: (a, b) => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action))}]`,
         pass: pass
     };
 };
@@ -65,17 +65,17 @@ const toHaveAnyOrderDispatchedActions = (actions, expectedActions) => {
     let pass = actions.length === expectedActions.length;
     if (pass) {
         const sortedActions = actions.sort((a, b) => (a.type > b.type ? -1 : 1));
-        const sortedExpectedActions = expectedActions.sort((a, b) => (a.type > b.type ? -1 : 1));
+        const sortedExpectedActions = expectedActions.sort((a, b) => (a > b ? -1 : 1));
 
         sortedActions.map((item, index) => {
-            if(item.type !==  sortedExpectedActions[index].type) {
+            if(item.type !==  sortedExpectedActions[index]) {
                 pass = false;
                 return;
             }
         });
     }
     return {
-        message: (a, b) => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action.type))}]`,
+        message: (a, b) => `received actions don't match expected actions [${actions.map(action => (action.type))}] vs [${expectedActions.map(action => (action))}]`,
         pass: pass
     };
 };
