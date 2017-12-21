@@ -26,6 +26,7 @@ export default class App extends React.Component {
 
     static childContextTypes = {
         isMobile: PropTypes.bool,
+        isPrint: PropTypes.object,
         selectFieldMobileOverrides: PropTypes.object
     };
 
@@ -35,13 +36,15 @@ export default class App extends React.Component {
             menuDrawerOpen: false,
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1280px)'),
-            isMobile: window.matchMedia('(max-width: 720px)').matches
+            isMobile: window.matchMedia('(max-width: 720px)').matches,
+            isPrint: window.matchMedia('print'),
         };
     }
 
     getChildContext() {
         return {
             isMobile: this.state.isMobile,
+            isPrint: this.state.isPrint,
             selectFieldMobileOverrides: {
                 style: !this.state.isMobile ? {width: '100%'} : {},
                 autoWidth: !this.state.isMobile,
@@ -103,7 +106,6 @@ export default class App extends React.Component {
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
         const isOrcidRequired = this.props.user.author && !this.props.user.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
-
         return (
             <div className="layout-fill">
                 {
@@ -144,21 +146,23 @@ export default class App extends React.Component {
                                 </div>
                             }
                         />
-
-                        <MenuDrawer
-                            menuItems={menuItems}
-                            drawerOpen={this.state.docked || this.state.menuDrawerOpen}
-                            docked={this.state.docked}
-                            history={this.props.history}
-                            logoImage={locale.global.logo}
-                            logoText={locale.global.title}
-                            onToggleDrawer={this.toggleDrawer}
-                            isMobile={this.state.isMobile}
-                            locale={{
-                                skipNavAriaLabel: locale.global.skipNav.ariaLabel,
-                                skipNavTitle: locale.global.skipNav.title,
-                                closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
-                            }} />
+                        {
+                            !this.state.isPrint.matches &&
+                            <MenuDrawer
+                                menuItems={menuItems}
+                                drawerOpen={this.state.docked || this.state.menuDrawerOpen}
+                                docked={this.state.docked}
+                                history={this.props.history}
+                                logoImage={locale.global.logo}
+                                logoText={locale.global.title}
+                                onToggleDrawer={this.toggleDrawer}
+                                isMobile={this.state.isMobile}
+                                locale={{
+                                    skipNavAriaLabel: locale.global.skipNav.ariaLabel,
+                                    skipNavTitle: locale.global.skipNav.title,
+                                    closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
+                                }}/>
+                        }
 
                         <div className="content-container" style={container}>
                             {
@@ -206,3 +210,4 @@ export default class App extends React.Component {
         );
     }
 }
+
