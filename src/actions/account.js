@@ -42,7 +42,7 @@ export function loadCurrentAccount() {
 
                 // load repository author details
                 dispatch({type: actions.CURRENT_AUTHOR_DETAILS_LOADING});
-                return get(routes.AUTHOR_DETAILS_API({userId: currentAuthor.aut_org_username}));
+                return get(routes.AUTHOR_DETAILS_API({userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username}));
             })
             .then(authorDetailsResponse => {
                 dispatch({

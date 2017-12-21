@@ -38,8 +38,8 @@ export const roles = {
     admin: 'admin'
 };
 
-export const getRoutesConfig = (components, account) => {
-    return [
+export const getRoutesConfig = (components, account, forceOrcidRegistration) => {
+    const publicPages = [
         {
             path: pathConfig.about,
             render: () => components.StandardPage({...locale.pages.about})
@@ -54,7 +54,18 @@ export const getRoutesConfig = (components, account) => {
                 render: () => components.Browse(locale.pages.browse),
                 exact: true
             }
-        ] : []),
+        ] : [])];
+
+    if (forceOrcidRegistration) {
+        return [
+            ...publicPages,
+            {
+                component: components.Orcid
+            }
+        ];
+    }
+    return [
+        ...publicPages,
         ...(account ? [
             {
                 path: pathConfig.index,
@@ -145,50 +156,72 @@ export const getRoutesConfig = (components, account) => {
     ];
 };
 
-export const getMenuConfig = (account) => [
-    ...(account ? [
+export const getMenuConfig = (account, disabled) => {
+    const publicPages = [
         {
-            linkTo: pathConfig.dashboard,
-            primaryText: locale.menu.myDashboard.primaryText,
-            secondaryText: account.mail
+            linkTo: pathConfig.browse,
+            ...locale.menu.browse,
+            public: true
         },
         {
-            linkTo: pathConfig.records.mine,
-            ...locale.menu.myResearch
-        },
-        {
-            linkTo: pathConfig.records.possible,
-            ...locale.menu.claimPublication
-        },
-        {
-            linkTo: pathConfig.records.add.find,
-            ...locale.menu.addMissingRecord
-        },
-        {
-            divider: true,
-            path: '/234234234242'
+            linkTo: pathConfig.about,
+            ...locale.menu.about,
+            public: true
         }
-    ] : []),
-    ...(account && account.canMasquerade ? [
-        {
-            linkTo: pathConfig.admin.masquerade,
-            ...locale.menu.masquerade,
-        },
-        {
-            divider: true,
-            path: '/234234234242'
-        }
-    ] : []),
-    {
-        linkTo: pathConfig.browse,
-        ...locale.menu.browse,
-        public: true
-    },
-    {
-        linkTo: pathConfig.about,
-        ...locale.menu.about,
-        public: true
+    ];
+
+    if (disabled) {
+        return [
+            ...(account ? [
+                {
+                    linkTo: pathConfig.dashboard,
+                    primaryText: locale.menu.myDashboard.primaryText,
+                    secondaryText: account.mail
+                },
+                {
+                    divider: true,
+                    path: '/234234234242'
+                }] : []),
+            ...publicPages
+        ];
     }
-];
+
+    return [
+        ...(account ? [
+            {
+                linkTo: pathConfig.dashboard,
+                primaryText: locale.menu.myDashboard.primaryText,
+                secondaryText: account.mail
+            },
+            {
+                linkTo: pathConfig.records.mine,
+                ...locale.menu.myResearch
+            },
+            {
+                linkTo: pathConfig.records.possible,
+                ...locale.menu.claimPublication
+            },
+            {
+                linkTo: pathConfig.records.add.find,
+                ...locale.menu.addMissingRecord
+            },
+            {
+                divider: true,
+                path: '/234234234242'
+            }
+        ] : []),
+        ...(account && account.canMasquerade ? [
+            {
+                linkTo: pathConfig.admin.masquerade,
+                ...locale.menu.masquerade,
+            },
+            {
+                divider: true,
+                path: '/234234234242'
+            }
+        ] : []),
+        ...publicPages
+    ];
+};
 
 export const ORCID_REDIRECT_URL = `${window.location.origin}${window.location.pathname}${!!window.location.hash ? '#' : ''}${pathConfig.authorIdentifiers.orcid.link}`;

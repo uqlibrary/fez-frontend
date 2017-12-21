@@ -62,7 +62,7 @@ export const accounts = {
     s2222222: {
         "id": "s1111111",
         "class": ["hass"],
-        "type": 2,
+        "type": 22,
         "homeLib": "St Lucia",
         "firstName": "J",
         "lastName": "RHD Student",
@@ -507,6 +507,37 @@ export const currentAuthor = {
             "aut_publons_id": null,
             "aut_student_username": null
         }
+    },
+    s2222222: {
+        "data": {
+            "aut_id": 44444,
+            "aut_org_username": null,
+            "aut_org_staff_id": null,
+            "aut_org_student_id": "2222222",
+            "aut_email": null,
+            "aut_display_name": "HDR Student, N",
+            "aut_fname": "N",
+            "aut_mname": null,
+            "aut_lname": "HDR Student",
+            "aut_title": "Miss",
+            "aut_position": null,
+            "aut_homepage_link": null,
+            "aut_created_date": "2017-11-03T01:00:24Z",
+            "aut_update_date": "2017-12-21T07:31:09Z",
+            "aut_external_id": null,
+            "aut_ref_num": null,
+            "aut_researcher_id": null,
+            "aut_scopus_id": null,
+            "aut_mypub_url": null,
+            "aut_rid_password": null,
+            "aut_people_australia_id": null,
+            "aut_description": null,
+            "aut_orcid_id": null,
+            "aut_google_scholar_id": null,
+            "aut_rid_last_updated": null,
+            "aut_publons_id": null,
+            "aut_student_username": "s2222222"
+        }
     }
 };
 
@@ -531,10 +562,23 @@ export const authorDetails = {
         "espace": {"first_year": 1990, "last_year": 2017, "doc_count": "282"}
     },
     s2222222: {
-        "orcid_id": null,
-        "researcher_id": null,
+        "espace_id": 44444,
+        "staff_id": null,
+        "given_name": "N",
+        "family_name": "HDR Student",
+        "title": "Miss",
         "scopus_id": null,
-        "publons_id": null
+        "google_scholar_id": null,
+        "researcher_id": null,
+        "orcid_id": null,
+        "publons_id": null,
+        "mypub_url": null,
+        "username": "s2222222",
+        "org_units": [""],
+        "positions": [""],
+        "uqr_id": null,
+        "image_exists": null,
+        "espace": {"first_year": null, "last_year": null, "doc_count": "0"}
     },
     uqnoauthid: {
         "uqr_id": null,

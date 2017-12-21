@@ -18,7 +18,8 @@ export function searchAuthors(query, filterBy) {
             .then(response => {
                 const data = response.data.map((item) => {
                     item.displayName = item.aut_title + ' ' + item.aut_display_name +
-                        (item.aut_org_username ? ' (' + item.aut_org_username + ')' : '');
+                        (item.aut_org_username ? ' (' + item.aut_org_username + ')' : '') +
+                        (item.aut_student_username ? ' (' + item.aut_student_username + ')' : '');
                     return item;
                 });
 

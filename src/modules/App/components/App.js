@@ -118,14 +118,14 @@ export default class App extends React.Component {
         const container = this.state.docked ? {paddingLeft: 340} : {};
         const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
 
-        const menuItems = routes.getMenuConfig(this.props.account);
-
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
-        const isPublicPage = menuItems.filter((menuItem) =>
-            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
             && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
+        const isHdrStudent = this.props.author && this.props.author.aut_student_username;
+        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
+        const isPublicPage = menuItems.filter((menuItem) =>
+            (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
 
         let userStatusAlert = null;
         if(!this.props.accountLoading && !this.props.account) {
@@ -139,11 +139,16 @@ export default class App extends React.Component {
             userStatusAlert = {
                 ...locale.global.notRegisteredAuthorAlert
             };
-        } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired ) {
+        } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired && !isHdrStudent ) {
             // user is logged in, but doesn't have ORCID identifier
             userStatusAlert = {
                 ...locale.global.noOrcidAlert,
                 action: this.redirectToOrcid
+            };
+        } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired && isHdrStudent ) {
+            // user is logged in, but doesn't have ORCID identifier
+            userStatusAlert = {
+                ...locale.global.forceOrcidLinkAlert
             };
         }
 
@@ -204,20 +209,21 @@ export default class App extends React.Component {
                     }
                     <AppAlertContainer />
                     {
-                        isAuthorLoading
-                            ? (
-                                <div className="isLoading is-centered">
-                                    <InlineLoader message={locale.global.loadingUserAccount}/>
-                                </div>
-                            ) : (
-                                <Switch>
-                                    {
-                                        routes.getRoutesConfig(pages, this.props.account).map((route, index) => (
-                                            <Route key={`route_${index}`} {...route} />
-                                        ))
-                                    }
-                                </Switch>
-                            )
+                        isAuthorLoading &&
+                        <div className="isLoading is-centered">
+                            <InlineLoader message={locale.global.loadingUserAccount}/>
+                        </div>
+                    }
+
+                    {
+                        !isAuthorLoading &&
+                        <Switch>
+                            {
+                                routes.getRoutesConfig(pages, this.props.account, isOrcidRequired && isHdrStudent).map((route, index) => (
+                                    <Route key={`route_${index}`} {...route} />
+                                ))
+                            }
+                        </Switch>
                     }
                 </div>
 

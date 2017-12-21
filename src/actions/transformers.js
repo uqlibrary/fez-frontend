@@ -7,7 +7,7 @@ const pipe = (...functionsList) => values => functionsList.reduce((attributes, f
 const getIssueValues = (data) => ({
     pid: data.publication.rek_pid,
     userName: data.author.aut_display_name,
-    userId: data.author.aut_org_username,
+    userId: data.author.aut_org_username || data.author.aut_student_username,
     comments: data.comments
 });
 

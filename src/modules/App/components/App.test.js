@@ -89,6 +89,32 @@ describe('Application component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render app for HRD without ORCID ID', () => {
+        const wrapper = setup({
+            account: account,
+            author: {
+                ...author,
+                aut_org_username: null,
+                aut_student_username: 's222222',
+                aut_orcid_id: null
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render app for HRD with ORCID ID', () => {
+        const wrapper = setup({
+            account: account,
+            author: {
+                ...author,
+                aut_org_username: null,
+                aut_student_username: 's222222',
+                aut_orcid_id: '1234-1234-1234'
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should redirect to login page', () => {
         window.location.assign = jest.fn();
         const wrapper = setup({}).instance().redirectUserToLogin();
