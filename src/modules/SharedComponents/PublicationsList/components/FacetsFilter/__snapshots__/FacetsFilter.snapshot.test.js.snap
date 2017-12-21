@@ -13,7 +13,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="0"
+      key="key_facet_item_0"
       nestedItems={
         Array [
           <ListItem
@@ -61,7 +61,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="1"
+      key="key_facet_item_1"
       nestedItems={
         Array [
           <ListItem
@@ -201,7 +201,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="2"
+      key="key_facet_item_2"
       nestedItems={
         Array [
           <ListItem
@@ -249,7 +249,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="3"
+      key="key_facet_item_3"
       nestedItems={
         Array [
           <ListItem
@@ -320,7 +320,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="4"
+      key="key_facet_item_4"
       nestedItems={
         Array [
           <ListItem
@@ -368,7 +368,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="5"
+      key="key_facet_item_5"
       nestedItems={
         Array [
           <ListItem
@@ -409,26 +409,6 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       secondaryTextLines={1}
     />
   </List>
-  <div
-    className="columns"
-  >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-tablet"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={true}
-        label="Reset"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
 </div>
 `;
 
@@ -445,7 +425,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="0"
+      key="key_facet_item_0"
       nestedItems={
         Array [
           <ListItem
@@ -516,7 +496,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="1"
+      key="key_facet_item_1"
       nestedItems={
         Array [
           <ListItem
@@ -656,7 +636,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="2"
+      key="key_facet_item_2"
       nestedItems={
         Array [
           <ListItem
@@ -704,7 +684,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="3"
+      key="key_facet_item_3"
       nestedItems={
         Array [
           <ListItem
@@ -775,7 +755,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="4"
+      key="key_facet_item_4"
       nestedItems={
         Array [
           <ListItem
@@ -823,7 +803,427 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="5"
+      key="key_facet_item_5"
+      nestedItems={
+        Array [
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={null}
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Schenk, Gerhard (Gary) (1)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+        ]
+      }
+      nestedLevel={0}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onNestedListToggle={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      open={null}
+      primaryText="Author"
+      primaryTogglesNestedList={true}
+      secondaryTextLines={1}
+    />
+  </List>
+</div>
+`;
+
+exports[`FacetsFilter renders  components for mock data activating a facet selection 1`] = `
+<div
+  className="facetsFilter"
+>
+  <List>
+    <ListItem
+      autoGenerateNestedIndicator={true}
+      className="facetsCategory active "
+      containerElement="span"
+      disableKeyboardFocus={false}
+      disabled={false}
+      initiallyOpen={false}
+      insetChildren={false}
+      key="key_facet_item_0"
+      nestedItems={
+        Array [
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink active "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={
+              <NavigationClose
+                disabled={false}
+              />
+            }
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Journal Article (2)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+        ]
+      }
+      nestedLevel={0}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onNestedListToggle={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      open={true}
+      primaryText="Display type"
+      primaryTogglesNestedList={true}
+      secondaryTextLines={1}
+    />
+    <ListItem
+      autoGenerateNestedIndicator={true}
+      className="facetsCategory active "
+      containerElement="span"
+      disableKeyboardFocus={false}
+      disabled={false}
+      initiallyOpen={false}
+      insetChildren={false}
+      key="key_facet_item_1"
+      nestedItems={
+        Array [
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={null}
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Applied Microbiology and Biotechnology (1)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink active "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={
+              <NavigationClose
+                disabled={false}
+              />
+            }
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Biochemistry (1)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={null}
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Bioengineering (1)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={null}
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Biomaterials (1)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={null}
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Biomedical Engineering (1)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+        ]
+      }
+      nestedLevel={0}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onNestedListToggle={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      open={true}
+      primaryText="Keywords"
+      primaryTogglesNestedList={true}
+      secondaryTextLines={1}
+    />
+    <ListItem
+      autoGenerateNestedIndicator={true}
+      className="facetsCategory "
+      containerElement="span"
+      disableKeyboardFocus={false}
+      disabled={false}
+      initiallyOpen={false}
+      insetChildren={false}
+      key="key_facet_item_2"
+      nestedItems={
+        Array [
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={null}
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="2017 (2)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+        ]
+      }
+      nestedLevel={0}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onNestedListToggle={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      open={null}
+      primaryText="Year published"
+      primaryTogglesNestedList={true}
+      secondaryTextLines={1}
+    />
+    <ListItem
+      autoGenerateNestedIndicator={true}
+      className="facetsCategory "
+      containerElement="span"
+      disableKeyboardFocus={false}
+      disabled={false}
+      initiallyOpen={false}
+      insetChildren={false}
+      key="key_facet_item_3"
+      nestedItems={
+        Array [
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={null}
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Metallomics (1)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={null}
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Nature biotechnology (1)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+        ]
+      }
+      nestedLevel={0}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onNestedListToggle={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      open={null}
+      primaryText="Journal name"
+      primaryTogglesNestedList={true}
+      secondaryTextLines={1}
+    />
+    <ListItem
+      autoGenerateNestedIndicator={true}
+      className="facetsCategory "
+      containerElement="span"
+      disableKeyboardFocus={false}
+      disabled={false}
+      initiallyOpen={false}
+      insetChildren={false}
+      key="key_facet_item_4"
+      nestedItems={
+        Array [
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            className="facetsLink "
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftIcon={null}
+            nestedItems={Array []}
+            nestedLevel={0}
+            onClick={[Function]}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText="Crossref Import (2)"
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+          />,
+        ]
+      }
+      nestedLevel={0}
+      onKeyboardFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onNestedListToggle={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      open={null}
+      primaryText="Collection"
+      primaryTogglesNestedList={true}
+      secondaryTextLines={1}
+    />
+    <ListItem
+      autoGenerateNestedIndicator={true}
+      className="facetsCategory "
+      containerElement="span"
+      disableKeyboardFocus={false}
+      disabled={false}
+      initiallyOpen={false}
+      insetChildren={false}
+      key="key_facet_item_5"
       nestedItems={
         Array [
           <ListItem
@@ -900,7 +1300,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="0"
+      key="key_facet_item_0"
       nestedItems={
         Array [
           <ListItem
@@ -952,7 +1352,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="1"
+      key="key_facet_item_1"
       nestedItems={
         Array [
           <ListItem
@@ -1092,7 +1492,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="2"
+      key="key_facet_item_2"
       nestedItems={
         Array [
           <ListItem
@@ -1140,7 +1540,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="3"
+      key="key_facet_item_3"
       nestedItems={
         Array [
           <ListItem
@@ -1211,7 +1611,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="4"
+      key="key_facet_item_4"
       nestedItems={
         Array [
           <ListItem
@@ -1259,7 +1659,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="5"
+      key="key_facet_item_5"
       nestedItems={
         Array [
           <ListItem
@@ -1336,7 +1736,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
-      key="0"
+      key="key_facet_item_0"
       nestedItems={
         Array [
           <ListItem
@@ -1384,7 +1784,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
-      key="1"
+      key="key_facet_item_1"
       nestedItems={
         Array [
           <ListItem
@@ -1524,7 +1924,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
-      key="2"
+      key="key_facet_item_2"
       nestedItems={
         Array [
           <ListItem
@@ -1572,7 +1972,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
-      key="3"
+      key="key_facet_item_3"
       nestedItems={
         Array [
           <ListItem
@@ -1643,7 +2043,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
-      key="4"
+      key="key_facet_item_4"
       nestedItems={
         Array [
           <ListItem
@@ -1691,7 +2091,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       disabled={true}
       initiallyOpen={false}
       insetChildren={false}
-      key="5"
+      key="key_facet_item_5"
       nestedItems={
         Array [
           <ListItem
@@ -1732,26 +2132,6 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       secondaryTextLines={1}
     />
   </List>
-  <div
-    className="columns"
-  >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-tablet"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={true}
-        label="Reset"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
 </div>
 `;
 
@@ -1768,7 +2148,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="0"
+      key="key_facet_item_0"
       nestedItems={
         Array [
           <ListItem
@@ -1908,7 +2288,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="1"
+      key="key_facet_item_1"
       nestedItems={
         Array [
           <ListItem
@@ -1956,7 +2336,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="2"
+      key="key_facet_item_2"
       nestedItems={
         Array [
           <ListItem
@@ -2027,7 +2407,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="3"
+      key="key_facet_item_3"
       nestedItems={
         Array [
           <ListItem
@@ -2075,7 +2455,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       disabled={false}
       initiallyOpen={false}
       insetChildren={false}
-      key="4"
+      key="key_facet_item_4"
       nestedItems={
         Array [
           <ListItem
@@ -2116,26 +2496,6 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       secondaryTextLines={1}
     />
   </List>
-  <div
-    className="columns"
-  >
-    <div
-      className="column is-hidden-mobile"
-    />
-    <div
-      className="column is-narrow-tablet"
-    >
-      <RaisedButton
-        disabled={false}
-        fullWidth={true}
-        label="Reset"
-        labelPosition="after"
-        onClick={[Function]}
-        primary={false}
-        secondary={false}
-      />
-    </div>
-  </div>
 </div>
 `;
 

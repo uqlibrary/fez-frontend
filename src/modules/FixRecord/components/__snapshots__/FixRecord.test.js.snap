@@ -2,7 +2,7 @@
 
 exports[`Component FixRecord  should render fix record form 1`] = `
 <StandardPage
-  title="Request a change/deposit a file"
+  title="Request a correction or upload files"
 >
   <form
     onKeyDown={[Function]}
@@ -615,7 +615,7 @@ exports[`Component FixRecord  should render loader when record is loading 1`] = 
 
 exports[`Component FixRecord  should render record citation, two actions in select field and a cancel button 1`] = `
 <StandardPage
-  title="Request a change/deposit a file"
+  title="Request a correction or upload files"
 >
   <form
     onKeyDown={[Function]}
@@ -1103,7 +1103,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
 
 exports[`Component FixRecord  should render record citation, two actions in select field and a cancel button 2`] = `
 <StandardPage
-  title="Request a change/deposit a file"
+  title="Request a correction or upload files"
 >
   <form
     onKeyDown={[Function]}
@@ -1591,7 +1591,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
 
 exports[`Component FixRecord  should render unclaim form 1`] = `
 <StandardPage
-  title="Request a change/deposit a file"
+  title="Request a correction or upload files"
 >
   <form
     onKeyDown={[Function]}

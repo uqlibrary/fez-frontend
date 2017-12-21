@@ -28,8 +28,8 @@ exports[`PublicationForm test should render component initialised with just one 
       component={[Function]}
       disabled={false}
       floatingLabelFixed={true}
-      floatingLabelText="Select publication type"
-      hintText="Select publication type"
+      floatingLabelText="Publication type"
+      hintText="Select a publication type from the dropdown list"
       name="rek_display_type"
     >
       <MenuItem

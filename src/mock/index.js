@@ -91,7 +91,7 @@ mock
     .reply(200, {data: {...mockData.authorOrcidDetails}})
     // .reply(500, {message: 'error - failed AUTHOR_ORCID_DETAILS_API'})
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
-    .reply(200, 's3-ap-southeast-2.amazonaws.com');
+    .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
     // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
 
 

@@ -384,7 +384,7 @@ export default {
         },
         fixRecord: {
             loadingMessage: 'Loading record...',
-            title: 'Request a change/deposit a file',
+            title: 'Request a correction or upload files',
             subTitle: 'Record to be amended',
             fieldLabels: {
                 action: 'Select an action'

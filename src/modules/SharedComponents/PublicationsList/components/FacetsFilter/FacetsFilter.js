@@ -131,21 +131,24 @@ export default class FacetsFilter extends React.Component {
                                     disabled={this.props.disabled}
                                     className={'facetsCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                                     primaryTogglesNestedList
-                                    key={index}
+                                    key={`key_facet_item_${index}`}
                                     nestedItems={this.getNestedListItems(item)} />
                             );
                         })
                     }
                 </List>
-                <div className="columns">
-                    <div className="column is-hidden-mobile"/>
-                    <div className="column is-narrow-tablet">
-                        <FlatButton
-                            fullWidth
-                            label={txt.resetButtonText}
-                            onClick={this.handleResetClick}/>
+                {
+                    Object.keys(this.state.activeFacets).length > 0 &&
+                    <div className="columns">
+                        <div className="column is-hidden-mobile"/>
+                        <div className="column is-narrow-tablet">
+                            <FlatButton
+                                fullWidth
+                                label={txt.resetButtonText}
+                                onClick={this.handleResetClick}/>
+                        </div>
                     </div>
-                </div>
+                }
             </div>
         );
     }

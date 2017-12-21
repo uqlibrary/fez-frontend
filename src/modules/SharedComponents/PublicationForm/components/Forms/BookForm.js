@@ -96,7 +96,7 @@ export default class BookForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                    <div>{txt.authors.description}</div>
+                    <div>{txt.authors.descriptionAuthorOrEditor}</div>
                     <Field
                         component={ContributorsEditorField}
                         name="authors"
@@ -107,7 +107,7 @@ export default class BookForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                    <div>{txt.editors.description}</div>
+                    <div>{txt.editors.descriptionAuthorOrEditor}</div>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment

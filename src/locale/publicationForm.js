@@ -6,7 +6,8 @@ export default {
     submit: 'Submit for approval',
     publicationType: {
         title: 'Publication type',
-        inputLabelText: 'Select publication type',
+        inputLabelText: 'Publication type',
+        hintText: 'Select a publication type from the dropdown list',
         help: {
             title: 'Publication type',
             text: 'Help about publication types, eg journal article, book, conference paper etc',
@@ -1029,9 +1030,9 @@ export default {
         }
     },
     fileUpload: {
-        title: 'Files',
+        title: 'Upload files',
         help: {
-            title: 'Files',
+            title: 'Upload files',
             text: 'file help...',
             buttonLabel: 'OK'
         }

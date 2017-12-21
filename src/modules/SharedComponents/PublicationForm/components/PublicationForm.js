@@ -96,7 +96,7 @@ export default class PublicationForm extends Component {
                         floatingLabelText={txt.publicationType.inputLabelText}
                         floatingLabelFixed
                         className="requiredField"
-                        hintText={txt.publicationType.inputLabelText}>
+                        hintText={txt.publicationType.hintText}>
                         {publicationTypeItems}
                     </Field>
                 </StandardCard>

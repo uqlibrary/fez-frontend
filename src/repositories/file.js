@@ -1,5 +1,5 @@
 import {generateCancelToken} from 'config';
-import {fileUploadActions} from 'uqlibrary-react-toolbox/build/FileUploader/actions';
+import * as fileUploadActions from 'uqlibrary-react-toolbox/build/FileUploader/actions';
 import * as routes from './routes';
 import {get, put, post} from './generic';
 
@@ -23,14 +23,24 @@ export function putUploadFile(pid, file, dispatch) {
                 },
                 cancelToken: generateCancelToken().token
             };
-            return put({apiUrl: uploadUrl}, file, options);
+            const fileUrl = Array.isArray(uploadUrl) && uploadUrl.length > 0 ? uploadUrl[0] : uploadUrl;
+            return put({apiUrl: fileUrl}, file, options);
         })
         .then(uploadResponse => (Promise.resolve(uploadResponse)))
         .catch(error => {
-            const issue = {issue: `File upload failed: app: ${navigator.appVersion}, connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
-            connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, user agent: ${navigator.userAgent}`};
+            const issue = {issue:
+                    `File upload failed: app: ${navigator.appVersion}, 
+                    connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
+                    connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, 
+                    user agent: ${navigator.userAgent}
+                    error status: ${error.status}
+                    error message: ${error.message}
+                    file name: ${file.name}`
+            };
             post(routes.RECORDS_ISSUES_API({pid: pid}), issue);
-            if (fileUploadActions) dispatch(fileUploadActions.notifyUploadFailed(file.name));
+            if (fileUploadActions) {
+                dispatch(fileUploadActions.notifyUploadFailed(file.name));
+            }
             return Promise.reject(new Error(error.message));
         });
 }

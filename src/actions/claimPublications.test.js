@@ -382,7 +382,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onAny()
-                .reply(200, {});
+                .reply(200,['http://upload.file.here/test.jpg']);
 
             const expectedActions = [
                 {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
@@ -423,6 +423,7 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
+                {type: 'FILE_UPLOADED_FAILED@test.jpg'},
                 {type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED}
             ];
 
@@ -460,6 +461,7 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 {type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING},
+                {type: 'FILE_UPLOADED_FAILED@test.jpg'},
                 {type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED}
             ];
 

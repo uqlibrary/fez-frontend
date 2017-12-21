@@ -74,7 +74,7 @@ exports[`PreprintForm renders  component 1`] = `
     title="Authors"
   >
     <div>
-      Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.
+      Please provide a list of authors and then select your name from the list.
     </div>
     <Field
       className="requiredField"
@@ -87,7 +87,7 @@ exports[`PreprintForm renders  component 1`] = `
               "addButton": "Add author",
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Author's name as published",
+              "nameAsPublishedLabel": "Enter each author's name as published",
             },
           },
           "header": Object {
