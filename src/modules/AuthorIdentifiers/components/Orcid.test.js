@@ -128,8 +128,6 @@ describe('Component Orcid ', () => {
         // account has been loaded
         wrapper.instance().componentWillReceiveProps({account: accounts.uqresearcher});
 
-        wrapper.update();
-
         // orcid state should be updated
         expect(wrapper.state().orcidRequest.state).toBeTruthy();
 
@@ -147,7 +145,6 @@ describe('Component Orcid ', () => {
             author: currentAuthor.uqresearcher.data
         });
 
-        wrapper.update();
         expect(wrapper.instance().props.history.push).toHaveBeenCalledWith('/dashboard');
     });
 
@@ -162,8 +159,6 @@ describe('Component Orcid ', () => {
             account: accounts.uqresearcher,
             author: currentAuthor.uqresearcher.data
         });
-
-        wrapper.update();
 
         expect(wrapper.instance().props.actions.showAppAlert).toHaveBeenCalled();
         expect(wrapper.instance().props.history.push).toHaveBeenCalledWith('/dashboard');
@@ -192,8 +187,6 @@ describe('Component Orcid ', () => {
             author: currentAuthor.uqnoauthid.data
         });
 
-        wrapper.update();
-
         expect(wrapper.instance().props.actions.linkAuthorOrcidId).toHaveBeenCalled();
     });
 
@@ -220,8 +213,6 @@ describe('Component Orcid ', () => {
             author: currentAuthor.uqnoauthid.data
         });
 
-        wrapper.update();
-
         expect(wrapper.instance().props.actions.linkAuthorOrcidId).not.toHaveBeenCalled();
     });
 
@@ -243,9 +234,7 @@ describe('Component Orcid ', () => {
         });
 
         wrapper.update();
-
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('should display error if author update failed', () => {
@@ -254,8 +243,6 @@ describe('Component Orcid ', () => {
             author: currentAuthor.uqnoauthid.data,
             accountAuthorError: 'API IS NOT AVAILABLE'
         });
-
-        wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -279,8 +266,6 @@ describe('Component Orcid ', () => {
         });
 
         wrapper.instance().componentDidMount();
-        wrapper.update();
-
         expect(wrapper.instance().props.actions.linkAuthorOrcidId).toHaveBeenCalled();
     });
 
@@ -302,8 +287,6 @@ describe('Component Orcid ', () => {
         });
 
         wrapper.instance().componentDidMount();
-        wrapper.update();
-
         expect(wrapper.instance().props.actions.linkAuthorOrcidId).not.toHaveBeenCalled();
     });
 

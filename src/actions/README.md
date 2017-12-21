@@ -4,36 +4,19 @@
 
 All action types are defined in src/actions/actionTypes.js
 
-### Action types naming conventions
-
-Keep to the following naming format `[OBJECT]_[STATUS]` or `[NOUN]_[VERB]`:
-
-- LATEST_PUBLICATIONS_LOADING
-- LATEST_PUBLICATIONS_LOADED
-- LATEST_PUBLICATIONS_FAILED
-
-or
-
-- APP_ALERT_SHOW
-- APP_ALERT_HIDE
-
-
-## Actions
-
-TBA
-
 ## Error handling
 
-TBA
-
+- Only action creators which handle redux-form should return Promise.resolve() or Promise.reject(), eg claimPublication(), fixPublication()
+- Dispatch [ACTION]_FAILED action in case something went wrong (even if it returns Promise.reject())
+ 
 ## Testing
 
 Global test setup is done in /src/test.setup.js:
 - mockApi - to mock API responses
 - mockActionsStore - to mock store to track all dispatched actions
-- extending expect with `toHaveDispatchedActions` to easily compare received actions to expected actions
+- extending expect with `toHaveDispatchedActions` and `toHaveAnyOrderDispatchedActions` to easily compare received actions to expected actions
   
-Temple for actions unit tests:
+Template for actions unit tests:
 
 ```` 
 
@@ -45,6 +28,7 @@ import * as mockData from 'mock/data';
 describe('[ACTIONS NAME] actions', () => {
     // extend expect to check actions
     expect.extend({toHaveDispatchedActions});
+    expect.extend({toHaveAnyOrderDispatchedActions});
 
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
@@ -63,8 +47,8 @@ describe('[ACTIONS NAME] actions', () => {
             .reply(200, {};
 
         const expectedActions = [
-            {type: actions.[ACTION_TYPE]_LOADING},
-            {type: actions.[ACTION_TYPE]_LOADED}
+            actions.[ACTION_TYPE]_LOADING,
+            actions.[ACTION_TYPE]_LOADED
         ];
 
         await mockActionsStore.dispatch([ACTIONS].[ACTION()]());
@@ -77,17 +61,13 @@ describe('[ACTIONS NAME] actions', () => {
             .reply(403, {});
 
         const expectedActions = [
-            {type: actions.[ACTION_TYPE]_LOADING},
-            {type: actions.CURRENT_ACCOUNT_ANONYMOUS},
-            {type: actions.[ACTION_TYPE]_FAILED}
+            actions.[ACTION_TYPE]_LOADING,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.[ACTION_TYPE]_LOADED
         ];
        
-        try {
-          await mockActionsStore.dispatch([ACTIONS].[ACTION()]());
-          expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        } catch(e) {
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        }
+        await mockActionsStore.dispatch([ACTIONS].[ACTION()]());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });
 
