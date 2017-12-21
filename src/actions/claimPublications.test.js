@@ -107,12 +107,8 @@ describe('Claim publication actions tests ', () => {
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
             ];
 
-            try {
-                await mockActionsStore.dispatch(claimActions.searchPossiblyYourPublications(testParams));
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            } catch(e) {
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            }
+            await mockActionsStore.dispatch(claimActions.searchPossiblyYourPublications(testParams));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
         it('dispatched expected actions to get a list of publications if API fails', async () => {
@@ -129,13 +125,8 @@ describe('Claim publication actions tests ', () => {
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
             ];
 
-            try {
-                await mockActionsStore.dispatch(claimActions.searchPossiblyYourPublications(testParams));
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            } catch (e) {
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-
-            }
+            await mockActionsStore.dispatch(claimActions.searchPossiblyYourPublications(testParams));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 
@@ -200,12 +191,8 @@ describe('Claim publication actions tests ', () => {
                 actions.HIDE_PUBLICATIONS_FAILED
             ];
 
-            try {
-                await mockActionsStore.dispatch(claimActions.hideRecord({record: testRecord, facets: {}}));
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            } catch (e) {
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            }
+            await mockActionsStore.dispatch(claimActions.hideRecord({record: testRecord, facets: {}}));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
         it('dispatched expected actions when hiding a publication if API fails', async () => {
@@ -223,12 +210,8 @@ describe('Claim publication actions tests ', () => {
                 actions.HIDE_PUBLICATIONS_FAILED
             ];
 
-            try {
-                await mockActionsStore.dispatch(claimActions.hideRecord({record: testRecord, facets: {}}));
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            } catch (e) {
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            }
+            await mockActionsStore.dispatch(claimActions.hideRecord({record: testRecord, facets: {}}));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
     });

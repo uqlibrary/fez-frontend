@@ -10,7 +10,7 @@ import * as actions from './actionTypes';
  * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
  * @param {array} files to be uploaded for this record
- * @returns {action}
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function createNewRecord(data) {
     return dispatch => {
@@ -75,7 +75,7 @@ export function createNewRecord(data) {
                     payload: error.message
                 });
 
-                return Promise.reject(new Error(error.message));
+                return Promise.reject(error);
             });
     };
 }

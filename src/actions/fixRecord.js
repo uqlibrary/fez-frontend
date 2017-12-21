@@ -27,7 +27,6 @@ export function loadRecordToFix(pid) {
                     type: actions.FIX_RECORD_LOAD_FAILED,
                     payload: error.message
                 });
-                return Promise.reject(error);
             });
     };
 }
@@ -65,7 +64,7 @@ export function clearFixRecord() {
  *      upload files,
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data: {publication, author, files}
- * @returns {action}
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function fixRecord(data) {
     if (!data.publication || !data.author) {
@@ -75,7 +74,7 @@ export function fixRecord(data) {
                 payload: 'Incomplete data for requests'
             });
 
-            return Promise.reject({message: 'Incomplete data for requests'});
+            return Promise.reject(new Error('Incomplete data for requests'));
         };
     }
 
@@ -90,7 +89,7 @@ export function fixRecord(data) {
                 type: actions.FIX_RECORD_FAILED,
                 payload: 'Current author is not linked to this record'
             });
-            return Promise.reject({message: 'Current author is not linked to this record'});
+            return Promise.reject(new Error('Current author is not linked to this record'));
         };
     }
 
@@ -136,7 +135,7 @@ export function fixRecord(data) {
 /**
  * Unclaim record
  * @param   {object}  data    Record to be unclaimed
- * @returns {action}
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function unclaimRecord(data) {
     if (!data.publication || !data.author) {
@@ -146,7 +145,7 @@ export function unclaimRecord(data) {
                 payload: 'Incomplete data for requests.'
             });
 
-            return Promise.reject({message: 'Incomplete data for requests.'});
+            return Promise.reject(new Error('Incomplete data for requests.'));
         };
     }
 
@@ -162,7 +161,7 @@ export function unclaimRecord(data) {
                 type: actions.FIX_RECORD_FAILED,
                 payload: 'Current author is not linked to this record.'
             });
-            return Promise.reject({message: 'Current author is not linked to this record.'});
+            return Promise.reject(new Error('Current author is not linked to this record.'));
         };
     }
 

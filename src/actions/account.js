@@ -19,7 +19,7 @@ export function loadCurrentAccount() {
                     return Promise.resolve(account);
                 } else {
                     dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
-                    return Promise.reject('Session expired. User is unauthorized.');
+                    return Promise.reject(new Error('Session expired. User is unauthorized.'));
                 }
             })
             .then(accountResponse => {

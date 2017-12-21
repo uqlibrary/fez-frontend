@@ -64,12 +64,8 @@ describe('Fix record actions', () => {
                 actions.CURRENT_ACCOUNT_ANONYMOUS,
                 actions.FIX_RECORD_LOAD_FAILED
             ];
-            try {
-                await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            } catch (e) {
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            }
+            await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 
@@ -243,10 +239,7 @@ describe('Fix record actions', () => {
                 actions.FIX_RECORD_SUCCESS
             ];
 
-            mockApi
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
-                .reply(200, {})
-                .onAny().reply(200, {});
+            mockApi.onAny().reply(200, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));

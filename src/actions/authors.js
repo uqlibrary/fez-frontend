@@ -94,7 +94,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
 
                 // response should contain orcid id
                 if (!orcidId) {
-                    return Promise.reject({message: 'ORCID id is missing in API response. '});
+                    return Promise.reject(new Error('ORCID id is missing in API response. '));
                 }
 
                 // patch author record with corresponding ORCID id

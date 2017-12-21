@@ -37,8 +37,6 @@ export function searchPossiblyYourPublications({facets = {}}) {
                         payload: response
                     });
                 }
-
-                return Promise.resolve(response);
             })
             .catch(error => {
                 dispatch({
@@ -50,8 +48,6 @@ export function searchPossiblyYourPublications({facets = {}}) {
                     type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                     payload: error.message
                 });
-
-                return Promise.reject(error);
             });
     };
 }
@@ -93,11 +89,11 @@ export function hideRecord({record, facets = {}}) {
                 return dispatch(searchPossiblyYourPublications({facets: facets}));
             })
             .catch(error => {
+                // TODO: display error message to user that this operation failed (in PT)
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_FAILED,
                     payload: error.message
                 });
-                return Promise.reject(error);
             });
     };
 }
@@ -141,7 +137,7 @@ export function clearClaimPublication() {
  *
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data: {publication, author, files}
- * @returns {action}
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function claimPublication(data) {
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&

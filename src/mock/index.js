@@ -21,7 +21,7 @@ if (user && !mockData.accounts[user]) {
 }
 
 // default user is researcher if user is not defined
-user = user || 'uqnoauthid';
+user = user || 'uqresearcher';
 
 
 mock
@@ -65,6 +65,7 @@ mock
         if (config.params.rule === 'mine') return [200, mockData.myRecordsList];
         // POSSIBLE_RECORDS_API
         if (config.params.rule === 'possible') return [200, mockData.possibleUnclaimedList];
+        // if (config.params.rule === 'possible') return [500, ['ERROR POSSIBLE_RECORDS_API']];
         // SEARCH_KEY_LOOKUP_API
         if (config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList[config.params.search_key]];
@@ -73,6 +74,7 @@ mock
         if (config.params.id || config.params.doi || config.params.title) {
             return [200, mockData.internalTitleSearchList];
         }
+        return [404, ['Request not found']];
     })
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
@@ -82,6 +84,7 @@ mock
     .reply(200, mockData.recordsTypeList)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(200, {data: {...mockData.record}})
+    // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'}).apiUrl)))
     .reply((config) => {
         const vocabId = config.url.substring(config.url.indexOf('/') + 1);
@@ -106,7 +109,7 @@ mock
     // .reply(500, {message: 'error - failed POST RECORDS_ISSUES_API'})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API().apiUrl)))
     .reply(200, {data: {}})
-    // .reply(500, {message: 'error - failed POST HIDE_POSSIBLE_RECORD_API'})
+    // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
     .reply(200, {data: {}});
     // .reply(500, {message: 'error - failed NEW_RECORD_API'});
@@ -114,9 +117,10 @@ mock
 mock
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(200, {data: {...mockData.record}})
+    // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}).apiUrl)))
-    .reply(200, {data: {...mockData.currentAuthor[user]}})
-    // .reply(500, {message: 'error - failed PATCH EXISTING_RECORD_API'})
+    .reply(200, {...mockData.currentAuthor.uqresearcher})
+    // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
     .onAny().reply((config) => {
         console.log('url not found...');
         console.log(config);
