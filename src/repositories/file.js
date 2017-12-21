@@ -26,7 +26,6 @@ export function putUploadFile(pid, file, dispatch) {
             };
             const fileUrl = Array.isArray(uploadUrl) && uploadUrl.length > 0 ? uploadUrl[0] : uploadUrl;
             return put(fileUrl, file, options);
-
         })
         .then(uploadResponse => (Promise.resolve(uploadResponse)))
         .catch(error => {
