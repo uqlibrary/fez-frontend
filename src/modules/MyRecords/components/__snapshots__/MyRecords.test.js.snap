@@ -12,18 +12,8 @@ exports[`MyRecords test renders list of publications 1`] = `
     >
       <StandardCard
         className=""
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": <div>
-              your research help....
-            </div>,
-            "title": "My research help",
-          }
-        }
-        title="Showing 20 of 147 of your eSpace publications"
       >
-        <div>
+        <span>
           Add to this list by 
           <a
             href="/records/possible"
@@ -37,7 +27,7 @@ exports[`MyRecords test renders list of publications 1`] = `
             adding a missing publication
           </a>
           .
-        </div>
+        </span>
         <PublicationsListSorting
           disabled={false}
           onPageSizeChanged={[Function]}
