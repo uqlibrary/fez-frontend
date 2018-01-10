@@ -146,6 +146,7 @@ export default class FixRecord extends Component {
         const saveConfirmationLocale = {...txtFixForm.successWorkflowConfirmation};
         if (this.props.publicationToFixFileUploadingError) {
             saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
+            saveConfirmationLocale.confirmationAlert = saveConfirmationLocale.fileFailConfirmationAlert;
         }
 
         return (

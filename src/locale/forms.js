@@ -62,14 +62,15 @@ export default {
                 confirmationTitle: 'Claim has been submitted',
                 successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member
                     for editing, prior to being moved into a publicly viewable collection.</p>),
-                fileFailConfirmationMessage: (<p>
-                    Your item will be referred to a UQ eSpace Staging staff member
-                    for editing, prior to being moved into a publicly viewable collection.<br/><br/>
-                    <strong>
-                        Please note, file upload has failed.
-                        Retry uploading files via "Fix record" screen or contact eSpace administrators.
-                    </strong>
-                </p>),
+                fileFailConfirmationMessage: (
+                    <p>
+                    Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
+                    </p>),
+                fileFailConfirmationAlert: {
+                    title: 'FILE UPLOAD FAILED',
+                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
+                    type: 'warning'
+                },
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
@@ -159,8 +160,13 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your request has been submitted',
-                confirmationMessage: (
-                    <p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
+                confirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
+                fileFailConfirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
+                fileFailConfirmationAlert: {
+                    title: 'FILE UPLOAD FAILED',
+                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
+                    type: 'warning'
+                },
                 cancelButtonLabel: 'Go to my dashboard',
                 confirmButtonLabel: 'Go to my research'
             },

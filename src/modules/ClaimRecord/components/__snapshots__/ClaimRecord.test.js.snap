@@ -791,17 +791,18 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationAlert": null,
             "confirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
             </p>,
             "confirmationTitle": "Claim has been submitted",
+            "fileFailConfirmationAlert": Object {
+              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "FILE UPLOAD FAILED",
+              "type": "warning",
+            },
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              <br />
-              <br />
-              <strong>
-                Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators.
-              </strong>
             </p>,
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -1691,17 +1692,18 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationAlert": null,
             "confirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
             </p>,
             "confirmationTitle": "Claim has been submitted",
+            "fileFailConfirmationAlert": Object {
+              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "FILE UPLOAD FAILED",
+              "type": "warning",
+            },
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              <br />
-              <br />
-              <strong>
-                Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators.
-              </strong>
             </p>,
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -2694,17 +2696,18 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationAlert": null,
             "confirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
             </p>,
             "confirmationTitle": "Claim has been submitted",
+            "fileFailConfirmationAlert": Object {
+              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "FILE UPLOAD FAILED",
+              "type": "warning",
+            },
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              <br />
-              <br />
-              <strong>
-                Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators.
-              </strong>
             </p>,
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -3846,17 +3849,18 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationAlert": null,
             "confirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
             </p>,
             "confirmationTitle": "Claim has been submitted",
+            "fileFailConfirmationAlert": Object {
+              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "FILE UPLOAD FAILED",
+              "type": "warning",
+            },
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              <br />
-              <br />
-              <strong>
-                Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators.
-              </strong>
             </p>,
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
@@ -4998,17 +5002,18 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
+            "confirmationAlert": null,
             "confirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
             </p>,
             "confirmationTitle": "Claim has been submitted",
+            "fileFailConfirmationAlert": Object {
+              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "FILE UPLOAD FAILED",
+              "type": "warning",
+            },
             "fileFailConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              <br />
-              <br />
-              <strong>
-                Please note, file upload has failed. Retry uploading files via "Fix record" screen or contact eSpace administrators.
-              </strong>
             </p>,
             "successConfirmationMessage": <p>
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.

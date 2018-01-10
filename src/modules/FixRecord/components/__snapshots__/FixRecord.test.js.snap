@@ -485,6 +485,14 @@ exports[`Component FixRecord  should render fix record form 1`] = `
               Your request will be referred to a UQ eSpace staff member for review/action.
             </p>,
             "confirmationTitle": "Your request has been submitted",
+            "fileFailConfirmationAlert": Object {
+              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "title": "FILE UPLOAD FAILED",
+              "type": "warning",
+            },
+            "fileFailConfirmationMessage": <p>
+              Your request will be referred to a UQ eSpace staff member for review/action.
+            </p>,
           }
         }
         onAction={[Function]}

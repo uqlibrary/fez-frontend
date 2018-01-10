@@ -371,13 +371,17 @@ export default {
                 successConfirmationMessage: (
                     <p>Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
                         record.</p>),
-                fileFailConfirmationMessage: (<p>
-                    Your record has been saved. <br/><br/>
-                    <strong>Please note, file upload has failed. Retry uploading files via "Fix record" screen or
-                        contact eSpace administrators. </strong><br/><br/>
+                fileFailConfirmationMessage: (
+                    <p><br />
+                    Your record has been saved.<br/><br/>
                     Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
                     record.
-                </p>),
+                    </p>),
+                fileFailConfirmationAlert: {
+                    title: 'FILE UPLOAD FAILED',
+                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
+                    type: 'warning'
+                },
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
             }
