@@ -77,6 +77,10 @@ class Dashboard extends React.Component {
         this.props.history.push(routes.pathConfig.records.possible);
     };
 
+    _addPublication = () => {
+        this.props.history.push(routes.pathConfig.records.add.new);
+    };
+
     _viewYourResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);
     };
@@ -116,6 +120,8 @@ class Dashboard extends React.Component {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
+        console.log('lure? ' + this.props.hidePossiblyYourPublicationsLure);
+        console.log('possibles? ' + this.props.possiblyYourPublicationsCount);
         return (
             <StandardPage className="dashboard">
                 {
@@ -134,16 +140,20 @@ class Dashboard extends React.Component {
                         </div>
                         <div className="column is-12 possiblePublicationLure">
                             {
-                                !this.props.hidePossiblyYourPublicationsLure
-                                && this.props.possiblyYourPublicationsCount > 0 &&
-                                <Alert
-                                    title={txt.possiblePublicationsLure.title}
-                                    message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
-                                    type={txt.possiblePublicationsLure.type}
-                                    actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
-                                    action={this._claimYourPublications}
-                                    allowDismiss
-                                    dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                                !this.props.hidePossiblyYourPublicationsLure && this.props.possiblyYourPublicationsCount > 0 ?
+                                    <Alert
+                                        title={txt.possiblePublicationsLure.title}
+                                        message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
+                                        type={txt.possiblePublicationsLure.type}
+                                        actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
+                                        action={this._claimYourPublications}
+                                        allowDismiss
+                                        dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                                    :
+                                    !this.props.possiblyYourPublicationsCount &&
+                                    <Alert
+                                        {...txt.nothingToClaimLure}
+                                        action={this._addPublication}/>
                             }
                         </div>
                     </div>

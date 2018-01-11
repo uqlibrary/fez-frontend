@@ -163,6 +163,12 @@ export default {
                 type: 'warning',
                 actionButtonLabel: 'Claim your publications now'
             },
+            nothingToClaimLure: {
+                title: 'Add your work to eSpace',
+                message: 'We found nothing new for you to claim, but you may add a publication any time.',
+                type: 'info_outline',
+                actionButtonLabel: 'Add a publication'
+            },
             publicationsByYearChart: {
                 title: 'eSpace publications per year',
                 yAxisTitle: 'Total publications'
@@ -243,7 +249,11 @@ export default {
             facetSearchMessage: 'Applying filters...',
             noResultsFound: {
                 title: 'No matching publications found',
-                text: 'No publications were automatically matched for you to claim.',
+                text: (
+                    <div>
+                        <p>No publications were automatically matched for you to claim.</p>
+                    </div>
+                ),
                 help: {
                     title: 'No matching records found',
                     text: 'Why search didn\'t return any items....',
