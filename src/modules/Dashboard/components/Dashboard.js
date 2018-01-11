@@ -86,7 +86,7 @@ class Dashboard extends React.Component {
         const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
             || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
             || this.props.loadingLatestPublications;
-        const barChart = !loading && this.props.publicationsByYear
+        const barChart = !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0
             ? (
                 <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
                     <AuthorsPublicationsPerYearChart
@@ -95,7 +95,7 @@ class Dashboard extends React.Component {
                         yAxisTitle={txt.publicationsByYearChart.yAxisTitle}/>
                 </StandardCard>
             ) : null;
-        const donutChart = !loading && this.props.publicationTypesCount
+        const donutChart = !loading && this.props.publicationTypesCount && this.props.publicationTypesCount.length > 0
             ? (
                 <StandardCard
                     className="donutChart"
