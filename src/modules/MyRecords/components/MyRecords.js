@@ -164,7 +164,8 @@ export default class MyRecords extends React.Component {
                                     onFacetsChanged={this.facetsChanged}
                                     activeFacets={this.state.activeFacets}
                                     disabled={this.props.loadingPublicationsList}
-                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList} />
+                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList} />
                             </StandardRighthandCard>
                         </div>
                     }

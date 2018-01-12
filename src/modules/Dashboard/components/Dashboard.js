@@ -120,8 +120,6 @@ class Dashboard extends React.Component {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
-        console.log('lure? ' + this.props.hidePossiblyYourPublicationsLure);
-        console.log('possibles? ' + this.props.possiblyYourPublicationsCount);
         return (
             <StandardPage className="dashboard">
                 {

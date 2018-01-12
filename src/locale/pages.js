@@ -240,7 +240,8 @@ export default {
                     text: 'Help about ....',
                     buttonLabel: 'Ok'
                 },
-                excludeFacetsList: ['Scopus document type', 'Subtype']
+                excludeFacetsList: ['Scopus document type', 'Subtype'],
+                renameFacetsList: {'Display type': 'Publication type'}
             }
         },
         claimPublications: {
