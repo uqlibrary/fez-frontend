@@ -1,178 +1,186 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContributorRowHeader renders  header for contributor editor control with all options 1`] = `
-<div
-  className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
+<div>
+  Step 2 - Locale missing
+  <div
+    className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
+  >
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all records?",
+          "confirmationTitle": "Delete all",
+        }
       }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
-  <div
-    className="column is-1-desktop is-1-tablet is-3-mobile authorAssignment datalist-title"
-  >
-    <label
-      aria-hidden={true}
-      htmlFor="contributorAssignment"
+      onAction={[Function]}
+      onRef={[Function]}
+    />
+    <div
+      className="column is-narrow is-hidden-mobile authorIcon"
+    />
+    <div
+      className="column name datalist-title"
     >
-      Select your name
-    </label>
-  </div>
-  <div
-    className="column name datalist-title"
-  >
-    Name as published
-  </div>
-  <div
-    className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title"
-  >
-    UQ identifier
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile order datalist-title"
-  >
-    Reorder records
-  </div>
-  <div
-    className="column is-narrow buttons datalist-buttons"
-  >
-    <IconButton
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Remove all records"
-      tooltipPosition="bottom-center"
-      touch={false}
+      Name as published
+    </div>
+    <div
+      className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title"
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      UQ identifier
+    </div>
+    <div
+      className="column is-narrow is-hidden-mobile order datalist-title"
+    >
+      Reorder records
+    </div>
+    <div
+      className="column is-narrow buttons datalist-buttons"
+    >
+      <IconButton
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="Remove all records"
+        tooltipPosition="bottom-center"
+        touch={false}
       >
-        delete_forever
-      </FontIcon>
-    </IconButton>
+        <FontIcon
+          className="material-icons"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          delete_forever
+        </FontIcon>
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow scrollbar-spacer is-hidden-mobile"
+    />
   </div>
-  <div
-    className="column is-narrow scrollbar-spacer is-hidden-mobile"
-  />
 </div>
 `;
 
 exports[`ContributorRowHeader renders  header for contributor editor control with delete all disabled 1`] = `
-<div
-  className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
+<div>
+  Step 2 - Locale missing
+  <div
+    className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
+  >
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all records?",
+          "confirmationTitle": "Delete all",
+        }
       }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
-  <div
-    className="column name datalist-title"
-  >
-    Name as published
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile order datalist-title"
-  >
-    Reorder records
-  </div>
-  <div
-    className="column is-narrow buttons datalist-buttons"
-  >
-    <IconButton
-      disableTouchRipple={false}
-      disabled={true}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Remove all records"
-      tooltipPosition="bottom-center"
-      touch={false}
+      onAction={[Function]}
+      onRef={[Function]}
+    />
+    <div
+      className="column is-narrow is-hidden-mobile authorIcon"
+    />
+    <div
+      className="column name datalist-title"
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      Name as published
+    </div>
+    <div
+      className="column is-narrow is-hidden-mobile order datalist-title"
+    >
+      Reorder records
+    </div>
+    <div
+      className="column is-narrow buttons datalist-buttons"
+    >
+      <IconButton
+        disableTouchRipple={false}
+        disabled={true}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="Remove all records"
+        tooltipPosition="bottom-center"
+        touch={false}
       >
-        delete_forever
-      </FontIcon>
-    </IconButton>
+        <FontIcon
+          className="material-icons"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          delete_forever
+        </FontIcon>
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow scrollbar-spacer is-hidden-mobile"
+    />
   </div>
-  <div
-    className="column is-narrow scrollbar-spacer is-hidden-mobile"
-  />
 </div>
 `;
 
 exports[`ContributorRowHeader renders  header for contributor editor control with name and delete all button only 1`] = `
-<div
-  className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
->
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure you want to delete all records?",
-        "confirmationTitle": "Delete all",
+<div>
+  Step 2 - Locale missing
+  <div
+    className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
+  >
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to delete all records?",
+          "confirmationTitle": "Delete all",
+        }
       }
-    }
-    onAction={[Function]}
-    onRef={[Function]}
-  />
-  <div
-    className="column name datalist-title"
-  >
-    Name as published
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile order datalist-title"
-  >
-    Reorder records
-  </div>
-  <div
-    className="column is-narrow buttons datalist-buttons"
-  >
-    <IconButton
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Remove all records"
-      tooltipPosition="bottom-center"
-      touch={false}
+      onAction={[Function]}
+      onRef={[Function]}
+    />
+    <div
+      className="column is-narrow is-hidden-mobile authorIcon"
+    />
+    <div
+      className="column name datalist-title"
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      Name as published
+    </div>
+    <div
+      className="column is-narrow is-hidden-mobile order datalist-title"
+    >
+      Reorder records
+    </div>
+    <div
+      className="column is-narrow buttons datalist-buttons"
+    >
+      <IconButton
+        disableTouchRipple={false}
+        disabled={false}
+        iconStyle={Object {}}
+        onTouchTap={[Function]}
+        tooltip="Remove all records"
+        tooltipPosition="bottom-center"
+        touch={false}
       >
-        delete_forever
-      </FontIcon>
-    </IconButton>
+        <FontIcon
+          className="material-icons"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          delete_forever
+        </FontIcon>
+      </IconButton>
+    </div>
+    <div
+      className="column is-narrow scrollbar-spacer is-hidden-mobile"
+    />
   </div>
-  <div
-    className="column is-narrow scrollbar-spacer is-hidden-mobile"
-  />
 </div>
 `;

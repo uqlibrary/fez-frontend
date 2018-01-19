@@ -102,8 +102,6 @@ describe('ContributorRow renders ', () => {
     it('a row with index and contributor set calls assignment function', () => {
         const testFunction = jest.fn();
         const wrapper = setup({index: 0, showContributorAssignment: true, onContributorAssigned: testFunction, isShallow: false});
-        const checkbox = wrapper.find('Checkbox .contributorAssignment input');
-        expect(checkbox.length).toBe(1);
         wrapper.instance()._onContributorAssigned();
         expect(testFunction).toBeCalled;
     });

@@ -10,7 +10,7 @@ export default class ContributorRowHeader extends Component {
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
         locale: PropTypes.object,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -25,8 +25,9 @@ export default class ContributorRowHeader extends Component {
                 confirmationMessage: 'Are you sure you want to delete all records?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
-            }
-        }
+            },
+            descriptionStep2: 'Step 2 - Locale missing'
+        },
     };
 
     constructor(props) {
@@ -40,38 +41,36 @@ export default class ContributorRowHeader extends Component {
     render() {
         const {
             nameColumn, identifierColumn, reorderColumn,
-            deleteAll, deleteAllConfirmation, contributorAssignmentColumn
+            deleteAll, deleteAllConfirmation
         } = this.props.locale;
 
         return (
-            <div className="columns is-gapless is-mobile contributorsHeader datalist datalist-header">
-                <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this.props.onDeleteAll}
-                    locale={deleteAllConfirmation}/>
-                {
-                    this.props.showContributorAssignment &&
-                    <div className="column is-1-desktop is-1-tablet is-3-mobile authorAssignment datalist-title">
-                        <label aria-hidden htmlFor="contributorAssignment">{contributorAssignmentColumn}</label>
-                    </div>
-                }
-                <div className="column name datalist-title">{nameColumn}</div>
-                {
-                    this.props.showIdentifierLookup &&
-                    <div
-                        className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title">{identifierColumn}</div>
-                }
-                <div className="column is-narrow is-hidden-mobile order datalist-title">{reorderColumn}</div>
+            <div>
+                {this.props.locale.descriptionStep2}
+                <div className="columns is-gapless is-mobile contributorsHeader datalist datalist-header">
+                    <ConfirmDialogBox
+                        onRef={ref => (this.confirmationBox = ref)}
+                        onAction={this.props.onDeleteAll}
+                        locale={deleteAllConfirmation}/>
+                    <div className="column is-narrow is-hidden-mobile authorIcon" />
+                    <div className="column name datalist-title">{nameColumn}</div>
+                    {
+                        this.props.showIdentifierLookup &&
+                        <div
+                            className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title">{identifierColumn}</div>
+                    }
+                    <div className="column is-narrow is-hidden-mobile order datalist-title">{reorderColumn}</div>
 
-                <div className="column is-narrow buttons datalist-buttons">
-                    <IconButton
-                        tooltip={deleteAll}
-                        onTouchTap={this._showConfirmation}
-                        disabled={this.props.disabled}>
-                        <FontIcon className="material-icons">delete_forever</FontIcon>
-                    </IconButton>
+                    <div className="column is-narrow buttons datalist-buttons">
+                        <IconButton
+                            tooltip={deleteAll}
+                            onTouchTap={this._showConfirmation}
+                            disabled={this.props.disabled}>
+                            <FontIcon className="material-icons">delete_forever</FontIcon>
+                        </IconButton>
+                    </div>
+                    <div className="column is-narrow scrollbar-spacer is-hidden-mobile" />
                 </div>
-                <div className="column is-narrow scrollbar-spacer is-hidden-mobile" />
             </div>
         );
     }

@@ -2,11 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
-import Checkbox from 'material-ui/Checkbox';
-import RadioButtonCheckedIcon from 'material-ui/svg-icons/toggle/radio-button-checked';
-import RadioButtonUncheckedIcon from 'material-ui/svg-icons/toggle/radio-button-unchecked';
-
-
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 
 export default class ContributorRow extends Component {
@@ -48,23 +43,30 @@ export default class ContributorRow extends Component {
 
     _showConfirmation = () => {
         this.confirmationBox.showConfirmation();
-    }
+    };
 
     _deleteRecord = () => {
         if (!this.props.disabled && this.props.onDelete) this.props.onDelete(this.props.contributor, this.props.index);
-    }
+    };
 
     _onMoveUp = () => {
         if (!this.props.disabled && this.props.onMoveUp) this.props.onMoveUp(this.props.contributor, this.props.index);
-    }
+    };
 
     _onMoveDown = () => {
         if (!this.props.disabled && this.props.onMoveDown) this.props.onMoveDown(this.props.contributor, this.props.index);
-    }
+    };
+
+    _onContributorAssignedKeyboard = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
+        }
+    };
 
     _onContributorAssigned = () => {
         if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
-    }
+    };
 
     render() {
         const {ordinalData, deleteRecordConfirmation} = this.props.locale;
@@ -72,26 +74,35 @@ export default class ContributorRow extends Component {
             ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
 
         return (
-            <div className="columns is-gapless is-mobile contributorsRow datalist datalist-row">
+            <div className={`columns is-gapless is-mobile contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}
                     locale={deleteRecordConfirmation} />
                 {
-                    this.props.showContributorAssignment &&
-                    <div className="column is-1-desktop is-1-tablet is-3-mobile contributorIdentifier datalist-text">
-                        <Checkbox
-                            name="contributorAssignment"
-                            onCheck={this._onContributorAssigned}
-                            className="contributorAssignment"
-                            checkedIcon={<RadioButtonCheckedIcon/>}
-                            uncheckedIcon={<RadioButtonUncheckedIcon/>}
-                            checked={this.props.contributor.selected}
-                            disabled={this.props.disabled || this.props.disabledContributorAssignment || this.props.contributor.disabled}
-                            value={this.props.index}/>
-                    </div>
+                    this.props.contributor.selected ?
+                        <div className="column is-narrow is-hidden-mobile">
+                            <IconButton
+                                tooltip="This is you"
+                                tooltipPosition="top-right"
+                                className="selectedAuthorIcon"
+                                disabled={this.props.disabled}>
+                                <FontIcon className="material-icons">person</FontIcon>
+                            </IconButton>
+                        </div>
+                        :
+                        <div className="column is-narrow is-hidden-mobile">
+                            <IconButton
+                                tooltip="Select this entry as you"
+                                tooltipPosition="bottom-right"
+                                onClick={this._onContributorAssigned}
+                                onKeyDown={this._onContributorAssignedKeyboard}
+                                disabled={this.props.disabled}>
+                                <FontIcon className="material-icons unselectedAuthorIcon">person_outline</FontIcon>
+                            </IconButton>
+                        </div>
                 }
-                <div className="column datalist-text">
+                <div className="column datalist-text" onClick={this._onContributorAssigned} onKeyDown={this._onContributorAssignedKeyboard} tabIndex="0">
                     <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
                     <span className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
                 </div>

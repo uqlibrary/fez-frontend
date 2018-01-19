@@ -16,7 +16,8 @@ export class ContributorForm extends Component {
         errorText: PropTypes.string,
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        descriptionStep1: PropTypes.string
     };
 
     static defaultProps = {
@@ -24,7 +25,8 @@ export class ContributorForm extends Component {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
             identifierLabel: 'UQ identifier (if available)',
-            addButton: 'Add author'
+            addButton: 'Add author',
+            descriptionStep1: 'This is a test of Step 1'
         }
     }
 
@@ -87,51 +89,54 @@ export class ContributorForm extends Component {
         const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
 
         return (
-            <div className="columns">
-                <div className="column">
-                    <TextField
-                        fullWidth
-                        errorText={this.props.errorText}
-                        ref="nameAsPublishedField"
-                        id="nameAsPublishedField"
-                        floatingLabelText={this.props.locale.nameAsPublishedLabel}
-                        hintText={this.props.locale.nameAsPublishedHint}
-                        value={this.state.nameAsPublished}
-                        onChange={this._onNameChanged}
-                        onKeyPress={this._addContributor}
-                        disabled={this.props.disabled}
-                        className="input-long-hint"/>
-                </div>
-                {
-                    this.props.showIdentifierLookup &&
+            <div>
+                {this.props.locale.descriptionStep1}
+                <div className="columns">
                     <div className="column">
-                        <AutoComplete
-                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                            listStyle={{maxHeight: 200, overflow: 'auto'}}
-                            filter={() => true}
-                            ref="identifierField"
-                            id="identifierField"
-                            floatingLabelText={this.props.locale.identifierLabel}
-                            hintText={this.props.locale.identifierLabel}
-                            dataSource={this.props.authorsList}
-                            dataSourceConfig={autoCompleteDataFormat}
-                            openOnFocus
+                        <TextField
                             fullWidth
-                            animated={false}
-                            searchText={this.state.uqIdentifier}
-                            onUpdateInput={this._onUQIdentifierChanged}
-                            onNewRequest={this._onUQIdentifierSelected}
-                        />
+                            errorText={this.props.errorText}
+                            ref="nameAsPublishedField"
+                            id="nameAsPublishedField"
+                            floatingLabelText={this.props.locale.nameAsPublishedLabel}
+                            hintText={this.props.locale.nameAsPublishedHint}
+                            value={this.state.nameAsPublished}
+                            onChange={this._onNameChanged}
+                            onKeyPress={this._addContributor}
+                            disabled={this.props.disabled}
+                            className="input-long-hint"/>
                     </div>
-                }
-                <div className="column is-narrow">
-                    <RaisedButton
-                        className="is-mui-spacing-button"
-                        fullWidth
-                        primary
-                        label={this.props.locale.addButton}
-                        disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
-                        onClick={this._addContributor} />
+                    {
+                        this.props.showIdentifierLookup &&
+                        <div className="column">
+                            <AutoComplete
+                                disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
+                                listStyle={{maxHeight: 200, overflow: 'auto'}}
+                                filter={() => true}
+                                ref="identifierField"
+                                id="identifierField"
+                                floatingLabelText={this.props.locale.identifierLabel}
+                                hintText={this.props.locale.identifierLabel}
+                                dataSource={this.props.authorsList}
+                                dataSourceConfig={autoCompleteDataFormat}
+                                openOnFocus
+                                fullWidth
+                                animated={false}
+                                searchText={this.state.uqIdentifier}
+                                onUpdateInput={this._onUQIdentifierChanged}
+                                onNewRequest={this._onUQIdentifierSelected}
+                            />
+                        </div>
+                    }
+                    <div className="column is-narrow">
+                        <RaisedButton
+                            className="is-mui-spacing-button"
+                            fullWidth
+                            primary
+                            label={this.props.locale.addButton}
+                            disabled={this.props.disabled || this.state.nameAsPublished.trim().length === 0}
+                            onClick={this._addContributor} />
+                    </div>
                 </div>
             </div>
         );

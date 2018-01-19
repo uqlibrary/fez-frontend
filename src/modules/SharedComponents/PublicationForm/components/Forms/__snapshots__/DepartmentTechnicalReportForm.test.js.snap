@@ -144,9 +144,7 @@ exports[`GenericDocumentForm renders  component 1`] = `
     }
     title="Authors"
   >
-    <div>
-      Please provide a list of authors and then select your name from the list.
-    </div>
+    <div />
     <Field
       className="requiredField"
       component={[Function]}
@@ -156,6 +154,14 @@ exports[`GenericDocumentForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButton": "Add author",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                 - Please add to a list of authors below, in the order they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
               "nameAsPublishedLabel": "Enter each author's name as published",
@@ -171,6 +177,21 @@ exports[`GenericDocumentForm renders  component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
+              "descriptionStep2": <div
+                style={
+                  Object {
+                    "marginTop": "12px",
+                  }
+                }
+              >
+                <br />
+                <span
+                  className="authorSteps"
+                >
+                  Step 2 of 2
+                </span>
+                 - Please select your name from the list below.
+              </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Author's name as published",
               "reorderColumn": "Reorder items",

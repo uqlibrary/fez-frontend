@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default {
     components: {
         facetsFilter: {
@@ -132,7 +134,6 @@ export default {
         },
         authors: {
             title: 'Authors',
-            description: 'Please provide a list of authors and then select your name from the list.',
             descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
             help: {
                 title: 'Adding contributors',
@@ -142,6 +143,9 @@ export default {
             field: {
                 form: {
                     locale: {
+                        descriptionStep1: (
+                            <div><span className="authorSteps">Step 1 of 2</span> - Please add to a list of authors below, in the order they are published.</div>
+                        ),
                         nameAsPublishedLabel: 'Enter each author\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
@@ -150,6 +154,9 @@ export default {
                 },
                 header: {
                     locale: {
+                        descriptionStep2: (
+                            <div style={{marginTop: '12px'}}><br /><span className="authorSteps">Step 2 of 2</span> - Please select your name from the list below.</div>
+                        ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Author\'s name as published',
                         identifierColumn: 'UQ identifier',

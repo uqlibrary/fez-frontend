@@ -1,0 +1,51 @@
+@import '../../../../sass/variables';
+
+.authorSteps {
+  font-weight: $text-weight-bold;
+  color: $theme-color;
+}
+.contributorsHeader {
+  &.datalist.datalist-header {
+    margin-top: 6px !important;
+  }
+  .authorIcon {
+    width: 48px;
+  }
+}
+.contributorsRow {
+  padding: 12px 0 12px 4px;
+  &.datalist-row {
+    margin-bottom: 0px !important;
+  }
+  &:hover {
+    background-color: rgba($secondary-color-light, 0.5);
+    cursor: pointer;
+  }
+  .datalist-text {
+    margin-top: 6px !important;
+    line-height: 22px !important;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .unselectedAuthorIcon {
+    opacity: 0.5;
+  }
+
+  // Selected author
+  &.selected {
+    background-color: $theme-color;
+    .datalist-text {
+      color: $text-color-reverse;
+      &:focus {
+        outline: none !important;
+      }
+      .datalist-text-subtitle {
+        color: $text-color-reverse !important;
+      }
+    }
+    .material-icons {
+      color: white !important;
+    }
+  }
+}

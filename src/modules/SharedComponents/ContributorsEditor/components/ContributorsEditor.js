@@ -25,7 +25,9 @@ export class ContributorsEditor extends Component {
         showContributorAssignment: false,
         locale: {
             errorTitle: 'Error',
-            errorMessage: 'Unable to add an item with the same identifier.'
+            errorMessage: 'Unable to add an item with the same identifier.',
+            description1: (<span>Step 1 - Test</span>),
+            description2: (<span>Step 2 - Test</span>),
         }
     };
 
@@ -163,13 +165,15 @@ export class ContributorsEditor extends Component {
                         showContributorAssignment={this.props.showContributorAssignment} />
                 }
                 {
-                    this.state.contributors.length > 0 &&
-                    <Infinite containerHeight={195}
-                        elementHeight={65}
-                        threshold={130}
-                        className="authors-infinite">
-                        {renderContributorsRows}
-                    </Infinite>
+                    this.state.contributors.length > 2 ?
+                        <Infinite containerHeight={195}
+                            elementHeight={65}
+                            threshold={130}
+                            className="authors-infinite">
+                            {renderContributorsRows}
+                        </Infinite>
+                        :
+                        <div>{renderContributorsRows.map(item => item)}</div>
                 }
             </div>
         );
