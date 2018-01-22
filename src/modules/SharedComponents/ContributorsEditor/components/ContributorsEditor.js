@@ -165,7 +165,7 @@ export class ContributorsEditor extends Component {
                         showContributorAssignment={this.props.showContributorAssignment} />
                 }
                 {
-                    this.state.contributors.length > 2 ?
+                    this.state.contributors.length > 3 ?
                         <Infinite containerHeight={195}
                             elementHeight={65}
                             threshold={130}

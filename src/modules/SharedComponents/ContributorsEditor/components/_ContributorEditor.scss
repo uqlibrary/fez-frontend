@@ -13,7 +13,10 @@
   }
 }
 .contributorsRow {
-  padding: 12px 0 12px 4px;
+  padding: 0;
+  .contributorDetails, .contributorActions {
+    padding: 6px;
+  }
   &.datalist-row {
     margin-bottom: 0px !important;
   }
@@ -23,7 +26,7 @@
   }
   .datalist-text {
     margin-top: 6px !important;
-    line-height: 22px !important;
+    line-height: 18px !important;
     &:hover {
       cursor: pointer;
     }

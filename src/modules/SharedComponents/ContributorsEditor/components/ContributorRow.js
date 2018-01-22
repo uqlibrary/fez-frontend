@@ -59,13 +59,13 @@ export default class ContributorRow extends Component {
 
     _onContributorAssignedKeyboard = (event) => {
         if (event.key === 'Enter') {
-            event.preventDefault();
             if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
         }
     };
 
-    _onContributorAssigned = () => {
+    _onContributorAssigned = (event) => {
         if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
+        event.currentTarget.blur();
     };
 
     render() {
@@ -74,74 +74,89 @@ export default class ContributorRow extends Component {
             ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
 
         return (
-            <div className={`columns is-gapless is-mobile contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
+            <div className={`contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}
                     locale={deleteRecordConfirmation} />
-                {
-                    this.props.contributor.selected ?
-                        <div className="column is-narrow is-hidden-mobile">
-                            <IconButton
-                                tooltip="This is you"
-                                tooltipPosition="top-right"
-                                className="selectedAuthorIcon"
-                                disabled={this.props.disabled}>
-                                <FontIcon className="material-icons">person</FontIcon>
-                            </IconButton>
+                <div className="columns is-gapless is-mobile">
+                    <div className="column">
+                        <div className="columns is-gapless contributorDetails"
+                            onClick={this._onContributorAssigned}
+                            onKeyDown={this._onContributorAssignedKeyboard}
+                            tabIndex="0"
+                            aria-label="This will be the aria label for screen readers"
+                        >
+                            {
+                                this.props.contributor.selected ?
+                                    <div className="column is-narrow is-hidden-mobile">
+                                        <IconButton
+                                            tooltip="This is you"
+                                            tooltipPosition="top-right"
+                                            className="selectedAuthorIcon"
+                                            disabled={this.props.disabled}>
+                                            <FontIcon className="material-icons">person</FontIcon>
+                                        </IconButton>
+                                    </div>
+                                    :
+                                    <div className="column is-narrow is-hidden-mobile">
+                                        <IconButton
+                                            tooltip="Select this entry as you"
+                                            tooltipPosition="bottom-right"
+                                            onClick={this._onContributorAssigned}
+                                            onKeyDown={this._onContributorAssignedKeyboard}
+                                            disabled={this.props.disabled}>
+                                            <FontIcon className="material-icons unselectedAuthorIcon">person_outline</FontIcon>
+                                        </IconButton>
+                                    </div>
+                            }
+                            <div className="column datalist-text">
+                                <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
+                                <span className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
+                            </div>
+                            {
+                                this.props.showIdentifierLookup &&
+                                <div className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
+                                    <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
+                                    <br/>
+                                    <small>{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</small>
+                                </div>
+                            }
                         </div>
-                        :
-                        <div className="column is-narrow is-hidden-mobile">
-                            <IconButton
-                                tooltip="Select this entry as you"
-                                tooltipPosition="bottom-right"
-                                onClick={this._onContributorAssigned}
-                                onKeyDown={this._onContributorAssignedKeyboard}
-                                disabled={this.props.disabled}>
-                                <FontIcon className="material-icons unselectedAuthorIcon">person_outline</FontIcon>
-                            </IconButton>
-                        </div>
-                }
-                <div className="column datalist-text" onClick={this._onContributorAssigned} onKeyDown={this._onContributorAssignedKeyboard} tabIndex="0">
-                    <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
-                    <span className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
-                </div>
-                {
-                    this.props.showIdentifierLookup &&
-                    <div className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
-                        <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
-                        <br/>
-                        <small>{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</small>
                     </div>
-                }
-                <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
-                    {this.props.canMoveUp &&
-                    <IconButton
-                        tooltip={this.props.locale.moveUpHint}
-                        onTouchTap={this._onMoveUp}
-                        className="reorderUp"
-                        disabled={this.props.disabled}>
-                        <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
-                    </IconButton>
-                    }
-                    {this.props.canMoveDown &&
-                    <IconButton
-                        tooltip={this.props.locale.moveDownHint}
-                        onTouchTap={this._onMoveDown}
-                        className="reorderDown"
-                        disabled={this.props.disabled}>
-                        <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
-                    </IconButton>
-                    }
-                </div>
-                <div className="column is-narrow contributorDelete datalist-buttons">
-                    <IconButton
-                        className="contributorDelete"
-                        tooltip={this.props.locale.deleteHint}
-                        onTouchTap={this._showConfirmation}
-                        disabled={this.props.disabled}>
-                        <FontIcon className="material-icons deleteIcon">delete</FontIcon>
-                    </IconButton>
+                    <div className="column is-narrow">
+                        <div className="columns is-gapless contributorActions">
+                            <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
+                                {this.props.canMoveUp &&
+                                <IconButton
+                                    tooltip={this.props.locale.moveUpHint}
+                                    onTouchTap={this._onMoveUp}
+                                    className="reorderUp"
+                                    disabled={this.props.disabled}>
+                                    <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
+                                </IconButton>
+                                }
+                                {this.props.canMoveDown &&
+                                <IconButton
+                                    tooltip={this.props.locale.moveDownHint}
+                                    onTouchTap={this._onMoveDown}
+                                    className="reorderDown"
+                                    disabled={this.props.disabled}>
+                                    <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
+                                </IconButton>
+                                }
+                            </div>
+                            <div className="column is-narrow contributorDelete datalist-buttons">
+                                <IconButton
+                                    className="contributorDelete"
+                                    tooltip={this.props.locale.deleteHint}
+                                    onTouchTap={this._showConfirmation}
+                                    disabled={this.props.disabled}>
+                                    <FontIcon className="material-icons deleteIcon">delete</FontIcon>
+                                </IconButton>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

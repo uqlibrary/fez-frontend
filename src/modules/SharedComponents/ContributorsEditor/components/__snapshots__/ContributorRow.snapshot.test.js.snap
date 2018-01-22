@@ -43,7 +43,7 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
   showIdentifierLookup={false}
 >
   <div
-    className="columns is-gapless is-mobile contributorsRow datalist datalist-row "
+    className="contributorsRow datalist datalist-row "
   >
     <ConfirmDialogBox
       hideCancelButton={false}
@@ -117,404 +117,425 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
       </Dialog>
     </ConfirmDialogBox>
     <div
-      className="column is-narrow is-hidden-mobile"
+      className="columns is-gapless is-mobile"
     >
-      <IconButton
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tooltip="Select this entry as you"
-        tooltipPosition="bottom-right"
-        touch={false}
+      <div
+        className="column"
       >
-        <EnhancedButton
-          centerRipple={true}
-          containerElement="button"
-          disableTouchRipple={false}
-          disabled={false}
-          onBlur={[Function]}
+        <div
+          aria-label="This will be the aria label for screen readers"
+          className="columns is-gapless contributorDetails"
           onClick={[Function]}
-          onFocus={[Function]}
           onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOut={[Function]}
-          onTouchStart={[Function]}
-          onTouchTap={[Function]}
-          style={
-            Object {
-              "boxSizing": "border-box",
-              "fontSize": 0,
-              "height": 48,
-              "overflow": "visible",
-              "padding": 12,
-              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "width": 48,
-            }
-          }
-          tabIndex={0}
-          type="button"
+          tabIndex="0"
         >
-          <button
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOut={[Function]}
-            onTouchStart={[Function]}
-            onTouchTap={[Function]}
-            style={
-              Object {
-                "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                "background": "none",
-                "border": 10,
-                "boxSizing": "border-box",
-                "cursor": "pointer",
-                "display": "inline-block",
-                "fontFamily": "Roboto, sans-serif",
-                "fontSize": 0,
-                "fontWeight": "inherit",
-                "height": 48,
-                "margin": 0,
-                "muiPrepared": true,
-                "outline": "none",
-                "overflow": "visible",
-                "padding": 12,
-                "position": "relative",
-                "textDecoration": "none",
-                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                "verticalAlign": null,
-                "width": 48,
-                "zIndex": 1,
-              }
-            }
-            tabIndex={0}
-            type="button"
+          <div
+            className="column is-narrow is-hidden-mobile"
           >
-            <TouchRipple
-              abortOnScroll={true}
-              centerRipple={true}
-              key="touchRipple"
+            <IconButton
+              disableTouchRipple={false}
+              disabled={false}
+              iconStyle={Object {}}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tooltip="Select this entry as you"
+              tooltipPosition="bottom-right"
+              touch={false}
             >
-              <div
-                onMouseDown={[Function]}
+              <EnhancedButton
+                centerRipple={true}
+                containerElement="button"
+                disableTouchRipple={false}
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onKeyboardFocus={[Function]}
+                onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
+                onMouseOut={[Function]}
                 onTouchStart={[Function]}
-              >
-                <Tooltip
-                  horizontalPosition="right"
-                  label="Select this entry as you"
-                  show={false}
-                  style={
-                    Object {
-                      "boxSizing": "border-box",
-                    }
+                onTouchTap={[Function]}
+                style={
+                  Object {
+                    "boxSizing": "border-box",
+                    "fontSize": 0,
+                    "height": 48,
+                    "overflow": "visible",
+                    "padding": 12,
+                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                    "width": 48,
                   }
-                  touch={false}
-                  verticalPosition="bottom"
-                >
-                  <div
-                    style={
-                      Object {
-                        "borderRadius": 2,
-                        "boxSizing": "border-box",
-                        "color": "#ffffff",
-                        "fontFamily": "Roboto, sans-serif",
-                        "fontSize": "10px",
-                        "left": 12,
-                        "lineHeight": "22px",
-                        "muiPrepared": true,
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "padding": "0 8px",
-                        "position": "absolute",
-                        "right": null,
-                        "top": -10000,
-                        "transition": "top 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "userSelect": "none",
-                        "zIndex": 3000,
-                      }
-                    }
-                  >
-                    <div
-                      style={
-                        Object {
-                          "backgroundColor": "transparent",
-                          "borderRadius": "50%",
-                          "left": "0%",
-                          "muiPrepared": true,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": "translate(-50%, -50%)",
-                          "transition": "width 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, height 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, backgroundColor 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        }
-                      }
-                    />
-                    <span
-                      style={
-                        Object {
-                          "muiPrepared": true,
-                          "position": "relative",
-                          "whiteSpace": "nowrap",
-                        }
-                      }
-                    >
-                      Select this entry as you
-                    </span>
-                  </div>
-                </Tooltip>
-                <FontIcon
-                  className="material-icons unselectedAuthorIcon"
-                  key=".0"
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <button
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  style={Object {}}
-                >
-                  <span
-                    className="material-icons unselectedAuthorIcon"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "color": "rgba(0, 0, 0, 0.87)",
-                        "display": "inline-block",
-                        "fontSize": 24,
-                        "muiPrepared": true,
-                        "position": "relative",
-                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "userSelect": "none",
-                      }
-                    }
-                  >
-                    person_outline
-                  </span>
-                </FontIcon>
-              </div>
-            </TouchRipple>
-          </button>
-        </EnhancedButton>
-      </IconButton>
-    </div>
-    <div
-      className="column datalist-text"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      tabIndex="0"
-    >
-      <span
-        className="contributorName"
-      >
-        A. Smith
-      </span>
-      <span
-        className="contributorSubtitle datalist-text-subtitle"
-      >
-        First  listed contributor
-      </span>
-    </div>
-    <div
-      className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-    />
-    <div
-      className="column is-narrow contributorDelete datalist-buttons"
-    >
-      <IconButton
-        className="contributorDelete"
-        disableTouchRipple={false}
-        disabled={false}
-        iconStyle={Object {}}
-        onTouchTap={[Function]}
-        tooltip="Remove this record"
-        tooltipPosition="bottom-center"
-        touch={false}
-      >
-        <EnhancedButton
-          centerRipple={true}
-          className="contributorDelete"
-          containerElement="button"
-          disableTouchRipple={false}
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onKeyboardFocus={[Function]}
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOut={[Function]}
-          onTouchStart={[Function]}
-          onTouchTap={[Function]}
-          style={
-            Object {
-              "boxSizing": "border-box",
-              "fontSize": 0,
-              "height": 48,
-              "overflow": "visible",
-              "padding": 12,
-              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "width": 48,
-            }
-          }
-          tabIndex={0}
-          type="button"
-        >
-          <button
-            className="contributorDelete"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOut={[Function]}
-            onTouchStart={[Function]}
-            onTouchTap={[Function]}
-            style={
-              Object {
-                "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                "background": "none",
-                "border": 10,
-                "boxSizing": "border-box",
-                "cursor": "pointer",
-                "display": "inline-block",
-                "fontFamily": "Roboto, sans-serif",
-                "fontSize": 0,
-                "fontWeight": "inherit",
-                "height": 48,
-                "margin": 0,
-                "muiPrepared": true,
-                "outline": "none",
-                "overflow": "visible",
-                "padding": 12,
-                "position": "relative",
-                "textDecoration": "none",
-                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                "verticalAlign": null,
-                "width": 48,
-                "zIndex": 1,
-              }
-            }
-            tabIndex={0}
-            type="button"
-          >
-            <TouchRipple
-              abortOnScroll={true}
-              centerRipple={true}
-              key="touchRipple"
-            >
-              <div
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchStart={[Function]}
-              >
-                <Tooltip
-                  horizontalPosition="center"
-                  label="Remove this record"
-                  show={false}
+                  onMouseOut={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchTap={[Function]}
                   style={
                     Object {
+                      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                      "background": "none",
+                      "border": 10,
                       "boxSizing": "border-box",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "Roboto, sans-serif",
+                      "fontSize": 0,
+                      "fontWeight": "inherit",
+                      "height": 48,
+                      "margin": 0,
+                      "muiPrepared": true,
+                      "outline": "none",
+                      "overflow": "visible",
+                      "padding": 12,
+                      "position": "relative",
+                      "textDecoration": "none",
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "verticalAlign": null,
+                      "width": 48,
+                      "zIndex": 1,
                     }
                   }
-                  touch={false}
-                  verticalPosition="bottom"
+                  tabIndex={0}
+                  type="button"
                 >
-                  <div
-                    style={
-                      Object {
-                        "borderRadius": 2,
-                        "boxSizing": "border-box",
-                        "color": "#ffffff",
-                        "fontFamily": "Roboto, sans-serif",
-                        "fontSize": "10px",
-                        "left": 24,
-                        "lineHeight": "22px",
-                        "muiPrepared": true,
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "padding": "0 8px",
-                        "position": "absolute",
-                        "right": null,
-                        "top": -10000,
-                        "transition": "top 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "userSelect": "none",
-                        "zIndex": 3000,
-                      }
-                    }
+                  <TouchRipple
+                    abortOnScroll={true}
+                    centerRipple={true}
+                    key="touchRipple"
                   >
                     <div
-                      style={
-                        Object {
-                          "backgroundColor": "transparent",
-                          "borderRadius": "50%",
-                          "left": "50%",
-                          "muiPrepared": true,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": "translate(-50%, -50%)",
-                          "transition": "width 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, height 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, backgroundColor 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        }
-                      }
-                    />
-                    <span
-                      style={
-                        Object {
-                          "muiPrepared": true,
-                          "position": "relative",
-                          "whiteSpace": "nowrap",
-                        }
-                      }
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
                     >
-                      Remove this record
-                    </span>
-                  </div>
-                </Tooltip>
-                <FontIcon
-                  className="material-icons deleteIcon"
-                  key=".0"
+                      <Tooltip
+                        horizontalPosition="right"
+                        label="Select this entry as you"
+                        show={false}
+                        style={
+                          Object {
+                            "boxSizing": "border-box",
+                          }
+                        }
+                        touch={false}
+                        verticalPosition="bottom"
+                      >
+                        <div
+                          style={
+                            Object {
+                              "borderRadius": 2,
+                              "boxSizing": "border-box",
+                              "color": "#ffffff",
+                              "fontFamily": "Roboto, sans-serif",
+                              "fontSize": "10px",
+                              "left": 12,
+                              "lineHeight": "22px",
+                              "muiPrepared": true,
+                              "opacity": 0,
+                              "overflow": "hidden",
+                              "padding": "0 8px",
+                              "position": "absolute",
+                              "right": null,
+                              "top": -10000,
+                              "transition": "top 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                              "zIndex": 3000,
+                            }
+                          }
+                        >
+                          <div
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "borderRadius": "50%",
+                                "left": "0%",
+                                "muiPrepared": true,
+                                "position": "absolute",
+                                "top": 0,
+                                "transform": "translate(-50%, -50%)",
+                                "transition": "width 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, height 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, backgroundColor 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              }
+                            }
+                          />
+                          <span
+                            style={
+                              Object {
+                                "muiPrepared": true,
+                                "position": "relative",
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            Select this entry as you
+                          </span>
+                        </div>
+                      </Tooltip>
+                      <FontIcon
+                        className="material-icons unselectedAuthorIcon"
+                        key=".0"
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        style={Object {}}
+                      >
+                        <span
+                          className="material-icons unselectedAuthorIcon"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          style={
+                            Object {
+                              "color": "rgba(0, 0, 0, 0.87)",
+                              "display": "inline-block",
+                              "fontSize": 24,
+                              "muiPrepared": true,
+                              "position": "relative",
+                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                            }
+                          }
+                        >
+                          person_outline
+                        </span>
+                      </FontIcon>
+                    </div>
+                  </TouchRipple>
+                </button>
+              </EnhancedButton>
+            </IconButton>
+          </div>
+          <div
+            className="column datalist-text"
+          >
+            <span
+              className="contributorName"
+            >
+              A. Smith
+            </span>
+            <span
+              className="contributorSubtitle datalist-text-subtitle"
+            >
+              First  listed contributor
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="column is-narrow"
+      >
+        <div
+          className="columns is-gapless contributorActions"
+        >
+          <div
+            className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+          />
+          <div
+            className="column is-narrow contributorDelete datalist-buttons"
+          >
+            <IconButton
+              className="contributorDelete"
+              disableTouchRipple={false}
+              disabled={false}
+              iconStyle={Object {}}
+              onTouchTap={[Function]}
+              tooltip="Remove this record"
+              tooltipPosition="bottom-center"
+              touch={false}
+            >
+              <EnhancedButton
+                centerRipple={true}
+                className="contributorDelete"
+                containerElement="button"
+                disableTouchRipple={false}
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onKeyboardFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseOut={[Function]}
+                onTouchStart={[Function]}
+                onTouchTap={[Function]}
+                style={
+                  Object {
+                    "boxSizing": "border-box",
+                    "fontSize": 0,
+                    "height": 48,
+                    "overflow": "visible",
+                    "padding": 12,
+                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                    "width": 48,
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <button
+                  className="contributorDelete"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  style={Object {}}
-                >
-                  <span
-                    className="material-icons deleteIcon"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "color": "rgba(0, 0, 0, 0.87)",
-                        "display": "inline-block",
-                        "fontSize": 24,
-                        "muiPrepared": true,
-                        "position": "relative",
-                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "userSelect": "none",
-                      }
+                  onMouseOut={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchTap={[Function]}
+                  style={
+                    Object {
+                      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                      "background": "none",
+                      "border": 10,
+                      "boxSizing": "border-box",
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "fontFamily": "Roboto, sans-serif",
+                      "fontSize": 0,
+                      "fontWeight": "inherit",
+                      "height": 48,
+                      "margin": 0,
+                      "muiPrepared": true,
+                      "outline": "none",
+                      "overflow": "visible",
+                      "padding": 12,
+                      "position": "relative",
+                      "textDecoration": "none",
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "verticalAlign": null,
+                      "width": 48,
+                      "zIndex": 1,
                     }
+                  }
+                  tabIndex={0}
+                  type="button"
+                >
+                  <TouchRipple
+                    abortOnScroll={true}
+                    centerRipple={true}
+                    key="touchRipple"
                   >
-                    delete
-                  </span>
-                </FontIcon>
-              </div>
-            </TouchRipple>
-          </button>
-        </EnhancedButton>
-      </IconButton>
+                    <div
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                    >
+                      <Tooltip
+                        horizontalPosition="center"
+                        label="Remove this record"
+                        show={false}
+                        style={
+                          Object {
+                            "boxSizing": "border-box",
+                          }
+                        }
+                        touch={false}
+                        verticalPosition="bottom"
+                      >
+                        <div
+                          style={
+                            Object {
+                              "borderRadius": 2,
+                              "boxSizing": "border-box",
+                              "color": "#ffffff",
+                              "fontFamily": "Roboto, sans-serif",
+                              "fontSize": "10px",
+                              "left": 24,
+                              "lineHeight": "22px",
+                              "muiPrepared": true,
+                              "opacity": 0,
+                              "overflow": "hidden",
+                              "padding": "0 8px",
+                              "position": "absolute",
+                              "right": null,
+                              "top": -10000,
+                              "transition": "top 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                              "zIndex": 3000,
+                            }
+                          }
+                        >
+                          <div
+                            style={
+                              Object {
+                                "backgroundColor": "transparent",
+                                "borderRadius": "50%",
+                                "left": "50%",
+                                "muiPrepared": true,
+                                "position": "absolute",
+                                "top": 0,
+                                "transform": "translate(-50%, -50%)",
+                                "transition": "width 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, height 0ms cubic-bezier(0.23, 1, 0.32, 1) 450ms, backgroundColor 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              }
+                            }
+                          />
+                          <span
+                            style={
+                              Object {
+                                "muiPrepared": true,
+                                "position": "relative",
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            Remove this record
+                          </span>
+                        </div>
+                      </Tooltip>
+                      <FontIcon
+                        className="material-icons deleteIcon"
+                        key=".0"
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        style={Object {}}
+                      >
+                        <span
+                          className="material-icons deleteIcon"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          style={
+                            Object {
+                              "color": "rgba(0, 0, 0, 0.87)",
+                              "display": "inline-block",
+                              "fontSize": 24,
+                              "muiPrepared": true,
+                              "position": "relative",
+                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                              "userSelect": "none",
+                            }
+                          }
+                        >
+                          delete
+                        </span>
+                      </FontIcon>
+                    </div>
+                  </TouchRipple>
+                </button>
+              </EnhancedButton>
+            </IconButton>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </ContributorRow>
@@ -522,7 +543,7 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
 
 exports[`ContributorRow renders  a row with index and contributor set, renders only name and delete button 1`] = `
 <div
-  className="columns is-gapless is-mobile contributorsRow datalist datalist-row "
+  className="contributorsRow datalist datalist-row "
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -538,75 +559,96 @@ exports[`ContributorRow renders  a row with index and contributor set, renders o
     onRef={[Function]}
   />
   <div
-    className="column is-narrow is-hidden-mobile"
+    className="columns is-gapless is-mobile"
   >
-    <IconButton
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      tooltip="Select this entry as you"
-      tooltipPosition="bottom-right"
-      touch={false}
+    <div
+      className="column"
     >
-      <FontIcon
-        className="material-icons unselectedAuthorIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        aria-label="This will be the aria label for screen readers"
+        className="columns is-gapless contributorDetails"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
       >
-        person_outline
-      </FontIcon>
-    </IconButton>
-  </div>
-  <div
-    className="column datalist-text"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
-  >
-    <span
-      className="contributorName"
+        <div
+          className="column is-narrow is-hidden-mobile"
+        >
+          <IconButton
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            tooltip="Select this entry as you"
+            tooltipPosition="bottom-right"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons unselectedAuthorIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              person_outline
+            </FontIcon>
+          </IconButton>
+        </div>
+        <div
+          className="column datalist-text"
+        >
+          <span
+            className="contributorName"
+          >
+            A. Smith
+          </span>
+          <span
+            className="contributorSubtitle datalist-text-subtitle"
+          >
+            First  listed contributor
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
     >
-      A. Smith
-    </span>
-    <span
-      className="contributorSubtitle datalist-text-subtitle"
-    >
-      First  listed contributor
-    </span>
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-  />
-  <div
-    className="column is-narrow contributorDelete datalist-buttons"
-  >
-    <IconButton
-      className="contributorDelete"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Remove this record"
-      tooltipPosition="bottom-center"
-      touch={false}
-    >
-      <FontIcon
-        className="material-icons deleteIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="columns is-gapless contributorActions"
       >
-        delete
-      </FontIcon>
-    </IconButton>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        />
+        <div
+          className="column is-narrow contributorDelete datalist-buttons"
+        >
+          <IconButton
+            className="contributorDelete"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Remove this record"
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              delete
+            </FontIcon>
+          </IconButton>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ContributorRow renders  a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
 <div
-  className="columns is-gapless is-mobile contributorsRow datalist datalist-row "
+  className="contributorsRow datalist datalist-row "
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -622,112 +664,133 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
     onRef={[Function]}
   />
   <div
-    className="column is-narrow is-hidden-mobile"
+    className="columns is-gapless is-mobile"
   >
-    <IconButton
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      tooltip="Select this entry as you"
-      tooltipPosition="bottom-right"
-      touch={false}
+    <div
+      className="column"
     >
-      <FontIcon
-        className="material-icons unselectedAuthorIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        aria-label="This will be the aria label for screen readers"
+        className="columns is-gapless contributorDetails"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
       >
-        person_outline
-      </FontIcon>
-    </IconButton>
-  </div>
-  <div
-    className="column datalist-text"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
-  >
-    <span
-      className="contributorName"
+        <div
+          className="column is-narrow is-hidden-mobile"
+        >
+          <IconButton
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            tooltip="Select this entry as you"
+            tooltipPosition="bottom-right"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons unselectedAuthorIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              person_outline
+            </FontIcon>
+          </IconButton>
+        </div>
+        <div
+          className="column datalist-text"
+        >
+          <span
+            className="contributorName"
+          >
+            A. Smith
+          </span>
+          <span
+            className="contributorSubtitle datalist-text-subtitle"
+          >
+            First  listed contributor
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
     >
-      A. Smith
-    </span>
-    <span
-      className="contributorSubtitle datalist-text-subtitle"
-    >
-      First  listed contributor
-    </span>
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-  >
-    <IconButton
-      className="reorderUp"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Move record up the order"
-      tooltipPosition="bottom-center"
-      touch={false}
-    >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="columns is-gapless contributorActions"
       >
-        keyboard_arrow_up
-      </FontIcon>
-    </IconButton>
-    <IconButton
-      className="reorderDown"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Move record down the order"
-      tooltipPosition="bottom-center"
-      touch={false}
-    >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        keyboard_arrow_down
-      </FontIcon>
-    </IconButton>
-  </div>
-  <div
-    className="column is-narrow contributorDelete datalist-buttons"
-  >
-    <IconButton
-      className="contributorDelete"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Remove this record"
-      tooltipPosition="bottom-center"
-      touch={false}
-    >
-      <FontIcon
-        className="material-icons deleteIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        delete
-      </FontIcon>
-    </IconButton>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        >
+          <IconButton
+            className="reorderUp"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Move record up the order"
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              keyboard_arrow_up
+            </FontIcon>
+          </IconButton>
+          <IconButton
+            className="reorderDown"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Move record down the order"
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              keyboard_arrow_down
+            </FontIcon>
+          </IconButton>
+        </div>
+        <div
+          className="column is-narrow contributorDelete datalist-buttons"
+        >
+          <IconButton
+            className="contributorDelete"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Remove this record"
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              delete
+            </FontIcon>
+          </IconButton>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`ContributorRow renders  a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
 <div
-  className="columns is-gapless is-mobile contributorsRow datalist datalist-row "
+  className="contributorsRow datalist datalist-row "
 >
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -743,77 +806,98 @@ exports[`ContributorRow renders  a row with index and contributor with author de
     onRef={[Function]}
   />
   <div
-    className="column is-narrow is-hidden-mobile"
+    className="columns is-gapless is-mobile"
   >
-    <IconButton
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      tooltip="Select this entry as you"
-      tooltipPosition="bottom-right"
-      touch={false}
+    <div
+      className="column"
     >
-      <FontIcon
-        className="material-icons unselectedAuthorIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        aria-label="This will be the aria label for screen readers"
+        className="columns is-gapless contributorDetails"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
       >
-        person_outline
-      </FontIcon>
-    </IconButton>
-  </div>
-  <div
-    className="column datalist-text"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
-  >
-    <span
-      className="contributorName"
+        <div
+          className="column is-narrow is-hidden-mobile"
+        >
+          <IconButton
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            tooltip="Select this entry as you"
+            tooltipPosition="bottom-right"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons unselectedAuthorIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              person_outline
+            </FontIcon>
+          </IconButton>
+        </div>
+        <div
+          className="column datalist-text"
+        >
+          <span
+            className="contributorName"
+          >
+            J. Smith
+          </span>
+          <span
+            className="contributorSubtitle datalist-text-subtitle"
+          >
+            First  listed contributor
+          </span>
+        </div>
+        <div
+          className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text"
+        >
+          <strong>
+             
+          </strong>
+          <br />
+          <small />
+        </div>
+      </div>
+    </div>
+    <div
+      className="column is-narrow"
     >
-      J. Smith
-    </span>
-    <span
-      className="contributorSubtitle datalist-text-subtitle"
-    >
-      First  listed contributor
-    </span>
-  </div>
-  <div
-    className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text"
-  >
-    <strong>
-       
-    </strong>
-    <br />
-    <small />
-  </div>
-  <div
-    className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
-  />
-  <div
-    className="column is-narrow contributorDelete datalist-buttons"
-  >
-    <IconButton
-      className="contributorDelete"
-      disableTouchRipple={false}
-      disabled={false}
-      iconStyle={Object {}}
-      onTouchTap={[Function]}
-      tooltip="Remove this record"
-      tooltipPosition="bottom-center"
-      touch={false}
-    >
-      <FontIcon
-        className="material-icons deleteIcon"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="columns is-gapless contributorActions"
       >
-        delete
-      </FontIcon>
-    </IconButton>
+        <div
+          className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
+        />
+        <div
+          className="column is-narrow contributorDelete datalist-buttons"
+        >
+          <IconButton
+            className="contributorDelete"
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onTouchTap={[Function]}
+            tooltip="Remove this record"
+            tooltipPosition="bottom-center"
+            touch={false}
+          >
+            <FontIcon
+              className="material-icons deleteIcon"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              delete
+            </FontIcon>
+          </IconButton>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
