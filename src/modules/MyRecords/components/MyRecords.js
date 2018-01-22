@@ -106,7 +106,6 @@ export default class MyRecords extends React.Component {
     render() {
         const txt = locale.pages.myResearch;
         const pagingData = this.props.publicationsListPagingData;
-        console.log('PAGIN DATA!!!\n\n' + JSON.stringify(pagingData));
         return (
             <StandardPage title={txt.pageTitle}>
                 {
