@@ -65,7 +65,7 @@ export default class ContributorRow extends Component {
 
     _onContributorAssigned = (event) => {
         if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
-        event.currentTarget.blur();
+        event && event.currentTarget.blur();
     };
 
     render() {

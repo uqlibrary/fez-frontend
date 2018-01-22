@@ -99,12 +99,12 @@ describe('ContributorRow renders ', () => {
         testFunction.mockReset();
     });
 
-    // it('a row with index and contributor set calls assignment function', () => {
-    //     const testFunction = jest.fn();
-    //     const wrapper = setup({index: 0, showContributorAssignment: true, onContributorAssigned: testFunction, isShallow: false});
-    //     wrapper.instance()._onContributorAssigned();
-    //     expect(testFunction).toBeCalled;
-    // });
+    it('a row with index and contributor set calls assignment function', () => {
+        const testFunction = jest.fn();
+        const wrapper = setup({index: 0, showContributorAssignment: true, onContributorAssigned: testFunction, isShallow: false});
+        wrapper.instance()._onContributorAssigned();
+        expect(testFunction).toBeCalled;
+    });
 
     it('a row with index and contributor set calls delete function', () => {
         const testFunction = jest.fn();
