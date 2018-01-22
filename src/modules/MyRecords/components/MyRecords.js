@@ -106,6 +106,7 @@ export default class MyRecords extends React.Component {
     render() {
         const txt = locale.pages.myResearch;
         const pagingData = this.props.publicationsListPagingData;
+        console.log('PAGIN DATA!!!\n\n' + JSON.stringify(pagingData));
         return (
             <StandardPage title={txt.pageTitle}>
                 {
@@ -125,6 +126,15 @@ export default class MyRecords extends React.Component {
                         !this.props.accountLoading && this.state.allowResultsPaging &&
                         <div className="column">
                             <StandardCard>
+                                {
+                                    pagingData && pagingData.to && pagingData.from && pagingData.total &&
+                                        <span>
+                                            {txt.recordCount
+                                                .replace('[recordsTotal]', pagingData.total)
+                                                .replace('[recordsFrom]', pagingData.from)
+                                                .replace('[recordsTo]', pagingData.to)}
+                                        </span>
+                                }
                                 {txt.text}
                                 <PublicationsListSorting
                                     pagingData={pagingData}

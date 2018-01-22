@@ -94,11 +94,11 @@ export default {
                 <StandardCard>
                     <p>The requested page could not be found.</p>
                     <p>Sorry about that, but here's what you can do next:
-                        <ul>
-                            <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.</li>
-                            <li>Start again at the home page.</li>
-                            <li>If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.</li>
-                        </ul>
+                    <ul>
+                        <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.</li>
+                        <li>Start again at the home page.</li>
+                        <li>If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.</li>
+                    </ul>
                     </p>
                 </StandardCard>
             )
@@ -217,6 +217,7 @@ export default {
         },
         myResearch: {
             pageTitle: 'My research',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
                     Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
