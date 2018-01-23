@@ -1,22 +1,25 @@
-jest.dontMock('./AddMissingRecord');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import AddMissingRecord from './AddMissingRecord';
 import * as routes from '../../../config/routes';
 
-function setup({rawSearchQuery, author, location, actions, history, match, addRecordStep}){
+function setup(testProps, isShallow = true) {
     const props = {
-        author: author || null,
-        actions: actions || {},
-        addRecordStep: addRecordStep || null,
-        rawSearchQuery: rawSearchQuery || null,
-        match: match || {},
-        location: location || {},
-        history: history || {}
+        ...testProps,
+
+        rawSearchQuery: testProps.rawSearchQuery || '',
+        addRecordStep: testProps.addRecordStep || jest.fn(),
+        location: testProps.location || {
+            pathname: ''
+        },
+        match: testProps.match || {},
+        author: testProps.author || null,
+        actions: testProps.actions || {
+
+        },
+        history: testProps.history || {
+            push: jest.fn()
+        }
     };
-    return shallow(<AddMissingRecord {...props} />);
+    return getElement(AddMissingRecord, props, isShallow);
 }
 
 describe('Component AddMissingRecord', () => {

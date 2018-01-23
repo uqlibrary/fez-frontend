@@ -831,7 +831,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             "title": "Additional information",
           }
         }
-        title="Optional: Please suggest changes and/or upload additional files below"
+        title="Optional: Suggest changes or add links to this record"
       >
         <Field
           component={[Function]}
@@ -1731,7 +1731,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "title": "Additional information",
           }
         }
-        title="Optional: Please suggest changes and/or upload additional files below"
+        title="Optional: Suggest changes or add links to this record"
       >
         <Field
           component={[Function]}
@@ -2883,7 +2883,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             "title": "Additional information",
           }
         }
-        title="Optional: Please suggest changes and/or upload additional files below"
+        title="Optional: Suggest changes or add links to this record"
       >
         <Field
           component={[Function]}
@@ -4035,7 +4035,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             "title": "Additional information",
           }
         }
-        title="Optional: Please suggest changes and/or upload additional files below"
+        title="Optional: Suggest changes or add links to this record"
       >
         <Field
           component={[Function]}
@@ -5188,7 +5188,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             "title": "Additional information",
           }
         }
-        title="Optional: Please suggest changes and/or upload additional files below"
+        title="Optional: Suggest changes or add links to this record"
       >
         <Field
           component={[Function]}

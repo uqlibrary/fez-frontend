@@ -17,22 +17,22 @@ describe('createRecord reducer', () => {
     };
 
     it('clears the state of a new record and returns the initialState', () => {
-        const test = createRecordReducer(initialState, {type: actions.RECORD_CREATE_RESET});
+        const test = createRecordReducer(initialState, {type: actions.CREATE_RECORD_RESET});
         expect(test).toEqual(initialState);
     });
 
     it('returns the payload of the created record, and whether the file upload was successful', () => {
-        const test = createRecordReducer(initialState, {type: actions.RECORD_CREATE_SUCCESS, payload: aRecordToCreate, fileUploadFailed: false});
+        const test = createRecordReducer(initialState, {type: actions.CREATE_RECORD_SUCCESS, payload: aRecordToCreate, fileUploadFailed: false});
         expect(test).toEqual({...initialState, newRecord: aRecordToCreate, newRecordFileUploadingError: false});
     });
 
     it('returns the payload of the failed record and that there was an error', () => {
-        const test = createRecordReducer(initialState, {type: actions.RECORD_CREATE_FAILED, payload: aRecordToCreate});
+        const test = createRecordReducer(initialState, {type: actions.CREATE_RECORD_FAILED, payload: aRecordToCreate});
         expect(test).toEqual({...initialState, newRecordError: true, newRecordErrorMessage: aRecordToCreate});
     });
 
     it('returns that the new record is currently being saved', () => {
-        const test = createRecordReducer(initialState, {type: actions.RECORD_CREATE_SAVING, payload: aRecordToCreate});
+        const test = createRecordReducer(initialState, {type: actions.CREATE_RECORD_SAVING, payload: aRecordToCreate});
         expect(test).toEqual({...initialState, newRecordSaving: true});
     });
 

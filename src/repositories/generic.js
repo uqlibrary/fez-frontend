@@ -1,98 +1,51 @@
 import {api} from '../config';
-/**
- * @param error
- * @param resolve
- * @param reject
- */
-function processError(error, resolve, reject) {
-    if (error.hasOwnProperty('response')
-        && error.response !== null && typeof(error.response) !== 'undefined'
-        && error.response.hasOwnProperty('status')
-        && (error.response.status === 403 || error.response.status === 404
-            || error.response.status === 500 || error.response.status === 422
-            || error.response.status === 504)) {
-        reject({status: error.response.status, message: error.response.message});
-    } else {
-        reject(error);
-    }
-}
 
 /**
  * Send a put request
  * @param {string} apiUrl
- * @param {object} data to be posted, refer to backend API
+ * @param {object} data to be posted to API
+ * @param {object} any query string parameters (defined in routes with apiUrl)
+ * @param {object} any additional options (headers, responseType, etc)
  * @returns {Promise}
  */
-export function put(apiUrl, data, options, encodeUrl = false) {
+export function put({apiUrl, options = {}}, data, config = {}) {
     console.log('PUT: ' + apiUrl);
-    return new Promise((resolve, reject) => {
-        api
-            .put(encodeUrl ? encodeURI(apiUrl) : apiUrl, data, options)
-            .then(response => {
-                console.log(response.data);
-                resolve(response.data);
-            })
-            .catch(error => {
-                console.log('PUT api call error');
-                console.log(error);
-                reject(error);
-            });
-    });
+    return api.put(apiUrl, data, {...config, ...options});
 }
 
 /**
  * Send a post request
  * @param {string} apiUrl
- * @param {object} data to be posted, refer to backend API
+ * @param {object} data to be posted to API
+ * @param {object} any query string parameters (defined in routes with apiUrl)
+ * @param {object} any additional options (headers, responseType, etc)
  * @returns {Promise}
  */
-export function post(apiUrl, data) {
+export function post({apiUrl, options = {}}, data, config = {}) {
     console.log('POST: ' + apiUrl);
-    console.log(data);
-    return new Promise((resolve, reject) => {
-        api
-            .post(encodeURI(apiUrl), data)
-            .then(response => {
-                console.log(response.data);
-                resolve(response.data);
-            })
-            .catch(error => {
-                reject(error);
-            });
-    });
+    return api.post(apiUrl, data, {...config, ...options});
 }
 
 /**
  * Send a patch request
  * @param {string} apiUrl
- * @param {object} data to be posted, refer to backend API
+ * @param {object} data to be posted to API
+ * @param {object} any query string parameters (defined in routes with apiUrl)
+ * @param {object} any additional options (headers, responseType, etc)
  * @returns {Promise}
  */
-export function patch(apiUrl, data) {
+export function patch({apiUrl, options = {}}, data, config = {}) {
     console.log('PATCH: ' + apiUrl);
-    console.log(data);
-    return new Promise((resolve, reject) => {
-        api.patch(encodeURI(apiUrl), data).then(response => {
-            console.log(response.data);
-            resolve(response.data);
-        }).catch(error => {
-            reject(error);
-        });
-    });
+    return api.patch(apiUrl, data, {...config, ...options});
 }
 
 /**
  * Send a get request
  * @param {string} apiUrl
+ * @param {object} any query string parameters (defined in routes with apiUrl)
+ * @param {object} any additional options (headers, responseType, etc)
  * @returns {Promise}
  */
-export function get(apiUrl) {
-    console.log('GET: ' + apiUrl);
-    return new Promise((resolve, reject) => {
-        api.get(encodeURI(apiUrl)).then(response => {
-            resolve(response.data);
-        }).catch(error => {
-            processError(error, resolve, reject);
-        });
-    });
+export function get({apiUrl, options = {}}, config = {}) {
+    return api.get(apiUrl, {...config, ...options});
 }

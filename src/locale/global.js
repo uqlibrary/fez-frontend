@@ -22,7 +22,8 @@ export default {
     global: {
         title: 'UQ eSpace DEMO',
         logo: 'https://static.uq.net.au/v1/logos/corporate/uq-logo-white.svg',
-        loading: 'loading...',
+        loading: 'Loading...',
+        loadingUserAccount: 'Loading user account...',
         mainNavButton: {
             tooltip: 'Main navigation',
             closeMenuLabel: 'Close menu'
@@ -51,9 +52,14 @@ export default {
         },
         noOrcidAlert: {
             title: 'ORCID ID REQUIRED',
-            message: 'You do not have an ORCID ID linked to your UQ eSpace',
+            message: 'You do not have an ORCID ID linked to your UQ eSpace.',
             type: 'info_outline',
             actionButtonLabel: 'Click here to link or register'
+        },
+        forceOrcidLinkAlert: {
+            title: 'ORCID ID REQUIRED',
+            message: 'Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID.',
+            type: 'error_outline'
         },
         discardFormChangesConfirmation: {
             confirmationTitle: 'Discard changes?',

@@ -4,7 +4,8 @@ import appReducer from './app';
 describe('app reducer', () => {
 
     const initialState = {
-        hidePossiblyYourPublicationsLure: false
+        hidePossiblyYourPublicationsLure: false,
+        appAlert: null
     };
 
     it('returns that the lure is to be hidden', () => {

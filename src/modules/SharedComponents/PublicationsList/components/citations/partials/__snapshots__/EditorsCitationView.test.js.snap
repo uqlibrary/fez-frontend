@@ -73,6 +73,7 @@ exports[`EditorsCitationView test  should render component with one contributor 
        edited by 
       <CitationView
         className="citationAuthor"
+        key="citationAuthor_1"
         prefix=""
         suffix=""
         value="Pedroso, Marcelo Monteiro"
@@ -160,6 +161,7 @@ exports[`EditorsCitationView test  should render component with three contributo
        edited by 
       <CitationView
         className="citationAuthor"
+        key="citationAuthor_1"
         prefix=""
         suffix=", "
         value="Pedroso, Marcelo Monteiro"
@@ -173,6 +175,7 @@ exports[`EditorsCitationView test  should render component with three contributo
       </CitationView>
       <CitationView
         className="citationAuthor"
+        key="citationAuthor_2"
         prefix=""
         suffix=", "
         value="Smith, J"
@@ -186,6 +189,7 @@ exports[`EditorsCitationView test  should render component with three contributo
       </CitationView>
       <CitationView
         className="citationAuthor"
+        key="citationAuthor_3"
         prefix=" and "
         suffix=""
         value="Andersen, J"
@@ -262,6 +266,7 @@ exports[`EditorsCitationView test  should render component with two contributors
        edited by 
       <CitationView
         className="citationAuthor"
+        key="citationAuthor_1"
         prefix=""
         suffix=""
         value="Pedroso, Marcelo Monteiro"
@@ -274,6 +279,7 @@ exports[`EditorsCitationView test  should render component with two contributors
       </CitationView>
       <CitationView
         className="citationAuthor"
+        key="citationAuthor_2"
         prefix=" and "
         suffix=""
         value="Smith, J"

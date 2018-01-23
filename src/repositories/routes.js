@@ -3,104 +3,96 @@ import {validation} from 'config';
 /**
  * Translate selected facets to query string parameters
  * @param {object} selected facets
- * @returns {string}
+ * @returns {object}
  */
-export const getFacetsQueryString = (facets) => {
-    return Object.keys(facets).map(key => {
-        return ('filters[facets][' + key + ']=' + facets[key]);
-    }).join('&');
+export const getFacetsParams = (facets) => {
+    const facetsParam = {};
+    Object.keys(facets).map(key => {
+        facetsParam[`filters[facets][${key}]`] = facets[key];
+    });
+    return facetsParam;
 };
 
-/**
- * prepareTextSearchQuery - escape/remove ElasticSearch special characters
- * @param {string} query string
- * @returns {string}
- */
-export const prepareTextSearchQuery = (searchQuery) => {
-    const escapeConfig = [
-        {
-            find: /([\!\*\+\-\=\&\|\(\)\[\]\{\}\^\~\?\:\\/"])/g,
-            replaceWith: '\\$1'
-        },
-        {
-            find: /([\<\>])/g,
-            replaceWith: ''
-        },
-        {
-            find: /\s/g,
-            replaceWith: '+'
-        }
-    ];
-    const value = escapeConfig.reduce((query, config) =>
-        (query.replace(config.find, config.replaceWith)), searchQuery.trim());
-    return value;
-};
+export const getStandardSearchParams = ({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => {
+    const unknownAuthors = withUnknownAuthors >= 0 ? {with_unknown_authors: withUnknownAuthors} : {};
 
-/**
- * Translate parameters into standard search string
- * @param {object} {page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}
- * @returns {string}
- */
-export const getStandardSearchParameters = ({page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', withUnknownAuthors = -1, facets = {}}) => (
-    `page=${page}&per_page=${pageSize}&sort=${sortBy}&order_by=${sortDirection.toLowerCase()}&${getFacetsQueryString(facets)}${withUnknownAuthors >= 0 ? `&with_unknown_authors=${withUnknownAuthors}` : ''}`
-);
+    return {
+        page: page,
+        per_page: pageSize,
+        sort: sortBy,
+        order_by: sortDirection.toLowerCase(),
+        ...getFacetsParams(facets),
+        ...unknownAuthors
+    };
+};
 
 /**
  * getSearchType - based on data provided returns query string attribute
  * @param {string} pid/pubmed/string title to search
- * @returns {string} query string attribute based on input
+ * @returns {object} query string attribute based on input
  */
 export const getSearchType = (searchQuery) => {
     if (validation.isValidDOIValue(searchQuery)) {
-        return `doi=${searchQuery.trim()}`;
+        return {doi: searchQuery.trim()};
     }
 
     if (validation.isValidPubMedValue(searchQuery)) {
-        return `id=pmid:${searchQuery.trim()}`;
+        return {id: `pmid:${searchQuery.trim()}`};
     }
 
-    return `title=${prepareTextSearchQuery(searchQuery)}`;
+    return {title: searchQuery};
 };
 
-export const ACCOUNT_API = () => (`account?${new Date().getTime()}`);
-export const AUTHORS_SEARCH_API = ({query}) => (`fez-authors/search?query=${query}`);
-export const CURRENT_AUTHOR_API = () => ('fez-authors');
-export const AUTHOR_DETAILS_API = ({userId}) => (`authors/details/${userId}`);
+export const CURRENT_ACCOUNT_API = () => ({apiUrl: 'account', options: {params: {ts: `${new Date().getTime()}`}}});
+export const AUTHORS_SEARCH_API = ({query}) => ({apiUrl: 'fez-authors/search', options: {params: {query: query}}});
+export const CURRENT_AUTHOR_API = () => ({apiUrl: 'fez-authors'});
+export const AUTHOR_API = ({authorId}) => ({apiUrl: `fez-authors/${authorId}`});
+export const AUTHOR_DETAILS_API = ({userId}) => ({apiUrl: `authors/details/${userId}`});
+export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => ({apiUrl: `orcid/${userId}/request`, options: {params: {...params}}});
 
 // academic stats apis
-export const ACADEMIC_STATS_PUBLICATION_YEARS_API = ({userId}) => (`academic/${userId}/publication-years`);
-export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => (`academic/${userId}/hindex`);
-export const ACADEMIC_STATS_PUBLICATION_STATS_API = ({userId}) => (`academic/${userId}/publication-stats`);
-export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = ({userId}) => (`academic/${userId}/trending_publications`);
+export const ACADEMIC_STATS_PUBLICATION_YEARS_API = ({userId}) => ({apiUrl: `academic/${userId}/publication-years`});
+export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({userId}) => ({apiUrl: `academic/${userId}/hindex`});
+export const ACADEMIC_STATS_PUBLICATION_STATS_API = ({userId}) => ({apiUrl: `academic/${userId}/publication-stats`});
+export const ACADEMIC_STATS_PUBLICATIONS_TRENDING_API = ({userId}) => ({apiUrl: `academic/${userId}/trending_publications`});
 
 // lookup apis
-export const GET_ACML_QUICK_TEMPLATES_API = () => ('acml/quick-templates');
-export const VOCABULARIES_API  = ({id}) => (`vocabularies/${id}`);
-export const GET_PUBLICATION_TYPES_API = () => ('records/types');
+export const GET_ACML_QUICK_TEMPLATES_API = () => ({apiUrl: 'acml/quick-templates'});
+export const VOCABULARIES_API  = ({id}) => ({apiUrl: `vocabularies/${id}`});
+export const GET_PUBLICATION_TYPES_API = () => ({apiUrl: 'records/types'});
 
 // file uploading apis
-export const FILE_UPLOAD_API = ({pid, fileName}) => (`file/upload/presigned/${pid}/${fileName}`);
+export const FILE_UPLOAD_API = ({pid, fileName}) => ({apiUrl: `file/upload/presigned/${pid}/${fileName}`});
 
 // create/patch record apis
-export const NEW_RECORD_API = () => ('records');
-export const EXISTING_RECORD_API = ({pid}) => (`records/${pid}`);
-export const RECORDS_ISSUES_API = ({pid}) => (`records/${pid}/issues`);
+export const NEW_RECORD_API = () => ({apiUrl: 'records'});
+export const EXISTING_RECORD_API = ({pid}) => ({apiUrl: `records/${pid}`});
+export const RECORDS_ISSUES_API = ({pid}) => ({apiUrl: `records/${pid}/issues`});
 
 // search/list records apis
-export const POSSIBLE_RECORDS_API = ({facets = {}}) => (`records/search?rule=possible&${getFacetsQueryString(facets)}`);
-export const HIDE_POSSIBLE_RECORD_API = () => ('records/search?rule=possible'); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
+export const POSSIBLE_RECORDS_API = ({facets = {}}) => ({apiUrl: 'records/search', options: {params: {rule: 'possible', ...getFacetsParams(facets)}}});
+export const HIDE_POSSIBLE_RECORD_API = () => ({apiUrl: 'records/search', options: {params: {rule: 'possible'}}}); // (POST: with data: [\'pid\' => \'UQ:1\', \'type\' => \'H\'])`);
 
-export const CURRENT_USER_RECORDS_API = (values) => (`records/search?rule=mine&${getStandardSearchParameters(values)}`);
+export const CURRENT_USER_RECORDS_API = (values) => ({apiUrl: 'records/search', options: {params: {rule: 'mine', ...getStandardSearchParams(values)}}});
 
 export const SEARCH_INTERNAL_RECORDS_API = (values) => (
     // values = {searchQuery, page = 1, pageSize = 20, sortBy = 'published_date', sortDirection = 'desc', facets = {}}
-    `records/search?${getSearchType(values.searchQuery)}&${getStandardSearchParameters(values)}`
+    {apiUrl: 'records/search', options: {params: {...getSearchType(values.searchQuery), ...getStandardSearchParams(values)}}}
 );
 
-export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery}) => (
-    `external/records/search?source=${source}&${getSearchType(searchQuery)}`
+export const SEARCH_EXTERNAL_RECORDS_API = ({source = 'wos', searchQuery = ''}) => (
+    {apiUrl: 'external/records/search', options: {params: {source: source, ...getSearchType(searchQuery)}}}
 );
 
 export const SEARCH_KEY_LOOKUP_API = ({searchKey, searchQuery}) => (
-    `records/search?rule=lookup&search_key=${searchKey}&lookup_value=${prepareTextSearchQuery(searchQuery)}`
+    {
+        apiUrl: 'records/search',
+        options: {
+            params: {
+                rule: 'lookup',
+                search_key: searchKey,
+                lookup_value: searchQuery
+            }
+        }
+    }
 );

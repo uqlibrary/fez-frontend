@@ -6,7 +6,6 @@ import {get, post, patch} from 'repositories/generic';
 import * as routes from 'repositories/routes';
 import * as repositories from 'repositories';
 
-
 /**
  * Search publications from eSpace which are matched to currently logged in username
  * @param {object} activeFacets - optional list of facets
@@ -19,38 +18,35 @@ export function searchPossiblyYourPublications({facets = {}}) {
         }
 
         dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: facets});
-
-        get(routes.POSSIBLE_RECORDS_API({facets: facets}))
+        return get(routes.POSSIBLE_RECORDS_API({facets: facets}))
             .then(response => {
                 dispatch({
-                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
                     payload: response,
                 });
 
                 dispatch({
-                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_COMPLETED,
+                    type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
                     payload: response.filters && response.filters.facets ? response.filters.facets : {}
                 });
 
                 if (Object.keys(facets).length === 0) {
                     // only update total count if there's no filtering
                     dispatch({
-                        type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_COMPLETED,
+                        type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED,
                         payload: response
                     });
                 }
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
-
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                    payload: error
+                    payload: error.message
                 });
 
                 dispatch({
                     type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };
@@ -82,21 +78,21 @@ export function hideRecord({record, facets = {}}) {
             pid: record.rek_pid
         };
 
-        post(routes.HIDE_POSSIBLE_RECORD_API(), data)
+        return post(routes.HIDE_POSSIBLE_RECORD_API(), data)
             .then(() => {
                 dispatch({
-                    type: actions.HIDE_PUBLICATIONS_COMPLETED,
+                    type: actions.HIDE_PUBLICATIONS_LOADED,
                     payload: {pid: record.rek_pid}
                 });
 
                 // reload current possibly your publications/count after user hides records
-                dispatch(searchPossiblyYourPublications({facets: facets}));
+                return dispatch(searchPossiblyYourPublications({facets: facets}));
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
+                // TODO: display error message to user that this operation failed (in PT)
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_FAILED,
-                    payload: []
+                    payload: error.message
                 });
             });
     };
@@ -141,7 +137,7 @@ export function clearClaimPublication() {
  *
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data: {publication, author, files}
- * @returns {action}
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function claimPublication(data) {
     const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
@@ -248,8 +244,6 @@ export function claimPublication(data) {
 
                     return Promise.resolve(data.publication);
                 }
-                // dispatch an action if session failed
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
 
                 // failed to create a claim/new record request
                 dispatch({

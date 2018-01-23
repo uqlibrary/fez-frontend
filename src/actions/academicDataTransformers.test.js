@@ -1,6 +1,4 @@
-import React from 'react';
 import * as transformers from './academicDataTransformers';
-import {APP_URL} from 'config';
 
 describe('Academic data transformers ', () => {
     describe('getPublicationsPerType test', () => {
@@ -363,7 +361,7 @@ describe('Academic data transformers ', () => {
         });
     });
 
-    describe('getPublicationsStats', () => {
+    it('should getPublicationsStats when data is provided', () => {
         const data = {
             "took": 130,
             "timed_out": false,

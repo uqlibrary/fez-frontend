@@ -1,23 +1,18 @@
-import MockAdapter from 'axios-mock-adapter';
-import {api} from 'config';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import {getMockStore, expectStoreHasExpectedActions} from './actions-test-commons';
-
 import * as controlledVocabActions from './controlledVocabularies';
 
-const store = getMockStore();
-
 describe('Controlled Vocabularies actions', () => {
-    let mock;
+    // extend expect to check actions
+    expect.extend({toHaveDispatchedActions});
 
     beforeEach(() => {
-        mock = new MockAdapter(api, {delayResponse: 100});
+        mockActionsStore = setupStoreForActions();
+        mockApi = setupMockAdapter();
     });
 
     afterEach(() => {
-        mock.reset();
-        store.clearActions();
+        mockApi.reset();
     });
 
     const returnedApiData = {
@@ -25711,50 +25706,53 @@ describe('Controlled Vocabularies actions', () => {
         ]
     };
 
-    it('return a list of controlled vocabularies successfully from API', () => {
-        mock.onGet(repositories.routes.VOCABULARIES_API({id: 451780}))
+    it('dispatches expected actions to load voabularies from API successfully', async () => {
+        const testId = 451780;
+
+        mockApi
+            .onGet(repositories.routes.VOCABULARIES_API({id: testId}).apiUrl)
             .reply(200, returnedApiData);
 
         const expectedActions = [
-            {type: `${actions.VOCABULARIES_LOADING}@451780`},
-            {type: `${actions.VOCABULARIES_LOADED}@451780`}
+            `${actions.VOCABULARIES_LOADING}@${testId}`,
+            `${actions.VOCABULARIES_LOADED}@${testId}`
         ];
 
-        const store = getMockStore();
-        return store.dispatch(controlledVocabActions.loadVocabulariesList(451780)).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
-        });
+        await mockActionsStore.dispatch(controlledVocabActions.loadVocabulariesList(testId));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('return a list of controlled vocabularies failed with 403 returned from API and set anon account', () => {
-        mock.onGet(repositories.routes.VOCABULARIES_API({id: 451780}))
+    it('dispatches expected actions to load voabularies from API for anon user', async () => {
+        const testId = 451780;
+
+        mockApi
+            .onAny()
             .reply(403);
 
         const expectedActions = [
-            {type: `${actions.VOCABULARIES_LOADING}@451780`},
-            {type: actions.ACCOUNT_ANONYMOUS},
-            {type: `${actions.VOCABULARIES_LOAD_FAILED}@451780`}
+            `${actions.VOCABULARIES_LOADING}@${testId}`,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            `${actions.VOCABULARIES_LOAD_FAILED}@${testId}`
         ];
 
-        const store = getMockStore();
-        return store.dispatch(controlledVocabActions.loadVocabulariesList(451780)).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
-        });
+        await mockActionsStore.dispatch(controlledVocabActions.loadVocabulariesList(testId));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('return a list of controlled vocabularies failed with 404 returned from API', () => {
-        mock.onGet(repositories.routes.VOCABULARIES_API({id: 451780}))
+    it('dispatches expected actions to load voabularies from API with 404 error', async () => {
+        const testId = 451780;
+
+        mockApi
+            .onAny()
             .reply(404);
 
         const expectedActions = [
-            {type: `${actions.VOCABULARIES_LOADING}@451780`},
-            {type: `${actions.VOCABULARIES_LOAD_FAILED}@451780`}
+            `${actions.VOCABULARIES_LOADING}@${testId}`,
+            `${actions.VOCABULARIES_LOAD_FAILED}@${testId}`
         ];
 
-        const store = getMockStore();
-        return store.dispatch(controlledVocabActions.loadVocabulariesList(451780)).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
-        });
+        await mockActionsStore.dispatch(controlledVocabActions.loadVocabulariesList(testId));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
 });

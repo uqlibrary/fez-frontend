@@ -163,7 +163,7 @@ describe('PublicationsListPaging renders ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
 
-        const nextPage = wrapper.find('.pagingNext');
+        const nextPage = wrapper.find('FlatButton.pagingNext');
         expect(nextPage.length).toBe(1);
         nextPage.props().onTouchTap();
         expect(testFunction).toBeCalled();
@@ -180,7 +180,7 @@ describe('PublicationsListPaging renders ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
 
-        const page = wrapper.find('.pagingPrevious');
+        const page = wrapper.find('FlatButton.pagingPrevious');
         expect(page.length).toBe(1);
         page.props().onTouchTap();
         expect(testFunction).toBeCalled();

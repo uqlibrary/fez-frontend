@@ -1,103 +1,135 @@
-import MockAdapter from 'axios-mock-adapter';
-import {api} from 'config';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import {getMockStore, expectStoreHasExpectedActions} from './actions-test-commons';
-
-import * as fixRecord from './fixRecord';
+import * as fixRecordActions from './fixRecord';
 import * as mockData from 'mock/data';
 
-const store = getMockStore();
-
 describe('Fix record actions', () => {
-    let mock;
+    const testPid = "UQ:396321";
+
+    // extend expect to check actions
+    expect.extend({toHaveDispatchedActions});
 
     beforeEach(() => {
-        mock = new MockAdapter(api, {delayResponse: 100});
+        mockActionsStore = setupStoreForActions();
+        mockApi = setupMockAdapter();
     });
 
     afterEach(() => {
-        mock.reset();
-        store.clearActions();
+        mockApi.reset();
     });
 
     describe('loadRecordToFix action', () => {
-        it('should dispatch actions FIX_RECORD_LOADING and FIX_RECORD_LOADED when loading record to fix', () => {
-            mock.onGet(repositories.routes.EXISTING_RECORD_API({pid: "UQ12345"}))
+        it('dispatches expected actions when loading a record to fix from API successfully', async () => {
+            mockApi
+                .onGet(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
                 .reply(200, {data: {...mockData.record}});
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_LOADING},
-                {type: actions.FIX_RECORD_LOADED}
+                actions.FIX_RECORD_LOADING,
+                actions.FIX_RECORD_LOADED
             ];
 
-            const store = getMockStore();
-            return store.dispatch(fixRecord.loadRecordToFix("UQ12345")).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            });
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('dispatches actions FIX_RECORD_LOADING and FIX_RECORD_LOAD_FAILED when loading record to fix', () => {
-            mock.onGet(repositories.routes.EXISTING_RECORD_API({pid: "UQ12345"}))
+        it('dispatches expected actions when loading a record to fix from API failed', async () => {
+            mockApi
+                .onAny()
                 .reply(500);
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_LOADING},
-                {type: actions.FIX_RECORD_LOAD_FAILED}
+                actions.FIX_RECORD_LOADING,
+                actions.FIX_RECORD_LOAD_FAILED
             ];
-
-            const store = getMockStore();
-            return store.dispatch(fixRecord.loadRecordToFix("UQ12345")).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            });
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('dispatches actions FIX_RECORD_LOADING, ACCOUNT_ANONYMOUS and FIX_RECORD_LOAD_FAILED on 403 error', () => {
-            mock.onGet(repositories.routes.EXISTING_RECORD_API({pid: "UQ12345"}))
+        it('dispatches expected actions when loading a record to fix from API for anon user', async () => {
+            mockApi
+                .onAny()
                 .reply(403);
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_LOADING},
-                {type: actions.ACCOUNT_ANONYMOUS},
-                {type: actions.FIX_RECORD_LOAD_FAILED}
+                actions.FIX_RECORD_LOADING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.FIX_RECORD_LOAD_FAILED
+            ];
+            await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('setting/clearing record to fix action', () => {
+        it('dispatches expected actions when setting a loaded record to fix', async () => {
+            const expectedActions = [
+                actions.FIX_RECORD_SET
+            ];
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.setFixRecord(mockData.record));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions when clearing a loaded record to fix', async () => {
+            const expectedActions = [
+                actions.FIX_RECORD_CLEAR
             ];
 
-            const store = getMockStore();
-            return store.dispatch(fixRecord.loadRecordToFix("UQ12345")).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            });
-        });
-    });
-
-    describe('setFixRecord action', () => {
-        it('should dispatch action FIX_RECORD_SET', () => {
-            store.dispatch(fixRecord.setFixRecord({...mockData.record}));
-            expectStoreHasExpectedActions(store, [{type: actions.FIX_RECORD_SET}]);
-        });
-    });
-
-    describe('clearFixRecord action', () => {
-        it('should dispatch action FIX_RECORD_CLEAR', () => {
-            store.dispatch(fixRecord.clearFixRecord());
-            expectStoreHasExpectedActions(store, [{type: actions.FIX_RECORD_CLEAR}]);
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.clearFixRecord());
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
     });
 
     describe('fixRecord action', () => {
-        it('should dispatch action FIX_RECORD_FAILED for incomplete data (missing publication data)', () => {
-            return store.dispatch(fixRecord.fixRecord({author: ''})).then(() => {
-                expectStoreHasExpectedActions(store, [{type: actions.FIX_RECORD_FAILED}]);
-            }).catch(error => expect(error.message).toEqual('Incomplete data for requests'));
+
+        it('dispatches expected actions with invalid data (missing publication data)', async () => {
+            const testInput = {author: ''};
+
+            const expectedActions = [
+                actions.FIX_RECORD_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch action FIX_RECORD_FAILED for incomplete data (missing author)', () => {
-            return store.dispatch(fixRecord.fixRecord({publication: {}})).then(() => {
-                expectStoreHasExpectedActions(store, [{type: actions.FIX_RECORD_FAILED}]);
-            }).catch(error => expect(error.message).toEqual('Incomplete data for requests'));
+        it('dispatches expected actions with invalid data (missing author data)', async () => {
+            const testInput = {publication: ''};
+
+            const expectedActions = [
+                actions.FIX_RECORD_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch action FIX_RECORD_FAILED if author is not linked', () => {
-            const data = {
+        it('dispatches expected actions with invalid data (missing author is not linked to publication)', async () => {
+            const testInput = {
                 publication: {
                     fez_record_search_key_author_id: [
                         {
@@ -110,18 +142,25 @@ describe('Fix record actions', () => {
                 }
             };
 
-            return store.dispatch(fixRecord.fixRecord(data)).then(() => {
-                expectStoreHasExpectedActions(store, [{type: actions.FIX_RECORD_FAILED}]);
-            }).catch(error => expect(error.message).toEqual('Current author is not linked to this record'));
+            const expectedActions = [
+                actions.FIX_RECORD_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch actions FIX_RECORD_PROCESSING and FIX_RECORD_SUCCESS for valid data with files but no link', () => {
-            const data = {
+        it('dispatches expected actions for successful record fix with files', async () => {
+            const testInput = {
                 publication: {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 },
                 files: {
                     queue: [
@@ -132,137 +171,177 @@ describe('Fix record actions', () => {
                 }
             };
 
-            mock.onGet(repositories.routes.FILE_UPLOAD_API({pid: 'UQ:396321', fileName: "test.txt"}))
-                .reply(200, 's3-ap-southeast-2.amazonaws.com')
-                .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"}, )
-                .reply(200, {})
-                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:396321'}))
-                .reply(200, {data: {...data}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: 'UQ:396321'}))
-                .reply(200, {});
-
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_SUCCESS}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_SUCCESS
             ];
 
-            return store.dispatch(fixRecord.fixRecord(data)).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            });
+            mockApi
+                .onGet(repositories.routes.FILE_UPLOAD_API({pid: testPid, fileName: "test.txt"}).apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
+                .reply(200, {})
+                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+                .reply(200, {data: {...mockData.record}})
+                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
+                .reply(200, {});
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch actions FIX_RECORD_PROCESSING and FIX_RECORD_SUCCESS for valid data with link but without files', () => {
-            const data = {
+        it('dispatches expected actions for successful record fix with url link', async () => {
+            const testInput = {
                 publication: {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 },
                 rek_link: 'http://www.google.com'
             };
 
-            mock.onPatch(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:396321'}))
-                .reply(200, {data: {...data}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: 'UQ:396321'}))
-                .reply(200, {});
-
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_SUCCESS}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_SUCCESS
             ];
 
-            return store.dispatch(fixRecord.fixRecord(data)).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            });
+            mockApi
+                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+                .reply(200, {data: {...mockData.record}})
+                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
+                .reply(200, {});
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch actions FIX_RECORD_PROCESSING and FIX_RECORD_SUCCESS for valid data without files or link', () => {
-            const data = {
+        it('dispatches expected actions for successful record fix', async () => {
+            const testInput = {
                 publication: {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 }
             };
 
-            mock.onPost(repositories.routes.RECORDS_ISSUES_API({pid: 'UQ:396321'}))
-                .reply(200, {});
-
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_SUCCESS}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_SUCCESS
             ];
 
-            return store.dispatch(fixRecord.fixRecord(data)).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            });
+            mockApi.onAny().reply(200, {});
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch actions FIX_RECORD_PROCESSING, ACCOUNT_ANONYMOUS and FIX_RECORD_FAILED on 403 error', () => {
-            const data = {
+        it('dispatches expected actions for record fix for anon user', async () => {
+            const testInput = {
                 publication: {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 }
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.ACCOUNT_ANONYMOUS},
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_PROCESSING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.FIX_RECORD_FAILED
             ];
 
-            mock.onPost(repositories.routes.RECORDS_ISSUES_API({pid: 'UQ:396321'}))
+            mockApi
+                .onAny()
                 .reply(403, {});
 
-            return store.dispatch(fixRecord.fixRecord(data)).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            }).catch(error => expect(error.message).toEqual('Request failed with status code 403'));
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch actions FIX_RECORD_PROCESSING and FIX_RECORD_FAILED on 500 error', () => {
-            const data = {
+        it('dispatches expected actions for record fix with API returning error', async () => {
+            const testInput = {
                 publication: {
                     ...mockData.record
                 },
                 author: {
-                    aut_id: 85056
+                    aut_id: 410
                 }
             };
 
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_FAILED
             ];
 
-            mock.onPost(repositories.routes.RECORDS_ISSUES_API({pid: 'UQ:396321'}))
+            mockApi
+                .onAny()
                 .reply(500, {});
 
-            return store.dispatch(fixRecord.fixRecord(data)).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            }).catch(error => expect(error.message).toEqual('Request failed with status code 500'));
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
     });
 
     describe('unclaimRecord action', () => {
-        it('should dispatch action FIX_RECORD_FAILED for incomplete data (missing publication data)', () => {
-            return store.dispatch(fixRecord.unclaimRecord({author: ''})).then(() => {
-                expectStoreHasExpectedActions(store, [{type: actions.FIX_RECORD_FAILED}]);
-            }).catch(error => expect(error.message).toEqual('Incomplete data for requests.'));
+        it('dispatches expected actions with invalid data (missing publication data)', async () => {
+            const testInput = {
+                author: {}
+            };
+
+            const expectedActions = [
+                actions.FIX_RECORD_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch action FIX_RECORD_FAILED for incomplete data (missing author)', () => {
-            return store.dispatch(fixRecord.unclaimRecord({publication: {}})).then(() => {
-                expectStoreHasExpectedActions(store, [{type: actions.FIX_RECORD_FAILED}]);
-            }).catch(error => expect(error.message).toEqual('Incomplete data for requests.'));
+        it('dispatches expected actions with invalid data (missing author)', async () => {
+            const testInput = {
+                publication: {}
+            };
+
+            const expectedActions = [
+                actions.FIX_RECORD_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch action FIX_RECORD_FAILED if author and contributor is not linked', () => {
-            const data = {
+        it('dispatches expected actions with invalid data (missing author/record link)', async () => {
+            const testInput = {
                 publication: {
                     fez_record_search_key_author_id: [
                         {
@@ -280,13 +359,20 @@ describe('Fix record actions', () => {
                 }
             };
 
-            return store.dispatch(fixRecord.unclaimRecord(data)).then(() => {
-                expectStoreHasExpectedActions(store, [{type: actions.FIX_RECORD_FAILED}]);
-            }).catch(error => expect(error.message).toEqual('Current author is not linked to this record.'));
+            const expectedActions = [
+                actions.FIX_RECORD_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch actions FIX_RECORD_PROCESSING and FIX_RECORD_UNCLAIM_SUCCESS', () => {
-            const data = {
+        it('dispatches expected actions for successful record unclaim', async () => {
+            const testInput = {
                 publication: {
                     ...mockData.record,
                     fez_record_search_key_author_id: [
@@ -305,21 +391,24 @@ describe('Fix record actions', () => {
                 }
             };
 
-            mock.onPatch(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:396321'}))
-                .reply(200, {data: {...data}});
-
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.FIX_RECORD_UNCLAIM_SUCCESS}
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_UNCLAIM_SUCCESS
             ];
 
-            return store.dispatch(fixRecord.unclaimRecord(data)).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            });
+            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+                .reply(200, {data: {...mockData.record}});
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
-        it('should dispatch actions FIX_RECORD_PROCESSING, ACCOUNT_ANONYMOUS and FIX_RECORD_FAILED on 403 error', () => {
-            const data = {
+        it('dispatches expected actions for record unclaim for anon user', async () => {
+            const testInput = {
                 publication: {
                     ...mockData.record,
                     fez_record_search_key_author_id: [
@@ -338,18 +427,59 @@ describe('Fix record actions', () => {
                 }
             };
 
-            mock.onPatch(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:396321'}))
-                .reply(403, {data: {...data}});
-
             const expectedActions = [
-                {type: actions.FIX_RECORD_PROCESSING},
-                {type: actions.ACCOUNT_ANONYMOUS},
-                {type: actions.FIX_RECORD_FAILED}
+                actions.FIX_RECORD_PROCESSING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.FIX_RECORD_FAILED
             ];
 
-            return store.dispatch(fixRecord.unclaimRecord(data)).then(() => {
-                expectStoreHasExpectedActions(store, expectedActions);
-            }).catch(error => expect(error.message).toEqual('Failed patch record request.'));
+            mockApi
+                .onAny()
+                .reply(403, {});
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions for record unclaim with API returning error', async () => {
+            const testInput = {
+                publication: {
+                    ...mockData.record,
+                    fez_record_search_key_author_id: [
+                        {
+                            rek_author_id: 123
+                        }
+                    ],
+                    fez_record_search_key_contributor_id: [
+                        {
+                            rek_contributor_id: 123
+                        }
+                    ]
+                },
+                author: {
+                    aut_id: 123
+                }
+            };
+
+            const expectedActions = [
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_FAILED
+            ];
+
+            mockApi
+                .onAny()
+                .reply(500, {});
+
+            try {
+                await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
     });
 });

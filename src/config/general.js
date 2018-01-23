@@ -1,13 +1,22 @@
+const getValue = (value) => (
+    typeof(value) !== 'undefined' && !!value ? value : null
+);
+
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const TOKEN_NAME = 'X-Uql-Token';
+export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 
 // URLS - values are set in webpack build
-export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
-export const APP_URL = process.env.APP_URL || 'https://fez-staging.library.uq.edu.au/';
+export const API_URL = getValue(process.env.API_URL) || 'https://api.library.uq.edu.au/staging/';
+export const APP_URL = getValue(process.env.APP_URL) || 'https://fez-staging.library.uq.edu.au/';
 
 export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
+
+export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.org';
+export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';
+export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
@@ -267,4 +276,3 @@ export const thesisSubtypes = [
 
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
-

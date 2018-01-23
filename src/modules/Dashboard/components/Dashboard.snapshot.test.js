@@ -10,7 +10,7 @@ function setup(
     {
         account,
         authorDetails,
-        loadingAuthorDetails,
+        accountAuthorDetailsLoading,
         loadingPublicationsByYear,
         publicationsByYear,
         publicationTypesCount,
@@ -24,7 +24,7 @@ function setup(
     const props = {
         account: account || mock.accounts.uqresearcher,
         authorDetails: authorDetails,
-        loadingAuthorDetails: loadingAuthorDetails || false,
+        accountAuthorDetailsLoading: accountAuthorDetailsLoading || false,
         loadingPublicationsByYear: loadingPublicationsByYear || false,
         publicationsByYear: publicationsByYear,
         publicationTypesCount: publicationTypesCount,
@@ -33,7 +33,13 @@ function setup(
         publicationsList: publicationsList,
         loadingPublicationsStats: loadingPublicationsStats || false,
         publicationsStats: publicationsStats,
-        actions: {},
+        actions: {
+            countPossiblyYourPublications: jest.fn(),
+            loadAuthorPublicationsStats: jest.fn(),
+            searchLatestPublications: jest.fn(),
+            searchTrendingPublications: jest.fn(),
+            loadAuthorPublicationsByYear: jest.fn()
+        },
         history: {}
     };
     return shallow(<Dashboard {...props} />);

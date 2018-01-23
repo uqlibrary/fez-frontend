@@ -18,5 +18,6 @@ export default {
         authorEditorRequired: 'Please provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user',
         supervisorRequired: 'Please provide a list of supervisors',
         editorRequired: 'Please provide a list of editors of the publication and link an editor name to the current user',
+        googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
     }
 };

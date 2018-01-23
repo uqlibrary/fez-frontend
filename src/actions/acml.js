@@ -17,10 +17,9 @@ export function loadAcmlQuickTemplates() {
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.ACML_QUICK_TEMPLATES_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };

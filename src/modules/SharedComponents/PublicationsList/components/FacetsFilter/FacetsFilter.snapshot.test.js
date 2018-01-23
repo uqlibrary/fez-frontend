@@ -67,9 +67,11 @@ describe('FacetsFilter renders ', () => {
         const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
 
         wrapper.instance().handleFacetClick('Display type', 130);
+        wrapper.update();
         expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({'Display type': 130}));
 
         wrapper.instance().handleFacetClick('Display type', 130);
+        wrapper.update();
         expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({}));
     });
 
@@ -78,8 +80,9 @@ describe('FacetsFilter renders ', () => {
         const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
 
         wrapper.instance().handleFacetClick('Keywords', 'Biochemistry');
-        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({'Display type': 179, 'Keywords': 'Biochemistry'}));
+        wrapper.update();
 
+        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({'Display type': 179, 'Keywords': 'Biochemistry'}));
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -88,6 +91,8 @@ describe('FacetsFilter renders ', () => {
         const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
 
         wrapper.instance().handleResetClick();
+        wrapper.update();
+
         expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({}));
     });
 

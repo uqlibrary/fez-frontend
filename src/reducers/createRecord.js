@@ -9,13 +9,13 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.RECORD_CREATE_RESET]: () => (
+    [actions.CREATE_RECORD_RESET]: () => (
         {
             ...initialState
         }
     ),
 
-    [actions.RECORD_CREATE_SUCCESS]: (state, action) => (
+    [actions.CREATE_RECORD_SUCCESS]: (state, action) => (
         {
             ...initialState,
             newRecord: action.payload,
@@ -23,7 +23,7 @@ const handlers = {
         }
     ),
 
-    [actions.RECORD_CREATE_FAILED]: (state, action) => (
+    [actions.CREATE_RECORD_FAILED]: (state, action) => (
         {
             ...initialState,
             newRecordError: true,
@@ -31,7 +31,7 @@ const handlers = {
         }
     ),
 
-    [actions.RECORD_CREATE_SAVING]: () => (
+    [actions.CREATE_RECORD_SAVING]: () => (
         {
             ...initialState,
             newRecordSaving: true

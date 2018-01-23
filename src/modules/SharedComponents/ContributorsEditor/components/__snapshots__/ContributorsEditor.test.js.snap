@@ -37,8 +37,10 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
         <ContributorForm
           actions={
             Object {
-              "loadAuthorDetails": [Function],
+              "linkAuthorOrcidId": [Function],
+              "resetSavingAuthorState": [Function],
               "searchAuthors": [Function],
+              "updateCurrentAuthor": [Function],
             }
           }
           authorsList={Array []}
@@ -1607,6 +1609,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           }
                         >
                           <span
+                            key="labelElement"
                             style={
                               Object {
                                 "color": "rgba(0, 0, 0, 0.3)",
@@ -1675,8 +1678,10 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
         <ContributorForm
           actions={
             Object {
-              "loadAuthorDetails": [Function],
+              "linkAuthorOrcidId": [Function],
+              "resetSavingAuthorState": [Function],
               "searchAuthors": [Function],
+              "updateCurrentAuthor": [Function],
             }
           }
           authorsList={Array []}
@@ -4770,6 +4775,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           }
                         >
                           <span
+                            key="labelElement"
                             style={
                               Object {
                                 "color": "rgba(0, 0, 0, 0.3)",

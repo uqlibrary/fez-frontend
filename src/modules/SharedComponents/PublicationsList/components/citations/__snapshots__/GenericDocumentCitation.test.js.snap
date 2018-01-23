@@ -784,6 +784,7 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Louise Olsen-Kettle"
@@ -1622,6 +1623,7 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Louise Olsen-Kettle"
@@ -2468,6 +2470,7 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Louise Olsen-Kettle"

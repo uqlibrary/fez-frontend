@@ -78,7 +78,9 @@ module.exports = {
             'process.env.USE_MOCK': JSON.stringify(useMock),
             'process.env.API_URL': JSON.stringify(config.api),
             'process.env.APP_URL': JSON.stringify(config.url),
-            'process.env.BRANCH': JSON.stringify(config.environment)
+            'process.env.BRANCH': JSON.stringify(config.environment),
+            'process.env.ORCID_URL': JSON.stringify(config.orcidUrl),
+            'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId)
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's

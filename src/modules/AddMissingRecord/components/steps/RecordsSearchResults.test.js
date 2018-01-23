@@ -1,11 +1,7 @@
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
-
 import RecordsSearchResults from './RecordsSearchResults';
 
-function setup(values) {
-    return shallow(<RecordsSearchResults {...values}/>);
+function setup(testProps, isShallow = true) {
+    return getElement(RecordsSearchResults, testProps, isShallow);
 }
 
 describe('Search record results', () => {

@@ -19,10 +19,20 @@ exports[`PossiblyMyRecords test renders empty list 1`] = `
             "title": "No matching records found",
           }
         }
-        text="No publications were automatically matched for you to claim."
+        text={
+          <div>
+            <p>
+              No publications were automatically matched for you to claim.
+            </p>
+          </div>
+        }
         title="No matching publications found"
       >
-        No publications were automatically matched for you to claim.
+        <div>
+          <p>
+            No publications were automatically matched for you to claim.
+          </p>
+        </div>
       </StandardCard>
     </div>
   </div>
@@ -3293,10 +3303,20 @@ exports[`PossiblyMyRecords test renders loading screen while loading author data
             "title": "No matching records found",
           }
         }
-        text="No publications were automatically matched for you to claim."
+        text={
+          <div>
+            <p>
+              No publications were automatically matched for you to claim.
+            </p>
+          </div>
+        }
         title="No matching publications found"
       >
-        No publications were automatically matched for you to claim.
+        <div>
+          <p>
+            No publications were automatically matched for you to claim.
+          </p>
+        </div>
       </StandardCard>
     </div>
   </div>
@@ -3339,10 +3359,20 @@ exports[`PossiblyMyRecords test renders no results 1`] = `
             "title": "No matching records found",
           }
         }
-        text="No publications were automatically matched for you to claim."
+        text={
+          <div>
+            <p>
+              No publications were automatically matched for you to claim.
+            </p>
+          </div>
+        }
         title="No matching publications found"
       >
-        No publications were automatically matched for you to claim.
+        <div>
+          <p>
+            No publications were automatically matched for you to claim.
+          </p>
+        </div>
       </StandardCard>
     </div>
   </div>

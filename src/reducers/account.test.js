@@ -1,109 +1,151 @@
 import * as actions from 'actions/actionTypes';
 import accountReducer from './account';
+import {initialState, initSavingState} from './account';
 
 describe('account reducer', () => {
 
-    const initialState = {
-        account: null,
-        author: null,
-        authorDetails: null,
-        accountLoading: true,
-        authorLoading: true,
-        loadingAuthorDetails: true
-    };
+    let emptyState, mockAccount;
 
-    const mockAccount = {};
-
-    it('returns that it is loading data', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_LOADING});
-        expect(test).toEqual({
-            ...initialState
-        })
+    beforeEach(() => {
+        mockAccount = {
+            author: 'loaded'
+        };
+        emptyState = {
+            ...initialState,
+            ...initSavingState
+        };
     });
 
-    it('returns that it has loaded data', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_LOADED, payload: mockAccount});
+    it('should set values for anon account', () => {
+        const test = accountReducer(emptyState, {type: actions.CURRENT_ACCOUNT_ANONYMOUS});
         expect(test).toEqual({
-            ...initialState,
-            account: mockAccount,
-            accountLoading: false,
-        })
-    });
-
-    it('returns an anon account', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_ANONYMOUS});
-        expect(test).toEqual({
-            ...initialState,
+            ...emptyState,
             accountLoading: false,
             accountAuthorLoading: false,
             accountAuthorDetailsLoading: false
         })
     });
 
-    it('returns thats the author account failed to load', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_FAILED});
+    it('should set account value when successfully loaded', () => {
+        const test = accountReducer(emptyState, {type: actions.CURRENT_ACCOUNT_LOADED, payload: mockAccount});
         expect(test).toEqual({
-            ...initialState,
-            author: null,
-            authorLoading: false
+            ...emptyState,
+            account: mockAccount,
+            accountLoading: false,
         })
     });
 
-    it('returns that it has loaded author data', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_LOADED, payload: mockAccount});
+    it('should set author value when successfully loaded', () => {
+        const test = accountReducer(emptyState, {type: actions.CURRENT_AUTHOR_LOADED, payload: mockAccount});
         expect(test).toEqual({
-            ...initialState,
+            ...emptyState,
             author: mockAccount,
-            authorLoading: false
+            accountAuthorLoading: false
         })
     });
 
-    it('returns that it is loading author data', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_LOADING});
+    it('should set author details value when successfully loaded', () => {
+        const test = accountReducer(emptyState, {type: actions.CURRENT_AUTHOR_DETAILS_LOADED, payload: mockAccount});
         expect(test).toEqual({
-            ...initialState,
-            author: null,
-            authorLoading: true
-        })
-    });
-
-    it('returns that the author details failed to load', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_DETAILS_FAILED});
-        expect(test).toEqual({
-            ...initialState,
-            authorDetails: null,
-            loadingAuthorDetails: false
-        })
-    });
-
-    it('returns that the author details have loaded', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_DETAILS_LOADED, payload: mockAccount});
-        expect(test).toEqual({
-            ...initialState,
+            ...emptyState,
             authorDetails: mockAccount,
-            loadingAuthorDetails: false
+            accountAuthorDetailsLoading: false
         })
     });
 
-    it('returns that the author details are loading', () => {
-        const test = accountReducer(initialState, {type: actions.ACCOUNT_AUTHOR_DETAILS_LOADING});
+    it('should set all loading flags to true when loading account', () => {
+        const test = accountReducer(emptyState, {type: actions.CURRENT_ACCOUNT_LOADING});
+        expect(test).toEqual(emptyState)
+    });
+
+    it('should set author details loading flag to true when loading author details', () => {
+        const test = accountReducer(emptyState, {type: actions.CURRENT_AUTHOR_DETAILS_LOADING});
         expect(test).toEqual({
-            ...initialState,
+            ...emptyState,
             authorDetails: null,
-            loadingAuthorDetails: true
+            accountAuthorDetailsLoading: true
         })
     });
 
-    it('returns the initialState due to an invalid action type', () => {
-        const test = accountReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
+    it('should set author loading flag to true when loading author', () => {
+        const test = accountReducer(emptyState, {type: actions.CURRENT_AUTHOR_LOADING});
         expect(test).toEqual({
-            ...initialState,
+            ...emptyState,
+            author: null,
+            accountAuthorLoading: true
+        })
+    });
+
+    it('should set author to null when failed loading', () => {
+        const test = accountReducer(emptyState, {type: actions.CURRENT_AUTHOR_FAILED});
+        expect(test).toEqual({
+            ...emptyState,
+            author: null,
+            accountAuthorLoading: false
+        })
+    });
+
+    it('should set author details to null when failed loading', () => {
+        const test = accountReducer(emptyState, {type: actions.CURRENT_AUTHOR_DETAILS_FAILED});
+        expect(test).toEqual({
+            ...emptyState,
             authorDetails: null,
-            loadingAuthorDetails: true
+            accountAuthorDetailsLoading: false
         })
     });
 
 
+    it('should not modify state if invalid action type', () => {
+        const test = accountReducer(emptyState, {type: 'INVALID_ACTION_TYPE'});
+        expect(test).toEqual({
+            ...emptyState
+        })
+    });
 
+    it('should set saving author flag to true when saving author', () => {
+        const test = accountReducer(emptyState, {type: 'CURRENT_AUTHOR_SAVING'});
+        expect(test).toEqual({
+            ...emptyState,
+            accountAuthorSaving: true,
+            accountAuthorError: null
+        })
+    });
 
+    it('should set error message when saving author failed', () => {
+        const test = accountReducer(emptyState, {type: 'CURRENT_AUTHOR_SAVE_FAILED', payload: 'failed!'});
+        expect(test).toEqual({
+            ...emptyState,
+            accountAuthorSaving: false,
+            accountAuthorError: 'failed!'
+        })
+    });
+
+    it('should set error message when saving author failed', () => {
+        const beforeState = {
+            ...emptyState,
+            accountAuthorSaving: true,
+            accountAuthorError: 'failed!'
+        };
+
+        const test = accountReducer(beforeState, {type: 'CURRENT_AUTHOR_SAVE_RESET'});
+        expect(test).toEqual({
+            ...emptyState
+        })
+    });
+
+    it('set author to new value if save successful', () => {
+        const beforeState = {
+            ...emptyState,
+            accountAuthorSaving: true,
+            accountAuthorError: 'failed!'
+        };
+
+        const testAuthor = {author: 'newAuthor'};
+
+        const test = accountReducer(beforeState, {type: 'CURRENT_AUTHOR_SAVED', payload: testAuthor});
+        expect(test).toEqual({
+            ...emptyState,
+            author: {...testAuthor}
+        })
+    });
 });

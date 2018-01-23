@@ -7,7 +7,7 @@ const pipe = (...functionsList) => values => functionsList.reduce((attributes, f
 const getIssueValues = (data) => ({
     pid: data.publication.rek_pid,
     userName: data.author.aut_display_name,
-    userId: data.author.aut_org_username,
+    userId: data.author.aut_org_username || data.author.aut_student_username,
     comments: data.comments
 });
 
@@ -261,4 +261,32 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
             )
         )
     };
+};
+
+/*
+* getAuthorIdentifierOrcidPatchRequest - returns author patch request to update author identifier with new orcid id
+* @param {string} authorId - fez-authors id (eg 1671)
+* @param {string} orcidId - new orcid id
+* @param {object} additional data
+* @returns {Object} formatted for author patch request
+*/
+export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = null) => {
+    if (!authorId) return {};
+
+    const patchRequest = {
+        aut_id: authorId,
+        aut_orcid_id: orcidId
+    };
+
+    // additional data is set for ORCID
+    if (orcidId && data) {
+        patchRequest.fez_author_identifier_user_grants = {
+            aig_name: data.scope,
+            aig_expires: data.expires_in,
+            aig_details: data.access_token,
+            aig_details_dump: JSON.stringify(data),
+        };
+    }
+
+    return patchRequest;
 };

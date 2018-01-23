@@ -1,4 +1,3 @@
-import React from 'react';
 import * as transformers from './transformers';
 import {APP_URL} from 'config';
 

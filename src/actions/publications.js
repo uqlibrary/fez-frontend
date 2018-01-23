@@ -13,15 +13,14 @@ export function searchLatestPublications() {
         return get(routes.CURRENT_USER_RECORDS_API({pageSize: 5}))
             .then(response => {
                 dispatch({
-                    type: actions.LATEST_PUBLICATIONS_COMPLETED,
+                    type: actions.LATEST_PUBLICATIONS_LOADED,
                     payload: response
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.LATEST_PUBLICATIONS_FAILED,
-                    payload: []
+                    payload: error.message
                 });
             });
     };
@@ -42,15 +41,14 @@ export function searchAuthorPublications({userName, page = 1, pageSize = 20, sor
         }))
             .then(response => {
                 dispatch({
-                    type: actions.AUTHOR_PUBLICATIONS_COMPLETED,
+                    type: actions.AUTHOR_PUBLICATIONS_LOADED,
                     payload: response
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.AUTHOR_PUBLICATIONS_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };
@@ -68,7 +66,7 @@ export function searchTrendingPublications(userName) {
             .then(response => {
                 // TODO: this response will change when this api endpoint will be moved to fez
                 dispatch({
-                    type: actions.TRENDING_PUBLICATIONS_COMPLETED,
+                    type: actions.TRENDING_PUBLICATIONS_LOADED,
                     payload: Object.keys(response)
                         .filter(item => {
                             return item !== 'author_details';
@@ -79,10 +77,9 @@ export function searchTrendingPublications(userName) {
                 });
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: actions.TRENDING_PUBLICATIONS_FAILED,
-                    payload: error
+                    payload: error.message
                 });
             });
     };

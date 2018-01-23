@@ -100,7 +100,7 @@ export default class ContributorRow extends Component {
                     <div className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
                         <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
                         <br/>
-                        <small>{this.props.contributor.aut_org_username}</small>
+                        <small>{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</small>
                     </div>
                 }
                 <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">

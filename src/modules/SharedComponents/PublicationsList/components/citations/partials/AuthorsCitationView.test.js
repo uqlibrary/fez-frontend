@@ -221,14 +221,16 @@ describe('AuthorsCitationView test ', () => {
         expect(wrapper.state().hasMoreAuthors).toEqual(true);
         expect(wrapper.state().toggleShowMoreLink).toEqual(true);
         expect(wrapper.state().authors.length).toEqual(12);
-        expect(wrapper.find('.citationAuthor').length).toEqual(10);
+        expect(wrapper.find('span.citationAuthor').length).toEqual(10);
         expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(1);
         expect(wrapper.find('.citationShowMoreAuthors').text()).toEqual('Show 2 more...');
 
         wrapper.instance()._toggleShowMore({preventDefault: jest.fn()});
+        wrapper.update();
+
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().toggleShowMoreLink).toEqual(false);
-        expect(wrapper.find('.citationAuthor').length).toEqual(12);
+        expect(wrapper.find('span.citationAuthor').length).toEqual(12);
         expect(wrapper.find('.citationShowMoreAuthors').text()).toEqual('Show less');
     });
 
@@ -302,7 +304,7 @@ describe('AuthorsCitationView test ', () => {
         expect(wrapper.state().hasMoreAuthors).toEqual(false);
         expect(wrapper.state().toggleShowMoreLink).toEqual(false);
         expect(wrapper.state().authors.length).toEqual(10);
-        expect(wrapper.find('.citationAuthor').length).toEqual(10);
+        expect(wrapper.find('span.citationAuthor').length).toEqual(10);
         expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(0);
     });
 
@@ -376,7 +378,7 @@ describe('AuthorsCitationView test ', () => {
         expect(wrapper.state().hasMoreAuthors).toEqual(false);
         expect(wrapper.state().toggleShowMoreLink).toEqual(false);
         expect(wrapper.state().authors.length).toEqual(10);
-        expect(wrapper.find('.citationAuthor').length).toEqual(10);
+        expect(wrapper.find('span.citationAuthor').length).toEqual(10);
         expect(wrapper.find('.citationShowMoreAuthors').length).toEqual(0);
     });
 

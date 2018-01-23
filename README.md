@@ -35,6 +35,27 @@ Mock data is provided for all pages and actions under `src/mock/`.
 
 ### Development notes
 
+#### Naming conventions
+
+- React components and files of components and related files (eg scss) are to be named with upper case (eg MenuDrawer.js). Do not add UQ, UQLibrary or similar prefixes to components
+- Other files are to be named with lower case (eg index.js, reducerX.js)
+
+##### Action types naming conventions
+
+- *Action transformers naming*: use [verb][Noun] format (if appropriate) to indicate what method returns, eg unclaimRecordContributorsIdSearchKey(), getRecordContributorsIdSearchKey(), etc
+- Keep to the following naming format `[OBJECT]_[STATUS]` or `[NOUN]_[VERB]`:
+
+
+- LATEST_PUBLICATIONS_LOADING
+- LATEST_PUBLICATIONS_LOADED
+- LATEST_PUBLICATIONS_FAILED
+
+or
+
+- APP_ALERT_SHOW
+- APP_ALERT_HIDE
+
+
 #### Optimisation
 
 to keep initial load to a minimum following optimisation has been added to the project:
@@ -102,6 +123,12 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 - run tests `npm test`
 
 Before committing changes, locally run tests and update stapshots (if required). To update snapshots run `npm test -- -u`.
+
+#### Guidelines
+
+- [Action creators](https://github.com/uqlibrary/fez-frontend/blob/master/src/actions/README.md#testing)
+- [Rendered components](https://github.com/uqlibrary/fez-frontend/blob/master/src/modules/README.md#testing)
+- [Reducers](https://github.com/uqlibrary/fez-frontend/blob/master/src/reducers/README.md#testing)
 
 ### E2E testing
 TBA

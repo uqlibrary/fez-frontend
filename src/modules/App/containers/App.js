@@ -3,16 +3,15 @@ import App from '../components/App';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions';
 
-const mapStateToProps = (state) => {
-    return {
-        user: {...state.get('accountReducer')}
-    };
-};
+const mapStateToProps = (state) => ({
+    ...state.get('accountReducer')
+});
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
     return {
         actions: bindActionCreators(actions, dispatch)
     };
-}
+};
+
 const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
 export default AppContainer;

@@ -1750,6 +1750,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Azimi, Iman"
@@ -1763,6 +1764,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Milevskiy, Michael J. G."
@@ -1776,6 +1778,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Kaemmerer, Elke"
@@ -1789,6 +1792,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=""
           suffix=", "
           value="Turner, Dane"
@@ -1802,6 +1806,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_5"
           prefix=""
           suffix=", "
           value="Yapa, Kunsala T. D. S."
@@ -1815,6 +1820,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_6"
           prefix=""
           suffix=", "
           value="Brown, Melissa A."
@@ -1828,6 +1834,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_7"
           prefix=""
           suffix=", "
           value="Thompson, Erik W."
@@ -1841,6 +1848,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_8"
           prefix=""
           suffix=", "
           value="Roberts-Thomson, Sarah J."
@@ -1854,6 +1862,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_9"
           prefix=" and "
           suffix=""
           value="Monteith, Gregory R."

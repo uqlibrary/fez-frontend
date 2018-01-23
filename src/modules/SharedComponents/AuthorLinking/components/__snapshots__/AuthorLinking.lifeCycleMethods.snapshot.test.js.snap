@@ -91,6 +91,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
             />
             <div
               className="columns is-multiline is-gapless is-marginless"
+              key="0"
             >
               <AuthorItem
                 author={
@@ -103,6 +104,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                 }
                 disabled={false}
                 index={0}
+                key="0"
                 linked={false}
                 locale={
                   Object {
@@ -239,6 +241,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                           <TouchRipple
                             abortOnScroll={true}
                             color="#999999"
+                            key="touchRipple"
                             opacity={0.3}
                           >
                             <div
@@ -251,6 +254,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                               <ToggleRadioButtonUnchecked
                                 className="author-link-status"
                                 color="rgba(0, 0, 0, 0.87)"
+                                key="iconCloned"
                                 style={
                                   Object {
                                     "marginLeft": 12,
@@ -301,6 +305,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                                 </SvgIcon>
                               </ToggleRadioButtonUnchecked>
                               <FlatButtonLabel
+                                key="labelElement"
                                 label={
                                   <span
                                     className="author-link-name"
@@ -368,6 +373,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                 }
                 disabled={false}
                 index={1}
+                key="1"
                 linked={false}
                 locale={
                   Object {
@@ -504,6 +510,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                           <TouchRipple
                             abortOnScroll={true}
                             color="#999999"
+                            key="touchRipple"
                             opacity={0.3}
                           >
                             <div
@@ -516,6 +523,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                               <ToggleRadioButtonUnchecked
                                 className="author-link-status"
                                 color="rgba(0, 0, 0, 0.87)"
+                                key="iconCloned"
                                 style={
                                   Object {
                                     "marginLeft": 12,
@@ -566,6 +574,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 1`] = `
                                 </SvgIcon>
                               </ToggleRadioButtonUnchecked>
                               <FlatButtonLabel
+                                key="labelElement"
                                 label={
                                   <span
                                     className="author-link-name"
@@ -718,6 +727,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
             />
             <div
               className="columns is-multiline is-gapless is-marginless"
+              key="0"
             >
               <AuthorItem
                 author={
@@ -730,6 +740,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                 }
                 disabled={false}
                 index={0}
+                key="0"
                 linked={false}
                 locale={
                   Object {
@@ -866,6 +877,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                           <TouchRipple
                             abortOnScroll={true}
                             color="#999999"
+                            key="touchRipple"
                             opacity={0.3}
                           >
                             <div
@@ -878,6 +890,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                               <ToggleRadioButtonUnchecked
                                 className="author-link-status"
                                 color="rgba(0, 0, 0, 0.87)"
+                                key="iconCloned"
                                 style={
                                   Object {
                                     "marginLeft": 12,
@@ -928,6 +941,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                                 </SvgIcon>
                               </ToggleRadioButtonUnchecked>
                               <FlatButtonLabel
+                                key="labelElement"
                                 label={
                                   <span
                                     className="author-link-name"
@@ -995,6 +1009,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                 }
                 disabled={false}
                 index={1}
+                key="1"
                 linked={false}
                 locale={
                   Object {
@@ -1131,6 +1146,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                           <TouchRipple
                             abortOnScroll={true}
                             color="#999999"
+                            key="touchRipple"
                             opacity={0.3}
                           >
                             <div
@@ -1143,6 +1159,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                               <ToggleRadioButtonUnchecked
                                 className="author-link-status"
                                 color="rgba(0, 0, 0, 0.87)"
+                                key="iconCloned"
                                 style={
                                   Object {
                                     "marginLeft": 12,
@@ -1193,6 +1210,7 @@ exports[`AuthorLinking should call componentDidMount life cycle method 2`] = `
                                 </SvgIcon>
                               </ToggleRadioButtonUnchecked>
                               <FlatButtonLabel
+                                key="labelElement"
                                 label={
                                   <span
                                     className="author-link-name"

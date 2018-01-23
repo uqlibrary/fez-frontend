@@ -1,11 +1,7 @@
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
-
 import NewRecord from './NewRecord';
 
-function setup(values) {
-    return shallow(<NewRecord {...values}/>);
+function setup(testProps, isShallow = true) {
+    return getElement(NewRecord, testProps, isShallow);
 }
 
 describe('Add new record', () => {

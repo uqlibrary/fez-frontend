@@ -632,6 +632,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Laselle, Laurence"
@@ -644,6 +645,7 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=" and "
           suffix=""
           value="Tisdell, Clem"
@@ -1392,6 +1394,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Laselle, Laurence"
@@ -1404,6 +1407,7 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=" and "
           suffix=""
           value="Tisdell, Clem"

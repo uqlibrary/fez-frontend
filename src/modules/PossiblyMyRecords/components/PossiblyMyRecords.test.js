@@ -40,7 +40,10 @@ function setup({possiblePublicationsList, loadingPossiblePublicationsList, loadi
         account: account || {id: 12345},
         author: author || {aut_id: 12344},
         accountLoading: accountLoading || false,
-        actions: actions || {},
+        actions: {
+            searchPossiblyYourPublications: jest.fn(),
+            ...actions
+        },
         history: history || { push : jest.fn()}
     };
 
@@ -71,7 +74,7 @@ describe('PossiblyMyRecords test', () => {
     });
 
     it('renders loading screen while loading author data', () => {
-        const wrapper = setup({ authorLoading: true }).find('PossiblyMyRecords').dive();
+        const wrapper = setup({ accountAuthorLoading: true }).find('PossiblyMyRecords').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -50,6 +50,7 @@ export default class PossiblyMyRecords extends React.Component {
         return this.props.accountLoading !== nextProps.accountLoading
             || this.props.loadingPossiblePublicationsList !== nextProps.loadingPossiblePublicationsList
             || this.props.loadingPossibleCounts !== nextProps.loadingPossibleCounts
+            || this.props.possiblePublicationsFacets !== nextProps.possiblePublicationsFacets
             || this.state !== nextState;
     }
 

@@ -1,23 +1,18 @@
-import MockAdapter from 'axios-mock-adapter';
-import {api} from 'config';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import {getMockStore, expectStoreHasExpectedActions} from './actions-test-commons';
-
 import * as acmlActions from './acml';
 
-const store = getMockStore();
-
 describe('ACML actions', () => {
-    let mock;
+    // extend expect to check actions
+    expect.extend({toHaveDispatchedActions});
 
     beforeEach(() => {
-        mock = new MockAdapter(api, {delayResponse: 100});
+        mockActionsStore = setupStoreForActions();
+        mockApi = setupMockAdapter();
     });
 
     afterEach(() => {
-        mock.reset();
-        store.clearActions();
+        mockApi.reset();
     });
 
     const acmlApiData = {
@@ -74,50 +69,47 @@ describe('ACML actions', () => {
         ]
     };
 
-    it('calls 2 actions on a successful quick-templates api call', () => {
-        mock.onGet(repositories.routes.GET_ACML_QUICK_TEMPLATES_API())
+    it('calls 2 actions on a successful quick-templates api call', async () => {
+        mockApi
+            .onGet(repositories.routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
             .reply(200, acmlApiData);
 
         const expectedActions = [
-            {type: actions.ACML_QUICK_TEMPLATES_LOADING},
-            {type: actions.ACML_QUICK_TEMPLATES_LOADED}
+            actions.ACML_QUICK_TEMPLATES_LOADING,
+            actions.ACML_QUICK_TEMPLATES_LOADED
         ];
 
-        const store = getMockStore();
-        return store.dispatch(acmlActions.loadAcmlQuickTemplates()).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
-        });
+        await mockActionsStore.dispatch(acmlActions.loadAcmlQuickTemplates());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('calls 2 actions on a failed 404 quick-templates api call', () => {
-        mock.onGet(repositories.routes.GET_ACML_QUICK_TEMPLATES_API())
+    it('calls 2 actions on a failed 404 quick-templates api call', async () => {
+        mockApi
+            .onAny()
             .reply(404);
 
         const expectedActions = [
-            {type: actions.ACML_QUICK_TEMPLATES_LOADING},
-            {type: actions.ACML_QUICK_TEMPLATES_FAILED}
+            actions.ACML_QUICK_TEMPLATES_LOADING,
+            actions.ACML_QUICK_TEMPLATES_FAILED
         ];
 
-        const store = getMockStore();
-        return store.dispatch(acmlActions.loadAcmlQuickTemplates()).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
-        });
+        await mockActionsStore.dispatch(acmlActions.loadAcmlQuickTemplates());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('calls 2 actions on a failed 403 quick-templates api call and load anon user', () => {
-        mock.onGet(repositories.routes.GET_ACML_QUICK_TEMPLATES_API())
+    it('calls 3 actions on a failed 403 quick-templates api call and load anon user', async () => {
+        mockApi
+            .onAny()
             .reply(403);
 
         const expectedActions = [
-            {type: actions.ACML_QUICK_TEMPLATES_LOADING},
-            {type: actions.ACCOUNT_ANONYMOUS},
-            {type: actions.ACML_QUICK_TEMPLATES_FAILED}
+            actions.ACML_QUICK_TEMPLATES_LOADING,
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
+            actions.ACML_QUICK_TEMPLATES_FAILED
         ];
 
-        const store = getMockStore();
-        return store.dispatch(acmlActions.loadAcmlQuickTemplates()).then(() => {
-            expectStoreHasExpectedActions(store, expectedActions);
-        });
+        await mockActionsStore.dispatch(acmlActions.loadAcmlQuickTemplates());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
 });

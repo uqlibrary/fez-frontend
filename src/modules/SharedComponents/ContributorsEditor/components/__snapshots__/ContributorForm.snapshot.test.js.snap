@@ -3101,6 +3101,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                     }
                   >
                     <span
+                      key="labelElement"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -4708,6 +4709,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
                     }
                   >
                     <span
+                      key="labelElement"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",

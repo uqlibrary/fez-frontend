@@ -10,11 +10,11 @@ import * as actions from './actionTypes';
  * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
  * @param {array} files to be uploaded for this record
- * @returns {action}
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function createNewRecord(data) {
     return dispatch => {
-        dispatch({type: actions.RECORD_CREATE_SAVING});
+        dispatch({type: actions.CREATE_RECORD_SAVING});
 
         // set default values, links
         const recordRequest = {
@@ -51,7 +51,7 @@ export function createNewRecord(data) {
             .then(() => (hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
             .then((response) => {
                 dispatch({
-                    type: actions.RECORD_CREATE_SUCCESS,
+                    type: actions.CREATE_RECORD_SUCCESS,
                     payload: response.data ? response.data : newRecord
                 });
                 return Promise.resolve(response.data ? response.data : newRecord);
@@ -60,7 +60,7 @@ export function createNewRecord(data) {
                 // record was created, but file upload or record patch failed
                 if (!!newRecord && !!newRecord.rek_pid) {
                     dispatch({
-                        type: actions.RECORD_CREATE_SUCCESS,
+                        type: actions.CREATE_RECORD_SUCCESS,
                         payload: {
                             ...newRecord,
                             fileUploadFailed: true
@@ -69,15 +69,13 @@ export function createNewRecord(data) {
 
                     return Promise.resolve(newRecord);
                 }
-                // all requests failed
-                if (error.response.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
 
                 dispatch({
-                    type: actions.RECORD_CREATE_FAILED,
+                    type: actions.CREATE_RECORD_FAILED,
                     payload: error.message
                 });
 
-                return Promise.reject(new Error(error.message));
+                return Promise.reject(error);
             });
     };
 }
@@ -89,7 +87,7 @@ export function createNewRecord(data) {
 export function clearNewRecord() {
     return dispatch => {
         dispatch({
-            type: actions.RECORD_CREATE_RESET
+            type: actions.CREATE_RECORD_RESET
         });
     };
 }
