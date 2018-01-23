@@ -99,7 +99,6 @@ export class ContributorForm extends Component {
                             ref="nameAsPublishedField"
                             id="nameAsPublishedField"
                             floatingLabelText={this.props.locale.nameAsPublishedLabel}
-                            hintText={this.props.locale.nameAsPublishedHint}
                             value={this.state.nameAsPublished}
                             onChange={this._onNameChanged}
                             onKeyPress={this._addContributor}

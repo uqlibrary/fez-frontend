@@ -92,7 +92,7 @@ export default class ContributorRow extends Component {
                                     <div className="column is-narrow is-hidden-mobile">
                                         <IconButton
                                             tooltip="This is you"
-                                            tooltipPosition="top-right"
+                                            tooltipPosition="bottom-right"
                                             className="selectedAuthorIcon"
                                             disabled={this.props.disabled}>
                                             <FontIcon className="material-icons">person</FontIcon>
