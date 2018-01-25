@@ -63,12 +63,8 @@ export default {
                 successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member
                     for editing, prior to being moved into a publicly viewable collection.</p>),
                 fileFailConfirmationMessage: (<p>
-                    Your item will be referred to a UQ eSpace Staging staff member
-                    for editing, prior to being moved into a publicly viewable collection.<br/><br/>
-                    <strong>
                         Please note, file upload has failed.
                         Retry uploading files via "Fix record" screen or contact eSpace administrators.
-                    </strong>
                 </p>),
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',

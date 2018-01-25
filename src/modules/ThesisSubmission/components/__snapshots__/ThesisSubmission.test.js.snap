@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThesisSubmission test should render component initialised with just one field - publication type 1`] = `
+<form>
+  <NavigationDialogBox
+    txt={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to abandon workflow?",
+        "confirmationTitle": "Abandon workflow",
+      }
+    }
+  />
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": "Help about publication types, eg journal article, book, conference paper etc",
+        "title": "Publication type",
+      }
+    }
+    title="Thesis Submission Form"
+  >
+    <p>
+       Coming soon.... 
+    </p>
+  </StandardCard>
+  <StandardCard
+    className=""
+    help={
+      Object {
+        "buttonLabel": "OK",
+        "text": "file help...",
+        "title": "Upload files",
+      }
+    }
+    title="Upload files"
+  >
+    <Field
+      component={[Function]}
+      disabled={false}
+      name="files"
+      requireFileAccess={true}
+      validate={
+        Array [
+          [Function],
+        ]
+      }
+    />
+  </StandardCard>
+  <div
+    className="columns action-buttons"
+  >
+    <div
+      className="column is-hidden-mobile"
+    />
+    <div
+      className="column is-narrow-desktop"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={true}
+        label="Abandon and search again"
+        labelPosition="after"
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={false}
+      />
+    </div>
+    <div
+      className="column is-narrow-desktop"
+    >
+      <RaisedButton
+        disabled={false}
+        fullWidth={true}
+        label="Submit for approval"
+        labelPosition="after"
+        primary={false}
+        secondary={true}
+      />
+    </div>
+  </div>
+</form>
+`;

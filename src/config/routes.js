@@ -5,6 +5,8 @@ export const pathConfig =  {
     dashboard: '/dashboard',
     browse: '/browse',
     about: '/about',
+    rhdSubmission: '/rhdsubmission',
+    sbsSubmission: '/sbslodge',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
@@ -56,16 +58,31 @@ export const getRoutesConfig = (components, account, forceOrcidRegistration) => 
             }
         ] : [])];
 
+    // TODO: check if account is RHD student for rhd submission here?
+    const thesisSubmissionPages = (account ? [
+        {
+            path: pathConfig.rhdSubmission,
+            render: () => components.ThesisSubmission()
+        },
+        {
+            path: pathConfig.sbsSubmission,
+            render: () => components.ThesisSubmission()
+        },
+    ] : []);
+
     if (forceOrcidRegistration) {
         return [
             ...publicPages,
+            ...thesisSubmissionPages,
             {
                 component: components.Orcid
             }
         ];
     }
+
     return [
         ...publicPages,
+        ...thesisSubmissionPages,
         ...(account ? [
             {
                 path: pathConfig.index,

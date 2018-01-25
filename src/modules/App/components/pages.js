@@ -9,6 +9,7 @@ export const MyRecords = () => (<Async load={import('modules/MyRecords/container
 export const Dashboard = () => (<Async load={import('modules/Dashboard/containers/Dashboard')} />);
 export const Orcid = () => (<Async load={import('modules/AuthorIdentifiers/containers/Orcid')} />);
 export const GoogleScholar = () => (<Async load={import('modules/AuthorIdentifiers/containers/GoogleScholar')} />);
+export const ThesisSubmission = () => (<Async load={import('modules/ThesisSubmission/containers/ThesisSubmission')} />);
 
 // build in components
 export {Browse} from 'modules/Browse';

@@ -102,6 +102,7 @@ export default class App extends React.Component {
     };
 
     render() {
+        console.log(location);
         // display loader while user account is loading
         if (this.props.accountLoading) {
             return (
@@ -114,8 +115,9 @@ export default class App extends React.Component {
             );
         }
 
+        const showMenu = true;
         const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
-        const container = this.state.docked ? {paddingLeft: 340} : {};
+        const containerStyle = this.state.docked ? {paddingLeft: 340} : {};
         const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
 
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
@@ -183,22 +185,25 @@ export default class App extends React.Component {
                     }
                 />
 
-                <MenuDrawer
-                    menuItems={menuItems}
-                    drawerOpen={this.state.docked || this.state.menuDrawerOpen}
-                    docked={this.state.docked}
-                    history={this.props.history}
-                    logoImage={locale.global.logo}
-                    logoText={locale.global.title}
-                    onToggleDrawer={this.toggleDrawer}
-                    isMobile={this.state.isMobile}
-                    locale={{
-                        skipNavAriaLabel: locale.global.skipNav.ariaLabel,
-                        skipNavTitle: locale.global.skipNav.title,
-                        closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
-                    }} />
+                {
+                    showMenu &&
+                    <MenuDrawer
+                        menuItems={menuItems}
+                        drawerOpen={this.state.docked || this.state.menuDrawerOpen}
+                        docked={this.state.docked}
+                        history={this.props.history}
+                        logoImage={locale.global.logo}
+                        logoText={locale.global.title}
+                        onToggleDrawer={this.toggleDrawer}
+                        isMobile={this.state.isMobile}
+                        locale={{
+                            skipNavAriaLabel: locale.global.skipNav.ariaLabel,
+                            skipNavTitle: locale.global.skipNav.title,
+                            closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
+                        }}/>
+                }
 
-                <div className="content-container" style={container}>
+                <div className="content-container" style={containerStyle}>
                     {
                         userStatusAlert &&
                         <div className="layout-fill dashAlert">
