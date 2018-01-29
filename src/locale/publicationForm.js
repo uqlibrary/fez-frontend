@@ -490,6 +490,15 @@ export default {
             },
             description: 'Select up to 3 Field of Research (FoR) codes'
         },
+        keywords: {
+            title: 'Keywords',
+            help: {
+                title: 'Optional information help',
+                text: 'Some help',
+                buttonLabel: 'OK'
+            },
+            description: 'Add keywords that describe the content of the thesis'
+        },
         optional: {
             title: 'Optional information',
             help: {
