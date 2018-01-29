@@ -93,14 +93,14 @@ export default {
                 <StandardCard>
                     <p>The requested page could not be found.</p>
                     <p>Sorry about that, but here's what you can do next:
-                        <ul>
-                            <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.
-                            </li>
-                            <li>Start again at the home page.</li>
-                            <li>If you’re sure the page should be at this address, email us at
-                                webmaster@library.uq.edu.au.
-                            </li>
-                        </ul>
+                    <ul>
+                        <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.
+                        </li>
+                        <li>Start again at the home page.</li>
+                        <li>If you’re sure the page should be at this address, email us at
+                            webmaster@library.uq.edu.au.
+                        </li>
+                    </ul>
                     </p>
                 </StandardCard>
             )
@@ -368,14 +368,11 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
-                successConfirmationMessage: (
-                    <p>Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
-                        record.</p>),
-                fileFailConfirmationMessage: (
-                    <p><br />
-                    Your record has been saved.<br/><br/>
-                    Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
-                    record.
+                recordSuccessConfirmationMessage: (
+                    <p>
+                        Your record has been saved.<br/><br/>
+                        Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
+                        record.
                     </p>),
                 fileFailConfirmationAlert: {
                     title: 'FILE UPLOAD FAILED',

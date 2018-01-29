@@ -60,11 +60,9 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Claim has been submitted',
-                successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member
-                    for editing, prior to being moved into a publicly viewable collection.</p>),
-                fileFailConfirmationMessage: (
+                successConfirmationMessage: (
                     <p>
-                    Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
+                        Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
                     </p>),
                 fileFailConfirmationAlert: {
                     title: 'FILE UPLOAD FAILED',
@@ -161,7 +159,6 @@ export default {
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your request has been submitted',
                 confirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
-                fileFailConfirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
                 fileFailConfirmationAlert: {
                     title: 'FILE UPLOAD FAILED',
                     message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',

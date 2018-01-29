@@ -10,7 +10,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 import {journalArticle} from 'mock/data/testing/records';
 
-function setup({initialValues, history, handleSubmit = jest.fn(), actions, isShallow = true}){
+function setup({initialValues, history, publicationToClaimFileUploadingError, handleSubmit = jest.fn(), actions, isShallow = true}){
     const props = {
         initialValues: initialValues ||
             Immutable.Map({
@@ -19,7 +19,8 @@ function setup({initialValues, history, handleSubmit = jest.fn(), actions, isSha
             }),
         handleSubmit: handleSubmit,
         actions: actions || {},
-        history: history || {}
+        history: history || {},
+        publicationToClaimFileUploadingError: publicationToClaimFileUploadingError || false
     };
 
     if(isShallow) {
@@ -277,4 +278,15 @@ describe('Component ClaimRecord ', () => {
         wrapper.setProps({dirty: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render the confirm dialog with an alert due to a file upload error', () => {
+        const wrapper = setup({publicationToClaimFileUploadingError: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render the confirm dialog without an alert due to file upload success', () => {
+        const wrapper = setup({publicationToClaimFileUploadingError: false});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });
