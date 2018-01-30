@@ -18,7 +18,8 @@ function setup(
         hidePossiblyYourPublicationsLure,
         publicationsList,
         loadingPublicationsStats,
-        publicationsStats
+        publicationsStats,
+        possiblyYourPublicationsCountLoading
     }
     ) {
     const props = {
@@ -33,6 +34,7 @@ function setup(
         publicationsList: publicationsList,
         loadingPublicationsStats: loadingPublicationsStats || false,
         publicationsStats: publicationsStats,
+        possiblyYourPublicationsCountLoading: possiblyYourPublicationsCountLoading || false,
         actions: {
             countPossiblyYourPublications: jest.fn(),
             loadAuthorPublicationsStats: jest.fn(),
@@ -46,6 +48,7 @@ function setup(
 }
 
 describe('Dashboard test', () => {
+
     it('renders alert for non-authors', () => {
         const wrapper = setup({account: mock.accounts.uqstaff});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -56,22 +59,44 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('renders possibly your publications lure', () => {
-        const wrapper = setup({
-            authorDetails: mock.authorDetails.uqresearcher,
-            possiblyYourPublicationsCount: 5
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('doesn\'t render possibly your publications lure', () => {
+    it('renders possibly your publications lure but not the add a record lure', () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             possiblyYourPublicationsCount: 5,
-            hidePossiblyYourPublicationsLure: true
+            hidePossiblyYourPublicationsLure: false,
+            possiblyYourPublicationsCountLoading: false
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('doesn\'t render possibly your publications lure or the add a record lure', () => {
+        const wrapper = setup({
+            authorDetails: mock.authorDetails.uqresearcher,
+            possiblyYourPublicationsCount: 5,
+            hidePossiblyYourPublicationsLure: true,
+            possiblyYourPublicationsCountLoading: false
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('doesn\'t render possibly your publications lure and shows the add a record lure', () => {
+        const wrapper = setup({
+            authorDetails: mock.authorDetails.uqresearcher,
+            possiblyYourPublicationsCount: 0,
+            hidePossiblyYourPublicationsLure: false,
+            possiblyYourPublicationsCountLoading: false
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('doesn\'t render either the publications lure or the add a record lure while the pub count is still loading', () => {
+        const wrapper = setup({
+            authorDetails: mock.authorDetails.uqresearcher,
+            possiblyYourPublicationsCount: null,
+            hidePossiblyYourPublicationsLure: false,
+            possiblyYourPublicationsCountLoading: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 
 });
