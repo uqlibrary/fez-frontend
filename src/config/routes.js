@@ -5,7 +5,7 @@ export const pathConfig =  {
     dashboard: '/dashboard',
     browse: '/browse',
     about: '/about',
-    rhdSubmission: '/rhdsubmission',
+    hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/sbslodge',
     records: {
         mine: '/records/mine',
@@ -34,13 +34,26 @@ export const pathConfig =  {
     }
 };
 
+const flattedPathConfig = ((path) => {
+    const flattenPath = Object.assign({}, ...function _flatten(objectBit, path = '') {
+        return [].concat(
+            ...Object.keys(objectBit).map(
+                key => typeof objectBit[key] === 'object' ?
+                    _flatten(objectBit[key], `${ path }/${ key }`) :
+                    ({[`${ path }/${ key }`]: objectBit[key]})
+            )
+        );
+    }(path));
+    return Object.values(flattenPath);
+})(pathConfig);
+
 // TODO: will we even have roles?
 export const roles = {
     researcher: 'researcher',
     admin: 'admin'
 };
 
-export const getRoutesConfig = (components, account, forceOrcidRegistration) => {
+export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegistration = false, isHdrStudent = false}) => {
     const publicPages = [
         {
             path: pathConfig.about,
@@ -58,15 +71,18 @@ export const getRoutesConfig = (components, account, forceOrcidRegistration) => 
             }
         ] : [])];
 
-    // TODO: check if account is RHD student for rhd submission here?
     const thesisSubmissionPages = (account ? [
         {
-            path: pathConfig.rhdSubmission,
-            render: () => components.ThesisSubmission()
+            path: pathConfig.hdrSubmission,
+            render: isHdrStudent
+                ? () => components.ThesisSubmission()
+                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied})
         },
         {
             path: pathConfig.sbsSubmission,
-            render: () => components.ThesisSubmission()
+            render: isHdrStudent
+                ? () => components.ThesisSubmission()
+                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied})
         },
     ] : []);
 
@@ -159,12 +175,7 @@ export const getRoutesConfig = (components, account, forceOrcidRegistration) => 
         ] : []),
         {
             render: (childProps) => {
-                const isValidRoute = childProps.location.pathname.split('/')
-                    .filter(Boolean)
-                    .reduce((subpath, locationItem) =>
-                        (subpath && !!subpath[locationItem] ? subpath[locationItem] : ''), pathConfig)
-                    .length > 0;
-
+                const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
                 if (isValidRoute && account) return components.StandardPage({...locale.pages.permissionDenied});
                 if (isValidRoute) return components.StandardPage({...locale.pages.authenticationRequired});
                 return components.StandardPage({...locale.pages.notFound});

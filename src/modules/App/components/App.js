@@ -31,6 +31,7 @@ export default class App extends React.Component {
 
     static childContextTypes = {
         isMobile: PropTypes.bool,
+        isPrint: PropTypes.bool,
         selectFieldMobileOverrides: PropTypes.object
     };
 
@@ -40,13 +41,15 @@ export default class App extends React.Component {
             menuDrawerOpen: false,
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1280px)'),
-            isMobile: window.matchMedia('(max-width: 720px)').matches
+            isMobile: window.matchMedia('(max-width: 720px)').matches,
+            isPrint: window.matchMedia('print').matches
         };
     }
 
     getChildContext() {
         return {
             isMobile: this.state.isMobile,
+            isPrint: this.state.isPrint,
             selectFieldMobileOverrides: {
                 style: !this.state.isMobile ? {width: '100%'} : {},
                 autoWidth: !this.state.isMobile,
@@ -102,7 +105,6 @@ export default class App extends React.Component {
     };
 
     render() {
-        console.log(location);
         // display loader while user account is loading
         if (this.props.accountLoading) {
             return (
@@ -115,11 +117,6 @@ export default class App extends React.Component {
             );
         }
 
-        const showMenu = true;
-        const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
-        const containerStyle = this.state.docked ? {paddingLeft: 340} : {};
-        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
-
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
@@ -128,6 +125,13 @@ export default class App extends React.Component {
         const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
+            this.props.location.pathname === routes.pathConfig.sbsSubmission;
+
+        const showMenu = !this.state.isPrint && !isThesisSubmissionPage;
+        const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
+        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 340} : {};
+        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
 
         let userStatusAlert = null;
         if(!this.props.accountLoading && !this.props.account) {
@@ -147,18 +151,17 @@ export default class App extends React.Component {
                 ...locale.global.noOrcidAlert,
                 action: this.redirectToOrcid
             };
-        } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired && isHdrStudent ) {
+        } else if (!isPublicPage && !isThesisSubmissionPage && !isAuthorLoading && isOrcidRequired && isHdrStudent) {
             // user is logged in, but doesn't have ORCID identifier
             userStatusAlert = {
                 ...locale.global.forceOrcidLinkAlert
             };
         }
-
         return (
             <div className="layout-fill align-stretch">
                 <AppBar
                     className="AppBar align-center"
-                    showMenuIconButton={!this.state.docked}
+                    showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
                     title={locale.global.title}
@@ -184,7 +187,6 @@ export default class App extends React.Component {
                         </div>
                     }
                 />
-
                 {
                     showMenu &&
                     <MenuDrawer
@@ -202,7 +204,6 @@ export default class App extends React.Component {
                             closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
                         }}/>
                 }
-
                 <div className="content-container" style={containerStyle}>
                     {
                         userStatusAlert &&
@@ -224,14 +225,18 @@ export default class App extends React.Component {
                         !isAuthorLoading &&
                         <Switch>
                             {
-                                routes.getRoutesConfig(pages, this.props.account, isOrcidRequired && isHdrStudent).map((route, index) => (
+                                routes.getRoutesConfig({
+                                    components: pages,
+                                    account: this.props.account,
+                                    forceOrcidRegistration: isOrcidRequired && isHdrStudent,
+                                    isHdrStudent: isHdrStudent
+                                }).map((route, index) => (
                                     <Route key={`route_${index}`} {...route} />
                                 ))
                             }
                         </Switch>
                     }
                 </div>
-
                 <HelpDrawer/>
             </div>
         );

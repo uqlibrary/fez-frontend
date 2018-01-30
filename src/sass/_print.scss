@@ -1,0 +1,21 @@
+@import './variables';
+
+
+// Print
+@page {
+  size: A4;
+  margin: 3mm;
+}
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+  .AppBar, div.possiblePublicationLure, div.authorCount, div.main-drawer {
+    display: none !important;
+  }
+  .content-container {
+    padding-top: 16px !important;
+    padding-left: 0 !important;
+  }
+}

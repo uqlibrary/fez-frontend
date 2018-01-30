@@ -30,7 +30,8 @@ export default class CitationCounts extends Component {
         return (
             <div className="citationCounts columns is-multiline is-gapless is-marginless">
                 {
-                    !!counts.wos && counts.wos > 0 &&
+                    !!counts.wos && counts.wos > 0 && !!publication.fez_record_search_key_isi_loc
+                    && !!publication.fez_record_search_key_isi_loc.rek_isi_loc &&
                     <Partials.CitationCountView
                         source="wos"
                         count={counts.wos}
@@ -39,7 +40,8 @@ export default class CitationCounts extends Component {
                     />
                 }
                 {
-                    !!counts.scopus && counts.scopus > 0 &&
+                    !!counts.scopus && counts.scopus > 0
+                    && !!publication.fez_record_search_key_scopus_id && !!publication.fez_record_search_key_scopus_id.rek_scopus_id &&
                     <Partials.CitationCountView
                         source="scopus"
                         count={counts.scopus}
@@ -48,7 +50,7 @@ export default class CitationCounts extends Component {
                     />
                 }
                 {
-                    !!counts.altmetric && counts.altmetric > 0 &&
+                    !!counts.altmetric && counts.altmetric > 0 && !!publication.rek_altmetric_id &&
                     <Partials.CitationCountView
                         source="altmetric"
                         count={counts.altmetric}
