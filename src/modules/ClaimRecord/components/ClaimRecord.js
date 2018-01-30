@@ -107,12 +107,9 @@ export default class ClaimRecord extends Component {
         const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
         saveConfirmationLocale.cancelButtonLabel = fromAddRecord
             ? txt.successWorkflowConfirmation.addRecordButtonLabel : txt.successWorkflowConfirmation.cancelButtonLabel;
-
-        saveConfirmationLocale.confirmationMessage =
-            (<div>
-                {txt.successWorkflowConfirmation.successConfirmationMessage}
-                this.props.publicationToClaimFileUploadingError && <Alert {...txt.successWorkflowConfirmation.fileFailAlert}/>
-            </div>);
+        saveConfirmationLocale.confirmationMessage = this.props.publicationToClaimFileUploadingError
+            ?  txt.successWorkflowConfirmation.fileFailConfirmationMessage
+            : txt.successWorkflowConfirmation.successConfirmationMessage;
 
         return (
             <StandardPage title={txt.title}>
