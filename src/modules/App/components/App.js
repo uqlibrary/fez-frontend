@@ -31,7 +31,7 @@ export default class App extends React.Component {
 
     static childContextTypes = {
         isMobile: PropTypes.bool,
-        isPrint: PropTypes.object,
+        isPrint: PropTypes.bool,
         selectFieldMobileOverrides: PropTypes.object
     };
 
@@ -185,23 +185,20 @@ export default class App extends React.Component {
                         </div>
                     }
                 />
-                {
-                    !this.state.isPrint.matches &&
-                    <MenuDrawer
-                        menuItems={menuItems}
-                        drawerOpen={this.state.docked || this.state.menuDrawerOpen}
-                        docked={this.state.docked}
-                        history={this.props.history}
-                        logoImage={locale.global.logo}
-                        logoText={locale.global.title}
-                        onToggleDrawer={this.toggleDrawer}
-                        isMobile={this.state.isMobile}
-                        locale={{
-                            skipNavAriaLabel: locale.global.skipNav.ariaLabel,
-                            skipNavTitle: locale.global.skipNav.title,
-                            closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
-                        }}/>
-                }
+                <MenuDrawer
+                    menuItems={menuItems}
+                    drawerOpen={this.state.docked || this.state.menuDrawerOpen}
+                    docked={this.state.docked}
+                    history={this.props.history}
+                    logoImage={locale.global.logo}
+                    logoText={locale.global.title}
+                    onToggleDrawer={this.toggleDrawer}
+                    isMobile={this.state.isMobile}
+                    locale={{
+                        skipNavAriaLabel: locale.global.skipNav.ariaLabel,
+                        skipNavTitle: locale.global.skipNav.title,
+                        closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
+                    }}/>
                 <div className="content-container" style={container}>
                     {
                         userStatusAlert &&
