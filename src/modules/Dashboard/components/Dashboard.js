@@ -33,6 +33,7 @@ class Dashboard extends React.Component {
 
         // lure data
         possiblyYourPublicationsCount: PropTypes.number,
+        possiblyYourPublicationsCountLoading: PropTypes.bool,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
         // wos/scopus data
@@ -138,7 +139,9 @@ class Dashboard extends React.Component {
                         </div>
                         <div className="column is-12 possiblePublicationLure">
                             {
-                                !this.props.hidePossiblyYourPublicationsLure && this.props.possiblyYourPublicationsCount > 0 ?
+                                !this.props.hidePossiblyYourPublicationsLure
+                                && !this.props.possiblyYourPublicationsCountLoading
+                                && this.props.possiblyYourPublicationsCount > 0 ?
                                     <Alert
                                         title={txt.possiblePublicationsLure.title}
                                         message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
@@ -148,7 +151,9 @@ class Dashboard extends React.Component {
                                         allowDismiss
                                         dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
                                     :
-                                    !this.props.possiblyYourPublicationsCount &&
+                                    !this.props.possiblyYourPublicationsCountLoading
+                                    && !this.props.hidePossiblyYourPublicationsLure
+                                    && !this.props.possiblyYourPublicationsCount &&
                                     <Alert
                                         {...txt.nothingToClaimLure}
                                         action={this._addPublication}/>
