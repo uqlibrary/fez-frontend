@@ -558,7 +558,7 @@ exports[`PublicationForm test should render component initialised with just one 
         fullWidth={true}
         label="Abandon and search again"
         labelPosition="after"
-        onTouchTap={[Function]}
+        onTouchTap={[MockFunction]}
         primary={false}
         secondary={false}
       />

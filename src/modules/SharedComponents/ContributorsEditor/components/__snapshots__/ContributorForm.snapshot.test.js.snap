@@ -4,9 +4,9 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
 <Provider
   store={
     Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "subscribe": [Function],
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
 >
@@ -21,7 +21,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
         "nameAsPublishedLabel": "Name as published",
       }
     }
-    onAdd={[Function]}
+    onAdd={[MockFunction]}
     showIdentifierLookup={true}
   >
     <div
@@ -3137,9 +3137,9 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
 <Provider
   store={
     Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "subscribe": [Function],
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
 >
@@ -3154,7 +3154,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
         "nameAsPublishedLabel": "Name as published",
       }
     }
-    onAdd={[Function]}
+    onAdd={[MockFunction]}
     showIdentifierLookup={false}
   >
     <div
