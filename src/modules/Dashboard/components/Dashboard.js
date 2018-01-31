@@ -196,7 +196,6 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
                 }
-
                 {
                     !loading
                     && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
@@ -295,5 +294,4 @@ class Dashboard extends React.Component {
         );
     }
 }
-
 export default Dashboard;
