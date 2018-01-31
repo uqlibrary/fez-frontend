@@ -7,6 +7,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
 import {publicationTypes} from 'config';
 import {locale} from 'locale';
+import YearPublishedFacetFilter from './YearPublishedFacetFilter';
 
 export default class FacetsFilter extends React.Component {
     static propTypes = {
@@ -15,7 +16,9 @@ export default class FacetsFilter extends React.Component {
         activeFacets: PropTypes.object,
         excludeFacetsList: PropTypes.array,
         renameFacetsList: PropTypes.object,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        publishedYearFrom: PropTypes.number,
+        publishedYearTo: PropTypes.number
     };
 
     static defaultProps = {
@@ -58,7 +61,7 @@ export default class FacetsFilter extends React.Component {
         this.setState({
             activeFacets: {}
         });
-    }
+    };
 
     getNestedListItems = (facetCategory) => {
         const listItems = facetCategory.facets.map((item, index) => {
@@ -76,7 +79,7 @@ export default class FacetsFilter extends React.Component {
         return listItems;
     };
 
-    getFacetsToDisplay(rawFacets, excludeFacetsList, renameFacetsList) {
+    getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList) => {
         const facetsToDisplay = [];
         Object.keys(rawFacets).forEach((key) => {
             const rawFacet = rawFacets[key];
@@ -114,7 +117,7 @@ export default class FacetsFilter extends React.Component {
         });
 
         return facetsToDisplay;
-    }
+    };
 
     render() {
         const txt = locale.components.facetsFilter;
@@ -137,6 +140,15 @@ export default class FacetsFilter extends React.Component {
                                     nestedItems={this.getNestedListItems(item)} />
                             );
                         })
+                    }
+                    {
+                        <YearPublishedFacetFilter
+                            index={facetsToDisplay.length}
+                            activeFacets={this.props.activeFacets}
+                            disabled={this.props.disabled}
+                            handleFacetClick={this.handleFacetClick}
+                            onFacetApplied={this.handleFacetClick}
+                        />
                     }
                 </List>
                 {
