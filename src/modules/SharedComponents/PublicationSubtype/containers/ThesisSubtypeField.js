@@ -3,10 +3,11 @@ import {connect} from 'react-redux';
 import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
 import {thesisSubtypes} from 'config/general';
 
-const mapStateToProps = () => {
+const mapStateToProps = (state, props) => {
     return {
         itemsList: thesisSubtypes,
-        itemsLoading: false
+        itemsLoading: false,
+        selectedValue: props.input ? props.input.value : null
     };
 };
 

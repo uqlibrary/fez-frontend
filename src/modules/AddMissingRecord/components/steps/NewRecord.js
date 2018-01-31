@@ -56,7 +56,6 @@ export default class NewRecord extends React.Component {
                     'authorId': this.props.author ? this.props.author.aut_id : ''
                 }
             ],
-            fez_record_search_key_org_name: {rek_org_name: 'The University of Queensland'},
             rek_title: (!validation.isValidDOIValue(rawSearchQuery) && !validation.isValidPubMedValue(rawSearchQuery)) ? rawSearchQuery : ''
         };
 

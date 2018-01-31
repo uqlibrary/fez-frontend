@@ -1,29 +1,33 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
+// import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
+import {reduxForm, getFormValues, stopSubmit} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ThesisSubmission from '../components/ThesisSubmission';
-import {createNewRecord} from 'actions';
+// import {createNewRecord} from 'actions';
 // import {general} from 'config';
 // import {locale} from 'locale';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'ThesisSubmission';
 
-const onSubmit = (values, dispatch) => {
+// const onSubmit = (values, dispatch) => {
+const onSubmit = () => {
     // set default values for a new unapproved record
-    return dispatch(createNewRecord({...values.toJS()}))
-        .then(() => {
-            // once this promise is resolved form is submitted successfully and will call parent container
-            // reported bug to redux-form:
-            // reset form after success action was dispatched:
-            // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-            setTimeout(()=>{
-                dispatch(reset(FORM_NAME));
-            }, 100);
-        })
-        .catch(error => {
-            throw new SubmissionError({_error: error.message});
-        });
+    return Promise.resolve();
+    //
+    // return dispatch(createNewRecord({...values.toJS()}))
+    //     .then(() => {
+    //         // once this promise is resolved form is submitted successfully and will call parent container
+    //         // reported bug to redux-form:
+    //         // reset form after success action was dispatched:
+    //         // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
+    //         setTimeout(()=>{
+    //             dispatch(reset(FORM_NAME));
+    //         }, 100);
+    //     })
+    //     .catch(error => {
+    //         throw new SubmissionError({_error: error.message});
+    //     });
 };
 
 const validate = (values) => {
@@ -64,8 +68,21 @@ let ThesisSubmissionContainer = reduxForm({
 })(confirmDiscardFormChanges(ThesisSubmission, FORM_NAME));
 
 const mapStateToProps = (state) => {
+    const currentAuthor = state.get('accountReducer').author;
+    const initialValues = {
+        currentAuthor: [
+            {
+                'nameAsPublished': currentAuthor ? currentAuthor.aut_display_name : '',
+                'authorId': currentAuthor ? currentAuthor.aut_id : ''
+            }
+        ],
+        fez_record_search_key_org_name: {rek_org_name: 'The University of Queensland'},
+        rek_genre_type: 'Professional Doctorate'
+    };
+
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({})
+        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        initialValues: initialValues
     };
 };
 

@@ -1073,5 +1073,15 @@ export default {
         type: 'done',
         title: 'Success',
         message: 'New publication has been saved successfully.'
+    },
+    thesisSubmission: {
+        hdrTitle: 'Higher degree by research thesis deposit',
+        sbsTitle: 'Professional doctorate deposit',
+        cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/3-thesis-examination',
+        cancel: 'Cancel',
+        submit: 'Deposit your thesis',
+        afterSubmit: 'Go to the next step',
+        afterSubmitText: (<p>You thesis has been submitted. You will received acknowledgement email shortly.</p>)
     }
 };
