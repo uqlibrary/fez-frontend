@@ -1,40 +1,19 @@
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import ThesisSubmission from './ThesisSubmission';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import Immutable from 'immutable';
 
-function setup({submitting, vocabId, initialValues, pristine, onFormCancel, onFormSubmitSuccess, isShallow = true}){
-
+function setup(testProps, isShallow = true) {
     const props = {
-        formValues: initialValues ? Immutable.Map(initialValues) : Immutable.Map({}),
-        onFormCancel: onFormCancel || jest.fn(),
-        onFormSubmitSuccess: onFormSubmitSuccess || jest.fn(),
-        submitting: submitting || false, // : PropTypes.bool
-        pristine: pristine || false, // : PropTypes.bool
+        ...testProps,
+
+        formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
+        onFormCancel: testProps.onFormCancel || jest.fn(),
+        onFormSubmitSuccess: testProps.onFormSubmitSuccess || jest.fn(),
+        submitting: testProps.submitting || false, // : PropTypes.bool
+        pristine: testProps.pristine || false, // : PropTypes.bool
     };
 
-    if(isShallow) {
-        return shallow(<ThesisSubmission {...props} />);
-    }
-
-    return mount(<ThesisSubmission {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
-
+    return getElement(ThesisSubmission, props, isShallow);
 }
-
-beforeAll(() => {
-    injectTapEventPlugin();
-});
 
 describe('ThesisSubmission test', () => {
     it('should render component initialised with just one field - publication type', () => {
