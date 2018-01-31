@@ -21,8 +21,6 @@ function setup({facetsData = {}, onFacetsChanged = jest.fn(), activeFacets = {},
 
 describe('FacetsFilter renders ', () => {
 
-    // Snapshot tests
-
     it('empty component for empty data', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -106,8 +104,6 @@ describe('FacetsFilter renders ', () => {
         const wrapper = setup({facetsData});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
-    // Unit tests
 
     const mockFacetsData = {
         "Scopus document type": {
