@@ -31,7 +31,6 @@ export default class App extends React.Component {
 
     static childContextTypes = {
         isMobile: PropTypes.bool,
-        isPrint: PropTypes.bool,
         selectFieldMobileOverrides: PropTypes.object
     };
 
@@ -42,14 +41,12 @@ export default class App extends React.Component {
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
-            isPrint: window.matchMedia('print').matches
         };
     }
 
     getChildContext() {
         return {
             isMobile: this.state.isMobile,
-            isPrint: this.state.isPrint,
             selectFieldMobileOverrides: {
                 style: !this.state.isMobile ? {width: '100%'} : {},
                 autoWidth: !this.state.isMobile,
@@ -70,8 +67,7 @@ export default class App extends React.Component {
             || this.props.accountAuthorLoading !== nextProps.accountAuthorLoading
             || (!!this.props.location && !!nextProps.location && this.props.location.pathname !== nextProps.location.pathname)
             || (!!this.props.history && !!nextState.history && this.props.history.push !== nextState.history.push)
-            || this.state !== nextState
-            || this.state.isPrint;
+            || this.state !== nextState;
     }
 
     componentWillUnmount() {
