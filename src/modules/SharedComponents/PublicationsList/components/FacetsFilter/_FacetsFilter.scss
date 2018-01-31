@@ -46,3 +46,12 @@
     }
   }
 }
+
+.yearPublished {
+  display: flex;
+  .from, .to {
+    width: 35%;
+    display: flex;
+    margin-right: 5px;
+  }
+}
