@@ -375,9 +375,9 @@ export default {
                         record.
                     </p>),
                 fileFailConfirmationAlert: {
-                    title: 'FILE UPLOAD FAILED',
+                    title: 'File upload failed',
                     message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
-                    type: 'warning'
+                    type: 'info'
                 },
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'

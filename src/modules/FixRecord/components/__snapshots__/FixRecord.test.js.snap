@@ -489,8 +489,8 @@ exports[`Component FixRecord  should render fix record form 1`] = `
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "FILE UPLOAD FAILED",
-              "type": "warning",
+              "title": "File upload failed",
+              "type": "info",
             },
           }
         }
@@ -2081,8 +2081,8 @@ exports[`Component FixRecord  should render the confirm dialog box with an alert
               <Alert
                 allowDismiss={false}
                 message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
-                title="FILE UPLOAD FAILED"
-                type="warning"
+                title="File upload failed"
+                type="info"
               />
               <p>
                 Your request will be referred to a UQ eSpace staff member for review/action.
@@ -2091,8 +2091,8 @@ exports[`Component FixRecord  should render the confirm dialog box with an alert
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "FILE UPLOAD FAILED",
-              "type": "warning",
+              "title": "File upload failed",
+              "type": "info",
             },
           }
         }
@@ -2691,8 +2691,8 @@ exports[`Component FixRecord  should render the confirm dialog box without an al
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
-              "title": "FILE UPLOAD FAILED",
-              "type": "warning",
+              "title": "File upload failed",
+              "type": "info",
             },
           }
         }

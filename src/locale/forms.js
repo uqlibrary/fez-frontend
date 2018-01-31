@@ -65,9 +65,9 @@ export default {
                         Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
                     </p>),
                 fileFailConfirmationAlert: {
-                    title: 'FILE UPLOAD FAILED',
+                    title: 'File upload failed',
                     message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
-                    type: 'warning'
+                    type: 'info'
                 },
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',
@@ -160,9 +160,9 @@ export default {
                 confirmationTitle: 'Your request has been submitted',
                 confirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
                 fileFailConfirmationAlert: {
-                    title: 'FILE UPLOAD FAILED',
+                    title: 'File upload failed',
                     message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
-                    type: 'warning'
+                    type: 'info'
                 },
                 cancelButtonLabel: 'Go to my dashboard',
                 confirmButtonLabel: 'Go to my research'
