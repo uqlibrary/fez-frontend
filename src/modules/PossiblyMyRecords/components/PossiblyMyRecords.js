@@ -36,7 +36,10 @@ export default class PossiblyMyRecords extends React.Component {
 
         this.state = {
             publicationToHide: null,
-            activeFacets: {}
+            activeFacets: {
+                filters: {},
+                ranges: {}
+            }
         };
     }
 
@@ -117,7 +120,7 @@ export default class PossiblyMyRecords extends React.Component {
                 {
                     (this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts) &&
                     <div className="is-centered">
-                        <InlineLoader message={Object.keys(this.state.activeFacets).length === 0 ? txt.loadingMessage : txt.facetSearchMessage} />
+                        <InlineLoader message={Object.keys(this.state.activeFacets.filters).length === 0 || Object.keys(this.state.activeFacets.ranges).length === 0 ? txt.loadingMessage : txt.facetSearchMessage} />
                     </div>
                 }
                 <div className="columns">
@@ -159,7 +162,9 @@ export default class PossiblyMyRecords extends React.Component {
                                     facetsData={this.props.possiblePublicationsFacets}
                                     onFacetsChanged={this._facetsChanged}
                                     activeFacets={this.state.activeFacets}
-                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList} />
+                                    disabled={this.props.loadingPossiblePublicationsList}
+                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList} />
                             </StandardRighthandCard>
                         </div>
                     }
