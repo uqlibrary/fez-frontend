@@ -416,7 +416,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
         }
       }
       disabled={false}
-      from={500}
+      from={1901}
       handleFacetClick={[Function]}
       index={6}
       to={2018}
@@ -864,7 +864,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
         }
       }
       disabled={false}
-      from={500}
+      from={1901}
       handleFacetClick={[Function]}
       index={6}
       to={2018}
@@ -1298,7 +1298,7 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
         }
       }
       disabled={false}
-      from={500}
+      from={1901}
       handleFacetClick={[Function]}
       index={6}
       to={2018}
@@ -1748,7 +1748,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
         }
       }
       disabled={false}
-      from={500}
+      from={1901}
       handleFacetClick={[Function]}
       index={6}
       to={2018}
@@ -2193,7 +2193,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         }
       }
       disabled={true}
-      from={500}
+      from={1901}
       handleFacetClick={[Function]}
       index={6}
       to={2018}
@@ -2570,7 +2570,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
         }
       }
       disabled={false}
-      from={500}
+      from={1901}
       handleFacetClick={[Function]}
       index={5}
       to={2018}
