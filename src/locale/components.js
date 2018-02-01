@@ -3,7 +3,8 @@ export default {
         facetsFilter: {
             resetButtonText: 'Reset',
             yearPublishedFacet: {
-                title: 'Published year range',
+                facetTitle: 'Published year range',
+                title: 'Year published',
                 fromFieldLabel: 'From',
                 toFieldLabel: 'To',
                 minYearValue: 500

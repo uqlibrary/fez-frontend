@@ -66,7 +66,7 @@ export default class YearPublishedFacetRange extends React.Component {
             <div className="facetsYear">
                 <ListItem
                     key={`key_facet_item_${this.props.index}`}
-                    primaryText={txt.title}
+                    primaryText={txt.facetTitle}
                     open={this.props.activeFacets.hasOwnProperty(FACET_TYPE_RANGE) && this.props.activeFacets[FACET_TYPE_RANGE][txt.title] && true}
                     disabled={this.props.disabled}
                     className={'facetsYearCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
