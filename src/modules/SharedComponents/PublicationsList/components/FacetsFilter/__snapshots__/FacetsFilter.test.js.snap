@@ -408,6 +408,19 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
+    <YearPublishedFacetRange
+      activeFacets={
+        Object {
+          "filters": Object {},
+          "ranges": Object {},
+        }
+      }
+      disabled={false}
+      from={500}
+      handleFacetClick={[Function]}
+      index={6}
+      to={2018}
+    />
   </List>
 </div>
 `;
@@ -843,6 +856,19 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
+    <YearPublishedFacetRange
+      activeFacets={
+        Object {
+          "filters": Object {},
+          "ranges": Object {},
+        }
+      }
+      disabled={false}
+      from={500}
+      handleFacetClick={[Function]}
+      index={6}
+      to={2018}
+    />
   </List>
 </div>
 `;
@@ -1262,6 +1288,20 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
       primaryText="Author"
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
+    />
+    <YearPublishedFacetRange
+      activeFacets={
+        Object {
+          "filters": Object {
+            "Display type": 179,
+          },
+        }
+      }
+      disabled={false}
+      from={500}
+      handleFacetClick={[Function]}
+      index={6}
+      to={2018}
     />
   </List>
   <div
@@ -1699,6 +1739,20 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
+    <YearPublishedFacetRange
+      activeFacets={
+        Object {
+          "filters": Object {
+            "Display type": 179,
+          },
+        }
+      }
+      disabled={false}
+      from={500}
+      handleFacetClick={[Function]}
+      index={6}
+      to={2018}
+    />
   </List>
   <div
     className="columns"
@@ -2131,6 +2185,19 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
+    <YearPublishedFacetRange
+      activeFacets={
+        Object {
+          "filters": Object {},
+          "ranges": Object {},
+        }
+      }
+      disabled={true}
+      from={500}
+      handleFacetClick={[Function]}
+      index={6}
+      to={2018}
+    />
   </List>
 </div>
 `;
@@ -2494,6 +2561,19 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       primaryText="Author"
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
+    />
+    <YearPublishedFacetRange
+      activeFacets={
+        Object {
+          "filters": Object {},
+          "ranges": Object {},
+        }
+      }
+      disabled={false}
+      from={500}
+      handleFacetClick={[Function]}
+      index={5}
+      to={2018}
     />
   </List>
 </div>
