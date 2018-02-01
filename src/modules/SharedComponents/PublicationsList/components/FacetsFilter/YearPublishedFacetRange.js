@@ -21,7 +21,7 @@ export default class YearPublishedFacetRange extends React.Component {
     };
 
     static defaultProps = {
-        from: 500,
+        from: 1901,
         to: (new Date()).getFullYear()
     };
 
@@ -63,52 +63,65 @@ export default class YearPublishedFacetRange extends React.Component {
         const txt = locale.components.facetsFilter.yearPublishedFacet;
         const isActive = this.props.activeFacets.hasOwnProperty(FACET_TYPE_RANGE) && this.props.activeFacets[FACET_TYPE_RANGE].hasOwnProperty(txt.title);
         return (
-            <ListItem
-                key={`key_facet_item_${this.props.index}`}
-                primaryText={txt.title}
-                open={this.props.activeFacets.hasOwnProperty(FACET_TYPE_RANGE) && this.props.activeFacets[FACET_TYPE_RANGE][txt.title] && true}
-                disabled={this.props.disabled}
-                className={'facetsCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
-                primaryTogglesNestedList
-                nestedItems={[
-                    <ListItem
-                        key="key_facet_item"
-                        id="activeYearPublishedFacet"
-                        className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
-                        primaryText={isActive ? `${this.state.from} - ${this.state.to}` : ''}
-                        onClick={isActive ? () => (this.props.handleFacetClick(txt.title, `[${this.state.from} TO ${this.state.to}]`, FACET_TYPE_RANGE)) : () => {}}
-                        disabled={this.props.disabled}
-                        leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}
-                    >
-                        {
-                            !isActive &&
-                            <div className="yearPublished">
-                                <div className="from">
-                                    <TextField
-                                        type="number"
-                                        min={Math.max(txt.minYearValue, this.props.from)}
-                                        max={this.state.to}
-                                        floatingLabelText={txt.fromFieldLabel}
-                                        defaultValue={this.state.from}
-                                        onChange={this.setFromValue}
-                                    />
+            <div className="facetsYear">
+                <ListItem
+                    key={`key_facet_item_${this.props.index}`}
+                    primaryText={txt.title}
+                    open={this.props.activeFacets.hasOwnProperty(FACET_TYPE_RANGE) && this.props.activeFacets[FACET_TYPE_RANGE][txt.title] && true}
+                    disabled={this.props.disabled}
+                    className={'facetsYearCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
+                    primaryTogglesNestedList
+                    nestedItems={[
+                        <ListItem
+                            key="key_facet_item"
+                            id="activeYearPublishedFacet"
+                            className={'facetsYearLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
+                            primaryText={isActive ? `${this.state.from} - ${this.state.to}` : ''}
+                            onClick={isActive ? () => (this.props.handleFacetClick(txt.title, `[${this.state.from} TO ${this.state.to}]`, FACET_TYPE_RANGE)) : () => {}}
+                            disabled={this.props.disabled}
+                            leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}
+                        >
+                            {
+                                !isActive &&
+                                <div className="yearPublished columns is-gapless">
+                                    <div className="facetsYearFrom column">
+                                        <TextField
+                                            type="number"
+                                            min={Math.max(txt.minYearValue, this.props.from)}
+                                            max={this.state.to}
+                                            floatingLabelText={txt.fromFieldLabel}
+                                            defaultValue={this.state.from}
+                                            onChange={this.setFromValue}
+                                            fullWidth
+                                        />
+                                    </div>
+                                    <div className="facetsYearSeparator column is-narrow" />
+                                    <div className="facetsYearTo column">
+                                        <TextField
+                                            type="number"
+                                            min={this.state.from}
+                                            max={this.props.to}
+                                            floatingLabelText={txt.toFieldLabel}
+                                            defaultValue={this.state.to}
+                                            onChange={this.setToValue}
+                                            fullWidth
+                                        />
+                                    </div>
+                                    <div className="facetsYearSeparator column is-narrow" />
+                                    <div className="facetsYearGo column is-narrow">
+                                        <FlatButton
+                                            label="Go"
+                                            onClick={() => (this.props.handleFacetClick(txt.title, `[${this.state.from} TO ${this.state.to}]`, FACET_TYPE_RANGE))}
+                                            className="is-mui-spacing-button"
+                                            fullWidth
+                                        />
+                                    </div>
                                 </div>
-                                <div className="to">
-                                    <TextField
-                                        type="number"
-                                        min={this.state.from}
-                                        max={this.props.to}
-                                        floatingLabelText={txt.toFieldLabel}
-                                        defaultValue={this.state.to}
-                                        onChange={this.setToValue}
-                                    />
-                                </div>
-                                <FlatButton label="Go" onClick={() => (this.props.handleFacetClick(txt.title, `[${this.state.from} TO ${this.state.to}]`, FACET_TYPE_RANGE))} />
-                            </div>
-                        }
-                    </ListItem>
-                ]}
-            />
+                            }
+                        </ListItem>
+                    ]}
+                />
+            </div>
         );
     }
 }
