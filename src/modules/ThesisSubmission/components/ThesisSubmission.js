@@ -24,7 +24,9 @@ import {default as formLocale} from 'locale/publicationForm';
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
-        ...propTypes // all redux-form props
+        ...propTypes, // all redux-form props
+        author: PropTypes.object,
+        isHdrThesis: PropTypes.bool // HDR thesis if true or SBS thesis if false
     };
 
     static contextTypes = {
@@ -43,7 +45,7 @@ export default class ThesisSubmission extends Component {
                 ...alertLocale.errorAlert,
                 message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
             };
-        } else if (!submitFailed && dirty && invalid) {
+        } else if (dirty && invalid) {
             alertProps = {...alertLocale.validationAlert};
         } else if (submitting) {
             alertProps = {...alertLocale.progressAlert};
@@ -62,12 +64,11 @@ export default class ThesisSubmission extends Component {
     }
 
     render() {
-        console.log(this.props);
         const txt = formLocale.thesis;
 
         if (this.props.submitSucceeded) {
             return (
-                <StandardPage title={formLocale.thesisSubmission.hdrTitle}>
+                <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
                     <StandardCard>
                         {formLocale.thesisSubmission.afterSubmitText}
                     </StandardCard>
@@ -84,10 +85,10 @@ export default class ThesisSubmission extends Component {
                 </StandardPage>
             );
         }
-
+        console.log(this.props);
         return (
-            <StandardPage title={formLocale.thesisSubmission.hdrTitle}>
-                <p>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span> </p>
+            <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
+                <p>{formLocale.thesisSubmission.text}</p>
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
@@ -237,15 +238,13 @@ export default class ThesisSubmission extends Component {
                         </div>
                     </StandardCard>
 
-                    <StandardCard title={formLocale.fileUpload.title} help={formLocale.fileUpload.help}>
-                        <p>
-                            Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination">HDR submission guidelines</a> for file naming conventions.
-                            <span className="requiredField"><label> File submission is required</label></span>
-                        </p>
+                    <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
+                        {formLocale.thesisSubmission.fileUpload.text}
                         <Field
                             name="files"
                             component={FileUploadField}
                             disabled={this.props.submitting}
+                            locale={formLocale.thesisSubmission.fileUpload.fileUploaderLocale}
                             validate={[validation.fileUploadRequired]}/>
                     </StandardCard>
 
@@ -268,7 +267,7 @@ export default class ThesisSubmission extends Component {
                                 fullWidth
                                 label={formLocale.thesisSubmission.submit}
                                 onTouchTap={this.props.handleSubmit}
-                                disabled={this.props.submitting || this.props.invalid}
+                                disabled={this.props.submitting || (!(this.props.submitFailed && this.props.error) && this.props.invalid)}
                             />
                         </div>
                     </div>

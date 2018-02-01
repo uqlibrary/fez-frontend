@@ -1,5 +1,4 @@
 import {locale} from 'locale';
-import React from 'react';
 
 export const pathConfig =  {
     index: '/',
@@ -76,13 +75,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         {
             path: pathConfig.hdrSubmission,
             render: isHdrStudent
-                ? () => (<components.ThesisSubmission something="hdr" />)
+                ? () => components.ThesisSubmission({isHdrThesis: true})
                 : () => components.StandardPage({...locale.pages.thesisSubmissionDenied})
         },
         {
             path: pathConfig.sbsSubmission,
             render: isHdrStudent
-                ? () => components.ThesisSubmission({something: 'sbs'})
+                ? () => components.ThesisSubmission({isHdrThesis: false})
                 : () => components.StandardPage({...locale.pages.thesisSubmissionDenied})
         },
     ] : []);

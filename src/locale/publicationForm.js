@@ -1077,6 +1077,17 @@ export default {
     thesisSubmission: {
         hdrTitle: 'Higher degree by research thesis deposit',
         sbsTitle: 'Professional doctorate deposit',
+        text: (<span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
+        fileUpload: {
+            title: 'Upload files',
+            help: {
+                title: 'Upload files',
+                text: 'file help...',
+                buttonLabel: 'OK'
+            },
+            text: (<span>
+                File submission is mandatory. Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination">HDR submission guidelines</a> for file naming conventions.<span className="requiredField"><label>&nbsp;</label></span></span>)
+        },
         cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/3-thesis-examination',
         cancel: 'Cancel',

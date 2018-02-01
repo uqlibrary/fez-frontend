@@ -1,43 +1,40 @@
 import {connect} from 'react-redux';
-// import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
-import {reduxForm, getFormValues, stopSubmit} from 'redux-form/immutable';
+import {reduxForm, getFormValues, stopSubmit, SubmissionError, reset} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ThesisSubmission from '../components/ThesisSubmission';
-// import {createNewRecord} from 'actions';
-// import {general} from 'config';
+import {submitThesis} from 'actions';
+import {general} from 'config';
 // import {locale} from 'locale';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'ThesisSubmission';
 
-// const onSubmit = (values, dispatch) => {
-const onSubmit = () => {
-    // set default values for a new unapproved record
-    return Promise.resolve();
-    //
-    // return dispatch(createNewRecord({...values.toJS()}))
-    //     .then(() => {
-    //         // once this promise is resolved form is submitted successfully and will call parent container
-    //         // reported bug to redux-form:
-    //         // reset form after success action was dispatched:
-    //         // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-    //         setTimeout(()=>{
-    //             dispatch(reset(FORM_NAME));
-    //         }, 100);
-    //     })
-    //     .catch(error => {
-    //         throw new SubmissionError({_error: error.message});
-    //     });
+const onSubmit = (values, dispatch, props) => {
+    return dispatch(submitThesis({...values.toJS()}, props.author))
+        .then((record) => {
+            console.log(record);
+            // once this promise is resolved form is submitted successfully and will call parent container
+            // reported bug to redux-form:
+            // reset form after success action was dispatched:
+            // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
+            setTimeout(()=>{
+                dispatch(reset(FORM_NAME));
+            }, 100);
+        })
+        .catch(error => {
+            throw new SubmissionError({_error: error});
+        });
 };
 
-const validate = (values) => {
+const validate = () => {
+// const validate = (values) => {
     // add only multi field validations
     // single field validations should be implemented using validate prop: <Field validate={[validation.required]} />
 
     // reset global errors, eg form submit failure
     stopSubmit(FORM_NAME, null);
+
     // const data = values.toJS();
-    console.log(values);
     const errors = {};
 
     // switch(data.rek_display_type) {
@@ -67,7 +64,7 @@ let ThesisSubmissionContainer = reduxForm({
     onSubmit
 })(confirmDiscardFormChanges(ThesisSubmission, FORM_NAME));
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, props) => {
     const currentAuthor = state.get('accountReducer').author;
     const initialValues = {
         currentAuthor: [
@@ -77,12 +74,14 @@ const mapStateToProps = (state) => {
             }
         ],
         fez_record_search_key_org_name: {rek_org_name: 'The University of Queensland'},
-        rek_genre_type: 'Professional Doctorate'
+        ...props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES : general.SBS_THESIS_DEFAULT_VALUES
     };
 
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        initialValues: initialValues
+        initialValues: initialValues,
+        author: currentAuthor,
+        isHdrThesis: props.isHdrThesis
     };
 };
 
