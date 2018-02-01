@@ -44,7 +44,9 @@ const handlers = {
         {
             ...state,
             loadingPossiblePublicationsList: false,
+            loadingPossibleCounts: false,
             possiblePublicationsList: action.payload.data,
+            possibleCounts: action.payload.total,
             possiblePublicationsPagingData: {
                 total: action.payload.total,
                 current_page: action.payload.current_page,
