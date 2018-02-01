@@ -235,7 +235,8 @@ export default {
                     buttonLabel: 'Ok'
                 },
                 excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
-                renameFacetsList: {'Display type': 'Publication type'}
+                renameFacetsList: {'Display type': 'Publication type'},
+                rangesFacetsList: ['Year published']
             }
         },
         claimPublications: {
@@ -286,7 +287,9 @@ export default {
                     text: 'Help about ....',
                     buttonLabel: 'Ok'
                 },
-                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published']
+                excludeFacetsList: ['Scopus document type', 'Subtype', 'Year published'],
+                renameFacetsList: {'Display type': 'Publication type'},
+                rangesFacetsList: ['Year published']
             }
         },
         addRecord: {

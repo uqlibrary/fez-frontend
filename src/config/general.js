@@ -276,3 +276,6 @@ export const thesisSubtypes = [
 
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
+
+export const FACET_TYPE_FILTER = 'filters';
+export const FACET_TYPE_RANGE = 'ranges';
