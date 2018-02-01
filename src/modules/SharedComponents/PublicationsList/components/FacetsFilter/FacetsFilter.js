@@ -72,13 +72,13 @@ export default class FacetsFilter extends React.Component {
 
     getNestedListItems = (facetCategory) => {
         const listItems = facetCategory.facets.map((item, index) => {
-            const isActive = this.state.activeFacets[facetCategory.type].hasOwnProperty(facetCategory.category) && this.state.activeFacets[facetCategory.type][facetCategory.category] === item.key;
+            const isActive = this.state.activeFacets[facetCategory.type].hasOwnProperty(facetCategory.facetTitle) && this.state.activeFacets[facetCategory.type][facetCategory.facetTitle] === item.key;
             return (
                 <ListItem
                     key={index}
                     className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                     primaryText={`${item.title} (${item.count})`}
-                    onClick={() => (this.handleFacetClick(facetCategory.category, item.key, facetCategory.type))}
+                    onClick={() => (this.handleFacetClick(facetCategory.facetTitle, item.key, facetCategory.type))}
                     disabled={this.props.disabled}
                     leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}/>
             );
@@ -99,8 +99,8 @@ export default class FacetsFilter extends React.Component {
 
             // construct facet object to display, if facet has a lookup - get display name from lookup, if facet key has a rename record, then use that
             const facetToDisplay = {
-                category: key, // backend looks for original category but not for renamed title (Display type => Publication type)
                 title: renameFacetsList[key] || key,
+                facetTitle: key,
                 type: FACET_TYPE_FILTER,
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
@@ -124,7 +124,6 @@ export default class FacetsFilter extends React.Component {
 
             facetsToDisplay.push(facetToDisplay);
         });
-
         return facetsToDisplay;
     };
 
