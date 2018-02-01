@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,7 +9,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import {FACET_TYPE_RANGE} from 'config';
 import {locale} from 'locale';
 
-export default class YearPublishedFacetFilter extends React.Component {
+export default class YearPublishedFacetRange extends React.Component {
     static propTypes = {
         onFacetApplied: PropTypes.func,
         handleFacetClick: PropTypes.func,
@@ -58,11 +57,6 @@ export default class YearPublishedFacetFilter extends React.Component {
         this.setState({
             to: validValue < 1000 ? `0${validValue}` : validValue
         });
-    };
-
-    isActive = (activeFacets) => {
-        const txt = locale.components.facetsFilter.yearPublishedFacet;
-        return activeFacets.hasOwnProperty(FACET_TYPE_RANGE) && activeFacets[FACET_TYPE_RANGE].hasOwnProperty(txt.title)
     };
 
     render() {

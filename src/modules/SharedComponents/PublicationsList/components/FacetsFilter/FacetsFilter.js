@@ -7,7 +7,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
 import {publicationTypes, FACET_TYPE_FILTER} from 'config';
 import {locale} from 'locale';
-import YearPublishedFacetFilter from './YearPublishedFacetFilter';
+import YearPublishedFacetRange from './YearPublishedFacetRange';
 
 export default class FacetsFilter extends React.Component {
     static propTypes = {
@@ -16,9 +16,7 @@ export default class FacetsFilter extends React.Component {
         activeFacets: PropTypes.object,
         excludeFacetsList: PropTypes.array,
         renameFacetsList: PropTypes.object,
-        disabled: PropTypes.bool,
-        publishedYearFrom: PropTypes.number,
-        publishedYearTo: PropTypes.number
+        disabled: PropTypes.bool
     };
 
     static defaultProps = {
@@ -101,7 +99,7 @@ export default class FacetsFilter extends React.Component {
 
             // construct facet object to display, if facet has a lookup - get display name from lookup, if facet key has a rename record, then use that
             const facetToDisplay = {
-                category: key,                          // backend looks for original category but not for renamed title (Display type => Publication type)
+                category: key, // backend looks for original category but not for renamed title (Display type => Publication type)
                 title: renameFacetsList[key] || key,
                 type: FACET_TYPE_FILTER,
                 facets: rawFacet.buckets.map((item, index) => {
@@ -153,7 +151,7 @@ export default class FacetsFilter extends React.Component {
                         })
                     }
                     {
-                        <YearPublishedFacetFilter
+                        <YearPublishedFacetRange
                             index={facetsToDisplay.length}
                             activeFacets={this.props.activeFacets}
                             disabled={this.props.disabled}
