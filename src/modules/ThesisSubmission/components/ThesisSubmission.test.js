@@ -18,7 +18,7 @@ describe('ThesisSubmission test', () => {
     it('should render thesis submission form', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(12);
+        expect(wrapper.find('Field').length).toEqual(11);
         expect(wrapper.find('RaisedButton').length).toEqual(2);
     });
 

@@ -207,6 +207,31 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
           />
         </div>
       </div>
+      <div
+        className="columns"
+      >
+        <div
+          className="column"
+        >
+          <Field
+            className="requiredField"
+            component={[Function]}
+            disabled={false}
+            floatingLabelText="Abstract"
+            fullWidth={true}
+            hintText="Provide an abstract or summary of the work"
+            multiLine={true}
+            name="fez_record_search_key_description.rek_description"
+            rows={4}
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </div>
+      </div>
     </StandardCard>
     <StandardCard
       className=""
@@ -293,7 +318,7 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
         Object {
           "buttonLabel": "OK",
           "text": "Some help",
-          "title": "Optional information help",
+          "title": "Field of research help",
         }
       }
       title="Field of research"
@@ -361,7 +386,7 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
       title="Keywords"
     >
       <div>
-        Add keywords that describe the content of the thesis
+        Add up to 10 keywords that describe the content of the thesis
       </div>
       <Field
         component={[Function]}
@@ -371,8 +396,8 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add",
-                "inputFieldHint": "Type keyword value",
-                "inputFieldLabel": "Keyword value",
+                "inputFieldHint": "Type keyword",
+                "inputFieldLabel": "Keyword",
               },
             },
             "header": Object {
@@ -403,7 +428,7 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
             },
           }
         }
-        maxCount={0}
+        maxCount={10}
         name="fez_record_search_key_keywords"
         searchKey={
           Object {
@@ -423,70 +448,25 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
       help={
         Object {
           "buttonLabel": "OK",
-          "text": "Some help",
-          "title": "Optional information help",
-        }
-      }
-      title="Optional information"
-    >
-      <div
-        className="columns"
-      >
-        <div
-          className="column"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            floatingLabelText="Abstract"
-            fullWidth={true}
-            hintText="Provide an abstract or summary of the work"
-            multiLine={true}
-            name="fez_record_search_key_description.rek_description"
-            rows={3}
-            type="text"
-          />
-        </div>
-      </div>
-      <div
-        className="columns"
-      >
-        <div
-          className="column"
-        >
-          <Field
-            component={[Function]}
-            disabled={false}
-            floatingLabelText="Notes (not publicly viewable)"
-            fullWidth={true}
-            hintText="Provide any additional information"
-            multiLine={true}
-            name="fez_record_search_key_notes.rek_notes"
-            rows={2}
-            type="text"
-          />
-        </div>
-      </div>
-    </StandardCard>
-    <StandardCard
-      className=""
-      help={
-        Object {
-          "buttonLabel": "OK",
           "text": "file help...",
           "title": "Upload files",
         }
       }
       title="Upload files"
     >
-      <span>
-        File submission is mandatory. Please refer to 
+      <div>
+        PDF files must be saved using the following naming structure 
+        <b>
+          &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
+        </b>
+        . Stages of examination are: submission, or correctedthesis, or finalthesis. Please refer to 
         <a
           href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination"
+          target="_blank"
         >
           HDR submission guidelines
         </a>
-         for file naming conventions.
+         for file naming conventions. File submission is mandatory.
         <span
           className="requiredField"
         >
@@ -494,7 +474,16 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
              
           </label>
         </span>
-      </span>
+        <br />
+        For example: 
+        <br />
+        - s1234567_phd_thesis.pdf 
+        <br />
+        - s1234567_phd_abstract.pdf 
+        <br />
+        - s1234567_phd_submissionform.pdf 
+        <br />
+      </div>
       <Field
         component={[Function]}
         disabled={false}

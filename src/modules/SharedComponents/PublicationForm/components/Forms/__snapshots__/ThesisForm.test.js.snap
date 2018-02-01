@@ -234,7 +234,7 @@ exports[`ThesisForm renders  component 1`] = `
       Object {
         "buttonLabel": "OK",
         "text": "Some help",
-        "title": "Optional information help",
+        "title": "Field of research help",
       }
     }
     title="Field of research"

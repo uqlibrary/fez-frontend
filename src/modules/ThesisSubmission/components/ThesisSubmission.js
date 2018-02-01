@@ -46,7 +46,17 @@ export default class ThesisSubmission extends Component {
                 message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
             };
         } else if (dirty && invalid) {
-            alertProps = {...alertLocale.validationAlert};
+            const message = (
+                <span>
+                    {alertLocale.validationAlert.message}
+                    <ul>
+                        {
+                            error && error.length > 0 && error.map((item, index) => (<li key={`validation-${index}`}>{item}</li>))
+                        }
+                    </ul>
+                </span>);
+
+            alertProps = {...alertLocale.validationAlert, message: message};
         } else if (submitting) {
             alertProps = {...alertLocale.progressAlert};
         } else if (submitSucceeded) {
@@ -85,7 +95,6 @@ export default class ThesisSubmission extends Component {
                 </StandardPage>
             );
         }
-        console.log(this.props);
         return (
             <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
                 <p>{formLocale.thesisSubmission.text}</p>
@@ -169,6 +178,21 @@ export default class ThesisSubmission extends Component {
                                     validate={[validation.required]}/>
                             </div>
                         </div>
+                        <div className="columns">
+                            <div className="column">
+                                <Field
+                                    component={TextField}
+                                    name="fez_record_search_key_description.rek_description"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    multiLine
+                                    className="requiredField"
+                                    validate={[validation.required]}
+                                    rows={4}
+                                    {...txt.optional.fieldLabels.abstract} />
+                            </div>
+                        </div>
                     </StandardCard>
 
                     <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
@@ -202,40 +226,11 @@ export default class ThesisSubmission extends Component {
                         <Field
                             component={ListEditorField}
                             name="fez_record_search_key_keywords"
-                            maxCount={0}
+                            maxCount={10}
                             validate={[validation.requiredList]}
                             searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
                             locale={locale.components.keywordsForm.field}
                             disabled={this.props.submitting}/>
-                    </StandardCard>
-
-                    <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <div className="columns">
-                            <div className="column">
-                                <Field
-                                    component={TextField}
-                                    name="fez_record_search_key_description.rek_description"
-                                    type="text"
-                                    disabled={this.props.submitting}
-                                    fullWidth
-                                    multiLine
-                                    rows={3}
-                                    {...txt.optional.fieldLabels.abstract} />
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Field
-                                    component={TextField}
-                                    name="fez_record_search_key_notes.rek_notes"
-                                    type="text"
-                                    disabled={this.props.submitting}
-                                    fullWidth
-                                    multiLine
-                                    rows={2}
-                                    {...txt.optional.fieldLabels.notes} />
-                            </div>
-                        </div>
                     </StandardCard>
 
                     <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>

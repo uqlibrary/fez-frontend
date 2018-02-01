@@ -484,7 +484,7 @@ export default {
         fieldOfResearch: {
             title: 'Field of research',
             help: {
-                title: 'Optional information help',
+                title: 'Field of research help',
                 text: 'Some help',
                 buttonLabel: 'OK'
             },
@@ -497,7 +497,7 @@ export default {
                 text: 'Some help',
                 buttonLabel: 'OK'
             },
-            description: 'Add keywords that describe the content of the thesis'
+            description: 'Add up to 10 keywords that describe the content of the thesis'
         },
         optional: {
             title: 'Optional information',
@@ -1085,8 +1085,18 @@ export default {
                 text: 'file help...',
                 buttonLabel: 'OK'
             },
-            text: (<span>
-                File submission is mandatory. Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination">HDR submission guidelines</a> for file naming conventions.<span className="requiredField"><label>&nbsp;</label></span></span>)
+            text: (
+                <div>
+                    PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
+                    Stages of examination are: submission, or correctedthesis, or finalthesis.
+                    Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
+                    File submission is mandatory.<span className="requiredField"><label>&nbsp;</label></span><br/>
+                    For example: <br />
+                    - s1234567_phd_thesis.pdf <br/>
+                    - s1234567_phd_abstract.pdf <br/>
+                    - s1234567_phd_submissionform.pdf <br/>
+                </div>
+            )
         },
         cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/3-thesis-examination',
