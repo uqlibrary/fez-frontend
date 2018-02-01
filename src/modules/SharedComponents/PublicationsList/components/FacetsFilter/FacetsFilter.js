@@ -62,13 +62,13 @@ export default class FacetsFilter extends React.Component {
 
     getNestedListItems = (facetCategory) => {
         const listItems = facetCategory.facets.map((item, index) => {
-            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.title) && this.state.activeFacets[facetCategory.title] === item.key;
+            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.facetTitle) && this.state.activeFacets[facetCategory.facetTitle] === item.key;
             return (
                 <ListItem
                     key={index}
                     className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                     primaryText={`${item.title} (${item.count})`}
-                    onClick={() => (this.handleFacetClick(facetCategory.title, item.key))}
+                    onClick={() => (this.handleFacetClick(facetCategory.facetTitle, item.key))}
                     disabled={this.props.disabled}
                     leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}/>
             );
@@ -90,6 +90,7 @@ export default class FacetsFilter extends React.Component {
             // construct facet object to display, if facet has a lookup - get display name from lookup, if facet key has a rename record, then use that
             const facetToDisplay = {
                 title: renameFacetsList[key] || key,
+                facetTitle: key,
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
                         const typeIndex = publicationTypes().findIndex((type) => {
@@ -112,7 +113,6 @@ export default class FacetsFilter extends React.Component {
 
             facetsToDisplay.push(facetToDisplay);
         });
-
         return facetsToDisplay;
     }
 
