@@ -14,7 +14,7 @@ export const cache = setupCache({
         query: false,
         paths: [
             'external/records/search',
-            'records/search?rule=lookup',
+            'records/search?rule=',
             'records/search?title=',
             'records/search?doi=',
             'records/search?id=pmid:',
