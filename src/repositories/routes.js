@@ -7,8 +7,11 @@ import {validation} from 'config';
  */
 export const getFacetsParams = (facets) => {
     const facetsParam = {};
-    Object.keys(facets).map(key => {
-        facetsParam[`filters[facets][${key}]`] = facets[key];
+    facets.hasOwnProperty('filters') && Object.keys(facets.filters).map(key => {
+        facetsParam[`filters[facets][${key}]`] = facets.filters[key];
+    });
+    facets.hasOwnProperty('ranges') && Object.keys(facets.ranges).map(key => {
+        facetsParam[`ranges[facets][${key}]`] = facets.ranges[key];
     });
     return facetsParam;
 };
