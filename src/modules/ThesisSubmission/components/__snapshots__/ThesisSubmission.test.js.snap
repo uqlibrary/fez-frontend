@@ -2,7 +2,7 @@
 
 exports[`ThesisSubmission test should display successfull submission screen 1`] = `
 <StandardPage
-  title="Higher degree by research thesis deposit"
+  title="Professional doctorate deposit"
 >
   <StandardCard
     className=""
@@ -36,18 +36,19 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
 
 exports[`ThesisSubmission test should render thesis submission form 1`] = `
 <StandardPage
-  title="Higher degree by research thesis deposit"
+  title="Professional doctorate deposit"
 >
   <p>
-    Required fields are marked with 
-    <span
-      className="requiredField"
-    >
-      <label>
-         
-      </label>
+    <span>
+      Required fields are marked with 
+      <span
+        className="requiredField"
+      >
+        <label>
+           
+        </label>
+      </span>
     </span>
-     
   </p>
   <form>
     <NavigationDialogBox
@@ -478,8 +479,8 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
       }
       title="Upload files"
     >
-      <p>
-        Please refer to 
+      <span>
+        File submission is mandatory. Please refer to 
         <a
           href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination"
         >
@@ -490,10 +491,10 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
           className="requiredField"
         >
           <label>
-             File submission is required
+             
           </label>
         </span>
-      </p>
+      </span>
       <Field
         component={[Function]}
         disabled={false}
