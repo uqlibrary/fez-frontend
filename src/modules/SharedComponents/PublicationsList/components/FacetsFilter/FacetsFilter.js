@@ -5,7 +5,7 @@ import FlatButton from 'material-ui/RaisedButton';
 import {List, ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-import {publicationTypes} from 'config';
+import {publicationTypes, FACET_TYPE_FILTER} from 'config';
 import {locale} from 'locale';
 import YearPublishedFacetFilter from './YearPublishedFacetFilter';
 
@@ -42,15 +42,21 @@ export default class FacetsFilter extends React.Component {
         }
     }
 
-    handleFacetClick = (category, facet) => {
+    handleFacetClick = (category, facet, facetType) => {
         if (this.props.disabled) {
             return;
         }
-        const activeFacets = {...this.state.activeFacets};
-        if (activeFacets.hasOwnProperty(category) && activeFacets[category] === facet) {
-            delete activeFacets[category];
+
+        const activeFacets = {
+            filters: {...this.state.activeFacets.filters},
+            ranges: {...this.state.activeFacets.ranges},
+        };
+
+
+        if (activeFacets[facetType].hasOwnProperty(category) && activeFacets[facetType][category] === facet) {
+            delete activeFacets[facetType][category];
         } else {
-            activeFacets[category] = facet;
+            activeFacets[facetType][category] = facet;
         }
         this.setState({
             activeFacets: {...activeFacets}
@@ -59,19 +65,22 @@ export default class FacetsFilter extends React.Component {
 
     handleResetClick = () => {
         this.setState({
-            activeFacets: {}
+            activeFacets: {
+                filters: {},
+                ranges: {}
+            }
         });
     };
 
     getNestedListItems = (facetCategory) => {
         const listItems = facetCategory.facets.map((item, index) => {
-            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.title) && this.state.activeFacets[facetCategory.title] === item.key;
+            const isActive = this.state.activeFacets[facetCategory.type].hasOwnProperty(facetCategory.category) && this.state.activeFacets[facetCategory.type][facetCategory.category] === item.key;
             return (
                 <ListItem
                     key={index}
                     className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                     primaryText={`${item.title} (${item.count})`}
-                    onClick={() => (this.handleFacetClick(facetCategory.title, item.key))}
+                    onClick={() => (this.handleFacetClick(facetCategory.category, item.key, facetCategory.type))}
                     disabled={this.props.disabled}
                     leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}/>
             );
@@ -92,14 +101,16 @@ export default class FacetsFilter extends React.Component {
 
             // construct facet object to display, if facet has a lookup - get display name from lookup, if facet key has a rename record, then use that
             const facetToDisplay = {
+                category: key,                          // backend looks for original category but not for renamed title (Display type => Publication type)
                 title: renameFacetsList[key] || key,
+                type: FACET_TYPE_FILTER,
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
-                        const typeIndex = publicationTypes().findIndex((type) => {
-                            return type.id === rawFacet.buckets[index].key;
+                        const publicationTypeIndex = publicationTypes().findIndex((publicationType) => {
+                            return publicationType.id === rawFacet.buckets[index].key;
                         });
                         return {
-                            title: typeIndex > -1 ? publicationTypes()[typeIndex].name : 'Unknown',
+                            title: publicationTypeIndex > -1 ? publicationTypes()[publicationTypeIndex].name : 'Unknown',
                             key: item.key,
                             count: item.doc_count
                         };
@@ -128,11 +139,11 @@ export default class FacetsFilter extends React.Component {
                 <List>
                     {
                         facetsToDisplay.map((item, index) => {
-                            const isActive = this.state.activeFacets.hasOwnProperty(item.title);
+                            const isActive = this.state.activeFacets[item.type].hasOwnProperty(item.title);
                             return (
                                 <ListItem
                                     primaryText={item.title}
-                                    open={this.state.activeFacets[item.title] && true}
+                                    open={this.state.activeFacets[item.type][item.title] && true}
                                     disabled={this.props.disabled}
                                     className={'facetsCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                                     primaryTogglesNestedList
@@ -147,12 +158,11 @@ export default class FacetsFilter extends React.Component {
                             activeFacets={this.props.activeFacets}
                             disabled={this.props.disabled}
                             handleFacetClick={this.handleFacetClick}
-                            onFacetApplied={this.handleFacetClick}
                         />
                     }
                 </List>
                 {
-                    Object.keys(this.state.activeFacets).length > 0 &&
+                    (Object.keys(this.state.activeFacets.filters).length > 0 || Object.keys(this.state.activeFacets.ranges).length > 0) &&
                     <div className="columns">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-tablet">
