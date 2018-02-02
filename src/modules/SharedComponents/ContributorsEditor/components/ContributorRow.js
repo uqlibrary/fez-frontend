@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
+import ReactTooltip from 'react-tooltip';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 
 export default class ContributorRow extends Component {
@@ -39,6 +40,10 @@ export default class ContributorRow extends Component {
 
     constructor(props) {
         super(props);
+    }
+
+    componentDidUpdate() {
+        ReactTooltip.rebuild();
     }
 
     _showConfirmation = () => {
@@ -79,37 +84,23 @@ export default class ContributorRow extends Component {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}
                     locale={deleteRecordConfirmation} />
+                <ReactTooltip className="reactTooltip" place="top" effect="float" />
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
                         <div className="columns is-gapless contributorDetails"
                             onClick={this._onContributorAssigned}
                             onKeyDown={this._onContributorAssignedKeyboard}
                             tabIndex="0"
-                            aria-label="This will be the aria label for screen readers"
+                            data-tip={this.props.contributor.selected ? null : 'Click to assign this author as you'}
+                            data-place="top"
                         >
-                            {
-                                this.props.contributor.selected ?
-                                    <div className="column is-narrow is-hidden-mobile">
-                                        <IconButton
-                                            tooltip="This is you"
-                                            tooltipPosition="bottom-right"
-                                            className="selectedAuthorIcon"
-                                            disabled={this.props.disabled}>
-                                            <FontIcon className="material-icons">person</FontIcon>
-                                        </IconButton>
-                                    </div>
-                                    :
-                                    <div className="column is-narrow is-hidden-mobile">
-                                        <IconButton
-                                            tooltip="Select this entry as you"
-                                            tooltipPosition="bottom-right"
-                                            onClick={this._onContributorAssigned}
-                                            onKeyDown={this._onContributorAssignedKeyboard}
-                                            disabled={this.props.disabled}>
-                                            <FontIcon className="material-icons unselectedAuthorIcon">person_outline</FontIcon>
-                                        </IconButton>
-                                    </div>
-                            }
+                            <div className="column is-narrow is-hidden-mobile">
+                                <IconButton
+                                    className="selectedAuthorIcon"
+                                    disabled={this.props.disabled}>
+                                    <FontIcon className="material-icons">{this.props.contributor.selected ? 'person' : 'person_outline'}</FontIcon>
+                                </IconButton>
+                            </div>
                             <div className="column datalist-text">
                                 <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
                                 <span className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
@@ -129,7 +120,7 @@ export default class ContributorRow extends Component {
                             <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
                                 {this.props.canMoveUp &&
                                 <IconButton
-                                    tooltip={this.props.locale.moveUpHint}
+                                    data-tip={this.props.locale.moveUpHint}
                                     onTouchTap={this._onMoveUp}
                                     className="reorderUp"
                                     disabled={this.props.disabled}>
@@ -138,7 +129,7 @@ export default class ContributorRow extends Component {
                                 }
                                 {this.props.canMoveDown &&
                                 <IconButton
-                                    tooltip={this.props.locale.moveDownHint}
+                                    data-tip={this.props.locale.moveDownHint}
                                     onTouchTap={this._onMoveDown}
                                     className="reorderDown"
                                     disabled={this.props.disabled}>
@@ -149,7 +140,7 @@ export default class ContributorRow extends Component {
                             <div className="column is-narrow contributorDelete datalist-buttons">
                                 <IconButton
                                     className="contributorDelete"
-                                    tooltip={this.props.locale.deleteHint}
+                                    data-tip={this.props.locale.deleteHint}
                                     onTouchTap={this._showConfirmation}
                                     disabled={this.props.disabled}>
                                     <FontIcon className="material-icons deleteIcon">delete</FontIcon>

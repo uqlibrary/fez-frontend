@@ -115,3 +115,17 @@ button[type=button] {
 .scrollbar-spacer{
   width: 17px !important;
 }
+
+// Styles to restyle the react-tooltip component
+.reactTooltip{
+  padding: 6px 10px !important;
+  font-size: $text-body-xsmall !important;
+  background: lighten($text-color, 20%) !important;
+  color: $text-color-reverse !important;
+  &.place-right::after {
+    border-color: transparent lighten($text-color, 20%) !important;
+  }
+  &.place-top::after {
+    border-color: lighten($text-color, 20%) transparent !important;
+  }
+}

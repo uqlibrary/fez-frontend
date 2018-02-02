@@ -144,7 +144,7 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div><span className="authorSteps">Step 1 of 2</span> - Please add to a list of authors below, in the format and order that they are published.</div>
+                            <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
                         ),
                         nameAsPublishedLabel: 'Enter each author\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
@@ -155,7 +155,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div style={{marginTop: '12px'}}><br /><span className="authorSteps">Step 2 of 2</span> - Please select your name once from the list below (if applicable).</div>
+                            <div style={{marginTop: '12px'}}><br /><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> once from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Author\'s name as published',
