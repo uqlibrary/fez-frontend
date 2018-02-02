@@ -455,32 +455,41 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
-                    hintText: 'Thesis title'
+                    hintText: 'Thesis title',
+                    errorMessage: 'Thesis title is required'
                 },
                 orgName: {
                     floatingLabelText: 'Institution name',
-                    hintText: ''
+                    hintText: '',
+                    errorMessage: 'Institution name is required'
                 },
                 orgUnitName: {
                     floatingLabelText: 'School, Institute or Centre',
-                    hintText: ''
+                    hintText: '',
+                    errorMessage: 'School, institute or centre is required'
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
+                    errorMessage: 'Publication date is required'
                 },
                 thesisType: {
-                    label: 'Thesis type'
+                    label: 'Thesis type',
+                    errorMessage: 'Thesis type is required'
                 },
                 author: {
                     floatingLabelText: 'Author name',
-                    hintText: ''
+                    hintText: '',
+                    errorMessage: 'Author name is required'
                 }
             }
         },
-        supervisors: txt.components.supervisors,
+        supervisors: {
+            ...txt.components.supervisors,
+            errorMessage: 'Supervisor are required'
+        },
         fieldOfResearch: {
             title: 'Field of research',
             help: {
@@ -488,7 +497,8 @@ export default {
                 text: 'Some help',
                 buttonLabel: 'OK'
             },
-            description: 'Select up to 3 Field of Research (FoR) codes'
+            description: 'Select up to 3 Field of Research (FoR) codes',
+            errorMessage: 'Field of research (FoR) is required'
         },
         keywords: {
             title: 'Keywords',
@@ -497,7 +507,8 @@ export default {
                 text: 'Some help',
                 buttonLabel: 'OK'
             },
-            description: 'Add up to 10 keywords that describe the content of the thesis'
+            description: 'Add up to 10 keywords that describe the content of the thesis',
+            errorMessage: 'Keywords are required'
         },
         optional: {
             title: 'Optional information',
@@ -517,7 +528,8 @@ export default {
                 },
                 abstract: {
                     floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work'
+                    hintText: 'Provide an abstract or summary of the work',
+                    errorMessage: 'Abstract is required'
                 },
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -1044,7 +1056,8 @@ export default {
             title: 'Upload files',
             text: 'file help...',
             buttonLabel: 'OK'
-        }
+        },
+        errorMessage: 'File submission is mandatory'
     },
     cancelWorkflowConfirmation: {
         confirmationTitle: 'Abandon workflow',

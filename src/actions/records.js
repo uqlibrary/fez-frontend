@@ -125,6 +125,16 @@ export function submitThesis(data, author) {
 
                 if (!fileUploadSucceeded) {
                     specificError = 'File upload failed. Issue has been created to notify eSpace administrators. ';
+                } else {
+                    const issue = {issue: `Thesis submission failed for user ${author.aut_student_username}
+                    app: ${navigator.appVersion}, 
+                    connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
+                    connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, 
+                    user agent: ${navigator.userAgent}
+                    error status: ${error.status}
+                    error message: ${error.message}`
+                    };
+                    post(routes.RECORDS_ISSUES_API({pid: `UQ:${author.aut_student_username}`}), issue);
                 }
 
                 return Promise.reject(`${specificError} ${ error.message ? `(${error.message})` : '' }`);

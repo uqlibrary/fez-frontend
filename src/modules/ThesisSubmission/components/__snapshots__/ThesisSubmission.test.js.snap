@@ -88,6 +88,7 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
+            errorMessage="Thesis title is required"
             floatingLabelText="Title"
             fullWidth={true}
             hintText="Thesis title"
@@ -113,6 +114,7 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
+            errorMessage="School, institute or centre is required"
             floatingLabelText="School, Institute or Centre"
             hintText=""
             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
@@ -130,6 +132,7 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
+            errorMessage="Institution name is required"
             floatingLabelText="Institution name"
             hintText=""
             name="fez_record_search_key_org_name.rek_org_name"
@@ -153,6 +156,7 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
             disabled={false}
             locale={
               Object {
+                "errorMessage": "Thesis type is required",
                 "label": "Thesis type",
               }
             }
@@ -193,6 +197,7 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
+            errorMessage="Author name is required"
             floatingLabelText="Author name"
             fullWidth={true}
             hintText=""
@@ -217,6 +222,7 @@ exports[`ThesisSubmission test should render thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
+            errorMessage="Abstract is required"
             floatingLabelText="Abstract"
             fullWidth={true}
             hintText="Provide an abstract or summary of the work"

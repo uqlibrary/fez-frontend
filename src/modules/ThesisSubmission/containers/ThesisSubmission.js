@@ -4,7 +4,8 @@ import Immutable from 'immutable';
 import ThesisSubmission from '../components/ThesisSubmission';
 import {submitThesis} from 'actions';
 import {general} from 'config';
-// import {locale} from 'locale';
+import {default as formLocale} from 'locale/publicationForm';
+
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'ThesisSubmission';
@@ -34,49 +35,50 @@ const validate = (values) => {
 
     const data = values.toJS();
     const errors = [];
+    const txt = formLocale.thesis;
 
     if (!data.rek_title) {
-        errors.push('Thesis title is required');
+        errors.push(txt.information.fieldLabels.documentTitle.errorMessage);
     }
 
-    if (data.fez_record_search_key_org_unit_name && !data.fez_record_search_key_org_unit_name.rek_org_unit_name) {
-        errors.push('School, institute or centre is required');
+    if (!data.fez_record_search_key_org_unit_name || !data.fez_record_search_key_org_unit_name.rek_org_unit_name) {
+        errors.push(txt.information.fieldLabels.orgUnitName.errorMessage);
     }
 
-    if (!data.fez_record_search_key_org_name.rek_org_name) {
-        errors.push('Institution name is required');
+    if (!data.fez_record_search_key_org_name || !data.fez_record_search_key_org_name.rek_org_name) {
+        errors.push(txt.information.fieldLabels.orgName.errorMessage);
     }
 
     if (!data.rek_genre_type) {
-        errors.push('Thesis type is required');
+        errors.push(txt.information.fieldLabels.thesisType.errorMessage);
     }
 
     if (!data.rek_date) {
-        errors.push('Publication date is required');
+        errors.push(txt.information.fieldLabels.date.errorMessage);
     }
 
-    if (!data.currentAuthor || data.currentAuthor.length === 0) {
-        errors.push('Thesis author name is required');
+    if (!data.currentAuthor || data.currentAuthor.length === 0 || !data.currentAuthor[0].nameAsPublished) {
+        errors.push(txt.information.fieldLabels.author.errorMessage);
     }
 
-    if (data.fez_record_search_key_description && !data.fez_record_search_key_description.rek_description) {
-        errors.push('Abstract is required');
+    if (!data.fez_record_search_key_description || !data.fez_record_search_key_description.rek_description) {
+        errors.push(txt.optional.fieldLabels.abstract.errorMessage);
     }
 
     if (!data.supervisors || data.supervisors.length === 0) {
-        errors.push('Supervisors are required');
+        errors.push(txt.supervisors.errorMessage);
     }
 
     if (!data.fieldOfResearch || data.fieldOfResearch.length === 0) {
-        errors.push('Field of research values are required');
+        errors.push(txt.fieldOfResearch.errorMessage);
     }
 
     if (!data.fez_record_search_key_keywords || data.fez_record_search_key_keywords.length === 0) {
-        errors.push('Keyword values are required');
+        errors.push(txt.keywords.errorMessage);
     }
 
     if (!data.files || data.files.queue.length === 0) {
-        errors.push('Thesis files are required');
+        errors.push(formLocale.fileUpload.errorMessage);
     }
 
     return errors.length > 0 ? {_error: errors} : null;
