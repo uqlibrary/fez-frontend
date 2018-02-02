@@ -76,7 +76,8 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
                 rek_file_attachment_access_condition: item.access_condition_id,
                 rek_file_attachment_access_condition_order: initialCount + index + 1
             };
-        });
+        })
+        .filter((file) => (file !== null));
 
     return {
         fez_record_search_key_file_attachment_name: [
@@ -127,7 +128,7 @@ export const getRecordSubjectSearchKey = (subjects) => {
     return {
         fez_record_search_key_subject: subjects.map((item, index) => (
             {
-                rek_subject_id: item.rek_value.key,
+                rek_subject: item.rek_value.key,
                 rek_subject_order: index + 1
             }
         ))
