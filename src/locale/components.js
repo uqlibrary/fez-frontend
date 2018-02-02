@@ -7,7 +7,8 @@ export default {
                 title: 'Year published',
                 fromFieldLabel: 'From',
                 toFieldLabel: 'To',
-                minYearValue: 500
+                minYearValue: 2010,
+                rangeSubmitButtonLabel: 'Go'
             }
         },
         publicationStats: {

@@ -11,18 +11,17 @@ import {locale} from 'locale';
 
 export default class YearPublishedFacetRange extends React.Component {
     static propTypes = {
-        onFacetApplied: PropTypes.func,
         handleFacetClick: PropTypes.func,
         activeFacets: PropTypes.object,
         disabled: PropTypes.bool,
-        from: PropTypes.number,
-        to: PropTypes.number,
+        minYearValue: PropTypes.number,
+        maxYearValue: PropTypes.number,
         index: PropTypes.number
     };
 
     static defaultProps = {
-        from: 1901,
-        to: (new Date()).getFullYear()
+        minYearValue: locale.components.facetsFilter.yearPublishedFacet.minYearValue,
+        maxYearValue: (new Date()).getFullYear() + 5
     };
 
     constructor(props) {
@@ -39,24 +38,32 @@ export default class YearPublishedFacetRange extends React.Component {
             };
         } else {
             this.state = {
-                from: this.props.from,
-                to: this.props.to
+                from: this.props.minYearValue,
+                to: this.props.maxYearValue
             };
         }
     }
 
     setFromValue = (event, value) => {
-        const validValue = isNaN(value) ? '*' : value;
         this.setState({
-            from: validValue < 1000 ? `0${validValue}` : validValue
+            from: isNaN(parseInt(value, 10)) ? undefined : ('0000' + value).substr(-4)
         });
     };
 
     setToValue = (event, value) => {
-        const validValue = isNaN(value) ? '*' : value;
         this.setState({
-            to: validValue < 1000 ? `0${validValue}` : validValue
+            to: isNaN(parseInt(value, 10)) ? undefined : ('0000' + value).substr(-4)
         });
+    };
+
+    _handleRangeFacetClick = () => {
+        const txt = locale.components.facetsFilter.yearPublishedFacet;
+        const parsedFromValue = parseInt(this.state.from, 10);
+        const parsedToValue = parseInt(this.state.to, 10);
+        const from = parsedFromValue > parsedToValue ? this.state.to : (this.state.from || '*');
+        const to = parsedToValue < parsedFromValue ? this.state.from : (this.state.to || '*');
+
+        return this.props.handleFacetClick(txt.title, `[${from} TO ${to}]`, FACET_TYPE_RANGE);
     };
 
     render() {
@@ -76,8 +83,8 @@ export default class YearPublishedFacetRange extends React.Component {
                             key="key_facet_item"
                             id="activeYearPublishedFacet"
                             className={'facetsYearLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
-                            primaryText={isActive ? `${this.state.from} - ${this.state.to}` : ''}
-                            onClick={isActive ? () => (this.props.handleFacetClick(txt.title, `[${this.state.from} TO ${this.state.to}]`, FACET_TYPE_RANGE)) : () => {}}
+                            primaryText={isActive ? `${this.state.from || '*'} - ${this.state.to || '*'}` : ''}
+                            onClick={isActive ? this._handleRangeFacetClick : () => {}}
                             disabled={this.props.disabled}
                             leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}
                         >
@@ -87,7 +94,7 @@ export default class YearPublishedFacetRange extends React.Component {
                                     <div className="facetsYearFrom column">
                                         <TextField
                                             type="number"
-                                            min={Math.max(txt.minYearValue, this.props.from)}
+                                            min={this.props.minYearValue}
                                             max={this.state.to}
                                             floatingLabelText={txt.fromFieldLabel}
                                             defaultValue={this.state.from}
@@ -100,7 +107,7 @@ export default class YearPublishedFacetRange extends React.Component {
                                         <TextField
                                             type="number"
                                             min={this.state.from}
-                                            max={this.props.to}
+                                            max={this.props.maxYearValue}
                                             floatingLabelText={txt.toFieldLabel}
                                             defaultValue={this.state.to}
                                             onChange={this.setToValue}
@@ -110,8 +117,8 @@ export default class YearPublishedFacetRange extends React.Component {
                                     <div className="facetsYearSeparator column is-narrow" />
                                     <div className="facetsYearGo column is-narrow">
                                         <FlatButton
-                                            label="Go"
-                                            onClick={() => (this.props.handleFacetClick(txt.title, `[${this.state.from} TO ${this.state.to}]`, FACET_TYPE_RANGE))}
+                                            label={txt.rangeSubmitButtonLabel}
+                                            onClick={this._handleRangeFacetClick}
                                             className="is-mui-spacing-button"
                                             fullWidth
                                         />

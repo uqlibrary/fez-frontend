@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YearPublishedFacetRange renders  range descriptor when active 1`] = `
+<div
+  className="facetsYear"
+>
+  <ListItem
+    autoGenerateNestedIndicator={true}
+    className="facetsYearCategory active "
+    containerElement="span"
+    disableKeyboardFocus={false}
+    disabled={false}
+    initiallyOpen={false}
+    insetChildren={false}
+    key="key_facet_item_0"
+    nestedItems={
+      Array [
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          className="facetsYearLink active "
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          id="activeYearPublishedFacet"
+          initiallyOpen={false}
+          insetChildren={false}
+          leftIcon={
+            <NavigationClose
+              disabled={false}
+            />
+          }
+          nestedItems={Array []}
+          nestedLevel={0}
+          onClick={[Function]}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          open={null}
+          primaryText="2010 - 2016"
+          primaryTogglesNestedList={false}
+          secondaryTextLines={1}
+        />,
+      ]
+    }
+    nestedLevel={0}
+    onKeyboardFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onNestedListToggle={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    open={true}
+    primaryText="Published year range"
+    primaryTogglesNestedList={true}
+    secondaryTextLines={1}
+  />
+</div>
+`;
+
+exports[`YearPublishedFacetRange renders  range selector as disabled 1`] = `
+<div
+  className="facetsYear"
+>
+  <ListItem
+    autoGenerateNestedIndicator={true}
+    className="facetsYearCategory disabled"
+    containerElement="span"
+    disableKeyboardFocus={false}
+    disabled={true}
+    initiallyOpen={false}
+    insetChildren={false}
+    key="key_facet_item_0"
+    nestedItems={
+      Array [
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          className="facetsYearLink disabled"
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={true}
+          id="activeYearPublishedFacet"
+          initiallyOpen={false}
+          insetChildren={false}
+          leftIcon={null}
+          nestedItems={Array []}
+          nestedLevel={0}
+          onClick={[Function]}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          open={null}
+          primaryText=""
+          primaryTogglesNestedList={false}
+          secondaryTextLines={1}
+        >
+          <div
+            className="yearPublished columns is-gapless"
+          >
+            <div
+              className="facetsYearFrom column"
+            >
+              <TextField
+                defaultValue={2010}
+                disabled={false}
+                floatingLabelFixed={false}
+                floatingLabelText="From"
+                fullWidth={true}
+                max={2020}
+                min={2010}
+                multiLine={false}
+                onChange={[Function]}
+                rows={1}
+                type="number"
+                underlineShow={true}
+              />
+            </div>
+            <div
+              className="facetsYearSeparator column is-narrow"
+            />
+            <div
+              className="facetsYearTo column"
+            >
+              <TextField
+                defaultValue={2020}
+                disabled={false}
+                floatingLabelFixed={false}
+                floatingLabelText="To"
+                fullWidth={true}
+                max={2020}
+                min={2010}
+                multiLine={false}
+                onChange={[Function]}
+                rows={1}
+                type="number"
+                underlineShow={true}
+              />
+            </div>
+            <div
+              className="facetsYearSeparator column is-narrow"
+            />
+            <div
+              className="facetsYearGo column is-narrow"
+            >
+              <FlatButton
+                className="is-mui-spacing-button"
+                disabled={false}
+                fullWidth={true}
+                label="Go"
+                labelPosition="after"
+                labelStyle={Object {}}
+                onClick={[Function]}
+                onKeyboardFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onTouchStart={[Function]}
+                primary={false}
+                secondary={false}
+              />
+            </div>
+          </div>
+        </ListItem>,
+      ]
+    }
+    nestedLevel={0}
+    onKeyboardFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onNestedListToggle={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    open={null}
+    primaryText="Published year range"
+    primaryTogglesNestedList={true}
+    secondaryTextLines={1}
+  />
+</div>
+`;
+
+exports[`YearPublishedFacetRange renders  range selector with default values populated 1`] = `
+<div
+  className="facetsYear"
+>
+  <ListItem
+    autoGenerateNestedIndicator={true}
+    className="facetsYearCategory "
+    containerElement="span"
+    disableKeyboardFocus={false}
+    disabled={false}
+    initiallyOpen={false}
+    insetChildren={false}
+    key="key_facet_item_0"
+    nestedItems={
+      Array [
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          className="facetsYearLink "
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          id="activeYearPublishedFacet"
+          initiallyOpen={false}
+          insetChildren={false}
+          leftIcon={null}
+          nestedItems={Array []}
+          nestedLevel={0}
+          onClick={[Function]}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          open={null}
+          primaryText=""
+          primaryTogglesNestedList={false}
+          secondaryTextLines={1}
+        >
+          <div
+            className="yearPublished columns is-gapless"
+          >
+            <div
+              className="facetsYearFrom column"
+            >
+              <TextField
+                defaultValue={2010}
+                disabled={false}
+                floatingLabelFixed={false}
+                floatingLabelText="From"
+                fullWidth={true}
+                max={2020}
+                min={2010}
+                multiLine={false}
+                onChange={[Function]}
+                rows={1}
+                type="number"
+                underlineShow={true}
+              />
+            </div>
+            <div
+              className="facetsYearSeparator column is-narrow"
+            />
+            <div
+              className="facetsYearTo column"
+            >
+              <TextField
+                defaultValue={2020}
+                disabled={false}
+                floatingLabelFixed={false}
+                floatingLabelText="To"
+                fullWidth={true}
+                max={2020}
+                min={2010}
+                multiLine={false}
+                onChange={[Function]}
+                rows={1}
+                type="number"
+                underlineShow={true}
+              />
+            </div>
+            <div
+              className="facetsYearSeparator column is-narrow"
+            />
+            <div
+              className="facetsYearGo column is-narrow"
+            >
+              <FlatButton
+                className="is-mui-spacing-button"
+                disabled={false}
+                fullWidth={true}
+                label="Go"
+                labelPosition="after"
+                labelStyle={Object {}}
+                onClick={[Function]}
+                onKeyboardFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onTouchStart={[Function]}
+                primary={false}
+                secondary={false}
+              />
+            </div>
+          </div>
+        </ListItem>,
+      ]
+    }
+    nestedLevel={0}
+    onKeyboardFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onNestedListToggle={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    open={null}
+    primaryText="Published year range"
+    primaryTogglesNestedList={true}
+    secondaryTextLines={1}
+  />
+</div>
+`;
