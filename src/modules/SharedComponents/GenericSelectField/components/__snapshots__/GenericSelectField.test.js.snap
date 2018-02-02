@@ -18,7 +18,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
       "loading": "loading...",
     }
   }
-  onChange={[MockFunction]}x
+  onChange={[MockFunction]}
   parentItemsId={null}
   selectedValue={null}
 >
@@ -1898,7 +1898,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
               }
             }
           >
-            Select item
+            Select item 
           </label>
         </TextFieldLabel>
         <DropDownMenu
@@ -3286,7 +3286,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
               }
             }
           >
-            Select item
+            Select item 
           </label>
         </TextFieldLabel>
         <DropDownMenu
