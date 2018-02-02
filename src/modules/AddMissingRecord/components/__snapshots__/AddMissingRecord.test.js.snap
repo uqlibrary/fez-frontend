@@ -26,7 +26,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
     author={null}
     history={
       Object {
-        "push": [Function],
+        "push": [MockFunction],
       }
     }
     location={
@@ -66,7 +66,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
     author={null}
     history={
       Object {
-        "push": [Function],
+        "push": [MockFunction],
       }
     }
     location={
@@ -106,7 +106,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
     author={null}
     history={
       Object {
-        "push": [Function],
+        "push": [MockFunction],
       }
     }
     location={

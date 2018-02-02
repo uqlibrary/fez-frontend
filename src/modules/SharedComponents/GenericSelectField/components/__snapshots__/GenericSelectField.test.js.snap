@@ -11,14 +11,14 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
     ]
   }
   itemsLoading={true}
-  loadItemsList={[Function]}
+  loadItemsList={[MockFunction]}
   locale={
     Object {
       "label": "Select item",
       "loading": "loading...",
     }
   }
-  onChange={[Function]}
+  onChange={[MockFunction]}x
   parentItemsId={null}
   selectedValue={null}
 >
@@ -1386,14 +1386,22 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
   disabled={false}
   itemsList={Array []}
   itemsLoading={false}
-  loadItemsList={[Function]}
+  loadItemsList={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          null,
+        ],
+      ],
+    }
+  }
   locale={
     Object {
       "label": "Select item",
       "loading": "loading...",
     }
   }
-  onChange={[Function]}
+  onChange={[MockFunction]}
   parentItemsId={null}
   selectedValue={null}
 >
@@ -1890,7 +1898,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
               }
             }
           >
-            Select item 
+            Select item
           </label>
         </TextFieldLabel>
         <DropDownMenu
@@ -2774,14 +2782,14 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
     ]
   }
   itemsLoading={false}
-  loadItemsList={[Function]}
+  loadItemsList={[MockFunction]}
   locale={
     Object {
       "label": "Select item",
       "loading": "loading...",
     }
   }
-  onChange={[Function]}
+  onChange={[MockFunction]}
   parentItemsId={null}
   selectedValue={null}
 >
@@ -3278,7 +3286,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
               }
             }
           >
-            Select item 
+            Select item
           </label>
         </TextFieldLabel>
         <DropDownMenu
