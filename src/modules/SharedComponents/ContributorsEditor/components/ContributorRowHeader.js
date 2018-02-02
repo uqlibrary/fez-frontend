@@ -45,7 +45,7 @@ export default class ContributorRowHeader extends Component {
         } = this.props.locale;
 
         return (
-            <div>
+            <div style={{paddingTop: 12}}>
                 {this.props.locale.descriptionStep2}
                 <div className="columns is-gapless is-mobile contributorsHeader datalist datalist-header">
                     <ConfirmDialogBox

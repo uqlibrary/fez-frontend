@@ -40,7 +40,7 @@ export default class App extends React.Component {
             menuDrawerOpen: false,
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1280px)'),
-            isMobile: window.matchMedia('(max-width: 720px)').matches
+            isMobile: window.matchMedia('(max-width: 720px)').matches,
         };
     }
 
@@ -151,7 +151,6 @@ export default class App extends React.Component {
                 ...locale.global.forceOrcidLinkAlert
             };
         }
-
         return (
             <div className="layout-fill align-stretch">
                 <AppBar
@@ -182,7 +181,6 @@ export default class App extends React.Component {
                         </div>
                     }
                 />
-
                 <MenuDrawer
                     menuItems={menuItems}
                     drawerOpen={this.state.docked || this.state.menuDrawerOpen}
@@ -196,8 +194,7 @@ export default class App extends React.Component {
                         skipNavAriaLabel: locale.global.skipNav.ariaLabel,
                         skipNavTitle: locale.global.skipNav.title,
                         closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
-                    }} />
-
+                    }}/>
                 <div className="content-container" style={container}>
                     {
                         userStatusAlert &&
@@ -226,7 +223,6 @@ export default class App extends React.Component {
                         </Switch>
                     }
                 </div>
-
                 <HelpDrawer/>
             </div>
         );

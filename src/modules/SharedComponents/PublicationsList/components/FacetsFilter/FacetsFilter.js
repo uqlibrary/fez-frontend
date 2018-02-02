@@ -14,11 +14,13 @@ export default class FacetsFilter extends React.Component {
         onFacetsChanged: PropTypes.func,
         activeFacets: PropTypes.object,
         excludeFacetsList: PropTypes.array,
+        renameFacetsList: PropTypes.object,
         disabled: PropTypes.bool
     };
 
     static defaultProps = {
-        excludeFacetsList: []
+        excludeFacetsList: [],
+        renameFacetsList: {}
     };
 
     constructor(props) {
@@ -60,13 +62,13 @@ export default class FacetsFilter extends React.Component {
 
     getNestedListItems = (facetCategory) => {
         const listItems = facetCategory.facets.map((item, index) => {
-            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.title) && this.state.activeFacets[facetCategory.title] === item.key;
+            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.facetTitle) && this.state.activeFacets[facetCategory.facetTitle] === item.key;
             return (
                 <ListItem
                     key={index}
                     className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                     primaryText={`${item.title} (${item.count})`}
-                    onClick={() => (this.handleFacetClick(facetCategory.title, item.key))}
+                    onClick={() => (this.handleFacetClick(facetCategory.facetTitle, item.key))}
                     disabled={this.props.disabled}
                     leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}/>
             );
@@ -74,7 +76,7 @@ export default class FacetsFilter extends React.Component {
         return listItems;
     };
 
-    getFacetsToDisplay(rawFacets, excludeFacetsList) {
+    getFacetsToDisplay(rawFacets, excludeFacetsList, renameFacetsList) {
         const facetsToDisplay = [];
         Object.keys(rawFacets).forEach((key) => {
             const rawFacet = rawFacets[key];
@@ -85,9 +87,10 @@ export default class FacetsFilter extends React.Component {
                 || excludeFacetsList && excludeFacetsList.indexOf(key) >= 0
                 || (rawFacet.buckets && rawFacet.buckets.length === 0)) return;
 
-            // construct facet object to display, if facet has a lookup - get display name from lookup
+            // construct facet object to display, if facet has a lookup - get display name from lookup, if facet key has a rename record, then use that
             const facetToDisplay = {
-                title: key,
+                title: renameFacetsList[key] || key,
+                facetTitle: key,
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
                         const typeIndex = publicationTypes().findIndex((type) => {
@@ -110,13 +113,12 @@ export default class FacetsFilter extends React.Component {
 
             facetsToDisplay.push(facetToDisplay);
         });
-
         return facetsToDisplay;
     }
 
     render() {
         const txt = locale.components.facetsFilter;
-        const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList);
+        const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
         if (facetsToDisplay.length === 0) return (<span className="facetsFilter empty" />);
         return (
             <div className="facetsFilter">

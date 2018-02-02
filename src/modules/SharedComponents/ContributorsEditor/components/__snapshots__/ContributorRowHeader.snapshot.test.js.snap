@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContributorRowHeader renders  header for contributor editor control with all options 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "paddingTop": 12,
+    }
+  }
+>
   Step 2 - Locale missing
   <div
     className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
@@ -66,7 +72,13 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
 `;
 
 exports[`ContributorRowHeader renders  header for contributor editor control with delete all disabled 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "paddingTop": 12,
+    }
+  }
+>
   Step 2 - Locale missing
   <div
     className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
@@ -126,7 +138,13 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
 `;
 
 exports[`ContributorRowHeader renders  header for contributor editor control with name and delete all button only 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "paddingTop": 12,
+    }
+  }
+>
   Step 2 - Locale missing
   <div
     className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"

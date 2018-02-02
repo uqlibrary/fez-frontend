@@ -162,7 +162,7 @@ exports[`BookForm renders  component 1`] = `
                 >
                   Step 1 of 2
                 </span>
-                 - Please add to a list of authors below, in the order they are published.
+                 - Please add to a list of authors below, in the format and order that they are published.
               </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
@@ -192,7 +192,7 @@ exports[`BookForm renders  component 1`] = `
                 >
                   Step 2 of 2
                 </span>
-                 - Please select your name from the list below.
+                 - Please select your name once from the list below (if applicable).
               </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Author's name as published",

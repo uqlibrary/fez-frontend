@@ -81,7 +81,8 @@ describe('MyRecords test', () => {
     });
 
     it('renders list of publications', () => {
-        const wrapper = setup({ publicationsList: myRecordsList.data }).find('MyRecords').dive();
+        const wrapper = setup({ publicationsList: myRecordsList.data, publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20}})
+            .find('MyRecords').dive();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

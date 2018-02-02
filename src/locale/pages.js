@@ -94,12 +94,9 @@ export default {
                     <p>The requested page could not be found.</p>
                     <p>Sorry about that, but here's what you can do next:
                     <ul>
-                        <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.
-                        </li>
+                        <li>Try re-typing the address, checking for spelling, capitalisation and/or punctuation.</li>
                         <li>Start again at the home page.</li>
-                        <li>If you’re sure the page should be at this address, email us at
-                            webmaster@library.uq.edu.au.
-                        </li>
+                        <li>If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.</li>
                     </ul>
                     </p>
                 </StandardCard>
@@ -158,6 +155,12 @@ export default {
                 type: 'warning',
                 actionButtonLabel: 'Claim your publications now'
             },
+            nothingToClaimLure: {
+                title: 'Add your work to eSpace',
+                message: 'We found nothing new for you to claim, but you may add a publication any time.',
+                type: 'info_outline',
+                actionButtonLabel: 'Add a publication'
+            },
             publicationsByYearChart: {
                 title: 'eSpace publications per year',
                 yAxisTitle: 'Total publications'
@@ -205,23 +208,15 @@ export default {
             },
         },
         myResearch: {
-            title: 'My research',
-            help: {
-                title: 'My research help',
-                text: (
-                    <div>
-                        your research help....
-                    </div>
-                ),
-                buttonLabel: 'OK'
-            },
+            pageTitle: 'My research',
+            recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
-                <div>
+                <span>
                     Add to this list by <a href="/records/possible">claiming a publication</a> or <a href="/records/add/find">adding a missing publication</a>.
-                </div>
+                </span>
             ),
             loadingMessage: 'Searching for your publications...',
-            loadingPagingMessage: 'Retrieving for your publications...',
+            loadingPagingMessage: 'Retrieving your publications...',
             noResultsFound: {
                 title: 'No publications found',
                 text: (
@@ -239,7 +234,8 @@ export default {
                     text: 'Help about ....',
                     buttonLabel: 'Ok'
                 },
-                excludeFacetsList: ['Scopus document type', 'Subtype']
+                excludeFacetsList: ['Scopus document type', 'Subtype'],
+                renameFacetsList: {'Display type': 'Publication type'}
             }
         },
         claimPublications: {
@@ -248,7 +244,11 @@ export default {
             facetSearchMessage: 'Applying filters...',
             noResultsFound: {
                 title: 'No matching publications found',
-                text: 'No publications were automatically matched for you to claim.',
+                text: (
+                    <div>
+                        <p>No publications were automatically matched for you to claim.</p>
+                    </div>
+                ),
                 help: {
                     title: 'No matching records found',
                     text: 'Why search didn\'t return any items....',
