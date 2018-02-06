@@ -162,9 +162,6 @@
     }
   },
   "jest": {
-    "testMatch": [
-      "**/?(*.)(test).js?(x)"
-    ],
     "transform": {
       ".*": "<rootDir>/node_modules/babel-jest"
     },

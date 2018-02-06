@@ -111,8 +111,8 @@ mock
     .reply(200, {data: {}})
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    // .reply(200, {data: {}});
-    .reply(500, {message: 'error - failed NEW_RECORD_API'});
+    .reply(200, {data: {}});
+    // .reply(500, {message: 'error - failed NEW_RECORD_API'});
 
 mock
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))

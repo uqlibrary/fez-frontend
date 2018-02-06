@@ -61,7 +61,7 @@ export function createNewRecord(data) {
                     dispatch({
                         type: actions.CREATE_RECORD_SUCCESS,
                         payload: {
-                            ...newRecord,
+                            newRecord: newRecord,
                             fileUploadFailed: true
                         }
                     });
@@ -88,8 +88,6 @@ export function createNewRecord(data) {
  */
 export function submitThesis(data, author) {
     return dispatch => {
-        // dispatch({type: actions.CREATE_RECORD_SAVING});
-
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
         if (!hasFilesToUpload) {
             // reject thesis submission, files are required
@@ -114,30 +112,35 @@ export function submitThesis(data, author) {
         if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
 
         let fileUploadSucceeded = false;
+        dispatch({type: actions.CREATE_RECORD_SAVING});
+
+        debugger;
         return putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch)
             .then((response) => {
                 fileUploadSucceeded = !!response;
                 return post(routes.NEW_RECORD_API(), recordRequest);
             })
-            .then(response => response)
+            .then(response => {
+                dispatch({
+                    type: actions.CREATE_RECORD_SUCCESS,
+                    payload: {
+                        newRecord: response
+                    }
+                });
+                return response;
+            })
             .catch(error => {
-                let specificError = 'Error occurred while saving record to eSpace. ';
+                const specificError = !fileUploadSucceeded
+                    ? 'File upload failed. Issue has been created to notify eSpace administrators. '
+                    : 'Error occurred while saving record to eSpace. ';
+                const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
 
-                if (!fileUploadSucceeded) {
-                    specificError = 'File upload failed. Issue has been created to notify eSpace administrators. ';
-                } else {
-                    const issue = {issue: `Thesis submission failed for user ${author.aut_student_username}
-                    app: ${navigator.appVersion}, 
-                    connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
-                    connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, 
-                    user agent: ${navigator.userAgent}
-                    error status: ${error.status}
-                    error message: ${error.message}`
-                    };
-                    post(routes.RECORDS_ISSUES_API({pid: `UQ:${author.aut_student_username}`}), issue);
-                }
+                dispatch({
+                    type: actions.CREATE_RECORD_FAILED,
+                    payload: compositeError
+                });
 
-                return Promise.reject(`${specificError} ${ error.message ? `(${error.message})` : '' }`);
+                return Promise.reject(compositeError);
             });
     };
 }

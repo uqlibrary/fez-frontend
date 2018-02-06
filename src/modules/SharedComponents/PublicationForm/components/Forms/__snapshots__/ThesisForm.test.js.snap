@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThesisForm renders  component 1`] = `
+exports[`ThesisForm  should render component 1`] = `
 <div>
   <StandardCard
     className=""

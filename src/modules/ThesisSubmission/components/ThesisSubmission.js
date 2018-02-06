@@ -37,8 +37,7 @@ export default class ThesisSubmission extends Component {
         super(props);
     }
 
-    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false,
-        error, submitSucceeded = false, alertLocale = {}}) => {
+    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error, submitSucceeded = false, alertLocale = {}}) => {
         let alertProps = null;
         if (submitFailed && error) {
             alertProps = {
