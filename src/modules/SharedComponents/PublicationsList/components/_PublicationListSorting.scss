@@ -8,14 +8,15 @@
   div#sortBy, div#sortOrder, div#pageSize {
     margin-bottom: -14px !important;
     & > div > div {
-      font-size: $text-body-small !important;
+      font-size: $text-body-normal !important;
+      color: $theme-color !important;
       white-space: nowrap !important;
       text-overflow: ellipsis !important;
       overflow: hidden !important;
     }
   }
   label[for=sortBy], label[for=sortOrder], label[for=pageSize] {
-    top: 42px !important;
+    top: 40px !important;
     width: 100% !important;
     overflow: hidden !important;
     white-space: nowrap !important;

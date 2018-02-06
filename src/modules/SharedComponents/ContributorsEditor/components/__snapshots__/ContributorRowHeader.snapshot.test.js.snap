@@ -14,7 +14,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
         "confirmationTitle": "Delete all",
       }
     }
-    onAction={[Function]}
+    onAction={[MockFunction]}
     onRef={[Function]}
   />
   <div
@@ -83,7 +83,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
         "confirmationTitle": "Delete all",
       }
     }
-    onAction={[Function]}
+    onAction={[MockFunction]}
     onRef={[Function]}
   />
   <div
@@ -137,7 +137,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
         "confirmationTitle": "Delete all",
       }
     }
-    onAction={[Function]}
+    onAction={[MockFunction]}
     onRef={[Function]}
   />
   <div

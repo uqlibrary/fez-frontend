@@ -33,7 +33,7 @@ export default {
                 }
             },
             comments: {
-                title: 'Optional: Please suggest changes and/or upload additional files below',
+                title: 'Optional: Suggest changes or add links to this record',
                 help: {
                     title: 'Additional information',
                     text: '...',

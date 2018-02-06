@@ -1,7 +1,7 @@
 @import '../../../../sass/variables';
 
 .publicationsList {
-  margin-top: 24px;
+  margin-top: 12px;
 }
 
 .publicationCitation {
@@ -31,8 +31,7 @@
   }
 
   &:first-child {
-    padding-top: 18px;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: 24px;
   }
 
   .publicationTitle {

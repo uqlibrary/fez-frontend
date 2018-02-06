@@ -590,7 +590,7 @@ exports[`Component FixRecord  should render fix record form 1`] = `
           fullWidth={true}
           label="Submit"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
         />
@@ -2192,7 +2192,7 @@ exports[`Component FixRecord  should render the confirm dialog box with an alert
           fullWidth={true}
           label="Submit"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
         />
@@ -2792,7 +2792,7 @@ exports[`Component FixRecord  should render the confirm dialog box without an al
           fullWidth={true}
           label="Submit"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
         />
@@ -3328,7 +3328,7 @@ exports[`Component FixRecord  should render unclaim form 1`] = `
           fullWidth={true}
           label="Submit"
           labelPosition="after"
-          onTouchTap={[Function]}
+          onTouchTap={[MockFunction]}
           primary={false}
           secondary={true}
         />

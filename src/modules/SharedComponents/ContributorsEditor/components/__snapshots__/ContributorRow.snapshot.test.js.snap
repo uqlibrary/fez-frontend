@@ -38,7 +38,18 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
       "suffix": " listed contributor",
     }
   }
-  onDelete={[Function]}
+  onDelete={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "nameAsPublished": "A. Smith",
+          },
+          0,
+        ],
+      ],
+    }
+  }
   showContributorAssignment={false}
   showIdentifierLookup={false}
 >

@@ -11,14 +11,14 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
     ]
   }
   itemsLoading={true}
-  loadItemsList={[Function]}
+  loadItemsList={[MockFunction]}
   locale={
     Object {
       "label": "Select item",
       "loading": "loading...",
     }
   }
-  onChange={[Function]}
+  onChange={[MockFunction]}
   parentItemsId={null}
   selectedValue={null}
 >
@@ -475,6 +475,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -1316,6 +1317,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -1386,14 +1388,22 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
   disabled={false}
   itemsList={Array []}
   itemsLoading={false}
-  loadItemsList={[Function]}
+  loadItemsList={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          null,
+        ],
+      ],
+    }
+  }
   locale={
     Object {
       "label": "Select item",
       "loading": "loading...",
     }
   }
-  onChange={[Function]}
+  onChange={[MockFunction]}
   parentItemsId={null}
   selectedValue={null}
 >
@@ -1850,6 +1860,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -2700,6 +2711,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -2774,14 +2786,14 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
     ]
   }
   itemsLoading={false}
-  loadItemsList={[Function]}
+  loadItemsList={[MockFunction]}
   locale={
     Object {
       "label": "Select item",
       "loading": "loading...",
     }
   }
-  onChange={[Function]}
+  onChange={[MockFunction]}
   parentItemsId={null}
   selectedValue={null}
 >
@@ -3238,6 +3250,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -4088,6 +4101,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
