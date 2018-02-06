@@ -33,6 +33,7 @@ class Dashboard extends React.Component {
 
         // lure data
         possiblyYourPublicationsCount: PropTypes.number,
+        possiblyYourPublicationsCountLoading: PropTypes.bool,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
         // wos/scopus data
@@ -90,7 +91,7 @@ class Dashboard extends React.Component {
         const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
             || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
             || this.props.loadingLatestPublications;
-        const barChart = !loading && this.props.publicationsByYear
+        const barChart = !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0
             ? (
                 <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
                     <AuthorsPublicationsPerYearChart
@@ -99,7 +100,7 @@ class Dashboard extends React.Component {
                         yAxisTitle={txt.publicationsByYearChart.yAxisTitle}/>
                 </StandardCard>
             ) : null;
-        const donutChart = !loading && this.props.publicationTypesCount
+        const donutChart = !loading && this.props.publicationTypesCount && this.props.publicationTypesCount.length > 0
             ? (
                 <StandardCard
                     className="donutChart"
@@ -138,7 +139,9 @@ class Dashboard extends React.Component {
                         </div>
                         <div className="column is-12 possiblePublicationLure">
                             {
-                                !this.props.hidePossiblyYourPublicationsLure && this.props.possiblyYourPublicationsCount > 0 ?
+                                !this.props.hidePossiblyYourPublicationsLure
+                                && !this.props.possiblyYourPublicationsCountLoading
+                                && this.props.possiblyYourPublicationsCount > 0 ?
                                     <Alert
                                         title={txt.possiblePublicationsLure.title}
                                         message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
@@ -148,7 +151,9 @@ class Dashboard extends React.Component {
                                         allowDismiss
                                         dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
                                     :
-                                    !this.props.possiblyYourPublicationsCount &&
+                                    !this.props.possiblyYourPublicationsCountLoading
+                                    && !this.props.hidePossiblyYourPublicationsLure
+                                    && !this.props.possiblyYourPublicationsCount &&
                                     <Alert
                                         {...txt.nothingToClaimLure}
                                         action={this._addPublication}/>
@@ -191,7 +196,6 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
                 }
-
                 {
                     !loading
                     && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
@@ -290,5 +294,4 @@ class Dashboard extends React.Component {
         );
     }
 }
-
 export default Dashboard;

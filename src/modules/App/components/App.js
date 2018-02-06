@@ -31,7 +31,6 @@ export default class App extends React.Component {
 
     static childContextTypes = {
         isMobile: PropTypes.bool,
-        isPrint: PropTypes.bool,
         selectFieldMobileOverrides: PropTypes.object
     };
 
@@ -42,14 +41,12 @@ export default class App extends React.Component {
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
-            isPrint: window.matchMedia('print').matches
         };
     }
 
     getChildContext() {
         return {
             isMobile: this.state.isMobile,
-            isPrint: this.state.isPrint,
             selectFieldMobileOverrides: {
                 style: !this.state.isMobile ? {width: '100%'} : {},
                 autoWidth: !this.state.isMobile,
@@ -128,7 +125,7 @@ export default class App extends React.Component {
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
 
-        const showMenu = !this.state.isPrint && !isThesisSubmissionPage;
+        const showMenu = !isThesisSubmissionPage;
         const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
         const containerStyle = showMenu && this.state.docked ? {paddingLeft: 340} : {};
         const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
