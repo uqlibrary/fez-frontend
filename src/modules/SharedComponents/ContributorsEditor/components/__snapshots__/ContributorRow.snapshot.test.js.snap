@@ -130,6 +130,7 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
     <ReactTooltip
       className="reactTooltip"
       effect="float"
+      event="focus"
       insecure={true}
       place="top"
       resizeHide={true}
@@ -464,6 +465,7 @@ exports[`ContributorRow renders  a row with index and contributor set, renders o
   <ReactTooltip
     className="reactTooltip"
     effect="float"
+    event="focus"
     insecure={true}
     place="top"
     resizeHide={true}
@@ -576,6 +578,7 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
   <ReactTooltip
     className="reactTooltip"
     effect="float"
+    event="focus"
     insecure={true}
     place="top"
     resizeHide={true}
@@ -725,6 +728,7 @@ exports[`ContributorRow renders  a row with index and contributor with author de
   <ReactTooltip
     className="reactTooltip"
     effect="float"
+    event="focus"
     insecure={true}
     place="top"
     resizeHide={true}

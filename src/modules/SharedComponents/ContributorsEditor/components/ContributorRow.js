@@ -98,7 +98,7 @@ export default class ContributorRow extends React.PureComponent {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}
                     locale={deleteRecordConfirmation} />
-                <ReactTooltip className="reactTooltip" place="top" effect="float" />
+                <ReactTooltip className="reactTooltip" place="top" effect="float" event="focus" />
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
                         <div className="columns is-gapless contributorDetails"
