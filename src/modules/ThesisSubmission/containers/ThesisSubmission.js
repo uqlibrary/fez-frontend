@@ -91,7 +91,7 @@ let ThesisSubmissionContainer = reduxForm({
 })(confirmDiscardFormChanges(ThesisSubmission, FORM_NAME));
 
 const mapStateToProps = (state, props) => {
-    const currentAuthor = state.get('accountReducer').author;
+    const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
     const initialValues = {
         currentAuthor: [
             {

@@ -62,7 +62,6 @@ export const validFileUpload = value => {
 };
 
 export const fileUploadRequired = value => {
-    console.log(value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined);
     return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
 };
 
