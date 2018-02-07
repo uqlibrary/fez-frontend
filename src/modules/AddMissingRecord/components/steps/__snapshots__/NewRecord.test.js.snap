@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Add new record should not render publication form if author is not loaded 1`] = `<span />`;
+exports[`Add new record should not render publication form if author is not loaded  1`] = `<span />`;
 
 exports[`Add new record should render stepper and a publication form 1`] = `
 <div>

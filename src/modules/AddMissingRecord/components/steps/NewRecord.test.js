@@ -6,7 +6,7 @@ function setup(testProps, isShallow = true) {
 
 describe('Add new record', () => {
 
-    it('should not render publication form if author is not loaded', () => {
+    it('should not render publication form if author is not loaded ', () => {
         const wrapper = setup({author: null});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
