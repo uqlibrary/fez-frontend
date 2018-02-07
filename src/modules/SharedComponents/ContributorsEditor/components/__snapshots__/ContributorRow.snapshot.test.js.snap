@@ -149,7 +149,7 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
         <div
           className="columns is-gapless contributorDetails"
           data-place="top"
-          data-tip="Click to assign this author as you"
+          data-tip="Assign this author as you."
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
@@ -478,7 +478,7 @@ exports[`ContributorRow renders  a row with index and contributor set, renders o
       <div
         className="columns is-gapless contributorDetails"
         data-place="top"
-        data-tip="Click to assign this author as you"
+        data-tip="Assign this author as you."
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -590,7 +590,7 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
       <div
         className="columns is-gapless contributorDetails"
         data-place="top"
-        data-tip="Click to assign this author as you"
+        data-tip="Assign this author as you."
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -739,7 +739,7 @@ exports[`ContributorRow renders  a row with index and contributor with author de
       <div
         className="columns is-gapless contributorDetails"
         data-place="top"
-        data-tip="Click to assign this author as you"
+        data-tip="Assign this author as you."
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"

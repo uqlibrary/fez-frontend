@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import ReactTooltip from 'react-tooltip';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 
-export default class ContributorRow extends Component {
+export default class ContributorRow extends React.PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
         contributor: PropTypes.object.isRequired,
@@ -42,6 +42,10 @@ export default class ContributorRow extends Component {
         super(props);
     }
 
+    shouldComponentUpdate(nextProps) {
+        return this.props !== nextProps;
+    }
+
     componentDidUpdate() {
         ReactTooltip.rebuild();
     }
@@ -73,6 +77,16 @@ export default class ContributorRow extends Component {
         event && event.currentTarget.blur();
     };
 
+    _updateSelectedTooltip = (selected) => {
+        if (selected) {
+            ReactTooltip.rebuild();
+            return 'This is you.';
+        } else {
+            ReactTooltip.rebuild();
+            return 'Assign this author as you.';
+        }
+    };
+
     render() {
         const {ordinalData, deleteRecordConfirmation} = this.props.locale;
         const contributorOrder = (this.props.index < ordinalData.length ?
@@ -91,7 +105,7 @@ export default class ContributorRow extends Component {
                             onClick={this._onContributorAssigned}
                             onKeyDown={this._onContributorAssignedKeyboard}
                             tabIndex="0"
-                            data-tip={this.props.contributor.selected ? null : 'Click to assign this author as you'}
+                            data-tip={this._updateSelectedTooltip(this.props.contributor.selected)} // {this.props.contributor.selected ? 'This is you.' : 'Assign this author as you.'}
                             data-place="top"
                         >
                             <div className="column is-narrow is-hidden-mobile">

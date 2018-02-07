@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
+import ReactTooltip from 'react-tooltip';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 
 export default class ContributorRowHeader extends Component {
@@ -52,6 +53,7 @@ export default class ContributorRowHeader extends Component {
                         onRef={ref => (this.confirmationBox = ref)}
                         onAction={this.props.onDeleteAll}
                         locale={deleteAllConfirmation}/>
+                    <ReactTooltip className="reactTooltip" place="top" effect="float" />
                     <div className="column is-narrow is-hidden-mobile authorIcon" />
                     <div className="column name datalist-title">{nameColumn}</div>
                     {
@@ -63,7 +65,7 @@ export default class ContributorRowHeader extends Component {
 
                     <div className="column is-narrow buttons datalist-buttons">
                         <IconButton
-                            tooltip={deleteAll}
+                            data-tip={deleteAll}
                             onTouchTap={this._showConfirmation}
                             disabled={this.props.disabled}>
                             <FontIcon className="material-icons">delete_forever</FontIcon>

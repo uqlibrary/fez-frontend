@@ -25,6 +25,14 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       onAction={[MockFunction]}
       onRef={[Function]}
     />
+    <ReactTooltip
+      className="reactTooltip"
+      effect="float"
+      insecure={true}
+      place="top"
+      resizeHide={true}
+      wrapper="div"
+    />
     <div
       className="column is-narrow is-hidden-mobile authorIcon"
     />
@@ -47,11 +55,11 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       className="column is-narrow buttons datalist-buttons"
     >
       <IconButton
+        data-tip="Remove all records"
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
         onTouchTap={[Function]}
-        tooltip="Remove all records"
         tooltipPosition="bottom-center"
         touch={false}
       >
@@ -96,6 +104,14 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       onAction={[MockFunction]}
       onRef={[Function]}
     />
+    <ReactTooltip
+      className="reactTooltip"
+      effect="float"
+      insecure={true}
+      place="top"
+      resizeHide={true}
+      wrapper="div"
+    />
     <div
       className="column is-narrow is-hidden-mobile authorIcon"
     />
@@ -113,11 +129,11 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       className="column is-narrow buttons datalist-buttons"
     >
       <IconButton
+        data-tip="Remove all records"
         disableTouchRipple={false}
         disabled={true}
         iconStyle={Object {}}
         onTouchTap={[Function]}
-        tooltip="Remove all records"
         tooltipPosition="bottom-center"
         touch={false}
       >
@@ -162,6 +178,14 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       onAction={[MockFunction]}
       onRef={[Function]}
     />
+    <ReactTooltip
+      className="reactTooltip"
+      effect="float"
+      insecure={true}
+      place="top"
+      resizeHide={true}
+      wrapper="div"
+    />
     <div
       className="column is-narrow is-hidden-mobile authorIcon"
     />
@@ -179,11 +203,11 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       className="column is-narrow buttons datalist-buttons"
     >
       <IconButton
+        data-tip="Remove all records"
         disableTouchRipple={false}
         disabled={false}
         iconStyle={Object {}}
         onTouchTap={[Function]}
-        tooltip="Remove all records"
         tooltipPosition="bottom-center"
         touch={false}
       >

@@ -49,7 +49,10 @@
       }
     }
     .material-icons {
-      color: white !important;
+      color: $text-color-reverse !important;
+      &:hover {
+        color: rgba($text-color-reverse, 0.66) !important;
+      }
     }
   }
 }
