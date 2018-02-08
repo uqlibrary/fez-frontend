@@ -89,7 +89,7 @@ describe('Application component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render app for HRD without ORCID ID', () => {
+    it('should render app for HDR without ORCID ID', () => {
         const wrapper = setup({
             account: account,
             author: {
@@ -102,7 +102,23 @@ describe('Application component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render app for HRD with ORCID ID', () => {
+    it('should render thesis submission for HDR without menu', () => {
+        const wrapper = setup({
+            location: {
+                pathname: routes.pathConfig.hdrSubmission
+            },
+            account: account,
+            author: {
+                ...author,
+                aut_org_username: null,
+                aut_student_username: 's222222',
+                aut_orcid_id: null
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render app for HDR with ORCID ID', () => {
         const wrapper = setup({
             account: account,
             author: {
