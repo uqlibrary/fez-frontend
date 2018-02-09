@@ -21,6 +21,7 @@ import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
+import {RichEditor} from 'modules/SharedComponents/RichEditor';
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
@@ -35,6 +36,9 @@ export default class ThesisSubmission extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            content: ''
+        };
     }
 
     getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error, submitSucceeded = false, alertLocale = {}}) => {
@@ -74,6 +78,7 @@ export default class ThesisSubmission extends Component {
 
     render() {
         const txt = formLocale.thesis;
+        console.log(this.state.content);
 
         if (this.props.submitSucceeded) {
             return (
@@ -101,6 +106,21 @@ export default class ThesisSubmission extends Component {
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
                         txt={formLocale.cancelWorkflowConfirmation}/>
+
+                    <StandardCard title={txt.information.title} help={txt.information.help}>
+                        <div className="columns" style={{marginTop: '-12px'}}>
+                            <div className="column">
+                                <RichEditor
+                                    content={this.state.content}
+                                    events={{
+                                        blur: this.onBlur,
+                                        afterPaste: this.afterPaste,
+                                        change: this.onChange
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    </StandardCard>
 
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <div className="columns" style={{marginTop: '-12px'}}>
