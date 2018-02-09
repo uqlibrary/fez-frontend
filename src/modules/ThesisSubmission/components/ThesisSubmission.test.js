@@ -18,27 +18,27 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('ThesisSubmission test', () => {
-    it('should render sbs thesis submission form', () => {
-        const wrapper = setup({isHdrThesis: false});
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(11);
-        expect(wrapper.find('RaisedButton').length).toEqual(2);
-    });
+    // it('should render sbs thesis submission form', () => {
+    //     const wrapper = setup({isHdrThesis: false});
+    //     expect(toJson(wrapper)).toMatchSnapshot();
+    //     expect(wrapper.find('Field').length).toEqual(11);
+    //     expect(wrapper.find('RaisedButton').length).toEqual(2);
+    // });
 
-    it('should render hdr thesis submission form', () => {
-        const wrapper = setup({isHdrThesis: true});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    // it('should render hdr thesis submission form', () => {
+    //     const wrapper = setup({isHdrThesis: true});
+    //     expect(toJson(wrapper)).toMatchSnapshot();
+    // });
 
-    it('should render hdr thesis submission acknowledgement', () => {
-        const wrapper = setup({isHdrThesis: true, submitSucceeded: true});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    // it('should render hdr thesis submission acknowledgement', () => {
+    //     const wrapper = setup({isHdrThesis: true, submitSucceeded: true});
+    //     expect(toJson(wrapper)).toMatchSnapshot();
+    // });
 
-    it('should render sbs thesis submission acknowledgement', () => {
-        const wrapper = setup({isHdrThesis: false, submitSucceeded: true});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    // it('should render sbs thesis submission acknowledgement', () => {
+    //     const wrapper = setup({isHdrThesis: false, submitSucceeded: true});
+    //     expect(toJson(wrapper)).toMatchSnapshot();
+    // });
 
     it('should render component with all fields disabled', () => {
         const wrapper = setup({submitting: true});
