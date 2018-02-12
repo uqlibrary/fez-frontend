@@ -71,7 +71,7 @@ export default class GenericSelectField extends Component {
                 id="selectedValue"
                 name="selectedValue"
                 {...this.context.selectFieldMobileOverrides}
-                className={this.props.className + ' mui-long-labels-fix'}
+                className={this.props.className}
                 value={this.props.itemsLoading ? null : this.state.selectedValue}
                 maxHeight={250}
                 onChange={this._itemSelected}

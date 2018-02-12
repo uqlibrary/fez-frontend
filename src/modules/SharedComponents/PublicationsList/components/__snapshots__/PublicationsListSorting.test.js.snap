@@ -11,7 +11,7 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
   className="publicationsListSorting columns is-gapless is-mobile is-multiline"
 >
   <div
-    className="column is-7-mobile"
+    className="column is-12-mobile"
   >
     <SelectField
       autoWidth={false}
@@ -203,10 +203,10 @@ exports[`PublicationsListSorting renders  component with non-empty paging data 1
     </SelectField>
   </div>
   <div
-    className="column is-narrow is-spacer"
+    className="column is-narrow is-spacer is-hidden-mobile"
   />
   <div
-    className="column"
+    className="column is-12-mobile"
   >
     <SelectField
       autoWidth={false}

@@ -24,7 +24,6 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
 >
   <SelectField
     autoWidth={false}
-    className="undefined mui-long-labels-fix"
     disabled={true}
     dropDownMenuProps={
       Object {
@@ -41,7 +40,6 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
     value={null}
   >
     <TextField
-      className="undefined mui-long-labels-fix"
       disabled={true}
       floatingLabelFixed={false}
       floatingLabelText="Select item loading..."
@@ -54,7 +52,6 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
       underlineShow={true}
     >
       <div
-        className="undefined mui-long-labels-fix"
         name="selectedValue"
         style={
           Object {
@@ -1412,7 +1409,6 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
 >
   <SelectField
     autoWidth={false}
-    className="undefined mui-long-labels-fix"
     disabled={false}
     dropDownMenuProps={
       Object {
@@ -1429,7 +1425,6 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
     value={null}
   >
     <TextField
-      className="undefined mui-long-labels-fix"
       disabled={false}
       floatingLabelFixed={false}
       floatingLabelText="Select item "
@@ -1442,7 +1437,6 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
       underlineShow={true}
     >
       <div
-        className="undefined mui-long-labels-fix"
         name="selectedValue"
         style={
           Object {
@@ -2805,7 +2799,6 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
 >
   <SelectField
     autoWidth={false}
-    className="undefined mui-long-labels-fix"
     disabled={false}
     dropDownMenuProps={
       Object {
@@ -2822,7 +2815,6 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
     value={null}
   >
     <TextField
-      className="undefined mui-long-labels-fix"
       disabled={false}
       floatingLabelFixed={false}
       floatingLabelText="Select item "
@@ -2835,7 +2827,6 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
       underlineShow={true}
     >
       <div
-        className="undefined mui-long-labels-fix"
         name="selectedValue"
         style={
           Object {
