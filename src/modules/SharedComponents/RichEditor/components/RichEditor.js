@@ -1,60 +1,68 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-const loadScript = require('load-script');
-const defaultScriptUrl = 'lib/ckeditor/ckeditor.js';
+// const loadScript = require('load-script');
+const defaultScriptUrl = 'ckeditor/ckeditor.js';
+// const CK = require('ckeditor');
+import 'ckeditor';
 
 class RichEditor extends React.Component {
     constructor(props) {
         super(props);
-
         // Bindings
-        this.onLoad = this.onLoad.bind(this);
-
+        // this.onLoad = this.onLoad.bind(this);
         // State initialization
         this.state = {
-            isScriptLoaded: this.props.isScriptLoaded,
+            // isScriptLoaded: this.props.isScriptLoaded,
             config: this.props.config
         };
     }
 
     // load ckeditor script as soon as component mounts if not already loaded
     componentDidMount() {
-        if(!this.props.isScriptLoaded) {
-            loadScript(this.props.scriptUrl, this.onLoad);
-        }else{
-            this.onLoad();
-        }
+        // console.log(CK);
+        console.log(window.CKEDITOR);
+        this.editorInstance = window.CKEDITOR.appendTo(
+            ReactDOM.findDOMNode(this),
+            this.state.config,
+            this.props.content
+        );
+        // if(!this.props.isScriptLoaded) {
+        //     loadScript(this.props.scriptUrl, this.onLoad);
+        // }else{
+        //     this.onLoad();
+        // }
     }
 
     componentWillUnmount() {
         this.unmounting = true;
     }
 
-    onLoad() {
-        if (this.unmounting) return;
-
-        this.setState({
-            isScriptLoaded: true
-        });
-
-        if (!window.CKEDITOR) {
-            console.error('CKEditor not found');
-            return;
-        }
-
-        this.editorInstance = window.CKEDITOR.appendTo(
-            ReactDOM.findDOMNode(this),
-            this.state.config,
-            this.props.content
-        );
-
-        // Register listener for custom events if any
-        // for (const eventA in this.props.events) {
-        //     const eventHandler = this.props.events[eventA];
-        //     this.editorInstance.on(eventA, eventHandler);
-        // }
-    }
+    // onLoad() {
+    //     if (this.unmounting) return;
+    //
+    //     this.setState({
+    //         isScriptLoaded: true
+    //     });
+    //
+    //     // if (!window.CKEDITOR) {
+    //     //     console.error('CKEditor not found');
+    //     //     // return;
+    //     // }
+    //     //
+    //
+    //     this.editorInstance = window.CKEDITOR.appendTo(
+    //         ReactDOM.findDOMNode(this),
+    //         this.state.config,
+    //         this.props.content
+    //     );
+    //
+    //     // Register listener for custom events if any
+    //     // for (const eventA in this.props.events) {
+    //     //     const eventHandler = this.props.events[eventA];
+    //     //     this.editorInstance.on(eventA, eventHandler);
+    //     // }
+    // }
 
     render() {
         return <div className={this.props.activeClass} />;

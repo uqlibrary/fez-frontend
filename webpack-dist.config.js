@@ -112,13 +112,19 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/
+                ],
                 enforce: 'pre',
                 use: 'eslint-loader'
             },
             {
                 test: /\.js?$/,
-                exclude: /node_modules/,
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/
+                ],
                 include: [
                     resolve(__dirname, 'src'),
                     resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')
@@ -165,6 +171,7 @@ module.exports = {
         modules: [
             'src',
             'node_modules',
+            'custom_modules'
         ]
     },
     performance: {
