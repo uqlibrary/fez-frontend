@@ -58,8 +58,8 @@ button[type=button] {
 }
 
 // Adds red asterix to required fields
-.requiredField label:after,
-.requiredHintField div:first-child:after {
+.requiredField label:before,
+.requiredHintField div:first-child:before {
   content: "*";
   padding-right: 5px;
   padding-left: 5px;
