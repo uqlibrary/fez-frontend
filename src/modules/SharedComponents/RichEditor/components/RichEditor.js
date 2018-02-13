@@ -22,11 +22,13 @@ class RichEditor extends React.Component {
     componentDidMount() {
         // console.log(CK);
         console.log(window.CKEDITOR);
-        this.editorInstance = window.CKEDITOR.appendTo(
-            ReactDOM.findDOMNode(this),
-            this.state.config,
-            this.props.content
-        );
+        if (window.CKEDITOR) {
+            this.editorInstance = window.CKEDITOR.appendTo(
+                ReactDOM.findDOMNode(this),
+                this.state.config,
+                this.props.content
+            );
+        }
         // if(!this.props.isScriptLoaded) {
         //     loadScript(this.props.scriptUrl, this.onLoad);
         // }else{
