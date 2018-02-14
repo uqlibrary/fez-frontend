@@ -21,7 +21,7 @@ import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
-import {RichEditor} from 'modules/SharedComponents/RichEditor';
+import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
@@ -37,7 +37,7 @@ export default class ThesisSubmission extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            content: ''
+            content: 'hello'
         };
     }
 
@@ -78,8 +78,6 @@ export default class ThesisSubmission extends Component {
 
     render() {
         const txt = formLocale.thesis;
-        console.log(this.state.content);
-
         if (this.props.submitSucceeded) {
             return (
                 <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
@@ -110,21 +108,6 @@ export default class ThesisSubmission extends Component {
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <div className="columns" style={{marginTop: '-12px'}}>
                             <div className="column">
-                                <RichEditor
-                                    content={this.state.content}
-                                    events={{
-                                        blur: this.onBlur,
-                                        afterPaste: this.afterPaste,
-                                        change: this.onChange
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    </StandardCard>
-
-                    <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <div className="columns" style={{marginTop: '-12px'}}>
-                            <div className="column">
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -140,7 +123,32 @@ export default class ThesisSubmission extends Component {
                                 />
                             </div>
                         </div>
+                        <div className="columns is-hidden-mobile">
+                            <div className="column">
+                                <label htmlFor="rek_formatted_title">Formatted title</label>
+                                <Field
+                                    component={RichEditorField}
+                                    name="rek_formatted_title"
+                                    disabled={this.props.submitting}
+                                    height={50}
+                                />
+                            </div>
+                        </div>
                         <div className="columns">
+                            <div className="column">
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="currentAuthor.0.nameAsPublished"
+                                    type="text"
+                                    fullWidth
+                                    rows={1}
+                                    {...txt.information.fieldLabels.author}
+                                    className="requiredField"
+                                    validate={[validation.required]}/>
+                            </div>
+                        </div>
+                        <div className="columns" style={{marginTop: '-12px'}}>
                             <div className="column is-half">
                                 <Field
                                     component={OrgUnitNameField}
@@ -187,20 +195,6 @@ export default class ThesisSubmission extends Component {
                             <div className="column">
                                 <Field
                                     component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="currentAuthor.0.nameAsPublished"
-                                    type="text"
-                                    fullWidth
-                                    rows={1}
-                                    {...txt.information.fieldLabels.author}
-                                    className="requiredField"
-                                    validate={[validation.required]}/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Field
-                                    component={TextField}
                                     name="fez_record_search_key_description.rek_description"
                                     type="text"
                                     disabled={this.props.submitting}
@@ -212,7 +206,18 @@ export default class ThesisSubmission extends Component {
                                     {...txt.optional.fieldLabels.abstract} />
                             </div>
                         </div>
+                        <div className="columns is-hidden-mobile">
+                            <div className="column">
+                                <label htmlFor="rek_formatted_abstract">Formatted abstract</label>
+                                <Field
+                                    component={RichEditorField}
+                                    disabled={this.props.submitting}
+                                    name="rek_formatted_abstract"
+                                />
+                            </div>
+                        </div>
                     </StandardCard>
+
 
                     <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
                         <div>{txt.supervisors.description}</div>

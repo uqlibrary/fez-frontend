@@ -1,16 +1,16 @@
 /* loader.js */
 var modulePath = 'custom_modules/ckeditor/ckeditor_build';
 
-window.CKEDITOR_BASEPATH = `/${modulePath}/`;
+window.CKEDITOR_BASEPATH = `./${modulePath}/`;
 
 // Load your custom config.js file for CKEditor.
-require(`!file-loader?context=${__dirname}&outputPath=custom_modules/ckeditor/ckeditor_build/&name=[path][name].[ext]!./config.js`);
+require(`!file-loader?context=${__dirname}&outputPath=./custom_modules/ckeditor/ckeditor_build/&name=[path][name].[ext]!./config.js`);
 
 // Load your custom contents.css file in case you use iframe editor.
-require(`!file-loader?context=${__dirname}&outputPath=custom_modules/ckeditor/ckeditor_build/&name=[path][name].[ext]!./contents.css`);
+require(`!file-loader?context=${__dirname}&outputPath=./custom_modules/ckeditor/ckeditor_build/&name=[path][name].[ext]!./contents.css`);
 
 // Load your custom styles.js file for CKEditor.
-require(`!file-loader?context=${__dirname}&outputPath=custom_modules/ckeditor/ckeditor_build/&name=[path][name].[ext]!./styles.js`);
+require(`!file-loader?context=${__dirname}&outputPath=./custom_modules/ckeditor/ckeditor_build/&name=[path][name].[ext]!./styles.js`);
 
 // Load files from plugins, excluding lang files.
 // Limit to active plugins with
@@ -39,7 +39,7 @@ require.context(
 
 // Load skin.
 require.context(
-    '!file-loader?name=[path][name].[ext]!ckeditor/ckeditor_build/skins/minimalist',
+    '!file-loader?name=[path][name].[ext]!ckeditor/ckeditor_build/skins/moono-lisa',
     true,
     /.*/
 );

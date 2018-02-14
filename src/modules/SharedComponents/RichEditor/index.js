@@ -1,1 +1,1 @@
-export {default as RichEditor} from './components/RichEditor';
+export {default as RichEditorField} from './RichEditorField';

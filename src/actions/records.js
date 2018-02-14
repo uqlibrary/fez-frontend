@@ -113,8 +113,6 @@ export function submitThesis(data, author) {
 
         let fileUploadSucceeded = false;
         dispatch({type: actions.CREATE_RECORD_SAVING});
-
-        debugger;
         return putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch)
             .then((response) => {
                 fileUploadSucceeded = !!response;

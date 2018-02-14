@@ -93,6 +93,8 @@ let ThesisSubmissionContainer = reduxForm({
 const mapStateToProps = (state, props) => {
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
     const initialValues = {
+        'rek_formatted_abstract': 'some abs value...',
+        'rek_formatted_title': 'some title value...',
         currentAuthor: [
             {
                 'nameAsPublished': currentAuthor ? currentAuthor.aut_display_name : '',
