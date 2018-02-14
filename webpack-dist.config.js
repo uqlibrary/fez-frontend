@@ -32,6 +32,8 @@ if(config.environment === 'development') {
     config.basePath += branch + '/';
 }
 
+process.env.PUBLIC_PATH = config.basePath;
+
 module.exports = {
     devtool: 'source-map',
     // The entry file. All your app roots from here.
