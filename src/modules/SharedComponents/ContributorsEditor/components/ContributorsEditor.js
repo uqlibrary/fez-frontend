@@ -182,7 +182,7 @@ export class ContributorsEditor extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        author: state.get('accountReducer').author
+        author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
     };
 };
 

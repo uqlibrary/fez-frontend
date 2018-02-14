@@ -32,7 +32,9 @@ export default class FixRecord extends Component {
 
         history: PropTypes.object.isRequired,
         match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+
+        publicationToFixFileUploadingError: PropTypes.bool
     };
 
     static contextTypes = {
@@ -144,9 +146,12 @@ export default class FixRecord extends Component {
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = {...txtFixForm.successWorkflowConfirmation};
-        if (this.props.publicationToFixFileUploadingError) {
-            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
-        }
+        saveConfirmationLocale.confirmationMessage = (
+            <div>
+                {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                {saveConfirmationLocale.confirmationMessage}
+            </div>
+        );
 
         return (
             <StandardPage title={txt.title}>

@@ -25,28 +25,33 @@ describe('Routes method', () => {
     });
 
     it('should return a list of routes for anon user', () => {
-        const testRoutes = routes.getRoutesConfig({}, null);
+        const testRoutes = routes.getRoutesConfig({components: {}, account: null});
         expect(testRoutes.length).toEqual(4);
     });
 
     it('should return a list of routes for researcher', () => {
-        const testRoutes = routes.getRoutesConfig({}, accounts.uqresearcher);
-        expect(testRoutes.length).toEqual(14);
+        const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqresearcher});
+        expect(testRoutes.length).toEqual(16);
     });
 
     it('should return a list of routes for user who can masquerade', () => {
-        const testRoutes = routes.getRoutesConfig({}, accounts.uqstaff);
-        expect(testRoutes.length).toEqual(15);
+        const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqstaff});
+        expect(testRoutes.length).toEqual(17);
     });
 
-    it('should return a list of routes for hrd student without ORCID', () => {
-        const testRoutes = routes.getRoutesConfig({}, accounts.s2222222, true);
-        expect(testRoutes.length).toEqual(3);
+    it('should return a list of routes for hdr student without ORCID', () => {
+        const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: true, isHdrStudent: true});
+        expect(testRoutes.length).toEqual(5);
+    });
+
+    it('should return a list of routes for hdr student with ORCID', () => {
+        const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: false, isHdrStudent: true});
+        expect(testRoutes.length).toEqual(16);
     });
 
     it('should render auth required page', () => {
         const testComponent = jest.fn();
-        const renderPage = routes.getRoutesConfig({StandardPage: testComponent}, null)[3].render;
+        const renderPage = routes.getRoutesConfig({components: {StandardPage: testComponent}, account: null})[3].render;
         const props = {
             location: {
                 pathname: routes.pathConfig.dashboard
@@ -58,7 +63,7 @@ describe('Routes method', () => {
 
     it('should render permissions denied page', () => {
         const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({StandardPage: testComponent}, accounts.uqresearcher);
+        const routesConfig = routes.getRoutesConfig({components: {StandardPage: testComponent}, account: accounts.uqresearcher});
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {
@@ -71,7 +76,7 @@ describe('Routes method', () => {
 
     it('should render not found page', () => {
         const testComponent = jest.fn();
-        const renderPage = routes.getRoutesConfig({StandardPage: testComponent}, null)[3].render;
+        const renderPage = routes.getRoutesConfig({components: {StandardPage: testComponent}})[3].render;
         const props = {
             location: {
                 pathname: '/abc/abac/aba'

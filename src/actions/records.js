@@ -9,7 +9,6 @@ import * as actions from './actionTypes';
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
  * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
- * @param {array} files to be uploaded for this record
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function createNewRecord(data) {
@@ -62,7 +61,7 @@ export function createNewRecord(data) {
                     dispatch({
                         type: actions.CREATE_RECORD_SUCCESS,
                         payload: {
-                            ...newRecord,
+                            newRecord: newRecord,
                             fileUploadFailed: true
                         }
                     });
@@ -80,6 +79,71 @@ export function createNewRecord(data) {
     };
 }
 
+
+/**
+ * Submit thesis involves two steps: upload files, create record with uploaded files.
+ * If error occurs on any stage failed action is dispatched
+ * @param {object} data to be posted, refer to backend API
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function submitThesis(data, author) {
+    return dispatch => {
+        const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+        if (!hasFilesToUpload) {
+            // reject thesis submission, files are required
+            return Promise.reject('Please attach files to proceed with thesis submission');
+        }
+        // set default values, links
+        const recordRequest = {
+            ...JSON.parse(JSON.stringify(data)),
+            ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
+            ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
+            ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
+            ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
+            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
+        };
+
+        // delete extra form values from request object
+        if (recordRequest.authors) delete recordRequest.authors;
+        if (recordRequest.editors) delete recordRequest.editors;
+        if (recordRequest.files) delete recordRequest.files;
+        if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
+        if (recordRequest.supervisors) delete recordRequest.supervisors;
+        if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
+
+        let fileUploadSucceeded = false;
+        dispatch({type: actions.CREATE_RECORD_SAVING});
+
+        debugger;
+        return putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch)
+            .then((response) => {
+                fileUploadSucceeded = !!response;
+                return post(routes.NEW_RECORD_API(), recordRequest);
+            })
+            .then(response => {
+                dispatch({
+                    type: actions.CREATE_RECORD_SUCCESS,
+                    payload: {
+                        newRecord: response
+                    }
+                });
+                return response;
+            })
+            .catch(error => {
+                const specificError = !fileUploadSucceeded
+                    ? 'File upload failed. Issue has been created to notify eSpace administrators. '
+                    : 'Error occurred while saving record to eSpace. ';
+                const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
+
+                dispatch({
+                    type: actions.CREATE_RECORD_FAILED,
+                    payload: compositeError
+                });
+
+                return Promise.reject(compositeError);
+            });
+    };
+}
 /**
  * Clear new record
  * @returns {action}

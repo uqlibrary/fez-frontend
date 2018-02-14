@@ -5,11 +5,12 @@ import {locale} from 'locale';
 function confirmDiscardFormChanges(WrappedComponent) {
     class ConfirmDiscardFormChanges extends React.Component {
         static propTypes = {
-            dirty: PropTypes.bool
+            dirty: PropTypes.bool,
+            submitSucceeded: PropTypes.bool
         };
 
         componentDidUpdate() {
-            this.promptDiscardFormChanges(this.props.dirty);
+            this.promptDiscardFormChanges(this.props.dirty && !this.props.submitSucceeded);
         }
 
         componentWillUnmount() {
