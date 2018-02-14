@@ -30,13 +30,15 @@ export default class RichEditor extends React.PureComponent {
                 this.props.value
             );
 
-            this.editorInstance.on('instanceReady', () => {
-                this.editorInstance.setReadOnly(!!this.props.disabled);
-            });
+            if (this.editorInstance) {
+                this.editorInstance.on('instanceReady', () => {
+                    this.editorInstance.setReadOnly(!!this.props.disabled);
+                });
 
-            this.editorInstance.on('change', (evt) => {
-                this.props.onChange(evt.editor.getData());
-            });
+                this.editorInstance.on('change', (evt) => {
+                    this.props.onChange(evt.editor.getData());
+                });
+            }
         }
     }
 
