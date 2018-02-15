@@ -416,10 +416,10 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
         }
       }
       disabled={false}
+      handleFacetClick={[Function]}
       index={6}
       maxYearValue={2023}
       minYearValue={2010}
-      onChange={[Function]}
     />
   </List>
 </div>
@@ -864,10 +864,10 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
         }
       }
       disabled={false}
+      handleFacetClick={[Function]}
       index={6}
       maxYearValue={2023}
       minYearValue={2010}
-      onChange={[Function]}
     />
   </List>
 </div>
@@ -1298,10 +1298,10 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
         }
       }
       disabled={false}
+      handleFacetClick={[Function]}
       index={6}
       maxYearValue={2023}
       minYearValue={2010}
-      onChange={[Function]}
     />
   </List>
   <div
@@ -1748,10 +1748,10 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
         }
       }
       disabled={false}
+      handleFacetClick={[Function]}
       index={6}
       maxYearValue={2023}
       minYearValue={2010}
-      onChange={[Function]}
     />
   </List>
   <div
@@ -2193,10 +2193,10 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
         }
       }
       disabled={true}
+      handleFacetClick={[Function]}
       index={6}
       maxYearValue={2023}
       minYearValue={2010}
-      onChange={[Function]}
     />
   </List>
 </div>
@@ -2570,10 +2570,10 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
         }
       }
       disabled={false}
+      handleFacetClick={[Function]}
       index={5}
       maxYearValue={2023}
       minYearValue={2010}
-      onChange={[Function]}
     />
   </List>
 </div>

@@ -6,6 +6,7 @@ import FlatButton from 'material-ui/FlatButton';
 import {ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
+import {FACET_TYPE_RANGE} from 'config';
 import {locale} from 'locale';
 
 export default class YearPublishedFacetRange extends React.Component {
@@ -28,9 +29,9 @@ export default class YearPublishedFacetRange extends React.Component {
         // always keep props/state in sync
         const title = locale.components.facetsFilter.yearPublishedFacet.title;
 
-        if (props.activeFacets.hasOwnProperty('ranges') &&
-            props.activeFacets.ranges.hasOwnProperty(title)) {
-            const range = props.activeFacets.ranges[title].match(/\d\d\d\d/g);
+        if (props.activeFacets.hasOwnProperty(FACET_TYPE_RANGE) &&
+            props.activeFacets[FACET_TYPE_RANGE].hasOwnProperty(title)) {
+            const range = props.activeFacets[FACET_TYPE_RANGE][title].match(/\d\d\d\d/g);
             this.state = {
                 from: range[0],
                 to: range[1]
@@ -62,29 +63,26 @@ export default class YearPublishedFacetRange extends React.Component {
         const from = parsedFromValue > parsedToValue ? this.state.to : (this.state.from || '*');
         const to = parsedToValue < parsedFromValue ? this.state.from : (this.state.to || '*');
 
-        return this.props.onChange(txt.title, `[${from} TO ${to}]`, 'ranges');
+        return this.props.onChange(txt.title, `[${from} TO ${to}]`, FACET_TYPE_RANGE);
     };
 
     render() {
         const txt = locale.components.facetsFilter.yearPublishedFacet;
-        const isActive = this.props.activeFacets.hasOwnProperty('ranges') && this.props.activeFacets.ranges.hasOwnProperty(txt.title);
-        const activeClass = isActive ? ' active ' : '';
-        const disabledClass = this.props.disabled ? ' disabled' : '';
-
+        const isActive = this.props.activeFacets.hasOwnProperty(FACET_TYPE_RANGE) && this.props.activeFacets[FACET_TYPE_RANGE].hasOwnProperty(txt.title);
         return (
             <div className="facetsYear">
                 <ListItem
                     key={`key_facet_item_${this.props.index}`}
                     primaryText={txt.facetTitle}
-                    open={isActive}
+                    open={this.props.activeFacets.hasOwnProperty(FACET_TYPE_RANGE) && this.props.activeFacets[FACET_TYPE_RANGE][txt.title] && true}
                     disabled={this.props.disabled}
-                    className={`facetsYearCategory${activeClass}${disabledClass}`}
+                    className={'facetsYearCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                     primaryTogglesNestedList
                     nestedItems={[
                         <ListItem
                             key="key_facet_item"
                             id="activeYearPublishedFacet"
-                            className={`facetsYearLink${activeClass}${disabledClass}`}
+                            className={'facetsYearLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                             primaryText={isActive ? `${this.state.from || '*'} - ${this.state.to || '*'}` : ''}
                             onClick={isActive ? this._handleRangeFacetClick : () => {}}
                             disabled={this.props.disabled}
