@@ -53,12 +53,13 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     // if record already has files, add new files to the end of the list (for patch)
     const initialCount = record && record.fez_record_search_key_file_attachment_name ?
         record.fez_record_search_key_file_attachment_name.length : 0;
-    const attachmentNames = files.map((item, index) => {
-        return {
-            rek_file_attachment_name: item.name,
-            rek_file_attachment_name_order: initialCount + index + 1
-        };
-    });
+    const attachmentNames = files
+        .map((item, index) => {
+            return {
+                rek_file_attachment_name: item.name,
+                rek_file_attachment_name_order: initialCount + index + 1
+            };
+        });
     const attachmentEmbargoDates = files
         .map((item, index) => {
             if (!item.hasOwnProperty('date')) return null;
@@ -68,12 +69,15 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
             };
         })
         .filter((file) => (file !== null));
-    const attachmentAccessConditions = files.map((item, index) => {
-        return {
-            rek_file_attachment_access_condition: item.access_condition_id,
-            rek_file_attachment_access_condition_order: initialCount + index + 1
-        };
-    });
+    const attachmentAccessConditions = files
+        .map((item, index) => {
+            if (!item.hasOwnProperty('access_condition_id')) return null;
+            return {
+                rek_file_attachment_access_condition: item.access_condition_id,
+                rek_file_attachment_access_condition_order: initialCount + index + 1
+            };
+        })
+        .filter((file) => (file !== null));
 
     return {
         fez_record_search_key_file_attachment_name: [
@@ -124,7 +128,7 @@ export const getRecordSubjectSearchKey = (subjects) => {
     return {
         fez_record_search_key_subject: subjects.map((item, index) => (
             {
-                rek_subject_id: item.rek_value.key,
+                rek_subject: item.rek_value.key,
                 rek_subject_order: index + 1
             }
         ))

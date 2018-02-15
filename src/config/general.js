@@ -18,15 +18,6 @@ export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.o
 export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
-// Default values for createNewRecord
-export const NEW_RECORD_DEFAULT_VALUES = {
-    rek_object_type: 3,
-    rek_status: 2,
-    fez_record_search_key_ismemberof: [
-        {rek_ismemberof: 'UQ:218198'}
-    ]
-};
-
 export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
 export const PUBLICATION_TYPE_BOOK = 174;
@@ -276,6 +267,34 @@ export const thesisSubtypes = [
 
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
+
+// Default values for createNewRecord
+export const NEW_RECORD_DEFAULT_VALUES = {
+    rek_object_type: 3,
+    rek_status: 2,
+    fez_record_search_key_ismemberof: [
+        {rek_ismemberof: 'UQ:218198'}
+    ]
+};
+
+export const HDR_THESIS_DEFAULT_VALUES = {
+    rek_object_type: 3,
+    rek_status: 2,
+    fez_record_search_key_ismemberof: [
+        {rek_ismemberof: 'UQ:152694'}
+    ],
+    rek_display_type: PUBLICATION_TYPE_THESIS
+};
+
+export const SBS_THESIS_DEFAULT_VALUES = {
+    rek_object_type: 3,
+    rek_status: 2,
+    fez_record_search_key_ismemberof: [
+        {rek_ismemberof: 'UQ:155729'}
+    ],
+    rek_display_type: PUBLICATION_TYPE_THESIS,
+    rek_genre_type: 'Professional Doctorate'
+};
 
 export const FACET_TYPE_FILTER = 'filters';
 export const FACET_TYPE_RANGE = 'ranges';

@@ -455,40 +455,60 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
-                    hintText: 'Thesis title'
+                    hintText: 'Thesis title',
+                    errorMessage: 'Thesis title is required'
                 },
                 orgName: {
                     floatingLabelText: 'Institution name',
-                    hintText: ''
+                    hintText: '',
+                    errorMessage: 'Institution name is required'
                 },
                 orgUnitName: {
                     floatingLabelText: 'School, Institute or Centre',
-                    hintText: ''
+                    hintText: '',
+                    errorMessage: 'School, institute or centre is required'
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
+                    errorMessage: 'Publication date is required'
                 },
                 thesisType: {
-                    label: 'Thesis type'
+                    label: 'Thesis type',
+                    errorMessage: 'Thesis type is required'
                 },
                 author: {
                     floatingLabelText: 'Author name',
-                    hintText: ''
+                    hintText: '',
+                    errorMessage: 'Author name is required'
                 }
             }
         },
-        supervisors: txt.components.supervisors,
+        supervisors: {
+            ...txt.components.supervisors,
+            errorMessage: 'Supervisor are required'
+        },
         fieldOfResearch: {
             title: 'Field of research',
+            help: {
+                title: 'Field of research help',
+                text: 'Some help',
+                buttonLabel: 'OK'
+            },
+            description: 'Select up to 3 Field of Research (FoR) codes',
+            errorMessage: 'Field of research (FoR) is required'
+        },
+        keywords: {
+            title: 'Keywords',
             help: {
                 title: 'Optional information help',
                 text: 'Some help',
                 buttonLabel: 'OK'
             },
-            description: 'Select up to 3 Field of Research (FoR) codes'
+            description: 'Add up to 10 keywords that describe the content of the thesis',
+            errorMessage: 'Keywords are required'
         },
         optional: {
             title: 'Optional information',
@@ -508,7 +528,8 @@ export default {
                 },
                 abstract: {
                     floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work'
+                    hintText: 'Provide an abstract or summary of the work',
+                    errorMessage: 'Abstract is required'
                 },
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -1035,7 +1056,8 @@ export default {
             title: 'Upload files',
             text: 'file help...',
             buttonLabel: 'OK'
-        }
+        },
+        errorMessage: 'File submission is mandatory'
     },
     cancelWorkflowConfirmation: {
         confirmationTitle: 'Abandon workflow',
@@ -1064,5 +1086,36 @@ export default {
         type: 'done',
         title: 'Success',
         message: 'New publication has been saved successfully.'
+    },
+    thesisSubmission: {
+        hdrTitle: 'Higher degree by research thesis deposit',
+        sbsTitle: 'Professional doctorate deposit',
+        text: (<span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
+        fileUpload: {
+            title: 'Upload files',
+            help: {
+                title: 'Upload files',
+                text: 'file help...',
+                buttonLabel: 'OK'
+            },
+            text: (
+                <div>
+                    PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
+                    Stages of examination are: submission, or correctedthesis, or finalthesis.
+                    Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
+                    File submission is mandatory.<span className="requiredField"><label>&nbsp;</label></span><br/>
+                    For example: <br />
+                    - s1234567_phd_thesis.pdf <br/>
+                    - s1234567_phd_abstract.pdf <br/>
+                    - s1234567_phd_submissionform.pdf <br/>
+                </div>
+            )
+        },
+        cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/3-thesis-examination',
+        cancel: 'Cancel',
+        submit: 'Deposit your thesis',
+        afterSubmit: 'Go to the next step',
+        afterSubmitText: (<p>You thesis has been submitted. You will received acknowledgement email shortly.</p>)
     }
 };

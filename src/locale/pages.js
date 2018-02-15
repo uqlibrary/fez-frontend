@@ -119,6 +119,22 @@ export default {
                 </StandardCard>
             )
         },
+        thesisSubmissionDenied: {
+            title: 'Thesis deposit access denied',
+            children: (
+                <StandardCard>
+                    <p>
+                        Your account does not have rights for thesis deposit workflow.
+                    </p>
+                    <p>
+                        For depositing your thesis you must login with your <b>student username</b> (you may have logged into eSpace with your staff username).
+                    </p>
+                    <p>
+                        Please logout and login with the correct user account.
+                    </p>
+                </StandardCard>
+            )
+        },
         dashboard: {
             loading: 'Loading your dashboard...',
             header: {
@@ -369,16 +385,17 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your record has been submitted',
-                successConfirmationMessage: (
-                    <p>Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
-                        record.</p>),
-                fileFailConfirmationMessage: (<p>
-                    Your record has been saved. <br/><br/>
-                    <strong>Please note, file upload has failed. Retry uploading files via "Fix record" screen or
-                        contact eSpace administrators. </strong><br/><br/>
-                    Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
-                    record.
-                </p>),
+                recordSuccessConfirmationMessage: (
+                    <p>
+                        Your record has been saved.<br/><br/>
+                        Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
+                        record.
+                    </p>),
+                fileFailConfirmationAlert: {
+                    title: 'File upload failed',
+                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
+                    type: 'info'
+                },
                 cancelButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
             }

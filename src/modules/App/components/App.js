@@ -114,10 +114,6 @@ export default class App extends React.Component {
             );
         }
 
-        const titleStyle = this.state.docked ? {paddingLeft: 320} : {};
-        const container = this.state.docked ? {paddingLeft: 340} : {};
-        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
-
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
@@ -126,6 +122,13 @@ export default class App extends React.Component {
         const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
         const isPublicPage = menuItems.filter((menuItem) =>
             (this.props.location.pathname === menuItem.linkTo && menuItem.public)).length > 0;
+        const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
+            this.props.location.pathname === routes.pathConfig.sbsSubmission;
+
+        const showMenu = !isThesisSubmissionPage;
+        const titleStyle = showMenu && this.state.docked ? {paddingLeft: 320} : {};
+        const containerStyle = showMenu && this.state.docked ? {paddingLeft: 340} : {};
+        const appBarButtonStyles = {backgroundColor: 'rgba(0,0,0,0.3)', borderRadius: '50%'};
 
         let userStatusAlert = null;
         if(!this.props.accountLoading && !this.props.account) {
@@ -145,7 +148,7 @@ export default class App extends React.Component {
                 ...locale.global.noOrcidAlert,
                 action: this.redirectToOrcid
             };
-        } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired && isHdrStudent ) {
+        } else if (!isPublicPage && !isThesisSubmissionPage && !isAuthorLoading && isOrcidRequired && isHdrStudent) {
             // user is logged in, but doesn't have ORCID identifier
             userStatusAlert = {
                 ...locale.global.forceOrcidLinkAlert
@@ -155,7 +158,7 @@ export default class App extends React.Component {
             <div className="layout-fill align-stretch">
                 <AppBar
                     className="AppBar align-center"
-                    showMenuIconButton={!this.state.docked}
+                    showMenuIconButton={showMenu && !this.state.docked}
                     style={{height: 75}}
                     iconStyleLeft={{marginTop: 0}}
                     title={locale.global.title}
@@ -181,21 +184,24 @@ export default class App extends React.Component {
                         </div>
                     }
                 />
-                <MenuDrawer
-                    menuItems={menuItems}
-                    drawerOpen={this.state.docked || this.state.menuDrawerOpen}
-                    docked={this.state.docked}
-                    history={this.props.history}
-                    logoImage={locale.global.logo}
-                    logoText={locale.global.title}
-                    onToggleDrawer={this.toggleDrawer}
-                    isMobile={this.state.isMobile}
-                    locale={{
-                        skipNavAriaLabel: locale.global.skipNav.ariaLabel,
-                        skipNavTitle: locale.global.skipNav.title,
-                        closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
-                    }}/>
-                <div className="content-container" style={container}>
+                {
+                    showMenu &&
+                    <MenuDrawer
+                        menuItems={menuItems}
+                        drawerOpen={this.state.docked || this.state.menuDrawerOpen}
+                        docked={this.state.docked}
+                        history={this.props.history}
+                        logoImage={locale.global.logo}
+                        logoText={locale.global.title}
+                        onToggleDrawer={this.toggleDrawer}
+                        isMobile={this.state.isMobile}
+                        locale={{
+                            skipNavAriaLabel: locale.global.skipNav.ariaLabel,
+                            skipNavTitle: locale.global.skipNav.title,
+                            closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
+                        }}/>
+                }
+                <div className="content-container" style={containerStyle}>
                     {
                         userStatusAlert &&
                         <div className="layout-fill dashAlert">
@@ -216,7 +222,12 @@ export default class App extends React.Component {
                         !isAuthorLoading &&
                         <Switch>
                             {
-                                routes.getRoutesConfig(pages, this.props.account, isOrcidRequired && isHdrStudent).map((route, index) => (
+                                routes.getRoutesConfig({
+                                    components: pages,
+                                    account: this.props.account,
+                                    forceOrcidRegistration: isOrcidRequired && isHdrStudent,
+                                    isHdrStudent: isHdrStudent
+                                }).map((route, index) => (
                                     <Route key={`route_${index}`} {...route} />
                                 ))
                             }

@@ -50,6 +50,43 @@ export default {
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ]
         },
+        keywordsForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Keyword',
+                        inputFieldHint: 'Type keyword',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Keyword',
+                        reorderColumn: 'Reorder keywords',
+                        deleteAll: 'Remove all keywords',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all keywords?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move keyword up the order',
+                        moveDownHint: 'Move keyword down the order',
+                        deleteHint: 'Remove this keyword',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete keyword',
+                            confirmationMessage: 'Are you sure you want to delete this keyword?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         isbnForm: {
             title: 'ISBN',
             text: 'You can add up to five ISBN values',

@@ -514,6 +514,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -961,6 +962,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -1433,6 +1435,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -2166,6 +2169,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -2613,6 +2617,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -3085,6 +3090,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -3643,6 +3649,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               "color": "#ffffff",
                               "rippleBackgroundColor": "#616161",
                             },
+                            "userAgent": undefined,
                             "zIndex": Object {
                               "appBar": 1100,
                               "dialog": 1500,
@@ -4090,6 +4097,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               "color": "#ffffff",
                               "rippleBackgroundColor": "#616161",
                             },
+                            "userAgent": undefined,
                             "zIndex": Object {
                               "appBar": 1100,
                               "dialog": 1500,
@@ -4564,6 +4572,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               "color": "#ffffff",
                               "rippleBackgroundColor": "#616161",
                             },
+                            "userAgent": undefined,
                             "zIndex": Object {
                               "appBar": 1100,
                               "dialog": 1500,

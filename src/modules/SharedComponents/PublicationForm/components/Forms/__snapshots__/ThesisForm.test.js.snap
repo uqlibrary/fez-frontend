@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThesisForm renders  component 1`] = `
+exports[`ThesisForm  should render component 1`] = `
 <div>
   <StandardCard
     className=""
@@ -29,6 +29,7 @@ exports[`ThesisForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
+          errorMessage="Thesis title is required"
           floatingLabelText="Title"
           fullWidth={true}
           hintText="Thesis title"
@@ -54,6 +55,7 @@ exports[`ThesisForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
+          errorMessage="School, institute or centre is required"
           floatingLabelText="School, Institute or Centre"
           hintText=""
           name="fez_record_search_key_org_unit_name.rek_org_unit_name"
@@ -71,6 +73,7 @@ exports[`ThesisForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
+          errorMessage="Institution name is required"
           floatingLabelText="Institution name"
           hintText=""
           name="fez_record_search_key_org_name.rek_org_name"
@@ -94,6 +97,7 @@ exports[`ThesisForm renders  component 1`] = `
           disabled={false}
           locale={
             Object {
+              "errorMessage": "Thesis type is required",
               "label": "Thesis type",
             }
           }
@@ -134,6 +138,7 @@ exports[`ThesisForm renders  component 1`] = `
           className="requiredField"
           component={[Function]}
           disabled={false}
+          errorMessage="Author name is required"
           floatingLabelText="Author name"
           fullWidth={true}
           hintText=""
@@ -234,7 +239,7 @@ exports[`ThesisForm renders  component 1`] = `
       Object {
         "buttonLabel": "OK",
         "text": "Some help",
-        "title": "Optional information help",
+        "title": "Field of research help",
       }
     }
     title="Field of research"
@@ -340,6 +345,7 @@ exports[`ThesisForm renders  component 1`] = `
         <Field
           component={[Function]}
           disabled={false}
+          errorMessage="Abstract is required"
           floatingLabelText="Abstract"
           fullWidth={true}
           hintText="Provide an abstract or summary of the work"

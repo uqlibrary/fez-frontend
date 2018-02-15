@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 import Async from 'modules/SharedComponents/Async';
 const PublicationForm = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationForm/containers/PublicationForm')} componentProps={componentProps} />);
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 
 // forms & custom components
 import {validation, routes} from 'config';
@@ -19,7 +20,7 @@ export default class NewRecord extends React.Component {
     };
 
     static defaultProps = {
-        rawSearchQuery: ''
+        rawSearchQuery: '',
     };
 
     constructor(props) {
@@ -61,11 +62,12 @@ export default class NewRecord extends React.Component {
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
-        if (this.props.newRecordFileUploadingError) {
-            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
-        } else {
-            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.successConfirmationMessage;
-        }
+        saveConfirmationLocale.confirmationMessage = (
+            <div>
+                {!this.props.newRecordFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                {saveConfirmationLocale.recordSuccessConfirmationMessage}
+            </div>
+        );
         return (
             <div>
                 <ConfirmDialogBox

@@ -10,7 +10,8 @@ const mapStateToProps = (state, props) => {
         errorText: props.meta ? props.meta.error : props.errorText,
         itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
             ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
-        dataSourceConfig: { text: 'value', value: 'key'}
+        dataSourceConfig: { text: 'value', value: 'key'},
+        selectedValue: props.input ? props.input.value : null
     };
 };
 
