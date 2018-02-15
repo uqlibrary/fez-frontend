@@ -1,26 +1,22 @@
 jest.dontMock('./YearPublishedFacetRange');
 
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
+import YearPublishedFacetRange from './YearPublishedFacetRange';
 import {possibleUnclaimedList} from 'mock/data';
 
-import YearPublishedFacetRange from './YearPublishedFacetRange';
-
-function setup({onChange = jest.fn(), activeFacets = {filters: {}, ranges: {}}, disabled = false, minYearValue = 2010, maxYearValue = 2020, index = 0}) {
+function setup(testProps, isShallow = true) {
     const props = {
-        onChange,
-        activeFacets,
-        minYearValue,
-        maxYearValue,
-        index,
-        disabled
+        onChange: jest.fn(),
+        activeFacets: {filters: {}, ranges: {}},
+        disabled: false,
+        minYearValue: 2010,
+        maxYearValue: 2020,
+        index: 0,
+        ...testProps
     };
-
-    return shallow(<YearPublishedFacetRange {...props} />);
+    return getElement(YearPublishedFacetRange, props, isShallow);
 }
 
-describe('YearPublishedFacetRange renders ', () => {
+describe('Year published facet range ', () => {
 
     beforeEach(() => {
         // Set a mock date for account API
@@ -32,15 +28,15 @@ describe('YearPublishedFacetRange renders ', () => {
         global.Date.now = _Date.now;
     });
 
-    it('range selector with default values populated', () => {
-        const wrapper = setup({});
+    it('should render range selector with default values populated', () => {
+        const wrapper = setup({minYearValue: 2010, maxYearValue: 2020, activeFacets: {filters: {}, ranges: {}}});
         expect(toJson(wrapper)).toMatchSnapshot();
 
         const yearPublishedCategory = wrapper.find('.facetsYear');
         expect(yearPublishedCategory.length).toEqual(1);
     });
 
-    it('range descriptor when active', () => {
+    it('should render range descriptor when active', () => {
         const wrapper = setup({activeFacets: {filters: {}, ranges: {'Year published': '2010 - 2016'}}});
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -48,7 +44,7 @@ describe('YearPublishedFacetRange renders ', () => {
         expect(yearPublishedCategory.length).toEqual(1);
     });
 
-    it('range selector as disabled', () => {
+    it('should render range selector disabled', () => {
         const wrapper = setup({disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -57,7 +53,7 @@ describe('YearPublishedFacetRange renders ', () => {
         });
     });
 
-    it('category for mock data deactivating a range selection', () => {
+    it('should handle facet click correctly on deactivating year published range', () => {
         const testHandleFacetClickFn = jest.fn();
         const wrapper = setup({onChange: testHandleFacetClickFn, activeFacets: {filters: {}, ranges: {'Year published': '2010 - 2018'}}});
 
@@ -66,9 +62,9 @@ describe('YearPublishedFacetRange renders ', () => {
         expect(testHandleFacetClickFn).toHaveBeenCalledWith('Year published', '[2010 TO 2018]', 'ranges');
     });
 
-    it('category for mock data activating a range selection', () => {
+    it('should handle facet click correctly on changing year published range values', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010});
 
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
@@ -85,9 +81,9 @@ describe('YearPublishedFacetRange renders ', () => {
         expect(testHandleFacetClickFn).toHaveBeenCalledWith('Year published', '[2005 TO 2015]', 'ranges');
     });
 
-    it('category for mock data activating a range (* - 2020)', () => {
+    it('should render category on facet click for a range (* - 2020)', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010});
 
         wrapper.instance().setFromValue({});
         wrapper.instance().setToValue({}, '2020');
@@ -96,9 +92,9 @@ describe('YearPublishedFacetRange renders ', () => {
         expect(testHandleFacetClickFn).toHaveBeenCalledWith('Year published', '[* TO 2020]', 'ranges');
     });
 
-    it('category for mock data activating a range (2010 - *)', () => {
+    it('should render category on facet click for a range (2010 - *)', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010});
 
         wrapper.instance().setFromValue({}, '2010');
         wrapper.instance().setToValue({});
@@ -107,9 +103,9 @@ describe('YearPublishedFacetRange renders ', () => {
         expect(testHandleFacetClickFn).toHaveBeenCalledWith('Year published', '[2010 TO *]', 'ranges');
     });
 
-    it('category for mock data activating a range (0500 - 2020)', () => {
+    it('should render category on facet click for a range (0500 - 2020)', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010});
 
         wrapper.instance().setFromValue({}, '500');
         wrapper.instance().setToValue({}, '2020');
@@ -118,9 +114,9 @@ describe('YearPublishedFacetRange renders ', () => {
         expect(testHandleFacetClickFn).toHaveBeenCalledWith('Year published', '[0500 TO 2020]', 'ranges');
     });
 
-    it('category for mock data activating a range swapped (2020 - 2015)', () => {
+    it('should render category with years swapped on facet click for a range (2020 - 2015)', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010});
 
         wrapper.instance().setFromValue({}, '2020');
         wrapper.instance().setToValue({}, '2015');
