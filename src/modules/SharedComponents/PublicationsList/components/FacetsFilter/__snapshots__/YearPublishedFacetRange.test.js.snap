@@ -6,7 +6,7 @@ exports[`Year published facet range  should render range descriptor when active 
 >
   <ListItem
     autoGenerateNestedIndicator={true}
-    className="facetsYearCategory active "
+    className="facetsYearCategory active"
     containerElement="span"
     disableKeyboardFocus={false}
     disabled={false}
@@ -17,7 +17,7 @@ exports[`Year published facet range  should render range descriptor when active 
       Array [
         <ListItem
           autoGenerateNestedIndicator={true}
-          className="facetsYearLink active "
+          className="facetsYearLink active"
           containerElement="span"
           disableKeyboardFocus={false}
           disabled={false}
@@ -188,7 +188,7 @@ exports[`Year published facet range  should render range selector with default v
 >
   <ListItem
     autoGenerateNestedIndicator={true}
-    className="facetsYearCategory "
+    className="facetsYearCategory"
     containerElement="span"
     disableKeyboardFocus={false}
     disabled={false}
@@ -199,7 +199,7 @@ exports[`Year published facet range  should render range selector with default v
       Array [
         <ListItem
           autoGenerateNestedIndicator={true}
-          className="facetsYearLink "
+          className="facetsYearLink"
           containerElement="span"
           disableKeyboardFocus={false}
           disabled={false}

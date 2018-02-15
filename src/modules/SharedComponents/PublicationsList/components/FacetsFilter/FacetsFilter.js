@@ -5,7 +5,7 @@ import FlatButton from 'material-ui/RaisedButton';
 import {List, ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-import {publicationTypes, FACET_TYPE_FILTER} from 'config';
+import {publicationTypes} from 'config';
 import {locale} from 'locale';
 import YearPublishedFacetRange from './YearPublishedFacetRange';
 
@@ -101,7 +101,7 @@ export default class FacetsFilter extends React.Component {
             const facetToDisplay = {
                 title: renameFacetsList[key] || key,
                 facetTitle: key,
-                type: FACET_TYPE_FILTER,
+                type: 'filters',
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
                         const publicationTypeIndex = publicationTypes().findIndex((publicationType) => {
