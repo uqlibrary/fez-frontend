@@ -532,7 +532,7 @@ describe('FacetsFilter renders ', () => {
 
     it('handleResetClick returns empty state for activeFacets', () => {
         const wrapper = setup({});
-        wrapper.setState({activeFacets:{"Year published":"2005","Keywords":"Cells"}});
+        wrapper.setState({activeFacets:{ranges: {"Year published": "[2005 - 2005]"}, filters: {"Keywords":"Cells"}}});
         wrapper.instance().handleResetClick();
         expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
     });

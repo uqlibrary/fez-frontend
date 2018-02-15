@@ -130,7 +130,8 @@ export default class FacetsFilter extends React.Component {
     render() {
         const txt = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
-        if (facetsToDisplay.length === 0) return (<span className="facetsFilter empty" />);
+        const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0 || Object.keys(this.state.activeFacets.ranges).length > 0);
+        if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
         return (
             <div className="facetsFilter">
                 <List>
@@ -159,7 +160,7 @@ export default class FacetsFilter extends React.Component {
                     }
                 </List>
                 {
-                    (Object.keys(this.state.activeFacets.filters).length > 0 || Object.keys(this.state.activeFacets.ranges).length > 0) &&
+                    hasActiveFilters &&
                     <div className="columns">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-tablet">

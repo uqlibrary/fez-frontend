@@ -167,8 +167,11 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.state.allowResultsPaging && this.props.publicationsListFacets
-                        && Object.keys(this.props.publicationsListFacets).length > 0 &&
+                        !this.props.accountLoading && this.state.allowResultsPaging && (
+                            (this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) ||
+                            Object.keys(this.state.activeFacets.filters).length > 0 ||
+                            Object.keys(this.state.activeFacets.ranges).length > 0
+                        ) &&
                         <div className="column is-3 is-hidden-mobile">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
