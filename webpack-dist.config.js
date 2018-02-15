@@ -32,8 +32,6 @@ if(config.environment === 'development') {
     config.basePath += branch + '/';
 }
 
-process.env.PUBLIC_PATH = config.basePath;
-
 module.exports = {
     devtool: 'source-map',
     // The entry file. All your app roots from here.
@@ -82,7 +80,8 @@ module.exports = {
             'process.env.APP_URL': JSON.stringify(config.url),
             'process.env.BRANCH': JSON.stringify(config.environment),
             'process.env.ORCID_URL': JSON.stringify(config.orcidUrl),
-            'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId)
+            'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId),
+            'process.env.PUBLIC_PATH': JSON.stringify(config.basePath)
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's

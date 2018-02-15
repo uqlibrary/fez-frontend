@@ -100,8 +100,16 @@ export function submitThesis(data, author) {
             ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
             ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
-            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
+            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
+            rek_title: data.thesisTitle.plainText,
+            rek_formatted_title: data.thesisTitle.htmlText,
+            fez_record_search_key_description: {
+                rek_description: data.thesisAbstract.plainText
+            },
+            rek_formatted_abstract: data.thesisAbstract.htmlText
         };
+
+        console.log(recordRequest);
 
         // delete extra form values from request object
         if (recordRequest.authors) delete recordRequest.authors;
@@ -110,6 +118,8 @@ export function submitThesis(data, author) {
         if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
         if (recordRequest.supervisors) delete recordRequest.supervisors;
         if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
+        if (recordRequest.thesisTitle) delete recordRequest.thesisTitle;
+        if (recordRequest.thesisAbstract) delete recordRequest.thesisAbstract;
 
         let fileUploadSucceeded = false;
         dispatch({type: actions.CREATE_RECORD_SAVING});

@@ -36,8 +36,7 @@ const validate = (values) => {
     const data = values.toJS();
     const errors = [];
     const txt = formLocale.thesis;
-
-    if (!data.rek_title) {
+    if (!data.thesisTitle || !data.thesisTitle.plainText) {
         errors.push(txt.information.fieldLabels.documentTitle.errorMessage);
     }
 
@@ -61,7 +60,7 @@ const validate = (values) => {
         errors.push(txt.information.fieldLabels.author.errorMessage);
     }
 
-    if (!data.fez_record_search_key_description || !data.fez_record_search_key_description.rek_description) {
+    if (!data.thesisAbstract || !data.thesisAbstract.plainText) {
         errors.push(txt.optional.fieldLabels.abstract.errorMessage);
     }
 
@@ -93,8 +92,6 @@ let ThesisSubmissionContainer = reduxForm({
 const mapStateToProps = (state, props) => {
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
     const initialValues = {
-        'rek_formatted_abstract': 'some abs value...',
-        'rek_formatted_title': 'some title value...',
         currentAuthor: [
             {
                 'nameAsPublished': currentAuthor ? currentAuthor.aut_display_name : '',

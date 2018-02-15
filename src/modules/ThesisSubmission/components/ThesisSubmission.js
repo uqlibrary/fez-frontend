@@ -106,29 +106,12 @@ export default class ThesisSubmission extends Component {
                         txt={formLocale.cancelWorkflowConfirmation}/>
 
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <div className="columns" style={{marginTop: '-12px'}}>
-                            <div className="column">
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    autoFocus
-                                    name="rek_title"
-                                    type="text"
-                                    fullWidth
-                                    multiLine
-                                    rows={1}
-                                    {...txt.information.fieldLabels.documentTitle}
-                                    className="requiredField"
-                                    validate={[validation.required]}
-                                />
-                            </div>
-                        </div>
-                        <div className="columns is-hidden-mobile">
-                            <div className="column">
-                                <label htmlFor="rek_formatted_title">Formatted title</label>
+                        <div className="columns">
+                            <div className="column requiredField">
+                                <label htmlFor="thesisTitle">{txt.information.fieldLabels.documentTitle.floatingLabelText}</label>
                                 <Field
                                     component={RichEditorField}
-                                    name="rek_formatted_title"
+                                    name="thesisTitle"
                                     disabled={this.props.submitting}
                                     height={50}
                                 />
@@ -192,27 +175,12 @@ export default class ThesisSubmission extends Component {
                             </div>
                         </div>
                         <div className="columns">
-                            <div className="column">
-                                <Field
-                                    component={TextField}
-                                    name="fez_record_search_key_description.rek_description"
-                                    type="text"
-                                    disabled={this.props.submitting}
-                                    fullWidth
-                                    multiLine
-                                    className="requiredField"
-                                    validate={[validation.required]}
-                                    rows={4}
-                                    {...txt.optional.fieldLabels.abstract} />
-                            </div>
-                        </div>
-                        <div className="columns is-hidden-mobile">
-                            <div className="column">
-                                <label htmlFor="rek_formatted_abstract">Formatted abstract</label>
+                            <div className="column requiredField">
+                                <label htmlFor="thesisAbstract">{txt.optional.fieldLabels.abstract.floatingLabelText}</label>
                                 <Field
                                     component={RichEditorField}
                                     disabled={this.props.submitting}
-                                    name="rek_formatted_abstract"
+                                    name="thesisAbstract"
                                 />
                             </div>
                         </div>
