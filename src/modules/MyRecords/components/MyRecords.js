@@ -125,7 +125,7 @@ export default class MyRecords extends React.Component {
                         </div>
                     }
                     {
-                        !this.props.accountLoading && this.state.allowResultsPaging &&
+                        !this.props.accountLoading && this.state.allowResultsPaging && this.props.publicationsList.length > 0 &&
                         <div className="column">
                             <StandardCard>
                                 {
