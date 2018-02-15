@@ -154,7 +154,7 @@ export default class FacetsFilter extends React.Component {
                             index={facetsToDisplay.length}
                             activeFacets={this.props.activeFacets}
                             disabled={this.props.disabled}
-                            handleFacetClick={this.handleFacetClick}
+                            onChange={this.handleFacetClick}
                         />
                     }
                 </List>

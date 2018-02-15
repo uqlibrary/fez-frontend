@@ -11,7 +11,7 @@ import {locale} from 'locale';
 
 export default class YearPublishedFacetRange extends React.Component {
     static propTypes = {
-        handleFacetClick: PropTypes.func,
+        onChange: PropTypes.func,
         activeFacets: PropTypes.object,
         disabled: PropTypes.bool,
         minYearValue: PropTypes.number,
@@ -63,7 +63,7 @@ export default class YearPublishedFacetRange extends React.Component {
         const from = parsedFromValue > parsedToValue ? this.state.to : (this.state.from || '*');
         const to = parsedToValue < parsedFromValue ? this.state.from : (this.state.to || '*');
 
-        return this.props.handleFacetClick(txt.title, `[${from} TO ${to}]`, FACET_TYPE_RANGE);
+        return this.props.onChange(txt.title, `[${from} TO ${to}]`, FACET_TYPE_RANGE);
     };
 
     render() {

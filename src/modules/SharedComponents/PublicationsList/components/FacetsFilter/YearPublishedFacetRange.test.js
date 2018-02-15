@@ -7,9 +7,9 @@ import {possibleUnclaimedList} from 'mock/data';
 
 import YearPublishedFacetRange from './YearPublishedFacetRange';
 
-function setup({handleFacetClick = jest.fn(), activeFacets = {filters: {}, ranges: {}}, disabled = false, minYearValue = 2010, maxYearValue = 2020, index = 0}) {
+function setup({onChange = jest.fn(), activeFacets = {filters: {}, ranges: {}}, disabled = false, minYearValue = 2010, maxYearValue = 2020, index = 0}) {
     const props = {
-        handleFacetClick,
+        onChange,
         activeFacets,
         minYearValue,
         maxYearValue,
@@ -59,7 +59,7 @@ describe('YearPublishedFacetRange renders ', () => {
 
     it('category for mock data deactivating a range selection', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({handleFacetClick: testHandleFacetClickFn, activeFacets: {filters: {}, ranges: {'Year published': '2010 - 2018'}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, activeFacets: {filters: {}, ranges: {'Year published': '2010 - 2018'}}});
 
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
@@ -68,7 +68,7 @@ describe('YearPublishedFacetRange renders ', () => {
 
     it('category for mock data activating a range selection', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({handleFacetClick: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
 
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
@@ -87,7 +87,7 @@ describe('YearPublishedFacetRange renders ', () => {
 
     it('category for mock data activating a range (* - 2020)', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({handleFacetClick: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
 
         wrapper.instance().setFromValue({});
         wrapper.instance().setToValue({}, '2020');
@@ -98,7 +98,7 @@ describe('YearPublishedFacetRange renders ', () => {
 
     it('category for mock data activating a range (2010 - *)', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({handleFacetClick: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
 
         wrapper.instance().setFromValue({}, '2010');
         wrapper.instance().setToValue({});
@@ -109,7 +109,7 @@ describe('YearPublishedFacetRange renders ', () => {
 
     it('category for mock data activating a range (0500 - 2020)', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({handleFacetClick: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
 
         wrapper.instance().setFromValue({}, '500');
         wrapper.instance().setToValue({}, '2020');
@@ -120,7 +120,7 @@ describe('YearPublishedFacetRange renders ', () => {
 
     it('category for mock data activating a range swapped (2020 - 2015)', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({handleFacetClick: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, minYearValue: 2000, maxYearValue: 2010, activeFacets: {filters: {}, ranges: {}}});
 
         wrapper.instance().setFromValue({}, '2020');
         wrapper.instance().setToValue({}, '2015');
