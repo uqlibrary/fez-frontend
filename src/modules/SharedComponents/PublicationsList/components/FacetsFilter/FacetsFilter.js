@@ -40,7 +40,7 @@ export default class FacetsFilter extends React.Component {
         }
     }
 
-    handleFacetClick = (category, facet, facetType) => {
+    _handleFacetClick = (category, facet, facetType) => {
         if (this.props.disabled) {
             return;
         }
@@ -61,7 +61,7 @@ export default class FacetsFilter extends React.Component {
         });
     };
 
-    handleResetClick = () => {
+    _handleResetClick = () => {
         this.setState({
             activeFacets: {
                 filters: {},
@@ -71,19 +71,18 @@ export default class FacetsFilter extends React.Component {
     };
 
     getNestedListItems = (facetCategory) => {
-        const listItems = facetCategory.facets.map((item, index) => {
+        return facetCategory.facets.map((item, index) => {
             const isActive = this.state.activeFacets[facetCategory.type].hasOwnProperty(facetCategory.facetTitle) && this.state.activeFacets[facetCategory.type][facetCategory.facetTitle] === item.key;
             return (
                 <ListItem
                     key={index}
                     className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                     primaryText={`${item.title} (${item.count})`}
-                    onClick={() => (this.handleFacetClick(facetCategory.facetTitle, item.key, facetCategory.type))}
+                    onClick={() => (this._handleFacetClick(facetCategory.facetTitle, item.key, facetCategory.type))}
                     disabled={this.props.disabled}
                     leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}/>
             );
         });
-        return listItems;
     };
 
     getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList) => {
@@ -155,7 +154,7 @@ export default class FacetsFilter extends React.Component {
                             index={facetsToDisplay.length}
                             activeFacets={this.props.activeFacets}
                             disabled={this.props.disabled}
-                            onChange={this.handleFacetClick}
+                            onChange={this._handleFacetClick}
                         />
                     }
                 </List>
@@ -167,7 +166,7 @@ export default class FacetsFilter extends React.Component {
                             <FlatButton
                                 fullWidth
                                 label={txt.resetButtonText}
-                                onClick={this.handleResetClick}/>
+                                onClick={this._handleResetClick}/>
                         </div>
                     </div>
                 }

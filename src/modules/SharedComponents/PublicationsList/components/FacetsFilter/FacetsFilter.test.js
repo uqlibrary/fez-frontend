@@ -66,11 +66,11 @@ describe('FacetsFilter renders ', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}}});
 
-        wrapper.instance().handleFacetClick('Display type', 130, 'filters');
+        wrapper.instance()._handleFacetClick('Display type', 130, 'filters');
         wrapper.update();
         expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({'Display type': 130}));
 
-        wrapper.instance().handleFacetClick('Display type', 130, 'filters');
+        wrapper.instance()._handleFacetClick('Display type', 130, 'filters');
         wrapper.update();
         expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({}));
     });
@@ -79,7 +79,7 @@ describe('FacetsFilter renders ', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}}});
 
-        wrapper.instance().handleFacetClick('Keywords', 'Biochemistry', 'filters');
+        wrapper.instance()._handleFacetClick('Keywords', 'Biochemistry', 'filters');
         wrapper.update();
 
         expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({'Display type': 179, 'Keywords': 'Biochemistry'}));
@@ -90,7 +90,7 @@ describe('FacetsFilter renders ', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
         const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}}});
 
-        wrapper.instance().handleResetClick();
+        wrapper.instance()._handleResetClick();
         wrapper.update();
 
         expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({filters: {}, ranges: {}}));
@@ -530,27 +530,27 @@ describe('FacetsFilter renders ', () => {
         expect(JSON.stringify(wrapper.instance().getNestedListItems(facetsCategory))).toBe(JSON.stringify(result));
     });
 
-    it('handleResetClick returns empty state for activeFacets', () => {
+    it('_handleResetClick returns empty state for activeFacets', () => {
         const wrapper = setup({});
         wrapper.setState({activeFacets:{ranges: {"Year published": "[2005 - 2005]"}, filters: {"Keywords":"Cells"}}});
-        wrapper.instance().handleResetClick();
+        wrapper.instance()._handleResetClick();
         expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
     });
 
-    it('handleFacetClick returns correct state object for active facets', () => {
+    it('_handleFacetClick returns correct state object for active facets', () => {
         const wrapper = setup({});
         wrapper.setState({activeFacets:{filters:{}, ranges:{}}});
-        wrapper.instance().handleFacetClick('Category1','Facet1', 'filters');
-        wrapper.instance().handleFacetClick('Category2','Facet2', 'filters');
-        wrapper.instance().handleFacetClick('Category3','Facet3', 'filters');
+        wrapper.instance()._handleFacetClick('Category1','Facet1', 'filters');
+        wrapper.instance()._handleFacetClick('Category2','Facet2', 'filters');
+        wrapper.instance()._handleFacetClick('Category3','Facet3', 'filters');
         expect(wrapper.state().activeFacets).toEqual({filters: {"Category1": "Facet1", "Category2": "Facet2", "Category3": "Facet3"}, ranges: {}});
     });
 
-    it('handleFacetClick returns empty state object when a facet is clicked while disabled', () => {
+    it('_handleFacetClick returns empty state object when a facet is clicked while disabled', () => {
         const wrapper = setup({disabled: true});
-        wrapper.instance().handleFacetClick('Category1','Facet1', 'filters');
-        wrapper.instance().handleFacetClick('Category2','Facet2', 'filters');
-        wrapper.instance().handleFacetClick('Category3','Facet3', 'filters');
+        wrapper.instance()._handleFacetClick('Category1','Facet1', 'filters');
+        wrapper.instance()._handleFacetClick('Category2','Facet2', 'filters');
+        wrapper.instance()._handleFacetClick('Category3','Facet3', 'filters');
         expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
     });
 
