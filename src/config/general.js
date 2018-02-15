@@ -295,6 +295,3 @@ export const SBS_THESIS_DEFAULT_VALUES = {
     rek_display_type: PUBLICATION_TYPE_THESIS,
     rek_genre_type: 'Professional Doctorate'
 };
-
-export const FACET_TYPE_FILTER = 'filters';
-export const FACET_TYPE_RANGE = 'ranges';

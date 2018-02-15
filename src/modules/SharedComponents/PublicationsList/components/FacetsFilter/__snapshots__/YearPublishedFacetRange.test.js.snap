@@ -174,7 +174,7 @@ exports[`YearPublishedFacetRange renders  range selector as disabled 1`] = `
     onNestedListToggle={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
-    open={null}
+    open={false}
     primaryText="Published year range"
     primaryTogglesNestedList={true}
     secondaryTextLines={1}
@@ -188,7 +188,7 @@ exports[`YearPublishedFacetRange renders  range selector with default values pop
 >
   <ListItem
     autoGenerateNestedIndicator={true}
-    className="facetsYearCategory "
+    className="facetsYearCategory"
     containerElement="span"
     disableKeyboardFocus={false}
     disabled={false}
@@ -199,7 +199,7 @@ exports[`YearPublishedFacetRange renders  range selector with default values pop
       Array [
         <ListItem
           autoGenerateNestedIndicator={true}
-          className="facetsYearLink "
+          className="facetsYearLink"
           containerElement="span"
           disableKeyboardFocus={false}
           disabled={false}
@@ -296,7 +296,7 @@ exports[`YearPublishedFacetRange renders  range selector with default values pop
     onNestedListToggle={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
-    open={null}
+    open={false}
     primaryText="Published year range"
     primaryTogglesNestedList={true}
     secondaryTextLines={1}
