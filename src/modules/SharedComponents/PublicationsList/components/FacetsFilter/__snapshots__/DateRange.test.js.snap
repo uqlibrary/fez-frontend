@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Year published facet range  should render range descriptor when active 1`] = `
+exports[`Date range  should render range descriptor when active 1`] = `
 <div
   className="facetsYear"
 >
@@ -60,7 +60,7 @@ exports[`Year published facet range  should render range descriptor when active 
 </div>
 `;
 
-exports[`Year published facet range  should render range selector disabled 1`] = `
+exports[`Date range  should render range selector disabled 1`] = `
 <div
   className="facetsYear"
 >
@@ -182,7 +182,7 @@ exports[`Year published facet range  should render range selector disabled 1`] =
 </div>
 `;
 
-exports[`Year published facet range  should render range selector with default values populated 1`] = `
+exports[`Date range  should render range selector with default values populated 1`] = `
 <div
   className="facetsYear"
 >
