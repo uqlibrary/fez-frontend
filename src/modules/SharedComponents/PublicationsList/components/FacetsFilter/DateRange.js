@@ -6,7 +6,7 @@ import FlatButton from 'material-ui/FlatButton';
 import {ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-export default class YearPublishedFacetRange extends React.Component {
+export default class DateRange extends React.Component {
     static propTypes = {
         onChange: PropTypes.func.isRequired,
         disabled: PropTypes.bool,

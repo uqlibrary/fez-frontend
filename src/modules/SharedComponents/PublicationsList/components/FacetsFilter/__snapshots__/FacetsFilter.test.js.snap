@@ -408,7 +408,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
-    <YearPublishedFacetRange
+    <DateRange
       disabled={false}
       displayTitle="Published year range"
       facetValueOnActive={Object {}}
@@ -865,7 +865,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
-    <YearPublishedFacetRange
+    <DateRange
       disabled={false}
       displayTitle="Published year range"
       facetValueOnActive={Object {}}
@@ -1307,7 +1307,7 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
-    <YearPublishedFacetRange
+    <DateRange
       disabled={false}
       displayTitle="Published year range"
       facetValueOnActive={Object {}}
@@ -1765,7 +1765,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
-    <YearPublishedFacetRange
+    <DateRange
       disabled={false}
       displayTitle="Published year range"
       facetValueOnActive={Object {}}
@@ -2219,7 +2219,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
-    <YearPublishedFacetRange
+    <DateRange
       disabled={true}
       displayTitle="Published year range"
       facetValueOnActive={Object {}}
@@ -2605,7 +2605,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
-    <YearPublishedFacetRange
+    <DateRange
       disabled={false}
       displayTitle="Published year range"
       facetValueOnActive={Object {}}

@@ -7,7 +7,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
 import {publicationTypes} from 'config';
 import {locale} from 'locale';
-import YearPublishedFacetRange from './YearPublishedFacetRange';
+import DateRange from './DateRange';
 
 export default class FacetsFilter extends React.Component {
     static propTypes = {
@@ -184,7 +184,7 @@ export default class FacetsFilter extends React.Component {
                         })
                     }
                     {
-                        <YearPublishedFacetRange
+                        <DateRange
                             index={facetsToDisplay.length}
                             key={`key_facet_item_${facetsToDisplay.length}`}
                             title={yearFacetTitle}

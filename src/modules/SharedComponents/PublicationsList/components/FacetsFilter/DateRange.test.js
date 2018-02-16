@@ -1,6 +1,6 @@
-jest.dontMock('./YearPublishedFacetRange');
+jest.dontMock('./DateRange');
 
-import YearPublishedFacetRange from './YearPublishedFacetRange';
+import DateRange from './DateRange';
 import {possibleUnclaimedList} from 'mock/data';
 
 function setup(testProps, isShallow = true) {
@@ -17,10 +17,10 @@ function setup(testProps, isShallow = true) {
         facetValueOnActive: {from: null, to: null},
         ...testProps
     };
-    return getElement(YearPublishedFacetRange, props, isShallow);
+    return getElement(DateRange, props, isShallow);
 }
 
-describe('Year published facet range ', () => {
+describe('Date range ', () => {
 
     beforeEach(() => {
         // Set a mock date for account API
