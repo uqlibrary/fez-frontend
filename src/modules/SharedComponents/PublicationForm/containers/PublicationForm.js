@@ -47,6 +47,7 @@ const validate = (values) => {
                     (!data.editors || (data.editors && data.editors.filter(item => (item.selected)).length === 0)))
             ) {
                 errors.authors = locale.validationErrors.authorEditorRequired;
+                errors.editors = locale.validationErrors.authorEditorRequired;
             }
             break;
         default:

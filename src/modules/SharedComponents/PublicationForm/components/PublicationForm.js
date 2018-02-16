@@ -40,6 +40,7 @@ export default class PublicationForm extends Component {
     }
 
     _getPublicationTypeForm = (publicationTypeId) => {
+        const {formValues} = this.props;
         const filteredPublicationType = publicationTypeId ?
             this.publicationTypes.filter((item) => { return item.id === publicationTypeId; }) : null;
         return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].formComponent ?
@@ -47,7 +48,8 @@ export default class PublicationForm extends Component {
                 filteredPublicationType[0].formComponent,
                 {
                     subtypeVocabId: filteredPublicationType[0].subtypeVocabId,
-                    submitting: this.props.submitting
+                    submitting: this.props.submitting,
+                    formValues
                 })
             :
             null;

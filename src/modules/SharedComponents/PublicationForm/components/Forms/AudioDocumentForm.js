@@ -13,7 +13,8 @@ import {default as formLocale} from 'locale/publicationForm';
 
 export default class AudioDocumentForm extends Component {
     static propTypes = {
-        submitting: PropTypes.bool
+        submitting: PropTypes.bool,
+        formValues: PropTypes.object
     };
 
     constructor(props) {
@@ -23,6 +24,10 @@ export default class AudioDocumentForm extends Component {
     render() {
         // path to the locale data for each of the sections
         const txt = formLocale.audioDocument;
+        const editors = this.props.formValues && this.props.formValues.get('editors');
+        const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
+        const authors = this.props.formValues && this.props.formValues.get('authors');
+        const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
         return (
             <div>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
@@ -96,7 +101,7 @@ export default class AudioDocumentForm extends Component {
                 <StandardCard title={txt.creator.title} help={txt.creator.help}>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
+                        showContributorAssignment={!editorSelected}
                         className="requiredField"
                         name="authors"
                         locale={txt.creator.field}
@@ -107,7 +112,7 @@ export default class AudioDocumentForm extends Component {
                 <StandardCard title={txt.contributor.title} help={txt.contributor.help}>
                     <Field
                         component={ContributorsEditorField}
-                        showContributorAssignment
+                        showContributorAssignment={!authorSelected}
                         name="editors"
                         locale={txt.contributor.field}
                         disabled={this.props.submitting}

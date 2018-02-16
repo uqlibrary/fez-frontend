@@ -16,7 +16,7 @@
 .validationErrorMessage {
   color: $error-color;
   font-size: $text-body-small;
-  margin: 24px 0 0 0;
+  margin: 12px 0 0 0;
 }
 .contributorsRow {
   padding: 0;
@@ -25,6 +25,7 @@
   }
   .contributorDetails {
     padding: 6px;
+    overflow: hidden;
     @include mobile {
       padding-left: 12px;
     }
@@ -41,7 +42,11 @@
   }
   .datalist-text {
     margin-top: 6px !important;
-    line-height: 18px !important;
+    line-height: 20px !important;
+    @include mobile {
+      word-break: break-all;
+      overflow: hidden !important;
+    }
   }
   .authorIcon {
     padding: 12px;
@@ -50,9 +55,13 @@
 
   // Selected author
   &.selected {
-    background-color: $theme-color;
+    background-color: $accent-color-light;
     .datalist-text {
       color: $text-color-reverse;
+      .contributorName::after {
+        content: ' (assigned as you)';
+        opacity: 0.66;
+      }
       .datalist-text-subtitle {
         color: $text-color-reverse !important;
       }

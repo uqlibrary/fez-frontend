@@ -19,7 +19,7 @@ export default {
         authorLinking: 'Please select and confirm an author',
         contributorLinking: 'Please select and confirm a contributor',
         authorRequired: (<span>Please <b>provide a list of authors/creators</b> of the publication and <b>select an author/creator as you</b></span>),
-        authorEditorRequired: (<span>Please <b>provide a list of authors/creators and/or editors/contributors</b> of the publication and <b>select one author/creator or editor/contributor</b> as you</span>),
+        authorEditorRequired: (<span>Please <b>provide a list of authors/creators and/or editors/contributors</b> of the publication and <b>select only one author/creator or editor/contributor record</b> as you</span>),
         supervisorRequired: 'Please provide a list of supervisors',
         editorRequired: (<span>Please <b>provide a list of editors</b> of the publication and <b>select an editor name</b> as you</span>),
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
