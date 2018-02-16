@@ -6,41 +6,42 @@ import FlatButton from 'material-ui/FlatButton';
 import {ListItem} from 'material-ui/List';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-import {locale} from 'locale';
-
 export default class YearPublishedFacetRange extends React.Component {
     static propTypes = {
-        onChange: PropTypes.func,
-        activeFacets: PropTypes.object,
+        onChange: PropTypes.func.isRequired,
         disabled: PropTypes.bool,
+        isActive: PropTypes.bool,
         minYearValue: PropTypes.number,
         maxYearValue: PropTypes.number,
-        index: PropTypes.number
+        index: PropTypes.number,
+        facetValueOnActive: PropTypes.object,
+        open: PropTypes.bool,
+        facetTitle: PropTypes.string,
+        title: PropTypes.string.isRequired,
+        displayTitle: PropTypes.string.isRequired,
+        locale: PropTypes.object
     };
 
     static defaultProps = {
-        minYearValue: locale.components.facetsFilter.yearPublishedFacet.minYearValue,
-        maxYearValue: (new Date()).getFullYear() + 5
+        minYearValue: 2010,
+        maxYearValue: (new Date()).getFullYear() + 5,
+        facetValueOnActive: {
+            from: null,
+            to: null
+        },
+        locale: {
+            fromFieldLabel: 'From',
+            toFieldLabel: 'To',
+            rangeSubmitButtonLabel: 'Go'
+        }
     };
 
     constructor(props) {
         super(props);
-        // always keep props/state in sync
-        const title = locale.components.facetsFilter.yearPublishedFacet.title;
-
-        if (props.activeFacets.hasOwnProperty('ranges') &&
-            props.activeFacets.ranges.hasOwnProperty(title)) {
-            const range = props.activeFacets.ranges[title].match(/\d\d\d\d/g);
-            this.state = {
-                from: range[0],
-                to: range[1]
-            };
-        } else {
-            this.state = {
-                from: this.props.minYearValue,
-                to: this.props.maxYearValue
-            };
-        }
+        this.state = {
+            from: this.props.facetValueOnActive.from || this.props.minYearValue,
+            to: this.props.facetValueOnActive.to || this.props.maxYearValue
+        };
     }
 
     setFromValue = (event, value) => {
@@ -56,28 +57,23 @@ export default class YearPublishedFacetRange extends React.Component {
     };
 
     _handleRangeFacetClick = () => {
-        const txt = locale.components.facetsFilter.yearPublishedFacet;
-        const parsedFromValue = parseInt(this.state.from, 10);
-        const parsedToValue = parseInt(this.state.to, 10);
-        const from = parsedFromValue > parsedToValue ? this.state.to : (this.state.from || '*');
-        const to = parsedToValue < parsedFromValue ? this.state.from : (this.state.to || '*');
-
-        return this.props.onChange(txt.title, `[${from} TO ${to}]`, 'ranges');
+        return this.props.onChange(this.props.title, this.state.from, this.state.to);
     };
 
     render() {
-        const txt = locale.components.facetsFilter.yearPublishedFacet;
-        const isActive = this.props.activeFacets.hasOwnProperty('ranges') && this.props.activeFacets.ranges.hasOwnProperty(txt.title);
+        const txt = this.props.locale;
+        const {displayTitle, disabled, index, open, isActive, minYearValue, maxYearValue} = this.props;
+
         const activeClass = isActive ? ' active' : '';
-        const disabledClass = this.props.disabled ? ' disabled' : '';
+        const disabledClass = disabled ? ' disabled' : '';
 
         return (
             <div className="facetsYear">
                 <ListItem
-                    key={`key_facet_item_${this.props.index}`}
-                    primaryText={txt.facetTitle}
-                    open={this.props.activeFacets.hasOwnProperty('ranges') && this.props.activeFacets.ranges[txt.title] && true}
-                    disabled={this.props.disabled}
+                    key={`key_facet_item_${index}`}
+                    primaryText={displayTitle}
+                    open={open}
+                    disabled={disabled}
                     className={`facetsYearCategory${activeClass}${disabledClass}`}
                     primaryTogglesNestedList
                     nestedItems={[
@@ -87,8 +83,8 @@ export default class YearPublishedFacetRange extends React.Component {
                             className={`facetsYearLink${activeClass}${disabledClass}`}
                             primaryText={isActive ? `${this.state.from || '*'} - ${this.state.to || '*'}` : ''}
                             onClick={isActive ? this._handleRangeFacetClick : () => {}}
-                            disabled={this.props.disabled}
-                            leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}
+                            disabled={disabled}
+                            leftIcon={isActive ? <NavigationClose disabled={disabled} /> : null}
                         >
                             {
                                 !isActive &&
@@ -96,7 +92,7 @@ export default class YearPublishedFacetRange extends React.Component {
                                     <div className="facetsYearFrom column">
                                         <TextField
                                             type="number"
-                                            min={this.props.minYearValue}
+                                            min={minYearValue}
                                             max={this.state.to}
                                             floatingLabelText={txt.fromFieldLabel}
                                             defaultValue={this.state.from}
@@ -109,7 +105,7 @@ export default class YearPublishedFacetRange extends React.Component {
                                         <TextField
                                             type="number"
                                             min={this.state.from}
-                                            max={this.props.maxYearValue}
+                                            max={maxYearValue}
                                             floatingLabelText={txt.toFieldLabel}
                                             defaultValue={this.state.to}
                                             onChange={this.setToValue}
