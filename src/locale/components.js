@@ -287,6 +287,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectTooltip: 'Select this editor as you',
                         selectedTooltip: 'This is you',
+                        selectedLabelSuffix: ' (assigned as you)',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -349,6 +350,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectTooltip: 'Select this creator as you',
                         selectedTooltip: 'This is you',
+                        selectedLabelSuffix: ' (assigned as you)',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -411,6 +413,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectTooltip: 'Select this designer as you',
                         selectedTooltip: 'This is you',
+                        selectedLabelSuffix: ' (assigned as you)',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -473,6 +476,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectTooltip: 'Select this supervisor as you',
                         selectedTooltip: 'This is you',
+                        selectedLabelSuffix: ' (assigned as you)',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -534,6 +538,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectTooltip: 'Select this contributor as you',
                         selectedTooltip: 'This is you',
+                        selectedLabelSuffix: ' (assigned as you)',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',

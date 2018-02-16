@@ -242,6 +242,7 @@ exports[`DesignForm renders  component 1`] = `
               ],
               "selectTooltip": "Select this designer as you",
               "selectedHint": "This is you",
+              "selectedLabelSuffix": " (assigned as you)",
               "selectedTooltip": "This is you",
               "suffix": " listed designer",
               "unselectedHint": "Select this to confirm this designer is you",

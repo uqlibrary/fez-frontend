@@ -286,6 +286,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
               ],
               "selectTooltip": "Select this editor as you",
               "selectedHint": "This is you",
+              "selectedLabelSuffix": " (assigned as you)",
               "selectedTooltip": "This is you",
               "suffix": " listed editor",
               "unselectedHint": "Select this to confirm this editor is you",

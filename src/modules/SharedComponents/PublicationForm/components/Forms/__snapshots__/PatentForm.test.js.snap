@@ -215,6 +215,7 @@ exports[`PatentForm renders  component 1`] = `
               ],
               "selectTooltip": "Select this creator as you",
               "selectedHint": "This is you",
+              "selectedLabelSuffix": " (assigned as you)",
               "selectedTooltip": "This is you",
               "suffix": " listed creator",
               "unselectedHint": "Select this to confirm this creator is you",

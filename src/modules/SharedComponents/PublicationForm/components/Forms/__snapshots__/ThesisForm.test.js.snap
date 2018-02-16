@@ -257,6 +257,7 @@ exports[`ThesisForm  should render component 1`] = `
               ],
               "selectTooltip": "Select this supervisor as you",
               "selectedHint": "This is you",
+              "selectedLabelSuffix": " (assigned as you)",
               "selectedTooltip": "This is you",
               "suffix": " listed supervisor",
               "unselectedHint": "Select this to confirm this supervisor is you",
