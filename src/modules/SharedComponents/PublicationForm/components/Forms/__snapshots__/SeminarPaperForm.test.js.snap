@@ -203,6 +203,7 @@ exports[`SeminarPaperForm renders  component 1`] = `
               ],
               "selectTooltip": "Select this author as you",
               "selectedHint": "This is you",
+              "selectedLabelSuffix": " (assigned as you)",
               "selectedTooltip": "This is you",
               "suffix": " listed author",
               "unselectedHint": "Select this to confirm [identifier] is you",

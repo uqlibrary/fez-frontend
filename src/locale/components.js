@@ -222,6 +222,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectTooltip: 'Select this author as you',
                         selectedTooltip: 'This is you',
+                        selectedLabelSuffix: ' (assigned as you)',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',

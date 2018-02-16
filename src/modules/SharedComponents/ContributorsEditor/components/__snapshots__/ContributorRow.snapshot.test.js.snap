@@ -532,6 +532,9 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
             A. Smith
           </span>
           <span
+            className="contributorSelectedSuffix"
+          />
+          <span
             className="contributorSubtitle datalist-text-subtitle"
           >
             First  listed contributor

@@ -58,12 +58,11 @@
     background-color: $accent-color-light;
     .datalist-text {
       color: $text-color-reverse;
-      .contributorName::after {
-        content: ' (assigned as you)';
-        opacity: 0.66;
-      }
       .datalist-text-subtitle {
         color: $text-color-reverse !important;
+      }
+      .contributorSelectedSuffix {
+        opacity: 0.66;
       }
     }
     .material-icons {

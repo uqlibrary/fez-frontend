@@ -119,8 +119,8 @@ export default class ContributorRow extends React.PureComponent {
                                     </div>
                                     <div className="column datalist-text">
                                         <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
-                                        <span
-                                            className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
+                                        <span className="contributorSelectedSuffix">{this.props.contributor.selected && this.props.locale.selectedLabelSuffix}</span>
+                                        <span className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
                                     </div>
                                     {
                                         this.props.showIdentifierLookup &&
