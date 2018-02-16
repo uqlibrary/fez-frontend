@@ -13,7 +13,7 @@ describe('ThesisSubmissionContainer', () => {
     it('form validation should return 11 errors for empty form', () => {
         const wrapper = setup({}, false);
         const allErrors = wrapper.find('Connect(Form(ConfirmDiscardFormChanges))').props().validate(Immutable.Map({}));
-        expect(allErrors._error.length).toEqual(11);
+        expect(allErrors._error.length).toEqual(10);
     });
 
     it('form validation should return no errors for filled out form', () => {

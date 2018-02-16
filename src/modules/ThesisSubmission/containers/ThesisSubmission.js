@@ -52,10 +52,6 @@ const validate = (values) => {
         errors.push(txt.information.fieldLabels.thesisType.errorMessage);
     }
 
-    if (!data.rek_date) {
-        errors.push(txt.information.fieldLabels.date.errorMessage);
-    }
-
     if (!data.currentAuthor || data.currentAuthor.length === 0 || !data.currentAuthor[0].nameAsPublished) {
         errors.push(txt.information.fieldLabels.author.errorMessage);
     }
