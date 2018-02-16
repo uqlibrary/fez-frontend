@@ -35,6 +35,8 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
         "Ninth",
         "Tenth",
       ],
+      "selectTooltip": "Select this record as you",
+      "selectedTooltip": "This is you",
       "suffix": " listed contributor",
     }
   }
@@ -127,20 +129,6 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
         />
       </Dialog>
     </ConfirmDialogBox>
-    <ReactTooltip
-      className="reactTooltip"
-      effect="float"
-      event="focus"
-      insecure={true}
-      place="top"
-      resizeHide={true}
-      wrapper="div"
-    >
-      <div
-        className="__react_component_tooltip place-top type-dark "
-        data-id="tooltip"
-      />
-    </ReactTooltip>
     <div
       className="columns is-gapless is-mobile"
     >
@@ -149,138 +137,34 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
       >
         <div
           className="columns is-gapless contributorDetails"
-          data-place="top"
-          data-tip="Assign this author as you."
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex="0"
         >
           <div
             className="column is-narrow is-hidden-mobile"
           >
-            <IconButton
-              className="selectedAuthorIcon"
-              disableTouchRipple={false}
-              disabled={false}
-              iconStyle={Object {}}
-              tooltipPosition="bottom-center"
-              touch={false}
+            <FontIcon
+              className="authorIcon material-icons"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
-              <EnhancedButton
-                centerRipple={true}
-                className="selectedAuthorIcon"
-                containerElement="button"
-                disableTouchRipple={false}
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onKeyboardFocus={[Function]}
+              <span
+                className="authorIcon material-icons"
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
-                onMouseOut={[Function]}
-                onTouchStart={[Function]}
-                onTouchTap={[Function]}
                 style={
                   Object {
-                    "boxSizing": "border-box",
-                    "fontSize": 0,
-                    "height": 48,
-                    "overflow": "visible",
-                    "padding": 12,
+                    "color": "rgba(0, 0, 0, 0.87)",
+                    "display": "inline-block",
+                    "fontSize": 24,
+                    "muiPrepared": true,
+                    "position": "relative",
                     "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                    "width": 48,
+                    "userSelect": "none",
                   }
                 }
-                tabIndex={0}
-                type="button"
               >
-                <button
-                  className="selectedAuthorIcon"
-                  disabled={false}
-                  onBlur={[Function]}
-                  onClick={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  onMouseOut={[Function]}
-                  onTouchStart={[Function]}
-                  onTouchTap={[Function]}
-                  style={
-                    Object {
-                      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                      "background": "none",
-                      "border": 10,
-                      "boxSizing": "border-box",
-                      "cursor": "pointer",
-                      "display": "inline-block",
-                      "fontFamily": "Roboto, sans-serif",
-                      "fontSize": 0,
-                      "fontWeight": "inherit",
-                      "height": 48,
-                      "margin": 0,
-                      "muiPrepared": true,
-                      "outline": "none",
-                      "overflow": "visible",
-                      "padding": 12,
-                      "position": "relative",
-                      "textDecoration": "none",
-                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                      "verticalAlign": null,
-                      "width": 48,
-                      "zIndex": 1,
-                    }
-                  }
-                  tabIndex={0}
-                  type="button"
-                >
-                  <TouchRipple
-                    abortOnScroll={true}
-                    centerRipple={true}
-                    key="touchRipple"
-                  >
-                    <div
-                      onMouseDown={[Function]}
-                      onMouseLeave={[Function]}
-                      onMouseUp={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchStart={[Function]}
-                    >
-                      <FontIcon
-                        className="material-icons"
-                        key=".0"
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        style={Object {}}
-                      >
-                        <span
-                          className="material-icons"
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          style={
-                            Object {
-                              "color": "rgba(0, 0, 0, 0.87)",
-                              "display": "inline-block",
-                              "fontSize": 24,
-                              "muiPrepared": true,
-                              "position": "relative",
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                            }
-                          }
-                        >
-                          person_outline
-                        </span>
-                      </FontIcon>
-                    </div>
-                  </TouchRipple>
-                </button>
-              </EnhancedButton>
-            </IconButton>
+                person_outline
+              </span>
+            </FontIcon>
           </div>
           <div
             className="column datalist-text"
@@ -311,7 +195,9 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
             className="column is-narrow contributorDelete datalist-buttons"
           >
             <IconButton
+              aria-label="Remove this record"
               className="contributorDelete"
+              data-for="contributorRow"
               data-tip="Remove this record"
               disableTouchRipple={false}
               disabled={false}
@@ -321,9 +207,11 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
               touch={false}
             >
               <EnhancedButton
+                aria-label="Remove this record"
                 centerRipple={true}
                 className="contributorDelete"
                 containerElement="button"
+                data-for="contributorRow"
                 data-tip="Remove this record"
                 disableTouchRipple={false}
                 disabled={false}
@@ -353,7 +241,9 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
                 type="button"
               >
                 <button
+                  aria-label="Remove this record"
                   className="contributorDelete"
+                  data-for="contributorRow"
                   data-tip="Remove this record"
                   disabled={false}
                   onBlur={[Function]}
@@ -441,6 +331,38 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
         </div>
       </div>
     </div>
+    <ReactTooltip
+      className="reactTooltip"
+      effect="solid"
+      event="focusin mouseenter"
+      eventOff="blur mouseleave"
+      id="contributorRow"
+      insecure={true}
+      place="top"
+      resizeHide={true}
+      wrapper="div"
+    >
+      <div
+        className="__react_component_tooltip place-top type-dark "
+        data-id="tooltip"
+      />
+    </ReactTooltip>
+    <ReactTooltip
+      className="reactTooltip"
+      effect="solid"
+      event="focusin mouseenter"
+      eventOff="blur mouseleave"
+      id="contributorSelect"
+      insecure={true}
+      place="top"
+      resizeHide={true}
+      wrapper="div"
+    >
+      <div
+        className="__react_component_tooltip place-top type-dark "
+        data-id="tooltip"
+      />
+    </ReactTooltip>
   </div>
 </ContributorRow>
 `;
@@ -462,15 +384,6 @@ exports[`ContributorRow renders  a row with index and contributor set, renders o
     onAction={[Function]}
     onRef={[Function]}
   />
-  <ReactTooltip
-    className="reactTooltip"
-    effect="float"
-    event="focus"
-    insecure={true}
-    place="top"
-    resizeHide={true}
-    wrapper="div"
-  />
   <div
     className="columns is-gapless is-mobile"
   >
@@ -479,31 +392,17 @@ exports[`ContributorRow renders  a row with index and contributor set, renders o
     >
       <div
         className="columns is-gapless contributorDetails"
-        data-place="top"
-        data-tip="Assign this author as you."
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
       >
         <div
           className="column is-narrow is-hidden-mobile"
         >
-          <IconButton
-            className="selectedAuthorIcon"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            tooltipPosition="bottom-center"
-            touch={false}
+          <FontIcon
+            className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
-            <FontIcon
-              className="material-icons"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              person_outline
-            </FontIcon>
-          </IconButton>
+            person_outline
+          </FontIcon>
         </div>
         <div
           className="column datalist-text"
@@ -534,7 +433,9 @@ exports[`ContributorRow renders  a row with index and contributor set, renders o
           className="column is-narrow contributorDelete datalist-buttons"
         >
           <IconButton
+            aria-label="Remove this record"
             className="contributorDelete"
+            data-for="contributorRow"
             data-tip="Remove this record"
             disableTouchRipple={false}
             disabled={false}
@@ -555,6 +456,28 @@ exports[`ContributorRow renders  a row with index and contributor set, renders o
       </div>
     </div>
   </div>
+  <ReactTooltip
+    className="reactTooltip"
+    effect="solid"
+    event="focusin mouseenter"
+    eventOff="blur mouseleave"
+    id="contributorRow"
+    insecure={true}
+    place="top"
+    resizeHide={true}
+    wrapper="div"
+  />
+  <ReactTooltip
+    className="reactTooltip"
+    effect="solid"
+    event="focusin mouseenter"
+    eventOff="blur mouseleave"
+    id="contributorSelect"
+    insecure={true}
+    place="top"
+    resizeHide={true}
+    wrapper="div"
+  />
 </div>
 `;
 
@@ -575,15 +498,6 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
     onAction={[Function]}
     onRef={[Function]}
   />
-  <ReactTooltip
-    className="reactTooltip"
-    effect="float"
-    event="focus"
-    insecure={true}
-    place="top"
-    resizeHide={true}
-    wrapper="div"
-  />
   <div
     className="columns is-gapless is-mobile"
   >
@@ -592,8 +506,8 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
     >
       <div
         className="columns is-gapless contributorDetails"
-        data-place="top"
-        data-tip="Assign this author as you."
+        data-for="contributorSelect"
+        data-tip="Select this record as you"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -601,22 +515,13 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
         <div
           className="column is-narrow is-hidden-mobile"
         >
-          <IconButton
-            className="selectedAuthorIcon"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            tooltipPosition="bottom-center"
-            touch={false}
+          <FontIcon
+            className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
-            <FontIcon
-              className="material-icons"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              person_outline
-            </FontIcon>
-          </IconButton>
+            person_outline
+          </FontIcon>
         </div>
         <div
           className="column datalist-text"
@@ -644,7 +549,9 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
           className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons"
         >
           <IconButton
+            aria-label="Move record up the order"
             className="reorderUp"
+            data-for="contributorRow"
             data-tip="Move record up the order"
             disableTouchRipple={false}
             disabled={false}
@@ -662,7 +569,9 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
             </FontIcon>
           </IconButton>
           <IconButton
+            aria-label="Move record down the order"
             className="reorderDown"
+            data-for="contributorRow"
             data-tip="Move record down the order"
             disableTouchRipple={false}
             disabled={false}
@@ -684,7 +593,9 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
           className="column is-narrow contributorDelete datalist-buttons"
         >
           <IconButton
+            aria-label="Remove this record"
             className="contributorDelete"
+            data-for="contributorRow"
             data-tip="Remove this record"
             disableTouchRipple={false}
             disabled={false}
@@ -705,6 +616,28 @@ exports[`ContributorRow renders  a row with index and contributor set, renders r
       </div>
     </div>
   </div>
+  <ReactTooltip
+    className="reactTooltip"
+    effect="solid"
+    event="focusin mouseenter"
+    eventOff="blur mouseleave"
+    id="contributorRow"
+    insecure={true}
+    place="top"
+    resizeHide={true}
+    wrapper="div"
+  />
+  <ReactTooltip
+    className="reactTooltip"
+    effect="solid"
+    event="focusin mouseenter"
+    eventOff="blur mouseleave"
+    id="contributorSelect"
+    insecure={true}
+    place="top"
+    resizeHide={true}
+    wrapper="div"
+  />
 </div>
 `;
 
@@ -725,15 +658,6 @@ exports[`ContributorRow renders  a row with index and contributor with author de
     onAction={[Function]}
     onRef={[Function]}
   />
-  <ReactTooltip
-    className="reactTooltip"
-    effect="float"
-    event="focus"
-    insecure={true}
-    place="top"
-    resizeHide={true}
-    wrapper="div"
-  />
   <div
     className="columns is-gapless is-mobile"
   >
@@ -742,31 +666,17 @@ exports[`ContributorRow renders  a row with index and contributor with author de
     >
       <div
         className="columns is-gapless contributorDetails"
-        data-place="top"
-        data-tip="Assign this author as you."
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
       >
         <div
           className="column is-narrow is-hidden-mobile"
         >
-          <IconButton
-            className="selectedAuthorIcon"
-            disableTouchRipple={false}
-            disabled={false}
-            iconStyle={Object {}}
-            tooltipPosition="bottom-center"
-            touch={false}
+          <FontIcon
+            className="authorIcon material-icons"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
-            <FontIcon
-              className="material-icons"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              person_outline
-            </FontIcon>
-          </IconButton>
+            person_outline
+          </FontIcon>
         </div>
         <div
           className="column datalist-text"
@@ -806,7 +716,9 @@ exports[`ContributorRow renders  a row with index and contributor with author de
           className="column is-narrow contributorDelete datalist-buttons"
         >
           <IconButton
+            aria-label="Remove this record"
             className="contributorDelete"
+            data-for="contributorRow"
             data-tip="Remove this record"
             disableTouchRipple={false}
             disabled={false}
@@ -827,5 +739,27 @@ exports[`ContributorRow renders  a row with index and contributor with author de
       </div>
     </div>
   </div>
+  <ReactTooltip
+    className="reactTooltip"
+    effect="solid"
+    event="focusin mouseenter"
+    eventOff="blur mouseleave"
+    id="contributorRow"
+    insecure={true}
+    place="top"
+    resizeHide={true}
+    wrapper="div"
+  />
+  <ReactTooltip
+    className="reactTooltip"
+    effect="solid"
+    event="focusin mouseenter"
+    eventOff="blur mouseleave"
+    id="contributorSelect"
+    insecure={true}
+    place="top"
+    resizeHide={true}
+    wrapper="div"
+  />
 </div>
 `;

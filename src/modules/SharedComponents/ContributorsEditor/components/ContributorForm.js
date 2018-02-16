@@ -17,10 +17,12 @@ export class ContributorForm extends Component {
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        descriptionStep1: PropTypes.string
+        descriptionStep1: PropTypes.string,
+        showContributorAssignment: PropTypes.bool
     };
 
     static defaultProps = {
+        showContributorAssignment: false,
         locale: {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
@@ -87,10 +89,11 @@ export class ContributorForm extends Component {
 
     render() {
         const autoCompleteDataFormat = {text: 'displayName', value: 'aut_id'};
+        const description = this.props.showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
 
         return (
             <div>
-                {this.props.locale.descriptionStep1}
+                {description}
                 <div className="columns">
                     <div className="column">
                         <TextField

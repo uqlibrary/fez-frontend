@@ -142,6 +142,13 @@ exports[`CreativeWorkForm renders  component 1`] = `
                 </b>
                 , in the format and order that they are published.
               </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of supervisors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
               "nameAsPublishedLabel": "Enter each author's name as published",
@@ -174,7 +181,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
                 <b>
                   select your name
                 </b>
-                 once from the list below (if applicable).
+                 from the list below (if applicable).
               </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Author's name as published",
@@ -204,7 +211,11 @@ exports[`CreativeWorkForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectTooltip": "Select this author as you",
+              "selectedHint": "This is you",
+              "selectedTooltip": "This is you",
               "suffix": " listed author",
+              "unselectedHint": "Select this to confirm [identifier] is you",
             },
           },
         }

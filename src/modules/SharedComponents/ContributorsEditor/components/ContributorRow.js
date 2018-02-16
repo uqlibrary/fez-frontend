@@ -29,6 +29,8 @@ export default class ContributorRow extends React.PureComponent {
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
             ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+            selectTooltip: 'Select this record as you',
+            selectedTooltip: 'This is you',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
                 confirmationMessage: 'Are you sure you want to delete this record?',
@@ -44,10 +46,6 @@ export default class ContributorRow extends React.PureComponent {
 
     shouldComponentUpdate(nextProps) {
         return this.props !== nextProps;
-    }
-
-    componentDidUpdate() {
-        ReactTooltip.rebuild();
     }
 
     _showConfirmation = () => {
@@ -68,22 +66,31 @@ export default class ContributorRow extends React.PureComponent {
 
     _onContributorAssignedKeyboard = (event) => {
         if (event.key === 'Enter') {
-            if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
+            this._assignContributor();
         }
     };
 
     _onContributorAssigned = (event) => {
-        if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
+        this._assignContributor();
         event && event.currentTarget.blur();
     };
 
-    _updateSelectedTooltip = (selected) => {
-        if (selected) {
-            ReactTooltip.rebuild();
-            return 'This is you.';
+    _assignContributor = () => {
+        if(this.props.contributor.selected) {
+            // deselect this contributor
+            if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(null, null);
         } else {
-            ReactTooltip.rebuild();
-            return 'Assign this author as you.';
+            // select this contributor
+            if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
+        }
+        ReactTooltip.hide();
+    };
+
+    selectTooltip = () => {
+        if (this.props.contributor.selected) {
+            return this.props.locale.selectedTooltip;
+        } else {
+            return this.props.locale.selectTooltip;
         }
     };
 
@@ -91,43 +98,61 @@ export default class ContributorRow extends React.PureComponent {
         const {ordinalData, deleteRecordConfirmation} = this.props.locale;
         const contributorOrder = (this.props.index < ordinalData.length ?
             ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
-
         return (
             <div className={`contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}
                     locale={deleteRecordConfirmation} />
-                <ReactTooltip className="reactTooltip" place="top" effect="float" event="focus" />
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
-                        <div className="columns is-gapless contributorDetails"
-                            onClick={this._onContributorAssigned}
-                            onKeyDown={this._onContributorAssignedKeyboard}
-                            tabIndex="0"
-                            data-tip={this._updateSelectedTooltip(this.props.contributor.selected)} // {this.props.contributor.selected ? 'This is you.' : 'Assign this author as you.'}
-                            data-place="top"
-                        >
-                            <div className="column is-narrow is-hidden-mobile">
-                                <IconButton
-                                    className="selectedAuthorIcon"
-                                    disabled={this.props.disabled}>
-                                    <FontIcon className="material-icons">{this.props.contributor.selected ? 'person' : 'person_outline'}</FontIcon>
-                                </IconButton>
-                            </div>
-                            <div className="column datalist-text">
-                                <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
-                                <span className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
-                            </div>
-                            {
-                                this.props.showIdentifierLookup &&
-                                <div className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
-                                    <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
-                                    <br/>
-                                    <small>{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</small>
+                        {
+                            this.props.showContributorAssignment && !this.props.disabledContributorAssignment ?
+                                <div className="columns is-gapless contributorDetails"
+                                    onClick={this._onContributorAssigned}
+                                    onKeyDown={this._onContributorAssignedKeyboard}
+                                    data-tip={this.selectTooltip()}
+                                    data-for="contributorSelect"
+                                    tabIndex="0">
+                                    <div className="column is-narrow is-hidden-mobile">
+                                        <FontIcon className="authorIcon material-icons">{this.props.contributor.selected ? 'person' : 'person_outline'}</FontIcon>
+                                    </div>
+                                    <div className="column datalist-text">
+                                        <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
+                                        <span
+                                            className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
+                                    </div>
+                                    {
+                                        this.props.showIdentifierLookup &&
+                                        <div
+                                            className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
+                                            <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
+                                            <br/>
+                                            <small>{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</small>
+                                        </div>
+                                    }
                                 </div>
-                            }
-                        </div>
+                                :
+                                <div className="columns is-gapless contributorDetails">
+                                    <div className="column is-narrow is-hidden-mobile">
+                                        <FontIcon className="authorIcon material-icons">person_outline</FontIcon>
+                                    </div>
+                                    <div className="column datalist-text">
+                                        <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
+                                        <span
+                                            className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
+                                    </div>
+                                    {
+                                        this.props.showIdentifierLookup &&
+                                        <div
+                                            className="column is-3-desktop is-3-tablet is-5-mobile contributorIdentifier datalist-text">
+                                            <strong>{this.props.contributor.aut_title} {this.props.contributor.aut_display_name}</strong>
+                                            <br/>
+                                            <small>{this.props.contributor.aut_org_username || this.props.contributor.aut_student_username}</small>
+                                        </div>
+                                    }
+                                </div>
+                        }
                     </div>
                     <div className="column is-narrow">
                         <div className="columns is-gapless contributorActions">
@@ -135,18 +160,22 @@ export default class ContributorRow extends React.PureComponent {
                                 {this.props.canMoveUp &&
                                 <IconButton
                                     data-tip={this.props.locale.moveUpHint}
+                                    data-for="contributorRow"
                                     onTouchTap={this._onMoveUp}
                                     className="reorderUp"
-                                    disabled={this.props.disabled}>
+                                    disabled={this.props.disabled}
+                                    aria-label={this.props.locale.moveUpHint}>
                                     <FontIcon className="material-icons">keyboard_arrow_up</FontIcon>
                                 </IconButton>
                                 }
                                 {this.props.canMoveDown &&
                                 <IconButton
                                     data-tip={this.props.locale.moveDownHint}
+                                    data-for="contributorRow"
                                     onTouchTap={this._onMoveDown}
                                     className="reorderDown"
-                                    disabled={this.props.disabled}>
+                                    disabled={this.props.disabled}
+                                    aria-label={this.props.locale.moveDownHint}>
                                     <FontIcon className="material-icons">keyboard_arrow_down</FontIcon>
                                 </IconButton>
                                 }
@@ -155,14 +184,18 @@ export default class ContributorRow extends React.PureComponent {
                                 <IconButton
                                     className="contributorDelete"
                                     data-tip={this.props.locale.deleteHint}
+                                    data-for="contributorRow"
                                     onTouchTap={this._showConfirmation}
-                                    disabled={this.props.disabled}>
+                                    disabled={this.props.disabled}
+                                    aria-label={this.props.locale.deleteHint}>
                                     <FontIcon className="material-icons deleteIcon">delete</FontIcon>
                                 </IconButton>
                             </div>
                         </div>
                     </div>
                 </div>
+                <ReactTooltip id="contributorRow" className="reactTooltip" place="top" event="focusin mouseenter" eventOff="blur mouseleave" effect="solid" />
+                <ReactTooltip id="contributorSelect" className="reactTooltip" place="top" event="focusin mouseenter" eventOff="blur mouseleave" effect="solid" />
             </div>
         );
     }

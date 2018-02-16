@@ -23,10 +23,10 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
       }
     }
     onAdd={[MockFunction]}
+    showContributorAssignment={false}
     showIdentifierLookup={true}
   >
     <div>
-      This is a test of Step 1
       <div
         className="columns"
       >
@@ -2728,10 +2728,10 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
       }
     }
     onAdd={[MockFunction]}
+    showContributorAssignment={false}
     showIdentifierLookup={false}
   >
     <div>
-      This is a test of Step 1
       <div
         className="columns"
       >

@@ -295,6 +295,7 @@ export default {
     audioDocument: {
         information: {
             title: 'Audio document information',
+
             help: {
                 title: 'Audio document information',
                 text: (

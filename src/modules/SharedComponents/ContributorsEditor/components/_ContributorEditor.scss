@@ -13,9 +13,23 @@
     width: 48px;
   }
 }
+.validationErrorMessage {
+  color: $error-color;
+  font-size: $text-body-small;
+  margin: 24px 0 0 0;
+}
 .contributorsRow {
   padding: 0;
-  .contributorDetails, .contributorActions {
+  > .columns {
+    margin-bottom: 0 !important;
+  }
+  .contributorDetails {
+    padding: 6px;
+    @include mobile {
+      padding-left: 12px;
+    }
+  }
+  .contributorActions {
     padding: 6px;
   }
   &.datalist-row {
@@ -28,12 +42,10 @@
   .datalist-text {
     margin-top: 6px !important;
     line-height: 18px !important;
-    &:hover {
-      cursor: pointer;
-    }
   }
-  .unselectedAuthorIcon {
-    opacity: 0.5;
+  .authorIcon {
+    padding: 12px;
+    opacity: 0.66;
   }
 
   // Selected author
@@ -41,18 +53,23 @@
     background-color: $theme-color;
     .datalist-text {
       color: $text-color-reverse;
-      &:focus {
-        outline: none !important;
-      }
       .datalist-text-subtitle {
         color: $text-color-reverse !important;
       }
     }
     .material-icons {
+      opacity: 1;
       color: $text-color-reverse !important;
       &:hover {
         color: rgba($text-color-reverse, 0.66) !important;
       }
     }
+  }
+}
+.authors-infinite {
+  padding-left: 5px;
+  overflow: visible;
+  @include mobile {
+    padding-left: 0;
   }
 }

@@ -118,14 +118,25 @@ button[type=button] {
 
 // Styles to restyle the react-tooltip component
 .reactTooltip{
+margin-top: 6px !important;
   padding: 6px 10px !important;
   font-size: $text-body-xsmall !important;
   background: lighten($text-color, 20%) !important;
   color: $text-color-reverse !important;
   &.place-right::after {
     border-color: transparent lighten($text-color, 20%) !important;
+    border-right: 2px solid inherit !important;
   }
   &.place-top::after {
     border-color: lighten($text-color, 20%) transparent !important;
+    border-top: 2px solid inherit !important;
+  }
+  &.place-bottom::after {
+    border-color: lighten($text-color, 20%) transparent !important;
+    border-bottom: 2px solid inherit !important;
+  }
+  &.place-left::after {
+    border-color: lighten($text-color, 20%) transparent !important;
+    border-left: 2px solid inherit !important;
   }
 }

@@ -178,9 +178,6 @@ exports[`BookChapterForm renders  component 1`] = `
     }
     title="Authors"
   >
-    <div>
-      Please provide a list of authors and then select your name once from the list of authors or editors.
-    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -199,6 +196,13 @@ exports[`BookChapterForm renders  component 1`] = `
                  - Please 
                 <b>
                   add to a list of authors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of supervisors below
                 </b>
                 , in the format and order that they are published.
               </div>,
@@ -234,7 +238,7 @@ exports[`BookChapterForm renders  component 1`] = `
                 <b>
                   select your name
                 </b>
-                 once from the list below (if applicable).
+                 from the list below (if applicable).
               </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Author's name as published",
@@ -264,7 +268,11 @@ exports[`BookChapterForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectTooltip": "Select this author as you",
+              "selectedHint": "This is you",
+              "selectedTooltip": "This is you",
               "suffix": " listed author",
+              "unselectedHint": "Select this to confirm [identifier] is you",
             },
           },
         }
@@ -289,9 +297,6 @@ exports[`BookChapterForm renders  component 1`] = `
     }
     title="Editors"
   >
-    <div>
-      Please provide a list of editors and then select your name once from the list of authors or editors.
-    </div>
     <Field
       component={[Function]}
       disabled={false}
@@ -300,6 +305,25 @@ exports[`BookChapterForm renders  component 1`] = `
           "form": Object {
             "locale": Object {
               "addButton": "Add editor",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                 - Please 
+                <b>
+                  add to a list of editors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of editors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
               "nameAsPublishedLabel": "Enter each editor's name as published",
@@ -315,6 +339,25 @@ exports[`BookChapterForm renders  component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
+              "descriptionStep2": <div
+                style={
+                  Object {
+                    "marginTop": "12px",
+                  }
+                }
+              >
+                <br />
+                <span
+                  className="authorSteps"
+                >
+                  Step 2 of 2
+                </span>
+                 - Please 
+                <b>
+                  select your name
+                </b>
+                 from the list below (if applicable).
+              </div>,
               "identifierColumn": "UQ identifier",
               "nameColumn": "Editor's name as published",
               "reorderColumn": "Reorder items",
@@ -343,7 +386,11 @@ exports[`BookChapterForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
+              "selectTooltip": "Select this editor as you",
+              "selectedHint": "This is you",
+              "selectedTooltip": "This is you",
               "suffix": " listed editor",
+              "unselectedHint": "Select this to confirm this editor is you",
             },
           },
         }

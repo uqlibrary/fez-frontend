@@ -25,9 +25,7 @@ export class ContributorsEditor extends Component {
         showContributorAssignment: false,
         locale: {
             errorTitle: 'Error',
-            errorMessage: 'Unable to add an item with the same identifier.',
-            description1: (<span>Step 1 - Test</span>),
-            description2: (<span>Step 2 - Test</span>),
+            errorMessage: 'Unable to add an item with the same identifier.'
         }
     };
 
@@ -139,7 +137,6 @@ export class ContributorsEditor extends Component {
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 onContributorAssigned={this.assignContributor} />
         ));
-
         return (
             <div className={this.props.className}>
                 {
@@ -150,11 +147,13 @@ export class ContributorsEditor extends Component {
                         type="warning" />
                 }
                 <ContributorForm
-                    errorText={this.props.meta && this.props.meta.dirty ? this.props.meta.error : ''}
+                    // errorText={this.props.meta && this.props.meta.dirty ? this.props.meta.error : ''}
                     onAdd={this.addContributor}
                     showIdentifierLookup={this.props.showIdentifierLookup}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
-                    disabled={this.props.disabled} />
+                    disabled={this.props.disabled}
+                    showContributorAssignment={this.props.showContributorAssignment}
+                />
                 {
                     this.state.contributors.length > 0 &&
                     <ContributorRowHeader
@@ -174,6 +173,12 @@ export class ContributorsEditor extends Component {
                         </Infinite>
                         :
                         <div>{renderContributorsRows.map(item => item)}</div>
+                }
+                {
+                    this.props.meta && this.props.meta.error &&
+                    <div className="validationErrorMessage">
+                        {this.props.meta.error}
+                    </div>
                 }
             </div>
         );

@@ -30,12 +30,6 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
     className="requiredField"
     locale={
       Object {
-        "description1": <span>
-          Step 1 - Test
-        </span>,
-        "description2": <span>
-          Step 2 - Test
-        </span>,
         "errorMessage": "Unable to add an item with the same identifier.",
         "errorTitle": "Error",
       }
@@ -47,8 +41,8 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
       className="requiredField"
     >
       <Connect(ContributorForm)
-        errorText=""
         onAdd={[Function]}
+        showContributorAssignment={false}
         showIdentifierLookup={false}
       >
         <ContributorForm
@@ -61,7 +55,6 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
             }
           }
           authorsList={Array []}
-          errorText=""
           locale={
             Object {
               "addButton": "Add author",
@@ -72,10 +65,10 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
             }
           }
           onAdd={[Function]}
+          showContributorAssignment={false}
           showIdentifierLookup={false}
         >
           <div>
-            This is a test of Step 1
             <div
               className="columns"
             >
@@ -85,7 +78,6 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                 <TextField
                   className="input-long-hint"
                   disabled={false}
-                  errorText=""
                   floatingLabelFixed={false}
                   floatingLabelText="Name as published"
                   fullWidth={true}
@@ -1260,12 +1252,6 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
     }
     locale={
       Object {
-        "description1": <span>
-          Step 1 - Test
-        </span>,
-        "description2": <span>
-          Step 2 - Test
-        </span>,
         "errorMessage": "Unable to add an item with the same identifier.",
         "errorTitle": "Error",
       }
@@ -1275,8 +1261,8 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
   >
     <div>
       <Connect(ContributorForm)
-        errorText=""
         onAdd={[Function]}
+        showContributorAssignment={false}
         showIdentifierLookup={true}
       >
         <ContributorForm
@@ -1289,7 +1275,6 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
             }
           }
           authorsList={Array []}
-          errorText=""
           locale={
             Object {
               "addButton": "Add author",
@@ -1300,10 +1285,10 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
             }
           }
           onAdd={[Function]}
+          showContributorAssignment={false}
           showIdentifierLookup={true}
         >
           <div>
-            This is a test of Step 1
             <div
               className="columns"
             >
@@ -1313,7 +1298,6 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                 <TextField
                   className="input-long-hint"
                   disabled={false}
-                  errorText=""
                   floatingLabelFixed={false}
                   floatingLabelText="Name as published"
                   fullWidth={true}
