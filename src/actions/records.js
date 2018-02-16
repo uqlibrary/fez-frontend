@@ -103,9 +103,7 @@ export function submitThesis(data, author) {
             ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
             rek_title: data.thesisTitle.plainText,
             rek_formatted_title: data.thesisTitle.htmlText,
-            fez_record_search_key_description: {
-                rek_description: data.thesisAbstract.plainText
-            },
+            rek_description: data.thesisAbstract.plainText,
             rek_formatted_abstract: data.thesisAbstract.htmlText
         };
 
