@@ -8,7 +8,7 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
     className=""
   >
     <p>
-      You thesis has been submitted. You will received acknowledgement email shortly.
+      Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.
     </p>
   </StandardCard>
   <div
@@ -23,7 +23,7 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
       <RaisedButton
         disabled={false}
         fullWidth={true}
-        label="Go to the next step"
+        label="Return to the Graduate School website"
         labelPosition="after"
         onTouchTap={[Function]}
         primary={false}

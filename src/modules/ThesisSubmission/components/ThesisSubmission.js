@@ -10,7 +10,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
 
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
 import {OrgNameField, OrgUnitNameField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
@@ -118,7 +117,7 @@ export default class ThesisSubmission extends Component {
                             </div>
                         </div>
                         <div className="columns">
-                            <div className="column">
+                            <div className="column is-half">
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -129,6 +128,15 @@ export default class ThesisSubmission extends Component {
                                     {...txt.information.fieldLabels.author}
                                     className="requiredField"
                                     validate={[validation.required]}/>
+                            </div>
+                            <div className="column ">
+                                <Field
+                                    component={ThesisSubtypeField}
+                                    name="rek_genre_type"
+                                    disabled={this.props.submitting}
+                                    validate={[validation.required]}
+                                    locale={txt.information.fieldLabels.thesisType}
+                                    className="requiredField"/>
                             </div>
                         </div>
                         <div className="columns" style={{marginTop: '-12px'}}>
@@ -150,28 +158,6 @@ export default class ThesisSubmission extends Component {
                                     className="requiredField"
                                     validate={[validation.required]}
                                     {...txt.information.fieldLabels.orgName}/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column is-half">
-                                <Field
-                                    component={ThesisSubtypeField}
-                                    name="rek_genre_type"
-                                    disabled={this.props.submitting}
-                                    validate={[validation.required]}
-                                    locale={txt.information.fieldLabels.thesisType}
-                                    className="requiredField"/>
-                            </div>
-                            <div className="column">
-                                <Field
-                                    component={PartialDateField}
-                                    disabled={this.props.submitting}
-                                    name="rek_date"
-                                    allowPartial
-                                    className="requiredHintField"
-                                    validate={[validation.required]}
-                                    floatingTitle={txt.information.fieldLabels.date.title}
-                                    floatingTitleRequired/>
                             </div>
                         </div>
                         <div className="columns">

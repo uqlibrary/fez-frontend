@@ -1104,18 +1104,19 @@ export default {
                     Stages of examination are: submission, or correctedthesis, or finalthesis.
                     Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
                     File submission is mandatory.<span className="requiredField"><label>&nbsp;</label></span><br/>
-                    For example: <br />
-                    - s1234567_phd_thesis.pdf <br/>
-                    - s1234567_phd_abstract.pdf <br/>
-                    - s1234567_phd_submissionform.pdf <br/>
+                    For example:
+                    <ul>
+                        <li>s1234567_phd_thesis.pdf</li>
+                        <li>s1234567_phd_abstract.pdf</li>
+                    </ul>
                 </div>
             )
         },
         cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
-        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/3-thesis-examination',
         cancel: 'Cancel',
         submit: 'Deposit your thesis',
-        afterSubmit: 'Go to the next step',
-        afterSubmitText: (<p>You thesis has been submitted. You will received acknowledgement email shortly.</p>)
+        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        afterSubmit: 'Return to the Graduate School website',
+        afterSubmitText: (<p>Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.</p>)
     }
 };
