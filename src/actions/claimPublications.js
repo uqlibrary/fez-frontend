@@ -80,6 +80,7 @@ export function hideRecord({record, facets = {}}) {
 
         return post(routes.HIDE_POSSIBLE_RECORD_API(), data)
             .then(() => {
+                console.log('it worked!');
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_LOADED,
                     payload: {pid: record.rek_pid}
@@ -95,6 +96,16 @@ export function hideRecord({record, facets = {}}) {
                     payload: error.message
                 });
             });
+    };
+}
+
+/**
+ * Reset the error message and status when leaving the claim possible pubs page
+ * @returns {action}
+ */
+export function hideRecordErrorReset() {
+    return dispatch => {
+        dispatch({type: actions.HIDE_PUBLICATIONS_FAILED_RESET});
     };
 }
 

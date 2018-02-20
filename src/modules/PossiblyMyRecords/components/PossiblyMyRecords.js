@@ -7,6 +7,7 @@ import {PublicationsList, FacetsFilter} from 'modules/SharedComponents/Publicati
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
+import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 import {StandardRighthandCard} from 'uqlibrary-react-toolbox/build/StandardRighthandCard';
 
@@ -28,7 +29,11 @@ export default class PossiblyMyRecords extends React.Component {
         loadingPossibleCounts: PropTypes.bool,
 
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+
+        hidePublicationLoading: PropTypes.bool,
+        hidePublicationFailed: PropTypes.bool,
+        hidePublicationFailedErrorMessage: PropTypes.string
     };
 
     constructor(props) {
@@ -51,7 +56,13 @@ export default class PossiblyMyRecords extends React.Component {
             || this.props.loadingPossiblePublicationsList !== nextProps.loadingPossiblePublicationsList
             || this.props.loadingPossibleCounts !== nextProps.loadingPossibleCounts
             || this.props.possiblePublicationsFacets !== nextProps.possiblePublicationsFacets
+            || this.props.hidePublicationLoading !== nextProps.hidePublicationLoading
+            || this.props.hidePublicationFailed !== nextProps.hidePublicationFailed
             || this.state !== nextState;
+    }
+
+    componentWillUnmount() {
+        this.props.actions.hideRecordErrorReset();
     }
 
     _hidePublication = () => {
@@ -61,7 +72,7 @@ export default class PossiblyMyRecords extends React.Component {
                 publicationToHide: null
             });
         }
-    }
+    };
 
     _confirmHidePublication = (item) => {
         // temporary keep which publication to hide in the state
@@ -72,7 +83,7 @@ export default class PossiblyMyRecords extends React.Component {
     _claimPublication = (item) => {
         this.props.history.push(routes.pathConfig.records.claim);
         this.props.actions.setClaimPublication(item);
-    }
+    };
 
     _facetsChanged = (activeFacets) => {
         this.setState({
@@ -82,9 +93,19 @@ export default class PossiblyMyRecords extends React.Component {
         this.props.actions.searchPossiblyYourPublications({facets: activeFacets});
     };
 
+    getAlert = (hasFailed = false, error = null, alertLocale) => {
+        let alertProps = null;
+        if(hasFailed) {
+            alertProps = {
+                ...alertLocale,
+                message: alertLocale.message ? alertLocale.message(error) : error
+            };
+        }
+        return alertProps ? (<Alert {...alertProps} />) : null;
+    };
+
     render() {
         const txt = locale.pages.claimPublications;
-
         const inProgress = [
             {
                 label: txt.searchResults.inProgress,
@@ -104,7 +125,6 @@ export default class PossiblyMyRecords extends React.Component {
                 handleAction: this._confirmHidePublication
             }
         ];
-
         return (
             <StandardPage title={txt.title}>
                 {
@@ -142,6 +162,7 @@ export default class PossiblyMyRecords extends React.Component {
                                             .replace('[totalCount]', this.props.possibleCounts)
                                     }
                                 </div>
+                                {this.getAlert(this.props.hidePublicationFailed, this.props.hidePublicationFailedErrorMessage, txt.hidePublicationFailedAlert)}
                                 <PublicationsList
                                     publicationsList={this.props.possiblePublicationsList}
                                     publicationsListSubset={this.props.publicationsClaimedInProgress}
