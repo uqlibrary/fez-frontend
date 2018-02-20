@@ -31,7 +31,6 @@ export default class PossiblyMyRecords extends React.Component {
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
 
-        hidePublicationLoading: PropTypes.bool,
         hidePublicationFailed: PropTypes.bool,
         hidePublicationFailedErrorMessage: PropTypes.string
     };
@@ -56,7 +55,6 @@ export default class PossiblyMyRecords extends React.Component {
             || this.props.loadingPossiblePublicationsList !== nextProps.loadingPossiblePublicationsList
             || this.props.loadingPossibleCounts !== nextProps.loadingPossibleCounts
             || this.props.possiblePublicationsFacets !== nextProps.possiblePublicationsFacets
-            || this.props.hidePublicationLoading !== nextProps.hidePublicationLoading
             || this.props.hidePublicationFailed !== nextProps.hidePublicationFailed
             || this.state !== nextState;
     }

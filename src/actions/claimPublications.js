@@ -80,7 +80,6 @@ export function hideRecord({record, facets = {}}) {
 
         return post(routes.HIDE_POSSIBLE_RECORD_API(), data)
             .then(() => {
-                console.log('it worked!');
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_LOADED,
                     payload: {pid: record.rek_pid}
