@@ -2,6 +2,7 @@
 
 exports[`Component AddMissingRecord method getStepperIndex should return step [0] and Stepper should render the 1st step 1`] = `
 <StandardPage
+  className=""
   title="Add a missing record to eSpace"
 >
   <CustomStepper
@@ -42,6 +43,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
 
 exports[`Component AddMissingRecord method getStepperIndex should return step [1] and Stepper should render the 2nd step 1`] = `
 <StandardPage
+  className=""
   title="Add a missing record to eSpace"
 >
   <CustomStepper
@@ -82,6 +84,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
 
 exports[`Component AddMissingRecord method getStepperIndex should return step [2] and Stepper should render the 3rd step 1`] = `
 <StandardPage
+  className=""
   title="Add a missing record to eSpace"
 >
   <CustomStepper

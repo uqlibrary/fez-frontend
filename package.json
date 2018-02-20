@@ -84,7 +84,7 @@
     "redux-form": "^7.0.4",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#mui-fix"
+    "uqlibrary-react-toolbox": "github:uqlibrary/uqlibrary-react-toolbox#master"
   },
   "scripts": {
     "start": "webpack-dev-server",
