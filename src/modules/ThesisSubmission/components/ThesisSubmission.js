@@ -215,12 +215,12 @@ export default class ThesisSubmission extends Component {
                     </StandardCard>
 
                     <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
-                        {formLocale.thesisSubmission.fileUpload.text}
                         <Field
                             name="files"
                             component={FileUploadField}
                             disabled={this.props.submitting}
-                            locale={formLocale.thesisSubmission.fileUpload.fileUploaderLocale}
+                            locale={formLocale.thesisSubmission.fileUpload.locale}
+                            defaultQuickTemplateId={3}
                             validate={[validation.fileUploadRequired]}/>
                     </StandardCard>
 

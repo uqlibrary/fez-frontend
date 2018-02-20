@@ -1098,18 +1098,38 @@ export default {
                 text: 'file help...',
                 buttonLabel: 'OK'
             },
+            locale: {
+                instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
+                accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                validation: {
+                    ['folder']: 'Invalid files ([filenames])',
+                    ['fileName']: 'File(s) ([filenames]) have invalid file name',
+                    ['maxFileSize']: 'File(s) ([filenames]) exceed maximum allowed upload file size',
+                    ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) Files ([filenames]) will not be uploaded',
+                },
+                errorTitle: 'Upload Errors',
+                fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
+                fileUploadRestrictions: (
+                    <div>
+                        PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
+                        Stages of examination are: submission, or correctedthesis, or finalthesis.
+                        Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
+                        File submission is mandatory.
+                        For example:
+                        <ul>
+                            <li>s1234567_phd_thesis.pdf</li>
+                            <li>s1234567_phd_abstract.pdf</li>
+                        </ul>
+                    </div>
+                ),
+                fileUploadInstruction: (
+                    <p>Click here to select files, or drag files into this area to upload</p>
+                )
+            },
             text: (
                 <div>
                     <span className="requiredField"><label>&nbsp;</label></span>
-                    PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
-                    Stages of examination are: submission, or correctedthesis, or finalthesis.
-                    Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
-                    File submission is mandatory.
-                    For example:
-                    <ul>
-                        <li>s1234567_phd_thesis.pdf</li>
-                        <li>s1234567_phd_abstract.pdf</li>
-                    </ul>
+
                 </div>
             )
         },

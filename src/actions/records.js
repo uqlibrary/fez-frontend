@@ -107,8 +107,6 @@ export function submitThesis(data, author) {
             rek_formatted_abstract: data.thesisAbstract.htmlText
         };
 
-        console.log(recordRequest);
-
         // delete extra form values from request object
         if (recordRequest.authors) delete recordRequest.authors;
         if (recordRequest.editors) delete recordRequest.editors;
