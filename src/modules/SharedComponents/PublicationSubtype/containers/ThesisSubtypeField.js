@@ -5,7 +5,7 @@ import {thesisSubtypes} from 'config/general';
 
 const mapStateToProps = (state, props) => {
     return {
-        itemsList: thesisSubtypes,
+        itemsList: props.itemsList || thesisSubtypes,
         itemsLoading: false,
         selectedValue: props.input ? props.input.value : null
     };

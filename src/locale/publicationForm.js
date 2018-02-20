@@ -464,9 +464,9 @@ export default {
                     errorMessage: 'Institution name is required'
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, Institute or Centre',
-                    hintText: '',
-                    errorMessage: 'School, institute or centre is required'
+                    floatingLabelText: 'Enrolling unit',
+                    hintText: 'Enrolling unit, eg. School of Business',
+                    errorMessage: 'Enrolling unit is required'
                 },
                 date: {
                     title: 'Publication date',
@@ -1100,10 +1100,11 @@ export default {
             },
             text: (
                 <div>
+                    <span className="requiredField"><label>&nbsp;</label></span>
                     PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
                     Stages of examination are: submission, or correctedthesis, or finalthesis.
                     Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
-                    File submission is mandatory.<span className="requiredField"><label>&nbsp;</label></span><br/>
+                    File submission is mandatory.
                     For example:
                     <ul>
                         <li>s1234567_phd_thesis.pdf</li>

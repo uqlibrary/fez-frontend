@@ -265,6 +265,12 @@ export const thesisSubtypes = [
     'Professional Doctorate'
 ];
 
+export const thesisSubmissionSubtypes = [
+    'MPhil Thesis',
+    'PhD Thesis',
+    'Professional Doctorate'
+];
+
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
 

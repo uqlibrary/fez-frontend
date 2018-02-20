@@ -12,7 +12,7 @@ import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {OrgNameField, OrgUnitNameField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
+import {OrgNameField, OrgUnitNameField, FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
 import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
@@ -21,6 +21,7 @@ import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
+import {thesisSubmissionSubtypes} from 'config/general';
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
@@ -35,9 +36,6 @@ export default class ThesisSubmission extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            content: 'hello'
-        };
     }
 
     getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error, submitSucceeded = false, alertLocale = {}}) => {
@@ -53,7 +51,9 @@ export default class ThesisSubmission extends Component {
                     {alertLocale.validationAlert.message}
                     <ul>
                         {
-                            error && error.length > 0 && error.map((item, index) => (<li key={`validation-${index}`}>{item}</li>))
+                            error && error.length > 0 && error.map((item, index) => (
+                                <li key={`validation-${index}`}>{item}</li>
+                            ))
                         }
                     </ul>
                 </span>);
@@ -77,6 +77,8 @@ export default class ThesisSubmission extends Component {
 
     render() {
         const txt = formLocale.thesis;
+        const txtFoR = locale.components.fieldOfResearchForm;
+        const txtSupervisors = locale.components.thesisSubmissionSupervisors;
         if (this.props.submitSucceeded) {
             return (
                 <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
@@ -132,6 +134,7 @@ export default class ThesisSubmission extends Component {
                             <div className="column ">
                                 <Field
                                     component={ThesisSubtypeField}
+                                    itemsList={thesisSubmissionSubtypes}
                                     name="rek_genre_type"
                                     disabled={this.props.submitting}
                                     validate={[validation.required]}
@@ -173,22 +176,22 @@ export default class ThesisSubmission extends Component {
                     </StandardCard>
 
 
-                    <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
-                        <div>{txt.supervisors.description}</div>
+                    <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
+                        <div>{txtSupervisors.description}</div>
                         <Field
                             component={ContributorsEditorField}
                             className="requiredField"
                             name="supervisors"
                             validate={[validation.supervisorRequired]}
-                            locale={txt.supervisors.field}
+                            locale={txtSupervisors.field}
                             disabled={this.props.submitting}
                         />
                     </StandardCard>
 
-                    <StandardCard title={txt.fieldOfResearch.title} help={txt.fieldOfResearch.help}>
-                        <div>{txt.fieldOfResearch.description}</div>
+                    <StandardCard title={txtFoR.title} help={txtFoR.help}>
+                        <div>{txtFoR.text}</div>
                         <Field
-                            component={FieldOfResearchListField}
+                            component={FilteredFieldOfResearchListField}
                             name="fieldOfResearch"
                             className="requiredField"
                             validate={[validation.forRequired]}
@@ -196,7 +199,7 @@ export default class ThesisSubmission extends Component {
                             distinctOnly
                             maxCount={3}
                             disabled={this.props.submitting}
-                            locale={locale.components.fieldOfResearchForm.field}/>
+                            locale={txtFoR.field}/>
                     </StandardCard>
 
                     <StandardCard title={txt.keywords.title} help={txt.keywords.help}>

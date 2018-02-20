@@ -89,11 +89,11 @@ const mapStateToProps = (state, props) => {
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
     const today = new Date();
     const initialValues = {
+        rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
         currentAuthor: [
             {
-                'rek_date': `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
-                'nameAsPublished': currentAuthor ? currentAuthor.aut_display_name : '',
-                'authorId': currentAuthor ? currentAuthor.aut_id : ''
+                nameAsPublished: currentAuthor ? currentAuthor.aut_display_name : '',
+                authorId: currentAuthor ? currentAuthor.aut_id : ''
             }
         ],
         fez_record_search_key_org_name: {rek_org_name: 'The University of Queensland'},
