@@ -40,7 +40,7 @@ export default class FacetsFilter extends React.Component {
         }
     }
 
-    _handleFacetClick = (category, facet) => {
+    _handleFacetClick = (yearPublishedCategory, facet) => {
         if (this.props.disabled) {
             return;
         }
@@ -51,17 +51,17 @@ export default class FacetsFilter extends React.Component {
             ranges: {...this.state.activeFacets.ranges},
         };
 
-        if (activeFacets.filters.hasOwnProperty(category) && activeFacets.filters[category] === facet) {
-            delete activeFacets.filters[category];
+        if (activeFacets.filters.hasOwnProperty(yearPublishedCategory) && activeFacets.filters[yearPublishedCategory] === facet) {
+            delete activeFacets.filters[yearPublishedCategory];
         } else {
-            activeFacets.filters[category] = facet;
+            activeFacets.filters[yearPublishedCategory] = facet;
         }
         this.setState({
             activeFacets: {...activeFacets}
         });
     };
 
-    _handleYearPublishedRangeFacet = (category, from, to) => {
+    _handleYearPublishedRangeFacet = (yearPublishedCategory) => (from, to) => {
         if (this.props.disabled) {
             return;
         }
@@ -79,12 +79,12 @@ export default class FacetsFilter extends React.Component {
 
         const facet = `[${fromValueForEs} TO ${toValueForEs}]`;
 
-        if (activeFacets.ranges[category] === facet) {
-            delete activeFacets.ranges[category];
-            delete activeFacets[category];
+        if (activeFacets.ranges[yearPublishedCategory] === facet) {
+            delete activeFacets.ranges[yearPublishedCategory];
+            delete activeFacets[yearPublishedCategory];
         } else {
-            activeFacets.ranges[category] = facet;
-            activeFacets[category] = {
+            activeFacets.ranges[yearPublishedCategory] = facet;
+            activeFacets[yearPublishedCategory] = {
                 from: fromValueForEs,
                 to: toValueForEs
             };
@@ -159,10 +159,9 @@ export default class FacetsFilter extends React.Component {
     };
 
     render() {
-        const txt = locale.components.facetsFilter;
+        const {yearPublishedCategory, yearPublishedFacet, resetButtonText} = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
         const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0 || Object.keys(this.state.activeFacets.ranges).length > 0);
-        const yearFacetTitle = txt.yearPublishedFacet.title;
         if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
 
         return (
@@ -185,16 +184,11 @@ export default class FacetsFilter extends React.Component {
                     }
                     {
                         <DateRange
-                            index={facetsToDisplay.length}
-                            key={`key_facet_item_${facetsToDisplay.length}`}
-                            title={yearFacetTitle}
-                            displayTitle={txt.yearPublishedFacet.facetTitle}
-                            open={this.state.activeFacets.ranges[yearFacetTitle] && true}
-                            isActive={this.state.activeFacets.ranges.hasOwnProperty(yearFacetTitle)}
-                            facetValueOnActive={this.state.activeFacets.hasOwnProperty(yearFacetTitle) ? this.state.activeFacets[yearFacetTitle] : {}}
+                            open={this.state.activeFacets.ranges[yearPublishedCategory] && true}
+                            value={this.state.activeFacets.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets[yearPublishedCategory] : {}}
                             disabled={this.props.disabled}
-                            onChange={this._handleYearPublishedRangeFacet}
-                            locale={txt.yearPublishedFacet}
+                            onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
+                            locale={yearPublishedFacet}
                         />
                     }
                 </List>
@@ -205,7 +199,7 @@ export default class FacetsFilter extends React.Component {
                         <div className="column is-narrow-tablet">
                             <FlatButton
                                 fullWidth
-                                label={txt.resetButtonText}
+                                label={resetButtonText}
                                 onClick={this._handleResetClick}/>
                         </div>
                     </div>

@@ -409,26 +409,23 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       secondaryTextLines={1}
     />
     <DateRange
+      defaultValue={
+        Object {
+          "from": 2010,
+          "to": 2023,
+        }
+      }
       disabled={false}
-      displayTitle="Published year range"
-      facetValueOnActive={Object {}}
-      index={6}
-      isActive={false}
-      key="key_facet_item_6"
       locale={
         Object {
-          "facetTitle": "Published year range",
+          "displayTitle": "Published year range",
           "fromFieldLabel": "From",
-          "minYearValue": 2010,
           "rangeSubmitButtonLabel": "Go",
-          "title": "Year published",
           "toFieldLabel": "To",
         }
       }
-      maxYearValue={2023}
-      minYearValue={2010}
       onChange={[Function]}
-      title="Year published"
+      value={Object {}}
     />
   </List>
 </div>
@@ -866,26 +863,23 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       secondaryTextLines={1}
     />
     <DateRange
+      defaultValue={
+        Object {
+          "from": 2010,
+          "to": 2023,
+        }
+      }
       disabled={false}
-      displayTitle="Published year range"
-      facetValueOnActive={Object {}}
-      index={6}
-      isActive={false}
-      key="key_facet_item_6"
       locale={
         Object {
-          "facetTitle": "Published year range",
+          "displayTitle": "Published year range",
           "fromFieldLabel": "From",
-          "minYearValue": 2010,
           "rangeSubmitButtonLabel": "Go",
-          "title": "Year published",
           "toFieldLabel": "To",
         }
       }
-      maxYearValue={2023}
-      minYearValue={2010}
       onChange={[Function]}
-      title="Year published"
+      value={Object {}}
     />
   </List>
 </div>
@@ -1308,26 +1302,23 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
       secondaryTextLines={1}
     />
     <DateRange
+      defaultValue={
+        Object {
+          "from": 2010,
+          "to": 2023,
+        }
+      }
       disabled={false}
-      displayTitle="Published year range"
-      facetValueOnActive={Object {}}
-      index={6}
-      isActive={false}
-      key="key_facet_item_6"
       locale={
         Object {
-          "facetTitle": "Published year range",
+          "displayTitle": "Published year range",
           "fromFieldLabel": "From",
-          "minYearValue": 2010,
           "rangeSubmitButtonLabel": "Go",
-          "title": "Year published",
           "toFieldLabel": "To",
         }
       }
-      maxYearValue={2023}
-      minYearValue={2010}
       onChange={[Function]}
-      title="Year published"
+      value={Object {}}
     />
   </List>
   <div
@@ -1766,26 +1757,23 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       secondaryTextLines={1}
     />
     <DateRange
+      defaultValue={
+        Object {
+          "from": 2010,
+          "to": 2023,
+        }
+      }
       disabled={false}
-      displayTitle="Published year range"
-      facetValueOnActive={Object {}}
-      index={6}
-      isActive={false}
-      key="key_facet_item_6"
       locale={
         Object {
-          "facetTitle": "Published year range",
+          "displayTitle": "Published year range",
           "fromFieldLabel": "From",
-          "minYearValue": 2010,
           "rangeSubmitButtonLabel": "Go",
-          "title": "Year published",
           "toFieldLabel": "To",
         }
       }
-      maxYearValue={2023}
-      minYearValue={2010}
       onChange={[Function]}
-      title="Year published"
+      value={Object {}}
     />
   </List>
   <div
@@ -2220,26 +2208,23 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       secondaryTextLines={1}
     />
     <DateRange
+      defaultValue={
+        Object {
+          "from": 2010,
+          "to": 2023,
+        }
+      }
       disabled={true}
-      displayTitle="Published year range"
-      facetValueOnActive={Object {}}
-      index={6}
-      isActive={false}
-      key="key_facet_item_6"
       locale={
         Object {
-          "facetTitle": "Published year range",
+          "displayTitle": "Published year range",
           "fromFieldLabel": "From",
-          "minYearValue": 2010,
           "rangeSubmitButtonLabel": "Go",
-          "title": "Year published",
           "toFieldLabel": "To",
         }
       }
-      maxYearValue={2023}
-      minYearValue={2010}
       onChange={[Function]}
-      title="Year published"
+      value={Object {}}
     />
   </List>
 </div>
@@ -2606,26 +2591,23 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       secondaryTextLines={1}
     />
     <DateRange
+      defaultValue={
+        Object {
+          "from": 2010,
+          "to": 2023,
+        }
+      }
       disabled={false}
-      displayTitle="Published year range"
-      facetValueOnActive={Object {}}
-      index={5}
-      isActive={false}
-      key="key_facet_item_5"
       locale={
         Object {
-          "facetTitle": "Published year range",
+          "displayTitle": "Published year range",
           "fromFieldLabel": "From",
-          "minYearValue": 2010,
           "rangeSubmitButtonLabel": "Go",
-          "title": "Year published",
           "toFieldLabel": "To",
         }
       }
-      maxYearValue={2023}
-      minYearValue={2010}
       onChange={[Function]}
-      title="Year published"
+      value={Object {}}
     />
   </List>
 </div>

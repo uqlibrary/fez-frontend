@@ -12,7 +12,6 @@ exports[`Date range  should render range descriptor when active 1`] = `
     disabled={false}
     initiallyOpen={false}
     insetChildren={false}
-    key="key_facet_item_0"
     nestedItems={
       Array [
         <ListItem
@@ -21,7 +20,6 @@ exports[`Date range  should render range descriptor when active 1`] = `
           containerElement="span"
           disableKeyboardFocus={false}
           disabled={false}
-          id="activeYearPublishedFacet"
           initiallyOpen={false}
           insetChildren={false}
           leftIcon={
@@ -72,7 +70,6 @@ exports[`Date range  should render range selector disabled 1`] = `
     disabled={true}
     initiallyOpen={false}
     insetChildren={false}
-    key="key_facet_item_0"
     nestedItems={
       Array [
         <ListItem
@@ -81,7 +78,6 @@ exports[`Date range  should render range selector disabled 1`] = `
           containerElement="span"
           disableKeyboardFocus={false}
           disabled={true}
-          id="activeYearPublishedFacet"
           initiallyOpen={false}
           insetChildren={false}
           leftIcon={null}
@@ -111,8 +107,6 @@ exports[`Date range  should render range selector disabled 1`] = `
                 floatingLabelFixed={false}
                 floatingLabelText="From"
                 fullWidth={true}
-                max={2020}
-                min={2010}
                 multiLine={false}
                 onChange={[Function]}
                 rows={1}
@@ -132,8 +126,6 @@ exports[`Date range  should render range selector disabled 1`] = `
                 floatingLabelFixed={false}
                 floatingLabelText="To"
                 fullWidth={true}
-                max={2020}
-                min={2010}
                 multiLine={false}
                 onChange={[Function]}
                 rows={1}
@@ -194,7 +186,6 @@ exports[`Date range  should render range selector with default values populated 
     disabled={false}
     initiallyOpen={false}
     insetChildren={false}
-    key="key_facet_item_0"
     nestedItems={
       Array [
         <ListItem
@@ -203,7 +194,6 @@ exports[`Date range  should render range selector with default values populated 
           containerElement="span"
           disableKeyboardFocus={false}
           disabled={false}
-          id="activeYearPublishedFacet"
           initiallyOpen={false}
           insetChildren={false}
           leftIcon={null}
@@ -233,8 +223,6 @@ exports[`Date range  should render range selector with default values populated 
                 floatingLabelFixed={false}
                 floatingLabelText="From"
                 fullWidth={true}
-                max={2020}
-                min={2010}
                 multiLine={false}
                 onChange={[Function]}
                 rows={1}
@@ -254,8 +242,6 @@ exports[`Date range  should render range selector with default values populated 
                 floatingLabelFixed={false}
                 floatingLabelText="To"
                 fullWidth={true}
-                max={2020}
-                min={2010}
                 multiLine={false}
                 onChange={[Function]}
                 rows={1}

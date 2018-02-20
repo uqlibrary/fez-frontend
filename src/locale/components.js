@@ -2,12 +2,11 @@ export default {
     components: {
         facetsFilter: {
             resetButtonText: 'Reset',
+            yearPublishedCategory: 'Year published',
             yearPublishedFacet: {
-                facetTitle: 'Published year range',
-                title: 'Year published',
+                displayTitle: 'Published year range',
                 fromFieldLabel: 'From',
                 toFieldLabel: 'To',
-                minYearValue: 2010,
                 rangeSubmitButtonLabel: 'Go'
             }
         },
