@@ -37,7 +37,7 @@ describe('Date range ', () => {
         const wrapper = setup({activeFacets: {filters: {}, ranges: {}}});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        const yearPublishedCategory = wrapper.find('.facetsYear');
+        const yearPublishedCategory = wrapper.find('.dateRange');
         expect(yearPublishedCategory.length).toEqual(1);
     });
 
@@ -45,7 +45,7 @@ describe('Date range ', () => {
         const wrapper = setup({open: true, value: {from: 2010, to: 2016}});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        const yearPublishedCategory = wrapper.find('.facetsYear .active');
+        const yearPublishedCategory = wrapper.find('.dateRange .active');
         expect(yearPublishedCategory.length).toEqual(1);
     });
 
