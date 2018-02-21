@@ -111,6 +111,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
     >
       <div
         className="columns"
+        style={
+          Object {
+            "marginTop": "6px",
+          }
+        }
       >
         <div
           className="column requiredField"
@@ -183,11 +188,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       </div>
       <div
         className="columns"
-        style={
-          Object {
-            "marginTop": "-12px",
-          }
-        }
       >
         <div
           className="column is-half"
@@ -228,6 +228,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       </div>
       <div
         className="columns"
+        style={
+          Object {
+            "marginTop": "6px",
+          }
+        }
       >
         <div
           className="column requiredField"
@@ -638,6 +643,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
     >
       <div
         className="columns"
+        style={
+          Object {
+            "marginTop": "6px",
+          }
+        }
       >
         <div
           className="column requiredField"
@@ -710,11 +720,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       </div>
       <div
         className="columns"
-        style={
-          Object {
-            "marginTop": "-12px",
-          }
-        }
       >
         <div
           className="column is-half"
@@ -755,6 +760,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       </div>
       <div
         className="columns"
+        style={
+          Object {
+            "marginTop": "6px",
+          }
+        }
       >
         <div
           className="column requiredField"

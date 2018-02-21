@@ -108,7 +108,7 @@ export default class ThesisSubmission extends Component {
                         txt={formLocale.cancelWorkflowConfirmation}/>
 
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <div className="columns">
+                        <div className="columns" style={{marginTop: '6px'}}>
                             <div className="column requiredField">
                                 <label htmlFor="thesisTitle">{txt.information.fieldLabels.documentTitle.floatingLabelText}</label>
                                 <Field
@@ -143,7 +143,7 @@ export default class ThesisSubmission extends Component {
                                     className="requiredField"/>
                             </div>
                         </div>
-                        <div className="columns" style={{marginTop: '-12px'}}>
+                        <div className="columns">
                             <div className="column is-half">
                                 <Field
                                     component={OrgUnitNameField}
@@ -164,7 +164,7 @@ export default class ThesisSubmission extends Component {
                                     {...txt.information.fieldLabels.orgName}/>
                             </div>
                         </div>
-                        <div className="columns">
+                        <div className="columns" style={{marginTop: '6px'}}>
                             <div className="column requiredField">
                                 <label htmlFor="thesisAbstract">{txt.optional.fieldLabels.abstract.floatingLabelText}</label>
                                 <Field

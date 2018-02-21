@@ -3,6 +3,9 @@
 // An MUI override to make form labels WCAG AA compliant
 label {
   color: $label-color !important;
+  font-size: $text-body-large;
+  font-weight: $text-weight-normal;
+  line-height: $text-line-height-xlarge;
 }
 
 .selectField button:focus {
