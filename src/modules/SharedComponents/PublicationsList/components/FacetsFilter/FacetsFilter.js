@@ -40,7 +40,7 @@ export default class FacetsFilter extends React.Component {
         }
     }
 
-    _handleFacetClick = (yearPublishedCategory, facet) => {
+    _handleFacetClick = (category, facet) => {
         if (this.props.disabled) {
             return;
         }
@@ -50,17 +50,17 @@ export default class FacetsFilter extends React.Component {
             ranges: {...this.state.activeFacets.ranges},
         };
 
-        if (activeFacets.filters.hasOwnProperty(yearPublishedCategory) && activeFacets.filters[yearPublishedCategory] === facet) {
-            delete activeFacets.filters[yearPublishedCategory];
+        if (activeFacets.filters.hasOwnProperty(category) && activeFacets.filters[category] === facet) {
+            delete activeFacets.filters[category];
         } else {
-            activeFacets.filters[yearPublishedCategory] = facet;
+            activeFacets.filters[category] = facet;
         }
         this.setState({
             activeFacets: {...activeFacets}
         });
     };
 
-    _handleYearPublishedRangeFacet = (yearPublishedCategory) => (range) => {
+    _handleYearPublishedRangeFacet = (category) => (range) => {
         if (this.props.disabled) {
             return;
         }
@@ -70,10 +70,10 @@ export default class FacetsFilter extends React.Component {
             ranges: {...this.state.activeFacets.ranges},
         };
 
-        if (JSON.stringify(activeFacets.ranges[yearPublishedCategory]) === JSON.stringify(range)) {
-            delete activeFacets.ranges[yearPublishedCategory];
+        if (JSON.stringify(activeFacets.ranges[category]) === JSON.stringify(range)) {
+            delete activeFacets.ranges[category];
         } else {
-            activeFacets.ranges[yearPublishedCategory] = range;
+            activeFacets.ranges[category] = range;
         }
         this.setState({
             activeFacets: {...activeFacets}
