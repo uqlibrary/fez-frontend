@@ -170,6 +170,7 @@ export default class FacetsFilter extends React.Component {
                     }
                     {
                         <DateRange
+                            className="dateRange"
                             open={this.state.activeFacets.ranges[yearPublishedCategory] && true}
                             value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
                             disabled={this.props.disabled}

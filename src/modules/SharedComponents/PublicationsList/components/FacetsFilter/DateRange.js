@@ -14,7 +14,8 @@ export default class DateRange extends React.Component {
         value: PropTypes.object,
         defaultValue: PropTypes.object,
         open: PropTypes.bool,
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        className: PropTypes.string
     };
 
     static defaultProps = {
@@ -31,7 +32,8 @@ export default class DateRange extends React.Component {
             toFieldLabel: 'To',
             rangeSubmitButtonLabel: 'Go',
             displayTitle: 'Date range'
-        }
+        },
+        className: 'dateRange'
     };
 
     constructor(props) {
@@ -68,17 +70,17 @@ export default class DateRange extends React.Component {
         const disabledClass = disabled ? ' disabled' : '';
 
         return (
-            <div className="facetsYear">
+            <div className={this.props.className}>
                 <ListItem
                     primaryText={txt.displayTitle}
                     open={open}
                     disabled={disabled}
-                    className={`facetsYearCategory${activeClass}${disabledClass}`}
+                    className={`dateRangeCategory${activeClass}${disabledClass}`}
                     primaryTogglesNestedList
                     nestedItems={[
                         <ListItem
                             key="key_facet_item"
-                            className={`facetsYearLink${activeClass}${disabledClass}`}
+                            className={`dateRangeLink${activeClass}${disabledClass}`}
                             primaryText={isActive ? `${this.state.from || '*'} - ${this.state.to || '*'}` : ''}
                             onClick={isActive ? this._handleRangeFacetClick : () => {}}
                             disabled={disabled}
@@ -87,7 +89,7 @@ export default class DateRange extends React.Component {
                             {
                                 !isActive &&
                                 <div className="yearPublished columns is-gapless">
-                                    <div className="facetsYearFrom column">
+                                    <div className="dateRangeFrom column">
                                         <TextField
                                             type="number"
                                             floatingLabelText={txt.fromFieldLabel}
@@ -96,8 +98,8 @@ export default class DateRange extends React.Component {
                                             fullWidth
                                         />
                                     </div>
-                                    <div className="facetsYearSeparator column is-narrow" />
-                                    <div className="facetsYearTo column">
+                                    <div className="dateRangeSeparator column is-narrow" />
+                                    <div className="dateRangeTo column">
                                         <TextField
                                             type="number"
                                             floatingLabelText={txt.toFieldLabel}
@@ -106,8 +108,8 @@ export default class DateRange extends React.Component {
                                             fullWidth
                                         />
                                     </div>
-                                    <div className="facetsYearSeparator column is-narrow" />
-                                    <div className="facetsYearGo column is-narrow">
+                                    <div className="dateRangeSeparator column is-narrow" />
+                                    <div className="dateRangeGo column is-narrow">
                                         <FlatButton
                                             label={txt.rangeSubmitButtonLabel}
                                             onClick={this._handleRangeFacetClick}

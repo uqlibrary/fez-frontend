@@ -46,8 +46,8 @@
     }
   }
 }
-.facetsYear {
-  .facetsYearCategory {
+.dateRange {
+  .dateRangeCategory {
     font-size: $text-body-normal !important;
     line-height: $text-line-height-small !important;
     &.disabled {
@@ -67,10 +67,10 @@
       font-weight: bold !important;
     }
   }
-  .facetsYearSeparator{
+  .dateRangeSeparator{
     width: 6px;
   }
-  .facetsYearLink {
+  .dateRangeLink {
     font-size: $text-body-normal !important;
     line-height: $text-line-height-small !important;
     font-weight: $text-weight-normal !important;

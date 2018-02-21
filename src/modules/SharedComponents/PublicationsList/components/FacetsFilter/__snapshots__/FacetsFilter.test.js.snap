@@ -409,6 +409,7 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       secondaryTextLines={1}
     />
     <DateRange
+      className="dateRange"
       defaultValue={
         Object {
           "from": 2010,
@@ -863,6 +864,7 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       secondaryTextLines={1}
     />
     <DateRange
+      className="dateRange"
       defaultValue={
         Object {
           "from": 2010,
@@ -1302,6 +1304,7 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
       secondaryTextLines={1}
     />
     <DateRange
+      className="dateRange"
       defaultValue={
         Object {
           "from": 2010,
@@ -1757,6 +1760,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       secondaryTextLines={1}
     />
     <DateRange
+      className="dateRange"
       defaultValue={
         Object {
           "from": 2010,
@@ -2208,6 +2212,7 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       secondaryTextLines={1}
     />
     <DateRange
+      className="dateRange"
       defaultValue={
         Object {
           "from": 2010,
@@ -2591,6 +2596,7 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       secondaryTextLines={1}
     />
     <DateRange
+      className="dateRange"
       defaultValue={
         Object {
           "from": 2010,

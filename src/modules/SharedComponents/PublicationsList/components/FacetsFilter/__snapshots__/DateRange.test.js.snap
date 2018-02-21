@@ -2,11 +2,11 @@
 
 exports[`Date range  should render range descriptor when active 1`] = `
 <div
-  className="facetsYear"
+  className="dateRange"
 >
   <ListItem
     autoGenerateNestedIndicator={true}
-    className="facetsYearCategory active"
+    className="dateRangeCategory active"
     containerElement="span"
     disableKeyboardFocus={false}
     disabled={false}
@@ -16,7 +16,7 @@ exports[`Date range  should render range descriptor when active 1`] = `
       Array [
         <ListItem
           autoGenerateNestedIndicator={true}
-          className="facetsYearLink active"
+          className="dateRangeLink active"
           containerElement="span"
           disableKeyboardFocus={false}
           disabled={false}
@@ -60,11 +60,11 @@ exports[`Date range  should render range descriptor when active 1`] = `
 
 exports[`Date range  should render range selector disabled 1`] = `
 <div
-  className="facetsYear"
+  className="dateRange"
 >
   <ListItem
     autoGenerateNestedIndicator={true}
-    className="facetsYearCategory disabled"
+    className="dateRangeCategory disabled"
     containerElement="span"
     disableKeyboardFocus={false}
     disabled={true}
@@ -74,7 +74,7 @@ exports[`Date range  should render range selector disabled 1`] = `
       Array [
         <ListItem
           autoGenerateNestedIndicator={true}
-          className="facetsYearLink disabled"
+          className="dateRangeLink disabled"
           containerElement="span"
           disableKeyboardFocus={false}
           disabled={true}
@@ -99,7 +99,7 @@ exports[`Date range  should render range selector disabled 1`] = `
             className="yearPublished columns is-gapless"
           >
             <div
-              className="facetsYearFrom column"
+              className="dateRangeFrom column"
             >
               <TextField
                 defaultValue={2010}
@@ -115,10 +115,10 @@ exports[`Date range  should render range selector disabled 1`] = `
               />
             </div>
             <div
-              className="facetsYearSeparator column is-narrow"
+              className="dateRangeSeparator column is-narrow"
             />
             <div
-              className="facetsYearTo column"
+              className="dateRangeTo column"
             >
               <TextField
                 defaultValue={2020}
@@ -134,10 +134,10 @@ exports[`Date range  should render range selector disabled 1`] = `
               />
             </div>
             <div
-              className="facetsYearSeparator column is-narrow"
+              className="dateRangeSeparator column is-narrow"
             />
             <div
-              className="facetsYearGo column is-narrow"
+              className="dateRangeGo column is-narrow"
             >
               <FlatButton
                 className="is-mui-spacing-button"
@@ -176,11 +176,11 @@ exports[`Date range  should render range selector disabled 1`] = `
 
 exports[`Date range  should render range selector with default values populated 1`] = `
 <div
-  className="facetsYear"
+  className="dateRange"
 >
   <ListItem
     autoGenerateNestedIndicator={true}
-    className="facetsYearCategory"
+    className="dateRangeCategory"
     containerElement="span"
     disableKeyboardFocus={false}
     disabled={false}
@@ -190,7 +190,7 @@ exports[`Date range  should render range selector with default values populated 
       Array [
         <ListItem
           autoGenerateNestedIndicator={true}
-          className="facetsYearLink"
+          className="dateRangeLink"
           containerElement="span"
           disableKeyboardFocus={false}
           disabled={false}
@@ -215,7 +215,7 @@ exports[`Date range  should render range selector with default values populated 
             className="yearPublished columns is-gapless"
           >
             <div
-              className="facetsYearFrom column"
+              className="dateRangeFrom column"
             >
               <TextField
                 defaultValue={2010}
@@ -231,10 +231,10 @@ exports[`Date range  should render range selector with default values populated 
               />
             </div>
             <div
-              className="facetsYearSeparator column is-narrow"
+              className="dateRangeSeparator column is-narrow"
             />
             <div
-              className="facetsYearTo column"
+              className="dateRangeTo column"
             >
               <TextField
                 defaultValue={2020}
@@ -250,10 +250,10 @@ exports[`Date range  should render range selector with default values populated 
               />
             </div>
             <div
-              className="facetsYearSeparator column is-narrow"
+              className="dateRangeSeparator column is-narrow"
             />
             <div
-              className="facetsYearGo column is-narrow"
+              className="dateRangeGo column is-narrow"
             >
               <FlatButton
                 className="is-mui-spacing-button"
