@@ -110,7 +110,7 @@ export default class PublicationForm extends Component {
                             name="files"
                             component={ FileUploadField }
                             disabled={this.props.submitting}
-                            requireFileAccess
+                            requireOpenAccessStatus
                             validate={[validation.validFileUpload]} />
                     </StandardCard>
                 }

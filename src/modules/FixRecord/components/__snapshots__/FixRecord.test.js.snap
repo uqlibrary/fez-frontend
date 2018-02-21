@@ -555,7 +555,7 @@ exports[`Component FixRecord  should render fix record form 1`] = `
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],
@@ -2160,7 +2160,7 @@ exports[`Component FixRecord  should render the confirm dialog box with an alert
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],
@@ -2761,7 +2761,7 @@ exports[`Component FixRecord  should render the confirm dialog box without an al
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],

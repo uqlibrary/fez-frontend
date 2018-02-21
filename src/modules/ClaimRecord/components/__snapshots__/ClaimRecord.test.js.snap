@@ -869,7 +869,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],
@@ -1769,7 +1769,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],
@@ -2921,7 +2921,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],
@@ -4073,7 +4073,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],
@@ -5226,7 +5226,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],
@@ -7198,7 +7198,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],
@@ -8350,7 +8350,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         <Field
           component={[Function]}
           name="files"
-          requireFileAccess={true}
+          requireOpenAccessStatus={true}
           validate={
             Array [
               [Function],
