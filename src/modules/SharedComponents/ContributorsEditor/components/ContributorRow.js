@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
-import ReactTooltip from 'react-tooltip';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 
 export default class ContributorRow extends React.PureComponent {
@@ -29,8 +28,8 @@ export default class ContributorRow extends React.PureComponent {
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
             ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-            selectTooltip: 'Select this record as you',
-            selectedTooltip: 'This is you',
+            selectTooltip: 'Click to assign this record as you',
+            selectedTooltip: '(This is you)',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
                 confirmationMessage: 'Are you sure you want to delete this record?',
@@ -83,15 +82,6 @@ export default class ContributorRow extends React.PureComponent {
             // select this contributor
             if (!this.props.disabled && this.props.onContributorAssigned) this.props.onContributorAssigned(this.props.contributor, this.props.index);
         }
-        ReactTooltip.hide();
-    };
-
-    selectTooltip = () => {
-        if (this.props.contributor.selected) {
-            return this.props.locale.selectedTooltip;
-        } else {
-            return this.props.locale.selectTooltip;
-        }
     };
 
     render() {
@@ -99,7 +89,7 @@ export default class ContributorRow extends React.PureComponent {
         const contributorOrder = (this.props.index < ordinalData.length ?
             ordinalData[this.props.index] : (this.props.index + 1)) + ' ' + this.props.locale.suffix;
         return (
-            <div className={`contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
+            <div id={this.props.index} className={`contributorsRow datalist datalist-row ${this.props.contributor.selected ? 'selected' : ''}` }>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._deleteRecord}
@@ -111,15 +101,17 @@ export default class ContributorRow extends React.PureComponent {
                                 <div className="columns is-gapless contributorDetails"
                                     onClick={this._onContributorAssigned}
                                     onKeyDown={this._onContributorAssignedKeyboard}
-                                    data-tip={this.selectTooltip()}
-                                    data-for="contributorSelect"
                                     tabIndex="0">
                                     <div className="column is-narrow is-hidden-mobile">
                                         <FontIcon className="authorIcon material-icons">{this.props.contributor.selected ? 'person' : 'person_outline'}</FontIcon>
                                     </div>
                                     <div className="column datalist-text">
                                         <span className="contributorName">{this.props.contributor.nameAsPublished}</span>
-                                        <span className="contributorSelectedSuffix">{this.props.contributor.selected && this.props.locale.selectedLabelSuffix}</span>
+                                        {this.props.contributor.selected ?
+                                            <span className="contributorSelectedSuffix">{this.props.locale.selectedLabelSuffix}</span>
+                                            :
+                                            <span className="contributorNotSelectedSuffix">{this.props.locale.notSelectedLabelSuffix}</span>
+                                        }
                                         <span className="contributorSubtitle datalist-text-subtitle">{contributorOrder}</span>
                                     </div>
                                     {
@@ -159,8 +151,8 @@ export default class ContributorRow extends React.PureComponent {
                             <div className="column is-narrow is-hidden-mobile contributorReorder datalist-buttons">
                                 {this.props.canMoveUp &&
                                 <IconButton
-                                    data-tip={this.props.locale.moveUpHint}
-                                    data-for="contributorRow"
+                                    tooltip={this.props.locale.moveUpHint}
+                                    tooltipPosition="bottom-left"
                                     onTouchTap={this._onMoveUp}
                                     className="reorderUp"
                                     disabled={this.props.disabled}
@@ -170,8 +162,8 @@ export default class ContributorRow extends React.PureComponent {
                                 }
                                 {this.props.canMoveDown &&
                                 <IconButton
-                                    data-tip={this.props.locale.moveDownHint}
-                                    data-for="contributorRow"
+                                    tooltip={this.props.locale.moveDownHint}
+                                    tooltipPosition="bottom-left"
                                     onTouchTap={this._onMoveDown}
                                     className="reorderDown"
                                     disabled={this.props.disabled}
@@ -183,8 +175,8 @@ export default class ContributorRow extends React.PureComponent {
                             <div className="column is-narrow contributorDelete datalist-buttons">
                                 <IconButton
                                     className="contributorDelete"
-                                    data-tip={this.props.locale.deleteHint}
-                                    data-for="contributorRow"
+                                    tooltip={this.props.locale.deleteHint}
+                                    tooltipPosition="bottom-left"
                                     onTouchTap={this._showConfirmation}
                                     disabled={this.props.disabled}
                                     aria-label={this.props.locale.deleteHint}>
@@ -194,8 +186,6 @@ export default class ContributorRow extends React.PureComponent {
                         </div>
                     </div>
                 </div>
-                <ReactTooltip id="contributorRow" className="reactTooltip" place="top" event="focusin mouseenter" eventOff="blur mouseleave" effect="solid" />
-                <ReactTooltip id="contributorSelect" className="reactTooltip" place="top" event="focusin mouseenter" eventOff="blur mouseleave" effect="solid" />
             </div>
         );
     }

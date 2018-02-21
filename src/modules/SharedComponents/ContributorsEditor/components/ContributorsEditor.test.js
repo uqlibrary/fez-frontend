@@ -30,15 +30,17 @@ const create = () => {
 };
 
 function setup({showIdentifierLookup, showContributorAssignment, className,
-    disabled, author, onChange, isShallow = true}){
+                   disabled, author, onChange, contributors, meta, isShallow = true}){
 
     const props = {
+        contributors: contributors || [],
         showIdentifierLookup: showIdentifierLookup || false, // : PropTypes.bool,
         showContributorAssignment: showContributorAssignment || false, // : PropTypes.bool,
-        className, // : PropTypes.string,
-        disabled, // : PropTypes.bool,
+        className: className || null, // : PropTypes.string,
+        disabled: disabled || false, // : PropTypes.bool,
         author: author || { aut_id: 1 }, // : PropTypes.object,
-        onChange //: PropTypes.func,
+        onChange: onChange || jest.fn(), //: PropTypes.func,
+        meta: meta || null
         //locale: PropTypes.object
     };
 
@@ -62,6 +64,7 @@ function setup({showIdentifierLookup, showContributorAssignment, className,
 
 
 describe('ContributorsEditor tests ', () => {
+
     it('rendering full component with a defined className', () => {
         const wrapper = setup({ isShallow: false, className: 'requiredField' });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -125,7 +128,7 @@ describe('ContributorsEditor tests ', () => {
 
     it('deleting all contributors from a list', () => {
         const wrapper = setup({}).find('ContributorsEditor').dive();
-        wrapper.setState({ contributors: [ {}, {}, {}], isCurrentAuthorSelected: true });
+        wrapper.setState({ contributors: [{"nameAsPublished":"One","disabled":false},{"nameAsPublished":"Two","disabled":false},{"nameAsPublished":"Three","disabled":false}], isCurrentAuthorSelected: true });
         expect(wrapper.state().contributors.length).toEqual(3);
         wrapper.instance().deleteAllContributors();
         expect(wrapper.state().contributors.length).toEqual(0);
@@ -151,4 +154,36 @@ describe('ContributorsEditor tests ', () => {
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[1].displayName).toEqual(3);
     });
+
+    // Tests for infinite scroll appear or not
+    it('renders no contributor rows', () => {
+        const wrapper = setup({isShallow: true, contributors: []}).find('ContributorsEditor').dive();
+        wrapper.setState({ contributors: []});
+        expect(wrapper.find('ContributorRow').length).toEqual(0);
+        expect(wrapper.find('Infinite').length).toEqual(0);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders 3 contributor rows', () => {
+        const wrapper = setup({isShallow: true, contributors: []}).find('ContributorsEditor').dive();
+        wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}]});
+        expect(wrapper.find('ContributorRow').length).toEqual(3);
+        expect(wrapper.find('Infinite').length).toEqual(0);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders 4 contributor rows wrapped in an infinite scroll', () => {
+        const wrapper = setup({isShallow: true, contributors: []}).find('ContributorsEditor').dive();
+        wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}, {displayName: 4}]});
+        expect(wrapper.find('ContributorRow').length).toEqual(4);
+        expect(wrapper.find('Infinite').length).toEqual(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show validation error', () => {
+        const wrapper = setup({isShallow: false, contributors: [], meta: {error: 'This is a test error'}});
+        expect(wrapper.find('.validationErrorMessage').length).toEqual(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

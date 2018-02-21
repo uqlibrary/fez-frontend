@@ -143,7 +143,7 @@ exports[`JournalArticleForm renders  component 1`] = `
               "descriptionStep1NoStep2": <div>
                 Please 
                 <b>
-                  add to a list of supervisors below
+                  add to a list of authors below
                 </b>
                 , in the format and order that they are published.
               </div>,
@@ -197,6 +197,7 @@ exports[`JournalArticleForm renders  component 1`] = `
               },
               "moveDownHint": "Move item down the order",
               "moveUpHint": "Move item up the order",
+              "notSelectedLabelSuffix": "- select to confirm this author is you",
               "ordinalData": Array [
                 "First",
                 "Second",
@@ -209,10 +210,8 @@ exports[`JournalArticleForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "selectTooltip": "Select this author as you",
               "selectedHint": "This is you",
-              "selectedLabelSuffix": " (assigned as you)",
-              "selectedTooltip": "This is you",
+              "selectedLabelSuffix": "- assigned as you",
               "suffix": " listed author",
               "unselectedHint": "Select this to confirm [identifier] is you",
             },

@@ -27,8 +27,18 @@
     padding: 6px;
     overflow: hidden;
     @include mobile {
-      padding-left: 12px;
+      padding-left: 4px;
     }
+    &:hover, &:focus {
+      .contributorNotSelectedSuffix {
+        padding-left: 4px;
+        display: inline-block;
+        opacity: 0.66;
+      }
+    }
+  }
+  .contributorNotSelectedSuffix {
+    display: none;
   }
   .contributorActions {
     padding: 6px;
@@ -37,7 +47,7 @@
     margin-bottom: 0px !important;
   }
   &:hover {
-    background-color: rgba($secondary-color-light, 0.5);
+    background-color: rgba($secondary-color-light, 0.66);
     cursor: pointer;
   }
   .datalist-text {
@@ -62,6 +72,7 @@
         color: $text-color-reverse !important;
       }
       .contributorSelectedSuffix {
+        padding-left: 4px;
         opacity: 0.66;
       }
     }
@@ -76,7 +87,8 @@
 }
 .authors-infinite {
   padding-left: 5px;
-  overflow: visible;
+  overflow-x: visible !important;
+  overflow-y: auto !important;
   @include mobile {
     padding-left: 0;
   }

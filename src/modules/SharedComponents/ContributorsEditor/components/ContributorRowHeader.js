@@ -36,7 +36,7 @@ export default class ContributorRowHeader extends Component {
 
     _showConfirmation = () => {
         this.confirmationBox.showConfirmation();
-    }
+    };
 
     render() {
         const {

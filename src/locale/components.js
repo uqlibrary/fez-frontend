@@ -185,7 +185,7 @@ export default {
                             <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
-                            <div>Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
+                            <div>Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
                         ),
                         nameAsPublishedLabel: 'Enter each author\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
@@ -220,9 +220,8 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectTooltip: 'Select this author as you',
-                        selectedTooltip: 'This is you',
-                        selectedLabelSuffix: ' (assigned as you)',
+                        selectedLabelSuffix: '- assigned as you',
+                        notSelectedLabelSuffix: '- select to confirm this author is you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -285,9 +284,8 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectTooltip: 'Select this editor as you',
-                        selectedTooltip: 'This is you',
-                        selectedLabelSuffix: ' (assigned as you)',
+                        selectedLabelSuffix: '- assigned as you',
+                        notSelectedLabelSuffix: '- select to confirm this editor is you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -313,7 +311,7 @@ export default {
                             <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
-                            <div>Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
+                            <div>Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
                         ),
                         nameAsPublishedLabel: 'Enter each creator\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
@@ -348,9 +346,8 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectTooltip: 'Select this creator as you',
-                        selectedTooltip: 'This is you',
-                        selectedLabelSuffix: ' (assigned as you)',
+                        selectedLabelSuffix: '- assigned as you',
+                        notSelectedLabelSuffix: '- select to confirm this creator is you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -376,7 +373,7 @@ export default {
                             <div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
-                            <div>Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
+                            <div>Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
                         ),
                         nameAsPublishedLabel: 'Enter each designer\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
@@ -411,9 +408,8 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectTooltip: 'Select this designer as you',
-                        selectedTooltip: 'This is you',
-                        selectedLabelSuffix: ' (assigned as you)',
+                        selectedLabelSuffix: '- assigned as you',
+                        notSelectedLabelSuffix: '- select to confirm this designer is you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -474,9 +470,8 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectTooltip: 'Select this supervisor as you',
-                        selectedTooltip: 'This is you',
-                        selectedLabelSuffix: ' (assigned as you)',
+                        selectedLabelSuffix: '- assigned as you',
+                        notSelectedLabelSuffix: '- select to confirm this supervisor is you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -536,9 +531,8 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-                        selectTooltip: 'Select this contributor as you',
-                        selectedTooltip: 'This is you',
-                        selectedLabelSuffix: ' (assigned as you)',
+                        selectedLabelSuffix: '- assigned as you',
+                        notSelectedLabelSuffix: '- select to confirm this contributor is you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',

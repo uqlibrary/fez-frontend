@@ -147,7 +147,6 @@ export class ContributorsEditor extends Component {
                         type="warning" />
                 }
                 <ContributorForm
-                    // errorText={this.props.meta && this.props.meta.dirty ? this.props.meta.error : ''}
                     onAdd={this.addContributor}
                     showIdentifierLookup={this.props.showIdentifierLookup}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}

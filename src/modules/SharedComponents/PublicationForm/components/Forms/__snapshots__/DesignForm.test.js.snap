@@ -174,7 +174,7 @@ exports[`DesignForm renders  component 1`] = `
               "descriptionStep1NoStep2": <div>
                 Please 
                 <b>
-                  add to a list of supervisors below
+                  add to a list of designers below
                 </b>
                 , in the format and order that they are published.
               </div>,
@@ -228,6 +228,7 @@ exports[`DesignForm renders  component 1`] = `
               },
               "moveDownHint": "Move item down the order",
               "moveUpHint": "Move item up the order",
+              "notSelectedLabelSuffix": "- select to confirm this designer is you",
               "ordinalData": Array [
                 "First",
                 "Second",
@@ -240,10 +241,8 @@ exports[`DesignForm renders  component 1`] = `
                 "Ninth",
                 "Tenth",
               ],
-              "selectTooltip": "Select this designer as you",
               "selectedHint": "This is you",
-              "selectedLabelSuffix": " (assigned as you)",
-              "selectedTooltip": "This is you",
+              "selectedLabelSuffix": "- assigned as you",
               "suffix": " listed designer",
               "unselectedHint": "Select this to confirm this designer is you",
             },
