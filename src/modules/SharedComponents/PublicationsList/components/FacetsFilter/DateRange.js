@@ -43,15 +43,21 @@ export default class DateRange extends React.Component {
         };
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (JSON.stringify(nextProps.value) === JSON.stringify({})) {
+            this.setState({isActive: false});
+        }
+    }
+
     setValue = (key) => (event, value) => {
         this.setState({
-            [key]: isNaN(parseInt(value, 10)) ? undefined : ('0000' + value).substr(-4)
+            [key]: isNaN(parseInt(value, 10)) ? null : parseInt(value, 10)
         });
     };
 
     _handleRangeFacetClick = () => {
         this.setState({isActive: !this.state.isActive});
-        return this.props.onChange(this.state.from, this.state.to);
+        return this.props.onChange({from: this.state.from, to: this.state.to});
     };
 
     render() {

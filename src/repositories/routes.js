@@ -1,5 +1,7 @@
 import {validation} from 'config';
 
+const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
+
 /**
  * Translate selected facets to query string parameters
  * @param {object} selected facets
@@ -11,7 +13,10 @@ export const getFacetsParams = (facets) => {
         facetsParam[`filters[facets][${key}]`] = facets.filters[key];
     });
     facets.hasOwnProperty('ranges') && Object.keys(facets.ranges).map(key => {
-        facetsParam[`ranges[facets][${key}]`] = facets.ranges[key];
+        const {from, to} = facets.ranges[key];
+        const fromValueForEs = (!!from && !!to && from > to) ? zeroPaddedYear(to) : zeroPaddedYear(from);
+        const toValueForEs = (!!from && !!to && to < from) ? zeroPaddedYear(from) : zeroPaddedYear(to);
+        facetsParam[`ranges[facets][${key}]`] = `[${fromValueForEs} TO ${toValueForEs}]`;
     });
     return facetsParam;
 };

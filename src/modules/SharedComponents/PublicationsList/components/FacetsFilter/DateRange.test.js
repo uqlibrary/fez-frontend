@@ -42,7 +42,7 @@ describe('Date range ', () => {
     });
 
     it('should render range descriptor when active', () => {
-        const wrapper = setup({open: true, value: {from: '2010', to: '2016'}});
+        const wrapper = setup({open: true, value: {from: 2010, to: 2016}});
         expect(toJson(wrapper)).toMatchSnapshot();
 
         const yearPublishedCategory = wrapper.find('.facetsYear .active');
@@ -60,11 +60,11 @@ describe('Date range ', () => {
 
     it('should handle facet click correctly on deactivating year published range', () => {
         const testHandleFacetClickFn = jest.fn();
-        const wrapper = setup({onChange: testHandleFacetClickFn, value: {from: '2010', to: '2018'}});
+        const wrapper = setup({onChange: testHandleFacetClickFn, value: {from: 2010, to: 2018}});
 
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
-        expect(testHandleFacetClickFn).toHaveBeenCalledWith('2010', '2018');
+        expect(testHandleFacetClickFn).toHaveBeenCalledWith({from: 2010, to: 2018});
     });
 
     it('should handle facet click correctly on changing year published range values', () => {
@@ -73,17 +73,17 @@ describe('Date range ', () => {
 
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
-        expect(testHandleFacetClickFn).toHaveBeenCalledWith(2000, 2010);
+        expect(testHandleFacetClickFn).toHaveBeenCalledWith({from: 2000, to: 2010});
 
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
-        expect(testHandleFacetClickFn).toHaveBeenCalledWith(2000, 2010);
+        expect(testHandleFacetClickFn).toHaveBeenCalledWith({from: 2000, to: 2010});
 
         wrapper.instance().setValue('from')({}, '2005');
         wrapper.instance().setValue('to')({}, '2015');
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
-        expect(testHandleFacetClickFn).toHaveBeenCalledWith('2005', '2015');
+        expect(testHandleFacetClickFn).toHaveBeenCalledWith({from: 2005, to: 2015});
     });
 
     it('should render category on facet click for a range (* - 2020)', () => {
@@ -94,7 +94,7 @@ describe('Date range ', () => {
         wrapper.instance().setValue('to')({}, '2020');
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
-        expect(testHandleFacetClickFn).toHaveBeenCalledWith(undefined, '2020');
+        expect(testHandleFacetClickFn).toHaveBeenCalledWith({from: null, to: 2020});
     });
 
     it('should render category on facet click for a range (2010 - *)', () => {
@@ -105,7 +105,7 @@ describe('Date range ', () => {
         wrapper.instance().setValue('to')({});
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
-        expect(testHandleFacetClickFn).toHaveBeenCalledWith('2010', undefined);
+        expect(testHandleFacetClickFn).toHaveBeenCalledWith({from: 2010, to: null});
     });
 
     it('should render category on facet click for a range (0500 - 2020)', () => {
@@ -116,7 +116,7 @@ describe('Date range ', () => {
         wrapper.instance().setValue('to')({}, '2020');
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
-        expect(testHandleFacetClickFn).toHaveBeenCalledWith('0500', '2020');
+        expect(testHandleFacetClickFn).toHaveBeenCalledWith({from: 500, to: 2020});
     });
 
     it('should render category with years swapped on facet click for a range (2020 - 2015)', () => {
@@ -127,6 +127,6 @@ describe('Date range ', () => {
         wrapper.instance().setValue('to')({}, '2015');
         wrapper.instance()._handleRangeFacetClick();
         wrapper.update();
-        expect(testHandleFacetClickFn).toHaveBeenCalledWith('2020', '2015');
+        expect(testHandleFacetClickFn).toHaveBeenCalledWith({from: 2020, to: 2015});
     });
 });

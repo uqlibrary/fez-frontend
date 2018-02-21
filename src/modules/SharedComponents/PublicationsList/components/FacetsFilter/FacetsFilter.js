@@ -46,7 +46,6 @@ export default class FacetsFilter extends React.Component {
         }
 
         const activeFacets = {
-            ...this.state.activeFacets,
             filters: {...this.state.activeFacets.filters},
             ranges: {...this.state.activeFacets.ranges},
         };
@@ -61,33 +60,20 @@ export default class FacetsFilter extends React.Component {
         });
     };
 
-    _handleYearPublishedRangeFacet = (yearPublishedCategory) => (from, to) => {
+    _handleYearPublishedRangeFacet = (yearPublishedCategory) => (range) => {
         if (this.props.disabled) {
             return;
         }
 
         const activeFacets = {
-            ...this.state.activeFacets,
             filters: {...this.state.activeFacets.filters},
             ranges: {...this.state.activeFacets.ranges},
         };
 
-        const parsedFromValue = parseInt(from, 10);
-        const parsedToValue = parseInt(to, 10);
-        const fromValueForEs = parsedFromValue > parsedToValue ? to : (from || '*');
-        const toValueForEs = parsedToValue < parsedFromValue ? from : (to || '*');
-
-        const facet = `[${fromValueForEs} TO ${toValueForEs}]`;
-
-        if (activeFacets.ranges[yearPublishedCategory] === facet) {
+        if (JSON.stringify(activeFacets.ranges[yearPublishedCategory]) === JSON.stringify(range)) {
             delete activeFacets.ranges[yearPublishedCategory];
-            delete activeFacets[yearPublishedCategory];
         } else {
-            activeFacets.ranges[yearPublishedCategory] = facet;
-            activeFacets[yearPublishedCategory] = {
-                from: fromValueForEs,
-                to: toValueForEs
-            };
+            activeFacets.ranges[yearPublishedCategory] = range;
         }
         this.setState({
             activeFacets: {...activeFacets}
@@ -185,7 +171,7 @@ export default class FacetsFilter extends React.Component {
                     {
                         <DateRange
                             open={this.state.activeFacets.ranges[yearPublishedCategory] && true}
-                            value={this.state.activeFacets.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets[yearPublishedCategory] : {}}
+                            value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
                             disabled={this.props.disabled}
                             onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
                             locale={yearPublishedFacet}
