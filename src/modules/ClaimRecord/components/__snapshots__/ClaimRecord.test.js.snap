@@ -2,6 +2,7 @@
 
 exports[`Component ClaimRecord  should render claim form if publication doesn't have a PID and but current author was assigned (author linking component should not be rendered) 1`] = `
 <StandardPage
+  className=""
   title="Claim a publication"
 >
   <form
@@ -916,6 +917,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
 
 exports[`Component ClaimRecord  should render claim form, author linking component should not be rendered if there's only one author on a publication 1`] = `
 <StandardPage
+  className=""
   title="Claim a publication"
 >
   <form
@@ -1815,6 +1817,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
 
 exports[`Component ClaimRecord  should render claim publication form 1`] = `
 <StandardPage
+  className=""
   title="Claim a publication"
 >
   <form
@@ -2966,6 +2969,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
 
 exports[`Component ClaimRecord  should render navigation prompt 1`] = `
 <StandardPage
+  className=""
   title="Claim a publication"
 >
   <form
@@ -4117,6 +4121,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
 
 exports[`Component ClaimRecord  should render navigation prompt 2`] = `
 <StandardPage
+  className=""
   title="Claim a publication"
 >
   <form
@@ -5269,6 +5274,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
 
 exports[`Component ClaimRecord  should render publication citation, error message if publication has PID and it was claimed by current author already 1`] = `
 <StandardPage
+  className=""
   title="Claim a publication"
 >
   <form
@@ -6082,6 +6088,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
 
 exports[`Component ClaimRecord  should render the confirm dialog with an alert due to a file upload error 1`] = `
 <StandardPage
+  className=""
   title="Claim a publication"
 >
   <form
@@ -7239,6 +7246,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
 
 exports[`Component ClaimRecord  should render the confirm dialog without an alert due to file upload success 1`] = `
 <StandardPage
+  className=""
   title="Claim a publication"
 >
   <form
