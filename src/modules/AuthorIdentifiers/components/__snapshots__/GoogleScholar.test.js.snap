@@ -2,6 +2,7 @@
 
 exports[`Component GoogleScholar  should display submission error if saving failed 1`] = `
 <StandardPage
+  className=""
   title="Google Scholar identifier"
 >
   <form
@@ -124,6 +125,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
 
 exports[`Component GoogleScholar  should display submission in progress alert 1`] = `
 <StandardPage
+  className=""
   title="Google Scholar identifier"
 >
   <form
@@ -247,6 +249,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
 
 exports[`Component GoogleScholar  should render form if author doesn't have google scholar id 1`] = `
 <StandardPage
+  className=""
   title="Google Scholar identifier"
 >
   <form
@@ -363,6 +366,7 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
 
 exports[`Component GoogleScholar  should render form if author has google scholar id 1`] = `
 <StandardPage
+  className=""
   title="Google Scholar identifier"
 >
   <form
