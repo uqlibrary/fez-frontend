@@ -2,6 +2,7 @@
 
 exports[`Component FixRecord  should render fix record form 1`] = `
 <StandardPage
+  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -622,6 +623,7 @@ exports[`Component FixRecord  should render loader when record is loading 1`] = 
 
 exports[`Component FixRecord  should render record citation, two actions in select field and a cancel button 1`] = `
 <StandardPage
+  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -1110,6 +1112,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
 
 exports[`Component FixRecord  should render record citation, two actions in select field and a cancel button 2`] = `
 <StandardPage
+  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -1598,6 +1601,7 @@ exports[`Component FixRecord  should render record citation, two actions in sele
 
 exports[`Component FixRecord  should render the confirm dialog box with an alert due to a file upload failure 1`] = `
 <StandardPage
+  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -2204,6 +2208,7 @@ exports[`Component FixRecord  should render the confirm dialog box with an alert
 
 exports[`Component FixRecord  should render the confirm dialog box without an alert due to a file upload success 1`] = `
 <StandardPage
+  className=""
   title="Request a correction or upload files"
 >
   <form
@@ -2804,6 +2809,7 @@ exports[`Component FixRecord  should render the confirm dialog box without an al
 
 exports[`Component FixRecord  should render unclaim form 1`] = `
 <StandardPage
+  className=""
   title="Request a correction or upload files"
 >
   <form

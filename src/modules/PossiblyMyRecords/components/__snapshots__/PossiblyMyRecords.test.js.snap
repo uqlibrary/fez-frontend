@@ -2,6 +2,7 @@
 
 exports[`PossiblyMyRecords test renders empty list 1`] = `
 <StandardPage
+  className=""
   title="Claim possible publications"
 >
   <div
@@ -41,6 +42,7 @@ exports[`PossiblyMyRecords test renders empty list 1`] = `
 
 exports[`PossiblyMyRecords test renders list of publications and counts 1`] = `
 <StandardPage
+  className=""
   title="Claim possible publications"
 >
   <ConfirmDialogBox
@@ -3286,6 +3288,7 @@ exports[`PossiblyMyRecords test renders list of publications and counts 1`] = `
 
 exports[`PossiblyMyRecords test renders loading screen while loading author data 1`] = `
 <StandardPage
+  className=""
   title="Claim possible publications"
 >
   <div
@@ -3325,6 +3328,7 @@ exports[`PossiblyMyRecords test renders loading screen while loading author data
 
 exports[`PossiblyMyRecords test renders loading screen while loading publications  1`] = `
 <StandardPage
+  className=""
   title="Claim possible publications"
 >
   <div
@@ -3342,6 +3346,7 @@ exports[`PossiblyMyRecords test renders loading screen while loading publication
 
 exports[`PossiblyMyRecords test renders no results 1`] = `
 <StandardPage
+  className=""
   title="Claim possible publications"
 >
   <div
