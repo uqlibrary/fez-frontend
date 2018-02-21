@@ -33,7 +33,7 @@ export default {
                 }
             },
             comments: {
-                title: 'Please suggest changes and/or upload additional files below',
+                title: 'Optional: Suggest changes or add links to this record',
                 help: {
                     title: 'Additional information',
                     text: '...',
@@ -45,7 +45,7 @@ export default {
                 }
             },
             fileUpload: {
-                title: 'Upload additional files',
+                title: 'Optional: Upload additional files',
                 help: {
                     title: 'Files',
                     text: '...',
@@ -60,16 +60,15 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Claim has been submitted',
-                successConfirmationMessage: (<p>Your item will be referred to a UQ eSpace Staging staff member
-                    for editing, prior to being moved into a publicly viewable collection.</p>),
-                fileFailConfirmationMessage: (<p>
-                    Your item will be referred to a UQ eSpace Staging staff member
-                    for editing, prior to being moved into a publicly viewable collection.<br/><br/>
-                    <strong>
-                        Please note, file upload has failed.
-                        Retry uploading files via "Fix record" screen or contact eSpace administrators.
-                    </strong>
-                </p>),
+                successConfirmationMessage: (
+                    <p>
+                        Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
+                    </p>),
+                fileFailConfirmationAlert: {
+                    title: 'File upload failed',
+                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
+                    type: 'info'
+                },
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research'
@@ -159,8 +158,12 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your request has been submitted',
-                confirmationMessage: (
-                    <p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
+                confirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
+                fileFailConfirmationAlert: {
+                    title: 'File upload failed',
+                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
+                    type: 'info'
+                },
                 cancelButtonLabel: 'Go to my dashboard',
                 confirmButtonLabel: 'Go to my research'
             },

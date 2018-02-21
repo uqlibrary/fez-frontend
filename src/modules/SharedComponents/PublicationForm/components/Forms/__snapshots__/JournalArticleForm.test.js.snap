@@ -93,7 +93,7 @@ exports[`JournalArticleForm renders  component 1`] = `
           locale={
             Object {
               "label": "Publication subtype",
-              "loading": "loading...",
+              "loading": "Loading...",
             }
           }
           name="rek_subtype"
@@ -118,6 +118,9 @@ exports[`JournalArticleForm renders  component 1`] = `
     }
     title="Authors"
   >
+    <div>
+      Please provide a list of authors and then select your name from the list.
+    </div>
     <Field
       className="requiredField"
       component={[Function]}
@@ -129,7 +132,7 @@ exports[`JournalArticleForm renders  component 1`] = `
               "addButton": "Add author",
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Author's name as published",
+              "nameAsPublishedLabel": "Enter each author's name as published",
             },
           },
           "header": Object {

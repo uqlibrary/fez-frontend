@@ -1,14 +1,18 @@
 @import '../../../../sass/variables';
 
 .publicationsList {
-  margin-top: 24px;
+  margin-top: 12px;
 }
 
 .publicationCitation {
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 12px;
-  padding: 6px;
+  padding: 0;
+
+  overflow: hidden;
+  word-break: break-word;
+
   & > div.columns:nth-child(1) {
     margin-bottom: 0px !important;
   }
@@ -18,7 +22,7 @@
   }
 
   .publicationSources, .citationSources {
-    font-size: 12px;
+    font-size: $text-body-small;
 
     .publicationSource {
       &:after {
@@ -31,8 +35,7 @@
   }
 
   &:first-child {
-    padding-top: 18px;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: 24px;
   }
 
   .publicationTitle {
@@ -40,10 +43,13 @@
   }
 
   .citationContent {
-    font-size: 12px;
-    line-height: 16px;
-    color: rgba($text-color, 0.88);
+    font-size: $text-body-normal;
+    line-height: $text-line-height-normal;
+    color: rgba($text-color, 0.8);
     margin-bottom: 12px;
+    @include mobile {
+      font-size: $text-body-small !important;
+    }
 
     .citationJournalName {
       font-style: italic;
@@ -62,7 +68,7 @@
     }
 
     .citationIcon {
-      font-size: $text-body-small !important;
+      font-size: $text-body-normal !important;
     }
   }
 

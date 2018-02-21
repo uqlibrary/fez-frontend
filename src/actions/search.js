@@ -22,31 +22,30 @@ export function createSearchPromise(source, queryString, dispatch) {
     return new Promise((resolve) => {
         dispatch({type: `${actions.SEARCH_LOADING}@${source}`});
         getSearch(source, queryString)
-            .then(response => {
-                const data = response && response.hasOwnProperty('data') ? response.data
-                    .map(item => {
-                        const sourceConfig = locale.global.sources[source];
-                        item.sources = [
-                            {
-                                source: source,
-                                id: sourceConfig.idKey
-                                    .split('.')
-                                    .reduce((objectValue, pathProperty) => objectValue[pathProperty], item)
-                            }];
-                        item.currentSource = source;
-                        return item;
-                    }) : [];
-                dispatch({
-                    type: `${actions.SEARCH_COMPLETED}@${source}`,
-                    payload: data
+            .then(({data = []}) => {
+                const processResponse = data.map(item => {
+                    const sourceConfig = locale.global.sources[source];
+                    item.sources = [
+                        {
+                            source: source,
+                            id: sourceConfig.idKey
+                                .split('.')
+                                .reduce((objectValue, pathProperty) => objectValue[pathProperty], item)
+                        }];
+                    item.currentSource = source;
+                    return item;
                 });
-                resolve(data);
+
+                dispatch({
+                    type: `${actions.SEARCH_LOADED}@${source}`,
+                    payload: processResponse
+                });
+                resolve(processResponse);
             })
             .catch(error => {
-                if (error.status === 403) dispatch({type: actions.ACCOUNT_ANONYMOUS});
                 dispatch({
                     type: `${actions.SEARCH_FAILED}@${source}`,
-                    payload: error
+                    payload: error.message
                 });
                 // do not reject - not to prevent Promise.all throwing an error
                 resolve([]);
@@ -68,13 +67,19 @@ export function searchPublications(searchQuery) {
 
         dispatch({type: actions.SEARCH_SOURCE_COUNT, payload: searchPromises.length});
 
-        Promise.all(searchPromises)
+        return Promise.all(searchPromises)
             .then((response) => {
                 let flattenedResults = [].concat.apply([], response);
                 flattenedResults = flattenedResults.slice(0, flattenedResults.length);
-                dispatch({type: actions.SEARCH_COMPLETED, payload: flattenedResults});
+                dispatch({
+                    type: actions.SEARCH_LOADED,
+                    payload: flattenedResults
+                });
             }, error => {
-                dispatch({type: actions.SEARCH_FAILED, payload: error});
+                dispatch({
+                    type: actions.SEARCH_FAILED,
+                    payload: error.message
+                });
             });
     };
 }
@@ -93,7 +98,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
             .then((response) => {
                 dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
             }, (error) => {
-                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`, payload: error});
+                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`, payload: error.message});
             });
     };
 }

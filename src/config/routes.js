@@ -1,22 +1,12 @@
-import React from 'react';
 import {locale} from 'locale';
-
-import Async from 'modules/SharedComponents/Async';
-const FixRecord = () => (<Async load={import('modules/FixRecord/containers/FixRecord')} />);
-const ClaimRecord = () => (<Async load={import('modules/ClaimRecord/containers/ClaimRecord')} />);
-const PossiblyMyRecords = () => (<Async load={import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')} />);
-const MyRecords = () => (<Async load={import('modules/MyRecords/containers/MyRecords')} />);
-const Dashboard = () => (<Async load={import('modules/Dashboard/containers/Dashboard')} />);
-// const AddMissingRecord = () => (<Async load={import('modules/AddMissingRecord/containers/AddMissingRecord')} />);
-// const FindRecords = () => (<Async load={import('modules/AddMissingRecord/components/steps/FindRecords')} />);
-// const RecordsSearchResults = () => (<Async load={import('modules/AddMissingRecord/components/steps/RecordsSearchResults')} />);
-// const NewRecord = () => (<Async load={import('modules/AddMissingRecord/components/steps/NewRecord')} />);
 
 export const pathConfig =  {
     index: '/',
     dashboard: '/dashboard',
     browse: '/browse',
     about: '/about',
+    hdrSubmission: '/rhdsubmission_new',
+    sbsSubmission: '/sbslodge_new',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
@@ -34,14 +24,28 @@ export const pathConfig =  {
     authorIdentifiers: {
         orcid: {
             link: '/author-identifiers/orcid/link',
+            absoluteLink: `${window.location.origin}${window.location.pathname}${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
-            link: '/author-identifiers/googleScholar/link',
-            // unlink: '/author-identifiers/googleScholar/link'
+            link: '/author-identifiers/google-scholar/link/',
+            // unlink: '/author-identifiers/google-scholar/link'
         }
     }
 };
+
+const flattedPathConfig = ((path) => {
+    const flattenPath = Object.assign({}, ...function _flatten(objectBit, path = '') {
+        return [].concat(
+            ...Object.keys(objectBit).map(
+                key => typeof objectBit[key] === 'object' ?
+                    _flatten(objectBit[key], `${ path }/${ key }`) :
+                    ({[`${ path }/${ key }`]: objectBit[key]})
+            )
+        );
+    }(path));
+    return Object.values(flattenPath);
+})(pathConfig);
 
 // TODO: will we even have roles?
 export const roles = {
@@ -49,8 +53,8 @@ export const roles = {
     admin: 'admin'
 };
 
-export const getRoutesConfig = (components, account) => {
-    return [
+export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegistration = false, isHdrStudent = false}) => {
+    const publicPages = [
         {
             path: pathConfig.about,
             render: () => components.StandardPage({...locale.pages.about})
@@ -65,40 +69,69 @@ export const getRoutesConfig = (components, account) => {
                 render: () => components.Browse(locale.pages.browse),
                 exact: true
             }
-        ] : []),
+        ] : [])];
+
+    const thesisSubmissionPages = (account ? [
+        {
+            path: pathConfig.hdrSubmission,
+            render: isHdrStudent
+                ? () => components.ThesisSubmission({isHdrThesis: true})
+                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied})
+        },
+        {
+            path: pathConfig.sbsSubmission,
+            render: isHdrStudent
+                ? () => components.ThesisSubmission({isHdrThesis: false})
+                : () => components.StandardPage({...locale.pages.thesisSubmissionDenied})
+        },
+    ] : []);
+
+    if (forceOrcidRegistration) {
+        return [
+            ...publicPages,
+            ...thesisSubmissionPages,
+            {
+                component: components.Orcid
+            }
+        ];
+    }
+
+    return [
+        ...publicPages,
+        ...thesisSubmissionPages,
         ...(account ? [
             {
                 path: pathConfig.index,
-                component: Dashboard,
+                component: components.Dashboard,
                 exact: true
             },
             {
                 path: pathConfig.dashboard,
-                component: Dashboard,
+                component: components.Dashboard,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.mine,
-                component: MyRecords,
+                component: components.MyRecords,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.possible,
-                component: PossiblyMyRecords,
+                component: components.PossiblyMyRecords,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.claim,
-                component: ClaimRecord,
+                component: components.ClaimRecord,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
             {
                 path: pathConfig.records.fix(':pid'),
-                component: FixRecord,
+                component: components.FixRecord,
                 access: [roles.researcher, roles.admin],
                 exact: true
             },
@@ -122,11 +155,14 @@ export const getRoutesConfig = (components, account) => {
             },
             {
                 path: pathConfig.authorIdentifiers.orcid.link,
-                render: () => components.StandardPage({title: 'Link ORCID ID to UQ eSpace', children: 'Link or register ORCID ID here.... Coming soon....'})
+                component: components.Orcid,
+                exact: true
             },
             {
                 path: pathConfig.authorIdentifiers.googleScholar.link,
-                render: () => components.StandardPage({title: 'Link Google Scholar ID to UQ eSpace', children: 'Link Google Scholar here.... Coming soon....'})
+                component: components.GoogleScholar,
+                access: [roles.researcher, roles.admin],
+                exact: true
             },
         ] : []),
         ...(account && account.canMasquerade ? [
@@ -139,12 +175,7 @@ export const getRoutesConfig = (components, account) => {
         ] : []),
         {
             render: (childProps) => {
-                const isValidRoute = childProps.location.pathname.split('/')
-                    .filter(Boolean)
-                    .reduce((subpath, locationItem) =>
-                        (subpath && !!subpath[locationItem] ? subpath[locationItem] : ''), pathConfig)
-                    .length > 0;
-
+                const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
                 if (isValidRoute && account) return components.StandardPage({...locale.pages.permissionDenied});
                 if (isValidRoute) return components.StandardPage({...locale.pages.authenticationRequired});
                 return components.StandardPage({...locale.pages.notFound});
@@ -153,48 +184,72 @@ export const getRoutesConfig = (components, account) => {
     ];
 };
 
-export const getMenuConfig = (account) => [
-    ...(account ? [
+export const getMenuConfig = (account, disabled) => {
+    const publicPages = [
         {
-            linkTo: pathConfig.dashboard,
-            primaryText: locale.menu.myDashboard.primaryText,
-            secondaryText: account.mail
+            linkTo: pathConfig.browse,
+            ...locale.menu.browse,
+            public: true
         },
         {
-            linkTo: pathConfig.records.mine,
-            ...locale.menu.myResearch
-        },
-        {
-            linkTo: pathConfig.records.possible,
-            ...locale.menu.claimPublication
-        },
-        {
-            linkTo: pathConfig.records.add.find,
-            ...locale.menu.addMissingRecord
-        },
-        {
-            divider: true,
-            path: '/234234234242'
+            linkTo: pathConfig.about,
+            ...locale.menu.about,
+            public: true
         }
-    ] : []),
-    ...(account && account.canMasquerade ? [
-        {
-            linkTo: pathConfig.admin.masquerade,
-            ...locale.menu.masquerade,
-        },
-        {
-            divider: true,
-            path: '/234234234242'
-        }
-    ] : []),
-    {
-        linkTo: pathConfig.browse,
-        ...locale.menu.browse,
-        public: true
-    },
-    {
-        linkTo: pathConfig.about,
-        ...locale.menu.about,
-        public: true
+    ];
+
+    if (disabled) {
+        return [
+            ...(account ? [
+                {
+                    linkTo: pathConfig.dashboard,
+                    primaryText: locale.menu.myDashboard.primaryText,
+                    secondaryText: account.mail
+                },
+                {
+                    divider: true,
+                    path: '/234234234242'
+                }] : []),
+            ...publicPages
+        ];
     }
-];
+
+    return [
+        ...(account ? [
+            {
+                linkTo: pathConfig.dashboard,
+                primaryText: locale.menu.myDashboard.primaryText,
+                secondaryText: account.mail
+            },
+            {
+                linkTo: pathConfig.records.mine,
+                ...locale.menu.myResearch
+            },
+            {
+                linkTo: pathConfig.records.possible,
+                ...locale.menu.claimPublication
+            },
+            {
+                linkTo: pathConfig.records.add.find,
+                ...locale.menu.addMissingRecord
+            },
+            {
+                divider: true,
+                path: '/234234234242'
+            }
+        ] : []),
+        ...(account && account.canMasquerade ? [
+            {
+                linkTo: pathConfig.admin.masquerade,
+                ...locale.menu.masquerade,
+            },
+            {
+                divider: true,
+                path: '/234234234242'
+            }
+        ] : []),
+        ...publicPages
+    ];
+};
+
+export const ORCID_REDIRECT_URL = `${window.location.origin}${window.location.pathname}${!!window.location.hash ? '#' : ''}${pathConfig.authorIdentifiers.orcid.link}`;

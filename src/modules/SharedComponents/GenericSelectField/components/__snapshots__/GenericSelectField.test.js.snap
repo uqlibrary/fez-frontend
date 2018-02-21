@@ -11,14 +11,14 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
     ]
   }
   itemsLoading={true}
-  loadItemsList={[Function]}
+  loadItemsList={[MockFunction]}
   locale={
     Object {
       "label": "Select item",
       "loading": "loading...",
     }
   }
-  onChange={[Function]}
+  onChange={[MockFunction]}
   parentItemsId={null}
   selectedValue={null}
 >
@@ -475,6 +475,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -654,6 +655,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                   }
                 >
                   <div
+                    key="::before"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -779,6 +781,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                         type="button"
                       >
                         <NavigationArrowDropDown
+                          key=".0"
                           style={
                             Object {
                               "color": "rgba(0, 0, 0, 0.3)",
@@ -840,6 +843,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                     }
                   />
                   <div
+                    key="::after"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -1313,6 +1317,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -1383,14 +1388,22 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
   disabled={false}
   itemsList={Array []}
   itemsLoading={false}
-  loadItemsList={[Function]}
+  loadItemsList={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          null,
+        ],
+      ],
+    }
+  }
   locale={
     Object {
       "label": "Select item",
       "loading": "loading...",
     }
   }
-  onChange={[Function]}
+  onChange={[MockFunction]}
   parentItemsId={null}
   selectedValue={null}
 >
@@ -1847,6 +1860,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -2026,6 +2040,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                   }
                 >
                   <div
+                    key="::before"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -2153,6 +2168,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                         <TouchRipple
                           abortOnScroll={true}
                           centerRipple={true}
+                          key="touchRipple"
                         >
                           <div
                             onMouseDown={[Function]}
@@ -2162,6 +2178,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                             onTouchStart={[Function]}
                           >
                             <NavigationArrowDropDown
+                              key=".0"
                               style={
                                 Object {
                                   "fill": "inherit",
@@ -2220,6 +2237,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                     }
                   />
                   <div
+                    key="::after"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -2693,6 +2711,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -2767,14 +2786,14 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
     ]
   }
   itemsLoading={false}
-  loadItemsList={[Function]}
+  loadItemsList={[MockFunction]}
   locale={
     Object {
       "label": "Select item",
       "loading": "loading...",
     }
   }
-  onChange={[Function]}
+  onChange={[MockFunction]}
   parentItemsId={null}
   selectedValue={null}
 >
@@ -3231,6 +3250,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,
@@ -3410,6 +3430,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                   }
                 >
                   <div
+                    key="::before"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -3537,6 +3558,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                         <TouchRipple
                           abortOnScroll={true}
                           centerRipple={true}
+                          key="touchRipple"
                         >
                           <div
                             onMouseDown={[Function]}
@@ -3546,6 +3568,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                             onTouchStart={[Function]}
                           >
                             <NavigationArrowDropDown
+                              key=".0"
                               style={
                                 Object {
                                   "fill": "inherit",
@@ -3604,6 +3627,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                     }
                   />
                   <div
+                    key="::after"
                     style={
                       Object {
                         "boxSizing": "border-box",
@@ -4077,6 +4101,7 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
                 "color": "#ffffff",
                 "rippleBackgroundColor": "#616161",
               },
+              "userAgent": undefined,
               "zIndex": Object {
                 "appBar": 1100,
                 "dialog": 1500,

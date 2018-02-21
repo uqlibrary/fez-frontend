@@ -4,9 +4,9 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
 <Provider
   store={
     Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "subscribe": [Function],
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
 >
@@ -21,7 +21,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
         "nameAsPublishedLabel": "Name as published",
       }
     }
-    onAdd={[Function]}
+    onAdd={[MockFunction]}
     showIdentifierLookup={true}
   >
     <div
@@ -31,7 +31,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
         className="column"
       >
         <TextField
-          className="input-long-hint"
+          className="mui-long-labels-fix"
           disabled={false}
           floatingLabelFixed={false}
           floatingLabelText="Name as published"
@@ -47,7 +47,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
           value=""
         >
           <div
-            className="input-long-hint"
+            className="mui-long-labels-fix"
             style={
               Object {
                 "backgroundColor": "transparent",
@@ -470,6 +470,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                     "color": "#ffffff",
                     "rippleBackgroundColor": "#616161",
                   },
+                  "userAgent": undefined,
                   "zIndex": Object {
                     "appBar": 1100,
                     "dialog": 1500,
@@ -917,6 +918,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                     "color": "#ffffff",
                     "rippleBackgroundColor": "#616161",
                   },
+                  "userAgent": undefined,
                   "zIndex": Object {
                     "appBar": 1100,
                     "dialog": 1500,
@@ -1389,6 +1391,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                     "color": "#ffffff",
                     "rippleBackgroundColor": "#616161",
                   },
+                  "userAgent": undefined,
                   "zIndex": Object {
                     "appBar": 1100,
                     "dialog": 1500,
@@ -1947,6 +1950,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                         "color": "#ffffff",
                         "rippleBackgroundColor": "#616161",
                       },
+                      "userAgent": undefined,
                       "zIndex": Object {
                         "appBar": 1100,
                         "dialog": 1500,
@@ -2394,6 +2398,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                         "color": "#ffffff",
                         "rippleBackgroundColor": "#616161",
                       },
+                      "userAgent": undefined,
                       "zIndex": Object {
                         "appBar": 1100,
                         "dialog": 1500,
@@ -2868,6 +2873,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                         "color": "#ffffff",
                         "rippleBackgroundColor": "#616161",
                       },
+                      "userAgent": undefined,
                       "zIndex": Object {
                         "appBar": 1100,
                         "dialog": 1500,
@@ -3101,6 +3107,7 @@ exports[`ContributorForm tests  rendering display name field and identifier fiel
                     }
                   >
                     <span
+                      key="labelElement"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",
@@ -3136,9 +3143,9 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
 <Provider
   store={
     Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "subscribe": [Function],
+      "dispatch": [MockFunction],
+      "getState": [MockFunction],
+      "subscribe": [MockFunction],
     }
   }
 >
@@ -3153,7 +3160,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
         "nameAsPublishedLabel": "Name as published",
       }
     }
-    onAdd={[Function]}
+    onAdd={[MockFunction]}
     showIdentifierLookup={false}
   >
     <div
@@ -3163,7 +3170,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
         className="column"
       >
         <TextField
-          className="input-long-hint"
+          className="mui-long-labels-fix"
           disabled={false}
           floatingLabelFixed={false}
           floatingLabelText="Name as published"
@@ -3179,7 +3186,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
           value=""
         >
           <div
-            className="input-long-hint"
+            className="mui-long-labels-fix"
             style={
               Object {
                 "backgroundColor": "transparent",
@@ -3602,6 +3609,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
                     "color": "#ffffff",
                     "rippleBackgroundColor": "#616161",
                   },
+                  "userAgent": undefined,
                   "zIndex": Object {
                     "appBar": 1100,
                     "dialog": 1500,
@@ -4049,6 +4057,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
                     "color": "#ffffff",
                     "rippleBackgroundColor": "#616161",
                   },
+                  "userAgent": undefined,
                   "zIndex": Object {
                     "appBar": 1100,
                     "dialog": 1500,
@@ -4521,6 +4530,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
                     "color": "#ffffff",
                     "rippleBackgroundColor": "#616161",
                   },
+                  "userAgent": undefined,
                   "zIndex": Object {
                     "appBar": 1100,
                     "dialog": 1500,
@@ -4708,6 +4718,7 @@ exports[`ContributorForm tests  rendering display name field only 1`] = `
                     }
                   >
                     <span
+                      key="labelElement"
                       style={
                         Object {
                           "color": "rgba(0, 0, 0, 0.3)",

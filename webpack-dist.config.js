@@ -78,7 +78,10 @@ module.exports = {
             'process.env.USE_MOCK': JSON.stringify(useMock),
             'process.env.API_URL': JSON.stringify(config.api),
             'process.env.APP_URL': JSON.stringify(config.url),
-            'process.env.BRANCH': JSON.stringify(config.environment)
+            'process.env.BRANCH': JSON.stringify(config.environment),
+            'process.env.ORCID_URL': JSON.stringify(config.orcidUrl),
+            'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId),
+            'process.env.PUBLIC_PATH': JSON.stringify(config.basePath)
         }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         // Put it in the end to capture all the HtmlWebpackPlugin's
@@ -110,13 +113,19 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/
+                ],
                 enforce: 'pre',
                 use: 'eslint-loader'
             },
             {
                 test: /\.js?$/,
-                exclude: /node_modules/,
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/
+                ],
                 include: [
                     resolve(__dirname, 'src'),
                     resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')
@@ -163,6 +172,7 @@ module.exports = {
         modules: [
             'src',
             'node_modules',
+            'custom_modules'
         ]
     },
     performance: {

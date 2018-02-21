@@ -646,6 +646,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Teesson, Maree"
@@ -659,6 +660,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Hall, Wayne"
@@ -672,6 +674,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Proudfoot, Heather"
@@ -685,6 +688,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=" and "
           suffix=""
           value="Degenhardt, Louisa"
@@ -1586,6 +1590,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
         >
           <CitationView
             className="citationAuthor"
+            key="citationAuthor_1"
             prefix=""
             suffix=", "
             value="Smith, A"
@@ -1599,6 +1604,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
           </CitationView>
           <CitationView
             className="citationAuthor"
+            key="citationAuthor_2"
             prefix=""
             suffix=", "
             value="Smith, C"
@@ -1612,6 +1618,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
           </CitationView>
           <CitationView
             className="citationAuthor"
+            key="citationAuthor_3"
             prefix=" and "
             suffix=""
             value="Smith, B"
@@ -2633,6 +2640,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
         >
           <CitationView
             className="citationAuthor"
+            key="citationAuthor_1"
             prefix=""
             suffix=", "
             value="Smith, A"
@@ -2646,6 +2654,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
           </CitationView>
           <CitationView
             className="citationAuthor"
+            key="citationAuthor_2"
             prefix=""
             suffix=", "
             value="Smith, C"
@@ -2659,6 +2668,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
           </CitationView>
           <CitationView
             className="citationAuthor"
+            key="citationAuthor_3"
             prefix=" and "
             suffix=""
             value="Smith, B"

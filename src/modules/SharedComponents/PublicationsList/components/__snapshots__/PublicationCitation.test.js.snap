@@ -810,6 +810,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
     />
     <div
       className="column is-narrow"
+      key="0"
     >
       <FlatButton
         className="publicationAction buttonOrder0"
@@ -829,6 +830,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
     </div>
     <div
       className="column is-narrow"
+      key="1"
     >
       <FlatButton
         className="publicationAction buttonOrder1"
@@ -848,6 +850,7 @@ exports[`PublicationCitation renders  component with custom actions 1`] = `
     </div>
     <div
       className="column is-narrow"
+      key="2"
     >
       <FlatButton
         className="publicationAction buttonOrder2"
@@ -1679,12 +1682,13 @@ exports[`PublicationCitation renders  component with default actions 1`] = `
     />
     <div
       className="column is-narrow"
+      key="0"
     >
       <FlatButton
         className="publicationAction buttonOrder0"
         disabled={false}
         fullWidth={true}
-        label="Fix record"
+        label="Request Correction"
         labelPosition="after"
         labelStyle={Object {}}
         onKeyboardFocus={[Function]}

@@ -944,6 +944,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Larance, Briony"
@@ -957,6 +958,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Peacock, Amy"
@@ -970,6 +972,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Campbell, Gabrielle"
@@ -983,6 +986,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=""
           suffix=", "
           value="Freckleton, Sarah"
@@ -996,6 +1000,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_5"
           prefix=""
           suffix=", "
           value="Smith, Kimberley"
@@ -1009,6 +1014,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_6"
           prefix=""
           suffix=", "
           value="Mattick, Richard"
@@ -1022,6 +1028,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_7"
           prefix=""
           suffix=", "
           value="Bruno, Raimondo"
@@ -1035,6 +1042,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_8"
           prefix=""
           suffix=", "
           value="Nielsen, Suzanne"
@@ -1048,6 +1056,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_9"
           prefix=""
           suffix=", "
           value="Cohen, Milton"
@@ -1061,6 +1070,7 @@ exports[`ConferencePaperCitation renders  component with a mock espace record 1`
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_10"
           prefix=""
           suffix=", "
           value="Lintzeris, Nicholas"

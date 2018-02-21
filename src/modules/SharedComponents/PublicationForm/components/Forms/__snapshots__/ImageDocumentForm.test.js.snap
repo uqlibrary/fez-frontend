@@ -91,7 +91,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
     title="Creators"
   >
     <div>
-      This is the author or creator of the work, e.g. producer or performer (if self-produced). Type creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.
+      Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.
     </div>
     <Field
       className="requiredField"
@@ -104,7 +104,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
               "addButton": "Add creator",
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Creator's name as published",
+              "nameAsPublishedLabel": "Enter each creator's name as published",
             },
           },
           "header": Object {

@@ -1,16 +1,12 @@
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
-
 import NewRecord from './NewRecord';
 
-function setup(values) {
-    return shallow(<NewRecord {...values}/>);
+function setup(testProps, isShallow = true) {
+    return getElement(NewRecord, testProps, isShallow);
 }
 
 describe('Add new record', () => {
 
-    it('should not render publication form if author is not loaded', () => {
+    it('should not render publication form if author is not loaded ', () => {
         const wrapper = setup({author: null});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -66,4 +62,15 @@ describe('Add new record', () => {
 
         expect(navigateToSearch).toBeCalled();
     });
+
+    it('should render the confirm dialog with an alert for failed file upload', () => {
+        const wrapper = setup({newRecordFileUploadingError: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render the confirm dialog with without an alert for successful file upload', () => {
+        const wrapper = setup({newRecordFileUploadingError: false});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

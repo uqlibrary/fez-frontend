@@ -14,3 +14,14 @@ export function hidePossiblyYourPublicationsLure() {
         type: actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE
     };
 }
+
+export function showAppAlert(appAlert) {
+    return {
+        type: actions.APP_ALERT_SHOW,
+        payload: appAlert
+    };
+}
+
+export function dismissAppAlert() {
+    return {type: actions.APP_ALERT_HIDE};
+}

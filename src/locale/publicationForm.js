@@ -6,7 +6,8 @@ export default {
     submit: 'Submit for approval',
     publicationType: {
         title: 'Publication type',
-        inputLabelText: 'Select publication type',
+        inputLabelText: 'Publication type',
+        hintText: 'Select a publication type from the dropdown list',
         help: {
             title: 'Publication type',
             text: 'Help about publication types, eg journal article, book, conference paper etc',
@@ -454,40 +455,60 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     floatingLabelText: 'Title',
-                    hintText: 'Thesis title'
+                    hintText: 'Thesis title',
+                    errorMessage: 'Thesis title is required'
                 },
                 orgName: {
                     floatingLabelText: 'Institution name',
-                    hintText: ''
+                    hintText: '',
+                    errorMessage: 'Institution name is required'
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, Institute or Centre',
-                    hintText: ''
+                    floatingLabelText: 'Enrolling unit',
+                    hintText: 'Enrolling unit, eg. School of Business',
+                    errorMessage: 'Enrolling unit is required'
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
+                    errorMessage: 'Publication date is required'
                 },
                 thesisType: {
-                    label: 'Thesis type'
+                    label: 'Thesis type',
+                    errorMessage: 'Thesis type is required'
                 },
                 author: {
                     floatingLabelText: 'Author name',
-                    hintText: ''
+                    hintText: '',
+                    errorMessage: 'Author name is required'
                 }
             }
         },
-        supervisors: txt.components.supervisors,
+        supervisors: {
+            ...txt.components.supervisors,
+            errorMessage: 'Supervisor are required'
+        },
         fieldOfResearch: {
             title: 'Field of research',
+            help: {
+                title: 'Field of research help',
+                text: 'Some help',
+                buttonLabel: 'OK'
+            },
+            description: 'Select up to 3 Field of Research (FoR) codes',
+            errorMessage: 'Field of research (FoR) is required'
+        },
+        keywords: {
+            title: 'Keywords',
             help: {
                 title: 'Optional information help',
                 text: 'Some help',
                 buttonLabel: 'OK'
             },
-            description: 'Select up to 3 Field of Research (FoR) codes'
+            description: 'Add up to 10 keywords that describe the content of the thesis',
+            errorMessage: 'Keywords are required'
         },
         optional: {
             title: 'Optional information',
@@ -507,7 +528,8 @@ export default {
                 },
                 abstract: {
                     floatingLabelText: 'Abstract',
-                    hintText: 'Provide an abstract or summary of the work'
+                    hintText: 'Provide an abstract or summary of the work',
+                    errorMessage: 'Abstract is required'
                 },
                 notes: {
                     floatingLabelText: 'Notes (not publicly viewable)',
@@ -1029,12 +1051,13 @@ export default {
         }
     },
     fileUpload: {
-        title: 'Files',
+        title: 'Upload files',
         help: {
-            title: 'Files',
+            title: 'Upload files',
             text: 'file help...',
             buttonLabel: 'OK'
-        }
+        },
+        errorMessage: 'File submission is mandatory'
     },
     cancelWorkflowConfirmation: {
         confirmationTitle: 'Abandon workflow',
@@ -1063,5 +1086,58 @@ export default {
         type: 'done',
         title: 'Success',
         message: 'New publication has been saved successfully.'
+    },
+    thesisSubmission: {
+        hdrTitle: 'Higher degree by research thesis deposit',
+        sbsTitle: 'Professional doctorate deposit',
+        text: (<span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
+        fileUpload: {
+            title: 'Upload files',
+            help: {
+                title: 'Upload files',
+                text: 'file help...',
+                buttonLabel: 'OK'
+            },
+            locale: {
+                instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
+                accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                validation: {
+                    ['folder']: 'Invalid files ([filenames])',
+                    ['fileName']: 'File(s) ([filenames]) have invalid file name',
+                    ['maxFileSize']: 'File(s) ([filenames]) exceed maximum allowed upload file size',
+                    ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) Files ([filenames]) will not be uploaded',
+                },
+                errorTitle: 'Upload Errors',
+                fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
+                fileUploadRestrictions: (
+                    <div>
+                        PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
+                        Stages of examination are: submission, or correctedthesis, or finalthesis.
+                        Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
+                        File submission is mandatory.
+                        For example:
+                        <ul>
+                            <li>s1234567_phd_thesis.pdf</li>
+                            <li>s1234567_phd_abstract.pdf</li>
+                        </ul>
+                    </div>
+                ),
+                fileUploadInstruction: (
+                    <p>Click here to select files, or drag files into this area to upload</p>
+                )
+            },
+            text: (
+                <div>
+                    <span className="requiredField"><label>&nbsp;</label></span>
+
+                </div>
+            )
+        },
+        cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        cancel: 'Cancel',
+        submit: 'Deposit your thesis',
+        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        afterSubmit: 'Return to the Graduate School website',
+        afterSubmitText: (<p>Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.</p>)
     }
 };

@@ -5,64 +5,93 @@ export const initialState = {
     author: null,
     authorDetails: null,
     accountLoading: true,
-    authorLoading: true,
-    loadingAuthorDetails: true
+    accountAuthorLoading: true,
+    accountAuthorDetailsLoading: true
+};
+
+export const initSavingState = {
+    accountAuthorSaving: false,
+    accountAuthorError: null
 };
 
 const handlers = {
-    [actions.ACCOUNT_LOADING]: () => ({
-        ...initialState
+    [actions.CURRENT_ACCOUNT_LOADING]: () => ({
+        ...initialState,
+        ...initSavingState
     }),
 
-    [actions.ACCOUNT_LOADED]: (state, action) => ({
+    [actions.CURRENT_ACCOUNT_LOADED]: (state, action) => ({
         ...state,
         accountLoading: false,
         account: action.payload
     }),
 
-    [actions.ACCOUNT_ANONYMOUS]: () => ({
+    [actions.CURRENT_ACCOUNT_ANONYMOUS]: () => ({
         ...initialState,
+        ...initSavingState,
         accountLoading: false,
         accountAuthorLoading: false,
         accountAuthorDetailsLoading: false
     }),
 
-    [actions.ACCOUNT_AUTHOR_FAILED]: (state) => ({
+    [actions.CURRENT_AUTHOR_FAILED]: (state) => ({
         ...state,
         author: null,
-        authorLoading: false
+        accountAuthorLoading: false
     }),
 
-    [actions.ACCOUNT_AUTHOR_LOADED]: (state, action) => {
-        return {
-            ...state,
-            author: action.payload,
-            authorLoading: false
-        };
-    },
+    [actions.CURRENT_AUTHOR_LOADED]: (state, action) => ({
+        ...state,
+        author: action.payload,
+        accountAuthorLoading: false
+    }),
 
-    [actions.ACCOUNT_AUTHOR_LOADING]: (state) => ({
+    [actions.CURRENT_AUTHOR_LOADING]: (state) => ({
         ...state,
         author: null,
-        authorLoading: true
+        accountAuthorLoading: true
     }),
 
-    [actions.ACCOUNT_AUTHOR_DETAILS_FAILED]: (state) => ({
+    [actions.CURRENT_AUTHOR_SAVING]: (state) => ({
+        ...state,
+        accountAuthorSaving: true,
+        accountAuthorError: null
+    }),
+
+    [actions.CURRENT_AUTHOR_SAVE_FAILED]: (state, action) => ({
+        ...state,
+        accountAuthorSaving: false,
+        accountAuthorError: action.payload
+    }),
+
+    [actions.CURRENT_AUTHOR_SAVE_RESET]: (state) => ({
+        ...state,
+        ...initSavingState
+    }),
+
+    [actions.CURRENT_AUTHOR_SAVED]: (state, action) => ({
+        ...state,
+        author: action.payload,
+        accountAuthorSaving: false,
+        accountAuthorError: null
+    }),
+
+    [actions.CURRENT_AUTHOR_DETAILS_FAILED]: (state) => ({
         ...state,
         authorDetails: null,
-        loadingAuthorDetails: false
+        accountAuthorDetailsLoading: false
     }),
 
-    [actions.ACCOUNT_AUTHOR_DETAILS_LOADED]: (state, action) => ({
+    [actions.CURRENT_AUTHOR_DETAILS_LOADED]: (state, action) => ({
         ...state,
         authorDetails: action.payload,
-        loadingAuthorDetails: false
+        accountAuthorDetailsLoading: false
     }),
 
-    [actions.ACCOUNT_AUTHOR_DETAILS_LOADING]: (state) => ({
+    [actions.CURRENT_AUTHOR_DETAILS_LOADING]: (state) => ({
         ...state,
         authorDetails: null,
-        loadingAuthorDetails: true
+        accountAuthorDetailsLoading: true
     })
 };
 

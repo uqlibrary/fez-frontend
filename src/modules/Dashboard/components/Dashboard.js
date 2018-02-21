@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
         author: PropTypes.object,
-        loadingAuthorDetails: PropTypes.bool,
+        accountAuthorDetailsLoading: PropTypes.bool,
 
         // graph data
         loadingPublicationsByYear: PropTypes.bool,
@@ -33,6 +33,7 @@ class Dashboard extends React.Component {
 
         // lure data
         possiblyYourPublicationsCount: PropTypes.number,
+        possiblyYourPublicationsCountLoading: PropTypes.bool,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
         // wos/scopus data
@@ -68,7 +69,7 @@ class Dashboard extends React.Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return !(nextProps.loadingPublicationsByYear || nextProps.loadingAuthorDetails
+        return !(nextProps.loadingPublicationsByYear || nextProps.accountAuthorDetailsLoading
             || nextProps.loadingPublicationsStats || nextProps.loadingTrendingPublications
             || nextProps.loadingLatestPublications);
     }
@@ -77,16 +78,20 @@ class Dashboard extends React.Component {
         this.props.history.push(routes.pathConfig.records.possible);
     };
 
+    _addPublication = () => {
+        this.props.history.push(routes.pathConfig.records.add.new);
+    };
+
     _viewYourResearch = () => {
         this.props.history.push(routes.pathConfig.records.mine);
     };
 
     render() {
         const txt = locale.pages.dashboard;
-        const loading = this.props.loadingPublicationsByYear || this.props.loadingAuthorDetails
+        const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
             || this.props.loadingPublicationsStats || this.props.loadingTrendingPublications
             || this.props.loadingLatestPublications;
-        const barChart = !loading && this.props.publicationsByYear
+        const barChart = !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0
             ? (
                 <StandardCard className="barChart" title={txt.publicationsByYearChart.title}>
                     <AuthorsPublicationsPerYearChart
@@ -95,7 +100,7 @@ class Dashboard extends React.Component {
                         yAxisTitle={txt.publicationsByYearChart.yAxisTitle}/>
                 </StandardCard>
             ) : null;
-        const donutChart = !loading && this.props.publicationTypesCount
+        const donutChart = !loading && this.props.publicationTypesCount && this.props.publicationTypesCount.length > 0
             ? (
                 <StandardCard
                     className="donutChart"
@@ -129,21 +134,29 @@ class Dashboard extends React.Component {
                     <div className="columns is-multiline is-gapless">
                         <div className="column is-12 is-hidden-mobile">
                             <div className="is-hidden-mobile">
-                                <DashboardAuthorProfile authorDetails={this.props.authorDetails} author={this.props.author} />
+                                <DashboardAuthorProfile authorDetails={this.props.authorDetails} author={this.props.author} history={this.props.history} />
                             </div>
                         </div>
                         <div className="column is-12 possiblePublicationLure">
                             {
                                 !this.props.hidePossiblyYourPublicationsLure
-                                && this.props.possiblyYourPublicationsCount > 0 &&
-                                <Alert
-                                    title={txt.possiblePublicationsLure.title}
-                                    message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
-                                    type={txt.possiblePublicationsLure.type}
-                                    actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
-                                    action={this._claimYourPublications}
-                                    allowDismiss
-                                    dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                                && !this.props.possiblyYourPublicationsCountLoading
+                                && this.props.possiblyYourPublicationsCount > 0 ?
+                                    <Alert
+                                        title={txt.possiblePublicationsLure.title}
+                                        message={txt.possiblePublicationsLure.message.replace('[count]', this.props.possiblyYourPublicationsCount)}
+                                        type={txt.possiblePublicationsLure.type}
+                                        actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}
+                                        action={this._claimYourPublications}
+                                        allowDismiss
+                                        dismissAction={this.props.actions.hidePossiblyYourPublicationsLure}/>
+                                    :
+                                    !this.props.possiblyYourPublicationsCountLoading
+                                    && !this.props.hidePossiblyYourPublicationsLure
+                                    && !this.props.possiblyYourPublicationsCount &&
+                                    <Alert
+                                        {...txt.nothingToClaimLure}
+                                        action={this._addPublication}/>
                             }
                         </div>
                     </div>
@@ -183,7 +196,6 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
                 }
-
                 {
                     !loading
                     && ((this.props.latestPublicationsList && this.props.latestPublicationsList.length > 0) ||
@@ -282,5 +294,4 @@ class Dashboard extends React.Component {
         );
     }
 }
-
 export default Dashboard;

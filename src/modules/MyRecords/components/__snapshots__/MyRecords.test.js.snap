@@ -2,6 +2,7 @@
 
 exports[`MyRecords test renders list of publications 1`] = `
 <StandardPage
+  className=""
   title="My research"
 >
   <div
@@ -12,101 +13,52 @@ exports[`MyRecords test renders list of publications 1`] = `
     >
       <StandardCard
         className=""
-        facetsFilter={
-          Object {
-            "excludeFacetsList": Array [
-              "Scopus document type",
-              "Subtype",
-            ],
-            "help": Object {
-              "buttonLabel": "Ok",
-              "text": "Help about ....",
-              "title": "Refining your results",
-            },
-            "title": "Refine results",
-          }
-        }
-        help={
-          Object {
-            "buttonLabel": "OK",
-            "text": <div>
-              your research help....
-            </div>,
-            "title": "My research help",
-          }
-        }
-        loadingMessage="Searching for your publications..."
-        loadingPagingMessage="Retrieving for your publications..."
-        noResultsFound={
-          Object {
-            "text": <div>
-              We were unable to find any results. You may be able to 
-              <a
-                href="/records/possible"
-              >
-                claim publications we think may be yours
-              </a>
-               or 
-              <a
-                href="/records/add/find"
-              >
-                add a missing publication
-              </a>
-            </div>,
-            "title": "No publications found",
-          }
-        }
-        text={
-          <div>
-            <div>
-              Add to this list by 
-              <a
-                href="/records/possible"
-              >
-                claiming a publication
-              </a>
-               or 
-              <a
-                href="/records/add/find"
-              >
-                adding a missing publication
-              </a>
-              .
-            </div>
-          </div>
-        }
-        title="My research"
       >
-        <div>
-          <div>
-            <div>
-              Add to this list by 
-              <a
-                href="/records/possible"
-              >
-                claiming a publication
-              </a>
-               or 
-              <a
-                href="/records/add/find"
-              >
-                adding a missing publication
-              </a>
-              .
-            </div>
-          </div>
-        </div>
+        <span>
+          Displaying records 1 to 20 of 147 total records. 
+        </span>
+        <span>
+          Add to this list by 
+          <a
+            href="/records/possible"
+          >
+            claiming a publication
+          </a>
+           or 
+          <a
+            href="/records/add/find"
+          >
+            adding a missing publication
+          </a>
+          .
+        </span>
         <PublicationsListSorting
           disabled={false}
           onPageSizeChanged={[Function]}
           onSortByChanged={[Function]}
-          pagingData={Object {}}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 20,
+              "total": 147,
+            }
+          }
         />
         <PublicationsListPaging
           disabled={false}
           loading={false}
           onPageChanged={[Function]}
-          pagingData={Object {}}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 20,
+              "total": 147,
+            }
+          }
         />
         <PublicationsList
           publicationsList={
@@ -11091,7 +11043,15 @@ exports[`MyRecords test renders list of publications 1`] = `
           disabled={false}
           loading={false}
           onPageChanged={[Function]}
-          pagingData={Object {}}
+          pagingData={
+            Object {
+              "current_page": 1,
+              "from": 1,
+              "per_page": 20,
+              "to": 20,
+              "total": 147,
+            }
+          }
         />
       </StandardCard>
     </div>
@@ -11101,6 +11061,7 @@ exports[`MyRecords test renders list of publications 1`] = `
 
 exports[`MyRecords test renders loading screen while loading account data 1`] = `
 <StandardPage
+  className=""
   title="My research"
 >
   <div
@@ -11118,6 +11079,7 @@ exports[`MyRecords test renders loading screen while loading account data 1`] = 
 
 exports[`MyRecords test renders loading screen while loading publications  1`] = `
 <StandardPage
+  className=""
   title="My research"
 >
   <div
@@ -11135,6 +11097,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
 
 exports[`MyRecords test renders no results 1`] = `
 <StandardPage
+  className=""
   title="My research"
 >
   <div

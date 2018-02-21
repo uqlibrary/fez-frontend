@@ -38,9 +38,46 @@ export default {
                 showLessLabel: 'Show less'
             },
             defaultActions: [
-                {key: 'fixRecord', label: 'Fix record', primary: false},
+                {key: 'fixRecord', label: 'Request Correction', primary: false},
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ]
+        },
+        keywordsForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Keyword',
+                        inputFieldHint: 'Type keyword',
+                        addButtonLabel: 'Add'
+                    }
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Keyword',
+                        reorderColumn: 'Reorder keywords',
+                        deleteAll: 'Remove all keywords',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all keywords?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move keyword up the order',
+                        moveDownHint: 'Move keyword down the order',
+                        deleteHint: 'Remove this keyword',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete keyword',
+                            confirmationMessage: 'Are you sure you want to delete this keyword?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
         },
         isbnForm: {
             title: 'ISBN',
@@ -132,7 +169,8 @@ export default {
         },
         authors: {
             title: 'Authors',
-            description: 'Enter authors in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+            description: 'Please provide a list of authors and then select your name from the list.',
+            descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
             help: {
                 title: 'Adding contributors',
                 text: 'Help text...',
@@ -141,7 +179,7 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Author\'s name as published',
+                        nameAsPublishedLabel: 'Enter each author\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author'
@@ -182,7 +220,8 @@ export default {
         },
         editors: {
             title: 'Editors',
-            description: 'Provide a list of editors for this publication',
+            description: 'Please provide a list of editors and then select your name from the list.',
+            descriptionAuthorOrEditor: 'Please provide a list of editors and then select your name once from the list of authors or editors.',
             help: {
                 title: 'Editors',
                 text: 'some help',
@@ -191,7 +230,7 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Editor\'s name as published',
+                        nameAsPublishedLabel: 'Enter each editor\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add editor'
@@ -236,11 +275,12 @@ export default {
                 text: 'some help',
                 buttonLabel: 'OK'
             },
-            description: 'This is the author or creator of the work, e.g. producer or performer (if self-produced). Type creators in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more creators.',
+            description: 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
+            descriptionCreatorOrContributor: 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.',
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Creator\'s name as published',
+                        nameAsPublishedLabel: 'Enter each creator\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add creator'
@@ -280,7 +320,7 @@ export default {
         },
         designers: {
             title: 'Designer name',
-            description: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
+            description: 'Please provide a list of designers and then select your name from the list.',
             help: {
                 title: 'Designers',
                 text: 'Enter designers in the order and form they appear on the published paper. Additional boxes will appear for more authors.',
@@ -289,7 +329,7 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Designer name as published',
+                        nameAsPublishedLabel: 'Enter each designer\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add designer'
@@ -334,11 +374,11 @@ export default {
                 text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
                 buttonLabel: 'OK'
             },
-            description: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
+            description: 'Please provide a list of supervisors and then select your name from the list.',
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Supervisor\'s name as published',
+                        nameAsPublishedLabel: 'Enter each supervisor\'s name as published',
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add supervisor'
@@ -376,9 +416,59 @@ export default {
                 }
             }
         },
+        thesisSubmissionSupervisors: {
+            title: 'Supervisors',
+            help: {
+                title: 'Supervisors help',
+                text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
+                buttonLabel: 'OK'
+            },
+            description: 'List your current supervisors',
+            field: {
+                form: {
+                    locale: {
+                        nameAsPublishedLabel: 'Enter each supervisor’s name on a separate line e.g. Firstname Surname',
+                        nameAsPublishedHint: '',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: 'Add supervisor'
+                    }
+                },
+                header: {
+                    locale: {
+                        contributorAssignmentColumn: 'Select your name',
+                        nameColumn: 'Supervisor\'s name',
+                        identifierColumn: 'UQ identifier',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        suffix: ' listed supervisor',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         contributors: {
             title: 'Contributors',
-            description: 'Provide a list of contributors for this publication',
+            description: 'Please provide a list of contributors (e.g. producer or performer if self-produced) and then select your name from the list.',
+            descriptionCreatorOrContributor: 'Please provide a list of contributors (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.',
             help: {
                 title: 'Contributors',
                 text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
@@ -387,7 +477,7 @@ export default {
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: 'Contributor\'s name as published',
+                        nameAsPublishedLabel: 'Enter each contributor\'s name as published',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add contributor'
@@ -427,7 +517,7 @@ export default {
         },
         fieldOfResearchForm: {
             title: 'Field of research',
-            text: 'You can add up to three field of research values',
+            text: 'Select up to 3 Field of Research (FoR) codes at the 4 digit level',
             help: {
                 title: 'Field of research',
                 text: 'more info',
@@ -437,7 +527,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'Field of research',
-                        inputFieldHint: 'Type field of research value then select a value from the list'
+                        inputFieldHint: 'Start typing code or field name and select from list'
                     }
                 },
                 header: {

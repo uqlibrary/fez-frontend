@@ -43,6 +43,7 @@ export const requiredList = value => (value && value.length > 0 ? undefined : lo
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
 export const doi = (value) => !!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined;
+export const forRequired = (itemList) =>  !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
 export const peopleRequired = (itemList, validationError, checkSelected = true) =>  (
     !itemList || itemList.length === 0 || (checkSelected && itemList && itemList.filter(item => (item.selected)).length === 0)
@@ -56,10 +57,14 @@ export const supervisorRequired = (supervisors) => peopleRequired(supervisors, l
 // DateTime
 export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? locale.validationErrors.dateTimeDay : undefined;
 export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? locale.validationErrors.dateTimeYear : undefined;
-
 export const validFileUpload = value => {
     return value && value.hasOwnProperty('isValid') && !value.isValid ? locale.validationErrors.fileUpload : undefined;
 };
+
+export const fileUploadRequired = value => {
+    return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
+};
+
 export const isValidIssn = subject => {
     const regex = /^([ep]{0,1}ISSN |)[\d]{4}(\-|)[\d]{3}(\d|\S){1}$/;
     if (subject.trim().length === 0 || regex.test(subject)) {
@@ -82,4 +87,14 @@ export const isValidAuthorLink = (link) => {
 
 export const isValidContributorLink = (link) => {
     return link.valid ? '' : locale.validationErrors.contributorLinking;
+};
+
+// Google Scholar ID
+export const isValidGoogleScholarId = id => {
+    const regex = /^\w{12}$/;
+    if (regex.test(id)) {
+        return '';
+    } else {
+        return locale.validationErrors.googleScholarId;
+    }
 };

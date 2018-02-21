@@ -598,6 +598,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Vishal Asai"
@@ -1351,6 +1352,7 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Vishal Asai"
@@ -2108,6 +2110,7 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=""
           value="Vishal Asai"

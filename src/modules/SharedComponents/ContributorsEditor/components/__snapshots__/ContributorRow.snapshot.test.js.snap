@@ -38,7 +38,18 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
       "suffix": " listed contributor",
     }
   }
-  onDelete={[Function]}
+  onDelete={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "nameAsPublished": "A. Smith",
+          },
+          0,
+        ],
+      ],
+    }
+  }
   showContributorAssignment={false}
   showIdentifierLookup={false}
 >
@@ -221,6 +232,7 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
             <TouchRipple
               abortOnScroll={true}
               centerRipple={true}
+              key="touchRipple"
             >
               <div
                 onMouseDown={[Function]}
@@ -293,6 +305,7 @@ exports[`ContributorRow renders  a row with index and contributor set calls dele
                 </Tooltip>
                 <FontIcon
                   className="material-icons deleteIcon"
+                  key=".0"
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   style={Object {}}

@@ -1,13 +1,8 @@
 import * as actions from '../actions/actionTypes';
 import fixRecordReducer from './fixRecord';
+import {initialState} from './fixRecord';
 
 describe('fixRecord reducer', () => {
-
-    const initialState = {
-        recordToFix: null,
-        recordToFixLoading: false,
-        recordToFixError: null
-    };
 
     const aMockRecordToFix = {
         "rek_pid": "UQ:123456",
@@ -17,14 +12,14 @@ describe('fixRecord reducer', () => {
 
     it('returns that the publication data is loading', () => {
         const test = fixRecordReducer(initialState, {type: actions.FIX_RECORD_LOADING});
-        expect(test.recordToFixLoading).toBeTruthy();
+        expect(test.loadingRecordToFix).toBeTruthy();
         expect(test.recordToFix).toBeNull();
         expect(test.recordToFixError).toBeNull();
     });
 
     it('returns a record to be fixed', () => {
         const test = fixRecordReducer(initialState, {type: actions.FIX_RECORD_LOADED, payload: aMockRecordToFix});
-        expect(test.recordToFixLoading).toBeFalsy();
+        expect(test.loadingRecordToFix).toBeFalsy();
         expect(test.recordToFix).toEqual(aMockRecordToFix);
         expect(test.recordToFixError).toBeNull();
     });
@@ -33,7 +28,7 @@ describe('fixRecord reducer', () => {
         const errorMsg = 'This is an error';
         const test = fixRecordReducer(initialState, {type: actions.FIX_RECORD_LOAD_FAILED, payload: errorMsg});
         expect(test.recordToFix).toBeNull();
-        expect(test.recordToFixLoading).toBeFalsy();
+        expect(test.loadingRecordToFix).toBeFalsy();
         expect(test.recordToFixError).toEqual(errorMsg);
     });
 

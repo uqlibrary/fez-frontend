@@ -24,13 +24,13 @@ const create = () => {
     return {store, next, invoke}
 };
 
-function setup({recordToFix = mockRecordToFix, recordToFixLoading, authorLoading, handleSubmit, match,
+function setup({recordToFix = mockRecordToFix, loadingRecordToFix, accountAuthorLoading, handleSubmit, match, publicationToFixFileUploadingError,
                    initialValues, actions, author = {aut_id: 410}, history = {go: jest.fn()}, isShallow = true}){
     const props = {
         recordToFix: recordToFix,
-        recordToFixLoading: recordToFixLoading || false,
+        loadingRecordToFix: loadingRecordToFix || false,
 
-        authorLoading: authorLoading || false,
+        accountAuthorLoading: accountAuthorLoading || false,
         author: author,
 
         handleSubmit: handleSubmit || jest.fn(),
@@ -41,7 +41,9 @@ function setup({recordToFix = mockRecordToFix, recordToFixLoading, authorLoading
             }),
         actions: actions || {},
         history: history || {},
-        match: match || {}
+        match: match || {},
+
+        publicationToFixFileUploadingError: publicationToFixFileUploadingError || false
     };
 
     if(isShallow) {
@@ -67,13 +69,14 @@ beforeAll(() => {
 
 
 describe('Component FixRecord ', () => {
+
     it('should render loader when author is loading', () => {
-        const wrapper = setup({authorLoading: true});
+        const wrapper = setup({accountAuthorLoading: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loader when record is loading', () => {
-        const wrapper = setup({recordToFixLoading: true});
+        const wrapper = setup({loadingRecordToFix: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -192,15 +195,9 @@ describe('Component FixRecord ', () => {
         expect(actionFunction).toHaveBeenCalled();
     });
 
-    it('should load author if author is not loaded', () => {
-        const actionFunction = jest.fn();
-        const wrapper = setup({isShallow: false, authorLoading: false, author: null, actions: {loadCurrentAccount: actionFunction}});
-        expect(actionFunction).toHaveBeenCalled();
-    });
-
     it('should load record if record is not loaded', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({isShallow: false, recordToFixLoading: false,
+        const wrapper = setup({isShallow: false, loadingRecordToFix: false,
             recordToFix: null, actions: {loadRecordToFix: actionFunction}, match: {params: {pid: 'UQ:1001'}}});
         expect(actionFunction).toHaveBeenCalled();
     });
@@ -211,5 +208,19 @@ describe('Component FixRecord ', () => {
         wrapper.instance().successConfirmationBox = {showConfirmation: testMethod};
         wrapper.instance().componentWillReceiveProps({submitSucceeded: true});
         expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('should render the confirm dialog box with an alert due to a file upload failure', () => {
+        const wrapper = setup({publicationToFixFileUploadingError: true});
+        wrapper.setState({selectedRecordAction: 'fix'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('should render the confirm dialog box without an alert due to a file upload success', () => {
+        const wrapper = setup({publicationToFixFileUploadingError: false});
+        wrapper.setState({selectedRecordAction: 'fix'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
     });
 });

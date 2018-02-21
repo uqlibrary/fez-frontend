@@ -90,6 +90,7 @@ export default class JournalArticleForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                    <div>{txt.authors.description}</div>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment

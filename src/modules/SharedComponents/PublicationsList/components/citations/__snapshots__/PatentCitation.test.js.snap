@@ -476,6 +476,7 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
       >
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_1"
           prefix=""
           suffix=", "
           value="Walsh, Laurence J"
@@ -489,6 +490,7 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_2"
           prefix=""
           suffix=", "
           value="Ota R"
@@ -502,6 +504,7 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_3"
           prefix=""
           suffix=", "
           value="Nagao S"
@@ -515,6 +518,7 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
         </CitationView>
         <CitationView
           className="citationAuthor"
+          key="citationAuthor_4"
           prefix=" and "
           suffix=""
           value="Sato T"

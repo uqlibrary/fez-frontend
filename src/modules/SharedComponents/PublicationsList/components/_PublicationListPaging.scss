@@ -2,9 +2,12 @@
 
 .publicationsListPaging {
   width: 98% !important;
-  margin: 0 auto !important;
+  margin: 4px auto 6px auto !important;
   display: flex;
   justify-content: center;
+  .publicationsListPagingItems {
+    padding: 0 12px;
+  }
   button.page, button.pagingPrevious, button.pagingNext {
     min-width: 26px !important;
     height: 24px !important;
@@ -12,6 +15,9 @@
     & > div > span, & > span {
       padding: 0px 6px !important;
       font-size: $text-body-small !important;
+    }
+    svg {
+      margin: 0px !important;
     }
   }
 }

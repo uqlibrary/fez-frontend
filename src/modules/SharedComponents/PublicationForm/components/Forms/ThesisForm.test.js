@@ -34,24 +34,32 @@ beforeAll(() => {
     injectTapEventPlugin();
 });
 
-describe('ThesisForm renders ', () => {
-    it('component', () => {
+describe('ThesisForm ', () => {
+    it('should render component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 12 input fields', () => {
+    it('should normalize total pages field', () => {
+        const wrapper = setup({});
+        expect(wrapper.instance().getNumbersOnly('Four')).toBe('');
+        expect(wrapper.instance().getNumbersOnly('12Three')).toBe('12');
+        expect(wrapper.instance().getNumbersOnly('  01Three')).toBe('01');
+        expect(wrapper.instance().getNumbersOnly('124')).toBe('124');
+    })
+
+    it('should render component with 12 input fields', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field').length).toEqual(12);
     });
 
-    it('component with 7 required input fields', () => {
+    it('should render component with 7 required input fields', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field .requiredField').length).toEqual(6);
         expect(wrapper.find('Field .requiredHintField').length).toEqual(1);
     });
 
-    it('component with all fields disabled', () => {
+    it('should render component with all fields disabled', () => {
         const wrapper = setup({submitting: true});
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);

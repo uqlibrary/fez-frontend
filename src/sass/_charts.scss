@@ -305,18 +305,23 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
 
     /* Legend */
     .highcharts-legend {
+      zoom: 0.5;
     }
     .highcharts-legend-box {
       fill: $graph-background-color-2 !important;
-      box-shadow: 10px 10px 10px red !important;
       stroke-width: 0;
     }
-    .highcharts-legend-item text {
-      font-family: $font-family !important;
-      fill: $text-color-reverse !important;
-      font-weight: normal;
-      cursor: pointer;
-      stroke-width: 0;
+    .highcharts-legend-item {
+      & span {
+        color: $text-color-reverse !important;
+      }
+      & text {
+        font-family: $font-family !important;
+        fill: $text-color-reverse !important;
+        font-weight: normal;
+        cursor: pointer;
+        stroke-width: 0;
+      }
     }
     .highcharts-legend-item:hover text {
       fill: $text-color-reverse !important;
@@ -442,6 +447,9 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
     }
 
     .highcharts-legend-item {
+      & span {
+        color: $text-color-reverse !important;
+      }
       & text {
         fill: $text-color-reverse !important;
         font-family: $font-family !important;
@@ -455,7 +463,7 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
     .highcharts-data-labels {
       & span {
         color: $text-color-reverse !important;
-        text-shadow: 1px 1px 2px rgba($text-color, 0.9);
+        text-shadow: none; //  1px 1px 2px rgba($text-color, 0.9);
         fill: $text-color-reverse !important;
         font-family: $font-family !important;
         font-size: $graph-font-size;

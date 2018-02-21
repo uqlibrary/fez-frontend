@@ -21,6 +21,7 @@ exports[`AuthorLinking should be disabled 1`] = `
     >
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="0"
       >
         <AuthorItem
           author={
@@ -33,6 +34,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={0}
+          key="0"
           linked={false}
           locale={
             Object {
@@ -66,6 +68,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={1}
+          key="1"
           linked={false}
           locale={
             Object {
@@ -99,6 +102,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={2}
+          key="2"
           linked={false}
           locale={
             Object {
@@ -124,6 +128,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       </div>
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="3"
       >
         <AuthorItem
           author={
@@ -136,6 +141,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={3}
+          key="3"
           linked={false}
           locale={
             Object {
@@ -169,6 +175,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={4}
+          key="4"
           linked={false}
           locale={
             Object {
@@ -202,6 +209,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={5}
+          key="5"
           linked={false}
           locale={
             Object {
@@ -227,6 +235,7 @@ exports[`AuthorLinking should be disabled 1`] = `
       </div>
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="6"
       >
         <AuthorItem
           author={
@@ -239,6 +248,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={6}
+          key="6"
           linked={false}
           locale={
             Object {
@@ -272,6 +282,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={7}
+          key="7"
           linked={false}
           locale={
             Object {
@@ -305,6 +316,7 @@ exports[`AuthorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={8}
+          key="8"
           linked={false}
           locale={
             Object {
@@ -354,6 +366,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
     >
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="0"
       >
         <AuthorItem
           author={
@@ -366,6 +379,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           disabled={false}
           index={0}
+          key="0"
           linked={false}
           locale={
             Object {
@@ -399,6 +413,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           disabled={false}
           index={1}
+          key="1"
           linked={false}
           locale={
             Object {
@@ -432,6 +447,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           disabled={false}
           index={2}
+          key="2"
           linked={false}
           locale={
             Object {
@@ -457,6 +473,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       </div>
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="3"
       >
         <AuthorItem
           author={
@@ -469,6 +486,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           disabled={false}
           index={3}
+          key="3"
           linked={false}
           locale={
             Object {
@@ -502,6 +520,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           disabled={false}
           index={4}
+          key="4"
           linked={false}
           locale={
             Object {
@@ -535,6 +554,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           disabled={false}
           index={5}
+          key="5"
           linked={false}
           locale={
             Object {
@@ -560,6 +580,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
       </div>
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="6"
       >
         <AuthorItem
           author={
@@ -572,6 +593,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           disabled={false}
           index={6}
+          key="6"
           linked={false}
           locale={
             Object {
@@ -605,6 +627,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           disabled={false}
           index={7}
+          key="7"
           linked={false}
           locale={
             Object {
@@ -638,6 +661,7 @@ exports[`AuthorLinking should render all authors as unlinked and selectable 1`] 
           }
           disabled={false}
           index={8}
+          key="8"
           linked={false}
           locale={
             Object {
@@ -687,6 +711,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
     >
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="0"
       >
         <AuthorItem
           author={
@@ -699,6 +724,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={0}
+          key="0"
           linked={false}
           locale={
             Object {
@@ -732,6 +758,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={1}
+          key="1"
           linked={false}
           locale={
             Object {
@@ -765,6 +792,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={2}
+          key="2"
           linked={true}
           locale={
             Object {
@@ -790,6 +818,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
       </div>
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="3"
       >
         <AuthorItem
           author={
@@ -802,6 +831,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={3}
+          key="3"
           linked={false}
           locale={
             Object {
@@ -835,6 +865,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={4}
+          key="4"
           linked={false}
           locale={
             Object {
@@ -868,6 +899,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={5}
+          key="5"
           linked={false}
           locale={
             Object {
@@ -893,6 +925,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
       </div>
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="6"
       >
         <AuthorItem
           author={
@@ -905,6 +938,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={6}
+          key="6"
           linked={false}
           locale={
             Object {
@@ -938,6 +972,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={7}
+          key="7"
           linked={false}
           locale={
             Object {
@@ -971,6 +1006,7 @@ exports[`AuthorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={8}
+          key="8"
           linked={false}
           locale={
             Object {
@@ -1020,6 +1056,7 @@ exports[`ContributorLinking should be disabled 1`] = `
     >
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="0"
       >
         <AuthorItem
           author={
@@ -1032,6 +1069,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={0}
+          key="0"
           linked={false}
           locale={
             Object {
@@ -1065,6 +1103,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={1}
+          key="1"
           linked={false}
           locale={
             Object {
@@ -1098,6 +1137,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={2}
+          key="2"
           linked={false}
           locale={
             Object {
@@ -1123,6 +1163,7 @@ exports[`ContributorLinking should be disabled 1`] = `
       </div>
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="3"
       >
         <AuthorItem
           author={
@@ -1135,6 +1176,7 @@ exports[`ContributorLinking should be disabled 1`] = `
           }
           disabled={true}
           index={3}
+          key="3"
           linked={false}
           locale={
             Object {
@@ -1184,6 +1226,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
     >
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="0"
       >
         <AuthorItem
           author={
@@ -1196,6 +1239,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           disabled={false}
           index={0}
+          key="0"
           linked={false}
           locale={
             Object {
@@ -1229,6 +1273,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           disabled={false}
           index={1}
+          key="1"
           linked={false}
           locale={
             Object {
@@ -1262,6 +1307,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           disabled={false}
           index={2}
+          key="2"
           linked={false}
           locale={
             Object {
@@ -1287,6 +1333,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
       </div>
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="3"
       >
         <AuthorItem
           author={
@@ -1299,6 +1346,7 @@ exports[`ContributorLinking should render all contributors as unlinked and selec
           }
           disabled={false}
           index={3}
+          key="3"
           linked={false}
           locale={
             Object {
@@ -1348,6 +1396,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
     >
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="0"
       >
         <AuthorItem
           author={
@@ -1360,6 +1409,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={0}
+          key="0"
           linked={true}
           locale={
             Object {
@@ -1393,6 +1443,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={1}
+          key="1"
           linked={true}
           locale={
             Object {
@@ -1426,6 +1477,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={2}
+          key="2"
           linked={true}
           locale={
             Object {
@@ -1451,6 +1503,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
       </div>
       <div
         className="columns is-multiline is-gapless is-marginless"
+        key="3"
       >
         <AuthorItem
           author={
@@ -1463,6 +1516,7 @@ exports[`ContributorLinking should render author Bridge as linked 1`] = `
           }
           disabled={false}
           index={3}
+          key="3"
           linked={true}
           locale={
             Object {

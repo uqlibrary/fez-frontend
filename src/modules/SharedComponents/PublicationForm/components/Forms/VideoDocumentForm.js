@@ -95,7 +95,7 @@ export default class VideoDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.creator.title} help={txt.creator.help}>
-                    <div>{txt.creator.description}</div>
+                    <div>{txt.creator.descriptionCreatorOrContributor}</div>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment
@@ -107,7 +107,7 @@ export default class VideoDocumentForm extends Component {
                 </StandardCard>
 
                 <StandardCard title={txt.contributor.title} help={txt.contributor.help}>
-                    <div>{txt.contributor.description}</div>
+                    <div>{txt.contributor.descriptionCreatorOrContributor}</div>
                     <Field
                         component={ContributorsEditorField}
                         showContributorAssignment

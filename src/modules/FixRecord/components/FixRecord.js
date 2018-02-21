@@ -25,14 +25,16 @@ export default class FixRecord extends Component {
         ...propTypes, // all redux-form props
 
         recordToFix: PropTypes.object,
-        recordToFixLoading: PropTypes.bool,
+        loadingRecordToFix: PropTypes.bool,
 
         author: PropTypes.object,
-        authorLoading: PropTypes.bool,
+        accountAuthorLoading: PropTypes.bool,
 
         history: PropTypes.object.isRequired,
         match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
+
+        publicationToFixFileUploadingError: PropTypes.bool
     };
 
     static contextTypes = {
@@ -48,11 +50,8 @@ export default class FixRecord extends Component {
     }
 
     componentDidMount() {
-        if (this.props.actions && !this.props.recordToFixLoading && !this.props.recordToFix) {
+        if (this.props.actions && !this.props.recordToFix) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
-        }
-        if (this.props.actions && !this.props.authorLoading && !this.props.author) {
-            this.props.actions.loadCurrentAccount();
         }
     }
 
@@ -121,7 +120,7 @@ export default class FixRecord extends Component {
 
     render() {
         // if author is not linked to this record, abandon form
-        if (!(this.props.authorLoading || this.props.recordToFixLoading) && !this.isAuthorLinked()) {
+        if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
             this.props.history.go(-1);
             return <div />;
         }
@@ -130,7 +129,7 @@ export default class FixRecord extends Component {
         const txtFixForm = locale.forms.fixPublicationForm;
         const txtUnclaimForm = locale.forms.unclaimPublicationForm;
 
-        if(this.props.authorLoading || this.props.recordToFixLoading) {
+        if(this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
                 <div className="is-centered">
                     <InlineLoader message={txt.loadingMessage}/>
@@ -147,9 +146,12 @@ export default class FixRecord extends Component {
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = {...txtFixForm.successWorkflowConfirmation};
-        if (this.props.publicationToFixFileUploadingError) {
-            saveConfirmationLocale.confirmationMessage = saveConfirmationLocale.fileFailConfirmationMessage;
-        }
+        saveConfirmationLocale.confirmationMessage = (
+            <div>
+                {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                {saveConfirmationLocale.confirmationMessage}
+            </div>
+        );
 
         return (
             <StandardPage title={txt.title}>

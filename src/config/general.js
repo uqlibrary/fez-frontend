@@ -1,22 +1,22 @@
+const getValue = (value) => (
+    typeof(value) !== 'undefined' && !!value ? value : null
+);
+
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const TOKEN_NAME = 'X-Uql-Token';
+export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 
 // URLS - values are set in webpack build
-export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
-export const APP_URL = process.env.APP_URL || 'https://fez-staging.library.uq.edu.au/';
+export const API_URL = getValue(process.env.API_URL) || 'https://api.library.uq.edu.au/staging/';
+export const APP_URL = getValue(process.env.APP_URL) || 'https://fez-staging.library.uq.edu.au/';
 
 export const AUTH_URL_LOGIN = 'https://auth.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = 'https://auth.library.uq.edu.au/logout';
 
-// Default values for createNewRecord
-export const NEW_RECORD_DEFAULT_VALUES = {
-    rek_object_type: 3,
-    rek_status: 2,
-    fez_record_search_key_ismemberof: [
-        {rek_ismemberof: 'UQ:218198'}
-    ]
-};
+export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.org';
+export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';
+export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
 export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
@@ -44,14 +44,6 @@ export const PUBLICATION_TYPE_WORKING_PAPER = 183;
 export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 
 export const publicationTypes = (components) => [
-    {
-        id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
-        name: 'Generic Document',
-        class: 'Uqlibrary\\FezCore\\Types\\Generic',
-        formComponent: components ? components.GenericDocumentForm : null,
-        citationComponent: components ? components.GenericDocumentCitation : null,
-        hasFormComponent: true
-    },
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
@@ -136,6 +128,14 @@ export const publicationTypes = (components) => [
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
         citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false
+    },
+    {
+        id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
+        name: 'Generic Document',
+        class: 'Uqlibrary\\FezCore\\Types\\Generic',
+        formComponent: components ? components.GenericDocumentForm : null,
+        citationComponent: components ? components.GenericDocumentCitation : null,
+        hasFormComponent: true
     },
     {
         id: PUBLICATION_TYPE_IMAGE,
@@ -265,6 +265,41 @@ export const thesisSubtypes = [
     'Professional Doctorate'
 ];
 
+export const thesisSubmissionSubtypes = [
+    'MPhil Thesis',
+    'PhD Thesis',
+    'Professional Doctorate'
+];
+
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
 
+// Default values for createNewRecord
+export const NEW_RECORD_DEFAULT_VALUES = {
+    rek_object_type: 3,
+    rek_status: 2,
+    fez_record_search_key_ismemberof: [
+        {rek_ismemberof: 'UQ:218198'}
+    ]
+};
+
+export const HDR_THESIS_DEFAULT_VALUES = {
+    rek_object_type: 3,
+    rek_status: 2,
+    fez_record_search_key_ismemberof: [
+        {rek_ismemberof: 'UQ:152694'}
+    ],
+    rek_display_type: PUBLICATION_TYPE_THESIS,
+    fileAccessId: 3
+};
+
+export const SBS_THESIS_DEFAULT_VALUES = {
+    rek_object_type: 3,
+    rek_status: 2,
+    fez_record_search_key_ismemberof: [
+        {rek_ismemberof: 'UQ:155729'}
+    ],
+    rek_display_type: PUBLICATION_TYPE_THESIS,
+    rek_genre_type: 'Professional Doctorate',
+    fileAccessId: 4
+};

@@ -3466,7 +3466,8 @@ export const record = {
         "rek_author_xsdmf_id": 6351,
         "rek_author": "Milevskiy, Michael J. G.",
         "rek_author_order": 1
-    }, {
+    },
+        {
         "rek_author_id": 28593830,
         "rek_author_pid": "UQ:396321",
         "rek_author_xsdmf_id": 6351,
@@ -3577,13 +3578,13 @@ export const record = {
         "rek_author_id_id": 27973928,
         "rek_author_id_pid": "UQ:396321",
         "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 85056,
+        "rek_author_id": 410,
         "rek_author_id_order": 1
     }, {
         "rek_author_id_id": 27973929,
         "rek_author_id_pid": "UQ:396321",
         "rek_author_id_xsdmf_id": 6346,
-        "rek_author_id": 0,
+        "rek_author_id": 4101,
         "rek_author_id_order": 2
     }, {
         "rek_author_id_id": 27973930,

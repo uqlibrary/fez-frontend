@@ -4,9 +4,20 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
 <Provider
   store={
     Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "subscribe": [Function],
+      "dispatch": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+      },
     }
   }
 >
@@ -37,8 +48,10 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
         <ContributorForm
           actions={
             Object {
-              "loadAuthorDetails": [Function],
+              "linkAuthorOrcidId": [Function],
+              "resetSavingAuthorState": [Function],
               "searchAuthors": [Function],
+              "updateCurrentAuthor": [Function],
             }
           }
           authorsList={Array []}
@@ -61,7 +74,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
               className="column"
             >
               <TextField
-                className="input-long-hint"
+                className="mui-long-labels-fix"
                 disabled={false}
                 errorText=""
                 floatingLabelFixed={false}
@@ -78,7 +91,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                 value=""
               >
                 <div
-                  className="input-long-hint"
+                  className="mui-long-labels-fix"
                   style={
                     Object {
                       "backgroundColor": "transparent",
@@ -501,6 +514,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -948,6 +962,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -1420,6 +1435,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -1607,6 +1623,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                           }
                         >
                           <span
+                            key="labelElement"
                             style={
                               Object {
                                 "color": "rgba(0, 0, 0, 0.3)",
@@ -1645,9 +1662,20 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
 <Provider
   store={
     Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "subscribe": [Function],
+      "dispatch": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+      },
     }
   }
 >
@@ -1675,8 +1703,10 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
         <ContributorForm
           actions={
             Object {
-              "loadAuthorDetails": [Function],
+              "linkAuthorOrcidId": [Function],
+              "resetSavingAuthorState": [Function],
               "searchAuthors": [Function],
+              "updateCurrentAuthor": [Function],
             }
           }
           authorsList={Array []}
@@ -1699,7 +1729,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
               className="column"
             >
               <TextField
-                className="input-long-hint"
+                className="mui-long-labels-fix"
                 disabled={false}
                 errorText=""
                 floatingLabelFixed={false}
@@ -1716,7 +1746,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                 value=""
               >
                 <div
-                  className="input-long-hint"
+                  className="mui-long-labels-fix"
                   style={
                     Object {
                       "backgroundColor": "transparent",
@@ -2139,6 +2169,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -2586,6 +2617,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -3058,6 +3090,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           "color": "#ffffff",
                           "rippleBackgroundColor": "#616161",
                         },
+                        "userAgent": undefined,
                         "zIndex": Object {
                           "appBar": 1100,
                           "dialog": 1500,
@@ -3616,6 +3649,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               "color": "#ffffff",
                               "rippleBackgroundColor": "#616161",
                             },
+                            "userAgent": undefined,
                             "zIndex": Object {
                               "appBar": 1100,
                               "dialog": 1500,
@@ -4063,6 +4097,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               "color": "#ffffff",
                               "rippleBackgroundColor": "#616161",
                             },
+                            "userAgent": undefined,
                             "zIndex": Object {
                               "appBar": 1100,
                               "dialog": 1500,
@@ -4537,6 +4572,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                               "color": "#ffffff",
                               "rippleBackgroundColor": "#616161",
                             },
+                            "userAgent": undefined,
                             "zIndex": Object {
                               "appBar": 1100,
                               "dialog": 1500,
@@ -4770,6 +4806,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                           }
                         >
                           <span
+                            key="labelElement"
                             style={
                               Object {
                                 "color": "rgba(0, 0, 0, 0.3)",

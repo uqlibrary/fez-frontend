@@ -1,0 +1,15 @@
+@import './variables';
+
+// Print
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  .AppBar, div.possiblePublicationLure, div.authorCount, div.main-drawer, .alertWrapper {
+    display: none !important;
+  }
+  .content-container {
+    padding: 0 !important;
+  }
+}

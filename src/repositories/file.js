@@ -11,8 +11,7 @@ import {get, put, post} from './generic';
  * @returns {Promise}
  */
 export function putUploadFile(pid, file, dispatch) {
-    const fileUploadUrl = routes.FILE_UPLOAD_API({pid: pid, fileName: file.name});
-    return get(fileUploadUrl)
+    return get(routes.FILE_UPLOAD_API({pid: pid, fileName: file.name}))
         .then(uploadUrl => {
             const options = {
                 headers: {
@@ -25,14 +24,23 @@ export function putUploadFile(pid, file, dispatch) {
                 cancelToken: generateCancelToken().token
             };
             const fileUrl = Array.isArray(uploadUrl) && uploadUrl.length > 0 ? uploadUrl[0] : uploadUrl;
-            return put(fileUrl, file, options);
+            return put({apiUrl: fileUrl}, file, options);
         })
         .then(uploadResponse => (Promise.resolve(uploadResponse)))
         .catch(error => {
-            const issue = {issue: `File upload failed: app: ${navigator.appVersion}, connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
-            connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, user agent: ${navigator.userAgent}`};
+            const issue = {issue:
+                    `File upload failed: app: ${navigator.appVersion}, 
+                    connection downlink: ${navigator.connection ? navigator.connection.downlink : 'n/a'},
+                    connection type: ${navigator.connection ? navigator.connection.effectiveType : 'n/a'}, 
+                    user agent: ${navigator.userAgent}
+                    error status: ${error.status}
+                    error message: ${error.message}
+                    file name: ${file.name}`
+            };
             post(routes.RECORDS_ISSUES_API({pid: pid}), issue);
-            dispatch(fileUploadActions.notifyUploadFailed(file.name));
+            if (fileUploadActions) {
+                dispatch(fileUploadActions.notifyUploadFailed(file.name));
+            }
             return Promise.reject(new Error(error.message));
         });
 }

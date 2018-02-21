@@ -4,10 +4,12 @@ export default {
         isbn: 'ISBN value is not valid',
         issn: 'ISSN value is not valid',
         fileUpload: 'File upload is not in valid state',
+        fileUploadRequired: 'Add at least one file to upload',
         required: 'This field is required',
         email: 'Email address is not valid',
         url: 'URL is not valid',
         doi: 'DOI is not valid',
+        forRequired: 'Field of research values are required',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
@@ -18,5 +20,6 @@ export default {
         authorEditorRequired: 'Please provide a list of authors/creators and/or editors/contributors of the publication and link one author or editor to the current user',
         supervisorRequired: 'Please provide a list of supervisors',
         editorRequired: 'Please provide a list of editors of the publication and link an editor name to the current user',
+        googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
     }
 };
