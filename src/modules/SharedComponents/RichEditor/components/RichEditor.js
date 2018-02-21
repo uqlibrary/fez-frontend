@@ -46,7 +46,7 @@ export default class RichEditor extends React.PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.disabled !== this.props.disabled) {
+        if (nextProps.disabled !== this.props.disabled && this.editorInstance !== null) {
             this.editorInstance.setReadOnly(!!nextProps.disabled);
         }
     }
