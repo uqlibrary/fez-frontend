@@ -10,16 +10,6 @@
     & > div > div {
       font-size: $text-body-normal !important;
       color: $theme-color !important;
-      white-space: nowrap !important;
-      text-overflow: ellipsis !important;
-      overflow: hidden !important;
     }
-  }
-  label[for=sortBy], label[for=sortOrder], label[for=pageSize] {
-    top: 40px !important;
-    width: 100% !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
   }
 }

@@ -74,7 +74,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
               className="column"
             >
               <TextField
-                className="input-long-hint"
+                className="mui-long-labels-fix"
                 disabled={false}
                 errorText=""
                 floatingLabelFixed={false}
@@ -91,7 +91,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
                 value=""
               >
                 <div
-                  className="input-long-hint"
+                  className="mui-long-labels-fix"
                   style={
                     Object {
                       "backgroundColor": "transparent",
@@ -1729,7 +1729,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
               className="column"
             >
               <TextField
-                className="input-long-hint"
+                className="mui-long-labels-fix"
                 disabled={false}
                 errorText=""
                 floatingLabelFixed={false}
@@ -1746,7 +1746,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
                 value=""
               >
                 <div
-                  className="input-long-hint"
+                  className="mui-long-labels-fix"
                   style={
                     Object {
                       "backgroundColor": "transparent",
