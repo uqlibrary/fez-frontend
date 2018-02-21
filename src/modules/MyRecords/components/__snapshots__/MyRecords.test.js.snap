@@ -2,6 +2,7 @@
 
 exports[`MyRecords test renders list of publications 1`] = `
 <StandardPage
+  className=""
   title="My research"
 >
   <div
@@ -11060,6 +11061,7 @@ exports[`MyRecords test renders list of publications 1`] = `
 
 exports[`MyRecords test renders loading screen while loading account data 1`] = `
 <StandardPage
+  className=""
   title="My research"
 >
   <div
@@ -11077,6 +11079,7 @@ exports[`MyRecords test renders loading screen while loading account data 1`] = 
 
 exports[`MyRecords test renders loading screen while loading publications  1`] = `
 <StandardPage
+  className=""
   title="My research"
 >
   <div
@@ -11094,6 +11097,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
 
 exports[`MyRecords test renders no results 1`] = `
 <StandardPage
+  className=""
   title="My research"
 >
   <div

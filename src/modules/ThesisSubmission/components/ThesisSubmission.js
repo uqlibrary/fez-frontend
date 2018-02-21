@@ -27,7 +27,8 @@ export default class ThesisSubmission extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         author: PropTypes.object,
-        isHdrThesis: PropTypes.bool // HDR thesis if true or SBS thesis if false
+        isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
+        fileAccessId: PropTypes.number
     };
 
     static contextTypes = {
@@ -220,7 +221,7 @@ export default class ThesisSubmission extends Component {
                             component={FileUploadField}
                             disabled={this.props.submitting}
                             locale={formLocale.thesisSubmission.fileUpload.locale}
-                            defaultQuickTemplateId={3}
+                            defaultQuickTemplateId={this.props.fileAccessId}
                             validate={[validation.fileUploadRequired]}/>
                     </StandardCard>
 

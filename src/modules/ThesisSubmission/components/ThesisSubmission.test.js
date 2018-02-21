@@ -2,6 +2,7 @@ import ThesisSubmission from './ThesisSubmission';
 import Immutable from 'immutable';
 import {AUTH_URL_LOGIN} from "config";
 import {default as formLocale} from 'locale/publicationForm';
+import PropTypes from "prop-types";
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -12,6 +13,7 @@ function setup(testProps, isShallow = true) {
         invalid: testProps.invalid || false, // : PropTypes.bool
         pristine: testProps.pristine || false, // : PropTypes.bool
         isHdrThesis: testProps.isHdrThesis || false, // : PropTypes.bool
+        fileAccessId: testProps.fileAccessId || 3 // PropTypes.number
     };
 
     return getElement(ThesisSubmission, props, isShallow);

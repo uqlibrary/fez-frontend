@@ -12,8 +12,8 @@ const FORM_NAME = 'ThesisSubmission';
 
 const onSubmit = (values, dispatch, props) => {
     return dispatch(submitThesis({...values.toJS()}, props.author))
-        .then((record) => {
-            console.log(record);
+        .then(() => {
+            // console.log(record);
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
             // reset form after success action was dispatched:
@@ -104,7 +104,8 @@ const mapStateToProps = (state, props) => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: initialValues,
         author: currentAuthor,
-        isHdrThesis: props.isHdrThesis
+        isHdrThesis: props.isHdrThesis,
+        fileAccessId: props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId
     };
 };
 

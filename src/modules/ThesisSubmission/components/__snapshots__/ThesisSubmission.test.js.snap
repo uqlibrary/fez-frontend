@@ -2,6 +2,7 @@
 
 exports[`ThesisSubmission test should display successfull submission screen 1`] = `
 <StandardPage
+  className=""
   title="Professional doctorate deposit"
 >
   <StandardCard
