@@ -49,7 +49,7 @@ export default class DateRange extends React.Component {
     componentWillReceiveProps(nextProps) {
         this.setState({
             from: nextProps.value.from || this.props.defaultValue.from,
-            to: nextProps.value.to || this.props.defaultValue.from,
+            to: nextProps.value.to || this.props.defaultValue.to,
             isActive: !!nextProps.value.from || !!nextProps.value.to
         });
     }
