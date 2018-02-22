@@ -28,24 +28,15 @@ export const pathConfig =  {
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
-            link: '/author-identifiers/google-scholar/link/',
+            link: '/author-identifiers/google-scholar/link',
             // unlink: '/author-identifiers/google-scholar/link'
         }
     }
 };
 
-const flattedPathConfig = ((path) => {
-    const flattenPath = Object.assign({}, ...function _flatten(objectBit, path = '') {
-        return [].concat(
-            ...Object.keys(objectBit).map(
-                key => typeof objectBit[key] === 'object' ?
-                    _flatten(objectBit[key], `${ path }/${ key }`) :
-                    ({[`${ path }/${ key }`]: objectBit[key]})
-            )
-        );
-    }(path));
-    return Object.values(flattenPath);
-})(pathConfig);
+const flattedPathConfig = ['/', '/dashboard', '/browse', '/about', '/rhdsubmission_new', '/sbslodge_new',
+    '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
+    '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
 // TODO: will we even have roles?
 export const roles = {
