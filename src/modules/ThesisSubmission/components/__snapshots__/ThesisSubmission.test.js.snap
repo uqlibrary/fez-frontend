@@ -190,7 +190,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         className="columns"
       >
         <div
-          className="column is-half"
+          className="column"
         >
           <Field
             className="requiredField"
@@ -200,24 +200,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             floatingLabelText="Enrolling unit"
             hintText="Enrolling unit, eg. School of Business"
             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </div>
-        <div
-          className="column"
-        >
-          <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            errorMessage="Institution name is required"
-            floatingLabelText="Institution name"
-            hintText=""
-            name="fez_record_search_key_org_name.rek_org_name"
             validate={
               Array [
                 [Function],
@@ -722,7 +704,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         className="columns"
       >
         <div
-          className="column is-half"
+          className="column"
         >
           <Field
             className="requiredField"
@@ -732,24 +714,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             floatingLabelText="Enrolling unit"
             hintText="Enrolling unit, eg. School of Business"
             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </div>
-        <div
-          className="column"
-        >
-          <Field
-            className="requiredField"
-            component={[Function]}
-            disabled={false}
-            errorMessage="Institution name is required"
-            floatingLabelText="Institution name"
-            hintText=""
-            name="fez_record_search_key_org_name.rek_org_name"
             validate={
               Array [
                 [Function],

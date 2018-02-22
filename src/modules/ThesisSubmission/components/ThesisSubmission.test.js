@@ -23,7 +23,7 @@ describe('ThesisSubmission test', () => {
     it('should render sbs thesis submission form', () => {
         const wrapper = setup({isHdrThesis: false});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(10);
+        expect(wrapper.find('Field').length).toEqual(9);
         expect(wrapper.find('RaisedButton').length).toEqual(2);
     });
 
