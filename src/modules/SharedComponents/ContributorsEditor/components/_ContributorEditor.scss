@@ -29,6 +29,9 @@
     @include mobile {
       padding-left: 4px;
     }
+    .contributorNotSelectedSuffix {
+      display: none;
+    }
     &:hover, &:focus {
       .contributorNotSelectedSuffix {
         padding-left: 4px;
@@ -36,9 +39,6 @@
         opacity: 0.66;
       }
     }
-  }
-  .contributorNotSelectedSuffix {
-    display: none;
   }
   .contributorActions {
     padding: 6px;

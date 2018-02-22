@@ -163,7 +163,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
               </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Enter each creator's name as published",
+              "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
             },
           },
           "header": Object {
@@ -202,6 +202,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
           },
           "row": Object {
             "locale": Object {
+              "ariaLabel": "Select this creator ([name]) to assign it as you",
               "deleteHint": "Remove this item",
               "deleteRecordConfirmation": Object {
                 "cancelButtonLabel": "No",
@@ -276,7 +277,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
               </div>,
               "identifierLabel": "UQ identifier (if available)",
               "nameAsPublishedHint": "Type the name exactly as published",
-              "nameAsPublishedLabel": "Enter each contributor's name as published",
+              "nameAsPublishedLabel": "Enter each contributor's name as published (eg. Smith, John)",
             },
           },
           "header": Object {
@@ -315,6 +316,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
           },
           "row": Object {
             "locale": Object {
+              "ariaLabel": "Select this contributor ([name]) to assign it as you",
               "deleteHint": "Remove this item",
               "deleteRecordConfirmation": Object {
                 "cancelButtonLabel": "No",

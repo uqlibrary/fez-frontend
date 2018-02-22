@@ -187,7 +187,7 @@ export default {
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: 'Enter each author\'s name as published',
+                        nameAsPublishedLabel: 'Enter each author\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author'
@@ -222,6 +222,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectedLabelSuffix: '- assigned as you',
                         notSelectedLabelSuffix: '- select to confirm this author is you',
+                        ariaLabel: 'Select this author ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -251,7 +252,7 @@ export default {
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of editors below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: 'Enter each editor\'s name as published',
+                        nameAsPublishedLabel: 'Enter each editor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add editor'
@@ -286,6 +287,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectedLabelSuffix: '- assigned as you',
                         notSelectedLabelSuffix: '- select to confirm this editor is you',
+                        ariaLabel: 'Select this editor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -313,7 +315,7 @@ export default {
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: 'Enter each creator\'s name as published',
+                        nameAsPublishedLabel: 'Enter each creator\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add creator'
@@ -348,6 +350,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectedLabelSuffix: '- assigned as you',
                         notSelectedLabelSuffix: '- select to confirm this creator is you',
+                        ariaLabel: 'Select this creator ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -375,7 +378,7 @@ export default {
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: 'Enter each designer\'s name as published',
+                        nameAsPublishedLabel: 'Enter each designer\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add designer'
@@ -410,6 +413,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectedLabelSuffix: '- assigned as you',
                         notSelectedLabelSuffix: '- select to confirm this designer is you',
+                        ariaLabel: 'Select this designer ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -437,7 +441,7 @@ export default {
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: 'Enter each supervisor\'s name as published',
+                        nameAsPublishedLabel: 'Enter each supervisor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add supervisor'
@@ -472,6 +476,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectedLabelSuffix: '- assigned as you',
                         notSelectedLabelSuffix: '- select to confirm this supervisor is you',
+                        ariaLabel: 'Select this supervisor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -498,7 +503,7 @@ export default {
                         descriptionStep1NoStep2: (
                             <div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: 'Enter each contributor\'s name as published',
+                        nameAsPublishedLabel: 'Enter each contributor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add contributor'
@@ -533,6 +538,7 @@ export default {
                         ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
                         selectedLabelSuffix: '- assigned as you',
                         notSelectedLabelSuffix: '- select to confirm this contributor is you',
+                        ariaLabel: 'Select this contributor ([name]) to assign it as you',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',

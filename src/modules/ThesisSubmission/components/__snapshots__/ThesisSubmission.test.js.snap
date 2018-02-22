@@ -320,7 +320,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedHint": "",
-                "nameAsPublishedLabel": "Enter each supervisor's name as published",
+                "nameAsPublishedLabel": "Enter each supervisor's name as published (eg. Smith, John)",
               },
             },
             "header": Object {
@@ -359,6 +359,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "ariaLabel": "Select this supervisor ([name]) to assign it as you",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -901,7 +902,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedHint": "",
-                "nameAsPublishedLabel": "Enter each supervisor's name as published",
+                "nameAsPublishedLabel": "Enter each supervisor's name as published (eg. Smith, John)",
               },
             },
             "header": Object {
@@ -940,6 +941,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "ariaLabel": "Select this supervisor ([name]) to assign it as you",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",

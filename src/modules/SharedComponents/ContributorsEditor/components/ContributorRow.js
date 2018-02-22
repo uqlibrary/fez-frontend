@@ -28,8 +28,9 @@ export default class ContributorRow extends React.PureComponent {
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
             ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
-            selectTooltip: 'Click to assign this record as you',
-            selectedTooltip: '(This is you)',
+            selectTooltip: '- select to assign this record as you',
+            selectedTooltip: '- assigned as you',
+            ariaLabel: 'Select this record to assign it to you',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
                 confirmationMessage: 'Are you sure you want to delete this record?',
@@ -101,7 +102,9 @@ export default class ContributorRow extends React.PureComponent {
                                 <div className="columns is-gapless contributorDetails"
                                     onClick={this._onContributorAssigned}
                                     onKeyDown={this._onContributorAssignedKeyboard}
-                                    tabIndex="0">
+                                    aria-label={this.props.locale.ariaLabel.replace('[name]', this.props.contributor.nameAsPublished)}
+                                    tabIndex="0"
+                                >
                                     <div className="column is-narrow is-hidden-mobile">
                                         <FontIcon className="authorIcon material-icons">{this.props.contributor.selected ? 'person' : 'person_outline'}</FontIcon>
                                     </div>

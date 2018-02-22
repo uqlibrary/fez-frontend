@@ -40,7 +40,7 @@ export default class ContributorRowHeader extends Component {
 
     render() {
         const {
-            nameColumn, identifierColumn, reorderColumn,
+            identifierColumn, reorderColumn,
             deleteAll, deleteAllConfirmation
         } = this.props.locale;
 
@@ -53,7 +53,7 @@ export default class ContributorRowHeader extends Component {
                         onAction={this.props.onDeleteAll}
                         locale={deleteAllConfirmation}/>
                     <div className="column is-narrow is-hidden-mobile authorIcon" />
-                    <div className="column name datalist-title">{nameColumn}</div>
+                    <div className="column name datalist-title" />
                     {
                         this.props.showIdentifierLookup &&
                         <div

@@ -4033,6 +4033,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows 1`] = `
       key="0"
       locale={
         Object {
+          "ariaLabel": "Select this record to assign it to you",
           "deleteHint": "Remove this record",
           "deleteRecordConfirmation": Object {
             "cancelButtonLabel": "No",
@@ -4054,8 +4055,8 @@ exports[`ContributorsEditor tests  renders 3 contributor rows 1`] = `
             "Ninth",
             "Tenth",
           ],
-          "selectTooltip": "Click to assign this record as you",
-          "selectedTooltip": "(This is you)",
+          "selectTooltip": "- select to assign this record as you",
+          "selectedTooltip": "- assigned as you",
           "suffix": " listed contributor",
         }
       }
@@ -4080,6 +4081,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows 1`] = `
       key="1"
       locale={
         Object {
+          "ariaLabel": "Select this record to assign it to you",
           "deleteHint": "Remove this record",
           "deleteRecordConfirmation": Object {
             "cancelButtonLabel": "No",
@@ -4101,8 +4103,8 @@ exports[`ContributorsEditor tests  renders 3 contributor rows 1`] = `
             "Ninth",
             "Tenth",
           ],
-          "selectTooltip": "Click to assign this record as you",
-          "selectedTooltip": "(This is you)",
+          "selectTooltip": "- select to assign this record as you",
+          "selectedTooltip": "- assigned as you",
           "suffix": " listed contributor",
         }
       }
@@ -4127,6 +4129,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows 1`] = `
       key="2"
       locale={
         Object {
+          "ariaLabel": "Select this record to assign it to you",
           "deleteHint": "Remove this record",
           "deleteRecordConfirmation": Object {
             "cancelButtonLabel": "No",
@@ -4148,8 +4151,8 @@ exports[`ContributorsEditor tests  renders 3 contributor rows 1`] = `
             "Ninth",
             "Tenth",
           ],
-          "selectTooltip": "Click to assign this record as you",
-          "selectedTooltip": "(This is you)",
+          "selectTooltip": "- select to assign this record as you",
+          "selectedTooltip": "- assigned as you",
           "suffix": " listed contributor",
         }
       }
@@ -4224,6 +4227,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       key="0"
       locale={
         Object {
+          "ariaLabel": "Select this record to assign it to you",
           "deleteHint": "Remove this record",
           "deleteRecordConfirmation": Object {
             "cancelButtonLabel": "No",
@@ -4245,8 +4249,8 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
             "Ninth",
             "Tenth",
           ],
-          "selectTooltip": "Click to assign this record as you",
-          "selectedTooltip": "(This is you)",
+          "selectTooltip": "- select to assign this record as you",
+          "selectedTooltip": "- assigned as you",
           "suffix": " listed contributor",
         }
       }
@@ -4271,6 +4275,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       key="1"
       locale={
         Object {
+          "ariaLabel": "Select this record to assign it to you",
           "deleteHint": "Remove this record",
           "deleteRecordConfirmation": Object {
             "cancelButtonLabel": "No",
@@ -4292,8 +4297,8 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
             "Ninth",
             "Tenth",
           ],
-          "selectTooltip": "Click to assign this record as you",
-          "selectedTooltip": "(This is you)",
+          "selectTooltip": "- select to assign this record as you",
+          "selectedTooltip": "- assigned as you",
           "suffix": " listed contributor",
         }
       }
@@ -4318,6 +4323,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       key="2"
       locale={
         Object {
+          "ariaLabel": "Select this record to assign it to you",
           "deleteHint": "Remove this record",
           "deleteRecordConfirmation": Object {
             "cancelButtonLabel": "No",
@@ -4339,8 +4345,8 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
             "Ninth",
             "Tenth",
           ],
-          "selectTooltip": "Click to assign this record as you",
-          "selectedTooltip": "(This is you)",
+          "selectTooltip": "- select to assign this record as you",
+          "selectedTooltip": "- assigned as you",
           "suffix": " listed contributor",
         }
       }
@@ -4365,6 +4371,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       key="3"
       locale={
         Object {
+          "ariaLabel": "Select this record to assign it to you",
           "deleteHint": "Remove this record",
           "deleteRecordConfirmation": Object {
             "cancelButtonLabel": "No",
@@ -4386,8 +4393,8 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
             "Ninth",
             "Tenth",
           ],
-          "selectTooltip": "Click to assign this record as you",
-          "selectedTooltip": "(This is you)",
+          "selectTooltip": "- select to assign this record as you",
+          "selectedTooltip": "- assigned as you",
           "suffix": " listed contributor",
         }
       }

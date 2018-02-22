@@ -30,9 +30,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
     />
     <div
       className="column name datalist-title"
-    >
-      Name as published
-    </div>
+    />
     <div
       className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title"
     >
@@ -100,9 +98,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
     />
     <div
       className="column name datalist-title"
-    >
-      Name as published
-    </div>
+    />
     <div
       className="column is-narrow is-hidden-mobile order datalist-title"
     >
@@ -165,9 +161,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
     />
     <div
       className="column name datalist-title"
-    >
-      Name as published
-    </div>
+    />
     <div
       className="column is-narrow is-hidden-mobile order datalist-title"
     >
