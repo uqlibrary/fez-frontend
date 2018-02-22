@@ -10,10 +10,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {TextField} from 'uqlibrary-react-toolbox/build/TextField';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
-import {PartialDateField} from 'uqlibrary-react-toolbox/build/PartialDate';
 
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {OrgNameField, OrgUnitNameField, FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
+import {OrgNameField, OrgUnitNameField, FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
 import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
@@ -21,12 +20,15 @@ import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
+import {RichEditorField} from 'modules/SharedComponents/RichEditor';
+import {thesisSubmissionSubtypes} from 'config/general';
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         author: PropTypes.object,
-        isHdrThesis: PropTypes.bool // HDR thesis if true or SBS thesis if false
+        isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
+        fileAccessId: PropTypes.number
     };
 
     static contextTypes = {
@@ -50,7 +52,9 @@ export default class ThesisSubmission extends Component {
                     {alertLocale.validationAlert.message}
                     <ul>
                         {
-                            error && error.length > 0 && error.map((item, index) => (<li key={`validation-${index}`}>{item}</li>))
+                            error && error.length > 0 && error.map((item, index) => (
+                                <li key={`validation-${index}`}>{item}</li>
+                            ))
                         }
                     </ul>
                 </span>);
@@ -74,7 +78,8 @@ export default class ThesisSubmission extends Component {
 
     render() {
         const txt = formLocale.thesis;
-
+        const txtFoR = locale.components.fieldOfResearchForm;
+        const txtSupervisors = locale.components.thesisSubmissionSupervisors;
         if (this.props.submitSucceeded) {
             return (
                 <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
@@ -103,21 +108,39 @@ export default class ThesisSubmission extends Component {
                         txt={formLocale.cancelWorkflowConfirmation}/>
 
                     <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <div className="columns" style={{marginTop: '-12px'}}>
-                            <div className="column">
+                        <div className="columns" style={{marginTop: '6px'}}>
+                            <div className="column requiredField">
+                                <label htmlFor="thesisTitle">{txt.information.fieldLabels.documentTitle.floatingLabelText}</label>
+                                <Field
+                                    component={RichEditorField}
+                                    name="thesisTitle"
+                                    disabled={this.props.submitting}
+                                    height={50}
+                                />
+                            </div>
+                        </div>
+                        <div className="columns">
+                            <div className="column is-half">
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
-                                    autoFocus
-                                    name="rek_title"
+                                    name="currentAuthor.0.nameAsPublished"
                                     type="text"
                                     fullWidth
-                                    multiLine
                                     rows={1}
-                                    {...txt.information.fieldLabels.documentTitle}
+                                    {...txt.information.fieldLabels.author}
                                     className="requiredField"
+                                    validate={[validation.required]}/>
+                            </div>
+                            <div className="column ">
+                                <Field
+                                    component={ThesisSubtypeField}
+                                    itemsList={thesisSubmissionSubtypes}
+                                    name="rek_genre_type"
+                                    disabled={this.props.submitting}
                                     validate={[validation.required]}
-                                />
+                                    locale={txt.information.fieldLabels.thesisType}
+                                    className="requiredField"/>
                             </div>
                         </div>
                         <div className="columns">
@@ -141,75 +164,35 @@ export default class ThesisSubmission extends Component {
                                     {...txt.information.fieldLabels.orgName}/>
                             </div>
                         </div>
-                        <div className="columns">
-                            <div className="column is-half">
+                        <div className="columns" style={{marginTop: '6px'}}>
+                            <div className="column requiredField">
+                                <label htmlFor="thesisAbstract">{txt.optional.fieldLabels.abstract.floatingLabelText}</label>
                                 <Field
-                                    component={ThesisSubtypeField}
-                                    name="rek_genre_type"
+                                    component={RichEditorField}
                                     disabled={this.props.submitting}
-                                    validate={[validation.required]}
-                                    locale={txt.information.fieldLabels.thesisType}
-                                    className="requiredField"/>
-                            </div>
-                            <div className="column">
-                                <Field
-                                    component={PartialDateField}
-                                    disabled={this.props.submitting}
-                                    name="rek_date"
-                                    allowPartial
-                                    className="requiredHintField"
-                                    validate={[validation.required]}
-                                    floatingTitle={txt.information.fieldLabels.date.title}
-                                    floatingTitleRequired/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="currentAuthor.0.nameAsPublished"
-                                    type="text"
-                                    fullWidth
-                                    rows={1}
-                                    {...txt.information.fieldLabels.author}
-                                    className="requiredField"
-                                    validate={[validation.required]}/>
-                            </div>
-                        </div>
-                        <div className="columns">
-                            <div className="column">
-                                <Field
-                                    component={TextField}
-                                    name="fez_record_search_key_description.rek_description"
-                                    type="text"
-                                    disabled={this.props.submitting}
-                                    fullWidth
-                                    multiLine
-                                    className="requiredField"
-                                    validate={[validation.required]}
-                                    rows={4}
-                                    {...txt.optional.fieldLabels.abstract} />
+                                    name="thesisAbstract"
+                                />
                             </div>
                         </div>
                     </StandardCard>
 
-                    <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
-                        <div>{txt.supervisors.description}</div>
+
+                    <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
+                        <div>{txtSupervisors.description}</div>
                         <Field
                             component={ContributorsEditorField}
                             className="requiredField"
                             name="supervisors"
                             validate={[validation.supervisorRequired]}
-                            locale={txt.supervisors.field}
+                            locale={txtSupervisors.field}
                             disabled={this.props.submitting}
                         />
                     </StandardCard>
 
-                    <StandardCard title={txt.fieldOfResearch.title} help={txt.fieldOfResearch.help}>
-                        <div>{txt.fieldOfResearch.description}</div>
+                    <StandardCard title={txtFoR.title} help={txtFoR.help}>
+                        <div>{txtFoR.text}</div>
                         <Field
-                            component={FieldOfResearchListField}
+                            component={FilteredFieldOfResearchListField}
                             name="fieldOfResearch"
                             className="requiredField"
                             validate={[validation.forRequired]}
@@ -217,7 +200,7 @@ export default class ThesisSubmission extends Component {
                             distinctOnly
                             maxCount={3}
                             disabled={this.props.submitting}
-                            locale={locale.components.fieldOfResearchForm.field}/>
+                            locale={txtFoR.field}/>
                     </StandardCard>
 
                     <StandardCard title={txt.keywords.title} help={txt.keywords.help}>
@@ -233,12 +216,12 @@ export default class ThesisSubmission extends Component {
                     </StandardCard>
 
                     <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
-                        {formLocale.thesisSubmission.fileUpload.text}
                         <Field
                             name="files"
                             component={FileUploadField}
                             disabled={this.props.submitting}
-                            locale={formLocale.thesisSubmission.fileUpload.fileUploaderLocale}
+                            locale={formLocale.thesisSubmission.fileUpload.locale}
+                            defaultQuickTemplateId={this.props.fileAccessId}
                             validate={[validation.fileUploadRequired]}/>
                     </StandardCard>
 

@@ -11,6 +11,7 @@ export default class ContributorRowHeader extends Component {
         showContributorAssignment: PropTypes.bool,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
+        isInfinite: PropTypes.bool
     };
 
     static defaultProps = {
@@ -43,21 +44,18 @@ export default class ContributorRowHeader extends Component {
             identifierColumn, reorderColumn,
             deleteAll, deleteAllConfirmation
         } = this.props.locale;
-
+        const description = this.props.showContributorAssignment && this.props.locale.descriptionStep2 || '';
         return (
             <div style={{paddingTop: 12}}>
-                {this.props.showContributorAssignment && this.props.locale.descriptionStep2}
                 <div className="columns is-gapless is-mobile contributorsHeader datalist datalist-header">
                     <ConfirmDialogBox
                         onRef={ref => (this.confirmationBox = ref)}
                         onAction={this.props.onDeleteAll}
                         locale={deleteAllConfirmation}/>
-                    <div className="column is-narrow is-hidden-mobile authorIcon" />
-                    <div className="column name datalist-title" />
+                    <div className="column description">{description}</div>
                     {
                         this.props.showIdentifierLookup &&
-                        <div
-                            className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title">{identifierColumn}</div>
+                        <div className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title">{identifierColumn}</div>
                     }
                     <div className="column is-narrow is-hidden-mobile order datalist-title">{reorderColumn}</div>
 
@@ -70,7 +68,7 @@ export default class ContributorRowHeader extends Component {
                             <FontIcon className="material-icons">delete_forever</FontIcon>
                         </IconButton>
                     </div>
-                    <div className="column is-narrow scrollbar-spacer is-hidden-mobile" />
+                    <div className={`column is-narrow scrollbar-spacer${this.props.isInfinite ? '-infinite' : ''} is-hidden-mobile`} />
                 </div>
             </div>
         );

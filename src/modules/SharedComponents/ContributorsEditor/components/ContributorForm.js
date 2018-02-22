@@ -17,20 +17,19 @@ export class ContributorForm extends Component {
         actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        descriptionStep1: PropTypes.string,
         showContributorAssignment: PropTypes.bool
     };
 
     static defaultProps = {
-        showContributorAssignment: false,
         locale: {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
             identifierLabel: 'UQ identifier (if available)',
             addButton: 'Add author',
-            descriptionStep1: 'This is a test of Step 1'
+            descriptionStep1: (<div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>),
+            descriptionStep1NoStep2: (<div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>)
         }
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -98,15 +97,16 @@ export class ContributorForm extends Component {
                     <div className="column">
                         <TextField
                             fullWidth
-                            errorText={this.props.errorText}
                             ref="nameAsPublishedField"
                             id="nameAsPublishedField"
                             floatingLabelText={this.props.locale.nameAsPublishedLabel}
+                            hintText={this.props.locale.nameAsPublishedHint}
                             value={this.state.nameAsPublished}
                             onChange={this._onNameChanged}
                             onKeyPress={this._addContributor}
                             disabled={this.props.disabled}
-                            className="input-long-hint"/>
+                            className="mui-long-labels-fix"
+                        />
                     </div>
                     {
                         this.props.showIdentifierLookup &&

@@ -465,9 +465,9 @@ export default {
                     errorMessage: 'Institution name is required'
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, Institute or Centre',
-                    hintText: '',
-                    errorMessage: 'School, institute or centre is required'
+                    floatingLabelText: 'Enrolling unit',
+                    hintText: 'Enrolling unit, eg. School of Business',
+                    errorMessage: 'Enrolling unit is required'
                 },
                 date: {
                     title: 'Publication date',
@@ -1099,24 +1099,46 @@ export default {
                 text: 'file help...',
                 buttonLabel: 'OK'
             },
+            locale: {
+                instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
+                accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                validation: {
+                    ['folder']: 'Invalid files ([filenames])',
+                    ['fileName']: 'File(s) ([filenames]) have invalid file name',
+                    ['maxFileSize']: 'File(s) ([filenames]) exceed maximum allowed upload file size',
+                    ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) Files ([filenames]) will not be uploaded',
+                },
+                errorTitle: 'Upload Errors',
+                fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
+                fileUploadRestrictions: (
+                    <div>
+                        PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
+                        Stages of examination are: submission, or correctedthesis, or finalthesis.
+                        Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
+                        File submission is mandatory.
+                        For example:
+                        <ul>
+                            <li>s1234567_phd_thesis.pdf</li>
+                            <li>s1234567_phd_abstract.pdf</li>
+                        </ul>
+                    </div>
+                ),
+                fileUploadInstruction: (
+                    <p>Click here to select files, or drag files into this area to upload</p>
+                )
+            },
             text: (
                 <div>
-                    PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
-                    Stages of examination are: submission, or correctedthesis, or finalthesis.
-                    Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
-                    File submission is mandatory.<span className="requiredField"><label>&nbsp;</label></span><br/>
-                    For example: <br />
-                    - s1234567_phd_thesis.pdf <br/>
-                    - s1234567_phd_abstract.pdf <br/>
-                    - s1234567_phd_submissionform.pdf <br/>
+                    <span className="requiredField"><label>&nbsp;</label></span>
+
                 </div>
             )
         },
         cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
-        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/3-thesis-examination',
         cancel: 'Cancel',
         submit: 'Deposit your thesis',
-        afterSubmit: 'Go to the next step',
-        afterSubmitText: (<p>You thesis has been submitted. You will received acknowledgement email shortly.</p>)
+        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        afterSubmit: 'Return to the Graduate School website',
+        afterSubmitText: (<p>Your thesis has been deposited. You will receive an email confirming your thesis deposit shortly.</p>)
     }
 };

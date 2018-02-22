@@ -1,89 +1,47 @@
-jest.dontMock('./ContributorsEditor');
-
-import { mount } from 'enzyme';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import {ContributorsEditor} from './ContributorsEditor';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import {Provider} from 'react-redux';
-import Immutable from 'immutable';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import {authorsSearch} from 'mock/data';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+function setup(testProps, isShallow = true) {
+    const props = {
+        ...testProps,
+        contributors: testProps.contributors || [],
+        showIdentifierLookup: testProps.showIdentifierLookup || false,
+        showContributorAssignment: testProps.showContributorAssignment || false,
+        className: testProps.className || null,
+        disabled: testProps.disabled || false,
+        author: testProps.author || { aut_id: 1 },
+        onChange: testProps.onChange || jest.fn(),
+        meta: testProps.meta || null
+    };
+    return getElement(ContributorsEditor, props, isShallow);
+}
 
 beforeAll(() => {
     injectTapEventPlugin();
 });
 
-const create = () => {
-    const initialState = Immutable.Map();
-
-    const store = {
-        getState: jest.fn(() => (initialState)),
-        dispatch: jest.fn(),
-        subscribe: jest.fn()
-    };
-    const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
-    return {store, next, invoke}
-};
-
-function setup({showIdentifierLookup, showContributorAssignment, className,
-                   disabled, author, onChange, contributors, meta, isShallow = true}){
-
-    const props = {
-        contributors: contributors || [],
-        showIdentifierLookup: showIdentifierLookup || false, // : PropTypes.bool,
-        showContributorAssignment: showContributorAssignment || false, // : PropTypes.bool,
-        className: className || null, // : PropTypes.string,
-        disabled: disabled || false, // : PropTypes.bool,
-        author: author || { aut_id: 1 }, // : PropTypes.object,
-        onChange: onChange || jest.fn(), //: PropTypes.func,
-        meta: meta || null
-        //locale: PropTypes.object
-    };
-
-    if (!isShallow) {
-        return mount(
-            <Provider store={create().store}>
-                <ContributorsEditor {...props} />
-            </Provider>, {
-                context: {
-                    muiTheme: getMuiTheme()
-                },
-                childContextTypes: {
-                    muiTheme: PropTypes.object.isRequired
-                }
-            });
-    }
-
-    return shallow(<Provider store={create().store}><ContributorsEditor {...props} /></Provider>);
-}
-
-
-
-describe('ContributorsEditor tests ', () => {
+describe('Component ContributorsEditor', () => {
 
     it('rendering full component with a defined className', () => {
-        const wrapper = setup({ isShallow: false, className: 'requiredField' });
+        const wrapper = setup({className: 'requiredField' }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('rendering full component with identifier lookup', () => {
-        const wrapper = setup({ isShallow: false, showIdentifierLookup: true });
+        const wrapper = setup({showIdentifierLookup: true}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('appending a contributor to the list', () => {
-        const wrapper = setup({}).find('ContributorsEditor').dive();
+        const wrapper = setup({});
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({displayName: "J.Smith"});
         expect(wrapper.state().contributors.length).toEqual(1);
     });
 
     it('appending a contributor with identifier to the list', () => {
-        const wrapper = setup({}).find('ContributorsEditor').dive();
+        const wrapper = setup({});
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({displayName: "J.Smith", ...authorsSearch.data[0]});
         expect(wrapper.state().contributors.length).toEqual(1);
@@ -91,7 +49,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('appending a contributor with duplicate identifier to the list', () => {
-        const wrapper = setup({}).find('ContributorsEditor').dive();
+        const wrapper = setup({});
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({displayName: "J.Smith", ...authorsSearch.data[0]});
         expect(wrapper.state().contributors.length).toEqual(1);
@@ -101,7 +59,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('appending a contributor with identifier who is a current author to the list', () => {
-        const wrapper = setup({ author: authorsSearch.data[0] }).find('ContributorsEditor').dive();
+        const wrapper = setup({ author: authorsSearch.data[0] });
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({displayName: "J.Smith", ...authorsSearch.data[0]});
         expect(wrapper.state().contributors.length).toEqual(1);
@@ -109,7 +67,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('assigning a contributor to current author', () => {
-        const wrapper = setup({}).find('ContributorsEditor').dive();
+        const wrapper = setup({});
         wrapper.setState({ contributors: [{}, {}, {}], isCurrentAuthorSelected: false });
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[0].selected).toBeFalsy();
@@ -119,7 +77,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('deleting a contributor from the list', () => {
-        const wrapper = setup({}).find('ContributorsEditor').dive();
+        const wrapper = setup({});
         wrapper.setState({ contributors: [ {}, {}, {}], isCurrentAuthorSelected: true });
         expect(wrapper.state().contributors.length).toEqual(3);
         wrapper.instance().deleteContributor({}, 0);
@@ -127,7 +85,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('deleting all contributors from a list', () => {
-        const wrapper = setup({}).find('ContributorsEditor').dive();
+        const wrapper = setup({});
         wrapper.setState({ contributors: [{"nameAsPublished":"One","disabled":false},{"nameAsPublished":"Two","disabled":false},{"nameAsPublished":"Three","disabled":false}], isCurrentAuthorSelected: true });
         expect(wrapper.state().contributors.length).toEqual(3);
         wrapper.instance().deleteAllContributors();
@@ -136,7 +94,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('moving up a contributor', () => {
-        const wrapper = setup({}).find('ContributorsEditor').dive();
+        const wrapper = setup({});
         wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}]});
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[1].displayName).toEqual(2);
@@ -146,7 +104,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('moving down a contributor', () => {
-        const wrapper = setup({}).find('ContributorsEditor').dive();
+        const wrapper = setup({});
         wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}]});
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[1].displayName).toEqual(2);
@@ -156,16 +114,16 @@ describe('ContributorsEditor tests ', () => {
     });
 
     // Tests for infinite scroll appear or not
-    it('renders no contributor rows', () => {
-        const wrapper = setup({isShallow: true, contributors: []}).find('ContributorsEditor').dive();
+    it('renders no contributor rows with no infinite scroll', () => {
+        const wrapper = setup({contributors: []});
         wrapper.setState({ contributors: []});
         expect(wrapper.find('ContributorRow').length).toEqual(0);
         expect(wrapper.find('Infinite').length).toEqual(0);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('renders 3 contributor rows', () => {
-        const wrapper = setup({isShallow: true, contributors: []}).find('ContributorsEditor').dive();
+    it('renders 3 contributor rows with no infinite scroll', () => {
+        const wrapper = setup({contributors: []});
         wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}]});
         expect(wrapper.find('ContributorRow').length).toEqual(3);
         expect(wrapper.find('Infinite').length).toEqual(0);
@@ -173,7 +131,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('renders 4 contributor rows wrapped in an infinite scroll', () => {
-        const wrapper = setup({isShallow: true, contributors: []}).find('ContributorsEditor').dive();
+        const wrapper = setup({contributors: []});
         wrapper.setState({ contributors: [ {displayName: 1}, {displayName: 2}, {displayName: 3}, {displayName: 4}]});
         expect(wrapper.find('ContributorRow').length).toEqual(4);
         expect(wrapper.find('Infinite').length).toEqual(1);
@@ -181,7 +139,7 @@ describe('ContributorsEditor tests ', () => {
     });
 
     it('should show validation error', () => {
-        const wrapper = setup({isShallow: false, contributors: [], meta: {error: 'This is a test error'}});
+        const wrapper = setup({contributors: [], meta: {error: 'This is a test error'}}, false);
         expect(wrapper.find('.validationErrorMessage').length).toEqual(1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });

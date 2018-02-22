@@ -202,7 +202,7 @@ export default class ClaimRecord extends Component {
                                     name="files"
                                     component={ FileUploadField }
                                     disabled={this.props.submitting}
-                                    requireFileAccess
+                                    requireOpenAccessStatus
                                     validate={[validation.validFileUpload]}
                                 />
                             </StandardCard>

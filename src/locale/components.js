@@ -196,7 +196,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div style={{marginTop: '12px'}}><br /><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Author\'s name as published',
@@ -261,7 +261,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div style={{marginTop: '12px'}}><br /><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name (if applicable)',
                         nameColumn: 'Editor\'s name as published',
@@ -324,7 +324,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div style={{marginTop: '12px'}}><br /><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Creator\'s name as published',
@@ -387,7 +387,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div style={{marginTop: '12px'}}><br /><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Designers name as published',
@@ -450,7 +450,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div style={{marginTop: '12px'}}><br /><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Supervisor\'s name as published',
@@ -487,6 +487,55 @@ export default {
                 }
             }
         },
+        thesisSubmissionSupervisors: {
+            title: 'Supervisors',
+            help: {
+                title: 'Supervisors help',
+                text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
+                buttonLabel: 'OK'
+            },
+            description: 'List your current supervisors',
+            field: {
+                form: {
+                    locale: {
+                        nameAsPublishedLabel: 'Enter each supervisor’s name on a separate line e.g. Firstname Surname',
+                        nameAsPublishedHint: '',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: 'Add supervisor'
+                    }
+                },
+                header: {
+                    locale: {
+                        contributorAssignmentColumn: 'Select your name',
+                        nameColumn: 'Supervisor\'s name',
+                        identifierColumn: 'UQ identifier',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                },
+                row: {
+                    locale: {
+                        suffix: ' listed supervisor',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        ordinalData: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes'
+                        }
+                    }
+                }
+            }
+        },
         contributors: {
             title: 'Contributors',
             help: {
@@ -512,7 +561,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div style={{marginTop: '12px'}}><br /><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
+                            <div><span className="authorSteps">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Contributor\'s name as published',
@@ -552,7 +601,7 @@ export default {
 
         fieldOfResearchForm: {
             title: 'Field of research',
-            text: 'You can add up to three field of research values',
+            text: 'Select up to 3 Field of Research (FoR) codes at the 4 digit level',
             help: {
                 title: 'Field of research',
                 text: 'more info',
@@ -562,7 +611,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'Field of research',
-                        inputFieldHint: 'Type field of research value then select a value from the list'
+                        inputFieldHint: 'Start typing code or field name and select from list'
                     }
                 },
                 header: {

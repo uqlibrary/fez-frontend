@@ -164,14 +164,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
                 "confirmationMessage": "Are you sure you want to delete all items?",
                 "confirmationTitle": "Delete all",
               },
-              "descriptionStep2": <div
-                style={
-                  Object {
-                    "marginTop": "12px",
-                  }
-                }
-              >
-                <br />
+              "descriptionStep2": <div>
                 <span
                   className="authorSteps"
                 >

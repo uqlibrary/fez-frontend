@@ -90,7 +90,7 @@ const getElement = (component, props, isShallow = true) => {
     if (isShallow) return shallow(React.createElement(component, props));
     return mount(
         <Provider store={setupStoreForMount().store}>
-            <MemoryRouter>
+            <MemoryRouter initialEntries={[ { pathname: '/', key: 'testKey' } ]}>
                 {React.createElement(component, props)}
             </MemoryRouter>
         </Provider>,

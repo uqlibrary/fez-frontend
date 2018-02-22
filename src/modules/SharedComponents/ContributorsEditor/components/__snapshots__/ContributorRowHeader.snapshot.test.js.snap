@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContributorRowHeader renders  header for contributor editor control with all options 1`] = `
+exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
 <div
   style={
     Object {
@@ -8,7 +8,6 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
     }
   }
 >
-  Step 2 - Locale missing
   <div
     className="columns is-gapless is-mobile contributorsHeader datalist datalist-header"
   >
@@ -26,11 +25,10 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       onRef={[Function]}
     />
     <div
-      className="column is-narrow is-hidden-mobile authorIcon"
-    />
-    <div
-      className="column name datalist-title"
-    />
+      className="column description"
+    >
+      Step 2 - Locale missing
+    </div>
     <div
       className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title"
     >
@@ -69,7 +67,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
 </div>
 `;
 
-exports[`ContributorRowHeader renders  header for contributor editor control with delete all disabled 1`] = `
+exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
 <div
   style={
     Object {
@@ -94,10 +92,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       onRef={[Function]}
     />
     <div
-      className="column is-narrow is-hidden-mobile authorIcon"
-    />
-    <div
-      className="column name datalist-title"
+      className="column description"
     />
     <div
       className="column is-narrow is-hidden-mobile order datalist-title"
@@ -132,7 +127,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
 </div>
 `;
 
-exports[`ContributorRowHeader renders  header for contributor editor control with name and delete all button only 1`] = `
+exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
 <div
   style={
     Object {
@@ -157,10 +152,7 @@ exports[`ContributorRowHeader renders  header for contributor editor control wit
       onRef={[Function]}
     />
     <div
-      className="column is-narrow is-hidden-mobile authorIcon"
-    />
-    <div
-      className="column name datalist-title"
+      className="column description"
     />
     <div
       className="column is-narrow is-hidden-mobile order datalist-title"

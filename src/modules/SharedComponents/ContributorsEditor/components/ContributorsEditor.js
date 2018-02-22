@@ -160,7 +160,9 @@ export class ContributorsEditor extends Component {
                         {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                         showIdentifierLookup={this.props.showIdentifierLookup}
                         disabled={this.props.disabled}
-                        showContributorAssignment={this.props.showContributorAssignment} />
+                        showContributorAssignment={this.props.showContributorAssignment}
+                        isInfinite={this.state.contributors.length > 3}
+                    />
                 }
                 {
                     this.state.contributors.length > 3 ?

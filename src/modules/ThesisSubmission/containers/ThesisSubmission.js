@@ -12,8 +12,8 @@ const FORM_NAME = 'ThesisSubmission';
 
 const onSubmit = (values, dispatch, props) => {
     return dispatch(submitThesis({...values.toJS()}, props.author))
-        .then((record) => {
-            console.log(record);
+        .then(() => {
+            // console.log(record);
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
             // reset form after success action was dispatched:
@@ -36,8 +36,7 @@ const validate = (values) => {
     const data = values.toJS();
     const errors = [];
     const txt = formLocale.thesis;
-
-    if (!data.rek_title) {
+    if (!data.thesisTitle || !data.thesisTitle.plainText) {
         errors.push(txt.information.fieldLabels.documentTitle.errorMessage);
     }
 
@@ -53,15 +52,11 @@ const validate = (values) => {
         errors.push(txt.information.fieldLabels.thesisType.errorMessage);
     }
 
-    if (!data.rek_date) {
-        errors.push(txt.information.fieldLabels.date.errorMessage);
-    }
-
     if (!data.currentAuthor || data.currentAuthor.length === 0 || !data.currentAuthor[0].nameAsPublished) {
         errors.push(txt.information.fieldLabels.author.errorMessage);
     }
 
-    if (!data.fez_record_search_key_description || !data.fez_record_search_key_description.rek_description) {
+    if (!data.thesisAbstract || !data.thesisAbstract.plainText) {
         errors.push(txt.optional.fieldLabels.abstract.errorMessage);
     }
 
@@ -92,11 +87,13 @@ let ThesisSubmissionContainer = reduxForm({
 
 const mapStateToProps = (state, props) => {
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
+    const today = new Date();
     const initialValues = {
+        rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
         currentAuthor: [
             {
-                'nameAsPublished': currentAuthor ? currentAuthor.aut_display_name : '',
-                'authorId': currentAuthor ? currentAuthor.aut_id : ''
+                nameAsPublished: currentAuthor ? currentAuthor.aut_display_name : '',
+                authorId: currentAuthor ? currentAuthor.aut_id : ''
             }
         ],
         fez_record_search_key_org_name: {rek_org_name: 'The University of Queensland'},
@@ -107,7 +104,8 @@ const mapStateToProps = (state, props) => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: initialValues,
         author: currentAuthor,
-        isHdrThesis: props.isHdrThesis
+        isHdrThesis: props.isHdrThesis,
+        fileAccessId: props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId
     };
 };
 

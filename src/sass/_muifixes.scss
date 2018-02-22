@@ -3,6 +3,9 @@
 // An MUI override to make form labels WCAG AA compliant
 label {
   color: $label-color !important;
+  font-size: $text-body-large;
+  font-weight: $text-weight-normal;
+  line-height: $text-line-height-xlarge;
 }
 
 .selectField button:focus {
@@ -58,8 +61,8 @@ button[type=button] {
 }
 
 // Adds red asterix to required fields
-.requiredField label:after,
-.requiredHintField div:first-child:after {
+.requiredField label:before,
+.requiredHintField div:first-child:before {
   content: "*";
   padding-right: 5px;
   padding-left: 5px;
@@ -113,7 +116,10 @@ button[type=button] {
 
 // Class to space elements against scroll bars
 .scrollbar-spacer{
-  width: 17px !important;
+  width: 6px;
+}
+.scrollbar-spacer-infinite{
+    width: 20px !important;
 }
 
 // Styles to restyle the react-tooltip component

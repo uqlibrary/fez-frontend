@@ -1,5 +1,3 @@
-jest.dontMock('./ContributorRow');
-
 import ContributorRow from './ContributorRow';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {authorsSearch} from 'mock/data';

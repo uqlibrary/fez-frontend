@@ -1,24 +1,17 @@
-jest.dontMock('./ContributorRowHeader');
-
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import ContributorRowHeader from './ContributorRowHeader';
 
-function setup({onDeleteAll, showIdentifierLookup, showContributorAssignment, disabled}){
-
+function setup(testProps, isShallow = true) {
     const props = {
-        onDeleteAll: onDeleteAll || jest.fn(), // : PropTypes.func.isRequired,
-        showIdentifierLookup: showIdentifierLookup || false, // : PropTypes.bool,
-        showContributorAssignment: showContributorAssignment || false, // : PropTypes.bool,
-        // locale, // : PropTypes.object,
-        disabled: disabled || false // : PropTypes.bool
+        ...testProps,
+        onDeleteAll: testProps.onDeleteAll || jest.fn(),
+        showIdentifierLookup: testProps.showIdentifierLookup || false,
+        showContributorAssignment: testProps.showContributorAssignment || false,
+        disabled: testProps.disabled || false
     };
-
-    return shallow(<ContributorRowHeader {...props} />);
+    return getElement(ContributorRowHeader, props, isShallow);
 }
 
-describe('ContributorRowHeader renders ', () => {
+describe('Component ContributorRowHeader', () => {
 
     it('header for contributor editor control with name and delete all button only', () => {
         const wrapper = setup({ });
@@ -34,4 +27,5 @@ describe('ContributorRowHeader renders ', () => {
         const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
 });
