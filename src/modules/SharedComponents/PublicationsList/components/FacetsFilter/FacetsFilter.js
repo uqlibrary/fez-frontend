@@ -40,7 +40,7 @@ export default class FacetsFilter extends React.Component {
         }
     }
 
-    _handleFacetClick = (category, facet) => {
+    _handleFacetClick = (category, facet) => () => {
         if (this.props.disabled) {
             return;
         }
@@ -70,7 +70,7 @@ export default class FacetsFilter extends React.Component {
             ranges: {...this.state.activeFacets.ranges},
         };
 
-        if (JSON.stringify(activeFacets.ranges[category]) === JSON.stringify(range)) {
+        if (!range.to && !range.from) {
             delete activeFacets.ranges[category];
         } else {
             activeFacets.ranges[category] = range;
@@ -97,7 +97,7 @@ export default class FacetsFilter extends React.Component {
                     key={index}
                     className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                     primaryText={`${item.title} (${item.count})`}
-                    onClick={() => (this._handleFacetClick(facetCategory.facetTitle, item.key))}
+                    onClick={this._handleFacetClick(facetCategory.facetTitle, item.key)}
                     disabled={this.props.disabled}
                     leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}/>
             );
@@ -170,7 +170,8 @@ export default class FacetsFilter extends React.Component {
                     }
                     {
                         <DateRange
-                            className="dateRange"
+                            itemClassName="dateRange facetsCategory"
+                            subitemClassName="dateRange facetsLink"
                             open={this.state.activeFacets.ranges[yearPublishedCategory] && true}
                             value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
                             disabled={this.props.disabled}
