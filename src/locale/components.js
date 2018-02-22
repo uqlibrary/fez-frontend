@@ -1,7 +1,14 @@
 export default {
     components: {
         facetsFilter: {
-            resetButtonText: 'Reset'
+            resetButtonText: 'Reset',
+            yearPublishedCategory: 'Year published',
+            yearPublishedFacet: {
+                displayTitle: 'Published year range',
+                fromFieldLabel: 'From',
+                toFieldLabel: 'To',
+                rangeSubmitButtonLabel: 'Go'
+            }
         },
         publicationStats: {
             publicationStatsTitle1: 'eSpace publications indexed in:',

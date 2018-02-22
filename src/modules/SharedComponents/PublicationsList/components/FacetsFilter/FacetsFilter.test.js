@@ -1,25 +1,18 @@
-jest.dontMock('./FacetsFilter');
-
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
+import FacetsFilter from './FacetsFilter';
 import {possibleUnclaimedList} from 'mock/data';
 
-import FacetsFilter from './FacetsFilter';
-
-function setup({facetsData = {}, onFacetsChanged = jest.fn(), activeFacets = {}, excludeFacetsList = [], disabled = false}) {
+function setup(testProps, isShallow = true) {
     const props = {
-        facetsData,
-        onFacetsChanged,
-        activeFacets,
-        excludeFacetsList,
-        disabled
-    }
-
-    return shallow(<FacetsFilter {...props} />);
+        activeFacets: {filters: {}, ranges: {}} || testProps.activeFacets,
+        facetsData: {} || testProps.facetsData,
+        excludeFacetsList: [] || testProps.excludeFacetsList,
+        onFacetsChanged: jest.fn() || testProps.onFacetsChanged,
+        ...testProps
+    };
+    return getElement(FacetsFilter, props, isShallow);
 }
 
-describe('FacetsFilter renders ', () => {
+describe('FacetsFilter ', () => {
 
     it('empty component for empty data', () => {
         const wrapper = setup({});
@@ -56,7 +49,7 @@ describe('FacetsFilter renders ', () => {
 
     it('components for mock data with active facets set', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
+        const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}, ranges: {}}});
         expect(toJson(wrapper)).toMatchSnapshot();
         const category = wrapper.find('.facetsCategory.active');
         expect(category.length).toEqual(1);
@@ -64,36 +57,36 @@ describe('FacetsFilter renders ', () => {
 
     it('components for mock data deactivating a facet selection', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
+        const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}, ranges: {}}});
 
-        wrapper.instance().handleFacetClick('Display type', 130);
+        wrapper.instance()._handleFacetClick('Display type', 130)();
         wrapper.update();
-        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({'Display type': 130}));
+        expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({'Display type': 130}));
 
-        wrapper.instance().handleFacetClick('Display type', 130);
+        wrapper.instance()._handleFacetClick('Display type', 130)();
         wrapper.update();
-        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({}));
+        expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({}));
     });
 
     it('components for mock data activating a facet selection', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
+        const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}, ranges: {}}});
 
-        wrapper.instance().handleFacetClick('Keywords', 'Biochemistry');
+        wrapper.instance()._handleFacetClick('Keywords', 'Biochemistry')();
         wrapper.update();
 
-        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({'Display type': 179, 'Keywords': 'Biochemistry'}));
+        expect(JSON.stringify(wrapper.state().activeFacets.filters)).toEqual(JSON.stringify({'Display type': 179, 'Keywords': 'Biochemistry'}));
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('components for mock data resetting a facet selection', () => {
         const facetsData = possibleUnclaimedList.filters.facets;
-        const wrapper = setup({facetsData, activeFacets: {'Display type': 179}});
+        const wrapper = setup({facetsData, activeFacets: {filters: {'Display type': 179}, ranges: {}}});
 
-        wrapper.instance().handleResetClick();
+        wrapper.instance()._handleResetClick();
         wrapper.update();
 
-        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({}));
+        expect(JSON.stringify(wrapper.state().activeFacets)).toEqual(JSON.stringify({filters: {}, ranges: {}}));
     });
 
     it('components for mock data', () => {
@@ -493,9 +486,9 @@ describe('FacetsFilter renders ', () => {
 
     it('getFacetsToDisplay returns facets correctly with an exclusion but no renaming', () => {
 
-        const excludeFacetsList = ["Scopus document type","Subtype"];
+        const excludeFacetsList = ["Scopus document type","Subtype","Year published"];
         const renameFacetsList = {};
-        const result = [{"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Display type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"}, {"facetTitle": "Year published", "facets": [{"count": 13, "key": "2005", "title": "2005"}, {"count": 13, "key": "2007", "title": "2007"}, {"count": 12, "key": "2008", "title": "2008"}, {"count": 11, "key": "2012", "title": "2012"}, {"count": 10, "key": "2000", "title": "2000"}], "title": "Year published"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}];
+        const result = [{"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Display type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}];
 
         const wrapper = setup({});
         expect(wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList,renameFacetsList)).toEqual(result);
@@ -505,7 +498,7 @@ describe('FacetsFilter renders ', () => {
 
         const excludeFacetsList = [];
         const renameFacetsList = {"Display type":"Publication type"};
-        const result = [{"facetTitle": "Scopus document type", "facets": [{"count": 68, "key": "ar", "title": "Article"}, {"count": 4, "key": "re", "title": "Review"}, {"count": 1, "key": "ch", "title": "Letter"}, {"count": 1, "key": "le", "title": "false"}], "title": "Scopus document type"}, {"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Publication type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"}, {"facetTitle": "Year published", "facets": [{"count": 13, "key": "2005", "title": "2005"}, {"count": 13, "key": "2007", "title": "2007"}, {"count": 12, "key": "2008", "title": "2008"}, {"count": 11, "key": "2012", "title": "2012"}, {"count": 10, "key": "2000", "title": "2000"}], "title": "Year published"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}, {"facetTitle": "Subtype", "facets": [{"count": 88, "key": "Article (original research)", "title": "Article (original research)"}, {"count": 10, "key": "Critical review of research, literature review, critical commentary", "title": "Critical review of research, literature review, critical commentary"}, {"count": 6, "key": "Other", "title": "Other"}, {"count": 6, "key": "Poster", "title": "Poster"}, {"count": 4, "key": "Creative work", "title": "Creative work"}], "title": "Subtype"}];
+        const result = [{"facetTitle": "Scopus document type", "facets": [{"count": 68, "key": "ar", "title": "Article"}, {"count": 4, "key": "re", "title": "Review"}, {"count": 1, "key": "ch", "title": "Letter"}, {"count": 1, "key": "le", "title": "false"}], "title": "Scopus document type"}, {"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Publication type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"},{"facetTitle": "Year published", "facets": [{"count": 13, "key": "2005", "title": "2005"}, {"count": 13, "key": "2007", "title": "2007"}, {"count": 12, "key": "2008", "title": "2008"}, {"count": 11, "key": "2012", "title": "2012"}, {"count": 10, "key": "2000", "title": "2000"}], "title": "Year published"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}, {"facetTitle": "Subtype", "facets": [{"count": 88, "key": "Article (original research)", "title": "Article (original research)"}, {"count": 10, "key": "Critical review of research, literature review, critical commentary", "title": "Critical review of research, literature review, critical commentary"}, {"count": 6, "key": "Other", "title": "Other"}, {"count": 6, "key": "Poster", "title": "Poster"}, {"count": 4, "key": "Creative work", "title": "Creative work"}], "title": "Subtype"}];
 
         const wrapper = setup({});
         expect(wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList,renameFacetsList)).toEqual(result);
@@ -513,9 +506,9 @@ describe('FacetsFilter renders ', () => {
 
     it('getFacetsToDisplay returns facets correctly with an exclusion and renaming', () => {
 
-        const excludeFacetsList = ["Scopus document type","Subtype"];
+        const excludeFacetsList = ["Scopus document type","Subtype","Year published"];
         const renameFacetsList = {"Display type":"Publication type"};
-        const result = [{"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Publication type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"}, {"facetTitle": "Year published", "facets": [{"count": 13, "key": "2005", "title": "2005"}, {"count": 13, "key": "2007", "title": "2007"}, {"count": 12, "key": "2008", "title": "2008"}, {"count": 11, "key": "2012", "title": "2012"}, {"count": 10, "key": "2000", "title": "2000"}], "title": "Year published"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}];
+        const result = [{"facetTitle": "Display type", "facets": [{"count": 110, "key": 179, "title": "Journal Article"}, {"count": 32, "key": 130, "title": "Conference Paper"}, {"count": 3, "key": 174, "title": "Book"}, {"count": 1, "key": 177, "title": "Book Chapter"}, {"count": 1, "key": 202, "title": "Generic Document"}], "title": "Publication type"}, {"facetTitle": "Keywords", "facets": [{"count": 15, "key": "Brca1", "title": "Brca1"}, {"count": 14, "key": "Breast cancer", "title": "Breast cancer"}, {"count": 9, "key": "Gene", "title": "Gene"}, {"count": 7, "key": "Cells", "title": "Cells"}, {"count": 7, "key": "Mutations", "title": "Mutations"}], "title": "Keywords"}, {"facetTitle": "Subject", "facets": [{"count": 23, "key": 450009, "title": "C1"}, {"count": 16, "key": 450018, "title": "EX"}, {"count": 15, "key": 450520, "title": "730108 Cancer and related disorders"}, {"count": 12, "key": 452615, "title": "1112 Oncology and Carcinogenesis"}, {"count": 9, "key": 270201, "title": "270201 Gene Expression"}], "title": "Subject"}, {"facetTitle": "Journal name", "facets": [{"count": 7, "key": "Human Mutation", "title": "Human Mutation"}, {"count": 6, "key": "Human Molecular Genetics", "title": "Human Molecular Genetics"}, {"count": 5, "key": "Oncogene", "title": "Oncogene"}, {"count": 5, "key": "test", "title": "test"}, {"count": 4, "key": "Breast Cancer Research", "title": "Breast Cancer Research"}], "title": "Journal name"}, {"facetTitle": "Collection", "facets": [{"count": 84, "key": "UQ:3825", "title": "School of Chemistry and Molecular Biosciences"}, {"count": 46, "key": "UQ:152266", "title": "Excellence in Research Australia (ERA) - Collection"}, {"count": 30, "key": "UQ:3831", "title": "School of Medicine Publications"}, {"count": 22, "key": "UQ:183940", "title": "ResearcherID Downloads"}, {"count": 20, "key": "UQ:218198", "title": "Unprocessed Records"}], "title": "Collection"}, {"facetTitle": "Author", "facets": [{"count": 147, "key": 1671, "title": "Brown, Melissa Anne"}, {"count": 36, "key": 950, "title": "French, Juliet D."}, {"count": 30, "key": 2463, "title": "Spurdle, Amanda B."}, {"count": 24, "key": 1605, "title": "Chanel Smart"}, {"count": 24, "key": 3247, "title": "Chenevix-Trench, Georgia"}], "title": "Author"}, {"facetTitle": "Genre", "facets": [{"count": 6, "key": "Article (original research)", "title": "Article (original research)"}], "title": "Genre"}];
 
         const wrapper = setup({});
         expect(wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList,renameFacetsList)).toEqual(result);
@@ -530,28 +523,43 @@ describe('FacetsFilter renders ', () => {
         expect(JSON.stringify(wrapper.instance().getNestedListItems(facetsCategory))).toBe(JSON.stringify(result));
     });
 
-    it('handleResetClick returns empty state for activeFacets', () => {
+    it('_handleResetClick returns empty state for activeFacets', () => {
         const wrapper = setup({});
-        wrapper.setState({activeFacets:{"Year published":"2005","Keywords":"Cells"}});
-        wrapper.instance().handleResetClick();
-        expect(wrapper.state().activeFacets).toEqual({});
+        wrapper.setState({activeFacets:{ranges: {"Year published": {from: 2010, to: 2015}}, filters: {"Keywords":"Cells"}}});
+        wrapper.instance()._handleResetClick();
+        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
     });
 
-    it('handleFacetClick returns correct state object for active facets', () => {
+    it('_handleFacetClick returns correct state object for active facets', () => {
         const wrapper = setup({});
-        wrapper.setState({activeFacets:{}});
-        wrapper.instance().handleFacetClick('Category1','Facet1');
-        wrapper.instance().handleFacetClick('Category2','Facet2');
-        wrapper.instance().handleFacetClick('Category3','Facet3');
-        expect(wrapper.state().activeFacets).toEqual({"Category1": "Facet1", "Category2": "Facet2", "Category3": "Facet3"});
+        wrapper.setState({activeFacets:{filters:{}, ranges:{}}});
+        wrapper.instance()._handleFacetClick('Category1','Facet1')();
+        wrapper.instance()._handleFacetClick('Category2','Facet2')();
+        wrapper.instance()._handleFacetClick('Category3','Facet3')();
+        expect(wrapper.state().activeFacets).toEqual({filters: {"Category1": "Facet1", "Category2": "Facet2", "Category3": "Facet3"}, ranges: {}});
     });
 
-    it('handleFacetClick returns empty state object when a facet is clicked while disabled', () => {
+    it('_handleFacetClick returns empty state object when a facet is clicked while disabled', () => {
         const wrapper = setup({disabled: true});
-        wrapper.instance().handleFacetClick('Category1','Facet1');
-        wrapper.instance().handleFacetClick('Category2','Facet2');
-        wrapper.instance().handleFacetClick('Category3','Facet3');
-        expect(wrapper.state().activeFacets).toEqual({});
+        wrapper.instance()._handleFacetClick('Category1','Facet1')();
+        wrapper.instance()._handleFacetClick('Category2','Facet2')();
+        wrapper.instance()._handleFacetClick('Category3','Facet3')();
+        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
+    });
+
+    it('should set ranges values if _handleYearPublishedRangeFacet is called', () => {
+        const wrapper = setup({});
+        wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: 2000, to: 2010});
+        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {Year: {from: 2000, to: 2010}}});
+
+        wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: null, to: null});
+        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
+    });
+
+    it('should set ranges values if _handleYearPublishedRangeFacet is called', () => {
+        const wrapper = setup({disabled: true});
+        wrapper.instance()._handleYearPublishedRangeFacet('Year')({from: 2000, to: 2010});
+        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
     });
 
 });
