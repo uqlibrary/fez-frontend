@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import AutoComplete from 'material-ui/AutoComplete';
 import TextField from 'material-ui/TextField';
@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions/authors';
 
-export class ContributorForm extends Component {
+export class ContributorForm extends React.PureComponent {
     static propTypes = {
         authorsList: PropTypes.array,
         onAdd: PropTypes.func.isRequired,
@@ -39,6 +39,10 @@ export class ContributorForm extends Component {
             uqIdentifier: '',
             contributor: {}
         };
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
     }
 
     _addContributor = (event) => {

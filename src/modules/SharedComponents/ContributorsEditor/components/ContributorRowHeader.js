@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import {ConfirmDialogBox} from 'uqlibrary-react-toolbox/build/ConfirmDialogBox';
 
-export default class ContributorRowHeader extends Component {
+export default class ContributorRowHeader extends React.PureComponent {
     static propTypes = {
         onDeleteAll: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
@@ -27,12 +27,18 @@ export default class ContributorRowHeader extends Component {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
-            descriptionStep2: 'Step 2 - Locale missing'
+            descriptionStep2: 'Step 2 - Select your name from the list below'
         },
     };
 
     constructor(props) {
         super(props);
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return this.props.showContributorAssignment !== nextProps.showContributorAssignment ||
+        this.props.disabled !== nextProps.disabled ||
+        this.props.isInfinite !== nextProps.isInfinite;
     }
 
     _showConfirmation = () => {

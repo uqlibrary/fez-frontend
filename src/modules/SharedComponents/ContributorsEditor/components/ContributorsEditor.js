@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ContributorRowHeader from './ContributorRowHeader';
@@ -7,7 +7,7 @@ import ContributorForm from './ContributorForm';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
 import Infinite from 'react-infinite';
 
-export class ContributorsEditor extends Component {
+export class ContributorsEditor extends React.PureComponent {
     static propTypes = {
         showIdentifierLookup: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
@@ -36,6 +36,10 @@ export class ContributorsEditor extends Component {
             isCurrentAuthorSelected: false,
             errorMessage: ''
         };
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
     }
 
     componentWillUpdate(nextProps, nextState) {

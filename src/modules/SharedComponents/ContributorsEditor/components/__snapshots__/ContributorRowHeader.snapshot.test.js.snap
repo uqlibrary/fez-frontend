@@ -27,7 +27,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     <div
       className="column description"
     >
-      Step 2 - Locale missing
+      Step 2 - Select your name from the list below
     </div>
     <div
       className="column is-3-desktop is-3-tablet is-5-mobile identifier datalist-title"

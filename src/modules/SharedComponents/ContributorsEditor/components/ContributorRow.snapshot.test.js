@@ -123,7 +123,7 @@ describe('Component ContributorRow ', () => {
         const wrapper = setup({contributor, index: 0});
         wrapper.instance().shouldComponentUpdate = testFunction;
         wrapper.setProps({nameAsPublished: "Ky Lane"});
-        expect(testFunction).toHaveBeenCalled();
+        expect(testFunction).toBeCalled();
     });
 
     it('should attempt to assign the current author when keyboard submit', () => {
@@ -132,7 +132,7 @@ describe('Component ContributorRow ', () => {
         const wrapper = setup({contributor, index: 0});
         wrapper.instance()._assignContributor = testFunction;
         wrapper.instance()._onContributorAssignedKeyboard({key: 'Enter'});
-        expect(testFunction).toHaveBeenCalled();
+        expect(testFunction).toBeCalled();
     });
 
     it('Row should be clickable when showContributorAssignment set to true', () => {
@@ -146,5 +146,22 @@ describe('Component ContributorRow ', () => {
         const wrapper = setup({showContributorAssignment: false, contributor, index: 0});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should call shouldComponentUpdate when something changes', () => {
+        const testFunction = jest.fn();
+        const wrapper = setup({contributor: {nameAsPublished: "J. Smith"}});
+        wrapper.instance().shouldComponentUpdate = testFunction;
+        wrapper.setProps({contributor: {nameAsPublished: "K. Lane"}});
+        expect(testFunction).toBeCalledWith({"canMoveDown": false, "canMoveUp": false, "contributor": {"nameAsPublished": "K. Lane"}, "disabled": false, "disabledContributorAssignment": false, "index": undefined, "locale": {"ariaLabel": "Select this record to assign it to you", "deleteHint": "Remove this record", "deleteRecordConfirmation": {"cancelButtonLabel": "No", "confirmButtonLabel": "Yes", "confirmationMessage": "Are you sure you want to delete this record?", "confirmationTitle": "Delete record"}, "moveDownHint": "Move record down the order", "moveUpHint": "Move record up the order", "ordinalData": ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], "selectTooltip": "- select to assign this record as you", "selectedTooltip": "- assigned as you", "suffix": " listed contributor"}, "showContributorAssignment": false, "showIdentifierLookup": false}, null, {});
+    });
+
+    it('triggers the confirmation box', () => {
+        const testFunction = jest.fn();
+        const wrapper = setup({});
+        wrapper.instance().confirmationBox = {showConfirmation: testFunction};
+        wrapper.instance()._showConfirmation();
+        expect(testFunction).toBeCalled();
+    });
+
 
 });
