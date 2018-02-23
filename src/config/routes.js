@@ -11,7 +11,8 @@ export const pathConfig =  {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
-        fix: (pid) => (`/records/${pid}/fix`),
+        view: (pid) => (`/records/${pid}(UQ:\\d+)`),
+        fix: (pid) => (`/records/${pid}(UQ:\\d+)/fix`),
         add: {
             find: '/records/add/find',
             results: '/records/add/results',
@@ -34,18 +35,10 @@ export const pathConfig =  {
     }
 };
 
-const flattedPathConfig = ((path) => {
-    const flattenPath = Object.assign({}, ...function _flatten(objectBit, path = '') {
-        return [].concat(
-            ...Object.keys(objectBit).map(
-                key => typeof objectBit[key] === 'object' ?
-                    _flatten(objectBit[key], `${ path }/${ key }`) :
-                    ({[`${ path }/${ key }`]: objectBit[key]})
-            )
-        );
-    }(path));
-    return Object.values(flattenPath);
-})(pathConfig);
+
+const flattedPathConfig = ['/', '/dashboard', '/browse', '/about', '/rhdsubmission_new', '/sbslodge_new',
+    '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
+    '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
 
 // TODO: will we even have roles?
 export const roles = {
@@ -62,6 +55,11 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         {
             path: pathConfig.browse,
             render: () => components.Browse(locale.pages.browse)
+        },
+        {
+            path: pathConfig.records.view(':pid'),
+            component: components.ViewRecord,
+            exact: true
         },
         ...(!account ? [
             {

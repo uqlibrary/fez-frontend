@@ -16,3 +16,5 @@ export {Browse} from 'modules/Browse';
 export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'modules/AddMissingRecord';
 export {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 export {Masquerade} from 'modules/Masquerade';
+export {ViewRecord} from 'modules/ViewRecord';
+
