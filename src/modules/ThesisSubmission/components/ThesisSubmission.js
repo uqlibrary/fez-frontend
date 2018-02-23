@@ -48,12 +48,12 @@ export default class ThesisSubmission extends Component {
             };
         } else if (dirty && invalid) {
             const message = (
-                <span>
+                <span className="validationMessage">
                     {alertLocale.validationAlert.message}
-                    <ul>
+                    <ul className="validationList">
                         {
                             error && error.length > 0 && error.map((item, index) => (
-                                <li key={`validation-${index}`}>{item}</li>
+                                <li className="validationItem" key={`validation-${index}`}>{item}</li>
                             ))
                         }
                     </ul>

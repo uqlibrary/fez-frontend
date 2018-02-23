@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -18,7 +18,7 @@ import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedCompone
 import {validation, routes} from 'config';
 import {locale} from 'locale';
 
-export default class ClaimRecord extends Component {
+export default class ClaimRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         publicationToClaimFileUploadingError: PropTypes.bool,
@@ -45,6 +45,10 @@ export default class ClaimRecord extends Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
+    }
+
     componentWillUnmount() {
         // clear previously selected publication for a claim
         this.props.actions.clearClaimPublication();
@@ -69,18 +73,25 @@ export default class ClaimRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false, submitSucceeded = false, txt, authorLinked = false}) => {
+    getAlert = ({submitFailed = false, error, submitting = false, submitSucceeded = false, txt, authorLinked = false}) => {
         let alertProps = null;
         if (submitFailed && error) {
             alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
-        } else if (!submitFailed && dirty && invalid) {
-            alertProps = {...txt.validationAlert};
         } else if (submitting) {
             alertProps = {...txt.progressAlert};
         } else if (submitSucceeded) {
             alertProps = {...txt.successAlert};
         } else if (authorLinked) {
             alertProps = {...txt.alreadyClaimedAlert};
+        } else if (error && error.length > 0) {
+            const message = (
+                <span className="validationMessage">
+                    {txt.validationAlert.message}
+                    <ul className="validationList">
+                        {error.map((item, index) => (<li className="validationItem" key={`validation-${index}`}>{item}</li>))}
+                    </ul>
+                </span>);
+            alertProps = {...txt.validationAlert, message: message};
         }
         return alertProps ? (<Alert {...alertProps} />) : null;
     };

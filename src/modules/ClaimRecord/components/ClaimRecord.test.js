@@ -158,10 +158,6 @@ describe('Component ClaimRecord ', () => {
                 expected: 'submitFailed'
             },
             {
-                parameters: {dirty: true, invalid: true, txt: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
-            },
-            {
                 parameters: {submitting: true, txt: {progressAlert: {title: 'submitting' }}},
                 expected: 'submitting'
             },
@@ -172,7 +168,11 @@ describe('Component ClaimRecord ', () => {
             {
                 parameters: {authorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
                 expected: 'alreadyClaimed'
-            }
+            },
+            {
+                parameters: {error: ['one'], txt: {validationAlert: {title: 'validationVerboseFailed'}}},
+                expected: 'validationVerboseFailed'
+            },
         ];
 
         testCases.forEach(testCase => {

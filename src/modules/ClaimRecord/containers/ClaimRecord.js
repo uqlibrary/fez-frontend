@@ -6,6 +6,8 @@ import ClaimRecord from '../components/ClaimRecord';
 import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import {default as formLocale} from 'locale/forms';
+
 
 const FORM_NAME = 'ClaimRecord';
 
@@ -25,9 +27,29 @@ const onSubmit = (values, dispatch) => {
         });
 };
 
-const validate = () => {
+const validate = (values) => {
     // reset global errors, eg form submit failure
     stopSubmit(FORM_NAME, null);
+
+    const data = values.toJS();
+    const errors = [];
+    const txt = formLocale.forms.claimPublicationForm;
+
+    // If author/editor linker is shown
+    if(data.publication && (data.publication.fez_record_search_key_author_id.length > 1 || data.publication.fez_record_search_key_contributor_id.length > 1)) {
+        // If !linking when there are more than a 1 author on the publication or more than 1 contributor (and no authors) listed on the publication
+        if ((!data.authorLinking &&  data.publication && data.publication.fez_record_search_key_author_id.length > 1) ||
+            (!data.contributorLinking &&  data.publication && data.publication.fez_record_search_key_contributor_id.length > 1 && data.publication.fez_record_search_key_author_id.length === 0)) {
+            errors.push(txt.errorSelect);
+        }
+        // If neither author or contributor are selected (show all the time), or if one is and they are invalid
+        if((!data.authorLinking && !data.contributorLinking) ||
+            (data.authorLinking && !data.authorLinking.valid) ||
+            (data.contributorLinking && !data.contributorLinking.valid)) {
+            errors.push(txt.errorValid);
+        }
+    }
+    return errors.length > 0 ? {_error: errors} : null;
 };
 
 let ClaimPublicationFormContainer = reduxForm({
@@ -38,11 +60,11 @@ let ClaimPublicationFormContainer = reduxForm({
 
 const mapStateToProps = (state) => {
     return {
-        publicationToClaimFileUploadingError: state.get('claimPublicationReducer').publicationToClaimFileUploadingError,
+        publicationToClaimFileUploadingError: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaimFileUploadingError : null,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {
-            publication: state.get('claimPublicationReducer').publicationToClaim,
-            author: state.get('accountReducer').author
+            publication: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaim : null,
+            author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
         }
     };
 };
