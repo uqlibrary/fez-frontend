@@ -85,9 +85,9 @@ export default class ClaimRecord extends React.PureComponent {
             alertProps = {...alertLocale.alreadyClaimedAlert};
         } else if (invalid && errors) {
             const formErrorLabels = {
-                authorLinking: alertLocale.authorLinking && alertLocale.authorLinking.title,
-                contributorLinking: alertLocale.contributorLinking && alertLocale.contributorLinking.title,
-                rek_link: alertLocale.comments && alertLocale.comments.fieldLabels.url,
+                authorLinking: locale.forms.claimPublicationForm.authorLinking.title,
+                contributorLinking: locale.forms.claimPublicationForm.contributorLinking.title,
+                rek_link: locale.forms.claimPublicationForm.comments.fieldLabels.url,
                 files: 'File upload'
             };
             const validationMessage = (
@@ -135,7 +135,6 @@ export default class ClaimRecord extends React.PureComponent {
                 {txt.successWorkflowConfirmation.successConfirmationMessage}
             </div>
         );
-        console.log('errors: ' + JSON.stringify(this.props.errors));
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
