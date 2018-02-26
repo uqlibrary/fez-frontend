@@ -11,8 +11,8 @@ export const pathConfig =  {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
-        view: (pid) => (`/records/${pid}(UQ:\\d+)`),
-        fix: (pid) => (`/records/${pid}(UQ:\\d+)/fix`),
+        view: (pid) => (`/records/${pid}`),
+        fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
             results: '/records/add/results',
@@ -47,6 +47,7 @@ export const roles = {
 };
 
 export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegistration = false, isHdrStudent = false}) => {
+    const pid = ':pid(UQ:\\d+)';
     const publicPages = [
         {
             path: pathConfig.about,
@@ -57,7 +58,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             render: () => components.Browse(locale.pages.browse)
         },
         {
-            path: pathConfig.records.view(':pid'),
+            path: pathConfig.records.view(pid),
             component: components.ViewRecord,
             exact: true
         },
@@ -95,7 +96,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     }
 
     return [
-        ...publicPages,
         ...thesisSubmissionPages,
         ...(account ? [
             {
@@ -128,7 +128,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true
             },
             {
-                path: pathConfig.records.fix(':pid'),
+                path: pathConfig.records.fix(pid),
                 component: components.FixRecord,
                 access: [roles.researcher, roles.admin],
                 exact: true
@@ -171,6 +171,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.admin]
             }
         ] : []),
+        ...publicPages,
         {
             render: (childProps) => {
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;

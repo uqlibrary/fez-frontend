@@ -92,6 +92,12 @@ export default class PublicationCitation extends Component {
         }
     };
 
+    viewRecord = (event) => {
+        event.preventDefault();
+        this.props.history.push(routes.pathConfig.records.view(this.props.publication.rek_pid));
+        this.props.actions.setRecordToView(this.props.publication);
+    }
+
     render() {
         const actions = this.props.showDefaultActions ? this.defaultActions : this.props.customActions;
         const renderedActions = actions && actions.length > 0 ?
@@ -111,8 +117,9 @@ export default class PublicationCitation extends Component {
                 return (
                     <div className="column is-narrow" key={index}>
                         {
-                            action.primary ?
-                                (<RaisedButton {...buttonProps}/>) : (<FlatButton {...buttonProps}/>)
+                            action.primary
+                                ? (<RaisedButton {...buttonProps}/>)
+                                : (<FlatButton {...buttonProps}/>)
                         }
                     </div>
                 );
@@ -122,14 +129,11 @@ export default class PublicationCitation extends Component {
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
                         <h3 className="publicationTitle">
-                            {!this.props.publication.rek_pid ? (this.props.publication.rek_title) : (
-                                <ExternalLink
-                                    href={locale.global.sources.espace.externalUrl.replace('[id]', this.props.publication.rek_pid)}
-                                    aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', this.props.publication.rek_title)}
-                                >
-                                    {this.props.publication.rek_title}
-                                </ExternalLink>
-                            )}
+                            {
+                                !this.props.publication.rek_pid
+                                    ? (this.props.publication.rek_title)
+                                    : (<a href="#" onClick={this.viewRecord} onKeyPress={this.viewRecord}>{this.props.publication.rek_title}</a>)
+                            }
                         </h3>
                         {
                             this._renderCitation(this.props.publication.rek_display_type)
@@ -147,8 +151,7 @@ export default class PublicationCitation extends Component {
                                                 key={'source_' + index}
                                                 className="publicationSource"
                                                 href={sourceConfig.externalUrl.replace('[id]', source.id)}
-                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}
-                                            >
+                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
                                                 {sourceConfig.title}
                                             </ExternalLink>
                                         );

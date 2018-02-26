@@ -199,6 +199,7 @@ export default class ThesisSubmission extends Component {
                         <Field
                             component={ListEditorField}
                             name="fez_record_search_key_keywords"
+                            className="requiredField"
                             maxCount={10}
                             validate={[validation.requiredList]}
                             searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
