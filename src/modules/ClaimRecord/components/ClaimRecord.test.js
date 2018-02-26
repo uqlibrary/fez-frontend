@@ -154,25 +154,21 @@ describe('Component ClaimRecord ', () => {
         const wrapper = setup({}).instance();
         const testCases = [
             {
-                parameters: {submitFailed: true, error: true, txt: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
-            },
-            {
-                parameters: {submitting: true, txt: {progressAlert: {title: 'submitting' }}},
+                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
                 expected: 'submitting'
             },
             {
-                parameters: {submitSucceeded: true, txt: {successAlert: {title: 'submitSucceeded' }}},
+                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
                 expected: 'submitSucceeded'
             },
             {
-                parameters: {authorLinked: true, txt: {alreadyClaimedAlert: {title: 'alreadyClaimed' }}},
-                expected: 'alreadyClaimed'
+                parameters: {submitFailed: true, alertLocale: {errorAlert: {title: 'submitFailed', message: '' }}},
+                expected: 'submitFailed'
             },
             {
-                parameters: {error: ['one'], txt: {validationAlert: {title: 'validationVerboseFailed'}}},
-                expected: 'validationVerboseFailed'
-            },
+                parameters: {invalid: true, errors: {one: 'one', two: 'two'}, alertLocale: {validationAlert: {title: 'validationError'}}},
+                expected: 'validationError'
+            }
         ];
 
         testCases.forEach(testCase => {

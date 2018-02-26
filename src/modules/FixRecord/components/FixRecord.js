@@ -101,17 +101,20 @@ export default class FixRecord extends Component {
         }
     };
 
-    getAlert = ({submitting = false, submitSucceeded = false, alertLocale = {}, invalid = false, errors = {}}) => {
+    getAlert = ({submitting = false, submitSucceeded = false, submitFailed = false, alertLocale = {}, invalid = false, errors = {}}) => {
         let alertProps = null;
         if (submitting) {
             alertProps = {...alertLocale.progressAlert};
         } else if (submitSucceeded) {
             alertProps = {...alertLocale.successAlert};
-        } else if (invalid) {
+        } else if (submitFailed) {
+            alertProps = {...alertLocale.failedAlert};
+        } else if (invalid && errors) {
             const formErrorLabels = {
                 fixAction: locale.pages.fixRecord.fieldLabels.action,
                 comments: locale.forms.fixPublicationForm.comments.fieldLabels.comments,
-                rek_link: locale.forms.fixPublicationForm.comments.fieldLabels.url
+                rek_link: locale.forms.fixPublicationForm.comments.fieldLabels.url,
+                files: 'File upload'
             };
             const validationMessage = (
                 <span className="validationMessage">

@@ -188,6 +188,11 @@ export default {
                 type: 'done',
                 title: 'Success',
                 message: 'Fix record request has been submitted successfully.'
+            },
+            failedAlert: {
+                type: 'error',
+                title: 'Failed',
+                message: 'Fix record request has failed. Please try again, or contact the eSpace administrator.'
             }
         }
     }

@@ -161,13 +161,10 @@ describe('Component FixRecord ', () => {
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
     });
 
-    it.skip('should display alert', () => {
+    it('should display alert', () => {
         const wrapper = setup({}).instance();
+        // submitting = false, submitSucceeded = false, alertLocale = {}, invalid = false, errors = {}}
         const testCases = [
-            {
-                parameters: {submitFailed: true, errors: true, alertLocale: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
-            },
             {
                 parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
                 expected: 'submitting'
@@ -177,14 +174,17 @@ describe('Component FixRecord ', () => {
                 expected: 'submitSucceeded'
             },
             {
-                parameters: {errors: {rek_title: 'This is the title'}, alertLocale: {successAlert: {title: 'validationError' }}},
+                parameters: {submitFailed: true, alertLocale: {failedAlert: {title: 'submitFailed' }}},
+                expected: 'submitFailed'
+            },
+            {
+                parameters: {invalid: true, errors: {one: 'one', two: 'two'}, alertLocale: {validationAlert: {title: 'validationError'}}},
                 expected: 'validationError'
             }
         ];
 
         testCases.forEach(testCase => {
             const alert = wrapper.getAlert({...testCase.parameters});
-            console.log(JSON.stringify(alert));
             expect(alert.props.title).toEqual(testCase.expected);
         });
     });

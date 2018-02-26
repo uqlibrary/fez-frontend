@@ -73,25 +73,34 @@ export default class ClaimRecord extends React.PureComponent {
         }
     };
 
-    getAlert = ({submitFailed = false, error, submitting = false, submitSucceeded = false, txt, authorLinked = false}) => {
+    getAlert = ({submitFailed = false, invalid = false, errors = {}, submitting = false, submitSucceeded = false, alertLocale, authorLinked = false}) => {
         let alertProps = null;
-        if (submitFailed && error) {
-            alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
+        if (submitFailed) {
+            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(errors) : errors};
         } else if (submitting) {
-            alertProps = {...txt.progressAlert};
+            alertProps = {...alertLocale.progressAlert};
         } else if (submitSucceeded) {
-            alertProps = {...txt.successAlert};
+            alertProps = {...alertLocale.successAlert};
         } else if (authorLinked) {
-            alertProps = {...txt.alreadyClaimedAlert};
-        } else if (error && error.length > 0) {
-            const message = (
+            alertProps = {...alertLocale.alreadyClaimedAlert};
+        } else if (invalid && errors) {
+            const formErrorLabels = {
+                authorLinking: alertLocale.authorLinking && alertLocale.authorLinking.title,
+                contributorLinking: alertLocale.contributorLinking && alertLocale.contributorLinking.title,
+                rek_link: alertLocale.comments && alertLocale.comments.fieldLabels.url,
+                files: 'File upload'
+            };
+            const validationMessage = (
                 <span className="validationMessage">
-                    {txt.validationAlert.message}
+                    {alertLocale.validationAlert.message}
                     <ul className="validationList">
-                        {error.map((item, index) => (<li className="validationItem" key={`validation-${index}`}>{item}</li>))}
+                        {Object.keys(errors).map((key, index) => (
+                            <li className="validationItem" key={`validation-${index}`}><b>{formErrorLabels[key]}</b> - {errors[key]}</li>
+                        ))}
                     </ul>
-                </span>);
-            alertProps = {...txt.validationAlert, message: message};
+                </span>
+            );
+            alertProps = {...alertLocale.validationAlert, message: validationMessage};
         }
         return alertProps ? (<Alert {...alertProps} />) : null;
     };
@@ -126,7 +135,7 @@ export default class ClaimRecord extends React.PureComponent {
                 {txt.successWorkflowConfirmation.successConfirmationMessage}
             </div>
         );
-
+        console.log('errors: ' + JSON.stringify(this.props.errors));
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -221,7 +230,7 @@ export default class ClaimRecord extends React.PureComponent {
                     }
 
                     {
-                        this.getAlert({...this.props, txt: txt, authorLinked: publication.rek_pid && (authorLinked || contributorLinked)})
+                        this.getAlert({...this.props, alertLocale: txt, authorLinked: publication.rek_pid && (authorLinked || contributorLinked)})
                     }
 
                     <div className="columns action-buttons">
