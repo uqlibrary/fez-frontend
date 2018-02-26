@@ -21,5 +21,25 @@ export default {
         supervisorRequired: 'Please provide a list of supervisors',
         editorRequired: 'Please provide a list of editors of the publication and link an editor name to the current user',
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
+    },
+    summary: {
+        rek_title: 'Title is required',
+        rek_date: 'Publication date is required',
+        rek_subtype: 'Publication subtype is required',
+        authors: 'Authors/Creators is required',
+        editors: 'Editors is required',
+        supervisors: 'Supervisors is required',
+        rek_journal_name: 'Journal name is required',
+        rek_link: 'Link is invalid',
+        rek_doi: 'DOI is invalid',
+        rek_newspaper: 'Newspaper name is required',
+        rek_end_page: 'End page is required',
+        rek_start_page: 'Start page is required',
+        rek_publisher: 'Publisher is required',
+        rek_place_of_publication: 'Place of publication is required',
+        rek_total_pages: 'Total page is required',
+        rek_conference_name: 'Conference name is required',
+        rek_conference_location: 'Conference location is required',
+        rek_conference_dates: 'Conference dates is required'
     }
 };

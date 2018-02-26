@@ -14,6 +14,7 @@ import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPromp
 
 import {publicationTypes, validation} from 'config';
 import {default as txt} from 'locale/publicationForm';
+import validationErrors from 'locale/validationErrors';
 
 import * as recordForms from './Forms';
 
@@ -53,13 +54,27 @@ export default class PublicationForm extends Component {
             null;
     };
 
-    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
+    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error, formErrors,
         submitSucceeded = false, alertLocale = {}}) => {
         let alertProps = null;
+        const errorMsgs = this.getErrorMsgs(formErrors);
+
         if (submitFailed && error) {
             alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
         } else if (!submitFailed && dirty && invalid) {
-            alertProps = {...alertLocale.validationAlert};
+            const message = (
+                <span>
+                    {alertLocale.validationAlert.message}
+                    <ul>
+                        {
+                            errorMsgs && errorMsgs.length > 0 && errorMsgs.map((item, index) => (
+                                <li key={`validation-${index}`}>{item}</li>
+                            ))
+                        }
+                    </ul>
+                </span>);
+
+            alertProps = {...alertLocale.validationAlert, message: message};
         } else if (submitting) {
             alertProps = {...alertLocale.progressAlert};
         } else if (submitSucceeded) {
@@ -68,6 +83,25 @@ export default class PublicationForm extends Component {
         return alertProps ? (<Alert {...alertProps} />) : null;
     };
 
+    getErrorMsgs = (formErrors) => {
+        const errorMsgs = [];
+        const summary = validationErrors.summary;
+
+        Object.keys(formErrors).map(key => {
+            if (typeof key === 'object') {
+                const msg = this.getErrorMsgs(key);
+                if (msg) {
+                    errorMsgs.push(msg);
+                }
+            }
+
+            if (summary.hasOwnProperty(key)) {
+                errorMsgs.push(summary[key]);
+            }
+        });
+
+        return errorMsgs.length > 0 ? errorMsgs : null;
+    };
 
     render() {
         const publicationTypeItems = [
