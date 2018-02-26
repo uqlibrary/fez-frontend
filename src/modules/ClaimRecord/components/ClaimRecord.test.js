@@ -162,7 +162,7 @@ describe('Component ClaimRecord ', () => {
                 expected: 'submitSucceeded'
             },
             {
-                parameters: {submitFailed: true, alertLocale: {errorAlert: {title: 'submitFailed', message: '' }}},
+                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn() }}},
                 expected: 'submitFailed'
             },
             {

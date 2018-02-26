@@ -32,7 +32,6 @@ export default {
                     buttonLabel: 'OK'
                 }
             },
-            errorValid: 'You need to confirm that you understand that you are claiming this publication under the name you have selected, and confirm this is you',
             comments: {
                 title: 'Optional: Suggest changes or add links to this record',
                 help: {
@@ -99,7 +98,6 @@ export default {
                 title: 'Error',
                 message: 'This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au'
             },
-            errorSelect: 'You are required to select your name from the list of authors/contributors',
         },
         unclaimPublicationForm: {
             title: 'Remove this record from my profile',

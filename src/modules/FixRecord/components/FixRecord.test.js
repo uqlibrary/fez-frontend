@@ -174,7 +174,7 @@ describe('Component FixRecord ', () => {
                 expected: 'submitSucceeded'
             },
             {
-                parameters: {submitFailed: true, alertLocale: {failedAlert: {title: 'submitFailed' }}},
+                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn() }}},
                 expected: 'submitFailed'
             },
             {

@@ -73,22 +73,20 @@ export default class ClaimRecord extends React.PureComponent {
         }
     };
 
-    getAlert = ({submitFailed = false, invalid = false, errors = {}, submitting = false, submitSucceeded = false, alertLocale, authorLinked = false}) => {
+    getAlert = ({submitFailed = false, invalid = false, errors = {}, error, submitting = false, submitSucceeded = false, alertLocale, authorLinked = false}) => {
         let alertProps = null;
-        if (submitFailed) {
-            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(errors) : errors};
-        } else if (submitting) {
+        if (submitting) {
             alertProps = {...alertLocale.progressAlert};
         } else if (submitSucceeded) {
             alertProps = {...alertLocale.successAlert};
         } else if (authorLinked) {
             alertProps = {...alertLocale.alreadyClaimedAlert};
-        } else if (invalid && errors) {
+        } else if (invalid && errors.size !== 0) {
             const formErrorLabels = {
                 authorLinking: locale.forms.claimPublicationForm.authorLinking.title,
                 contributorLinking: locale.forms.claimPublicationForm.contributorLinking.title,
                 rek_link: locale.forms.claimPublicationForm.comments.fieldLabels.url,
-                files: 'File upload'
+                files: locale.forms.claimPublicationForm.fileUpload.title
             };
             const validationMessage = (
                 <span className="validationMessage">
@@ -101,6 +99,8 @@ export default class ClaimRecord extends React.PureComponent {
                 </span>
             );
             alertProps = {...alertLocale.validationAlert, message: validationMessage};
+        } else if (submitFailed && error) {
+            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
         }
         return alertProps ? (<Alert {...alertProps} />) : null;
     };
