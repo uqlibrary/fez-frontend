@@ -34,7 +34,9 @@ export default class FixRecord extends Component {
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
 
-        publicationToFixFileUploadingError: PropTypes.bool
+        publicationToFixFileUploadingError: PropTypes.bool,
+
+        errors: PropTypes.object,
     };
 
     static contextTypes = {
@@ -99,17 +101,29 @@ export default class FixRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
-        submitSucceeded = false, alertLocale = {}}) => {
+    getAlert = ({submitting = false, submitSucceeded = false, alertLocale = {}, invalid = false, errors = {}}) => {
         let alertProps = null;
-        if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
-        } else if (!submitFailed && dirty && invalid) {
-            alertProps = {...alertLocale.validationAlert};
-        } else if (submitting) {
+        if (submitting) {
             alertProps = {...alertLocale.progressAlert};
         } else if (submitSucceeded) {
             alertProps = {...alertLocale.successAlert};
+        } else if (invalid) {
+            const formErrorLabels = {
+                fixAction: locale.pages.fixRecord.fieldLabels.action,
+                comments: locale.forms.fixPublicationForm.comments.fieldLabels.comments,
+                rek_link: locale.forms.fixPublicationForm.comments.fieldLabels.url
+            };
+            const validationMessage = (
+                <span className="validationMessage">
+                    {alertLocale.validationAlert.message}
+                    <ul className="validationList">
+                        {Object.keys(errors).map((key, index) => (
+                            <li className="validationItem" key={`validation-${index}`}><b>{formErrorLabels[key]}</b> - {errors[key]}</li>
+                        ))}
+                    </ul>
+                </span>
+            );
+            alertProps = {...alertLocale.validationAlert, message: validationMessage};
         }
         return alertProps ? (<Alert {...alertProps} />) : null;
     };
@@ -152,7 +166,6 @@ export default class FixRecord extends Component {
                 {saveConfirmationLocale.confirmationMessage}
             </div>
         );
-
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
