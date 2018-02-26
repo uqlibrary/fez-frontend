@@ -57,7 +57,7 @@ export default class PublicationForm extends Component {
     getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error, formErrors,
         submitSucceeded = false, alertLocale = {}}) => {
         let alertProps = null;
-        const errorMsgs = this.getErrorMsgs(formErrors);
+        const errorMsgs = formErrors ? this.getErrorMsgs(formErrors) : null;
 
         if (submitFailed && error) {
             alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
@@ -84,14 +84,15 @@ export default class PublicationForm extends Component {
     };
 
     getErrorMsgs = (formErrors) => {
-        const errorMsgs = [];
+        let errorMsgs = [];
         const summary = validationErrors.summary;
 
         Object.keys(formErrors).map(key => {
-            if (typeof key === 'object') {
-                const msg = this.getErrorMsgs(key);
+            const value = formErrors[key];
+            if (typeof value === 'object') {
+                const msg = this.getErrorMsgs(value);
                 if (msg) {
-                    errorMsgs.push(msg);
+                    errorMsgs = errorMsgs.concat(msg);
                 }
             }
 

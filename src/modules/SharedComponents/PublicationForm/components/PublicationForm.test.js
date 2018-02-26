@@ -114,4 +114,23 @@ describe('PublicationForm test', () => {
         wrapper.setProps({ submitSucceeded: true });
         expect(testMethod).toHaveBeenCalled();
     });
+
+    it('should return correct validation error summary', () => {
+        const wrapper = setup({}).instance();
+        const testCases = [
+          {
+            parameters: {'rek_title': 'This field is required'},
+            expected: 'Title is required'
+          },
+          {
+            parameters: {'fez_record_search_key_journal_name': { 'rek_journal_name' : 'This field is required'}},
+            expected: 'Journal name is required'
+          }
+        ];
+
+        testCases.forEach(testCase => {
+          const errorMsgs = wrapper.getErrorMsgs(testCase.parameters);
+          expect(errorMsgs[0]).toEqual(testCase.expected);
+        });
+    });
 });
