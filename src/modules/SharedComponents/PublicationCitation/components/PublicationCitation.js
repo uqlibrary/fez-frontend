@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import {publicationTypes} from 'config';
+
 import {locale} from 'locale';
+import {routes, publicationTypes} from 'config';
 
 // citations for different publication types
-import {routes} from 'config';
 import CitationCounts from './citations/CitationCounts';
 import JournalArticleCitation from './citations/JournalArticleCitation';
 import BookChapterCitation from './citations/BookChapterCitation';
@@ -33,10 +33,11 @@ import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
 import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
 
-export default class PublicationCitation extends Component {
+export default class PublicationCitation extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         showDefaultActions: PropTypes.bool,
+        showSources: PropTypes.bool,
         customActions: PropTypes.array,
         className: PropTypes.string,
         history: PropTypes.object.isRequired,
@@ -45,6 +46,7 @@ export default class PublicationCitation extends Component {
 
     static defaultProps = {
         showDefaultActions: false,
+        showSources: false,
         className: ''
     };
 
@@ -63,17 +65,6 @@ export default class PublicationCitation extends Component {
 
     shouldComponentUpdate(nextProps) {
         return JSON.stringify(nextProps.publication) !== JSON.stringify(this.props.publication);
-    }
-
-    _renderCitation = (publicationTypeId) => {
-        const filteredPublicationType = publicationTypeId ?
-            publicationTypes(this.citationComponents).filter((item) => {
-                return item.id === publicationTypeId;
-            }) : null;
-
-        return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent ?
-            React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication}) :
-            <div>Citation display not available for {publicationTypeId}</div>;
     }
 
     _handleDefaultActions = (action) => {
@@ -98,24 +89,39 @@ export default class PublicationCitation extends Component {
         this.props.actions.setRecordToView(this.props.publication);
     }
 
-    render() {
-        const actions = this.props.showDefaultActions ? this.defaultActions : this.props.customActions;
-        const renderedActions = actions && actions.length > 0 ?
-            actions.map((action, index) => {
+    renderTitle = () => {
+        return this.props.publication.rek_pid
+            ? (<a href="#" onClick={this.viewRecord} onKeyPress={this.viewRecord}>{this.props.publication.rek_title}</a>)
+            : (this.props.publication.rek_title);
+    }
+
+    renderCitation = (publicationTypeId) => {
+        const filteredPublicationType = publicationTypeId
+            ? publicationTypes(this.citationComponents).filter((item) => {
+                return item.id === publicationTypeId;
+            })
+            : null;
+
+        return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent
+            ? React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication})
+            : (<div>Citation display not available for {publicationTypeId}</div>);
+    }
+
+    renderActions = (actions) => {
+        return actions && actions.length > 0
+            ? actions.map((action, index) => {
                 const buttonProps = {
                     secondary: true,
                     fullWidth: true,
                     disabled: action.disabled,
                     label: action.label,
                     className: `publicationAction buttonOrder${index}`,
-                    onTouchTap: () => (
-                        this.props.showDefaultActions
-                            ? this._handleDefaultActions(action.key)
-                            : action.handleAction(this.props.publication)
-                    )
+                    onTouchTap: () => (this.props.showDefaultActions
+                        ? this._handleDefaultActions(action.key)
+                        : action.handleAction(this.props.publication))
                 };
                 return (
-                    <div className="column is-narrow" key={index}>
+                    <div className="column is-narrow" key={`action_key_${index}`}>
                         {
                             action.primary
                                 ? (<RaisedButton {...buttonProps}/>)
@@ -123,48 +129,58 @@ export default class PublicationCitation extends Component {
                         }
                     </div>
                 );
-            }) : null;
+            })
+            : null;
+    }
+
+    renderSources = () => {
+        return (
+            <div className="publicationSources">
+                {locale.components.publicationCitation.publicationSourcesLabel}
+                {
+                    this.props.publication.sources.map((source, index) => {
+                        const sourceConfig = locale.global.sources[source.source];
+                        return (
+                            <ExternalLink
+                                key={'source_' + index}
+                                className="publicationSource"
+                                href={sourceConfig.externalUrl.replace('[id]', source.id)}
+                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
+                                {sourceConfig.title}
+                            </ExternalLink>
+                        );
+                    })
+                }
+            </div>
+        );
+    }
+
+    render() {
         return (
             <div className={`publicationCitation ${this.props.className}`}>
                 <div className="columns is-gapless is-mobile">
                     <div className="column">
                         <h3 className="publicationTitle">
-                            {
-                                !this.props.publication.rek_pid
-                                    ? (this.props.publication.rek_title)
-                                    : (<a href="#" onClick={this.viewRecord} onKeyPress={this.viewRecord}>{this.props.publication.rek_title}</a>)
-                            }
+                            {this.renderTitle()}
                         </h3>
-                        {
-                            this._renderCitation(this.props.publication.rek_display_type)
-                        }
+
+                        {this.renderCitation(this.props.publication.rek_display_type)}
+
                         <CitationCounts publication={this.props.publication} />
-                        {
-                            this.props.publication.sources &&
-                            <span className="publicationSources">
-                                {locale.components.publicationCitation.publicationSourcesLabel}
-                                {
-                                    this.props.publication.sources.map((source, index) => {
-                                        const sourceConfig = locale.global.sources[source.source];
-                                        return (
-                                            <ExternalLink
-                                                key={'source_' + index}
-                                                className="publicationSource"
-                                                href={sourceConfig.externalUrl.replace('[id]', source.id)}
-                                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
-                                                {sourceConfig.title}
-                                            </ExternalLink>
-                                        );
-                                    })
-                                }
-                            </span>
-                        }
+
+                        {/* display publication source (eg from espace/pubmed/crossref/etc */}
+                        {this.props.showSources && this.props.publication.sources && this.renderSources()}
                     </div>
                 </div>
-                <div className="publicationActions columns is-gapless">
-                    <div className="column is-hidden-mobile"/>
-                    {renderedActions}
-                </div>
+                {
+                    (this.props.showDefaultActions || this.props.customActions) &&
+                    <div className="publicationActions columns is-gapless">
+                        <div className="column is-hidden-mobile"/>
+                        {
+                            this.renderActions(this.props.showDefaultActions ? this.defaultActions : this.props.customActions)
+                        }
+                    </div>
+                }
             </div>
         );
     }

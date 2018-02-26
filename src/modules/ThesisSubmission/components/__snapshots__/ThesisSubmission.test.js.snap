@@ -388,6 +388,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         Add up to 10 keywords that describe the content of the thesis
       </div>
       <Field
+        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -395,8 +396,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add",
-                "inputFieldHint": "Type keyword",
-                "inputFieldLabel": "Keyword",
+                "inputFieldHint": "Type keywords",
+                "inputFieldLabel": "Keywords",
               },
             },
             "header": Object {
@@ -475,6 +476,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               File upload restrictions
             </h3>,
             "fileUploadRestrictions": <div>
+              File submission is mandatory. Maximum file size is 5Gb. 
+              <br />
               PDF files must be saved using the following naming structure 
               <b>
                 &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
@@ -486,7 +489,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               >
                 HDR submission guidelines
               </a>
-               for file naming conventions. File submission is mandatory. For example:
+               for file naming conventions. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -496,7 +499,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 </li>
               </ul>
             </div>,
-            "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+            "instructions": "",
             "validation": Object {
               "fileName": "File(s) ([filenames]) have invalid file name",
               "folder": "Invalid files ([filenames])",
@@ -902,6 +905,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         Add up to 10 keywords that describe the content of the thesis
       </div>
       <Field
+        className="requiredField"
         component={[Function]}
         disabled={false}
         locale={
@@ -909,8 +913,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             "form": Object {
               "locale": Object {
                 "addButtonLabel": "Add",
-                "inputFieldHint": "Type keyword",
-                "inputFieldLabel": "Keyword",
+                "inputFieldHint": "Type keywords",
+                "inputFieldLabel": "Keywords",
               },
             },
             "header": Object {
@@ -989,6 +993,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               File upload restrictions
             </h3>,
             "fileUploadRestrictions": <div>
+              File submission is mandatory. Maximum file size is 5Gb. 
+              <br />
               PDF files must be saved using the following naming structure 
               <b>
                 &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
@@ -1000,7 +1006,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               >
                 HDR submission guidelines
               </a>
-               for file naming conventions. File submission is mandatory. For example:
+               for file naming conventions. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -1010,7 +1016,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 </li>
               </ul>
             </div>,
-            "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+            "instructions": "",
             "validation": Object {
               "fileName": "File(s) ([filenames]) have invalid file name",
               "folder": "Invalid files ([filenames])",

@@ -214,6 +214,18 @@ describe('Claim publication actions tests ', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
+        it('dispatches expected actions when hideRecordErrorReset is called', async () => {
+            const expectedActions = [
+                actions.HIDE_PUBLICATIONS_FAILED_RESET
+            ];
+            try {
+                await mockActionsStore.dispatch(claimActions.hideRecordErrorReset());
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
     });
 
     describe('claimPublication()', () => {

@@ -5,20 +5,16 @@ import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 import {Alert} from 'uqlibrary-react-toolbox/build/Alert';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
+import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
+import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
 
 import {locale} from 'locale';
 
-export default class FixRecord extends Component {
+export default class ViewRecord extends Component {
     static propTypes = {
         recordToView: PropTypes.object,
         loadingRecordToView: PropTypes.bool,
         recordToViewError: PropTypes.string,
-
-        author: PropTypes.object,
-        accountAuthorLoading: PropTypes.bool,
-
-        history: PropTypes.object.isRequired,
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired
     };
@@ -54,7 +50,7 @@ export default class FixRecord extends Component {
         if(this.props.recordToViewError) {
             return (
                 <StandardPage>
-                    <Alert title={'Error'} message = {this.props.recordToViewError} type={'error'} />
+                    <Alert message={this.props.recordToViewError} />
                 </StandardPage>
             );
         }
@@ -62,8 +58,9 @@ export default class FixRecord extends Component {
         return (
             <StandardPage>
                 <PublicationCitation publication={this.props.recordToView}/>
-
-                <StandardCard title={'Links'} />
+                <StandardCard title={'Links'}>
+                    Include PubmedCentral link if available: <PubmedCentralLink pubmedCentralId={'PMC123232'} />
+                </StandardCard>
                 <StandardCard title={'Files'} />
                 <StandardCard title={'Additional information'} />
             </StandardPage>
