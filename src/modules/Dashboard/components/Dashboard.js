@@ -124,10 +124,9 @@ class Dashboard extends React.Component {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
-        const isQuirksMode = document.compatMode === 'BackCompat';
         return (
             <StandardPage className="dashboard">
-                {isQuirksMode &&
+                {document.compatMode === 'BackCompat' &&
                     <Alert {...locale.pages.dashboard.isQuirksModeAlert} />
                 }
                 {
