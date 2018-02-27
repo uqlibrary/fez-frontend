@@ -11037,6 +11037,7 @@ exports[`MyRecords test renders list of publications 1`] = `
           }
           publicationsListSubset={Array []}
           showDefaultActions={true}
+          showSources={false}
           subsetCustomActions={Array []}
         />
         <PublicationsListPaging

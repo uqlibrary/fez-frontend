@@ -488,7 +488,7 @@ export default {
         },
         supervisors: {
             ...txt.components.supervisors,
-            errorMessage: 'Supervisor are required'
+            errorMessage: 'Supervisors are required'
         },
         fieldOfResearch: {
             title: 'Field of research',
@@ -1099,7 +1099,7 @@ export default {
                 buttonLabel: 'OK'
             },
             locale: {
-                instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
+                instructions: '',
                 accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
                     ['folder']: 'Invalid files ([filenames])',
@@ -1111,10 +1111,10 @@ export default {
                 fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
                 fileUploadRestrictions: (
                     <div>
+                        File submission is mandatory. Maximum file size is 5Gb. <br/>
                         PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
                         Stages of examination are: submission, or correctedthesis, or finalthesis.
                         Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
-                        File submission is mandatory.
                         For example:
                         <ul>
                             <li>s1234567_phd_thesis.pdf</li>

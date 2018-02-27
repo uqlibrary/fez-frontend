@@ -116,7 +116,6 @@ export function submitThesis(data, author) {
         if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
         if (recordRequest.thesisTitle) delete recordRequest.thesisTitle;
         if (recordRequest.thesisAbstract) delete recordRequest.thesisAbstract;
-
         let fileUploadSucceeded = false;
         dispatch({type: actions.CREATE_RECORD_SAVING});
         return putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch)
@@ -135,7 +134,7 @@ export function submitThesis(data, author) {
             })
             .catch(error => {
                 const specificError = !fileUploadSucceeded
-                    ? 'File upload failed. Issue has been created to notify eSpace administrators. '
+                    ? 'File upload failed. '
                     : 'Error occurred while saving record to eSpace. ';
                 const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
 

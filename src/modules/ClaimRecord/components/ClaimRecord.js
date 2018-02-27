@@ -13,7 +13,7 @@ import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
 
 
-import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
+import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
 import {validation, routes} from 'config';
 import {locale} from 'locale';

@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, stopSubmit} from 'redux-form/immutable'; // SubmissionError
+import {reduxForm, getFormValues, stopSubmit} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import PublicationSearchForm from '../components/PublicationSearchForm';
 import {validation} from 'config';

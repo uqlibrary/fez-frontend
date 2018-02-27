@@ -425,6 +425,9 @@ export default {
             cancel: 'Cancel',
             submit: 'Submit'
         },
+        viewRecord: {
+            loadingMessage: 'Loading record...'
+        },
         masquerade: {
             title: 'Masquerade',
             help: {
