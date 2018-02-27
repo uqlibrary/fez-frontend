@@ -2,6 +2,7 @@ import ThesisSubmission from './ThesisSubmission';
 import Immutable from 'immutable';
 import {AUTH_URL_LOGIN} from "config";
 import {default as formLocale} from 'locale/publicationForm';
+import PropTypes from "prop-types";
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -12,6 +13,7 @@ function setup(testProps, isShallow = true) {
         invalid: testProps.invalid || false, // : PropTypes.bool
         pristine: testProps.pristine || false, // : PropTypes.bool
         isHdrThesis: testProps.isHdrThesis || false, // : PropTypes.bool
+        fileAccessId: testProps.fileAccessId || 3 // PropTypes.number
     };
 
     return getElement(ThesisSubmission, props, isShallow);
@@ -21,7 +23,7 @@ describe('ThesisSubmission test', () => {
     it('should render sbs thesis submission form', () => {
         const wrapper = setup({isHdrThesis: false});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(11);
+        expect(wrapper.find('Field').length).toEqual(10);
         expect(wrapper.find('RaisedButton').length).toEqual(2);
     });
 

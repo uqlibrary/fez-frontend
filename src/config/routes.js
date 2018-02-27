@@ -5,8 +5,8 @@ export const pathConfig =  {
     dashboard: '/dashboard',
     browse: '/browse',
     about: '/about',
-    hdrSubmission: '/rhdsubmission',
-    sbsSubmission: '/sbslodge',
+    hdrSubmission: '/rhdsubmission_new',
+    sbsSubmission: '/sbslodge_new',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',

@@ -100,8 +100,10 @@ mock
 
 mock
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-    .reply(200, {data: {}});
-    // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
+    // .reply(200, {data: {}})
+    .replyOnce(200, {data: {}})
+    .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
+    .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
 
 mock
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)))

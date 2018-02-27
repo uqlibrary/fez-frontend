@@ -148,12 +148,12 @@ exports[`Application component should render alert if user is not fez author 1`]
       />
       <Route
         key="route_2"
-        path="/rhdsubmission"
+        path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
         key="route_3"
-        path="/sbslodge"
+        path="/sbslodge_new"
         render={[Function]}
       />
       <Route
@@ -420,12 +420,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       />
       <Route
         key="route_2"
-        path="/rhdsubmission"
+        path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
         key="route_3"
-        path="/sbslodge"
+        path="/sbslodge_new"
         render={[Function]}
       />
       <Route
@@ -694,12 +694,12 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       />
       <Route
         key="route_2"
-        path="/rhdsubmission"
+        path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
         key="route_3"
-        path="/sbslodge"
+        path="/sbslodge_new"
         render={[Function]}
       />
       <Route
@@ -846,12 +846,12 @@ exports[`Application component should render app for account with fez author wit
       />
       <Route
         key="route_2"
-        path="/rhdsubmission"
+        path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
         key="route_3"
-        path="/sbslodge"
+        path="/sbslodge_new"
         render={[Function]}
       />
       <Route
@@ -1134,12 +1134,12 @@ exports[`Application component should render app for account with fez author wit
       />
       <Route
         key="route_2"
-        path="/rhdsubmission"
+        path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
         key="route_3"
-        path="/sbslodge"
+        path="/sbslodge_new"
         render={[Function]}
       />
       <Route
@@ -1642,12 +1642,12 @@ exports[`Application component should render thesis submission for HDR without m
       />
       <Route
         key="route_2"
-        path="/rhdsubmission"
+        path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
         key="route_3"
-        path="/sbslodge"
+        path="/sbslodge_new"
         render={[Function]}
       />
       <Route

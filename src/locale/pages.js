@@ -289,6 +289,11 @@ export default {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
+            hidePublicationFailedAlert: {
+                title: 'Error',
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
+                type: 'error'
+            },
             hideAllPublicationsConfirmation: {
                 confirmationTitle: 'Hide publications',
                 confirmationMessage: 'Are you sure you want to hide all possibly your publications from this view?',

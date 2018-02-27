@@ -100,7 +100,8 @@ export class ContributorForm extends Component {
                         onChange={this._onNameChanged}
                         onKeyPress={this._addContributor}
                         disabled={this.props.disabled}
-                        className="input-long-hint"/>
+                        className="mui-long-labels-fix"
+                    />
                 </div>
                 {
                     this.props.showIdentifierLookup &&

@@ -52,13 +52,19 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/
+                ],
                 enforce: 'pre',
                 use: 'eslint-loader'
             },
             {
                 test: /\.js?$/,
-                exclude: /node_modules/,
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/
+                ],
                 include: [
                     path.resolve(__dirname, 'src')
                 ],
@@ -70,6 +76,7 @@ module.exports = {
                 test: /\.json$/,
                 exclude: [
                     /node_modules/,
+                    /custom_modules/
                 ],
                 use: [
                     'json-loader',
@@ -163,6 +170,7 @@ module.exports = {
         modules: [
             'src',
             'node_modules',
+            'custom_modules'
         ]
     },
 };
