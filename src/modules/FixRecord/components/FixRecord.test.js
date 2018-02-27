@@ -1,74 +1,34 @@
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
+jest.unmock('./FixRecord');
+
 import FixRecord from './FixRecord';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import Immutable from 'immutable';
 import {mockRecordToFix} from 'mock/data/testing/records';
-import {MemoryRouter } from 'react-router-dom'
-import {Provider} from 'react-redux';
+import Immutable from 'immutable';
 
-
-const create = () => {
-    const initialState = Immutable.Map();
-
-    const store = {
-        getState: jest.fn(() => (initialState)),
-        dispatch: jest.fn(),
-        subscribe: jest.fn()
-    };
-    const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
-    return {store, next, invoke}
-};
-
-function setup({recordToFix = mockRecordToFix, loadingRecordToFix, accountAuthorLoading, handleSubmit, match, publicationToFixFileUploadingError,
-                   initialValues, actions, author = {aut_id: 410}, history = {go: jest.fn()}, isShallow = true}){
+function setup(testProps, isShallow = true) {
     const props = {
-        recordToFix: recordToFix,
-        loadingRecordToFix: loadingRecordToFix || false,
+        ...testProps,
+        recordToFix: testProps.recordToFix || mockRecordToFix,
+        loadingRecordToFix: testProps.loadingRecordToFix || false,
 
-        accountAuthorLoading: accountAuthorLoading || false,
-        author: author,
+        accountAuthorLoading: testProps.accountAuthorLoading || false,
+        author: testProps.author || {aut_id: 410},
 
-        handleSubmit: handleSubmit || jest.fn(),
-        initialValues: initialValues ||
+        handleSubmit: testProps.handleSubmit || jest.fn(),
+        initialValues: testProps.initialValues ||
             Immutable.Map({
-                publication: Immutable.Map(recordToFix),
-                author: Immutable.Map(author)
+                publication: Immutable.Map(testProps.recordToFix || mockRecordToFix),
+                author: Immutable.Map(testProps.author || {aut_id: 410})
             }),
-        actions: actions || {},
-        history: history || {},
-        match: match || {},
+        actions: testProps.actions || {},
+        history: testProps.history || {},
+        match: testProps.match || {},
 
-        publicationToFixFileUploadingError: publicationToFixFileUploadingError || false
+        publicationToFixFileUploadingError: testProps.publicationToFixFileUploadingError || false
     };
-
-    if(isShallow) {
-        return shallow(<FixRecord {...props} />);
-    }
-
-    return mount(
-        <Provider store={create().store}>
-            <MemoryRouter><FixRecord {...props} /></MemoryRouter>
-        </Provider>, {
-            context: {
-                muiTheme: getMuiTheme()
-            },
-            childContextTypes: {
-                muiTheme: PropTypes.object.isRequired
-            }
-        });
+    return getElement(FixRecord, props, isShallow);
 }
 
-beforeAll(() => {
-    injectTapEventPlugin();
-});
-
-
-describe('Component FixRecord ', () => {
+describe('Component FixRecord', () => {
 
     it('should render loader when author is loading', () => {
         const wrapper = setup({accountAuthorLoading: true});
@@ -95,22 +55,12 @@ describe('Component FixRecord ', () => {
         expect(wrapper.find('RaisedButton').length).toEqual(1);
     });
 
-    it('should render record citation, two actions in select field and a cancel button', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        expect(wrapper.find('MenuItem').length).toEqual(2);
-        expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
-        expect(wrapper.find('RaisedButton').length).toEqual(1);
-    });
-
     it('should render fix record form', () => {
         const wrapper = setup({});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(4);
         expect(wrapper.find('RaisedButton').length).toEqual(2);
-
     });
 
     it('should set action for form', () => {
@@ -161,7 +111,7 @@ describe('Component FixRecord ', () => {
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
     });
 
-    it('should display alert', () => {
+    it('should return the alert details correctly', () => {
         const wrapper = setup({}).instance();
         // submitting = false, submitSucceeded = false, alertLocale = {}, invalid = false, errors = {}}
         const testCases = [
@@ -198,8 +148,7 @@ describe('Component FixRecord ', () => {
 
     it('should load record if record is not loaded', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({isShallow: false, loadingRecordToFix: false,
-            recordToFix: null, actions: {loadRecordToFix: actionFunction}, match: {params: {pid: 'UQ:1001'}}});
+        const wrapper = setup({loadingRecordToFix: false, recordToFix: null, actions: {loadRecordToFix: actionFunction}, match: {params: {pid: 'UQ:1001'}}}, false);
         expect(actionFunction).toHaveBeenCalled();
     });
 
@@ -224,4 +173,5 @@ describe('Component FixRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
     });
+
 });

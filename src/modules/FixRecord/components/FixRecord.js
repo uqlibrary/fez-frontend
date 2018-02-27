@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -20,7 +20,7 @@ import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
 import {validation, routes} from 'config';
 import {locale} from 'locale';
 
-export default class FixRecord extends Component {
+export default class FixRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
 
@@ -61,6 +61,10 @@ export default class FixRecord extends Component {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
     }
 
     componentWillUnmount() {
