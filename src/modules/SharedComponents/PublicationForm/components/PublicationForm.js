@@ -57,7 +57,7 @@ export default class PublicationForm extends Component {
     getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error, formErrors,
         submitSucceeded = false, alertLocale = {}}) => {
         let alertProps = null;
-        const errorMsgs = formErrors ? this.getErrorMsgs(formErrors) : null;
+        const errorMessagesList = formErrors ? this.translateFormErrorsToText(formErrors) : null;
 
         if (submitFailed && error) {
             alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
@@ -67,7 +67,7 @@ export default class PublicationForm extends Component {
                     {alertLocale.validationAlert.message}
                     <ul>
                         {
-                            errorMsgs && errorMsgs.length > 0 && errorMsgs.map((item, index) => (
+                            errorMessagesList && errorMessagesList.length > 0 && errorMessagesList.map((item, index) => (
                                 <li key={`validation-${index}`}>{item}</li>
                             ))
                         }
@@ -83,24 +83,24 @@ export default class PublicationForm extends Component {
         return alertProps ? (<Alert {...alertProps} />) : null;
     };
 
-    getErrorMsgs = (formErrors) => {
-        let errorMsgs = [];
+    translateFormErrorsToText = (formErrors) => {
+        let errorMessagesList = [];
 
         Object.keys(formErrors).map(key => {
             const value = formErrors[key];
             if (typeof value === 'object') {
-                const msg = this.getErrorMsgs(value);
-                if (msg) {
-                    errorMsgs = errorMsgs.concat(msg);
+                const errorMessage = this.translateFormErrorsToText(value);
+                if (errorMessage) {
+                    errorMessagesList = errorMessagesList.concat(errorMessage);
                 }
             }
 
             if (validationErrorsSummary.hasOwnProperty(key)) {
-                errorMsgs.push(validationErrorsSummary[key]);
+                errorMessagesList.push(validationErrorsSummary[key]);
             }
         });
 
-        return errorMsgs.length > 0 ? errorMsgs : null;
+        return errorMessagesList.length > 0 ? errorMessagesList : null;
     };
 
     render() {

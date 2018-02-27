@@ -28,9 +28,9 @@ export const validationErrorsSummary = {
     rek_title: 'Title is required',
     rek_date: 'Publication date is required',
     rek_subtype: 'Publication subtype is required',
-    authors: 'Authors/Creators are required',
-    editors: 'Editors are required',
-    supervisors: 'Supervisors are required',
+    authors: 'Author/creator names are required',
+    editors: 'Editor/contributor names are required',
+    supervisors: 'Supervisor names are required',
     rek_journal_name: 'Journal name is required',
     rek_link: 'Link is invalid',
     rek_doi: 'DOI is invalid',
@@ -42,5 +42,5 @@ export const validationErrorsSummary = {
     rek_total_pages: 'Total page is required',
     rek_conference_name: 'Conference name is required',
     rek_conference_location: 'Conference location is required',
-    rek_conference_dates: 'Conference dates is required'
+    rek_conference_dates: 'Conference dates are required'
 };
