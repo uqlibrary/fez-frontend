@@ -137,6 +137,11 @@ export default {
         },
         dashboard: {
             loading: 'Loading your dashboard...',
+            isQuirksModeAlert: {
+                title: 'Your browser is in Quirks Mode',
+                message: 'To view this website properly, please disable quirks mode in your browser.',
+                type: 'warning'
+            },
             header: {
                 help: {
                     title: 'Your dashboard',
@@ -168,7 +173,7 @@ export default {
             possiblePublicationsLure: {
                 title: 'Claim now!',
                 message: 'We have found [count] record(s) that could possibly be your work.',
-                type: 'warning',
+                type: 'info_outline',
                 actionButtonLabel: 'Claim your publications now'
             },
             nothingToClaimLure: {
