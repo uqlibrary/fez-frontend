@@ -14,7 +14,7 @@ import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPromp
 
 import {publicationTypes, validation} from 'config';
 import {default as txt} from 'locale/publicationForm';
-import validationErrors from 'locale/validationErrors';
+import {validationErrorsSummary} from 'locale/validationErrors';
 
 import * as recordForms from './Forms';
 
@@ -85,7 +85,6 @@ export default class PublicationForm extends Component {
 
     getErrorMsgs = (formErrors) => {
         let errorMsgs = [];
-        const summary = validationErrors.summary;
 
         Object.keys(formErrors).map(key => {
             const value = formErrors[key];
@@ -96,8 +95,8 @@ export default class PublicationForm extends Component {
                 }
             }
 
-            if (summary.hasOwnProperty(key)) {
-                errorMsgs.push(summary[key]);
+            if (validationErrorsSummary.hasOwnProperty(key)) {
+                errorMsgs.push(validationErrorsSummary[key]);
             }
         });
 
