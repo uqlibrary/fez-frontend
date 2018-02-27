@@ -169,7 +169,7 @@ class Dashboard extends React.Component {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
-        console.log('What version is this? ' + JSON.stringify(this._IeVersion));
+        console.log('What version is this? ' + JSON.stringify(this._IeVersion()));
         return (
             <StandardPage className="dashboard">
                 {document.compatMode === 'BackCompat' &&
