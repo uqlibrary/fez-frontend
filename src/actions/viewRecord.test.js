@@ -3,7 +3,7 @@ import * as repositories from 'repositories';
 import * as viewRecordActions from './viewRecord';
 import * as mockData from 'mock/data';
 
-describe('Fix record actions', () => {
+describe('View record actions', () => {
     const testPid = "UQ:396321";
 
     // extend expect to check actions
