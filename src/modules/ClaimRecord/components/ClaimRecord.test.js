@@ -1,5 +1,3 @@
-jest.unmock('./ClaimRecord');
-
 import ClaimRecord from './ClaimRecord';
 import Immutable from 'immutable';
 import {journalArticle} from 'mock/data/testing/records';
@@ -150,7 +148,7 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should return alert message depending on form status', () => {
+    it('should return and render alert message depending on form status', () => {
         const wrapper = setup({}).instance();
         const testCases = [
             {
@@ -174,28 +172,8 @@ describe('Component ClaimRecord ', () => {
         testCases.forEach(testCase => {
             const alert = wrapper.getAlert({...testCase.parameters});
             expect(alert.props.title).toEqual(testCase.expected);
-        });
-    });
-
-    it('should render alert messages correctly', () => {
-        const testCases = [
-            {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
-            },
-            {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
-            },
-            {
-                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn() }}},
-            },
-            {
-                parameters: {invalid: true, errors: {one: 'one', two: 'two'}, alertLocale: {validationAlert: {title: 'validationError'}}},
-            }
-        ];
-
-        testCases.forEach(testCase => {
-            const wrapper = setup({...testCase.parameters}).find('Alert').dive();
-            expect(toJson(wrapper)).toMatchSnapshot();
+            const alert2 = setup({...testCase.parameters}).find('Alert').dive();
+            expect(toJson(alert2)).toMatchSnapshot();
         });
     });
 

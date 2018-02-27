@@ -52,7 +52,10 @@ export default class FixRecord extends React.PureComponent {
     }
 
     componentDidMount() {
-        if (this.props.actions && !this.props.recordToFix) {
+        if (this.props.actions &&
+            !this.props.recordToFix &&
+            this.props.match.params &&
+            this.props.match.params.pid) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
     }
