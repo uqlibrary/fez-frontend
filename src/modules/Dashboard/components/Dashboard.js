@@ -126,6 +126,21 @@ class Dashboard extends React.Component {
             ) : null;
         return (
             <StandardPage className="dashboard">
+                <Alert title="Test" message="This is just a test" type="warning" actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert message="This is just a test" type="info" actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert title="Test" message="This is just a test" type="info_outline" actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert message="This is just a test" type="error" actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert title="Test" message="This is just a test" type="done" actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert title="Test" message="This is just a test" type="help" actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert title="Test" message="This is just a test" type="help_outline" actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <br/> <br/>
+                <Alert title="Test" message="This is just a test" type="warning" showLoader actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert message="This is just a test" type="info" showLoader actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert title="Test" message="This is just a test" type="info_outline" showLoader actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert title="Test" message="This is just a test" type="error" showLoader actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert message="This is just a test" type="done" showLoader actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert title="Test" message="This is just a test" type="help" showLoader actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
+                <Alert title="Test" message="This is just a test" type="help_outline" showLoader actionButtonLabel="TEST" action={this._addPublication} allowDismiss dismissAction={this._addPublication}/>
                 {
                     loading &&
                     <div className="isLoading is-centered">

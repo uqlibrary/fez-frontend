@@ -1080,7 +1080,8 @@ export default {
     progressAlert: {
         type: 'info_outline',
         title: 'Saving',
-        message: 'Creating new publication is in progress.'
+        message: 'Creating new publication is in progress.',
+        showLoader: true
     },
     successAlert: {
         type: 'done',

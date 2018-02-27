@@ -6059,6 +6059,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     <Alert
       allowDismiss={false}
       message="This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au"
+      showLoader={false}
       title="Error"
       type="error"
     />
@@ -6970,6 +6971,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               <Alert
                 allowDismiss={false}
                 message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+                showLoader={false}
                 title="File upload failed"
                 type="info"
               />

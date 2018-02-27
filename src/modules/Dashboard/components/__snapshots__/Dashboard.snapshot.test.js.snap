@@ -4,6 +4,145 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
 <StandardPage
   className="dashboard"
 >
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help_outline"
+  />
+  <br />
+   
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help_outline"
+  />
   <div
     className="columns is-multiline is-gapless"
   >
@@ -59,6 +198,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
         actionButtonLabel="Add a publication"
         allowDismiss={false}
         message="We found nothing new for you to claim, but you may add a publication any time."
+        showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
       />
@@ -390,6 +530,145 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
 <StandardPage
   className="dashboard"
 >
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help_outline"
+  />
+  <br />
+   
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help_outline"
+  />
   <div
     className="columns is-multiline is-gapless"
   >
@@ -448,6 +727,145 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
 <StandardPage
   className="dashboard"
 >
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help_outline"
+  />
+  <br />
+   
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help_outline"
+  />
   <div
     className="columns is-multiline is-gapless"
   >
@@ -503,6 +921,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
         actionButtonLabel="Add a publication"
         allowDismiss={false}
         message="We found nothing new for you to claim, but you may add a publication any time."
+        showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
       />
@@ -515,6 +934,145 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
 <StandardPage
   className="dashboard"
 >
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help_outline"
+  />
+  <br />
+   
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help_outline"
+  />
   <div
     className="columns is-multiline is-gapless"
   >
@@ -573,6 +1131,145 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
 <StandardPage
   className="dashboard"
 >
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help_outline"
+  />
+  <br />
+   
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help_outline"
+  />
   <div
     className="columns is-multiline is-gapless"
   >
@@ -628,6 +1325,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
         actionButtonLabel="Add a publication"
         allowDismiss={false}
         message="We found nothing new for you to claim, but you may add a publication any time."
+        showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
       />
@@ -639,13 +1337,292 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
 exports[`Dashboard test renders alert for non-authors 1`] = `
 <StandardPage
   className="dashboard"
-/>
+>
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help_outline"
+  />
+  <br />
+   
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help_outline"
+  />
+</StandardPage>
 `;
 
 exports[`Dashboard test renders dashboard header only 1`] = `
 <StandardPage
   className="dashboard"
 >
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help_outline"
+  />
+  <br />
+   
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help_outline"
+  />
   <div
     className="columns is-multiline is-gapless"
   >
@@ -701,6 +1678,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
         actionButtonLabel="Add a publication"
         allowDismiss={false}
         message="We found nothing new for you to claim, but you may add a publication any time."
+        showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
       />
@@ -713,6 +1691,145 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
 <StandardPage
   className="dashboard"
 >
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={false}
+    title="Test"
+    type="help_outline"
+  />
+  <br />
+   
+  <br />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="warning"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="info"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="info_outline"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="error"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    type="done"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help"
+  />
+  <Alert
+    action={[Function]}
+    actionButtonLabel="TEST"
+    allowDismiss={true}
+    dismissAction={[Function]}
+    message="This is just a test"
+    showLoader={true}
+    title="Test"
+    type="help_outline"
+  />
   <div
     className="columns is-multiline is-gapless"
   >
@@ -768,6 +1885,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
         actionButtonLabel="Claim your publications now"
         allowDismiss={true}
         message="We have found 5 record(s) that could possibly be your work."
+        showLoader={false}
         title="Claim now!"
         type="warning"
       />

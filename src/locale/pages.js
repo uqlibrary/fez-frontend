@@ -515,7 +515,8 @@ export default {
             progressAlert: {
                 type: 'info_outline',
                 title: 'Saving',
-                message: 'Request is being processed.'
+                message: 'Request is being processed.',
+                showLoader: true
             },
             successAlert: {
                 type: 'done',
@@ -638,7 +639,8 @@ export default {
             progressAlert: {
                 type: 'info_outline',
                 title: 'Linking ORCID',
-                message: 'Request is being processed.'
+                message: 'Request is being processed.',
+                showLoader: true
             }
         }
     }
