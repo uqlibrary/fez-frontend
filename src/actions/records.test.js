@@ -358,7 +358,7 @@ describe('Record action creators', () => {
                 await mockActionsStore.dispatch(recordActions.submitThesis(customInput, authorData));
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-                expect(e).toEqual('File upload failed. Issue has been created to notify eSpace administrators.  (Request error with status code 500. )');
+                expect(e).toEqual('File upload failed.  (Request error with status code 500. )');
             }
         });
 

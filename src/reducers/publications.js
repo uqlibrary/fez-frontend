@@ -46,7 +46,6 @@ const handlers = {
     [actions.AUTHOR_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
-            publicationsList: [],
             publicationsListPagingData: {},
             loadingPublicationsList: true
         };

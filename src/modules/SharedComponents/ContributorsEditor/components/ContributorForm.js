@@ -10,7 +10,7 @@ import * as actions from 'actions/authors';
 
 export class ContributorForm extends Component {
     static propTypes = {
-        authorsList: PropTypes.array,
+        authorsList: PropTypes.array.isRequired,
         onAdd: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
         errorText: PropTypes.string,
@@ -141,7 +141,7 @@ export class ContributorForm extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        authorsList: state.get('authorsReducer') ? state.get('authorsReducer').authorsList : []
+        authorsList: state && state.get('authorsReducer') ? state.get('authorsReducer').authorsList : []
     };
 };
 

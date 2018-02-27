@@ -68,7 +68,9 @@ describe('claimPublication reducer', () => {
         expect(test).toEqual({
             ...initialState,
             loadingPossiblePublicationsList: false,
+            loadingPossibleCounts: false,
             possiblePublicationsList: mockRecord.data,
+            possibleCounts: 3,
             possiblePublicationsPagingData: {
                 total: mockRecord.total,
                 current_page: mockRecord.current_page,

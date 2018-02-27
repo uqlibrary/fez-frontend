@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FacetsFilter renders  components for mock data 1`] = `
+exports[`FacetsFilter  components for mock data 1`] = `
 <div
   className="facetsFilter"
 >
@@ -408,11 +408,31 @@ exports[`FacetsFilter renders  components for mock data 1`] = `
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
+    <DateRange
+      defaultValue={
+        Object {
+          "from": 2008,
+          "to": 2023,
+        }
+      }
+      itemClassName="dateRange facetsCategory"
+      locale={
+        Object {
+          "displayTitle": "Published year range",
+          "fromFieldLabel": "From",
+          "rangeSubmitButtonLabel": "Go",
+          "toFieldLabel": "To",
+        }
+      }
+      onChange={[Function]}
+      subitemClassName="dateRange facetsLink"
+      value={Object {}}
+    />
   </List>
 </div>
 `;
 
-exports[`FacetsFilter renders  components for mock data 2`] = `
+exports[`FacetsFilter  components for mock data 2`] = `
 <div
   className="facetsFilter"
 >
@@ -843,11 +863,31 @@ exports[`FacetsFilter renders  components for mock data 2`] = `
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
+    <DateRange
+      defaultValue={
+        Object {
+          "from": 2008,
+          "to": 2023,
+        }
+      }
+      itemClassName="dateRange facetsCategory"
+      locale={
+        Object {
+          "displayTitle": "Published year range",
+          "fromFieldLabel": "From",
+          "rangeSubmitButtonLabel": "Go",
+          "toFieldLabel": "To",
+        }
+      }
+      onChange={[Function]}
+      subitemClassName="dateRange facetsLink"
+      value={Object {}}
+    />
   </List>
 </div>
 `;
 
-exports[`FacetsFilter renders  components for mock data activating a facet selection 1`] = `
+exports[`FacetsFilter  components for mock data activating a facet selection 1`] = `
 <div
   className="facetsFilter"
 >
@@ -873,7 +913,7 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
             insetChildren={false}
             leftIcon={
               <NavigationClose
-                disabled={false}
+                disabled={undefined}
               />
             }
             nestedItems={Array []}
@@ -948,7 +988,7 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
             insetChildren={false}
             leftIcon={
               <NavigationClose
-                disabled={false}
+                disabled={undefined}
               />
             }
             nestedItems={Array []}
@@ -1262,6 +1302,26 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
       primaryText="Author"
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
+    />
+    <DateRange
+      defaultValue={
+        Object {
+          "from": 2008,
+          "to": 2023,
+        }
+      }
+      itemClassName="dateRange facetsCategory"
+      locale={
+        Object {
+          "displayTitle": "Published year range",
+          "fromFieldLabel": "From",
+          "rangeSubmitButtonLabel": "Go",
+          "toFieldLabel": "To",
+        }
+      }
+      onChange={[Function]}
+      subitemClassName="dateRange facetsLink"
+      value={Object {}}
     />
   </List>
   <div
@@ -1287,7 +1347,7 @@ exports[`FacetsFilter renders  components for mock data activating a facet selec
 </div>
 `;
 
-exports[`FacetsFilter renders  components for mock data with active facets set 1`] = `
+exports[`FacetsFilter  components for mock data with active facets set 1`] = `
 <div
   className="facetsFilter"
 >
@@ -1313,7 +1373,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
             insetChildren={false}
             leftIcon={
               <NavigationClose
-                disabled={false}
+                disabled={undefined}
               />
             }
             nestedItems={Array []}
@@ -1699,6 +1759,26 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
+    <DateRange
+      defaultValue={
+        Object {
+          "from": 2008,
+          "to": 2023,
+        }
+      }
+      itemClassName="dateRange facetsCategory"
+      locale={
+        Object {
+          "displayTitle": "Published year range",
+          "fromFieldLabel": "From",
+          "rangeSubmitButtonLabel": "Go",
+          "toFieldLabel": "To",
+        }
+      }
+      onChange={[Function]}
+      subitemClassName="dateRange facetsLink"
+      value={Object {}}
+    />
   </List>
   <div
     className="columns"
@@ -1723,7 +1803,7 @@ exports[`FacetsFilter renders  components for mock data with active facets set 1
 </div>
 `;
 
-exports[`FacetsFilter renders  components for mock data with disabled flag set 1`] = `
+exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
 <div
   className="facetsFilter"
 >
@@ -2131,11 +2211,32 @@ exports[`FacetsFilter renders  components for mock data with disabled flag set 1
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
+    <DateRange
+      defaultValue={
+        Object {
+          "from": 2008,
+          "to": 2023,
+        }
+      }
+      disabled={true}
+      itemClassName="dateRange facetsCategory"
+      locale={
+        Object {
+          "displayTitle": "Published year range",
+          "fromFieldLabel": "From",
+          "rangeSubmitButtonLabel": "Go",
+          "toFieldLabel": "To",
+        }
+      }
+      onChange={[Function]}
+      subitemClassName="dateRange facetsLink"
+      value={Object {}}
+    />
   </List>
 </div>
 `;
 
-exports[`FacetsFilter renders  components for mock data with excluded facets 1`] = `
+exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
 <div
   className="facetsFilter"
 >
@@ -2495,11 +2596,31 @@ exports[`FacetsFilter renders  components for mock data with excluded facets 1`]
       primaryTogglesNestedList={true}
       secondaryTextLines={1}
     />
+    <DateRange
+      defaultValue={
+        Object {
+          "from": 2008,
+          "to": 2023,
+        }
+      }
+      itemClassName="dateRange facetsCategory"
+      locale={
+        Object {
+          "displayTitle": "Published year range",
+          "fromFieldLabel": "From",
+          "rangeSubmitButtonLabel": "Go",
+          "toFieldLabel": "To",
+        }
+      }
+      onChange={[Function]}
+      subitemClassName="dateRange facetsLink"
+      value={Object {}}
+    />
   </List>
 </div>
 `;
 
-exports[`FacetsFilter renders  empty component for empty data 1`] = `
+exports[`FacetsFilter  empty component for empty data 1`] = `
 <span
   className="facetsFilter empty"
 />

@@ -7,6 +7,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
 import {publicationTypes} from 'config';
 import {locale} from 'locale';
+import DateRange from './DateRange';
 
 export default class FacetsFilter extends React.Component {
     static propTypes = {
@@ -39,44 +40,71 @@ export default class FacetsFilter extends React.Component {
         }
     }
 
-    handleFacetClick = (category, facet) => {
+    _handleFacetClick = (category, facet) => () => {
         if (this.props.disabled) {
             return;
         }
-        const activeFacets = {...this.state.activeFacets};
-        if (activeFacets.hasOwnProperty(category) && activeFacets[category] === facet) {
-            delete activeFacets[category];
+
+        const activeFacets = {
+            filters: {...this.state.activeFacets.filters},
+            ranges: {...this.state.activeFacets.ranges},
+        };
+
+        if (activeFacets.filters.hasOwnProperty(category) && activeFacets.filters[category] === facet) {
+            delete activeFacets.filters[category];
         } else {
-            activeFacets[category] = facet;
+            activeFacets.filters[category] = facet;
         }
         this.setState({
             activeFacets: {...activeFacets}
         });
     };
 
-    handleResetClick = () => {
+    _handleYearPublishedRangeFacet = (category) => (range) => {
+        if (this.props.disabled) {
+            return;
+        }
+
+        const activeFacets = {
+            filters: {...this.state.activeFacets.filters},
+            ranges: {...this.state.activeFacets.ranges},
+        };
+
+        if (!range.to && !range.from) {
+            delete activeFacets.ranges[category];
+        } else {
+            activeFacets.ranges[category] = range;
+        }
         this.setState({
-            activeFacets: {}
+            activeFacets: {...activeFacets}
         });
-    }
+    };
+
+    _handleResetClick = () => {
+        this.setState({
+            activeFacets: {
+                filters: {},
+                ranges: {}
+            }
+        });
+    };
 
     getNestedListItems = (facetCategory) => {
-        const listItems = facetCategory.facets.map((item, index) => {
-            const isActive = this.state.activeFacets.hasOwnProperty(facetCategory.facetTitle) && this.state.activeFacets[facetCategory.facetTitle] === item.key;
+        return facetCategory.facets.map((item, index) => {
+            const isActive = this.state.activeFacets.filters.hasOwnProperty(facetCategory.facetTitle) && this.state.activeFacets.filters[facetCategory.facetTitle] === item.key;
             return (
                 <ListItem
                     key={index}
                     className={'facetsLink ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                     primaryText={`${item.title} (${item.count})`}
-                    onClick={() => (this.handleFacetClick(facetCategory.facetTitle, item.key))}
+                    onClick={this._handleFacetClick(facetCategory.facetTitle, item.key)}
                     disabled={this.props.disabled}
                     leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}/>
             );
         });
-        return listItems;
     };
 
-    getFacetsToDisplay(rawFacets, excludeFacetsList, renameFacetsList) {
+    getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList) => {
         const facetsToDisplay = [];
         Object.keys(rawFacets).forEach((key) => {
             const rawFacet = rawFacets[key];
@@ -93,11 +121,11 @@ export default class FacetsFilter extends React.Component {
                 facetTitle: key,
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
-                        const typeIndex = publicationTypes().findIndex((type) => {
-                            return type.id === rawFacet.buckets[index].key;
+                        const publicationTypeIndex = publicationTypes().findIndex((publicationType) => {
+                            return publicationType.id === rawFacet.buckets[index].key;
                         });
                         return {
-                            title: typeIndex > -1 ? publicationTypes()[typeIndex].name : 'Unknown',
+                            title: publicationTypeIndex > -1 ? publicationTypes()[publicationTypeIndex].name : 'Unknown',
                             key: item.key,
                             count: item.doc_count
                         };
@@ -114,22 +142,24 @@ export default class FacetsFilter extends React.Component {
             facetsToDisplay.push(facetToDisplay);
         });
         return facetsToDisplay;
-    }
+    };
 
     render() {
-        const txt = locale.components.facetsFilter;
+        const {yearPublishedCategory, yearPublishedFacet, resetButtonText} = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList);
-        if (facetsToDisplay.length === 0) return (<span className="facetsFilter empty" />);
+        const hasActiveFilters = (Object.keys(this.state.activeFacets.filters).length > 0 || Object.keys(this.state.activeFacets.ranges).length > 0);
+        if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
+
         return (
             <div className="facetsFilter">
                 <List>
                     {
                         facetsToDisplay.map((item, index) => {
-                            const isActive = this.state.activeFacets.hasOwnProperty(item.title);
+                            const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
                             return (
                                 <ListItem
                                     primaryText={item.title}
-                                    open={this.state.activeFacets[item.title] && true}
+                                    open={this.state.activeFacets.filters[item.title] && true}
                                     disabled={this.props.disabled}
                                     className={'facetsCategory ' + (isActive ? 'active ' : '') + (this.props.disabled ? 'disabled' : '')}
                                     primaryTogglesNestedList
@@ -138,16 +168,27 @@ export default class FacetsFilter extends React.Component {
                             );
                         })
                     }
+                    {
+                        <DateRange
+                            itemClassName="dateRange facetsCategory"
+                            subitemClassName="dateRange facetsLink"
+                            open={this.state.activeFacets.ranges[yearPublishedCategory] && true}
+                            value={this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory) ? this.state.activeFacets.ranges[yearPublishedCategory] : {}}
+                            disabled={this.props.disabled}
+                            onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
+                            locale={yearPublishedFacet}
+                        />
+                    }
                 </List>
                 {
-                    Object.keys(this.state.activeFacets).length > 0 &&
+                    hasActiveFilters &&
                     <div className="columns">
                         <div className="column is-hidden-mobile"/>
                         <div className="column is-narrow-tablet">
                             <FlatButton
                                 fullWidth
-                                label={txt.resetButtonText}
-                                onClick={this.handleResetClick}/>
+                                label={resetButtonText}
+                                onClick={this._handleResetClick}/>
                         </div>
                     </div>
                 }

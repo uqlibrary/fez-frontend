@@ -32,11 +32,11 @@ describe('ThesisSubmissionContainer', () => {
             ],
             "thesisAbstract": {
                 plainText: "abstract",
-                formattedText: "<p>abstract</p>"
+                htmlText: "<p>abstract</p>"
             },
             "thesisTitle": {
                 plainText: "title",
-                formattedText: "<p>title</p>"
+                htmlText: "<p>title</p>"
             },
             "fez_record_search_key_org_name": {"rek_org_name": "The University of Queensland"},
             "rek_object_type": 3,

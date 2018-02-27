@@ -36,7 +36,7 @@ const validate = (values) => {
     const data = values.toJS();
     const errors = [];
     const txt = formLocale.thesis;
-    if (!data.thesisTitle || !data.thesisTitle.plainText) {
+    if (!data.thesisTitle || !data.thesisTitle.htmlText) {
         errors.push(txt.information.fieldLabels.documentTitle.errorMessage);
     }
 
@@ -56,7 +56,7 @@ const validate = (values) => {
         errors.push(txt.information.fieldLabels.author.errorMessage);
     }
 
-    if (!data.thesisAbstract || !data.thesisAbstract.plainText) {
+    if (!data.thesisAbstract || !data.thesisAbstract.htmlText) {
         errors.push(txt.optional.fieldLabels.abstract.errorMessage);
     }
 

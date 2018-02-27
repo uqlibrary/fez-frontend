@@ -138,28 +138,18 @@ exports[`Application component should render alert if user is not fez author 1`]
     <Switch>
       <Route
         key="route_0"
-        path="/about"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
-        key="route_2"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_3"
+        key="route_1"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_4"
+        key="route_2"
         path="/"
       />
       <Route
@@ -171,7 +161,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_5"
+        key="route_3"
         path="/dashboard"
       />
       <Route
@@ -183,7 +173,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_4"
         path="/records/mine"
       />
       <Route
@@ -195,7 +185,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_5"
         path="/records/possible"
       />
       <Route
@@ -207,7 +197,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_8"
+        key="route_6"
         path="/records/claim"
       />
       <Route
@@ -219,8 +209,8 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_9"
-        path="/records/:pid/fix"
+        key="route_7"
+        path="/records/:pid(UQ:\\\\d+)/fix"
       />
       <Route
         access={
@@ -230,7 +220,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_8"
         path="/records/add/find"
         render={[Function]}
       />
@@ -242,7 +232,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_9"
         path="/records/add/results"
         render={[Function]}
       />
@@ -254,14 +244,14 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_10"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_11"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -273,11 +263,27 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_12"
         path="/author-identifiers/google-scholar/link/"
       />
       <Route
+        key="route_13"
+        path="/about"
+        render={[Function]}
+      />
+      <Route
+        key="route_14"
+        path="/browse"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
         key="route_15"
+        path="/records/:pid(UQ:\\\\d+)"
+      />
+      <Route
+        key="route_16"
         render={[Function]}
       />
     </Switch>
@@ -410,28 +416,18 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     <Switch>
       <Route
         key="route_0"
-        path="/about"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
-        key="route_2"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_3"
+        key="route_1"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_4"
+        key="route_2"
         path="/"
       />
       <Route
@@ -443,7 +439,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_5"
+        key="route_3"
         path="/dashboard"
       />
       <Route
@@ -455,7 +451,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_4"
         path="/records/mine"
       />
       <Route
@@ -467,7 +463,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_5"
         path="/records/possible"
       />
       <Route
@@ -479,7 +475,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_8"
+        key="route_6"
         path="/records/claim"
       />
       <Route
@@ -491,8 +487,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_9"
-        path="/records/:pid/fix"
+        key="route_7"
+        path="/records/:pid(UQ:\\\\d+)/fix"
       />
       <Route
         access={
@@ -502,7 +498,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_8"
         path="/records/add/find"
         render={[Function]}
       />
@@ -514,7 +510,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_9"
         path="/records/add/results"
         render={[Function]}
       />
@@ -526,14 +522,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_10"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_11"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -545,11 +541,27 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_12"
         path="/author-identifiers/google-scholar/link/"
       />
       <Route
+        key="route_13"
+        path="/about"
+        render={[Function]}
+      />
+      <Route
+        key="route_14"
+        path="/browse"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
         key="route_15"
+        path="/records/:pid(UQ:\\\\d+)"
+      />
+      <Route
+        key="route_16"
         render={[Function]}
       />
     </Switch>
@@ -693,18 +705,24 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         render={[Function]}
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_2"
+        path="/records/:pid(UQ:\\\\d+)"
+      />
+      <Route
+        key="route_3"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_3"
+        key="route_4"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_4"
+        key="route_5"
       />
     </Switch>
   </div>
@@ -836,28 +854,18 @@ exports[`Application component should render app for account with fez author wit
     <Switch>
       <Route
         key="route_0"
-        path="/about"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
-        key="route_2"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_3"
+        key="route_1"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_4"
+        key="route_2"
         path="/"
       />
       <Route
@@ -869,7 +877,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_5"
+        key="route_3"
         path="/dashboard"
       />
       <Route
@@ -881,7 +889,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_4"
         path="/records/mine"
       />
       <Route
@@ -893,7 +901,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_5"
         path="/records/possible"
       />
       <Route
@@ -905,7 +913,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_8"
+        key="route_6"
         path="/records/claim"
       />
       <Route
@@ -917,8 +925,8 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_9"
-        path="/records/:pid/fix"
+        key="route_7"
+        path="/records/:pid(UQ:\\\\d+)/fix"
       />
       <Route
         access={
@@ -928,7 +936,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_8"
         path="/records/add/find"
         render={[Function]}
       />
@@ -940,7 +948,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_9"
         path="/records/add/results"
         render={[Function]}
       />
@@ -952,14 +960,14 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_10"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_11"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -971,11 +979,27 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_12"
         path="/author-identifiers/google-scholar/link/"
       />
       <Route
+        key="route_13"
+        path="/about"
+        render={[Function]}
+      />
+      <Route
+        key="route_14"
+        path="/browse"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
         key="route_15"
+        path="/records/:pid(UQ:\\\\d+)"
+      />
+      <Route
+        key="route_16"
         render={[Function]}
       />
     </Switch>
@@ -1124,28 +1148,18 @@ exports[`Application component should render app for account with fez author wit
     <Switch>
       <Route
         key="route_0"
-        path="/about"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        path="/browse"
-        render={[Function]}
-      />
-      <Route
-        key="route_2"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_3"
+        key="route_1"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_4"
+        key="route_2"
         path="/"
       />
       <Route
@@ -1157,7 +1171,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_5"
+        key="route_3"
         path="/dashboard"
       />
       <Route
@@ -1169,7 +1183,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_6"
+        key="route_4"
         path="/records/mine"
       />
       <Route
@@ -1181,7 +1195,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_7"
+        key="route_5"
         path="/records/possible"
       />
       <Route
@@ -1193,7 +1207,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_8"
+        key="route_6"
         path="/records/claim"
       />
       <Route
@@ -1205,8 +1219,8 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_9"
-        path="/records/:pid/fix"
+        key="route_7"
+        path="/records/:pid(UQ:\\\\d+)/fix"
       />
       <Route
         access={
@@ -1216,7 +1230,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_8"
         path="/records/add/find"
         render={[Function]}
       />
@@ -1228,7 +1242,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_9"
         path="/records/add/results"
         render={[Function]}
       />
@@ -1240,14 +1254,14 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_10"
         path="/records/add/new"
         render={[Function]}
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_11"
         path="/author-identifiers/orcid/link"
       />
       <Route
@@ -1259,11 +1273,27 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_12"
         path="/author-identifiers/google-scholar/link/"
       />
       <Route
+        key="route_13"
+        path="/about"
+        render={[Function]}
+      />
+      <Route
+        key="route_14"
+        path="/browse"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
         key="route_15"
+        path="/records/:pid(UQ:\\\\d+)"
+      />
+      <Route
+        key="route_16"
         render={[Function]}
       />
     </Switch>
@@ -1533,13 +1563,19 @@ exports[`Application component should render for anon user 1`] = `
         render={[Function]}
       />
       <Route
+        component={[Function]}
         exact={true}
         key="route_2"
+        path="/records/:pid(UQ:\\\\d+)"
+      />
+      <Route
+        exact={true}
+        key="route_3"
         path="/"
         render={[Function]}
       />
       <Route
-        key="route_3"
+        key="route_4"
         render={[Function]}
       />
     </Switch>
@@ -1641,18 +1677,24 @@ exports[`Application component should render thesis submission for HDR without m
         render={[Function]}
       />
       <Route
+        component={[Function]}
+        exact={true}
         key="route_2"
+        path="/records/:pid(UQ:\\\\d+)"
+      />
+      <Route
+        key="route_3"
         path="/rhdsubmission_new"
         render={[Function]}
       />
       <Route
-        key="route_3"
+        key="route_4"
         path="/sbslodge_new"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_4"
+        key="route_5"
       />
     </Switch>
   </div>

@@ -1,40 +1,19 @@
-jest.dontMock('./GenericSelectField');
-
-import { shallow, mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import React from 'react';
 import GenericSelectField from './GenericSelectField';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import PropTypes from 'prop-types';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-beforeAll(() => {
-    injectTapEventPlugin();
-});
-
-function setup({onChange = jest.fn(), itemsList = [], itemsLoading = false, loadItemsList = jest.fn(), selectedValue = null, parentItemsId = null, disabled = false, isShallow = false}){
+function setup(testProps, isShallow = true){
     const props = {
-        onChange: onChange,
-        itemsList: itemsList,
-        itemsLoading: itemsLoading,
-        loadItemsList: loadItemsList,
-        selectedValue: selectedValue,
-        parentItemsId: parentItemsId,
-        disabled: disabled
+        ...testProps,
+        // onChange: PropTypes.func,
+        // locale: PropTypes.object,
+        // itemsList: PropTypes.array,
+        // itemsLoading: PropTypes.bool,
+        // loadItemsList: PropTypes.func,
+        // selectedValue: PropTypes.any,
+        // parentItemsId: PropTypes.number,
+        // className: PropTypes.string,
+        // disabled: PropTypes.bool
     };
-
-    if(isShallow) {
-        return shallow(<GenericSelectField {...props} />);
-    }
-
-    return mount(<GenericSelectField {...props} />, {
-        context: {
-            muiTheme: getMuiTheme()
-        },
-        childContextTypes: {
-            muiTheme: PropTypes.object.isRequired
-        }
-    });
+    return getElement(GenericSelectField, props, isShallow);
 }
 
 describe('GenericSelectField ', () => {

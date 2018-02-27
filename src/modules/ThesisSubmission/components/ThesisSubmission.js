@@ -12,7 +12,7 @@ import {StandardPage} from 'uqlibrary-react-toolbox/build/StandardPage';
 import {StandardCard} from 'uqlibrary-react-toolbox/build/StandardCard';
 
 import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {OrgNameField, OrgUnitNameField, FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
+import {OrgUnitNameField, FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {ListEditorField} from 'uqlibrary-react-toolbox/build/ListEditor';
 import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
@@ -144,7 +144,7 @@ export default class ThesisSubmission extends Component {
                             </div>
                         </div>
                         <div className="columns">
-                            <div className="column is-half">
+                            <div className="column">
                                 <Field
                                     component={OrgUnitNameField}
                                     name="fez_record_search_key_org_unit_name.rek_org_unit_name"
@@ -153,15 +153,6 @@ export default class ThesisSubmission extends Component {
                                     className="requiredField"
                                     {...txt.information.fieldLabels.orgUnitName}
                                 />
-                            </div>
-                            <div className="column">
-                                <Field
-                                    component={OrgNameField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_org_name.rek_org_name"
-                                    className="requiredField"
-                                    validate={[validation.required]}
-                                    {...txt.information.fieldLabels.orgName}/>
                             </div>
                         </div>
                         <div className="columns" style={{marginTop: '6px'}}>
@@ -208,6 +199,7 @@ export default class ThesisSubmission extends Component {
                         <Field
                             component={ListEditorField}
                             name="fez_record_search_key_keywords"
+                            className="requiredField"
                             maxCount={10}
                             validate={[validation.requiredList]}
                             searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
