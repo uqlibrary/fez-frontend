@@ -89,6 +89,51 @@ class Dashboard extends React.Component {
         this.props.history.push(routes.pathConfig.records.mine);
     };
 
+    _IeVersion() {
+        // Set defaults
+        const value = {
+            IsIE: false,
+            IsEdge: false,
+            EdgeHtmlVersion: 0,
+            TrueVersion: 0,
+            ActingVersion: 0,
+            CompatibilityMode: false
+        };
+
+        // Try to find the Trident version number
+        const trident = navigator.userAgent.match(/Trident\/(\d+)/);
+        if (trident) {
+            value.IsIE = true;
+            // Convert from the Trident version number to the IE version number
+            value.TrueVersion = parseInt(trident[1], 10) + 4;
+        }
+
+        // Try to find the MSIE number
+        const msie = navigator.userAgent.match(/MSIE (\d+)/);
+        if (msie) {
+            value.IsIE = true;
+            // Find the IE version number from the user agent string
+            value.ActingVersion = parseInt(msie[1], 10);
+        } else {
+            // Must be IE 11 in "edge" mode
+            value.ActingVersion = value.TrueVersion;
+        }
+
+        // If we have both a Trident and MSIE version number, see if they're different
+        if (value.IsIE && value.TrueVersion > 0 && value.ActingVersion > 0) {
+            // In compatibility mode if the trident number doesn't match up with the MSIE number
+            value.CompatibilityMode = value.TrueVersion !== value.ActingVersion;
+        }
+
+        // Try to find Edge and the EdgeHTML vesion number
+        const edge = navigator.userAgent.match(/Edge\/(\d+\.\d+)$/);
+        if (edge) {
+            value.IsEdge = true;
+            value.EdgeHtmlVersion = edge[1];
+        }
+        return value;
+    }
+
     render() {
         const txt = locale.pages.dashboard;
         const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
@@ -124,6 +169,7 @@ class Dashboard extends React.Component {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
+        console.log('What version is this?' + JSON.stringify(this._IeVersion()));
         return (
             <StandardPage className="dashboard">
                 {document.compatMode === 'BackCompat' &&
