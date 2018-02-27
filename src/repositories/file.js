@@ -17,10 +17,7 @@ export function putUploadFile(pid, file, dispatch) {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
-                onUploadProgress: event => {
-                    const completed = Math.floor((event.loaded * 100) / event.total);
-                    dispatch(fileUploadActions.notifyProgress(file.name, completed));
-                },
+                onUploadProgress: fileUploadActions.notifyFileUploadProgress(file.name, dispatch),
                 cancelToken: generateCancelToken().token
             };
             const fileUrl = Array.isArray(uploadUrl) && uploadUrl.length > 0 ? uploadUrl[0] : uploadUrl;

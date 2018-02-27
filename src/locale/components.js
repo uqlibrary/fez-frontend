@@ -53,8 +53,8 @@ export default {
             field: {
                 form: {
                     locale: {
-                        inputFieldLabel: 'Keyword',
-                        inputFieldHint: 'Type keyword',
+                        inputFieldLabel: 'Keywords',
+                        inputFieldHint: 'Type keywords',
                         addButtonLabel: 'Add'
                     }
                 },

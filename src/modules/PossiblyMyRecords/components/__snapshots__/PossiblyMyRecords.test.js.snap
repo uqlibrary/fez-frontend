@@ -3236,6 +3236,8 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
             ]
           }
           publicationsListSubset={Array []}
+          showDefaultActions={false}
+          showSources={false}
           subsetCustomActions={
             Array [
               Object {
@@ -6522,6 +6524,8 @@ exports[`Component PossiblyMyRecords renders list of publications and counts 1`]
             ]
           }
           publicationsListSubset={Array []}
+          showDefaultActions={false}
+          showSources={false}
           subsetCustomActions={
             Array [
               Object {

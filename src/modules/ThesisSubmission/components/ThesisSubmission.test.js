@@ -1,8 +1,6 @@
 import ThesisSubmission from './ThesisSubmission';
 import Immutable from 'immutable';
-import {AUTH_URL_LOGIN} from "config";
 import {default as formLocale} from 'locale/publicationForm';
-import PropTypes from "prop-types";
 
 function setup(testProps, isShallow = true) {
     const props = {

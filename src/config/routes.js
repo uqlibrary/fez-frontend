@@ -11,6 +11,7 @@ export const pathConfig =  {
         mine: '/records/mine',
         possible: '/records/possible',
         claim: '/records/claim',
+        view: (pid) => (`/records/${pid}`),
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
@@ -34,6 +35,7 @@ export const pathConfig =  {
     }
 };
 
+// a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/browse', '/about', '/rhdsubmission_new', '/sbslodge_new',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
@@ -45,6 +47,7 @@ export const roles = {
 };
 
 export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegistration = false, isHdrStudent = false}) => {
+    const pid = ':pid(UQ:\\d+)';
     const publicPages = [
         {
             path: pathConfig.about,
@@ -53,6 +56,11 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         {
             path: pathConfig.browse,
             render: () => components.Browse(locale.pages.browse)
+        },
+        {
+            path: pathConfig.records.view(pid),
+            component: components.ViewRecord,
+            exact: true
         },
         ...(!account ? [
             {
@@ -88,7 +96,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     }
 
     return [
-        ...publicPages,
         ...thesisSubmissionPages,
         ...(account ? [
             {
@@ -121,7 +128,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true
             },
             {
-                path: pathConfig.records.fix(':pid'),
+                path: pathConfig.records.fix(pid),
                 component: components.FixRecord,
                 access: [roles.researcher, roles.admin],
                 exact: true
@@ -164,6 +171,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.admin]
             }
         ] : []),
+        ...publicPages,
         {
             render: (childProps) => {
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;

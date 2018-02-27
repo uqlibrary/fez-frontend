@@ -17,6 +17,7 @@ export default class GenericSelectField extends Component {
     };
 
     static defaultProps = {
+        itemsList: [],
         locale: {
             label: 'Select item',
             loading: 'loading...'
