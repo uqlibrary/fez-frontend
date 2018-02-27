@@ -14,7 +14,6 @@ import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPromp
 
 import {publicationTypes, validation} from 'config';
 import {default as txt} from 'locale/publicationForm';
-import {validationErrorsSummary} from 'locale/validationErrors';
 
 import * as recordForms from './Forms';
 
@@ -54,55 +53,6 @@ export default class PublicationForm extends Component {
             null;
     };
 
-    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error, formErrors,
-        submitSucceeded = false, alertLocale = {}}) => {
-        let alertProps = null;
-        const errorMessagesList = formErrors ? this.translateFormErrorsToText(formErrors) : null;
-
-        if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
-        } else if (!submitFailed && dirty && invalid) {
-            const message = (
-                <span>
-                    {alertLocale.validationAlert.message}
-                    <ul>
-                        {
-                            errorMessagesList && errorMessagesList.length > 0 && errorMessagesList.map((item, index) => (
-                                <li key={`validation-${index}`}>{item}</li>
-                            ))
-                        }
-                    </ul>
-                </span>);
-
-            alertProps = {...alertLocale.validationAlert, message: message};
-        } else if (submitting) {
-            alertProps = {...alertLocale.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...alertLocale.successAlert};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
-    };
-
-    translateFormErrorsToText = (formErrors) => {
-        let errorMessagesList = [];
-
-        Object.keys(formErrors).map(key => {
-            const value = formErrors[key];
-            if (typeof value === 'object') {
-                const errorMessage = this.translateFormErrorsToText(value);
-                if (errorMessage) {
-                    errorMessagesList = errorMessagesList.concat(errorMessage);
-                }
-            }
-
-            if (validationErrorsSummary.hasOwnProperty(key)) {
-                errorMessagesList.push(validationErrorsSummary[key]);
-            }
-        });
-
-        return errorMessagesList.length > 0 ? errorMessagesList : null;
-    };
-
     render() {
         const publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
@@ -117,6 +67,8 @@ export default class PublicationForm extends Component {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })
         ];
+
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
             <form>
                 <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
@@ -149,7 +101,8 @@ export default class PublicationForm extends Component {
                     </StandardCard>
                 }
                 {
-                    this.getAlert({...this.props, alertLocale: txt})
+                    alertProps &&
+                    <Alert {...alertProps} />
                 }
                 <div className="columns action-buttons">
                     <div className="column is-hidden-mobile"/>

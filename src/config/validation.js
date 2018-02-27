@@ -1,3 +1,4 @@
+import React from 'react';
 import {locale} from 'locale';
 
 // Min Length
@@ -43,9 +44,9 @@ export const requiredList = value => (value && value.length > 0 ? undefined : lo
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = (value) => value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
 export const doi = (value) => !!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined;
-export const forRequired = (itemList) =>  !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
+export const forRequired = (itemList) => !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
-export const peopleRequired = (itemList, validationError, checkSelected = true) =>  (
+export const peopleRequired = (itemList, validationError, checkSelected = true) => (
     !itemList || itemList.length === 0 || (checkSelected && itemList && itemList.filter(item => (item.selected)).length === 0)
         ? validationError : undefined
 );
@@ -97,4 +98,54 @@ export const isValidGoogleScholarId = id => {
     } else {
         return locale.validationErrors.googleScholarId;
     }
+};
+
+export const translateFormErrorsToText = (formErrors) => {
+    let errorMessagesList = [];
+
+    Object.keys(formErrors).map(key => {
+        const value = formErrors[key];
+        if (typeof value === 'object') {
+            const errorMessage = translateFormErrorsToText(value);
+            if (errorMessage) {
+                errorMessagesList = errorMessagesList.concat(errorMessage);
+            }
+        }
+
+        if (locale.validationErrorsSummary.hasOwnProperty(key)) {
+            errorMessagesList.push(locale.validationErrorsSummary[key]);
+        }
+    });
+
+    return errorMessagesList.length > 0 ? errorMessagesList : null;
+};
+
+export const getErrorAlertProps = ({submitFailed = false, dirty = false, invalid = false, submitting = false,
+    error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
+    let alertProps = null;
+    if (submitFailed && error) {
+        alertProps = {
+            ...alertLocale.errorAlert,
+            message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
+        };
+    } else if (dirty && invalid && !error) {
+        const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
+        const message = (
+            <span>
+                {alertLocale.validationAlert.message}
+                <ul>
+                    {
+                        errorMessagesList && errorMessagesList.length > 0 && errorMessagesList.map((item, index) => (
+                            <li key={`validation-summary-${index}`}>{item}</li>
+                        ))
+                    }
+                </ul>
+            </span>);
+        alertProps = {...alertLocale.validationAlert, message: message};
+    } else if (submitting) {
+        alertProps = {...alertLocale.progressAlert};
+    } else if (submitSucceeded) {
+        alertProps = {...alertLocale.successAlert};
+    }
+    return alertProps;
 };
