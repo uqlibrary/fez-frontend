@@ -2867,22 +2867,23 @@ exports[`Component FixRecord should return and render the alert details correctl
     <div
       className="column is-narrow alertIcon"
     >
-      <FontIcon
-        className="material-icons"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        info_outline
-      </FontIcon>
+      <CircularProgress
+        className="alertSpinner"
+        max={100}
+        min={0}
+        mode="indeterminate"
+        size={32}
+        thickness={4}
+        value={0}
+      />
     </div>
     <div
       className="column alertText"
     >
       <div>
         <b>
-          Saving
+          Saving - 
         </b>
-         - 
         Request is being processed.
       </div>
     </div>
@@ -2913,9 +2914,8 @@ exports[`Component FixRecord should return and render the alert details correctl
     >
       <div>
         <b>
-          Success
+          Success - 
         </b>
-         - 
         Fix record request has been submitted successfully.
       </div>
     </div>
@@ -2946,9 +2946,8 @@ exports[`Component FixRecord should return and render the alert details correctl
     >
       <div>
         <b>
-          Error
+          Error - 
         </b>
-         - 
         Error has occurred during request and request cannot be processed. This is an error Please contact eSpace administrators or try again later.
       </div>
     </div>
@@ -2979,9 +2978,8 @@ exports[`Component FixRecord should return and render the alert details correctl
     >
       <div>
         <b>
-          Validation
+          Validation - 
         </b>
-         - 
         <span>
           Form cannot be submitted until all fields are valid. Please review all input fields.
           <ul>
