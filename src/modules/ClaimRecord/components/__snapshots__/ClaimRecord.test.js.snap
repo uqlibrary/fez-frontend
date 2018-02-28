@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ClaimRecord  should render claim form if publication doesn't have a PID and but current author was assigned (author linking component should not be rendered) 1`] = `
+exports[`Component ClaimRecord  should render claim form if publication doesn't have a PID but current author was assigned (author linking component should not be rendered) 1`] = `
 <StandardPage
   className=""
   title="Claim a publication"
@@ -8521,28 +8521,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
           Validation
         </b>
          - 
-        <span
-          className="validationMessage"
-        >
+        <span>
           Form cannot be submitted until all fields are valid. Please review all input fields.
-          <ul
-            className="validationList"
-          >
+          <ul>
             <li
-              className="validationItem"
-              key="validation-0"
+              key="validation-summary-0"
             >
-              <b />
-               - 
-              one
+              Title is required
             </li>
             <li
-              className="validationItem"
-              key="validation-1"
+              key="validation-summary-1"
             >
-              <b />
-               - 
-              two
+              Publication date is required
             </li>
           </ul>
         </span>

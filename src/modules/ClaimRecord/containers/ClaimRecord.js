@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, getFormSyncErrors, isInvalid, SubmissionError} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ClaimRecord from '../components/ClaimRecord';
 import {withRouter} from 'react-router-dom';
@@ -34,8 +34,7 @@ const mapStateToProps = (state) => {
     return {
         publicationToClaimFileUploadingError: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaimFileUploadingError : null,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        errors: getFormSyncErrors(FORM_NAME)(state),
-        invalid: isInvalid(FORM_NAME)(state),
+        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
         initialValues: {
             publication: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaim : null,
             author: state && state.get('accountReducer') ? state.get('accountReducer').author : null

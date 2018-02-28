@@ -73,38 +73,6 @@ export default class ClaimRecord extends React.PureComponent {
         }
     };
 
-    getAlert = ({submitFailed = false, invalid = false, errors = {}, error, submitting = false, submitSucceeded = false, alertLocale, authorLinked = false}) => {
-        let alertProps = null;
-        if (submitting) {
-            alertProps = {...alertLocale.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...alertLocale.successAlert};
-        } else if (authorLinked) {
-            alertProps = {...alertLocale.alreadyClaimedAlert};
-        } else if (invalid && errors.size !== 0) {
-            const formErrorLabels = {
-                authorLinking: locale.forms.claimPublicationForm.authorLinking.title,
-                contributorLinking: locale.forms.claimPublicationForm.contributorLinking.title,
-                rek_link: locale.forms.claimPublicationForm.comments.fieldLabels.url,
-                files: locale.forms.claimPublicationForm.fileUpload.title
-            };
-            const validationMessage = (
-                <span className="validationMessage">
-                    {alertLocale.validationAlert.message}
-                    <ul className="validationList">
-                        {Object.keys(errors).map((key, index) => (
-                            <li className="validationItem" key={`validation-${index}`}><b>{formErrorLabels[key]}</b> - {errors[key]}</li>
-                        ))}
-                    </ul>
-                </span>
-            );
-            alertProps = {...alertLocale.validationAlert, message: validationMessage};
-        } else if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
-    };
-
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
     };
@@ -135,6 +103,7 @@ export default class ClaimRecord extends React.PureComponent {
                 {txt.successWorkflowConfirmation.successConfirmationMessage}
             </div>
         );
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -229,7 +198,11 @@ export default class ClaimRecord extends React.PureComponent {
                     }
 
                     {
-                        this.getAlert({...this.props, alertLocale: txt, authorLinked: publication.rek_pid && (authorLinked || contributorLinked)})
+                        alertProps && <Alert {...alertProps} />
+                    }
+                    {
+                        publication.rek_pid && (authorLinked || contributorLinked) &&
+                            <Alert {...txt.alreadyClaimedAlert} />
                     }
 
                     <div className="columns action-buttons">

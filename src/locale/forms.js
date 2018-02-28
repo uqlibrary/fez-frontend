@@ -86,7 +86,8 @@ export default {
             progressAlert: {
                 type: 'info_outline',
                 title: 'Saving',
-                message: 'Claim publication is being processed.'
+                message: 'Claim publication is being processed.',
+                showLoader: true
             },
             successAlert: {
                 type: 'done',
@@ -186,11 +187,6 @@ export default {
                 type: 'done',
                 title: 'Success',
                 message: 'Fix record request has been submitted successfully.'
-            },
-            failedAlert: {
-                type: 'error',
-                title: 'Failed',
-                message: 'Fix record request has failed. Please try again, or contact the eSpace administrator.'
             }
         }
     }
