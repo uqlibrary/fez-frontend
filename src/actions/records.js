@@ -100,7 +100,11 @@ export function submitThesis(data, author) {
             ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
             ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
-            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
+            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
+            rek_title: data.thesisTitle.plainText,
+            rek_formatted_title: data.thesisTitle.htmlText,
+            rek_description: data.thesisAbstract.plainText,
+            rek_formatted_abstract: data.thesisAbstract.htmlText
         };
 
         // delete extra form values from request object
@@ -110,11 +114,10 @@ export function submitThesis(data, author) {
         if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
         if (recordRequest.supervisors) delete recordRequest.supervisors;
         if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
-
+        if (recordRequest.thesisTitle) delete recordRequest.thesisTitle;
+        if (recordRequest.thesisAbstract) delete recordRequest.thesisAbstract;
         let fileUploadSucceeded = false;
         dispatch({type: actions.CREATE_RECORD_SAVING});
-
-        debugger;
         return putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch)
             .then((response) => {
                 fileUploadSucceeded = !!response;
@@ -131,7 +134,7 @@ export function submitThesis(data, author) {
             })
             .catch(error => {
                 const specificError = !fileUploadSucceeded
-                    ? 'File upload failed. Issue has been created to notify eSpace administrators. '
+                    ? 'File upload failed. '
                     : 'Error occurred while saving record to eSpace. ';
                 const compositeError = `${specificError} ${ error.message ? `(${error.message})` : '' }`;
 

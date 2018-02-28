@@ -8,7 +8,11 @@
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 12px;
-  padding: 6px;
+  padding: 0;
+
+  overflow: hidden;
+  word-break: break-word;
+
   & > div.columns:nth-child(1) {
     margin-bottom: 0px !important;
   }
@@ -43,6 +47,9 @@
     line-height: $text-line-height-normal;
     color: rgba($text-color, 0.8);
     margin-bottom: 12px;
+    @include mobile {
+      font-size: $text-body-small !important;
+    }
 
     .citationJournalName {
       font-style: italic;
@@ -61,7 +68,8 @@
     }
 
     .citationIcon {
-      font-size: $text-body-normal !important;
+      height: $text-body-normal !important;
+      width: $text-body-normal !important;
     }
   }
 
@@ -90,6 +98,8 @@
         &.material-icons {
           margin: 1px 3px 0 0 !important;
           font-size: $text-body-small !important;
+          height: $text-body-normal !important;
+          width: $text-body-normal !important;
           line-height: 12px !important;
         }
       }

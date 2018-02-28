@@ -48,7 +48,9 @@ export default class Masquerade extends Component {
                         hintText={txt.labels.hint}
                         value={this.state.userName}
                         onChange={this._usernameChanged}
-                        onKeyPress={this._masqueradeAs} />
+                        onKeyPress={this._masqueradeAs}
+                        className="mui-long-labels-fix"
+                    />
                 </StandardCard>
                 <div className="columns action-buttons">
                     <div className="column is-hidden-mobile"/>

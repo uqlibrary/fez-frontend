@@ -168,7 +168,7 @@ export default {
             possiblePublicationsLure: {
                 title: 'Claim now!',
                 message: 'We have found [count] record(s) that could possibly be your work.',
-                type: 'warning',
+                type: 'info_outline',
                 actionButtonLabel: 'Claim your publications now'
             },
             nothingToClaimLure: {
@@ -288,6 +288,11 @@ export default {
                 confirmationMessage: 'Are you sure you want to hide selected possibly your publication from this view?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
+            },
+            hidePublicationFailedAlert: {
+                title: 'Error',
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
+                type: 'error'
             },
             hideAllPublicationsConfirmation: {
                 confirmationTitle: 'Hide publications',
@@ -420,6 +425,9 @@ export default {
             cancel: 'Cancel',
             submit: 'Submit'
         },
+        viewRecord: {
+            loadingMessage: 'Loading record...'
+        },
         masquerade: {
             title: 'Masquerade',
             help: {
@@ -507,7 +515,8 @@ export default {
             progressAlert: {
                 type: 'info_outline',
                 title: 'Saving',
-                message: 'Request is being processed.'
+                message: 'Request is being processed.',
+                showLoader: true
             },
             successAlert: {
                 type: 'done',
@@ -630,7 +639,8 @@ export default {
             progressAlert: {
                 type: 'info_outline',
                 title: 'Linking ORCID',
-                message: 'Request is being processed.'
+                message: 'Request is being processed.',
+                showLoader: true
             }
         }
     }

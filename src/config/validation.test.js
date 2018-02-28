@@ -126,3 +126,65 @@ describe('Validation method', () => {
     });
 });
 
+describe('getErrorAlertProps ', () => {
+    it('should return props for alert', () => {
+        const testCases = [
+            {
+                parameters: {submitFailed: true, error: true, alertLocale: {errorAlert: {title: 'submitFailed' }}},
+                expected: 'submitFailed'
+            },
+            {
+                parameters: {dirty: true, invalid: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
+                expected: 'validationFailed'
+            },
+            {
+                parameters: {submitFailed: true, dirty: true, invalid: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
+                expected: 'validationFailed'
+            },
+            {
+                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
+                expected: 'submitting'
+            },
+            {
+                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
+                expected: 'submitSucceeded'
+            }
+        ];
+
+        testCases.forEach(testCase => {
+            const alertProps = validation.getErrorAlertProps({...testCase.parameters});
+            expect(alertProps.title).toEqual(testCase.expected);
+        });
+    });
+
+    it('should return correct validation error summary', () => {
+        const testCases = [
+            {
+                parameters: {'rek_title': 'This field is required'},
+                expected: 'Title is required'
+            },
+            {
+                parameters: {'fez_record_search_key_journal_name': {'rek_journal_name': 'This field is required'}},
+                expected: 'Journal name is required'
+            }
+        ];
+
+        testCases.forEach(testCase => {
+            const errorMsgs = validation.translateFormErrorsToText(testCase.parameters);
+            expect(errorMsgs[0]).toEqual(testCase.expected);
+        });
+
+        const nonExistingFieldTestCase = {
+            parameters: {'some_nonexisting_field': 'This field is required'},
+            expected: null
+        };
+
+        const testMessage = validation.translateFormErrorsToText(nonExistingFieldTestCase.parameters);
+        expect(testMessage).toBeNull();
+
+        const emptyMessage = validation.translateFormErrorsToText('');
+        expect(emptyMessage).toBeNull();
+    });
+
+});
+

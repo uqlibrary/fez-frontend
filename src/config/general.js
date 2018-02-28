@@ -265,6 +265,12 @@ export const thesisSubtypes = [
     'Professional Doctorate'
 ];
 
+export const thesisSubmissionSubtypes = [
+    'MPhil Thesis',
+    'PhD Thesis',
+    'Professional Doctorate'
+];
+
 export const OrgUnitsVocabId = 453703;
 export const FieldOfResearchVocabId = 451780;
 
@@ -283,7 +289,8 @@ export const HDR_THESIS_DEFAULT_VALUES = {
     fez_record_search_key_ismemberof: [
         {rek_ismemberof: 'UQ:152694'}
     ],
-    rek_display_type: PUBLICATION_TYPE_THESIS
+    rek_display_type: PUBLICATION_TYPE_THESIS,
+    fileAccessId: 3
 };
 
 export const SBS_THESIS_DEFAULT_VALUES = {
@@ -293,5 +300,6 @@ export const SBS_THESIS_DEFAULT_VALUES = {
         {rek_ismemberof: 'UQ:155729'}
     ],
     rek_display_type: PUBLICATION_TYPE_THESIS,
-    rek_genre_type: 'Professional Doctorate'
+    rek_genre_type: 'Professional Doctorate',
+    fileAccessId: 4
 };

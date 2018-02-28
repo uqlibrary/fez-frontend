@@ -99,6 +99,16 @@ export function hideRecord({record, facets = {}}) {
 }
 
 /**
+ * Reset the error message and status when leaving the claim possible pubs page
+ * @returns {action}
+ */
+export function hideRecordErrorReset() {
+    return dispatch => {
+        dispatch({type: actions.HIDE_PUBLICATIONS_FAILED_RESET});
+    };
+}
+
+/**
  * Set publication to be claimed
  * @param publication {object} - set a publication to be claimed (to display in claim publiation form)
  * @returns {action}

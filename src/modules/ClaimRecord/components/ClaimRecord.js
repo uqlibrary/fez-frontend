@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -13,12 +13,12 @@ import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPrompt';
 
 
-import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
+import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
 import {validation, routes} from 'config';
 import {locale} from 'locale';
 
-export default class ClaimRecord extends Component {
+export default class ClaimRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         publicationToClaimFileUploadingError: PropTypes.bool,
@@ -45,6 +45,10 @@ export default class ClaimRecord extends Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
+    }
+
     componentWillUnmount() {
         // clear previously selected publication for a claim
         this.props.actions.clearClaimPublication();
@@ -67,22 +71,6 @@ export default class ClaimRecord extends Component {
             event.preventDefault();
             this.props.handleSubmit();
         }
-    };
-
-    getAlert = ({submitFailed = false, error, dirty = false, invalid = false, submitting = false, submitSucceeded = false, txt, authorLinked = false}) => {
-        let alertProps = null;
-        if (submitFailed && error) {
-            alertProps = {...txt.errorAlert, message: txt.errorAlert.message ? txt.errorAlert.message(error) : error};
-        } else if (!submitFailed && dirty && invalid) {
-            alertProps = {...txt.validationAlert};
-        } else if (submitting) {
-            alertProps = {...txt.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...txt.successAlert};
-        } else if (authorLinked) {
-            alertProps = {...txt.alreadyClaimedAlert};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
     };
 
     _setSuccessConfirmation = (ref) => {
@@ -115,7 +103,7 @@ export default class ClaimRecord extends Component {
                 {txt.successWorkflowConfirmation.successConfirmationMessage}
             </div>
         );
-
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -202,7 +190,7 @@ export default class ClaimRecord extends Component {
                                     name="files"
                                     component={ FileUploadField }
                                     disabled={this.props.submitting}
-                                    requireFileAccess
+                                    requireOpenAccessStatus
                                     validate={[validation.validFileUpload]}
                                 />
                             </StandardCard>
@@ -210,7 +198,11 @@ export default class ClaimRecord extends Component {
                     }
 
                     {
-                        this.getAlert({...this.props, txt: txt, authorLinked: publication.rek_pid && (authorLinked || contributorLinked)})
+                        alertProps && <Alert {...alertProps} />
+                    }
+                    {
+                        publication.rek_pid && (authorLinked || contributorLinked) &&
+                            <Alert {...txt.alreadyClaimedAlert} />
                     }
 
                     <div className="columns action-buttons">

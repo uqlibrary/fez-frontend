@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
@@ -16,11 +16,11 @@ import {NavigationDialogBox} from 'uqlibrary-react-toolbox/build/NavigationPromp
 import {FileUploadField} from 'uqlibrary-react-toolbox/build/FileUploader';
 import {InlineLoader} from 'uqlibrary-react-toolbox/build/Loaders';
 
-import {PublicationCitation} from 'modules/SharedComponents/PublicationsList';
+import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {validation, routes} from 'config';
 import {locale} from 'locale';
 
-export default class FixRecord extends Component {
+export default class FixRecord extends React.PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
 
@@ -34,7 +34,9 @@ export default class FixRecord extends Component {
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
 
-        publicationToFixFileUploadingError: PropTypes.bool
+        publicationToFixFileUploadingError: PropTypes.bool,
+
+        errors: PropTypes.object,
     };
 
     static contextTypes = {
@@ -50,7 +52,10 @@ export default class FixRecord extends Component {
     }
 
     componentDidMount() {
-        if (this.props.actions && !this.props.recordToFix) {
+        if (this.props.actions &&
+            !this.props.recordToFix &&
+            this.props.match.params &&
+            this.props.match.params.pid) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
     }
@@ -59,6 +64,10 @@ export default class FixRecord extends Component {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props !== nextProps || this.state !== nextState;
     }
 
     componentWillUnmount() {
@@ -99,21 +108,6 @@ export default class FixRecord extends Component {
         }
     };
 
-    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
-        submitSucceeded = false, alertLocale = {}}) => {
-        let alertProps = null;
-        if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
-        } else if (!submitFailed && dirty && invalid) {
-            alertProps = {...alertLocale.validationAlert};
-        } else if (submitting) {
-            alertProps = {...alertLocale.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...alertLocale.successAlert};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
-    };
-
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
     };
@@ -152,7 +146,7 @@ export default class FixRecord extends Component {
                 {saveConfirmationLocale.confirmationMessage}
             </div>
         );
-
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -207,7 +201,7 @@ export default class FixRecord extends Component {
                                     name="files"
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
-                                    requireFileAccess
+                                    requireOpenAccessStatus
                                     validate={[validation.validFileUpload]}
                                 />
                             </StandardCard>
@@ -228,7 +222,7 @@ export default class FixRecord extends Component {
                     }
 
                     {
-                        this.getAlert({...this.props, alertLocale: txtFixForm})
+                        alertProps && <Alert {...alertProps} />
                     }
 
                     <div className="columns action-buttons">

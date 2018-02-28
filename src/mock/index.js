@@ -26,17 +26,17 @@ user = user || 'uqresearcher';
 
 mock
     .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(config => {
-        // mock account response
-        if (user === 'anon') return [403, {}];
-        if (mockData.accounts[user]) return [200, mockData.accounts[user]];
-        return [404, {}];
-    })
+    // mock account response
+    if (user === 'anon') return [403, {}];
+    if (mockData.accounts[user]) return [200, mockData.accounts[user]];
+    return [404, {}];
+})
     .onGet(routes.AUTHOR_DETAILS_API({userId: user}).apiUrl).reply(config => {
-        // mock current author details
-        if (user === 'anon') return [403, {}];
-        if (mockData.authorDetails[user]) return [200, mockData.authorDetails[user]];
-        return [404, {}];
-    })
+    // mock current author details
+    if (user === 'anon') return [403, {}];
+    if (mockData.authorDetails[user]) return [200, mockData.authorDetails[user]];
+    return [404, {}];
+})
     .onGet(routes.CURRENT_AUTHOR_API().apiUrl)
     .reply(config => {
         // mock current author details from fez
@@ -61,21 +61,21 @@ mock
         if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
-        // CURRENT_USER_RECORDS_API
-        if (config.params.rule === 'mine') return [200, mockData.myRecordsList];
-        // POSSIBLE_RECORDS_API
-        if (config.params.rule === 'possible') return [200, mockData.possibleUnclaimedList];
-        // if (config.params.rule === 'possible') return [500, ['ERROR POSSIBLE_RECORDS_API']];
-        // SEARCH_KEY_LOOKUP_API
-        if (config.params.rule === 'lookup') {
-            return [200, mockData.searchKeyList[config.params.search_key]];
-        }
-        // SEARCH_INTERNAL_RECORDS_API
-        if (config.params.id || config.params.doi || config.params.title) {
-            return [200, mockData.internalTitleSearchList];
-        }
-        return [404, ['Request not found']];
-    })
+    // CURRENT_USER_RECORDS_API
+    if (config.params.rule === 'mine') return [200, mockData.myRecordsList];
+    // POSSIBLE_RECORDS_API
+    if (config.params.rule === 'possible') return [200, mockData.possibleUnclaimedList];
+    // if (config.params.rule === 'possible') return [500, ['ERROR POSSIBLE_RECORDS_API']];
+    // SEARCH_KEY_LOOKUP_API
+    if (config.params.rule === 'lookup') {
+        return [200, mockData.searchKeyList[config.params.search_key]];
+    }
+    // SEARCH_INTERNAL_RECORDS_API
+    if (config.params.id || config.params.doi || config.params.title) {
+        return [200, mockData.internalTitleSearchList];
+    }
+    return [404, ['Request not found']];
+})
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
     .onGet(routes.AUTHORS_SEARCH_API({query: '.*'}).apiUrl)
@@ -111,8 +111,8 @@ mock
     .reply(200, {data: {}})
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    .reply(200, {data: {}});
-    // .reply(500, {message: 'error - failed NEW_RECORD_API'});
+    // .reply(200, {data: {}});
+    .reply(500, {message: 'error - failed NEW_RECORD_API'});
 
 mock
     .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))

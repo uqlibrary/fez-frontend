@@ -166,10 +166,12 @@ h2.trendingPubsSource {
     text-align: right;
     margin-left: 24px !important;
     font-size: $title-large;
+    line-height: $title-large;
   }
   .trendingPubsDifference {
     color: $secondary-color;
     font-size: $title-small;
+    line-height: $title-small;
     vertical-align: top;
   }
 }

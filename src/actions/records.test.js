@@ -251,8 +251,14 @@ describe('Record action creators', () => {
                 "rek_value": {"key": 452270, "value": "080607 Information Engineering and Theory"},
                 "rek_order": 3
             }],
-            "fez_record_search_key_description": {"rek_description": "This is a abstract text..."},
-            "rek_title": "Test thesis title",
+            "thesisAbstract": {
+                plainText: "abstract",
+                formattedText: "<p>abstract</p>"
+            },
+            "thesisTitle": {
+                plainText: "title",
+                formattedText: "<p>title</p>"
+            },
             "fez_record_search_key_org_name": {"rek_org_name": "The University of Queensland"},
             "rek_object_type": 3,
             "rek_date": "2018-01-01",
@@ -352,7 +358,7 @@ describe('Record action creators', () => {
                 await mockActionsStore.dispatch(recordActions.submitThesis(customInput, authorData));
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-                expect(e).toEqual('File upload failed. Issue has been created to notify eSpace administrators.  (Request error with status code 500. )');
+                expect(e).toEqual('File upload failed.  (Request error with status code 500. )');
             }
         });
 

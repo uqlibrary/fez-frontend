@@ -10,12 +10,12 @@ export default class DateRange extends React.Component {
     static propTypes = {
         onChange: PropTypes.func.isRequired,
         disabled: PropTypes.bool,
-        isActive: PropTypes.bool,
         value: PropTypes.object,
         defaultValue: PropTypes.object,
         open: PropTypes.bool,
         locale: PropTypes.object,
-        className: PropTypes.string
+        itemClassName: PropTypes.string,
+        subitemClassName: PropTypes.string
     };
 
     static defaultProps = {
@@ -24,7 +24,7 @@ export default class DateRange extends React.Component {
             to: null
         },
         defaultValue: {
-            from: 2010,
+            from: (new Date()).getFullYear() - 10,
             to: (new Date()).getFullYear() + 5
         },
         locale: {
@@ -33,7 +33,8 @@ export default class DateRange extends React.Component {
             rangeSubmitButtonLabel: 'Go',
             displayTitle: 'Date range'
         },
-        className: 'dateRange'
+        itemClassName: 'dateRange',
+        subitemClassName: 'dateRage'
     };
 
     constructor(props) {
@@ -46,83 +47,95 @@ export default class DateRange extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (JSON.stringify(nextProps.value) === JSON.stringify({})) {
-            this.setState({isActive: false});
-        }
+        this.setState({
+            from: nextProps.value.from || this.props.defaultValue.from,
+            to: nextProps.value.to || this.props.defaultValue.to,
+            isActive: !!nextProps.value.from || !!nextProps.value.to
+        });
     }
 
     setValue = (key) => (event, value) => {
+        const intValue = parseInt(value, 10);
         this.setState({
-            [key]: isNaN(parseInt(value, 10)) ? null : parseInt(value, 10)
+            [key]: isNaN(intValue) || intValue < 0 || intValue > 9999 ? '*' : intValue
         });
     };
 
-    _handleRangeFacetClick = () => {
-        this.setState({isActive: !this.state.isActive});
-        return this.props.onChange({from: this.state.from, to: this.state.to});
+    setDateRange = () => {
+        this.setState({isActive: true});
+        const isFromYearSet = !isNaN(parseInt(this.state.from, 10));
+        const isToYearSet = !isNaN(parseInt(this.state.to, 10));
+
+        this.props.onChange({from: isFromYearSet ? this.state.from : null, to: isToYearSet ? this.state.to : null});
     };
+
+    renderDateRangeForm = () => (
+        <div className="yearPublished columns is-gapless">
+            <div className="dateRangeFrom column">
+                <TextField
+                    type="number"
+                    floatingLabelText={this.props.locale.fromFieldLabel}
+                    value={this.state.from}
+                    onChange={this.setValue('from')}
+                    disabled={this.props.disabled}
+                    fullWidth/>
+            </div>
+            <div className="dateRangeSeparator column is-narrow"/>
+            <div className="dateRangeTo column">
+                <TextField
+                    type="number"
+                    floatingLabelText={this.props.locale.toFieldLabel}
+                    value={this.state.to}
+                    onChange={this.setValue('to')}
+                    disabled={this.props.disabled}
+                    fullWidth/>
+            </div>
+            <div className="dateRangeSeparator column is-narrow"/>
+            <div className="dateRangeGo column is-narrow">
+                <FlatButton
+                    label={this.props.locale.rangeSubmitButtonLabel}
+                    onClick={this.setDateRange}
+                    className="is-mui-spacing-button"
+                    disabled={this.props.disabled || (!isNaN(this.state.to - this.state.from) && (this.state.to - this.state.from) < 0)}
+                    fullWidth/>
+            </div>
+        </div>
+    );
+
+    removeDateRange = () => {
+        if (this.state.isActive) {
+            this.setState({isActive: false});
+            this.props.onChange({from: null, to: null});
+        }
+    }
+
+    getNestedItem = () => {
+        const isActive = this.state.isActive;
+        return (
+            <ListItem
+                key="dateRangeItem"
+                className={`${this.props.subitemClassName} ${(isActive ? 'active ' : '')} ${(this.props.disabled ? 'disabled' : '')}`}
+                primaryText={isActive ? `${this.state.from} - ${this.state.to}` : ''}
+                disabled={this.props.disabled}
+                onClick={this.removeDateRange}
+                leftIcon={isActive ? <NavigationClose disabled={this.props.disabled} /> : null}>
+                {
+                    !isActive && this.renderDateRangeForm()
+                }
+            </ListItem>
+        );
+    }
 
     render() {
         const txt = this.props.locale;
-        const {disabled, open} = this.props;
-        const {isActive} = this.state;
-        const activeClass = isActive ? ' active' : '';
-        const disabledClass = disabled ? ' disabled' : '';
-
         return (
-            <div className={this.props.className}>
-                <ListItem
-                    primaryText={txt.displayTitle}
-                    open={open}
-                    disabled={disabled}
-                    className={`dateRangeCategory${activeClass}${disabledClass}`}
-                    primaryTogglesNestedList
-                    nestedItems={[
-                        <ListItem
-                            key="key_facet_item"
-                            className={`dateRangeLink${activeClass}${disabledClass}`}
-                            primaryText={isActive ? `${this.state.from || '*'} - ${this.state.to || '*'}` : ''}
-                            onClick={isActive ? this._handleRangeFacetClick : () => {}}
-                            disabled={disabled}
-                            leftIcon={isActive ? <NavigationClose disabled={disabled} /> : null}
-                        >
-                            {
-                                !isActive &&
-                                <div className="yearPublished columns is-gapless">
-                                    <div className="dateRangeFrom column">
-                                        <TextField
-                                            type="number"
-                                            floatingLabelText={txt.fromFieldLabel}
-                                            defaultValue={this.state.from}
-                                            onChange={this.setValue('from')}
-                                            fullWidth
-                                        />
-                                    </div>
-                                    <div className="dateRangeSeparator column is-narrow" />
-                                    <div className="dateRangeTo column">
-                                        <TextField
-                                            type="number"
-                                            floatingLabelText={txt.toFieldLabel}
-                                            defaultValue={this.state.to}
-                                            onChange={this.setValue('to')}
-                                            fullWidth
-                                        />
-                                    </div>
-                                    <div className="dateRangeSeparator column is-narrow" />
-                                    <div className="dateRangeGo column is-narrow">
-                                        <FlatButton
-                                            label={txt.rangeSubmitButtonLabel}
-                                            onClick={this._handleRangeFacetClick}
-                                            className="is-mui-spacing-button"
-                                            fullWidth
-                                        />
-                                    </div>
-                                </div>
-                            }
-                        </ListItem>
-                    ]}
-                />
-            </div>
+            <ListItem
+                open={this.props.open}
+                primaryText={txt.displayTitle}
+                disabled={this.props.disabled}
+                className={`${this.props.itemClassName} ${(this.state.isActive ? 'active ' : '')} ${(this.props.disabled ? 'disabled' : '')}`}
+                primaryTogglesNestedList
+                nestedItems={[this.getNestedItem()]} />
         );
     }
 }

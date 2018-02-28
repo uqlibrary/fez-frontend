@@ -105,6 +105,23 @@ const handlers = {
         }
     ),
 
+    [actions.HIDE_PUBLICATIONS_FAILED]: (state, action) => (
+        {
+            ...state,
+            hidePublicationLoading: false,
+            hidePublicationFailed: true,
+            hidePublicationFailedErrorMessage: action.payload
+        }
+    ),
+
+    [actions.HIDE_PUBLICATIONS_FAILED_RESET]: (state) => (
+        {
+            ...state,
+            hidePublicationFailed: false,
+            hidePublicationFailedErrorMessage: null
+        }
+    ),
+
     [actions.CLAIM_PUBLICATION_CREATE_COMPLETED]: (state, action) => (
         {
             ...state,

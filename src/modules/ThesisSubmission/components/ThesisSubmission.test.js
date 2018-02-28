@@ -1,6 +1,5 @@
 import ThesisSubmission from './ThesisSubmission';
 import Immutable from 'immutable';
-import {AUTH_URL_LOGIN} from "config";
 import {default as formLocale} from 'locale/publicationForm';
 
 function setup(testProps, isShallow = true) {
@@ -12,6 +11,7 @@ function setup(testProps, isShallow = true) {
         invalid: testProps.invalid || false, // : PropTypes.bool
         pristine: testProps.pristine || false, // : PropTypes.bool
         isHdrThesis: testProps.isHdrThesis || false, // : PropTypes.bool
+        fileAccessId: testProps.fileAccessId || 3 // PropTypes.number
     };
 
     return getElement(ThesisSubmission, props, isShallow);
@@ -21,7 +21,7 @@ describe('ThesisSubmission test', () => {
     it('should render sbs thesis submission form', () => {
         const wrapper = setup({isHdrThesis: false});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(11);
+        expect(wrapper.find('Field').length).toEqual(9);
         expect(wrapper.find('RaisedButton').length).toEqual(2);
     });
 
@@ -86,33 +86,6 @@ describe('ThesisSubmission test', () => {
         const wrapper = setup({});
         wrapper.setProps({ submitSucceeded: true });
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should display alert', () => {
-        const wrapper = setup({}).instance();
-        const testCases = [
-            {
-                parameters: {submitFailed: true, error: true, alertLocale: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
-            },
-            {
-                parameters: {dirty: true, invalid: true, error: ['one', 'two'], alertLocale: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
-            },
-            {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
-                expected: 'submitting'
-            },
-            {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
-                expected: 'submitSucceeded'
-            }
-        ];
-
-        testCases.forEach(testCase => {
-            const alert = wrapper.getAlert({...testCase.parameters});
-            expect(alert.props.title).toEqual(testCase.expected);
-        });
     });
 
     it('should redirect to cancel page', () => {
