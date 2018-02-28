@@ -89,56 +89,6 @@ class Dashboard extends React.Component {
         this.props.history.push(routes.pathConfig.records.mine);
     };
 
-    _IeVersion = () => {
-        // Get the user agent string
-        const ua = navigator.userAgent;
-        let compatibilityMode = false;
-
-        // Get the current "emulated" version of IE
-        const renderVersion = parseFloat(RegExp.$1);
-        let version = renderVersion;
-
-        // Check the browser version with the rest of the agent string to detect compatibility mode
-        if(ua.indexOf('MSIE') > -1) {
-            if (ua.indexOf('Trident/7.0') > -1) {
-                if (ua.indexOf('MSIE 7.0') > -1) {
-                    compatibilityMode = true;
-                    version = 11;
-                }
-            } else if (ua.indexOf('Trident/6.0') > -1) {
-                if (ua.indexOf('MSIE 7.0') > -1) {
-                    compatibilityMode = true;
-                    version = 10;
-                }
-            } else if (ua.indexOf('Trident/5.0') > -1) {
-                if (ua.indexOf('MSIE 7.0') > -1) {
-                    compatibilityMode = true;
-                    version = 9;                   // IE 9
-                }
-            } else if (ua.indexOf('Trident/4.0') > -1) {
-                if (ua.indexOf('MSIE 7.0') > -1) {
-                    compatibilityMode = true;
-                    version = 8;                   // IE 8
-                }
-            } else if (ua.indexOf('MSIE 7.') > -1) {
-                version = 7; // IE 7
-            } else {
-                version = 6;                       // IE 6
-            }
-            return {
-                version: version,
-                rederVersion: renderVersion,
-                compatabilityMode: compatibilityMode,
-            };
-        } else {
-            return {
-                version: 'Not IE',
-                rederVersion: null,
-                compatabilityMode: null,
-            };
-        }
-    };
-
     render() {
         const txt = locale.pages.dashboard;
         const loading = this.props.loadingPublicationsByYear || this.props.accountAuthorDetailsLoading
@@ -174,10 +124,9 @@ class Dashboard extends React.Component {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
+        console.log(navigator.userAgent);
         return (
             <StandardPage className="dashboard">
-                <div>{JSON.stringify(this._IeVersion())}</div>
-                <div>{navigator.userAgent}</div>
                 {
                     <Alert {...locale.pages.dashboard.isQuirksModeAlert} />
                 }
