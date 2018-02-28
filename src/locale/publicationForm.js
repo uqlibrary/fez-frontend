@@ -1100,10 +1100,9 @@ export default {
                 fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
                 fileUploadRestrictions: (
                     <div>
-                        File submission is mandatory. Maximum file size is 5Gb. <br/>
+                        Maximum file size is 5Gb. <br/>
                         PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf</b>.
                         Stages of examination are: submission, or correctedthesis, or finalthesis.
-                        Please refer to <a href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination" target="_blank">HDR submission guidelines</a> for file naming conventions.
                         For example:
                         <ul>
                             <li>s1234567_phd_thesis.pdf</li>
