@@ -146,3 +146,11 @@ margin-top: 6px !important;
     border-left: 2px solid inherit !important;
   }
 }
+
+.validationMessage {
+  .validationList {
+    margin: 6px 0;
+    .validationItem {
+    }
+  }
+}

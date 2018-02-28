@@ -49,8 +49,11 @@ export default {
         rek_genre_type: 'Thesis type is required',
         thesisTitle: 'Thesis title is required',
         thesisAbstract: 'Thesis abstract is required',
-        files: 'File submission is mandatory',
+        files: 'File submission to be completed',
         fieldOfResearch: 'Field of research (FoR) codes are required',
-        fez_record_search_key_keywords: 'Keywords are required'
+        fez_record_search_key_keywords: 'Keywords are required',
+        contributorLinking: 'You are required to select a contributor from the list, then confirm that it is you',
+        authorLinking: 'You are required to select a author from the list, then confirm that it is you',
+        comments: 'Comments are required'
     }
 };
