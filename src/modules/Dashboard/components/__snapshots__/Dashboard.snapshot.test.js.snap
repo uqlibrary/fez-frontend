@@ -4,12 +4,17 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
 <StandardPage
   className="dashboard"
 >
-  {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  <div>
+    {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  </div>
+  <div>
+    Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.6.2
+  </div>
   <Alert
     allowDismiss={false}
-    message="To view this website properly, please disable quirks mode in your browser."
+    message="To view this website properly, please disable quirks/compatability mode in your browser."
     showLoader={false}
-    title="Your browser is in Quirks Mode"
+    title="Your browser is in Quirks/Compatability Mode"
     type="warning"
   />
   <div
@@ -399,12 +404,17 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
 <StandardPage
   className="dashboard"
 >
-  {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  <div>
+    {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  </div>
+  <div>
+    Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.6.2
+  </div>
   <Alert
     allowDismiss={false}
-    message="To view this website properly, please disable quirks mode in your browser."
+    message="To view this website properly, please disable quirks/compatability mode in your browser."
     showLoader={false}
-    title="Your browser is in Quirks Mode"
+    title="Your browser is in Quirks/Compatability Mode"
     type="warning"
   />
   <div
@@ -465,12 +475,17 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
 <StandardPage
   className="dashboard"
 >
-  {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  <div>
+    {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  </div>
+  <div>
+    Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.6.2
+  </div>
   <Alert
     allowDismiss={false}
-    message="To view this website properly, please disable quirks mode in your browser."
+    message="To view this website properly, please disable quirks/compatability mode in your browser."
     showLoader={false}
-    title="Your browser is in Quirks Mode"
+    title="Your browser is in Quirks/Compatability Mode"
     type="warning"
   />
   <div
@@ -541,12 +556,17 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
 <StandardPage
   className="dashboard"
 >
-  {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  <div>
+    {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  </div>
+  <div>
+    Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.6.2
+  </div>
   <Alert
     allowDismiss={false}
-    message="To view this website properly, please disable quirks mode in your browser."
+    message="To view this website properly, please disable quirks/compatability mode in your browser."
     showLoader={false}
-    title="Your browser is in Quirks Mode"
+    title="Your browser is in Quirks/Compatability Mode"
     type="warning"
   />
   <div
@@ -607,12 +627,17 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
 <StandardPage
   className="dashboard"
 >
-  {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  <div>
+    {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  </div>
+  <div>
+    Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.6.2
+  </div>
   <Alert
     allowDismiss={false}
-    message="To view this website properly, please disable quirks mode in your browser."
+    message="To view this website properly, please disable quirks/compatability mode in your browser."
     showLoader={false}
-    title="Your browser is in Quirks Mode"
+    title="Your browser is in Quirks/Compatability Mode"
     type="warning"
   />
   <div
@@ -683,12 +708,17 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
 <StandardPage
   className="dashboard"
 >
-  {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  <div>
+    {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  </div>
+  <div>
+    Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.6.2
+  </div>
   <Alert
     allowDismiss={false}
-    message="To view this website properly, please disable quirks mode in your browser."
+    message="To view this website properly, please disable quirks/compatability mode in your browser."
     showLoader={false}
-    title="Your browser is in Quirks Mode"
+    title="Your browser is in Quirks/Compatability Mode"
     type="warning"
   />
 </StandardPage>
@@ -698,12 +728,17 @@ exports[`Dashboard test renders dashboard header only 1`] = `
 <StandardPage
   className="dashboard"
 >
-  {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  <div>
+    {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  </div>
+  <div>
+    Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.6.2
+  </div>
   <Alert
     allowDismiss={false}
-    message="To view this website properly, please disable quirks mode in your browser."
+    message="To view this website properly, please disable quirks/compatability mode in your browser."
     showLoader={false}
-    title="Your browser is in Quirks Mode"
+    title="Your browser is in Quirks/Compatability Mode"
     type="warning"
   />
   <div
@@ -774,12 +809,17 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
 <StandardPage
   className="dashboard"
 >
-  {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  <div>
+    {"version":"Not IE","rederVersion":null,"compatabilityMode":null}
+  </div>
+  <div>
+    Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.6.2
+  </div>
   <Alert
     allowDismiss={false}
-    message="To view this website properly, please disable quirks mode in your browser."
+    message="To view this website properly, please disable quirks/compatability mode in your browser."
     showLoader={false}
-    title="Your browser is in Quirks Mode"
+    title="Your browser is in Quirks/Compatability Mode"
     type="warning"
   />
   <div

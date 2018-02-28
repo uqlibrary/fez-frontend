@@ -138,8 +138,8 @@ export default {
         dashboard: {
             loading: 'Loading your dashboard...',
             isQuirksModeAlert: {
-                title: 'Your browser is in Quirks Mode',
-                message: 'To view this website properly, please disable quirks mode in your browser.',
+                title: 'Your browser is in Quirks/Compatability Mode',
+                message: 'To view this website properly, please disable quirks/compatability mode in your browser.',
                 type: 'warning'
             },
             header: {

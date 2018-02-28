@@ -176,7 +176,8 @@ class Dashboard extends React.Component {
             ) : null;
         return (
             <StandardPage className="dashboard">
-                {JSON.stringify(this._IeVersion())}
+                <div>{JSON.stringify(this._IeVersion())}</div>
+                <div>{navigator.userAgent}</div>
                 {
                     <Alert {...locale.pages.dashboard.isQuirksModeAlert} />
                 }
