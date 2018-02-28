@@ -53,22 +53,6 @@ export default class PublicationForm extends Component {
             null;
     };
 
-    getAlert = ({submitFailed = false, dirty = false, invalid = false, submitting = false, error,
-        submitSucceeded = false, alertLocale = {}}) => {
-        let alertProps = null;
-        if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
-        } else if (!submitFailed && dirty && invalid) {
-            alertProps = {...alertLocale.validationAlert};
-        } else if (submitting) {
-            alertProps = {...alertLocale.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...alertLocale.successAlert};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
-    };
-
-
     render() {
         const publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
@@ -83,6 +67,8 @@ export default class PublicationForm extends Component {
                 return <MenuItem value={item.id} primaryText={item.name} key={index} disabled={!item.formComponent}/>;
             })
         ];
+
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
         return (
             <form>
                 <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
@@ -115,7 +101,8 @@ export default class PublicationForm extends Component {
                     </StandardCard>
                 }
                 {
-                    this.getAlert({...this.props, alertLocale: txt})
+                    alertProps &&
+                    <Alert {...alertProps} />
                 }
                 <div className="columns action-buttons">
                     <div className="column is-hidden-mobile"/>

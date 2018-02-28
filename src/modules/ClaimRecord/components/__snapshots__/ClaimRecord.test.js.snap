@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ClaimRecord  should render claim form if publication doesn't have a PID and but current author was assigned (author linking component should not be rendered) 1`] = `
+exports[`Component ClaimRecord  should render claim form if publication doesn't have a PID but current author was assigned (author linking component should not be rendered) 1`] = `
 <StandardPage
   className=""
   title="Claim a publication"
@@ -6059,6 +6059,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     <Alert
       allowDismiss={false}
       message="This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at espace.admin@email.com.au"
+      showLoader={false}
       title="Error"
       type="error"
     />
@@ -6970,6 +6971,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               <Alert
                 allowDismiss={false}
                 message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+                showLoader={false}
                 title="File upload failed"
                 type="info"
               />
@@ -8394,4 +8396,148 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
     </div>
   </form>
 </StandardPage>
+`;
+
+exports[`Component ClaimRecord  should return and render alert message depending on form status 1`] = `
+<div
+  className="info_outline alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <CircularProgress
+        className="alertSpinner"
+        max={100}
+        min={0}
+        mode="indeterminate"
+        size={32}
+        thickness={4}
+        value={0}
+      />
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b>
+          Saving - 
+        </b>
+        Claim publication is being processed.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component ClaimRecord  should return and render alert message depending on form status 2`] = `
+<div
+  className="done alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        done
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b>
+          Success - 
+        </b>
+        Publication claim has been submitted successfully.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component ClaimRecord  should return and render alert message depending on form status 3`] = `
+<div
+  className="error_outline alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        error_outline
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b>
+          Error - 
+        </b>
+        Error has occurred during request and request cannot be processed. This is an error Please contact eSpace administrators or try again later.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component ClaimRecord  should return and render alert message depending on form status 4`] = `
+<div
+  className="warning alertWrapper "
+>
+  <div
+    className="columns is-multiline is-mobile"
+  >
+    <div
+      className="column is-narrow alertIcon"
+    >
+      <FontIcon
+        className="material-icons"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        warning
+      </FontIcon>
+    </div>
+    <div
+      className="column alertText"
+    >
+      <div>
+        <b>
+          Validation - 
+        </b>
+        <span>
+          Form cannot be submitted until all fields are valid. Please review all input fields.
+          <ul>
+            <li
+              key="validation-summary-0"
+            >
+              Title is required
+            </li>
+            <li
+              key="validation-summary-1"
+            >
+              Publication date is required
+            </li>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 `;

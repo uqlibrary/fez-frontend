@@ -14,6 +14,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
           <Alert
             allowDismiss={false}
             message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+            showLoader={false}
             title="File upload failed"
             type="info"
           />

@@ -14,9 +14,12 @@ import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {PublicationStats} from 'modules/SharedComponents/PublicationStats';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import FontIcon from 'material-ui/FontIcon';
 import {routes} from 'config';
 import {locale} from 'locale';
+
+// Icons
+import EditorFormatQuote from 'material-ui/svg-icons/editor/format-quote'; // format_quote
+import ActionOpenInNew from 'material-ui/svg-icons/action/open-in-new'; // open_in_new
 
 class Dashboard extends React.Component {
     static propTypes = {
@@ -246,9 +249,7 @@ class Dashboard extends React.Component {
                                                                     <div className="column">
                                                                         <div className="citationContent">
                                                                             <h3 className="publicationTitle">{recordValue.title}</h3>
-                                                                            <FontIcon className="material-icons citationIcon" data-place="left">
-                                                                                format_quote
-                                                                            </FontIcon>
+                                                                            <EditorFormatQuote className="material-icons citationIcon" data-place="left" />
                                                                             {recordValue.authors} ({recordValue.rek_date.substring(0, 4)})
                                                                         </div>
                                                                         <div className="citationCounts">
@@ -260,7 +261,9 @@ class Dashboard extends React.Component {
                                                                                     rel="noopener noreferrer"
                                                                                     title={locale.global.linkWillOpenInNewWindow.replace('[destination]', recordValue.title)}>
                                                                                     <div className="columns is-mobile is-gapless">
-                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}<FontIcon className="citationCountIcon material-icons">open_in_new</FontIcon></div>
+                                                                                        <div className="column is-narrow citationCountNumber">{txt.myTrendingPublications.viewFullCitationLinkTitle}
+                                                                                            <ActionOpenInNew className="citationCountIcon material-icons" />
+                                                                                        </div>
                                                                                     </div>
                                                                                 </a>
                                                                             </div>

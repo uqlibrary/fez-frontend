@@ -59,6 +59,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
         actionButtonLabel="Add a publication"
         allowDismiss={false}
         message="We found nothing new for you to claim, but you may add a publication any time."
+        showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
       />
@@ -503,6 +504,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
         actionButtonLabel="Add a publication"
         allowDismiss={false}
         message="We found nothing new for you to claim, but you may add a publication any time."
+        showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
       />
@@ -628,6 +630,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
         actionButtonLabel="Add a publication"
         allowDismiss={false}
         message="We found nothing new for you to claim, but you may add a publication any time."
+        showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
       />
@@ -701,6 +704,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
         actionButtonLabel="Add a publication"
         allowDismiss={false}
         message="We found nothing new for you to claim, but you may add a publication any time."
+        showLoader={false}
         title="Add your work to eSpace"
         type="info_outline"
       />
@@ -768,8 +772,9 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
         actionButtonLabel="Claim your publications now"
         allowDismiss={true}
         message="We have found 5 record(s) that could possibly be your work."
+        showLoader={false}
         title="Claim now!"
-        type="warning"
+        type="info_outline"
       />
     </div>
   </div>

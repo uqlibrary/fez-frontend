@@ -29,13 +29,13 @@ export const pathConfig =  {
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
-            link: '/author-identifiers/google-scholar/link/',
+            link: '/author-identifiers/google-scholar/link',
             // unlink: '/author-identifiers/google-scholar/link'
         }
     }
 };
 
-
+// a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/browse', '/about', '/rhdsubmission_new', '/sbslodge_new',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];

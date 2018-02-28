@@ -130,6 +130,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             disabled={false}
             height={50}
             name="thesisTitle"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
       </div>
@@ -143,7 +148,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
-            errorMessage="Author name is required"
             floatingLabelText="Author name"
             fullWidth={true}
             hintText=""
@@ -173,7 +177,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             }
             locale={
               Object {
-                "errorMessage": "Thesis type is required",
                 "label": "Thesis type",
               }
             }
@@ -196,7 +199,6 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
-            errorMessage="Enrolling unit is required"
             floatingLabelText="Enrolling unit"
             hintText="Enrolling unit, eg. School of Business"
             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
@@ -228,6 +230,11 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
             component={[Function]}
             disabled={false}
             name="thesisAbstract"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
       </div>
@@ -476,20 +483,13 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               File upload restrictions
             </h3>,
             "fileUploadRestrictions": <div>
-              File submission is mandatory. Maximum file size is 5Gb. 
+              Maximum file size is 5Gb. 
               <br />
               PDF files must be saved using the following naming structure 
               <b>
                 &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. Please refer to 
-              <a
-                href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination"
-                target="_blank"
-              >
-                HDR submission guidelines
-              </a>
-               for file naming conventions. For example:
+              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
@@ -649,6 +649,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             disabled={false}
             height={50}
             name="thesisTitle"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
       </div>
@@ -662,7 +667,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
-            errorMessage="Author name is required"
             floatingLabelText="Author name"
             fullWidth={true}
             hintText=""
@@ -692,7 +696,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             }
             locale={
               Object {
-                "errorMessage": "Thesis type is required",
                 "label": "Thesis type",
               }
             }
@@ -715,7 +718,6 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             className="requiredField"
             component={[Function]}
             disabled={false}
-            errorMessage="Enrolling unit is required"
             floatingLabelText="Enrolling unit"
             hintText="Enrolling unit, eg. School of Business"
             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
@@ -747,6 +749,11 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
             component={[Function]}
             disabled={false}
             name="thesisAbstract"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </div>
       </div>
@@ -995,20 +1002,13 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               File upload restrictions
             </h3>,
             "fileUploadRestrictions": <div>
-              File submission is mandatory. Maximum file size is 5Gb. 
+              Maximum file size is 5Gb. 
               <br />
               PDF files must be saved using the following naming structure 
               <b>
                 &lt;student number&gt;_&lt;degree type&gt;_&lt;stage examination&gt;.pdf
               </b>
-              . Stages of examination are: submission, or correctedthesis, or finalthesis. Please refer to 
-              <a
-                href="http://ppl.app.uq.edu.au/content/4.60.08-higher-degree-research-examination"
-                target="_blank"
-              >
-                HDR submission guidelines
-              </a>
-               for file naming conventions. For example:
+              . Stages of examination are: submission, or correctedthesis, or finalthesis. For example:
               <ul>
                 <li>
                   s1234567_phd_thesis.pdf
