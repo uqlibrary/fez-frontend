@@ -89,50 +89,55 @@ class Dashboard extends React.Component {
         this.props.history.push(routes.pathConfig.records.mine);
     };
 
-    _IeVersion() {
-        // Set defaults
-        const value = {
-            IsIE: false,
-            IsEdge: false,
-            EdgeHtmlVersion: 0,
-            TrueVersion: 0,
-            ActingVersion: 0,
-            CompatibilityMode: false
-        };
+    _IeVersion = () => {
+        // Get the user agent string
+        const ua = navigator.userAgent;
+        let compatibilityMode = false;
 
-        // Try to find the Trident version number
-        const trident = navigator.userAgent.match(/Trident\/(\d+)/);
-        if (trident) {
-            value.IsIE = true;
-            // Convert from the Trident version number to the IE version number
-            value.TrueVersion = parseInt(trident[1], 10) + 4;
-        }
+        // Get the current "emulated" version of IE
+        const renderVersion = parseFloat(RegExp.$1);
+        let version = renderVersion;
 
-        // Try to find the MSIE number
-        const msie = navigator.userAgent.match(/MSIE (\d+)/);
-        if (msie) {
-            value.IsIE = true;
-            // Find the IE version number from the user agent string
-            value.ActingVersion = parseInt(msie[1], 10);
+        // Check the browser version with the rest of the agent string to detect compatibility mode
+        if(ua.indexOf('MSIE') > -1) {
+            if (ua.indexOf('Trident/7.0') > -1) {
+                if (ua.indexOf('MSIE 7.0') > -1) {
+                    compatibilityMode = true;
+                    version = 11;
+                }
+            } else if (ua.indexOf('Trident/6.0') > -1) {
+                if (ua.indexOf('MSIE 7.0') > -1) {
+                    compatibilityMode = true;
+                    version = 10;
+                }
+            } else if (ua.indexOf('Trident/5.0') > -1) {
+                if (ua.indexOf('MSIE 7.0') > -1) {
+                    compatibilityMode = true;
+                    version = 9;                   // IE 9
+                }
+            } else if (ua.indexOf('Trident/4.0') > -1) {
+                if (ua.indexOf('MSIE 7.0') > -1) {
+                    compatibilityMode = true;
+                    version = 8;                   // IE 8
+                }
+            } else if (ua.indexOf('MSIE 7.') > -1) {
+                version = 7; // IE 7
+            } else {
+                version = 6;                       // IE 6
+            }
+            return {
+                version: version,
+                rederVersion: renderVersion,
+                compatabilityMode: compatibilityMode,
+            };
         } else {
-            // Must be IE 11 in "edge" mode
-            value.ActingVersion = value.TrueVersion;
+            return {
+                version: 'Not IE',
+                rederVersion: null,
+                compatabilityMode: null,
+            };
         }
-
-        // If we have both a Trident and MSIE version number, see if they're different
-        if (value.IsIE && value.TrueVersion > 0 && value.ActingVersion > 0) {
-            // In compatibility mode if the trident number doesn't match up with the MSIE number
-            value.CompatibilityMode = value.TrueVersion !== value.ActingVersion;
-        }
-
-        // Try to find Edge and the EdgeHTML vesion number
-        const edge = navigator.userAgent.match(/Edge\/(\d+\.\d+)$/);
-        if (edge) {
-            value.IsEdge = true;
-            value.EdgeHtmlVersion = edge[1];
-        }
-        return value;
-    }
+    };
 
     render() {
         const txt = locale.pages.dashboard;
