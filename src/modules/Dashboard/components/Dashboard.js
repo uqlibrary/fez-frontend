@@ -124,12 +124,8 @@ class Dashboard extends React.Component {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
-        console.log(navigator.userAgent);
         return (
             <StandardPage className="dashboard">
-                {
-                    <Alert {...locale.pages.dashboard.isQuirksModeAlert} />
-                }
                 {
                     loading &&
                     <div className="isLoading is-centered">
