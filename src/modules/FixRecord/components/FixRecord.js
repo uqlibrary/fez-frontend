@@ -108,36 +108,6 @@ export default class FixRecord extends React.PureComponent {
         }
     };
 
-    getAlert = ({submitting = false, submitSucceeded = false, submitFailed = false, alertLocale = {}, invalid = false, errors = {}, error}) => {
-        let alertProps = null;
-        if (submitting) {
-            alertProps = {...alertLocale.progressAlert};
-        } else if (submitSucceeded) {
-            alertProps = {...alertLocale.successAlert};
-        } else if (submitFailed && error) {
-            alertProps = {...alertLocale.errorAlert, message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error};
-        } else if (invalid && errors.size !== 0) {
-            const formErrorLabels = {
-                fixAction: locale.pages.fixRecord.fieldLabels.action,
-                comments: locale.forms.fixPublicationForm.comments.fieldLabels.comments,
-                rek_link: locale.forms.fixPublicationForm.comments.fieldLabels.url,
-                files: locale.forms.fixPublicationForm.fileUpload.title,
-            };
-            const validationMessage = (
-                <span className="validationMessage">
-                    {alertLocale.validationAlert.message}
-                    <ul className="validationList">
-                        {Object.keys(errors).map((key, index) => (
-                            <li className="validationItem" key={`validation-${index}`}><b>{formErrorLabels[key]}</b> - {errors[key]}</li>
-                        ))}
-                    </ul>
-                </span>
-            );
-            alertProps = {...alertLocale.validationAlert, message: validationMessage};
-        }
-        return alertProps ? (<Alert {...alertProps} />) : null;
-    };
-
     _setSuccessConfirmation = (ref) => {
         this.successConfirmationBox = ref;
     };
@@ -176,6 +146,7 @@ export default class FixRecord extends React.PureComponent {
                 {saveConfirmationLocale.confirmationMessage}
             </div>
         );
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
         return (
             <StandardPage title={txt.title}>
                 <form onKeyDown={this._handleKeyboardFormSubmit}>
@@ -251,7 +222,7 @@ export default class FixRecord extends React.PureComponent {
                     }
 
                     {
-                        this.getAlert({...this.props, alertLocale: txtFixForm})
+                        alertProps && <Alert {...alertProps} />
                     }
 
                     <div className="columns action-buttons">

@@ -110,32 +110,24 @@ describe('Component FixRecord', () => {
     });
 
     it('should return and render the alert details correctly', () => {
-        const wrapper = setup({}).instance();
-        // submitting = false, submitSucceeded = false, alertLocale = {}, invalid = false, errors = {}}
         const testCases = [
             {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
-                expected: 'submitting'
+                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting', message: 'submitting', type: 'info'}}},
             },
             {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
-                expected: 'submitSucceeded'
+                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded', message: 'submitSucceeded', type: 'done'}}},
             },
             {
-                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn() }}},
-                expected: 'submitFailed'
+                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn(), type: 'error'}}},
             },
             {
-                parameters: {invalid: true, errors: {one: 'one', two: 'two'}, alertLocale: {validationAlert: {title: 'validationError'}}},
-                expected: 'validationError'
+                parameters: {invalid: true, dirty: true, formErrors: {rek_title: 'one', comments: 'two'}, alertLocale: {validationAlert: {title: 'validationError'}}},
             }
         ];
 
         testCases.forEach(testCase => {
-            const alert = wrapper.getAlert({...testCase.parameters, recordToFix: mockRecordToFix, history: {go: jest.fn()}});
-            expect(alert.props.title).toEqual(testCase.expected);
-            const alert2 = setup({...testCase.parameters, recordToFix: mockRecordToFix, history: {go: jest.fn()}}).find('Alert').dive();
-            expect(toJson(alert2)).toMatchSnapshot();
+            const wrapper = setup({...testCase.parameters, recordToFix: mockRecordToFix}).find('Alert').dive();
+            expect(toJson(wrapper)).toMatchSnapshot();
         });
     });
 
@@ -176,5 +168,4 @@ describe('Component FixRecord', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
     });
-
 });

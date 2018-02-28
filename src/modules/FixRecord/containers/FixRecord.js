@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, getFormSyncErrors, isInvalid, SubmissionError} from 'redux-form/immutable';
+import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import FixRecord from '../components/FixRecord';
 import {withRouter} from 'react-router-dom';
@@ -41,8 +41,7 @@ const mapStateToProps = (state) => {
         ...state.get('fixRecordReducer'),
         ...state.get('accountReducer'),
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        errors: getFormSyncErrors(FORM_NAME)(state) || {},
-        invalid: isInvalid(FORM_NAME)(state)
+        formErrors: getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}),
     };
 };
 
