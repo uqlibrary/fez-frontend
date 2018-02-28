@@ -1102,11 +1102,13 @@ export default {
                 instructions: '',
                 accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
-                    ['folder']: 'Invalid files ([filenames])',
+                    ['folder']: 'Invalid file(s) ([filenames])',
                     ['fileName']: 'File(s) ([filenames]) have invalid file name',
                     ['maxFileSize']: 'File(s) ([filenames]) exceed maximum allowed upload file size',
-                    ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) Files ([filenames]) will not be uploaded',
+                    ['maxFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([filenames]) will not be uploaded',
                 },
+                successTitle: 'Success',
+                successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 errorTitle: 'Upload Errors',
                 fileUploadRestrictionHeading: (<h3><span className="requiredField"><label>&nbsp;</label></span>File upload restrictions</h3>),
                 fileUploadRestrictions: (
